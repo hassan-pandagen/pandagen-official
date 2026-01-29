@@ -24,7 +24,7 @@ export default function Home() {
   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
 
   return (
-    <main className="min-h-screen bg-[#050505] text-white overflow-x-hidden">
+    <main className="min-h-screen bg-transparent text-white overflow-x-hidden">
       {/* Global Noise Texture - This fixes the "Flat" look */}
       <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-20 mix-blend-overlay"></div>
 

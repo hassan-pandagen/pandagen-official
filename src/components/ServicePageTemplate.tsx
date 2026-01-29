@@ -17,7 +17,7 @@ interface ServicePageProps {
 
 export default function ServicePageTemplate({ title, subtitle, description, painPoints, features, guaranteeText, deepDive }: ServicePageProps) {
   return (
-    <main className="bg-[#050505] min-h-screen selection:bg-neon selection:text-black overflow-x-hidden">
+    <main className="bg-transparent min-h-screen selection:bg-neon selection:text-black overflow-x-hidden">
       <Header />
 
       {/* 1. HERO (Filled Space & Ambient Light) */}

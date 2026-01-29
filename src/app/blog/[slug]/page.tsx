@@ -299,7 +299,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
     }
 
     return (
-         <main className="bg-[#050505] min-h-screen selection:bg-neon selection:text-black overflow-x-hidden relative">
+         <main className="bg-transparent min-h-screen selection:bg-neon selection:text-black overflow-x-hidden relative">
              {/* 1. BRIGHTER AMBIENCE (No more "Cave" feel) */}
              <div className="fixed inset-0 z-0 pointer-events-none">
                  {/* Top Center Spotlight - Lights up the reading area */}

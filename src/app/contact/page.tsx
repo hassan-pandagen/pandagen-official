@@ -29,7 +29,7 @@ export default function ContactPage() {
    ];
 
   return (
-    <main className="bg-[#050505] min-h-screen selection:bg-neon selection:text-black overflow-x-hidden">
+    <main className="bg-transparent min-h-screen selection:bg-neon selection:text-black overflow-x-hidden">
       <Header />
 
       <section className="relative pt-40 pb-20 px-6">

@@ -63,7 +63,7 @@ const articles = blogPosts.map(post => ({
 export default function BlogPage() {
   const [activeCategory, setActiveCategory] = useState("All");
   return (
-    <main className="bg-[#050505] min-h-screen selection:bg-neon selection:text-black overflow-x-hidden relative">
+    <main className="bg-transparent min-h-screen selection:bg-neon selection:text-black overflow-x-hidden relative">
       {/* GLOBAL GRID BACKGROUND */}
       <div className="fixed inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px] pointer-events-none z-0" />
       

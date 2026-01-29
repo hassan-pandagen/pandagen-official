@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import CalEmbed from "@/components/ui/CalEmbed";
+import AuroraBackground from "@/components/layout/AuroraBackground";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -77,22 +78,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>
-        {/* GLOBAL AMBIENT LIGHT - Creates "Lit Room" Effect */}
-        <div className="fixed inset-0 z-[-1] pointer-events-none">
-          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-blue-900/10 blur-[120px]" />
-          <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-purple-900/10 blur-[120px]" />
-        </div>
-
+      <body className={`${inter.className} antialiased bg-[#050505] text-white selection:bg-neon selection:text-black`}>
+        
+        {/* Aurora Background - Living, Animated Gradient */}
+        <AuroraBackground />
+        
         <CalEmbed />
         <SmoothScroll>
           {children}
-          {/* Noise/Grain Overlay */}
-          <div className="fixed inset-0 pointer-events-none z-[9999] opacity-[0.03]" 
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`
-            }}
-          />
         </SmoothScroll>
       </body>
     </html>
