@@ -9,7 +9,7 @@ const STACK = ["NEXT.JS 15", "VERCEL", "REACT", "TYPESCRIPT", "SUPABASE", "STRIP
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[100vh] flex flex-col justify-center pt-32 overflow-hidden bg-[#050505]">
+    <section className="relative min-h-[100vh] flex flex-col justify-center pt-32 overflow-hidden bg-transparent">
       
       {/* 1. BACKGROUND AMBIENCE (Subtle & Deep) */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-blue-900/20 blur-[120px] rounded-full pointer-events-none opacity-50" />

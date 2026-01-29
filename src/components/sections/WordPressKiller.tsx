@@ -78,7 +78,7 @@ export default function RealityCheck({ onOpenQuote }: RealityCheckProps) {
   const current = content[platform];
 
   return (
-    <section className="py-24 bg-black relative overflow-hidden">
+    <section className="py-24 bg-transparent relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         
         {/* HEADER */}

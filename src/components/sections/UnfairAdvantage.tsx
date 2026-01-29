@@ -38,7 +38,7 @@ const pillars = [
 
 export default function UnfairAdvantage() {
   return (
-    <section className="py-32 bg-black relative overflow-hidden">
+    <section className="py-32 bg-transparent relative overflow-hidden">
       
       {/* Background Ambience */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-7xl bg-gradient-to-r from-blue-900/10 via-purple-900/10 to-blue-900/10 blur-[100px] pointer-events-none" />
