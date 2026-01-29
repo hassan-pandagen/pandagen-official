@@ -78,9 +78,36 @@ export default function PricingPage() {
             />
 
          </div>
-         </section>
+          </section>
 
-         {/* 2.5. RISK-FREE GUARANTEE BADGE */}
+          {/* 2.4. THE "WHY" EXPLAINER */}
+          <section className="container mx-auto px-6 pb-32">
+             <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-white/10 rounded-3xl p-8 md:p-12">
+                <h2 className="text-3xl font-bold text-white mb-6">Why our pricing is "Fixed" (and why you should care).</h2>
+                <div className="grid md:grid-cols-2 gap-12 text-gray-300 leading-relaxed">
+                   <div>
+                      <h3 className="text-white font-bold mb-2 flex items-center gap-2">
+                        <span>🚫</span> The Hourly Billing Trap
+                      </h3>
+                      <p>
+                         Most agencies charge $100/hour. This punishes efficiency. If they work slow, you pay more. 
+                         You never know the final bill until it's too late. It creates a conflict of interest.
+                      </p>
+                   </div>
+                   <div>
+                      <h3 className="text-neon font-bold mb-2 flex items-center gap-2">
+                        <span>✅</span> The PandaGen Flat Fee
+                      </h3>
+                      <p>
+                         We charge for the <strong>Outcome</strong>. Whether it takes us 50 hours or 500 hours to build your perfect platform, you pay the same agreed price. 
+                         We take the risk, not you. This aligns our incentives: we both want it done perfectly and efficiently.
+                      </p>
+                   </div>
+                </div>
+             </div>
+          </section>
+
+          {/* 2.5. RISK-FREE GUARANTEE BADGE */}
          <section className="container mx-auto px-6 pb-32">
          <motion.div 
             initial={{ opacity: 0, y: 20 }}

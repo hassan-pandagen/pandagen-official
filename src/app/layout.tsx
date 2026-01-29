@@ -3,16 +3,19 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import CalEmbed from "@/components/ui/CalEmbed";
-import { ThemeProvider } from "@/components/layout/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://pandagencode.com'),
   title: {
     default: "PandaGenCode | WordPress to Next.js Migration Experts",
     template: "%s | PandaGenCode",
   },
   description: "Enterprise-grade web development agency specializing in WordPress to Next.js migration. Get 10x faster websites, bank-grade security, and better SEO at WordPress prices.",
+  alternates: {
+    canonical: '/',
+  },
   keywords: [
     "WordPress to Next.js migration",
     "Next.js development agency",
@@ -81,18 +84,16 @@ export default function RootLayout({
           <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-purple-900/10 blur-[120px]" />
         </div>
 
-        <ThemeProvider>
-          <CalEmbed />
-          <SmoothScroll>
-            {children}
-            {/* Noise/Grain Overlay */}
-            <div className="fixed inset-0 pointer-events-none z-[9999] opacity-[0.03]" 
-              style={{
-                backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`
-              }}
-            />
-          </SmoothScroll>
-        </ThemeProvider>
+        <CalEmbed />
+        <SmoothScroll>
+          {children}
+          {/* Noise/Grain Overlay */}
+          <div className="fixed inset-0 pointer-events-none z-[9999] opacity-[0.03]" 
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`
+            }}
+          />
+        </SmoothScroll>
       </body>
     </html>
   );

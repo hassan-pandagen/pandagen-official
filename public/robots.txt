@@ -1,0 +1,15 @@
+# Robots.txt for PandaGenCode.com
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://pandagencode.com/sitemap.xml
+
+# Crawl-delay for politeness (optional)
+Crawl-delay: 1
+
+# Block specific paths if needed (currently none)
+# Disallow: /admin/
+# Disallow: /api/

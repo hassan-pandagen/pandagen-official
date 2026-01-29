@@ -1,17 +1,22 @@
 "use client";
 
 import React, { useState } from "react";
+import dynamic from "next/dynamic";
 import { motion, useScroll, useSpring } from "framer-motion";
+import { ShieldCheck } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
-import MethodToCreativity from "@/components/MethodToCreativity";
-import DiscoveryPortal from "@/components/DiscoveryPortal";
 import QuoteModal from "@/components/ui/QuoteModal";
-import WordPressKiller from "@/components/sections/WordPressKiller";
-import ProofMarquee from "@/components/ProofMarquee";
-import ServicesHub from "@/components/sections/ServicesHub";
-import UnfairAdvantage from "@/components/sections/UnfairAdvantage";
+
+// Lazy load heavy/below-the-fold components for better initial load performance
+const ProofMarquee = dynamic(() => import("@/components/ProofMarquee"));
+const MethodToCreativity = dynamic(() => import("@/components/MethodToCreativity"));
+const ServicesHub = dynamic(() => import("@/components/sections/ServicesHub"));
+const WordPressKiller = dynamic(() => import("@/components/sections/WordPressKiller"));
+const UnfairAdvantage = dynamic(() => import("@/components/sections/UnfairAdvantage"));
+const FullROIShowcase = dynamic(() => import("@/components/sections/FullROIShowcase"));
+const DiscoveryPortal = dynamic(() => import("@/components/DiscoveryPortal"));
 
 export default function Home() {
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
@@ -29,7 +34,16 @@ export default function Home() {
       <Header onOpenQuote={() => setIsQuoteModalOpen(true)} />
 
       {/* Hero Section */}
-      <Hero onOpenQuote={() => setIsQuoteModalOpen(true)} />
+      <Hero />
+      
+      {/* THE GUARANTEE BANNER */}
+      <div className="w-full bg-[#0A0A0A] border-y border-white/5 py-4 relative overflow-hidden group">
+         <div className="absolute inset-0 bg-green-500/5 group-hover:bg-green-500/10 transition-colors" />
+         <div className="container mx-auto px-6 flex flex-col md:flex-row justify-center items-center gap-3 text-sm font-bold uppercase tracking-widest text-green-400">
+            <ShieldCheck className="w-5 h-5" />
+            <span>30-Day Money-Back Guarantee on all Projects</span>
+         </div>
+      </div>
       
       {/* Proof Marquee (Trusted By) */}
       <ProofMarquee />
@@ -45,6 +59,9 @@ export default function Home() {
 
       {/* The Unfair Advantage - Speed, Security, Ownership */}
       <UnfairAdvantage />
+
+      {/* Full ROI Showcase with Detailed Comparisons */}
+      <FullROIShowcase onOpenQuote={() => setIsQuoteModalOpen(true)} />
 
       {/* Discovery Portal (CTA) */}
       <DiscoveryPortal onOpenQuote={() => setIsQuoteModalOpen(true)} />

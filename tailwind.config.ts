@@ -24,7 +24,9 @@ const config: Config = {
       },
       animation: {
         "glow-pulse": "glow-pulse 2s ease-in-out infinite",
-        "marquee": "marquee 25s linear infinite",
+        "marquee": "marquee 30s linear infinite",
+        "spin-slow": "spin 4s linear infinite",
+        "float": "float 3s ease-in-out infinite",
       },
       keyframes: {
         "glow-pulse": {
@@ -32,8 +34,12 @@ const config: Config = {
           "50%": { boxShadow: "0 0 40px #06B6D4, 0 0 60px #06B6D4" },
         },
         marquee: {
-          "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-100%)" },
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-20px)" },
         },
       },
     },
