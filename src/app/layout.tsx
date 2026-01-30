@@ -10,10 +10,10 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL('https://pandagencode.com'),
   title: {
-    default: "PandaGenCode | WordPress to Next.js Migration Experts",
-    template: "%s | PandaGenCode",
+    default: "PandaGen | Enterprise Next.js & Shopify Architecture",
+    template: "%s | PandaGen",
   },
-  description: "Enterprise-grade web development agency specializing in WordPress to Next.js migration. Get 10x faster websites, bank-grade security, and better SEO at WordPress prices.",
+  description: "We migrate WordPress & Shopify sites to custom Next.js architectures. 0.1s load times. Zero bloat. Enterprise-grade security and SEO.",
   alternates: {
     canonical: '/',
   },
@@ -47,22 +47,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://pandagencode.com",
-    siteName: "PandaGenCode",
-    title: "PandaGenCode | WordPress to Next.js Migration Experts",
-    description: "Enterprise-grade web development at WordPress prices. 10x faster, bank-grade security, better SEO.",
+    siteName: "PandaGen",
+    title: "PandaGen | Enterprise Next.js & Shopify Architecture",
+    description: "We migrate WordPress & Shopify sites to custom Next.js architectures. 0.1s load times. Zero bloat.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "PandaGenCode - Next.js Development Agency",
+        alt: "PandaGen - Enterprise Next.js Development Agency",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "PandaGenCode | WordPress to Next.js Migration Experts",
-    description: "Enterprise-grade web development at WordPress prices. 10x faster, bank-grade security, better SEO.",
+    title: "PandaGen | Enterprise Next.js & Shopify Architecture",
+    description: "We migrate WordPress & Shopify sites to custom Next.js architectures. 0.1s load times. Zero bloat.",
     images: ["/og-image.jpg"],
     creator: "@pandagencode",
   },

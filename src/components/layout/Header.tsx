@@ -119,14 +119,14 @@ export default function Header({ onOpenQuote }: HeaderProps) {
             {onOpenQuote ? (
               <button
                 onClick={onOpenQuote}
-                className="px-6 py-2.5 bg-neon text-background font-semibold hover:bg-neon/90 transition-all hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                className="px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105 bg-neon text-black hover:bg-[#33e0ff] shadow-[0_0_20px_rgba(34,211,238,0.4)] hover:shadow-[0_0_30px_rgba(34,211,238,0.6)]"
               >
                 Get Free Quote
               </button>
             ) : (
               <Link
                 href="/contact"
-                className="px-6 py-2.5 bg-neon text-background font-semibold hover:bg-neon/90 transition-all hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                className="px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105 bg-neon text-black hover:bg-[#33e0ff] shadow-[0_0_20px_rgba(34,211,238,0.4)] hover:shadow-[0_0_30px_rgba(34,211,238,0.6)]"
               >
                 Get Free Quote
               </Link>
@@ -195,7 +195,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
               setIsMobileMenuOpen(false);
               onOpenQuote();
             }}
-            className="px-8 py-4 bg-neon text-background font-bold text-lg"
+            className="px-8 py-3 rounded-full bg-neon text-black font-bold text-sm transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(34,211,238,0.4)]"
           >
             Get Free Quote
           </button>
@@ -203,7 +203,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
           <Link
             href="/contact"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="px-8 py-4 bg-neon text-background font-bold text-lg"
+            className="px-8 py-3 rounded-full bg-neon text-black font-bold text-sm transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(34,211,238,0.4)]"
           >
             Get Free Quote
           </Link>

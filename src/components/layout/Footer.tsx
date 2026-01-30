@@ -99,26 +99,26 @@ export default function Footer({ onOpenQuote }: FooterProps) {
               <Link href="/" className="text-2xl font-bold text-white mb-6 block tracking-tight">
                 PANDA<span className="text-neon">GEN</span>
               </Link>
-              <p className="text-gray-500 text-sm leading-relaxed mb-6">
+              <p className="text-gray-400 text-sm leading-relaxed mb-6">
                  Enterprise-grade web development. Built for speed. Priced for growth.
               </p>
               <div className="flex gap-2">
-                 <a href="https://twitter.com" target="_blank" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 hover:text-neon transition-all text-gray-400">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75-2.25 7-5 7-5s-1 1.5-3 3" /></svg>
+                 <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Twitter" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 hover:text-neon transition-all text-gray-400">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75-2.25 7-5 7-5s-1 1.5-3 3" /></svg>
                  </a>
-                 <a href="https://linkedin.com" target="_blank" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 hover:text-neon transition-all text-gray-400">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" /><circle cx="4" cy="4" r="2" /></svg>
+                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Connect with us on LinkedIn" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 hover:text-neon transition-all text-gray-400">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" /><circle cx="4" cy="4" r="2" /></svg>
                  </a>
-                 <a href="mailto:info@pandagencode.com" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 hover:text-neon transition-all text-gray-400">
-                    <Mail className="w-5 h-5" />
+                 <a href="mailto:info@pandagencode.com" aria-label="Email us at info@pandagencode.com" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 hover:text-neon transition-all text-gray-400">
+                    <Mail className="w-5 h-5" aria-hidden="true" />
                  </a>
               </div>
            </div>
             
            {/* SERVICES */}
            <div>
-              <h4 className="text-white font-bold text-sm uppercase tracking-widest mb-6">Services</h4>
-              <ul className="space-y-3 text-gray-500 text-sm">
+              <h3 className="text-white font-bold text-sm uppercase tracking-widest mb-6">Services</h3>
+              <ul className="space-y-3 text-gray-400 text-sm">
                  <li><Link href="/services/wordpress-migration" className="hover:text-neon transition-colors">WordPress Migration</Link></li>
                  <li><Link href="/services/custom-engineering" className="hover:text-neon transition-colors">Custom Engineering</Link></li>
                  <li><Link href="/services/ecommerce" className="hover:text-neon transition-colors">E-Commerce</Link></li>
@@ -127,8 +127,8 @@ export default function Footer({ onOpenQuote }: FooterProps) {
 
            {/* COMPANY */}
            <div>
-              <h4 className="text-white font-bold text-sm uppercase tracking-widest mb-6">Company</h4>
-              <ul className="space-y-3 text-gray-500 text-sm">
+              <h3 className="text-white font-bold text-sm uppercase tracking-widest mb-6">Company</h3>
+              <ul className="space-y-3 text-gray-400 text-sm">
                  <li><Link href="/about" className="hover:text-neon transition-colors">About Us</Link></li>
                  <li><Link href="/contact" className="hover:text-neon transition-colors">How We Work</Link></li>
                  <li><Link href="/work" className="hover:text-neon transition-colors">Case Studies</Link></li>
@@ -138,8 +138,8 @@ export default function Footer({ onOpenQuote }: FooterProps) {
 
            {/* LEGAL */}
            <div>
-              <h4 className="text-white font-bold text-sm uppercase tracking-widest mb-6">Legal</h4>
-              <ul className="space-y-3 text-gray-500 text-sm">
+              <h3 className="text-white font-bold text-sm uppercase tracking-widest mb-6">Legal</h3>
+              <ul className="space-y-3 text-gray-400 text-sm">
                  <li><Link href="/privacy" className="hover:text-neon transition-colors">Privacy Policy</Link></li>
                  <li><Link href="/terms" className="hover:text-neon transition-colors">Terms of Service</Link></li>
                  <li><Link href="/cookies" className="hover:text-neon transition-colors">Cookies</Link></li>
@@ -148,8 +148,8 @@ export default function Footer({ onOpenQuote }: FooterProps) {
 
            {/* CONTACT */}
            <div>
-              <h4 className="text-white font-bold text-sm uppercase tracking-widest mb-6">Contact</h4>
-              <ul className="space-y-3 text-gray-500 text-sm">
+              <h3 className="text-white font-bold text-sm uppercase tracking-widest mb-6">Contact</h3>
+              <ul className="space-y-3 text-gray-400 text-sm">
                  <li>
                     <div className="text-gray-400 font-medium mb-1 flex items-center gap-2">
                        <MapPin className="w-4 h-4" /> HQ
@@ -172,9 +172,9 @@ export default function Footer({ onOpenQuote }: FooterProps) {
            </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 border-t border-white/5 pt-8 gap-4">
-           <p>© 2026 PandaGenCode. All rights reserved.</p>
-           <p className="text-gray-700">Built with Next.js • Engineered for Scale</p>
+        <div className="flex flex-col md:flex-row justify-between items-center text-xs text-gray-400 border-t border-white/5 pt-8 gap-4">
+           <p>© 2026 PandaGen Code LLC. All rights reserved.</p>
+           <p className="text-gray-500">Built with Next.js • Engineered for Scale</p>
         </div>
         </div>
 

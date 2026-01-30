@@ -228,8 +228,8 @@ export default function ROIComparisonCarousel() {
     <div className="relative max-w-6xl mx-auto">
 
       {/* Progress Indicators */}
-      <div className="flex justify-center gap-2 mb-6">
-        {slides.map((_, index) => (
+      <div className="flex justify-center gap-2 mb-6" role="tablist" aria-label="Comparison slides">
+        {slides.map((slide, index) => (
           <button
             key={index}
             onClick={() => {
@@ -237,6 +237,9 @@ export default function ROIComparisonCarousel() {
               setAutoPlay(false);
             }}
             className="group relative"
+            role="tab"
+            aria-selected={index === currentSlide}
+            aria-label={`Go to slide ${index + 1}: ${slide.title}`}
           >
             <div className={`h-1 w-12 rounded-full transition-all duration-300 ${
               index === currentSlide ? "bg-neon" : "bg-white/20"
@@ -276,7 +279,7 @@ export default function ROIComparisonCarousel() {
                 <Icon className="w-7 h-7 text-neon" />
               </div>
               <div>
-                <p className="text-xs text-gray-500 uppercase tracking-widest font-bold mb-1">
+                <p className="text-xs text-gray-400 uppercase tracking-widest font-bold mb-1">
                   {currentData.category}
                 </p>
                 <h3 className="text-2xl md:text-3xl font-bold text-white">
@@ -371,7 +374,7 @@ export default function ROIComparisonCarousel() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="text-xs text-gray-600 mt-4 text-center"
+              className="text-xs text-gray-400 mt-4 text-center"
             >
               Source: {currentData.source}
             </motion.p>

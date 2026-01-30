@@ -122,7 +122,7 @@ export default function SkillsShowcase() {
                 <div className="w-2 h-2 bg-neon rounded-full animate-pulse" />
                 <div>
                   <p className="font-semibold text-white text-sm">{cert.name}</p>
-                  <p className="text-xs text-gray-500">{cert.issuer}</p>
+                  <p className="text-xs text-gray-400">{cert.issuer}</p>
                 </div>
               </div>
             ))}
@@ -153,7 +153,7 @@ export default function SkillsShowcase() {
               >
                 {stat.value}
               </motion.div>
-              <div className="text-sm text-gray-500">{stat.label}</div>
+              <div className="text-sm text-gray-400">{stat.label}</div>
             </div>
           ))}
         </motion.div>

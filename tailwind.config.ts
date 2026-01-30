@@ -27,6 +27,8 @@ const config: Config = {
         "marquee": "marquee 30s linear infinite",
         "spin-slow": "spin 4s linear infinite",
         "float": "float 3s ease-in-out infinite",
+        "scan": "scan 3s linear infinite",
+        "gradient-x": "gradient-x 3s ease infinite",
       },
       keyframes: {
         "glow-pulse": {
@@ -40,6 +42,14 @@ const config: Config = {
         float: {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-20px)" },
+        },
+        scan: {
+          "0%": { top: "0%" },
+          "100%": { top: "100%" },
+        },
+        "gradient-x": {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
         },
       },
     },

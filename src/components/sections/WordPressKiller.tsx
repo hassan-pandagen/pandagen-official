@@ -84,23 +84,25 @@ export default function RealityCheck({ onOpenQuote }: RealityCheckProps) {
         {/* HEADER */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            The Reality <span className="text-gray-600">Check.</span>
+            The Reality <span className="text-gray-400">Check.</span>
           </h2>
           
           {/* TOGGLE */}
           <div className="inline-flex bg-white/5 p-1 rounded-full border border-white/10 backdrop-blur-sm">
              <button
                onClick={() => setPlatform("wordpress")}
+               aria-pressed={platform === "wordpress"}
                className={`px-6 py-2 rounded-full text-sm font-bold transition-all ${
-                 platform === "wordpress" ? "bg-red-500/20 text-red-400 border border-red-500/30" : "text-gray-500 hover:text-white"
+                 platform === "wordpress" ? "bg-red-500/20 text-red-400 border border-red-500/30" : "text-gray-400 hover:text-white"
                }`}
              >
                vs WordPress
              </button>
              <button
                onClick={() => setPlatform("shopify")}
+               aria-pressed={platform === "shopify"}
                className={`px-6 py-2 rounded-full text-sm font-bold transition-all ${
-                 platform === "shopify" ? "bg-orange-500/20 text-orange-400 border border-orange-500/30" : "text-gray-500 hover:text-white"
+                 platform === "shopify" ? "bg-orange-500/20 text-orange-400 border border-orange-500/30" : "text-gray-400 hover:text-white"
                }`}
              >
                vs Shopify
@@ -166,7 +168,7 @@ export default function RealityCheck({ onOpenQuote }: RealityCheckProps) {
                   <p className="text-xs text-red-400 uppercase font-bold">Hidden Monthly Cost</p>
                   <div className="flex items-baseline gap-2 mt-2">
                       <span className="text-2xl font-bold text-white">{current.hiddenCost}</span>
-                      <span className="text-xs text-gray-500">{current.hiddenCostLabel}</span>
+                      <span className="text-xs text-gray-400">{current.hiddenCostLabel}</span>
                   </div>
               </motion.div>
             </motion.div>
@@ -209,7 +211,7 @@ export default function RealityCheck({ onOpenQuote }: RealityCheckProps) {
                             <CheckCircle className="text-cyan-400 w-3 h-3" />
                          </div>
                          <div className="flex-1 min-w-0">
-                            <p className="text-[10px] text-cyan-700 uppercase font-bold tracking-wider mb-1">{item.label}</p>
+                            <p className="text-[10px] text-cyan-400 uppercase font-bold tracking-wider mb-1">{item.label}</p>
                             <p className="text-white font-medium text-sm leading-relaxed">{item.good}</p>
                          </div>
                       </motion.div>
@@ -228,7 +230,7 @@ export default function RealityCheck({ onOpenQuote }: RealityCheckProps) {
                 <p className="text-xs text-cyan-400 uppercase font-bold">Your Monthly Cost</p>
                 <div className="flex items-baseline gap-2 mt-2">
                     <span className="text-2xl font-bold text-white">$0</span>
-                    <span className="text-xs text-gray-500">You own the code. No monthly taxes.</span>
+                    <span className="text-xs text-gray-400">You own the code. No monthly taxes.</span>
                 </div>
             </motion.div>
           </div>

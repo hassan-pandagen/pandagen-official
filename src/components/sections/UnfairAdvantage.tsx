@@ -82,7 +82,7 @@ export default function UnfairAdvantage() {
                 <div className="pt-8 border-t border-white/5 flex items-end justify-between">
                   <div>
                     <div className={`text-5xl font-bold ${pillar.colorClass} mb-1`}>{pillar.stat}</div>
-                    <div className="text-xs text-gray-500 uppercase tracking-widest font-bold">{pillar.statLabel}</div>
+                    <div className="text-xs text-gray-400 uppercase tracking-widest font-bold">{pillar.statLabel}</div>
                   </div>
                   <div className={`opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all duration-300 ${pillar.colorClass}`}>
                     <ArrowRight />

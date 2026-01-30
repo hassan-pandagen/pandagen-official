@@ -69,7 +69,7 @@ export default function BlogPage() {
       
       <div className="relative z-10">
         <Header />
-      <section className="pt-40 pb-16 px-6 text-center"><h1 className="text-5xl md:text-7xl font-bold text-white">Insights from the <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon to-purple-500">Code Lab.</span></h1></section>
+      <section className="pt-40 pb-16 px-6 text-center"><h1 className="text-5xl md:text-7xl font-bold text-white">Insights from the <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon to-purple-500">Engine Room.</span></h1></section>
       
       <section className="container mx-auto px-6 py-12">
          {articles.filter(a => a.featured).map((article) => (

@@ -3,6 +3,19 @@ const nextConfig = {
   transpilePackages: ['framer-motion'],
   experimental: {
     optimizePackageImports: ['framer-motion', 'lucide-react'],
+    // Optimize CSS loading - reduces render blocking
+    optimizeCss: true,
+  },
+
+  // Target modern browsers only (uses .browserslistrc)
+  // Removes legacy polyfills: Array.prototype.at/flat/flatMap, Object.fromEntries/hasOwn
+  // Estimated savings: ~12 KiB
+
+  // Modularize imports to reduce bundle size
+  modularizeImports: {
+    'lucide-react': {
+      transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}',
+    },
   },
 
   // Performance Optimizations

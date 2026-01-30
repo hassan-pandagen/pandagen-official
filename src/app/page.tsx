@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
-import { motion, useScroll, useSpring } from "framer-motion";
 import { ShieldCheck } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -20,16 +19,39 @@ const DiscoveryPortal = dynamic(() => import("@/components/DiscoveryPortal"));
 
 export default function Home() {
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
+  const progressRef = useRef<HTMLDivElement>(null);
+
+  // Optimized scroll progress - uses passive listener and requestAnimationFrame
+  useEffect(() => {
+    let ticking = false;
+    const updateProgress = () => {
+      if (progressRef.current) {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? scrollTop / docHeight : 0;
+        progressRef.current.style.transform = `scaleX(${progress})`;
+      }
+      ticking = false;
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(updateProgress);
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <main className="min-h-screen bg-transparent text-white overflow-x-hidden">
       {/* Global Noise Texture - This fixes the "Flat" look */}
       <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-20 mix-blend-overlay"></div>
 
-      {/* Scroll Progress Bar */}
-      <motion.div className="fixed top-0 left-0 right-0 h-1 bg-neon z-[70] origin-left" style={{ scaleX }} />
+      {/* Scroll Progress Bar - CSS transform for GPU acceleration */}
+      <div ref={progressRef} className="fixed top-0 left-0 right-0 h-1 bg-neon z-[70] origin-left will-change-transform" style={{ transform: "scaleX(0)" }} />
 
       <Header onOpenQuote={() => setIsQuoteModalOpen(true)} />
 
