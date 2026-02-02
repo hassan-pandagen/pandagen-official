@@ -4,14 +4,6 @@ import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 
 // Lazy load heavy components for better performance
-const HighConversionAd = dynamic(() => import("./HighConversionAd"), {
-  loading: () => (
-    <div className="min-h-[400px] flex items-center justify-center">
-      <div className="animate-pulse text-gray-400">Loading...</div>
-    </div>
-  ),
-});
-
 const ROIComparisonCarousel = dynamic(() => import("./ROIComparisonCarousel"), {
   loading: () => (
     <div className="min-h-[400px] flex items-center justify-center">
@@ -27,9 +19,6 @@ interface FullROIShowcaseProps {
 export default function FullROIShowcase({ onOpenQuote }: FullROIShowcaseProps) {
   return (
     <div className="bg-gradient-to-br from-[#050505] via-[#0A0A14] to-[#050505]">
-      {/* Main High-Conversion Ad */}
-      <HighConversionAd onOpenQuote={onOpenQuote} />
-
       {/* Detailed ROI Breakdown Section */}
       <section className="py-16 relative overflow-hidden">
         {/* Background Elements */}

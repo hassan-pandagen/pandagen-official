@@ -4,11 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { ArrowRight, TrendingUp, CheckCircle2, X, Sparkles, ShieldCheck, DollarSign, Zap, Globe } from "lucide-react";
 
-interface RealityCheckProps {
-  onOpenQuote?: () => void;
-}
-
-export default function RealityCheck({ onOpenQuote }: RealityCheckProps) {
+export default function RealityCheck() {
   const [platform, setPlatform] = useState<"wordpress" | "shopify">("wordpress");
 
   // Dynamic Data based on Platform
@@ -100,14 +96,14 @@ export default function RealityCheck({ onOpenQuote }: RealityCheckProps) {
                                 <span className="text-xs font-bold text-red-400 uppercase tracking-wider">Warning</span>
                             </div>
 
-                            <h2 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
+                            <h2 className="text-5xl md:text-6xl font-bold text-white leading-tight mb-6 drop-shadow-2xl">
                                 Stop Losing Money.<br/>
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-orange-400 to-red-400 animate-gradient-x font-extrabold">
                                     {current.pain}
                                 </span>
                             </h2>
 
-                            <p className="text-xl text-gray-400 mb-10 leading-relaxed max-w-md">
+                            <p className="text-xl text-gray-200 mb-10 leading-relaxed max-w-md font-medium">
                                 {current.sub}
                             </p>
                         </motion.div>
@@ -116,7 +112,6 @@ export default function RealityCheck({ onOpenQuote }: RealityCheckProps) {
                     {/* CTA Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4">
                       <button
-                        onClick={onOpenQuote}
                         className="group px-8 py-4 bg-neon text-black font-bold rounded-full shadow-[0_0_30px_rgba(34,211,238,0.4)] hover:shadow-[0_0_50px_rgba(34,211,238,0.6)] transition-all flex items-center justify-center gap-2 hover:scale-105"
                       >
                         Calculate Savings <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

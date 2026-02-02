@@ -72,23 +72,7 @@ export default function Hero() {
                 </Link>
             </motion.div>
 
-            {/* Micro Social Proof */}
-            <motion.div 
-                initial={{ opacity: 0 }} 
-                animate={{ opacity: 1 }} 
-                transition={{ delay: 0.5 }}
-                className="mt-12 flex items-center gap-6 text-sm text-gray-500 font-mono"
-            >
-                <div className="flex items-center gap-2">
-                    <Zap className="w-4 h-4 text-yellow-500" /> 
-                    <span>99/100 Speed Score</span>
-                </div>
-                <div className="w-px h-4 bg-white/10" />
-                <div className="flex items-center gap-2">
-                    <ShieldCheck className="w-4 h-4 text-green-500" /> 
-                    <span>Zero Vulnerabilities</span>
-                </div>
-            </motion.div>
+
         </div>
 
         {/* --- RIGHT: THE HOLOGRAPHIC DASHBOARD (Replaces the Void) --- */}

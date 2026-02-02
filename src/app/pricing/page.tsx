@@ -241,7 +241,7 @@ function FAQ({ q, a }: any) {
          initial={{ opacity: 0, y: 10 }}
          whileInView={{ opacity: 1, y: 0 }}
          viewport={{ once: true }}
-         className="p-6 border border-white/10 rounded-2xl bg-white/[0.02] hover:bg-white/[0.05] transition-colors"
+         className="bg-gradient-to-b from-white/[0.05] to-transparent border border-white/10 rounded-2xl p-6 hover:bg-white/[0.08] transition-colors"
       >
          <h3 className="text-lg font-bold text-white mb-3">{q}</h3>
          <p className="text-gray-400 text-sm leading-relaxed">{a}</p>

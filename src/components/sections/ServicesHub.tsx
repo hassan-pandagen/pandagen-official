@@ -35,7 +35,7 @@ export default function ServicesHub() {
              title="WordPress Migration"
              subtitle="Make Your Site Instant"
              icon={Database}
-             gradient="from-orange-500/20 via-amber-500/5"
+             gradient="from-blue-600/20 via-purple-500/5"
            >
               <MigrationDecoration />
            </BentoCard>
@@ -130,7 +130,7 @@ function RevenueGraphDecoration() {
 function MigrationDecoration() {
     return (
         <div className="absolute bottom-6 right-6 left-6 pointer-events-none">
-            <div className="flex justify-between text-[10px] text-orange-200 mb-2 font-mono uppercase tracking-wider">
+            <div className="flex justify-between text-[10px] text-blue-200 mb-2 font-mono uppercase tracking-wider">
                 <span className="animate-pulse">Transferring Core...</span>
                 <span>98 TB/s</span>
             </div>
@@ -143,7 +143,7 @@ function MigrationDecoration() {
                     initial={{ width: "0%" }}
                     whileInView={{ width: "100%" }}
                     transition={{ duration: 1.5, ease: "circOut" }}
-                    className="h-full bg-gradient-to-r from-orange-600 to-amber-400"
+                    className="h-full bg-gradient-to-r from-blue-600 to-purple-400"
                 />
 
                 {/* The Flashy Beam (Shoots across) */}

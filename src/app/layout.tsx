@@ -78,7 +78,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased bg-[#050505] text-white selection:bg-neon selection:text-black`}>
+      <body className={`${inter.className} antialiased bg-[#050505] text-white selection:bg-neon selection:text-black`} suppressHydrationWarning>
         
         {/* Aurora Background - Living, Animated Gradient */}
         <AuroraBackground />

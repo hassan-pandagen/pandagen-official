@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Mail, Phone, MapPin } from "lucide-react";
+import { ArrowRight, Mail, Phone, MapPin, Linkedin, Facebook, Instagram } from "lucide-react";
 import { useState } from "react";
 import QuoteModal from "@/components/ui/QuoteModal";
 
@@ -103,11 +103,14 @@ export default function Footer({ onOpenQuote }: FooterProps) {
                  Enterprise-grade web development. Built for speed. Priced for growth.
               </p>
               <div className="flex gap-2">
-                 <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Twitter" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 hover:text-neon transition-all text-gray-400">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75-2.25 7-5 7-5s-1 1.5-3 3" /></svg>
+                 <a href="https://www.linkedin.com/company/pandacodegen" target="_blank" rel="noopener noreferrer" aria-label="Connect with us on LinkedIn" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 hover:text-neon transition-all text-gray-400">
+                    <Linkedin className="w-5 h-5" aria-hidden="true" />
                  </a>
-                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Connect with us on LinkedIn" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 hover:text-neon transition-all text-gray-400">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" /><circle cx="4" cy="4" r="2" /></svg>
+                 <a href="https://www.facebook.com/profile.php?id=61587111848962" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 hover:text-neon transition-all text-gray-400">
+                    <Facebook className="w-5 h-5" aria-hidden="true" />
+                 </a>
+                 <a href="https://www.instagram.com/pandacodegen/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 hover:text-neon transition-all text-gray-400">
+                    <Instagram className="w-5 h-5" aria-hidden="true" />
                  </a>
                  <a href="mailto:info@pandagencode.com" aria-label="Email us at info@pandagencode.com" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 hover:text-neon transition-all text-gray-400">
                     <Mail className="w-5 h-5" aria-hidden="true" />

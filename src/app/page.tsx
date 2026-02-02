@@ -11,6 +11,7 @@ import QuoteModal from "@/components/ui/QuoteModal";
 // Lazy load heavy/below-the-fold components for better initial load performance
 const ProofMarquee = dynamic(() => import("@/components/ProofMarquee"));
 const MethodToCreativity = dynamic(() => import("@/components/MethodToCreativity"));
+const PerformanceStats = dynamic(() => import("@/components/sections/PerformanceStats"));
 const ServicesHub = dynamic(() => import("@/components/sections/ServicesHub"));
 const WordPressKiller = dynamic(() => import("@/components/sections/WordPressKiller"));
 const UnfairAdvantage = dynamic(() => import("@/components/sections/UnfairAdvantage"));
@@ -72,6 +73,9 @@ export default function Home() {
 
       {/* The Process - Vertical Sticky Timeline */}
       <MethodToCreativity />
+
+      {/* Performance Stats - Live Metrics */}
+      <PerformanceStats />
 
       {/* Services Hub */}
       <ServicesHub />
