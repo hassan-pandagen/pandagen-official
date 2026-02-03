@@ -1,5 +1,4 @@
 import { MetadataRoute } from 'next';
-import { blogPosts } from '@/data/blog';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://pandagencode.com';
@@ -68,6 +67,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
     {
+      url: `${baseUrl}/blog/wordpress-killer`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/shopify-headless`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/elementor-kills-seo`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/privacy`,
       lastModified: currentDate,
       changeFrequency: 'yearly' as const,
@@ -87,13 +104,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Dynamically add blog post URLs
-  const blogUrls: MetadataRoute.Sitemap = blogPosts.map((post) => ({
-    url: `${baseUrl}/blog/${post.id}`,
-    lastModified: post.lastModified || currentDate,
-    changeFrequency: 'monthly' as const,
-    priority: post.featured ? 0.7 : 0.6,
-  }));
-
-  return [...routes, ...blogUrls];
+  return routes;
 }

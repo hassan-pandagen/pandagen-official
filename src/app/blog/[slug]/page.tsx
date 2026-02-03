@@ -1,5 +1,3 @@
-"use client";
-
 import { ArrowLeft, Calendar, Clock, ShieldCheck, ArrowRight, Zap, CheckCircle2, DollarSign } from "lucide-react";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
@@ -274,7 +272,12 @@ function GuaranteeCTA() {
 }
 
 // --- PAGE COMPONENT ---
-export default function BlogPost({ params }: { params: { slug: string } }) {
+interface PageProps {
+  params: Promise<{ slug: string }>;
+}
+
+export default async function BlogPost(props: PageProps) {
+    const params = await props.params;
     const post = blogPosts[params.slug];
 
     if (!post) {
