@@ -5,6 +5,7 @@ import SmoothScroll from "@/components/layout/SmoothScroll";
 import CalEmbed from "@/components/ui/CalEmbed";
 import AuroraBackground from "@/components/layout/AuroraBackground";
 import PreconnectLinks from "@/components/PreconnectLinks";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -103,6 +104,7 @@ export default function RootLayout({
         <SmoothScroll>
           {children}
         </SmoothScroll>
+        <Analytics />
       </body>
     </html>
   );
