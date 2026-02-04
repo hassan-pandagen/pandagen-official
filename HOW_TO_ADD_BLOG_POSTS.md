@@ -53,8 +53,8 @@ export default function YourPostPage() {
 ### Step 3: Build and Deploy
 
 That's it! The blog post will automatically:
-- ✅ Appear on the blog page ([/blog](https://pandagencode.com/blog))
-- ✅ Be added to the sitemap ([/sitemap.xml](https://pandagencode.com/sitemap.xml))
+- ✅ Appear on the blog page ([/blog](https://pandacodegen.com/blog))
+- ✅ Be added to the sitemap ([/sitemap.xml](https://pandacodegen.com/sitemap.xml))
 - ✅ Use the correct illustration based on `illustrationType`
 - ✅ Show in featured section if `featured: true`
 

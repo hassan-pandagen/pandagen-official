@@ -310,7 +310,7 @@ export default function CookiesPage() {
               <div className="mt-4 p-4 bg-white/5 border border-white/10 rounded-lg">
                 <p className="text-white font-semibold">PandaGenCode LLC</p>
                 <p>Missouri, USA</p>
-                <p>Email: <a href="mailto:info@pandagencode.com" className="text-neon hover:underline">info@pandagencode.com</a></p>
+                <p>Email: <a href="mailto:info@pandacodegen.com" className="text-neon hover:underline">info@pandacodegen.com</a></p>
                 <p className="mt-4 text-sm">
                   <strong>Cookie Preference Center:</strong> Use the cookie settings on our website to manage your preferences at any time.
                 </p>

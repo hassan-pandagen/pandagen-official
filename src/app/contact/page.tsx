@@ -64,7 +64,7 @@ export default function ContactPage() {
                     </div>
                     <div className="flex-1 min-w-0">
                        <div className="text-xs text-gray-500 uppercase tracking-wider font-bold mb-1">Email</div>
-                       <a href="mailto:info@pandagencode.com" className="text-sm font-medium text-white hover:text-neon transition-colors break-all">info@pandagencode.com</a>
+                       <a href="mailto:info@pandacodegen.com" className="text-sm font-medium text-white hover:text-neon transition-colors break-all">info@pandacodegen.com</a>
                     </div>
                  </motion.div>
 

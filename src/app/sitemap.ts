@@ -1,108 +1,43 @@
-import { MetadataRoute } from 'next';
+import { MetadataRoute } from 'next'
+
+type RouteConfig = {
+  path: string
+  priority: number
+  changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://pandagencode.com';
-  const currentDate = new Date().toISOString();
+  const baseUrl = 'https://www.pandacodegen.com' // ✅ Correct Domain
+  const lastModified = new Date()
 
-  // Static routes with their priorities and change frequencies
-  const routes: MetadataRoute.Sitemap = [
-    {
-      url: baseUrl,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/services`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/wordpress-migration`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services/ecommerce`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services/custom-engineering`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/pricing`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/work`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/blog/wordpress-killer`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/shopify-headless`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/elementor-kills-seo`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/privacy`,
-      lastModified: currentDate,
-      changeFrequency: 'yearly' as const,
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/terms`,
-      lastModified: currentDate,
-      changeFrequency: 'yearly' as const,
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/cookies`,
-      lastModified: currentDate,
-      changeFrequency: 'yearly' as const,
-      priority: 0.3,
-    },
-  ];
+  // SEO Strategy: Prioritize Money Pages
+  const routes: RouteConfig[] = [
+    // 1. Core Business Pages (Highest Priority)
+    { path: '', priority: 1.0, changeFrequency: 'weekly' },
+    { path: '/services', priority: 0.9, changeFrequency: 'monthly' },
+    { path: '/pricing', priority: 0.9, changeFrequency: 'monthly' },
+    { path: '/contact', priority: 0.9, changeFrequency: 'monthly' }, // Bumped Contact to 0.9 (Conversion Goal)
 
-  return routes;
+    // 2. Service Pillars (High Priority)
+    { path: '/services/wordpress-migration', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/services/ecommerce', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/services/custom-engineering', priority: 0.8, changeFrequency: 'weekly' },
+
+    // 3. Dynamic Content (Medium Priority - Updates Often)
+    { path: '/work', priority: 0.7, changeFrequency: 'weekly' },
+    { path: '/about', priority: 0.7, changeFrequency: 'monthly' },
+    { path: '/blog', priority: 0.7, changeFrequency: 'weekly' },
+
+    // 4. Boring Stuff (Low Priority)
+    { path: '/privacy', priority: 0.3, changeFrequency: 'yearly' },
+    { path: '/terms', priority: 0.3, changeFrequency: 'yearly' },
+    { path: '/cookies', priority: 0.3, changeFrequency: 'yearly' },
+  ]
+
+  return routes.map((route) => ({
+    url: `${baseUrl}${route.path}`,
+    lastModified,
+    changeFrequency: route.changeFrequency,
+    priority: route.priority,
+  }))
 }

@@ -315,7 +315,7 @@ export default function TermsPage() {
               <div className="mt-4 p-4 bg-white/5 border border-white/10 rounded-lg">
                 <p className="text-white font-semibold">PandaGenCode LLC</p>
                 <p>Missouri, USA</p>
-                <p>Email: <a href="mailto:info@pandagencode.com" className="text-neon hover:underline">info@pandagencode.com</a></p>
+                <p>Email: <a href="mailto:info@pandacodegen.com" className="text-neon hover:underline">info@pandacodegen.com</a></p>
               </div>
             </motion.section>
 

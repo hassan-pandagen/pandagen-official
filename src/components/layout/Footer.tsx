@@ -112,7 +112,7 @@ export default function Footer({ onOpenQuote }: FooterProps) {
                  <a href="https://www.instagram.com/pandacodegen/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 hover:text-neon transition-all text-gray-400">
                     <Instagram className="w-5 h-5" aria-hidden="true" />
                  </a>
-                 <a href="mailto:info@pandagencode.com" aria-label="Email us at info@pandagencode.com" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 hover:text-neon transition-all text-gray-400">
+                 <a href="mailto:info@pandacodegen.com" aria-label="Email us at info@pandacodegen.com" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 hover:text-neon transition-all text-gray-400">
                     <Mail className="w-5 h-5" aria-hidden="true" />
                  </a>
               </div>
@@ -169,7 +169,7 @@ export default function Footer({ onOpenQuote }: FooterProps) {
                     <div className="text-gray-400 font-medium mb-1 flex items-center gap-2">
                        <Mail className="w-4 h-4" /> Email
                     </div>
-                    <Link href="mailto:info@pandagencode.com" className="hover:text-neon transition-colors">info@pandagencode.com</Link>
+                    <Link href="mailto:info@pandacodegen.com" className="hover:text-neon transition-colors">info@pandacodegen.com</Link>
                  </li>
               </ul>
            </div>

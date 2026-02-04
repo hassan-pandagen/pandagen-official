@@ -5,7 +5,7 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
 ![Tailwind](https://img.shields.io/badge/Tailwind-3.0-cyan)
 
-The official production source code for [PandaGenCode.com](https://pandagencode.com).
+The official production source code for [PandaGenCode.com](https://pandacodegen.com).
 
 We believe in **Open Engineering**. Most agencies hide their code because it's messy. We open-source our marketing platform to demonstrate our commitment to:
 - **Zero Bloat:** No CMS plugins, no page builders.
@@ -65,7 +65,7 @@ src/
 
 ```bash
 # Clone the repository
-git clone https://github.com/pandagencode/pandagen-platform.git
+git clone https://github.com/pandacodegen/pandagen-platform.git
 cd pandagen-platform
 
 # Install dependencies
@@ -124,7 +124,7 @@ We help founders and enterprises migrate from legacy monoliths (WordPress/Shopif
 
 **Ready to build?**
 - Book a Discovery Call
-- Email us at [info@pandagencode.com](mailto:info@pandagencode.com)
+- Email us at [info@pandacodegen.com](mailto:info@pandacodegen.com)
 
 ## 📄 License
 
@@ -132,10 +132,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🔗 Links
 
-- Website: [PandaGenCode.com](https://pandagencode.com)
-- Services: [Our Services](https://pandagencode.com/services)
-- Case Studies: [Our Work](https://pandagencode.com/work)
-- Blog: [Engineering Insights](https://pandagencode.com/blog)
+- Website: [PandaGenCode.com](https://pandacodegen.com)
+- Services: [Our Services](https://pandacodegen.com/services)
+- Case Studies: [Our Work](https://pandacodegen.com/work)
+- Blog: [Engineering Insights](https://pandacodegen.com/blog)
 
 ---
 

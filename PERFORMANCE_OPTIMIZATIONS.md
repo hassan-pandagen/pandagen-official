@@ -31,7 +31,7 @@ This document outlines all the performance and SEO optimizations implemented for
 - Ready for future disallow rules if needed
 
 ### Enhanced Metadata (`src/app/layout.tsx`)
-- **metadataBase**: Set to https://pandagencode.com for proper URL resolution
+- **metadataBase**: Set to https://pandacodegen.com for proper URL resolution
 - **Canonical URLs**: Prevents duplicate content issues
 - **Open Graph tags**: Optimized for social media sharing
   - Title, description, images (1200x630)
@@ -173,7 +173,7 @@ npm start
 npm run build -- --analyze
 
 # Test with Lighthouse
-lighthouse https://pandagencode.com --view
+lighthouse https://pandacodegen.com --view
 ```
 
 ---

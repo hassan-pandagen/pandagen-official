@@ -4,11 +4,16 @@ import "./globals.css";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import CalEmbed from "@/components/ui/CalEmbed";
 import AuroraBackground from "@/components/layout/AuroraBackground";
+import PreconnectLinks from "@/components/PreconnectLinks";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  display: 'swap',
+  preload: true,
+});
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://pandagencode.com'),
+  metadataBase: new URL('https://pandacodegen.com'),
   title: {
     default: "PandaGen | Enterprise Next.js & Shopify Architecture",
     template: "%s | PandaGen",
@@ -54,7 +59,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://pandagencode.com",
+    url: "https://pandacodegen.com",
     siteName: "PandaGen",
     title: "PandaGen | Enterprise Next.js & Shopify Architecture",
     description: "We migrate WordPress & Shopify sites to custom Next.js architectures. 0.1s load times. Zero bloat.",
@@ -72,7 +77,7 @@ export const metadata: Metadata = {
     title: "PandaGen | Enterprise Next.js & Shopify Architecture",
     description: "We migrate WordPress & Shopify sites to custom Next.js architectures. 0.1s load times. Zero bloat.",
     images: ["/og-image.jpg"],
-    creator: "@pandagencode",
+    creator: "@pandacodegen",
   },
   verification: {
     google: "google-site-verification-code",
@@ -87,10 +92,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased bg-[#050505] text-white selection:bg-neon selection:text-black`} suppressHydrationWarning>
-        
+
+        {/* Preconnect to external resources for better performance */}
+        <PreconnectLinks />
+
         {/* Aurora Background - Living, Animated Gradient */}
         <AuroraBackground />
-        
+
         <CalEmbed />
         <SmoothScroll>
           {children}

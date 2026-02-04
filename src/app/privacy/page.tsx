@@ -133,7 +133,7 @@ export default function PrivacyPage() {
                 <li><strong>Data Portability:</strong> You can request your data in a portable format.</li>
               </ul>
               <p className="mt-4">
-                To exercise these rights, contact us at <a href="mailto:info@pandagencode.com" className="text-neon hover:underline">info@pandagencode.com</a>.
+                To exercise these rights, contact us at <a href="mailto:info@pandacodegen.com" className="text-neon hover:underline">info@pandacodegen.com</a>.
               </p>
             </motion.section>
 
@@ -237,7 +237,7 @@ export default function PrivacyPage() {
               <div className="mt-4 p-4 bg-white/5 border border-white/10 rounded-lg">
                 <p className="text-white font-semibold">PandaGenCode LLC</p>
                 <p>Missouri, USA</p>
-                <p>Email: <a href="mailto:info@pandagencode.com" className="text-neon hover:underline">info@pandagencode.com</a></p>
+                <p>Email: <a href="mailto:info@pandacodegen.com" className="text-neon hover:underline">info@pandacodegen.com</a></p>
                 <p>Response Time: Within 48 hours during business days</p>
               </div>
             </motion.section>
