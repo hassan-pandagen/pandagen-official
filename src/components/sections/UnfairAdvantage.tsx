@@ -6,7 +6,7 @@ import { Zap, ShieldCheck, Database, ArrowRight } from "lucide-react";
 const pillars = [
   {
     title: "Blazing Speed",
-    stat: "0.1s",
+    stat: "<1s",
     statLabel: "Load Time",
     description: "Google ranks fast sites higher. We strip away the bloat and serve raw HTML at the edge. 90+ Lighthouse scores are our baseline, not a goal.",
     icon: Zap,

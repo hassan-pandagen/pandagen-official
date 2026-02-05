@@ -25,7 +25,7 @@ const SpeedIllustration = () => (
   <div className="w-full h-full bg-green-950/20 relative overflow-hidden flex items-center justify-center">
     <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(34,197,94,0.2),transparent_70%)]" />
     <div className="z-10 text-center">
-        <div className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-green-300 to-green-600 font-mono">0.1s</div>
+        <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-green-300 to-green-600 font-mono">0.8-1.2s</div>
         <div className="text-xs text-green-400 uppercase tracking-widest mt-2">Load Time</div>
     </div>
   </div>
@@ -43,6 +43,80 @@ const CodeIllustration = () => (
   </div>
 );
 
+const PluginsIllustration = () => (
+  <div className="w-full h-full bg-gradient-to-br from-red-950/30 to-orange-950/20 relative overflow-hidden flex items-center justify-center">
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(220,38,38,0.15),transparent_60%)]" />
+
+    {/* Floating Plugin Icons (Puzzle Pieces) */}
+    {[...Array(8)].map((_, i) => (
+      <motion.div
+        key={i}
+        animate={{
+          y: [0, -20, 0],
+          rotate: [0, 10, -10, 0],
+          opacity: [0.3, 0.6, 0.3]
+        }}
+        transition={{
+          duration: 3 + i * 0.5,
+          repeat: Infinity,
+          delay: i * 0.3
+        }}
+        className="absolute text-2xl"
+        style={{
+          left: `${15 + (i % 4) * 20}%`,
+          top: `${20 + Math.floor(i / 4) * 40}%`
+        }}
+      >
+        <div className="bg-gray-800/50 border border-orange-500/40 rounded-lg p-2 backdrop-blur-sm">
+          <div className="w-6 h-6 bg-orange-500/30 rounded" />
+        </div>
+      </motion.div>
+    ))}
+
+    {/* Floating Money Symbols */}
+    {[...Array(6)].map((_, i) => (
+      <motion.div
+        key={`money-${i}`}
+        animate={{ y: [-30, 180] }}
+        transition={{
+          duration: 2.5 + i * 0.3,
+          repeat: Infinity,
+          delay: i * 0.4,
+          ease: "linear"
+        }}
+        className="absolute text-2xl font-bold text-red-400/50"
+        style={{ left: `${20 + i * 12}%`, top: '-30px' }}
+      >
+        $
+      </motion.div>
+    ))}
+
+    {/* Center Bill/Invoice */}
+    <div className="z-10 relative">
+      <div className="bg-red-900/30 border-2 border-red-500/50 rounded-xl p-6 backdrop-blur-md shadow-2xl transform rotate-3">
+        <div className="space-y-2 font-mono text-xs">
+          <div className="flex justify-between text-red-300 border-b border-red-500/30 pb-2">
+            <span>30+ Plugins</span>
+            <span className="font-bold">INVOICE</span>
+          </div>
+          <div className="flex justify-between text-gray-400">
+            <span>Speed Loss</span>
+            <span className="text-red-400">-3.5s</span>
+          </div>
+          <div className="flex justify-between text-gray-400">
+            <span>HTTP Requests</span>
+            <span className="text-red-400">200+</span>
+          </div>
+          <div className="flex justify-between text-gray-400 border-t border-red-500/30 pt-2">
+            <span>Lost Revenue</span>
+            <span className="text-red-500 font-bold text-sm">$75K/yr</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 // Map illustration types to components
 const getIllustration = (type: IllustrationType) => {
   const illustrations = {
@@ -50,15 +124,22 @@ const getIllustration = (type: IllustrationType) => {
     speed: <SpeedIllustration />,
     saas: <SaaSIllustration />,
     code: <CodeIllustration />,
+    plugins: <PluginsIllustration />,
   };
   return illustrations[type];
 };
 
-// Combine blog data with illustrations
-const articles = blogPosts.map(post => ({
-  ...post,
-  illustration: getIllustration(post.illustrationType),
-}));
+// Combine blog data with illustrations and sort by newest first
+const articles = blogPosts
+  .map(post => ({
+    ...post,
+    illustration: getIllustration(post.illustrationType),
+  }))
+  .sort((a, b) => {
+    const dateA = new Date(a.lastModified || a.date);
+    const dateB = new Date(b.lastModified || b.date);
+    return dateB.getTime() - dateA.getTime(); // Newest first
+  });
 
 export default function BlogPage() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -77,7 +158,11 @@ export default function BlogPage() {
                <div className="relative rounded-[2.5rem] overflow-hidden border border-white/10 bg-[#0A0A0A] grid md:grid-cols-2">
                   <div className="h-64 md:h-auto border-r border-white/10">{article.illustration}</div>
                   <div className="p-12 flex flex-col justify-center">
-                     <span className="text-red-400 text-xs font-bold uppercase mb-4">{article.category}</span>
+                     <div className="flex items-center gap-4 mb-4">
+                        <span className="text-red-400 text-xs font-bold uppercase">{article.category}</span>
+                        <span className="text-gray-500 text-xs">•</span>
+                        <span className="text-gray-500 text-xs">{article.date}</span>
+                     </div>
                      <h2 className="text-4xl font-bold text-white mb-6">{article.title}</h2>
                      <p className="text-gray-400 mb-8">{article.excerpt}</p>
                      <div className="flex items-center gap-2 text-white font-bold">Read Analysis <ArrowRight className="w-4 h-4 text-red-400" /></div>
@@ -93,7 +178,11 @@ export default function BlogPage() {
                <Link key={article.id} href={`/blog/${article.id}`} className="group bg-[#0A0A0A] border border-white/10 rounded-3xl overflow-hidden hover:border-white/20 transition-all">
                   <div className="h-56 w-full border-b border-white/5">{article.illustration}</div>
                   <div className="p-8">
-                     <span className="text-neon text-xs font-bold uppercase">{article.category}</span>
+                     <div className="flex items-center gap-3 mb-3">
+                        <span className="text-neon text-xs font-bold uppercase">{article.category}</span>
+                        <span className="text-gray-600 text-xs">•</span>
+                        <span className="text-gray-500 text-xs">{article.date}</span>
+                     </div>
                      <h3 className="text-xl font-bold text-white my-4">{article.title}</h3>
                      <div className="flex justify-between items-center mt-6 pt-6 border-t border-white/5 text-xs text-gray-500">
                         <span>By {article.author}</span>

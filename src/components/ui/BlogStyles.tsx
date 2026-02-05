@@ -53,7 +53,7 @@ export function ComparisonTable() {
       </div>
       <TableRow label="Hosting Cost" bad="$150/mo (Kinsta)" good="$0 (Vercel)" />
       <TableRow label="Security" bad="Plugin Risks" good="Bank-Grade Static" />
-      <TableRow label="Load Time" bad="1.5s - 4.0s" good="0.1s Instant" />
+      <TableRow label="Load Time" bad="1.5s - 4.0s" good="0.8-1.2s" />
       <div className="grid grid-cols-3 p-5 bg-neon/10 text-white font-bold border-t border-white/10">
         <div>Total / Year</div>
         <div className="text-red-400">-$3,000+</div>

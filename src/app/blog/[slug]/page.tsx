@@ -3,6 +3,35 @@ import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, ComparisonTable } from "@/components/ui/BlogStyles";
+import type { Metadata } from "next";
+
+// --- SEO METADATA ---
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+    const { slug } = await params;
+    const post = blogPosts[slug];
+    if (!post) return { title: "Post Not Found" };
+
+    return {
+        title: post.title,
+        description: post.excerpt,
+        openGraph: {
+            title: post.title,
+            description: post.excerpt,
+            type: "article",
+            publishedTime: post.date,
+            authors: [post.author],
+            url: `https://www.pandacodegen.com/blog/${slug}`,
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: post.title,
+            description: post.excerpt,
+        },
+        alternates: {
+            canonical: `/blog/${slug}`,
+        },
+    };
+}
 
 // --- BLOG CONTENT DATA ---
 const blogPosts: Record<
@@ -77,10 +106,10 @@ const blogPosts: Record<
         ),
     },
     "shopify-headless": {
-        title: "Shopify Plus + Next.js: The 0.1s Load Time Secret",
-        subtitle: "We bypassed Liquid limitations to build a storefront that loads instantly. Here is the exact tech stack we used.",
+        title: "Shopify Plus + Next.js: Sub-Second Load Times",
+        subtitle: "We bypassed Liquid limitations to build a storefront that loads in under 1 second. Here is the exact tech stack we used.",
         excerpt:
-            "We bypassed Liquid limitations to build a storefront that loads instantly. Here is the exact tech stack we used.",
+            "We bypassed Liquid limitations to build a storefront that loads in under 1 second. Here is the exact tech stack we used.",
         author: "Imran",
         role: "Lead Architect",
         date: "Jan 10, 2026",
@@ -90,7 +119,7 @@ const blogPosts: Record<
         serviceLink: "/services",
         executiveSummary: [
             "Shopify Liquid limits custom logic. Headless Next.js removes all constraints.",
-            "Speed increase of 0.1s = 8% higher conversion rate = $80,000 annual gain.",
+            "Achieving sub-second load times = 8% higher conversion rate = $80,000 annual gain.",
             "Own your frontend, keep Shopify backend. Best of both worlds."
         ],
         content: (
@@ -141,7 +170,7 @@ const blogPosts: Record<
 
                 <BlogHeader>The Result</BlogHeader>
                 <BlogText>
-                    Your site loads in 0.1s. The user clicks "Product," and it appears before their finger leaves the mouse. Conversion rates jump 8-12%.
+                    Your site loads in under 1 second. Pages feel instant. The user clicks "Product," and it appears immediately. Conversion rates jump 8-12%.
                 </BlogText>
 
                 <BlogHeader>The ROI Math</BlogHeader>
@@ -160,6 +189,137 @@ const blogPosts: Record<
                 <BlogQuote>
                     Your migration pays for itself in month one. Then it's just free money.
                 </BlogQuote>
+            </>
+        ),
+    },
+    "wordpress-plugins-destroy-speed": {
+        title: "WordPress Plugins Are Destroying Your Site Speed (And Revenue)",
+        subtitle: "30+ plugins means 200+ HTTP requests on every page load. Your visitors leave before they see your homepage.",
+        excerpt:
+            "30+ plugins = 200+ HTTP requests. Here's the math your developer won't show you.",
+        author: "Hassan",
+        role: "Lead Engineer",
+        date: "Feb 5, 2026",
+        readTime: "10 min read",
+        category: "Performance",
+        serviceName: "WordPress Migration",
+        serviceLink: "/services/wordpress-migration",
+        executiveSummary: [
+            "Every plugin adds 2-15 HTTP requests. 30 plugins = 200+ requests per page load.",
+            "Plugin bloat costs you: average WordPress site with 30+ plugins scores 35/100 on PageSpeed.",
+            "The Solution: Custom Next.js code replaces 30 plugins with zero dependencies and sub-second load times."
+        ],
+        content: (
+            <>
+                <BlogText>
+                    Your developer told you plugins are the magic of WordPress. Install one for SEO. Another for caching. Another for forms. Another for security. Another for backups. <BlogHighlight>Before you know it, you have 30+ plugins running on every single page load.</BlogHighlight>
+                </BlogText>
+                <BlogText>
+                    Each plugin loads its own CSS files, JavaScript files, and makes its own database queries. Your visitors don&apos;t see this. They just see a page that takes 4 seconds to load. And then they leave.
+                </BlogText>
+
+                <BlogHeader>What Actually Happens When a Plugin Loads</BlogHeader>
+                <BlogText>
+                    When someone visits your WordPress site, here is what happens behind the scenes for <strong>every single plugin</strong>:
+                </BlogText>
+                <BlogList items={[
+                    "1-3 CSS files loaded (render-blocking — browser can't show anything until these download)",
+                    "1-5 JavaScript files loaded (each one blocks interactivity)",
+                    "1-10 database queries fired (each one adds 10-50ms of server time)",
+                    "External API calls to plugin servers (analytics, fonts, tracking pixels)"
+                ]} />
+                <BlogText>
+                    Multiply that by 30 plugins. You are looking at <BlogHighlight>200+ HTTP requests</BlogHighlight>, <BlogHighlight>60+ database queries</BlogHighlight>, and <BlogHighlight>2-4MB of JavaScript</BlogHighlight> before your visitor sees a single word.
+                </BlogText>
+
+                <BlogHeader>The Top 10 Worst Plugin Offenders</BlogHeader>
+                <BlogText>
+                    We audited hundreds of WordPress sites. These plugins consistently destroy PageSpeed scores:
+                </BlogText>
+                <BlogList items={[
+                    "Elementor Pro — Adds 1.2MB of CSS/JS even on pages that don't use it. 800+ DOM nodes per section.",
+                    "WooCommerce — Loads cart fragments JS on EVERY page, even blog posts. Adds 300ms+ to load time.",
+                    "Yoast SEO Premium — 200KB of JavaScript for an admin toolbar visitors never see.",
+                    "Slider Revolution — 500KB+ of JavaScript for one hero slider. Blocks rendering completely.",
+                    "Contact Form 7 / WPForms — Loads form CSS and JS on every page, not just the contact page.",
+                    "Jetpack — The bloatware king. Loads 15+ modules you don't use. Adds 400KB+ to every page.",
+                    "WPML (Translation) — Adds 5-8 database queries per page for language switching logic.",
+                    "MonsterInsights — Loads Google Analytics through a PHP proxy, adding 200ms vs a direct script tag.",
+                    "WP Rocket — Ironic: the caching plugin meant to speed you up adds its own overhead.",
+                    "Social sharing plugins — Each button loads external scripts from Facebook, Twitter, LinkedIn separately."
+                ]} />
+
+                <BlogQuote>
+                    The average WordPress site with 30+ plugins scores 35/100 on Google PageSpeed Mobile. Google considers your site &quot;Poor&quot; and ranks it accordingly.
+                </BlogQuote>
+
+                <BlogHeader>How Plugin Bloat Directly Costs You Money</BlogHeader>
+                <BlogText>
+                    This is not theoretical. Google and Deloitte have published the data:
+                </BlogText>
+                <BlogList items={[
+                    "53% of mobile visitors leave if a page takes longer than 3 seconds to load (Google)",
+                    "Every 0.1 second improvement = 8% increase in conversions (Deloitte)",
+                    "Sites scoring below 50 on Core Web Vitals see 20-30% less organic traffic (Search Engine Journal)",
+                    "Amazon calculated that 100ms of latency costs them 1% in revenue — $4.8 billion/year"
+                ]} />
+                <BlogText>
+                    If your site makes $500,000/year and loads in 4 seconds instead of 1, you are losing roughly <BlogHighlight>$75,000-$150,000 in revenue annually</BlogHighlight> from visitors who bounced before the page loaded.
+                </BlogText>
+
+                <BlogHeader>The Plugin Dependency Nightmare</BlogHeader>
+                <BlogText>
+                    Speed is only half the problem. The other half is <strong>stability</strong>. With 30+ plugins, you have 30+ developers who don&apos;t talk to each other, all writing code that runs on your site simultaneously.
+                </BlogText>
+                <BlogList items={[
+                    "Plugin A updates → breaks Plugin B's JavaScript → your checkout stops working Saturday night",
+                    "WordPress core updates → 5 plugins become incompatible → white screen of death",
+                    "A plugin developer abandons their project → unpatched security vulnerability on your site",
+                    "Two plugins both load jQuery → now you have two copies, doubling the JavaScript payload"
+                ]} />
+                <BlogText>
+                    This is why WordPress developers spend 40% of their time on maintenance instead of building features. You are paying your developer to babysit plugins instead of growing your business.
+                </BlogText>
+
+                <BlogHeader>The Alternative: Zero Plugins, Zero Bloat</BlogHeader>
+                <BlogText>
+                    Everything those 30 plugins do can be replaced with clean, custom code:
+                </BlogText>
+                <BlogList items={[
+                    "SEO Plugin (Yoast) → Next.js Metadata API — built into the framework, zero JS overhead",
+                    "Page Builder (Elementor) → React Components — 95% less DOM nodes, instant rendering",
+                    "Caching Plugin (WP Rocket) → Static Generation + CDN — pages pre-built, served in 50ms globally",
+                    "Form Plugin (WPForms) → Server Action + Resend — one API call, no client-side JavaScript",
+                    "Analytics Plugin → Vercel Analytics — 1KB script vs 200KB plugin overhead",
+                    "Security Plugin → No attack surface — static sites have no database to hack"
+                ]} />
+
+                <ComparisonTable />
+
+                <BlogHeader>Before and After: Real Migration Numbers</BlogHeader>
+                <BlogText>
+                    When we migrate a client from WordPress with 30+ plugins to custom Next.js:
+                </BlogText>
+                <BlogList items={[
+                    "PageSpeed Mobile: 35/100 → 98/100",
+                    "Load Time: 3.8 seconds → 0.9 seconds",
+                    "HTTP Requests: 200+ → 12",
+                    "JavaScript Payload: 2.4MB → 180KB",
+                    "Monthly Plugin Costs: $150-300/mo → $0",
+                    "Monthly Maintenance Hours: 8 hours → 0 hours"
+                ]} />
+
+                <BlogQuote>
+                    Your website should be an asset that makes money, not a liability that costs money. Every plugin is a tax on your revenue.
+                </BlogQuote>
+
+                <BlogHeader>What You Should Do Right Now</BlogHeader>
+                <BlogText>
+                    Run your site through Google PageSpeed Insights. If your mobile score is below 70, plugins are the reason. If you have more than 15 active plugins, you are guaranteed to be losing traffic and revenue to faster competitors.
+                </BlogText>
+                <BlogText>
+                    We offer a free speed audit where we show you exactly which plugins are costing you the most — and how much revenue you are leaving on the table. <BlogHighlight>No sales pitch. Just data.</BlogHighlight>
+                </BlogText>
             </>
         ),
     },
@@ -227,7 +387,7 @@ const blogPosts: Record<
                     "Code Cleanliness: 100% (semantic HTML, zero bloat)",
                     "Accessibility: 100% (WCAG AA compliant)",
                     "Google Rank: #1 (for your target keywords)",
-                    "Load Time: 0.1s (Lighthouse 99/100)"
+                    "Load Time: Sub-second (Lighthouse 99/100)"
                 ]} />
 
                 <BlogHeader>The Choice Is Yours</BlogHeader>

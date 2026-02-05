@@ -50,7 +50,7 @@ export default function Hero() {
                 transition={{ delay: 0.2 }}
                 className="text-xl text-gray-400 mb-10 leading-relaxed max-w-lg"
             >
-                Stop paying for bloated templates. We engineer <span className="text-white font-bold">bespoke Next.js architectures</span> that rank higher, load instantly (0.1s), and convert cold traffic into revenue.
+                Stop paying for bloated templates. We engineer <span className="text-white font-bold">bespoke Next.js architectures</span> that rank higher, load in under 1 second, and convert cold traffic into revenue.
             </motion.p>
 
             <motion.div 

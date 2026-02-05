@@ -35,7 +35,7 @@ export default function PricingPage() {
                   "1 Long-Form 3D Landing Page",
                   "Next.js + Framer Motion Animations",
                   "Copywriting & VSL Integration",
-                  "0.1s Load Speed Guarantee",
+                  "Sub-Second Load Speed Guarantee",
                   "1 Week Delivery"
                ]}
                cta="Start Build"
@@ -153,7 +153,7 @@ export default function PricingPage() {
                <div className="text-neon">PandaGen</div>
             </div>
             <TableRow label="Technology" bad="WordPress / Elementor" good="Next.js (React)" />
-            <TableRow label="Load Time" bad="2.0s - 4.0s" good="0.1s - 0.5s" />
+            <TableRow label="Load Time" bad="2.0s - 4.0s" good="0.8s - 1.2s" />
             <TableRow label="Security" bad="Plugin Vulnerabilities" good="Bank-Grade (Static)" />
             <TableRow label="Ownership" bad="Locked to Theme" good="100% Code Ownership" />
             <TableRow label="Monthly Cost" bad="$150+ (Maintenance)" good="$0 (Deploy & Forget)" />

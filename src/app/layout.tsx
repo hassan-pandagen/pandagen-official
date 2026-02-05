@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     default: "PandaGen | Enterprise Next.js & Shopify Architecture",
     template: "%s | PandaGen",
   },
-  description: "We migrate WordPress & Shopify sites to custom Next.js architectures. 0.1s load times. Zero bloat. Enterprise-grade security and SEO.",
+  description: "We migrate WordPress & Shopify sites to custom Next.js architectures. Sub-second load times. Zero bloat. Enterprise-grade security and SEO.",
   alternates: {
     canonical: '/',
   },
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     url: "https://pandacodegen.com",
     siteName: "PandaGen",
     title: "PandaGen | Enterprise Next.js & Shopify Architecture",
-    description: "We migrate WordPress & Shopify sites to custom Next.js architectures. 0.1s load times. Zero bloat.",
+    description: "We migrate WordPress & Shopify sites to custom Next.js architectures. Sub-second load times. Zero bloat.",
     images: [
       {
         url: "/og-image.jpg",
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "PandaGen | Enterprise Next.js & Shopify Architecture",
-    description: "We migrate WordPress & Shopify sites to custom Next.js architectures. 0.1s load times. Zero bloat.",
+    description: "We migrate WordPress & Shopify sites to custom Next.js architectures. Sub-second load times. Zero bloat.",
     images: ["/og-image.jpg"],
     creator: "@pandacodegen",
   },

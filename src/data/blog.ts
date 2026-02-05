@@ -1,5 +1,5 @@
 // Centralized blog data - Add new posts here and they'll automatically appear in sitemap
-export type IllustrationType = 'wordpress' | 'speed' | 'code' | 'saas';
+export type IllustrationType = 'wordpress' | 'speed' | 'code' | 'saas' | 'plugins';
 
 export interface BlogPost {
   id: string;
@@ -25,14 +25,14 @@ export const blogPosts: BlogPost[] = [
     date: "Jan 15",
     author: "Hassan",
     role: "Lead Eng",
-    featured: true,
+    featured: false,
     illustrationType: 'wordpress',
     lastModified: "2026-01-15",
   },
   {
     id: "shopify-headless",
-    title: "Shopify Plus + Next.js: The 0.1s Load Time Secret",
-    excerpt: "We bypassed Liquid limitations to build a storefront that loads instantly.",
+    title: "Shopify Plus + Next.js: Sub-Second Load Times",
+    excerpt: "We bypassed Liquid limitations to build a storefront that loads in under 1 second.",
     category: "E-Commerce",
     readTime: "12 min",
     date: "Jan 10",
@@ -54,5 +54,18 @@ export const blogPosts: BlogPost[] = [
     featured: false,
     illustrationType: 'code',
     lastModified: "2025-12-28",
+  },
+  {
+    id: "wordpress-plugins-destroy-speed",
+    title: "WordPress Plugins Are Destroying Your Site Speed (And Revenue)",
+    excerpt: "30+ plugins = 200+ HTTP requests. Here's the math your developer won't show you.",
+    category: "Performance",
+    readTime: "10 min",
+    date: "Feb 5",
+    author: "Hassan",
+    role: "Lead Eng",
+    featured: true,
+    illustrationType: 'plugins',
+    lastModified: "2026-02-05",
   },
 ];

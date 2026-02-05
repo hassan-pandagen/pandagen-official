@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { blogPosts } from '@/data/blog'
 
 type RouteConfig = {
   path: string
@@ -34,10 +35,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/cookies', priority: 0.3, changeFrequency: 'yearly' },
   ]
 
-  return routes.map((route) => ({
+  // Static page entries
+  const staticEntries = routes.map((route) => ({
     url: `${baseUrl}${route.path}`,
     lastModified,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
   }))
+
+  // Blog post entries — auto-generated from blog.ts
+  const blogEntries = blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.id}`,
+    lastModified: post.lastModified ? new Date(post.lastModified) : lastModified,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+  return [...staticEntries, ...blogEntries]
 }
