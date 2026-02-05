@@ -38,8 +38,20 @@ const SaaSIllustration = () => (
 );
 
 const CodeIllustration = () => (
-  <div className="w-full h-full bg-orange-950/20 relative overflow-hidden p-8 font-mono text-xs text-orange-300/50 flex flex-col justify-center">
-     <div>{"<LegacyCode>"}</div><div className="pl-4 text-red-400/60">{"<Bloat />"}</div><div>{"</LegacyCode>"}</div>
+  <div className="w-full h-full bg-orange-950/20 relative overflow-hidden p-6 font-mono text-[10px] leading-relaxed text-orange-300/40 flex flex-col justify-center gap-0.5">
+     <div className="text-gray-500">{"<!-- 15,000 lines of spaghetti -->"}</div>
+     <div className="text-orange-400/60">{"<div class=\"wrapper\">"}</div>
+     <div className="pl-3 text-orange-400/50">{"<div class=\"container\">"}</div>
+     <div className="pl-6 text-orange-400/40">{"<div class=\"row\">"}</div>
+     <div className="pl-9 text-orange-400/30">{"<div class=\"col\">"}</div>
+     <div className="pl-12 text-red-400/60">{"<LegacyPlugin />"}</div>
+     <div className="pl-12 text-red-400/60">{"<Bloat />"}</div>
+     <div className="pl-12 text-red-400/60">{"<TechDebt />"}</div>
+     <div className="pl-9 text-orange-400/30">{"</div>"}</div>
+     <div className="pl-6 text-orange-400/40">{"</div>"}</div>
+     <div className="pl-3 text-orange-400/50">{"</div>"}</div>
+     <div className="text-orange-400/60">{"</div>"}</div>
+     <div className="text-gray-500 mt-2">{"// 300+ dependencies 💀"}</div>
   </div>
 );
 
@@ -145,9 +157,6 @@ export default function BlogPage() {
   const [activeCategory, setActiveCategory] = useState("All");
   return (
     <main className="bg-transparent min-h-screen selection:bg-neon selection:text-black overflow-x-hidden relative">
-      {/* GLOBAL GRID BACKGROUND */}
-      <div className="fixed inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px] pointer-events-none z-0" />
-      
       <div className="relative z-10">
         <Header />
       <section className="pt-40 pb-16 px-6 text-center"><h1 className="text-5xl md:text-7xl font-bold text-white">Insights from the <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon to-purple-500">Engine Room.</span></h1></section>
@@ -155,8 +164,8 @@ export default function BlogPage() {
       <section className="container mx-auto px-6 py-12">
          {articles.filter(a => a.featured).map((article) => (
             <Link key={article.id} href={`/blog/${article.id}`} className="group block relative">
-               <div className="relative rounded-[2.5rem] overflow-hidden border border-white/10 bg-[#0A0A0A] grid md:grid-cols-2">
-                  <div className="h-64 md:h-auto border-r border-white/10">{article.illustration}</div>
+               <div className="relative rounded-[2.5rem] overflow-hidden border-2 border-white/20 bg-[#0A0A0A] grid md:grid-cols-2 hover:border-neon/40 transition-all duration-300 shadow-[0_0_30px_rgba(0,0,0,0.5)] hover:shadow-[0_0_50px_rgba(34,211,238,0.15)]">
+                  <div className="h-64 md:h-auto border-r-2 border-white/20">{article.illustration}</div>
                   <div className="p-12 flex flex-col justify-center">
                      <div className="flex items-center gap-4 mb-4">
                         <span className="text-red-400 text-xs font-bold uppercase">{article.category}</span>
@@ -175,8 +184,8 @@ export default function BlogPage() {
       <section className="container mx-auto px-6 pb-32">
          <div className="grid md:grid-cols-3 gap-8">
             {articles.filter(a => !a.featured).map((article) => (
-               <Link key={article.id} href={`/blog/${article.id}`} className="group bg-[#0A0A0A] border border-white/10 rounded-3xl overflow-hidden hover:border-white/20 transition-all">
-                  <div className="h-56 w-full border-b border-white/5">{article.illustration}</div>
+               <Link key={article.id} href={`/blog/${article.id}`} className="group bg-[#0A0A0A] border-2 border-white/20 rounded-3xl overflow-hidden hover:border-neon/40 transition-all duration-300 shadow-[0_0_20px_rgba(0,0,0,0.3)] hover:shadow-[0_0_40px_rgba(34,211,238,0.1)] hover:scale-[1.02]">
+                  <div className="h-56 w-full border-b-2 border-white/20">{article.illustration}</div>
                   <div className="p-8">
                      <div className="flex items-center gap-3 mb-3">
                         <span className="text-neon text-xs font-bold uppercase">{article.category}</span>

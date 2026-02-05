@@ -463,14 +463,6 @@ export default async function BlogPost(props: PageProps) {
 
     return (
          <main className="bg-transparent min-h-screen selection:bg-neon selection:text-black overflow-x-hidden relative">
-             {/* 1. BRIGHTER AMBIENCE (No more "Cave" feel) */}
-             <div className="fixed inset-0 z-0 pointer-events-none">
-                 {/* Top Center Spotlight - Lights up the reading area */}
-                 <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[80%] h-[800px] bg-blue-900/20 blur-[150px] rounded-full opacity-60" />
-                 {/* Subtle Grid */}
-                 <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:60px_60px] opacity-20" /> 
-             </div>
-
             {/* Scroll Progress Bar */}
             <div className="fixed top-0 left-0 right-0 h-1 z-50 bg-white/5">
                 <div className="h-full bg-gradient-to-r from-neon to-blue-600 w-[35%] shadow-[0_0_10px_#22d3ee]" />

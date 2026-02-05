@@ -80,7 +80,7 @@ export default function ContactPage() {
                     </div>
                     <div className="flex-1 min-w-0">
                        <div className="text-xs text-gray-500 uppercase tracking-wider font-bold mb-1">Call</div>
-                       <a href="tel:+15551234567" className="text-sm font-medium text-white hover:text-neon transition-colors">+1 (555) 123-4567</a>
+                       <a href="tel:+13022504340" className="text-sm font-medium text-white hover:text-neon transition-colors">+1 (302) 250-4340</a>
                     </div>
                  </motion.div>
                  
