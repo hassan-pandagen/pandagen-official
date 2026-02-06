@@ -47,7 +47,7 @@ export default function PerformanceStats() {
                     <div className="w-3 h-3 rounded-full bg-yellow-500/20" />
                     <div className="w-3 h-3 rounded-full bg-green-500/20" />
                 </div>
-                <div className="ml-4 text-xs font-mono text-gray-500">pandagen_audit_log.json</div>
+                <div className="ml-4 text-xs font-mono text-gray-400">pandagen_audit_log.json</div>
             </div>
 
             {/* Grid Content */}
@@ -95,7 +95,7 @@ export default function PerformanceStats() {
             </div>
 
             {/* Bottom CLI */}
-            <div className="bg-black/50 p-4 border-t border-white/10 font-mono text-xs text-gray-500 flex justify-between items-center">
+            <div className="bg-black/50 p-4 border-t border-white/10 font-mono text-xs text-gray-400 flex justify-between items-center">
                 <span>Last Scan: Just now</span>
                 <a
                     href="https://pagespeed.web.dev/analysis/https-www.pandacodegen.com"
@@ -128,8 +128,8 @@ function StatBox({ label, value, sub, icon: Icon, color, chart, textResult }: an
             </div>
             
             <div className="text-4xl font-bold text-white mb-1">{value}</div>
-            <div className="text-xs text-gray-500 uppercase tracking-wider mb-4">{label}</div>
-            <div className="text-[10px] text-gray-600">{sub}</div>
+            <div className="text-xs text-gray-400 uppercase tracking-wider mb-4">{label}</div>
+            <div className="text-[10px] text-gray-500">{sub}</div>
 
             {/* Mini Chart Decoration */}
             {chart && (

@@ -191,7 +191,7 @@ export default function Footer({ onOpenQuote }: FooterProps) {
 
         <div className="flex flex-col md:flex-row justify-between items-center text-xs text-gray-400 border-t border-white/5 pt-8 gap-4">
            <p>© 2026 PandaGen Code LLC. All rights reserved.</p>
-           <p className="text-gray-500">Built with Next.js • Engineered for Scale</p>
+           <p className="text-gray-400">Built with Next.js • Engineered for Scale</p>
         </div>
         </div>
 

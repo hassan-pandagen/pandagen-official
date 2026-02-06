@@ -139,12 +139,12 @@ export default function RealityCheck({ onOpenQuote }: RealityCheckProps) {
                        
                       <div className="flex justify-between items-end mb-6 border-b border-white/10 pb-4 relative z-10">
                          <h3 className="text-xl font-bold text-white">The Comparison</h3>
-                         <span className="text-xs text-gray-500">vs PandaGen</span>
+                         <span className="text-xs text-gray-400">vs PandaGen</span>
                       </div>
 
                       <div className="space-y-2 relative z-10">
                         {/* Headers */}
-                        <div className="grid grid-cols-3 gap-4 pb-2 text-xs text-gray-500 uppercase tracking-wider font-bold">
+                        <div className="grid grid-cols-3 gap-4 pb-2 text-xs text-gray-400 uppercase tracking-wider font-bold">
                             <div>Metric</div>
                             <div className="text-center text-red-400">Them</div>
                             <div className="text-center text-neon">Us</div>
@@ -194,7 +194,7 @@ export default function RealityCheck({ onOpenQuote }: RealityCheckProps) {
                
                {/* TECH STACK STRIP */}
                <div className="border-t border-white/10 bg-white/[0.02] px-8 py-6 flex flex-col items-center">
-                  <p className="text-[10px] text-gray-500 uppercase tracking-[0.2em] mb-4 font-bold">Enterprise Tech Stack</p>
+                  <p className="text-[10px] text-gray-400 uppercase tracking-[0.2em] mb-4 font-bold">Enterprise Tech Stack</p>
                   <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500">
                     <span className="text-lg font-bold text-white flex gap-2 items-center"><Zap size={16}/> Next.js 15</span>
                     <span className="text-lg font-bold text-white flex gap-2 items-center"><Globe size={16}/> Vercel</span>

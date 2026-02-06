@@ -19,8 +19,8 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
   },
-  // 5. Enable SWC minification (default in Next.js 15)
-  swcMinify: true,
+  // 5. Enable compression
+  compress: true,
 };
 
 module.exports = nextConfig;
