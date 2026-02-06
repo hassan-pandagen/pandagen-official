@@ -6,6 +6,8 @@ import CalEmbed from "@/components/ui/CalEmbed";
 import AuroraBackground from "@/components/layout/AuroraBackground";
 import PreconnectLinks from "@/components/PreconnectLinks";
 import { Analytics } from "@vercel/analytics/react";
+import TawkToChat from "@/components/TawkToChat";
+import FacebookPixel from "@/components/FacebookPixel";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -101,6 +103,8 @@ export default function RootLayout({
         <AuroraBackground />
 
         <CalEmbed />
+        <TawkToChat />
+        <FacebookPixel />
         <SmoothScroll>
           {children}
         </SmoothScroll>

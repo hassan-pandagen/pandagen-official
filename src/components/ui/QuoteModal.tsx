@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Upload, Send, Paperclip, CheckCircle2 } from "lucide-react";
 import { useState, useEffect } from "react";
+import { trackFBEvent } from "@/components/FacebookPixel";
 
 interface QuoteModalProps {
   isOpen: boolean;
@@ -14,11 +15,17 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
+  const [trafficSource, setTrafficSource] = useState<any>(null);
 
   // Prevent background scrolling when modal is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
+      // Load traffic source from localStorage
+      const sourceData = localStorage.getItem('trafficSource');
+      if (sourceData) {
+        setTrafficSource(JSON.parse(sourceData));
+      }
     } else {
       document.body.style.overflow = "unset";
     }
@@ -93,6 +100,14 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
       if (!response.ok) {
         throw new Error('Failed to submit form');
       }
+
+      // Track Facebook conversion event
+      trackFBEvent('Lead', {
+        content_name: 'Quote Request',
+        content_category: 'Contact Form',
+        value: 0,
+        currency: 'USD',
+      });
 
       setIsSubmitted(true);
 
@@ -291,6 +306,17 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                       <div className="p-3 bg-red-500/20 border border-red-500/30 rounded-xl text-red-400 text-sm">
                         {error}
                       </div>
+                    )}
+
+                    {/* HIDDEN SOURCE TRACKING FIELDS */}
+                    {trafficSource && (
+                      <>
+                        <input type="hidden" name="trafficSource" value={trafficSource.source || 'Unknown'} />
+                        <input type="hidden" name="trafficMedium" value={trafficSource.medium || 'Unknown'} />
+                        <input type="hidden" name="trafficCampaign" value={trafficSource.campaign || 'None'} />
+                        <input type="hidden" name="landingPage" value={trafficSource.landingPage || '/'} />
+                        <input type="hidden" name="firstVisit" value={trafficSource.timestamp || ''} />
+                      </>
                     )}
 
                     {/* SUBMIT */}

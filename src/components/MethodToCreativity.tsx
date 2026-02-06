@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import { motion, useScroll, useSpring } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { Search, PenTool, Code2, Rocket } from "lucide-react";
 
 // 1. RICH CONTENT (Restored Professional Detail)
@@ -37,7 +37,7 @@ const steps = [
 ];
 
 export default function MethodToCreativity() {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const timelineRef = useRef<HTMLDivElement>(null);
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -45,8 +45,8 @@ export default function MethodToCreativity() {
   }, []);
 
   const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"]
+    target: timelineRef,
+    offset: ["start end", "end start"]
   });
   
   const scaleY = useSpring(scrollYProgress, {
@@ -55,14 +55,17 @@ export default function MethodToCreativity() {
     restDelta: 0.001
   });
 
+  // Create a dynamic 'top' value for the glowing head based on the scroll progress
+  const lineTop = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+
   if (!isMounted) return <section className="py-24 bg-transparent min-h-screen" />;
 
   return (
-    <section ref={containerRef} className="relative py-32 bg-transparent overflow-hidden">
-      
+    <section className="relative py-16 md:py-32 bg-transparent">
+
       {/* 2. LOCAL GLOW (To make sure it's not 'Too Black') */}
       {/* This puts a purple light RIGHT behind the timeline */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[1000px] bg-purple-900/10 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[1000px] bg-purple-900/20 md:bg-purple-900/10 blur-[120px] rounded-full pointer-events-none" />
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row gap-20">
@@ -93,13 +96,19 @@ export default function MethodToCreativity() {
           </div>
 
           {/* RIGHT: Scrollable Timeline */}
-          <div className="lg:w-2/3 py-10">
-            <div className="relative border-l-2 border-white/10 ml-4 md:ml-12 space-y-24">
-              
-              {/* Glowing Progress Line */}
-              <motion.div 
+          <div ref={timelineRef} className="lg:w-2/3 py-10">
+            <div className="relative border-l-2 border-white/10 ml-4 md:ml-12 space-y-12 md:space-y-24 pb-32">
+
+              {/* 1. Glowing Progress Line - Extended beyond last card */}
+              <motion.div
                 style={{ scaleY, originY: 0 }}
-                className="absolute left-[-2px] top-0 bottom-0 w-1 bg-gradient-to-b from-neon via-purple-500 to-orange-500 shadow-[0_0_25px_#22d3ee]"
+                className="absolute left-[-2px] top-0 h-[calc(100%+8rem)] w-1 bg-gradient-to-b from-neon via-purple-500 to-orange-500 shadow-[0_0_25px_#22d3ee] z-10"
+              />
+
+              {/* 2. The Glowing Head (The "Cool" Moving Part) */}
+              <motion.div 
+                style={{ top: lineTop }} 
+                className="absolute left-[-6px] w-4 h-4 rounded-full bg-white border-2 border-neon shadow-[0_0_20px_#22d3ee] z-20 -translate-y-1/2"
               />
 
               {steps.map((step, index) => (

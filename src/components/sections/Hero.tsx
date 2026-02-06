@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Zap, ShieldCheck, Cpu, ChevronRight } from "lucide-react";
+import { ArrowRight, Zap, ShieldCheck, Cpu } from "lucide-react";
 import Link from "next/link";
 
 // Data for Marquee
@@ -9,7 +9,7 @@ const STACK = ["NEXT.JS 15", "VERCEL", "REACT", "TYPESCRIPT", "SUPABASE", "STRIP
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[100vh] flex flex-col justify-center pt-32 overflow-hidden bg-transparent">
+    <section className="relative min-h-[100vh] flex flex-col justify-center pt-24 pb-40 md:pt-32 md:pb-0 overflow-hidden bg-transparent">
       
       {/* 1. BACKGROUND AMBIENCE (Subtle & Deep) */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-blue-900/20 blur-[120px] rounded-full pointer-events-none opacity-50" />
@@ -36,7 +36,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
-                className="text-6xl md:text-8xl font-bold text-white tracking-tighter mb-6 leading-[1]"
+                className="text-5xl md:text-8xl font-bold text-white tracking-tighter mb-6 leading-[1]"
             >
                 Digital <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon via-blue-500 to-purple-500 animate-gradient-x">
@@ -156,12 +156,11 @@ export default function Hero() {
 
       </div>
 
-      {/* 2. INFINITE SCROLLING TECH STACK (The Fix) */}
-      <div className="absolute bottom-0 w-full border-t border-white/5 bg-black/20 backdrop-blur-sm py-6 overflow-hidden">
-         <div className="flex w-max animate-marquee gap-16 items-center opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-            {/* Duplicate list to create seamless loop */}
+      {/* 2. INFINITE SCROLLING TECH STACK */}
+      <div className="absolute bottom-0 w-full border-t border-white/10 md:border-white/5 bg-black/20 backdrop-blur-sm py-6 overflow-hidden z-20">
+         <div className="flex w-max animate-marquee gap-16 items-center opacity-70 md:opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
             {[...STACK, ...STACK, ...STACK].map((tech, i) => (
-                <span key={i} className="text-lg font-bold text-white/60 flex items-center gap-2">
+                <span key={i} className="text-lg font-bold text-white/80 md:text-white/60 flex items-center gap-2">
                     {tech}
                 </span>
             ))}

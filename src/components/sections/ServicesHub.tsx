@@ -7,7 +7,10 @@ import Link from "next/link";
 
 export default function ServicesHub() {
   return (
-    <section className="py-24 bg-transparent relative overflow-hidden">
+    <section className="py-12 md:py-24 bg-transparent relative overflow-hidden">
+      {/* Ambient Glow - Stronger on mobile */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/20 md:bg-purple-500/10 blur-[150px] rounded-full pointer-events-none" />
+
       <div className="container mx-auto px-6 relative z-10">
         
         {/* Header */}
@@ -206,19 +209,19 @@ function SaaSDecoration() {
 
 function BentoCard({ colSpan, rowSpan, title, subtitle, icon: Icon, gradient, children }: any) {
   return (
-    <motion.div 
+    <motion.div
       whileHover={{ y: -5 }}
-      className={`relative group overflow-hidden rounded-2xl md:rounded-3xl border border-white/[0.15] bg-gradient-to-b from-white/[0.08] to-transparent p-6 md:p-8 flex flex-col justify-between h-64 md:h-auto ${colSpan} ${rowSpan} transition-all duration-300 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)]`}
+      className={`relative group overflow-hidden rounded-2xl md:rounded-3xl border border-white/[0.25] md:border-white/[0.15] bg-gradient-to-b from-white/[0.12] md:from-white/[0.08] to-transparent p-6 md:p-8 flex flex-col justify-between h-64 md:h-auto ${colSpan} ${rowSpan} transition-all duration-300 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)]`}
     >
-      {/* Background Gradient on Hover */}
-      <div className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-700`} />
+      {/* Background Gradient - Visible on mobile, hover on desktop */}
+      <div className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-30 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-700`} />
       
       {/* Content */}
       <div className="relative z-10">
-        <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-white/10 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.1)] transition-all duration-300">
-          <Icon 
-            strokeWidth={1.5} 
-            className="w-6 h-6 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]" 
+        <div className="w-12 h-12 rounded-xl bg-white/10 md:bg-white/5 border border-white/20 md:border-white/10 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-white/10 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.1)] transition-all duration-300">
+          <Icon
+            strokeWidth={1.5}
+            className="w-6 h-6 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
           />
         </div>
         <h3 className="text-lg md:text-2xl font-bold text-white mb-2">{title}</h3>

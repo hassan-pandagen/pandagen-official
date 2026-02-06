@@ -20,13 +20,19 @@ Open [src/data/blog.ts](src/data/blog.ts) and add a new entry to the `blogPosts`
   category: "Category Name",      // e.g., "Performance", "E-Commerce"
   readTime: "10 min",
   date: "Feb 1",                  // Display date
-  author: "Hassan",               // or "Imran"
-  role: "Lead Eng",               // or "Architect"
+  author: "Hassan",               // HASSAN: Development/Implementation posts | IMRAN: Architecture/Strategy posts
+  role: "Lead Engineer",          // HASSAN: "Lead Engineer" | IMRAN: "Architect"
   featured: false,                // true = large card, false = grid card
   illustrationType: 'wordpress',  // 'wordpress', 'speed', 'code', 'saas', or 'plugins'
   lastModified: "2026-02-01",    // For sitemap (YYYY-MM-DD format)
 },
 ```
+
+**Author Assignment Rules:**
+- **HASSAN (Lead Engineer)**: Use for posts about development, implementation, performance optimization, migration guides, code quality, best practices
+  - Examples: "WordPress Plugins Destroy Speed", "Page Builder Tax", "WooCommerce Core Web Vitals Fail"
+- **IMRAN (Architect)**: Use for posts about system design, architecture decisions, technology strategy, enterprise solutions
+  - Examples: "Shopify Headless Commerce", "Enterprise Architecture", "Migration Strategy"
 
 ### Step 2: Create Blog Post Page
 

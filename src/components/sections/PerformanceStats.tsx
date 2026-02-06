@@ -14,9 +14,9 @@ export default function PerformanceStats() {
   if (!mounted) return <section className="py-24 bg-transparent" />;
 
   return (
-    <section className="py-24 bg-transparent relative overflow-hidden">
-      {/* Backlight Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-blue-500/10 blur-[150px] rounded-full pointer-events-none" />
+    <section className="py-12 md:py-24 bg-transparent relative overflow-hidden">
+      {/* Backlight Glow - Stronger on mobile */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-blue-500/20 md:bg-blue-500/10 blur-[150px] rounded-full pointer-events-none" />
       
       <div className="container mx-auto px-6 relative z-10">
         
@@ -39,7 +39,7 @@ export default function PerformanceStats() {
         </div>
 
         {/* THE LIVE TERMINAL BOARD */}
-        <div className="max-w-5xl mx-auto bg-[#0F0F0F] border border-white/20 rounded-3xl overflow-hidden relative shadow-[0_0_50px_rgba(0,0,0,0.5)]">
+        <div className="max-w-5xl mx-auto bg-[#0F0F0F] border border-white/30 md:border-white/20 rounded-3xl overflow-hidden relative shadow-[0_0_50px_rgba(0,0,0,0.5)]">
             {/* Top Bar */}
             <div className="h-10 bg-white/5 border-b border-white/10 flex items-center px-4 gap-2">
                 <div className="flex gap-1.5">

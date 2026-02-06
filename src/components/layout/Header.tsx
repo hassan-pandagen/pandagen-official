@@ -31,6 +31,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -152,31 +153,41 @@ export default function Header({ onOpenQuote }: HeaderProps) {
         )}
       >
         {navItems.map((item) => {
-          if (item.hasDropdown) {
-            return (
-              <div key={item.name} className="flex flex-col items-center gap-4 w-full">
-                <Link
-                  href={item.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-2xl font-bold text-white hover:text-neon transition-colors"
-                >
-                  {item.name}
-                </Link>
-                <div className="flex flex-col items-center gap-2">
-                  {services.map((service) => (
-                    <Link
-                      key={service.name}
-                      href={service.href}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className="text-sm font-medium text-gray-400 hover:text-neon transition-colors"
-                    >
-                      {service.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            );
-          }
+           if (item.hasDropdown) {
+             return (
+               <div key={item.name} className="flex flex-col items-center gap-4 w-full">
+                 <button
+                   onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                   className="text-2xl font-bold text-white hover:text-neon transition-colors flex items-center gap-2"
+                 >
+                   {item.name}
+                   <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isMobileServicesOpen ? 'rotate-180' : ''}`} />
+                 </button>
+                 {isMobileServicesOpen && (
+                   <motion.div 
+                     initial={{ opacity: 0, height: 0 }}
+                     animate={{ opacity: 1, height: 'auto' }}
+                     exit={{ opacity: 0, height: 0 }}
+                     className="flex flex-col items-center gap-2 w-full"
+                   >
+                     {services.map((service) => (
+                       <Link
+                         key={service.name}
+                         href={service.href}
+                         onClick={() => {
+                           setIsMobileMenuOpen(false);
+                           setIsMobileServicesOpen(false);
+                         }}
+                         className="text-sm font-medium text-gray-400 hover:text-neon transition-colors py-2"
+                       >
+                         {service.name}
+                       </Link>
+                     ))}
+                   </motion.div>
+                 )}
+               </div>
+             );
+           }
 
           return (
             <Link

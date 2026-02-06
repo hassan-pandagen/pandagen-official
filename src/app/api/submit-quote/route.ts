@@ -13,6 +13,13 @@ export async function POST(request: NextRequest) {
     const service = formData.get('service') as string;
     const details = formData.get('details') as string;
 
+    // Source tracking fields
+    const trafficSource = formData.get('trafficSource') as string;
+    const trafficMedium = formData.get('trafficMedium') as string;
+    const trafficCampaign = formData.get('trafficCampaign') as string;
+    const landingPage = formData.get('landingPage') as string;
+    const firstVisit = formData.get('firstVisit') as string;
+
     // Validate required fields
     if (!name || !email || !phone) {
       return NextResponse.json(
@@ -45,7 +52,7 @@ export async function POST(request: NextRequest) {
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #f9f9f9; padding: 20px; border-radius: 8px;">
           <h2 style="color: #06B6D4; margin-bottom: 20px;">🎉 New Quote Request</h2>
-          
+
           <div style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 15px;">
             <p style="margin: 10px 0;"><strong>Name:</strong> ${name}</p>
             <p style="margin: 10px 0;"><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
@@ -54,6 +61,21 @@ export async function POST(request: NextRequest) {
             ${details ? `<p style="margin: 10px 0;"><strong>Project Details:</strong></p><p style="background: #f5f5f5; padding: 10px; border-radius: 4px; white-space: pre-wrap;">${details}</p>` : ''}
             ${attachments.length > 0 ? `<p style="margin: 10px 0;"><strong>Attachments (${attachments.length}):</strong></p><ul style="margin: 5px 0; padding-left: 20px;">${attachments.map(a => `<li>${a.filename}</li>`).join('')}</ul>` : ''}
           </div>
+
+          ${trafficSource ? `
+          <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 8px; margin-bottom: 15px; color: white;">
+            <h3 style="margin: 0 0 15px 0; font-size: 16px; display: flex; align-items: center;">
+              📊 Traffic Source
+            </h3>
+            <div style="background: rgba(255,255,255,0.1); padding: 12px; border-radius: 6px; backdrop-filter: blur(10px);">
+              <p style="margin: 6px 0; font-size: 14px;"><strong>Source:</strong> ${trafficSource}</p>
+              <p style="margin: 6px 0; font-size: 14px;"><strong>Medium:</strong> ${trafficMedium}</p>
+              ${trafficCampaign && trafficCampaign !== 'none' ? `<p style="margin: 6px 0; font-size: 14px;"><strong>Campaign:</strong> ${trafficCampaign}</p>` : ''}
+              ${landingPage ? `<p style="margin: 6px 0; font-size: 14px;"><strong>Landing Page:</strong> ${landingPage}</p>` : ''}
+              ${firstVisit ? `<p style="margin: 6px 0; font-size: 14px;"><strong>First Visit:</strong> ${new Date(firstVisit).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' })}</p>` : ''}
+            </div>
+          </div>
+          ` : ''}
 
           <div style="background: #06B6D4; color: white; padding: 15px; border-radius: 8px; text-align: center;">
             <p style="margin: 0; font-size: 14px;">This is a lead from your website. Reply directly to ${email}</p>

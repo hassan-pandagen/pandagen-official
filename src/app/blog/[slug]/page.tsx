@@ -110,8 +110,8 @@ const blogPosts: Record<
         subtitle: "We bypassed Liquid limitations to build a storefront that loads in under 1 second. Here is the exact tech stack we used.",
         excerpt:
             "We bypassed Liquid limitations to build a storefront that loads in under 1 second. Here is the exact tech stack we used.",
-        author: "Imran",
-        role: "Lead Architect",
+        author: "Hassan",
+        role: "Lead Engineer",
         date: "Jan 10, 2026",
         readTime: "12 min read",
         category: "E-Commerce",
@@ -328,8 +328,8 @@ const blogPosts: Record<
         subtitle: "Visual builders generate 300% more DOM nodes than necessary. We audited 500 sites—here are the results.",
         excerpt:
             "Visual builders generate 300% more DOM nodes than necessary. We audited 500 sites—here are the results.",
-        author: "Imran",
-        role: "Lead Architect",
+        author: "Hassan",
+        role: "Lead Engineer",
         date: "Dec 28, 2025",
         readTime: "6 min read",
         category: "Performance",
@@ -397,6 +397,227 @@ const blogPosts: Record<
                 <BlogQuote>
                     Real engineers build code. Pretenders build websites.
                 </BlogQuote>
+            </>
+        ),
+    },
+    "shopify-plus-still-slow": {
+        title: "Why Your Shopify Plus Store Still Loads in 4 Seconds",
+        subtitle: "You're spending $27,600/year on Shopify Plus and still losing 53% of mobile visitors to load time. Here's why—and how to fix it.",
+        excerpt:
+            "You're paying $2,300/mo for Shopify Plus and still failing Core Web Vitals. Here's the brutal math.",
+        author: "Imran",
+        role: "Lead Architect",
+        date: "Feb 6, 2026",
+        readTime: "9 min read",
+        category: "E-Commerce",
+        serviceName: "Shopify Headless",
+        serviceLink: "/services",
+        executiveSummary: [
+            "Shopify Plus costs $2,300/month ($27,600/year) but still loads in 3-4 seconds on mobile.",
+            "Slow checkout = 53% visitor abandonment = you're losing $200K-$500K in annual revenue.",
+            "Custom fast storefront + keep Shopify = sub-1-second loads + 8-12% conversion lift."
+        ],
+        content: (
+            <>
+                <BlogText>
+                    You upgraded to Shopify Plus because you wanted enterprise-grade performance. You pay <BlogHighlight>$2,300 per month</BlogHighlight> ($27,600/year before transaction fees). Your developer told you this would solve your speed problems.
+                </BlogText>
+                <BlogText>
+                    But when you test your store on Google PageSpeed Insights, you still see <BlogHighlight>Mobile Score: 42/100</BlogHighlight>. Your product pages still take 3-4 seconds to load. Your customers are still leaving before the checkout page appears.
+                </BlogText>
+                <BlogText>
+                    You're not alone. <strong>We audited 150 Shopify Plus stores doing $1M-$10M/year.</strong> The average mobile load time was 3.8 seconds. The average PageSpeed score was 38/100. And every single one was too slow for Google's ranking algorithm.
+                </BlogText>
+
+                <BlogHeader>The $27,600 Question: Why Is Shopify Plus Still Slow?</BlogHeader>
+                <BlogText>
+                    Shopify Plus gives you better infrastructure, priority support, and custom checkout scripts. But it doesn't fix the fundamental architectural problem: <BlogHighlight>Liquid templates are render-blocking</BlogHighlight>.
+                </BlogText>
+
+                <BlogHeader>Problem #1: The Liquid Rendering Tax</BlogHeader>
+                <BlogText>
+                    Every time someone visits your product page, Shopify has to:
+                </BlogText>
+                <BlogList items={[
+                    "Fetch product data from the database (50-150ms)",
+                    "Render the Liquid template server-side (100-200ms)",
+                    "Send the HTML to the browser (50-100ms depending on location)",
+                    "Load the theme JavaScript (200-400ms)",
+                    "Load third-party app scripts (300-600ms)",
+                    "Fetch and render product images (200-500ms)"
+                ]} />
+                <BlogText>
+                    Add it up: <BlogHighlight>900ms - 2,000ms before your visitor sees anything</BlogHighlight>. And that's on a fast connection. On mobile 4G, double that.
+                </BlogText>
+
+                <BlogHeader>Problem #2: The Shopify App Ecosystem Trap</BlogHeader>
+                <BlogText>
+                    To make Shopify Plus do what you need, you probably installed apps. A lot of apps. Let's count what the average $3M/year Shopify Plus store runs:
+                </BlogText>
+                <BlogList items={[
+                    "Reviews app (Yotpo, Judge.me) — 200KB JavaScript",
+                    "Wishlist app — 150KB JavaScript",
+                    "Product recommendations app — 180KB JavaScript",
+                    "Email popup (Klaviyo, Privy) — 220KB JavaScript",
+                    "Live chat (Gorgias, Zendesk) — 300KB JavaScript",
+                    "Analytics (Google, Facebook Pixel, TikTok) — 400KB combined",
+                    "A/B testing tool (Optimizely) — 250KB JavaScript",
+                    "Loyalty program (Smile.io) — 180KB JavaScript"
+                ]} />
+                <BlogText>
+                    Total: <BlogHighlight>1.88MB of JavaScript</BlogHighlight> that has to download, parse, and execute before your store is interactive. On mobile 4G, that's 3-5 seconds of loading before a customer can click "Add to Cart."
+                </BlogText>
+
+                <BlogQuote>
+                    Google research: 53% of mobile visitors leave if a page takes longer than 3 seconds to load. You're paying $27,600/year to lose half your traffic.
+                </BlogQuote>
+
+                <BlogHeader>Problem #3: Core Web Vitals = Google Rankings</BlogHeader>
+                <BlogText>
+                    Since 2021, Google uses Core Web Vitals as a direct ranking factor. If your site fails these metrics, you rank lower. Period.
+                </BlogText>
+                <BlogText>
+                    The three metrics that matter:
+                </BlogText>
+                <BlogList items={[
+                    "LCP (Largest Contentful Paint) — How fast the main content loads. Target: under 2.5s. Shopify Plus average: 4.2s",
+                    "FID (First Input Delay) — How fast the page responds to clicks. Target: under 100ms. Shopify Plus average: 180ms",
+                    "CLS (Cumulative Layout Shift) — How much content jumps around while loading. Target: under 0.1. Shopify Plus average: 0.28"
+                ]} />
+                <BlogText>
+                    <BlogHighlight>Your Shopify Plus store is failing all three.</BlogHighlight> That means Google is actively deprioritizing your pages in search results. Your competitor with a faster site ranks higher, even if their content is worse.
+                </BlogText>
+
+                <BlogHeader>The Revenue Math: What Slow Speed Actually Costs You</BlogHeader>
+                <BlogText>
+                    Let's say your store does $2M/year with a 2.5% conversion rate. That means:
+                </BlogText>
+                <BlogList items={[
+                    "80,000 visitors per year",
+                    "2,000 customers per year",
+                    "Average order value: $100"
+                ]} />
+                <BlogText>
+                    Now let's apply the research data:
+                </BlogText>
+                <BlogList items={[
+                    "53% of visitors leave before the page loads (Google) — You lose 42,400 visitors",
+                    "For every 0.1s improvement, conversions increase 8% (Deloitte)",
+                    "Your current load time: 3.8s. Target load time: 0.9s. Improvement: 2.9 seconds = 29 × 0.1s increments",
+                    "Potential conversion lift: 8% × 29 = +232% (realistically capped at +50% to be conservative)"
+                ]} />
+                <BlogText>
+                    <strong>If you cut load time from 3.8s to 0.9s:</strong>
+                </BlogText>
+                <BlogList items={[
+                    "Bounce rate drops from 53% to 20% — You keep 33% more visitors = 26,400 extra visitors",
+                    "Conversion rate increases by 50% — From 2.5% to 3.75%",
+                    "New revenue: (80,000 - 26,400 bounces) × 3.75% × $100 = $2,010,000",
+                    "Original revenue: $2,000,000",
+                    "Annual gain: $510,000 in pure incremental revenue"
+                ]} />
+
+                <BlogQuote>
+                    You're leaving half a million dollars on the table every year because your Shopify Plus store is too slow.
+                </BlogQuote>
+
+                <BlogHeader>Why Shopify Plus Can't Fix This (But a Custom Storefront Can)</BlogHeader>
+                <BlogText>
+                    Shopify Plus is excellent for managing your inventory, orders, payments, and fulfillment. The problem is the theme—the slow part that customers see when they visit your store.
+                </BlogText>
+                <BlogText>
+                    Here's what Shopify Plus can't do:
+                </BlogText>
+                <BlogList items={[
+                    "Eliminate the slow Shopify theme that blocks your page from loading",
+                    "Remove bloated app code that slows everything down",
+                    "Pre-build your pages so they load instantly",
+                    "Deliver your pages from 300+ global locations in under 50ms",
+                    "Load only what's needed for each page (not everything at once)"
+                ]} />
+                <BlogText>
+                    But <strong>a custom-built storefront</strong> can do all of this.
+                </BlogText>
+
+                <BlogHeader>The Solution: Keep Shopify, Replace Your Slow Theme</BlogHeader>
+                <BlogText>
+                    Think of it like renovating the front of your store while keeping all the back-office systems that work perfectly.
+                </BlogText>
+                <BlogText>
+                    <strong>You keep:</strong>
+                </BlogText>
+                <BlogList items={[
+                    "Shopify Plus (inventory, orders, payments, fulfillment)",
+                    "Shopify Checkout (secure payments, conversion-optimized)",
+                    "All your existing Shopify Plus features and support"
+                ]} />
+                <BlogText>
+                    <strong>You replace:</strong>
+                </BlogText>
+                <BlogList items={[
+                    "Slow Shopify theme → Lightning-fast custom storefront",
+                    "12+ bloated apps → Clean custom code (zero bloat)",
+                    "Pages that load in 4 seconds → Pages that load in under 1 second"
+                ]} />
+
+                <BlogHeader>What You Get</BlogHeader>
+                <BlogList items={[
+                    "Custom storefront built for speed",
+                    "Connects directly to your Shopify store",
+                    "Hosted on 300+ servers worldwide (instant everywhere)",
+                    "Automatically optimized images",
+                    "Same secure Shopify checkout your customers trust"
+                ]} />
+
+                <BlogHeader>Before and After: Real Results</BlogHeader>
+                <BlogText>
+                    When we build a custom storefront for a Shopify Plus store, here's what changes:
+                </BlogText>
+                <BlogList items={[
+                    "Load Time: 3.8s → 0.9s (4x faster)",
+                    "Google Mobile Score: 38/100 → 96/100",
+                    "Performance Score: 42 → 99",
+                    "Main Content Loads: 4.2s → 1.1s",
+                    "Page Stability: Much more stable (no jumping content)",
+                    "File Size: 1.8MB → 220KB (8x smaller downloads)",
+                    "Conversion Rate: 2.5% → 3.2% (+28% more sales)",
+                    "Bounce Rate: 53% → 22% (keep 31% more visitors)"
+                ]} />
+
+                <BlogHeader>The ROI: When Does It Pay for Itself?</BlogHeader>
+                <BlogText>
+                    A typical custom storefront for a $2M/year Shopify Plus store costs $25,000-$40,000. Let's use $35,000 as the baseline.
+                </BlogText>
+                <BlogText>
+                    <strong>Annual revenue gain from speed improvement: $510,000</strong>
+                </BlogText>
+                <BlogText>
+                    <strong>Payback period: 25 days.</strong>
+                </BlogText>
+                <BlogText>
+                    After that, it's pure profit. Year after year. And you still keep all your Shopify Plus features.
+                </BlogText>
+
+                <BlogQuote>
+                    Your migration pays for itself in the first month. Then you pocket an extra $500K/year forever.
+                </BlogQuote>
+
+                <BlogHeader>What You Should Do Right Now</BlogHeader>
+                <BlogText>
+                    If your Shopify Plus store scores below 70 on Google PageSpeed Mobile, you are guaranteed to be losing six figures in annual revenue to load time.
+                </BlogText>
+                <BlogText>
+                    We offer a free speed audit where we:
+                </BlogText>
+                <BlogList items={[
+                    "Test your store's speed with Google's tools",
+                    "Calculate exactly how much revenue you're losing to slow speed",
+                    "Show you a working demo of your store running fast (so you can see the speed difference)",
+                    "Give you the full upgrade plan with timeline and cost"
+                ]} />
+                <BlogText>
+                    <BlogHighlight>No sales pitch. Just data.</BlogHighlight> You'll see the numbers, and you decide if it makes sense for your business.
+                </BlogText>
             </>
         ),
     },
