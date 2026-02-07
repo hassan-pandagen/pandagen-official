@@ -102,13 +102,13 @@ export default function MethodToCreativity() {
               {/* 1. Glowing Progress Line - Extended beyond last card */}
               <motion.div
                 style={{ scaleY, originY: 0 }}
-                className="absolute left-[-2px] top-0 h-[calc(100%+8rem)] w-1 bg-gradient-to-b from-neon via-purple-500 to-orange-500 shadow-[0_0_25px_#22d3ee] z-10"
+                className="absolute left-[-3px] top-0 h-[calc(100%+8rem)] w-[3px] bg-gradient-to-b from-neon via-purple-500 to-orange-500 shadow-[0_0_40px_#22d3ee,0_0_80px_rgba(34,211,238,0.3)] z-30"
               />
 
               {/* 2. The Glowing Head (The "Cool" Moving Part) */}
-              <motion.div 
-                style={{ top: lineTop }} 
-                className="absolute left-[-6px] w-4 h-4 rounded-full bg-white border-2 border-neon shadow-[0_0_20px_#22d3ee] z-20 -translate-y-1/2"
+              <motion.div
+                style={{ top: lineTop }}
+                className="absolute left-[-8px] w-5 h-5 rounded-full bg-neon border-2 border-white shadow-[0_0_30px_#22d3ee,0_0_60px_rgba(34,211,238,0.5)] z-40 -translate-y-1/2 animate-pulse"
               />
 
               {steps.map((step, index) => (
