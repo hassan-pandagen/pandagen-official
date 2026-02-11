@@ -12,12 +12,16 @@ export default function AboutPage() {
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
 
   return (
-    <main className="bg-[#050505] min-h-screen selection:bg-neon selection:text-black overflow-x-hidden">
+    <main className="bg-[#050505] min-h-screen selection:bg-neon selection:text-black overflow-x-hidden relative">
+      {/* Global Noise Texture */}
+      <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-20 mix-blend-overlay"></div>
+
       <Header onOpenQuote={() => setIsQuoteModalOpen(true)} />
 
       {/* 1. HERO with DNA STRIP */}
       <section className="relative pt-40 pb-32 px-6 overflow-hidden">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-red-600/10 blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-red-600/20 blur-[150px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-orange-600/15 blur-[150px] rounded-full pointer-events-none" />
         
         <div className="container mx-auto max-w-4xl text-center relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-400 mb-8">
@@ -85,7 +89,10 @@ export default function AboutPage() {
 
       {/* 3. OPERATING GLOBALLY (SVG Map Fix) */}
       <section className="py-32 px-6 text-center bg-[#080808] border-y border-white/5 relative overflow-hidden">
-         <div className="absolute inset-0 opacity-10">
+         {/* Localized Glow */}
+         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none z-[5]" />
+
+         <div className="absolute inset-0 opacity-10 z-[1]">
             <svg className="w-full h-full text-white" fill="currentColor" viewBox="0 0 100 50" preserveAspectRatio="none">
                 <pattern id="grid" width="2" height="2" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.5" className="text-white/20" /></pattern>
                 <rect width="100%" height="100%" fill="url(#grid)" />

@@ -17,13 +17,17 @@ interface ServicePageProps {
 
 export default function ServicePageTemplate({ title, subtitle, description, painPoints, features, guaranteeText, deepDive }: ServicePageProps) {
   return (
-    <main className="bg-transparent min-h-screen selection:bg-neon selection:text-black overflow-x-hidden">
+    <main className="bg-transparent min-h-screen selection:bg-neon selection:text-black overflow-x-hidden relative">
+      {/* Global Noise Texture */}
+      <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-20 mix-blend-overlay"></div>
+
       <Header />
 
       {/* 1. HERO (Filled Space & Ambient Light) */}
       <section className="relative pt-40 pb-32 px-6 overflow-hidden">
-        {/* Massive Background Glow */}
-        <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[80%] h-[800px] bg-blue-600/10 blur-[150px] rounded-full pointer-events-none" />
+        {/* Enhanced Dual Glows */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-orange-600/20 blur-[150px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-red-600/15 blur-[150px] rounded-full pointer-events-none" />
         
         <div className="container mx-auto text-center relative z-10 max-w-5xl">
            <motion.div 
@@ -70,8 +74,11 @@ export default function ServicePageTemplate({ title, subtitle, description, pain
 
       {/* 2. THE DEEP DIVE (Business Context) */}
       {deepDive && (
-        <section className="py-20 px-6 bg-[#080808] border-y border-white/5">
-           <div className="container mx-auto max-w-4xl">
+        <section className="py-20 px-6 bg-[#080808] border-y border-white/5 relative overflow-hidden">
+           {/* Localized Glow */}
+           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-purple-600/10 blur-[120px] rounded-full pointer-events-none" />
+
+           <div className="container mx-auto max-w-4xl relative z-10">
               <div className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12">
                  <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
                     <span className="w-1 h-8 bg-neon rounded-full" /> 
@@ -86,8 +93,11 @@ export default function ServicePageTemplate({ title, subtitle, description, pain
       )}
 
       {/* 3. THE PROBLEM (Redesigned: The "Terminal" Look) */}
-      <section className="py-24 border-y border-white/5 bg-[#080808]">
-         <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
+      <section className="py-24 border-y border-white/5 bg-[#080808] relative overflow-hidden">
+         {/* Localized Glow */}
+         <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-red-600/10 blur-[120px] rounded-full pointer-events-none" />
+
+         <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center relative z-10">
             
             {/* Left: Copy */}
             <div>
@@ -150,8 +160,11 @@ export default function ServicePageTemplate({ title, subtitle, description, pain
       </section>
 
       {/* 3. THE SOLUTION (Glass Cards - Lighter) */}
-      <section className="py-32 container mx-auto px-6">
-         <div className="text-center mb-20">
+      <section className="py-32 container mx-auto px-6 relative overflow-hidden">
+         {/* Localized Glow */}
+         <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
+
+         <div className="text-center mb-20 relative z-10">
             <span className="text-neon font-bold tracking-widest text-xs uppercase mb-2 block">The Architecture</span>
             <h2 className="text-4xl md:text-5xl font-bold text-white">
                How we fix it. Forever.

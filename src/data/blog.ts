@@ -1,5 +1,5 @@
 // Centralized blog data - Add new posts here and they'll automatically appear in sitemap
-export type IllustrationType = 'wordpress' | 'speed' | 'code' | 'saas' | 'plugins';
+export type IllustrationType = 'wordpress' | 'speed' | 'code' | 'saas' | 'plugins' | 'traffic' | 'sales' | 'conversion';
 
 export interface BlogPost {
   id: string;
@@ -80,5 +80,44 @@ export const blogPosts: BlogPost[] = [
     featured: true,
     illustrationType: 'speed',
     lastModified: "2026-02-06",
+  },
+  {
+    id: "wordpress-traffic-drop-speed",
+    title: "Why Is My WordPress Site Losing Traffic? (The Speed Tax You're Paying)",
+    excerpt: "Slow WordPress sites lose Google rankings fast. Here's the simple math on why speed = traffic.",
+    category: "Traffic Growth",
+    readTime: "7 min",
+    date: "Feb 7",
+    author: "Hassan",
+    role: "Lead Eng",
+    featured: false,
+    illustrationType: 'traffic',
+    lastModified: "2026-02-07",
+  },
+  {
+    id: "shopify-slow-losing-sales",
+    title: "Your Shopify Store Is Costing You $75K/Year in Lost Sales (Here's the Math)",
+    excerpt: "Every second your store takes to load costs you customers. We calculated exactly how much.",
+    category: "E-Commerce",
+    readTime: "8 min",
+    date: "Feb 10",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: false,
+    illustrationType: 'sales',
+    lastModified: "2026-02-10",
+  },
+  {
+    id: "shopify-conversion-rate-speed-fix",
+    title: "Why Is My Conversion Rate So Low? (Shopify Speed Is Killing Your Sales)",
+    excerpt: "Your conversion rate is low because visitors leave before your page loads. The fix is simpler than you think.",
+    category: "Conversion",
+    readTime: "9 min",
+    date: "Feb 11",
+    author: "Hassan",
+    role: "Lead Eng",
+    featured: false,
+    illustrationType: 'conversion',
+    lastModified: "2026-02-11",
   },
 ];

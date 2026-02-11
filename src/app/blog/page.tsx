@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Clock, BookOpen, Search, User, ShieldAlert, Layers, ShieldCheck } from "lucide-react";
+import { ArrowRight, Clock, BookOpen, Search, User, ShieldAlert, Layers, ShieldCheck, TrendingDown, DollarSign, Filter } from "lucide-react";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -129,6 +129,108 @@ const PluginsIllustration = () => (
   </div>
 );
 
+const TrafficIllustration = () => (
+  <div className="w-full h-full bg-gradient-to-br from-purple-950/30 to-red-950/20 relative overflow-hidden flex items-center justify-center">
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_80%,rgba(147,51,234,0.15),transparent_70%)]" />
+
+    {/* Trending Down Arrows */}
+    {[...Array(5)].map((_, i) => (
+      <motion.div
+        key={i}
+        animate={{ y: [0, 30, 0], opacity: [0.3, 0.7, 0.3] }}
+        transition={{ duration: 2 + i * 0.3, repeat: Infinity, delay: i * 0.4 }}
+        className="absolute text-red-500"
+        style={{ left: `${20 + i * 15}%`, top: `${20 + i * 10}%` }}
+      >
+        <TrendingDown className="w-8 h-8" />
+      </motion.div>
+    ))}
+
+    {/* Traffic Numbers Dropping */}
+    <div className="z-10 bg-purple-900/30 border-2 border-purple-500/50 rounded-xl p-6 backdrop-blur-md">
+      <div className="text-center space-y-2">
+        <div className="text-gray-400 text-xs uppercase tracking-widest">Monthly Traffic</div>
+        <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-purple-300 to-red-500 font-mono line-through">10,000</div>
+        <div className="text-2xl font-bold text-red-400 font-mono flex items-center justify-center gap-2">
+          <TrendingDown className="w-5 h-5" />
+          2,000
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
+const SalesIllustration = () => (
+  <div className="w-full h-full bg-gradient-to-br from-emerald-950/20 to-red-950/30 relative overflow-hidden flex items-center justify-center">
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.1),transparent_70%)]" />
+
+    {/* Falling Money */}
+    {[...Array(12)].map((_, i) => (
+      <motion.div
+        key={i}
+        animate={{
+          y: [-40, 200],
+          rotate: [0, 360],
+          opacity: [0, 0.6, 0]
+        }}
+        transition={{
+          duration: 3 + i * 0.2,
+          repeat: Infinity,
+          delay: i * 0.3,
+          ease: "linear"
+        }}
+        className="absolute text-3xl text-emerald-400/40 font-bold"
+        style={{ left: `${10 + i * 7}%`, top: '-40px' }}
+      >
+        $
+      </motion.div>
+    ))}
+
+    {/* Lost Sales Counter */}
+    <div className="z-10 bg-red-900/40 border-2 border-red-500/60 rounded-2xl p-6 backdrop-blur-md shadow-2xl">
+      <div className="text-center space-y-1">
+        <div className="text-red-300 text-xs uppercase tracking-widest font-bold">Lost Revenue/Year</div>
+        <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-red-300 to-red-600 font-mono">$75K</div>
+        <div className="text-gray-400 text-[10px] font-mono">from slow load times</div>
+      </div>
+    </div>
+  </div>
+);
+
+const ConversionIllustration = () => (
+  <div className="w-full h-full bg-gradient-to-br from-cyan-950/20 to-blue-950/30 relative overflow-hidden flex items-center justify-center">
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.15),transparent_70%)]" />
+
+    {/* Conversion Funnel */}
+    <div className="z-10 relative flex flex-col items-center gap-3">
+      {/* Top of funnel */}
+      <div className="w-32 h-8 bg-cyan-500/30 border-2 border-cyan-400/50 rounded-t-xl flex items-center justify-center backdrop-blur-sm">
+        <span className="text-xs font-bold text-cyan-300">100 Visitors</span>
+      </div>
+
+      {/* Middle */}
+      <motion.div
+        animate={{ opacity: [0.5, 1, 0.5] }}
+        transition={{ duration: 2, repeat: Infinity }}
+        className="w-20 h-6 bg-cyan-600/40 border-2 border-cyan-400/40 flex items-center justify-center backdrop-blur-sm"
+      >
+        <Filter className="w-4 h-4 text-cyan-300" />
+      </motion.div>
+
+      {/* Bottom - Low conversion */}
+      <div className="w-12 h-6 bg-red-500/40 border-2 border-red-400/50 rounded-b-xl flex items-center justify-center backdrop-blur-sm">
+        <span className="text-[10px] font-bold text-red-300">1.2%</span>
+      </div>
+
+      {/* Conversion Rate Display */}
+      <div className="mt-4 bg-blue-900/40 border border-blue-500/50 rounded-lg px-4 py-2 backdrop-blur-md">
+        <div className="text-xs text-gray-400 uppercase tracking-wider">Conversion Rate</div>
+        <div className="text-2xl font-bold text-red-400 font-mono">1.2%</div>
+      </div>
+    </div>
+  </div>
+);
+
 // Map illustration types to components
 const getIllustration = (type: IllustrationType) => {
   const illustrations = {
@@ -137,6 +239,9 @@ const getIllustration = (type: IllustrationType) => {
     saas: <SaaSIllustration />,
     code: <CodeIllustration />,
     plugins: <PluginsIllustration />,
+    traffic: <TrafficIllustration />,
+    sales: <SalesIllustration />,
+    conversion: <ConversionIllustration />,
   };
   return illustrations[type];
 };
@@ -220,6 +325,9 @@ export default function BlogPage() {
 
   return (
     <main className="bg-transparent min-h-screen selection:bg-neon selection:text-black overflow-x-hidden relative">
+      {/* Global Noise Texture */}
+      <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-20 mix-blend-overlay"></div>
+
       {/* Schema.org JSON-LD for SEO */}
       <script
         type="application/ld+json"
@@ -228,7 +336,13 @@ export default function BlogPage() {
 
       <div className="relative z-10">
         <Header />
-      <section className="pt-40 pb-16 px-6 text-center"><h1 className="text-5xl md:text-7xl font-bold text-white">Insights from the <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon to-purple-500">Engine Room.</span></h1></section>
+      <section className="pt-40 pb-16 px-6 text-center relative">
+        {/* Ambient Glows */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-purple-600/20 blur-[150px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/3 right-0 w-[600px] h-[600px] bg-pink-600/15 blur-[150px] rounded-full pointer-events-none" />
+
+        <h1 className="text-5xl md:text-7xl font-bold text-white relative z-10">Insights from the <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon to-purple-500">Engine Room.</span></h1>
+      </section>
       
       <section className="container mx-auto px-6 py-12">
          {articles.filter(a => a.featured).map((article) => (

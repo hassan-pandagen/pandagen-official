@@ -46,7 +46,7 @@ export default function MethodToCreativity() {
 
   const { scrollYProgress } = useScroll({
     target: timelineRef,
-    offset: ["start center", "end end"]
+    offset: ["start center", "end center"]
   });
 
   const scaleY = useSpring(scrollYProgress, {
@@ -55,8 +55,8 @@ export default function MethodToCreativity() {
     restDelta: 0.001
   });
 
-  // Calculate the glowing head position - smooth tracking
-  const headPosition = useTransform(scrollYProgress, [0, 1], ["0%", "95%"]);
+  // Calculate the glowing head position - smooth tracking all the way to bottom
+  const headPosition = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   if (!isMounted) return <section className="py-24 bg-transparent min-h-screen" />;
 

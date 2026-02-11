@@ -7,12 +7,16 @@ import Footer from "@/components/layout/Footer";
 
 export default function PricingPage() {
   return (
-    <main className="bg-[#050505] min-h-screen selection:bg-neon selection:text-black overflow-x-hidden">
+    <main className="bg-[#050505] min-h-screen selection:bg-neon selection:text-black overflow-x-hidden relative">
+      {/* Global Noise Texture */}
+      <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-20 mix-blend-overlay"></div>
+
       <Header />
 
       {/* 1. HERO */}
       <section className="relative pt-40 pb-20 px-6 text-center">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-blue-600/20 blur-[150px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/3 right-0 w-[600px] h-[600px] bg-purple-600/15 blur-[150px] rounded-full pointer-events-none" />
         <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tighter mb-6">
            Simple, Transparent <br />
            <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon to-purple-500">Investment.</span>

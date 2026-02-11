@@ -81,12 +81,16 @@ const projects = [
 
 export default function WorkPage() {
     return (
-        <main className="bg-transparent min-h-screen selection:bg-neon selection:text-black overflow-x-hidden">
+        <main className="bg-transparent min-h-screen selection:bg-neon selection:text-black overflow-x-hidden relative">
+            {/* Global Noise Texture */}
+            <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-20 mix-blend-overlay"></div>
+
             <Header />
 
             {/* 1. HERO SECTION */}
             <section className="relative pt-40 pb-20 px-6">
-                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-purple-600/10 blur-[120px] rounded-full pointer-events-none" />
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-purple-600/20 blur-[150px] rounded-full pointer-events-none" />
+                <div className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-pink-600/15 blur-[150px] rounded-full pointer-events-none" />
 
                 <div className="container mx-auto relative z-10">
                     <motion.div

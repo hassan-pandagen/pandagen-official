@@ -9,12 +9,16 @@ import Footer from "@/components/layout/Footer";
 
 export default function ServicesPage() {
   return (
-    <main className="bg-[#050505] min-h-screen selection:bg-neon selection:text-black overflow-x-hidden">
+    <main className="bg-[#050505] min-h-screen selection:bg-neon selection:text-black overflow-x-hidden relative">
+      {/* Global Noise Texture */}
+      <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-20 mix-blend-overlay"></div>
+
       <Header />
-      
+
       {/* 1. HERO */}
       <section className="relative pt-40 pb-32 px-6">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1000px] h-[600px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1000px] h-[600px] bg-blue-600/20 blur-[150px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-purple-600/15 blur-[150px] rounded-full pointer-events-none" />
         
         <div className="container mx-auto text-center relative z-10">
           <motion.div
