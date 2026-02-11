@@ -682,8 +682,130 @@ export default async function BlogPost(props: PageProps) {
         );
     }
 
+    // Generate structured data (Schema.org JSON-LD) for SEO
+    const publishDate = new Date(post.date).toISOString();
+    const articleSchema = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Article",
+                "@id": `https://www.pandacodegen.com/blog/${params.slug}#article`,
+                "headline": post.title,
+                "description": post.excerpt,
+                "image": `https://www.pandacodegen.com/og-image.jpg`,
+                "datePublished": publishDate,
+                "dateModified": publishDate,
+                "author": {
+                    "@type": "Person",
+                    "@id": `https://www.pandacodegen.com/#/schema/person/${post.author.toLowerCase()}`,
+                    "name": post.author,
+                    "jobTitle": post.role,
+                    "url": "https://www.pandacodegen.com/about"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "@id": "https://www.pandacodegen.com/#organization",
+                    "name": "PandaGen",
+                    "url": "https://www.pandacodegen.com",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://www.pandacodegen.com/logo.png",
+                        "width": 512,
+                        "height": 512
+                    }
+                },
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": `https://www.pandacodegen.com/blog/${params.slug}`
+                },
+                "articleSection": post.category,
+                "keywords": [
+                    "Next.js development",
+                    "WordPress migration",
+                    "Shopify headless",
+                    "React development",
+                    "web performance",
+                    "enterprise web development"
+                ],
+                "timeRequired": post.readTime,
+                "inLanguage": "en-US"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": `https://www.pandacodegen.com/blog/${params.slug}#breadcrumb`,
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://www.pandacodegen.com"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Blog",
+                        "item": "https://www.pandacodegen.com/blog"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": post.title,
+                        "item": `https://www.pandacodegen.com/blog/${params.slug}`
+                    }
+                ]
+            },
+            {
+                "@type": "WebPage",
+                "@id": `https://www.pandacodegen.com/blog/${params.slug}#webpage`,
+                "url": `https://www.pandacodegen.com/blog/${params.slug}`,
+                "name": post.title,
+                "description": post.excerpt,
+                "isPartOf": {
+                    "@id": "https://www.pandacodegen.com/#website"
+                },
+                "primaryImageOfPage": {
+                    "@type": "ImageObject",
+                    "url": `https://www.pandacodegen.com/og-image.jpg`
+                },
+                "datePublished": publishDate,
+                "dateModified": publishDate,
+                "breadcrumb": {
+                    "@id": `https://www.pandacodegen.com/blog/${params.slug}#breadcrumb`
+                },
+                "inLanguage": "en-US"
+            },
+            {
+                "@type": "Organization",
+                "@id": "https://www.pandacodegen.com/#organization",
+                "name": "PandaGen",
+                "alternateName": "PandaGen Code",
+                "url": "https://www.pandacodegen.com",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.pandacodegen.com/logo.png",
+                    "width": 512,
+                    "height": 512
+                },
+                "sameAs": [
+                    "https://twitter.com/pandacodegen",
+                    "https://linkedin.com/company/pandagen"
+                ],
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "Customer Service",
+                    "email": "hello@pandacodegen.com"
+                }
+            }
+        ]
+    };
+
     return (
          <main className="bg-transparent min-h-screen selection:bg-neon selection:text-black overflow-x-hidden relative">
+            {/* Schema.org JSON-LD for SEO */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+            />
             {/* Scroll Progress Bar */}
             <div className="fixed top-0 left-0 right-0 h-1 z-50 bg-white/5">
                 <div className="h-full bg-gradient-to-r from-neon to-blue-600 w-[35%] shadow-[0_0_10px_#22d3ee]" />

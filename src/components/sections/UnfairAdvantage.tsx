@@ -38,13 +38,13 @@ const pillars = [
 
 export default function UnfairAdvantage() {
   return (
-    <section className="py-32 bg-transparent relative overflow-hidden">
-      
+    <section className="py-12 md:py-20 bg-transparent relative overflow-hidden">
+
       {/* Background Ambience */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-7xl bg-gradient-to-r from-blue-900/10 via-purple-900/10 to-blue-900/10 blur-[100px] pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-20">
+        <div className="text-center mb-12">
            <span className="text-neon tracking-widest text-sm font-bold uppercase">Why PandaGen</span>
            <h2 className="text-5xl md:text-6xl font-bold text-white mt-4">
              The Unfair <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Advantage.</span>

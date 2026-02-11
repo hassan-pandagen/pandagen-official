@@ -58,9 +58,17 @@ export default function YourPostPage() {
 
 ### Step 3: Build and Deploy
 
+**IMPORTANT:** After adding the blog post data and page file:
+
+1. **Test locally** - Run `npm run dev` and visit `http://localhost:3000/blog/[your-slug]` to verify
+2. **Deploy to production** - Push to GitHub/Vercel to make it live
+3. **Verify schema** - Use [Google Rich Results Test](https://search.google.com/test/rich-results) on the live URL
+4. **Submit to Google** - In Google Search Console > URL Inspection, request indexing
+
 That's it! The blog post will automatically:
 - ✅ Appear on the blog page ([/blog](https://pandacodegen.com/blog))
 - ✅ Be added to the sitemap ([/sitemap.xml](https://pandacodegen.com/sitemap.xml))
+- ✅ Include proper Schema.org structured data for Google
 - ✅ Use the correct illustration based on `illustrationType`
 - ✅ Show in featured section if `featured: true`
 

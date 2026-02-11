@@ -155,8 +155,77 @@ const articles = blogPosts
 
 export default function BlogPage() {
   const [activeCategory, setActiveCategory] = useState("All");
+
+  // Schema.org structured data for blog listing page
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://www.pandacodegen.com/blog#webpage",
+        "url": "https://www.pandacodegen.com/blog",
+        "name": "PandaGen Blog - Insights from the Engine Room",
+        "description": "Expert insights on Next.js development, WordPress migration, Shopify optimization, and enterprise web performance.",
+        "isPartOf": {
+          "@id": "https://www.pandacodegen.com/#website"
+        },
+        "breadcrumb": {
+          "@id": "https://www.pandacodegen.com/blog#breadcrumb"
+        },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.pandacodegen.com/blog#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.pandacodegen.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://www.pandacodegen.com/blog"
+          }
+        ]
+      },
+      {
+        "@type": "Blog",
+        "@id": "https://www.pandacodegen.com/blog#blog",
+        "name": "PandaGen Blog",
+        "description": "Technical insights on modern web development, WordPress alternatives, and performance optimization.",
+        "publisher": {
+          "@id": "https://www.pandacodegen.com/#organization"
+        },
+        "blogPost": articles.map((article) => ({
+          "@type": "BlogPosting",
+          "headline": article.title,
+          "description": article.excerpt,
+          "url": `https://www.pandacodegen.com/blog/${article.id}`,
+          "datePublished": new Date(article.date).toISOString(),
+          "author": {
+            "@type": "Person",
+            "name": article.author
+          },
+          "publisher": {
+            "@id": "https://www.pandacodegen.com/#organization"
+          }
+        }))
+      }
+    ]
+  };
+
   return (
     <main className="bg-transparent min-h-screen selection:bg-neon selection:text-black overflow-x-hidden relative">
+      {/* Schema.org JSON-LD for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
+
       <div className="relative z-10">
         <Header />
       <section className="pt-40 pb-16 px-6 text-center"><h1 className="text-5xl md:text-7xl font-bold text-white">Insights from the <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon to-purple-500">Engine Room.</span></h1></section>

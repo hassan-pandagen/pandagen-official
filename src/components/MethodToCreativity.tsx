@@ -46,22 +46,22 @@ export default function MethodToCreativity() {
 
   const { scrollYProgress } = useScroll({
     target: timelineRef,
-    offset: ["start end", "end start"]
+    offset: ["start center", "end end"]
   });
-  
+
   const scaleY = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
+    stiffness: 120,
+    damping: 25,
     restDelta: 0.001
   });
 
-  // Create a dynamic 'top' value for the glowing head based on the scroll progress
-  const lineTop = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  // Calculate the glowing head position - smooth tracking
+  const headPosition = useTransform(scrollYProgress, [0, 1], ["0%", "95%"]);
 
   if (!isMounted) return <section className="py-24 bg-transparent min-h-screen" />;
 
   return (
-    <section className="relative py-16 md:py-32 bg-transparent">
+    <section className="relative py-12 md:py-24 bg-transparent">
 
       {/* 2. LOCAL GLOW (To make sure it's not 'Too Black') */}
       {/* This puts a purple light RIGHT behind the timeline */}
@@ -97,18 +97,18 @@ export default function MethodToCreativity() {
 
           {/* RIGHT: Scrollable Timeline */}
           <div ref={timelineRef} className="lg:w-2/3 py-10">
-            <div className="relative border-l-2 border-white/10 ml-4 md:ml-12 space-y-12 md:space-y-24 pb-32">
+            <div className="relative border-l-2 border-white/10 ml-4 md:ml-12 space-y-12 md:space-y-24 pb-8">
 
               {/* 1. Glowing Progress Line - Extended beyond last card */}
               <motion.div
-                style={{ scaleY, originY: 0 }}
-                className="absolute left-[-3px] top-0 h-[calc(100%+8rem)] w-[3px] bg-gradient-to-b from-neon via-purple-500 to-orange-500 shadow-[0_0_40px_#22d3ee,0_0_80px_rgba(34,211,238,0.3)] z-30"
+                style={{ scaleY, transformOrigin: "top" }}
+                className="absolute left-[-3px] top-0 h-full w-[3px] bg-gradient-to-b from-neon via-purple-500 to-orange-500 shadow-[0_0_40px_#22d3ee,0_0_80px_rgba(34,211,238,0.3)] z-30"
               />
 
               {/* 2. The Glowing Head (The "Cool" Moving Part) */}
               <motion.div
-                style={{ top: lineTop }}
-                className="absolute left-[-8px] w-5 h-5 rounded-full bg-neon border-2 border-white shadow-[0_0_30px_#22d3ee,0_0_60px_rgba(34,211,238,0.5)] z-40 -translate-y-1/2 animate-pulse"
+                style={{ top: headPosition }}
+                className="absolute left-[-8px] w-5 h-5 rounded-full bg-neon border-2 border-white shadow-[0_0_30px_#22d3ee,0_0_60px_rgba(34,211,238,0.5)] z-40 animate-pulse"
               />
 
               {steps.map((step, index) => (
@@ -135,19 +135,19 @@ function StepCard({ step, index }: { step: any, index: number }) {
       {/* 3. ICON (Architectural Look) */}
       <span className="absolute -left-3 md:-left-12 top-8 flex h-6 w-6 md:h-24 md:w-24 items-center justify-center z-10">
          {/* The Halo */}
-         <div className="hidden md:flex items-center justify-center w-12 h-12 rounded-xl bg-[#050505] border border-white/20 text-white shadow-[0_0_20px_rgba(255,255,255,0.05)]">
+         <div className="hidden md:flex items-center justify-center w-12 h-12 rounded-xl bg-[#050505] border border-white/30 text-white shadow-[0_0_30px_rgba(34,211,238,0.2)] group-hover:shadow-[0_0_40px_rgba(34,211,238,0.4)] group-hover:border-neon/50 transition-all duration-500">
             <step.icon size={20} />
          </div>
          {/* Mobile Dot */}
-         <div className="md:hidden w-4 h-4 rounded-full bg-[#050505] border-2 border-neon box-content" />
+         <div className="md:hidden w-4 h-4 rounded-full bg-[#050505] border-2 border-neon box-content shadow-[0_0_10px_rgba(34,211,238,0.6)]" />
       </span>
 
-      {/* 4. THE CARD (Glass Upgrade - NO BLACK BACKGROUND) */}
+      {/* 4. THE PREMIUM CARD */}
       <div className="group relative p-8 rounded-3xl transition-all duration-500
-        bg-white/[0.02] border border-white/10 backdrop-blur-sm
-        hover:bg-white/[0.04] hover:border-white/20 hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)]"
+        bg-white/[0.05] md:bg-white/[0.02] border border-white/15 md:border-white/10 backdrop-blur-sm
+        hover:bg-white/[0.08] hover:border-white/25 hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_10px_40px_rgba(34,211,238,0.15)] hover:-translate-y-1"
       >
-        <div className="absolute -top-4 left-8 px-4 py-1 bg-[#0A0A0A] border border-white/20 rounded-full text-xs font-mono text-neon uppercase tracking-wider">
+        <div className="absolute -top-4 left-8 px-4 py-1 bg-[#0A0A0A] border border-white/30 rounded-full text-xs font-mono text-neon uppercase tracking-wider shadow-[0_0_20px_rgba(34,211,238,0.3)] group-hover:shadow-[0_0_30px_rgba(34,211,238,0.5)] group-hover:border-neon/50 transition-all duration-500">
           Phase {step.id}
         </div>
         

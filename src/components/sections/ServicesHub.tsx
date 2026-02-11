@@ -7,14 +7,14 @@ import Link from "next/link";
 
 export default function ServicesHub() {
   return (
-    <section className="py-12 md:py-24 bg-transparent relative overflow-hidden">
-      {/* Ambient Glow - Stronger on mobile */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/20 md:bg-purple-500/10 blur-[150px] rounded-full pointer-events-none" />
+    <section className="py-8 md:py-16 bg-transparent relative overflow-hidden">
+      {/* Subtle Ambient Glow - reduced to not overpower card colors */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/15 md:bg-purple-500/8 blur-[150px] rounded-full pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10">
         
         {/* Header */}
-        <div className="mb-16 md:flex justify-between items-end">
+        <div className="mb-10 md:flex justify-between items-end">
           <div className="max-w-2xl">
             <span className="text-neon tracking-widest text-sm font-bold uppercase">Our Expertise</span>
             <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 leading-tight">
@@ -32,37 +32,40 @@ export default function ServicesHub() {
          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 h-auto md:h-[600px] md:grid-rows-2">
            
            {/* 1. WORDPRESS MIGRATION (Data Transfer) */}
-           <BentoCard 
-             colSpan="md:col-span-1" 
+           <BentoCard
+             colSpan="md:col-span-1"
              rowSpan="md:row-span-1"
              title="WordPress Migration"
              subtitle="Make Your Site Instant"
              icon={Database}
-             gradient="from-blue-600/20 via-purple-500/5"
+             gradient="from-blue-600/60 via-blue-500/30 to-transparent"
+             borderColor="blue-500"
            >
               <MigrationDecoration />
            </BentoCard>
 
            {/* 2. WEB APPS & DASHBOARDS (Typing Code) */}
-           <BentoCard 
-             colSpan="md:col-span-2" 
+           <BentoCard
+             colSpan="md:col-span-2"
              rowSpan="md:row-span-1"
              title="Web Apps & Dashboards"
              subtitle="Build Your Own Software (SaaS)"
              icon={Code}
-             gradient="from-blue-500/20 via-purple-500/5"
+             gradient="from-cyan-500/60 via-cyan-600/30 to-transparent"
+             borderColor="cyan-500"
            >
               <TypingCodeDecoration />
            </BentoCard>
 
            {/* 3. HIGH-PERFORMANCE STORES (Growing Graph) */}
-           <BentoCard 
-             colSpan="md:col-span-1" 
+           <BentoCard
+             colSpan="md:col-span-1"
              rowSpan="md:row-span-2"
              title="High-Performance Stores"
              subtitle="Custom Shopify (No Templates)"
              icon={ShoppingCart}
-             gradient="from-green-500/20 via-emerald-500/5"
+             gradient="from-green-600/60 via-green-500/30 to-transparent"
+             borderColor="green-500"
            >
              <RevenueGraphDecoration />
            </BentoCard>
@@ -207,30 +210,42 @@ function SaaSDecoration() {
 
 // --- MAIN CARD COMPONENT ---
 
-function BentoCard({ colSpan, rowSpan, title, subtitle, icon: Icon, gradient, children }: any) {
+function BentoCard({ colSpan, rowSpan, title, subtitle, icon: Icon, gradient, borderColor, children }: any) {
+  // Get border color mapping
+  const getBorderColor = () => {
+    switch(borderColor) {
+      case 'blue-500': return { hover: 'rgba(59, 130, 246, 0.6)', icon: 'rgba(59, 130, 246, 0.8)' };
+      case 'cyan-500': return { hover: 'rgba(6, 182, 212, 0.6)', icon: 'rgba(6, 182, 212, 0.8)' };
+      case 'green-500': return { hover: 'rgba(34, 197, 94, 0.6)', icon: 'rgba(34, 197, 94, 0.8)' };
+      default: return { hover: 'rgba(255, 255, 255, 0.4)', icon: 'rgba(255, 255, 255, 0.5)' };
+    }
+  };
+
+  const colors = getBorderColor();
+
   return (
     <motion.div
-      whileHover={{ y: -5 }}
-      className={`relative group overflow-hidden rounded-2xl md:rounded-3xl border border-white/[0.25] md:border-white/[0.15] bg-gradient-to-b from-white/[0.12] md:from-white/[0.08] to-transparent p-6 md:p-8 flex flex-col justify-between h-64 md:h-auto ${colSpan} ${rowSpan} transition-all duration-300 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)]`}
+      whileHover={{ y: -6, scale: 1.02 }}
+      className={`relative group overflow-hidden rounded-2xl md:rounded-3xl border-2 border-white/20 bg-gradient-to-b from-white/[0.08] to-transparent backdrop-blur-sm p-6 md:p-8 flex flex-col justify-between h-64 md:h-auto ${colSpan} ${rowSpan} transition-all duration-300 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_8px_32px_rgba(0,0,0,0.4)] hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.15),0_20px_60px_rgba(0,0,0,0.6)] hover:border-white/40`}
     >
-      {/* Background Gradient - Visible on mobile, hover on desktop */}
-      <div className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-30 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-700`} />
-      
+      {/* Background Gradient - BOLD and always visible */}
+      <div className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-60 transition-opacity duration-500`} />
+
       {/* Content */}
       <div className="relative z-10">
-        <div className="w-12 h-12 rounded-xl bg-white/10 md:bg-white/5 border border-white/20 md:border-white/10 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-white/10 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.1)] transition-all duration-300">
+        <div className="w-12 h-12 rounded-xl bg-white/10 border-2 border-white/30 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:border-white/50 group-hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all duration-300">
           <Icon
-            strokeWidth={1.5}
-            className="w-6 h-6 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
+            strokeWidth={2}
+            className="w-6 h-6 text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.8)]"
           />
         </div>
-        <h3 className="text-lg md:text-2xl font-bold text-white mb-2">{title}</h3>
-        <p className="text-gray-400 text-xs md:text-sm font-medium">{subtitle}</p>
+        <h3 className="text-lg md:text-2xl font-bold text-white mb-2 drop-shadow-lg">{title}</h3>
+        <p className="text-gray-300 text-xs md:text-sm font-medium">{subtitle}</p>
       </div>
 
       {children}
 
-      {/* Hover Arrow */}
+      {/* Hover Arrow - subtle */}
       <div className="absolute top-6 right-6 md:top-8 md:right-8 opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-x-2 group-hover:translate-x-0">
         <ArrowUpRight className="w-5 h-5 md:w-6 md:h-6 text-white" />
       </div>

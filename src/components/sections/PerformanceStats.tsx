@@ -14,20 +14,21 @@ export default function PerformanceStats() {
   if (!mounted) return <section className="py-24 bg-transparent" />;
 
   return (
-    <section className="py-12 md:py-24 bg-transparent relative overflow-hidden">
-      {/* Backlight Glow - Stronger on mobile */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-blue-500/20 md:bg-blue-500/10 blur-[150px] rounded-full pointer-events-none" />
+    <section className="py-8 md:py-16 bg-transparent relative overflow-hidden">
+      {/* Premium Backlight Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-blue-500/25 md:bg-blue-500/15 blur-[150px] rounded-full pointer-events-none" />
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-cyan-500/15 md:bg-cyan-500/10 blur-[120px] rounded-full pointer-events-none" />
       
       <div className="container mx-auto px-6 relative z-10">
         
         {/* Header */}
-        <div className="text-center mb-16 max-w-2xl mx-auto">
-          <motion.div 
+        <div className="text-center mb-10 max-w-2xl mx-auto">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-xs font-mono mb-6"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/15 border border-green-500/40 text-green-400 text-xs font-mono mb-6 shadow-[0_0_20px_rgba(34,197,94,0.3)]"
           >
-            <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+            <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.8)]" />
             SYSTEM STATUS: OPTIMIZED
           </motion.div>
           <h2 className="text-5xl md:text-6xl font-black text-white mb-6 tracking-tight drop-shadow-xl">
@@ -39,7 +40,7 @@ export default function PerformanceStats() {
         </div>
 
         {/* THE LIVE TERMINAL BOARD */}
-        <div className="max-w-5xl mx-auto bg-[#0F0F0F] border border-white/30 md:border-white/20 rounded-3xl overflow-hidden relative shadow-[0_0_50px_rgba(0,0,0,0.5)]">
+        <div className="max-w-5xl mx-auto bg-[#0F0F0F] border border-white/30 md:border-white/20 rounded-3xl overflow-hidden relative shadow-[0_0_50px_rgba(0,0,0,0.5),0_0_100px_rgba(34,211,238,0.1)] hover:shadow-[0_0_60px_rgba(0,0,0,0.5),0_0_120px_rgba(34,211,238,0.15)] transition-shadow duration-500">
             {/* Top Bar */}
             <div className="h-10 bg-white/5 border-b border-white/10 flex items-center px-4 gap-2">
                 <div className="flex gap-1.5">

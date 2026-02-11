@@ -20,7 +20,7 @@ export default function FullROIShowcase({ onOpenQuote }: FullROIShowcaseProps) {
   return (
     <div className="bg-gradient-to-br from-[#050505] via-[#0A0A14] to-[#050505]">
       {/* Detailed ROI Breakdown Section */}
-      <section className="py-16 relative overflow-hidden">
+      <section className="py-12 relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:30px_30px]" />
@@ -33,7 +33,7 @@ export default function FullROIShowcase({ onOpenQuote }: FullROIShowcaseProps) {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="text-center mb-8"
           >
             <p className="text-neon text-sm uppercase tracking-widest font-bold mb-4">
               DATA-BACKED COMPARISONS
@@ -54,7 +54,7 @@ export default function FullROIShowcase({ onOpenQuote }: FullROIShowcaseProps) {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-12 text-center"
+            className="mt-10 text-center"
           >
             <button
               onClick={onOpenQuote}

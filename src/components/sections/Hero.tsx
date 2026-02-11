@@ -9,21 +9,24 @@ const STACK = ["NEXT.JS 15", "VERCEL", "REACT", "TYPESCRIPT", "SUPABASE", "STRIP
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[100vh] flex flex-col justify-center pt-24 pb-40 md:pt-32 md:pb-0 overflow-hidden bg-transparent">
+    <section className="relative min-h-[100vh] flex flex-col justify-center pt-24 pb-20 md:pt-32 md:pb-0 overflow-hidden bg-transparent">
       
-      {/* 1. BACKGROUND AMBIENCE (Subtle & Deep) */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-blue-900/20 blur-[120px] rounded-full pointer-events-none opacity-50" />
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:60px_60px] opacity-20 pointer-events-none" />
+      {/* 1. SUBTLE BACKGROUND AMBIENCE */}
+      {/* Main spotlight glow - reduced */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-blue-900/15 md:bg-blue-900/10 blur-[150px] rounded-full pointer-events-none" />
+      {/* Secondary accent glow - minimal */}
+      <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-purple-500/10 md:bg-purple-500/6 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
         
         {/* --- LEFT: HIGH-CONVERSION COPY --- */}
-        <div className="max-w-2xl">
+        <div className="max-w-2xl relative">
+
             {/* Status Pill */}
-            <motion.div 
+            <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-neon mb-8 backdrop-blur-md"
+                className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-xs font-medium text-neon mb-8 backdrop-blur-md shadow-[0_0_20px_rgba(34,211,238,0.2)]"
             >
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
@@ -32,14 +35,14 @@ export default function Hero() {
                 Accepting Projects for Feb 2026
             </motion.div>
 
-            <motion.h1 
+            <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
-                className="text-5xl md:text-8xl font-bold text-white tracking-tighter mb-6 leading-[1]"
+                className="text-5xl md:text-8xl font-black text-white tracking-tighter mb-6 leading-[1]"
             >
                 Digital <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon via-blue-500 to-purple-500 animate-gradient-x">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-500 [text-shadow:0_0_40px_rgba(34,211,238,0.5)] [-webkit-text-stroke:1px_rgba(34,211,238,0.3)]">
                     Done Right.
                 </span>
             </motion.h1>
@@ -59,15 +62,15 @@ export default function Hero() {
                 transition={{ delay: 0.3 }}
                 className="flex flex-col sm:flex-row gap-4"
             >
-                <button 
+                <button
                     data-cal-namespace="discovery"
                     data-cal-link="pandagen/discovery"
                     data-cal-config='{"layout":"month_view"}'
-                    className="px-8 py-4 bg-neon text-black font-bold text-lg rounded-full hover:bg-neon/90 transition-all flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(34,211,238,0.4)] hover:scale-105"
+                    className="px-8 py-4 bg-neon text-black font-bold text-lg rounded-full hover:bg-neon/90 transition-all duration-300 flex items-center justify-center gap-2 shadow-[0_0_40px_rgba(34,211,238,0.6),0_0_80px_rgba(34,211,238,0.3)] hover:shadow-[0_0_60px_rgba(34,211,238,0.8),0_0_100px_rgba(34,211,238,0.4)] hover:scale-105"
                 >
                     Get Free Quote <ArrowRight className="w-5 h-5" />
                 </button>
-                <Link href="/work" className="px-8 py-4 bg-white/5 border border-white/10 text-white font-bold text-lg rounded-full hover:bg-white/10 transition-all flex items-center justify-center gap-2">
+                <Link href="/work" className="px-8 py-4 bg-white/10 border border-white/20 text-white font-bold text-lg rounded-full hover:bg-white/15 transition-all flex items-center justify-center gap-2 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:-translate-y-0.5">
                     View Case Studies
                 </Link>
             </motion.div>
@@ -158,9 +161,9 @@ export default function Hero() {
 
       {/* 2. INFINITE SCROLLING TECH STACK */}
       <div className="absolute bottom-0 w-full border-t border-white/10 md:border-white/5 bg-black/20 backdrop-blur-sm py-6 overflow-hidden z-20">
-         <div className="flex w-max animate-marquee gap-16 items-center opacity-70 md:opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+         <div className="flex w-max animate-marquee gap-16 items-center transition-all duration-500">
             {[...STACK, ...STACK, ...STACK].map((tech, i) => (
-                <span key={i} className="text-lg font-bold text-white/80 md:text-white/60 flex items-center gap-2">
+                <span key={i} className="text-lg font-bold text-white flex items-center gap-2 hover:text-neon transition-colors duration-300">
                     {tech}
                 </span>
             ))}

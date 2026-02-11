@@ -46,8 +46,117 @@ export default function Home() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Schema.org structured data for homepage
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.pandacodegen.com/#organization",
+        "name": "PandaGen",
+        "alternateName": "PandaGen Code",
+        "url": "https://www.pandacodegen.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.pandacodegen.com/logo.png",
+          "width": 512,
+          "height": 512
+        },
+        "description": "Enterprise Next.js development agency specializing in WordPress migration, Shopify optimization, and custom web applications. Sub-second load times guaranteed.",
+        "email": "hello@pandacodegen.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "US"
+        },
+        "sameAs": [
+          "https://twitter.com/pandacodegen",
+          "https://linkedin.com/company/pandagen"
+        ],
+        "serviceType": [
+          "Next.js Development",
+          "WordPress Migration",
+          "Shopify Headless Commerce",
+          "React Development",
+          "Web Performance Optimization",
+          "Enterprise Web Development"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.pandacodegen.com/#website",
+        "url": "https://www.pandacodegen.com",
+        "name": "PandaGen - Enterprise Next.js Development",
+        "description": "We migrate WordPress & Shopify sites to custom Next.js architectures. Sub-second load times. Zero bloat. Enterprise-grade security.",
+        "publisher": {
+          "@id": "https://www.pandacodegen.com/#organization"
+        },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.pandacodegen.com/#webpage",
+        "url": "https://www.pandacodegen.com",
+        "name": "PandaGen | Enterprise Next.js & Shopify Architecture",
+        "description": "We migrate WordPress & Shopify sites to custom Next.js architectures. Sub-second load times. Zero bloat. Enterprise-grade security and SEO.",
+        "isPartOf": {
+          "@id": "https://www.pandacodegen.com/#website"
+        },
+        "about": {
+          "@id": "https://www.pandacodegen.com/#organization"
+        },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.pandacodegen.com/#service",
+        "name": "PandaGen Development Services",
+        "description": "Custom Next.js development, WordPress migration, and Shopify optimization for enterprise businesses.",
+        "provider": {
+          "@id": "https://www.pandacodegen.com/#organization"
+        },
+        "areaServed": "Worldwide",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Development Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "WordPress to Next.js Migration",
+                "description": "Migrate your WordPress site to a custom Next.js application with sub-second load times."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Shopify Headless Development",
+                "description": "Build a custom Shopify storefront with Next.js for 4x faster load times."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Custom Web Applications",
+                "description": "Build SaaS platforms and dashboards with React and Next.js."
+              }
+            }
+          ]
+        }
+      }
+    ]
+  };
+
   return (
     <main className="min-h-screen bg-transparent text-white overflow-x-hidden">
+      {/* Schema.org JSON-LD for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+
       {/* Global Noise Texture - This fixes the "Flat" look */}
       <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-20 mix-blend-overlay"></div>
 

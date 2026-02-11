@@ -42,7 +42,7 @@ export default function RealityCheck({ onOpenQuote }: RealityCheckProps) {
   const current = content[platform];
 
   return (
-    <section className="py-32 bg-transparent relative overflow-hidden">
+    <section className="py-12 md:py-20 bg-transparent relative overflow-hidden">
       
       {/* 1. ATMOSPHERE GLOW */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[800px] bg-blue-900/20 blur-[150px] rounded-full pointer-events-none" />
@@ -79,35 +79,37 @@ export default function RealityCheck({ onOpenQuote }: RealityCheckProps) {
           layout
           className="max-w-6xl mx-auto"
         >
-          <div className="relative p-[1px] rounded-[3rem] bg-gradient-to-b from-white/10 via-transparent to-transparent">
-            <div className="relative rounded-[3rem] overflow-hidden bg-[#080808] h-full shadow-2xl">
+          <div className="relative p-[1px] rounded-[3rem] bg-gradient-to-b from-white/15 via-white/5 to-transparent">
+            <div className="relative rounded-[3rem] overflow-hidden bg-gradient-to-b from-[#0a0a0a] to-[#050505] h-full shadow-[0_20px_60px_rgba(0,0,0,0.5),0_0_100px_rgba(34,211,238,0.1)]">
                
                <div className="relative z-10 grid md:grid-cols-2 gap-12 p-8 md:p-16 items-center">
 
                   {/* LEFT: THE PAIN (Dynamic) */}
                   <div className="flex flex-col justify-center">
-                    
+
                     <AnimatePresence mode="wait">
-                        <motion.div 
+                        <motion.div
                             key={platform}
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: 20 }}
                             transition={{ duration: 0.3 }}
                         >
-                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-full w-fit mb-6">
-                                <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
+                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/15 border border-red-500/30 rounded-full w-fit mb-6 shadow-[0_0_20px_rgba(239,68,68,0.3)]">
+                                <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse shadow-[0_0_10px_rgba(239,68,68,0.8)]" />
                                 <span className="text-xs font-bold text-red-400 uppercase tracking-wider">Warning</span>
                             </div>
 
-                            <h2 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
-                                Stop Losing Money.<br/>
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">
-                                    {current.pain}
-                                </span>
+                            <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-4">
+                                Stop Losing Money.
                             </h2>
 
-                            <p className="text-xl text-gray-400 mb-10 leading-relaxed max-w-md">
+                            {/* MAIN FOCUS - WordPress/Shopify Pain Point */}
+                            <h3 className="text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-orange-500 to-red-400 leading-tight mb-8 [text-shadow:0_0_60px_rgba(239,68,68,0.6),0_0_30px_rgba(249,115,22,0.4)] [-webkit-text-stroke:0.5px_rgba(239,68,68,0.4)] animate-pulse">
+                                {current.pain}
+                            </h3>
+
+                            <p className="text-lg md:text-xl text-gray-400 mb-10 leading-relaxed max-w-md">
                                 {current.sub}
                             </p>
                         </motion.div>
@@ -159,10 +161,10 @@ export default function RealityCheck({ onOpenQuote }: RealityCheckProps) {
                                 className="space-y-2"
                             >
                                 {current.comparison.map((row, i) => (
-                                <div key={i} className="grid grid-cols-3 gap-4 items-center py-4 border-b border-white/5 last:border-0 hover:bg-white/5 transition-colors rounded-lg px-2 -mx-2">
-                                    <div className="text-sm text-gray-300 font-medium">{row.metric}</div>
-                                    <div className="text-center text-sm text-red-400/80">{row.bad}</div>
-                                    <div className="text-center text-sm text-neon font-bold shadow-[0_0_15px_rgba(34,211,238,0.1)]">{row.good}</div>
+                                <div key={i} className="grid grid-cols-3 gap-4 items-center py-4 border-b border-white/5 last:border-0 hover:bg-white/10 hover:border-white/10 transition-all duration-300 rounded-lg px-2 -mx-2 hover:shadow-[0_0_20px_rgba(34,211,238,0.1)] hover:-translate-y-0.5">
+                                    <div className="text-sm text-gray-300 font-medium group-hover:text-white">{row.metric}</div>
+                                    <div className="text-center text-sm text-red-400/80 group-hover:text-red-400">{row.bad}</div>
+                                    <div className="text-center text-sm text-neon font-bold shadow-[0_0_15px_rgba(34,211,238,0.2)] group-hover:shadow-[0_0_25px_rgba(34,211,238,0.4)]">{row.good}</div>
                                 </div>
                                 ))}
                             </motion.div>
@@ -194,12 +196,12 @@ export default function RealityCheck({ onOpenQuote }: RealityCheckProps) {
                
                {/* TECH STACK STRIP */}
                <div className="border-t border-white/10 bg-white/[0.02] px-8 py-6 flex flex-col items-center">
-                  <p className="text-[10px] text-gray-400 uppercase tracking-[0.2em] mb-4 font-bold">Enterprise Tech Stack</p>
-                  <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500">
-                    <span className="text-lg font-bold text-white flex gap-2 items-center"><Zap size={16}/> Next.js 15</span>
-                    <span className="text-lg font-bold text-white flex gap-2 items-center"><Globe size={16}/> Vercel</span>
-                    <span className="text-lg font-bold text-white flex gap-2 items-center"><DollarSign size={16}/> Stripe</span>
-                    <span className="text-lg font-bold text-white flex gap-2 items-center"><ShieldCheck size={16}/> Supabase</span>
+                  <p className="text-[10px] text-neon uppercase tracking-[0.2em] mb-4 font-bold">Enterprise Tech Stack</p>
+                  <div className="flex flex-wrap justify-center gap-8 md:gap-16 transition-all duration-500">
+                    <span className="text-lg font-bold text-white flex gap-2 items-center hover:text-neon hover:scale-110 transition-all duration-300"><Zap size={16} className="text-neon"/> Next.js 15</span>
+                    <span className="text-lg font-bold text-white flex gap-2 items-center hover:text-neon hover:scale-110 transition-all duration-300"><Globe size={16} className="text-neon"/> Vercel</span>
+                    <span className="text-lg font-bold text-white flex gap-2 items-center hover:text-neon hover:scale-110 transition-all duration-300"><DollarSign size={16} className="text-neon"/> Stripe</span>
+                    <span className="text-lg font-bold text-white flex gap-2 items-center hover:text-neon hover:scale-110 transition-all duration-300"><ShieldCheck size={16} className="text-neon"/> Supabase</span>
                   </div>
                </div>
 
