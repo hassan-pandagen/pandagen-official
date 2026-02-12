@@ -1,8 +1,9 @@
-import { ArrowLeft, Calendar, Clock, ShieldCheck, ArrowRight, Zap, CheckCircle2, DollarSign } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, ShieldCheck, ArrowRight, Zap, CheckCircle2, DollarSign, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, ComparisonTable } from "@/components/ui/BlogStyles";
+import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 import type { Metadata } from "next";
 
 // --- SEO METADATA ---
@@ -1351,6 +1352,11 @@ export default async function BlogPost(props: PageProps) {
 
     // Generate structured data (Schema.org JSON-LD) for SEO
     const publishDate = new Date(post.date).toISOString();
+
+    // Get FAQ data from blog.ts if available
+    const blogData = await import('@/data/blog');
+    const blogPostData = blogData.blogPosts.find((p) => p.id === params.slug);
+
     const articleSchema = {
         "@context": "https://schema.org",
         "@graph": [
@@ -1462,7 +1468,20 @@ export default async function BlogPost(props: PageProps) {
                     "contactType": "Customer Service",
                     "email": "hello@pandacodegen.com"
                 }
-            }
+            },
+            // Add FAQ schema if the post has FAQs (helps win featured snippets)
+            ...(blogPostData?.faqs && blogPostData.faqs.length > 0 ? [{
+                "@type": "FAQPage",
+                "@id": `https://www.pandacodegen.com/blog/${params.slug}#faq`,
+                "mainEntity": blogPostData.faqs.map((faq) => ({
+                    "@type": "Question",
+                    "name": faq.question,
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": faq.answer
+                    }
+                }))
+            }] : [])
         ]
     };
 
@@ -1476,10 +1495,8 @@ export default async function BlogPost(props: PageProps) {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
             />
-            {/* Scroll Progress Bar */}
-            <div className="fixed top-0 left-0 right-0 h-1 z-50 bg-white/5">
-                <div className="h-full bg-gradient-to-r from-neon to-blue-600 w-[35%] shadow-[0_0_10px_#22d3ee]" />
-            </div>
+            {/* Reading Progress Bar */}
+            <ReadingProgressBar />
 
             <Header />
 
@@ -1489,9 +1506,18 @@ export default async function BlogPost(props: PageProps) {
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-purple-600/20 blur-[150px] rounded-full pointer-events-none" />
                 <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-blue-600/15 blur-[150px] rounded-full pointer-events-none" />
                 <div className="container mx-auto text-center max-w-4xl relative z-10">
-                    <Link href="/blog" className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-10 text-sm font-bold uppercase tracking-widest">
-                         <ArrowLeft className="w-4 h-4" /> Back to Insights
-                     </Link>
+                    {/* Breadcrumb Navigation - SEO & UX */}
+                    <nav aria-label="Breadcrumb" className="flex items-center justify-center gap-3 text-lg mb-10 font-semibold">
+                        <Link href="/" className="text-white hover:text-neon transition-colors">
+                            Home
+                        </Link>
+                        <ChevronRight className="w-5 h-5 text-neon" />
+                        <Link href="/blog" className="text-white hover:text-neon transition-colors">
+                            Blog
+                        </Link>
+                        <ChevronRight className="w-5 h-5 text-neon" />
+                        <span className="text-gray-400">{post.title.length > 40 ? post.title.substring(0, 40) + '...' : post.title}</span>
+                    </nav>
                     
                     <div className="flex items-center justify-center gap-4 mb-8">
                         <span className="px-4 py-1 bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs font-bold rounded-full uppercase tracking-wider">

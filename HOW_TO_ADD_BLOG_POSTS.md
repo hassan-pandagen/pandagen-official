@@ -56,21 +56,68 @@ export default function YourPostPage() {
 }
 ```
 
+### Step 2.5: Add FAQs for Featured Snippets (HIGHLY RECOMMENDED)
+
+**Featured snippets = 2x higher click-through rate in Google**
+
+Add FAQs to your blog post data to compete for the answer boxes at the top of search results:
+
+```typescript
+{
+  id: "your-post-slug",
+  title: "Your Post Title",
+  // ... other fields
+  faqs: [
+    {
+      question: "Why is my WordPress site so slow?",
+      answer: "WordPress sites become slow due to plugin bloat. Every plugin adds 2-15 HTTP requests, CSS files, and JavaScript that must load on every page. With 30+ plugins, you're looking at 200+ HTTP requests before visitors see anything."
+    },
+    {
+      question: "How can I speed up my WordPress site?",
+      answer: "Caching plugins can help marginally, but can't eliminate the fundamental bloat. To get truly fast (under 1 second load time), you need to replace plugins with custom code or migrate to a modern framework like Next.js."
+    }
+  ]
+},
+```
+
+**FAQ Writing Rules:**
+- ✅ **Target actual search queries** - Use "People Also Ask" in Google to find real questions
+- ✅ **Keep answers under 300 characters** - Shorter answers are more likely to be selected as featured snippets
+- ✅ **Front-load the answer** - Put the most important info in the first sentence
+- ✅ **3-5 FAQs per post** - Optimal for schema markup without overwhelming the page
+- ✅ **Answer the question directly** - Don't be vague or promotional
+
+**Good FAQ Examples:**
+| ❌ Bad Question | ✅ Good Question |
+|----------------|-----------------|
+| "What is Next.js?" | "Why is my WordPress site so slow?" |
+| "Our services" | "How much does WordPress migration cost?" |
+| "Contact us for more info" | "Can I migrate without losing SEO rankings?" |
+
+**Where FAQs Get Used:**
+1. **FAQPage schema** - Automatically generated for Google
+2. **Featured snippets** - Your answers appear in Google's answer boxes
+3. **Voice search** - Google Assistant reads your answers
+
 ### Step 3: Build and Deploy
 
 **IMPORTANT:** After adding the blog post data and page file:
 
 1. **Test locally** - Run `npm run dev` and visit `http://localhost:3000/blog/[your-slug]` to verify
-2. **Deploy to production** - Push to GitHub/Vercel to make it live
-3. **Verify schema** - Use [Google Rich Results Test](https://search.google.com/test/rich-results) on the live URL
-4. **Submit to Google** - In Google Search Console > URL Inspection, request indexing
+2. **Check FAQs** - View page source and search for "FAQPage" to confirm FAQ schema was generated
+3. **Deploy to production** - Push to GitHub/Vercel to make it live
+4. **Verify schema** - Use [Google Rich Results Test](https://search.google.com/test/rich-results) on the live URL
+   - Should show: ✅ Article schema, ✅ FAQPage schema (if you added FAQs), ✅ BreadcrumbList schema
+5. **Submit to Google** - In Google Search Console > URL Inspection, request indexing
 
 That's it! The blog post will automatically:
 - ✅ Appear on the blog page ([/blog](https://pandacodegen.com/blog))
 - ✅ Be added to the sitemap ([/sitemap.xml](https://pandacodegen.com/sitemap.xml))
-- ✅ Include proper Schema.org structured data for Google
+- ✅ Include proper Schema.org structured data for Google (Article, FAQPage, BreadcrumbList)
 - ✅ Use the correct illustration based on `illustrationType`
 - ✅ Show in featured section if `featured: true`
+- ✅ Display breadcrumb navigation (Home › Blog › Post Title)
+- ✅ Show reading progress bar as users scroll
 
 ---
 
@@ -537,6 +584,90 @@ Every post MUST link to at least 2 other blog posts + 1 service page:
 
 ---
 
+## 🎯 Advanced SEO Features (Built-In)
+
+Your blog posts automatically include elite-level SEO features:
+
+### 1. FAQ Schema for Featured Snippets
+When you add `faqs` to your blog post data, the system automatically generates FAQPage schema markup. This helps you win featured snippets in Google (the answer boxes at the top of search results).
+
+**How it works:**
+- Add FAQs to blog post data in [src/data/blog.ts](src/data/blog.ts)
+- Schema is auto-generated when the page loads
+- Google crawls and indexes your FAQs
+- Your answers appear in "People Also Ask" boxes
+
+**Impact:** 2x higher click-through rate from search results
+
+### 2. Breadcrumb Navigation
+Every blog post automatically shows breadcrumb navigation:
+```
+Home › Blog › [Post Title]
+```
+
+**Benefits:**
+- Better UX (users know where they are)
+- Breadcrumb schema markup for Google
+- Lower bounce rate (easier navigation)
+
+### 3. Reading Progress Bar
+Dynamic progress bar at the top of the page shows how far users have scrolled.
+
+**Benefits:**
+- Increases engagement (users see their progress)
+- Time-on-page metric improves (SEO ranking signal)
+- 60fps smooth animation using requestAnimationFrame
+
+### 4. Structured Data (Schema.org)
+Every blog post automatically includes:
+- ✅ **Article schema** - Title, author, date, publisher
+- ✅ **FAQPage schema** - If you add FAQs
+- ✅ **BreadcrumbList schema** - Navigation hierarchy
+- ✅ **WebPage schema** - Page metadata
+- ✅ **Organization schema** - Company info
+
+**Verify your schema:** Use [Google Rich Results Test](https://search.google.com/test/rich-results) after publishing.
+
+---
+
+## 📅 When to Update lastModified Dates
+
+### Blog Posts
+The `lastModified` field in [src/data/blog.ts](src/data/blog.ts) is used for the sitemap. Update it when:
+- ✅ You fix errors in the content
+- ✅ You add new sections or FAQs
+- ✅ You update statistics or data
+- ❌ Don't update for minor typo fixes
+
+### Static Pages
+Update the `last-modified` field in layout.tsx files when:
+- ✅ You change pricing
+- ✅ You update service descriptions
+- ✅ You add new team members
+- ✅ You modify contact information
+- ❌ Don't update for design tweaks
+
+**Files to update:**
+- [src/app/services/wordpress-migration/layout.tsx](src/app/services/wordpress-migration/layout.tsx)
+- [src/app/services/ecommerce/layout.tsx](src/app/services/ecommerce/layout.tsx)
+- [src/app/services/custom-engineering/layout.tsx](src/app/services/custom-engineering/layout.tsx)
+- [src/app/pricing/layout.tsx](src/app/pricing/layout.tsx)
+- [src/app/about/layout.tsx](src/app/about/layout.tsx)
+- [src/app/contact/layout.tsx](src/app/contact/layout.tsx)
+
+**Example:**
+```typescript
+export const metadata: Metadata = {
+  title: 'Pricing & Investment',
+  // ... other fields
+  other: {
+    'last-modified': '2026-02-15', // ← Update this date
+  },
+}
+```
+
+---
+
 ## Important Notes
 
 - **Delete Static Sitemap**: You can now delete `public/sitemap.xml` if it exists - the dynamic sitemap at [src/app/sitemap.ts](src/app/sitemap.ts) handles everything automatically
@@ -544,6 +675,7 @@ Every post MUST link to at least 2 other blog posts + 1 service page:
 - **Featured Posts**: Set `featured: true` for important posts - they appear as large hero cards
 - **SEO-Friendly**: Each post automatically gets proper metadata for search engines
 - **Date Format**: Use `lastModified` in YYYY-MM-DD format for accurate sitemap dates
+- **FAQs**: Always add 3-5 FAQs to every blog post for featured snippet opportunities
 
 ---
 
