@@ -1,5 +1,5 @@
 // Centralized blog data - Add new posts here and they'll automatically appear in sitemap
-export type IllustrationType = 'wordpress' | 'speed' | 'code' | 'saas' | 'plugins' | 'traffic' | 'sales' | 'conversion';
+export type IllustrationType = 'wordpress' | 'speed' | 'code' | 'saas' | 'plugins' | 'traffic' | 'sales' | 'conversion' | 'ranking';
 
 export interface FAQ {
   question: string;
@@ -179,5 +179,40 @@ export const blogPosts: BlogPost[] = [
     featured: false,
     illustrationType: 'conversion',
     lastModified: "2026-02-11",
+  },
+  {
+    id: "why-competitor-outranks-you",
+    title: "Why Your Competitor Outranks You on Google (And Pays Less for Hosting)",
+    excerpt: "They're getting 3× your traffic with a coded website. Google, ChatGPT, and Bing all prefer fast sites. Here's why.",
+    category: "Traffic Growth",
+    readTime: "11 min",
+    date: "Feb 15",
+    author: "Hassan",
+    role: "Lead Eng",
+    featured: true,
+    illustrationType: 'ranking',
+    lastModified: "2026-02-15",
+    faqs: [
+      {
+        question: "Why does my competitor rank higher on Google than me?",
+        answer: "If your competitor has a coded website and you have WordPress or Shopify, they're beating you on speed. Google uses website speed as a direct ranking factor. Fast sites (under 1.5 seconds) rank 20-30 positions higher than slow sites (3+ seconds) with identical content. Your competitor loads in 1.2 seconds. You load in 3.8 seconds. Google picks the faster site."
+      },
+      {
+        question: "Why does Google prefer coded websites over WordPress?",
+        answer: "Coded websites load faster because they're built with modern technology. WordPress is slow because plugins and themes add hundreds of files that must load on every page. Google can read a coded website in 0.3 seconds vs 4-6 seconds for WordPress. Faster sites rank higher."
+      },
+      {
+        question: "Do ChatGPT and Bing also prefer fast websites?",
+        answer: "Yes. ChatGPT's web search and Bing both prioritize fast-loading sites. When ChatGPT searches the web to answer questions, it prefers sites that load quickly and are easy to read. Same for Bing. All modern search engines (Google, Bing, ChatGPT, Perplexity) reward fast sites."
+      },
+      {
+        question: "How much more does WordPress hosting cost compared to coded websites?",
+        answer: "WordPress requires expensive hosting at $100-$400/month because it uses a lot of server resources. Coded websites run for free or $20/month. Over one year: WordPress = $1,200-$4,800 vs coded site = $0-$240. You save $1,000-$4,500 annually."
+      },
+      {
+        question: "Can I improve WordPress SEO without rebuilding my site?",
+        answer: "You can make small improvements with caching plugins and image compression, but you'll hit a limit. WordPress will never load in under 1.5 seconds with plugins. To compete with coded websites and recover lost rankings, you need to rebuild with modern technology."
+      }
+    ]
   },
 ];

@@ -4,10 +4,13 @@ import { useEffect } from "react";
 
 export default function PreconnectLinks() {
   useEffect(() => {
-    // Add preconnect hints for external resources
+    // Add preconnect hints for critical external resources
     const links = [
-      { rel: "preconnect", href: "https://cal.com" },
-      { rel: "dns-prefetch", href: "https://cal.com" },
+      { rel: "preconnect", href: "https://app.cal.com" },
+      { rel: "preconnect", href: "https://capig.madgicx.ai" },
+      { rel: "preconnect", href: "https://connect.facebook.net" },
+      { rel: "dns-prefetch", href: "https://app.cal.com" },
+      { rel: "dns-prefetch", href: "https://connect.facebook.net" },
     ];
 
     links.forEach(({ rel, href }) => {

@@ -7,7 +7,7 @@ export default function FacebookPixel() {
   const pathname = usePathname();
 
   useEffect(() => {
-    // Load Facebook Pixel
+    // Defer Facebook Pixel loading until after page is interactive
     const loadFBPixel = () => {
       const f: any = window;
       const b: any = document;
@@ -28,18 +28,31 @@ export default function FacebookPixel() {
 
       const t = b.createElement(e);
       t.async = true;
+      t.defer = true;
       t.src = v;
       const s = b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t, s);
     };
 
-    loadFBPixel();
-
-    // Initialize pixel
-    if ((window as any).fbq) {
-      (window as any).fbq('init', '1612130730207311');
-      (window as any).fbq('track', 'PageView');
+    // Delay loading until after page is interactive
+    if (document.readyState === 'complete') {
+      setTimeout(loadFBPixel, 1000);
+    } else {
+      window.addEventListener('load', () => {
+        setTimeout(loadFBPixel, 1000);
+      });
     }
+
+    // Initialize pixel after loading
+    const checkAndInit = setInterval(() => {
+      if ((window as any).fbq) {
+        clearInterval(checkAndInit);
+        (window as any).fbq('init', '1612130730207311');
+        (window as any).fbq('track', 'PageView');
+      }
+    }, 100);
+
+    return () => clearInterval(checkAndInit);
   }, []);
 
   // Track page views on route change

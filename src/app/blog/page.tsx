@@ -231,6 +231,70 @@ const ConversionIllustration = () => (
   </div>
 );
 
+const RankingIllustration = () => (
+  <div className="w-full h-full bg-gradient-to-br from-red-950/30 to-gray-950/20 relative overflow-hidden flex items-center justify-center">
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(220,38,38,0.2),transparent_70%)]" />
+
+    {/* Falling Ranking Numbers */}
+    {[...Array(5)].map((_, i) => (
+      <motion.div
+        key={i}
+        animate={{
+          y: [-30, 180],
+          opacity: [0, 0.5, 0]
+        }}
+        transition={{
+          duration: 3 + i * 0.3,
+          repeat: Infinity,
+          delay: i * 0.5,
+          ease: "linear"
+        }}
+        className="absolute text-2xl font-bold text-red-400/30 font-mono"
+        style={{ left: `${15 + i * 18}%`, top: '-30px' }}
+      >
+        #{10 + i * 3}
+      </motion.div>
+    ))}
+
+    {/* Center: Before and After */}
+    <div className="z-10 relative flex flex-col items-center gap-4">
+      {/* Page 1 Position #3 (Good - crossed out) */}
+      <div className="bg-green-900/20 border-2 border-green-500/40 rounded-xl p-4 backdrop-blur-md relative">
+        <div className="absolute inset-0 bg-red-500/10 rounded-xl" />
+        <div className="relative">
+          <div className="text-xs text-green-300 uppercase tracking-widest mb-1">Before</div>
+          <div className="flex items-center gap-3">
+            <div className="text-2xl font-bold text-green-400 font-mono line-through opacity-50">Page 1</div>
+            <div className="text-3xl font-bold text-green-400 font-mono line-through opacity-50">#3</div>
+          </div>
+        </div>
+      </div>
+
+      {/* Big Red Down Arrow */}
+      <motion.div
+        animate={{
+          y: [0, 10, 0],
+          scale: [1, 1.1, 1]
+        }}
+        transition={{ duration: 1.5, repeat: Infinity }}
+        className="text-red-500"
+      >
+        <TrendingDown className="w-12 h-12" />
+      </motion.div>
+
+      {/* Page 2 Position #14 (Bad) */}
+      <div className="bg-red-900/30 border-2 border-red-500/60 rounded-xl p-4 backdrop-blur-md shadow-2xl">
+        <div className="text-xs text-red-300 uppercase tracking-widest mb-1">After</div>
+        <div className="flex items-center gap-3">
+          <div className="text-2xl font-bold text-red-400 font-mono">Page 2</div>
+          <div className="text-3xl font-bold text-red-500 font-mono">#14</div>
+        </div>
+        <div className="text-[10px] text-gray-400 mt-2 font-mono">-80% traffic loss</div>
+      </div>
+    </div>
+  </div>
+);
+
 // Map illustration types to components
 const getIllustration = (type: IllustrationType) => {
   const illustrations = {
@@ -242,6 +306,7 @@ const getIllustration = (type: IllustrationType) => {
     traffic: <TrafficIllustration />,
     sales: <SalesIllustration />,
     conversion: <ConversionIllustration />,
+    ranking: <RankingIllustration />,
   };
   return illustrations[type];
 };

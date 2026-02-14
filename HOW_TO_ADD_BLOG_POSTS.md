@@ -218,6 +218,7 @@ Choose one of these for your blog post:
 | `'code'` | Orange legacy code snippet | Technical debt, code quality |
 | `'saas'` | Blue layered icon | SaaS products, architecture |
 | `'plugins'` | Plugin icons + invoice/bill showing costs | Plugin bloat, hidden fees, performance drain |
+| `'ranking'` | Google rankings dropping (Page 1 #3 → Page 2 #14) with red downward arrow | SEO, rankings, competition, Google deranking |
 
 ---
 

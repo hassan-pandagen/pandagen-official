@@ -197,6 +197,8 @@ function ProjectCard({ project, index }: any) {
                                     fill
                                     className="object-contain"
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 50vw"
+                                    loading="lazy"
+                                    quality={90}
                                 />
                             </div>
                         ) : (

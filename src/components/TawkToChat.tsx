@@ -97,9 +97,17 @@ export default function TawkToChat() {
       })();
     };
 
-    // Execute
+    // Execute traffic source tracking immediately
     storeSource();
-    loadTawkTo();
+
+    // Defer TawkTo loading until after page is interactive
+    if (document.readyState === 'complete') {
+      setTimeout(loadTawkTo, 2000);
+    } else {
+      window.addEventListener('load', () => {
+        setTimeout(loadTawkTo, 2000);
+      });
+    }
 
     // Update current page on route change
     const updateCurrentPage = () => {
