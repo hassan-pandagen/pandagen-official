@@ -6,6 +6,7 @@ import { Database, Code2, ShoppingCart, CheckCircle2, Server, Layers, ArrowRight
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 
 export default function ServicesPage() {
   return (
@@ -13,6 +14,7 @@ export default function ServicesPage() {
       {/* Global Noise Texture */}
       <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-20 mix-blend-overlay"></div>
 
+      <ReadingProgressBar />
       <Header />
 
       {/* 1. HERO */}

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { ChevronLeft, ChevronRight, DollarSign, TrendingUp, Zap, Search, Users, Shield, Clock, Award } from "lucide-react";
 
 interface ComparisonSlide {
@@ -29,6 +29,9 @@ interface ComparisonSlide {
 export default function ROIComparisonCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [autoPlay, setAutoPlay] = useState(true);
+  const [direction, setDirection] = useState(1);
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
 
   const slides: ComparisonSlide[] = [
     {
@@ -206,19 +209,43 @@ export default function ROIComparisonCarousel() {
   useEffect(() => {
     if (!autoPlay) return;
     const timer = setInterval(() => {
+      setDirection(1);
       setCurrentSlide((prev) => (prev + 1) % totalSlides);
-    }, 7000); // Change slide every 7 seconds
+    }, 7000);
     return () => clearInterval(timer);
   }, [autoPlay, totalSlides]);
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setAutoPlay(false);
+    setDirection(1);
     setCurrentSlide((prev) => (prev + 1) % totalSlides);
+  }, [totalSlides]);
+
+  const prevSlide = useCallback(() => {
+    setAutoPlay(false);
+    setDirection(-1);
+    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+  }, [totalSlides]);
+
+  // Touch swipe handlers
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
   };
 
-  const prevSlide = () => {
-    setAutoPlay(false);
-    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    const diff = touchStartX.current - touchEndX.current;
+    const minSwipeDistance = 50;
+    if (Math.abs(diff) > minSwipeDistance) {
+      if (diff > 0) {
+        nextSlide();
+      } else {
+        prevSlide();
+      }
+    }
   };
 
   const currentData = slides[currentSlide];
@@ -228,12 +255,13 @@ export default function ROIComparisonCarousel() {
     <div className="relative max-w-6xl mx-auto">
 
       {/* Progress Indicators */}
-      <div className="flex justify-center gap-2 mb-6" role="tablist" aria-label="Comparison slides">
+      <div className="flex justify-center gap-1.5 md:gap-2 mb-4 md:mb-6" role="tablist" aria-label="Comparison slides">
         {slides.map((slide, index) => (
           <button
             key={index}
             onClick={() => {
               setCurrentSlide(index);
+              setDirection(index > currentSlide ? 1 : -1);
               setAutoPlay(false);
             }}
             className="group relative"
@@ -241,7 +269,7 @@ export default function ROIComparisonCarousel() {
             aria-selected={index === currentSlide}
             aria-label={`Go to slide ${index + 1}: ${slide.title}`}
           >
-            <div className={`h-1 w-12 rounded-full transition-all duration-300 ${
+            <div className={`h-1 w-6 md:w-12 rounded-full transition-all duration-300 ${
               index === currentSlide ? "bg-neon" : "bg-white/20"
             }`}>
               {index === currentSlide && (
@@ -258,19 +286,24 @@ export default function ROIComparisonCarousel() {
       </div>
 
       {/* Main Carousel */}
-      <div className="relative bg-gradient-to-br from-[#0A0A0A] to-[#050505] border border-white/10 rounded-3xl overflow-hidden shadow-[0_0_60px_rgba(6,182,212,0.1)]">
+      <div
+        className="relative bg-gradient-to-br from-[#0A0A0A] to-[#050505] border border-white/10 rounded-2xl md:rounded-3xl overflow-hidden shadow-[0_0_60px_rgba(6,182,212,0.1)] touch-pan-y"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
 
         {/* Background Glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-neon/10 blur-[100px] rounded-full pointer-events-none" />
 
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="wait" initial={false}>
           <motion.div
             key={currentSlide}
-            initial={{ opacity: 0, x: 100 }}
+            initial={{ opacity: 0, x: direction * 100 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -100 }}
-            transition={{ duration: 0.5 }}
-            className="relative z-10 p-8 md:p-12"
+            exit={{ opacity: 0, x: direction * -100 }}
+            transition={{ duration: 0.4 }}
+            className="relative z-10 p-5 md:p-12"
           >
 
             {/* Header */}
@@ -382,10 +415,10 @@ export default function ROIComparisonCarousel() {
           </motion.div>
         </AnimatePresence>
 
-        {/* Navigation Arrows */}
+        {/* Navigation Arrows (hidden on mobile - use swipe) */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 hover:border-neon/50 transition-all z-20 backdrop-blur-sm"
+          className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/5 border border-white/10 items-center justify-center hover:bg-white/10 hover:border-neon/50 transition-all z-20 backdrop-blur-sm"
           aria-label="Previous slide"
         >
           <ChevronLeft className="w-5 h-5 text-white" />
@@ -393,7 +426,7 @@ export default function ROIComparisonCarousel() {
 
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 hover:border-neon/50 transition-all z-20 backdrop-blur-sm"
+          className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/5 border border-white/10 items-center justify-center hover:bg-white/10 hover:border-neon/50 transition-all z-20 backdrop-blur-sm"
           aria-label="Next slide"
         >
           <ChevronRight className="w-5 h-5 text-white" />
@@ -401,11 +434,15 @@ export default function ROIComparisonCarousel() {
 
       </div>
 
-      {/* Auto-play Toggle */}
-      <div className="flex justify-center mt-4">
+      {/* Mobile swipe hint + Auto-play Toggle */}
+      <div className="flex justify-center items-center gap-4 mt-4">
+        <span className="md:hidden text-xs text-gray-500">
+          Swipe to explore
+        </span>
+        <span className="text-xs text-gray-600">{currentSlide + 1}/{totalSlides}</span>
         <button
           onClick={() => setAutoPlay(!autoPlay)}
-          className="text-xs text-gray-500 hover:text-neon transition-colors"
+          className="hidden md:inline text-xs text-gray-500 hover:text-neon transition-colors"
         >
           {autoPlay ? "Pause" : "Play"} Auto-rotation
         </button>

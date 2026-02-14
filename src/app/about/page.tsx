@@ -5,6 +5,7 @@ import { ShieldCheck, Globe, Rocket, Terminal, Code2, Cpu } from "lucide-react";
 import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 import { useState } from "react";
 import QuoteModal from "@/components/ui/QuoteModal";
 
@@ -16,6 +17,7 @@ export default function AboutPage() {
       {/* Global Noise Texture */}
       <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-20 mix-blend-overlay"></div>
 
+      <ReadingProgressBar />
       <Header onOpenQuote={() => setIsQuoteModalOpen(true)} />
 
       {/* 1. HERO with DNA STRIP */}
@@ -49,7 +51,29 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 2. THE ENGINEERS (Real Photos) */}
+      {/* 2. TRACK RECORD (Quick Stats) */}
+      <section className="container mx-auto px-6 py-12">
+         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            <div className="text-center p-6 bg-gradient-to-b from-white/[0.08] to-transparent border border-white/10 rounded-2xl">
+               <div className="text-4xl font-bold text-neon mb-2">4</div>
+               <div className="text-sm text-gray-400 uppercase tracking-wider">Live Projects</div>
+            </div>
+            <div className="text-center p-6 bg-gradient-to-b from-white/[0.08] to-transparent border border-white/10 rounded-2xl">
+               <div className="text-4xl font-bold text-green-400 mb-2">98/100</div>
+               <div className="text-sm text-gray-400 uppercase tracking-wider">Avg Lighthouse Score</div>
+            </div>
+            <div className="text-center p-6 bg-gradient-to-b from-white/[0.08] to-transparent border border-white/10 rounded-2xl">
+               <div className="text-4xl font-bold text-purple-400 mb-2">&lt;1s</div>
+               <div className="text-sm text-gray-400 uppercase tracking-wider">Avg Load Time</div>
+            </div>
+            <div className="text-center p-6 bg-gradient-to-b from-white/[0.08] to-transparent border border-white/10 rounded-2xl">
+               <div className="text-4xl font-bold text-orange-400 mb-2">2026</div>
+               <div className="text-sm text-gray-400 uppercase tracking-wider">Est. Year</div>
+            </div>
+         </div>
+      </section>
+
+      {/* 3. THE ENGINEERS (Real Photos) */}
       <section className="container mx-auto px-6 py-20">
          <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white">Meet the Engineers</h2>
@@ -66,7 +90,12 @@ export default function AboutPage() {
                <div className="absolute bottom-0 left-0 w-full p-8 z-20">
                   <div className="px-3 py-1 bg-blue-500/20 text-blue-400 text-[10px] font-bold uppercase tracking-wider rounded w-fit mb-2">Strategy</div>
                   <h3 className="text-3xl font-bold text-white mb-1">Imran</h3>
-                  <p className="text-blue-400 font-mono text-sm mb-4">Lead Solutions Architect</p>
+                  <p className="text-blue-400 font-mono text-sm mb-2">Lead Solutions Architect</p>
+                  <div className="flex gap-3 mb-3 text-xs text-gray-500">
+                     <span>8+ years</span>
+                     <span>•</span>
+                     <span>50+ projects</span>
+                  </div>
                   <p className="text-gray-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">"My job is to ensure your investment turns into measurable ROI."</p>
                </div>
             </div>
@@ -80,35 +109,67 @@ export default function AboutPage() {
                <div className="absolute bottom-0 left-0 w-full p-8 z-20">
                   <div className="px-3 py-1 bg-neon/20 text-neon text-[10px] font-bold uppercase tracking-wider rounded w-fit mb-2">Engineering</div>
                   <h3 className="text-3xl font-bold text-white mb-1">Hassan</h3>
-                  <p className="text-neon font-mono text-sm mb-4">Lead Full-Stack Engineer</p>
+                  <p className="text-neon font-mono text-sm mb-2">Lead Full-Stack Engineer</p>
+                  <div className="flex gap-3 mb-3 text-xs text-gray-500">
+                     <span>7+ years</span>
+                     <span>•</span>
+                     <span>100k+ lines shipped</span>
+                  </div>
                   <p className="text-gray-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">"I obsess over milliseconds. I build the engines that run the business."</p>
                </div>
             </div>
          </div>
       </section>
 
-      {/* 3. OPERATING GLOBALLY (SVG Map Fix) */}
-      <section className="py-32 px-6 text-center bg-[#080808] border-y border-white/5 relative overflow-hidden">
+      {/* 4. WHY CHOOSE US (Industry Standard Benefits) */}
+      <section className="py-20 px-6 bg-[#080808] border-y border-white/5 relative overflow-hidden">
          {/* Localized Glow */}
          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none z-[5]" />
 
-         <div className="absolute inset-0 opacity-10 z-[1]">
-            <svg className="w-full h-full text-white" fill="currentColor" viewBox="0 0 100 50" preserveAspectRatio="none">
-                <pattern id="grid" width="2" height="2" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.5" className="text-white/20" /></pattern>
-                <rect width="100%" height="100%" fill="url(#grid)" />
-            </svg>
-         </div>
-         <div className="relative z-10 container mx-auto">
-             <h2 className="text-white font-bold text-3xl mb-12">Global Footprint</h2>
-             <div className="flex flex-col md:flex-row justify-center gap-12 md:gap-24">
-                <LocationPoint city="Karachi, PK" role="Engineering Lab" color="bg-neon" pulse />
-                <LocationPoint city="Dubai, UAE" role="Client Hub" color="bg-purple-500" />
-                <LocationPoint city="Missouri, USA" role="HQ & Strategy" color="bg-blue-500" />
+         <div className="relative z-10 container mx-auto max-w-5xl">
+             <div className="text-center mb-16">
+                <h2 className="text-white font-bold text-4xl mb-4">Why Choose PandaGen</h2>
+                <p className="text-gray-400 text-lg">What makes us different from traditional agencies</p>
+             </div>
+
+             <div className="grid md:grid-cols-3 gap-8">
+                {/* Benefit 1 */}
+                <div className="bg-gradient-to-b from-white/[0.08] to-transparent border border-white/10 rounded-2xl p-8 hover:border-neon/30 transition-all">
+                   <div className="w-12 h-12 rounded-xl bg-neon/10 flex items-center justify-center mb-6">
+                      <svg className="w-6 h-6 text-neon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                      </svg>
+                   </div>
+                   <h3 className="text-xl font-bold text-white mb-3">Full Code Ownership</h3>
+                   <p className="text-gray-400 leading-relaxed">You own 100% of the source code. No vendor lock-in, no recurring licensing fees. It's yours forever.</p>
+                </div>
+
+                {/* Benefit 2 */}
+                <div className="bg-gradient-to-b from-white/[0.08] to-transparent border border-white/10 rounded-2xl p-8 hover:border-green-500/30 transition-all">
+                   <div className="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center mb-6">
+                      <svg className="w-6 h-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      </svg>
+                   </div>
+                   <h3 className="text-xl font-bold text-white mb-3">Fixed Pricing</h3>
+                   <p className="text-gray-400 leading-relaxed">No hourly rates or surprise invoices. You get a guaranteed fixed price upfront before we write a single line of code.</p>
+                </div>
+
+                {/* Benefit 3 */}
+                <div className="bg-gradient-to-b from-white/[0.08] to-transparent border border-white/10 rounded-2xl p-8 hover:border-purple-500/30 transition-all">
+                   <div className="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center mb-6">
+                      <svg className="w-6 h-6 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                   </div>
+                   <h3 className="text-xl font-bold text-white mb-3">Direct Access to Engineers</h3>
+                   <p className="text-gray-400 leading-relaxed">No account managers or middlemen. You work directly with the developers building your product.</p>
+                </div>
              </div>
          </div>
       </section>
 
-      {/* 4. MANIFESTO (Terminal Style) */}
+      {/* 5. MANIFESTO (Terminal Style) */}
       <section className="py-20 px-6">
          <div className="container mx-auto max-w-4xl bg-[#0F0F0F] border border-white/10 rounded-2xl overflow-hidden font-mono text-sm shadow-2xl">
             <div className="bg-[#1a1a1a] p-3 border-b border-white/5 flex gap-2">
@@ -135,16 +196,4 @@ export default function AboutPage() {
       <QuoteModal isOpen={isQuoteModalOpen} onClose={() => setIsQuoteModalOpen(false)} />
     </main>
   );
-}
-
-function LocationPoint({ city, role, color, pulse }: any) {
-    return (
-        <div className="flex flex-col items-center gap-3">
-            <div className={`w-4 h-4 rounded-full ${color} ${pulse ? 'animate-ping' : ''} shadow-[0_0_20px_currentColor]`} />
-            <div className="text-center">
-                <div className="text-white font-bold text-lg">{city}</div>
-                <div className="text-xs text-gray-500 uppercase tracking-widest">{role}</div>
-            </div>
-        </div>
-    )
 }

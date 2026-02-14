@@ -1,5 +1,5 @@
 "use client";
-import ServicePageTemplate from "@/components/ServicePageTemplate";
+import ServicePageTemplate from "@/components/ui/ServicePageTemplate";
 import { ShoppingCart, Globe, CreditCard, ArrowRightLeft } from "lucide-react";
 
 export default function EcommercePage() {

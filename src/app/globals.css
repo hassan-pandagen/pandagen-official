@@ -36,6 +36,13 @@ body {
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+/* Prevent layout shift during scroll */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Custom scrollbar */
@@ -67,6 +74,15 @@ html {
   .border-glass {
     @apply border-white/15 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08)];
   }
+
+  /* Hide scrollbar for mobile swiper */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /* 3D Grid Animation */
@@ -94,11 +110,16 @@ html {
 .will-change-transform {
   will-change: transform;
   transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.will-change-auto {
+  will-change: auto;
 }
 
 /* Prevent layout thrashing on scroll */
 .scroll-optimize {
-  contain: content;
+  contain: layout style paint;
 }
 
 /* Aurora Background Animations - GPU accelerated */

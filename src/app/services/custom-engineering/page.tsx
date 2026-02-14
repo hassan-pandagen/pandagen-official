@@ -1,5 +1,5 @@
 "use client";
-import ServicePageTemplate from "@/components/ServicePageTemplate";
+import ServicePageTemplate from "@/components/ui/ServicePageTemplate";
 import { Code2, Smartphone, Cpu, Lock } from "lucide-react";
 
 export default function EngineeringPage() {

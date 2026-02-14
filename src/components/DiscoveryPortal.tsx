@@ -47,6 +47,15 @@ export default function DiscoveryPortal({ onOpenQuote }: DiscoveryPortalProps) {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-center md:text-right"
             >
+               {/* Urgency Badge */}
+               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs font-bold uppercase tracking-wider mb-3">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+                  </span>
+                  2 of 3 February Slots Claimed
+               </div>
+
                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/20 text-green-400 text-xs font-bold uppercase tracking-wider mb-4">
                   <ShieldCheck className="w-3 h-3" /> 30-Day Money Back Guarantee
                </div>
@@ -55,14 +64,14 @@ export default function DiscoveryPortal({ onOpenQuote }: DiscoveryPortalProps) {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={onOpenQuote}
-                  className="px-8 py-4 bg-neon text-background font-bold text-lg hover:bg-neon/90 transition-all"
+                  className="px-8 py-4 bg-neon text-background font-bold text-lg hover:bg-neon/90 transition-all rounded-full shadow-[0_0_30px_rgba(34,211,238,0.5)]"
                 >
                   Get Free Quote
                 </motion.button>
               ) : (
                 <a
                   href="/contact"
-                  className="inline-block px-8 py-4 bg-neon text-background font-bold text-lg hover:bg-neon/90 transition-all"
+                  className="inline-block px-8 py-4 bg-neon text-background font-bold text-lg hover:bg-neon/90 transition-all rounded-full shadow-[0_0_30px_rgba(34,211,238,0.5)]"
                 >
                   Get Free Quote
                 </a>

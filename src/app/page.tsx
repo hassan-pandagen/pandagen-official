@@ -10,10 +10,12 @@ import QuoteModal from "@/components/ui/QuoteModal";
 
 // Lazy load heavy/below-the-fold components for better initial load performance
 const ProofMarquee = dynamic(() => import("@/components/ProofMarquee"));
+const HowItWorksSimple = dynamic(() => import("@/components/HowItWorksSimple"));
 const MethodToCreativity = dynamic(() => import("@/components/MethodToCreativity"));
-const PerformanceStats = dynamic(() => import("@/components/sections/PerformanceStats"));
+const ClientResults = dynamic(() => import("@/components/sections/ClientResults"));
 const ServicesHub = dynamic(() => import("@/components/sections/ServicesHub"));
 const WordPressKiller = dynamic(() => import("@/components/sections/WordPressKiller"));
+const BuiltWith = dynamic(() => import("@/components/sections/BuiltWith"));
 const UnfairAdvantage = dynamic(() => import("@/components/sections/UnfairAdvantage"));
 const FullROIShowcase = dynamic(() => import("@/components/sections/FullROIShowcase"));
 const DiscoveryPortal = dynamic(() => import("@/components/DiscoveryPortal"));
@@ -176,21 +178,27 @@ export default function Home() {
             <span>30-Day Money-Back Guarantee on all Projects</span>
          </div>
       </div>
-      
+
       {/* Proof Marquee (Trusted By) */}
       <ProofMarquee />
 
+      {/* How It Works - Simple Client Journey (NEW - HIGH ON PAGE) */}
+      <HowItWorksSimple />
+
+      {/* Client Results - Data-Driven Social Proof */}
+      <ClientResults />
+
       {/* The Process - Vertical Sticky Timeline */}
       <MethodToCreativity />
-
-      {/* Performance Stats - Live Metrics */}
-      <PerformanceStats />
 
       {/* Services Hub */}
       <ServicesHub />
 
       {/* WordPress & Shopify Comparison */}
       <WordPressKiller onOpenQuote={() => setIsQuoteModalOpen(true)} />
+
+      {/* Enterprise Tech Stack */}
+      <BuiltWith />
 
       {/* The Unfair Advantage - Speed, Security, Ownership */}
       <UnfairAdvantage />

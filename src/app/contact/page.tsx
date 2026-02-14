@@ -7,26 +7,13 @@ import Footer from "@/components/layout/Footer";
 import { useState } from "react";
 
 export default function ContactPage() {
-   const [selectedType, setSelectedType] = useState("migration");
-   const [budgetDropdownOpen, setBudgetDropdownOpen] = useState(false);
    const [formData, setFormData] = useState({
      name: "",
-     company: "",
      email: "",
-     phone: "",
-     budget: "",
-     description: ""
+     message: ""
    });
-   const [errors, setErrors] = useState<{name?: string; email?: string; phone?: string}>({});
-
-   const budgetOptions = [
-     { value: "2.5k-5k", label: "$2.5k - $5k" },
-     { value: "5k-10k", label: "$5k - $10k" },
-     { value: "10k-25k", label: "$10k - $25k" },
-     { value: "25k-50k", label: "$25k - $50k" },
-     { value: "50k+", label: "$50k+" },
-     { value: "custom", label: "Custom Budget" },
-   ];
+   const [isSubmitting, setIsSubmitting] = useState(false);
+   const [errors, setErrors] = useState<{name?: string; email?: string; message?: string}>({});
 
   return (
     <main className="bg-transparent min-h-screen selection:bg-neon selection:text-black overflow-x-hidden relative">
@@ -183,182 +170,119 @@ export default function ContactPage() {
               </motion.div>
            </div>
 
-           {/* RIGHT: THE HIGH-TECH FORM */}
+           {/* RIGHT: ULTRA-SIMPLE FORM (3 Fields = Maximum Conversion!) */}
            <div className="bg-[#0A0A0A] border border-white/10 rounded-[2rem] p-8 md:p-10 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-neon/5 blur-[80px] pointer-events-none" />
-              
-              <form className="relative z-10 space-y-6" onSubmit={(e) => {
+
+              <form className="relative z-10 space-y-6" onSubmit={async (e) => {
                  e.preventDefault();
-                 const newErrors: {name?: string; email?: string; phone?: string} = {};
+                 setIsSubmitting(true);
+
+                 const newErrors: {name?: string; email?: string; message?: string} = {};
                  if (!formData.name.trim()) newErrors.name = "Name is required";
                  if (!formData.email.trim()) newErrors.email = "Email is required";
-                 if (!formData.phone.trim()) newErrors.phone = "Phone is required";
+                 if (!formData.message.trim()) newErrors.message = "Message is required";
+
                  setErrors(newErrors);
+
                  if (Object.keys(newErrors).length === 0) {
-                    console.log("Form submitted", formData);
+                    try {
+                       // Submit to your existing Resend API
+                       const formDataToSend = new FormData();
+                       formDataToSend.append('name', formData.name);
+                       formDataToSend.append('email', formData.email);
+                       formDataToSend.append('phone', 'Not provided'); // Contact form doesn't have phone field
+                       formDataToSend.append('details', formData.message);
+
+                       const response = await fetch("/api/submit-quote", {
+                          method: "POST",
+                          body: formDataToSend,
+                       });
+
+                       const result = await response.json();
+
+                       if (response.ok && result.success) {
+                          alert("Thanks! We'll respond within 2 hours.");
+                          setFormData({ name: "", email: "", message: "" });
+                       } else {
+                          alert("Something went wrong. Please email us directly at info@pandacodegen.com");
+                       }
+                    } catch (error) {
+                       console.error("Form submission error:", error);
+                       alert("Something went wrong. Please email us directly at info@pandacodegen.com");
+                    }
                  }
+
+                 setIsSubmitting(false);
               }}>
-                 <div className="grid md:grid-cols-2 gap-6">
-                    <InputGroup 
-                       label="Name *" 
-                       placeholder="John Doe" 
+                 {/* Name */}
+                 <div className="space-y-2">
+                    <label className="text-base font-bold text-white">Name *</label>
+                    <input
+                       type="text"
+                       placeholder="John Doe"
                        value={formData.name}
-                       onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                       onChange={(e) => {
                           setFormData({...formData, name: e.target.value});
                           if (errors.name) setErrors({...errors, name: undefined});
                        }}
-                       error={errors.name}
                        required
+                       className={`w-full bg-black/50 border rounded-xl p-4 text-base text-white outline-none transition-colors ${
+                          errors.name ? "border-red-500/70 focus:border-red-500" : "border-white/10 focus:border-neon"
+                       }`}
                     />
-                    <InputGroup 
-                       label="Company" 
-                       placeholder="TechFlow Inc." 
-                       value={formData.company}
-                       onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFormData({...formData, company: e.target.value})}
-                    />
+                    {errors.name && <p className="text-sm text-red-400">{errors.name}</p>}
                  </div>
-                 
-                 <div className="grid md:grid-cols-2 gap-6">
-                    <InputGroup 
-                       label="Email *" 
-                       placeholder="john@company.com" 
-                       type="email" 
+
+                 {/* Email */}
+                 <div className="space-y-2">
+                    <label className="text-base font-bold text-white">Email *</label>
+                    <input
+                       type="email"
+                       placeholder="john@company.com"
                        value={formData.email}
-                       onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                       onChange={(e) => {
                           setFormData({...formData, email: e.target.value});
                           if (errors.email) setErrors({...errors, email: undefined});
                        }}
-                       error={errors.email}
                        required
+                       className={`w-full bg-black/50 border rounded-xl p-4 text-base text-white outline-none transition-colors ${
+                          errors.email ? "border-red-500/70 focus:border-red-500" : "border-white/10 focus:border-neon"
+                       }`}
                     />
-                    <InputGroup 
-                       label="Phone Number *" 
-                       placeholder="+1 (555) 123-4567" 
-                       type="tel"
-                       value={formData.phone}
-                       onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                          setFormData({...formData, phone: e.target.value});
-                          if (errors.phone) setErrors({...errors, phone: undefined});
+                    {errors.email && <p className="text-sm text-red-400">{errors.email}</p>}
+                 </div>
+
+                 {/* Message */}
+                 <div className="space-y-2">
+                    <label className="text-base font-bold text-white">What can we help you with? *</label>
+                    <textarea
+                       className={`w-full bg-black/50 border rounded-xl p-4 text-white outline-none h-40 resize-none transition-colors text-base ${
+                          errors.message ? "border-red-500/70 focus:border-red-500" : "border-white/10 focus:border-neon"
+                       }`}
+                       placeholder="e.g., 'Need to migrate WordPress site with 50 pages' or 'Looking to build custom e-commerce platform'"
+                       value={formData.message}
+                       onChange={(e) => {
+                          setFormData({...formData, message: e.target.value});
+                          if (errors.message) setErrors({...errors, message: undefined});
                        }}
-                       error={errors.phone}
                        required
                     />
-                 </div>
-                 
-                 <div className="space-y-3">
-                    <label className="text-base font-bold text-white">Project Type</label>
-                    <div className="grid grid-cols-2 gap-3">
-                       <SelectButton 
-                          text="Migration" 
-                          active={selectedType === "migration"}
-                          onClick={() => setSelectedType("migration")}
-                       />
-                       <SelectButton 
-                          text="Custom SaaS" 
-                          active={selectedType === "saas"}
-                          onClick={() => setSelectedType("saas")}
-                       />
-                       <SelectButton 
-                          text="E-Commerce" 
-                          active={selectedType === "ecommerce"}
-                          onClick={() => setSelectedType("ecommerce")}
-                       />
-                       <SelectButton 
-                          text="Other" 
-                          active={selectedType === "other"}
-                          onClick={() => setSelectedType("other")}
-                       />
-                    </div>
+                    {errors.message && <p className="text-sm text-red-400">{errors.message}</p>}
                  </div>
 
-                 <div className="space-y-3">
-                    <label className="text-base font-bold text-white">Budget Range (USD)</label>
-                    
-                    {/* Custom Dropdown */}
-                    <div className="relative">
-                       <button 
-                          type="button"
-                          onClick={() => setBudgetDropdownOpen(!budgetDropdownOpen)}
-                          className="w-full bg-black/50 border border-white/10 rounded-xl p-4 text-white hover:border-white/20 focus:border-neon outline-none transition-all flex items-center justify-between group"
-                       >
-                          <span className={formData.budget ? "text-white" : "text-gray-500"}>
-                             {formData.budget 
-                                ? budgetOptions.find(opt => opt.value === formData.budget)?.label 
-                                : "Select budget..."}
-                          </span>
-                          <ChevronDown className={`w-4 h-4 text-gray-400 group-hover:text-neon transition-all ${budgetDropdownOpen ? "rotate-180" : ""}`} />
-                       </button>
-
-                       {/* Dropdown Menu */}
-                       {budgetDropdownOpen && (
-                          <motion.div 
-                             initial={{ opacity: 0, y: -10 }}
-                             animate={{ opacity: 1, y: 0 }}
-                             exit={{ opacity: 0, y: -10 }}
-                             className="absolute top-full left-0 right-0 mt-2 bg-[#0A0A0A] border border-white/10 rounded-xl overflow-hidden z-50 shadow-2xl"
-                          >
-                             {budgetOptions.map((option) => (
-                                <button
-                                   key={option.value}
-                                   type="button"
-                                   onClick={() => {
-                                      setFormData({...formData, budget: option.value});
-                                      setBudgetDropdownOpen(false);
-                                   }}
-                                   className={`w-full px-4 py-3 text-left text-sm font-medium transition-all flex items-center justify-between group ${
-                                      formData.budget === option.value 
-                                         ? "bg-neon/10 text-neon border-l-2 border-neon" 
-                                         : "text-gray-300 hover:bg-white/5 hover:text-neon"
-                                   }`}
-                                >
-                                   <span>{option.label}</span>
-                                   {formData.budget === option.value && (
-                                      <span className="text-neon text-sm">✓</span>
-                                   )}
-                                </button>
-                             ))}
-                          </motion.div>
-                       )}
-
-                       {/* Custom Input (if custom selected) */}
-                       {formData.budget === "custom" && (
-                          <motion.input
-                             initial={{ opacity: 0, height: 0 }}
-                             animate={{ opacity: 1, height: "auto" }}
-                             exit={{ opacity: 0, height: 0 }}
-                             type="text"
-                             placeholder="Enter your budget (e.g., $100k - $150k)"
-                             onChange={(e) => {
-                                // Keep the value in formData for submission
-                                setFormData({...formData, description: (formData.description || "") + (e.target.value ? ` | Custom Budget: ${e.target.value}` : "")});
-                             }}
-                             className="w-full mt-2 bg-black/50 border border-neon/30 rounded-xl p-4 text-white focus:border-neon outline-none transition-colors text-sm"
-                          />
-                       )}
-                    </div>
-                 </div>
-
-                 <div className="space-y-3">
-                    <label className="text-base font-bold text-white">Project Details</label>
-                    <textarea 
-                       className="w-full bg-black/50 border border-white/10 rounded-xl p-4 text-white focus:border-neon outline-none h-32 resize-none transition-colors text-base"
-                       placeholder="Tell us about your current stack and what you want to achieve..."
-                       value={formData.description}
-                       onChange={(e) => setFormData({...formData, description: e.target.value})}
-                    />
-                 </div>
-
-                 <motion.button 
+                 <motion.button
                     type="submit"
+                    disabled={isSubmitting}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full py-5 bg-neon text-black font-bold text-lg rounded-xl hover:bg-neon/90 transition-all flex items-center justify-center gap-2"
+                    className="w-full py-5 bg-neon text-black font-bold text-lg rounded-xl hover:bg-neon/90 transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-[0_0_30px_rgba(34,211,238,0.5)]"
                  >
-                    <Send className="w-5 h-5" /> Submit Application
+                    <Send className="w-5 h-5" /> {isSubmitting ? "Sending..." : "Get Free Quote"}
                  </motion.button>
-                 
-                 <p className="text-center text-xs text-gray-500 mt-4">
-                    We reply within 2 hours during EST business hours (Mon-Fri, 9AM-6PM).
+
+                 <p className="text-center text-sm text-gray-400 mt-4">
+                    ✓ Same-day response • ✓ No obligation • ✓ Free consultation
                  </p>
               </form>
            </div>

@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { ArrowRight, TrendingUp, CheckCircle2, X, Sparkles, ShieldCheck, DollarSign, Zap, Globe } from "lucide-react";
+import { ArrowRight, TrendingUp, CheckCircle2, X, Sparkles, DollarSign } from "lucide-react";
 
 interface RealityCheckProps {
   onOpenQuote?: () => void;
@@ -57,7 +57,7 @@ export default function RealityCheck({ onOpenQuote }: RealityCheckProps) {
             <div className="inline-flex bg-white/5 p-1 rounded-full border border-white/10 backdrop-blur-md relative">
                 <button
                     onClick={() => setPlatform("wordpress")}
-                    className={`relative z-10 px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 ${
+                    className={`relative z-10 px-5 md:px-8 py-2.5 md:py-3 rounded-full text-xs md:text-sm font-bold transition-all duration-300 ${
                         platform === "wordpress" ? "bg-red-500/20 text-red-400 shadow-[0_0_20px_rgba(239,68,68,0.3)]" : "text-gray-400 hover:text-white"
                     }`}
                 >
@@ -65,7 +65,7 @@ export default function RealityCheck({ onOpenQuote }: RealityCheckProps) {
                 </button>
                 <button
                     onClick={() => setPlatform("shopify")}
-                    className={`relative z-10 px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 ${
+                    className={`relative z-10 px-5 md:px-8 py-2.5 md:py-3 rounded-full text-xs md:text-sm font-bold transition-all duration-300 ${
                         platform === "shopify" ? "bg-green-500/20 text-green-400 shadow-[0_0_20px_rgba(34,197,94,0.3)]" : "text-gray-400 hover:text-white"
                     }`}
                 >
@@ -79,10 +79,10 @@ export default function RealityCheck({ onOpenQuote }: RealityCheckProps) {
           layout
           className="max-w-6xl mx-auto"
         >
-          <div className="relative p-[1px] rounded-[3rem] bg-gradient-to-b from-white/15 via-white/5 to-transparent">
-            <div className="relative rounded-[3rem] overflow-hidden bg-gradient-to-b from-[#0a0a0a] to-[#050505] h-full shadow-[0_20px_60px_rgba(0,0,0,0.5),0_0_100px_rgba(34,211,238,0.1)]">
-               
-               <div className="relative z-10 grid md:grid-cols-2 gap-12 p-8 md:p-16 items-center">
+          <div className="relative p-[1px] rounded-2xl md:rounded-[3rem] bg-gradient-to-b from-white/15 via-white/5 to-transparent">
+            <div className="relative rounded-2xl md:rounded-[3rem] overflow-hidden bg-gradient-to-b from-[#0a0a0a] to-[#050505] h-full shadow-[0_20px_60px_rgba(0,0,0,0.5),0_0_100px_rgba(34,211,238,0.1)]">
+
+               <div className="relative z-10 grid md:grid-cols-2 gap-8 md:gap-12 p-5 md:p-16 items-center">
 
                   {/* LEFT: THE PAIN (Dynamic) */}
                   <div className="flex flex-col justify-center">
@@ -100,12 +100,12 @@ export default function RealityCheck({ onOpenQuote }: RealityCheckProps) {
                                 <span className="text-xs font-bold text-red-400 uppercase tracking-wider">Warning</span>
                             </div>
 
-                            <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-4">
+                            <h2 className="text-2xl md:text-5xl font-bold text-white leading-tight mb-3 md:mb-4">
                                 Stop Losing Money.
                             </h2>
 
                             {/* MAIN FOCUS - WordPress/Shopify Pain Point */}
-                            <h3 className="text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-orange-500 to-red-400 leading-tight mb-8 [text-shadow:0_0_60px_rgba(239,68,68,0.6),0_0_30px_rgba(249,115,22,0.4)] [-webkit-text-stroke:0.5px_rgba(239,68,68,0.4)] animate-pulse">
+                            <h3 className="text-3xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-orange-500 to-red-400 leading-tight mb-6 md:mb-8 [text-shadow:0_0_60px_rgba(239,68,68,0.6),0_0_30px_rgba(249,115,22,0.4)] [-webkit-text-stroke:0.5px_rgba(239,68,68,0.4)] animate-pulse">
                                 {current.pain}
                             </h3>
 
@@ -119,7 +119,7 @@ export default function RealityCheck({ onOpenQuote }: RealityCheckProps) {
                     <div className="flex flex-col sm:flex-row gap-4">
                       <button
                         onClick={onOpenQuote}
-                        className="group px-8 py-4 bg-neon text-black font-bold rounded-full shadow-[0_0_30px_rgba(34,211,238,0.4)] hover:shadow-[0_0_50px_rgba(34,211,238,0.6)] transition-all flex items-center justify-center gap-2 hover:scale-105"
+                        className="group px-6 py-3 md:px-8 md:py-4 bg-neon text-black font-bold text-sm md:text-base rounded-full shadow-[0_0_30px_rgba(34,211,238,0.4)] hover:shadow-[0_0_50px_rgba(34,211,238,0.6)] transition-all flex items-center justify-center gap-2 hover:scale-105"
                       >
                         Calculate Savings <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       </button>
@@ -128,7 +128,7 @@ export default function RealityCheck({ onOpenQuote }: RealityCheckProps) {
                          data-cal-namespace="discovery"
                          data-cal-link="pandagen/discovery"
                          data-cal-config='{"layout":"month_view"}'
-                         className="px-8 py-4 bg-white/5 border border-white/20 text-white font-semibold rounded-full hover:bg-white/10 transition-all"
+                         className="px-6 py-3 md:px-8 md:py-4 bg-white/5 border border-white/20 text-white font-semibold text-sm md:text-base rounded-full hover:bg-white/10 transition-all"
                       >
                         Book Audit
                       </button>
@@ -137,7 +137,7 @@ export default function RealityCheck({ onOpenQuote }: RealityCheckProps) {
 
                   {/* RIGHT: THE TABLE (Dynamic) */}
                   <div className="flex flex-col justify-center">
-                    <div className="bg-black/40 border border-white/10 rounded-3xl p-8 shadow-inner relative overflow-hidden backdrop-blur-sm">
+                    <div className="bg-black/40 border border-white/10 rounded-2xl md:rounded-3xl p-5 md:p-8 shadow-inner relative overflow-hidden backdrop-blur-sm">
                        
                       <div className="flex justify-between items-end mb-6 border-b border-white/10 pb-4 relative z-10">
                          <h3 className="text-xl font-bold text-white">The Comparison</h3>
@@ -181,7 +181,7 @@ export default function RealityCheck({ onOpenQuote }: RealityCheckProps) {
                         >
                             <div>
                                 <p className="text-xs text-green-400 uppercase font-bold mb-1">Your Potential Savings</p>
-                                <p className="text-3xl font-bold text-white">{current.loss}</p>
+                                <p className="text-2xl md:text-3xl font-bold text-white">{current.loss}</p>
                             </div>
                             <div className="h-12 w-12 bg-green-500 rounded-full flex items-center justify-center text-black font-bold shadow-[0_0_20px_#22c55e]">
                                 <DollarSign className="w-6 h-6" />
@@ -192,17 +192,6 @@ export default function RealityCheck({ onOpenQuote }: RealityCheckProps) {
                     </div>
                   </div>
 
-               </div>
-               
-               {/* TECH STACK STRIP */}
-               <div className="border-t border-white/10 bg-white/[0.02] px-8 py-6 flex flex-col items-center">
-                  <p className="text-[10px] text-neon uppercase tracking-[0.2em] mb-4 font-bold">Enterprise Tech Stack</p>
-                  <div className="flex flex-wrap justify-center gap-8 md:gap-16 transition-all duration-500">
-                    <span className="text-lg font-bold text-white flex gap-2 items-center hover:text-neon hover:scale-110 transition-all duration-300"><Zap size={16} className="text-neon"/> Next.js 15</span>
-                    <span className="text-lg font-bold text-white flex gap-2 items-center hover:text-neon hover:scale-110 transition-all duration-300"><Globe size={16} className="text-neon"/> Vercel</span>
-                    <span className="text-lg font-bold text-white flex gap-2 items-center hover:text-neon hover:scale-110 transition-all duration-300"><DollarSign size={16} className="text-neon"/> Stripe</span>
-                    <span className="text-lg font-bold text-white flex gap-2 items-center hover:text-neon hover:scale-110 transition-all duration-300"><ShieldCheck size={16} className="text-neon"/> Supabase</span>
-                  </div>
                </div>
 
             </div>

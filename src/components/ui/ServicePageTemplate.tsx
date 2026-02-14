@@ -9,12 +9,13 @@ interface ServicePageProps {
   title: string;
   subtitle: string;
   description: string;
+  deepDive?: React.ReactNode;
   painPoints: string[];
   features: { title: string; desc: string; icon: any }[];
   guaranteeText: string;
 }
 
-export default function ServicePageTemplate({ title, subtitle, description, painPoints, features, guaranteeText }: ServicePageProps) {
+export default function ServicePageTemplate({ title, subtitle, description, deepDive, painPoints, features, guaranteeText }: ServicePageProps) {
   return (
     <main className="bg-[#050505] min-h-screen selection:bg-neon selection:text-black overflow-x-hidden">
       <Header />
@@ -43,6 +44,17 @@ export default function ServicePageTemplate({ title, subtitle, description, pain
            </div>
         </div>
       </section>
+
+      {/* Deep Dive Section (if provided) */}
+      {deepDive && (
+        <section className="py-20 px-6 bg-white/[0.02]">
+          <div className="container mx-auto max-w-3xl">
+            <div className="prose prose-invert prose-lg max-w-none text-gray-300">
+              {deepDive}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* 2. THE PROBLEM (Why they need you) */}
       <section className="py-20 border-y border-white/5 bg-white/[0.02]">

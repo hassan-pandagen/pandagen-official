@@ -20,7 +20,13 @@ export default function ShopifySlowPage() {
     return (
         <>
             <Header />
-            <main className="bg-black text-white pt-32 pb-20">
+            <main className="bg-transparent min-h-screen selection:bg-neon selection:text-black overflow-x-hidden relative text-white pt-32 pb-20">
+                {/* Global Noise Texture */}
+                <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-20 mix-blend-overlay"></div>
+
+                {/* Ambient Glows */}
+                <div className="fixed top-0 right-0 w-[600px] h-[600px] bg-purple-600/20 blur-[150px] rounded-full pointer-events-none" />
+                <div className="fixed top-1/3 left-0 w-[500px] h-[500px] bg-pink-600/15 blur-[150px] rounded-full pointer-events-none" />
                 <article className="max-w-3xl mx-auto px-6">
                     
                     {/* Back Button */}
@@ -70,11 +76,27 @@ export default function ShopifySlowPage() {
                     {/* Content */}
                     <div className="space-y-8">
                         <BlogText>
-                            You know how much money you're leaving on the table right now? Probably not. But if your Shopify store takes more than 2 seconds to load, it's somewhere between $75,000 and $150,000 per year.
+                            Every day, hundreds of people visit your online store. They're ready to buy. But most of them leave before they even see your products.
                         </BlogText>
 
                         <BlogText>
-                            That's not an exaggeration. That's math. <BlogHighlight>Cold, simple, brutal math.</BlogHighlight>
+                            Your first thought: "My prices are too high." Or "My products aren't good enough." Or "My ads are targeting the wrong people."
+                        </BlogText>
+
+                        <BlogText>
+                            It's none of those.
+                        </BlogText>
+
+                        <BlogText>
+                            <BlogHighlight>It's your website. It's too slow.</BlogHighlight> And while you're reading this sentence, you just lost another customer who clicked, waited 3 seconds, and left.
+                        </BlogText>
+
+                        <BlogText>
+                            The worst part? You have no idea it's even happening. Your store doesn't send you an alert that says "Customer #247 bounced after 2.8 seconds." They just... disappear. And take their money with them.
+                        </BlogText>
+
+                        <BlogText>
+                            If your Shopify store takes more than 2 seconds to load, you're losing between $75,000 and $150,000 per year. That's not an exaggeration. <BlogHighlight>That's math. Cold, simple, brutal math.</BlogHighlight>
                         </BlogText>
 
                         <BlogHeader>The Speed-to-Revenue Equation</BlogHeader>

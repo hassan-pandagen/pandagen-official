@@ -4,78 +4,86 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { ArrowUpRight, ExternalLink, Code2, Rocket, BarChart3, Smartphone } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 
 // --- PROJECT DATA ---
 const projects = [
     {
         id: "01",
-        client: "Dubai Luxury Yachts",
-        category: "Ultra-High Performance",
-        title: "The Ocean's Digital Twin",
+        client: "MyCustomPatches",
+        category: "WordPress → Next.js Migration",
+        title: "From Legacy to Lightning",
         description:
-            "A visually heavy luxury charter platform. We used Next.js Image Optimization and Lazy Loading to serve 4K media instantly, creating a seamless experience for billionaire clients.",
+            "Migrated a 10-year-old WordPress site to modern Next.js architecture. The transformation: 3-second load times dropped to sub-1s, SEO rankings improved dramatically, and monthly hosting costs eliminated. Same content, completely rebuilt foundation.",
         stats: [
-            { label: "Load Time", value: "0.4s" },
-            { label: "Images", value: "4K Res" },
-            { label: "Region", value: "Dubai" },
+            { label: "Load Time", value: "3s → 0.7s" },
+            { label: "Lighthouse", value: "100/100" },
+            { label: "Hosting", value: "$0/mo" },
         ],
-        tags: ["Next.js", "Framer Motion", "CDN Optimization"],
-        color: "blue",
-        gradient: "from-blue-600/20 to-cyan-500/5",
-        imagePlaceholder: "bg-gradient-to-br from-blue-900 to-black",
+        tags: ["Next.js 15", "WordPress Migration", "SSG", "SEO"],
+        color: "orange",
+        gradient: "from-orange-600/20 to-red-500/5",
+        image: "/work/mycustompatches.png",
+        liveUrl: "https://www.mycustompatches.net",
+        isLive: true,
     },
     {
         id: "02",
         client: "Panda Patches",
-        category: "Headless E-Commerce",
-        title: "Migration from WordPress to Sanity",
+        category: "Headless E-Commerce Platform",
+        title: "Custom Shopify Alternative",
         description:
-            "Our internal venture. We moved from a slow WooCommerce setup to a blazing fast Sanity + Next.js stack. Integrated Stripe for custom checkout flows and achieved a 98/100 Mobile SEO score.",
+            "Full-stack e-commerce platform built from scratch. Integrated Sanity CMS for product management, Stripe for payments, and custom checkout logic. Zero monthly app fees, complete design control, and 45% conversion improvement over WooCommerce.",
         stats: [
             { label: "Conversion", value: "+45%" },
-            { label: "Platform", value: "Sanity" },
-            { label: "Payments", value: "Stripe" },
+            { label: "Lighthouse", value: "98/100" },
+            { label: "App Fees", value: "$0" },
         ],
-        tags: ["Headless Commerce", "Stripe API", "Sanity CMS"],
+        tags: ["Headless Commerce", "Stripe", "Sanity CMS", "Next.js"],
         color: "green",
         gradient: "from-green-600/20 to-emerald-500/5",
-        imagePlaceholder: "bg-gradient-to-br from-green-900 to-black",
+        image: "/work/panda-patches.png",
+        liveUrl: "https://panda-patches-ecommerce.vercel.app",
+        isLive: true,
     },
     {
         id: "03",
-        client: "Panda Operations",
-        category: "SaaS Dashboard",
-        title: "Order Management OS",
+        client: "Enterprise SaaS Platform",
+        category: "Custom Business Dashboard",
+        title: "Full-Stack Operations Hub",
         description:
-            "A custom internal dashboard to manage manufacturing, shipping, and customer support. Real-time data syncing with the e-commerce frontend. This is the brain behind the operation.",
+            "Custom-built business intelligence platform for managing complex operations. Real-time analytics, team performance tracking, automated reporting, and role-based access control. Built to scale for high-volume production environments.",
         stats: [
             { label: "Efficiency", value: "10x" },
-            { label: "Data", value: "Real-time" },
-            { label: "Users", value: "Internal" },
+            { label: "Data Sync", value: "Real-time" },
+            { label: "Automation", value: "95%" },
         ],
-        tags: ["React Table", "Recharts", "Role-Auth"],
+        tags: ["React", "TypeScript", "Real-time DB", "Role-Based Auth"],
         color: "purple",
         gradient: "from-purple-600/20 to-pink-500/5",
-        imagePlaceholder: "bg-gradient-to-br from-purple-900 to-black",
+        image: "/work/panda-operations.png",
+        isLive: false,
     },
     {
         id: "04",
-        client: "MyCustomPatches",
-        category: "SEO Migration",
-        title: "Dominating Search Results",
+        client: "PandaCodeLab",
+        category: "Agency Brand & Web Presence",
+        title: "Practicing What We Preach",
         description:
-            "A high-traffic migration from WordPress. The goal was pure SEO dominance. By moving to Next.js SSG (Static Generation), we hit Core Web Vitals perfectly, ranking #1 for key industry terms.",
+            "Before launching client work, we rebuilt our own agency platform using the exact Next.js architecture we recommend. 100/100 Lighthouse score, conversion-optimized UX, and bleeding-edge features. This is our digital showroom.",
         stats: [
-            { label: "Traffic", value: "+300%" },
-            { label: "Lighthouse", value: "100" },
-            { label: "SEO", value: "Rank #1" },
+            { label: "Lighthouse", value: "100/100" },
+            { label: "Load Time", value: "0.6s" },
+            { label: "Framework", value: "Next.js 15" },
         ],
-        tags: ["Next.js SSG", "Programmatic SEO", "Blog Engine"],
-        color: "orange",
-        gradient: "from-orange-600/20 to-red-500/5",
-        imagePlaceholder: "bg-gradient-to-br from-orange-900 to-black",
+        tags: ["Next.js 15", "Framer Motion", "Brand Identity", "Performance"],
+        color: "blue",
+        gradient: "from-blue-600/20 to-cyan-500/5",
+        image: "/work/pandacodelab.png",
+        isLive: false,
     },
 ];
 
@@ -85,6 +93,7 @@ export default function WorkPage() {
             {/* Global Noise Texture */}
             <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-20 mix-blend-overlay"></div>
 
+            <ReadingProgressBar />
             <Header />
 
             {/* 1. HERO SECTION */}
@@ -180,21 +189,37 @@ function ProjectCard({ project, index }: any) {
                         />
 
                         {/* THE SCREENSHOT CONTAINER */}
-                        <div
-                            className={`w-full h-full ${project.imagePlaceholder} transform group-hover:scale-105 transition-transform duration-700 flex items-center justify-center relative`}
-                        >
-                            {/* Fake UI Element for demo */}
-                            <div className="w-3/4 h-3/4 bg-black/40 backdrop-blur-md rounded-xl border border-white/10 flex items-center justify-center">
-                                <span className="text-white/20 font-bold text-2xl">
-                                    Project Screenshot
-                                </span>
+                        {project.image ? (
+                            <div className="w-full h-full relative transform group-hover:scale-105 transition-transform duration-700 bg-gradient-to-br from-white/[0.03] to-black/50">
+                                <Image
+                                    src={project.image}
+                                    alt={`${project.client} - ${project.title}`}
+                                    fill
+                                    className="object-contain"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 50vw"
+                                />
                             </div>
-                        </div>
+                        ) : (
+                            <div className="w-full h-full bg-gradient-to-br from-white/5 to-white/[0.02] transform group-hover:scale-105 transition-transform duration-700 flex items-center justify-center relative border border-white/10">
+                                {/* Placeholder */}
+                                <div className="text-center px-6">
+                                    <div className={`w-16 h-16 mx-auto mb-4 rounded-2xl ${project.gradient} border border-white/20 flex items-center justify-center`}>
+                                        <Code2 className="w-8 h-8 text-white/50" />
+                                    </div>
+                                    <p className="text-white/30 font-medium text-sm">
+                                        {project.client}
+                                    </p>
+                                    <p className="text-white/20 text-xs mt-1">
+                                        Screenshot coming soon
+                                    </p>
+                                </div>
+                            </div>
+                        )}
 
-                        {/* Floating "Live" Badge */}
-                        <div className="absolute top-6 left-6 z-20 px-4 py-2 bg-black/50 backdrop-blur-md border border-white/10 rounded-full flex items-center gap-2">
-                            <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                            <span className="text-xs font-bold text-white">Live Project</span>
+                        {/* Floating "Live" or "Internal" Badge */}
+                        <div className={`absolute top-6 left-6 z-20 px-4 py-2 bg-black/50 backdrop-blur-md border ${project.isLive ? 'border-green-500/30' : 'border-purple-500/30'} rounded-full flex items-center gap-2`}>
+                            <div className={`w-2 h-2 rounded-full ${project.isLive ? 'bg-green-500 animate-pulse' : 'bg-purple-500'}`} />
+                            <span className="text-xs font-bold text-white">{project.isLive ? 'Live Project' : 'Internal Tool'}</span>
                         </div>
                     </div>
 
@@ -239,14 +264,30 @@ function ProjectCard({ project, index }: any) {
                         </div>
 
                         {/* Action Button */}
-                        <div className="flex items-center gap-4 group/btn cursor-pointer">
-                            <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover/btn:bg-white group-hover/btn:text-black transition-all">
-                                <ArrowUpRight className="w-5 h-5" />
+                        {project.liveUrl ? (
+                            <a
+                                href={project.liveUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-4 group/btn cursor-pointer w-fit"
+                            >
+                                <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover/btn:bg-neon group-hover/btn:text-black group-hover/btn:border-neon transition-all">
+                                    <ExternalLink className="w-5 h-5" />
+                                </div>
+                                <span className="text-sm font-bold text-white group-hover/btn:text-neon group-hover/btn:translate-x-2 transition-all">
+                                    View Live Site →
+                                </span>
+                            </a>
+                        ) : (
+                            <div className="flex items-center gap-4 group/btn cursor-default">
+                                <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center">
+                                    <Code2 className="w-5 h-5 text-purple-400" />
+                                </div>
+                                <span className="text-sm font-bold text-gray-400">
+                                    Internal Project
+                                </span>
                             </div>
-                            <span className="text-sm font-bold text-white group-hover/btn:translate-x-2 transition-transform">
-                                View Case Study
-                            </span>
-                        </div>
+                        )}
                     </div>
                 </div>
             </motion.div>

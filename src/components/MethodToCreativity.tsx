@@ -46,32 +46,34 @@ export default function MethodToCreativity() {
 
   const { scrollYProgress } = useScroll({
     target: timelineRef,
-    offset: ["start center", "end center"]
+    offset: ["start end", "end start"],
+    layoutEffect: false
   });
 
   const scaleY = useSpring(scrollYProgress, {
-    stiffness: 120,
-    damping: 25,
-    restDelta: 0.001
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+    restSpeed: 0.001
   });
 
-  // Calculate the glowing head position - smooth tracking all the way to bottom
-  const headPosition = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  // Head follows the line exactly by transforming on Y axis
+  const headY = useTransform(scaleY, (latest) => `calc(${latest * 100}% - 10px)`);
 
-  if (!isMounted) return <section className="py-24 bg-transparent min-h-screen" />;
+  if (!isMounted) return <section className="py-24 bg-transparent" style={{ minHeight: '100vh' }} />;
 
   return (
-    <section className="relative py-12 md:py-24 bg-transparent">
+    <section className="relative py-12 md:py-24 bg-transparent overflow-hidden">
 
       {/* 2. LOCAL GLOW (To make sure it's not 'Too Black') */}
       {/* This puts a purple light RIGHT behind the timeline */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[1000px] bg-purple-900/20 md:bg-purple-900/10 blur-[120px] rounded-full pointer-events-none" />
-      
+
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row gap-20">
-          
+
           {/* LEFT: Sticky Header */}
-          <div className="lg:w-1/3 lg:h-screen lg:sticky lg:top-32 flex flex-col justify-start pt-10">
+          <div className="lg:w-1/3 lg:sticky lg:top-32 lg:self-start flex flex-col justify-start pt-10" style={{ maxHeight: 'calc(100vh - 8rem)' }}>
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-bold text-neon mb-6 uppercase tracking-widest shadow-[0_0_15px_rgba(34,211,238,0.1)]">
                  The Protocol
@@ -97,18 +99,22 @@ export default function MethodToCreativity() {
 
           {/* RIGHT: Scrollable Timeline */}
           <div ref={timelineRef} className="lg:w-2/3 py-10">
-            <div className="relative border-l-2 border-white/10 ml-4 md:ml-12 space-y-12 md:space-y-24 pb-8">
+            <div className="relative border-l-2 border-white/10 ml-4 md:ml-12 space-y-12 md:space-y-24 pb-32">
 
-              {/* 1. Glowing Progress Line - Extended beyond last card */}
+              {/* 1. Glowing Progress Line */}
               <motion.div
-                style={{ scaleY, transformOrigin: "top" }}
-                className="absolute left-[-3px] top-0 h-full w-[3px] bg-gradient-to-b from-neon via-purple-500 to-orange-500 shadow-[0_0_40px_#22d3ee,0_0_80px_rgba(34,211,238,0.3)] z-30"
+                className="absolute left-[-3px] top-0 w-[3px] bg-gradient-to-b from-neon via-purple-500 to-orange-500 shadow-[0_0_40px_#22d3ee,0_0_80px_rgba(34,211,238,0.3)] z-30 will-change-transform"
+                style={{
+                  height: "100%",
+                  scaleY,
+                  transformOrigin: "top"
+                }}
               />
 
-              {/* 2. The Glowing Head (The "Cool" Moving Part) */}
+              {/* 2. The Glowing Head - tracks the end of the progress line */}
               <motion.div
-                style={{ top: headPosition }}
-                className="absolute left-[-8px] w-5 h-5 rounded-full bg-neon border-2 border-white shadow-[0_0_30px_#22d3ee,0_0_60px_rgba(34,211,238,0.5)] z-40 animate-pulse"
+                className="absolute left-[-8px] top-0 w-5 h-5 rounded-full bg-neon border-2 border-white shadow-[0_0_30px_#22d3ee,0_0_60px_rgba(34,211,238,0.5)] z-40 animate-pulse will-change-transform"
+                style={{ y: headY }}
               />
 
               {steps.map((step, index) => (

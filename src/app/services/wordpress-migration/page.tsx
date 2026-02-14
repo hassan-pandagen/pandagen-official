@@ -1,5 +1,5 @@
 "use client";
-import ServicePageTemplate from "@/components/ServicePageTemplate";
+import ServicePageTemplate from "@/components/ui/ServicePageTemplate";
 import { Database, Server, Lock } from "lucide-react";
 
 export default function MigrationPage() {

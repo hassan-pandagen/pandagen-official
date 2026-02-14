@@ -4,9 +4,6 @@ import { motion } from "framer-motion";
 import { ArrowRight, Zap, ShieldCheck, Cpu } from "lucide-react";
 import Link from "next/link";
 
-// Data for Marquee
-const STACK = ["NEXT.JS 15", "VERCEL", "REACT", "TYPESCRIPT", "SUPABASE", "STRIPE", "SANITY", "TAILWIND"];
-
 export default function Hero() {
   return (
     <section className="relative min-h-[100vh] flex flex-col justify-center pt-24 pb-20 md:pt-32 md:pb-0 overflow-hidden bg-transparent">
@@ -47,34 +44,81 @@ export default function Hero() {
                 </span>
             </motion.h1>
 
-            <motion.p 
+            <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="text-xl text-gray-400 mb-10 leading-relaxed max-w-lg"
+                className="text-2xl text-gray-200 mb-10 leading-relaxed max-w-lg font-medium"
             >
-                Stop paying for bloated templates. We engineer <span className="text-white font-bold">bespoke Next.js architectures</span> that rank higher, load in under 1 second, and convert cold traffic into revenue.
+                Stop paying for bloated templates. We engineer <span className="text-white font-bold">bespoke Next.js architectures</span> that <span className="text-neon font-bold">rank higher</span>, load in <span className="text-neon font-bold">under 1 second</span>, and convert cold traffic into revenue.
             </motion.p>
 
-            <motion.div 
+            <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="flex flex-col sm:flex-row gap-4"
+                className="flex flex-col gap-4"
             >
-                <button
-                    data-cal-namespace="discovery"
-                    data-cal-link="pandagen/discovery"
-                    data-cal-config='{"layout":"month_view"}'
-                    className="px-8 py-4 bg-neon text-black font-bold text-lg rounded-full hover:bg-neon/90 transition-all duration-300 flex items-center justify-center gap-2 shadow-[0_0_40px_rgba(34,211,238,0.6),0_0_80px_rgba(34,211,238,0.3)] hover:shadow-[0_0_60px_rgba(34,211,238,0.8),0_0_100px_rgba(34,211,238,0.4)] hover:scale-105"
-                >
-                    Get Free Quote <ArrowRight className="w-5 h-5" />
-                </button>
-                <Link href="/work" className="px-8 py-4 bg-white/10 border border-white/20 text-white font-bold text-lg rounded-full hover:bg-white/15 transition-all flex items-center justify-center gap-2 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:-translate-y-0.5">
-                    View Case Studies
-                </Link>
+                <div className="flex flex-col sm:flex-row items-center gap-3">
+                    {/* PRIMARY CTA */}
+                    <button
+                        data-cal-namespace="discovery"
+                        data-cal-link="pandagen/discovery"
+                        data-cal-config='{"layout":"month_view"}'
+                        className="w-full sm:w-auto px-5 py-2.5 bg-neon text-black font-medium text-sm rounded-full hover:bg-neon/90 transition-all duration-300 flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(34,211,238,0.3)] hover:shadow-[0_0_20px_rgba(34,211,238,0.5)] hover:scale-[1.01] group"
+                    >
+                        Get Free Quote <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </button>
+
+                    {/* SECONDARY CTA */}
+                    <Link
+                        href="/work"
+                        className="w-full sm:w-auto px-5 py-2.5 bg-transparent border border-white/20 text-white font-medium text-sm rounded-full hover:border-neon hover:bg-neon/10 transition-all duration-300 flex items-center justify-center gap-2 group"
+                    >
+                        View Case Studies <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                </div>
             </motion.div>
 
+            {/* Urgency Messaging */}
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+                className="flex items-center justify-center gap-2 text-sm mt-6"
+            >
+                <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400">
+                    <span className="relative flex h-2 w-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+                    </span>
+                    <span className="font-bold">Only 3 projects per month</span>
+                </div>
+                <span className="text-gray-500">•</span>
+                <span className="text-gray-400">February slots filling up</span>
+            </motion.div>
+
+            {/* MOBILE STATS PREVIEW (Simplified Dashboard for Mobile) */}
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+                className="lg:hidden mt-8 grid grid-cols-2 gap-4 max-w-md mx-auto"
+            >
+                {/* Lighthouse Score Card */}
+                <div className="bg-gradient-to-br from-white/[0.08] to-transparent border border-white/10 rounded-2xl p-5 backdrop-blur-sm">
+                    <div className="text-xs text-gray-500 uppercase tracking-wider mb-2 font-bold">Performance</div>
+                    <div className="text-4xl font-bold text-neon mb-1">100</div>
+                    <div className="text-xs text-gray-400">Lighthouse Score</div>
+                </div>
+
+                {/* Load Time Card */}
+                <div className="bg-gradient-to-br from-white/[0.08] to-transparent border border-white/10 rounded-2xl p-5 backdrop-blur-sm">
+                    <div className="text-xs text-gray-500 uppercase tracking-wider mb-2 font-bold">Speed</div>
+                    <div className="text-4xl font-bold text-green-400 mb-1">&lt;1s</div>
+                    <div className="text-xs text-gray-400">Load Time</div>
+                </div>
+            </motion.div>
 
         </div>
 
@@ -157,17 +201,6 @@ export default function Hero() {
 
         </motion.div>
 
-      </div>
-
-      {/* 2. INFINITE SCROLLING TECH STACK */}
-      <div className="absolute bottom-0 w-full border-t border-white/10 md:border-white/5 bg-black/20 backdrop-blur-sm py-6 overflow-hidden z-20">
-         <div className="flex w-max animate-marquee gap-16 items-center transition-all duration-500">
-            {[...STACK, ...STACK, ...STACK].map((tech, i) => (
-                <span key={i} className="text-lg font-bold text-white flex items-center gap-2 hover:text-neon transition-colors duration-300">
-                    {tech}
-                </span>
-            ))}
-         </div>
       </div>
 
     </section>

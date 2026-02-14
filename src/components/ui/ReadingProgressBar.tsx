@@ -37,7 +37,7 @@ export default function ReadingProgressBar() {
     <div
       ref={progressRef}
       className="fixed top-0 left-0 right-0 h-1 bg-neon z-[70] origin-left will-change-transform"
-      style={{ transform: 'scaleX(0.3)' }}
+      style={{ transform: 'scaleX(0)' }}
     />
   )
 }
