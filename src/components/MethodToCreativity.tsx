@@ -38,27 +38,46 @@ const steps = [
 
 export default function MethodToCreativity() {
   const timelineRef = useRef<HTMLDivElement>(null);
+  const borderContainerRef = useRef<HTMLDivElement>(null);
+  const progressLineRef = useRef<HTMLDivElement>(null);
+  const progressHeadRef = useRef<HTMLDivElement>(null);
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
+
+    const updateProgress = () => {
+      if (!timelineRef.current || !progressLineRef.current || !progressHeadRef.current || !borderContainerRef.current) return;
+
+      const rect = timelineRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      // Calculate progress: 0 when entering viewport, 1 when leaving
+      const start = rect.top;
+      const end = rect.bottom - windowHeight;
+      const total = rect.height + windowHeight;
+      const current = windowHeight - start;
+
+      const progress = Math.max(0, Math.min(1, current / total));
+
+      // Apply transform directly to DOM for better Lenis compatibility
+      progressLineRef.current.style.transform = `scaleY(${progress})`;
+      progressHeadRef.current.style.transform = `translateY(${progress * rect.height}px)`;
+
+      // Update border color based on progress (white/10 -> orange based on scroll)
+      const opacity = 0.1 + (progress * 0.4); // 0.1 to 0.5
+      borderContainerRef.current.style.borderLeftColor = `rgba(251, 146, 60, ${opacity})`;
+    };
+
+    updateProgress();
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    window.addEventListener('resize', updateProgress, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', updateProgress);
+      window.removeEventListener('resize', updateProgress);
+    };
   }, []);
-
-  const { scrollYProgress } = useScroll({
-    target: timelineRef,
-    offset: ["start end", "end start"],
-    layoutEffect: false
-  });
-
-  const scaleY = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-    restSpeed: 0.001
-  });
-
-  // Head follows the line exactly by transforming on Y axis
-  const headY = useTransform(scaleY, (latest) => `calc(${latest * 100}% - 10px)`);
 
   if (!isMounted) return <section className="py-24 bg-transparent" style={{ minHeight: '100vh' }} />;
 
@@ -99,22 +118,24 @@ export default function MethodToCreativity() {
 
           {/* RIGHT: Scrollable Timeline */}
           <div ref={timelineRef} className="lg:w-2/3 py-10">
-            <div className="relative border-l-2 border-white/10 ml-4 md:ml-12 space-y-12 md:space-y-24 pb-32">
+            <div ref={borderContainerRef} className="relative border-l-2 border-white/10 ml-4 md:ml-12 space-y-12 md:space-y-24 pb-32 hover:!border-orange-500 transition-colors duration-300">
 
               {/* 1. Glowing Progress Line */}
-              <motion.div
-                className="absolute left-[-3px] top-0 w-[3px] bg-gradient-to-b from-neon via-purple-500 to-orange-500 shadow-[0_0_40px_#22d3ee,0_0_80px_rgba(34,211,238,0.3)] z-30 will-change-transform"
+              <div
+                ref={progressLineRef}
+                className="absolute left-[-3px] top-0 w-[3px] bg-gradient-to-b from-neon via-purple-500 to-orange-500 shadow-[0_0_40px_#22d3ee,0_0_80px_rgba(34,211,238,0.3)] z-30 transition-transform duration-75 ease-linear"
                 style={{
                   height: "100%",
-                  scaleY,
-                  transformOrigin: "top"
+                  transformOrigin: "top",
+                  transform: "scaleY(0)"
                 }}
               />
 
               {/* 2. The Glowing Head - tracks the end of the progress line */}
-              <motion.div
-                className="absolute left-[-8px] top-0 w-5 h-5 rounded-full bg-neon border-2 border-white shadow-[0_0_30px_#22d3ee,0_0_60px_rgba(34,211,238,0.5)] z-40 animate-pulse will-change-transform"
-                style={{ y: headY }}
+              <div
+                ref={progressHeadRef}
+                className="absolute left-[-8px] top-0 w-5 h-5 rounded-full bg-neon border-2 border-white shadow-[0_0_30px_#22d3ee,0_0_60px_rgba(34,211,238,0.5)] z-40 animate-pulse transition-transform duration-75 ease-linear"
+                style={{ transform: "translateY(0px)" }}
               />
 
               {steps.map((step, index) => (

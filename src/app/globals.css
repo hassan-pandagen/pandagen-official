@@ -55,12 +55,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--border);
+  background: var(--focus);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--focus);
+  background: #ea580c;
 }
 
 @layer utilities {

@@ -18,9 +18,8 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
   },
-  // 4. Optimize CSS
+  // 4. Optimize package imports for better tree-shaking
   experimental: {
-    optimizeCss: true,
     optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
   // 5. Enable compression

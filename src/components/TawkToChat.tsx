@@ -100,14 +100,21 @@ export default function TawkToChat() {
     // Execute traffic source tracking immediately
     storeSource();
 
-    // Defer TawkTo loading until after page is interactive
-    if (document.readyState === 'complete') {
-      setTimeout(loadTawkTo, 2000);
-    } else {
-      window.addEventListener('load', () => {
-        setTimeout(loadTawkTo, 2000);
-      });
-    }
+    let loaded = false;
+    const loadChat = () => {
+      if (loaded) return;
+      loaded = true;
+      loadTawkTo();
+    };
+
+    // Load TawkTo only on scroll or after 5 seconds (whichever comes first)
+    const handleScroll = () => {
+      loadChat();
+      window.removeEventListener('scroll', handleScroll);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true, once: true });
+    const fallbackTimer = setTimeout(loadChat, 5000);
 
     // Update current page on route change
     const updateCurrentPage = () => {
@@ -121,7 +128,10 @@ export default function TawkToChat() {
     // Listen for route changes (for Next.js navigation)
     window.addEventListener('popstate', updateCurrentPage);
 
+    // Cleanup all event listeners
     return () => {
+      clearTimeout(fallbackTimer);
+      window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('popstate', updateCurrentPage);
     };
   }, []);

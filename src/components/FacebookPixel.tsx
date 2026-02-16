@@ -7,8 +7,13 @@ export default function FacebookPixel() {
   const pathname = usePathname();
 
   useEffect(() => {
-    // Defer Facebook Pixel loading until after page is interactive
+    let loaded = false;
+
+    // Load Facebook Pixel only on user interaction (click, scroll, touch)
     const loadFBPixel = () => {
+      if (loaded) return;
+      loaded = true;
+
       const f: any = window;
       const b: any = document;
       const e = 'script';
@@ -32,27 +37,32 @@ export default function FacebookPixel() {
       t.src = v;
       const s = b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t, s);
+
+      // Initialize pixel after loading
+      setTimeout(() => {
+        if ((window as any).fbq) {
+          (window as any).fbq('init', '1612130730207311');
+          (window as any).fbq('track', 'PageView');
+        }
+      }, 100);
     };
 
-    // Delay loading until after page is interactive
-    if (document.readyState === 'complete') {
-      setTimeout(loadFBPixel, 1000);
-    } else {
-      window.addEventListener('load', () => {
-        setTimeout(loadFBPixel, 1000);
-      });
-    }
+    // Load on user interaction
+    const events = ['mousedown', 'touchstart', 'scroll', 'keydown'];
+    const handleInteraction = () => {
+      loadFBPixel();
+      events.forEach(event => window.removeEventListener(event, handleInteraction));
+    };
 
-    // Initialize pixel after loading
-    const checkAndInit = setInterval(() => {
-      if ((window as any).fbq) {
-        clearInterval(checkAndInit);
-        (window as any).fbq('init', '1612130730207311');
-        (window as any).fbq('track', 'PageView');
-      }
-    }, 100);
+    events.forEach(event => window.addEventListener(event, handleInteraction, { passive: true, once: true }));
 
-    return () => clearInterval(checkAndInit);
+    // Fallback: Load after 3 seconds if no interaction
+    const fallbackTimer = setTimeout(loadFBPixel, 3000);
+
+    return () => {
+      clearTimeout(fallbackTimer);
+      events.forEach(event => window.removeEventListener(event, handleInteraction));
+    };
   }, []);
 
   // Track page views on route change
