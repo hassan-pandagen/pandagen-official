@@ -1,5 +1,5 @@
 // Centralized blog data - Add new posts here and they'll automatically appear in sitemap
-export type IllustrationType = 'wordpress' | 'speed' | 'code' | 'saas' | 'plugins' | 'traffic' | 'sales' | 'conversion' | 'ranking';
+export type IllustrationType = 'wordpress' | 'speed' | 'code' | 'saas' | 'plugins' | 'traffic' | 'sales' | 'conversion' | 'ranking' | 'cost' | 'performance';
 
 export interface FAQ {
   question: string;
@@ -101,8 +101,8 @@ export const blogPosts: BlogPost[] = [
     date: "Feb 6",
     author: "Hassan",
     role: "Lead Engineer",
-    featured: true,
-    illustrationType: 'speed',
+    featured: false,
+    illustrationType: 'cost',
     lastModified: "2026-02-06",
     faqs: [
       {
@@ -189,7 +189,7 @@ export const blogPosts: BlogPost[] = [
     date: "Feb 15",
     author: "Hassan",
     role: "Lead Eng",
-    featured: true,
+    featured: false,
     illustrationType: 'ranking',
     lastModified: "2026-02-15",
     faqs: [
@@ -212,6 +212,76 @@ export const blogPosts: BlogPost[] = [
       {
         question: "Can I improve WordPress SEO without rebuilding my site?",
         answer: "You can make small improvements with caching plugins and image compression, but you'll hit a limit. WordPress will never load in under 1.5 seconds with plugins. To compete with coded websites and recover lost rankings, you need to rebuild with modern technology."
+      }
+    ]
+  },
+  {
+    id: "how-to-achieve-100-pagespeed",
+    title: "How to Achieve 100/100 PageSpeed Score: Complete Next.js Guide",
+    excerpt: "We achieve 98-100/100 PageSpeed scores on every client site. Here's the exact optimization process we use, step by step.",
+    category: "Performance",
+    readTime: "12 min",
+    date: "Feb 17",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: false,
+    illustrationType: 'speed',
+    lastModified: "2026-02-17",
+    faqs: [
+      {
+        question: "What is a good PageSpeed score?",
+        answer: "A good PageSpeed score is 90-100 (green). Scores of 50-89 (orange) mean you're losing 10-15% of traffic to faster competitors. Scores of 0-49 (red) mean you're losing 20-30% of organic traffic and ranking lower on Google."
+      },
+      {
+        question: "How do I check my PageSpeed score?",
+        answer: "Go to pagespeed.web.dev, enter your URL, and click Analyze. Check your Mobile score (this is what matters for SEO). If it's below 70, you're losing traffic and rankings to faster competitors."
+      },
+      {
+        question: "Can WordPress get 100/100 PageSpeed score?",
+        answer: "No. WordPress can reach 60-75 at best, even when fully optimized. The architecture is too old. To hit 95-100, you need modern frameworks like Next.js with built-in optimization, code splitting, and server components."
+      },
+      {
+        question: "How long does it take to improve PageSpeed score?",
+        answer: "On WordPress: 2-4 weeks to go from 40 to 70, but you'll hit a ceiling. Migrating to Next.js: 4-6 weeks from start to 95-100 score. Once optimized, rankings improve within 30-90 days as Google re-crawls your faster pages."
+      },
+      {
+        question: "Does PageSpeed score affect SEO?",
+        answer: "Yes, directly. Google made Core Web Vitals (what PageSpeed measures) a ranking factor in 2021. Fast sites (90-100 score) rank 20-30 positions higher than slow sites (0-49 score) with identical content. PageSpeed = rankings = traffic."
+      }
+    ]
+  },
+  {
+    id: "how-to-fix-slow-wordpress",
+    title: "How to Fix a Slow WordPress Site (8 Ways That Actually Work)",
+    excerpt: "Your WordPress site loads in 4 seconds. Your competitor loads in 0.9 seconds. Here's how to close the gap.",
+    category: "Performance",
+    readTime: "10 min",
+    date: "Feb 19",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: true,
+    illustrationType: 'performance',
+    lastModified: "2026-02-19",
+    faqs: [
+      {
+        question: "Why is my WordPress site so slow?",
+        answer: "WordPress sites are slow because of plugin bloat, unoptimized images, theme overhead, and old PHP architecture. Each plugin adds 2-15 HTTP requests. With 30+ plugins, you're loading 200+ files before visitors see anything. The average WordPress site takes 3.8 seconds to load."
+      },
+      {
+        question: "How many plugins are too many?",
+        answer: "More than 10-15 plugins will slow your site noticeably. Each plugin adds code, CSS, JavaScript, and database queries. Even 'lightweight' plugins add 50-150KB. Security plugins alone can add 0.5-1 second to load time."
+      },
+      {
+        question: "Can I make WordPress load in under 1 second?",
+        answer: "No. Even with perfect optimization, WordPress struggles to break 1.5 seconds. The architecture is from 2003 and wasn't designed for modern performance standards. To get sub-1-second load times, you need to migrate to a modern framework like Next.js."
+      },
+      {
+        question: "What's the fastest way to speed up WordPress?",
+        answer: "The fastest improvement: Remove unused plugins (can save 1-2 seconds). Then optimize images with WebP format and lazy loading (saves 1-2 seconds). Add caching (saves 0.5-1 second). But you'll hit a ceiling around 2-2.5 seconds no matter what you do."
+      },
+      {
+        question: "Should I migrate from WordPress to something else?",
+        answer: "If your business depends on speed and SEO rankings, yes. WordPress optimization has diminishing returns. Migrating to Next.js gets you 0.8-1.2 second load times, 95-100 PageSpeed scores, and 2-3× more organic traffic within 90 days. ROI typically pays for migration within 3-6 months."
       }
     ]
   },

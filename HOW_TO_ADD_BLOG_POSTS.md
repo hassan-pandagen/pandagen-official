@@ -1,8 +1,15 @@
-# How to Add New Blog Posts
+# Complete Blog & SEO Strategy Guide
 
-## Quick Guide
+**Last Updated:** February 17, 2026
 
-Your sitemap is now **100% automatic**. When you add a new blog post, it will automatically appear in the sitemap without any manual updates needed!
+## Table of Contents
+1. [Quick Start: Adding a Blog Post](#adding-a-new-blog-post-3-easy-steps)
+2. [Blog Writing Rules](#-critical-blog-writing-rules-read-before-writing)
+3. [SEO Keyword Research & Strategy](#seo-keyword-research--strategy)
+4. [30-Day Content Calendar](#30-day-blog-content-calendar-feb-17---mar-17)
+5. [Priority Blog Posts to Write](#priority-blog-posts-with-outlines)
+6. [Distribution Checklist](#post-publish-distribution-checklist)
+7. [Success Metrics](#success-metrics--tracking)
 
 ---
 
@@ -207,18 +214,64 @@ That's it! The blog post will automatically:
 
 ---
 
-## Illustration Types
+## Illustration Types Reference
 
-Choose one of these for your blog post:
+**IMPORTANT:** Before assigning an illustration type to a new blog post, check this table to avoid duplicates!
 
-| Type | Description | Used For |
-|------|-------------|----------|
-| `'wordpress'` | Red warning icon with dollar signs | WordPress critiques, cost analysis |
-| `'speed'` | Green "0.8-1.2s" load time display | Performance, speed topics |
-| `'code'` | Orange legacy code snippet | Technical debt, code quality |
-| `'saas'` | Blue layered icon | SaaS products, architecture |
-| `'plugins'` | Plugin icons + invoice/bill showing costs | Plugin bloat, hidden fees, performance drain |
-| `'ranking'` | Google rankings dropping (Page 1 #3 → Page 2 #14) with red downward arrow | SEO, rankings, competition, Google deranking |
+With 11 posts and 11 illustration types, **every post has a unique illustration** - NO DUPLICATES!
+
+### Current Illustration Assignments
+
+| illustrationType | Visual Description | Currently Used By | Theme |
+|------------------|-------------------|-------------------|-------|
+| `'wordpress'` | Red shield with falling $$$ symbols | **1 post:** "wordpress-killer" (Why WordPress Is a Waste of Money) | WordPress critiques, platform costs |
+| `'speed'` | Green "0.8-1.2s" load time display | **1 post:** "how-to-achieve-100-pagespeed" (How to Achieve 100/100 PageSpeed Score) | Speed optimization, performance targets |
+| `'code'` | Orange nested HTML/code snippet showing bloat | **1 post:** "elementor-kills-seo" (Stop Using Page Builders) | Code quality, technical debt, page builder bloat |
+| `'saas'` | Blue layered icon | **1 post:** "shopify-headless" (Shopify Plus + Next.js: Sub-Second Load Times) | SaaS platforms, Shopify architecture |
+| `'plugins'` | Puzzle pieces + invoice showing "$75K/yr" | **1 post:** "wordpress-plugins-destroy-speed" (WordPress Plugins Destroy Speed) | Plugin bloat, hidden fees, WordPress overhead |
+| `'traffic'` | Purple with TrendingDown arrows, traffic dropping 10K→2K | **1 post:** "wordpress-traffic-drop-speed" (Why Is My WordPress Site Losing Traffic) | Traffic loss, SEO decline, rankings |
+| `'sales'` | Emerald/red with falling money, "$75K" lost revenue counter | **1 post:** "shopify-slow-losing-sales" (Your Shopify Store Is Costing You $75K/Year) | Revenue loss, sales impact, business cost |
+| `'conversion'` | Cyan funnel showing "100 Visitors → 1.2%" conversion | **1 post:** "shopify-conversion-rate-speed-fix" (Why Is My Conversion Rate So Low) | Conversion rates, funnel optimization |
+| `'ranking'` | Red with falling ranking numbers, "Page 1 #3 → Page 2 #14" | **1 post:** "why-competitor-outranks-you" (Why Your Competitor Outranks You) | SEO rankings, competition, Google deranking |
+| `'cost'` | Yellow/orange dollar bills stacking UP, "$2,300" price tag | **1 post:** "shopify-plus-still-slow" (Why Your Shopify Plus Store Still Loads in 4 Seconds) | Platform costs, expensive hosting, mounting expenses |
+| `'performance'` | Purple/cyan performance bars showing "4.2s → 0.9s" | **1 post:** "how-to-fix-slow-wordpress" (How to Fix Slow WordPress Site) | Performance optimization, speed improvements, before/after metrics |
+
+### Guidelines for New Posts
+
+**When adding a new blog post:**
+1. ✅ **Check the table above first** - See which illustration types are available
+2. ✅ **Match theme** - Choose the illustration that best matches your post's primary topic
+3. ✅ **Prefer unique illustrations** - All current posts have unique visuals, maintain this standard
+4. ✅ **Create new illustrations if needed** - If no existing type fits, add a new illustration component
+
+**Quick Reference by Post Topic:**
+- WordPress critique/cost → `'wordpress'`
+- Speed targets/goals → `'speed'`
+- Code quality/page builders → `'code'`
+- SaaS platform architecture → `'saas'`
+- Plugin bloat/overhead → `'plugins'`
+- Traffic decline/loss → `'traffic'`
+- Revenue loss/impact → `'sales'`
+- Conversion problems → `'conversion'`
+- SEO rankings/competition → `'ranking'`
+- Platform costs/pricing → `'cost'`
+- Performance optimization/metrics → `'performance'`
+
+### Adding New Illustration Types
+
+If you need a new illustration type:
+
+1. **Create the component** in [src/app/blog/page.tsx](src/app/blog/page.tsx) (after existing illustrations)
+2. **Add to type definition** in [src/data/blog.ts](src/data/blog.ts) - update `IllustrationType`
+3. **Add to mapping** in [src/app/blog/page.tsx](src/app/blog/page.tsx) - update `getIllustration` function
+4. **Document here** - Update the table above with the new type
+
+**Design Guidelines for New Illustrations:**
+- Use distinct color schemes (don't repeat existing gradients)
+- Add motion/animation (Framer Motion)
+- Match existing size constraints (h-56 on cards)
+- Use glassmorphism style (backdrop-blur, semi-transparent borders)
+- Include relevant metrics/numbers when applicable
 
 ---
 
@@ -688,3 +741,408 @@ export const metadata: Metadata = {
 4. Search engines discover your new posts instantly via the updated sitemap
 
 **Zero manual sitemap updates required!** 🎉
+
+---
+
+---
+
+## SEO Keyword Research & Strategy
+
+**Goal:** Rank Page 1 for target keywords within 30-90 days using low-competition, high-intent keywords.
+
+### 🎯 Primary Target Keywords
+
+#### WordPress Migration (START HERE - Low Competition)
+| Keyword | Search Volume | Difficulty | Priority |
+|---------|---------------|------------|----------|
+| "how to fix slow WordPress site" | HIGH | **LOW** | 🔥 #1 |
+| "WordPress to Next.js migration" | MEDIUM | MEDIUM | 🟡 #3 |
+| "WordPress plugin alternatives" | MEDIUM | LOW | 🟢 Top 10 |
+| "true cost of WordPress 2026" | MEDIUM | LOW | 🟢 Top 10 |
+
+#### Next.js Performance (YOUR EXPERTISE - Low Competition)
+| Keyword | Search Volume | Difficulty | Priority |
+|---------|---------------|------------|----------|
+| "how to achieve 100 PageSpeed score" | MEDIUM | **LOW** | 🔥 #2 |
+| "Core Web Vitals optimization guide" | HIGH | **LOW** | 🔥 #4 |
+| "Next.js server components ecommerce" | MEDIUM | LOW | 🟢 Top 10 |
+| "Next.js vs WordPress performance" | HIGH | MEDIUM | 🟡 #5 |
+
+#### Shopify Development (Medium Competition)
+| Keyword | Search Volume | Difficulty | Priority |
+|---------|---------------|------------|----------|
+| "Shopify headless vs theme" | MEDIUM | MEDIUM | 🟡 Week 2 |
+| "Shopify Plus slow" | LOW | LOW | 🟢 Top 10 |
+| "custom Shopify storefront" | MEDIUM | MEDIUM | 🟡 Week 3 |
+
+### 🚀 Long-Tail Quick Wins (Target These First)
+
+These keywords have **LOW competition** but **HIGH conversion intent**:
+
+1. **"how to fix slow WordPress site"** - Problem-aware, ready to pay
+2. **"how to achieve 100 PageSpeed score"** - Shows your expertise
+3. **"migrate WordPress to Next.js cost"** - Bottom-funnel, high intent
+4. **"WordPress site slow after update fix"** - Specific pain point
+5. **"Core Web Vitals optimization"** - Technical but business-focused
+6. **"WordPress vs Next.js for business"** - Comparison, decision stage
+7. **"when to migrate WordPress"** - Pre-purchase research
+8. **"Shopify theme alternatives custom development"** - Frustrated Shopify owners
+
+### 🔍 Question Keywords (Featured Snippet Opportunities)
+
+Target these for Google's "People Also Ask" boxes:
+
+- "Why is my WordPress site so slow?"
+- "How much does WordPress migration cost?"
+- "Can WordPress get 100/100 PageSpeed score?"
+- "What is a good PageSpeed score?"
+- "Does PageSpeed score affect SEO?"
+- "How long does WordPress to Next.js migration take?"
+- "Will I lose SEO rankings if I migrate from WordPress?"
+
+**Strategy:** Add these as FAQs in every blog post to win featured snippets.
+
+---
+
+## 30-Day Blog Content Calendar (Feb 17 - Mar 17)
+
+**Goal:** 9 new posts in 30 days targeting low-competition keywords to drive 100-200% traffic increase.
+
+### Week 1 (Feb 17-23): How-To Guides (Low-Competition Quick Wins)
+
+| Date | Post Slug | Target Keyword | Word Count | Status |
+|------|-----------|----------------|------------|--------|
+| **Feb 17** | `how-to-achieve-100-pagespeed` | "how to achieve 100 PageSpeed score" | 2,500 | ✅ DONE |
+| **Feb 19** | `how-to-fix-slow-wordpress` | "how to fix slow WordPress site" | 2,000 | 📝 NEXT |
+| **Feb 21** | `core-web-vitals-optimization-guide` | "Core Web Vitals optimization" | 2,800 | 📝 TODO |
+
+### Week 2 (Feb 24 - Mar 2): Comparison Content (Medium Competition)
+
+| Date | Post Slug | Target Keyword | Word Count | Status |
+|------|-----------|----------------|------------|--------|
+| **Feb 24** | `wordpress-vs-nextjs-2026` | "WordPress vs Next.js" | 2,500 | 📝 TODO |
+| **Feb 26** | `shopify-headless-vs-theme` | "Shopify headless vs theme" | 2,200 | 📝 TODO |
+
+### Week 3 (Mar 3-9): Migration & Technical Guides
+
+| Date | Post Slug | Target Keyword | Word Count | Status |
+|------|-----------|----------------|------------|--------|
+| **Mar 3** | `migrate-wordpress-nextjs-seo` | "migrate WordPress to Next.js" | 3,000 | 📝 TODO |
+| **Mar 5** | `nextjs-server-components-ecommerce` | "Next.js server components ecommerce" | 3,500 | 📝 TODO |
+
+### Week 4 (Mar 10-17): Authority Building
+
+| Date | Post Slug | Target Keyword | Word Count | Status |
+|------|-----------|----------------|------------|--------|
+| **Mar 10** | `when-to-migrate-wordpress` | "when to migrate WordPress" | 1,500 | 📝 TODO |
+| **Mar 12** | `real-cost-wordpress-plugins` | "WordPress plugin alternatives" | 1,800 | 📝 TODO |
+
+---
+
+## Priority Blog Posts with Outlines
+
+### 🔥 POST #1: "How to Fix a Slow WordPress Site (8 Ways That Actually Work)" ✅ NEXT TO WRITE
+
+**Target Keyword:** "how to fix slow WordPress site" (LOW competition, HIGH intent)
+
+**Outline:**
+1. Executive Summary: Why speed = money
+2. Test Your Current Speed (PageSpeed.web.dev)
+3. Method 1: Remove Unused Plugins (saves 0.5-1.5s)
+4. Method 2: Optimize Images (saves 1-2s)
+5. Method 3: Enable Caching (saves 0.5-1s)
+6. Method 4: Use a CDN (saves 0.3-0.8s)
+7. Method 5: Minify CSS/JS (saves 0.2-0.5s)
+8. Method 6: Database Optimization (saves 0.1-0.3s)
+9. Method 7: Choose Better Hosting (saves 0.5-1s)
+10. Method 8: Remove Page Builders (saves 1-2s)
+11. The Hard Truth: Optimization Has Limits
+12. The Professional Solution: WordPress to Next.js Migration
+13. FAQs (5 questions)
+
+**FAQs to Include:**
+- "Why is my WordPress site so slow?"
+- "How many plugins are too many?"
+- "Can I make WordPress load in under 1 second?"
+- "What's the fastest way to speed up WordPress?"
+- "Should I migrate from WordPress to something else?"
+
+**Internal Links:**
+- Link to "WordPress Plugins Destroy Speed" (existing post)
+- Link to "How to Achieve 100 PageSpeed Score" (existing post)
+- Link to `/services/wordpress-migration`
+
+---
+
+### 🔥 POST #2: "Core Web Vitals Optimization: Complete 2026 Guide"
+
+**Target Keyword:** "Core Web Vitals optimization guide" (LOW competition)
+
+**Outline:**
+1. Executive Summary: What are CWV, why they matter, how to pass
+2. What Are Core Web Vitals? (LCP, FID/INP, CLS)
+3. Why Google Cares (Ranking Factor Since 2021)
+4. How to Test Your Site (PageSpeed Insights, Lighthouse)
+5. Optimizing LCP (Largest Contentful Paint)
+   - Image optimization
+   - Server response time
+   - Render-blocking resources
+6. Optimizing INP (Interaction to Next Paint)
+   - JavaScript execution time
+   - Third-party scripts
+   - Event handlers
+7. Optimizing CLS (Cumulative Layout Shift)
+   - Image/video dimensions
+   - Font loading
+   - Dynamic content
+8. The WordPress Problem (Why It Fails CWV)
+9. The Next.js Solution (Built-in CWV Optimization)
+10. Real Examples: Before/After Metrics
+11. FAQs (5 questions)
+
+**FAQs to Include:**
+- "What are Core Web Vitals?"
+- "Why does my site fail Core Web Vitals?"
+- "How do I pass Core Web Vitals?"
+- "Do Core Web Vitals affect SEO?"
+- "What is a good Core Web Vitals score?"
+
+---
+
+### 🟡 POST #3: "WordPress to Next.js Migration: Complete Guide (Without Losing SEO)"
+
+**Target Keyword:** "migrate WordPress to Next.js" (MEDIUM competition, HIGH intent)
+
+**Outline:**
+1. Executive Summary: Zero downtime, zero SEO loss, 4-6 week timeline
+2. Why Migrate? (Speed, Cost, Security, Scalability)
+3. Pre-Migration Audit (What to Analyze First)
+4. Migration Process Overview (7 Phases)
+5. Phase 1: Content Export (Posts, Pages, Media)
+6. Phase 2: URL Mapping (301 Redirects)
+7. Phase 3: Design Recreation (Match or Improve)
+8. Phase 4: SEO Transfer (Metadata, Schema, Redirects)
+9. Phase 5: Testing (Staging Environment)
+10. Phase 6: Launch (DNS Cutover)
+11. Phase 7: Post-Launch Monitoring (Google Search Console)
+12. SEO Checklist (How to Keep Rankings)
+13. Cost Breakdown ($8K-$25K depending on complexity)
+14. Timeline (Typical 4-6 weeks)
+15. FAQs (5 questions)
+
+**FAQs to Include:**
+- "Will I lose SEO rankings if I migrate from WordPress?"
+- "How long does WordPress to Next.js migration take?"
+- "How much does it cost to migrate from WordPress to Next.js?"
+- "Can I migrate WordPress to Next.js myself?"
+- "What happens to my WordPress content during migration?"
+
+---
+
+### 🟡 POST #4: "WordPress vs Next.js: The 2026 Performance Comparison"
+
+**Target Keyword:** "WordPress vs Next.js" (HIGH volume, MEDIUM competition)
+
+**Outline:**
+1. Executive Summary: Which wins for Speed, Cost, Scalability, SEO
+2. The Real Differences (Not Marketing Fluff)
+3. Performance Comparison
+   | Metric | WordPress | Next.js | Winner |
+   |--------|-----------|---------|--------|
+   | Load Time | 3.8s | 0.9s | Next.js |
+   | PageSpeed Score | 65 | 98 | Next.js |
+4. Cost Comparison (12-Month Total)
+   - WordPress: $3,000-$5,000/year (hosting, plugins, maintenance)
+   - Next.js: $500-$1,200/year (hosting, no plugins needed)
+5. SEO Comparison
+6. Security Comparison
+7. Scalability Comparison
+8. Use Cases: When to Choose Each
+   - WordPress: Blogs, non-technical users
+   - Next.js: E-commerce, SaaS, high-traffic sites
+9. Migration Path: WordPress → Next.js
+10. FAQs (5 questions)
+
+---
+
+### 🟡 POST #5: "Shopify Headless vs Theme: Performance Comparison 2026"
+
+**Target Keyword:** "Shopify headless vs theme" (MEDIUM competition)
+
+**Outline:**
+1. Executive Summary: Headless = 4× faster, more control, lower app costs
+2. What is Shopify Headless?
+3. Theme Architecture vs Headless Architecture
+4. Performance Comparison
+   | Metric | Shopify Theme | Headless Next.js | Winner |
+   |--------|---------------|------------------|--------|
+   | Load Time | 4.2s | 1.1s | Headless |
+   | PageSpeed Score | 55 | 96 | Headless |
+5. Cost Comparison
+6. Customization Comparison
+7. SEO Comparison
+8. Use Cases: When to Go Headless
+9. Migration Timeline & Cost
+10. FAQs (5 questions)
+
+---
+
+## Blog Post Templates (Copy-Paste Ready)
+
+### Template 1: "How-To" Technical Guide
+
+**Use for:** Performance optimization, migration guides, technical tutorials
+
+```markdown
+# [How to Do X]: Complete [Year] Guide
+
+## Executive Summary
+- Bullet 1: What you'll learn
+- Bullet 2: Time/cost savings
+- Bullet 3: Expected results
+
+## Why [Problem] Matters for Your Business
+[Business impact with numbers]
+
+## The [X] Problem (What's Really Going On)
+[Technical explanation in simple language]
+
+## Method 1: [Solution Name]
+### Step 1: [Action]
+### Step 2: [Action]
+### Results: [Metrics]
+
+## Method 2: [Solution Name]
+[Repeat structure]
+
+## The Professional Solution (Our Approach)
+[Link to service page]
+
+## FAQs
+[3-5 questions from People Also Ask]
+
+## Next Steps
+[CTA to booking]
+```
+
+### Template 2: Comparison Post
+
+**Use for:** WordPress vs Next.js, Shopify vs Headless, Platform comparisons
+
+```markdown
+# [Platform A] vs [Platform B]: The [Year] Comparison
+
+## Executive Summary
+- Which wins: Speed, Cost, Scalability, SEO
+
+## The Real Differences (Not Marketing Fluff)
+[Honest comparison with data]
+
+## Performance Comparison
+| Metric | Platform A | Platform B | Winner |
+|--------|------------|------------|--------|
+
+## Cost Comparison (12-Month Total)
+[TCO breakdown]
+
+## Use Cases: When to Choose Each
+Platform A: [scenarios]
+Platform B: [scenarios]
+
+## Migration Path: [Platform A] → [Platform B]
+[Brief overview]
+
+## FAQs
+[5 questions]
+
+## Our Recommendation
+[Business-focused recommendation]
+
+## Next Steps
+[CTA]
+```
+
+---
+
+## Implementation Checklist
+
+### For Each New Blog Post:
+
+**Phase 1: Research & Writing (Day 1-2)**
+- [ ] Search "People Also Ask" for target keyword on Google
+- [ ] Find 3-5 FAQ questions
+- [ ] Write 2,000-3,000 word post using template above
+- [ ] Add 3-5 internal links (other posts + service pages)
+- [ ] Include 1-2 screenshots or data visualizations
+- [ ] Write meta description (160 chars max)
+
+**Phase 2: Add to System (Day 2)**
+- [ ] Add entry to `/src/data/blog.ts` with FAQs
+- [ ] Create `/src/app/blog/[slug]/page.tsx` file
+- [ ] Set `lastModified` date
+- [ ] Choose correct `illustrationType`
+- [ ] Set `featured: true` for first 2 weeks (new posts get visibility)
+
+**Phase 3: SEO Verification (Day 3)**
+- [ ] Test locally: `npm run dev`
+- [ ] View page source, verify FAQPage schema exists
+- [ ] Deploy to production
+- [ ] Test live URL in Google Rich Results Test
+- [ ] Submit to Google Search Console
+
+**Phase 4: Distribution (Day 3-5)**
+- [ ] LinkedIn post (text + link in comments)
+- [ ] Reddit post (2-3 relevant subreddits)
+- [ ] Cross-post to Dev.to (with canonical URL)
+- [ ] Cross-post to Hashnode (with canonical URL)
+- [ ] Optional: Indie Hackers, Hacker News (if data-driven)
+
+---
+
+## Success Metrics & Tracking
+
+### Expected Results Timeline
+
+#### Month 1 (Feb 17 - Mar 17)
+- **Posts Published:** 9 new posts
+- **Target Keywords:** 15-20 long-tail keywords tracked
+- **Expected Rankings:** 5-8 keywords on Page 1 (low-competition)
+- **Traffic Increase:** +50-100%
+- **Leads:** 3-5 qualified leads from organic
+
+#### Month 2 (Mar 18 - Apr 17)
+- **Posts Published:** 4 new posts (total: 13 posts)
+- **Target Keywords:** 25-30 keywords tracked
+- **Expected Rankings:** 12-15 keywords on Page 1
+- **Traffic Increase:** +150-200%
+- **Leads:** 8-12 qualified leads from organic
+
+#### Month 3 (Apr 18 - May 17)
+- **Posts Published:** 4 new posts (total: 17 posts)
+- **Target Keywords:** 35+ keywords tracked
+- **Expected Rankings:** 20-25 keywords on Page 1
+- **Traffic Increase:** +300-400%
+- **Leads:** 15-20 qualified leads from organic
+- **Goal:** First $50K+ deal from organic SEO
+
+### Success Metrics Dashboard
+
+Track these in Google Search Console + Google Analytics:
+
+| Metric | Current (Feb 17) | Month 1 Target | Month 3 Target |
+|--------|------------------|----------------|----------------|
+| **Organic Traffic** | ~500/mo | 750/mo | 2,000/mo |
+| **Keywords Page 1** | 8 | 15 | 30 |
+| **Featured Snippets** | 0 | 2 | 5 |
+| **Blog Pageviews** | ~1,000/mo | 2,000/mo | 5,000/mo |
+| **Organic Leads** | 2/mo | 5/mo | 15/mo |
+| **Avg Time on Page** | 2:30 | 3:00 | 3:30 |
+
+### Tools to Use (All Free)
+
+1. **Google Search Console** - Track rankings, impressions, CTR
+2. **Google Analytics 4** - Traffic sources, user behavior
+3. **PageSpeed Insights** - Performance monitoring
+4. **Google Rich Results Test** - Verify schema markup
+
+---

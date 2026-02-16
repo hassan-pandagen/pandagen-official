@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Clock, BookOpen, Search, User, ShieldAlert, Layers, ShieldCheck, TrendingDown, DollarSign, Filter } from "lucide-react";
+import { ArrowRight, Clock, BookOpen, Search, User, ShieldAlert, Layers, ShieldCheck, TrendingDown, DollarSign, Filter, X } from "lucide-react";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -295,6 +295,92 @@ const RankingIllustration = () => (
   </div>
 );
 
+const CostIllustration = () => (
+  <div className="w-full h-full bg-gradient-to-br from-yellow-950/30 to-orange-950/20 relative overflow-hidden flex items-center justify-center">
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(234,179,8,0.15),transparent_70%)]" />
+
+    {/* Stacking Dollar Bills (Going UP not down) */}
+    {[...Array(8)].map((_, i) => (
+      <motion.div
+        key={i}
+        animate={{
+          y: [180, -40],
+          opacity: [0, 0.6, 0]
+        }}
+        transition={{
+          duration: 3 + i * 0.2,
+          repeat: Infinity,
+          delay: i * 0.4,
+          ease: "linear"
+        }}
+        className="absolute text-3xl text-yellow-400/40 font-bold"
+        style={{ left: `${15 + i * 10}%`, top: '180px' }}
+      >
+        $
+      </motion.div>
+    ))}
+
+    {/* Price Tag with Increasing Numbers */}
+    <div className="z-10 bg-orange-900/40 border-2 border-yellow-500/60 rounded-2xl p-6 backdrop-blur-md shadow-2xl">
+      <div className="text-center space-y-2">
+        <div className="text-yellow-300 text-xs uppercase tracking-widest font-bold">Monthly Cost</div>
+        <motion.div
+          animate={{ scale: [1, 1.1, 1] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-yellow-300 to-orange-600 font-mono"
+        >
+          $2,300
+        </motion.div>
+        <div className="text-gray-400 text-[10px] font-mono">+ plugins + hosting</div>
+      </div>
+    </div>
+  </div>
+);
+
+const PerformanceIllustration = () => (
+  <div className="w-full h-full bg-gradient-to-br from-purple-950/30 to-cyan-950/20 relative overflow-hidden flex items-center justify-center">
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(147,51,234,0.15),transparent_70%)]" />
+
+    {/* Performance Bars Animation */}
+    <div className="z-10 relative flex flex-col gap-4 w-48">
+      {/* Before Bar (Slow) */}
+      <div className="space-y-1">
+        <div className="text-xs text-gray-400 uppercase tracking-wider">Before</div>
+        <div className="h-6 bg-gray-800/50 rounded-full overflow-hidden border border-white/10">
+          <motion.div
+            animate={{ width: ["0%", "85%"] }}
+            transition={{ duration: 2, repeat: Infinity, repeatDelay: 1 }}
+            className="h-full bg-gradient-to-r from-red-500 to-orange-500 flex items-center justify-end pr-2"
+          >
+            <span className="text-[10px] font-bold text-white">4.2s</span>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* After Bar (Fast) */}
+      <div className="space-y-1">
+        <div className="text-xs text-cyan-300 uppercase tracking-wider">After</div>
+        <div className="h-6 bg-gray-800/50 rounded-full overflow-hidden border border-cyan-500/30">
+          <motion.div
+            animate={{ width: ["0%", "25%"] }}
+            transition={{ duration: 2, repeat: Infinity, repeatDelay: 1, delay: 0.5 }}
+            className="h-full bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-end pr-2"
+          >
+            <span className="text-[10px] font-bold text-white">0.9s</span>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Performance Gain Label */}
+      <div className="mt-2 text-center">
+        <div className="inline-block bg-purple-900/40 border border-purple-500/50 rounded-lg px-3 py-1">
+          <span className="text-xs text-purple-300 font-bold">4.7× Faster</span>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 // Map illustration types to components
 const getIllustration = (type: IllustrationType) => {
   const illustrations = {
@@ -307,6 +393,8 @@ const getIllustration = (type: IllustrationType) => {
     sales: <SalesIllustration />,
     conversion: <ConversionIllustration />,
     ranking: <RankingIllustration />,
+    cost: <CostIllustration />,
+    performance: <PerformanceIllustration />,
   };
   return illustrations[type];
 };
@@ -325,6 +413,20 @@ const articles = blogPosts
 
 export default function BlogPage() {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [searchQuery, setSearchQuery] = useState("");
+
+  // Get unique categories from blog posts
+  const categories = ["All", ...Array.from(new Set(blogPosts.map(post => post.category)))];
+
+  // Filter articles by category and search query
+  const filteredArticles = articles.filter(article => {
+    const matchesCategory = activeCategory === "All" || article.category === activeCategory;
+    const matchesSearch = searchQuery === "" ||
+      article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      article.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      article.category.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   // Schema.org structured data for blog listing page
   const blogSchema = {
@@ -408,9 +510,59 @@ export default function BlogPage() {
 
         <h1 className="text-5xl md:text-7xl font-bold text-white relative z-10">Insights from the <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon to-purple-500">Engine Room.</span></h1>
       </section>
-      
+
+      {/* Search & Filter Section */}
+      <section className="container mx-auto px-6 pb-8">
+        <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
+          {/* Search Bar */}
+          <div className="relative w-full md:w-96">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
+            <input
+              type="text"
+              placeholder="Search articles..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full pl-12 pr-10 py-3 bg-white/5 border border-white/10 rounded-full text-white placeholder-gray-500 focus:outline-none focus:border-neon/50 transition-colors"
+            />
+            {searchQuery && (
+              <button
+                onClick={() => setSearchQuery("")}
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-white transition-colors"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            )}
+          </div>
+
+          {/* Category Filters */}
+          <div className="flex flex-wrap gap-2 items-center">
+            <Filter className="w-4 h-4 text-gray-500" />
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setActiveCategory(category)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                  activeCategory === category
+                    ? 'bg-neon text-black'
+                    : 'bg-white/5 text-gray-400 border border-white/10 hover:border-neon/50 hover:text-white'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Result Count */}
+        <div className="mt-6 text-center text-gray-500 text-sm">
+          Showing {filteredArticles.length} of {articles.length} article{articles.length !== 1 ? 's' : ''}
+          {searchQuery && ` for "${searchQuery}"`}
+          {activeCategory !== "All" && ` in ${activeCategory}`}
+        </div>
+      </section>
+
       <section className="container mx-auto px-6 py-12">
-         {articles.filter(a => a.featured).map((article) => (
+         {filteredArticles.filter(a => a.featured).map((article) => (
             <Link key={article.id} href={`/blog/${article.id}`} className="group block relative">
                <div className="relative rounded-[2.5rem] overflow-hidden border-2 border-white/20 bg-[#0A0A0A] grid md:grid-cols-2 hover:border-neon/40 transition-all duration-300 shadow-[0_0_30px_rgba(0,0,0,0.5)] hover:shadow-[0_0_50px_rgba(34,211,238,0.15)]">
                   <div className="h-64 md:h-auto border-r-2 border-white/20">{article.illustration}</div>
@@ -431,7 +583,7 @@ export default function BlogPage() {
 
       <section className="container mx-auto px-6 pb-32">
          <div className="grid md:grid-cols-3 gap-8">
-            {articles.filter(a => !a.featured).map((article) => (
+            {filteredArticles.filter(a => !a.featured).map((article) => (
                <Link key={article.id} href={`/blog/${article.id}`} className="group bg-[#0A0A0A] border-2 border-white/20 rounded-3xl overflow-hidden hover:border-neon/40 transition-all duration-300 shadow-[0_0_20px_rgba(0,0,0,0.3)] hover:shadow-[0_0_40px_rgba(34,211,238,0.1)] hover:scale-[1.02]">
                   <div className="h-56 w-full border-b-2 border-white/20">{article.illustration}</div>
                   <div className="p-8">

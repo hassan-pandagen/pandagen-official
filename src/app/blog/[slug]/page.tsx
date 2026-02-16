@@ -273,7 +273,7 @@ const blogPosts: Record<
                     When someone visits your WordPress site, here is what happens behind the scenes for <strong>every single plugin</strong>:
                 </BlogText>
                 <BlogList items={[
-                    "1-3 CSS files loaded (render-blocking — browser can't show anything until these download)",
+                    "1-3 CSS files loaded (render-blocking - browser can't show anything until these download)",
                     "1-5 JavaScript files loaded (each one blocks interactivity)",
                     "1-10 database queries fired (each one adds 10-50ms of server time)",
                     "External API calls to plugin servers (analytics, fonts, tracking pixels)"
@@ -287,16 +287,16 @@ const blogPosts: Record<
                     We audited hundreds of WordPress sites. These plugins consistently destroy PageSpeed scores:
                 </BlogText>
                 <BlogList items={[
-                    "Elementor Pro — Adds 1.2MB of CSS/JS even on pages that don't use it. 800+ DOM nodes per section.",
-                    "WooCommerce — Loads cart fragments JS on EVERY page, even blog posts. Adds 300ms+ to load time.",
-                    "Yoast SEO Premium — 200KB of JavaScript for an admin toolbar visitors never see.",
-                    "Slider Revolution — 500KB+ of JavaScript for one hero slider. Blocks rendering completely.",
-                    "Contact Form 7 / WPForms — Loads form CSS and JS on every page, not just the contact page.",
-                    "Jetpack — The bloatware king. Loads 15+ modules you don't use. Adds 400KB+ to every page.",
-                    "WPML (Translation) — Adds 5-8 database queries per page for language switching logic.",
-                    "MonsterInsights — Loads Google Analytics through a PHP proxy, adding 200ms vs a direct script tag.",
-                    "WP Rocket — Ironic: the caching plugin meant to speed you up adds its own overhead.",
-                    "Social sharing plugins — Each button loads external scripts from Facebook, Twitter, LinkedIn separately."
+                    "Elementor Pro - Adds 1.2MB of CSS/JS even on pages that don't use it. 800+ DOM nodes per section.",
+                    "WooCommerce - Loads cart fragments JS on EVERY page, even blog posts. Adds 300ms+ to load time.",
+                    "Yoast SEO Premium - 200KB of JavaScript for an admin toolbar visitors never see.",
+                    "Slider Revolution - 500KB+ of JavaScript for one hero slider. Blocks rendering completely.",
+                    "Contact Form 7 / WPForms - Loads form CSS and JS on every page, not just the contact page.",
+                    "Jetpack - The bloatware king. Loads 15+ modules you don't use. Adds 400KB+ to every page.",
+                    "WPML (Translation) - Adds 5-8 database queries per page for language switching logic.",
+                    "MonsterInsights - Loads Google Analytics through a PHP proxy, adding 200ms vs a direct script tag.",
+                    "WP Rocket - Ironic: the caching plugin meant to speed you up adds its own overhead.",
+                    "Social sharing plugins - Each button loads external scripts from Facebook, Twitter, LinkedIn separately."
                 ]} />
 
                 <BlogQuote>
@@ -311,7 +311,7 @@ const blogPosts: Record<
                     "53% of mobile visitors leave if a page takes longer than 3 seconds to load (Google)",
                     "Every 0.1 second improvement = 8% increase in conversions (Deloitte)",
                     "Sites scoring below 50 on Core Web Vitals see 20-30% less organic traffic (Search Engine Journal)",
-                    "Amazon calculated that 100ms of latency costs them 1% in revenue — $4.8 billion/year"
+                    "Amazon calculated that 100ms of latency costs them 1% in revenue - $4.8 billion/year"
                 ]} />
                 <BlogText>
                     If your site makes $500,000/year and loads in 4 seconds instead of 1, you are losing roughly <BlogHighlight>$75,000-$150,000 in revenue annually</BlogHighlight> from visitors who bounced before the page loaded.
@@ -336,12 +336,12 @@ const blogPosts: Record<
                     Everything those 30 plugins do can be replaced with clean, custom code:
                 </BlogText>
                 <BlogList items={[
-                    "SEO Plugin (Yoast) → Next.js Metadata API — built into the framework, zero JS overhead",
-                    "Page Builder (Elementor) → React Components — 95% less DOM nodes, instant rendering",
-                    "Caching Plugin (WP Rocket) → Static Generation + CDN — pages pre-built, served in 50ms globally",
-                    "Form Plugin (WPForms) → Server Action + Resend — one API call, no client-side JavaScript",
-                    "Analytics Plugin → Vercel Analytics — 1KB script vs 200KB plugin overhead",
-                    "Security Plugin → No attack surface — static sites have no database to hack"
+                    "SEO Plugin (Yoast) → Next.js Metadata API - built into the framework, zero JS overhead",
+                    "Page Builder (Elementor) → React Components - 95% less DOM nodes, instant rendering",
+                    "Caching Plugin (WP Rocket) → Static Generation + CDN - pages pre-built, served in 50ms globally",
+                    "Form Plugin (WPForms) → Server Action + Resend - one API call, no client-side JavaScript",
+                    "Analytics Plugin → Vercel Analytics - 1KB script vs 200KB plugin overhead",
+                    "Security Plugin → No attack surface - static sites have no database to hack"
                 ]} />
 
                 <ComparisonTable />
@@ -368,16 +368,16 @@ const blogPosts: Record<
                     Run your site through Google PageSpeed Insights. If your mobile score is below 70, plugins are the reason. If you have more than 15 active plugins, you are guaranteed to be losing traffic and revenue to faster competitors.
                 </BlogText>
                 <BlogText>
-                    We offer a free speed audit where we show you exactly which plugins are costing you the most — and how much revenue you are leaving on the table. <BlogHighlight>No sales pitch. Just data.</BlogHighlight>
+                    We offer a free speed audit where we show you exactly which plugins are costing you the most - and how much revenue you are leaving on the table. <BlogHighlight>No sales pitch. Just data.</BlogHighlight>
                 </BlogText>
             </>
         ),
     },
     "elementor-kills-seo": {
         title: "Stop Using Page Builders (Why Elementor Kills SEO)",
-        subtitle: "Visual builders generate 300% more DOM nodes than necessary. We audited 500 sites—here are the results.",
+        subtitle: "Visual builders generate 300% more DOM nodes than necessary. We audited 500 sites-here are the results.",
         excerpt:
-            "Visual builders generate 300% more DOM nodes than necessary. We audited 500 sites—here are the results.",
+            "Visual builders generate 300% more DOM nodes than necessary. We audited 500 sites-here are the results.",
         author: "Hassan",
         role: "Lead Engineer",
         date: "Dec 28, 2025",
@@ -468,7 +468,7 @@ const blogPosts: Record<
     },
     "shopify-plus-still-slow": {
         title: "Why Your Shopify Plus Store Still Loads in 4 Seconds",
-        subtitle: "You're spending $27,600/year on Shopify Plus and still losing 53% of mobile visitors to load time. Here's why—and how to fix it.",
+        subtitle: "You're spending $27,600/year on Shopify Plus and still losing 53% of mobile visitors to load time. Here's why-and how to fix it.",
         excerpt:
             "You're paying $2,300/mo for Shopify Plus and still failing Core Web Vitals. Here's the brutal math.",
         author: "Imran",
@@ -530,14 +530,14 @@ const blogPosts: Record<
                     To make Shopify Plus do what you need, you probably installed apps. A lot of apps. Let's count what the average $3M/year Shopify Plus store runs:
                 </BlogText>
                 <BlogList items={[
-                    "Reviews app (Yotpo, Judge.me) — 200KB JavaScript",
-                    "Wishlist app — 150KB JavaScript",
-                    "Product recommendations app — 180KB JavaScript",
-                    "Email popup (Klaviyo, Privy) — 220KB JavaScript",
-                    "Live chat (Gorgias, Zendesk) — 300KB JavaScript",
-                    "Analytics (Google, Facebook Pixel, TikTok) — 400KB combined",
-                    "A/B testing tool (Optimizely) — 250KB JavaScript",
-                    "Loyalty program (Smile.io) — 180KB JavaScript"
+                    "Reviews app (Yotpo, Judge.me) - 200KB JavaScript",
+                    "Wishlist app - 150KB JavaScript",
+                    "Product recommendations app - 180KB JavaScript",
+                    "Email popup (Klaviyo, Privy) - 220KB JavaScript",
+                    "Live chat (Gorgias, Zendesk) - 300KB JavaScript",
+                    "Analytics (Google, Facebook Pixel, TikTok) - 400KB combined",
+                    "A/B testing tool (Optimizely) - 250KB JavaScript",
+                    "Loyalty program (Smile.io) - 180KB JavaScript"
                 ]} />
                 <BlogText>
                     Total: <BlogHighlight>1.88MB of JavaScript</BlogHighlight> that has to download, parse, and execute before your store is interactive. On mobile 4G, that's 3-5 seconds of loading before a customer can click "Add to Cart."
@@ -555,9 +555,9 @@ const blogPosts: Record<
                     The three metrics that matter:
                 </BlogText>
                 <BlogList items={[
-                    "LCP (Largest Contentful Paint) — How fast the main content loads. Target: under 2.5s. Shopify Plus average: 4.2s",
-                    "FID (First Input Delay) — How fast the page responds to clicks. Target: under 100ms. Shopify Plus average: 180ms",
-                    "CLS (Cumulative Layout Shift) — How much content jumps around while loading. Target: under 0.1. Shopify Plus average: 0.28"
+                    "LCP (Largest Contentful Paint) - How fast the main content loads. Target: under 2.5s. Shopify Plus average: 4.2s",
+                    "FID (First Input Delay) - How fast the page responds to clicks. Target: under 100ms. Shopify Plus average: 180ms",
+                    "CLS (Cumulative Layout Shift) - How much content jumps around while loading. Target: under 0.1. Shopify Plus average: 0.28"
                 ]} />
                 <BlogText>
                     <BlogHighlight>Your Shopify Plus store is failing all three.</BlogHighlight> That means Google is actively deprioritizing your pages in search results. Your competitor with a faster site ranks higher, even if their content is worse.
@@ -576,7 +576,7 @@ const blogPosts: Record<
                     Now let's apply the research data:
                 </BlogText>
                 <BlogList items={[
-                    "53% of visitors leave before the page loads (Google) — You lose 42,400 visitors",
+                    "53% of visitors leave before the page loads (Google) - You lose 42,400 visitors",
                     "For every 0.1s improvement, conversions increase 8% (Deloitte)",
                     "Your current load time: 3.8s. Target load time: 0.9s. Improvement: 2.9 seconds = 29 × 0.1s increments",
                     "Potential conversion lift: 8% × 29 = +232% (realistically capped at +50% to be conservative)"
@@ -585,8 +585,8 @@ const blogPosts: Record<
                     <strong>If you cut load time from 3.8s to 0.9s:</strong>
                 </BlogText>
                 <BlogList items={[
-                    "Bounce rate drops from 53% to 20% — You keep 33% more visitors = 26,400 extra visitors",
-                    "Conversion rate increases by 50% — From 2.5% to 3.75%",
+                    "Bounce rate drops from 53% to 20% - You keep 33% more visitors = 26,400 extra visitors",
+                    "Conversion rate increases by 50% - From 2.5% to 3.75%",
                     "New revenue: (80,000 - 26,400 bounces) × 3.75% × $100 = $2,010,000",
                     "Original revenue: $2,000,000",
                     "Annual gain: $510,000 in pure incremental revenue"
@@ -598,7 +598,7 @@ const blogPosts: Record<
 
                 <BlogHeader>Why Shopify Plus Can't Fix This (But a Custom Storefront Can)</BlogHeader>
                 <BlogText>
-                    Shopify Plus is excellent for managing your inventory, orders, payments, and fulfillment. The problem is the theme—the slow part that customers see when they visit your store.
+                    Shopify Plus is excellent for managing your inventory, orders, payments, and fulfillment. The problem is the theme-the slow part that customers see when they visit your store.
                 </BlogText>
                 <BlogText>
                     Here's what Shopify Plus can't do:
@@ -698,7 +698,7 @@ const blogPosts: Record<
     },
     "wordpress-traffic-drop-speed": {
         title: "Why Is My WordPress Site Losing Traffic? (The Speed Tax You're Paying)",
-        subtitle: "Slow websites disappear from Google. Here's the simple math on why your traffic dropped—and how to fix it fast.",
+        subtitle: "Slow websites disappear from Google. Here's the simple math on why your traffic dropped-and how to fix it fast.",
         excerpt:
             "Slow WordPress sites lose Google rankings fast. Here's the simple math on why speed = traffic.",
         author: "Hassan",
@@ -762,11 +762,11 @@ const blogPosts: Record<
                     Here is what we see when business owners come to us with traffic problems:
                 </BlogText>
                 <BlogList items={[
-                    "Year 1: 10,000 visitors/month — Site is new and fast",
-                    "Year 2: 8,500 visitors/month — Added 15 plugins, traffic drops 15%",
-                    "Year 3: 6,000 visitors/month — More plugins, site now takes 4 seconds to load",
-                    "Year 4: 3,500 visitors/month — Google basically stopped ranking you",
-                    "Year 5: 2,000 visitors/month — You are invisible. Competitors with fast sites took your rankings."
+                    "Year 1: 10,000 visitors/month - Site is new and fast",
+                    "Year 2: 8,500 visitors/month - Added 15 plugins, traffic drops 15%",
+                    "Year 3: 6,000 visitors/month - More plugins, site now takes 4 seconds to load",
+                    "Year 4: 3,500 visitors/month - Google basically stopped ranking you",
+                    "Year 5: 2,000 visitors/month - You are invisible. Competitors with fast sites took your rankings."
                 ]} />
                 <BlogText>
                     This is called "The Speed Tax." Every second your site is slow costs you traffic. And traffic = customers = money.
@@ -780,9 +780,9 @@ const blogPosts: Record<
                     Look at your <strong>Mobile Score</strong>:
                 </BlogText>
                 <BlogList items={[
-                    "90-100 (Green) — You're good. Speed isn't your problem.",
-                    "50-89 (Orange) — You're losing some traffic. Fixable.",
-                    "0-49 (Red) — This is why your traffic disappeared. Google is hiding you."
+                    "90-100 (Green) - You're good. Speed isn't your problem.",
+                    "50-89 (Orange) - You're losing some traffic. Fixable.",
+                    "0-49 (Red) - This is why your traffic disappeared. Google is hiding you."
                 ]} />
                 <BlogText>
                     If your score is red or orange, <BlogHighlight>speed is 100% the reason your traffic dropped</BlogHighlight>.
@@ -805,7 +805,7 @@ const blogPosts: Record<
                 </BlogText>
 
                 <BlogQuote>
-                    Deloitte research: Improving site speed by 0.1 seconds increases conversions by 8%. If you fix your speed, you don't just get your old traffic back—you convert more of it into sales.
+                    Deloitte research: Improving site speed by 0.1 seconds increases conversions by 8%. If you fix your speed, you don't just get your old traffic back-you convert more of it into sales.
                 </BlogQuote>
 
                 <BlogHeader>Why "Just Add a Caching Plugin" Doesn't Work</BlogHeader>
@@ -816,10 +816,10 @@ const blogPosts: Record<
                     Here's why caching plugins can't fix a fundamentally slow WordPress site:
                 </BlogText>
                 <BlogList items={[
-                    "You have 30+ plugins loading on every page — Caching can't remove that bloat",
-                    "Your images are 5MB each — Caching doesn't compress images properly",
-                    "Your theme loads 2MB of JavaScript — Caching can't eliminate unnecessary code",
-                    "Every plugin makes database queries — Caching reduces this but can't eliminate it"
+                    "You have 30+ plugins loading on every page - Caching can't remove that bloat",
+                    "Your images are 5MB each - Caching doesn't compress images properly",
+                    "Your theme loads 2MB of JavaScript - Caching can't eliminate unnecessary code",
+                    "Every plugin makes database queries - Caching reduces this but can't eliminate it"
                 ]} />
                 <BlogText>
                     Caching is like putting a Band-Aid on a broken leg. It helps a little, but it doesn't fix the underlying problem.
@@ -833,11 +833,11 @@ const blogPosts: Record<
                     Here's what that means:
                 </BlogText>
                 <BlogList items={[
-                    "Remove 90% of your plugins — Replace them with clean, custom code",
-                    "Switch from WordPress to a modern framework — Built for speed from day one",
-                    "Serve your pages from 300+ global locations — Your site loads in under 1 second everywhere",
-                    "Optimize every image automatically — No more 5MB photos slowing you down",
-                    "Eliminate database queries — Pre-built pages that load instantly"
+                    "Remove 90% of your plugins - Replace them with clean, custom code",
+                    "Switch from WordPress to a modern framework - Built for speed from day one",
+                    "Serve your pages from 300+ global locations - Your site loads in under 1 second everywhere",
+                    "Optimize every image automatically - No more 5MB photos slowing you down",
+                    "Eliminate database queries - Pre-built pages that load instantly"
                 ]} />
 
                 <ComparisonTable />
@@ -938,10 +938,10 @@ const blogPosts: Record<
                     Here's what happens every time someone visits your product page:
                 </BlogText>
                 <BlogList items={[
-                    "Shopify loads the entire theme (even parts you're not using) — 800KB-1.5MB",
-                    "All your apps load their JavaScript (reviews, live chat, email popup, analytics) — 400KB-800KB",
-                    "Product images load (often not optimized) — 500KB-2MB per image",
-                    "Shopify queries its database to get product info — 100-200ms delay",
+                    "Shopify loads the entire theme (even parts you're not using) - 800KB-1.5MB",
+                    "All your apps load their JavaScript (reviews, live chat, email popup, analytics) - 400KB-800KB",
+                    "Product images load (often not optimized) - 500KB-2MB per image",
+                    "Shopify queries its database to get product info - 100-200ms delay",
                     "Everything has to wait for everything else before the page appears"
                 ]} />
                 <BlogText>
@@ -966,7 +966,7 @@ const blogPosts: Record<
                     <strong>What's Happening Right Now:</strong>
                 </BlogText>
                 <BlogList items={[
-                    "53% of visitors leave because your site is too slow — You lose 26,500 visitors per month",
+                    "53% of visitors leave because your site is too slow - You lose 26,500 visitors per month",
                     "If just 2% of those lost visitors would have bought → That's 530 lost customers per month",
                     "530 customers × $100 average order = $53,000 in lost monthly sales",
                     "Annual lost revenue: $636,000"
@@ -979,7 +979,7 @@ const blogPosts: Record<
                 </BlogText>
 
                 <BlogQuote>
-                    Every second your store is slow, money walks out the door. Speed isn't a "nice to have"—it's the difference between $500K and $1M.
+                    Every second your store is slow, money walks out the door. Speed isn't a "nice to have"-it's the difference between $500K and $1M.
                 </BlogQuote>
 
                 <BlogHeader>But I Already Optimized My Shopify Theme!</BlogHeader>
@@ -1008,8 +1008,8 @@ const blogPosts: Record<
                     Think of Shopify as two parts:
                 </BlogText>
                 <BlogList items={[
-                    "Backend (inventory, orders, payments, fulfillment) — This part is excellent. Keep it.",
-                    "Frontend (the theme customers see) — This part is slow. Replace it."
+                    "Backend (inventory, orders, payments, fulfillment) - This part is excellent. Keep it.",
+                    "Frontend (the theme customers see) - This part is slow. Replace it."
                 ]} />
                 <BlogText>
                     We build you a lightning-fast custom storefront that connects to your Shopify backend. You get:
@@ -1284,7 +1284,7 @@ const blogPosts: Record<
                     Here's what actually works:
                 </BlogText>
                 <BlogList items={[
-                    "Keep: Shopify backend (inventory, orders, payments, fulfillment) — It's excellent",
+                    "Keep: Shopify backend (inventory, orders, payments, fulfillment) - It's excellent",
                     "Replace: Shopify theme (the slow part customers see) → Custom fast storefront",
                     "Result: Same Shopify dashboard you're used to + Lightning-fast customer experience"
                 ]} />
@@ -1306,9 +1306,9 @@ const blogPosts: Record<
                     When we build a custom fast storefront for Shopify stores, here's what happens to conversion rates:
                 </BlogText>
                 <BlogList items={[
-                    "Client A (Fashion): 1.2% → 3.8% (+217% lift) — Revenue went from $280K to $890K/year",
-                    "Client B (Electronics): 0.9% → 2.7% (+200% lift) — Revenue went from $540K to $1.62M/year",
-                    "Client C (Home Goods): 1.6% → 4.1% (+156% lift) — Revenue went from $420K to $1.08M/year"
+                    "Client A (Fashion): 1.2% → 3.8% (+217% lift) - Revenue went from $280K to $890K/year",
+                    "Client B (Electronics): 0.9% → 2.7% (+200% lift) - Revenue went from $540K to $1.62M/year",
+                    "Client C (Home Goods): 1.6% → 4.1% (+156% lift) - Revenue went from $420K to $1.08M/year"
                 ]} />
                 <BlogText>
                     These aren't outliers. This is what happens when you stop losing customers to slow load times.
@@ -1327,7 +1327,7 @@ const blogPosts: Record<
                 </BlogText>
                 <BlogList items={[
                     "Current revenue: $144K/year (1.5% conversion)",
-                    "After speed fix: $432K/year (4.5% conversion) — Conservative 3× lift",
+                    "After speed fix: $432K/year (4.5% conversion) - Conservative 3× lift",
                     "Annual gain: $288K",
                     "Cost: $35,000",
                     "Payback period: 44 days",
@@ -1346,7 +1346,7 @@ const blogPosts: Record<
                     If your conversion rate is below 2.5%, speed is almost certainly the problem.
                 </BlogText>
                 <BlogText>
-                    Test your speed: <strong>pagespeed.web.dev</strong> — If your Mobile Score is below 70, you are losing customers to slow load times.
+                    Test your speed: <strong>pagespeed.web.dev</strong> - If your Mobile Score is below 70, you are losing customers to slow load times.
                 </BlogText>
                 <BlogText>
                     We offer a free conversion rate audit where we:
