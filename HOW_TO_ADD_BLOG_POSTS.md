@@ -4,12 +4,13 @@
 
 ## Table of Contents
 1. [Quick Start: Adding a Blog Post](#adding-a-new-blog-post-3-easy-steps)
-2. [Blog Writing Rules](#-critical-blog-writing-rules-read-before-writing)
-3. [SEO Keyword Research & Strategy](#seo-keyword-research--strategy)
-4. [30-Day Content Calendar](#30-day-blog-content-calendar-feb-17---mar-17)
-5. [Priority Blog Posts to Write](#priority-blog-posts-with-outlines)
-6. [Distribution Checklist](#post-publish-distribution-checklist)
-7. [Success Metrics](#success-metrics--tracking)
+2. [🚨 SEO Metadata Rules (Read Before Publishing)](#-seo-metadata-rules--read-before-publishing-lessons-learned-the-hard-way)
+3. [Blog Writing Rules](#-critical-blog-writing-rules-read-before-writing)
+4. [SEO Keyword Research & Strategy](#seo-keyword-research--strategy)
+5. [30-Day Content Calendar](#30-day-blog-content-calendar-feb-17---mar-17)
+6. [Priority Blog Posts to Write](#priority-blog-posts-with-outlines)
+7. [Distribution Checklist](#post-publish-distribution-checklist)
+8. [Success Metrics](#success-metrics--tracking)
 
 ---
 
@@ -46,19 +47,38 @@ Open [src/data/blog.ts](src/data/blog.ts) and add a new entry to the `blogPosts`
 Create a new file at `src/app/blog/[your-post-slug]/page.tsx`:
 
 ```typescript
-import BlogArticle from "@/components/BlogStyles";
+import type { Metadata } from "next";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+
+// ✅ REQUIRED: Always include all 3 of these — title, description, alternates.canonical
+// ✅ REQUIRED: alternates.canonical must be the EXACT path of THIS page (not '/' or any other page)
+// ✅ REQUIRED: openGraph.url must use https://www.pandacodegen.com (with www)
+// ❌ NEVER copy-paste metadata from another post and forget to update the slug
+export const metadata: Metadata = {
+  title: "Your Post Title | PandaGen",
+  description: "Your meta description (150-160 characters).",
+  alternates: {
+    canonical: '/blog/your-post-slug',   // ← CHANGE THIS to match your actual URL slug
+  },
+  openGraph: {
+    title: "Your Post Title",
+    description: "Your meta description.",
+    type: "article",
+    url: "https://www.pandacodegen.com/blog/your-post-slug",   // ← CHANGE THIS too
+  },
+};
 
 export default function YourPostPage() {
   return (
-    <BlogArticle
-      title="Your Post Title"
-      date="Feb 1, 2026"
-      author="Hassan"
-      category="Performance"
-    >
-      {/* Your blog content goes here */}
-      <p>Your blog post content...</p>
-    </BlogArticle>
+    <>
+      <Header />
+      <main>
+        {/* Your blog content goes here */}
+        <p>Your blog post content...</p>
+      </main>
+      <Footer />
+    </>
   );
 }
 ```
@@ -118,13 +138,126 @@ Add FAQs to your blog post data to compete for the answer boxes at the top of se
 5. **Submit to Google** - In Google Search Console > URL Inspection, request indexing
 
 That's it! The blog post will automatically:
-- ✅ Appear on the blog page ([/blog](https://pandacodegen.com/blog))
-- ✅ Be added to the sitemap ([/sitemap.xml](https://pandacodegen.com/sitemap.xml))
+- ✅ Appear on the blog page ([/blog](https://www.pandacodegen.com/blog))
+- ✅ Be added to the sitemap ([/sitemap.xml](https://www.pandacodegen.com/sitemap.xml))
 - ✅ Include proper Schema.org structured data for Google (Article, FAQPage, BreadcrumbList)
 - ✅ Use the correct illustration based on `illustrationType`
 - ✅ Show in featured section if `featured: true`
 - ✅ Display breadcrumb navigation (Home › Blog › Post Title)
 - ✅ Show reading progress bar as users scroll
+
+---
+
+## 🚨 SEO METADATA RULES — Read Before Publishing (Lessons Learned the Hard Way)
+
+> **Why this section exists:** In Feb 2026, a single metadata mistake caused Bing to block 3 blog posts from its index for weeks. Google indexing was also delayed. The root cause: wrong `canonical` URL. This section prevents it from ever happening again.
+
+---
+
+### The #1 Rule: Every Blog Post Needs Its Own Canonical
+
+**What is a canonical URL?**
+It tells Google/Bing: "This is the ONE true URL for this page. Don't index any other version."
+Without it, search engines guess — and they guess wrong.
+
+**✅ CORRECT — every blog post page.tsx must have this:**
+```typescript
+export const metadata: Metadata = {
+  title: "Post Title | PandaGen",
+  description: "Meta description here.",
+  alternates: {
+    canonical: '/blog/your-exact-slug-here',  // ← relative path, no domain needed
+  },
+  openGraph: {
+    type: "article",
+    url: "https://www.pandacodegen.com/blog/your-exact-slug-here",  // ← full URL with www
+  },
+};
+```
+
+**❌ WRONG — what caused the Bing blocking incident:**
+```typescript
+// root layout.tsx had this — caused ALL pages to inherit homepage as canonical:
+alternates: {
+  canonical: '/',   // ← NEVER put this in layout.tsx. It cascades to EVERY child page.
+}
+
+// Blog posts had NO alternates at all — canonical tag was completely missing
+export const metadata: Metadata = {
+  title: "Post Title",
+  description: "...",
+  // ← no alternates = no canonical tag = search engines confused
+};
+```
+
+---
+
+### Metadata Checklist — Before Publishing Any Blog Post
+
+| Check | ✅ Correct | ❌ Wrong |
+|-------|-----------|---------|
+| **Canonical path** | `/blog/your-slug` | `/` or missing entirely |
+| **Domain in openGraph.url** | `https://www.pandacodegen.com/...` | `https://pandacodegen.com/...` (no www) |
+| **Slug matches actual URL** | `/blog/how-to-fix-slow-wordpress` | `/blog/how-to-fix-slow-wordpress-site` (mismatch) |
+| **Metadata in page.tsx** | ✅ Present | ❌ Forgotten entirely |
+| **`alternates` in layout.tsx** | ❌ Not in root layout (causes cascade) | Only in individual page files |
+
+---
+
+### URL Rules — Always Use www
+
+**Site canonical domain: `https://www.pandacodegen.com`** (with www — this is non-negotiable)
+
+| ✅ Correct | ❌ Wrong |
+|-----------|---------|
+| `https://www.pandacodegen.com/blog/post` | `https://pandacodegen.com/blog/post` |
+| `https://www.pandacodegen.com` | `https://pandacodegen.com` |
+
+This applies everywhere: `openGraph.url`, `alternates.canonical`, `metadataBase`, sitemap entries, Schema.org markup.
+
+---
+
+### How Next.js Metadata Inheritance Works (Know This)
+
+Next.js App Router merges metadata from layout → page. Critical rules:
+
+1. **`metadataBase` is set ONCE in `src/app/layout.tsx`** → `https://www.pandacodegen.com`
+   - This means `alternates.canonical: '/blog/your-slug'` automatically becomes `https://www.pandacodegen.com/blog/your-slug`
+   - You don't need to repeat the full domain in `alternates.canonical` — just the path
+
+2. **`alternates` set in a layout cascades to ALL child pages that don't override it**
+   - Root `layout.tsx` must NEVER have `alternates.canonical`
+   - Each `page.tsx` must set its own `alternates.canonical`
+
+3. **Page metadata OVERRIDES layout metadata for the same key**
+   - If your page.tsx sets `alternates.canonical`, it wins over anything in layout.tsx
+   - If your page.tsx does NOT set it, whatever the layout has cascades down
+
+4. **`"use client"` pages cannot export `metadata`**
+   - If your page is a client component, you can't add SEO metadata to it
+   - Solution: wrap it in a server component parent, or use a layout.tsx for that route
+
+---
+
+### What Happened (The Actual Bug — Feb 2026)
+
+**Root cause:** `src/app/layout.tsx` had `alternates: { canonical: '/' }` combined with `metadataBase: new URL('https://pandacodegen.com')`
+
+**Effect:** Every single page on the site — including all blog posts — had this in its `<head>`:
+```html
+<link rel="canonical" href="https://pandacodegen.com/" />
+```
+
+**What Bing saw:** "This blog post says its canonical is the homepage. Therefore this blog post is a duplicate of the homepage. Block it."
+
+**What Google saw:** Same thing — all blog posts appeared as duplicates of the homepage, slowing indexing.
+
+**Fix applied:**
+1. Removed `alternates` block entirely from `src/app/layout.tsx`
+2. Fixed `metadataBase` to include `www`: `https://www.pandacodegen.com`
+3. Added `alternates.canonical` to each individual blog post `page.tsx`
+
+**Time lost:** ~3 weeks of Bing blocking + delayed Google indexing.
 
 ---
 

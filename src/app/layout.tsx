@@ -17,15 +17,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://pandacodegen.com'),
+  metadataBase: new URL('https://www.pandacodegen.com'),
   title: {
     default: "PandaGen | Enterprise Next.js & Shopify Architecture",
     template: "%s | PandaGen",
   },
   description: "We migrate WordPress & Shopify sites to custom Next.js architectures. Sub-second load times. Zero bloat. Enterprise-grade security and SEO.",
-  alternates: {
-    canonical: '/',
-  },
   icons: {
     icon: [
       { url: '/favicon.ico' },
@@ -63,7 +60,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://pandacodegen.com",
+    url: "https://www.pandacodegen.com",
     siteName: "PandaGen",
     title: "PandaGen | Enterprise Next.js & Shopify Architecture",
     description: "We migrate WordPress & Shopify sites to custom Next.js architectures. Sub-second load times. Zero bloat.",

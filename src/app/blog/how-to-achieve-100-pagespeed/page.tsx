@@ -10,6 +10,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "How to Achieve 100/100 PageSpeed Score: Complete Next.js Guide",
     description: "We achieve 98-100/100 PageSpeed scores on every client site. Here's the exact optimization process we use, step by step.",
+    alternates: {
+        canonical: '/blog/how-to-achieve-100-pagespeed',
+    },
     openGraph: {
         title: "How to Achieve 100/100 PageSpeed Score: Complete Next.js Guide",
         description: "We achieve 98-100/100 PageSpeed scores on every client site. Here's the exact optimization process we use, step by step.",
@@ -180,9 +183,9 @@ export default function AchievePageSpeedPage() {
                             Here's our exact checklist. We use this on every client project. Miss one, and you'll plateau at 85-90.
                         </BlogText>
 
-                        <BlogText className="font-bold text-xl text-white mt-12 mb-4">
+                        <BlogHeader>
                             Optimization #1: Image Optimization (Saves 1-2 seconds)
-                        </BlogText>
+                        </BlogHeader>
 
                         <BlogText>
                             <strong>The Problem:</strong> Most sites load full-resolution 4K images on mobile. A 2.5MB PNG that displays at 300px wide.
@@ -204,9 +207,9 @@ export default function AchievePageSpeedPage() {
                             <strong>WordPress equivalent:</strong> Requires 3 plugins (Imagify, WP Rocket, lazy load plugin) that conflict and slow you down.
                         </BlogText>
 
-                        <BlogText className="font-bold text-xl text-white mt-12 mb-4">
+                        <BlogHeader>
                             Optimization #2: Font Optimization (Saves 0.3-0.8 seconds)
-                        </BlogText>
+                        </BlogHeader>
 
                         <BlogText>
                             <strong>The Problem:</strong> Google Fonts load from an external server. 200-400ms delay while fonts download. Text is invisible during loading (FOIT - Flash of Invisible Text).
@@ -227,9 +230,9 @@ export default function AchievePageSpeedPage() {
                             <strong>WordPress equivalent:</strong> Manually download fonts, edit theme files, configure preload headers. Most developers skip this.
                         </BlogText>
 
-                        <BlogText className="font-bold text-xl text-white mt-12 mb-4">
+                        <BlogHeader>
                             Optimization #3: JavaScript Optimization (Saves 0.5-1.5 seconds)
-                        </BlogText>
+                        </BlogHeader>
 
                         <BlogText>
                             <strong>The Problem:</strong> JavaScript files block page rendering. Browser can't show content until JavaScript finishes loading and executing.
@@ -251,9 +254,9 @@ export default function AchievePageSpeedPage() {
                             Example: WordPress contact form plugin = 120KB JavaScript. Our Next.js form = 8KB. That's 15× smaller.
                         </BlogText>
 
-                        <BlogText className="font-bold text-xl text-white mt-12 mb-4">
+                        <BlogHeader>
                             Optimization #4: CSS Optimization (Saves 0.2-0.6 seconds)
-                        </BlogText>
+                        </BlogHeader>
 
                         <BlogText>
                             <strong>The Problem:</strong> CSS blocks page rendering. WordPress themes load 200KB+ CSS for every page, even if 90% is unused.
@@ -274,9 +277,9 @@ export default function AchievePageSpeedPage() {
                             Typical WordPress theme: 180KB CSS. Our Next.js sites: 12-18KB CSS.
                         </BlogText>
 
-                        <BlogText className="font-bold text-xl text-white mt-12 mb-4">
+                        <BlogHeader>
                             Optimization #5: Lazy Loading Everything (Saves 0.5-1 second)
-                        </BlogText>
+                        </BlogHeader>
 
                         <BlogText>
                             <strong>The Problem:</strong> Pages load everything on page load, even content users never see.
@@ -297,9 +300,9 @@ export default function AchievePageSpeedPage() {
                             Example: Chat widget, newsletter popup, related posts - all lazy loaded. Users see content instantly, extras load in background.
                         </BlogText>
 
-                        <BlogText className="font-bold text-xl text-white mt-12 mb-4">
+                        <BlogHeader>
                             Optimization #6: Edge Caching & CDN (Saves 0.3-0.8 seconds)
-                        </BlogText>
+                        </BlogHeader>
 
                         <BlogText>
                             <strong>The Problem:</strong> Every page request hits your server. If server is slow or far away, page is slow.
@@ -321,9 +324,9 @@ export default function AchievePageSpeedPage() {
                             <strong>WordPress equivalent:</strong> $400/month Cloudflare Enterprise + complex configuration. We get it free with Vercel.
                         </BlogText>
 
-                        <BlogText className="font-bold text-xl text-white mt-12 mb-4">
+                        <BlogHeader>
                             Optimization #7: Remove Third-Party Scripts (Saves 0.5-2 seconds)
-                        </BlogText>
+                        </BlogHeader>
 
                         <BlogText>
                             <strong>The Problem:</strong> Every third-party script adds 100-500ms. Facebook Pixel, Google Analytics, chat widgets, ad scripts.
@@ -345,9 +348,9 @@ export default function AchievePageSpeedPage() {
                             Example: Facebook Pixel = 280ms blocking. Our implementation: Deferred until user scrolls = 0ms blocking.
                         </BlogText>
 
-                        <BlogText className="font-bold text-xl text-white mt-12 mb-4">
+                        <BlogHeader>
                             Optimization #8: Server Components (Next.js 15 Only)
-                        </BlogText>
+                        </BlogHeader>
 
                         <BlogText>
                             <strong>The Game Changer:</strong> Server Components let you move heavy logic to the server. Browser receives pre-rendered HTML with zero JavaScript.

@@ -10,6 +10,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "How to Fix a Slow WordPress Site (8 Ways That Actually Work) | PandaGen",
     description: "Your WordPress site loads in 4 seconds. Your competitor loads in 0.9 seconds. Here's exactly how to speed up WordPress and close the gap.",
+    alternates: {
+        canonical: '/blog/how-to-fix-slow-wordpress',
+    },
     openGraph: {
         title: "How to Fix a Slow WordPress Site: 8 Ways That Actually Work",
         description: "Your WordPress site loads in 4 seconds. Your competitor loads in 0.9 seconds. Here's how to close the gap.",

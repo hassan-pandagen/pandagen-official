@@ -8,6 +8,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Your Shopify Store Is Costing You $75K/Year in Lost Sales",
     description: "Every second your store takes to load costs you customers. We calculated exactly how much.",
+    alternates: {
+        canonical: '/blog/shopify-slow-losing-sales',
+    },
     openGraph: {
         title: "Your Shopify Store Is Costing You $75K/Year in Lost Sales",
         description: "Every second your store takes to load costs you customers. We calculated exactly how much.",

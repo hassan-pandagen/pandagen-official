@@ -8,6 +8,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Why Your Competitor Outranks You on Google (And Pays Less for Hosting)",
     description: "They're getting 3× your traffic with a coded website. Google, ChatGPT, and Bing all prefer fast sites. Here's why.",
+    alternates: {
+        canonical: '/blog/why-competitor-outranks-you',
+    },
     openGraph: {
         title: "Why Your Competitor Outranks You on Google (And Pays Less for Hosting)",
         description: "They're getting 3× your traffic with a coded website. Google, ChatGPT, and Bing all prefer fast sites. Here's why.",
