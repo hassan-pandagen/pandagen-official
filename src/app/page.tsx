@@ -11,14 +11,10 @@ import QuoteModal from "@/components/ui/QuoteModal";
 // Lazy load heavy/below-the-fold components for better initial load performance
 const ProofMarquee = dynamic(() => import("@/components/ProofMarquee"));
 const HowItWorksSimple = dynamic(() => import("@/components/HowItWorksSimple"));
-const MethodToCreativity = dynamic(() => import("@/components/MethodToCreativity"));
 const ClientResults = dynamic(() => import("@/components/sections/ClientResults"));
 const ServicesHub = dynamic(() => import("@/components/sections/ServicesHub"));
-const WordPressKiller = dynamic(() => import("@/components/sections/WordPressKiller"));
-const BuiltWith = dynamic(() => import("@/components/sections/BuiltWith"));
-const UnfairAdvantage = dynamic(() => import("@/components/sections/UnfairAdvantage"));
-const FullROIShowcase = dynamic(() => import("@/components/sections/FullROIShowcase"));
 const DiscoveryPortal = dynamic(() => import("@/components/DiscoveryPortal"));
+const LatestBlog = dynamic(() => import("@/components/sections/LatestBlog"));
 
 export default function Home() {
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
@@ -188,23 +184,11 @@ export default function Home() {
       {/* Client Results - Data-Driven Social Proof */}
       <ClientResults />
 
-      {/* The Process - Vertical Sticky Timeline */}
-      <MethodToCreativity />
-
       {/* Services Hub */}
       <ServicesHub />
 
-      {/* WordPress & Shopify Comparison */}
-      <WordPressKiller onOpenQuote={() => setIsQuoteModalOpen(true)} />
-
-      {/* Enterprise Tech Stack */}
-      <BuiltWith />
-
-      {/* The Unfair Advantage - Speed, Security, Ownership */}
-      <UnfairAdvantage />
-
-      {/* Full ROI Showcase with Detailed Comparisons */}
-      <FullROIShowcase onOpenQuote={() => setIsQuoteModalOpen(true)} />
+      {/* Latest Blog Posts - SEO Interlinking */}
+      <LatestBlog />
 
       {/* Discovery Portal (CTA) */}
       <DiscoveryPortal onOpenQuote={() => setIsQuoteModalOpen(true)} />

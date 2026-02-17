@@ -15,8 +15,57 @@ export default function ContactPage() {
    const [isSubmitting, setIsSubmitting] = useState(false);
    const [errors, setErrors] = useState<{name?: string; email?: string; message?: string}>({});
 
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ContactPage",
+        "@id": "https://www.pandacodegen.com/contact#webpage",
+        "url": "https://www.pandacodegen.com/contact",
+        "name": "Contact PandaGen - Let's Talk Engineering",
+        "description": "Get in touch with PandaGen for Next.js development, WordPress migration, or Shopify optimization. Free discovery call. 2-hour response time.",
+        "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
+        "about": { "@id": "https://www.pandacodegen.com/#organization" },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.pandacodegen.com/#organization",
+        "name": "PandaGen",
+        "url": "https://www.pandacodegen.com",
+        "email": "info@pandacodegen.com",
+        "telephone": "+13022504340",
+        "address": [
+          {
+            "@type": "PostalAddress",
+            "addressRegion": "Missouri",
+            "addressCountry": "US",
+            "name": "Headquarters"
+          }
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "Sales",
+          "email": "info@pandacodegen.com",
+          "telephone": "+13022504340",
+          "availableLanguage": "English"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
+          { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.pandacodegen.com/contact" }
+        ]
+      }
+    ]
+  };
+
   return (
     <main className="bg-transparent min-h-screen selection:bg-neon selection:text-black overflow-x-hidden relative">
+      {/* Schema.org JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }} />
+
       {/* Global Noise Texture */}
       <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-20 mix-blend-overlay"></div>
 

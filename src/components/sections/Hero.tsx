@@ -36,7 +36,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
-                className="text-5xl md:text-8xl font-black text-white tracking-tighter mb-6 leading-[1]"
+                className="text-5xl md:text-8xl font-black text-white tracking-tighter mb-4 leading-[1]"
             >
                 Digital <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-500 [text-shadow:0_0_40px_rgba(34,211,238,0.5)] [-webkit-text-stroke:1px_rgba(34,211,238,0.3)]">
@@ -47,10 +47,19 @@ export default function Hero() {
             <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
-                className="text-2xl text-gray-200 mb-10 leading-relaxed max-w-lg font-medium"
+                transition={{ delay: 0.15 }}
+                className="text-lg md:text-xl text-gray-400 mb-4 font-medium"
             >
-                Stop paying for bloated templates. We engineer <span className="text-white font-bold">bespoke Next.js architectures</span> that <span className="text-neon font-bold">rank higher</span>, load in <span className="text-neon font-bold">under 1 second</span>, and convert cold traffic into revenue.
+                You don&apos;t have a traffic problem. <span className="text-white font-bold">You have a website problem.</span>
+            </motion.p>
+
+            <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2 }}
+                className="text-base md:text-lg text-gray-300 mb-10 leading-relaxed max-w-lg"
+            >
+                We engineer <span className="text-white font-bold">custom-coded websites, e-commerce stores & SaaS platforms</span> <span className="text-gray-500">(Next.js)</span> that replace slow WordPress & Shopify setups, loading in <span className="text-neon font-bold">under 1 second</span>, <span className="text-neon font-bold">ranking higher</span>, and turning visitors into revenue.
             </motion.p>
 
             <motion.div
@@ -80,22 +89,22 @@ export default function Hero() {
                 </div>
             </motion.div>
 
-            {/* Urgency Messaging */}
+            {/* Trust Signals */}
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
-                className="flex items-center justify-center gap-2 text-sm mt-6"
+                className="flex items-center justify-center gap-4 text-sm mt-6"
             >
-                <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400">
-                    <span className="relative flex h-2 w-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
-                    </span>
-                    <span className="font-bold">Only 3 projects per month</span>
+                <div className="flex items-center gap-2 text-gray-400">
+                    <Zap className="w-4 h-4 text-neon" />
+                    <span>Sub-1s Load Times</span>
                 </div>
-                <span className="text-gray-500">•</span>
-                <span className="text-gray-400">February slots filling up</span>
+                <span className="text-gray-600">•</span>
+                <div className="flex items-center gap-2 text-gray-400">
+                    <ShieldCheck className="w-4 h-4 text-green-400" />
+                    <span>30-Day Money Back</span>
+                </div>
             </motion.div>
 
             {/* MOBILE STATS PREVIEW (Simplified Dashboard for Mobile) */}

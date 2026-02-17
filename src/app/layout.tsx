@@ -42,6 +42,16 @@ export const metadata: Metadata = {
     "ecommerce migration",
     "custom web development",
     "headless CMS",
+    "Squarespace migration",
+    "Webflow migration",
+    "Wix migration",
+    "GoHighLevel alternative",
+    "Shopify headless commerce",
+    "custom coded website",
+    "SaaS development",
+    "website speed optimization",
+    "Core Web Vitals optimization",
+    "custom website vs template",
   ],
   authors: [{ name: "PandaGenCode" }],
   creator: "PandaGenCode",
@@ -92,7 +102,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased bg-[#050505] text-white selection:bg-neon selection:text-black`} suppressHydrationWarning>
+      <body className={`${inter.className} antialiased bg-transparent text-white selection:bg-neon selection:text-black`} suppressHydrationWarning>
 
         {/* Preconnect to external resources for better performance */}
         <PreconnectLinks />

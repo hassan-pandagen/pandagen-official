@@ -1,7 +1,7 @@
 // Pure CSS animations - runs on compositor thread, not main thread
 export default function AuroraBackground() {
   return (
-    <div className="fixed inset-0 z-[-1] pointer-events-none overflow-hidden bg-gradient-to-b from-[#0a0a0f] via-[#050505] to-[#000000]">
+    <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-gradient-to-b from-[#0a0a0f] via-[#050505] to-[#000000]">
 
       {/* 1. MINIMAL AMBIENT GLOW - Just atmosphere, let cards shine */}
       {/* Top Light (Blue) - reduced 70% */}

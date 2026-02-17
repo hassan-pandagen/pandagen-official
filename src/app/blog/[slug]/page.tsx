@@ -4,6 +4,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, ComparisonTable } from "@/components/ui/BlogStyles";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
+import RelatedPosts from "@/components/ui/RelatedPosts";
 import type { Metadata } from "next";
 
 // --- SEO METADATA ---
@@ -1663,33 +1664,7 @@ export default async function BlogPost(props: PageProps) {
                     <GuaranteeCTA />
 
                     {/* Related Articles */}
-                    <div className="mt-20 pt-20 border-t border-white/10">
-                        <h3 className="text-2xl font-bold text-white mb-8">
-                            More from Code Lab
-                        </h3>
-                        <div className="grid md:grid-cols-2 gap-8">
-                            {Object.entries(blogPosts)
-                                .filter(([slug]) => slug !== params.slug)
-                                .slice(0, 2)
-                                .map(([slug, article]) => (
-                                    <Link
-                                        key={slug}
-                                        href={`/blog/${slug}`}
-                                        className="group p-6 bg-white/5 border border-white/10 rounded-2xl hover:border-neon/50 transition-all"
-                                    >
-                                        <h4 className="text-lg font-bold text-white mb-2 group-hover:text-neon transition-colors">
-                                            {article.title.split(":")[0]}
-                                        </h4>
-                                        <p className="text-sm text-gray-400 mb-4">
-                                            {article.excerpt}
-                                        </p>
-                                        <div className="flex items-center gap-2 text-neon text-sm font-bold group-hover:gap-4 transition-all">
-                                            Read <ArrowRight className="w-3 h-3" />
-                                        </div>
-                                    </Link>
-                                ))}
-                        </div>
-                    </div>
+                    <RelatedPosts currentPostId={params.slug} category={post.category} />
                 </div>
             </section>
 

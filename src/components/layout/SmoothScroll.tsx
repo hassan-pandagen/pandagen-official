@@ -21,18 +21,20 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
 
   // While loading, just render children to prevent mismatch
   if (!mounted) {
-    return <div className="overflow-x-hidden">{children}</div>;
+    return <div className="overflow-x-hidden relative z-10">{children}</div>;
   }
 
   // If mobile, disable Lenis (Native Scroll is better on phone)
   if (isMobile) {
-    return <div className="overflow-x-hidden">{children}</div>;
+    return <div className="overflow-x-hidden relative z-10">{children}</div>;
   }
 
   // Desktop Luxury Scroll
   return (
     <ReactLenis root options={{ lerp: 0.1, duration: 1.5, smoothWheel: true }}>
-      {children}
+      <div className="relative z-10">
+        {children}
+      </div>
     </ReactLenis>
   );
 }

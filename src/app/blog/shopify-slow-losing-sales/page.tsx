@@ -2,12 +2,14 @@ import { ArrowLeft, Calendar, Clock, ShieldCheck, ArrowRight, Zap, CheckCircle2,
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import Breadcrumb from "@/components/ui/Breadcrumb";
+import RelatedPosts from "@/components/ui/RelatedPosts";
 import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, ComparisonTable } from "@/components/ui/BlogStyles";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Your Shopify Store Is Costing You $75K/Year in Lost Sales",
-    description: "Every second your store takes to load costs you customers. We calculated exactly how much.",
+    title: { absolute: "Your Shopify Store Is Costing You $75K/Year in Lost Sales | PandaGen" },
+    description: "Every second your store takes to load costs you customers. We calculated exactly how much revenue you're losing from slow Shopify speed.",
     alternates: {
         canonical: '/blog/shopify-slow-losing-sales',
     },
@@ -17,6 +19,19 @@ export const metadata: Metadata = {
         type: "article",
         url: "https://www.pandacodegen.com/blog/shopify-slow-losing-sales",
     },
+};
+
+const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Your Shopify Store Is Costing You $75K/Year in Lost Sales (Here's the Math)",
+    "description": "Every second your store takes to load costs you customers. We calculated exactly how much revenue you're losing from slow Shopify speed.",
+    "author": { "@type": "Person", "name": "Hassan" },
+    "publisher": { "@type": "Organization", "name": "PandaGen", "url": "https://www.pandacodegen.com" },
+    "datePublished": "2026-02-10",
+    "dateModified": "2026-02-10",
+    "url": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales",
+    "mainEntityOfPage": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales",
 };
 
 export default function ShopifySlowPage() {
@@ -31,7 +46,22 @@ export default function ShopifySlowPage() {
                 <div className="fixed top-0 right-0 w-[600px] h-[600px] bg-purple-600/20 blur-[150px] rounded-full pointer-events-none" />
                 <div className="fixed top-1/3 left-0 w-[500px] h-[500px] bg-pink-600/15 blur-[150px] rounded-full pointer-events-none" />
                 <article className="max-w-3xl mx-auto px-6">
-                    
+
+                    {/* Article Schema */}
+                    <script
+                        type="application/ld+json"
+                        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+                    />
+
+                    {/* Breadcrumb Navigation */}
+                    <Breadcrumb
+                        items={[
+                            { label: "Home", href: "/" },
+                            { label: "Blog", href: "/blog" },
+                            { label: "Shopify Store Costing You $75K/Year", href: "/blog/shopify-slow-losing-sales" }
+                        ]}
+                    />
+
                     {/* Back Button */}
                     <Link href="/blog" className="inline-flex items-center gap-2 text-neon hover:text-neon/80 mb-8 transition-colors">
                         <ArrowLeft className="w-4 h-4" />
@@ -343,6 +373,10 @@ export default function ShopifySlowPage() {
                             Schedule Free Audit <ArrowRight className="w-5 h-5" />
                         </a>
                     </div>
+
+                    {/* Related Posts */}
+                    <RelatedPosts currentPostId="shopify-slow-losing-sales" category="E-Commerce" />
+
                 </article>
             </main>
             <Footer />

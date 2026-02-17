@@ -88,8 +88,49 @@ const projects = [
 ];
 
 export default function WorkPage() {
+    const portfolioSchema = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "CollectionPage",
+                "@id": "https://www.pandacodegen.com/work#webpage",
+                "url": "https://www.pandacodegen.com/work",
+                "name": "Our Work & Portfolio | PandaGen",
+                "description": "Explore PandaGen's portfolio of high-performance Next.js projects. Real results from WordPress migrations, Shopify headless stores, and custom web applications.",
+                "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
+                "about": { "@id": "https://www.pandacodegen.com/#organization" },
+                "inLanguage": "en-US"
+            },
+            {
+                "@type": "ItemList",
+                "name": "PandaGen Portfolio",
+                "itemListElement": projects.map((project, index) => ({
+                    "@type": "ListItem",
+                    "position": index + 1,
+                    "item": {
+                        "@type": "CreativeWork",
+                        "name": project.client,
+                        "description": project.description,
+                        "creator": { "@id": "https://www.pandacodegen.com/#organization" },
+                        ...(project.liveUrl ? { "url": project.liveUrl } : {})
+                    }
+                }))
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
+                    { "@type": "ListItem", "position": 2, "name": "Our Work", "item": "https://www.pandacodegen.com/work" }
+                ]
+            }
+        ]
+    };
+
     return (
         <main className="bg-transparent min-h-screen selection:bg-neon selection:text-black overflow-x-hidden relative">
+            {/* Schema.org JSON-LD */}
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(portfolioSchema) }} />
+
             {/* Global Noise Texture */}
             <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-20 mix-blend-overlay"></div>
 
@@ -228,7 +269,7 @@ function ProjectCard({ project, index }: any) {
                     {/* DETAILS SIDE (Right - spans 5 cols) */}
                     <div className="lg:col-span-5 py-8 lg:py-0 pl-4 lg:pl-8">
                         <span className="text-blue-400 text-xs font-bold tracking-widest uppercase mb-4 block">
-                            {project.id} — {project.category}
+                            {project.id} | {project.category}
                         </span>
 
                         <h3 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">

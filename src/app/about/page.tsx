@@ -12,8 +12,65 @@ import QuoteModal from "@/components/ui/QuoteModal";
 export default function AboutPage() {
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
 
+  const aboutSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "@id": "https://www.pandacodegen.com/about#webpage",
+        "url": "https://www.pandacodegen.com/about",
+        "name": "About PandaGen - The Anti-Agency",
+        "description": "Meet the engineers behind PandaGen. We build web assets, not templates. Direct access to architects, fixed pricing, full code ownership.",
+        "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
+        "about": { "@id": "https://www.pandacodegen.com/#organization" },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.pandacodegen.com/#organization",
+        "name": "PandaGen",
+        "alternateName": "PandaGen Code",
+        "url": "https://www.pandacodegen.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.pandacodegen.com/logo.png",
+          "width": 512,
+          "height": 512
+        },
+        "description": "Enterprise Next.js development agency specializing in WordPress migration, Shopify optimization, and custom web applications.",
+        "email": "info@pandacodegen.com",
+        "telephone": "+13022504340",
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "Missouri",
+          "addressCountry": "US"
+        },
+        "founder": [
+          { "@type": "Person", "name": "Imran", "jobTitle": "Lead Solutions Architect" },
+          { "@type": "Person", "name": "Hassan", "jobTitle": "Lead Full-Stack Engineer" }
+        ],
+        "foundingDate": "2026",
+        "numberOfEmployees": { "@type": "QuantitativeValue", "value": 2 },
+        "sameAs": [
+          "https://twitter.com/pandacodegen",
+          "https://linkedin.com/company/pandagen"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
+          { "@type": "ListItem", "position": 2, "name": "About", "item": "https://www.pandacodegen.com/about" }
+        ]
+      }
+    ]
+  };
+
   return (
     <main className="bg-[#050505] min-h-screen selection:bg-neon selection:text-black overflow-x-hidden relative">
+      {/* Schema.org JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }} />
+
       {/* Global Noise Texture */}
       <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-20 mix-blend-overlay"></div>
 

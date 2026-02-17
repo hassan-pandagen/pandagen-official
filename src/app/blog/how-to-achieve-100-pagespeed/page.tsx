@@ -9,7 +9,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "How to Achieve 100/100 PageSpeed Score: Complete Next.js Guide",
-    description: "We achieve 98-100/100 PageSpeed scores on every client site. Here's the exact optimization process we use, step by step.",
+    description: "We achieve 98-100/100 PageSpeed scores on every client site. Here's the exact 8-step optimization process we use, covering images, fonts, JavaScript, CSS, CDN, and server components.",
     alternates: {
         canonical: '/blog/how-to-achieve-100-pagespeed',
     },
@@ -19,6 +19,19 @@ export const metadata: Metadata = {
         type: "article",
         url: "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed",
     },
+};
+
+const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Achieve 100/100 PageSpeed Score: Complete Next.js Guide",
+    "description": "We achieve 98-100/100 PageSpeed scores on every client site. Here's the exact optimization process we use, step by step.",
+    "author": { "@type": "Person", "name": "Hassan" },
+    "publisher": { "@type": "Organization", "name": "PandaGen", "url": "https://www.pandacodegen.com" },
+    "datePublished": "2026-02-17",
+    "dateModified": "2026-02-17",
+    "url": "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed",
+    "mainEntityOfPage": "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed",
 };
 
 export default function AchievePageSpeedPage() {
@@ -34,6 +47,12 @@ export default function AchievePageSpeedPage() {
                 <div className="fixed top-1/3 left-0 w-[500px] h-[500px] bg-blue-600/15 blur-[150px] rounded-full pointer-events-none" />
 
                 <article className="max-w-3xl mx-auto px-6">
+
+                    {/* Article Schema */}
+                    <script
+                        type="application/ld+json"
+                        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+                    />
 
                     {/* Breadcrumb Navigation */}
                     <Breadcrumb

@@ -105,7 +105,7 @@ export default function TermsPage() {
               <div className="mt-6 p-4 bg-neon/10 border border-neon/30 rounded-lg">
                 <p className="text-neon font-semibold mb-2">⚡ Risk-Free Engagement</p>
                 <p className="text-gray-300 text-sm">
-                  Our 30-day satisfaction guarantee combined with free 1-month support means you have zero risk. Get full code ownership, expert support, and if it's not right—get your final payment back.
+                  Our 30-day satisfaction guarantee combined with free 1-month support means you have zero risk. Get full code ownership, expert support, and if it's not right, get your final payment back.
                 </p>
               </div>
             </motion.section>

@@ -23,6 +23,10 @@ const services = [
   { name: "WordPress Migration", href: "/services/wordpress-migration" },
   { name: "Custom Engineering", href: "/services/custom-engineering" },
   { name: "E-Commerce", href: "/services/ecommerce" },
+  { name: "Wix Migration", href: "/services/wix" },
+  { name: "Squarespace Migration", href: "/services/squarespace" },
+  { name: "Webflow Migration", href: "/services/webflow" },
+  { name: "GoHighLevel", href: "/services/gohighlevel" },
 ];
 
 export default function Header({ onOpenQuote }: HeaderProps) {

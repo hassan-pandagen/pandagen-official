@@ -1,28 +1,28 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, DollarSign, Gauge, Lock, Shield, RefreshCcw, Eye } from "lucide-react";
+import { ArrowRight, DollarSign, Gauge, ShoppingCart, CreditCard, Globe, Smartphone } from "lucide-react";
 
-interface WordPressKillerProps {
+interface ShopifyKillerProps {
   onOpenQuote?: () => void;
 }
 
 const comparisonRows = [
-  { metric: "Load Speed", bad: "2-5s", good: "< 1s", icon: Gauge },
-  { metric: "Monthly Cost", bad: "$150+", good: "$0", icon: DollarSign },
-  { metric: "Security", bad: "Vulnerable", good: "Bank-Grade", icon: Shield },
-  { metric: "Maintenance", bad: "Daily Updates", good: "Zero", icon: RefreshCcw },
-  { metric: "Ownership", bad: "Rented", good: "100% Yours", icon: Lock },
-  { metric: "AI Search", bad: "Invisible", good: "Optimized", icon: Eye },
+  { metric: "Load Speed", bad: "3-5s", good: "< 1s", icon: Gauge },
+  { metric: "App Fees", bad: "$1,500/mo", good: "$0", icon: DollarSign },
+  { metric: "Checkout", bad: "Generic", good: "Custom Logic", icon: CreditCard },
+  { metric: "Mobile Score", bad: "30-50", good: "95+", icon: Smartphone },
+  { metric: "Design", bad: "Template", good: "Fully Custom", icon: ShoppingCart },
+  { metric: "SEO Control", bad: "Locked URLs", good: "Full Control", icon: Globe },
 ];
 
-export default function WordPressKiller({ onOpenQuote }: WordPressKillerProps) {
+export default function ShopifyKiller({ onOpenQuote }: ShopifyKillerProps) {
   return (
     <section className="py-12 md:py-24 bg-transparent relative overflow-hidden">
 
       {/* Atmosphere */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[800px] bg-red-900/15 blur-[180px] rounded-full pointer-events-none" />
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-orange-900/10 blur-[150px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[800px] bg-green-900/15 blur-[180px] rounded-full pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-900/10 blur-[150px] rounded-full pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10">
 
@@ -33,38 +33,38 @@ export default function WordPressKiller({ onOpenQuote }: WordPressKillerProps) {
           viewport={{ once: true }}
           className="max-w-6xl mx-auto"
         >
-          <div className="relative p-[1px] rounded-2xl md:rounded-[2rem] bg-gradient-to-b from-red-500/30 via-white/10 to-transparent">
-            <div className="relative rounded-2xl md:rounded-[2rem] overflow-hidden bg-gradient-to-b from-[#0c0808] to-[#050505] shadow-[0_20px_60px_rgba(0,0,0,0.5),0_0_80px_rgba(239,68,68,0.08)]">
+          <div className="relative p-[1px] rounded-2xl md:rounded-[2rem] bg-gradient-to-b from-green-500/30 via-white/10 to-transparent">
+            <div className="relative rounded-2xl md:rounded-[2rem] overflow-hidden bg-gradient-to-b from-[#080c08] to-[#050505] shadow-[0_20px_60px_rgba(0,0,0,0.5),0_0_80px_rgba(34,197,94,0.08)]">
 
               <div className="relative z-10 grid md:grid-cols-2 gap-8 md:gap-0">
 
                 {/* LEFT: The Pain */}
                 <div className="p-6 md:p-14 flex flex-col justify-center">
 
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/15 border border-red-500/30 rounded-full w-fit mb-6 shadow-[0_0_20px_rgba(239,68,68,0.2)]">
-                    <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse shadow-[0_0_10px_rgba(239,68,68,0.8)]" />
-                    <span className="text-xs font-bold text-red-400 uppercase tracking-wider">Warning</span>
+                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/15 border border-green-500/30 rounded-full w-fit mb-6 shadow-[0_0_20px_rgba(34,197,94,0.2)]">
+                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_10px_rgba(34,197,94,0.8)]" />
+                    <span className="text-xs font-bold text-green-400 uppercase tracking-wider">App Tax Alert</span>
                   </div>
 
                   <h2 className="text-2xl md:text-5xl font-bold text-white leading-tight mb-3">
-                    Stop Losing Money.
+                    Stop Paying App Taxes.
                   </h2>
 
                   <h3 className="text-3xl md:text-6xl font-black leading-tight mb-6 md:mb-8">
                     <span
                       style={{
-                        backgroundImage: 'linear-gradient(to right, #f87171, #f97316, #f87171)',
+                        backgroundImage: 'linear-gradient(to right, #4ade80, #22d3ee, #4ade80)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
                         backgroundClip: 'text',
                       }}
                     >
-                      WordPress is a liability.
+                      Go headless.
                     </span>
                   </h3>
 
                   <p className="text-base md:text-lg text-gray-400 mb-8 leading-relaxed max-w-md">
-                    Plugins break. Databases bloat. Security fails. AI search engines can&apos;t read your page builders. Stop patching a broken ship.
+                    Shopify apps drain $1,500+/mo. Liquid themes cap your speed at 3+ seconds. AI search engines skip slow stores. Keep the backend, replace the frontend.
                   </p>
 
                   {/* CTA Buttons */}
@@ -91,14 +91,14 @@ export default function WordPressKiller({ onOpenQuote }: WordPressKillerProps) {
 
                   {/* Table Header */}
                   <div className="flex justify-between items-center mb-6 pb-4 border-b border-white/10">
-                    <h4 className="text-lg font-bold text-white">WordPress vs PandaGen</h4>
+                    <h4 className="text-lg font-bold text-white">Shopify Theme vs Custom</h4>
                   </div>
 
                   {/* Column Headers */}
                   <div className="grid grid-cols-[1fr_110px_110px] gap-3 pb-3 mb-1">
                     <div className="text-[11px] text-gray-500 uppercase tracking-widest font-bold">Metric</div>
-                    <div className="text-[11px] text-red-400/70 uppercase tracking-widest font-bold text-center">Them</div>
-                    <div className="text-[11px] text-neon/70 uppercase tracking-widest font-bold text-center">Us</div>
+                    <div className="text-[11px] text-red-400/70 uppercase tracking-widest font-bold text-center">Theme</div>
+                    <div className="text-[11px] text-neon/70 uppercase tracking-widest font-bold text-center">Custom</div>
                   </div>
 
                   {/* Rows */}
@@ -138,7 +138,7 @@ export default function WordPressKiller({ onOpenQuote }: WordPressKillerProps) {
                   >
                     <div>
                       <p className="text-[11px] text-green-400 uppercase font-bold tracking-wider mb-1">Your Potential Savings</p>
-                      <p className="text-2xl md:text-3xl font-bold text-white">$12,600<span className="text-lg text-gray-400">/yr</span></p>
+                      <p className="text-2xl md:text-3xl font-bold text-white">$18,000<span className="text-lg text-gray-400">/yr</span></p>
                     </div>
                     <div className="h-12 w-12 bg-green-500 rounded-full flex items-center justify-center text-black font-bold shadow-[0_0_20px_#22c55e]">
                       <DollarSign className="w-6 h-6" />

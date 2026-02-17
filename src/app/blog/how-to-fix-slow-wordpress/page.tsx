@@ -8,8 +8,8 @@ import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote } from "@/comp
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "How to Fix a Slow WordPress Site: 8 Ways That Work | PandaGen",
-    description: "Your WordPress site loads in 4 seconds. Your competitor loads in 0.9 seconds. Here's exactly how to speed up WordPress and close the gap.",
+    title: { absolute: "How to Fix a Slow WordPress Site: 8 Ways That Work | PandaGen" },
+    description: "Your WordPress site loads in 4 seconds. Your competitor loads in 0.9 seconds. Here's exactly how to speed up WordPress with 8 proven methods ranked by impact, plus the hard truth about WordPress's speed ceiling.",
     alternates: {
         canonical: '/blog/how-to-fix-slow-wordpress',
     },
@@ -19,6 +19,19 @@ export const metadata: Metadata = {
         type: "article",
         url: "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress",
     },
+};
+
+const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Fix a Slow WordPress Site (8 Ways That Actually Work)",
+    "description": "Your WordPress site loads in 4 seconds. Your competitor loads in 0.9 seconds. Here's exactly how to speed up WordPress and close the gap.",
+    "author": { "@type": "Person", "name": "Hassan" },
+    "publisher": { "@type": "Organization", "name": "PandaGen", "url": "https://www.pandacodegen.com" },
+    "datePublished": "2026-02-17",
+    "dateModified": "2026-02-17",
+    "url": "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress",
+    "mainEntityOfPage": "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress",
 };
 
 export default function FixSlowWordPressPage() {
@@ -34,6 +47,12 @@ export default function FixSlowWordPressPage() {
                 <div className="fixed top-1/3 left-0 w-[500px] h-[500px] bg-orange-600/15 blur-[150px] rounded-full pointer-events-none" />
 
                 <article className="max-w-3xl mx-auto px-6">
+
+                    {/* Article Schema */}
+                    <script
+                        type="application/ld+json"
+                        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+                    />
 
                     {/* Breadcrumb Navigation */}
                     <Breadcrumb
