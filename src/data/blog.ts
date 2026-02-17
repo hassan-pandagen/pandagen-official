@@ -256,12 +256,12 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Your WordPress site loads in 4 seconds. Your competitor loads in 0.9 seconds. Here's how to close the gap.",
     category: "Performance",
     readTime: "10 min",
-    date: "Feb 19",
+    date: "Feb 17",
     author: "Hassan",
     role: "Lead Engineer",
     featured: true,
     illustrationType: 'performance',
-    lastModified: "2026-02-19",
+    lastModified: "2026-02-17",
     faqs: [
       {
         question: "Why is my WordPress site so slow?",
