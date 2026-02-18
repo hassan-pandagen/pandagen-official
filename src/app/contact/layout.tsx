@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Contact Us',
-  description: 'Get in touch with PandaGen for Next.js development, WordPress migration, or Shopify optimization. Free discovery call. 2-hour response time during business hours.',
+  description: 'Contact PandaGen for Next.js development, WordPress migration, or Shopify optimization. Free discovery call. 2-hour response time.',
   keywords: [
     'contact PandaGen',
     'Next.js development quote',

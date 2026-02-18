@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Webflow Migration to Custom Code | PandaGen',
-  description: 'Outgrown Webflow? We migrate your site to custom-coded Next.js. Stop paying $39-212/month for hosting limitations. Get full code ownership, faster loading, and real SEO.',
+  description: 'Outgrown Webflow? We migrate your site to custom-coded Next.js. Stop paying $39-212/month for hosting. Get full code ownership and real SEO.',
   keywords: [
     'Webflow migration',
     'Webflow alternative',

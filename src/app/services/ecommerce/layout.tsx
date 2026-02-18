@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Shopify Headless & E-Commerce Development',
-  description: 'Build high-performance Shopify storefronts with Next.js. Eliminate app fees, achieve 2x faster load times, and own your custom checkout flow. Headless commerce done right.',
+  description: 'Build high-performance Shopify storefronts with Next.js. Eliminate app fees, achieve 2x faster load times, and own your checkout flow.',
   keywords: [
     'Shopify headless commerce',
     'Next.js ecommerce',

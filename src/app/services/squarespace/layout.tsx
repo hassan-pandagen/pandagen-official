@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Squarespace Migration to Custom Code | PandaGen',
-  description: 'Outgrown Squarespace? We migrate your site to custom-coded Next.js. Faster loading, better SEO, zero monthly fees, and full code ownership. Stop renting your website.',
+  description: 'Outgrown Squarespace? We migrate your site to custom-coded Next.js. Faster loading, better SEO, zero monthly fees, and full code ownership.',
   keywords: [
     'Squarespace migration',
     'Squarespace alternative',

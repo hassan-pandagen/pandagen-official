@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'GoHighLevel Website & Funnel Development',
-  description: 'Professional GoHighLevel funnel development and migration. We build custom-coded landing pages that integrate with GHL CRM for faster loading, better SEO, and lower ad costs.',
+  description: 'GoHighLevel funnel development and migration. Custom-coded landing pages that integrate with GHL CRM. Faster loading and better SEO.',
   keywords: [
     'GoHighLevel developer',
     'GHL funnel builder',
