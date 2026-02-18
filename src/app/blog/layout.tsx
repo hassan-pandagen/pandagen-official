@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Blog - Insights from the Engine Room',
-  description: 'Expert insights on Next.js development, WordPress migration strategies, web performance optimization, and modern web architecture. Technical articles from PandaGen engineers.',
+  description: 'Expert insights on Next.js, WordPress migration, web performance, and modern architecture from PandaGen engineers.',
   keywords: [
     'Next.js blog',
     'WordPress migration guide',

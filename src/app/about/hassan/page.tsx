@@ -7,7 +7,7 @@ import { blogPosts } from "@/data/blog";
 
 export const metadata: Metadata = {
     title: "Hassan Jamal - Founder & Lead Engineer at PandaCodeGen",
-    description: "Hassan Jamal helps e-commerce brands ditch Shopify fees and WordPress bloat with high-performance custom code (Next.js). Founder at PandaCodeGen. Karachi University alumni. Based in Missouri City, Texas.",
+    description: "Hassan Jamal builds high-performance Next.js sites for e-commerce brands. Founder at PandaCodeGen. Based in Missouri City, TX.",
     openGraph: {
         title: "Hassan Jamal - Founder & Lead Engineer at PandaCodeGen",
         description: "Helping E-com brands ditch Shopify fees & WordPress bloat with high-performance custom code (Next.js). Founder @ PandaCodeGen.",

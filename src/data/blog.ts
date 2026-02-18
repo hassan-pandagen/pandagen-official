@@ -192,7 +192,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "shopify-conversion-rate-speed-fix",
-    title: "Why Is My Conversion Rate So Low? (Shopify Speed Is Killing Your Sales)",
+    title: "Low Shopify Conversion Rate? Speed Is Killing Your Sales",
     excerpt: "Your conversion rate is low because visitors leave before your page loads. The fix is simpler than you think.",
     category: "Conversion",
     readTime: "9 min",

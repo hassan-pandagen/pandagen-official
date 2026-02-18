@@ -900,7 +900,7 @@ const blogPosts: Record<
     },
     // NOTE: "shopify-slow-losing-sales" has its own dedicated static page at /blog/shopify-slow-losing-sales/page.tsx
     "shopify-conversion-rate-speed-fix": {
-        title: "Why Is My Conversion Rate So Low? (Shopify Speed Is Killing Your Sales)",
+        title: "Low Shopify Conversion Rate? Speed Is Killing Your Sales",
         subtitle: "You're getting traffic. But nobody's buying. Here's the uncomfortable truth: Your store is too slow, and customers are leaving before they can check out.",
         excerpt:
             "Your conversion rate is low because visitors leave before your page loads. The fix is simpler than you think.",
