@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { supabase } from '@/lib/supabase';
 import type { PageSpeedResult } from '@/lib/audit/pagespeed';
 
 export async function POST(request: NextRequest) {
@@ -20,38 +19,17 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Invalid email format' }, { status: 400 });
     }
 
-    // Extract name from email (john@company.com → "john")
-    const name = email.split('@')[0].replace(/[._-]/g, ' ');
-
-    // 1. Insert into prospects table
-    const { data: prospect, error: prospectError } = await supabase
-      .from('prospects')
-      .insert({
-        name,
-        email,
-        website_url: url,
-        source: 'audit_tool',
-        pagespeed_score: auditData.performanceScore,
-        load_time_ms: Math.round(auditData.fcp),
-        pain_point: auditData.performanceScore < 70
-          ? `Poor PageSpeed: ${auditData.performanceScore}/100, ${auditData.loadTime}s load time`
-          : `PageSpeed: ${auditData.performanceScore}/100, ${auditData.loadTime}s load time`,
-        status: 'new',
-        auto_discovered: true,
-      })
-      .select('id')
-      .single();
-
-    if (prospectError) {
-      console.error('Supabase prospects insert error:', prospectError);
-      return NextResponse.json({ error: 'Failed to save lead' }, { status: 500 });
+    const leadEngineUrl = process.env.LEAD_ENGINE_URL;
+    if (!leadEngineUrl) {
+      console.error('LEAD_ENGINE_URL env var is not set');
+      return NextResponse.json({ error: 'Server configuration error' }, { status: 500 });
     }
 
-    // 2. Insert into scanner_reports table
-    const reportPayload = {
-      prospect_id: prospect.id,
-      url,
-      performance_score: auditData.performanceScore,
+    const payload = {
+      email,
+      website_url: url,
+      pagespeed_score: auditData.performanceScore,
+      load_time_ms: Math.round(auditData.fcp),
       seo_score: auditData.seoScore,
       accessibility_score: auditData.accessibilityScore,
       best_practices_score: auditData.bestPracticesScore,
@@ -60,24 +38,22 @@ export async function POST(request: NextRequest) {
         lcp: auditData.lcp,
         tbt: auditData.tbt,
         cls: auditData.cls,
-        speedIndex: auditData.speedIndex,
-        loadTime: auditData.loadTime,
-        pageSize: auditData.pageSize,
-        platformDetected: auditData.platformDetected,
       },
     };
 
-    console.log('scanner_reports payload:', JSON.stringify(reportPayload));
+    const response = await fetch(`${leadEngineUrl}/api/prospects/enroll`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
 
-    const { error: reportError } = await supabase
-      .from('scanner_reports')
-      .insert(reportPayload);
-
-    if (reportError) {
-      console.error('Supabase scanner_reports insert error:', JSON.stringify(reportError));
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error('Lead engine error:', response.status, errorText);
+      return NextResponse.json({ error: 'Failed to enroll lead' }, { status: 500 });
     }
 
-    return NextResponse.json({ success: true, message: 'Lead saved successfully' }, { status: 200 });
+    return NextResponse.json({ success: true, message: 'Lead enrolled successfully' }, { status: 200 });
   } catch (error) {
     console.error('Submit lead error:', error);
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
