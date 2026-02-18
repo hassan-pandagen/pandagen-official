@@ -434,6 +434,28 @@ export default function SquarespacePageContent() {
         </div>
       </section>
 
+      {/* Related Services - Internal Linking */}
+      <section className="py-20 px-6 border-t border-white/5">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-2xl font-bold text-white text-center mb-3">Explore More Services</h2>
+          <p className="text-gray-500 text-center mb-10 text-sm">Every migration is different. Find the right path for your platform.</p>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Link href="/services/wix" className="group p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-neon/30 transition-all">
+              <h3 className="text-white font-bold mb-2 group-hover:text-neon transition-colors">Wix Migration</h3>
+              <p className="text-gray-500 text-sm">Break free from Wix limitations. Own your code.</p>
+            </Link>
+            <Link href="/services/webflow" className="group p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-neon/30 transition-all">
+              <h3 className="text-white font-bold mb-2 group-hover:text-neon transition-colors">Webflow Migration</h3>
+              <p className="text-gray-500 text-sm">Outgrow Webflow&apos;s constraints with custom architecture.</p>
+            </Link>
+            <Link href="/services/wordpress-migration" className="group p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-neon/30 transition-all">
+              <h3 className="text-white font-bold mb-2 group-hover:text-neon transition-colors">WordPress Migration</h3>
+              <p className="text-gray-500 text-sm">Escape plugin bloat. Get sub-second load times with custom code.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </main>
   );

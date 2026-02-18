@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     ],
     apple: '/apple-touch-icon.png',
   },
+  manifest: "/manifest.json",
   keywords: [
     "WordPress to Next.js migration",
     "Next.js development agency",
@@ -90,9 +91,8 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"],
     creator: "@pandacodegen",
   },
-  verification: {
-    google: "google-site-verification-code",
-  },
+  // Add your Google Search Console HTML tag verification code here:
+  // verification: { google: "YOUR_ACTUAL_CODE_HERE" },
 };
 
 export default function RootLayout({

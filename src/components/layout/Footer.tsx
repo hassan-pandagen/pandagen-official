@@ -133,6 +133,10 @@ export default function Footer({ onOpenQuote }: FooterProps) {
                  <li><Link href="/services/wordpress-migration" className="hover:text-neon transition-colors">WordPress Migration</Link></li>
                  <li><Link href="/services/custom-engineering" className="hover:text-neon transition-colors">Custom Engineering</Link></li>
                  <li><Link href="/services/ecommerce" className="hover:text-neon transition-colors">E-Commerce</Link></li>
+                 <li><Link href="/services/wix" className="hover:text-neon transition-colors">Wix Migration</Link></li>
+                 <li><Link href="/services/squarespace" className="hover:text-neon transition-colors">Squarespace Migration</Link></li>
+                 <li><Link href="/services/webflow" className="hover:text-neon transition-colors">Webflow Migration</Link></li>
+                 <li><Link href="/services/gohighlevel" className="hover:text-neon transition-colors">GoHighLevel</Link></li>
               </ul>
            </div>
 

@@ -17,21 +17,83 @@ export const metadata: Metadata = {
         title: "How to Achieve 100/100 PageSpeed Score: Complete Next.js Guide",
         description: "We achieve 98-100/100 PageSpeed scores on every client site. Here's the exact optimization process we use, step by step.",
         type: "article",
+        publishedTime: "2026-02-17",
+        authors: ["Hassan"],
         url: "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed",
+        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "How to Achieve 100/100 PageSpeed Score: Complete Next.js Guide",
+        description: "We achieve 98-100/100 PageSpeed scores on every client site. Here's the exact optimization process we use, step by step.",
     },
 };
 
 const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "How to Achieve 100/100 PageSpeed Score: Complete Next.js Guide",
-    "description": "We achieve 98-100/100 PageSpeed scores on every client site. Here's the exact optimization process we use, step by step.",
-    "author": { "@type": "Person", "name": "Hassan" },
-    "publisher": { "@type": "Organization", "name": "PandaGen", "url": "https://www.pandacodegen.com" },
-    "datePublished": "2026-02-17",
-    "dateModified": "2026-02-17",
-    "url": "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed",
-    "mainEntityOfPage": "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed",
+    "@graph": [
+        {
+            "@type": "Article",
+            "@id": "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed#article",
+            "headline": "How to Achieve 100/100 PageSpeed Score: Complete Next.js Guide",
+            "description": "We achieve 98-100/100 PageSpeed scores on every client site. Here's the exact optimization process we use, step by step.",
+            "image": "https://www.pandacodegen.com/og-image.jpg",
+            "datePublished": "2026-02-17",
+            "dateModified": "2026-02-17",
+            "author": {
+                "@type": "Person",
+                "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
+                "name": "Hassan Jamal",
+                "jobTitle": "Lead Full-Stack Engineer",
+                "url": "https://www.pandacodegen.com/about/hassan",
+                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
+            },
+            "publisher": {
+                "@type": "Organization",
+                "@id": "https://www.pandacodegen.com/#organization",
+                "name": "PandaGen",
+                "url": "https://www.pandacodegen.com",
+                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 512, "height": 512 }
+            },
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed" },
+            "articleSection": "Performance",
+            "keywords": ["PageSpeed score", "Core Web Vitals", "Next.js performance", "website speed optimization", "100 PageSpeed", "LCP optimization"],
+            "timeRequired": "PT12M",
+            "inLanguage": "en-US"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed#breadcrumb",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
+                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", "position": 3, "name": "How to Achieve 100 PageSpeed Score", "item": "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed" }
+            ]
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed#webpage",
+            "url": "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed",
+            "name": "How to Achieve 100/100 PageSpeed Score: Complete Next.js Guide",
+            "description": "We achieve 98-100/100 PageSpeed scores on every client site. Here's the exact 8-step optimization process we use.",
+            "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
+            "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
+            "datePublished": "2026-02-17",
+            "dateModified": "2026-02-17",
+            "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed#breadcrumb" },
+            "inLanguage": "en-US"
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://www.pandacodegen.com/#organization",
+            "name": "PandaGen",
+            "alternateName": "PandaGen Code",
+            "url": "https://www.pandacodegen.com",
+            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 512, "height": 512 },
+            "sameAs": ["https://twitter.com/pandacodegen", "https://linkedin.com/company/pandagen"],
+            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" }
+        }
+    ]
 };
 
 export default function AchievePageSpeedPage() {

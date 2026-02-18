@@ -35,6 +35,20 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
 }
 
+// --- STATIC GENERATION ---
+// Pre-render all blog posts at build time for instant TTFB (50ms vs 500ms on-demand)
+export function generateStaticParams() {
+    return [
+        { slug: "wordpress-killer" },
+        { slug: "shopify-headless" },
+        { slug: "wordpress-plugins-destroy-speed" },
+        { slug: "elementor-kills-seo" },
+        { slug: "shopify-plus-still-slow" },
+        { slug: "wordpress-traffic-drop-speed" },
+        { slug: "shopify-conversion-rate-speed-fix" },
+    ];
+}
+
 // --- BLOG CONTENT DATA ---
 const blogPosts: Record<
     string,
@@ -93,7 +107,7 @@ const blogPosts: Record<
 
                 <BlogHeader>The "Free" Plugin Trap</BlogHeader>
                 <BlogText>
-                    To make WordPress do anything useful, you need "Plugins" (Elementor, WooCommerce, Yoast). These look free, but they cost you in <strong>Speed</strong> and <strong>Stability</strong>.
+                    To make WordPress do anything useful, you need "Plugins" (Elementor, WooCommerce, Yoast). These look free, but they cost you in <strong>Speed</strong> and <strong>Stability</strong>. We break down the full technical damage in our guide on <Link href="/blog/how-to-fix-slow-wordpress" className="text-neon hover:underline font-medium">how to fix a slow WordPress site</Link>.
                 </BlogText>
                 <BlogList items={[
                     "Site Speed: Every plugin adds weight. A slow site means customers leave before the page loads.",
@@ -114,7 +128,7 @@ const blogPosts: Record<
 
                 <BlogHeader>The Solution: Own Your Assets</BlogHeader>
                 <BlogText>
-                    We don't use plugins. We write clean, custom code. It loads instantly. It cannot be hacked by standard bots. And best of all? <strong>You never have to update a plugin again.</strong>
+                    We don't use plugins. Our <Link href="/services/wordpress-migration" className="text-neon hover:underline font-medium">WordPress migration service</Link> replaces all of that with clean, custom code. It loads instantly. It cannot be hacked by standard bots. And best of all? <strong>You never have to update a plugin again.</strong>
                 </BlogText>
             </>
         ),
@@ -188,7 +202,7 @@ const blogPosts: Record<
                     No matter how much you optimize images, a standard Shopify theme will struggle to hit 90+ Mobile Score because of bloat.
                 </BlogText>
                 <BlogText>
-                    A 60 Mobile Score = you lose 40% of mobile traffic to competitors with 90+ scores.
+                    A 60 Mobile Score = you lose 40% of mobile traffic to competitors with 90+ scores. We cover the full revenue impact of this in our <Link href="/blog/shopify-slow-losing-sales" className="text-neon hover:underline font-medium">Shopify speed and lost sales analysis</Link>.
                 </BlogText>
 
                 <BlogHeader>The Headless Solution</BlogHeader>
@@ -206,7 +220,7 @@ const blogPosts: Record<
 
                 <BlogHeader>The Result</BlogHeader>
                 <BlogText>
-                    Your site loads in under 1 second. Pages feel instant. The user clicks "Product," and it appears immediately. Conversion rates jump 8-12%.
+                    With our <Link href="/services/ecommerce" className="text-neon hover:underline font-medium">custom e-commerce storefront</Link>, your site loads in under 1 second. Pages feel instant. The user clicks "Product," and it appears immediately. Conversion rates jump 8-12%.
                 </BlogText>
 
                 <BlogHeader>The ROI Math</BlogHeader>
@@ -334,7 +348,7 @@ const blogPosts: Record<
 
                 <BlogHeader>The Alternative: Zero Plugins, Zero Bloat</BlogHeader>
                 <BlogText>
-                    Everything those 30 plugins do can be replaced with clean, custom code:
+                    Everything those 30 plugins do can be replaced with clean, custom code. Our <Link href="/services/wordpress-migration" className="text-neon hover:underline font-medium">WordPress migration service</Link> handles the entire transition:
                 </BlogText>
                 <BlogList items={[
                     "SEO Plugin (Yoast) → Next.js Metadata API - built into the framework, zero JS overhead",
@@ -349,7 +363,7 @@ const blogPosts: Record<
 
                 <BlogHeader>Before and After: Real Migration Numbers</BlogHeader>
                 <BlogText>
-                    When we migrate a client from WordPress with 30+ plugins to custom Next.js:
+                    When we migrate a client from WordPress with 30+ plugins to custom Next.js, the results speak for themselves. Read our full breakdown on <Link href="/blog/how-to-achieve-100-pagespeed" className="text-neon hover:underline font-medium">how to achieve a 100 PageSpeed score</Link>:
                 </BlogText>
                 <BlogList items={[
                     "PageSpeed Mobile: 35/100 → 98/100",
@@ -448,7 +462,7 @@ const blogPosts: Record<
 
                 <BlogHeader>The PandaGen Standard</BlogHeader>
                 <BlogText>
-                    We write semantic HTML. Real engineering isn't dragging and dropping. It's architecting for:
+                    Our <Link href="/services/custom-engineering" className="text-neon hover:underline font-medium">custom engineering team</Link> writes semantic HTML. Real engineering isn't dragging and dropping. It's architecting for:
                 </BlogText>
                 <BlogList items={[
                     "Code Cleanliness: 100% (semantic HTML, zero bloat)",
@@ -459,7 +473,7 @@ const blogPosts: Record<
 
                 <BlogHeader>The Choice Is Yours</BlogHeader>
                 <BlogText>
-                    You can drag and drop your way to mediocrity, or you can own a well-architected codebase that ranks, converts, and scales.
+                    You can drag and drop your way to mediocrity, or you can <Link href="/services/wordpress-migration" className="text-neon hover:underline font-medium">migrate away from WordPress</Link> and own a well-architected codebase that ranks, converts, and scales.
                 </BlogText>
                 <BlogQuote>
                     Real engineers build code. Pretenders build websites.
@@ -612,7 +626,7 @@ const blogPosts: Record<
                     "Load only what's needed for each page (not everything at once)"
                 ]} />
                 <BlogText>
-                    But <strong>a custom-built storefront</strong> can do all of this.
+                    But <strong>a custom-built storefront</strong> can do all of this. We explain exactly how in our <Link href="/blog/shopify-slow-losing-sales" className="text-neon hover:underline font-medium">analysis of how Shopify speed kills sales</Link>.
                 </BlogText>
 
                 <BlogHeader>The Solution: Keep Shopify, Replace Your Slow Theme</BlogHeader>
@@ -637,6 +651,9 @@ const blogPosts: Record<
                 ]} />
 
                 <BlogHeader>What You Get</BlogHeader>
+                <BlogText>
+                    Our <Link href="/services/ecommerce" className="text-neon hover:underline font-medium">e-commerce performance service</Link> delivers:
+                </BlogText>
                 <BlogList items={[
                     "Custom storefront built for speed",
                     "Connects directly to your Shopify store",
@@ -802,7 +819,7 @@ const blogPosts: Record<
                     "You are losing $40,000 per year because your site is too slow"
                 ]} />
                 <BlogText>
-                    And it gets worse every year. Your competitors keep getting faster. You keep getting slower. The gap widens.
+                    And it gets worse every year. Your competitors keep getting faster. You keep getting slower. The gap widens. We explain the full ranking mechanics in <Link href="/blog/why-competitor-outranks-you" className="text-neon hover:underline font-medium">why your competitor outranks you</Link>.
                 </BlogText>
 
                 <BlogQuote>
@@ -845,7 +862,7 @@ const blogPosts: Record<
 
                 <BlogHeader>Real Results: Traffic Recovery Timeline</BlogHeader>
                 <BlogText>
-                    When we migrate a client from slow WordPress to a fast custom site, here's what happens to their traffic:
+                    When we <Link href="/services/wordpress-migration" className="text-neon hover:underline font-medium">migrate a client from slow WordPress</Link> to a fast custom site, here's what happens to their traffic:
                 </BlogText>
                 <BlogList items={[
                     "Week 1: Site goes live. Load time: 4.5s → 0.9s. Mobile Score: 38 → 96",
@@ -881,214 +898,7 @@ const blogPosts: Record<
             </>
         ),
     },
-    "shopify-slow-losing-sales": {
-        title: "Your Shopify Store Is Costing You $75K/Year in Lost Sales (Here's the Math)",
-        subtitle: "Every second your store takes to load costs you customers. We calculated exactly how much money slow speed is costing you.",
-        excerpt:
-            "Every second your store takes to load costs you customers. We calculated exactly how much.",
-        author: "Hassan",
-        role: "Lead Engineer",
-        date: "Feb 10, 2026",
-        readTime: "8 min read",
-        category: "E-Commerce",
-        serviceName: "Shopify Headless",
-        serviceLink: "/services",
-        executiveSummary: [
-            "The average Shopify store loads in 3.5 seconds on mobile. Google says 53% of visitors leave after 3 seconds.",
-            "If you're making $500K/year with a slow store, you're losing $75K-$150K in sales to visitors who bounced.",
-            "The Solution: Cut load time to under 1 second = keep 30% more visitors = +$75K-$150K in pure profit annually."
-        ],
-        content: (
-            <>
-                <BlogText>
-                    You spent months building your Shopify store. You found the perfect products. You wrote great descriptions. You ran ads. Traffic is coming in.
-                </BlogText>
-                <BlogText>
-                    But then you check your analytics and see something terrifying: <BlogHighlight>Your bounce rate is 55%.</BlogHighlight>
-                </BlogText>
-                <BlogText>
-                    That means more than half your visitors leave your site without looking at a single product. They don't add anything to cart. They don't check out. They just... disappear.
-                </BlogText>
-                <BlogText>
-                    <strong>Why? Because your site is too slow, and they left before it even loaded.</strong>
-                </BlogText>
-
-                <BlogHeader>The 3-Second Rule (And Why You're Breaking It)</BlogHeader>
-                <BlogText>
-                    Google did a huge study on mobile shoppers. They found that <BlogHighlight>53% of people leave if a mobile page takes longer than 3 seconds to load</BlogHighlight>.
-                </BlogText>
-                <BlogText>
-                    Now go test your Shopify store. Use Google's free tool: <strong>pagespeed.web.dev</strong>
-                </BlogText>
-                <BlogText>
-                    Look at the "Largest Contentful Paint" number. That's how long it takes for your main product image or text to appear on screen.
-                </BlogText>
-                <BlogText>
-                    For most Shopify stores, that number is <strong>3.5 to 5 seconds</strong>. You are breaking the 3-second rule by a mile. And it's costing you thousands of dollars every single month.
-                </BlogText>
-
-                <BlogQuote>
-                    Amazon calculated that every 100ms (0.1 seconds) of extra load time costs them 1% in sales. For Amazon, that's $1.6 billion per year. For you, it's tens of thousands.
-                </BlogQuote>
-
-                <BlogHeader>Why Shopify Stores Are Slow (It's Not Your Fault)</BlogHeader>
-                <BlogText>
-                    Shopify is a great platform for managing products, orders, and payments. But the themes (the part customers see) are built for flexibility, not speed.
-                </BlogText>
-                <BlogText>
-                    Here's what happens every time someone visits your product page:
-                </BlogText>
-                <BlogList items={[
-                    "Shopify loads the entire theme (even parts you're not using) - 800KB-1.5MB",
-                    "All your apps load their JavaScript (reviews, live chat, email popup, analytics) - 400KB-800KB",
-                    "Product images load (often not optimized) - 500KB-2MB per image",
-                    "Shopify queries its database to get product info - 100-200ms delay",
-                    "Everything has to wait for everything else before the page appears"
-                ]} />
-                <BlogText>
-                    Add it all up: <BlogHighlight>3-5 seconds before a customer sees your product</BlogHighlight>. By then, half of them already hit the back button and went to a competitor.
-                </BlogText>
-
-                <BlogHeader>The Lost Sales Calculator (This Hurts to Read)</BlogHeader>
-                <BlogText>
-                    Let's calculate exactly how much money you are losing to slow speed. We'll use a typical Shopify store as an example:
-                </BlogText>
-                <BlogText>
-                    <strong>Your Current Numbers:</strong>
-                </BlogText>
-                <BlogList items={[
-                    "Annual revenue: $500,000",
-                    "Monthly visitors: 50,000",
-                    "Conversion rate: 2% (1,000 customers/month)",
-                    "Average order value: $100",
-                    "Current load time: 4 seconds (mobile)"
-                ]} />
-                <BlogText>
-                    <strong>What's Happening Right Now:</strong>
-                </BlogText>
-                <BlogList items={[
-                    "53% of visitors leave because your site is too slow - You lose 26,500 visitors per month",
-                    "If just 2% of those lost visitors would have bought → That's 530 lost customers per month",
-                    "530 customers × $100 average order = $53,000 in lost monthly sales",
-                    "Annual lost revenue: $636,000"
-                ]} />
-                <BlogText>
-                    Wait, what? You're making $500K but leaving $636K on the table?
-                </BlogText>
-                <BlogText>
-                    Yes. <BlogHighlight>If your site was fast, you'd be making $1.1 million instead of $500K.</BlogHighlight>
-                </BlogText>
-
-                <BlogQuote>
-                    Every second your store is slow, money walks out the door. Speed isn't a "nice to have"-it's the difference between $500K and $1M.
-                </BlogQuote>
-
-                <BlogHeader>But I Already Optimized My Shopify Theme!</BlogHeader>
-                <BlogText>
-                    You probably tried everything your developer suggested:
-                </BlogText>
-                <BlogList items={[
-                    "Compressed your images",
-                    "Removed some apps",
-                    "Switched to a \"faster\" theme",
-                    "Enabled lazy loading",
-                    "Used a Shopify Plus plan ($2,300/month)"
-                ]} />
-                <BlogText>
-                    And your Google PageSpeed score went from... 32 to 45. Still red. Still failing.
-                </BlogText>
-                <BlogText>
-                    <strong>Here's why theme optimization doesn't work:</strong> All Shopify themes are built on the same slow foundation (Liquid templates). You can't make a Honda Civic faster than a Tesla by adding racing stripes.
-                </BlogText>
-                <BlogText>
-                    To get truly fast, you need a different engine entirely.
-                </BlogText>
-
-                <BlogHeader>The Real Solution: Custom Storefront (Keep Shopify Backend)</BlogHeader>
-                <BlogText>
-                    Think of Shopify as two parts:
-                </BlogText>
-                <BlogList items={[
-                    "Backend (inventory, orders, payments, fulfillment) - This part is excellent. Keep it.",
-                    "Frontend (the theme customers see) - This part is slow. Replace it."
-                ]} />
-                <BlogText>
-                    We build you a lightning-fast custom storefront that connects to your Shopify backend. You get:
-                </BlogText>
-                <BlogList items={[
-                    "Same Shopify dashboard you're used to (products, orders, everything)",
-                    "Same Shopify checkout (secure, trusted, conversion-optimized)",
-                    "Brand new fast storefront that loads in under 1 second",
-                    "No more slow themes or bloated apps"
-                ]} />
-
-                <BlogHeader>Before and After: Real Numbers</BlogHeader>
-                <BlogText>
-                    When we build a custom fast storefront for a Shopify store doing $500K/year, here's what changes:
-                </BlogText>
-                <BlogList items={[
-                    "Load Time: 4.2s → 0.9s (nearly 5x faster)",
-                    "Google Mobile Score: 38/100 → 97/100",
-                    "Bounce Rate: 55% → 24% (you keep 31% more visitors)",
-                    "Conversion Rate: 2.0% → 2.6% (+30% more sales per visitor)",
-                    "Annual Revenue: $500K → $750K (+$250K)"
-                ]} />
-                <BlogText>
-                    <strong>How the math works:</strong>
-                </BlogText>
-                <BlogList items={[
-                    "Before: 50,000 visitors × 45% stay × 2% convert = 450 customers/month × $100 = $45K/month",
-                    "After: 50,000 visitors × 76% stay × 2.6% convert = 988 customers/month × $100 = $98.8K/month",
-                    "Difference: +$53.8K per month = +$645K per year"
-                ]} />
-
-                <BlogQuote>
-                    One client went from $420K/year to $890K/year after we fixed their speed. Same products. Same ads. Same traffic. Just a faster site that didn't lose half the visitors to slow load times.
-                </BlogQuote>
-
-                <BlogHeader>How Much Does It Cost to Fix This?</BlogHeader>
-                <BlogText>
-                    A custom fast storefront for a typical Shopify store costs $25,000-$45,000 depending on complexity.
-                </BlogText>
-                <BlogText>
-                    Let's use $35,000 as the baseline and compare it to doing nothing:
-                </BlogText>
-                <BlogList items={[
-                    "Cost: $35,000 one-time",
-                    "Annual revenue gain: $250K+ (based on typical 50% lift for $500K/year stores)",
-                    "Payback period: 51 days",
-                    "Year 1 net gain: $215,000",
-                    "Year 2+ net gain: $250,000 per year (no additional cost)"
-                ]} />
-                <BlogText>
-                    In other words, you pay $35K once and make an extra $215K in the first year. Then $250K every year after that. Forever.
-                </BlogText>
-                <BlogText>
-                    <BlogHighlight>Or you can keep your slow site and keep losing $75K-$150K per year. Your choice.</BlogHighlight>
-                </BlogText>
-
-                <BlogHeader>What You Should Do Right Now</BlogHeader>
-                <BlogText>
-                    Test your Shopify store's speed: <strong>pagespeed.web.dev</strong>
-                </BlogText>
-                <BlogText>
-                    If your Mobile Score is below 70, you are guaranteed to be losing tens of thousands of dollars per year to slow load times.
-                </BlogText>
-                <BlogText>
-                    We offer a free revenue loss audit where we:
-                </BlogText>
-                <BlogList items={[
-                    "Test your store's exact load time and bounce rate",
-                    "Calculate how much revenue you're losing per month to slow speed",
-                    "Show you a working demo of your store loading in under 1 second",
-                    "Give you the full plan with timeline, cost, and projected revenue gain"
-                ]} />
-                <BlogText>
-                    <BlogHighlight>No sales pitch. Just data.</BlogHighlight> You'll see the numbers, and you decide if losing $75K-$150K per year is acceptable.
-                </BlogText>
-            </>
-        ),
-    },
+    // NOTE: "shopify-slow-losing-sales" has its own dedicated static page at /blog/shopify-slow-losing-sales/page.tsx
     "shopify-conversion-rate-speed-fix": {
         title: "Why Is My Conversion Rate So Low? (Shopify Speed Is Killing Your Sales)",
         subtitle: "You're getting traffic. But nobody's buying. Here's the uncomfortable truth: Your store is too slow, and customers are leaving before they can check out.",
@@ -1182,7 +992,7 @@ const blogPosts: Record<
                     <strong>Final conversion rate: 1.5%</strong> (15 out of 100 people bought)
                 </BlogText>
                 <BlogText>
-                    But here's the thing: <BlogHighlight>You didn't lose 85 people because they didn't like your products. You lost them because your site was too slow to show them the products in the first place.</BlogHighlight>
+                    But here's the thing: <BlogHighlight>You didn't lose 85 people because they didn't like your products. You lost them because your site was too slow to show them the products in the first place.</BlogHighlight> We break down the full revenue impact in our <Link href="/blog/shopify-slow-losing-sales" className="text-neon hover:underline font-medium">Shopify speed and lost sales report</Link>.
                 </BlogText>
 
                 <BlogHeader>What Happens If Your Store Loads in Under 1 Second</BlogHeader>
@@ -1282,7 +1092,7 @@ const blogPosts: Record<
 
                 <BlogHeader>The Real Fix: Custom Fast Storefront (Keep Shopify Backend)</BlogHeader>
                 <BlogText>
-                    Here's what actually works:
+                    Our <Link href="/services/ecommerce" className="text-neon hover:underline font-medium">e-commerce performance service</Link> is built around what actually works:
                 </BlogText>
                 <BlogList items={[
                     "Keep: Shopify backend (inventory, orders, payments, fulfillment) - It's excellent",
@@ -1448,7 +1258,8 @@ export default async function BlogPost(props: PageProps) {
                     "@id": `https://www.pandacodegen.com/#/schema/person/${post.author.toLowerCase()}`,
                     "name": post.author,
                     "jobTitle": post.role,
-                    "url": "https://www.pandacodegen.com/about"
+                    "url": `https://www.pandacodegen.com/about/${post.author.toLowerCase()}`,
+                    "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
                 },
                 "publisher": {
                     "@type": "Organization",
@@ -1639,17 +1450,16 @@ export default async function BlogPost(props: PageProps) {
                         </ul>
                     </div>
 
-                    {/* Author Block */}
-                     <div className="flex items-center justify-center gap-4 mt-12 pt-10 border-t border-white/10 opacity-70">
-                         <div className="w-12 h-12 rounded-full overflow-hidden border border-white/20">
-                             {/* Replace with your actual image path */}
-                             <img src="/team/hassan.png" alt={post.author} className="w-full h-full object-cover" />
+                    {/* Author Block - Links to author page for E-E-A-T */}
+                     <Link href="/about/hassan" className="flex items-center justify-center gap-4 mt-12 pt-10 border-t border-white/10 opacity-70 hover:opacity-100 transition-opacity group">
+                         <div className="w-12 h-12 rounded-full overflow-hidden border border-white/20 group-hover:border-neon/30 transition-colors">
+                             <img src="/team/hassan.png" alt={`${post.author} - ${post.role} at PandaGen`} className="w-full h-full object-cover" />
                          </div>
                          <div className="text-left">
-                             <div className="text-white font-bold text-sm">{post.author}</div>
+                             <div className="text-white font-bold text-sm group-hover:text-neon transition-colors">{post.author}</div>
                              <div className="text-xs text-neon uppercase tracking-wider">{post.role}</div>
                          </div>
-                     </div>
+                     </Link>
                 </div>
             </section>
 

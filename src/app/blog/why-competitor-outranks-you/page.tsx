@@ -17,21 +17,83 @@ export const metadata: Metadata = {
         title: "Why Your Competitor Outranks You on Google (And Pays Less for Hosting)",
         description: "They're getting 3× your traffic with a coded website. Google, ChatGPT, and Bing all prefer fast sites. Here's why.",
         type: "article",
+        publishedTime: "2026-02-15",
+        authors: ["Hassan"],
         url: "https://www.pandacodegen.com/blog/why-competitor-outranks-you",
+        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Why Your Competitor Outranks You on Google (And Pays Less for Hosting)",
+        description: "They're getting 3× your traffic with a coded website. Google, ChatGPT, and Bing all prefer fast sites. Here's why.",
     },
 };
 
 const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Why Your Competitor Outranks You on Google (And Pays Less for Hosting)",
-    "description": "They're getting 3× your traffic with a coded website. Google, ChatGPT, and Bing all prefer fast sites. Here's why.",
-    "author": { "@type": "Person", "name": "Hassan" },
-    "publisher": { "@type": "Organization", "name": "PandaGen", "url": "https://www.pandacodegen.com" },
-    "datePublished": "2026-02-15",
-    "dateModified": "2026-02-15",
-    "url": "https://www.pandacodegen.com/blog/why-competitor-outranks-you",
-    "mainEntityOfPage": "https://www.pandacodegen.com/blog/why-competitor-outranks-you",
+    "@graph": [
+        {
+            "@type": "Article",
+            "@id": "https://www.pandacodegen.com/blog/why-competitor-outranks-you#article",
+            "headline": "Why Your Competitor Outranks You on Google (And Pays Less for Hosting)",
+            "description": "They're getting 3× your traffic with a coded website. Google, ChatGPT, and Bing all prefer fast sites. Here's why.",
+            "image": "https://www.pandacodegen.com/og-image.jpg",
+            "datePublished": "2026-02-15",
+            "dateModified": "2026-02-15",
+            "author": {
+                "@type": "Person",
+                "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
+                "name": "Hassan Jamal",
+                "jobTitle": "Lead Full-Stack Engineer",
+                "url": "https://www.pandacodegen.com/about/hassan",
+                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
+            },
+            "publisher": {
+                "@type": "Organization",
+                "@id": "https://www.pandacodegen.com/#organization",
+                "name": "PandaGen",
+                "url": "https://www.pandacodegen.com",
+                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 512, "height": 512 }
+            },
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/why-competitor-outranks-you" },
+            "articleSection": "Traffic Growth",
+            "keywords": ["Google rankings", "competitor analysis", "website speed SEO", "WordPress vs Next.js", "AI search optimization", "coded website benefits"],
+            "timeRequired": "PT11M",
+            "inLanguage": "en-US"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/why-competitor-outranks-you#breadcrumb",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
+                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", "position": 3, "name": "Why Your Competitor Outranks You", "item": "https://www.pandacodegen.com/blog/why-competitor-outranks-you" }
+            ]
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/why-competitor-outranks-you#webpage",
+            "url": "https://www.pandacodegen.com/blog/why-competitor-outranks-you",
+            "name": "Why Your Competitor Outranks You on Google (And Pays Less)",
+            "description": "Your competitor is getting 3× your traffic with a faster coded website. Google, ChatGPT, and Bing all prefer fast sites.",
+            "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
+            "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
+            "datePublished": "2026-02-15",
+            "dateModified": "2026-02-15",
+            "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/why-competitor-outranks-you#breadcrumb" },
+            "inLanguage": "en-US"
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://www.pandacodegen.com/#organization",
+            "name": "PandaGen",
+            "alternateName": "PandaGen Code",
+            "url": "https://www.pandacodegen.com",
+            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 512, "height": 512 },
+            "sameAs": ["https://twitter.com/pandacodegen", "https://linkedin.com/company/pandagen"],
+            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" }
+        }
+    ]
 };
 
 export default function CompetitorRankingsPage() {

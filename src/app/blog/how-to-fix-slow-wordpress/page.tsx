@@ -17,21 +17,83 @@ export const metadata: Metadata = {
         title: "How to Fix a Slow WordPress Site: 8 Ways That Actually Work",
         description: "Your WordPress site loads in 4 seconds. Your competitor loads in 0.9 seconds. Here's how to close the gap.",
         type: "article",
+        publishedTime: "2026-02-17",
+        authors: ["Hassan"],
         url: "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress",
+        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "How to Fix a Slow WordPress Site: 8 Ways That Actually Work",
+        description: "Your WordPress site loads in 4 seconds. Your competitor loads in 0.9 seconds. Here's how to close the gap.",
     },
 };
 
 const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "How to Fix a Slow WordPress Site (8 Ways That Actually Work)",
-    "description": "Your WordPress site loads in 4 seconds. Your competitor loads in 0.9 seconds. Here's exactly how to speed up WordPress and close the gap.",
-    "author": { "@type": "Person", "name": "Hassan" },
-    "publisher": { "@type": "Organization", "name": "PandaGen", "url": "https://www.pandacodegen.com" },
-    "datePublished": "2026-02-17",
-    "dateModified": "2026-02-17",
-    "url": "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress",
-    "mainEntityOfPage": "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress",
+    "@graph": [
+        {
+            "@type": "Article",
+            "@id": "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress#article",
+            "headline": "How to Fix a Slow WordPress Site (8 Ways That Actually Work)",
+            "description": "Your WordPress site loads in 4 seconds. Your competitor loads in 0.9 seconds. Here's exactly how to speed up WordPress and close the gap.",
+            "image": "https://www.pandacodegen.com/og-image.jpg",
+            "datePublished": "2026-02-17",
+            "dateModified": "2026-02-17",
+            "author": {
+                "@type": "Person",
+                "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
+                "name": "Hassan Jamal",
+                "jobTitle": "Lead Full-Stack Engineer",
+                "url": "https://www.pandacodegen.com/about/hassan",
+                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
+            },
+            "publisher": {
+                "@type": "Organization",
+                "@id": "https://www.pandacodegen.com/#organization",
+                "name": "PandaGen",
+                "url": "https://www.pandacodegen.com",
+                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 512, "height": 512 }
+            },
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress" },
+            "articleSection": "Performance",
+            "keywords": ["slow WordPress", "WordPress speed optimization", "fix slow WordPress", "WordPress performance", "WordPress vs Next.js", "Core Web Vitals"],
+            "timeRequired": "PT10M",
+            "inLanguage": "en-US"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress#breadcrumb",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
+                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", "position": 3, "name": "How to Fix a Slow WordPress Site", "item": "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress" }
+            ]
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress#webpage",
+            "url": "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress",
+            "name": "How to Fix a Slow WordPress Site: 8 Ways That Work",
+            "description": "Your WordPress site loads in 4 seconds. Your competitor loads in 0.9 seconds. Here's exactly how to speed up WordPress with 8 proven methods.",
+            "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
+            "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
+            "datePublished": "2026-02-17",
+            "dateModified": "2026-02-17",
+            "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress#breadcrumb" },
+            "inLanguage": "en-US"
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://www.pandacodegen.com/#organization",
+            "name": "PandaGen",
+            "alternateName": "PandaGen Code",
+            "url": "https://www.pandacodegen.com",
+            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 512, "height": 512 },
+            "sameAs": ["https://twitter.com/pandacodegen", "https://linkedin.com/company/pandagen"],
+            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" }
+        }
+    ]
 };
 
 export default function FixSlowWordPressPage() {

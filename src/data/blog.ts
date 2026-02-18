@@ -34,6 +34,12 @@ export const blogPosts: BlogPost[] = [
     featured: false,
     illustrationType: 'wordpress',
     lastModified: "2026-01-15",
+    faqs: [
+      { question: "How much does WordPress really cost per year?", answer: "The true cost of WordPress is $3,000-$10,000/year when you factor in premium plugins ($500-$2,000), managed hosting ($300-$1,200), security monitoring ($200-$600), developer maintenance ($1,200-$4,800), and lost revenue from downtime. The $50/month hosting fee is just the beginning." },
+      { question: "Is WordPress still worth it in 2026?", answer: "For simple blogs, WordPress still works. But for business websites that need speed, security, and reliability, WordPress is an expensive liability. Modern alternatives like Next.js give you better performance at a fraction of the ongoing cost with zero plugin dependencies." },
+      { question: "What is the best alternative to WordPress for business websites?", answer: "Next.js is the leading WordPress alternative for businesses. It delivers sub-second load times, zero plugin vulnerabilities, free hosting on Vercel, and 95-100 PageSpeed scores. You own the code outright with no recurring platform fees." },
+      { question: "Why do WordPress sites keep getting hacked?", answer: "98% of WordPress hacks come through outdated plugins. Each plugin is third-party code with its own vulnerabilities. With 30+ plugins, you have 30+ potential entry points for hackers. Custom coded sites have zero plugins and zero of these attack vectors." }
+    ]
   },
   {
     id: "shopify-headless",
@@ -47,6 +53,12 @@ export const blogPosts: BlogPost[] = [
     featured: false,
     illustrationType: 'saas',
     lastModified: "2026-01-10",
+    faqs: [
+      { question: "What is headless Shopify?", answer: "Headless Shopify means using Shopify for backend operations (inventory, orders, payments) while replacing the slow Liquid theme with a custom-built fast frontend. Your store loads 4-5x faster while you keep the same Shopify dashboard and checkout." },
+      { question: "How much faster is headless Shopify vs regular Shopify?", answer: "Regular Shopify themes load in 3-5 seconds. Headless Shopify with Next.js loads in 0.6-1.2 seconds. That's a 4-5x speed improvement that directly translates to 20-30% higher conversion rates." },
+      { question: "Is headless Shopify worth the investment?", answer: "For stores doing $200K+/year, absolutely. The typical ROI is 3-6 months. A store doing $500K/year can expect $75K-$150K in additional annual revenue from reduced bounce rates and higher conversion rates." },
+      { question: "Can I still use Shopify apps with headless?", answer: "Most backend apps (inventory, shipping, email) work normally. Frontend apps (popups, reviews widgets) need to be rebuilt as custom components, which actually makes your site faster since you eliminate bloated third-party scripts." }
+    ]
   },
   {
     id: "elementor-kills-seo",
@@ -60,6 +72,12 @@ export const blogPosts: BlogPost[] = [
     featured: false,
     illustrationType: 'code',
     lastModified: "2025-12-28",
+    faqs: [
+      { question: "Does Elementor slow down WordPress?", answer: "Yes. Elementor adds 300-500KB of CSS and JavaScript to every page, plus generates 3-5x more DOM nodes than necessary. A typical Elementor page has 2,000-4,000 DOM elements vs 400-800 for clean code. This bloat directly causes slower load times and lower PageSpeed scores." },
+      { question: "What is the best alternative to Elementor?", answer: "For maximum performance, custom code (HTML/CSS/React) is the best alternative. If you need a visual builder, consider Webflow for design flexibility or migrate to Next.js for enterprise-grade performance with 95-100 PageSpeed scores." },
+      { question: "Why do page builders hurt SEO?", answer: "Page builders generate bloated HTML with excessive wrapper divs, inline styles, and render-blocking scripts. This increases page weight by 200-400%, slows load times to 4+ seconds, and tanks Core Web Vitals scores. Google directly uses these metrics for rankings." },
+      { question: "Can I get a good PageSpeed score with Elementor?", answer: "Rarely above 50-60 on mobile, even with aggressive optimization. Elementor's architecture loads its entire framework on every page regardless of what widgets you use. The performance ceiling is fundamentally limited by the builder's design." }
+    ]
   },
   {
     id: "wordpress-plugins-destroy-speed",
@@ -166,6 +184,11 @@ export const blogPosts: BlogPost[] = [
     featured: false,
     illustrationType: 'sales',
     lastModified: "2026-02-10",
+    faqs: [
+      { question: "How much money am I losing from a slow Shopify store?", answer: "For every second of load time over 2 seconds, you lose approximately 7% of conversions. A Shopify store making $500K/year with a 4-second load time is losing $75K-$150K annually to visitors who bounce before the page loads." },
+      { question: "Why is my Shopify store so slow on mobile?", answer: "Shopify themes load 800KB-1.5MB of theme code plus 400KB-800KB of app scripts on every page. Combined with unoptimized images, the average Shopify store takes 3.5-5 seconds to load on mobile, well above the 2-second threshold where customers start leaving." },
+      { question: "How do I speed up my Shopify store?", answer: "Quick wins: remove unused apps, compress images, and minimize custom code in theme.liquid. But these only get you to 2.5-3 seconds. To reach sub-1-second load times, you need a custom headless storefront that replaces the slow Liquid theme entirely." }
+    ]
   },
   {
     id: "shopify-conversion-rate-speed-fix",
@@ -179,6 +202,12 @@ export const blogPosts: BlogPost[] = [
     featured: false,
     illustrationType: 'conversion',
     lastModified: "2026-02-11",
+    faqs: [
+      { question: "Why is my Shopify conversion rate so low?", answer: "The average Shopify conversion rate is 1.4%. If yours is below that, site speed is likely the culprit. Stores loading in 4+ seconds see conversion rates 50% lower than stores loading in under 2 seconds. Slow speed kills conversions before customers even see your products." },
+      { question: "What is a good conversion rate for Shopify?", answer: "The average Shopify conversion rate is 1.4%, but top-performing stores achieve 3-5%. The difference is almost always site speed: fast stores (under 2 seconds) convert at 2-3x the rate of slow stores (4+ seconds)." },
+      { question: "How does website speed affect conversion rate?", answer: "Every additional second of load time reduces conversions by 7%. A site loading in 1 second converts at 3.05%. The same site loading in 3 seconds converts at 1.68%. At 5 seconds, it drops to 0.99%. Speed is the single biggest lever for conversion rate optimization." },
+      { question: "How do I increase my Shopify conversion rate?", answer: "The fastest ROI improvement: fix your site speed. Reduce load time to under 2 seconds and you'll see 20-30% more conversions immediately. Then optimize product pages, simplify checkout, and add trust signals. Speed fixes pay for themselves within weeks." }
+    ]
   },
   {
     id: "why-competitor-outranks-you",

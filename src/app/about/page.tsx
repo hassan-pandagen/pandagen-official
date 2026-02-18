@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ShieldCheck, Globe, Rocket, Terminal, Code2, Cpu } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
@@ -47,7 +48,7 @@ export default function AboutPage() {
         },
         "founder": [
           { "@type": "Person", "name": "Imran", "jobTitle": "Lead Solutions Architect" },
-          { "@type": "Person", "name": "Hassan", "jobTitle": "Lead Full-Stack Engineer" }
+          { "@type": "Person", "@id": "https://www.pandacodegen.com/#/schema/person/hassan", "name": "Hassan Jamal", "jobTitle": "Lead Full-Stack Engineer", "url": "https://www.pandacodegen.com/about/hassan", "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"] }
         ],
         "foundingDate": "2026",
         "numberOfEmployees": { "@type": "QuantitativeValue", "value": 2 },
@@ -158,24 +159,99 @@ export default function AboutPage() {
             </div>
 
             {/* HASSAN */}
-            <div className="group relative bg-[#0A0A0A] border border-white/10 rounded-3xl overflow-hidden hover:border-neon/50 transition-colors duration-500">
+            <Link href="/about/hassan" className="group relative bg-[#0A0A0A] border border-white/10 rounded-3xl overflow-hidden hover:border-neon/50 transition-colors duration-500 block">
                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-10" />
                <div className="h-96 w-full relative">
-                  <Image src="/team/hassan.png" fill alt="Hassan" className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700" />
+                  <Image src="/team/hassan.png" fill alt="Hassan Jamal - Lead Full-Stack Engineer at PandaGen" className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700" />
                </div>
                <div className="absolute bottom-0 left-0 w-full p-8 z-20">
                   <div className="px-3 py-1 bg-neon/20 text-neon text-[10px] font-bold uppercase tracking-wider rounded w-fit mb-2">Engineering</div>
-                  <h3 className="text-3xl font-bold text-white mb-1">Hassan</h3>
+                  <h3 className="text-3xl font-bold text-white mb-1">Hassan Jamal</h3>
                   <p className="text-neon font-mono text-sm mb-2">Lead Full-Stack Engineer</p>
                   <div className="flex gap-3 mb-3 text-xs text-gray-500">
                      <span>7+ years</span>
                      <span>•</span>
                      <span>100k+ lines shipped</span>
                   </div>
-                  <p className="text-gray-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">"I obsess over milliseconds. I build the engines that run the business."</p>
+                  <p className="text-gray-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">&ldquo;I obsess over milliseconds. I build the engines that run the business.&rdquo;</p>
                </div>
-            </div>
+            </Link>
          </div>
+      </section>
+
+      {/* FOUNDER SPOTLIGHT — Hassan Jamal */}
+      <section className="py-20 px-6 border-t border-white/5 bg-white/[0.01]">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neon/5 border border-neon/20 text-sm text-neon mb-6">
+              <Code2 className="w-4 h-4" /> Founder Spotlight
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">The Engineer Behind PandaGen</h2>
+            <p className="text-gray-500 max-w-2xl mx-auto">No account managers. When you work with PandaGen, you talk directly to the person writing the code.</p>
+          </div>
+
+          <div className="grid md:grid-cols-5 gap-8 items-start">
+            {/* Left: Photo + Links */}
+            <div className="md:col-span-2 flex flex-col items-center text-center">
+              <div className="w-48 h-48 rounded-3xl overflow-hidden border-2 border-white/10 relative mb-4">
+                <Image src="/team/hassan.png" fill alt="Hassan Jamal - Founder & Lead Engineer at PandaCodeGen" className="object-cover object-top" />
+              </div>
+              <h3 className="text-2xl font-bold text-white">Hassan Jamal</h3>
+              <p className="text-neon font-mono text-sm mb-1">Founder & Lead Full-Stack Engineer</p>
+              <p className="text-gray-500 text-xs mb-4">Karachi University &middot; Missouri City, TX</p>
+              <div className="flex gap-3">
+                <a href="https://www.linkedin.com/in/hassan-jamal-713ba6228/" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs font-medium hover:bg-white/10 hover:border-neon/30 transition-all text-gray-300">LinkedIn</a>
+                <a href="https://github.com/hassan-pandagen" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs font-medium hover:bg-white/10 hover:border-neon/30 transition-all text-gray-300">GitHub</a>
+              </div>
+            </div>
+
+            {/* Right: Bio + Expertise */}
+            <div className="md:col-span-3 space-y-6">
+              <div>
+                <p className="text-gray-300 text-lg leading-relaxed mb-4">
+                  I help e-commerce brands ditch Shopify fees and WordPress bloat with high-performance custom code. One client was paying <strong className="text-white">$3,200/month</strong> on Shopify Plus. Their storefront scored <strong className="text-white">31 on Google PageSpeed</strong>. We migrated them to a custom build. Same features. Zero app fees. PageSpeed went from <strong className="text-neon">31 to 92</strong>.
+                </p>
+                <p className="text-gray-400 leading-relaxed">
+                  Most agencies hand you a WordPress theme and call it a day. I build from scratch — Next.js, React, TypeScript, server-rendered, edge-deployed. No plugins. No bloat. No $500/month in SaaS fees just to run your store. You get a website that loads in under a second and costs nearly nothing to host.
+                </p>
+              </div>
+
+              {/* Expertise Tags */}
+              <div>
+                <h4 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-3">Core Expertise</h4>
+                <div className="flex flex-wrap gap-2">
+                  {["Next.js 15 / React / TypeScript", "Shopify Headless (Storefront API)", "WordPress & Platform Migrations", "SEO & Core Web Vitals", "Vercel / Supabase / Sanity", "Custom SaaS Development"].map((skill) => (
+                    <span key={skill} className="px-3 py-1.5 bg-white/[0.05] border border-white/10 rounded-full text-xs text-gray-300 font-medium">{skill}</span>
+                  ))}
+                </div>
+              </div>
+
+              {/* What I Build — compact */}
+              <div className="grid grid-cols-2 gap-3">
+                <div className="p-4 rounded-xl bg-white/[0.03] border border-white/5">
+                  <h4 className="text-white font-bold text-sm mb-1">Custom Next.js Storefronts</h4>
+                  <p className="text-gray-500 text-xs">90+ PageSpeed. $0/month to run.</p>
+                </div>
+                <div className="p-4 rounded-xl bg-white/[0.03] border border-white/5">
+                  <h4 className="text-white font-bold text-sm mb-1">Platform Migrations</h4>
+                  <p className="text-gray-500 text-xs">Shopify Plus & WordPress to custom code.</p>
+                </div>
+                <div className="p-4 rounded-xl bg-white/[0.03] border border-white/5">
+                  <h4 className="text-white font-bold text-sm mb-1">Admin Dashboards & SaaS</h4>
+                  <p className="text-gray-500 text-xs">Replace $500+/mo in SaaS apps.</p>
+                </div>
+                <div className="p-4 rounded-xl bg-white/[0.03] border border-white/5">
+                  <h4 className="text-white font-bold text-sm mb-1">Speed & Cost Audits</h4>
+                  <p className="text-gray-500 text-xs">Free audit for stores paying $1k+/mo.</p>
+                </div>
+              </div>
+
+              <Link href="/about/hassan" className="inline-flex items-center gap-2 text-neon text-sm font-medium hover:underline">
+                View full profile & articles &rarr;
+              </Link>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* 4. WHY CHOOSE US (Industry Standard Benefits) */}

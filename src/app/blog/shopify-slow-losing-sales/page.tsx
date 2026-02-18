@@ -17,21 +17,83 @@ export const metadata: Metadata = {
         title: "Your Shopify Store Is Costing You $75K/Year in Lost Sales",
         description: "Every second your store takes to load costs you customers. We calculated exactly how much.",
         type: "article",
+        publishedTime: "2026-02-10",
+        authors: ["Hassan"],
         url: "https://www.pandacodegen.com/blog/shopify-slow-losing-sales",
+        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Your Shopify Store Is Costing You $75K/Year in Lost Sales",
+        description: "Every second your store takes to load costs you customers. We calculated exactly how much.",
     },
 };
 
 const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Your Shopify Store Is Costing You $75K/Year in Lost Sales (Here's the Math)",
-    "description": "Every second your store takes to load costs you customers. We calculated exactly how much revenue you're losing from slow Shopify speed.",
-    "author": { "@type": "Person", "name": "Hassan" },
-    "publisher": { "@type": "Organization", "name": "PandaGen", "url": "https://www.pandacodegen.com" },
-    "datePublished": "2026-02-10",
-    "dateModified": "2026-02-10",
-    "url": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales",
-    "mainEntityOfPage": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales",
+    "@graph": [
+        {
+            "@type": "Article",
+            "@id": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales#article",
+            "headline": "Your Shopify Store Is Costing You $75K/Year in Lost Sales (Here's the Math)",
+            "description": "Every second your store takes to load costs you customers. We calculated exactly how much revenue you're losing from slow Shopify speed.",
+            "image": "https://www.pandacodegen.com/og-image.jpg",
+            "datePublished": "2026-02-10",
+            "dateModified": "2026-02-10",
+            "author": {
+                "@type": "Person",
+                "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
+                "name": "Hassan Jamal",
+                "jobTitle": "Lead Full-Stack Engineer",
+                "url": "https://www.pandacodegen.com/about/hassan",
+                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
+            },
+            "publisher": {
+                "@type": "Organization",
+                "@id": "https://www.pandacodegen.com/#organization",
+                "name": "PandaGen",
+                "url": "https://www.pandacodegen.com",
+                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 512, "height": 512 }
+            },
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales" },
+            "articleSection": "E-Commerce",
+            "keywords": ["Shopify speed optimization", "headless Shopify", "Shopify slow", "e-commerce performance", "Shopify lost sales", "custom storefront"],
+            "timeRequired": "PT8M",
+            "inLanguage": "en-US"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales#breadcrumb",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
+                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", "position": 3, "name": "Shopify Store Costing You $75K/Year", "item": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales" }
+            ]
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales#webpage",
+            "url": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales",
+            "name": "Your Shopify Store Is Costing You $75K/Year in Lost Sales",
+            "description": "Every second your store takes to load costs you customers. We calculated exactly how much revenue you're losing from slow Shopify speed.",
+            "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
+            "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
+            "datePublished": "2026-02-10",
+            "dateModified": "2026-02-10",
+            "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales#breadcrumb" },
+            "inLanguage": "en-US"
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://www.pandacodegen.com/#organization",
+            "name": "PandaGen",
+            "alternateName": "PandaGen Code",
+            "url": "https://www.pandacodegen.com",
+            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 512, "height": 512 },
+            "sameAs": ["https://twitter.com/pandacodegen", "https://linkedin.com/company/pandagen"],
+            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" }
+        }
+    ]
 };
 
 export default function ShopifySlowPage() {
