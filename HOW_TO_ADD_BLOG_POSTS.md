@@ -902,11 +902,21 @@ For posts in Weeks 5-13, follow the same structure as above. Key points for each
 
 ## Illustration Types Reference
 
-### Current Assignments (All 11 Existing Posts Use Unique Types)
+⚠️ **CRITICAL: NEVER REUSE THE SAME ILLUSTRATION TYPE AS AN EXISTING POST!**
+
+**Before adding a blog post:**
+1. **CHECK THIS TABLE** to see which illustration types are already used
+2. Choose a DIFFERENT type that matches your post's theme
+3. If no existing type fits, add a new one (see "Adding New Illustration Types" below)
+
+**Why this matters:** Duplicate illustration types make blog posts look identical on the listing page, confusing users and making the site look unprofessional.
+
+### Current Assignments (Each Post Must Have a Unique Type)
 
 | Type | Visual | Currently Used By | Best For |
 |------|--------|-------------------|----------|
 | `'wordpress'` | Red shield with falling $$$ | "wordpress-killer" | WordPress critiques, platform costs |
+| `'security'` | Purple shield with alerts | "wordpress-ai-security-risk-2026" | Security vulnerabilities, hacking, breaches |
 | `'speed'` | Green "0.8-1.2s" display | "how-to-achieve-100-pagespeed" | Speed optimization, performance targets |
 | `'code'` | Orange nested HTML snippet | "elementor-kills-seo" | Code quality, page builder bloat |
 | `'saas'` | Blue layered icon | "shopify-headless" | SaaS platforms, Shopify architecture |
@@ -918,12 +928,16 @@ For posts in Weeks 5-13, follow the same structure as above. Key points for each
 | `'cost'` | Yellow dollar bills stacking | "shopify-plus-still-slow" | Platform costs, expenses |
 | `'performance'` | Purple/cyan bars "4.2s→0.9s" | "how-to-fix-slow-wordpress" | Performance, before/after |
 
-### For New Posts — Reuse Illustration Types by Theme Match
+### For New Posts — Choose an Unused Type by Theme Match
 
-| New Post Topic | Recommended Type |
+**STEP 1:** Check the table above to see which types are ALREADY USED
+**STEP 2:** Choose a type from the list below that's NOT in use
+**STEP 3:** If all relevant types are used, add a new one
+
+| New Post Topic | Recommended Types (Pick One That's Not Used) |
 |---------------|-----------------|
 | VS Comparison posts | `'code'` or `'ranking'` |
-| Security/hacking posts | `'wordpress'` |
+| Security/hacking posts | `'security'` (⚠️ NOW USED) or add new type |
 | Cost/pricing posts | `'cost'` |
 | Speed/performance posts | `'speed'` or `'performance'` |
 | E-commerce posts | `'saas'` or `'sales'` |

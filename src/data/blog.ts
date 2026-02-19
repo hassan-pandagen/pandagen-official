@@ -1,5 +1,5 @@
 // Centralized blog data - Add new posts here and they'll automatically appear in sitemap
-export type IllustrationType = 'wordpress' | 'speed' | 'code' | 'saas' | 'plugins' | 'traffic' | 'sales' | 'conversion' | 'ranking' | 'cost' | 'performance';
+export type IllustrationType = 'wordpress' | 'speed' | 'code' | 'saas' | 'plugins' | 'traffic' | 'sales' | 'conversion' | 'ranking' | 'cost' | 'performance' | 'security';
 
 export interface FAQ {
   question: string;
@@ -22,6 +22,41 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    id: "wordpress-ai-security-risk-2026",
+    title: "WordPress AI Security Risk: 100K+ Sites Exposed Through Plugin Vulnerabilities",
+    excerpt: "Is WordPress AI safe for business? WordPress 6.9 AI features exposed 100K+ sites through plugin security flaws. What you need to know to protect your site in 2026.",
+    category: "Security",
+    readTime: "9 min",
+    date: "Feb 19",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: true,
+    illustrationType: 'security',
+    lastModified: "2026-02-20",
+    faqs: [
+      {
+        question: "What is WordPress 6.9 Abilities API?",
+        answer: "WordPress 6.9's Abilities API is a new system that lets AI agents (like Claude, ChatGPT, and Cursor) interact with your WordPress site through plugins. Every plugin can now register abilities that AI tools can call to create posts, manage users, pull reports, and run commands. It uses the Model Context Protocol (MCP) to expose plugin functionality to external AI applications."
+      },
+      {
+        question: "Is WordPress AI safe to use?",
+        answer: "WordPress AI features in version 6.9 introduce significant security risks if not properly configured. The AI Engine plugin vulnerability (CVE-2025-11749) exposed 100K+ sites to complete admin takeover through leaked MCP bearer tokens. To use WordPress AI safely, you need to understand JWT token management, OAuth 2.1 authentication, REST API security, and per-plugin permission scoping."
+      },
+      {
+        question: "What was the WordPress AI Engine plugin vulnerability?",
+        answer: "CVE-2025-11749 affected AI Engine plugin versions up to 3.1.3. When the No-Auth URL feature was enabled, the plugin exposed MCP bearer tokens through the /wp-json/ REST API endpoint. Attackers could harvest these tokens and use them to run privileged commands like wp_update_user, escalating their access to full administrator level and compromising the entire site."
+      },
+      {
+        question: "How many plugins can become AI endpoints in WordPress?",
+        answer: "Every WordPress plugin can now register abilities and become an AI endpoint. The average WordPress site runs 20-30 plugins, meaning you potentially have 20-30 AI entry points. Each plugin that registers an ability becomes a potential security vulnerability if the permission callbacks, authentication flows, or endpoint exposure aren't properly configured."
+      },
+      {
+        question: "Should I use WordPress for sites that handle sensitive data?",
+        answer: "If your site processes payments, stores customer data, or drives real business revenue, WordPress's new AI features add unnecessary security complexity. Custom-built sites let you explicitly define every AI integration point with intentional security controls, while WordPress bolts AI features onto an existing plugin architecture with 20-30+ potential entry points."
+      }
+    ]
+  },
   {
     id: "wordpress-killer",
     title: "Why WordPress Is a Waste of Money in 2026",

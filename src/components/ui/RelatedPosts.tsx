@@ -29,8 +29,8 @@ export default function RelatedPosts({
   if (relatedPosts.length === 0) return null;
 
   return (
-    <div className="mt-16 pt-16 border-t border-white/10">
-      <h2 className="text-2xl font-bold mb-8 text-white">Related Articles</h2>
+    <div className="max-w-6xl mx-auto px-6 mt-20 pt-16 border-t border-white/10">
+      <h2 className="text-3xl md:text-4xl font-bold mb-10 text-white">Related Articles</h2>
       <div className="grid gap-6 md:grid-cols-3">
         {relatedPosts.map((post) => (
           <Link

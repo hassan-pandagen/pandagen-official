@@ -381,6 +381,44 @@ const PerformanceIllustration = () => (
   </div>
 );
 
+const SecurityIllustration = () => (
+  <div className="w-full h-full bg-purple-950/20 relative overflow-hidden flex items-center justify-center">
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(168,85,247,0.2),transparent_70%)]" />
+
+    {/* Warning symbols floating */}
+    {[...Array(4)].map((_, i) => (
+      <motion.div
+        key={i}
+        animate={{
+          y: [-15, 15],
+          opacity: [0.3, 0.6, 0.3]
+        }}
+        transition={{
+          duration: 2 + i * 0.3,
+          repeat: Infinity,
+          delay: i * 0.5
+        }}
+        className="absolute text-red-500/30"
+        style={{
+          left: `${15 + i * 25}%`,
+          top: `${30 + (i % 2) * 30}%`
+        }}
+      >
+        <ShieldAlert className="w-6 h-6" />
+      </motion.div>
+    ))}
+
+    <div className="z-10 bg-purple-900/20 border border-purple-500/50 p-5 rounded-xl backdrop-blur-md relative">
+      <ShieldCheck className="w-14 h-14 text-purple-400 drop-shadow-[0_0_15px_rgba(168,85,247,0.6)]" />
+      <motion.div
+        animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0, 0.5] }}
+        transition={{ duration: 2, repeat: Infinity }}
+        className="absolute inset-0 border-2 border-purple-400/50 rounded-xl"
+      />
+    </div>
+  </div>
+);
+
 // Map illustration types to components
 const getIllustration = (type: IllustrationType) => {
   const illustrations = {
@@ -395,6 +433,7 @@ const getIllustration = (type: IllustrationType) => {
     ranking: <RankingIllustration />,
     cost: <CostIllustration />,
     performance: <PerformanceIllustration />,
+    security: <SecurityIllustration />,
   };
   return illustrations[type];
 };
