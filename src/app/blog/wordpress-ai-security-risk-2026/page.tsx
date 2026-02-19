@@ -8,8 +8,8 @@ import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote } from "@/comp
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: { absolute: "WordPress AI Security Risk 2026: Is Your Site Safe from AI Vulnerabilities? | PandaGen" },
-    description: "100K+ WordPress sites exposed to hackers through AI plugin vulnerabilities. Learn why WordPress 6.9 AI features create security risks and what business owners must know to protect their sites in 2026.",
+    title: { absolute: "WordPress AI Security 2026: 100K+ Sites Exposed | PandaGen" },
+    description: "100K+ WordPress sites exposed through AI plugin flaws. Why WordPress 6.9 AI features create security risks & what business owners must know in 2026.",
     alternates: {
         canonical: '/blog/wordpress-ai-security-risk-2026',
     },
