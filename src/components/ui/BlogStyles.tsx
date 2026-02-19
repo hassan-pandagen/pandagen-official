@@ -1,8 +1,8 @@
 import React from "react";
 
-export function BlogHeader({ children }: { children: React.ReactNode }) {
+export function BlogHeader({ children, id }: { children: React.ReactNode; id?: string }) {
   return (
-    <h2 className="text-3xl md:text-4xl font-bold text-white mt-16 mb-6 leading-tight border-l-4 border-neon pl-6">
+    <h2 id={id} className="text-3xl md:text-4xl font-bold text-white mt-16 mb-6 leading-tight border-l-4 border-neon pl-6">
       {children}
     </h2>
   );
