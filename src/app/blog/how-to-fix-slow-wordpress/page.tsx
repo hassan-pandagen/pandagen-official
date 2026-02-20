@@ -92,6 +92,52 @@ const articleSchema = {
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 512, "height": 512 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://linkedin.com/company/pandagen"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" }
+        },
+        {
+            "@type": "FAQPage",
+            "@id": "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress#faq",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Why is my WordPress site so slow?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "WordPress sites are slow because of plugin bloat, unoptimized images, theme overhead, and old PHP architecture. Each plugin adds 2-15 HTTP requests. With 30+ plugins, you're loading 200+ files before visitors see anything. The average WordPress site takes 3.8 seconds to load."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How many plugins are too many?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "More than 10-15 plugins will slow your site noticeably. Each plugin adds code, CSS, JavaScript, and database queries. Even 'lightweight' plugins add 50-150KB. Security plugins alone can add 0.5-1 second to load time."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can I make WordPress load in under 1 second?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "No. Even with perfect optimization, WordPress struggles to break 1.5 seconds. The architecture is from 2003 and wasn't designed for modern performance standards. To get sub-1-second load times, you need to migrate to a modern framework like Next.js."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What's the fastest way to speed up WordPress?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "The fastest improvement: Remove unused plugins (can save 1-2 seconds). Then optimize images with WebP format and lazy loading (saves 1-2 seconds). Add caching (saves 0.5-1 second). But you'll hit a ceiling around 2-2.5 seconds no matter what you do."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Should I migrate from WordPress to something else?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "If your business depends on speed and SEO rankings, yes. WordPress optimization has diminishing returns. Migrating to Next.js gets you 0.8-1.2 second load times, 95-100 PageSpeed scores, and 2-3× more organic traffic within 90 days. ROI typically pays for migration within 3-6 months."
+                    }
+                }
+            ]
         }
     ]
 };

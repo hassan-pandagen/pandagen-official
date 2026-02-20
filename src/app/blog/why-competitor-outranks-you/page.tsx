@@ -92,6 +92,52 @@ const articleSchema = {
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 512, "height": 512 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://linkedin.com/company/pandagen"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" }
+        },
+        {
+            "@type": "FAQPage",
+            "@id": "https://www.pandacodegen.com/blog/why-competitor-outranks-you#faq",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Why does my competitor rank higher on Google than me?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Your competitor likely ranks higher because their website loads faster. In 2021, Google made speed a direct ranking factor. When two sites have similar content, Google ranks the faster one higher. If your WordPress/Shopify site loads in 3.8 seconds and your competitor's coded site (Next.js) loads in 1.2 seconds, Google shows their site first. This can result in 20-30 position differences in search rankings."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Does website speed really affect Google rankings?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. Google made Core Web Vitals (speed metrics) a direct ranking factor in 2021. Fast sites moved up 20-30 positions while slow sites dropped. Modern search engines including Google, Bing, ChatGPT, and Perplexity all prioritize fast sites with clean code. A 3× speed difference can mean the difference between page 1 (#3 ranking) and page 2 (#14 ranking), which translates to 3× more traffic for the faster site."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can I optimize my WordPress site to rank better on Google?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "WordPress optimization has a ceiling. You can compress images, remove plugins, and enable caching, but the best-optimized WordPress site still loads in 2.0-2.5 seconds. A basic coded website (Next.js) loads in 0.8-1.2 seconds with zero optimization. WordPress is built on 21-year-old technology that requires plugins for basic features. You can make WordPress faster, but you can't make it fast enough to compete with modern coded websites."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How much does a coded website cost compared to WordPress hosting?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "A coded Next.js website costs $8,000-$25,000 one-time to build, but hosting costs only $0-$20/month on Vercel. WordPress requires expensive hosting (WP Engine, Kinsta) at $100-$400/month. Over 12 months, WordPress hosting costs $1,200-$4,800 while Next.js hosting costs $0-$240. The coded website saves $960-$4,560 annually in hosting costs while delivering 3× more traffic and better Google rankings."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How long does it take to see SEO improvements after switching to a faster website?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "You can expect to see Google ranking improvements within 60-90 days after migrating to a coded website. The migration itself takes 4-8 weeks for most sites. After launch, Google needs 2-3 months to re-crawl and re-index your site at the new speed. Most businesses see their rankings jump 15-30 positions within this timeframe, resulting in 2-4× more organic traffic. The investment typically pays for itself in 2-6 months through hosting savings and increased conversions."
+                    }
+                }
+            ]
         }
     ]
 };

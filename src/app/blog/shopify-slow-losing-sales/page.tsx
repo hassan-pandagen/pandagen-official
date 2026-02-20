@@ -92,6 +92,36 @@ const articleSchema = {
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 512, "height": 512 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://linkedin.com/company/pandagen"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" }
+        },
+        {
+            "@type": "FAQPage",
+            "@id": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales#faq",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "How much money am I losing from a slow Shopify store?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "A $500K/year Shopify store with 3+ second load times loses $75K-$150K annually. Research shows every 0.1 second delay reduces conversions by 8%. If your store is 3 seconds slower than competitors, you're losing 60-70% of potential conversions. This translates to $6,000-$12,000 in lost monthly revenue."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Why is my Shopify store so slow on mobile?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Shopify themes are built on Liquid templates which process everything server-side, creating unavoidable delays. Mobile devices have slower processors and network speeds, making this worse. App bloat, unoptimized images, and theme overhead compound the problem. 53% of mobile users leave if a page takes more than 3 seconds to load."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How do I speed up my Shopify store?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Theme optimization (image compression, removing apps, faster themes) provides minimal improvement because all Shopify themes share the same slow foundation. The real solution is a headless custom storefront using Next.js connected to your Shopify backend. This separates the fast frontend from the backend, keeping Shopify's excellent inventory/payment systems while replacing the slow customer-facing interface. Typical results: 3.8s → 0.9s load time, 38 → 97 mobile score."
+                    }
+                }
+            ]
         }
     ]
 };

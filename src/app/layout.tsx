@@ -23,6 +23,9 @@ export const metadata: Metadata = {
     template: "%s | PandaGen",
   },
   description: "We migrate WordPress & Shopify sites to custom Next.js architectures. Sub-second load times. Zero bloat. Enterprise-grade security and SEO.",
+  alternates: {
+    canonical: '/',
+  },
   icons: {
     icon: [
       { url: '/favicon.ico' },
