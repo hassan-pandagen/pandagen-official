@@ -1,11 +1,14 @@
-import { ArrowLeft, Calendar, Clock, ShieldCheck, ArrowRight, Zap, CheckCircle2, DollarSign, ChevronRight } from "lucide-react";
+import { Calendar, Clock, ShieldCheck, ArrowRight, Zap, CheckCircle2, DollarSign, ChevronRight } from "lucide-react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, ComparisonTable } from "@/components/ui/BlogStyles";
+import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
-import RelatedPosts from "@/components/ui/RelatedPosts";
 import type { Metadata } from "next";
+
+const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 
 // --- SEO METADATA ---
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -1259,6 +1262,7 @@ export default async function BlogPost(props: PageProps) {
                     "name": post.author,
                     "jobTitle": post.role,
                     "url": `https://www.pandacodegen.com/about/${post.author.toLowerCase()}`,
+                    "image": { "@type": "ImageObject", "url": `https://www.pandacodegen.com/team/${post.author.toLowerCase()}.png`, "width": 400, "height": 400 },
                     "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
                 },
                 "publisher": {
@@ -1469,6 +1473,11 @@ export default async function BlogPost(props: PageProps) {
                     <article>
                         {post.content}
                     </article>
+
+                    {/* FAQ Section — renders FAQs from blog.ts data, powers featured snippets */}
+                    {blogPostData?.faqs && blogPostData.faqs.length > 0 && (
+                        <FAQAccordion faqs={blogPostData.faqs} />
+                    )}
 
                     {/* Guarantee CTA */}
                     <GuaranteeCTA />

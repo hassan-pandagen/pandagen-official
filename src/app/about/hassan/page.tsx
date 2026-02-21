@@ -43,10 +43,6 @@ const personSchema = {
                 "@id": "https://www.pandacodegen.com/#organization",
                 "name": "PandaCodeGen"
             },
-            "alumniOf": {
-                "@type": "CollegeOrUniversity",
-                "name": "Karachi University"
-            },
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Missouri City",
@@ -111,7 +107,10 @@ export default function HassanAuthorPage() {
     const hassanPosts = blogPosts.filter(p => p.author === "Hassan");
 
     return (
-        <main className="bg-[#050505] min-h-screen text-white">
+        <main className="bg-transparent min-h-screen text-white">
+            {/* Global Noise Texture */}
+            <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-20 mix-blend-overlay" />
+
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
 
             <Header />
@@ -149,7 +148,7 @@ export default function HassanAuthorPage() {
                             </div>
                             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-2">Hassan Jamal</h1>
                             <p className="text-neon font-mono text-lg mb-1">Founder &amp; Lead Full-Stack Engineer</p>
-                            <p className="text-gray-500 text-sm mb-6">PandaCodeGen &middot; Karachi University &middot; Missouri City, TX</p>
+                            <p className="text-gray-500 text-sm mb-6">PandaCodeGen &middot; Missouri City, TX</p>
 
                             <p className="text-gray-300 text-lg leading-relaxed max-w-xl">
                                 I help e-commerce brands ditch Shopify fees and WordPress bloat with high-performance custom code. One client was paying $3,200/month on Shopify Plus. Their storefront scored 31 on Google PageSpeed. We migrated them to a custom build. Same features. Zero app fees. PageSpeed went from 31 to 92.

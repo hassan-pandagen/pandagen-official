@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/layout/SmoothScroll";
@@ -96,6 +96,12 @@ export const metadata: Metadata = {
   },
   // Add your Google Search Console HTML tag verification code here:
   // verification: { google: "YOUR_ACTUAL_CODE_HERE" },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 export default function RootLayout({

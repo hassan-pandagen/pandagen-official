@@ -1,11 +1,14 @@
-import { ArrowLeft, Calendar, Clock, ArrowRight, Zap, CheckCircle2, TrendingUp, Award } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import RelatedPosts from "@/components/ui/RelatedPosts";
 import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote } from "@/components/ui/BlogStyles";
+import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import type { Metadata } from "next";
+
+const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 
 export const metadata: Metadata = {
     title: "How to Achieve 100/100 PageSpeed Score: Complete Next.js Guide",
@@ -46,6 +49,7 @@ const articleSchema = {
                 "name": "Hassan Jamal",
                 "jobTitle": "Lead Full-Stack Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
+                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
             },
             "publisher": {
@@ -60,6 +64,24 @@ const articleSchema = {
             "keywords": ["PageSpeed score", "Core Web Vitals", "Next.js performance", "website speed optimization", "100 PageSpeed", "LCP optimization"],
             "timeRequired": "PT12M",
             "inLanguage": "en-US"
+        },
+        {
+            "@type": "HowTo",
+            "@id": "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed#howto",
+            "name": "How to Achieve 100/100 PageSpeed Score",
+            "description": "The exact 8-step optimization process we use to achieve 98-100/100 PageSpeed scores on every client site.",
+            "totalTime": "PT6W",
+            "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "15000" },
+            "step": [
+                { "@type": "HowToStep", "position": 1, "name": "Image Optimization", "text": "Use next/image component. Automatically serves WebP/AVIF (50% smaller). Responsive images for mobile vs desktop. Lazy loading for below-the-fold images." },
+                { "@type": "HowToStep", "position": 2, "name": "Font Optimization", "text": "Use next/font to self-host Google Fonts. Fonts preloaded during build, served instantly. No external requests, no FOIT (Flash of Invisible Text)." },
+                { "@type": "HowToStep", "position": 3, "name": "JavaScript Optimization", "text": "Code splitting: only load JS needed for current page. Tree shaking: remove unused code. Dynamic imports for heavy features. Server components send zero JS to browser." },
+                { "@type": "HowToStep", "position": 4, "name": "CSS Optimization", "text": "Tailwind CSS with tree-shaking: only CSS you use gets shipped. Critical CSS inlined for above-the-fold. No render-blocking CSS." },
+                { "@type": "HowToStep", "position": 5, "name": "Lazy Loading Everything", "text": "Lazy load below-the-fold components. Defer third-party scripts until user interaction. Only load what is visible on screen." },
+                { "@type": "HowToStep", "position": 6, "name": "Edge Caching & CDN", "text": "Deploy to Vercel Edge Network (300+ locations). Pages pre-built and cached at edge. Zero server computation on page load." },
+                { "@type": "HowToStep", "position": 7, "name": "Remove Third-Party Scripts", "text": "Defer all third-party scripts until after page load. Load on user interaction instead of page load. Use lightweight alternatives like Plausible vs Google Analytics." },
+                { "@type": "HowToStep", "position": 8, "name": "Server Components", "text": "Move data fetching and complex UI logic to the server. Send pre-rendered HTML to the browser. Zero client JavaScript for static content." }
+            ]
         },
         {
             "@type": "BreadcrumbList",
@@ -92,6 +114,17 @@ const articleSchema = {
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 512, "height": 512 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://linkedin.com/company/pandagen"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" }
+        },
+        {
+            "@type": "FAQPage",
+            "@id": "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed#faq",
+            "mainEntity": [
+                { "@type": "Question", "name": "What is a good PageSpeed score?", "acceptedAnswer": { "@type": "Answer", "text": "A good PageSpeed score is 90-100 (green). Scores of 50-89 (orange) mean you're losing 10-15% of traffic to faster competitors. Scores of 0-49 (red) mean you're losing 20-30% of organic traffic and ranking lower on Google." } },
+                { "@type": "Question", "name": "How do I check my PageSpeed score?", "acceptedAnswer": { "@type": "Answer", "text": "Go to pagespeed.web.dev, enter your URL, and click Analyze. Check your Mobile score (this is what matters for SEO). If it's below 70, you're losing traffic and rankings to faster competitors." } },
+                { "@type": "Question", "name": "Can WordPress get 100/100 PageSpeed score?", "acceptedAnswer": { "@type": "Answer", "text": "No. WordPress can reach 60-75 at best, even when fully optimized. The architecture is too old. To hit 95-100, you need modern frameworks like Next.js with built-in optimization, code splitting, and server components." } },
+                { "@type": "Question", "name": "How long does it take to improve PageSpeed score?", "acceptedAnswer": { "@type": "Answer", "text": "On WordPress: 2-4 weeks to go from 40 to 70, but you'll hit a ceiling. Migrating to Next.js: 4-6 weeks from start to 95-100 score. Once optimized, rankings improve within 30-90 days as Google re-crawls your faster pages." } },
+                { "@type": "Question", "name": "Does PageSpeed score affect SEO?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, directly. Google made Core Web Vitals (what PageSpeed measures) a ranking factor in 2021. Fast sites (90-100 score) rank 20-30 positions higher than slow sites (0-49 score) with identical content. PageSpeed = rankings = traffic." } }
+            ]
         }
     ]
 };
@@ -629,6 +662,15 @@ export default function AchievePageSpeedPage() {
                             Schedule Free Audit <ArrowRight className="w-5 h-5" />
                         </a>
                     </div>
+
+                    {/* FAQ Section */}
+                    <FAQAccordion faqs={[
+                        { question: "What is a good PageSpeed score?", answer: "A good PageSpeed score is 90-100 (green). Scores of 50-89 (orange) mean you're losing 10-15% of traffic to faster competitors. Scores of 0-49 (red) mean you're losing 20-30% of organic traffic and ranking lower on Google." },
+                        { question: "How do I check my PageSpeed score?", answer: "Go to pagespeed.web.dev, enter your URL, and click Analyze. Check your Mobile score (this is what matters for SEO). If it's below 70, you're losing traffic and rankings to faster competitors." },
+                        { question: "Can WordPress get 100/100 PageSpeed score?", answer: "No. WordPress can reach 60-75 at best, even when fully optimized. The architecture is too old. To hit 95-100, you need modern frameworks like Next.js with built-in optimization, code splitting, and server components." },
+                        { question: "How long does it take to improve PageSpeed score?", answer: "On WordPress: 2-4 weeks to go from 40 to 70, but you'll hit a ceiling. Migrating to Next.js: 4-6 weeks from start to 95-100 score. Once optimized, rankings improve within 30-90 days as Google re-crawls your faster pages." },
+                        { question: "Does PageSpeed score affect SEO?", answer: "Yes, directly. Google made Core Web Vitals (what PageSpeed measures) a ranking factor in 2021. Fast sites (90-100 score) rank 20-30 positions higher than slow sites (0-49 score) with identical content. PageSpeed = rankings = traffic." }
+                    ]} />
 
                     {/* Related Posts */}
                     <RelatedPosts currentPostId="how-to-achieve-100-pagespeed" category="Performance" />

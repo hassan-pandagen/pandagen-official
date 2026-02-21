@@ -68,7 +68,7 @@ export default function AboutPage() {
   };
 
   return (
-    <main className="bg-[#050505] min-h-screen selection:bg-neon selection:text-black overflow-x-hidden relative">
+    <main className="bg-transparent min-h-screen selection:bg-neon selection:text-black overflow-x-hidden relative">
       {/* Schema.org JSON-LD */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }} />
 
@@ -143,7 +143,7 @@ export default function AboutPage() {
             <div className="group relative bg-[#0A0A0A] border border-white/10 rounded-3xl overflow-hidden hover:border-blue-500/50 transition-colors duration-500">
                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-10" />
                <div className="h-96 w-full relative">
-                  <Image src="/team/imran.png" fill alt="Imran" className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700" />
+                  <Image src="/team/imran.png" fill alt="Imran - Lead Solutions Architect at PandaGen" className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700" />
                </div>
                <div className="absolute bottom-0 left-0 w-full p-8 z-20">
                   <div className="px-3 py-1 bg-blue-500/20 text-blue-400 text-[10px] font-bold uppercase tracking-wider rounded w-fit mb-2">Strategy</div>

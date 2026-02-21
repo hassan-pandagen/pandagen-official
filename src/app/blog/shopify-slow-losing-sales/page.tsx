@@ -1,11 +1,17 @@
-import { ArrowLeft, Calendar, Clock, ShieldCheck, ArrowRight, Zap, CheckCircle2, DollarSign, ChevronRight } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import RelatedPosts from "@/components/ui/RelatedPosts";
 import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, ComparisonTable } from "@/components/ui/BlogStyles";
+import { FAQAccordion } from "@/components/ui/FAQAccordion";
+import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
+
+const shopifyLostSalesFAQs = blogPosts.find(p => p.id === 'shopify-slow-losing-sales')?.faqs ?? [];
+
+const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 
 export const metadata: Metadata = {
     title: { absolute: "Your Shopify Store Is Costing You $75K/Year in Lost Sales | PandaGen" },
@@ -46,6 +52,7 @@ const articleSchema = {
                 "name": "Hassan Jamal",
                 "jobTitle": "Lead Full-Stack Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
+                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
             },
             "publisher": {
@@ -449,6 +456,9 @@ export default function ShopifySlowPage() {
                             The math is simple. The decision should be too.
                         </BlogText>
                     </div>
+
+                    {/* FAQ Section */}
+                    {shopifyLostSalesFAQs.length > 0 && <FAQAccordion faqs={shopifyLostSalesFAQs} />}
 
                     {/* CTA Section */}
                     <div className="bg-white/5 border border-white/10 rounded-lg p-8 mt-16 text-center">

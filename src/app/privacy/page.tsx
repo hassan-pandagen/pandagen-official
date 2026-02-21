@@ -6,7 +6,8 @@ import { motion } from "framer-motion";
 
 export default function PrivacyPage() {
   return (
-    <main className="bg-[#050505] min-h-screen selection:bg-neon selection:text-black">
+    <main className="bg-transparent min-h-screen selection:bg-neon selection:text-black">
+      <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-20 mix-blend-overlay" />
       <Header />
       
       <div className="pt-32 pb-20 px-6">

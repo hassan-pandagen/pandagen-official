@@ -1,11 +1,17 @@
 import { ArrowLeft, Calendar, Clock, ArrowRight, Shield, AlertTriangle, CheckCircle2, ExternalLink, Lock, Code2 } from "lucide-react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import RelatedPosts from "@/components/ui/RelatedPosts";
 import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote } from "@/components/ui/BlogStyles";
+import { FAQAccordion } from "@/components/ui/FAQAccordion";
+import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
+
+const aiSecurityFAQs = blogPosts.find(p => p.id === 'wordpress-ai-security-risk-2026')?.faqs ?? [];
+
+const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 
 export const metadata: Metadata = {
     title: { absolute: "WordPress AI Security 2026: 100K+ Sites Exposed | PandaGen" },
@@ -47,6 +53,7 @@ const articleSchema = {
                 "name": "Hassan Jamal",
                 "jobTitle": "Lead Full-Stack Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
+                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
             },
             "publisher": {
@@ -585,6 +592,9 @@ export default function WordPressAISecurityPage() {
                     </div>
 
                 </article>
+
+                {/* FAQ Section */}
+                {aiSecurityFAQs.length > 0 && <FAQAccordion faqs={aiSecurityFAQs} />}
 
                 {/* Related Posts */}
                 <RelatedPosts currentPostId="wordpress-ai-security-risk-2026" category="Security" />

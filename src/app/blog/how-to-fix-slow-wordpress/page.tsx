@@ -1,11 +1,14 @@
-import { ArrowLeft, Calendar, Clock, ArrowRight, AlertTriangle, CheckCircle2, XCircle, Zap } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import RelatedPosts from "@/components/ui/RelatedPosts";
 import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote } from "@/components/ui/BlogStyles";
+import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import type { Metadata } from "next";
+
+const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 
 export const metadata: Metadata = {
     title: { absolute: "How to Fix a Slow WordPress Site: 8 Ways That Work | PandaGen" },
@@ -46,6 +49,7 @@ const articleSchema = {
                 "name": "Hassan Jamal",
                 "jobTitle": "Lead Full-Stack Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
+                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
             },
             "publisher": {
@@ -60,6 +64,23 @@ const articleSchema = {
             "keywords": ["slow WordPress", "WordPress speed optimization", "fix slow WordPress", "WordPress performance", "WordPress vs Next.js", "Core Web Vitals"],
             "timeRequired": "PT10M",
             "inLanguage": "en-US"
+        },
+        {
+            "@type": "HowTo",
+            "@id": "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress#howto",
+            "name": "How to Fix a Slow WordPress Site",
+            "description": "8 proven methods to speed up WordPress, ranked by impact — with realistic time savings for each.",
+            "totalTime": "PT20H",
+            "step": [
+                { "@type": "HowToStep", "position": 1, "name": "Remove Unused Plugins", "text": "Go to Plugins → Installed Plugins. Deactivate and delete plugins you haven't used in 30 days. Every plugin removed saves 2-15 HTTP requests per page load." },
+                { "@type": "HowToStep", "position": 2, "name": "Optimize Images", "text": "Install ShortPixel or Imagify. Compress all images to WebP format (50-70% smaller). Enable lazy loading so images below the fold don't load until scrolled." },
+                { "@type": "HowToStep", "position": 3, "name": "Enable Caching", "text": "Install WP Rocket ($49/year) or W3 Total Cache (free). Enable page caching, browser caching, and object caching to reduce server queries per visit." },
+                { "@type": "HowToStep", "position": 4, "name": "Use Global Servers (CDN)", "text": "Sign up for Cloudflare (free tier). Connect your website. Your site gets copied to 300+ servers worldwide so visitors load from the nearest location." },
+                { "@type": "HowToStep", "position": 5, "name": "Compress Files", "text": "Install Autoptimize or WP Rocket. Enable CSS/JS minification to remove extra whitespace. Combine small files into fewer requests." },
+                { "@type": "HowToStep", "position": 6, "name": "Database Optimization", "text": "Install WP-Optimize. Delete post revisions, remove spam comments, clean transients. Schedule weekly automatic cleanup." },
+                { "@type": "HowToStep", "position": 7, "name": "Choose Better Hosting", "text": "Switch from shared hosting to managed WordPress hosting: Kinsta ($35/mo), WP Engine ($30/mo), or Flywheel ($25/mo). These include caching and speed-optimized servers." },
+                { "@type": "HowToStep", "position": 8, "name": "Remove Page Builders", "text": "Replace Elementor, Divi, or WPBakery with a lightweight theme (GeneratePress, Astra) or Gutenberg blocks. Page builders add 1-2 seconds to every page load." }
+            ]
         },
         {
             "@type": "BreadcrumbList",
@@ -696,6 +717,15 @@ export default function FixSlowWordPressPage() {
                             30-minute call • No commitment • See real before/after speeds
                         </p>
                     </div>
+
+                    {/* FAQ Section */}
+                    <FAQAccordion faqs={[
+                        { question: "Why is my WordPress site so slow?", answer: "WordPress sites are slow because of plugin bloat, unoptimized images, theme overhead, and old PHP architecture. Each plugin adds 2-15 HTTP requests. With 30+ plugins, you're loading 200+ files before visitors see anything. The average WordPress site takes 3.8 seconds to load." },
+                        { question: "How many plugins are too many?", answer: "More than 10-15 plugins will slow your site noticeably. Each plugin adds code, CSS, JavaScript, and database queries. Even 'lightweight' plugins add 50-150KB. Security plugins alone can add 0.5-1 second to load time." },
+                        { question: "Can I make WordPress load in under 1 second?", answer: "No. Even with perfect optimization, WordPress struggles to break 1.5 seconds. The architecture is from 2003 and wasn't designed for modern performance standards. To get sub-1-second load times, you need to migrate to a modern framework like Next.js." },
+                        { question: "What's the fastest way to speed up WordPress?", answer: "The fastest improvement: Remove unused plugins (can save 1-2 seconds). Then optimize images with WebP format and lazy loading (saves 1-2 seconds). Add caching (saves 0.5-1 second). But you'll hit a ceiling around 2-2.5 seconds no matter what you do." },
+                        { question: "Should I migrate from WordPress to something else?", answer: "If your business depends on speed and SEO rankings, yes. WordPress optimization has diminishing returns. Migrating to Next.js gets you 0.8-1.2 second load times, 95-100 PageSpeed scores, and 2-3× more organic traffic within 90 days. ROI typically pays for migration within 3-6 months." }
+                    ]} />
 
                     {/* Related Posts */}
                     <RelatedPosts currentPostId="how-to-fix-slow-wordpress" category="Performance" />

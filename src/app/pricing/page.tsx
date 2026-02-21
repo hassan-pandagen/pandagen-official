@@ -7,7 +7,7 @@ import Footer from "@/components/layout/Footer";
 
 export default function PricingPage() {
   return (
-    <main className="bg-[#050505] min-h-screen selection:bg-neon selection:text-black overflow-x-hidden relative">
+    <main className="bg-transparent min-h-screen selection:bg-neon selection:text-black overflow-x-hidden relative">
       {/* Global Noise Texture */}
       <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-20 mix-blend-overlay"></div>
 
