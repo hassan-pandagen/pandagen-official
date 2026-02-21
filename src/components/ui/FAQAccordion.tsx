@@ -19,15 +19,15 @@ export function FAQAccordion({ faqs }: { faqs: FAQ[] }) {
       >
         Frequently Asked Questions
       </h2>
-      <div className="space-y-3">
+      <div className="space-y-4">
         {faqs.map((faq, i) => (
           <div
             key={i}
-            className="border border-white/10 rounded-xl overflow-hidden bg-white/[0.03] hover:border-white/20 transition-colors"
+            className="border border-white/10 rounded-2xl overflow-hidden bg-[#0f1115] hover:border-neon/30 transition-all duration-200"
           >
             <button
               onClick={() => setOpenIndex(openIndex === i ? null : i)}
-              className="w-full flex items-center justify-between gap-4 p-6 text-left text-white font-semibold text-lg hover:bg-white/5 transition-colors"
+              className="w-full flex items-center justify-between gap-4 p-6 text-left text-white font-semibold text-lg hover:bg-white/[0.03] transition-colors"
               aria-expanded={openIndex === i}
             >
               <span>{faq.question}</span>
@@ -38,7 +38,7 @@ export function FAQAccordion({ faqs }: { faqs: FAQ[] }) {
               />
             </button>
             {openIndex === i && (
-              <div className="px-6 pb-6 text-gray-300 text-lg leading-relaxed border-t border-white/5 pt-4">
+              <div className="px-6 pb-6 text-gray-300 text-base leading-relaxed border-t border-white/10 pt-4">
                 {faq.answer}
               </div>
             )}

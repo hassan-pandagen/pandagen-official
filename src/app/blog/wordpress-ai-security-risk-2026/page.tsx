@@ -594,7 +594,11 @@ export default function WordPressAISecurityPage() {
                 </article>
 
                 {/* FAQ Section */}
-                {aiSecurityFAQs.length > 0 && <FAQAccordion faqs={aiSecurityFAQs} />}
+                {aiSecurityFAQs.length > 0 && (
+                    <div className="max-w-3xl mx-auto px-6">
+                        <FAQAccordion faqs={aiSecurityFAQs} />
+                    </div>
+                )}
 
                 {/* Related Posts */}
                 <RelatedPosts currentPostId="wordpress-ai-security-risk-2026" category="Security" />

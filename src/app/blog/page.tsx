@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Clock, BookOpen, Search, User, ShieldAlert, Layers, ShieldCheck, TrendingDown, DollarSign, Filter, X } from "lucide-react";
+import { ArrowRight, Search, ShieldAlert, Layers, ShieldCheck, TrendingDown, Filter, X, Bot, ShoppingCart, Zap } from "lucide-react";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -419,6 +419,68 @@ const SecurityIllustration = () => (
   </div>
 );
 
+const AICommerceIllustration = () => (
+  <div className="w-full h-full bg-cyan-950/20 relative overflow-hidden flex items-center justify-center">
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_60%,rgba(6,182,212,0.18),transparent_70%)]" />
+
+    {/* Floating product boxes */}
+    {[
+      { label: "Shoes $89", x: "8%",  delay: 0 },
+      { label: "Watch $299", x: "62%", delay: 0.7 },
+      { label: "Bag $149",  x: "35%", delay: 1.4 },
+    ].map(({ label, x, delay }) => (
+      <motion.div
+        key={label}
+        animate={{ y: [-6, 6, -6] }}
+        transition={{ duration: 3, repeat: Infinity, delay, ease: "easeInOut" }}
+        className="absolute top-6 text-[10px] font-bold px-2 py-1 rounded-lg bg-cyan-900/40 border border-cyan-400/30 text-cyan-300"
+        style={{ left: x }}
+      >
+        {label}
+      </motion.div>
+    ))}
+
+    {/* Central robot buying */}
+    <div className="z-10 flex flex-col items-center gap-3">
+      <div className="relative">
+        <div className="bg-cyan-900/30 border border-cyan-400/40 p-4 rounded-2xl backdrop-blur-md">
+          <Bot className="w-12 h-12 text-cyan-400 drop-shadow-[0_0_20px_rgba(6,182,212,0.7)]" />
+        </div>
+        {/* Pulse ring */}
+        <motion.div
+          animate={{ scale: [1, 1.4, 1], opacity: [0.5, 0, 0.5] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="absolute inset-0 border-2 border-cyan-400/40 rounded-2xl"
+        />
+      </div>
+
+      {/* Arrow down to cart */}
+      <motion.div
+        animate={{ opacity: [0.4, 1, 0.4], y: [0, 3, 0] }}
+        transition={{ duration: 1.2, repeat: Infinity }}
+        className="text-cyan-400/60"
+      >
+        <Zap className="w-4 h-4" />
+      </motion.div>
+
+      <div className="flex items-center gap-2 px-3 py-1.5 bg-cyan-500/10 border border-cyan-400/30 rounded-full">
+        <ShoppingCart className="w-4 h-4 text-cyan-400" />
+        <span className="text-[11px] font-bold text-cyan-300 tracking-wide">Purchased</span>
+        <motion.div
+          animate={{ scale: [1, 1.3, 1] }}
+          transition={{ duration: 1, repeat: Infinity }}
+          className="w-2 h-2 rounded-full bg-cyan-400"
+        />
+      </div>
+    </div>
+
+    {/* Bottom label */}
+    <div className="absolute bottom-4 text-[9px] text-cyan-500/60 font-mono tracking-widest uppercase">
+      No website visit required
+    </div>
+  </div>
+);
+
 // Map illustration types to components
 const getIllustration = (type: IllustrationType) => {
   const illustrations = {
@@ -434,6 +496,7 @@ const getIllustration = (type: IllustrationType) => {
     cost: <CostIllustration />,
     performance: <PerformanceIllustration />,
     security: <SecurityIllustration />,
+    aicommerce: <AICommerceIllustration />,
   };
   return illustrations[type];
 };

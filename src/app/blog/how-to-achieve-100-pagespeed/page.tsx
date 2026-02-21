@@ -6,7 +6,10 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
+import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
+
+const pagespeedFAQs = blogPosts.find(p => p.id === 'how-to-achieve-100-pagespeed')?.faqs ?? [];
 
 const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 
@@ -664,13 +667,7 @@ export default function AchievePageSpeedPage() {
                     </div>
 
                     {/* FAQ Section */}
-                    <FAQAccordion faqs={[
-                        { question: "What is a good PageSpeed score?", answer: "A good PageSpeed score is 90-100 (green). Scores of 50-89 (orange) mean you're losing 10-15% of traffic to faster competitors. Scores of 0-49 (red) mean you're losing 20-30% of organic traffic and ranking lower on Google." },
-                        { question: "How do I check my PageSpeed score?", answer: "Go to pagespeed.web.dev, enter your URL, and click Analyze. Check your Mobile score (this is what matters for SEO). If it's below 70, you're losing traffic and rankings to faster competitors." },
-                        { question: "Can WordPress get 100/100 PageSpeed score?", answer: "No. WordPress can reach 60-75 at best, even when fully optimized. The architecture is too old. To hit 95-100, you need modern frameworks like Next.js with built-in optimization, code splitting, and server components." },
-                        { question: "How long does it take to improve PageSpeed score?", answer: "On WordPress: 2-4 weeks to go from 40 to 70, but you'll hit a ceiling. Migrating to Next.js: 4-6 weeks from start to 95-100 score. Once optimized, rankings improve within 30-90 days as Google re-crawls your faster pages." },
-                        { question: "Does PageSpeed score affect SEO?", answer: "Yes, directly. Google made Core Web Vitals (what PageSpeed measures) a ranking factor in 2021. Fast sites (90-100 score) rank 20-30 positions higher than slow sites (0-49 score) with identical content. PageSpeed = rankings = traffic." }
-                    ]} />
+                    {pagespeedFAQs.length > 0 && <FAQAccordion faqs={pagespeedFAQs} />}
 
                     {/* Related Posts */}
                     <RelatedPosts currentPostId="how-to-achieve-100-pagespeed" category="Performance" />

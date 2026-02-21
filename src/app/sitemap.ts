@@ -34,6 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/work', priority: 0.7, changeFrequency: 'weekly' },
     { path: '/about', priority: 0.7, changeFrequency: 'monthly' },
     { path: '/about/hassan', priority: 0.6, changeFrequency: 'monthly' },
+    { path: '/about/imran', priority: 0.6, changeFrequency: 'monthly' },
     { path: '/blog', priority: 0.7, changeFrequency: 'weekly' },
 
     // 4. Boring Stuff (Low Priority)

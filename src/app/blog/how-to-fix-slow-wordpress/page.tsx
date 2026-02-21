@@ -6,7 +6,10 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
+import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
+
+const slowWordPressFAQs = blogPosts.find(p => p.id === 'how-to-fix-slow-wordpress')?.faqs ?? [];
 
 const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 
@@ -719,13 +722,7 @@ export default function FixSlowWordPressPage() {
                     </div>
 
                     {/* FAQ Section */}
-                    <FAQAccordion faqs={[
-                        { question: "Why is my WordPress site so slow?", answer: "WordPress sites are slow because of plugin bloat, unoptimized images, theme overhead, and old PHP architecture. Each plugin adds 2-15 HTTP requests. With 30+ plugins, you're loading 200+ files before visitors see anything. The average WordPress site takes 3.8 seconds to load." },
-                        { question: "How many plugins are too many?", answer: "More than 10-15 plugins will slow your site noticeably. Each plugin adds code, CSS, JavaScript, and database queries. Even 'lightweight' plugins add 50-150KB. Security plugins alone can add 0.5-1 second to load time." },
-                        { question: "Can I make WordPress load in under 1 second?", answer: "No. Even with perfect optimization, WordPress struggles to break 1.5 seconds. The architecture is from 2003 and wasn't designed for modern performance standards. To get sub-1-second load times, you need to migrate to a modern framework like Next.js." },
-                        { question: "What's the fastest way to speed up WordPress?", answer: "The fastest improvement: Remove unused plugins (can save 1-2 seconds). Then optimize images with WebP format and lazy loading (saves 1-2 seconds). Add caching (saves 0.5-1 second). But you'll hit a ceiling around 2-2.5 seconds no matter what you do." },
-                        { question: "Should I migrate from WordPress to something else?", answer: "If your business depends on speed and SEO rankings, yes. WordPress optimization has diminishing returns. Migrating to Next.js gets you 0.8-1.2 second load times, 95-100 PageSpeed scores, and 2-3× more organic traffic within 90 days. ROI typically pays for migration within 3-6 months." }
-                    ]} />
+                    {slowWordPressFAQs.length > 0 && <FAQAccordion faqs={slowWordPressFAQs} />}
 
                     {/* Related Posts */}
                     <RelatedPosts currentPostId="how-to-fix-slow-wordpress" category="Performance" />
