@@ -24,7 +24,9 @@ export default function AboutPage() {
         "description": "Meet the engineers behind PandaGen. We build web assets, not templates. Direct access to architects, fixed pricing, full code ownership.",
         "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
         "about": { "@id": "https://www.pandacodegen.com/#organization" },
-        "inLanguage": "en-US"
+        "inLanguage": "en-US",
+        "datePublished": "2026-01-01",
+        "dateModified": "2026-02-22"
       },
       {
         "@type": "Organization",
@@ -50,7 +52,7 @@ export default function AboutPage() {
           { "@type": "Person", "name": "Imran", "jobTitle": "Lead Solutions Architect" },
           { "@type": "Person", "@id": "https://www.pandacodegen.com/#/schema/person/hassan", "name": "Hassan Jamal", "jobTitle": "Lead Full-Stack Engineer", "url": "https://www.pandacodegen.com/about/hassan", "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"] }
         ],
-        "foundingDate": "2026",
+        "foundingDate": "2026-01-01",
         "numberOfEmployees": { "@type": "QuantitativeValue", "value": 2 },
         "sameAs": [
           "https://twitter.com/pandacodegen",

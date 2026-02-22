@@ -8,6 +8,7 @@ import PreconnectLinks from "@/components/PreconnectLinks";
 import { Analytics } from "@vercel/analytics/react";
 import TawkToChat from "@/components/TawkToChat";
 import FacebookPixel from "@/components/FacebookPixel";
+import MicrosoftClarity from "@/components/MicrosoftClarity";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -122,6 +123,7 @@ export default function RootLayout({
         <CalEmbed />
         <TawkToChat />
         <FacebookPixel />
+        <MicrosoftClarity />
         <SmoothScroll>
           {children}
         </SmoothScroll>

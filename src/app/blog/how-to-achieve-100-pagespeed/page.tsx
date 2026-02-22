@@ -14,14 +14,14 @@ const pagespeedFAQs = blogPosts.find(p => p.id === 'how-to-achieve-100-pagespeed
 const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 
 export const metadata: Metadata = {
-    title: "How to Achieve 100/100 PageSpeed Score: Complete Next.js Guide",
-    description: "We achieve 98-100/100 PageSpeed scores on every client site. Here's the exact 8-step optimization process we use, covering images, fonts, JavaScript, CSS, CDN, and server components.",
+    title: "Google Is Penalizing Your Slow Site. Here's How We Hit 100/100 PageSpeed on Every Build.",
+    description: "Most websites score 35-55/100 on Google PageSpeed — and they're losing customers because of it. Here's the exact 8-step process we use to hit 98-100/100 on every client site.",
     alternates: {
         canonical: '/blog/how-to-achieve-100-pagespeed',
     },
     openGraph: {
-        title: "How to Achieve 100/100 PageSpeed Score: Complete Next.js Guide",
-        description: "We achieve 98-100/100 PageSpeed scores on every client site. Here's the exact optimization process we use, step by step.",
+        title: "Google Is Penalizing Your Slow Site. Here's How We Hit 100/100 PageSpeed on Every Build.",
+        description: "Most websites score 35-55/100 on Google PageSpeed — and they're losing customers because of it. Here's the exact process we use to hit 98-100/100.",
         type: "article",
         publishedTime: "2026-02-17",
         authors: ["Hassan"],
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "How to Achieve 100/100 PageSpeed Score: Complete Next.js Guide",
-        description: "We achieve 98-100/100 PageSpeed scores on every client site. Here's the exact optimization process we use, step by step.",
+        title: "Google Is Penalizing Your Slow Site. Here's How We Hit 100/100 PageSpeed on Every Build.",
+        description: "Most websites score 35-55/100 on Google PageSpeed — and they're losing customers because of it. Here's the exact process we use to hit 98-100/100.",
     },
 };
 

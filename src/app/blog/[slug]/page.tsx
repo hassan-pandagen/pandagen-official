@@ -137,10 +137,10 @@ const blogPosts: Record<
         ),
     },
     "shopify-headless": {
-        title: "Shopify Plus + Next.js: Sub-Second Load Times",
+        title: "Your Shopify Store Loads in 4 Seconds. We Got It to 0.8. Here's Exactly How.",
         subtitle: "We bypassed Liquid limitations to build a storefront that loads in under 1 second. Here is the exact tech stack we used.",
         excerpt:
-            "We bypassed Liquid limitations to build a storefront that loads in under 1 second. Here is the exact tech stack we used.",
+            "Most Shopify stores fail Core Web Vitals because Liquid templates are render-blocking by design. Here's the exact stack we used to cut load time from 4 seconds to 0.8.",
         author: "Hassan",
         role: "Lead Engineer",
         date: "Jan 10, 2026",
@@ -246,10 +246,10 @@ const blogPosts: Record<
         ),
     },
     "wordpress-plugins-destroy-speed": {
-        title: "WordPress Plugins Are Destroying Your Site Speed (And Revenue)",
+        title: "WordPress Slow? Your Plugins Are Killing Speed (And Costing You Customers)",
         subtitle: "30+ plugins means 200+ HTTP requests on every page load. Your visitors leave before they see your homepage.",
         excerpt:
-            "30+ plugins = 200+ HTTP requests. Here's the math your developer won't show you.",
+            "Most WordPress sites with 30+ plugins score 35/100 on mobile PageSpeed. See how to calculate the exact revenue you're losing — and what to do about it.",
         author: "Hassan",
         role: "Lead Engineer",
         date: "Feb 5, 2026",
@@ -392,10 +392,10 @@ const blogPosts: Record<
         ),
     },
     "elementor-kills-seo": {
-        title: "Stop Using Page Builders (Why Elementor Kills SEO)",
+        title: "Is Elementor Killing Your Google Rankings? We Audited 500 Sites. The Results Are Brutal.",
         subtitle: "Visual builders generate 300% more DOM nodes than necessary. We audited 500 sites-here are the results.",
         excerpt:
-            "Visual builders generate 300% more DOM nodes than necessary. We audited 500 sites-here are the results.",
+            "The average Elementor site scores 38/100 on mobile PageSpeed. We audited 500 sites to find out exactly how much traffic and revenue page builders are costing business owners.",
         author: "Hassan",
         role: "Lead Engineer",
         date: "Dec 28, 2025",
@@ -485,10 +485,10 @@ const blogPosts: Record<
         ),
     },
     "shopify-plus-still-slow": {
-        title: "Why Your Shopify Plus Store Still Loads in 4 Seconds",
+        title: "Shopify Plus Still Slow? Why $2,300/mo Doesn't Fix Your Core Web Vitals",
         subtitle: "You're spending $27,600/year on Shopify Plus and still losing 53% of mobile visitors to load time. Here's why-and how to fix it.",
         excerpt:
-            "You're paying $2,300/mo for Shopify Plus and still failing Core Web Vitals. Here's the brutal math.",
+            "53% of mobile visitors leave before your Shopify Plus store loads. We break down the Liquid template problem — and the headless solution that actually works.",
         author: "Imran",
         role: "Lead Architect",
         date: "Feb 6, 2026",

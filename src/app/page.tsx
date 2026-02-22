@@ -70,6 +70,12 @@ export default function Home() {
           "https://twitter.com/pandacodegen",
           "https://linkedin.com/company/pandagen"
         ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "hello@pandacodegen.com",
+          "contactType": "customer service",
+          "availableLanguage": "English"
+        },
         "serviceType": [
           "Next.js Development",
           "WordPress Migration",
@@ -88,7 +94,15 @@ export default function Home() {
         "publisher": {
           "@id": "https://www.pandacodegen.com/#organization"
         },
-        "inLanguage": "en-US"
+        "inLanguage": "en-US",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.pandacodegen.com/blog?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
       },
       {
         "@type": "WebPage",
@@ -102,7 +116,9 @@ export default function Home() {
         "about": {
           "@id": "https://www.pandacodegen.com/#organization"
         },
-        "inLanguage": "en-US"
+        "inLanguage": "en-US",
+        "datePublished": "2026-01-01",
+        "dateModified": "2026-02-22"
       },
       {
         "@type": "ProfessionalService",
