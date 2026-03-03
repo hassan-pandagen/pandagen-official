@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Linkedin, Twitter, Mail, Phone } from "lucide-react";
 import Logo from "@/components/Logo";
 
 interface HeaderProps {
@@ -13,27 +13,43 @@ interface HeaderProps {
 
 const navItems = [
   { name: "Services", href: "/services", hasDropdown: true },
-  { name: "Work", href: "/work" },
+  { name: "Work", href: "/work", hasDropdown: true, dropdownKey: "work" },
   { name: "Pricing", href: "/pricing" },
+  { name: "Partners", href: "/partners" },
   { name: "Blog", href: "/blog" },
-  { name: "About", href: "/about" },
+  { name: "About", href: "/about", hasDropdown: true, dropdownKey: "about" },
 ];
 
 const services = [
   { name: "WordPress Migration", href: "/services/wordpress-migration" },
   { name: "Custom Engineering", href: "/services/custom-engineering" },
   { name: "E-Commerce", href: "/services/ecommerce" },
+  { name: "WooCommerce Migration", href: "/services/woocommerce" },
   { name: "Wix Migration", href: "/services/wix" },
   { name: "Squarespace Migration", href: "/services/squarespace" },
   { name: "Webflow Migration", href: "/services/webflow" },
   { name: "GoHighLevel", href: "/services/gohighlevel" },
 ];
 
+const workLinks = [
+  { name: "All Projects", href: "/work" },
+  { name: "MyCustomPatches — WordPress Migration", href: "/work/mycustompatches" },
+  { name: "Panda Patches — $38K/mo E-Commerce", href: "/work/panda-patches" },
+  { name: "Enterprise Ops Platform", href: "/work/enterprise-ops" },
+  { name: "Panda CodeLab Agency Site", href: "/work/panda-codelab" },
+];
+
+const aboutLinks = [
+  { name: "About PandaGen", href: "/about" },
+  { name: "Hassan Jamal", href: "/about/hassan" },
+  { name: "Imran", href: "/about/imran" },
+];
+
 export default function Header({ onOpenQuote }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [mobileOpenDropdown, setMobileOpenDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,6 +59,11 @@ export default function Header({ onOpenQuote }: HeaderProps) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [isMobileMenuOpen]);
+
   return (
     <>
       <motion.header
@@ -51,7 +72,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
         className={cn(
           "fixed top-0 left-0 right-0 z-[60] transition-all duration-300",
           isScrolled
-            ? "bg-surface/95 backdrop-blur-md border-b border-border py-3"
+            ? "bg-white/95 backdrop-blur-md border-b border-stone-200 py-3 shadow-card"
             : "bg-transparent py-5"
         )}
       >
@@ -64,39 +85,42 @@ export default function Header({ onOpenQuote }: HeaderProps) {
            <nav className="hidden md:flex items-center gap-8">
              {navItems.map((item) => {
                if (item.hasDropdown) {
+                 const dropdownKey = (item as any).dropdownKey || "services";
+                 const dropdownItems = dropdownKey === "about" ? aboutLinks : dropdownKey === "work" ? workLinks : services;
+                 const isOpen = openDropdown === dropdownKey;
                  return (
                    <div
                      key={item.name}
                      className="relative"
-                     onMouseEnter={() => setIsServicesOpen(true)}
-                     onMouseLeave={() => setIsServicesOpen(false)}
+                     onMouseEnter={() => setOpenDropdown(dropdownKey)}
+                     onMouseLeave={() => setOpenDropdown(null)}
                    >
                      <button
                        onClick={() => window.location.href = item.href}
-                       className="text-base font-medium text-gray-300 hover:text-neon transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus tracking-wide flex items-center gap-2 py-2"
+                       className="text-base font-medium text-stone-600 hover:text-cognac transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cognac tracking-wide flex items-center gap-2 py-2"
                      >
                        {item.name}
-                       <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
+                       <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
                      </button>
 
                      {/* Dropdown Menu */}
-                     {isServicesOpen && (
+                     {isOpen && (
                        <motion.div
                          initial={{ opacity: 0, y: -10 }}
                          animate={{ opacity: 1, y: 0 }}
                          exit={{ opacity: 0, y: -10 }}
                          transition={{ duration: 0.2 }}
-                         className="absolute top-full left-0 mt-0 w-56 bg-surface/95 backdrop-blur-md border border-border rounded-lg shadow-lg z-50 pointer-events-auto"
+                         className="absolute top-full left-0 mt-0 w-56 bg-white border border-stone-200 rounded-lg shadow-elevated z-50 pointer-events-auto"
                        >
                          <div className="py-2">
-                           {services.map((service) => (
+                           {dropdownItems.map((dropItem) => (
                              <Link
-                               key={service.name}
-                               href={service.href}
-                               onClick={() => setIsServicesOpen(false)}
-                               className="block px-4 py-3 text-sm font-medium text-gray-300 hover:text-neon hover:bg-white/5 transition-colors"
+                               key={dropItem.name}
+                               href={dropItem.href}
+                               onClick={() => setOpenDropdown(null)}
+                               className="block px-4 py-3 text-sm font-medium text-stone-600 hover:text-cognac hover:bg-stone-50 transition-colors"
                              >
-                               {service.name}
+                               {dropItem.name}
                              </Link>
                            ))}
                          </div>
@@ -105,12 +129,12 @@ export default function Header({ onOpenQuote }: HeaderProps) {
                    </div>
                  );
                }
-               
+
                return (
                  <Link
                    key={item.name}
                    href={item.href}
-                   className="text-base font-medium text-gray-300 hover:text-neon transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus tracking-wide"
+                   className="text-base font-medium text-stone-600 hover:text-cognac transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cognac tracking-wide"
                  >
                    {item.name}
                  </Link>
@@ -119,17 +143,24 @@ export default function Header({ onOpenQuote }: HeaderProps) {
            </nav>
 
           <div className="hidden md:flex items-center gap-4 z-[61]">
+            <a
+              href="tel:+13022504340"
+              className="flex items-center gap-1.5 text-sm font-medium text-stone-600 hover:text-cognac transition-colors tracking-wide"
+            >
+              <Phone className="w-3.5 h-3.5" />
+              +1 (302) 250-4340
+            </a>
             {onOpenQuote ? (
               <button
                 onClick={onOpenQuote}
-                className="px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105 bg-neon text-black hover:bg-[#33e0ff] shadow-[0_0_20px_rgba(34,211,238,0.4)] hover:shadow-[0_0_30px_rgba(34,211,238,0.6)]"
+                className="px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105 bg-charcoal text-white hover:bg-stone-800"
               >
                 Get Free Quote
               </button>
             ) : (
               <Link
                 href="/contact"
-                className="px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105 bg-neon text-black hover:bg-[#33e0ff] shadow-[0_0_20px_rgba(34,211,238,0.4)] hover:shadow-[0_0_30px_rgba(34,211,238,0.6)]"
+                className="px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105 bg-charcoal text-white hover:bg-stone-800"
               >
                 Get Free Quote
               </Link>
@@ -138,7 +169,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden z-[61] p-2 text-white"
+            className="md:hidden z-[61] p-2 text-charcoal"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -150,77 +181,113 @@ export default function Header({ onOpenQuote }: HeaderProps) {
       {/* Mobile Menu Overlay */}
       <div
         className={cn(
-          "fixed inset-0 bg-background z-[50] flex flex-col items-center justify-center gap-8 transition-all duration-300 md:hidden overflow-y-auto",
+          "fixed inset-0 z-[50] flex flex-col md:hidden transition-all duration-300 overflow-hidden",
           isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         )}
       >
-        {navItems.map((item) => {
-           if (item.hasDropdown) {
-             return (
-               <div key={item.name} className="flex flex-col items-center gap-4 w-full">
-                 <button
-                   onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-                   className="text-2xl font-bold text-white hover:text-neon transition-colors flex items-center gap-2"
-                 >
-                   {item.name}
-                   <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isMobileServicesOpen ? 'rotate-180' : ''}`} />
-                 </button>
-                 {isMobileServicesOpen && (
-                   <motion.div 
-                     initial={{ opacity: 0, height: 0 }}
-                     animate={{ opacity: 1, height: 'auto' }}
-                     exit={{ opacity: 0, height: 0 }}
-                     className="flex flex-col items-center gap-2 w-full"
-                   >
-                     {services.map((service) => (
-                       <Link
-                         key={service.name}
-                         href={service.href}
-                         onClick={() => {
-                           setIsMobileMenuOpen(false);
-                           setIsMobileServicesOpen(false);
-                         }}
-                         className="text-sm font-medium text-gray-400 hover:text-neon transition-colors py-2"
-                       >
-                         {service.name}
-                       </Link>
-                     ))}
-                   </motion.div>
-                 )}
-               </div>
-             );
-           }
+        {/* Background layers */}
+        <div className="absolute inset-0 bg-paper" />
+        <div className="absolute inset-0 bg-noise opacity-40 mix-blend-overlay pointer-events-none" />
 
-          return (
-            <Link
-              key={item.name}
-              href={item.href}
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="text-2xl font-bold text-white hover:text-neon transition-colors"
-            >
-              {item.name}
-            </Link>
-          );
-        })}
-        {onOpenQuote ? (
-          <button
-            onClick={() => {
-              setIsMobileMenuOpen(false);
-              onOpenQuote();
-            }}
-            className="px-8 py-3 rounded-full bg-neon text-black font-bold text-sm transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(34,211,238,0.4)]"
-          >
-            Get Free Quote
-          </button>
-        ) : (
-          <Link
-            href="/contact"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="px-8 py-3 rounded-full bg-neon text-black font-bold text-sm transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(34,211,238,0.4)]"
-          >
-            Get Free Quote
-          </Link>
-        )}
+        {/* Content */}
+        <div className="relative z-10 flex flex-col h-full px-8 pt-28 pb-10 justify-between overflow-y-auto">
+
+          {/* Navigation Links */}
+          <nav className="flex flex-col items-center gap-1">
+            {navItems.map((item) => {
+              if (item.hasDropdown) {
+                const dropdownKey = (item as any).dropdownKey || "services";
+                const dropdownItems = dropdownKey === "about" ? aboutLinks : dropdownKey === "work" ? workLinks : services;
+                const isOpen = mobileOpenDropdown === dropdownKey;
+                return (
+                  <div key={item.name} className="flex flex-col items-center gap-2 w-full">
+                    <button
+                      onClick={() => setMobileOpenDropdown(isOpen ? null : dropdownKey)}
+                      className="font-serif italic text-4xl text-charcoal hover:text-cognac transition-colors flex items-center gap-2 py-2"
+                    >
+                      {item.name}
+                      <ChevronDown className={`w-5 h-5 transition-transform duration-200 not-italic ${isOpen ? 'rotate-180' : ''}`} />
+                    </button>
+                    {isOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        className="flex flex-col items-center gap-1 w-full pb-2"
+                      >
+                        {dropdownItems.map((dropItem) => (
+                          <Link
+                            key={dropItem.name}
+                            href={dropItem.href}
+                            onClick={() => {
+                              setIsMobileMenuOpen(false);
+                              setMobileOpenDropdown(null);
+                            }}
+                            className="text-sm font-medium text-stone-500 hover:text-cognac transition-colors py-1.5 tracking-wide"
+                          >
+                            {dropItem.name}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </div>
+                );
+              }
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="font-serif italic text-4xl text-charcoal hover:text-cognac transition-colors py-2"
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
+          </nav>
+
+          {/* Bottom Anchor */}
+          <div className="flex flex-col items-center gap-5 mt-10">
+            {onOpenQuote ? (
+              <button
+                onClick={() => { setIsMobileMenuOpen(false); onOpenQuote(); }}
+                className="w-full max-w-xs py-4 bg-charcoal text-white font-bold rounded-full text-center hover:bg-stone-800 transition-all"
+              >
+                Get Free Quote
+              </button>
+            ) : (
+              <Link
+                href="/contact"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="w-full max-w-xs py-4 bg-charcoal text-white font-bold rounded-full text-center hover:bg-stone-800 transition-all block"
+              >
+                Get Free Quote
+              </Link>
+            )}
+
+            <div className="w-full max-w-xs border-t border-stone-200 pt-5 flex flex-col items-center gap-4">
+              <div className="flex gap-6">
+                <a href="https://linkedin.com/company/pandacodegen" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <Linkedin className="w-5 h-5 text-stone-400 hover:text-charcoal transition-colors" />
+                </a>
+                <a href="https://twitter.com/pandacodegen" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                  <Twitter className="w-5 h-5 text-stone-400 hover:text-charcoal transition-colors" />
+                </a>
+                <a href="mailto:info@pandacodegen.com" aria-label="Email">
+                  <Mail className="w-5 h-5 text-stone-400 hover:text-charcoal transition-colors" />
+                </a>
+              </div>
+              <a href="tel:+13022504340" className="flex items-center gap-1.5 text-xs font-bold text-stone-400 hover:text-charcoal transition-colors uppercase tracking-widest">
+                <Phone className="w-3.5 h-3.5" />
+                +1 (302) 250-4340
+              </a>
+              <p className="text-xs text-stone-400 uppercase tracking-widest font-bold">
+                info@pandacodegen.com
+              </p>
+            </div>
+          </div>
+
+        </div>
       </div>
     </>
   );

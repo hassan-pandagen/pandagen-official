@@ -1,9 +1,8 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import CalEmbed from "@/components/ui/CalEmbed";
-import AuroraBackground from "@/components/layout/AuroraBackground";
 import PreconnectLinks from "@/components/PreconnectLinks";
 import { Analytics } from "@vercel/analytics/react";
 import TawkToChat from "@/components/TawkToChat";
@@ -15,15 +14,24 @@ const inter = Inter({
   display: 'swap',
   preload: true,
   adjustFontFallback: true,
+  variable: '--font-inter',
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  display: 'swap',
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-playfair',
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.pandacodegen.com'),
   title: {
-    default: "PandaGen | Enterprise Next.js & Shopify Architecture",
+    default: "PandaGen | Custom-Coded Websites That Load in Under 1 Second",
     template: "%s | PandaGen",
   },
-  description: "We migrate WordPress & Shopify sites to custom Next.js architectures. Sub-second load times. Zero bloat. Enterprise-grade security and SEO.",
+  description: "We migrate WordPress & Shopify sites to custom-coded platforms. Sub-second load times. Zero bloat. Bank-grade security and SEO.",
   alternates: {
     canonical: '/',
   },
@@ -37,26 +45,32 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.json",
   keywords: [
-    "WordPress to Next.js migration",
-    "Next.js development agency",
-    "React development services",
+    "WordPress migration",
+    "custom coded website",
     "WordPress alternative",
     "enterprise web development",
     "SEO optimization",
     "web performance optimization",
     "ecommerce migration",
     "custom web development",
-    "headless CMS",
     "Squarespace migration",
     "Webflow migration",
     "Wix migration",
     "GoHighLevel alternative",
-    "Shopify headless commerce",
-    "custom coded website",
-    "SaaS development",
+    "Shopify custom store",
     "website speed optimization",
-    "Core Web Vitals optimization",
     "custom website vs template",
+    // Tier 2 — medium competition, ranking within 60-120 days
+    "wordpress migration service",
+    "shopify slow loading fix",
+    "custom web development agency",
+    "100/100 pagespeed score",
+    "wordpress to nextjs migration",
+    "replace shopify with custom code",
+    "custom ecommerce development",
+    "web performance agency",
+    "wordpress plugin bloat fix",
+    "shopify alternative for businesses",
   ],
   authors: [{ name: "PandaGenCode" }],
   creator: "PandaGenCode",
@@ -77,26 +91,24 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.pandacodegen.com",
     siteName: "PandaGen",
-    title: "PandaGen | Enterprise Next.js & Shopify Architecture",
-    description: "We migrate WordPress & Shopify sites to custom Next.js architectures. Sub-second load times. Zero bloat.",
+    title: "PandaGen | Custom-Coded Websites That Load in Under 1 Second",
+    description: "We migrate WordPress & Shopify sites to custom-coded platforms. Sub-second load times. Zero bloat.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "PandaGen - Enterprise Next.js Development Agency",
+        alt: "PandaGen - Custom Web Development Agency",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "PandaGen | Enterprise Next.js & Shopify Architecture",
-    description: "We migrate WordPress & Shopify sites to custom Next.js architectures. Sub-second load times. Zero bloat.",
+    title: "PandaGen | Custom-Coded Websites That Load in Under 1 Second",
+    description: "We migrate WordPress & Shopify sites to custom-coded platforms. Sub-second load times. Zero bloat.",
     images: ["/og-image.jpg"],
     creator: "@pandacodegen",
   },
-  // Add your Google Search Console HTML tag verification code here:
-  // verification: { google: "YOUR_ACTUAL_CODE_HERE" },
 };
 
 export const viewport: Viewport = {
@@ -112,13 +124,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased bg-transparent text-white selection:bg-neon selection:text-black`} suppressHydrationWarning>
+      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-background text-charcoal`} suppressHydrationWarning>
 
         {/* Preconnect to external resources for better performance */}
         <PreconnectLinks />
-
-        {/* Aurora Background - Living, Animated Gradient */}
-        <AuroraBackground />
 
         <CalEmbed />
         <TawkToChat />

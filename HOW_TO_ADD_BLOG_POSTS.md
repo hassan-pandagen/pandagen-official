@@ -1,6 +1,6 @@
 # PandaGen Complete Blog, SEO & Content Strategy Guide
 
-**Last Updated:** February 18, 2026
+**Last Updated:** March 4, 2026
 
 ---
 
@@ -269,26 +269,79 @@ Bad titles (too technical):
 
 ---
 
+## Schedule Status — LIVE TRACKING
+
+**Today:** March 4, 2026
+**Calendar start:** February 20, 2026
+**Publishing cadence:** 3 posts/week (Mon + Wed + Fri)
+
+### Posts Due By Today (6 total)
+
+| # | Due Date | Scheduled Title | Status | Replaced By |
+|---|----------|----------------|--------|-------------|
+| 1 | Feb 20 | WordPress vs Next.js: Complete 2026 Comparison | ✅ Published | WordPress vs Custom Code: Real Cost 3 Years |
+| 2 | Feb 23 | My WordPress Site Keeps Getting Hacked | ❌ Behind | — |
+| 3 | Feb 25 | Template Website vs Custom Website | ❌ Behind | — |
+| 4 | Feb 27 | How to Choose a Web Developer in 2026 | ❌ Behind | — |
+| 5 | Mar 2 | Shopify vs Headless Shopify | ❌ Behind | — |
+| 6 | Mar 4 | Google Ads Landing Page Score Is Low | ✅ Published | Why We Chose Next.js Over WordPress 2026 |
+
+**Currently behind by: 3 posts** (Feb 23, Feb 25, Feb 27 slots unpublished)
+**Next up to write:** My WordPress Site Keeps Getting Hacked (was Feb 23) + Template vs Custom (was Feb 25) + How to Choose a Developer (was Feb 27)
+
+### Upcoming (Already Planned)
+
+| # | Target Date | Title | Status |
+|---|-------------|-------|--------|
+| 7 | Mar 6 | For Agencies: How to Offer Custom Web Dev Without a Dev Team | ✅ Written |
+| 8 | Mar 9 | Shopify vs Headless Shopify: When to Make the Switch | ❌ Not started |
+| 9 | Mar 11 | Wix vs Custom Website: The Real Cost Over 3 Years | ❌ Not started |
+
+---
+
 ## Current Keyword Coverage
 
-### What We Already Target (11 Existing Blog Posts)
+### Blog Posts — Complete Tracking (16 Posts)
 
 | # | Post | Primary Keywords | Status |
 |---|------|-----------------|--------|
-| 1 | Why WordPress Is a Waste of Money in 2026 | wordpress cost, wordpress waste of money | Data only |
-| 2 | Shopify Plus + Next.js: Sub-Second Load Times | shopify headless, shopify next.js | Data only |
-| 3 | Stop Using Page Builders (Why Elementor Kills SEO) | elementor seo, page builder problems | Data only |
-| 4 | WordPress Plugins Are Destroying Your Site Speed | wordpress plugins slow, wordpress speed | Data only |
-| 5 | Why Your Shopify Plus Store Still Loads in 4 Seconds | shopify plus slow, shopify speed | Data only |
-| 6 | Why Is My WordPress Site Losing Traffic? | wordpress traffic drop, wordpress losing traffic | Data only |
-| 7 | Your Shopify Store Is Costing You $75K/Year | shopify lost sales, shopify slow revenue | Page exists |
-| 8 | Why Is My Conversion Rate So Low? | low conversion rate, shopify conversion | Data only |
-| 9 | Why Your Competitor Outranks You on Google | competitor outranks, google rankings | Page exists |
-| 10 | How to Achieve 100/100 PageSpeed Score | pagespeed score, pagespeed 100 | Page exists |
-| 11 | How to Fix a Slow WordPress Site | fix slow wordpress, wordpress speed fix | Page exists |
+| 1 | WordPress vs Custom Code: Real Cost Over 3 Years (NEW) | wordpress vs custom code cost, wordpress real cost, custom website vs wordpress | **Page exists** |
+| 2 | Why We Chose Next.js Over WordPress for Every Client (NEW) | nextjs vs wordpress 2026, why nextjs over wordpress, switch from wordpress | **Page exists** |
+| 3 | For Agencies: Offer Custom Dev Without a Dev Team (NEW) | white label web development, outsource web dev for agencies | **Page exists** |
+| 4 | Customers Can Buy Inside Google Without Visiting Your Site (UCP) | google UCP, AI commerce 2026, ai shopping | **Page exists** |
+| 5 | WordPress AI Security Risk: 100K Sites Exposed | wordpress ai security, wordpress 6.9 vulnerability | **Page exists** |
+| 6 | Why WordPress Is a Waste of Money in 2026 | wordpress cost, wordpress waste of money | Data only |
+| 7 | Shopify Plus + Next.js: Sub-Second Load Times | shopify headless, shopify next.js | Data only |
+| 8 | Stop Using Page Builders (Why Elementor Kills SEO) | elementor seo, page builder problems | Data only |
+| 9 | WordPress Plugins Are Destroying Your Site Speed | wordpress plugins slow, wordpress speed | Data only |
+| 10 | Why Your Shopify Plus Store Still Loads in 4 Seconds | shopify plus slow, shopify speed | Data only |
+| 11 | Why Is My WordPress Site Losing Traffic? | wordpress traffic drop, wordpress losing traffic | Data only |
+| 12 | Your Shopify Store Is Costing You $75K/Year | shopify lost sales, shopify slow revenue | **Page exists** |
+| 13 | Why Is My Conversion Rate So Low? | low conversion rate, shopify conversion | Data only |
+| 14 | Why Your Competitor Outranks You on Google | competitor outranks, google rankings | **Page exists** |
+| 15 | How to Achieve 100/100 PageSpeed Score | pagespeed score, pagespeed 100 | **Page exists** |
+| 16 | How to Fix a Slow WordPress Site | fix slow wordpress, wordpress speed fix | **Page exists** |
 
-**"Data only"** = entry exists in blog.ts but actual page content still needs to be written.
-**"Page exists"** = full blog page with content is live.
+**"Data only"** = entry exists in blog.ts but actual page content still needs to be written (7 posts owe pages).
+**"Page exists"** = full blog page with content is live (9 posts done).
+
+### Keywords We Are Now Targeting (New vs Old)
+
+**NEW keywords added March 4, 2026:**
+- `wordpress vs custom code cost` — HIGH intent, comparison searcher ready to decide
+- `custom website vs wordpress 3 years` — MEDIUM volume, LOW competition (unique angle)
+- `real cost of wordpress` — HIGH intent, frustrated owner searching for justification
+- `nextjs vs wordpress 2026` — HIGH volume, MEDIUM competition
+- `why switch from wordpress to nextjs` — MEDIUM volume, very LOW competition
+- `white label web development for agencies` — MEDIUM volume, LOW competition (B2B)
+- `outsource web development agency` — MEDIUM volume, HIGH intent (agency buyer)
+- `offer custom development without dev team` — LOW volume, ZERO competition (exact match)
+
+**Keyword gaps still unaddressed (write next):**
+- `my wordpress site keeps getting hacked` — HIGH pain, HIGH intent
+- `template website vs custom website` — HIGH volume, MEDIUM competition
+- `how to choose a web developer` — HIGH volume, top-of-funnel
+- `shopify vs headless shopify` — MEDIUM volume, decision stage
 
 ### Service Pages Currently Targeting
 
@@ -1425,3 +1478,198 @@ Every post MUST link to:
 6. Request indexing in Google Search Console + Bing Webmaster Tools
 
 No manual sitemap updates required.
+
+---
+
+## Feature Visual Animations (REQUIRED — Every Blog Post)
+
+Every blog post MUST include an animated feature visual between the author block and the first paragraph. These are looping CSS/React animations that tell the article's story visually before the reader starts reading.
+
+### Available Animation Components
+
+All live in `src/components/blog/`. All are `"use client"` components — import via `dynamic()`:
+
+| Animation | File | Use For | Visual Story |
+|---|---|---|---|
+| `PageSpeedAnimation` | `PageSpeedAnimation.tsx` | PageSpeed, performance, load time posts | Score ring animates from 47 → 100, Core Web Vitals turn green |
+| `SalesImpactAnimation` | `SalesImpactAnimation.tsx` | Shopify slow, revenue loss, ROI posts | Revenue loss counter ticks to $75K, then bar chart comparison |
+| `SEORankingAnimation` | `SEORankingAnimation.tsx` | SEO, competitor, traffic posts | Your store climbs from rank #5 to #1 as speed improves |
+| `SecurityShieldAnimation` | `SecurityShieldAnimation.tsx` | Security, hacking, WordPress vulnerabilities | CVE threats found on WordPress vs clean PandaGen shield |
+| `UCPFlowAnimation` | `UCPFlowAnimation.tsx` | AI commerce, Google UCP, agentic buying | Customer → Google AI → Your Store flow with moving dots |
+| `BlogFeatureVisual` | `BlogFeatureVisual.tsx` | Auto-pick by `category` prop (for [slug] page) | Delegates to one of the above based on category string |
+
+### How to Add to a Static Blog Page
+
+**Step 1 — Dynamic import at top of file (after existing RelatedPosts import):**
+```tsx
+const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
+const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
+// Replace PageSpeedAnimation with whichever animation fits your topic
+```
+
+**Step 2 — Place in article body, after `<BlogAuthor />` and closing `</div>`, before first content:**
+```tsx
+<BlogAuthor />
+</div>
+
+{/* Feature Visual */}
+<div className="mb-12">
+    <PageSpeedAnimation />
+</div>
+
+{/* First content section */}
+```
+
+### Which Animation to Pick
+
+| Post Topic | Animation |
+|---|---|
+| PageSpeed / load times / WordPress performance / fix slow | `PageSpeedAnimation` |
+| Shopify revenue loss / sales impact / e-commerce ROI | `SalesImpactAnimation` |
+| Google rankings / competitor outranking / SEO / traffic drop | `SEORankingAnimation` |
+| WordPress security / hacking / plugin vulnerabilities | `SecurityShieldAnimation` |
+| Google UCP / AI commerce / agentic buying protocol | `UCPFlowAnimation` |
+
+### Creating a New Animation for a New Topic
+
+If none of the 5 existing animations fit your topic:
+
+1. Create `src/components/blog/YourTopicAnimation.tsx`
+2. Start with `"use client";` directive
+3. Use a state machine: `type Phase = "phase1" | "phase2" | "phase3"; const PHASES: Phase[] = [...];`
+4. Use `useEffect` with `setTimeout` loop for the animation sequence
+5. Put `@keyframes` in a `<style>{...}</style>` tag inside the component
+6. Use `aspect-[2/1]` ratio, `rounded-2xl border`, and consistent padding
+7. Add a status bar at the bottom that changes text per phase
+8. Register it in `BlogFeatureVisual.tsx` with a new category match
+
+---
+
+## Article Body Components — BlogStyles.tsx
+
+Every blog post MUST use these components from `@/components/ui/BlogStyles`. Do NOT write raw `<h2>`, `<p>`, `<ul>` tags.
+
+```tsx
+import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
+```
+
+| Component | Usage | What It Renders |
+|---|---|---|
+| `<BlogHeader id="anchor">` | Every H2 section | Playfair Display serif font, large, dark |
+| `<BlogText>` | Every body paragraph | stone-700 warm text, relaxed line-height |
+| `<BlogList items={[...]} />` | Bullet point lists | Card-style rows with filled ✓ checkmarks |
+| `<BlogHighlight>` | Inline key phrases | Bold charcoal, inline |
+| `<BlogQuote>` | Pull quotes / stats | Left border cognac accent, italic serif |
+| `<BlogAuthor />` | After meta info block | Hassan photo + role (or Imran) |
+| `<ComparisonTable />` | WordPress vs PandaGen | Pre-built hardcoded comparison grid |
+| `<InsightBox variant="...">` | Key point callouts | Coloured left-border box with label |
+| `<CodeWindow filename="...">` | Code snippets | Dark editor window with line numbers |
+| `<ComparisonGrid left={...} right={...}>` | Any X vs Y comparison | Red/green 2-column card grid |
+| `<StatCard stat="50%" label="..." context="...">` | Data highlights | Large number + label card |
+
+### UI Kit — Usage Examples
+
+**InsightBox** (variants: `info` blue / `warning` orange / `tip` green / `danger` red):
+```tsx
+<InsightBox variant="warning">Google penalises pages that load slower than 3 seconds.</InsightBox>
+<InsightBox variant="tip" label="Our Rule">Always lazy-load images below the fold.</InsightBox>
+```
+
+**CodeWindow:**
+```tsx
+<CodeWindow filename="next.config.js">
+{`images: {
+  formats: ['image/avif', 'image/webp'],
+  minimumCacheTTL: 31536000,
+}`}
+</CodeWindow>
+```
+
+**ComparisonGrid:**
+```tsx
+<ComparisonGrid
+  left={{ label: "WordPress", items: ["Plugin bloat", "3.8s load time", "$150/mo hosting"] }}
+  right={{ label: "Next.js", items: ["Zero dependencies", "0.8s load time", "$0/mo on Vercel"] }}
+/>
+```
+
+**StatCard** (wrap multiples in a grid):
+```tsx
+<div className="grid grid-cols-2 md:grid-cols-3 gap-4 my-10">
+  <StatCard stat="50%" label="Reduction in LCP" context="After migrating to Next.js" />
+  <StatCard stat="$75K" label="Revenue recovered" context="Per year for average store" />
+  <StatCard stat="100" label="PageSpeed score" context="Every PandaGen build" />
+</div>
+```
+
+**Workflow for Tier 2 (Traffic) posts — 5-min extra effort:**
+1. Write the text
+2. Drop in 2 `InsightBox` components at key points
+3. Drop in 1 `StatCard` grid for your main numbers
+4. Drop in 1 `CodeWindow` or `ComparisonGrid` where relevant
+5. Publish
+
+**Typography rules:**
+- H1: `text-5xl md:text-6xl font-bold` with serif italic accent: `<span className="font-serif italic text-stone-500">key phrase.</span>`
+- H2: Always `<BlogHeader>` — never raw `<h2>`
+- Body: Always `<BlogText>` — NEVER `text-secondary` (cold grey = grey goo problem)
+- First paragraph of article gets an automatic **editorial drop cap** (defined in `globals.css`)
+
+---
+
+## SEO Citation Audit — All 13 Blogs (Feb 2026)
+
+**Minimum standard: 5 citations in the JSON-LD `"citation"` array per post.**
+
+### Static Blog Pages
+
+| Blog | Citations | Status |
+|---|---|---|
+| Google UCP | 7 | ✅ Good |
+| WordPress AI Security | 3 | ⚠️ Needs 2 more |
+| How to Achieve 100 PageSpeed | 0 | ❌ Needs 5 citations |
+| Shopify Slow Losing Sales | 0 | ❌ Needs 5 citations |
+| How to Fix Slow WordPress | 0 | ❌ Needs 5 citations |
+| Why Competitor Outranks You | 0 | ❌ Needs 5 citations |
+
+### Dynamic [slug] Blogs (via blog.ts data)
+
+All 7 dynamic posts have 0 citations. Citations must be added inside the JSON-LD schema in each post's page.tsx file (or a new `citations` field added to `blog.ts` and passed into the schema).
+
+### Where to Add Citations in Schema
+
+In the `"citation"` array inside the Article node:
+```tsx
+"citation": [
+    { "@type": "CreativeWork", "name": "Source Title", "url": "https://verified-live-url.com" },
+    // minimum 5 entries
+]
+```
+
+### High-Authority Citation Sources by Topic
+
+**Performance / PageSpeed:**
+- https://web.dev/vitals — Core Web Vitals (Google)
+- https://developers.google.com/search/docs/appearance/page-experience
+- https://nextjs.org/learn — Next.js official
+
+**E-Commerce / Shopify:**
+- https://shopify.engineering — Shopify engineering
+- https://baymard.com/blog — Cart abandonment research
+- https://www.shopify.com/enterprise/blog
+
+**SEO / Rankings:**
+- https://developers.google.com/search/blog
+- https://moz.com/blog
+- https://backlinko.com/google-ranking-factors
+
+**WordPress / Security:**
+- https://developer.wordpress.org
+- https://wpscan.com/vulnerability
+- https://www.wordfence.com/blog
+- https://patchstack.com/articles
+
+**Rules:**
+- ONLY add real, live URLs — verify before adding
+- No placeholder or broken links
+- Prefer .gov, .edu, major tech publications, and official documentation

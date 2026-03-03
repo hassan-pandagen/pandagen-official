@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote } from "@/components/ui/BlogStyles";
+import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote , BlogAuthor } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
@@ -12,6 +12,7 @@ import type { Metadata } from "next";
 const competitorFAQs = blogPosts.find(p => p.id === 'why-competitor-outranks-you')?.faqs ?? [];
 
 const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
+const SEORankingAnimation = dynamic(() => import("@/components/blog/SEORankingAnimation"));
 
 export const metadata: Metadata = {
     title: "Why Your Competitor Outranks You on Google (And Pays Less)",
@@ -66,7 +67,19 @@ const articleSchema = {
             "articleSection": "Traffic Growth",
             "keywords": ["Google rankings", "competitor analysis", "website speed SEO", "WordPress vs Next.js", "AI search optimization", "coded website benefits"],
             "timeRequired": "PT11M",
-            "inLanguage": "en-US"
+            "inLanguage": "en-US",
+            "speakable": {
+                "@type": "SpeakableSpecification",
+                "cssSelector": ["h1", "h2", "[data-speakable='true']"]
+            },
+            "citation": [
+                { "@type": "CreativeWork", "name": "Google Page Experience as Ranking Signal", "url": "https://developers.google.com/search/docs/appearance/page-experience" },
+                { "@type": "CreativeWork", "name": "Core Web Vitals Ranking Factor", "url": "https://developers.google.com/search/docs/appearance/core-web-vitals" },
+                { "@type": "CreativeWork", "name": "Google Mobile-First Indexing", "url": "https://developers.google.com/search/docs/crawling-indexing/mobile/mobile-sites-mobile-first-indexing" },
+                { "@type": "CreativeWork", "name": "Google Search Essentials", "url": "https://developers.google.com/search/docs/essentials" },
+                { "@type": "CreativeWork", "name": "Structured Data for Google Search", "url": "https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data" },
+                { "@type": "CreativeWork", "name": "Next.js Documentation", "url": "https://nextjs.org/docs" }
+            ]
         },
         {
             "@type": "BreadcrumbList",
@@ -153,15 +166,13 @@ export default function CompetitorRankingsPage() {
     return (
         <>
             <Header />
-            <main className="bg-transparent min-h-screen selection:bg-neon selection:text-black overflow-x-hidden relative text-white pt-32 pb-20">
+            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-32 pb-20">
                 {/* Global Noise Texture */}
-                <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-20 mix-blend-overlay"></div>
+                <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
 
                 {/* Ambient Glows */}
-                <div className="fixed top-0 right-0 w-[600px] h-[600px] bg-blue-600/20 blur-[150px] rounded-full pointer-events-none" />
-                <div className="fixed top-1/3 left-0 w-[500px] h-[500px] bg-green-600/15 blur-[150px] rounded-full pointer-events-none" />
 
-                <article className="max-w-3xl mx-auto px-6">
+                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-sm px-8 py-10 md:px-14">
 
                     {/* Article Schema */}
                     <script
@@ -179,7 +190,7 @@ export default function CompetitorRankingsPage() {
                     />
 
                     {/* Back Button */}
-                    <Link href="/blog" className="inline-flex items-center gap-2 text-neon hover:text-neon/80 mb-8 transition-colors">
+                    <Link href="/blog" className="inline-flex items-center gap-2 text-charcoal hover:text-stone-700 mb-8 transition-colors">
                         <ArrowLeft className="w-4 h-4" />
                         Back to Blog
                     </Link>
@@ -187,14 +198,14 @@ export default function CompetitorRankingsPage() {
                     {/* Title & Meta */}
                     <div className="mb-10">
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                            Why Your Competitor <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon to-green-500">Outranks You</span> on Google (And Pays Less)
+                            Why Your Competitor <span className="font-serif italic text-stone-500">Outranks You</span> on Google (And Pays Less)
                         </h1>
 
-                        <p className="text-xl text-gray-400 mb-6 leading-relaxed">
+                        <p className="text-xl text-stone-600 mb-6 leading-relaxed">
                             They're getting 3× your traffic with a coded website. Google, ChatGPT, and Bing all prefer fast sites. Here's why.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-gray-500">
+                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">
                             <div className="flex items-center gap-2">
                                 <Calendar className="w-4 h-4" />
                                 Feb 15, 2026
@@ -203,17 +214,18 @@ export default function CompetitorRankingsPage() {
                                 <Clock className="w-4 h-4" />
                                 11 min read
                             </div>
-                            <div className="flex items-center gap-2">
-                                <span>Hassan</span>
-                                <span>•</span>
-                                <span>Lead Eng</span>
-                            </div>
                         </div>
+                        <BlogAuthor />
+                    </div>
+
+                    {/* Feature Visual */}
+                    <div className="mb-12">
+                        <SEORankingAnimation />
                     </div>
 
                     {/* Executive Summary */}
-                    <div className="bg-white/5 border border-white/10 rounded-lg p-6 mb-12">
-                        <h3 className="font-bold text-neon mb-4">Executive Summary</h3>
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12">
+                        <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
                         <BlogList items={[
                             "Your competitor ranks 20-30 positions higher because their coded website loads in 1.2 seconds vs your 3.8-second WordPress/Shopify site",
                             "Google, Bing, ChatGPT, and Perplexity all prioritize fast sites with clean code. Modern search engines reward speed.",
@@ -244,7 +256,77 @@ export default function CompetitorRankingsPage() {
                             Your competitor has a coded website (Next.js, React, modern framework). You have WordPress or Shopify. And in 2026, that difference is costing you tens of thousands of dollars in lost traffic.
                         </BlogText>
 
-                        <BlogHeader>Why Google Loves Coded Websites (And Hates WordPress)</BlogHeader>
+                        <BlogHeader>How Does Your WordPress Site Compare to a Coded Competitor Over 12 Months?</BlogHeader>
+
+                        <BlogText>
+                            Let's compare what happens over 12 months. Same product, same keywords, same content — only the website technology is different.
+                        </BlogText>
+
+                        <div className="my-12 border border-stone-200 rounded-2xl overflow-hidden shadow-2xl">
+                            <div className="grid grid-cols-3 bg-stone-50 p-5 border-b border-stone-200 font-bold text-charcoal text-sm md:text-base uppercase tracking-wider">
+                                <div>Metric</div>
+                                <div className="text-red-400">Your Site (WP)</div>
+                                <div className="text-charcoal">Competitor (Next.js)</div>
+                            </div>
+                            <div className="grid grid-cols-3 p-5 border-b border-stone-200 text-sm md:text-lg hover:bg-stone-50/50 transition-colors">
+                                <div className="text-charcoal font-medium">Load Time</div>
+                                <div className="text-stone-400">3.8 seconds</div>
+                                <div className="text-charcoal font-bold">1.2 seconds</div>
+                            </div>
+                            <div className="grid grid-cols-3 p-5 border-b border-stone-200 text-sm md:text-lg hover:bg-stone-50/50 transition-colors">
+                                <div className="text-charcoal font-medium">Google Mobile Score</div>
+                                <div className="text-stone-400">38/100 (Red)</div>
+                                <div className="text-charcoal font-bold">95/100 (Green)</div>
+                            </div>
+                            <div className="grid grid-cols-3 p-5 border-b border-stone-200 text-sm md:text-lg hover:bg-stone-50/50 transition-colors">
+                                <div className="text-charcoal font-medium">Google Ranking</div>
+                                <div className="text-stone-400">Page 2 (#14)</div>
+                                <div className="text-charcoal font-bold">Page 1 (#3)</div>
+                            </div>
+                            <div className="grid grid-cols-3 p-5 border-b border-stone-200 text-sm md:text-lg hover:bg-stone-50/50 transition-colors">
+                                <div className="text-charcoal font-medium">Monthly Traffic</div>
+                                <div className="text-stone-400">2,500 visitors</div>
+                                <div className="text-charcoal font-bold">8,200 visitors</div>
+                            </div>
+                            <div className="grid grid-cols-3 p-5 border-b border-stone-200 text-sm md:text-lg hover:bg-stone-50/50 transition-colors">
+                                <div className="text-charcoal font-medium">Hosting Cost</div>
+                                <div className="text-stone-400">$150/month (Kinsta)</div>
+                                <div className="text-charcoal font-bold">$20/month (Vercel)</div>
+                            </div>
+                            <div className="grid grid-cols-3 p-5 bg-stone-50 text-charcoal font-bold border-t border-stone-200">
+                                <div>Year 1 Results</div>
+                                <div className="text-red-400">30K visits, -$1,800 hosting</div>
+                                <div className="text-charcoal">98K visits, -$240 hosting</div>
+                            </div>
+                        </div>
+
+                        <BlogList items={[
+                            "Your competitor gets 68,000 more visitors than you",
+                            "Your competitor saves $1,560 on hosting costs",
+                            "If your conversion rate is 2%, they get 1,360 more customers",
+                            "If your average sale is $100, they make $136,000 more revenue",
+                            "All because their website loads 2.6 seconds faster"
+                        ]} />
+
+                        <BlogQuote>
+                            Your competitor is getting more traffic, more customers, and more revenue while paying less for hosting. And it's all because of the website technology.
+                        </BlogQuote>
+
+                        {/* Mid-Article CTA */}
+                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                            <p className="font-bold text-charcoal mb-2">See exactly how much traffic you&apos;re losing to your competitor.</p>
+                            <p className="text-stone-600 mb-4 text-sm">Free speed audit. No sales pitch. Just data.</p>
+                            <a
+                                href="https://cal.com/pandagen/discovery"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all"
+                            >
+                                Get Free Speed Audit <ArrowRight className="w-4 h-4" />
+                            </a>
+                        </div>
+
+                        <BlogHeader>Why Does Google Rank Coded Websites Higher Than WordPress Sites?</BlogHeader>
 
                         <BlogText>
                             Google's ranking algorithm is simple: <strong>Show users the best experience.</strong>
@@ -274,36 +356,7 @@ export default function CompetitorRankingsPage() {
                             Google's job is to send users to the best website. If two sites have identical content, Google picks the faster one. Every. Single. Time.
                         </BlogQuote>
 
-                        <BlogHeader>It's Not Just Google Anymore: ChatGPT, Bing, and Perplexity Care About Speed</BlogHeader>
-
-                        <BlogText>
-                            In 2024-2026, search changed. It's not just Google anymore.
-                        </BlogText>
-
-                        <BlogText>
-                            Now people search on:
-                        </BlogText>
-
-                        <BlogList items={[
-                            "ChatGPT (SearchGPT mode) - crawls the web to answer questions",
-                            "Bing (Microsoft's search engine, now with AI)",
-                            "Perplexity AI - answers questions by crawling sites in real-time",
-                            "Google SGE (Search Generative Experience) - AI-powered search results"
-                        ]} />
-
-                        <BlogText>
-                            All of these systems have one thing in common: <BlogHighlight>They prefer fast sites with clean code.</BlogHighlight>
-                        </BlogText>
-
-                        <BlogText>
-                            When ChatGPT searches the web to answer a user's question, it needs to crawl websites quickly. If your site takes 4 seconds to load and a competitor's site takes 1 second, ChatGPT will read the competitor's site first (and maybe skip yours entirely if it already found a good answer).
-                        </BlogText>
-
-                        <BlogText>
-                            Same with Bing. Same with Perplexity. <strong>Modern search engines are built for speed.</strong> Slow sites get left behind.
-                        </BlogText>
-
-                        <BlogHeader>The Technical Difference (Explained Simply)</BlogHeader>
+                        <BlogHeader>What Is the Technical Reason Coded Websites Load 3× Faster Than WordPress?</BlogHeader>
 
                         <BlogText>
                             Let me explain why coded websites are faster, without using confusing tech jargon.
@@ -337,71 +390,7 @@ export default function CompetitorRankingsPage() {
                             Think of WordPress like a car with 30 shopping bags in the trunk, a bike rack, roof cargo, and extra passengers. Next.js is the same car with just the driver and half a tank of gas. Both get you there. One is 3× faster.
                         </BlogQuote>
 
-                        <BlogHeader>The 1-Year Traffic and Cost Comparison</BlogHeader>
-
-                        <BlogText>
-                            Let's compare what happens over 12 months with your WordPress/Shopify site vs a competitor with a coded Next.js site.
-                        </BlogText>
-
-                        <BlogText>
-                            <strong>Scenario:</strong> You both target the same keywords. You both have good content. The only difference is the website technology.
-                        </BlogText>
-
-                        <div className="my-12 border border-white/10 rounded-2xl overflow-hidden shadow-2xl">
-                            <div className="grid grid-cols-3 bg-white/5 p-5 border-b border-white/10 font-bold text-white text-sm md:text-base uppercase tracking-wider">
-                                <div>Metric</div>
-                                <div className="text-red-400">Your Site (WP)</div>
-                                <div className="text-neon">Competitor (Next.js)</div>
-                            </div>
-                            <div className="grid grid-cols-3 p-5 border-b border-white/5 text-sm md:text-lg hover:bg-white/[0.02] transition-colors">
-                                <div className="text-white font-medium">Load Time</div>
-                                <div className="text-gray-500">3.8 seconds</div>
-                                <div className="text-neon font-bold">1.2 seconds</div>
-                            </div>
-                            <div className="grid grid-cols-3 p-5 border-b border-white/5 text-sm md:text-lg hover:bg-white/[0.02] transition-colors">
-                                <div className="text-white font-medium">Google Mobile Score</div>
-                                <div className="text-gray-500">38/100 (Red)</div>
-                                <div className="text-neon font-bold">95/100 (Green)</div>
-                            </div>
-                            <div className="grid grid-cols-3 p-5 border-b border-white/5 text-sm md:text-lg hover:bg-white/[0.02] transition-colors">
-                                <div className="text-white font-medium">Google Ranking</div>
-                                <div className="text-gray-500">Page 2 (#14)</div>
-                                <div className="text-neon font-bold">Page 1 (#3)</div>
-                            </div>
-                            <div className="grid grid-cols-3 p-5 border-b border-white/5 text-sm md:text-lg hover:bg-white/[0.02] transition-colors">
-                                <div className="text-white font-medium">Monthly Traffic</div>
-                                <div className="text-gray-500">2,500 visitors</div>
-                                <div className="text-neon font-bold">8,200 visitors</div>
-                            </div>
-                            <div className="grid grid-cols-3 p-5 border-b border-white/5 text-sm md:text-lg hover:bg-white/[0.02] transition-colors">
-                                <div className="text-white font-medium">Hosting Cost</div>
-                                <div className="text-gray-500">$150/month (Kinsta)</div>
-                                <div className="text-neon font-bold">$20/month (Vercel)</div>
-                            </div>
-                            <div className="grid grid-cols-3 p-5 bg-white/5 text-white font-bold border-t border-white/10">
-                                <div>Year 1 Results</div>
-                                <div className="text-red-400">30K visits, -$1,800 hosting</div>
-                                <div className="text-neon">98K visits, -$240 hosting</div>
-                            </div>
-                        </div>
-
-                        <BlogText>
-                            Over one year:
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Your competitor gets 68,000 more visitors than you",
-                            "Your competitor saves $1,560 on hosting costs",
-                            "If your conversion rate is 2%, they get 1,360 more customers",
-                            "If your average sale is $100, they make $136,000 more revenue",
-                            "All because their website loads 2.6 seconds faster"
-                        ]} />
-
-                        <BlogQuote>
-                            Your competitor is getting more traffic, more customers, and more revenue while paying less for hosting. And it's all because of the website technology.
-                        </BlogQuote>
-
-                        <BlogHeader>Why You Can't Fix This With WordPress Optimization</BlogHeader>
+                        <BlogHeader>Why Can&apos;t WordPress Optimization Close the Speed Gap With Coded Sites?</BlogHeader>
 
                         <BlogText>
                             I know what you're thinking: "I'll just optimize my WordPress site. Install a caching plugin. Compress images. Remove some plugins."
@@ -453,7 +442,7 @@ export default function CompetitorRankingsPage() {
                             The only way to get fast on Shopify: Keep Shopify for inventory and checkout (it's great at that), but replace the slow theme with a custom fast storefront.
                         </BlogText>
 
-                        <BlogHeader>The Real Cost of Staying Slow</BlogHeader>
+                        <BlogHeader>What Is the Real Annual Cost of Keeping a Slow WordPress or Shopify Site?</BlogHeader>
 
                         <BlogText>
                             Let's do the math on what staying with WordPress or Shopify costs you over the next 12 months.
@@ -496,42 +485,6 @@ export default function CompetitorRankingsPage() {
                             Your slow website is costing you $225K+ per year in lost traffic and revenue while charging you $1,200-$4,800 more for hosting. Your competitor is winning with a website that costs less.
                         </BlogQuote>
 
-                        <BlogHeader>How Search Engines See Your Site vs Coded Sites</BlogHeader>
-
-                        <BlogText>
-                            Let me show you what happens when Google, ChatGPT, or Bing crawls your site.
-                        </BlogText>
-
-                        <BlogText>
-                            <strong>WordPress Site (What Search Engines See):</strong>
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Your page: Huge file (4.8MB total) with tons of unnecessary code",
-                            "28 different files from plugins, themes, and page builders",
-                            "Unoptimized images that take forever to load",
-                            "Total page size: 4.8MB (think of downloading a small movie)",
-                            "Time for Google to read it: 4-6 seconds",
-                            "Google's reaction: \"This site is too slow. Rank it lower.\""
-                        ]} />
-
-                        <BlogText>
-                            <strong>Coded Website (What Search Engines See):</strong>
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Your page: Tiny file (556KB total) with clean, efficient code",
-                            "Only 3-4 files needed to show the page",
-                            "Optimized images that load instantly",
-                            "Total page size: 556KB (8.6× smaller than WordPress)",
-                            "Time for Google to read it: 0.3 seconds",
-                            "Google's reaction: \"Fast site! Rank it higher.\""
-                        ]} />
-
-                        <BlogText>
-                            Search engines prioritize sites they can crawl quickly. If Google's crawler can index 10 of your competitor's pages in the time it takes to index 1 of yours, <BlogHighlight>your entire site gets indexed slower, ranked lower, and shown less often.</BlogHighlight>
-                        </BlogText>
-
                         <BlogHeader>What Should You Do?</BlogHeader>
 
                         <BlogText>
@@ -564,28 +517,6 @@ export default function CompetitorRankingsPage() {
 
                         <BlogText>
                             The math is simple. If you're currently doing $200K+/year in revenue and losing 50-70% of potential traffic to slow load times, fixing your site will pay for itself in <BlogHighlight>2-6 months</BlogHighlight> and continue generating 2-4× more traffic every month after that.
-                        </BlogText>
-
-                        <BlogHeader>Why This Matters More in 2026 Than Ever Before</BlogHeader>
-
-                        <BlogText>
-                            In 2020, slow sites could still rank okay. Speed was a "nice to have."
-                        </BlogText>
-
-                        <BlogText>
-                            In 2026, speed is <strong>required</strong>. Here's why:
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Google made Core Web Vitals a ranking factor in 2021. Fast sites win.",
-                            "ChatGPT's web search mode launched in 2024. It skips slow sites.",
-                            "Bing integrated AI search in 2023. Speed is a major factor.",
-                            "Mobile usage is 70% of all traffic. Slow sites on mobile = instant bounce.",
-                            "Google's \"Helpful Content Update\" in 2024 prioritizes user experience. Speed = experience."
-                        ]} />
-
-                        <BlogText>
-                            Every search engine, every AI tool, and every user expects websites to load in under 2 seconds. If you're at 3-5 seconds, <BlogHighlight>you're invisible to modern search.</BlogHighlight>
                         </BlogText>
 
                         <BlogHeader>Next Steps</BlogHeader>
@@ -622,16 +553,16 @@ export default function CompetitorRankingsPage() {
                     {competitorFAQs.length > 0 && <FAQAccordion faqs={competitorFAQs} />}
 
                     {/* CTA Section */}
-                    <div className="bg-white/5 border border-white/10 rounded-lg p-8 mt-16 text-center">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Ready to Outrank Your Competitors?</h3>
-                        <p className="text-gray-400 mb-6">
+                        <p className="text-stone-600 mb-6">
                             Get a free SEO audit. See exactly how much traffic you're losing to faster sites.
                         </p>
                         <a
                             href="https://cal.com/pandagen/discovery"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-8 py-4 bg-neon text-black font-bold rounded-full hover:bg-neon/90 transition-all"
+                            className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all"
                         >
                             Schedule Free Audit <ArrowRight className="w-5 h-5" />
                         </a>

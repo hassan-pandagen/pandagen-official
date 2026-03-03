@@ -1,254 +1,115 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code, ShoppingCart, Cloud, ArrowUpRight, Database, Server } from "lucide-react";
-import { useEffect, useState } from "react";
+import { ArrowRight, Code2, Globe } from "lucide-react";
 import Link from "next/link";
+
+const platforms = ["WordPress", "Wix", "Squarespace", "Shopify", "Webflow"];
 
 export default function ServicesHub() {
   return (
-    <section className="py-8 md:py-16 bg-transparent relative overflow-hidden">
-      {/* Subtle Ambient Glow - reduced to not overpower card colors */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/15 md:bg-purple-500/8 blur-[150px] rounded-full pointer-events-none" />
+    <section className="py-12 md:py-32 bg-paper relative">
+      {/* Warm stone ambient glow — clipped to section only */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-0 w-[500px] h-[500px] bg-stone-200/40 blur-[150px] rounded-full" />
+        <div className="absolute bottom-20 right-0 w-[400px] h-[400px] bg-stone-200/30 blur-[120px] rounded-full" />
+      </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        
-        {/* Header */}
-        <div className="mb-10 md:flex justify-between items-end">
-          <div className="max-w-2xl">
-            <span className="text-neon tracking-widest text-sm font-bold uppercase">Our Expertise</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 leading-tight">
-              We Don't Just Code. <br />
-              <span className="text-gray-500">We Engineer Revenue.</span>
-            </h2>
-          </div>
-          <Link href="/services" className="hidden md:flex items-center gap-2 text-white border-b border-neon pb-1 hover:text-neon transition-colors">
-            View All Services <ArrowUpRight className="w-4 h-4" />
-          </Link>
-        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-10 md:mb-20 md:text-center max-w-3xl mx-auto"
+        >
+          <span className="text-cognac font-bold tracking-widest uppercase text-xs mb-4 block">Our Expertise</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-charcoal mb-6 tracking-tight leading-tight">
+            We don&apos;t just &ldquo;build websites.&rdquo;<br />
+            <span className="font-serif italic text-stone-500">We engineer digital assets.</span>
+          </h2>
+        </motion.div>
 
         {/* BENTO GRID */}
-         {/* Mobile: Stacked, Desktop: Grid */}
-         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 h-auto md:h-[600px] md:grid-rows-2">
-           
-           {/* 1. WORDPRESS MIGRATION (Data Transfer) */}
-           <BentoCard
-             colSpan="md:col-span-1"
-             rowSpan="md:row-span-1"
-             title="WordPress Migration"
-             subtitle="Make Your Site Instant"
-             icon={Database}
-             gradient="from-blue-600/60 via-blue-500/30 to-transparent"
-             borderColor="blue-500"
-           >
-              <MigrationDecoration />
-           </BentoCard>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-           {/* 2. WEB APPS & DASHBOARDS (Typing Code) */}
-           <BentoCard
-             colSpan="md:col-span-2"
-             rowSpan="md:row-span-1"
-             title="Web Apps & Dashboards"
-             subtitle="Build Your Own Software (SaaS)"
-             icon={Code}
-             gradient="from-cyan-500/60 via-cyan-600/30 to-transparent"
-             borderColor="cyan-500"
-           >
-              <TypingCodeDecoration />
-           </BentoCard>
+          {/* CARD 1: MIGRATIONS (Large — 2 columns) */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5 }}
+            className="group md:col-span-2 relative overflow-hidden rounded-[2rem] bg-gradient-to-b from-white to-stone-50 border border-white shadow-xl shadow-stone-200/40 ring-1 ring-stone-900/5 p-10 min-h-[450px] hover:border-cognac/20 hover:shadow-2xl hover:shadow-cognac/10 transition-all duration-500"
+          >
+            {/* Inner architectural grid texture */}
+            <div
+              className="absolute inset-0 opacity-[0.03] pointer-events-none"
+              style={{ backgroundImage: "linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)", backgroundSize: "24px 24px" }}
+            />
+            <div className="relative z-10 h-full flex flex-col justify-between">
+              <div>
+                <div className="w-14 h-14 bg-stone-100 rounded-2xl flex items-center justify-center mb-8 transition-colors duration-300 group-hover:bg-charcoal">
+                  <Globe className="w-7 h-7 text-charcoal group-hover:text-white transition-colors duration-300" />
+                </div>
+                <h3 className="text-3xl font-bold text-charcoal mb-4 font-serif">Legacy Migrations</h3>
+                <p className="text-stone-600 text-lg max-w-md leading-relaxed">
+                  We move high-traffic sites off restrictive builders without losing SEO rankings or going offline for a single minute.
+                </p>
+              </div>
 
-           {/* 3. HIGH-PERFORMANCE STORES (Growing Graph) */}
-           <BentoCard
-             colSpan="md:col-span-1"
-             rowSpan="md:row-span-2"
-             title="High-Performance Stores"
-             subtitle="Custom Shopify (No Templates)"
-             icon={ShoppingCart}
-             gradient="from-green-600/60 via-green-500/30 to-transparent"
-             borderColor="green-500"
-           >
-             <RevenueGraphDecoration />
-           </BentoCard>
+              {/* Platform logos row */}
+              <div className="flex flex-wrap items-center gap-4 mt-8 pt-8 border-t border-stone-100 opacity-60 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
+                {platforms.map((name) => (
+                  <span
+                    key={name}
+                    className="px-3 py-1 bg-stone-100 border border-stone-200 rounded-full text-xs font-bold text-stone-600"
+                  >
+                    {name}
+                  </span>
+                ))}
+                <Link
+                  href="/services"
+                  className="ml-auto inline-flex items-center gap-2 text-charcoal font-bold text-sm group-hover:gap-3 transition-all duration-300"
+                >
+                  Explore Migrations <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+          </motion.div>
 
-           {/* SPACER - Hidden on desktop, takes no space on mobile */}
-           <div className="hidden md:block" />
+          {/* CARD 2: CUSTOM ENGINEERING (Dark Midnight) */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="group relative overflow-hidden rounded-[2rem] bg-midnight text-white p-10 min-h-[450px] shadow-2xl"
+          >
+            {/* Accent glow */}
+            <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-cognac/20 blur-[100px] rounded-full pointer-events-none" />
 
-         </div>
+            <div className="relative z-10 h-full flex flex-col justify-between">
+              <div>
+                <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-8">
+                  <Code2 className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-3xl font-bold mb-4 font-serif">Custom Engineering</h3>
+                <p className="text-stone-400 leading-relaxed">
+                  SaaS dashboards, internal tools, and AI integrations. When &ldquo;off-the-shelf&rdquo; isn&apos;t enough for your growth.
+                </p>
+              </div>
+
+              <Link
+                href="/services/custom-engineering"
+                className="mt-8 inline-flex items-center gap-3 text-white font-bold group-hover:gap-4 transition-all duration-300"
+              >
+                View Architecture <ArrowRight className="w-5 h-5 text-cognac" />
+              </Link>
+            </div>
+          </motion.div>
+
+        </div>
       </div>
     </section>
-  );
-}
-
-// --- DECORATION COMPONENTS (The "Life" inside the boxes) ---
-
-function TypingCodeDecoration() {
-  const [text, setText] = useState("");
-  const fullText = `const future = await build();\nreturn "Excellence";`;
-
-  useEffect(() => {
-    let i = 0;
-    const interval = setInterval(() => {
-      setText(fullText.slice(0, i));
-      i++;
-      if (i > fullText.length) {
-        setTimeout(() => { i = 0; }, 2000);
-      }
-    }, 50);
-    return () => clearInterval(interval);
-  }, []);
-
-  return (
-    <div className="absolute right-4 bottom-4 md:right-6 md:bottom-6 w-full max-w-[250px] opacity-50 pointer-events-none">
-      <div className="bg-black/50 backdrop-blur-sm border border-white/10 p-3 md:p-4 rounded-lg font-mono text-[9px] md:text-xs text-blue-300 shadow-xl">
-        <div className="flex gap-1.5 mb-3">
-           <div className="w-2 h-2 rounded-full bg-red-500/50" />
-           <div className="w-2 h-2 rounded-full bg-yellow-500/50" />
-           <div className="w-2 h-2 rounded-full bg-green-500/50" />
-        </div>
-        <pre className="whitespace-pre-wrap break-all">{text}<span className="animate-pulse">|</span></pre>
-      </div>
-    </div>
-  );
-}
-
-function RevenueGraphDecoration() {
-  return (
-    <div className="absolute bottom-0 left-0 right-0 h-32 md:h-48 flex items-end justify-around px-4 md:px-6 pb-0 pointer-events-none">
-       {[30, 60, 45, 80, 55, 90].map((height, i) => (
-          <motion.div 
-            key={i}
-            initial={{ height: "10%" }}
-            whileInView={{ height: `${height}%` }}
-            animate={{ height: [`${height}%`, `${height - 20}%`, `${height}%`] }}
-            transition={{ 
-                duration: 2, 
-                repeat: Infinity, 
-                delay: i * 0.2,
-                ease: "easeInOut"
-            }}
-            className="w-2 md:w-4 bg-gradient-to-t from-green-500/40 to-green-400/10 rounded-t-sm border-t border-green-500/30" 
-          />
-       ))}
-    </div>
-  );
-}
-
-function MigrationDecoration() {
-    return (
-        <div className="absolute bottom-6 right-6 left-6 pointer-events-none">
-            <div className="flex justify-between text-[10px] text-blue-200 mb-2 font-mono uppercase tracking-wider">
-                <span className="animate-pulse">Transferring Core...</span>
-                <span>98 TB/s</span>
-            </div>
-            
-            {/* The Track */}
-            <div className="relative h-2 w-full bg-gray-800/50 rounded-full overflow-hidden border border-white/5">
-                
-                {/* The Fill */}
-                <motion.div 
-                    initial={{ width: "0%" }}
-                    whileInView={{ width: "100%" }}
-                    transition={{ duration: 1.5, ease: "circOut" }}
-                    className="h-full bg-gradient-to-r from-blue-600 to-purple-400"
-                />
-
-                {/* The Flashy Beam (Shoots across) */}
-                <motion.div 
-                    animate={{ x: ["-100%", "200%"] }}
-                    transition={{ duration: 1, repeat: Infinity, ease: "linear", repeatDelay: 0.5 }}
-                    className="absolute top-0 bottom-0 w-20 bg-gradient-to-r from-transparent via-white to-transparent opacity-70 blur-sm"
-                />
-            </div>
-
-            {/* Floating Data Particles */}
-            <div className="absolute -top-8 right-0 flex gap-1">
-                 {[1,2,3].map((i) => (
-                    <motion.div 
-                        key={i}
-                        animate={{ y: [0, -20], opacity: [1, 0] }}
-                        transition={{ duration: 1, repeat: Infinity, delay: i * 0.2 }}
-                        className="text-[8px] text-orange-400 font-mono"
-                    >
-                        01
-                    </motion.div>
-                 ))}
-            </div>
-        </div>
-    )
-}
-
-function SaaSDecoration() {
-    return (
-        <div className="absolute bottom-4 md:bottom-6 right-4 md:right-6 w-20 h-20 md:w-24 md:h-24 pointer-events-none">
-            {/* Central Server Icon */}
-            <div className="absolute inset-0 flex items-center justify-center z-10">
-                <Server className="w-6 h-6 md:w-8 md:h-8 text-cyan-400" />
-            </div>
-            
-            {/* Ripples */}
-            {[1, 2, 3].map((i) => (
-                <motion.div
-                    key={i}
-                    className="absolute inset-0 border border-cyan-500/30 rounded-full"
-                    initial={{ scale: 0.5, opacity: 1 }}
-                    animate={{ scale: 1.5, opacity: 0 }}
-                    transition={{ 
-                        duration: 2, 
-                        repeat: Infinity, 
-                        delay: i * 0.6,
-                        ease: "easeOut"
-                    }}
-                />
-            ))}
-            
-            {/* Connection Dot */}
-            <div className="absolute top-0 right-0 w-2 h-2 bg-green-500 rounded-full animate-ping" />
-        </div>
-    )
-}
-
-
-// --- MAIN CARD COMPONENT ---
-
-function BentoCard({ colSpan, rowSpan, title, subtitle, icon: Icon, gradient, borderColor, children }: any) {
-  // Get border color mapping
-  const getBorderColor = () => {
-    switch(borderColor) {
-      case 'blue-500': return { hover: 'rgba(59, 130, 246, 0.6)', icon: 'rgba(59, 130, 246, 0.8)' };
-      case 'cyan-500': return { hover: 'rgba(6, 182, 212, 0.6)', icon: 'rgba(6, 182, 212, 0.8)' };
-      case 'green-500': return { hover: 'rgba(34, 197, 94, 0.6)', icon: 'rgba(34, 197, 94, 0.8)' };
-      default: return { hover: 'rgba(255, 255, 255, 0.4)', icon: 'rgba(255, 255, 255, 0.5)' };
-    }
-  };
-
-  const colors = getBorderColor();
-
-  return (
-    <motion.div
-      whileHover={{ y: -6, scale: 1.02 }}
-      className={`relative group overflow-hidden rounded-2xl md:rounded-3xl border-2 border-white/20 bg-gradient-to-b from-white/[0.08] to-transparent backdrop-blur-sm p-6 md:p-8 flex flex-col justify-between h-64 md:h-auto ${colSpan} ${rowSpan} transition-all duration-300 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_8px_32px_rgba(0,0,0,0.4)] hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.15),0_20px_60px_rgba(0,0,0,0.6)] hover:border-white/40`}
-    >
-      {/* Background Gradient - BOLD and always visible */}
-      <div className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-60 transition-opacity duration-500`} />
-
-      {/* Content */}
-      <div className="relative z-10">
-        <div className="w-12 h-12 rounded-xl bg-white/10 border-2 border-white/30 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:border-white/50 group-hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all duration-300">
-          <Icon
-            strokeWidth={2}
-            className="w-6 h-6 text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.8)]"
-          />
-        </div>
-        <h3 className="text-lg md:text-2xl font-bold text-white mb-2 drop-shadow-lg">{title}</h3>
-        <p className="text-gray-300 text-xs md:text-sm font-medium">{subtitle}</p>
-      </div>
-
-      {children}
-
-      {/* Hover Arrow - subtle */}
-      <div className="absolute top-6 right-6 md:top-8 md:right-8 opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-x-2 group-hover:translate-x-0">
-        <ArrowUpRight className="w-5 h-5 md:w-6 md:h-6 text-white" />
-      </div>
-    </motion.div>
   );
 }

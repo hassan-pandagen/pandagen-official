@@ -3,6 +3,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { ArrowLeft, ArrowRight, BarChart3, Target } from "lucide-react";
 import { blogPosts } from "@/data/blog";
 
 export const metadata: Metadata = {
@@ -20,9 +21,7 @@ export const metadata: Metadata = {
         title: "Imran - Lead Solutions Architect at PandaCodeGen",
         description: "Enterprise architecture & strategic planning for e-commerce migrations. 8+ years experience.",
     },
-    alternates: {
-        canonical: "/about/imran",
-    },
+    alternates: { canonical: "/about/imran" },
 };
 
 const personSchema = {
@@ -40,20 +39,13 @@ const personSchema = {
             "worksFor": {
                 "@type": "Organization",
                 "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaCodeGen"
+                "name": "PandaCodeGen",
             },
             "knowsAbout": [
-                "Enterprise Architecture",
-                "Solutions Architecture",
-                "Strategic Planning",
-                "Business Strategy",
-                "Platform Migrations",
-                "ROI Optimization",
-                "System Design",
-                "Technical Leadership",
-                "E-commerce Strategy",
-                "Performance Optimization"
-            ]
+                "Enterprise Architecture", "Solutions Architecture", "Strategic Planning",
+                "Business Strategy", "Platform Migrations", "ROI Optimization",
+                "System Design", "Technical Leadership", "E-commerce Strategy", "Performance Optimization",
+            ],
         },
         {
             "@type": "ProfilePage",
@@ -63,7 +55,7 @@ const personSchema = {
             "description": "Learn about Imran, Lead Solutions Architect at PandaGen. 8+ years of experience in enterprise architecture and strategic planning.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "mainEntity": { "@id": "https://www.pandacodegen.com/#/schema/person/imran" },
-            "inLanguage": "en-US"
+            "inLanguage": "en-US",
         },
         {
             "@type": "BreadcrumbList",
@@ -71,189 +63,169 @@ const personSchema = {
             "itemListElement": [
                 { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
                 { "@type": "ListItem", "position": 2, "name": "About", "item": "https://www.pandacodegen.com/about" },
-                { "@type": "ListItem", "position": 3, "name": "Imran", "item": "https://www.pandacodegen.com/about/imran" }
-            ]
-        }
-    ]
+                { "@type": "ListItem", "position": 3, "name": "Imran", "item": "https://www.pandacodegen.com/about/imran" },
+            ],
+        },
+    ],
 };
 
 const expertise = [
-    { name: "Enterprise Architecture", level: "Expert" },
-    { name: "Solutions Design", level: "Expert" },
-    { name: "Strategic Planning", level: "Expert" },
-    { name: "Platform Migrations", level: "Expert" },
-    { name: "ROI Optimization", level: "Expert" },
-    { name: "Technical Leadership", level: "Expert" },
-    { name: "Business Strategy", level: "Expert" },
-    { name: "System Integration", level: "Advanced" },
-    { name: "Performance Auditing", level: "Expert" },
-    { name: "E-commerce Strategy", level: "Expert" },
+    "Enterprise Architecture",
+    "Solutions Design",
+    "Strategic Planning",
+    "Platform Migrations",
+    "ROI Optimization",
+    "Technical Leadership",
+    "Business Strategy",
+    "System Integration",
+    "Performance Auditing",
+    "E-commerce Strategy",
+];
+
+const builds = [
+    { title: "Enterprise Architecture Design", desc: "Scalable architectures that eliminate platform fees, reduce hosting costs by 60-90%, and improve performance by 3-4×. Every decision is ROI-driven." },
+    { title: "Strategic Migration Planning", desc: "WordPress, Shopify, and legacy platform migrations with zero downtime. Minimize disruption while maximizing performance gains and cost savings." },
+    { title: "ROI & Cost Analysis", desc: "Calculate exact ROI before writing a single line of code. Monthly savings, performance improvements, and payback timeline, upfront. No surprises." },
+    { title: "Technical Leadership", desc: "Lead implementation teams, ensure quality standards, and guarantee projects deliver on promised metrics. 8+ years leading enterprise migrations." },
 ];
 
 export default function ImranAuthorPage() {
     const imranPosts = blogPosts.filter(p => p.author === "Imran");
 
     return (
-        <main className="bg-transparent min-h-screen text-white">
-            {/* Global Noise Texture */}
-            <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-20 mix-blend-overlay" />
-
+        <main className="bg-paper min-h-screen">
+            <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]" />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
-
             <Header />
 
-            {/* Hero */}
-            <section className="relative pt-40 pb-20 px-6 overflow-hidden">
-                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/15 blur-[150px] rounded-full pointer-events-none" />
+            <div className="pt-40 pb-24 px-6">
+                <div className="container mx-auto max-w-5xl">
 
-                <div className="container mx-auto max-w-4xl relative z-10">
-                    {/* Breadcrumbs */}
-                    <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-gray-500 mb-10">
-                        <Link href="/" className="hover:text-neon transition-colors">Home</Link>
-                        <span>/</span>
-                        <Link href="/about" className="hover:text-neon transition-colors">About</Link>
-                        <span>/</span>
-                        <span className="text-gray-300">Imran</span>
-                    </nav>
+                    {/* Back */}
+                    <Link href="/about" className="group inline-flex items-center gap-2 text-stone-500 hover:text-cognac transition-colors mb-12 font-medium">
+                        <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+                        Back to Team
+                    </Link>
 
-                    <div className="flex flex-col md:flex-row items-start gap-10">
-                        {/* Photo */}
-                        <div className="w-40 h-40 md:w-52 md:h-52 rounded-3xl overflow-hidden border-2 border-white/10 flex-shrink-0 relative">
+                    {/* Hero */}
+                    <div className="flex flex-col md:flex-row gap-12 items-start mb-24">
+                        <div className="w-full md:w-64 flex-shrink-0 aspect-square relative rounded-2xl overflow-hidden shadow-xl shadow-stone-200/60 border border-white">
                             <Image
                                 src="/team/imran.png"
                                 fill
                                 alt="Imran - Lead Solutions Architect at PandaGen"
-                                className="object-cover object-top"
+                                className="object-cover object-top grayscale hover:grayscale-0 transition-all duration-700"
                                 priority
                             />
                         </div>
 
-                        {/* Info */}
-                        <div>
-                            <div className="px-3 py-1 bg-blue-500/10 text-blue-400 text-[10px] font-bold uppercase tracking-wider rounded w-fit mb-3">
-                                Strategy
+                        <div className="flex-1 pt-2">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-stone-200 text-xs font-bold uppercase tracking-widest text-charcoal mb-6">
+                                Lead Solutions Architect
                             </div>
-                            <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-2">Imran</h1>
-                            <p className="text-blue-400 font-mono text-lg mb-1">Lead Solutions Architect</p>
-                            <p className="text-gray-500 text-sm mb-6">PandaCodeGen &middot; 8+ years &middot; 50+ projects</p>
-
-                            <p className="text-gray-300 text-lg leading-relaxed max-w-xl">
+                            <h1 className="text-5xl md:text-6xl font-serif text-charcoal mb-3">Imran.</h1>
+                            <p className="text-lg font-mono text-cognac mb-6">Enterprise Architect &middot; 8+ years &middot; 50+ projects</p>
+                            <p className="text-xl text-stone-600 leading-relaxed max-w-xl mb-8">
                                 My job is to ensure your investment turns into measurable ROI. I design enterprise architectures that eliminate technical debt, reduce hosting costs, and deliver performance improvements that directly impact your bottom line. Every migration I architect is built around your business goals, not just technical specs.
                             </p>
-
-                            <div className="flex gap-3 mt-6">
-                                <a
-                                    href="https://cal.com/pandagen/discovery"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="px-5 py-2.5 bg-blue-500/10 border border-blue-500/30 text-blue-400 rounded-full text-sm font-medium hover:bg-blue-500/20 transition-all"
+                            <div className="flex flex-wrap gap-3">
+                                <button
+                                    data-cal-namespace="discovery"
+                                    data-cal-link="pandagen/discovery"
+                                    data-cal-config='{"layout":"month_view"}'
+                                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-stone-200 text-charcoal rounded-full text-sm font-bold hover:border-cognac/40 hover:text-cognac transition-all"
                                 >
                                     Book Strategy Call
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
 
-            {/* Expertise */}
-            <section className="py-16 px-6 border-y border-white/5 bg-white/[0.01]">
-                <div className="container mx-auto max-w-4xl">
-                    <h2 className="text-2xl font-bold mb-8">Strategic Expertise</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        {expertise.map((skill) => (
-                            <div key={skill.name} className="flex items-center justify-between p-4 rounded-xl bg-white/[0.03] border border-white/5">
-                                <span className="text-gray-300 font-medium">{skill.name}</span>
-                                <span className={`text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full ${skill.level === "Expert" ? "bg-blue-500/10 text-blue-400" : "bg-cyan-500/10 text-cyan-400"}`}>
-                                    {skill.level}
-                                </span>
+                    {/* Skills Grid */}
+                    <div className="grid md:grid-cols-2 gap-8 mb-16">
+                        <div className="p-8 bg-white border border-stone-200 rounded-2xl shadow-sm">
+                            <div className="flex items-center gap-3 mb-6">
+                                <BarChart3 className="w-5 h-5 text-cognac" />
+                                <h3 className="text-xl font-serif text-charcoal">Strategic Expertise</h3>
                             </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+                            <div className="flex flex-wrap gap-2">
+                                {expertise.map((skill) => (
+                                    <span key={skill} className="px-3 py-1 bg-stone-50 border border-stone-100 text-stone-600 text-sm font-medium rounded-md">
+                                        {skill}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
 
-            {/* What I Do */}
-            <section className="py-16 px-6">
-                <div className="container mx-auto max-w-4xl">
-                    <h2 className="text-2xl font-bold mb-6">What I Do</h2>
-                    <div className="grid md:grid-cols-2 gap-6">
-                        <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
-                            <h3 className="text-white font-bold mb-2">Enterprise Architecture Design</h3>
-                            <p className="text-gray-500 text-sm">Design scalable architectures that eliminate platform fees, reduce hosting costs by 60-90%, and improve performance by 3-4×. Every architecture decision is ROI-driven.</p>
-                        </div>
-                        <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
-                            <h3 className="text-white font-bold mb-2">Strategic Migration Planning</h3>
-                            <p className="text-gray-500 text-sm">Map out WordPress, Shopify, and legacy platform migrations with zero downtime. Minimize business disruption while maximizing performance gains and cost savings.</p>
-                        </div>
-                        <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
-                            <h3 className="text-white font-bold mb-2">ROI & Cost Analysis</h3>
-                            <p className="text-gray-500 text-sm">Calculate exact ROI before we write a single line of code. Show you the monthly savings, performance improvements, and payback timeline upfront. No surprises.</p>
-                        </div>
-                        <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
-                            <h3 className="text-white font-bold mb-2">Technical Leadership</h3>
-                            <p className="text-gray-500 text-sm">Lead implementation teams, ensure quality standards, and guarantee projects deliver on promised metrics. 8+ years leading enterprise migrations for e-commerce brands.</p>
+                        <div className="p-8 bg-white border border-stone-200 rounded-2xl shadow-sm">
+                            <div className="flex items-center gap-3 mb-6">
+                                <Target className="w-5 h-5 text-cognac" />
+                                <h3 className="text-xl font-serif text-charcoal">What I Do</h3>
+                            </div>
+                            <ul className="space-y-4">
+                                {builds.map((item) => (
+                                    <li key={item.title} className="border-t border-stone-100 pt-4 first:border-0 first:pt-0">
+                                        <div className="font-bold text-charcoal text-sm mb-1">{item.title}</div>
+                                        <div className="text-stone-500 text-xs leading-relaxed">{item.desc}</div>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
                     </div>
-                </div>
-            </section>
 
-            {/* Articles by Imran */}
-            {imranPosts.length > 0 && (
-                <section className="py-16 px-6 border-t border-white/5 bg-white/[0.01]">
-                    <div className="container mx-auto max-w-4xl">
-                        <h2 className="text-2xl font-bold mb-2">Articles by Imran</h2>
-                        <p className="text-gray-500 mb-8">Strategic insights on enterprise migrations and ROI optimization.</p>
-
-                        <div className="grid gap-4">
-                            {imranPosts.map((post) => (
-                                <Link
-                                    key={post.id}
-                                    href={`/blog/${post.id}`}
-                                    className="group flex items-center justify-between p-5 rounded-xl bg-white/[0.03] border border-white/5 hover:border-blue-500/20 transition-all"
-                                >
-                                    <div>
-                                        <h3 className="text-white font-medium group-hover:text-blue-400 transition-colors mb-1">{post.title}</h3>
-                                        <div className="flex items-center gap-3 text-xs text-gray-500">
-                                            <span>{post.category}</span>
-                                            <span>&middot;</span>
-                                            <span>{post.readTime}</span>
-                                            <span>&middot;</span>
-                                            <span>{post.date}</span>
+                    {/* Articles */}
+                    {imranPosts.length > 0 && (
+                        <section className="border-t border-stone-200 pt-16 mb-16">
+                            <h2 className="text-2xl font-serif text-charcoal mb-2">Articles by Imran</h2>
+                            <p className="text-stone-500 mb-8">Strategic insights on enterprise migrations and ROI optimization.</p>
+                            <div className="grid gap-3">
+                                {imranPosts.map((post) => (
+                                    <Link
+                                        key={post.id}
+                                        href={`/blog/${post.id}`}
+                                        className="group flex items-center justify-between p-5 rounded-xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all duration-300"
+                                    >
+                                        <div>
+                                            <h3 className="text-charcoal font-medium group-hover:text-cognac transition-colors mb-1">{post.title}</h3>
+                                            <div className="flex items-center gap-3 text-xs text-stone-400">
+                                                <span>{post.category}</span>
+                                                <span>&middot;</span>
+                                                <span>{post.readTime}</span>
+                                                <span>&middot;</span>
+                                                <span>{post.date}</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <span className="text-gray-600 group-hover:text-blue-400 transition-colors text-lg">&rarr;</span>
-                                </Link>
-                            ))}
+                                        <ArrowRight className="w-4 h-4 text-stone-300 group-hover:text-cognac transition-colors flex-shrink-0 ml-4" />
+                                    </Link>
+                                ))}
+                            </div>
+                        </section>
+                    )}
+
+                    {/* CTA */}
+                    <section className="text-center py-16 bg-white border border-stone-200 rounded-3xl px-8">
+                        <h2 className="text-2xl font-serif text-charcoal mb-4">Work With Me</h2>
+                        <p className="text-stone-500 mb-8 max-w-md mx-auto">Get a strategic architecture review and ROI analysis before committing to any platform migration.</p>
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                            <button
+                                data-cal-namespace="discovery"
+                                data-cal-link="pandagen/discovery"
+                                data-cal-config='{"layout":"month_view"}'
+                                className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 hover:scale-105 transition-all"
+                            >
+                                Book Strategy Call
+                            </button>
+                            <Link
+                                href="/about"
+                                className="px-8 py-4 bg-white border border-stone-200 text-charcoal font-bold rounded-full hover:bg-stone-50 hover:border-stone-400 transition-all"
+                            >
+                                Meet the Full Team
+                            </Link>
                         </div>
-                    </div>
-                </section>
-            )}
+                    </section>
 
-            {/* CTA */}
-            <section className="py-16 px-6">
-                <div className="container mx-auto max-w-2xl text-center">
-                    <h2 className="text-2xl font-bold mb-4">Work With Me</h2>
-                    <p className="text-gray-400 mb-8">Get a strategic architecture review and ROI analysis before committing to any platform migration.</p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button
-                            data-cal-namespace="discovery"
-                            data-cal-link="pandagen/discovery"
-                            data-cal-config='{"layout":"month_view"}'
-                            className="px-8 py-4 bg-blue-500 text-white font-bold rounded-full hover:scale-105 transition-transform"
-                        >
-                            Book Strategy Call
-                        </button>
-                        <Link
-                            href="/about"
-                            className="px-8 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-full hover:bg-white/10 transition-colors"
-                        >
-                            Meet the Full Team
-                        </Link>
-                    </div>
                 </div>
-            </section>
-
+            </div>
             <Footer />
         </main>
     );

@@ -13,12 +13,12 @@ export default function CalEmbed() {
         theme: "dark",
         cssVarsPerTheme: {
           dark: {
-            "cal-brand": "#22d3ee", // Neon Cyan Color
+            "cal-brand": "#3B82F6", // Neon Cyan Color
             "cal-text": "#ffffff",
             "cal-background": "#050505", // Dark Background
           },
           light: {
-            "cal-brand": "#22d3ee", // Neon Cyan Color
+            "cal-brand": "#3B82F6", // Neon Cyan Color
             "cal-text": "#000000",
             "cal-background": "#ffffff", // Light Background
           },

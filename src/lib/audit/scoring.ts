@@ -1,7 +1,7 @@
 export function getScoreColor(score: number): string {
-  if (score >= 90) return '#22c55e';
-  if (score >= 50) return '#f97316';
-  return '#ef4444';
+  if (score >= 90) return '#16a34a';
+  if (score >= 50) return '#ea580c';
+  return '#dc2626';
 }
 
 export function getScoreLabel(score: number): string {
@@ -11,13 +11,13 @@ export function getScoreLabel(score: number): string {
 }
 
 export function getScoreTextClass(score: number): string {
-  if (score >= 90) return 'text-green-400';
-  if (score >= 50) return 'text-orange-400';
-  return 'text-red-400';
+  if (score >= 90) return 'text-green-600';
+  if (score >= 50) return 'text-orange-500';
+  return 'text-red-500';
 }
 
 export function getScoreBorderClass(score: number): string {
-  if (score >= 90) return 'border-green-500/20';
-  if (score >= 50) return 'border-orange-500/20';
-  return 'border-red-500/20';
+  if (score >= 90) return 'border-green-200 bg-green-50';
+  if (score >= 50) return 'border-orange-200 bg-orange-50';
+  return 'border-red-200 bg-red-50';
 }

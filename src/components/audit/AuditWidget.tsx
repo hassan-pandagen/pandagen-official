@@ -2,13 +2,28 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Globe, ArrowRight, Lock, Zap, Search } from "lucide-react";
+import { Globe, ArrowRight, Search, BarChart3, Smartphone, MousePointer, Heading, Code2, Zap, ShieldCheck, CreditCard, Bot } from "lucide-react";
 import AuditLoadingState from "./AuditLoadingState";
 import AuditEmailGate from "./AuditEmailGate";
 import { getScoreTextClass, getScoreBorderClass } from "@/lib/audit/scoring";
 import type { PageSpeedResult } from "@/lib/audit/pagespeed";
 
 type WidgetState = "input" | "loading" | "results";
+
+/* The 11 deep checks — shown as preview in input state */
+const deepChecks = [
+  { icon: BarChart3, label: "Visual Hierarchy" },
+  { icon: Smartphone, label: "Mobile First Screen" },
+  { icon: MousePointer, label: "CTA Overload" },
+  { icon: Heading, label: "Heading Structure" },
+  { icon: Code2, label: "Structured Data" },
+  { icon: Globe, label: "Crawl Waste" },
+  { icon: Zap, label: "Indexing Speed" },
+  { icon: ShieldCheck, label: "Trust Signals" },
+  { icon: ShieldCheck, label: "Security Headers" },
+  { icon: CreditCard, label: "Mobile Checkout" },
+  { icon: Bot, label: "AI Readiness" },
+];
 
 export default function AuditWidget() {
   const [state, setState] = useState<WidgetState>("input");
@@ -68,15 +83,23 @@ export default function AuditWidget() {
         className="relative hidden lg:flex justify-center items-center"
       >
         <motion.div
-          whileHover={state === "input" ? { scale: 1.02, rotateY: 3 } : undefined}
-          className="relative w-full max-w-xl bg-[#0A0A0A]/90 backdrop-blur-xl border border-white/15 rounded-[2.5rem] p-10 overflow-hidden shadow-[0_0_80px_rgba(6,182,212,0.12),0_0_120px_rgba(139,92,246,0.06)]"
+          whileHover={state === "input" ? { scale: 1.01 } : undefined}
+          className="relative w-full max-w-xl bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-elevated"
         >
-          {/* Aurora glow effects */}
-          <div className="absolute -top-24 -right-24 w-80 h-80 bg-neon/20 blur-[120px] pointer-events-none animate-pulse" />
-          <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-purple-500/15 blur-[100px] pointer-events-none animate-pulse [animation-delay:1s]" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-blue-500/10 blur-[70px] pointer-events-none" />
+          {/* Header bar */}
+          <div className="flex items-center justify-between px-6 py-3 border-b border-gray-100 bg-stone-50/80">
+            <div className="flex items-center gap-1.5">
+              <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
+              <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
+              <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-charcoal animate-pulse" />
+              <span className="text-[10px] font-bold text-cognac uppercase tracking-wider">AI Audit Engine</span>
+            </div>
+          </div>
 
-          <div className="relative z-10">
+          <div className="p-6 md:p-8">
             <AnimatePresence mode="wait">
               {state === "input" && (
                 <motion.div
@@ -84,52 +107,59 @@ export default function AuditWidget() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
-                  className="space-y-6"
+                  className="space-y-5"
                 >
                   <div>
-                    <div className="text-xs text-neon uppercase tracking-[0.2em] mb-2 font-bold">
-                      Quick Free Website Audit
-                    </div>
-                    <h3 className="text-2xl font-bold text-white">
-                      Is Your Site Losing on Google?
+                    <h3 className="text-xl font-bold text-charcoal leading-tight mb-1">
+                      Get Your AI Audit
                     </h3>
-                    <p className="text-sm text-gray-400 mt-1">
-                      See how you stack up against competitors.
+                    <p className="text-sm text-stone-600">
+                      PageSpeed scores don&apos;t tell you why people leave without buying. We go 11 layers deeper.
                     </p>
                   </div>
 
+                  {/* URL Input */}
                   <div className="space-y-3">
                     <div className="relative">
-                      <Globe className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
+                      <Globe className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                       <input
                         type="text"
                         value={url}
                         onChange={(e) => setUrl(e.target.value)}
                         onKeyDown={handleKeyDown}
                         placeholder="yourwebsite.com"
-                        className="w-full bg-white/5 border border-white/10 rounded-xl pl-12 pr-4 py-4 text-white placeholder:text-gray-600 focus:outline-none focus:border-neon focus:ring-1 focus:ring-neon transition-all text-lg"
+                        className="w-full bg-stone-50 border border-gray-200 rounded-xl pl-12 pr-4 py-4 text-charcoal placeholder:text-gray-400 focus:outline-none focus:border-cognac focus:ring-2 focus:ring-cognac/20 transition-all text-base font-medium"
                       />
                     </div>
 
-                    {error && <p className="text-red-400 text-sm">{error}</p>}
+                    {error && <p className="text-red-600 text-sm">{error}</p>}
 
                     <button
                       onClick={handleAnalyze}
-                      className="w-full py-4 bg-neon text-black font-bold text-lg rounded-xl hover:bg-neon/90 transition-all flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:shadow-[0_0_30px_rgba(34,211,238,0.5)] hover:scale-[1.01] group"
+                      className="w-full py-4 bg-charcoal hover:bg-stone-800 text-white font-bold text-base rounded-xl transition-all flex items-center justify-center gap-2 hover:scale-[1.01] group"
                     >
-                      Analyze Free
+                      Run AI Audit
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </button>
                   </div>
 
-                  <div className="flex items-center justify-center gap-4 text-xs text-gray-500">
-                    <span className="flex items-center gap-1">
-                      <Lock className="w-3 h-3" /> No signup required
-                    </span>
-                    <span className="text-gray-700">|</span>
-                    <span className="flex items-center gap-1">
-                      <Zap className="w-3 h-3" /> Takes a few seconds
-                    </span>
+                  {/* 11 Deep Checks Preview */}
+                  <div className="pt-4 border-t border-gray-100">
+                    <div className="text-[10px] text-stone-500 uppercase tracking-widest font-bold mb-3">11 Deep Checks Included</div>
+                    <div className="flex flex-wrap gap-1.5">
+                      {deepChecks.map((check, i) => {
+                        const Icon = check.icon;
+                        return (
+                          <div
+                            key={i}
+                            className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-stone-50 border border-gray-100 text-[10px] font-medium text-stone-600"
+                          >
+                            <Icon className="w-2.5 h-2.5 text-cognac" />
+                            {check.label}
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
                 </motion.div>
               )}
@@ -153,8 +183,8 @@ export default function AuditWidget() {
                   exit={{ opacity: 0, y: -10 }}
                   className="space-y-5"
                 >
-                  <div className="flex items-center gap-2 text-sm text-gray-400">
-                    <Search className="w-4 h-4 text-neon" />
+                  <div className="flex items-center gap-2 text-sm text-stone-600">
+                    <Search className="w-4 h-4 text-cognac" />
                     <span className="truncate">{url}</span>
                   </div>
 
@@ -168,15 +198,15 @@ export default function AuditWidget() {
 
                   <button
                     onClick={() => setIsEmailGateOpen(true)}
-                    className="w-full py-4 bg-neon text-black font-bold rounded-xl hover:bg-neon/90 transition-all flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:scale-[1.01] group"
+                    className="w-full py-4 bg-charcoal text-white font-bold rounded-xl hover:bg-stone-800 transition-all flex items-center justify-center gap-2 hover:scale-[1.01] group"
                   >
-                    Get Full Report
+                    Get Full AI Report
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </button>
 
                   <button
                     onClick={handleReset}
-                    className="w-full text-center text-sm text-gray-500 hover:text-neon transition-colors"
+                    className="w-full text-center text-sm text-gray-500 hover:text-cognac transition-colors"
                   >
                     Scan another site
                   </button>
@@ -185,10 +215,6 @@ export default function AuditWidget() {
             </AnimatePresence>
           </div>
         </motion.div>
-
-        {/* Decorative floating elements */}
-        <div className="absolute -top-6 -right-6 w-24 h-24 border border-dashed border-white/10 rounded-full animate-spin-slow pointer-events-none" />
-        <div className="absolute bottom-10 -left-8 w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl blur-xl opacity-30 animate-float" />
       </motion.div>
 
       {/* Mobile Widget */}
@@ -198,59 +224,77 @@ export default function AuditWidget() {
         transition={{ delay: 0.6 }}
         className="lg:hidden mt-8 max-w-md mx-auto"
       >
-        <div className="bg-[#0A0A0A]/90 backdrop-blur-xl border border-white/20 rounded-2xl p-6 shadow-[0_0_40px_rgba(6,182,212,0.06)]">
-          <AnimatePresence mode="wait">
-            {state === "input" && (
-              <motion.div key="m-input" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="space-y-4">
-                <h3 className="text-lg font-bold text-white">Is Your Site Losing on Google?</h3>
-                <div className="relative">
-                  <Globe className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
-                  <input
-                    type="text"
-                    value={url}
-                    onChange={(e) => setUrl(e.target.value)}
-                    onKeyDown={handleKeyDown}
-                    placeholder="yourwebsite.com"
-                    className="w-full bg-white/5 border border-white/10 rounded-xl pl-10 pr-4 py-3 text-white placeholder:text-gray-600 focus:outline-none focus:border-neon focus:ring-1 focus:ring-neon transition-all"
-                  />
-                </div>
-                {error && <p className="text-red-400 text-sm">{error}</p>}
-                <button
-                  onClick={handleAnalyze}
-                  className="w-full py-3 bg-neon text-black font-bold rounded-xl hover:bg-neon/90 transition-all flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(34,211,238,0.3)] group"
-                >
-                  Analyze Free <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </button>
-              </motion.div>
-            )}
+        <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-card">
+          {/* Mobile header */}
+          <div className="flex items-center justify-between px-4 py-2.5 border-b border-gray-100 bg-stone-50/80">
+            <div className="flex items-center gap-1.5">
+              <div className="w-2 h-2 rounded-full bg-red-400" />
+              <div className="w-2 h-2 rounded-full bg-yellow-400" />
+              <div className="w-2 h-2 rounded-full bg-green-400" />
+            </div>
+            <div className="flex items-center gap-1.5">
+              <div className="w-1.5 h-1.5 rounded-full bg-charcoal animate-pulse" />
+              <span className="text-[9px] font-bold text-cognac uppercase tracking-wider">AI Audit</span>
+            </div>
+          </div>
 
-            {state === "loading" && (
-              <motion.div key="m-loading" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-                <AuditLoadingState url={url} />
-              </motion.div>
-            )}
+          <div className="p-5">
+            <AnimatePresence mode="wait">
+              {state === "input" && (
+                <motion.div key="m-input" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="space-y-4">
+                  <div>
+                    <h3 className="text-lg font-bold text-charcoal mb-1">Get Your AI Audit</h3>
+                    <p className="text-xs text-stone-600">11 deep checks beyond PageSpeed.</p>
+                  </div>
+                  <div className="relative">
+                    <Globe className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+                    <input
+                      type="text"
+                      value={url}
+                      onChange={(e) => setUrl(e.target.value)}
+                      onKeyDown={handleKeyDown}
+                      placeholder="yourwebsite.com"
+                      className="w-full bg-stone-50 border border-gray-200 rounded-xl pl-10 pr-4 py-3 text-charcoal placeholder:text-gray-400 focus:outline-none focus:border-cognac focus:ring-2 focus:ring-cognac/20 transition-all"
+                    />
+                  </div>
+                  {error && <p className="text-red-600 text-sm">{error}</p>}
+                  <button
+                    onClick={handleAnalyze}
+                    className="w-full py-3 bg-charcoal hover:bg-stone-800 text-white font-bold rounded-xl transition-all flex items-center justify-center gap-2 group"
+                  >
+                    Run AI Audit <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </motion.div>
+              )}
 
-            {state === "results" && auditData && (
-              <motion.div key="m-results" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="space-y-4">
-                <div className="text-sm text-gray-400 truncate">{url}</div>
-                <div className="grid grid-cols-2 gap-2">
-                  <MetricCard label="Performance" value={auditData.performanceScore} suffix="/100" isScore delay={0} />
-                  <MetricCard label="Load Time" value={auditData.loadTime} suffix="s" delay={0.1} />
-                  <MetricCard label="Page Size" value={auditData.pageSize} isText delay={0.2} />
-                  <MetricCard label="SEO Score" value={auditData.seoScore} suffix="/100" isScore delay={0.3} />
-                </div>
-                <button
-                  onClick={() => setIsEmailGateOpen(true)}
-                  className="w-full py-3 bg-neon text-black font-bold rounded-xl hover:bg-neon/90 transition-all flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(34,211,238,0.3)] group"
-                >
-                  Get Full Report <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </button>
-                <button onClick={handleReset} className="w-full text-center text-xs text-gray-500 hover:text-neon transition-colors">
-                  Scan another site
-                </button>
-              </motion.div>
-            )}
-          </AnimatePresence>
+              {state === "loading" && (
+                <motion.div key="m-loading" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+                  <AuditLoadingState url={url} />
+                </motion.div>
+              )}
+
+              {state === "results" && auditData && (
+                <motion.div key="m-results" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="space-y-4">
+                  <div className="text-sm text-stone-600 truncate">{url}</div>
+                  <div className="grid grid-cols-2 gap-2">
+                    <MetricCard label="Performance" value={auditData.performanceScore} suffix="/100" isScore delay={0} />
+                    <MetricCard label="Load Time" value={auditData.loadTime} suffix="s" delay={0.1} />
+                    <MetricCard label="Page Size" value={auditData.pageSize} isText delay={0.2} />
+                    <MetricCard label="SEO Score" value={auditData.seoScore} suffix="/100" isScore delay={0.3} />
+                  </div>
+                  <button
+                    onClick={() => setIsEmailGateOpen(true)}
+                    className="w-full py-3 bg-charcoal text-white font-bold rounded-xl hover:bg-stone-800 transition-all flex items-center justify-center gap-2 group"
+                  >
+                    Get Full AI Report <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                  <button onClick={handleReset} className="w-full text-center text-xs text-gray-500 hover:text-cognac transition-colors">
+                    Scan another site
+                  </button>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </div>
       </motion.div>
 
@@ -288,7 +332,7 @@ function MetricCard({
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay, duration: 0.3 }}
-      className={`bg-white/5 rounded-2xl p-4 border border-white/5 ${
+      className={`bg-stone-50 rounded-xl p-4 border border-gray-200 ${
         isScore ? getScoreBorderClass(numericValue) : ""
       }`}
     >
@@ -297,7 +341,7 @@ function MetricCard({
       </div>
       <div
         className={`text-2xl font-bold font-mono ${
-          isScore ? getScoreTextClass(numericValue) : "text-white"
+          isScore ? getScoreTextClass(numericValue) : "text-charcoal"
         }`}
       >
         {isText ? (

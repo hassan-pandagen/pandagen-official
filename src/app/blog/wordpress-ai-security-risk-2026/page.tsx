@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote } from "@/components/ui/BlogStyles";
+import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote , BlogAuthor } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
@@ -12,6 +12,7 @@ import type { Metadata } from "next";
 const aiSecurityFAQs = blogPosts.find(p => p.id === 'wordpress-ai-security-risk-2026')?.faqs ?? [];
 
 const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
+const SecurityShieldAnimation = dynamic(() => import("@/components/blog/SecurityShieldAnimation"));
 
 export const metadata: Metadata = {
     title: { absolute: "WordPress AI Security 2026: 100K+ Sites Exposed | PandaGen" },
@@ -84,7 +85,11 @@ const articleSchema = {
                     "name": "WordPress AI Security Guide for SMBs",
                     "url": "https://michelebedin.com/en/wordpress-security-ai-guide-sme-mcp-vulnerabilities/"
                 }
-            ]
+            ],
+            "speakable": {
+                "@type": "SpeakableSpecification",
+                "cssSelector": ["h1", "h2", "[data-speakable='true']"]
+            }
         },
         {
             "@type": "BreadcrumbList",
@@ -171,15 +176,13 @@ export default function WordPressAISecurityPage() {
     return (
         <>
             <Header />
-            <main className="bg-transparent min-h-screen selection:bg-neon selection:text-black overflow-x-hidden relative text-white pt-32 pb-20">
+            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-32 pb-20">
                 {/* Global Noise Texture */}
-                <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-20 mix-blend-overlay"></div>
+                <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
 
                 {/* Ambient Glows */}
-                <div className="fixed top-0 right-0 w-[600px] h-[600px] bg-red-600/20 blur-[150px] rounded-full pointer-events-none" />
-                <div className="fixed top-1/3 left-0 w-[500px] h-[500px] bg-purple-600/15 blur-[150px] rounded-full pointer-events-none" />
 
-                <article className="max-w-3xl mx-auto px-6">
+                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-sm px-8 py-10 md:px-14">
 
                     {/* Article Schema */}
                     <script
@@ -197,7 +200,7 @@ export default function WordPressAISecurityPage() {
                     />
 
                     {/* Back Button */}
-                    <Link href="/blog" className="inline-flex items-center gap-2 text-neon hover:text-neon/80 mb-8 transition-colors">
+                    <Link href="/blog" className="inline-flex items-center gap-2 text-charcoal hover:text-stone-700 mb-8 transition-colors">
                         <ArrowLeft className="w-4 h-4" />
                         Back to Blog
                     </Link>
@@ -205,14 +208,14 @@ export default function WordPressAISecurityPage() {
                     {/* Title & Meta */}
                     <div className="mb-10">
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                            WordPress Just Made Every Plugin an <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-purple-500">AI Endpoint</span>
+                            WordPress Just Made Every Plugin an <span className="font-serif italic text-stone-500">AI Endpoint</span>
                         </h1>
 
-                        <p className="text-xl text-gray-400 mb-6 leading-relaxed">
+                        <p className="text-xl text-stone-600 mb-6 leading-relaxed">
                             Here's why that's a security risk.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-gray-500">
+                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">
                             <div className="flex items-center gap-2">
                                 <Calendar className="w-4 h-4" />
                                 Feb 19, 2026
@@ -226,6 +229,23 @@ export default function WordPressAISecurityPage() {
                                 Security Analysis
                             </div>
                         </div>
+                        <BlogAuthor />
+                    </div>
+
+                    {/* Feature Visual */}
+                    <div className="mb-12">
+                        <SecurityShieldAnimation />
+                    </div>
+
+                    {/* Executive Summary */}
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12">
+                        <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
+                        <BlogList items={[
+                            "WordPress 6.9 turned every plugin into an AI endpoint — your 20-30 plugins are now 20-30 potential hacker entry points.",
+                            "The AI Engine plugin (100K+ sites) accidentally published admin credentials publicly. One checkbox = complete site takeover.",
+                            "Security researchers found 43% of WordPress AI plugins let attackers run commands remotely on your server.",
+                            "If your site processes payments or customer data, this risk is active now — not theoretical."
+                        ]} />
                     </div>
 
                     {/* Opening */}
@@ -250,10 +270,10 @@ export default function WordPressAISecurityPage() {
                     </BlogText>
 
                     {/* The Promise vs Reality */}
-                    <BlogHeader id="wordpress-promise">The WordPress Promise</BlogHeader>
+                    <BlogHeader id="wordpress-promise">What Did WordPress Originally Promise Business Owners, and Where Does That Promise Break Down?</BlogHeader>
 
                     <BlogText>
-                        WordPress was built on one promise — <strong>anyone can build a website</strong>. No code. No complexity. Install a theme, add some plugins, you're live.
+                        WordPress was built on one promise: <strong>anyone can build a website</strong>. No code. No complexity. Install a theme, add some plugins, you're live.
                     </BlogText>
 
                     <BlogText>
@@ -269,7 +289,7 @@ export default function WordPressAISecurityPage() {
                     ]} />
 
                     <BlogText>
-                        Even <a href="https://developer.wordpress.org/news/2026/02/from-abilities-to-ai-agents-introducing-the-wordpress-mcp-adapter/" target="_blank" rel="noopener noreferrer" className="text-neon hover:underline inline-flex items-center gap-1">WordPress's own developer blog <ExternalLink className="w-3 h-3 inline" /></a> says "start small, begin with read-only abilities, be prepared to hit roadblocks."
+                        Even <a href="https://developer.wordpress.org/news/2026/02/from-abilities-to-ai-agents-introducing-the-wordpress-mcp-adapter/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline inline-flex items-center gap-1">WordPress's own developer blog <ExternalLink className="w-3 h-3 inline" /></a> says "start small, begin with read-only abilities, be prepared to hit roadblocks."
                     </BlogText>
 
                     <BlogText>
@@ -277,7 +297,7 @@ export default function WordPressAISecurityPage() {
                     </BlogText>
 
                     {/* The Real Vulnerability */}
-                    <BlogHeader id="ai-engine-vulnerability">The AI Engine Vulnerability: 100K+ Sites Exposed</BlogHeader>
+                    <BlogHeader id="ai-engine-vulnerability">What Was the AI Engine Vulnerability That Exposed 100K+ WordPress Sites to Complete Takeover?</BlogHeader>
 
                     <BlogText>
                         And this isn't theoretical.
@@ -291,11 +311,11 @@ export default function WordPressAISecurityPage() {
                         <div className="flex items-start gap-4">
                             <AlertTriangle className="w-6 h-6 text-red-500 flex-shrink-0 mt-1" />
                             <div>
-                                <h3 className="text-lg font-bold text-white mb-2">The AI Engine Security Flaw: Complete Site Takeover</h3>
-                                <p className="text-gray-300 leading-relaxed mb-4">
+                                <h3 className="text-lg font-bold text-charcoal mb-2">The AI Engine Security Flaw: Complete Site Takeover</h3>
+                                <p className="text-stone-600 leading-relaxed mb-4">
                                     When a specific setting was turned on, the plugin accidentally <strong>published your site's login keys on a publicly accessible page</strong>.
                                 </p>
-                                <p className="text-gray-300 leading-relaxed">
+                                <p className="text-stone-600 leading-relaxed">
                                     Hackers could grab these keys by simply visiting your site. With those keys, they could <strong>promote themselves to full administrator</strong>, giving them complete control over your website.
                                 </p>
                             </div>
@@ -303,7 +323,7 @@ export default function WordPressAISecurityPage() {
                     </div>
 
                     <BlogText>
-                        Source: <a href="https://esecurityplanet.com/threats/news-wordpress-vulnerability-100k-impact/" target="_blank" rel="noopener noreferrer" className="text-neon hover:underline inline-flex items-center gap-1">eSecurity Planet — WordPress Vulnerability Affects 100K+ Sites <ExternalLink className="w-3 h-3 inline" /></a>
+                        Source: <a href="https://esecurityplanet.com/threats/news-wordpress-vulnerability-100k-impact/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline inline-flex items-center gap-1">eSecurity Planet, WordPress Vulnerability Affects 100K+ Sites <ExternalLink className="w-3 h-3 inline" /></a>
                     </BlogText>
 
                     <BlogText>
@@ -315,7 +335,7 @@ export default function WordPressAISecurityPage() {
                     </BlogText>
 
                     {/* Every Plugin Is Now a Target */}
-                    <BlogHeader id="every-plugin-target">Every Plugin Is Now a Potential Entry Point</BlogHeader>
+                    <BlogHeader id="every-plugin-target">Why Is Every WordPress Plugin Now a Potential AI Security Entry Point?</BlogHeader>
 
                     <BlogText>
                         Every plugin that registers an ability becomes a potential entry point.
@@ -338,29 +358,29 @@ export default function WordPressAISecurityPage() {
                     </BlogText>
 
                     {/* The Security Research */}
-                    <BlogHeader id="security-research">What Security Researchers Are Finding</BlogHeader>
+                    <BlogHeader id="security-research">What Are Security Researchers Discovering About WordPress AI Plugin Vulnerabilities?</BlogHeader>
 
                     <BlogText>
                         Security researchers tested WordPress AI plugins and found alarming results:
                     </BlogText>
 
                     <div className="my-8 grid sm:grid-cols-3 gap-4">
-                        <div className="p-6 border border-white/10 bg-white/5 rounded-2xl text-center">
+                        <div className="p-6 border border-stone-200 bg-stone-50 rounded-2xl text-center">
                             <div className="text-4xl font-bold text-red-500 mb-2">43%</div>
-                            <div className="text-sm text-gray-400">Let hackers run commands on your server</div>
+                            <div className="text-sm text-stone-600">Let hackers run commands on your server</div>
                         </div>
-                        <div className="p-6 border border-white/10 bg-white/5 rounded-2xl text-center">
+                        <div className="p-6 border border-stone-200 bg-stone-50 rounded-2xl text-center">
                             <div className="text-4xl font-bold text-orange-500 mb-2">33%</div>
-                            <div className="text-sm text-gray-400">Can access any website without restrictions</div>
+                            <div className="text-sm text-stone-600">Can access any website without restrictions</div>
                         </div>
-                        <div className="p-6 border border-white/10 bg-white/5 rounded-2xl text-center">
+                        <div className="p-6 border border-stone-200 bg-stone-50 rounded-2xl text-center">
                             <div className="text-4xl font-bold text-yellow-500 mb-2">22%</div>
-                            <div className="text-sm text-gray-400">Expose private files they shouldn't have access to</div>
+                            <div className="text-sm text-stone-600">Expose private files they shouldn't have access to</div>
                         </div>
                     </div>
 
                     <BlogText>
-                        Source: <a href="https://michelebedin.com/en/wordpress-security-ai-guide-sme-mcp-vulnerabilities/" target="_blank" rel="noopener noreferrer" className="text-neon hover:underline inline-flex items-center gap-1">Michele Bedin — WordPress AI Security Guide for SMBs <ExternalLink className="w-3 h-3 inline" /></a>
+                        Source: <a href="https://michelebedin.com/en/wordpress-security-ai-guide-sme-mcp-vulnerabilities/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline inline-flex items-center gap-1">Michele Bedin, WordPress AI Security Guide for SMBs <ExternalLink className="w-3 h-3 inline" /></a>
                     </BlogText>
 
                     <BlogText>
@@ -368,7 +388,7 @@ export default function WordPressAISecurityPage() {
                     </BlogText>
 
                     {/* WordPress vs Custom Built */}
-                    <BlogHeader id="wordpress-vs-custom">WordPress vs Custom-Built: The Security Gap</BlogHeader>
+                    <BlogHeader id="wordpress-vs-custom">How Wide Is the Security Gap Between WordPress AI Features and Custom-Built Sites?</BlogHeader>
 
                     <BlogText>
                         I'm not saying WordPress is dead. It powers 40% of the web and that's not changing tomorrow.
@@ -384,7 +404,7 @@ export default function WordPressAISecurityPage() {
                                 <AlertTriangle className="w-6 h-6 text-red-500" />
                                 <h3 className="text-lg font-bold">WordPress + AI</h3>
                             </div>
-                            <ul className="space-y-2 text-gray-300 text-sm">
+                            <ul className="space-y-2 text-stone-600 text-sm">
                                 <li className="flex items-start gap-2">
                                     <span className="text-red-500 mt-1">×</span>
                                     <span>20-30+ plugins = 20-30+ AI entry points</span>
@@ -409,7 +429,7 @@ export default function WordPressAISecurityPage() {
                                 <CheckCircle2 className="w-6 h-6 text-green-500" />
                                 <h3 className="text-lg font-bold">Custom-Built Sites</h3>
                             </div>
-                            <ul className="space-y-2 text-gray-300 text-sm">
+                            <ul className="space-y-2 text-stone-600 text-sm">
                                 <li className="flex items-start gap-2">
                                     <span className="text-green-500 mt-1">✓</span>
                                     <span>Every AI integration point is explicitly defined</span>
@@ -446,19 +466,19 @@ export default function WordPressAISecurityPage() {
                     </BlogText>
 
                     <BlogList items={[
-                        "Processes payments — WooCommerce, Easy Digital Downloads, Stripe integrations",
-                        "Stores customer data — Email lists, user accounts, PII, GDPR-protected information",
-                        "Handles sensitive business data — CRM integrations, analytics, sales reports",
-                        "Relies on uptime for revenue — E-commerce, SaaS, membership sites",
-                        "Manages user-generated content — Forums, reviews, community platforms"
+                        "Processes payments: WooCommerce, Easy Digital Downloads, Stripe integrations",
+                        "Stores customer data: Email lists, user accounts, PII, GDPR-protected information",
+                        "Handles sensitive business data: CRM integrations, analytics, sales reports",
+                        "Relies on uptime for revenue: E-commerce, SaaS, membership sites",
+                        "Manages user-generated content: Forums, reviews, community platforms"
                     ]} />
 
                     <BlogText>
-                        For these sites, <a href="/blog/wordpress-killer" className="text-neon hover:underline">WordPress's plugin architecture</a> already introduces <a href="/blog/wordpress-plugins-destroy-speed" className="text-neon hover:underline">performance and security risks</a>. Adding AI endpoints to every plugin multiplies the attack surface.
+                        For these sites, <a href="/blog/wordpress-killer" className="text-cognac hover:underline">WordPress's plugin architecture</a> already introduces <a href="/blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline">performance and security risks</a>. Adding AI endpoints to every plugin multiplies the attack surface.
                     </BlogText>
 
                     {/* The Technical Reality */}
-                    <BlogHeader id="technical-reality">The Technical Reality: AI-Ready ≠ Easy</BlogHeader>
+                    <BlogHeader id="technical-reality">What Does It Actually Take to Use WordPress AI Features Safely?</BlogHeader>
 
                     <BlogText>
                         The promise was "easy." This doesn't look easy anymore.
@@ -471,7 +491,7 @@ export default function WordPressAISecurityPage() {
                     <BlogQuote>
                         "Start small, begin with read-only abilities, be prepared to hit roadblocks."
                         <br />
-                        <span className="text-sm text-gray-500">— WordPress Developer Blog, Feb 2026</span>
+                        <span className="text-sm text-stone-400">(WordPress Developer Blog, Feb 2026)</span>
                     </BlogQuote>
 
                     <BlogText>
@@ -483,32 +503,32 @@ export default function WordPressAISecurityPage() {
                     </BlogText>
 
                     <div className="my-8 space-y-4">
-                        <div className="p-4 border border-white/10 bg-white/5 rounded-xl">
+                        <div className="p-4 border border-stone-200 bg-stone-50 rounded-xl">
                             <div className="flex items-start gap-3">
-                                <Code2 className="w-5 h-5 text-neon mt-1 flex-shrink-0" />
+                                <Code2 className="w-5 h-5 text-charcoal mt-1 flex-shrink-0" />
                                 <div>
-                                    <h4 className="font-bold text-white mb-1">AI Server Setup</h4>
-                                    <p className="text-sm text-gray-400">How to properly connect AI tools to your website without creating security holes</p>
+                                    <h4 className="font-bold text-charcoal mb-1">AI Server Setup</h4>
+                                    <p className="text-sm text-stone-600">How to properly connect AI tools to your website without creating security holes</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="p-4 border border-white/10 bg-white/5 rounded-xl">
+                        <div className="p-4 border border-stone-200 bg-stone-50 rounded-xl">
                             <div className="flex items-start gap-3">
-                                <Lock className="w-5 h-5 text-neon mt-1 flex-shrink-0" />
+                                <Lock className="w-5 h-5 text-charcoal mt-1 flex-shrink-0" />
                                 <div>
-                                    <h4 className="font-bold text-white mb-1">Login & Password Security</h4>
-                                    <p className="text-sm text-gray-400">Managing login credentials, automatic expiration, and preventing credential leaks</p>
+                                    <h4 className="font-bold text-charcoal mb-1">Login & Password Security</h4>
+                                    <p className="text-sm text-stone-600">Managing login credentials, automatic expiration, and preventing credential leaks</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="p-4 border border-white/10 bg-white/5 rounded-xl">
+                        <div className="p-4 border border-stone-200 bg-stone-50 rounded-xl">
                             <div className="flex items-start gap-3">
-                                <Shield className="w-5 h-5 text-neon mt-1 flex-shrink-0" />
+                                <Shield className="w-5 h-5 text-cognac mt-1 flex-shrink-0" />
                                 <div>
-                                    <h4 className="font-bold text-white mb-1">Access Control</h4>
-                                    <p className="text-sm text-gray-400">Making sure only authorized AI tools can access specific parts of your site</p>
+                                    <h4 className="font-bold text-charcoal mb-1">Access Control</h4>
+                                    <p className="text-sm text-stone-600">Making sure only authorized AI tools can access specific parts of your site</p>
                                 </div>
                             </div>
                         </div>
@@ -519,7 +539,7 @@ export default function WordPressAISecurityPage() {
                     </BlogText>
 
                     {/* The Verdict */}
-                    <BlogHeader id="verdict">The Verdict</BlogHeader>
+                    <BlogHeader id="verdict">What Is the Verdict: Should Business Owners Trust WordPress to Handle AI Security?</BlogHeader>
 
                     <BlogText>
                         I'm not here to bash WordPress.
@@ -542,53 +562,58 @@ export default function WordPressAISecurityPage() {
                     </BlogText>
 
                     <BlogText>
-                        If your business depends on security, uptime, and customer trust — ask yourself: is a platform built on third-party plugins really the best foundation for AI features?
+                        If your business depends on security, uptime, and customer trust, ask yourself: is a platform built on third-party plugins really the best foundation for AI features?
                     </BlogText>
 
                     {/* Sources Section */}
-                    <div className="my-12 p-8 border border-white/10 bg-white/5 rounded-2xl">
+                    <div className="my-12 p-8 border border-stone-200 bg-stone-50 rounded-2xl">
                         <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                            <ExternalLink className="w-6 h-6 text-neon" />
+                            <ExternalLink className="w-6 h-6 text-charcoal" />
                             Sources & Further Reading
                         </h3>
-                        <ul className="space-y-3 text-gray-300">
+                        <ul className="space-y-3 text-stone-600">
                             <li className="flex items-start gap-2">
-                                <span className="text-neon mt-1">→</span>
-                                <a href="https://developer.wordpress.org/news/2026/02/from-abilities-to-ai-agents-introducing-the-wordpress-mcp-adapter/" target="_blank" rel="noopener noreferrer" className="hover:text-neon transition-colors">
-                                    WordPress 6.9 Abilities API + MCP Adapter — Official Developer Documentation
+                                <span className="text-charcoal mt-1">→</span>
+                                <a href="https://developer.wordpress.org/news/2026/02/from-abilities-to-ai-agents-introducing-the-wordpress-mcp-adapter/" target="_blank" rel="noopener noreferrer" className="hover:text-cognac transition-colors">
+                                    WordPress 6.9 Abilities API + MCP Adapter, Official Developer Documentation
                                 </a>
                             </li>
                             <li className="flex items-start gap-2">
-                                <span className="text-neon mt-1">→</span>
-                                <a href="https://esecurityplanet.com/threats/news-wordpress-vulnerability-100k-impact/" target="_blank" rel="noopener noreferrer" className="hover:text-neon transition-colors">
-                                    AI Engine Vulnerability (CVE-2025-11749) Affects 100K+ Sites — eSecurity Planet
+                                <span className="text-charcoal mt-1">→</span>
+                                <a href="https://esecurityplanet.com/threats/news-wordpress-vulnerability-100k-impact/" target="_blank" rel="noopener noreferrer" className="hover:text-cognac transition-colors">
+                                    AI Engine Vulnerability (CVE-2025-11749) Affects 100K+ Sites, eSecurity Planet
                                 </a>
                             </li>
                             <li className="flex items-start gap-2">
-                                <span className="text-neon mt-1">→</span>
-                                <a href="https://michelebedin.com/en/wordpress-security-ai-guide-sme-mcp-vulnerabilities/" target="_blank" rel="noopener noreferrer" className="hover:text-neon transition-colors">
-                                    WordPress AI Security Guide for SMBs — Michele Bedin
+                                <span className="text-charcoal mt-1">→</span>
+                                <a href="https://michelebedin.com/en/wordpress-security-ai-guide-sme-mcp-vulnerabilities/" target="_blank" rel="noopener noreferrer" className="hover:text-cognac transition-colors">
+                                    WordPress AI Security Guide for SMBs, Michele Bedin
                                 </a>
                             </li>
                             <li className="flex items-start gap-2">
-                                <span className="text-neon mt-1">→</span>
-                                <a href="https://make.wordpress.org/ai/2025/07/17/ai-building-blocks/" target="_blank" rel="noopener noreferrer" className="hover:text-neon transition-colors">
-                                    WordPress AI Building Blocks Roadmap — WordPress.org
+                                <span className="text-charcoal mt-1">→</span>
+                                <a href="https://make.wordpress.org/ai/2025/07/17/ai-building-blocks/" target="_blank" rel="noopener noreferrer" className="hover:text-cognac transition-colors">
+                                    WordPress AI Building Blocks Roadmap, WordPress.org
                                 </a>
                             </li>
                         </ul>
                     </div>
 
                     {/* CTA */}
-                    <div className="my-12 p-8 bg-gradient-to-br from-neon/10 to-purple-500/10 border border-neon/20 rounded-2xl">
+                    <div className="my-12 p-8 bg-stone-50 border border-stone-200 rounded-2xl">
                         <h3 className="text-2xl font-bold mb-4">Want a Website Built for Security?</h3>
-                        <p className="text-gray-300 mb-6 leading-relaxed">
+                        <p className="text-stone-600 mb-6 leading-relaxed">
                             Custom-coded sites give you explicit control over every AI integration point. Zero plugin dependencies. Zero third-party vulnerabilities. Just clean, secure code you own outright.
                         </p>
-                        <Link href="/services/next-js" className="inline-flex items-center gap-2 px-6 py-3 bg-neon text-black font-bold rounded-xl hover:bg-neon/90 transition-all">
-                            Learn About Custom Development
+                        <a
+                            href="https://cal.com/pandagen/discovery"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-xl hover:bg-stone-800 transition-all"
+                        >
+                            Book a Free Security Consultation
                             <ArrowRight className="w-5 h-5" />
-                        </Link>
+                        </a>
                     </div>
 
                 </article>

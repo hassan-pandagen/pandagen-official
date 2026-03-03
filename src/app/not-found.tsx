@@ -9,42 +9,38 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
     return (
-        <main className="min-h-screen bg-[#050505] flex items-center justify-center px-6">
-            <div className="text-center max-w-2xl">
-                <div className="text-[120px] md:text-[180px] font-bold leading-none tracking-tighter">
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon to-blue-400">404</span>
-                </div>
+        <main className="min-h-screen bg-paper flex flex-col items-center justify-center text-center px-6">
+            {/* Huge serif background number */}
+            <h1 className="text-[10rem] md:text-[18rem] font-serif leading-none text-stone-200 select-none">
+                404
+            </h1>
 
-                <h1 className="text-3xl md:text-4xl font-bold text-white mb-4 -mt-4">
-                    Page Not Found
-                </h1>
-                <p className="text-gray-400 text-lg mb-10">
-                    This page doesn&apos;t exist or has been moved. Let&apos;s get you back on track.
+            <div className="relative -mt-12 md:-mt-20 z-10">
+                <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6 font-serif">
+                    Page not found.
+                </h2>
+                <p className="text-stone-500 max-w-md mx-auto mb-10 text-lg">
+                    This page has been moved, deleted, or never existed. Let&apos;s get you back on track.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Link
                         href="/"
-                        className="px-8 py-4 bg-neon text-black font-bold rounded-full hover:scale-105 transition-transform"
+                        className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 hover:scale-105 transition-all"
                     >
-                        Go Home
+                        Return Home
                     </Link>
                     <Link
-                        href="/services"
-                        className="px-8 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-full hover:bg-white/10 transition-colors"
+                        href="/contact"
+                        className="px-8 py-4 bg-transparent border border-stone-300 text-charcoal font-bold rounded-full hover:bg-white hover:border-stone-400 transition-all"
                     >
-                        View Services
-                    </Link>
-                    <Link
-                        href="/blog"
-                        className="px-8 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-full hover:bg-white/10 transition-colors"
-                    >
-                        Read Blog
+                        Contact Support
                     </Link>
                 </div>
 
-                <p className="text-gray-600 text-sm mt-12">
-                    Looking for something specific? <Link href="/contact" className="text-neon hover:underline">Contact us</Link>
+                <p className="text-stone-400 text-sm mt-12">
+                    Looking for something specific?{" "}
+                    <Link href="/contact" className="text-cognac hover:underline">Contact us</Link>
                 </p>
             </div>
         </main>

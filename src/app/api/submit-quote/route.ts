@@ -51,7 +51,7 @@ export async function POST(request: NextRequest) {
       subject: `New Quote Request from ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #f9f9f9; padding: 20px; border-radius: 8px;">
-          <h2 style="color: #06B6D4; margin-bottom: 20px;">🎉 New Quote Request</h2>
+          <h2 style="color: #3B82F6; margin-bottom: 20px;">🎉 New Quote Request</h2>
 
           <div style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 15px;">
             <p style="margin: 10px 0;"><strong>Name:</strong> ${name}</p>
@@ -77,7 +77,7 @@ export async function POST(request: NextRequest) {
           </div>
           ` : ''}
 
-          <div style="background: #06B6D4; color: white; padding: 15px; border-radius: 8px; text-align: center;">
+          <div style="background: #3B82F6; color: white; padding: 15px; border-radius: 8px; text-align: center;">
             <p style="margin: 0; font-size: 14px;">This is a lead from your website. Reply directly to ${email}</p>
           </div>
         </div>

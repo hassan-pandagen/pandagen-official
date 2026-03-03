@@ -54,17 +54,17 @@ export default function ServiceSection({
                 {/* TEXT SIDE */}
                 <div className="flex-1 flex flex-col justify-center">
                     <div className="flex items-center gap-4 mb-6">
-                        <span className="text-6xl font-bold text-white/5">{id}</span>
+                        <span className="text-6xl font-bold text-stone-100">{id}</span>
                         <div
-                            className={`p-3 rounded-2xl bg-gradient-to-br ${gradient} border border-white/10`}
+                            className={`p-3 rounded-2xl bg-gradient-to-br ${gradient} border border-stone-200`}
                         >
-                            <Icon className="w-6 h-6 text-white" />
+                            <Icon className="w-6 h-6 text-charcoal" />
                         </div>
                     </div>
 
-                    <h2 className="text-4xl font-bold text-white mb-2">{title}</h2>
-                    <p className="text-xl text-neon mb-6 font-medium">{subtitle}</p>
-                    <p className="text-gray-400 text-lg leading-relaxed mb-8">
+                    <h2 className="text-4xl font-bold text-charcoal mb-2">{title}</h2>
+                    <p className="text-xl text-cognac mb-6 font-medium">{subtitle}</p>
+                    <p className="text-stone-600 text-lg leading-relaxed mb-8">
                         {description}
                     </p>
 
@@ -72,7 +72,7 @@ export default function ServiceSection({
                         {tags.map((tag: string, i: number) => (
                             <span
                                 key={i}
-                                className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-gray-400"
+                                className="px-3 py-1 rounded-full bg-stone-100 border border-stone-200 text-xs text-stone-600"
                             >
                                 {tag}
                             </span>
@@ -83,9 +83,9 @@ export default function ServiceSection({
                         {features.map((feature: string, i: number) => (
                             <li
                                 key={i}
-                                className="flex items-center gap-3 text-gray-300"
+                                className="flex items-center gap-3 text-stone-600"
                             >
-                                <CheckCircle2 className="w-5 h-5 text-neon" />
+                                <CheckCircle2 className="w-5 h-5 text-cognac" />
                                 {feature}
                             </li>
                         ))}
@@ -95,7 +95,7 @@ export default function ServiceSection({
                 {/* VISUAL SIDE */}
                 <div className="flex-1 min-h-[400px]">
                     <div
-                        className={`w-full h-full rounded-[2rem] border border-white/10 bg-[#0A0A0A] p-2 relative overflow-hidden group`}
+                        className={`w-full h-full rounded-[2rem] border border-stone-200 bg-stone-50 p-2 relative overflow-hidden group`}
                     >
                         <div
                             className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-10 group-hover:opacity-20 transition-opacity duration-700`}

@@ -23,6 +23,66 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "for-agencies-offer-custom-web-development",
+    title: "For Agencies: How to Offer Custom Web Development Without Hiring a Dev Team",
+    excerpt: "Your client wants a custom-built website. You don't have a dev team. Here's how 40+ agencies deliver premium custom builds without touching a line of code.",
+    category: "Agency",
+    readTime: "10 min",
+    date: "Mar 6",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: false,
+    illustrationType: 'code',
+    lastModified: "2026-03-06",
+    faqs: [
+      { question: "What is white-label web development?", answer: "White-label web development is when you hire a development agency to build websites under your brand. You sell the work to your clients, we build it, and your client never knows we exist. You keep your margins, client relationships, and brand reputation." },
+      { question: "How do agencies make money on white-label web development?", answer: "Agencies typically mark up white-label development 25-50% above the actual build cost. If we build a site for $8,000, you quote your client $10,000-$12,000 and pocket the difference while keeping the ongoing client relationship." },
+      { question: "What happens if the client wants changes after launch?", answer: "You remain the point of contact for all change requests. You communicate requirements to us, we implement them, and you deliver to your client. Some agencies manage changes themselves with a documented handoff; others keep us on a monthly retainer under their brand." },
+      { question: "Will my client find out I'm using a development partner?", answer: "No. We sign an NDA before any project begins. All deliverables are unbranded. We don't include footer credits, file names, or metadata pointing to PandaGen. Your client relationship stays 100% yours." },
+      { question: "What types of projects can agencies white-label through PandaGen?", answer: "WordPress migrations to Next.js, custom e-commerce builds, GoHighLevel implementations, custom internal tools and dashboards, and full brand website rebuilds. Minimum engagement is $5,000. Most agency partnerships are $8,000-$25,000 per project." },
+    ]
+  },
+  {
+    id: "why-we-chose-nextjs-over-wordpress-2026",
+    title: "Why We Chose Next.js Over WordPress for Every New Client in 2026",
+    excerpt: "In 2023 we still built in WordPress. By mid-2024 we stopped completely. Here's the data, the client stories, and the 7 technical reasons we made the switch permanent.",
+    category: "Comparison",
+    readTime: "11 min",
+    date: "Mar 4",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: false,
+    illustrationType: 'code',
+    lastModified: "2026-03-04",
+    faqs: [
+      { question: "Why do web developers prefer Next.js over WordPress?", answer: "Next.js loads 3-5x faster than WordPress, requires zero plugins (eliminating security vulnerabilities), and hosts for free on Vercel. WordPress requires constant maintenance, plugin updates, and expensive hosting. For business websites that need speed and security, Next.js is objectively better technology." },
+      { question: "What are the main disadvantages of WordPress vs Next.js?", answer: "WordPress loads in 3-5 seconds vs Next.js 0.7-1.2 seconds. WordPress requires $100-$400/month hosting vs $0-$20 for Next.js. WordPress has 30+ plugin vulnerabilities vs zero for Next.js. WordPress scores 35-65/100 on Google PageSpeed vs 95-100 for Next.js." },
+      { question: "Does Next.js work for non-developers? Can clients edit their own content?", answer: "Yes. We connect Next.js to a headless CMS (usually Sanity). Clients get a clean, simple dashboard to edit text, images, and pages. It's more intuitive than the WordPress admin and doesn't require plugin updates or backups." },
+      { question: "Does switching from WordPress to Next.js hurt SEO rankings?", answer: "When done correctly, no. We preserve every URL, meta tag, and canonical with 301 redirects. Most clients see rankings recover within 30-60 days and improve by 20-40% within 90 days because the faster load time ranks higher." },
+      { question: "How long does it take to migrate from WordPress to Next.js?", answer: "A typical site takes 4-6 weeks. Week 1: Audit and planning. Weeks 2-4: Build and content migration. Week 5: Testing. Week 6: Zero-downtime launch with the old WordPress site running in parallel until all checks pass." },
+    ]
+  },
+  {
+    id: "wordpress-vs-custom-code-real-cost-3-years",
+    title: "WordPress vs Custom Code: The Real Cost Comparison Over 3 Years",
+    excerpt: "Everyone says WordPress is cheap. They're not counting hosting, plugins, maintenance, security, and lost revenue. We ran the numbers. The results will change how you think about your website.",
+    category: "Cost Analysis",
+    readTime: "12 min",
+    date: "Feb 20",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: false,
+    illustrationType: 'cost',
+    lastModified: "2026-02-20",
+    faqs: [
+      { question: "What is the total cost of WordPress over 3 years?", answer: "The average WordPress business site costs $8,000-$15,000 over 3 years when you add hosting ($1,800-$4,800/yr), premium plugins ($500-$1,000/yr), developer maintenance ($1,200-$2,400/yr), and security tools ($200-$400/yr). Most business owners only count the $50/month hosting and ignore everything else." },
+      { question: "Is a custom website cheaper than WordPress long-term?", answer: "Yes, typically after 18-24 months. A custom Next.js site costs $8,000-$15,000 to build but only $0-$240/year to host. Compared to WordPress at $3,600-$8,400/year in recurring costs, the custom site pays for itself within 2 years and saves money every year after." },
+      { question: "What are the hidden costs of WordPress?", answer: "The hidden costs of WordPress include: premium plugins ($500-$2,000/year), developer maintenance for updates and conflicts ($100-$200/month), security incidents ($1,500-$5,000 per hack), downtime losses, and performance optimization tools. Most business owners underestimate total WordPress cost by 3-5x." },
+      { question: "Does WordPress cost more than Squarespace or Wix?", answer: "WordPress costs more than Squarespace and Wix for most businesses because of hosting, plugins, and maintenance. However, all three have hidden ongoing costs. Custom-coded sites have the highest upfront cost but the lowest total cost of ownership over 3+ years." },
+      { question: "What happens to my WordPress site costs if it gets hacked?", answer: "The average cost of a WordPress hack is $3,000-$10,000 including cleanup, data recovery, potential downtime, and reputation damage. Sites with premium security plugins reduce but don't eliminate this risk. Coded sites have no database to hack and no plugins to exploit." },
+    ]
+  },
+  {
     id: "google-universal-commerce-protocol-what-it-means-for-your-store",
     title: "Customers Can Now Buy Inside Google Without Ever Seeing Your Website. Is Your Store Ready?",
     excerpt: "Google's Universal Commerce Protocol lets AI buy for customers without visiting your site. Here's what every e-commerce store owner needs to know about AI commerce in 2026.",
@@ -41,35 +101,35 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: "Can customers really buy from my store without visiting my website?",
-        answer: "Yes. As of February 2026, US shoppers can already buy from Etsy and Wayfair directly inside Google's AI Mode without ever clicking to those websites. The customer types a question, the AI finds the right product with price and availability, and checkout happens through Google Pay or PayPal — all inside Google. Your store gets the sale. Your website never gets the visit."
+        answer: "Yes. As of February 2026, US shoppers can already buy from Etsy and Wayfair directly inside Google's AI Mode without ever clicking to those websites. The customer types a question, the AI finds the right product with price and availability, and checkout happens through Google Pay or PayPal, all inside Google. Your store gets the sale. Your website never gets the visit."
       },
       {
         question: "Which e-commerce platforms are ready for Google UCP?",
-        answer: "Shopify is the most ready — they co-built UCP with Google, so the connection is mostly a settings flip. WordPress/WooCommerce requires a developer to manually build and maintain the connection. Wix and Squarespace have no UCP support announced at all, which means stores on those platforms may become invisible to AI shopping. Custom-built stores (like the ones we build at PandaCodeGen) are the most flexible — we connect them directly using the Model Context Protocol (MCP), a universal translator that lets AI assistants from Google, ChatGPT, and Bing all read your store simultaneously."
+        answer: "Shopify is the most ready; they co-built UCP with Google, so the connection is mostly a settings flip. WordPress/WooCommerce requires a developer to manually build and maintain the connection. Wix and Squarespace have no UCP support announced at all, which means stores on those platforms may become invisible to AI shopping. Custom-built stores (like the ones we build at PandaCodeGen) are the most flexible. We connect them directly using the Model Context Protocol (MCP), a universal translator that lets AI assistants from Google, ChatGPT, and Bing all read your store simultaneously."
       },
       {
         question: "Will I lose sales if customers buy without visiting my website?",
-        answer: "You won't lose the sale — you'll still receive the order and payment. What changes is the buying journey. You lose the chance to show that customer other products or capture their email. But the upside: customers who buy through AI have already made up their mind. They convert at higher rates and abandon carts less. The stores that win will be visible to AI (picking up AI-driven sales) while also maintaining a great website for customers who visit directly."
+        answer: "You won't lose the sale. You'll still receive the order and payment. What changes is the buying journey. You lose the chance to show that customer other products or capture their email. But the upside: customers who buy through AI have already made up their mind. They convert at higher rates and abandon carts less. The stores that win will be visible to AI (picking up AI-driven sales) while also maintaining a great website for customers who visit directly."
       },
       {
         question: "When should I start preparing for Google UCP?",
-        answer: "Now — and that's not a marketing line. UCP won't be mainstream for most stores for another 12-18 months. That gap is your advantage. The businesses that invested in Google SEO in 2010 dominated their markets by 2014 while late movers were paying thousands per month in ads just to keep up. UCP is that same curve. The stores preparing now will be the ones Google's AI recommends by default when mass adoption hits."
+        answer: "Right now, and that's not a marketing line. UCP won't be mainstream for most stores for another 12-18 months. That gap is your advantage. The businesses that invested in Google SEO in 2010 dominated their markets by 2014 while late movers were paying thousands per month in ads just to keep up. UCP is that same curve. The stores preparing now will be the ones Google's AI recommends by default when mass adoption hits."
       },
       {
         question: "What is a Headless CMS and why does it matter for Google UCP?",
-        answer: "A Headless CMS (like Sanity, Contentful, or Hygraph) is a content system where your product information lives separately from your website design. Think of it as a warehouse: your product data, descriptions, pricing, and availability all sit in one central place and get delivered to wherever they're needed — your website, Google's AI, ChatGPT, Bing Copilot — all at once. Traditional platforms like WordPress or Shopify bundle your content with your website, which makes it harder for AI agents to read your data cleanly. A Headless CMS gives Google's UCP a direct, clean feed of your products, and that's what gets you recommended first."
+        answer: "A Headless CMS (like Sanity, Contentful, or Hygraph) is a content system where your product information lives separately from your website design. Think of it as a warehouse: your product data, descriptions, pricing, and availability all sit in one central place and get delivered to wherever they're needed: your website, Google's AI, ChatGPT, Bing Copilot, all at once. Traditional platforms like WordPress or Shopify bundle your content with your website, which makes it harder for AI agents to read your data cleanly. A Headless CMS gives Google's UCP a direct, clean feed of your products, and that's what gets you recommended first."
       },
       {
         question: "How is Google UCP different from Google Shopping?",
-        answer: "Google Shopping shows your products as ads or listings in search results — the customer still has to click through to your website and check out themselves. UCP goes further: the AI assistant handles the entire buying decision and completes the transaction inside Google, without the customer ever leaving. Google Shopping is passive visibility. UCP is active selling. Your store doesn't just show up in results — it participates in the sale."
+        answer: "Google Shopping shows your products as ads or listings in search results, but the customer still has to click through to your website and check out themselves. UCP goes further: the AI assistant handles the entire buying decision and completes the transaction inside Google, without the customer ever leaving. Google Shopping is passive visibility. UCP is active selling. Your store doesn't just show up in results. It participates in the sale."
       },
       {
         question: "What happens to my website traffic when customers buy through Google AI?",
-        answer: "Direct website traffic will drop over time as more purchases happen through AI channels. That's the honest answer. But you gain a new sales channel that converts at higher rates — AI-driven buyers have already made their decision before they hit checkout, so they abandon carts less and return items less often. The move isn't to protect your website traffic at all costs. It's to make sure your store is visible in both places: your website for customers who browse, and Google's AI for customers who are ready to buy right now."
+        answer: "Direct website traffic will drop over time as more purchases happen through AI channels. That's the honest answer. But you gain a new sales channel that converts at higher rates. AI-driven buyers have already made their decision before they hit checkout, so they abandon carts less and return items less often. The move isn't to protect your website traffic at all costs. It's to make sure your store is visible in both places: your website for customers who browse, and Google's AI for customers who are ready to buy right now."
       },
       {
         question: "How much does it cost to make my store UCP-ready?",
-        answer: "It depends on where you're starting. On Shopify, the base UCP connection is built in — the main cost is optimizing your product data so AI picks you over competitors. On WordPress, you'll need a developer to build and maintain the integration manually, and it gets expensive as UCP evolves. On Wix or Squarespace, there's no UCP path yet. The most cost-effective long-term option is a custom Next.js store with a Headless CMS like Sanity — lower monthly costs than Shopify or WooCommerce, and built from the ground up to give AI everything it needs to recommend your products."
+        answer: "It depends on where you're starting. On Shopify, the base UCP connection is built in, so the main cost is optimizing your product data so AI picks you over competitors. On WordPress, you'll need a developer to build and maintain the integration manually, and it gets expensive as UCP evolves. On Wix or Squarespace, there's no UCP path yet. The most cost-effective long-term option is a custom Next.js store with a Headless CMS like Sanity, with lower monthly costs than Shopify or WooCommerce, and built from the ground up to give AI everything it needs to recommend your products."
       }
     ]
   },
@@ -168,7 +228,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "wordpress-plugins-destroy-speed",
     title: "WordPress Slow? Your Plugins Are Killing Speed (And Costing You Customers)",
-    excerpt: "Most WordPress sites with 30+ plugins score 35/100 on mobile PageSpeed. See how to calculate the exact revenue you're losing — and what to do about it.",
+    excerpt: "Most WordPress sites with 30+ plugins score 35/100 on mobile PageSpeed. See how to calculate the exact revenue you're losing, and what to do about it.",
     category: "Performance",
     readTime: "10 min",
     date: "Feb 5",
@@ -199,7 +259,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "shopify-plus-still-slow",
     title: "Shopify Plus Still Slow? Why $2,300/mo Doesn't Fix Your Core Web Vitals",
-    excerpt: "53% of mobile visitors leave before your Shopify Plus store loads. We break down the Liquid template problem — and the headless solution that actually works.",
+    excerpt: "53% of mobile visitors leave before your Shopify Plus store loads. We break down the Liquid template problem and the headless solution that actually works.",
     category: "E-Commerce",
     readTime: "9 min",
     date: "Feb 6",
@@ -333,7 +393,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "how-to-achieve-100-pagespeed",
     title: "Google Is Penalizing Your Slow Site. Here's How We Hit 100/100 PageSpeed on Every Build.",
-    excerpt: "Most websites score 35-55/100 on Google PageSpeed — and they're losing customers because of it. Here's the exact 8-step process we use to hit 98-100/100 on every client site.",
+    excerpt: "Most websites score 35-55/100 on Google PageSpeed, and they're losing customers because of it. Here's the exact 8-step process we use to hit 98-100/100 on every client site.",
     category: "Performance",
     readTime: "12 min",
     date: "Feb 17",

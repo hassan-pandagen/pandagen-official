@@ -7,7 +7,6 @@ import { ArrowRight, TrendingUp, CheckCircle2, X, Sparkles, ShieldCheck, DollarS
 export default function RealityCheck() {
   const [platform, setPlatform] = useState<"wordpress" | "shopify">("wordpress");
 
-  // Dynamic Data based on Platform
   const content = {
     wordpress: {
       loss: "$12,600/yr",
@@ -38,23 +37,23 @@ export default function RealityCheck() {
   const current = content[platform];
 
   return (
-    <section className="py-32 bg-transparent relative overflow-hidden">
-      
-      {/* 1. ATMOSPHERE GLOW */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[800px] bg-blue-900/20 blur-[150px] rounded-full pointer-events-none" />
+    <section className="py-32 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+
+      {/* Atmosphere Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[800px] bg-stone-200/40 blur-[150px] rounded-full pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10">
 
-        {/* 2. THE HEADER & TOGGLE */}
+        {/* Header & Toggle */}
         <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-8">The Reality Check.</h2>
-            
-            {/* The Toggle Pill */}
-            <div className="inline-flex bg-white/5 p-1 rounded-full border border-white/10 backdrop-blur-md relative">
+            <h2 className="text-4xl md:text-6xl font-bold text-charcoal mb-8">The Reality Check.</h2>
+
+            {/* Toggle Pill */}
+            <div className="inline-flex bg-stone-100 p-1 rounded-full border border-gray-200 relative">
                 <button
                     onClick={() => setPlatform("wordpress")}
                     className={`relative z-10 px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 ${
-                        platform === "wordpress" ? "bg-red-500/20 text-red-400 shadow-[0_0_20px_rgba(239,68,68,0.3)]" : "text-gray-400 hover:text-white"
+                        platform === "wordpress" ? "bg-white text-red-600 shadow-card border border-red-100" : "text-stone-600 hover:text-charcoal"
                     }`}
                 >
                     vs WordPress
@@ -62,7 +61,7 @@ export default function RealityCheck() {
                 <button
                     onClick={() => setPlatform("shopify")}
                     className={`relative z-10 px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 ${
-                        platform === "shopify" ? "bg-green-500/20 text-green-400 shadow-[0_0_20px_rgba(34,197,94,0.3)]" : "text-gray-400 hover:text-white"
+                        platform === "shopify" ? "bg-white text-green-600 shadow-card border border-green-100" : "text-stone-600 hover:text-charcoal"
                     }`}
                 >
                     vs Shopify
@@ -70,40 +69,39 @@ export default function RealityCheck() {
             </div>
         </div>
 
-        {/* 3. THE "MEGA CARD" (Combines everything) */}
+        {/* Mega Card */}
         <motion.div
           layout
           className="max-w-6xl mx-auto"
         >
-          <div className="relative p-[1px] rounded-[3rem] bg-gradient-to-b from-white/10 via-transparent to-transparent">
-            <div className="relative rounded-[3rem] overflow-hidden bg-[#080808] h-full shadow-2xl">
-               
+          <div className="relative rounded-[2rem] md:rounded-[3rem] overflow-hidden bg-white border border-gray-200 shadow-elevated">
+
                <div className="relative z-10 grid md:grid-cols-2 gap-12 p-8 md:p-16 items-center">
 
-                  {/* LEFT: THE PAIN (Dynamic) */}
+                  {/* LEFT: The Pain */}
                   <div className="flex flex-col justify-center">
-                    
+
                     <AnimatePresence mode="wait">
-                        <motion.div 
+                        <motion.div
                             key={platform}
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: 20 }}
                             transition={{ duration: 0.3 }}
                         >
-                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-full w-fit mb-6">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 border border-red-200 rounded-full w-fit mb-6">
                                 <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
-                                <span className="text-xs font-bold text-red-400 uppercase tracking-wider">Warning</span>
+                                <span className="text-xs font-bold text-red-600 uppercase tracking-wider">Warning</span>
                             </div>
 
-                            <h2 className="text-5xl md:text-6xl font-bold text-white leading-tight mb-6 drop-shadow-2xl">
+                            <h2 className="text-5xl md:text-6xl font-bold text-charcoal leading-tight mb-6">
                                 Stop Losing Money.<br/>
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-orange-400 to-red-400 animate-gradient-x font-extrabold">
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-orange-500 to-red-500 animate-gradient-x font-extrabold">
                                     {current.pain}
                                 </span>
                             </h2>
 
-                            <p className="text-xl text-gray-200 mb-10 leading-relaxed max-w-md font-medium">
+                            <p className="text-xl text-stone-600 mb-10 leading-relaxed max-w-md font-medium">
                                 {current.sub}
                             </p>
                         </motion.div>
@@ -112,7 +110,7 @@ export default function RealityCheck() {
                     {/* CTA Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4">
                       <button
-                        className="group px-8 py-4 bg-neon text-black font-bold rounded-full shadow-[0_0_30px_rgba(34,211,238,0.4)] hover:shadow-[0_0_50px_rgba(34,211,238,0.6)] transition-all flex items-center justify-center gap-2 hover:scale-105"
+                        className="group px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:shadow-[0_12px_40px_rgba(37,99,235,0.25)] transition-all flex items-center justify-center gap-2 hover:scale-105"
                       >
                         Calculate Savings <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       </button>
@@ -121,32 +119,32 @@ export default function RealityCheck() {
                          data-cal-namespace="discovery"
                          data-cal-link="pandagen/discovery"
                          data-cal-config='{"layout":"month_view"}'
-                         className="px-8 py-4 bg-white/5 border border-white/20 text-white font-semibold rounded-full hover:bg-white/10 transition-all"
+                         className="px-8 py-4 bg-stone-50 border border-gray-200 text-charcoal font-semibold rounded-full hover:bg-stone-100 transition-all"
                       >
                         Book Audit
                       </button>
                     </div>
                   </div>
 
-                  {/* RIGHT: THE TABLE (Dynamic) */}
+                  {/* RIGHT: The Table */}
                   <div className="flex flex-col justify-center">
-                    <div className="bg-black/40 border border-white/10 rounded-3xl p-8 shadow-inner relative overflow-hidden backdrop-blur-sm">
-                       
-                      <div className="flex justify-between items-end mb-6 border-b border-white/10 pb-4 relative z-10">
-                         <h3 className="text-xl font-bold text-white">The Comparison</h3>
-                         <span className="text-xs text-gray-500">vs PandaGen</span>
+                    <div className="bg-stone-50 border border-gray-200 rounded-3xl p-8 shadow-card relative overflow-hidden">
+
+                      <div className="flex justify-between items-end mb-6 border-b border-gray-200 pb-4 relative z-10">
+                         <h3 className="text-xl font-bold text-charcoal">The Comparison</h3>
+                         <span className="text-xs text-stone-500">vs PandaGen</span>
                       </div>
 
                       <div className="space-y-2 relative z-10">
                         {/* Headers */}
-                        <div className="grid grid-cols-3 gap-4 pb-2 text-xs text-gray-500 uppercase tracking-wider font-bold">
+                        <div className="grid grid-cols-3 gap-4 pb-2 text-xs text-stone-500 uppercase tracking-wider font-bold">
                             <div>Metric</div>
-                            <div className="text-center text-red-400">Them</div>
-                            <div className="text-center text-neon">Us</div>
+                            <div className="text-center text-red-500">Them</div>
+                            <div className="text-center text-cognac">Us</div>
                         </div>
 
                         <AnimatePresence mode="wait">
-                            <motion.div 
+                            <motion.div
                                 key={platform}
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
@@ -154,10 +152,10 @@ export default function RealityCheck() {
                                 className="space-y-2"
                             >
                                 {current.comparison.map((row, i) => (
-                                <div key={i} className="grid grid-cols-3 gap-4 items-center py-4 border-b border-white/5 last:border-0 hover:bg-white/5 transition-colors rounded-lg px-2 -mx-2">
-                                    <div className="text-sm text-gray-300 font-medium">{row.metric}</div>
-                                    <div className="text-center text-sm text-red-400/80">{row.bad}</div>
-                                    <div className="text-center text-sm text-neon font-bold shadow-[0_0_15px_rgba(34,211,238,0.1)]">{row.good}</div>
+                                <div key={i} className="grid grid-cols-3 gap-4 items-center py-4 border-b border-gray-100 last:border-0 hover:bg-white transition-colors rounded-lg px-2 -mx-2">
+                                    <div className="text-sm text-charcoal font-medium">{row.metric}</div>
+                                    <div className="text-center text-sm text-red-500">{row.bad}</div>
+                                    <div className="text-center text-sm text-cognac font-bold">{row.good}</div>
                                 </div>
                                 ))}
                             </motion.div>
@@ -166,17 +164,17 @@ export default function RealityCheck() {
 
                       {/* ROI Result */}
                       <AnimatePresence mode="wait">
-                        <motion.div 
+                        <motion.div
                             key={platform}
                             initial={{ scale: 0.9, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
-                            className="mt-8 p-6 bg-gradient-to-r from-green-500/10 to-emerald-900/20 border border-green-500/30 rounded-2xl flex items-center justify-between shadow-[0_0_30px_rgba(34,197,94,0.1)]"
+                            className="mt-8 p-6 bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-2xl flex items-center justify-between shadow-green-glow"
                         >
                             <div>
-                                <p className="text-xs text-green-400 uppercase font-bold mb-1">Your Potential Savings</p>
-                                <p className="text-3xl font-bold text-white">{current.loss}</p>
+                                <p className="text-xs text-green-700 uppercase font-bold mb-1">Your Potential Savings</p>
+                                <p className="text-3xl font-bold text-charcoal">{current.loss}</p>
                             </div>
-                            <div className="h-12 w-12 bg-green-500 rounded-full flex items-center justify-center text-black font-bold shadow-[0_0_20px_#22c55e]">
+                            <div className="h-12 w-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold shadow-green-glow">
                                 <DollarSign className="w-6 h-6" />
                             </div>
                         </motion.div>
@@ -186,19 +184,18 @@ export default function RealityCheck() {
                   </div>
 
                </div>
-               
-               {/* TECH STACK STRIP */}
-               <div className="border-t border-white/10 bg-white/[0.02] px-8 py-6 flex flex-col items-center">
-                  <p className="text-[10px] text-gray-500 uppercase tracking-[0.2em] mb-4 font-bold">Enterprise Tech Stack</p>
-                  <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500">
-                    <span className="text-lg font-bold text-white flex gap-2 items-center"><Zap size={16}/> Next.js 15</span>
-                    <span className="text-lg font-bold text-white flex gap-2 items-center"><Globe size={16}/> Vercel</span>
-                    <span className="text-lg font-bold text-white flex gap-2 items-center"><DollarSign size={16}/> Stripe</span>
-                    <span className="text-lg font-bold text-white flex gap-2 items-center"><ShieldCheck size={16}/> Supabase</span>
+
+               {/* Tech Stack Strip */}
+               <div className="border-t border-gray-200 bg-stone-50 px-8 py-6 flex flex-col items-center">
+                  <p className="text-[10px] text-stone-500 uppercase tracking-[0.2em] mb-4 font-bold">Enterprise Tech Stack</p>
+                  <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+                    <span className="text-lg font-bold text-charcoal flex gap-2 items-center"><Zap size={16}/> Next.js 15</span>
+                    <span className="text-lg font-bold text-charcoal flex gap-2 items-center"><Globe size={16}/> Vercel</span>
+                    <span className="text-lg font-bold text-charcoal flex gap-2 items-center"><DollarSign size={16}/> Stripe</span>
+                    <span className="text-lg font-bold text-charcoal flex gap-2 items-center"><ShieldCheck size={16}/> Supabase</span>
                   </div>
                </div>
 
-            </div>
           </div>
         </motion.div>
 

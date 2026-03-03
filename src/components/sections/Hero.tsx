@@ -1,118 +1,132 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Zap, ShieldCheck } from "lucide-react";
+import { ArrowRight, Zap, ShieldCheck, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import AuditWidget from "@/components/audit/AuditWidget";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[100vh] flex flex-col justify-center pt-24 pb-20 md:pt-32 md:pb-0 overflow-hidden bg-transparent">
+    <section className="relative min-h-[90vh] flex flex-col justify-center pt-32 pb-20 overflow-hidden bg-paper">
 
-      {/* 1. SUBTLE BACKGROUND AMBIENCE */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-blue-900/15 md:bg-blue-900/10 blur-[150px] rounded-full pointer-events-none" />
-      <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-purple-500/10 md:bg-purple-500/6 blur-[120px] rounded-full pointer-events-none" />
+      {/* Noise texture overlay */}
+      <div className="absolute inset-0 bg-noise opacity-40 mix-blend-overlay pointer-events-none" />
 
-      <div className="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+      {/* Subtle stone grid */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: "linear-gradient(#1C1917 1px, transparent 1px), linear-gradient(90deg, #1C1917 1px, transparent 1px)",
+          backgroundSize: "50px 50px",
+          opacity: 0.03,
+        }}
+      />
 
-        {/* --- LEFT: HIGH-CONVERSION COPY --- */}
-        <div className="max-w-2xl relative">
+      {/* Soft warm glow — far less aggressive than the blue orbs */}
+      <div className="absolute top-1/3 right-[10%] w-[500px] h-[500px] bg-stone-200/50 blur-[140px] rounded-full pointer-events-none" />
 
-            {/* Status Pill */}
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-xs font-medium text-neon mb-8 backdrop-blur-md shadow-[0_0_20px_rgba(34,211,238,0.2)]"
+      <div className="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+        {/* --- LEFT: EDITORIAL COPY --- */}
+        <div className="max-w-2xl">
+
+          {/* Status pill — cognac pulse dot */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-stone-200 text-xs font-bold uppercase tracking-widest text-stone-500 mb-8 shadow-sm"
+          >
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cognac opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-cognac" />
+            </span>
+            Accepting Q2 Clients
+          </motion.div>
+
+          {/* Headline: sans bold + serif italic second line */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 0.6 }}
+            className="text-5xl md:text-7xl font-sans font-bold text-charcoal tracking-tight mb-6 leading-[1.1]"
+          >
+            Your website is <br />
+            <span className="font-serif italic text-stone-500">
+              costing you revenue.
+            </span>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            className="text-lg md:text-xl text-stone-600 mb-10 leading-relaxed max-w-lg font-medium"
+          >
+            We replace slow legacy platforms with{" "}
+            <span className="text-charcoal font-bold underline decoration-cognac/40 decoration-2 underline-offset-2">
+              custom-engineered infrastructure
+            </span>
+            . Sub-second load times. Zero plugins. 100% ownership.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.35, duration: 0.5 }}
+            className="flex flex-col sm:flex-row items-start gap-4"
+          >
+            {/* Primary CTA: Charcoal (signals seriousness, not SaaS) */}
+            <button
+              data-cal-namespace="discovery"
+              data-cal-link="pandagen/discovery"
+              data-cal-config='{"layout":"month_view"}'
+              className="w-full sm:w-auto px-8 py-4 bg-charcoal text-white font-bold text-base rounded-full hover:bg-black transition-all duration-300 flex items-center justify-center gap-2 shadow-xl hover:shadow-2xl hover:-translate-y-0.5"
             >
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
-                </span>
-                Accepting Projects for Feb 2026
-            </motion.div>
+              Get Migration Plan <ArrowRight className="w-5 h-5 text-cognac" />
+            </button>
 
-            <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-                className="text-5xl md:text-8xl font-black text-white tracking-tighter mb-4 leading-[1]"
+            {/* Secondary CTA: White surface card */}
+            <Link
+              href="/work"
+              className="w-full sm:w-auto px-8 py-4 bg-white border border-stone-200 text-charcoal font-bold text-base rounded-full hover:bg-stone-50 transition-all duration-300 flex items-center justify-center gap-2 shadow-card"
             >
-                Digital <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-500 [text-shadow:0_0_40px_rgba(34,211,238,0.5)] [-webkit-text-stroke:1px_rgba(34,211,238,0.3)]">
-                    Done Right.
-                </span>
-            </motion.h1>
+              View Case Studies <ArrowRight className="w-4 h-4" />
+            </Link>
+          </motion.div>
 
-            <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.15 }}
-                className="text-lg md:text-xl text-gray-400 mb-4 font-medium"
-            >
-                You don&apos;t have a traffic problem. <span className="text-white font-bold">You have a website problem.</span>
-            </motion.p>
-
-            <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
-                className="text-base md:text-lg text-gray-300 mb-10 leading-relaxed max-w-lg"
-            >
-                We engineer <span className="text-white font-bold">custom-coded websites, e-commerce stores & SaaS platforms</span> <span className="text-gray-500">(Next.js)</span> that replace slow WordPress & Shopify setups, loading in <span className="text-neon font-bold">under 1 second</span>, <span className="text-neon font-bold">ranking higher</span>, and turning visitors into revenue.
-            </motion.p>
-
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="flex flex-col gap-4"
-            >
-                <div className="flex flex-col sm:flex-row items-center gap-3">
-                    {/* PRIMARY CTA */}
-                    <button
-                        data-cal-namespace="discovery"
-                        data-cal-link="pandagen/discovery"
-                        data-cal-config='{"layout":"month_view"}'
-                        className="w-full sm:w-auto px-5 py-2.5 bg-neon text-black font-medium text-sm rounded-full hover:bg-neon/90 transition-all duration-300 flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(34,211,238,0.3)] hover:shadow-[0_0_20px_rgba(34,211,238,0.5)] hover:scale-[1.01] group"
-                    >
-                        Get Free Quote <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </button>
-
-                    {/* SECONDARY CTA */}
-                    <Link
-                        href="/work"
-                        className="w-full sm:w-auto px-5 py-2.5 bg-transparent border border-white/20 text-white font-medium text-sm rounded-full hover:border-neon hover:bg-neon/10 transition-all duration-300 flex items-center justify-center gap-2 group"
-                    >
-                        View Case Studies <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                </div>
-            </motion.div>
-
-            {/* Trust Signals */}
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
-                className="flex items-center justify-center gap-4 text-sm mt-6"
-            >
-                <div className="flex items-center gap-2 text-gray-400">
-                    <Zap className="w-4 h-4 text-neon" />
-                    <span>Sub-1s Load Times</span>
-                </div>
-                <span className="text-gray-600">•</span>
-                <div className="flex items-center gap-2 text-gray-400">
-                    <ShieldCheck className="w-4 h-4 text-green-400" />
-                    <span>30-Day Money Back</span>
-                </div>
-            </motion.div>
+          {/* Trust signals */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.55 }}
+            className="flex flex-wrap items-center gap-x-8 gap-y-3 mt-10 text-sm text-stone-500 font-medium"
+          >
+            <div className="flex items-center gap-2">
+              <Zap className="w-4 h-4 text-cognac flex-shrink-0" />
+              <span>&lt;1s Load Time</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <ShieldCheck className="w-4 h-4 text-charcoal flex-shrink-0" />
+              <span>Bank-Grade Security</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-charcoal flex-shrink-0" />
+              <span>Fixed Pricing</span>
+            </div>
+          </motion.div>
 
         </div>
 
-        {/* --- RIGHT: SPEED AUDIT WIDGET --- */}
-        <AuditWidget />
+        {/* --- RIGHT: AUDIT WIDGET on white card lifted off the paper bg --- */}
+        <div className="relative">
+          {/* Warm white halo behind widget for depth */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-white/50 blur-3xl rounded-full pointer-events-none" />
+          <div className="relative z-10">
+            <AuditWidget />
+          </div>
+        </div>
 
       </div>
-
     </section>
   );
 }

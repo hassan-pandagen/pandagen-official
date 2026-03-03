@@ -2,18 +2,21 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
-import { ShieldCheck } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
 import QuoteModal from "@/components/ui/QuoteModal";
 
-// Lazy load heavy/below-the-fold components for better initial load performance
-const ProofMarquee = dynamic(() => import("@/components/ProofMarquee"));
-const HowItWorksSimple = dynamic(() => import("@/components/HowItWorksSimple"));
-const ClientResults = dynamic(() => import("@/components/sections/ClientResults"));
+// Lazy load below-the-fold components
+const TrustLogoBar = dynamic(() => import("@/components/sections/TrustLogoBar"));
+const SocialProof = dynamic(() => import("@/components/home/SocialProof"));
+const UnfairAdvantage = dynamic(() => import("@/components/sections/UnfairAdvantage"));
 const ServicesHub = dynamic(() => import("@/components/sections/ServicesHub"));
-const DiscoveryPortal = dynamic(() => import("@/components/DiscoveryPortal"));
+const HowItWorksSimple = dynamic(() => import("@/components/HowItWorksSimple"));
+const AIPowered = dynamic(() => import("@/components/sections/AIPowered"));
+const RevenueCalculator = dynamic(() => import("@/components/sections/RevenueCalculator"));
+const FounderSection = dynamic(() => import("@/components/sections/FounderSection"));
+const AntiAgency = dynamic(() => import("@/components/sections/AntiAgency"));
 const LatestBlog = dynamic(() => import("@/components/sections/LatestBlog"));
 
 export default function Home() {
@@ -60,37 +63,43 @@ export default function Home() {
           "width": 512,
           "height": 512
         },
-        "description": "Enterprise Next.js development agency specializing in WordPress migration, Shopify optimization, and custom web applications. Sub-second load times guaranteed.",
-        "email": "hello@pandacodegen.com",
+        "description": "Custom web development agency specializing in WordPress migration, Shopify optimization, and custom web applications. Sub-second load times guaranteed.",
+        "email": "info@pandacodegen.com",
+        "telephone": "+13022504340",
         "address": {
           "@type": "PostalAddress",
+          "addressLocality": "Missouri City",
+          "addressRegion": "TX",
           "addressCountry": "US"
         },
         "sameAs": [
           "https://twitter.com/pandacodegen",
-          "https://linkedin.com/company/pandagen"
+          "https://www.linkedin.com/company/pandagen",
+          "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
+          "https://github.com/hassan-pandagen"
         ],
         "contactPoint": {
           "@type": "ContactPoint",
-          "email": "hello@pandacodegen.com",
+          "email": "info@pandacodegen.com",
+          "telephone": "+13022504340",
           "contactType": "customer service",
           "availableLanguage": "English"
         },
         "serviceType": [
-          "Next.js Development",
+          "Custom Web Development",
           "WordPress Migration",
-          "Shopify Headless Commerce",
-          "React Development",
+          "Shopify Store Optimization",
+          "E-Commerce Development",
           "Web Performance Optimization",
-          "Enterprise Web Development"
+          "Business Website Development"
         ]
       },
       {
         "@type": "WebSite",
         "@id": "https://www.pandacodegen.com/#website",
         "url": "https://www.pandacodegen.com",
-        "name": "PandaGen - Enterprise Next.js Development",
-        "description": "We migrate WordPress & Shopify sites to custom Next.js architectures. Sub-second load times. Zero bloat. Enterprise-grade security.",
+        "name": "PandaGen - Custom Web Development",
+        "description": "We migrate WordPress & Shopify sites to custom-coded websites. Sub-second load times. Zero bloat. Enterprise-grade security.",
         "publisher": {
           "@id": "https://www.pandacodegen.com/#organization"
         },
@@ -108,8 +117,8 @@ export default function Home() {
         "@type": "WebPage",
         "@id": "https://www.pandacodegen.com/#webpage",
         "url": "https://www.pandacodegen.com",
-        "name": "PandaGen | Enterprise Next.js & Shopify Architecture",
-        "description": "We migrate WordPress & Shopify sites to custom Next.js architectures. Sub-second load times. Zero bloat. Enterprise-grade security and SEO.",
+        "name": "PandaGen | Custom Web Development & Shopify Optimization",
+        "description": "We migrate WordPress & Shopify sites to custom-coded websites. Sub-second load times. Zero bloat. Enterprise-grade security and SEO.",
         "isPartOf": {
           "@id": "https://www.pandacodegen.com/#website"
         },
@@ -117,14 +126,18 @@ export default function Home() {
           "@id": "https://www.pandacodegen.com/#organization"
         },
         "inLanguage": "en-US",
-        "datePublished": "2026-01-01",
-        "dateModified": "2026-02-22"
+        "datePublished": "2026-02-10",
+        "dateModified": "2026-03-01",
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": ["h1", "h2", "[data-speakable='true']"]
+        }
       },
       {
         "@type": "ProfessionalService",
         "@id": "https://www.pandacodegen.com/#service",
         "name": "PandaGen Development Services",
-        "description": "Custom Next.js development, WordPress migration, and Shopify optimization for enterprise businesses.",
+        "description": "Custom web development, WordPress migration, and Shopify optimization for growing businesses.",
         "provider": {
           "@id": "https://www.pandacodegen.com/#organization"
         },
@@ -137,16 +150,16 @@ export default function Home() {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "WordPress to Next.js Migration",
-                "description": "Migrate your WordPress site to a custom Next.js application with sub-second load times."
+                "name": "WordPress Migration",
+                "description": "Migrate your WordPress site to a custom-coded website with sub-second load times."
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Shopify Headless Development",
-                "description": "Build a custom Shopify storefront with Next.js for 4x faster load times."
+                "name": "Shopify Store Optimization",
+                "description": "Build a custom Shopify storefront for 4x faster load times."
               }
             },
             {
@@ -154,63 +167,90 @@ export default function Home() {
               "itemOffered": {
                 "@type": "Service",
                 "name": "Custom Web Applications",
-                "description": "Build SaaS platforms and dashboards with React and Next.js."
+                "description": "Build custom business tools, dashboards, and web applications."
               }
             }
           ]
         }
+      },
+      {
+        "@type": "Review",
+        "@id": "https://www.pandacodegen.com/#review-mycustompatches",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "author": { "@type": "Organization", "name": "MyCustomPatches.net" },
+        "itemReviewed": { "@id": "https://www.pandacodegen.com/#organization" },
+        "reviewBody": "Migrated our 10-year-old WordPress site to a custom Next.js platform. Load time dropped from 3+ seconds to 0.7 seconds, PageSpeed went from 40 to 100/100, and hosting cost dropped from $150/month to $0. Zero data loss, zero downtime during cutover."
+      },
+      {
+        "@type": "Review",
+        "@id": "https://www.pandacodegen.com/#review-pandapatches",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "author": { "@type": "Organization", "name": "Panda Patches" },
+        "itemReviewed": { "@id": "https://www.pandacodegen.com/#organization" },
+        "reviewBody": "Built a custom e-commerce storefront with a real-time pricing calculator replacing WordPress + WooCommerce. Replaced 7 separate tools with one Supabase ops platform. Now generating $38K+/month on under $25/month in total tooling costs."
+      },
+      {
+        "@type": "Review",
+        "@id": "https://www.pandacodegen.com/#review-enterprise-ops",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "author": { "@type": "Organization", "name": "Enterprise Operations Client" },
+        "itemReviewed": { "@id": "https://www.pandacodegen.com/#organization" },
+        "reviewBody": "Replaced Google Sheets, a disconnected CRM, and WhatsApp-based status updates with a single custom platform. 95% process automation, live reporting, 10x efficiency gain. Rated 10/10 by independent senior developer review."
       }
     ]
   };
 
   return (
-    <main className="min-h-screen bg-transparent text-white overflow-x-hidden">
+    <main className="min-h-screen bg-paper text-charcoal overflow-x-hidden">
       {/* Schema.org JSON-LD for SEO */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
 
-      {/* Global Noise Texture - This fixes the "Flat" look */}
-      <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-20 mix-blend-overlay"></div>
+      {/* Paper grain texture */}
+      <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
 
-      {/* Scroll Progress Bar - CSS transform for GPU acceleration */}
-      <div ref={progressRef} className="fixed top-0 left-0 right-0 h-1 bg-neon z-[70] origin-left will-change-transform" style={{ transform: "scaleX(0)" }} />
+      {/* Scroll Progress Bar */}
+      <div ref={progressRef} className="fixed top-0 left-0 right-0 h-1 bg-cognac z-[70] origin-left will-change-transform" style={{ transform: "scaleX(0)" }} />
 
       <Header onOpenQuote={() => setIsQuoteModalOpen(true)} />
 
-      {/* Hero Section */}
+      {/* Hero */}
       <Hero />
-      
-      {/* THE GUARANTEE BANNER */}
-      <div className="w-full bg-[#0A0A0A] border-y border-white/5 py-4 relative overflow-hidden group">
-         <div className="absolute inset-0 bg-green-500/5 group-hover:bg-green-500/10 transition-colors" />
-         <div className="container mx-auto px-6 flex flex-col md:flex-row justify-center items-center gap-3 text-sm font-bold uppercase tracking-widest text-green-400">
-            <ShieldCheck className="w-5 h-5" />
-            <span>30-Day Money-Back Guarantee on all Projects</span>
-         </div>
-      </div>
 
-      {/* Proof Marquee (Trusted By) */}
-      <ProofMarquee />
+      {/* Trust Stats Strip — 98+ PageSpeed, <1s load, $0 fees, 100% ownership */}
+      <TrustLogoBar />
 
-      {/* How It Works - Simple Client Journey (NEW - HIGH ON PAGE) */}
-      <HowItWorksSimple />
+      {/* Social Proof — quiet confidence strip (Paper) */}
+      <SocialProof />
 
-      {/* Client Results - Data-Driven Social Proof */}
-      <ClientResults />
+      {/* Unfair Advantage — financial grid stats (White) */}
+      <UnfairAdvantage />
 
-      {/* Services Hub */}
+      {/* Services Bento — premium bento grid (Paper) */}
       <ServicesHub />
 
-      {/* Latest Blog Posts - SEO Interlinking */}
+      {/* How It Works — 4 Steps with Visual Diagrams */}
+      <HowItWorksSimple />
+
+      {/* AI-Powered — Speed Comparison */}
+      <AIPowered />
+
+      {/* Revenue Recovery Calculator */}
+      <RevenueCalculator />
+
+      {/* Founders */}
+      <FounderSection />
+
+      {/* Anti-Agency Manifesto */}
+      <AntiAgency />
+
+      {/* Latest Blog Posts */}
       <LatestBlog />
 
-      {/* Discovery Portal (CTA) */}
-      <DiscoveryPortal onOpenQuote={() => setIsQuoteModalOpen(true)} />
-      
       <Footer onOpenQuote={() => setIsQuoteModalOpen(true)} />
-      
+
       <QuoteModal isOpen={isQuoteModalOpen} onClose={() => setIsQuoteModalOpen(false)} />
     </main>
   );

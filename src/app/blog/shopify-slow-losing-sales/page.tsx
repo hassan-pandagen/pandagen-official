@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, ComparisonTable } from "@/components/ui/BlogStyles";
+import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, ComparisonTable, BlogAuthor } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
@@ -12,6 +12,7 @@ import type { Metadata } from "next";
 const shopifyLostSalesFAQs = blogPosts.find(p => p.id === 'shopify-slow-losing-sales')?.faqs ?? [];
 
 const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
+const SalesImpactAnimation = dynamic(() => import("@/components/blog/SalesImpactAnimation"));
 
 export const metadata: Metadata = {
     title: { absolute: "Your Shopify Store Is Costing You $75K/Year in Lost Sales | PandaGen" },
@@ -66,7 +67,19 @@ const articleSchema = {
             "articleSection": "E-Commerce",
             "keywords": ["Shopify speed optimization", "headless Shopify", "Shopify slow", "e-commerce performance", "Shopify lost sales", "custom storefront"],
             "timeRequired": "PT8M",
-            "inLanguage": "en-US"
+            "inLanguage": "en-US",
+            "speakable": {
+                "@type": "SpeakableSpecification",
+                "cssSelector": ["h1", "h2", "[data-speakable='true']"]
+            },
+            "citation": [
+                { "@type": "CreativeWork", "name": "Google Core Web Vitals as Ranking Factor", "url": "https://developers.google.com/search/docs/appearance/core-web-vitals" },
+                { "@type": "CreativeWork", "name": "Core Web Vitals — Web Dev", "url": "https://web.dev/vitals/" },
+                { "@type": "CreativeWork", "name": "Think With Google: Mobile Page Speed Benchmarks", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
+                { "@type": "CreativeWork", "name": "Shopify Storefront Performance", "url": "https://shopify.dev/docs/storefronts/themes/performance" },
+                { "@type": "CreativeWork", "name": "Next.js Documentation", "url": "https://nextjs.org/docs" },
+                { "@type": "CreativeWork", "name": "Google Page Experience Documentation", "url": "https://developers.google.com/search/docs/appearance/page-experience" }
+            ]
         },
         {
             "@type": "BreadcrumbList",
@@ -137,14 +150,12 @@ export default function ShopifySlowPage() {
     return (
         <>
             <Header />
-            <main className="bg-transparent min-h-screen selection:bg-neon selection:text-black overflow-x-hidden relative text-white pt-32 pb-20">
+            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-32 pb-20">
                 {/* Global Noise Texture */}
-                <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-20 mix-blend-overlay"></div>
+                <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
 
                 {/* Ambient Glows */}
-                <div className="fixed top-0 right-0 w-[600px] h-[600px] bg-purple-600/20 blur-[150px] rounded-full pointer-events-none" />
-                <div className="fixed top-1/3 left-0 w-[500px] h-[500px] bg-pink-600/15 blur-[150px] rounded-full pointer-events-none" />
-                <article className="max-w-3xl mx-auto px-6">
+                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-sm px-8 py-10 md:px-14">
 
                     {/* Article Schema */}
                     <script
@@ -162,7 +173,7 @@ export default function ShopifySlowPage() {
                     />
 
                     {/* Back Button */}
-                    <Link href="/blog" className="inline-flex items-center gap-2 text-neon hover:text-neon/80 mb-8 transition-colors">
+                    <Link href="/blog" className="inline-flex items-center gap-2 text-charcoal hover:text-stone-700 mb-8 transition-colors">
                         <ArrowLeft className="w-4 h-4" />
                         Back to Blog
                     </Link>
@@ -170,14 +181,14 @@ export default function ShopifySlowPage() {
                     {/* Title & Meta */}
                     <div className="mb-10">
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                            Your Shopify Store Is Costing You <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon to-blue-500">$75K/Year</span> in Lost Sales
+                            Your Shopify Store Is Costing You <span className="font-serif italic text-stone-500">$75K/Year</span> in Lost Sales
                         </h1>
                         
-                        <p className="text-xl text-gray-400 mb-6 leading-relaxed">
+                        <p className="text-xl text-stone-600 mb-6 leading-relaxed">
                             Every second your store takes to load costs you customers. We calculated exactly how much.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-gray-500">
+                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">
                             <div className="flex items-center gap-2">
                                 <Calendar className="w-4 h-4" />
                                 Feb 10, 2026
@@ -186,17 +197,18 @@ export default function ShopifySlowPage() {
                                 <Clock className="w-4 h-4" />
                                 8 min read
                             </div>
-                            <div className="flex items-center gap-2">
-                                <span>Hassan</span>
-                                <span>•</span>
-                                <span>Lead Engineer</span>
-                            </div>
                         </div>
+                        <BlogAuthor />
+                    </div>
+
+                    {/* Feature Visual */}
+                    <div className="mb-12">
+                        <SalesImpactAnimation />
                     </div>
 
                     {/* Executive Summary */}
-                    <div className="bg-white/5 border border-white/10 rounded-lg p-6 mb-12">
-                        <h3 className="font-bold text-neon mb-4">Executive Summary</h3>
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12">
+                        <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
                         <BlogList items={[
                             "Average Shopify store doing $500K/year loses $75K-$150K annually due to slow load times",
                             "Every 0.1 second delay = 1% revenue loss. A 3-second delay = losing 30% of revenue.",
@@ -231,7 +243,7 @@ export default function ShopifySlowPage() {
                             If your Shopify store takes more than 2 seconds to load, you're losing between $75,000 and $150,000 per year. That's not an exaggeration. <BlogHighlight>That's math. Cold, simple, brutal math.</BlogHighlight>
                         </BlogText>
 
-                        <BlogHeader>The Speed-to-Revenue Equation</BlogHeader>
+                        <BlogHeader>How Does Your Store&apos;s Load Time Directly Reduce Shopify Revenue?</BlogHeader>
                         
                         <BlogText>
                             Deloitte's research is crystal clear: <strong>For every 0.1 second improvement in load time, conversions increase by 8%.</strong>
@@ -257,7 +269,7 @@ export default function ShopifySlowPage() {
                             If a faster competitor is getting 30 sales per 10,000 visitors, you're getting 10 sales per 10,000 visitors. Same traffic. Same products. Different website speed.
                         </BlogQuote>
 
-                        <BlogHeader>The Actual Dollar Loss</BlogHeader>
+                        <BlogHeader>How Much Revenue Is a Slow Shopify Store Costing You Each Year?</BlogHeader>
 
                         <BlogText>
                             Let's calculate the revenue impact for a $500K/year store:
@@ -287,7 +299,7 @@ export default function ShopifySlowPage() {
                             <BlogHighlight>Your real annual loss is closer to $75K-$150K.</BlogHighlight>
                         </BlogText>
 
-                        <BlogHeader>But You've Already Optimized Your Theme, Right?</BlogHeader>
+                        <BlogHeader>Why Doesn&apos;t Shopify Theme Optimization Fix Slow Load Times?</BlogHeader>
 
                         <BlogText>
                             Let me guess. You've tried:
@@ -313,7 +325,7 @@ export default function ShopifySlowPage() {
                             You can't make a Honda Civic faster than a Tesla by adding racing stripes. You need a different engine.
                         </BlogQuote>
 
-                        <BlogHeader>The Real Solution: Custom Headless Storefront</BlogHeader>
+                        <BlogHeader>What Is the Real Solution to Slow Shopify Load Times?</BlogHeader>
 
                         <BlogText>
                             Here's what we do: We separate your Shopify store into two parts:
@@ -335,7 +347,7 @@ export default function ShopifySlowPage() {
                             "Zero bloat. Zero unnecessary apps. Zero theme limitations."
                         ]} />
 
-                        <BlogHeader>Before and After: Real Numbers</BlogHeader>
+                        <BlogHeader>What Are the Before and After Numbers for a Headless Shopify Migration?</BlogHeader>
 
                         <BlogText>
                             When we build a custom storefront for a typical $500K/year Shopify store, here's what changes:
@@ -364,7 +376,21 @@ export default function ShopifySlowPage() {
                             One client went from $420K/year to $890K/year after we fixed their storefront. Same products. Same ads. Same traffic. Just a website that didn't lose half the visitors to slow load times.
                         </BlogQuote>
 
-                        <BlogHeader>The Investment & Payback Math</BlogHeader>
+                        {/* Mid-Article CTA */}
+                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                            <p className="font-bold text-charcoal mb-2">How much revenue is your store losing right now?</p>
+                            <p className="text-stone-600 mb-4 text-sm">Free revenue audit. We calculate your exact loss and show you the fix.</p>
+                            <a
+                                href="https://cal.com/pandagen/discovery"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all"
+                            >
+                                Get Free Revenue Audit <ArrowRight className="w-4 h-4" />
+                            </a>
+                        </div>
+
+                        <BlogHeader>How Quickly Does a Custom Shopify Storefront Pay for Itself?</BlogHeader>
 
                         <BlogText>
                             A custom fast storefront costs <strong>$15,000-$35,000</strong> depending on complexity.
@@ -402,7 +428,7 @@ export default function ShopifySlowPage() {
                             <BlogHighlight>You spend $35K once and make back $95K+ in the first year alone.</BlogHighlight>
                         </BlogText>
 
-                        <BlogHeader>What About Your Current Situation?</BlogHeader>
+                        <BlogHeader>How Much Revenue Are You Losing Right Now as You Read This?</BlogHeader>
 
                         <BlogText>
                             Right now, as you read this, you're losing money.
@@ -423,7 +449,7 @@ export default function ShopifySlowPage() {
                             The faster you move, the more money you save.
                         </BlogText>
 
-                        <BlogHeader>Next Steps</BlogHeader>
+                        <BlogHeader>What Should You Do to Stop Losing Revenue to Slow Speed?</BlogHeader>
 
                         <BlogText>
                             Test your store's speed right now: <strong>pagespeed.web.dev</strong>
@@ -461,16 +487,16 @@ export default function ShopifySlowPage() {
                     {shopifyLostSalesFAQs.length > 0 && <FAQAccordion faqs={shopifyLostSalesFAQs} />}
 
                     {/* CTA Section */}
-                    <div className="bg-white/5 border border-white/10 rounded-lg p-8 mt-16 text-center">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Ready to Stop Losing Money?</h3>
-                        <p className="text-gray-400 mb-6">
+                        <p className="text-stone-600 mb-6">
                             Get a free revenue audit. See exactly how much your store is losing to slow speed.
                         </p>
-                        <a 
+                        <a
                             href="https://cal.com/pandagen/discovery"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-8 py-4 bg-neon text-black font-bold rounded-full hover:bg-neon/90 transition-all"
+                            className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all"
                         >
                             Schedule Free Audit <ArrowRight className="w-5 h-5" />
                         </a>

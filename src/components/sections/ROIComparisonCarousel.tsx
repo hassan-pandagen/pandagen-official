@@ -227,7 +227,6 @@ export default function ROIComparisonCarousel() {
     setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
   }, [totalSlides]);
 
-  // Touch swipe handlers
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.touches[0].clientX;
   };
@@ -270,11 +269,11 @@ export default function ROIComparisonCarousel() {
             aria-label={`Go to slide ${index + 1}: ${slide.title}`}
           >
             <div className={`h-1 w-6 md:w-12 rounded-full transition-all duration-300 ${
-              index === currentSlide ? "bg-neon" : "bg-white/20"
+              index === currentSlide ? "bg-cognac" : "bg-stone-200"
             }`}>
               {index === currentSlide && (
                 <motion.div
-                  className="h-full bg-neon rounded-full"
+                  className="h-full bg-cognac rounded-full"
                   initial={{ width: "0%" }}
                   animate={{ width: "100%" }}
                   transition={{ duration: 7, ease: "linear" }}
@@ -287,14 +286,14 @@ export default function ROIComparisonCarousel() {
 
       {/* Main Carousel */}
       <div
-        className="relative bg-gradient-to-br from-[#0A0A0A] to-[#050505] border border-white/10 rounded-2xl md:rounded-3xl overflow-hidden shadow-[0_0_60px_rgba(6,182,212,0.1)] touch-pan-y"
+        className="relative bg-white border border-gray-200 rounded-2xl md:rounded-3xl overflow-hidden shadow-premium touch-pan-y"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
 
         {/* Background Glow */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-neon/10 blur-[100px] rounded-full pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-stone-200/50 blur-[100px] rounded-full pointer-events-none" />
 
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
@@ -308,14 +307,14 @@ export default function ROIComparisonCarousel() {
 
             {/* Header */}
             <div className="flex items-center gap-4 mb-8">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-neon/20 to-blue-500/20 border border-white/10 flex items-center justify-center">
-                <Icon className="w-7 h-7 text-neon" />
+              <div className="w-14 h-14 rounded-2xl bg-stone-50 border border-stone-200 flex items-center justify-center">
+                <Icon className="w-7 h-7 text-cognac" />
               </div>
               <div>
-                <p className="text-xs text-gray-400 uppercase tracking-widest font-bold mb-1">
+                <p className="text-xs text-stone-500 uppercase tracking-widest font-bold mb-1">
                   {currentData.category}
                 </p>
-                <h3 className="text-2xl md:text-3xl font-bold text-white">
+                <h3 className="text-2xl md:text-3xl font-bold text-charcoal">
                   {currentData.title}
                 </h3>
               </div>
@@ -331,17 +330,16 @@ export default function ROIComparisonCarousel() {
                 transition={{ delay: 0.2 }}
                 className="relative group"
               >
-                <div className="absolute -inset-1 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="relative bg-[#1A0505] border border-red-500/20 rounded-2xl p-6 hover:border-red-500/40 transition-colors">
+                <div className="relative bg-red-50/80 border border-red-200 rounded-2xl p-6 hover:border-red-300 hover:shadow-red-glow transition-all duration-300">
                   <div className="flex items-center gap-2 mb-3">
-                    <div className="px-2 py-1 bg-red-500/10 border border-red-500/20 rounded text-xs text-red-400 font-bold">
+                    <div className="px-2 py-1 bg-red-100 border border-red-200 rounded text-xs text-red-700 font-bold">
                       TRADITIONAL
                     </div>
                   </div>
-                  <div className="text-3xl font-bold text-white mb-2">
+                  <div className="text-3xl font-bold text-charcoal mb-2">
                     {currentData.wordpress.value}
                   </div>
-                  <p className="text-sm text-gray-400">
+                  <p className="text-sm text-stone-600">
                     {currentData.wordpress.label}
                   </p>
                 </div>
@@ -354,17 +352,16 @@ export default function ROIComparisonCarousel() {
                 transition={{ delay: 0.3 }}
                 className="relative group"
               >
-                <div className="absolute -inset-1 bg-gradient-to-br from-neon/20 to-blue-500/20 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="relative bg-[#051015] border border-neon/20 rounded-2xl p-6 hover:border-neon/40 transition-colors">
+                <div className="relative bg-cognac/5 border border-cognac/20 rounded-2xl p-6 hover:border-cognac/40 hover:shadow-card-hover transition-all duration-300">
                   <div className="flex items-center gap-2 mb-3">
-                    <div className="px-2 py-1 bg-neon/10 border border-neon/20 rounded text-xs text-neon font-bold">
+                    <div className="px-2 py-1 bg-cognac/10 border border-cognac/20 rounded text-xs text-cognac font-bold">
                       PANDAGEN
                     </div>
                   </div>
-                  <div className="text-3xl font-bold text-neon mb-2">
+                  <div className="text-3xl font-bold text-cognac mb-2">
                     {currentData.nextjs.value}
                   </div>
-                  <p className="text-sm text-gray-300">
+                  <p className="text-sm text-stone-600">
                     {currentData.nextjs.label}
                   </p>
                 </div>
@@ -377,27 +374,27 @@ export default function ROIComparisonCarousel() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="relative overflow-hidden bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-green-500/10 border border-green-500/20 rounded-2xl p-6"
+              className="relative overflow-hidden bg-gradient-to-r from-green-50 via-emerald-50 to-green-50 border border-green-200 rounded-2xl p-6"
             >
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(34,197,94,0.1),transparent_70%)]" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(34,197,94,0.08),transparent_70%)]" />
               <div className="relative flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
                 <div className="flex-1">
-                  <p className="text-xs text-green-400 uppercase tracking-widest font-bold mb-2">
+                  <p className="text-xs text-green-700 uppercase tracking-widest font-bold mb-2">
                     YOUR COMPETITIVE ADVANTAGE
                   </p>
-                  <p className="text-2xl font-bold text-white mb-1">
+                  <p className="text-2xl font-bold text-charcoal mb-1">
                     {currentData.impact.stat}
                   </p>
-                  <p className="text-sm text-gray-300 leading-relaxed">
+                  <p className="text-sm text-stone-600 leading-relaxed">
                     {currentData.impact.description}
                   </p>
                 </div>
                 <motion.div
                   animate={{ rotate: [0, 5, 0, -5, 0] }}
                   transition={{ duration: 2, repeat: Infinity }}
-                  className="w-16 h-16 rounded-full bg-green-500/20 border border-green-500/30 flex items-center justify-center flex-shrink-0"
+                  className="w-16 h-16 rounded-full bg-green-100 border border-green-200 flex items-center justify-center flex-shrink-0"
                 >
-                  <TrendingUp className="w-8 h-8 text-green-400" />
+                  <TrendingUp className="w-8 h-8 text-green-600" />
                 </motion.div>
               </div>
             </motion.div>
@@ -407,7 +404,7 @@ export default function ROIComparisonCarousel() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="text-xs text-gray-400 mt-4 text-center"
+              className="text-xs text-stone-500 mt-4 text-center"
             >
               Source: {currentData.source}
             </motion.p>
@@ -415,34 +412,34 @@ export default function ROIComparisonCarousel() {
           </motion.div>
         </AnimatePresence>
 
-        {/* Navigation Arrows (hidden on mobile - use swipe) */}
+        {/* Navigation Arrows */}
         <button
           onClick={prevSlide}
-          className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/5 border border-white/10 items-center justify-center hover:bg-white/10 hover:border-neon/50 transition-all z-20 backdrop-blur-sm"
+          className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white border border-gray-200 items-center justify-center hover:bg-stone-50 hover:border-cognac/50 transition-all z-20 shadow-card"
           aria-label="Previous slide"
         >
-          <ChevronLeft className="w-5 h-5 text-white" />
+          <ChevronLeft className="w-5 h-5 text-charcoal" />
         </button>
 
         <button
           onClick={nextSlide}
-          className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/5 border border-white/10 items-center justify-center hover:bg-white/10 hover:border-neon/50 transition-all z-20 backdrop-blur-sm"
+          className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white border border-gray-200 items-center justify-center hover:bg-stone-50 hover:border-cognac/50 transition-all z-20 shadow-card"
           aria-label="Next slide"
         >
-          <ChevronRight className="w-5 h-5 text-white" />
+          <ChevronRight className="w-5 h-5 text-charcoal" />
         </button>
 
       </div>
 
       {/* Mobile swipe hint + Auto-play Toggle */}
       <div className="flex justify-center items-center gap-4 mt-4">
-        <span className="md:hidden text-xs text-gray-500">
+        <span className="md:hidden text-xs text-stone-500">
           Swipe to explore
         </span>
-        <span className="text-xs text-gray-600">{currentSlide + 1}/{totalSlides}</span>
+        <span className="text-xs text-stone-600">{currentSlide + 1}/{totalSlides}</span>
         <button
           onClick={() => setAutoPlay(!autoPlay)}
-          className="hidden md:inline text-xs text-gray-500 hover:text-neon transition-colors"
+          className="hidden md:inline text-xs text-stone-500 hover:text-cognac transition-colors"
         >
           {autoPlay ? "Pause" : "Play"} Auto-rotation
         </button>

@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote } from "@/components/ui/BlogStyles";
+import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
@@ -12,6 +12,7 @@ import type { Metadata } from "next";
 const slowWordPressFAQs = blogPosts.find(p => p.id === 'how-to-fix-slow-wordpress')?.faqs ?? [];
 
 const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
+const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
 
 export const metadata: Metadata = {
     title: { absolute: "How to Fix a Slow WordPress Site: 8 Ways That Work | PandaGen" },
@@ -66,13 +67,25 @@ const articleSchema = {
             "articleSection": "Performance",
             "keywords": ["slow WordPress", "WordPress speed optimization", "fix slow WordPress", "WordPress performance", "WordPress vs Next.js", "Core Web Vitals"],
             "timeRequired": "PT10M",
-            "inLanguage": "en-US"
+            "inLanguage": "en-US",
+            "speakable": {
+                "@type": "SpeakableSpecification",
+                "cssSelector": ["h1", "h2", "[data-speakable='true']"]
+            },
+            "citation": [
+                { "@type": "CreativeWork", "name": "WordPress Performance Optimization Guide", "url": "https://wordpress.org/documentation/article/optimization/" },
+                { "@type": "CreativeWork", "name": "Core Web Vitals — Google Web Dev", "url": "https://web.dev/vitals/" },
+                { "@type": "CreativeWork", "name": "Google PageSpeed & Performance", "url": "https://developers.google.com/speed" },
+                { "@type": "CreativeWork", "name": "Cloudflare: How to Speed Up a Website", "url": "https://www.cloudflare.com/learning/performance/speed-up-a-website/" },
+                { "@type": "CreativeWork", "name": "Google Page Experience Guide", "url": "https://developers.google.com/search/docs/appearance/page-experience" },
+                { "@type": "CreativeWork", "name": "WPScan Vulnerability Database", "url": "https://wpscan.com/wordpress-security-database/" }
+            ]
         },
         {
             "@type": "HowTo",
             "@id": "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress#howto",
             "name": "How to Fix a Slow WordPress Site",
-            "description": "8 proven methods to speed up WordPress, ranked by impact — with realistic time savings for each.",
+            "description": "8 proven methods to speed up WordPress, ranked by impact, with realistic time savings for each.",
             "totalTime": "PT20H",
             "step": [
                 { "@type": "HowToStep", "position": 1, "name": "Remove Unused Plugins", "text": "Go to Plugins → Installed Plugins. Deactivate and delete plugins you haven't used in 30 days. Every plugin removed saves 2-15 HTTP requests per page load." },
@@ -170,15 +183,13 @@ export default function FixSlowWordPressPage() {
     return (
         <>
             <Header />
-            <main className="bg-transparent min-h-screen selection:bg-neon selection:text-black overflow-x-hidden relative text-white pt-32 pb-20">
+            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-32 pb-20">
                 {/* Global Noise Texture */}
-                <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-20 mix-blend-overlay"></div>
+                <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
 
                 {/* Ambient Glows */}
-                <div className="fixed top-0 right-0 w-[600px] h-[600px] bg-red-600/20 blur-[150px] rounded-full pointer-events-none" />
-                <div className="fixed top-1/3 left-0 w-[500px] h-[500px] bg-orange-600/15 blur-[150px] rounded-full pointer-events-none" />
 
-                <article className="max-w-3xl mx-auto px-6">
+                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-sm px-8 py-10 md:px-14">
 
                     {/* Article Schema */}
                     <script
@@ -196,7 +207,7 @@ export default function FixSlowWordPressPage() {
                     />
 
                     {/* Back Button */}
-                    <Link href="/blog" className="inline-flex items-center gap-2 text-neon hover:text-neon/80 mb-8 transition-colors">
+                    <Link href="/blog" className="inline-flex items-center gap-2 text-charcoal hover:text-stone-700 mb-8 transition-colors">
                         <ArrowLeft className="w-4 h-4" />
                         Back to Blog
                     </Link>
@@ -204,14 +215,14 @@ export default function FixSlowWordPressPage() {
                     {/* Title & Meta */}
                     <div className="mb-10">
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                            How to Fix a <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">Slow WordPress Site</span>
+                            How to Fix a <span className="font-serif italic text-stone-500">Slow WordPress Site</span>
                         </h1>
 
-                        <p className="text-xl text-gray-400 mb-6 leading-relaxed">
+                        <p className="text-xl text-stone-600 mb-6 leading-relaxed">
                             Your WordPress site loads in 4 seconds. Your competitor loads in 0.9 seconds. Here's exactly how to speed up WordPress and close the gap.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-gray-500">
+                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">
                             <div className="flex items-center gap-2">
                                 <Calendar className="w-4 h-4" />
                                 Feb 19, 2026
@@ -220,39 +231,24 @@ export default function FixSlowWordPressPage() {
                                 <Clock className="w-4 h-4" />
                                 10 min read
                             </div>
-                            <div className="flex items-center gap-2">
-                                <span>Hassan</span>
-                                <span>•</span>
-                                <span>Lead Engineer</span>
-                            </div>
                         </div>
+                        <BlogAuthor />
+                    </div>
+
+                    {/* Feature Visual */}
+                    <div className="mb-12">
+                        <PageSpeedAnimation />
                     </div>
 
                     {/* Executive Summary */}
-                    <div className="bg-white/5 border border-white/10 rounded-lg p-6 mb-12">
-                        <h3 className="font-bold text-neon mb-4">Executive Summary</h3>
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12">
+                        <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
                         <BlogList items={[
                             "Every 1 second of slowness costs you 7% in conversions. At 4 seconds load time, you're losing 28% of sales.",
                             "8 proven methods to speed up WordPress: Remove plugins, optimize images, enable caching, use global servers, compress files, clean database, better hosting, remove page builders.",
                             "WordPress has a speed ceiling of 2-2.5 seconds no matter how optimized. Can't beat modern platforms.",
                             "If you need sub-1-second load times (to compete with fast sites), migration to Next.js is the only solution."
                         ]} />
-                    </div>
-
-                    {/* WARNING BANNER */}
-                    <div className="bg-gradient-to-r from-red-500/10 via-orange-500/10 to-red-500/10 border-l-4 border-red-500 rounded-lg p-6 mb-12">
-                        <div className="flex items-start gap-3">
-                            <span className="text-2xl">⚠️</span>
-                            <div>
-                                <h3 className="font-bold text-white mb-2">Important: WordPress Has a Speed Ceiling</h3>
-                                <BlogText>
-                                    Even if you implement every optimization in this guide perfectly, <BlogHighlight>WordPress maxes out at 2-2.5 seconds load time.</BlogHighlight> Meanwhile, sites built with modern platforms (Next.js, Gatsby) load in 0.8-1 second with zero optimization effort.
-                                </BlogText>
-                                <BlogText>
-                                    <strong>If your competitors are using modern tech, you're already behind.</strong> This guide will help you get the most out of WordPress-but it will also prove why migration might be your only path to truly competitive speed.
-                                </BlogText>
-                            </div>
-                        </div>
                     </div>
 
                     {/* Content */}
@@ -303,10 +299,10 @@ export default function FixSlowWordPressPage() {
                             Now let's fix it. Here are 8 methods that actually work, ranked by impact.
                         </BlogText>
 
-                        <BlogHeader>Test Your Current Speed First</BlogHeader>
+                        <BlogHeader>How Do You Test Your WordPress Speed Before Starting Optimization?</BlogHeader>
 
                         <BlogText>
-                            Before you start optimizing, you need to know your baseline. Go to <Link href="https://pagespeed.web.dev" target="_blank" rel="noopener" className="text-neon hover:underline">pagespeed.web.dev</Link> and test your site.
+                            Before you start optimizing, you need to know your baseline. Go to <Link href="https://pagespeed.web.dev" target="_blank" rel="noopener" className="text-cognac hover:underline">pagespeed.web.dev</Link> and test your site.
                         </BlogText>
 
                         <BlogText>
@@ -357,7 +353,7 @@ export default function FixSlowWordPressPage() {
                         </BlogText>
 
                         <BlogText>
-                            If you're using a page builder like Elementor, read our detailed breakdown on <Link href="/blog/wordpress-plugins-destroy-speed" className="text-neon hover:underline">how WordPress plugins destroy site speed</Link>.
+                            If you're using a page builder like Elementor, read our detailed breakdown on <Link href="/blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline">how WordPress plugins destroy site speed</Link>.
                         </BlogText>
 
                         <BlogHeader>Method 2: Optimize Images (Saves 1-2 seconds)</BlogHeader>
@@ -381,7 +377,7 @@ export default function FixSlowWordPressPage() {
                             <strong>Expected result:</strong> 1-2 second improvement, especially on mobile.
                         </BlogText>
 
-                        <div className="bg-white/5 border-l-4 border-neon/50 rounded p-4 my-6">
+                        <div className="bg-stone-50 border-l-4 border-charcoal/50 rounded p-4 my-6">
                             <BlogText>
                                 <strong>⚡ Reality Check:</strong> Image optimization helps, but <BlogHighlight>Next.js does this automatically in 0.2 seconds with zero plugins.</BlogHighlight> WordPress requires plugins ($49/year for ShortPixel Pro) + manual setup + ongoing maintenance. You're working 10× harder for a slower result.
                             </BlogText>
@@ -458,7 +454,7 @@ export default function FixSlowWordPressPage() {
                             <strong>Warning:</strong> File compression can sometimes break plugins. Test your site after enabling and disable if things break.
                         </BlogText>
 
-                        <div className="bg-white/5 border-l-4 border-orange-500/50 rounded p-4 my-6">
+                        <div className="bg-stone-50 border-l-4 border-orange-500/50 rounded p-4 my-6">
                             <BlogText>
                                 <strong>🔧 The Plugin Trap:</strong> Notice a pattern? Every WordPress optimization requires installing another plugin. <BlogHighlight>More plugins = slower site.</BlogHighlight> You're optimizing WordPress by adding more WordPress. Modern platforms don't have this problem-file compression happens automatically at build time.
                             </BlogText>
@@ -550,7 +546,23 @@ export default function FixSlowWordPressPage() {
                             </BlogText>
                         </div>
 
-                        <BlogHeader>The Hard Truth: WordPress Has a Speed Ceiling</BlogHeader>
+                        {/* WARNING BANNER - after reader has done all 8 methods */}
+                        <div className="bg-gradient-to-r from-red-500/10 via-orange-500/10 to-red-500/10 border-l-4 border-red-500 rounded-lg p-6 my-8">
+                            <div className="flex items-start gap-3">
+                                <span className="text-2xl">⚠️</span>
+                                <div>
+                                    <h3 className="font-bold text-charcoal mb-2">Important: WordPress Has a Speed Ceiling</h3>
+                                    <BlogText>
+                                        Even if you implement every optimization in this guide perfectly, <BlogHighlight>WordPress maxes out at 2-2.5 seconds load time.</BlogHighlight> Meanwhile, sites built with modern platforms (Next.js) load in 0.8-1 second with zero optimization effort.
+                                    </BlogText>
+                                    <BlogText>
+                                        <strong>If your competitors are using modern tech, you're already behind.</strong> This guide helped you get the most out of WordPress — but it also proves why migration is the only path to truly competitive speed.
+                                    </BlogText>
+                                </div>
+                            </div>
+                        </div>
+
+                        <BlogHeader>What Is WordPress&apos;s Absolute Speed Ceiling, Even When Fully Optimized?</BlogHeader>
 
                         <BlogText>
                             Here's what nobody tells you: <BlogHighlight>Even with all 8 optimizations, WordPress will never load in under 1.5 seconds.</BlogHighlight>
@@ -581,10 +593,10 @@ export default function FixSlowWordPressPage() {
                         </BlogQuote>
 
                         <BlogText>
-                            If your business depends on speed (for SEO rankings, conversions, user experience), WordPress optimization has diminishing returns. To learn more about why this happens, read our guide on <Link href="/blog/how-to-achieve-100-pagespeed" className="text-neon hover:underline">how to achieve 100/100 PageSpeed scores</Link>.
+                            If your business depends on speed (for SEO rankings, conversions, user experience), WordPress optimization has diminishing returns. To learn more about why this happens, read our guide on <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">how to achieve 100/100 PageSpeed scores</Link>.
                         </BlogText>
 
-                        <BlogHeader>The Professional Solution: WordPress Migration</BlogHeader>
+                        <BlogHeader>When Does WordPress Optimization Stop Working and Migration Become the Only Option?</BlogHeader>
 
                         <BlogText>
                             We migrate WordPress sites to Next.js for clients who need:
@@ -622,10 +634,24 @@ export default function FixSlowWordPressPage() {
                         </BlogText>
 
                         <BlogText>
-                            Learn more about our <Link href="/services/wordpress-migration" className="text-neon hover:underline">WordPress to Next.js migration service</Link>.
+                            Learn more about our <Link href="/services/wordpress-migration" className="text-cognac hover:underline">WordPress to Next.js migration service</Link>.
                         </BlogText>
 
-                        <BlogHeader>Summary: Your WordPress Speed Optimization Checklist</BlogHeader>
+                        {/* Mid-Article CTA */}
+                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                            <p className="font-bold text-charcoal mb-2">Ready to go beyond WordPress&apos;s speed ceiling?</p>
+                            <p className="text-stone-600 mb-4 text-sm">Free migration audit. See what sub-1-second load times would do for your traffic and revenue.</p>
+                            <a
+                                href="https://cal.com/pandagen/discovery"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all"
+                            >
+                                Book Free Migration Audit <ArrowRight className="w-4 h-4" />
+                            </a>
+                        </div>
+
+                        <BlogHeader>What Is the Complete WordPress Speed Optimization Checklist in Order of Impact?</BlogHeader>
 
                         <BlogText>
                             Here's what to do, in order of impact:
@@ -653,7 +679,7 @@ export default function FixSlowWordPressPage() {
                             </BlogText>
                         </div>
 
-                        <BlogHeader>Next Steps</BlogHeader>
+                        <BlogHeader>Which Path Should You Choose: DIY WordPress Optimization or Full Migration?</BlogHeader>
 
                         <BlogText>
                             You have two options. Choose based on your business goals:
@@ -685,7 +711,7 @@ export default function FixSlowWordPressPage() {
                             "Never optimize again-speed is built into the platform"
                         ]} />
 
-                        <div className="bg-gradient-to-r from-neon/10 to-blue-500/10 border border-neon/30 rounded-lg p-6 my-6">
+                        <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 my-6">
                             <BlogText>
                                 <strong>💰 The Real Math:</strong> If slow WordPress costs you $75,000/year in lost revenue, spending 20 hours optimizing saves $50K/year (you're still losing $25K). <BlogHighlight>OR you spend $20K once on migration, save $75K every year after, PLUS never deal with WordPress slowdowns, plugin conflicts, or security patches again.</BlogHighlight>
                             </BlogText>
@@ -700,23 +726,23 @@ export default function FixSlowWordPressPage() {
                     </div>
 
                     {/* CTA Section */}
-                    <div className="bg-gradient-to-r from-neon/10 via-green-500/10 to-neon/10 border-2 border-neon/50 rounded-lg p-10 mt-16 text-center">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-10 mt-16 text-center">
                         <h3 className="text-3xl font-bold mb-4">Done Fighting WordPress?</h3>
-                        <p className="text-gray-300 text-lg mb-2">
+                        <p className="text-stone-600 text-lg mb-2">
                             We'll show you exactly how much faster your site could be.
                         </p>
-                        <p className="text-gray-400 mb-8">
-                            Free migration assessment: We analyze your WordPress site, calculate your current revenue loss, and show you the exact speed you'd get on Next.js. <strong className="text-white">No sales pitch, just data.</strong>
+                        <p className="text-stone-600 mb-8">
+                            Free migration assessment: We analyze your WordPress site, calculate your current revenue loss, and show you the exact speed you'd get on Next.js. <strong className="text-charcoal">No sales pitch, just data.</strong>
                         </p>
                         <a
                             href="https://cal.com/pandagen/discovery"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-10 py-5 bg-neon text-black text-lg font-bold rounded-full hover:bg-neon/90 hover:scale-105 transition-all shadow-[0_0_30px_rgba(0,255,117,0.3)]"
+                            className="inline-flex items-center gap-2 px-10 py-5 bg-charcoal text-white text-lg font-bold rounded-full hover:bg-stone-800 hover:scale-105 transition-all"
                         >
                             Get Your Free Speed Assessment <ArrowRight className="w-5 h-5" />
                         </a>
-                        <p className="text-sm text-gray-500 mt-4">
+                        <p className="text-sm text-stone-400 mt-4">
                             30-minute call • No commitment • See real before/after speeds
                         </p>
                     </div>

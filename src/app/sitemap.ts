@@ -25,13 +25,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/services/custom-engineering', priority: 0.8, changeFrequency: 'weekly' },
 
     // 3. Platform-Specific Service Pages (Lead Capture Funnels)
+    { path: '/services/woocommerce', priority: 0.8, changeFrequency: 'weekly' },
     { path: '/services/wix', priority: 0.8, changeFrequency: 'weekly' },
     { path: '/services/squarespace', priority: 0.8, changeFrequency: 'weekly' },
     { path: '/services/webflow', priority: 0.8, changeFrequency: 'weekly' },
     { path: '/services/gohighlevel', priority: 0.8, changeFrequency: 'weekly' },
 
+    // Agency Partnerships
+    { path: '/partners', priority: 0.8, changeFrequency: 'monthly' },
+
     // 3. Dynamic Content (Medium Priority - Updates Often)
     { path: '/work', priority: 0.7, changeFrequency: 'weekly' },
+    { path: '/work/mycustompatches', priority: 0.8, changeFrequency: 'monthly' },
+    { path: '/work/panda-patches', priority: 0.8, changeFrequency: 'monthly' },
+    { path: '/work/enterprise-ops', priority: 0.8, changeFrequency: 'monthly' },
+    { path: '/work/panda-codelab', priority: 0.8, changeFrequency: 'monthly' },
     { path: '/about', priority: 0.7, changeFrequency: 'monthly' },
     { path: '/about/hassan', priority: 0.6, changeFrequency: 'monthly' },
     { path: '/about/imran', priority: 0.6, changeFrequency: 'monthly' },

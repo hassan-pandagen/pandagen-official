@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote } from "@/components/ui/BlogStyles";
+import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote , BlogAuthor } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
@@ -12,16 +12,17 @@ import type { Metadata } from "next";
 const pagespeedFAQs = blogPosts.find(p => p.id === 'how-to-achieve-100-pagespeed')?.faqs ?? [];
 
 const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
+const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
 
 export const metadata: Metadata = {
     title: "Google Is Penalizing Your Slow Site. Here's How We Hit 100/100 PageSpeed on Every Build.",
-    description: "Most websites score 35-55/100 on Google PageSpeed — and they're losing customers because of it. Here's the exact 8-step process we use to hit 98-100/100 on every client site.",
+    description: "Most websites score 35-55/100 on Google PageSpeed, and they're losing customers because of it. Here's the exact 8-step process we use to hit 98-100/100 on every client site.",
     alternates: {
         canonical: '/blog/how-to-achieve-100-pagespeed',
     },
     openGraph: {
         title: "Google Is Penalizing Your Slow Site. Here's How We Hit 100/100 PageSpeed on Every Build.",
-        description: "Most websites score 35-55/100 on Google PageSpeed — and they're losing customers because of it. Here's the exact process we use to hit 98-100/100.",
+        description: "Most websites score 35-55/100 on Google PageSpeed, and they're losing customers because of it. Here's the exact process we use to hit 98-100/100.",
         type: "article",
         publishedTime: "2026-02-17",
         authors: ["Hassan"],
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Google Is Penalizing Your Slow Site. Here's How We Hit 100/100 PageSpeed on Every Build.",
-        description: "Most websites score 35-55/100 on Google PageSpeed — and they're losing customers because of it. Here's the exact process we use to hit 98-100/100.",
+        description: "Most websites score 35-55/100 on Google PageSpeed, and they're losing customers because of it. Here's the exact process we use to hit 98-100/100.",
     },
 };
 
@@ -66,7 +67,19 @@ const articleSchema = {
             "articleSection": "Performance",
             "keywords": ["PageSpeed score", "Core Web Vitals", "Next.js performance", "website speed optimization", "100 PageSpeed", "LCP optimization"],
             "timeRequired": "PT12M",
-            "inLanguage": "en-US"
+            "inLanguage": "en-US",
+            "speakable": {
+                "@type": "SpeakableSpecification",
+                "cssSelector": ["h1", "h2", "[data-speakable='true']"]
+            },
+            "citation": [
+                { "@type": "CreativeWork", "name": "Google PageSpeed Insights", "url": "https://pagespeed.web.dev/" },
+                { "@type": "CreativeWork", "name": "Core Web Vitals — Google Web Dev", "url": "https://web.dev/vitals/" },
+                { "@type": "CreativeWork", "name": "Next.js Image Optimization", "url": "https://nextjs.org/docs/app/api-reference/components/image" },
+                { "@type": "CreativeWork", "name": "Next.js Font Optimization", "url": "https://nextjs.org/docs/app/building-your-application/optimizing/fonts" },
+                { "@type": "CreativeWork", "name": "Chrome Lighthouse Overview", "url": "https://developer.chrome.com/docs/lighthouse/overview/" },
+                { "@type": "CreativeWork", "name": "Largest Contentful Paint (LCP) Optimization", "url": "https://web.dev/lcp/" }
+            ]
         },
         {
             "@type": "HowTo",
@@ -136,15 +149,13 @@ export default function AchievePageSpeedPage() {
     return (
         <>
             <Header />
-            <main className="bg-transparent min-h-screen selection:bg-neon selection:text-black overflow-x-hidden relative text-white pt-32 pb-20">
+            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-32 pb-20">
                 {/* Global Noise Texture */}
-                <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-20 mix-blend-overlay"></div>
+                <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
 
                 {/* Ambient Glows */}
-                <div className="fixed top-0 right-0 w-[600px] h-[600px] bg-green-600/20 blur-[150px] rounded-full pointer-events-none" />
-                <div className="fixed top-1/3 left-0 w-[500px] h-[500px] bg-blue-600/15 blur-[150px] rounded-full pointer-events-none" />
 
-                <article className="max-w-3xl mx-auto px-6">
+                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-sm px-8 py-10 md:px-14">
 
                     {/* Article Schema */}
                     <script
@@ -162,7 +173,7 @@ export default function AchievePageSpeedPage() {
                     />
 
                     {/* Back Button */}
-                    <Link href="/blog" className="inline-flex items-center gap-2 text-neon hover:text-neon/80 mb-8 transition-colors">
+                    <Link href="/blog" className="inline-flex items-center gap-2 text-charcoal hover:text-stone-700 mb-8 transition-colors">
                         <ArrowLeft className="w-4 h-4" />
                         Back to Blog
                     </Link>
@@ -170,14 +181,14 @@ export default function AchievePageSpeedPage() {
                     {/* Title & Meta */}
                     <div className="mb-10">
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                            How to Achieve <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon to-green-500">100/100 PageSpeed Score</span>
+                            How to Achieve <span className="font-serif italic text-stone-500">100/100 PageSpeed Score</span>
                         </h1>
 
-                        <p className="text-xl text-gray-400 mb-6 leading-relaxed">
+                        <p className="text-xl text-stone-600 mb-6 leading-relaxed">
                             We achieve 98-100/100 PageSpeed scores on every client site. Here's the exact optimization process we use, step by step.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-gray-500">
+                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">
                             <div className="flex items-center gap-2">
                                 <Calendar className="w-4 h-4" />
                                 Feb 17, 2026
@@ -186,17 +197,18 @@ export default function AchievePageSpeedPage() {
                                 <Clock className="w-4 h-4" />
                                 12 min read
                             </div>
-                            <div className="flex items-center gap-2">
-                                <span>Hassan</span>
-                                <span>•</span>
-                                <span>Lead Engineer</span>
-                            </div>
                         </div>
+                        <BlogAuthor />
+                    </div>
+
+                    {/* Feature Visual */}
+                    <div className="mb-12">
+                        <PageSpeedAnimation />
                     </div>
 
                     {/* Executive Summary */}
-                    <div className="bg-white/5 border border-white/10 rounded-lg p-6 mb-12">
-                        <h3 className="font-bold text-neon mb-4">Executive Summary</h3>
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12">
+                        <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
                         <BlogList items={[
                             "Google PageSpeed score directly affects your rankings. Sites below 70 lose 20-30% of organic traffic.",
                             "WordPress can reach 60-75 max. To hit 95-100, you need modern architecture (Next.js, React).",
@@ -227,7 +239,7 @@ export default function AchievePageSpeedPage() {
                             This guide shows you the exact 8-step process we use to achieve 98-100/100 PageSpeed scores on every client site. No magic. Just engineering.
                         </BlogText>
 
-                        <BlogHeader>Why PageSpeed Score Actually Matters (Beyond the Number)</BlogHeader>
+                        <BlogHeader>Why Does Your PageSpeed Score Directly Determine Your Google Rankings?</BlogHeader>
 
                         <BlogText>
                             Google PageSpeed score isn't just a vanity metric. It's a proxy for four Core Web Vitals that Google uses as direct ranking factors:
@@ -294,7 +306,61 @@ export default function AchievePageSpeedPage() {
                             That's why every client site we build starts with Next.js. The optimizations below only work with modern architecture.
                         </BlogText>
 
-                        <BlogHeader>The 8 Optimizations That Get You to 100/100</BlogHeader>
+                        <BlogHeader>What Results Do Real Clients Get After Migrating to Next.js?</BlogHeader>
+
+                        <BlogText>
+                            Before we get into the technical steps, here's what actually happens when we apply all 8 optimizations for our clients:
+                        </BlogText>
+
+                        <BlogText>
+                            <strong>E-commerce Client (Shopify → Next.js Headless):</strong>
+                        </BlogText>
+
+                        <BlogList items={[
+                            "Before: 42/100 Mobile, 3.8s load time, 54% bounce rate",
+                            "After: 97/100 Mobile, 0.9s load time, 24% bounce rate",
+                            "Result: 55% increase in conversions, $67K more monthly revenue"
+                        ]} />
+
+                        <BlogText>
+                            <strong>SaaS Client (WordPress → Next.js):</strong>
+                        </BlogText>
+
+                        <BlogList items={[
+                            "Before: 38/100 Mobile, 4.2s load time, Page 2 Google rankings",
+                            "After: 98/100 Mobile, 1.1s load time, Page 1 Google rankings",
+                            "Result: 3× organic traffic within 90 days, 120% more signups"
+                        ]} />
+
+                        <BlogText>
+                            <strong>Service Business (WordPress → Next.js):</strong>
+                        </BlogText>
+
+                        <BlogList items={[
+                            "Before: 51/100 Mobile, 3.5s load time, 2,500 monthly visitors",
+                            "After: 100/100 Mobile, 0.8s load time, 8,200 monthly visitors",
+                            "Result: 228% more traffic, 15 qualified leads/month vs 3 before"
+                        ]} />
+
+                        <BlogQuote>
+                            The pattern is consistent: Move from WordPress/Shopify to Next.js with these 8 optimizations → 95-100 PageSpeed score → 2-4× more traffic within 90 days.
+                        </BlogQuote>
+
+                        {/* Mid-Article CTA */}
+                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                            <p className="font-bold text-charcoal mb-2">Want these results on your site?</p>
+                            <p className="text-stone-600 mb-4 text-sm">Get a free speed audit. We&apos;ll show you exactly how much traffic you&apos;re losing.</p>
+                            <a
+                                href="https://cal.com/pandagen/discovery"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all"
+                            >
+                                Schedule Free Audit <ArrowRight className="w-4 h-4" />
+                            </a>
+                        </div>
+
+                        <BlogHeader>What Are the 8 Specific Optimizations That Get Any Site to 100/100 PageSpeed?</BlogHeader>
 
                         <BlogText>
                             Here's our exact checklist. We use this on every client project. Miss one, and you'll plateau at 85-90.
@@ -489,47 +555,7 @@ export default function AchievePageSpeedPage() {
                             This is the biggest breakthrough in web performance since 2020. <BlogHighlight>It's why Next.js sites can hit 100/100 while WordPress sites plateau at 70.</BlogHighlight>
                         </BlogText>
 
-                        <BlogHeader>Real Client Results: Before & After</BlogHeader>
-
-                        <BlogText>
-                            Here's what happens when we apply all 8 optimizations:
-                        </BlogText>
-
-                        <BlogText>
-                            <strong>E-commerce Client (Shopify → Next.js Headless):</strong>
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Before: 42/100 Mobile, 3.8s load time, 54% bounce rate",
-                            "After: 97/100 Mobile, 0.9s load time, 24% bounce rate",
-                            "Result: 55% increase in conversions, $67K more monthly revenue"
-                        ]} />
-
-                        <BlogText>
-                            <strong>SaaS Client (WordPress → Next.js):</strong>
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Before: 38/100 Mobile, 4.2s load time, Page 2 Google rankings",
-                            "After: 98/100 Mobile, 1.1s load time, Page 1 Google rankings",
-                            "Result: 3× organic traffic within 90 days, 120% more signups"
-                        ]} />
-
-                        <BlogText>
-                            <strong>Service Business (WordPress - Next.js):</strong>
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Before: 51/100 Mobile, 3.5s load time, 2,500 monthly visitors",
-                            "After: 100/100 Mobile, 0.8s load time, 8,200 monthly visitors",
-                            "Result: 228% more traffic, 15 qualified leads/month vs 3 before"
-                        ]} />
-
-                        <BlogQuote>
-                            The pattern is consistent: Move from WordPress/Shopify to Next.js with these 8 optimizations → 95-100 PageSpeed score → 2-4× more traffic within 90 days.
-                        </BlogQuote>
-
-                        <BlogHeader>Why You Can't DIY This (Even With This Guide)</BlogHeader>
+                        <BlogHeader>Why Can&apos;t Most Business Owners DIY a 100/100 PageSpeed Score?</BlogHeader>
 
                         <BlogText>
                             If you're technical and have experience with React/Next.js, you can implement these optimizations yourself.
@@ -550,7 +576,7 @@ export default function AchievePageSpeedPage() {
                             <BlogHighlight>The bigger issue: You need to rebuild your entire site on Next.js first.</BlogHighlight> Optimization comes after migration. If you're on WordPress, you can't apply these techniques.
                         </BlogText>
 
-                        <BlogHeader>The Professional Solution: Let Us Handle It</BlogHeader>
+                        <BlogHeader>What Is the Professional Path to a Guaranteed 95-100/100 PageSpeed Score?</BlogHeader>
 
                         <BlogText>
                             We've built 40+ Next.js sites. Every single one scores 95-100/100 on PageSpeed Mobile.
@@ -584,7 +610,7 @@ export default function AchievePageSpeedPage() {
                             <BlogHighlight>Result: You get a site that loads in under 1 second, ranks higher on Google, and converts 30-50% better.</BlogHighlight> We handle all technical work. You focus on your business.
                         </BlogText>
 
-                        <BlogHeader>How to Check Your Current PageSpeed Score</BlogHeader>
+                        <BlogHeader>How Do You Check Your Current PageSpeed Score in Under 60 Seconds?</BlogHeader>
 
                         <BlogText>
                             Before deciding whether you need optimization, test your current score:
@@ -611,7 +637,7 @@ export default function AchievePageSpeedPage() {
                             If you're below 70, <BlogHighlight>optimization should be your #1 priority.</BlogHighlight> Rankings and conversions are directly tied to speed.
                         </BlogText>
 
-                        <BlogHeader>Next Steps</BlogHeader>
+                        <BlogHeader>Which Path Gets You to 100/100 Faster: DIY or Professional Migration?</BlogHeader>
 
                         <BlogText>
                             You have two options:
@@ -651,16 +677,16 @@ export default function AchievePageSpeedPage() {
                     </div>
 
                     {/* CTA Section */}
-                    <div className="bg-white/5 border border-white/10 rounded-lg p-8 mt-16 text-center">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Ready for 100/100 PageSpeed?</h3>
-                        <p className="text-gray-400 mb-6">
+                        <p className="text-stone-600 mb-6">
                             Get a free speed audit. We'll analyze your site and show you exactly how much traffic you're losing.
                         </p>
                         <a
                             href="https://cal.com/pandagen/discovery"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-8 py-4 bg-neon text-black font-bold rounded-full hover:bg-neon/90 transition-all"
+                            className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all"
                         >
                             Schedule Free Audit <ArrowRight className="w-5 h-5" />
                         </a>
