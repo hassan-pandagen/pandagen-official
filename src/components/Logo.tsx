@@ -15,8 +15,8 @@ export default function Logo({ size = "lg" }: { size?: "sm" | "lg" }) {
       <Image
         src="/logo.png"
         alt="PandaGen Code Lab"
-        width={0}
-        height={height}
+        width={655}
+        height={113}
         style={{ height: `${height}px`, width: "auto" }}
         className="object-contain"
         priority
