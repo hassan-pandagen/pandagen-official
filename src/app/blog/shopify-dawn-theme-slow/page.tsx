@@ -125,6 +125,46 @@ const articleSchema = {
             "foundingDate": "2023"
         },
         {
+            "@type": "HowTo",
+            "@id": "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow#howto",
+            "name": "How to Speed Up a Slow Shopify Dawn Theme",
+            "description": "Practical steps to improve your Shopify Dawn theme PageSpeed score. These optimizations can gain 10–20 points, though the ceiling on standard Shopify is 70–75/100.",
+            "totalTime": "PT2H",
+            "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
+            "step": [
+                {
+                    "@type": "HowToStep",
+                    "position": 1,
+                    "name": "Audit and remove unused apps",
+                    "text": "Open your Shopify admin and review every installed app. Each app injects 80–200KB of JavaScript on every page load. Remove any app you haven't used in 30 days. Each removal saves 80–200ms of blocking time."
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 2,
+                    "name": "Compress and resize hero images before uploading",
+                    "text": "Export your hero and banner images at the actual display dimensions, then compress them to under 150KB using Squoosh or TinyPNG. Do not upload high-resolution originals and rely on Shopify's resize — it still serves oversized files to mobile."
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 3,
+                    "name": "Enable native lazy loading for below-fold images",
+                    "text": "In Dawn's theme settings, verify that lazy loading is enabled for collection and product images. This defers images that aren't visible on initial load, improving LCP and reducing initial page weight."
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 4,
+                    "name": "Defer non-critical app scripts using Shopify's Script Tag API",
+                    "text": "For apps that support it, switch their script load strategy from synchronous to deferred or async via the Shopify Script Tag API or the app's own settings panel. Not all apps support this — contact app support if you don't see the option."
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 5,
+                    "name": "Remove unused theme sections from all page templates",
+                    "text": "In the Dawn theme editor, open each page template and delete any sections that are hidden or empty. Even invisible sections can register in Shopify's rendering pipeline and add load overhead."
+                }
+            ]
+        },
+        {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow#faq",
             "mainEntity": [
@@ -215,6 +255,10 @@ export default function ShopifyDawnThemeSlowPage() {
 
                         <BlogText>
                             The issue wasn&apos;t their setup. It was the platform itself.
+                        </BlogText>
+
+                        <BlogText>
+                            If you&apos;ve already paid a developer to &ldquo;fix&rdquo; your speed, switched themes, installed a speed optimization app, or upgraded to Shopify Plus hoping it would solve this — and you&apos;re still sitting at 40–55/100 — you&apos;re not alone. That money wasn&apos;t wasted on bad work. It was spent solving the wrong problem.
                         </BlogText>
 
                         <BlogHeader>What Is Shopify Dawn and Why Should It Be Fast?</BlogHeader>
@@ -327,7 +371,7 @@ export default function ShopifyDawnThemeSlowPage() {
                         {/* Mid CTA */}
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">What&apos;s your store&apos;s real speed score?</p>
-                            <p className="text-stone-600 mb-4 text-sm">We&apos;ll audit your Shopify store for free and show you exactly what&apos;s slowing it down — and how much revenue it&apos;s costing you.</p>
+                            <p className="text-stone-600 mb-4 text-sm">30 minutes, live screen-share. We run your store through PageSpeed, identify every bottleneck, and give you a written report — free, no obligation.</p>
                             <a
                                 href="https://cal.com/pandagen/discovery"
                                 target="_blank"
@@ -487,8 +531,11 @@ export default function ShopifyDawnThemeSlowPage() {
                     {/* Bottom CTA */}
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Find out what your store is actually losing</h3>
+                        <p className="text-stone-600 mb-4">
+                            Every week your store runs at 45/100 PageSpeed is another week faster competitors are taking conversions that should be yours.
+                        </p>
                         <p className="text-stone-600 mb-6">
-                            We&apos;ll audit your Shopify store, score every speed bottleneck, and give you a clear picture of what&apos;s recoverable — no sales pitch.
+                            Book a free 30-minute audit. We screen-share, run your store live through PageSpeed and Core Web Vitals, identify every bottleneck, and tell you exactly what&apos;s recoverable — and what it&apos;s costing you. You leave with a written report. No pitch, no obligation.
                         </p>
                         <a
                             href="https://cal.com/pandagen/discovery"
