@@ -62,8 +62,8 @@ const personSchema = {
             "@type": "ProfilePage",
             "@id": "https://www.pandacodegen.com/about/hassan#webpage",
             "url": "https://www.pandacodegen.com/about/hassan",
-            "name": "Hassan Jamal - Lead Full-Stack Engineer at PandaGen",
-            "description": "Learn about Hassan Jamal, Lead Full-Stack Engineer at PandaGen. 7+ years of experience in web performance, Next.js, and enterprise architecture.",
+            "name": "Hassan Jamal - Lead Full-Stack Engineer at PandaCodeGen",
+            "description": "Learn about Hassan Jamal, Lead Full-Stack Engineer at PandaCodeGen. 7+ years of experience in web performance, Next.js, and enterprise architecture.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "mainEntity": { "@id": "https://www.pandacodegen.com/#/schema/person/hassan" },
             "inLanguage": "en-US",
@@ -124,7 +124,8 @@ export default function HassanAuthorPage() {
                             <Image
                                 src="/team/hassan.png"
                                 fill
-                                alt="Hassan Jamal - Lead Full-Stack Engineer at PandaGen"
+                                sizes="(max-width: 768px) 100vw, 256px"
+                                alt="Hassan Jamal - Lead Full-Stack Engineer at PandaCodeGen"
                                 className="object-cover object-top grayscale hover:grayscale-0 transition-all duration-700"
                                 priority
                             />

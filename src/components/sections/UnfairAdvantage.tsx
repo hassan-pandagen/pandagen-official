@@ -8,7 +8,7 @@ const stats = [
     icon: Zap,
     number: "<1s",
     title: "Blazing Speed",
-    body: "Google ranks fast sites higher. We strip away the bloat and serve raw HTML at the edge.",
+    body: "Google rewards fast sites with higher rankings. We eliminate every speed bottleneck so your pages load before competitors' sites even start.",
     borderRight: true,
   },
   {

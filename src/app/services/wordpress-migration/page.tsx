@@ -9,7 +9,7 @@ export default function MigrationPage() {
         "@id": "https://www.pandacodegen.com/services/wordpress-migration#service",
         "name": "WordPress Migration to Custom Code",
         "description": "Professional WordPress migration to custom-coded websites. Zero data loss, 2x faster load times, and bank-grade security.",
-        "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaGen" },
+        "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
         "serviceType": ["WordPress Migration", "WordPress to Custom Code", "WordPress Alternative"]
       },
@@ -17,7 +17,7 @@ export default function MigrationPage() {
         "@type": "WebPage",
         "@id": "https://www.pandacodegen.com/services/wordpress-migration#webpage",
         "url": "https://www.pandacodegen.com/services/wordpress-migration",
-        "name": "WordPress Migration | PandaGen",
+        "name": "WordPress Migration | PandaCodeGen",
         "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
         "about": { "@id": "https://www.pandacodegen.com/services/wordpress-migration#service" },
         "inLanguage": "en-US"

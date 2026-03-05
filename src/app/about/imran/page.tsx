@@ -51,8 +51,8 @@ const personSchema = {
             "@type": "ProfilePage",
             "@id": "https://www.pandacodegen.com/about/imran#webpage",
             "url": "https://www.pandacodegen.com/about/imran",
-            "name": "Imran - Lead Solutions Architect at PandaGen",
-            "description": "Learn about Imran, Lead Solutions Architect at PandaGen. 8+ years of experience in enterprise architecture and strategic planning.",
+            "name": "Imran - Lead Solutions Architect at PandaCodeGen",
+            "description": "Learn about Imran, Lead Solutions Architect at PandaCodeGen. 8+ years of experience in enterprise architecture and strategic planning.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "mainEntity": { "@id": "https://www.pandacodegen.com/#/schema/person/imran" },
             "inLanguage": "en-US",
@@ -113,7 +113,8 @@ export default function ImranAuthorPage() {
                             <Image
                                 src="/team/imran.png"
                                 fill
-                                alt="Imran - Lead Solutions Architect at PandaGen"
+                                sizes="(max-width: 768px) 100vw, 256px"
+                                alt="Imran - Lead Solutions Architect at PandaCodeGen"
                                 className="object-cover object-top grayscale hover:grayscale-0 transition-all duration-700"
                                 priority
                             />

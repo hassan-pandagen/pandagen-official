@@ -24,8 +24,8 @@ export default function ContactPage() {
         "@type": "ContactPage",
         "@id": "https://www.pandacodegen.com/contact#webpage",
         "url": "https://www.pandacodegen.com/contact",
-        "name": "Contact PandaGen - Let's Talk Engineering",
-        "description": "Get in touch with PandaGen for custom web development, WordPress migration, or Shopify optimization. Free discovery call. Response within 2 hours.",
+        "name": "Contact PandaCodeGen - Let's Talk Engineering",
+        "description": "Get in touch with PandaCodeGen for custom web development, WordPress migration, or Shopify optimization. Free discovery call. Response within 2 hours.",
         "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
         "about": { "@id": "https://www.pandacodegen.com/#organization" },
         "inLanguage": "en-US"
@@ -33,7 +33,7 @@ export default function ContactPage() {
       {
         "@type": "Organization",
         "@id": "https://www.pandacodegen.com/#organization",
-        "name": "PandaGen",
+        "name": "PandaCodeGen",
         "url": "https://www.pandacodegen.com",
         "email": "info@pandacodegen.com",
         "telephone": "+13022504340",

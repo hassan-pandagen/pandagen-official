@@ -23,6 +23,26 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "shopify-dawn-theme-slow",
+    title: "Shopify Dawn Theme Slow? Here's Exactly Why (and the Real Fix)",
+    excerpt: "Dawn is Shopify's fastest theme — so why is your store still loading in 3+ seconds? Here's what's actually killing your speed and why theme-level fixes won't save you.",
+    category: "Shopify",
+    readTime: "9 min",
+    date: "Mar 7",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: false,
+    illustrationType: 'performance',
+    lastModified: "2026-03-07",
+    faqs: [
+      { question: "Why is my Shopify Dawn theme slow?", answer: "Dawn is Shopify's fastest default theme, but it still loads in 2.5–4 seconds on most stores because of third-party apps injecting scripts, Liquid template rendering on every request, large unoptimized hero images, and Shopify's own checkout scripts. The theme isn't the bottleneck — Shopify's architecture is." },
+      { question: "What PageSpeed score does Shopify Dawn get?", answer: "A basic Dawn store with no apps typically scores 65–80/100 on mobile. Add 3–5 apps (reviews, chat, upsell, pop-ups, loyalty) and that drops to 35–55/100. No amount of theme optimization fixes app script bloat — those scripts load regardless of which theme you use." },
+      { question: "How can I speed up my Shopify Dawn theme?", answer: "You can compress images, remove unused apps, disable non-critical scripts, and use a Shopify speed optimization app. This typically improves your score by 10–20 points. But you'll hit a ceiling at 70–75/100 because Shopify's Liquid rendering and checkout scripts can't be removed — they're baked into the platform." },
+      { question: "Is Shopify Dawn better than other Shopify themes for speed?", answer: "Yes, Dawn is the fastest Shopify theme by default. But 'fastest Shopify theme' and 'fast website' are different things. Even Dawn scores 25–40 points lower than a custom Next.js storefront. If you need 90–100/100 PageSpeed, you need to move beyond Shopify's theme system entirely." },
+      { question: "Should I switch from Shopify Dawn to a custom headless build?", answer: "If your store does $30K+/month and your PageSpeed mobile score is below 60, the ROI on going headless is significant. A 1-second improvement in load time increases conversions 7–12%. For a $30K/month store, that's $2,100–$3,600/month recovered. Most headless builds pay for themselves in 6–9 months." },
+    ]
+  },
+  {
     id: "for-agencies-offer-custom-web-development",
     title: "For Agencies: How to Offer Custom Web Development Without Hiring a Dev Team",
     excerpt: "Your client wants a custom-built website. You don't have a dev team. Here's how 40+ agencies deliver premium custom builds without touching a line of code.",
@@ -38,8 +58,8 @@ export const blogPosts: BlogPost[] = [
       { question: "What is white-label web development?", answer: "White-label web development is when you hire a development agency to build websites under your brand. You sell the work to your clients, we build it, and your client never knows we exist. You keep your margins, client relationships, and brand reputation." },
       { question: "How do agencies make money on white-label web development?", answer: "Agencies typically mark up white-label development 25-50% above the actual build cost. If we build a site for $8,000, you quote your client $10,000-$12,000 and pocket the difference while keeping the ongoing client relationship." },
       { question: "What happens if the client wants changes after launch?", answer: "You remain the point of contact for all change requests. You communicate requirements to us, we implement them, and you deliver to your client. Some agencies manage changes themselves with a documented handoff; others keep us on a monthly retainer under their brand." },
-      { question: "Will my client find out I'm using a development partner?", answer: "No. We sign an NDA before any project begins. All deliverables are unbranded. We don't include footer credits, file names, or metadata pointing to PandaGen. Your client relationship stays 100% yours." },
-      { question: "What types of projects can agencies white-label through PandaGen?", answer: "WordPress migrations to Next.js, custom e-commerce builds, GoHighLevel implementations, custom internal tools and dashboards, and full brand website rebuilds. Minimum engagement is $5,000. Most agency partnerships are $8,000-$25,000 per project." },
+      { question: "Will my client find out I'm using a development partner?", answer: "No. We sign an NDA before any project begins. All deliverables are unbranded. We don't include footer credits, file names, or metadata pointing to PandaCodeGen. Your client relationship stays 100% yours." },
+      { question: "What types of projects can agencies white-label through PandaCodeGen?", answer: "WordPress migrations to Next.js, custom e-commerce builds, GoHighLevel implementations, custom internal tools and dashboards, and full brand website rebuilds. Minimum engagement is $5,000. Most agency partnerships are $8,000-$25,000 per project." },
     ]
   },
   {

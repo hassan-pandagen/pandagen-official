@@ -9,7 +9,7 @@ export default function GoHighLevelServicePage() {
         "@id": "https://www.pandacodegen.com/services/gohighlevel#service",
         "name": "GoHighLevel Website & Funnel Development",
         "description": "Keep GoHighLevel for CRM and automations. We build custom-coded websites that integrate with GHL's API, or build a fully custom CRM + website solution. You own the code.",
-        "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaGen" },
+        "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
         "serviceType": ["GoHighLevel Development", "GHL Funnel Building", "GoHighLevel Migration", "GoHighLevel Alternative"]
       },
@@ -17,7 +17,7 @@ export default function GoHighLevelServicePage() {
         "@type": "WebPage",
         "@id": "https://www.pandacodegen.com/services/gohighlevel#webpage",
         "url": "https://www.pandacodegen.com/services/gohighlevel",
-        "name": "GoHighLevel Development & Migration | PandaGen",
+        "name": "GoHighLevel Development & Migration | PandaCodeGen",
         "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
         "about": { "@id": "https://www.pandacodegen.com/services/gohighlevel#service" },
         "inLanguage": "en-US"

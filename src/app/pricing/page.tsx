@@ -21,7 +21,7 @@ const pricingSchema = {
       "@type": "WebPage",
       "@id": "https://www.pandacodegen.com/pricing#webpage",
       "url": "https://www.pandacodegen.com/pricing",
-      "name": "Pricing | PandaGen Custom Web Development",
+      "name": "Pricing | PandaCodeGen Custom Web Development",
       "description": "Fixed-price custom web development. Conversion sites from $2,900. Full migrations from $5,900. No hourly billing. 30-day money-back guarantee.",
       "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
       "about": { "@id": "https://www.pandacodegen.com/#organization" },
@@ -89,7 +89,7 @@ export default function PricingPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6"
           >
-            Enterprise engineering. <br />
+            Production-grade engineering. <br />
             <span className="font-serif italic text-stone-500">Fixed-price transparency.</span>
           </motion.h1>
 
@@ -289,7 +289,7 @@ export default function PricingPage() {
             </div>
             <div>
               <h3 className="text-charcoal font-bold mb-2 flex items-center gap-2">
-                <span>✅</span> The PandaGen Sprint Model
+                <span>✅</span> The PandaCodeGen Sprint Model
               </h3>
               <p>
                 A 30% deposit secures your engineering sprint. Whether it takes 50 hours or 500 to get it perfect, you pay the agreed price. We take the risk, not you. Your incentive and ours are perfectly aligned.
@@ -375,7 +375,7 @@ export default function PricingPage() {
         <div className="overflow-x-auto">
           <div className="min-w-[640px] rounded-3xl border border-stone-200 overflow-hidden shadow-sm">
 
-            {/* Cognac accent bar — top of PandaGen column only */}
+            {/* Cognac accent bar — top of PandaCodeGen column only */}
             <div className="grid grid-cols-[1fr_1.4fr_1.4fr]">
               <div className="h-1 bg-stone-50" />
               <div className="h-1 bg-stone-50" />
@@ -386,7 +386,7 @@ export default function PricingPage() {
             <div className="grid grid-cols-[1fr_1.4fr_1.4fr] bg-stone-50 border-b border-stone-200">
               <div className="px-5 py-4 text-xs font-black text-stone-400 uppercase tracking-widest">Feature</div>
               <div className="px-5 py-4 text-sm font-bold text-stone-600 border-l border-stone-200">Standard Agency</div>
-              <div className="px-5 py-4 text-sm font-bold text-cognac border-l border-stone-200 bg-paper">PandaGen</div>
+              <div className="px-5 py-4 text-sm font-bold text-cognac border-l border-stone-200 bg-paper">PandaCodeGen</div>
             </div>
 
             {/* Data rows */}
@@ -426,7 +426,36 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* 6. FAQ */}
+      {/* 6. TESTIMONIAL */}
+      <section className="container mx-auto px-6 pb-16 max-w-3xl">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="bg-white border border-stone-200 rounded-3xl p-8 md:p-10 shadow-sm text-center"
+        >
+          <div className="flex justify-center gap-1 mb-4">
+            {[...Array(5)].map((_, i) => (
+              <svg key={i} className="w-4 h-4 text-cognac" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            ))}
+          </div>
+          <blockquote className="text-lg md:text-xl font-serif italic text-charcoal leading-relaxed mb-6 max-w-2xl mx-auto">
+            &ldquo;Load time dropped from 3+ seconds to 0.7 seconds. PageSpeed went from 40 to 100/100. Hosting cost dropped from $150/month to $0. Zero data loss, zero downtime during cutover. The ROI was immediate.&rdquo;
+          </blockquote>
+          <div className="flex items-center justify-center gap-3">
+            <div className="h-px w-8 bg-stone-300" />
+            <div>
+              <div className="text-sm font-bold text-charcoal">MyCustomPatches</div>
+              <div className="text-xs text-stone-400">Patch Manufacturing · WordPress Migration</div>
+            </div>
+            <div className="h-px w-8 bg-stone-300" />
+          </div>
+        </motion.div>
+      </section>
+
+      {/* 7. FAQ */}
       <section className="container mx-auto px-6 pb-32 max-w-3xl">
         <h2 className="text-3xl font-bold text-charcoal text-center mb-12">Common Questions</h2>
         <div className="space-y-6">
@@ -443,8 +472,12 @@ export default function PricingPage() {
             a="Yes. Most clients keep us on for ongoing updates ($500/mo) or priority new feature development at discounted rates."
           />
           <FAQ
+            q="Why not just hire a freelancer on Upwork or Fiverr?"
+            a="A freelancer gives you a file. We give you a system. Our builds include architecture review, SEO preservation, performance guarantees, 30 days of post-launch support, and full IP handover to your accounts. Freelancers disappear after delivery. We don't — and we have the case studies to prove it."
+          />
+          <FAQ
             q="Why is your price higher than a freelancer?"
-            a="Because we're not building templates. We're building assets. Clients typically see their investment pay for itself within 6–12 months through faster load times, higher conversion rates, and eliminated plugin fees."
+            a="Because we're not building templates. We're building assets. Clients typically see their investment pay for itself within 6–12 months through faster load times, higher conversion rates, and eliminated plugin and hosting fees. MyCustomPatches went from $150/mo in hosting to $0 and from a 40 PageSpeed score to 100/100 — the build paid for itself in under a year."
           />
           <FAQ
             q="What's in the Discovery Call?"

@@ -18,8 +18,9 @@ export const metadata: Metadata = {
     title: "Google Is Penalizing Your Slow Site. Here's How We Hit 100/100 PageSpeed on Every Build.",
     description: "Most websites score 35-55/100 on Google PageSpeed, and they're losing customers because of it. Here's the exact 8-step process we use to hit 98-100/100 on every client site.",
     alternates: {
-        canonical: '/blog/how-to-achieve-100-pagespeed',
+        canonical: 'https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed',
     },
+    keywords: ["100 PageSpeed score", "Core Web Vitals optimization", "Next.js PageSpeed 100", "website speed optimization 2026", "how to improve PageSpeed score", "Google PageSpeed Insights guide", "fix slow website"],
     openGraph: {
         title: "Google Is Penalizing Your Slow Site. Here's How We Hit 100/100 PageSpeed on Every Build.",
         description: "Most websites score 35-55/100 on Google PageSpeed, and they're losing customers because of it. Here's the exact process we use to hit 98-100/100.",
@@ -59,14 +60,21 @@ const articleSchema = {
             "publisher": {
                 "@type": "Organization",
                 "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaGen",
+                "name": "PandaCodeGen",
                 "url": "https://www.pandacodegen.com",
-                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 512, "height": 512 }
+                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed" },
             "articleSection": "Performance",
             "keywords": ["PageSpeed score", "Core Web Vitals", "Next.js performance", "website speed optimization", "100 PageSpeed", "LCP optimization"],
             "timeRequired": "PT12M",
+            "wordCount": 3000,
+            "about": [
+                {"@type": "Thing", "name": "Google PageSpeed Score"},
+                {"@type": "Thing", "name": "Core Web Vitals"},
+                {"@type": "SoftwareApplication", "name": "Next.js"},
+                {"@type": "Thing", "name": "Website Performance Optimisation"}
+            ],
             "inLanguage": "en-US",
             "speakable": {
                 "@type": "SpeakableSpecification",
@@ -124,12 +132,15 @@ const articleSchema = {
         {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
-            "name": "PandaGen",
-            "alternateName": "PandaGen Code",
+            "name": "PandaCodeGen",
+            "alternateName": "PandaCodeGen Code",
             "url": "https://www.pandacodegen.com",
-            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 512, "height": 512 },
+            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://linkedin.com/company/pandagen"],
-            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" }
+            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" },
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
+            "areaServed": "Worldwide",
+            "foundingDate": "2023"
         },
         {
             "@type": "FAQPage",
@@ -207,7 +218,7 @@ export default function AchievePageSpeedPage() {
                     </div>
 
                     {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
                         <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
                         <BlogList items={[
                             "Google PageSpeed score directly affects your rankings. Sites below 70 lose 20-30% of organic traffic.",
@@ -306,6 +317,14 @@ export default function AchievePageSpeedPage() {
                             That's why every client site we build starts with Next.js. The optimizations below only work with modern architecture.
                         </BlogText>
 
+                        <BlogText>
+                            Still on the fence about WordPress? Our post on{" "}
+                            <Link href="/blog/wordpress-killer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                                the true cost of WordPress in 2026
+                            </Link>{" "}
+                            breaks down exactly why most businesses are paying 3–5× more than they realise — in hosting, plugins, security, and lost revenue from slow speed.
+                        </BlogText>
+
                         <BlogHeader>What Results Do Real Clients Get After Migrating to Next.js?</BlogHeader>
 
                         <BlogText>
@@ -313,7 +332,7 @@ export default function AchievePageSpeedPage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>E-commerce Client (Shopify → Next.js Headless):</strong>
+                            <strong>MyCustomPatches (Shopify → Next.js Headless):</strong>
                         </BlogText>
 
                         <BlogList items={[
@@ -673,6 +692,17 @@ export default function AchievePageSpeedPage() {
 
                         <BlogText>
                             If your site does $500K/year and you're losing 20% of traffic to slow speed, that's $100K lost annually. Fix it once, gain $100K+ every year after.
+                        </BlogText>
+
+                        <BlogText>
+                            Every build we do follows the same performance-first process — whether it's a{" "}
+                            <Link href="/blog/how-to-fix-slow-wordpress" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                                slow WordPress site that needs migrating
+                            </Link>{" "}
+                            or a Shopify store going headless. See exactly what&apos;s included in our{" "}
+                            <Link href="/services/wordpress-migration" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                                WordPress to Next.js migration service
+                            </Link>.
                         </BlogText>
                     </div>
 

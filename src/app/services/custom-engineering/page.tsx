@@ -9,7 +9,7 @@ export default function EngineeringPage() {
         "@id": "https://www.pandacodegen.com/services/custom-engineering#service",
         "name": "Custom Web Apps & SaaS Development",
         "description": "Build scalable SaaS platforms, client portals, and AI-powered dashboards. Enterprise-grade architecture that scales to millions.",
-        "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaGen" },
+        "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
         "serviceType": ["SaaS Development", "Web Application Development", "Custom Dashboard", "AI Integration"]
       },
@@ -17,7 +17,7 @@ export default function EngineeringPage() {
         "@type": "WebPage",
         "@id": "https://www.pandacodegen.com/services/custom-engineering#webpage",
         "url": "https://www.pandacodegen.com/services/custom-engineering",
-        "name": "Custom Engineering | PandaGen",
+        "name": "Custom Engineering | PandaCodeGen",
         "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
         "about": { "@id": "https://www.pandacodegen.com/services/custom-engineering#service" },
         "inLanguage": "en-US"

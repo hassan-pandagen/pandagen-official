@@ -1,5 +1,7 @@
-// IndexNow bulk ping — run once with: node indexnow-ping.mjs
-// Notifies Bing, Yandex, and all IndexNow-compatible engines instantly
+// IndexNow ping — run with: node indexnow-ping.mjs
+// ⚠️  WARNING: Only ping NEW or UPDATED URLs. Do NOT run the full list repeatedly.
+// Pinging the same URLs daily risks Bing blacklisting the domain.
+// Rule: add new URLs here → ping once after deployment → done.
 
 const KEY  = "95b8869ac7714e9fa60226a559eb96ca";
 const HOST = "www.pandacodegen.com";
@@ -30,6 +32,7 @@ const urls = [
 
   // Blog posts
   `${BASE}/blog/wordpress-killer`,
+  `${BASE}/blog/shopify-headless`,
   `${BASE}/blog/wordpress-plugins-destroy-speed`,
   `${BASE}/blog/elementor-kills-seo`,
   `${BASE}/blog/shopify-plus-still-slow`,
@@ -41,6 +44,10 @@ const urls = [
   `${BASE}/blog/shopify-slow-losing-sales`,
   `${BASE}/blog/why-competitor-outranks-you`,
   `${BASE}/blog/google-universal-commerce-protocol-what-it-means-for-your-store`,
+  `${BASE}/blog/for-agencies-offer-custom-web-development`,
+  `${BASE}/blog/why-we-chose-nextjs-over-wordpress-2026`,
+  `${BASE}/blog/wordpress-vs-custom-code-real-cost-3-years`,
+  `${BASE}/blog/shopify-dawn-theme-slow`,
 
   // Legal
   `${BASE}/privacy`,

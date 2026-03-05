@@ -4,14 +4,14 @@
 
 ## Overview
 
-Web-based SEO audit tool similar to PageAudit.com for lead generation. Users enter their website URL, see performance/SEO issues, and understand revenue impact - creating a natural conversion path to PandaGen's services.
+Web-based SEO audit tool similar to PageAudit.com for lead generation. Users enter their website URL, see performance/SEO issues, and understand revenue impact - creating a natural conversion path to PandaCodeGen's services.
 
 ---
 
 ## Business Goals
 
 - **Lead Generation:** Capture emails from website owners who see they have speed/SEO problems
-- **Authority Building:** Demonstrate PandaGen's expertise in web performance analysis
+- **Authority Building:** Demonstrate PandaCodeGen's expertise in web performance analysis
 - **Viral Traffic:** Shareable results that drive organic discovery
 - **Revenue Alignment:** Show business cost of slow websites (aligns with blog strategy)
 
@@ -102,7 +102,7 @@ Web-based SEO audit tool similar to PageAudit.com for lead generation. Users ent
 - Baseline conversion rate: 2.5%
 - Average order value: $100
 - Monthly traffic: 10,000 visitors
-- Optimized load time: 0.8 seconds (PandaGen's promise)
+- Optimized load time: 0.8 seconds (PandaCodeGen's promise)
 
 **Output:**
 - Current revenue estimate
@@ -146,7 +146,7 @@ Web-based SEO audit tool similar to PageAudit.com for lead generation. Users ent
 - Revenue impact estimate
 - CTA: "Book Free Consultation" → Cal.com link
 
-**To PandaGen (Internal Notification):**
+**To PandaCodeGen (Internal Notification):**
 - Lead email and audited URL
 - Overall score and platform detected
 - Revenue impact calculation
@@ -179,7 +179,7 @@ Capture and include in lead data:
 
 ## UI/UX Design Patterns
 
-### Follow Existing PandaGen Theme
+### Follow Existing PandaCodeGen Theme
 - **Colors:** Neon green (`#22d3ee`), dark background (`#050505`)
 - **Glassmorphism:** `bg-white/5 backdrop-blur-md border border-white/10`
 - **Buttons:** `bg-neon text-black` with glow shadow
@@ -304,7 +304,7 @@ src/
 
 1. **Revenue Impact Focus** - PageAudit shows scores, we show dollar loss
 2. **Platform-Specific Advice** - Tailored recommendations for WordPress/Shopify users
-3. **Integrated Conversion Path** - Direct link to PandaGen services
+3. **Integrated Conversion Path** - Direct link to PandaCodeGen services
 4. **Modern Visual Design** - Neon theme with animations vs PageAudit's basic UI
 5. **No Extension Required** - Works in browser, no Chrome extension needed
 6. **Automated Follow-Up** - Email drip campaign for leads

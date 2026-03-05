@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Blog - Insights from the Engine Room',
-  description: 'Expert insights on Next.js, WordPress migration, web performance, and modern architecture from PandaGen engineers.',
+  description: 'Expert insights on Next.js, WordPress migration, web performance, and modern architecture from PandaCodeGen engineers.',
   keywords: [
     'Next.js blog',
     'WordPress migration guide',
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'enterprise web architecture',
   ],
   openGraph: {
-    title: 'PandaGen Blog - Technical Insights & Best Practices',
+    title: 'PandaCodeGen Blog - Technical Insights & Best Practices',
     description: 'Deep dives into Next.js, WordPress alternatives, Shopify optimization, and building high-performance web applications.',
     url: 'https://www.pandacodegen.com/blog',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'PandaGen Blog - Technical Insights & Best Practices',
+    title: 'PandaCodeGen Blog - Technical Insights & Best Practices',
     description: 'Deep dives into Next.js, WordPress alternatives, Shopify optimization, and building high-performance web applications.',
   },
   alternates: {

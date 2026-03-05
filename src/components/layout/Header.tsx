@@ -5,13 +5,20 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { Menu, X, ChevronDown, Linkedin, Twitter, Mail, Phone } from "lucide-react";
-import Logo from "@/components/Logo";
+import Image from "next/image";
 
 interface HeaderProps {
   onOpenQuote?: () => void;
 }
 
-const navItems = [
+interface NavItem {
+  name: string;
+  href: string;
+  hasDropdown?: boolean;
+  dropdownKey?: string;
+}
+
+const navItems: NavItem[] = [
   { name: "Services", href: "/services", hasDropdown: true },
   { name: "Work", href: "/work", hasDropdown: true, dropdownKey: "work" },
   { name: "Pricing", href: "/pricing" },
@@ -40,7 +47,7 @@ const workLinks = [
 ];
 
 const aboutLinks = [
-  { name: "About PandaGen", href: "/about" },
+  { name: "About PandaCodeGen", href: "/about" },
   { name: "Hassan Jamal", href: "/about/hassan" },
   { name: "Imran", href: "/about/imran" },
 ];
@@ -78,14 +85,14 @@ export default function Header({ onOpenQuote }: HeaderProps) {
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
           <Link href="/" className="z-[61]">
-            <Logo size="lg" />
+            <Image src="/logo.png" alt="PandaCodeGen" width={131} height={23} priority className="h-auto" />
           </Link>
 
           {/* Desktop Navigation */}
            <nav className="hidden md:flex items-center gap-8">
              {navItems.map((item) => {
                if (item.hasDropdown) {
-                 const dropdownKey = (item as any).dropdownKey || "services";
+                 const dropdownKey = item.dropdownKey || "services";
                  const dropdownItems = dropdownKey === "about" ? aboutLinks : dropdownKey === "work" ? workLinks : services;
                  const isOpen = openDropdown === dropdownKey;
                  return (
@@ -196,7 +203,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
           <nav className="flex flex-col items-center gap-1">
             {navItems.map((item) => {
               if (item.hasDropdown) {
-                const dropdownKey = (item as any).dropdownKey || "services";
+                const dropdownKey = item.dropdownKey || "services";
                 const dropdownItems = dropdownKey === "about" ? aboutLinks : dropdownKey === "work" ? workLinks : services;
                 const isOpen = mobileOpenDropdown === dropdownKey;
                 return (

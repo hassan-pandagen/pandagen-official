@@ -7,12 +7,12 @@ export default function ServicesPage() {
       {
         "@type": "ProfessionalService",
         "@id": "https://www.pandacodegen.com/services#service",
-        "name": "PandaGen Development Services",
+        "name": "PandaCodeGen Development Services",
         "url": "https://www.pandacodegen.com/services",
         "provider": {
           "@type": "Organization",
           "@id": "https://www.pandacodegen.com/#organization",
-          "name": "PandaGen"
+          "name": "PandaCodeGen"
         },
         "areaServed": "Worldwide",
         "hasOfferCatalog": {
@@ -50,7 +50,7 @@ export default function ServicesPage() {
         "@type": "WebPage",
         "@id": "https://www.pandacodegen.com/services#webpage",
         "url": "https://www.pandacodegen.com/services",
-        "name": "Services & Capabilities | PandaGen",
+        "name": "Services & Capabilities | PandaCodeGen",
         "description": "Expert Next.js development services: WordPress migration, Shopify headless commerce, and custom web application development.",
         "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
         "about": { "@id": "https://www.pandacodegen.com/services#service" },

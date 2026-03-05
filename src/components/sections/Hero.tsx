@@ -62,11 +62,11 @@ export default function Hero() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="text-lg md:text-xl text-stone-600 mb-10 leading-relaxed max-w-lg font-medium"
           >
-            We replace slow legacy platforms with{" "}
+            We replace slow WordPress &amp; Shopify sites with{" "}
             <span className="text-charcoal font-bold underline decoration-cognac/40 decoration-2 underline-offset-2">
-              custom-engineered infrastructure
+              hand-built websites that actually perform
             </span>
-            . Sub-second load times. Zero plugins. 100% ownership.
+            . Under 1 second. No monthly fees. No vendor lock-in.
           </motion.p>
 
           <motion.div
@@ -93,6 +93,16 @@ export default function Hero() {
               View Case Studies <ArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>
+
+          {/* Social proof micro-line */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.45 }}
+            className="text-xs text-stone-400 mt-1"
+          >
+            WordPress &amp; Shopify migrations · Avg 100/100 PageSpeed · $0/mo hosting
+          </motion.p>
 
           {/* Trust signals */}
           <motion.div

@@ -6,7 +6,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 
 export const metadata: Metadata = {
-    title: "Enterprise Operations Platform Case Study — Custom Business Dashboard | PandaGen",
+    title: "Enterprise Operations Platform Case Study — Custom Business Dashboard | PandaCodeGen",
     description: "How we replaced spreadsheets, WhatsApp chains, and 3 SaaS tools with a single custom ops platform. Real-time order pipeline, RBAC, automated attendance, profit tracking. Rated 10/10 by senior developer review.",
     openGraph: {
         title: "Enterprise Operations Platform Case Study — Custom Business Dashboard",
@@ -38,7 +38,7 @@ const caseStudySchema = {
             "publisher": {
                 "@type": "Organization",
                 "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaGen"
+                "name": "PandaCodeGen"
             },
             "mainEntityOfPage": {
                 "@type": "WebPage",
@@ -60,7 +60,7 @@ const caseStudySchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/work/enterprise-ops#webpage",
             "url": "https://www.pandacodegen.com/work/enterprise-ops",
-            "name": "Enterprise Operations Platform Case Study | PandaGen",
+            "name": "Enterprise Operations Platform Case Study | PandaCodeGen",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "inLanguage": "en-US"
         },

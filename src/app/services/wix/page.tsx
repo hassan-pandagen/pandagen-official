@@ -9,7 +9,7 @@ export default function WixServicePage() {
         "@id": "https://www.pandacodegen.com/services/wix#service",
         "name": "Wix Website Development & Migration Services",
         "description": "Professional Wix website development with migration path to custom-coded Next.js for businesses that want to own their platform and rank higher.",
-        "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaGen" },
+        "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
         "serviceType": ["Wix Development", "Wix Migration", "Wix to Next.js", "Wix Alternative"]
       },
@@ -17,7 +17,7 @@ export default function WixServicePage() {
         "@type": "WebPage",
         "@id": "https://www.pandacodegen.com/services/wix#webpage",
         "url": "https://www.pandacodegen.com/services/wix",
-        "name": "Wix Development & Migration | PandaGen",
+        "name": "Wix Development & Migration | PandaCodeGen",
         "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
         "about": { "@id": "https://www.pandacodegen.com/services/wix#service" },
         "inLanguage": "en-US"

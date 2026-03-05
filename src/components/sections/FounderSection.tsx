@@ -14,7 +14,7 @@ const founders = [
     github: "https://github.com/hassan-pandagen",
     linkedin: "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
     about: "/about/hassan",
-    tags: ["Next.js", "TypeScript", "Supabase", "Python"],
+    tags: ["WordPress Migrations", "E-Commerce Builds", "Speed Optimization", "Custom Platforms"],
   },
   {
     name: "Imran",
@@ -24,7 +24,7 @@ const founders = [
     github: null,
     linkedin: "https://www.linkedin.com/in/imran-raza-ladhani/",
     about: "/about/imran",
-    tags: ["Architecture", "E-Commerce", "SEO Strategy", "Systems Design"],
+    tags: ["Project Architecture", "Revenue Strategy", "SEO", "Migration Planning"],
   },
 ];
 
@@ -68,6 +68,7 @@ export default function FounderSection() {
                     src={founder.image}
                     alt={founder.name}
                     fill
+                    sizes="64px"
                     className="object-cover"
                   />
                 </div>

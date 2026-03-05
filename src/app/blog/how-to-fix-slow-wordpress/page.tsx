@@ -15,8 +15,8 @@ const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
 
 export const metadata: Metadata = {
-    title: { absolute: "How to Fix a Slow WordPress Site: 8 Ways That Work | PandaGen" },
-    description: "Your WordPress site loads in 4 seconds. Your competitor loads in 0.9 seconds. Here's exactly how to speed up WordPress with 8 proven methods ranked by impact, plus the hard truth about WordPress's speed ceiling.",
+    title: { absolute: "How to Fix a Slow WordPress Site: 8 Ways That Work | PandaCodeGen" },
+    description: "WordPress loads in 4s. Your competitor: 0.9s. 8 speed methods ranked by impact — and the hard truth about WordPress's performance ceiling.",
     alternates: {
         canonical: '/blog/how-to-fix-slow-wordpress',
     },
@@ -34,6 +34,7 @@ export const metadata: Metadata = {
         title: "How to Fix a Slow WordPress Site: 8 Ways That Actually Work",
         description: "Your WordPress site loads in 4 seconds. Your competitor loads in 0.9 seconds. Here's how to close the gap.",
     },
+    keywords: ["slow WordPress", "WordPress speed optimization", "fix slow WordPress", "WordPress performance", "WordPress vs Next.js", "Core Web Vitals"],
 };
 
 const articleSchema = {
@@ -59,14 +60,21 @@ const articleSchema = {
             "publisher": {
                 "@type": "Organization",
                 "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaGen",
+                "name": "PandaCodeGen",
                 "url": "https://www.pandacodegen.com",
-                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 512, "height": 512 }
+                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress" },
             "articleSection": "Performance",
             "keywords": ["slow WordPress", "WordPress speed optimization", "fix slow WordPress", "WordPress performance", "WordPress vs Next.js", "Core Web Vitals"],
             "timeRequired": "PT10M",
+            "wordCount": 2500,
+            "about": [
+                {"@type": "Thing", "name": "WordPress Speed Optimisation"},
+                {"@type": "SoftwareApplication", "name": "WordPress"},
+                {"@type": "Thing", "name": "Core Web Vitals"},
+                {"@type": "Thing", "name": "Website Performance"}
+            ],
             "inLanguage": "en-US",
             "speakable": {
                 "@type": "SpeakableSpecification",
@@ -123,12 +131,15 @@ const articleSchema = {
         {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
-            "name": "PandaGen",
-            "alternateName": "PandaGen Code",
+            "name": "PandaCodeGen",
+            "alternateName": "PandaCodeGen Code",
             "url": "https://www.pandacodegen.com",
-            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 512, "height": 512 },
+            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://linkedin.com/company/pandagen"],
-            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" }
+            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" },
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
+            "areaServed": "Worldwide",
+            "foundingDate": "2023"
         },
         {
             "@type": "FAQPage",
@@ -241,7 +252,7 @@ export default function FixSlowWordPressPage() {
                     </div>
 
                     {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
                         <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
                         <BlogList items={[
                             "Every 1 second of slowness costs you 7% in conversions. At 4 seconds load time, you're losing 28% of sales.",
@@ -556,7 +567,7 @@ export default function FixSlowWordPressPage() {
                                         Even if you implement every optimization in this guide perfectly, <BlogHighlight>WordPress maxes out at 2-2.5 seconds load time.</BlogHighlight> Meanwhile, sites built with modern platforms (Next.js) load in 0.8-1 second with zero optimization effort.
                                     </BlogText>
                                     <BlogText>
-                                        <strong>If your competitors are using modern tech, you're already behind.</strong> This guide helped you get the most out of WordPress — but it also proves why migration is the only path to truly competitive speed.
+                                        <strong>If your competitors are using modern tech, you're already behind.</strong> This guide helped you get the most out of WordPress — but it also proves why <a href="/blog/wordpress-killer" className="text-cognac hover:underline">migration is the only path to truly competitive speed</a>.
                                     </BlogText>
                                 </div>
                             </div>

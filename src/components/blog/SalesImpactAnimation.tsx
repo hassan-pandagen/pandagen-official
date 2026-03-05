@@ -48,7 +48,7 @@ export default function SalesImpactAnimation() {
   const maxVal = 80;
 
   return (
-    <div className="relative w-full aspect-[2/1] bg-gradient-to-br from-stone-50 to-white rounded-2xl border border-stone-200 overflow-hidden">
+    <div role="img" aria-label="Interactive animation showing revenue loss from slow page load times and conversion rate gains from speed improvements" className="relative w-full aspect-[2/1] bg-gradient-to-br from-stone-50 to-white rounded-2xl border border-stone-200 overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(234,88,12,0.04),transparent_60%)]" />
 
       {/* Top label */}

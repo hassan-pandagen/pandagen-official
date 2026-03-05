@@ -9,7 +9,7 @@ export default function WebflowServicePage() {
         "@id": "https://www.pandacodegen.com/services/webflow#service",
         "name": "Webflow Migration to Custom Code",
         "description": "Professional Webflow migration to custom-coded Next.js. Stop paying premium hosting fees. Get faster loading, full SEO control, and own your code.",
-        "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaGen" },
+        "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
         "serviceType": ["Webflow Migration", "Webflow to Next.js", "Webflow Alternative", "Webflow to Custom Code"]
       },
@@ -17,7 +17,7 @@ export default function WebflowServicePage() {
         "@type": "WebPage",
         "@id": "https://www.pandacodegen.com/services/webflow#webpage",
         "url": "https://www.pandacodegen.com/services/webflow",
-        "name": "Webflow Migration | PandaGen",
+        "name": "Webflow Migration | PandaCodeGen",
         "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
         "about": { "@id": "https://www.pandacodegen.com/services/webflow#service" },
         "inLanguage": "en-US"

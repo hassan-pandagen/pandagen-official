@@ -25,7 +25,7 @@ export default function SocialProof() {
         >
           <Quote className="w-6 h-6 text-cognac mb-4 opacity-60" />
           <blockquote className="text-xl md:text-2xl font-serif italic text-charcoal leading-relaxed max-w-2xl">
-            &ldquo;We were running Yoast SEO, Elementor, WooCommerce, and a dozen other plugins just to keep the site alive, costing us $150/month in hosting and still loading in 3+ seconds. PandaGen stripped it all out and rebuilt from scratch. No plugins. No hosting bill. Loads in under a second. The ROI was immediate.&rdquo;
+            &ldquo;We were running Yoast SEO, Elementor, WooCommerce, and a dozen other plugins just to keep the site alive, costing us $150/month in hosting and still loading in 3+ seconds. PandaCodeGen stripped it all out and rebuilt from scratch. No plugins. No hosting bill. Loads in under a second. The ROI was immediate.&rdquo;
           </blockquote>
           <div className="mt-5 flex items-center gap-3">
             <div className="h-px w-8 bg-stone-300" />

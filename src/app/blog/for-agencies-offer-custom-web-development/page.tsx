@@ -15,7 +15,7 @@ const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
 
 export const metadata: Metadata = {
-    title: "For Agencies: How to Offer Custom Web Development Without Hiring a Dev Team | PandaGen",
+    title: "For Agencies: How to Offer Custom Web Development Without Hiring a Dev Team | PandaCodeGen",
     description: "Your client wants a custom site. No dev team? Here's how 40+ agencies deliver premium custom builds under their own brand — without touching a line of code.",
     alternates: {
         canonical: '/blog/for-agencies-offer-custom-web-development',
@@ -34,6 +34,7 @@ export const metadata: Metadata = {
         title: "For Agencies: How to Offer Custom Web Development Without Hiring a Dev Team",
         description: "Your client wants a custom-built website. You don't have a dev team. Here's how 40+ agencies deliver it.",
     },
+    keywords: ["white label web development", "outsource web development for agencies", "offer custom web development without dev team", "white label nextjs", "agency web development partner"],
 };
 
 const articleSchema = {
@@ -59,7 +60,7 @@ const articleSchema = {
             "publisher": {
                 "@type": "Organization",
                 "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaGen",
+                "name": "PandaCodeGen",
                 "url": "https://www.pandacodegen.com",
                 "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
@@ -84,7 +85,8 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Vercel for Agencies", "url": "https://vercel.com/enterprise" },
                 { "@type": "CreativeWork", "name": "Sanity CMS for Developers", "url": "https://www.sanity.io/docs" },
                 { "@type": "CreativeWork", "name": "Google Core Web Vitals", "url": "https://developers.google.com/search/docs/appearance/core-web-vitals" },
-                { "@type": "CreativeWork", "name": "Agency Partnerships — PandaGen", "url": "https://www.pandacodegen.com/partners" }
+                { "@type": "CreativeWork", "name": "Agency Partnerships — PandaCodeGen", "url": "https://www.pandacodegen.com/partners" },
+                { "@type": "CreativeWork", "name": "Google Page Experience Documentation", "url": "https://developers.google.com/search/docs/appearance/page-experience" }
             ]
         },
         {
@@ -112,13 +114,13 @@ const articleSchema = {
         {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
-            "name": "PandaGen",
-            "alternateName": "PandaGen Code",
+            "name": "PandaCodeGen",
+            "alternateName": "PandaCodeGen Code",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://linkedin.com/company/pandagen"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" },
-            "description": "PandaGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
             "foundingDate": "2023"
         },
@@ -358,7 +360,7 @@ export default function ForAgenciesCustomDevPage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>1. WordPress Migrations to Custom Next.js</strong>
+                            <strong>1. <a href="/blog/wordpress-killer" className="text-cognac hover:underline">WordPress Migrations</a> to Custom Next.js</strong>
                         </BlogText>
 
                         <BlogList items={[
@@ -440,7 +442,7 @@ export default function ForAgenciesCustomDevPage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>One important note:</strong> Don&apos;t undersell. When you present a custom Next.js site, you&apos;re selling a premium product — 100/100 PageSpeed, zero hosting costs, owned code. Position it accordingly. Clients who are serious about their website will pay for quality.
+                            <strong>One important note:</strong> Don&apos;t undersell. When you present a custom Next.js site, you&apos;re selling a premium product — <a href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">100/100 PageSpeed</a>, zero hosting costs, owned code. Position it accordingly. Clients who are serious about their website will pay for quality.
                         </BlogText>
 
                         <BlogHeader>How Does This Affect Your Agency&apos;s Positioning?</BlogHeader>

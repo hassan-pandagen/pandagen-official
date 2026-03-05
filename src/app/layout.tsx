@@ -28,8 +28,8 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.pandacodegen.com'),
   title: {
-    default: "PandaGen | Custom-Coded Websites That Load in Under 1 Second",
-    template: "%s | PandaGen",
+    default: "PandaCodeGen | Custom-Coded Websites That Load in Under 1 Second",
+    template: "%s | PandaCodeGen",
   },
   description: "We migrate WordPress & Shopify sites to custom-coded platforms. Sub-second load times. Zero bloat. Bank-grade security and SEO.",
   alternates: {
@@ -72,9 +72,9 @@ export const metadata: Metadata = {
     "wordpress plugin bloat fix",
     "shopify alternative for businesses",
   ],
-  authors: [{ name: "PandaGenCode" }],
-  creator: "PandaGenCode",
-  publisher: "PandaGenCode",
+  authors: [{ name: "PandaCodeGen" }],
+  creator: "PandaCodeGen",
+  publisher: "PandaCodeGen",
   robots: {
     index: true,
     follow: true,
@@ -90,24 +90,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://www.pandacodegen.com",
-    siteName: "PandaGen",
-    title: "PandaGen | Custom-Coded Websites That Load in Under 1 Second",
+    siteName: "PandaCodeGen",
+    title: "PandaCodeGen | Custom-Coded Websites That Load in Under 1 Second",
     description: "We migrate WordPress & Shopify sites to custom-coded platforms. Sub-second load times. Zero bloat.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "PandaGen - Custom Web Development Agency",
+        alt: "PandaCodeGen – Custom-Coded Websites That Load in Under 1 Second",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "PandaGen | Custom-Coded Websites That Load in Under 1 Second",
+    title: "PandaCodeGen | Custom-Coded Websites That Load in Under 1 Second",
     description: "We migrate WordPress & Shopify sites to custom-coded platforms. Sub-second load times. Zero bloat.",
-    images: ["/og-image.jpg"],
     creator: "@pandacodegen",
+    images: ["/opengraph-image"],
   },
 };
 

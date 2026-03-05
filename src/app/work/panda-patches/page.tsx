@@ -6,7 +6,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 
 export const metadata: Metadata = {
-    title: "Panda Patches Case Study — $38K/mo E-Commerce on $25/mo Tooling | PandaGen",
+    title: "Panda Patches Case Study — $38K/mo E-Commerce on $25/mo Tooling | PandaCodeGen",
     description: "How we replaced WordPress + 3 paid tools + spreadsheets with a custom Next.js storefront and Supabase ops platform. Real-time pricing calculator across 9 patch types. $38K+/mo on under $25/mo.",
     openGraph: {
         title: "Panda Patches Case Study — $38K/mo E-Commerce on $25/mo Tooling",
@@ -38,7 +38,7 @@ const caseStudySchema = {
             "publisher": {
                 "@type": "Organization",
                 "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaGen"
+                "name": "PandaCodeGen"
             },
             "mainEntityOfPage": {
                 "@type": "WebPage",
@@ -59,7 +59,7 @@ const caseStudySchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/work/panda-patches#webpage",
             "url": "https://www.pandacodegen.com/work/panda-patches",
-            "name": "Panda Patches Case Study | PandaGen",
+            "name": "Panda Patches Case Study | PandaCodeGen",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "inLanguage": "en-US"
         },

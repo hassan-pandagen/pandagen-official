@@ -49,7 +49,7 @@ export function ComparisonTable() {
       <div className="grid grid-cols-3 bg-stone-50 p-5 border-b border-stone-200 font-bold text-charcoal text-sm md:text-base uppercase tracking-wider">
         <div>Feature</div>
         <div className="text-red-600">WordPress</div>
-        <div className="text-charcoal">PandaGen</div>
+        <div className="text-charcoal">PandaCodeGen</div>
       </div>
       <TableRow label="Hosting Cost" bad="$150/mo (Kinsta)" good="$0 (Vercel)" />
       <TableRow label="Security" bad="Plugin Risks" good="Bank-Grade Static" />
@@ -188,7 +188,7 @@ export function StatCard({ stat, label, context }: { stat: string; label: string
 }
 
 // ─── BlogAuthor ────────────────────────────────────────────────────────────────
-export function BlogAuthor({ name = "Hassan Jamal", role = "Co-Founder & Lead Engineer · PandaGen" }: { name?: string; role?: string }) {
+export function BlogAuthor({ name = "Hassan Jamal", role = "Co-Founder & Lead Engineer · PandaCodeGen" }: { name?: string; role?: string }) {
   return (
     <div className="flex items-center gap-3 mt-6 pt-6 border-t border-stone-200">
       <img

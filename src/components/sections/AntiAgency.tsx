@@ -12,7 +12,7 @@ const pillars = [
   {
     icon: Code,
     title: "Zero Outsourcing",
-    body: "We don't white-label cheap offshore labor. Every line of code is written by our core team. Senior engineers who understand high-scale architecture.",
+    body: "We don't white-label offshore labor. Every line of code is written by our core team — the same people you speak to on the discovery call.",
   },
   {
     icon: LockOpen,

@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     'better than Wix',
   ],
   openGraph: {
-    title: 'Wix Development & Migration | PandaGen',
+    title: 'Wix Development & Migration | PandaCodeGen',
     description: 'Outgrown Wix? We help businesses break free from slow templates and own their platform with custom-coded websites.',
     url: 'https://www.pandacodegen.com/services/wix',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Wix Development & Migration | PandaGen',
+    title: 'Wix Development & Migration | PandaCodeGen',
     description: 'Outgrown Wix? We help businesses break free from slow templates and own their platform with custom-coded websites.',
   },
   alternates: {

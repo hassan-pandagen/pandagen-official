@@ -15,7 +15,7 @@ const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
 
 export const metadata: Metadata = {
-    title: "Why We Chose Next.js Over WordPress for Every New Client in 2026 | PandaGen",
+    title: "Why We Chose Next.js Over WordPress for Every New Client in 2026 | PandaCodeGen",
     description: "In 2023 we still built in WordPress. By mid-2024 we stopped completely. Here's the data, the client stories, and the 7 reasons we made the switch permanent.",
     alternates: {
         canonical: '/blog/why-we-chose-nextjs-over-wordpress-2026',
@@ -34,6 +34,7 @@ export const metadata: Metadata = {
         title: "Why We Chose Next.js Over WordPress for Every New Client in 2026",
         description: "In 2023 we still built in WordPress. By mid-2024 we stopped completely. Here's the 7 reasons.",
     },
+    keywords: ["nextjs vs wordpress 2026", "why nextjs over wordpress", "wordpress alternative nextjs", "switch from wordpress to nextjs", "nextjs benefits over wordpress"],
 };
 
 const articleSchema = {
@@ -59,7 +60,7 @@ const articleSchema = {
             "publisher": {
                 "@type": "Organization",
                 "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaGen",
+                "name": "PandaCodeGen",
                 "url": "https://www.pandacodegen.com",
                 "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
@@ -113,13 +114,13 @@ const articleSchema = {
         {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
-            "name": "PandaGen",
-            "alternateName": "PandaGen Code",
+            "name": "PandaCodeGen",
+            "alternateName": "PandaCodeGen Code",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://linkedin.com/company/pandagen"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" },
-            "description": "PandaGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
             "foundingDate": "2023"
         },
@@ -348,7 +349,7 @@ export default function WhyNextjsOverWordPressPage() {
                         </BlogText>
 
                         <BlogText>
-                            Our recent clients: MyCustomPatches — 100/100. Our own agency site (this one) — 100/100. Every project. Consistent.
+                            Our recent clients: MyCustomPatches — <a href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">100/100</a>. Our own agency site (this one) — 100/100. Every project. Consistent.
                         </BlogText>
 
                         <BlogHeader>Reason 5: The Content Editor Is Better Than WordPress Admin</BlogHeader>
@@ -467,7 +468,7 @@ export default function WhyNextjsOverWordPressPage() {
                         ]} />
 
                         <BlogText>
-                            Most clients see their Google rankings recover within 30–60 days. Within 90 days, rankings improve because Google now sees a faster site — and faster sites rank higher than slower ones with identical content.
+                            Most clients see their Google rankings recover within 30–60 days. Within 90 days, rankings improve because Google now sees <a href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">a faster site</a> — and faster sites rank higher than slower ones with identical content.
                         </BlogText>
 
                         <BlogText>

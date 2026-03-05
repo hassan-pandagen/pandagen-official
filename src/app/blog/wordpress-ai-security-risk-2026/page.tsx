@@ -15,7 +15,7 @@ const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 const SecurityShieldAnimation = dynamic(() => import("@/components/blog/SecurityShieldAnimation"));
 
 export const metadata: Metadata = {
-    title: { absolute: "WordPress AI Security 2026: 100K+ Sites Exposed | PandaGen" },
+    title: { absolute: "WordPress AI Security 2026: 100K+ Sites Exposed | PandaCodeGen" },
     description: "100K+ WordPress sites exposed through AI plugin flaws. Why WordPress 6.9 AI features create security risks & what business owners must know in 2026.",
     alternates: {
         canonical: '/blog/wordpress-ai-security-risk-2026',
@@ -35,6 +35,7 @@ export const metadata: Metadata = {
         title: "WordPress AI Security Risk: 100K+ Sites Exposed Through Plugin Vulnerabilities",
         description: "Is WordPress AI safe? 100K+ sites exposed through AI Engine vulnerability. What business owners need to know about WordPress 6.9 security risks.",
     },
+    keywords: ["WordPress AI security risk", "is WordPress AI safe", "WordPress 6.9 security vulnerabilities", "AI Engine plugin security flaw", "WordPress site security 2026"],
 };
 
 const articleSchema = {
@@ -60,14 +61,21 @@ const articleSchema = {
             "publisher": {
                 "@type": "Organization",
                 "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaGen",
+                "name": "PandaCodeGen",
                 "url": "https://www.pandacodegen.com",
-                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 512, "height": 512 }
+                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/wordpress-ai-security-risk-2026" },
             "articleSection": "Security",
             "keywords": ["WordPress AI security risk", "is WordPress AI safe", "WordPress 6.9 security vulnerabilities", "WordPress AI plugin vulnerabilities", "AI Engine plugin security flaw", "WordPress site security 2026", "WordPress AI threats", "protect WordPress from AI attacks", "WordPress security for business owners", "WordPress AI endpoint security", "WordPress plugin security risks", "should I use WordPress for business"],
-            "timeRequired": "PT9M",
+            "timeRequired": "PT10M",
+            "wordCount": 2600,
+            "about": [
+                {"@type": "Thing", "name": "WordPress AI Security"},
+                {"@type": "Thing", "name": "AI Security Vulnerabilities"},
+                {"@type": "SoftwareApplication", "name": "WordPress"},
+                {"@type": "Thing", "name": "Website Security for Business"}
+            ],
             "inLanguage": "en-US",
             "citation": [
                 {
@@ -84,6 +92,21 @@ const articleSchema = {
                     "@type": "CreativeWork",
                     "name": "WordPress AI Security Guide for SMBs",
                     "url": "https://michelebedin.com/en/wordpress-security-ai-guide-sme-mcp-vulnerabilities/"
+                },
+                {
+                    "@type": "CreativeWork",
+                    "name": "WordPress AI Building Blocks Roadmap",
+                    "url": "https://make.wordpress.org/ai/2025/07/17/ai-building-blocks/"
+                },
+                {
+                    "@type": "CreativeWork",
+                    "name": "Wordfence: WordPress Plugin Vulnerabilities Database",
+                    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins"
+                },
+                {
+                    "@type": "CreativeWork",
+                    "name": "OWASP Top 10 Security Risks",
+                    "url": "https://owasp.org/www-project-top-ten/"
                 }
             ],
             "speakable": {
@@ -162,12 +185,15 @@ const articleSchema = {
         {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
-            "name": "PandaGen",
-            "alternateName": "PandaGen Code",
+            "name": "PandaCodeGen",
+            "alternateName": "PandaCodeGen Code",
             "url": "https://www.pandacodegen.com",
-            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 512, "height": 512 },
+            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://linkedin.com/company/pandagen"],
-            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" }
+            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" },
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
+            "areaServed": "Worldwide",
+            "foundingDate": "2023"
         }
     ]
 };
@@ -238,7 +264,7 @@ export default function WordPressAISecurityPage() {
                     </div>
 
                     {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
                         <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
                         <BlogList items={[
                             "WordPress 6.9 turned every plugin into an AI endpoint — your 20-30 plugins are now 20-30 potential hacker entry points.",
@@ -562,7 +588,7 @@ export default function WordPressAISecurityPage() {
                     </BlogText>
 
                     <BlogText>
-                        If your business depends on security, uptime, and customer trust, ask yourself: is a platform built on third-party plugins really the best foundation for AI features?
+                        If your business depends on security, uptime, and customer trust, ask yourself: is <a href="/services/wordpress-migration" className="text-cognac hover:underline">a platform built on third-party plugins</a> really the best foundation for AI features?
                     </BlogText>
 
                     {/* Sources Section */}
@@ -594,6 +620,18 @@ export default function WordPressAISecurityPage() {
                                 <span className="text-charcoal mt-1">→</span>
                                 <a href="https://make.wordpress.org/ai/2025/07/17/ai-building-blocks/" target="_blank" rel="noopener noreferrer" className="hover:text-cognac transition-colors">
                                     WordPress AI Building Blocks Roadmap, WordPress.org
+                                </a>
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <span className="text-charcoal mt-1">→</span>
+                                <a href="https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins" target="_blank" rel="noopener noreferrer" className="hover:text-cognac transition-colors">
+                                    WordPress Plugin Vulnerability Database, Wordfence Threat Intelligence
+                                </a>
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <span className="text-charcoal mt-1">→</span>
+                                <a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener noreferrer" className="hover:text-cognac transition-colors">
+                                    OWASP Top 10 Security Risks, Open Web Application Security Project
                                 </a>
                             </li>
                         </ul>

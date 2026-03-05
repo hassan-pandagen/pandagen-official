@@ -21,8 +21,8 @@ export default function AboutPage() {
         "@type": "AboutPage",
         "@id": "https://www.pandacodegen.com/about#webpage",
         "url": "https://www.pandacodegen.com/about",
-        "name": "About PandaGen - The Anti-Agency",
-        "description": "Meet the engineers behind PandaGen. We build web assets, not templates. Direct access to architects, fixed pricing, full code ownership.",
+        "name": "About PandaCodeGen - The Anti-Agency",
+        "description": "Meet the engineers behind PandaCodeGen. We build web assets, not templates. Direct access to architects, fixed pricing, full code ownership.",
         "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
         "about": { "@id": "https://www.pandacodegen.com/#organization" },
         "inLanguage": "en-US",
@@ -32,8 +32,8 @@ export default function AboutPage() {
       {
         "@type": "Organization",
         "@id": "https://www.pandacodegen.com/#organization",
-        "name": "PandaGen",
-        "alternateName": "PandaGen Code",
+        "name": "PandaCodeGen",
+        "alternateName": "PandaCodeGen Code",
         "url": "https://www.pandacodegen.com",
         "logo": {
           "@type": "ImageObject",
@@ -98,7 +98,7 @@ export default function AboutPage() {
           </h1>
 
           <p className="text-xl text-stone-600 leading-relaxed mb-12">
-            Most agencies sell you a template and disappear. We are engineers who grew up breaking WordPress sites and fixing them. PandaGen was born from a simple truth: <strong className="text-charcoal">The web is too slow, and business owners are paying the price.</strong>
+            Most agencies sell you a template and disappear. We are engineers who grew up breaking WordPress sites and fixing them. PandaCodeGen was born from a simple truth: <strong className="text-charcoal">The web is too slow, and business owners are paying the price.</strong>
           </p>
         </div>
 
@@ -148,7 +148,7 @@ export default function AboutPage() {
             <div className="group relative bg-stone-900 border border-stone-800 rounded-3xl overflow-hidden hover:border-stone-700 transition-colors duration-500">
                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-stone-950/95 z-10" />
                <div className="h-96 w-full relative">
-                  <Image src="/team/imran.png" fill alt="Imran - Lead Solutions Architect at PandaGen" className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700" />
+                  <Image src="/team/imran.png" fill sizes="(max-width: 768px) 100vw, 50vw" alt="Imran - Lead Solutions Architect at PandaCodeGen" className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700" />
                </div>
                <div className="absolute bottom-0 left-0 w-full p-8 z-20">
                   <div className="px-3 py-1 bg-white/10 text-stone-300 text-[10px] font-bold uppercase tracking-wider rounded w-fit mb-2">Strategy</div>
@@ -167,7 +167,7 @@ export default function AboutPage() {
             <Link href="/about/hassan" className="group relative bg-stone-900 border border-stone-800 rounded-3xl overflow-hidden hover:border-stone-700 transition-colors duration-500 block">
                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-stone-950/95 z-10" />
                <div className="h-96 w-full relative">
-                  <Image src="/team/hassan.png" fill alt="Hassan Jamal - Lead Full-Stack Engineer at PandaGen" className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700" />
+                  <Image src="/team/hassan.png" fill sizes="(max-width: 768px) 100vw, 50vw" alt="Hassan Jamal - Lead Full-Stack Engineer at PandaCodeGen" className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700" />
                </div>
                <div className="absolute bottom-0 left-0 w-full p-8 z-20">
                   <div className="px-3 py-1 bg-white/10 text-stone-300 text-[10px] font-bold uppercase tracking-wider rounded w-fit mb-2">Engineering</div>
@@ -199,8 +199,8 @@ export default function AboutPage() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-100 border border-stone-200 text-sm text-stone-600 mb-6">
               <Code2 className="w-4 h-4 text-stone-500" /> Founder Spotlight
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-3">The Engineer Behind PandaGen</h2>
-            <p className="text-stone-500 max-w-2xl mx-auto">No account managers. When you work with PandaGen, you talk directly to the person writing the code.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-3">The Engineer Behind PandaCodeGen</h2>
+            <p className="text-stone-500 max-w-2xl mx-auto">No account managers. When you work with PandaCodeGen, you talk directly to the person writing the code.</p>
           </div>
 
           <div className="grid md:grid-cols-5 gap-8 items-start">
@@ -271,7 +271,7 @@ export default function AboutPage() {
       <section className="py-20 px-6 border-y border-stone-200 relative overflow-hidden">
          <div className="relative z-10 container mx-auto max-w-5xl">
              <div className="text-center mb-16">
-                <h2 className="text-charcoal font-bold text-4xl mb-4">Why Choose PandaGen</h2>
+                <h2 className="text-charcoal font-bold text-4xl mb-4">Why Choose PandaCodeGen</h2>
                 <p className="text-stone-500 text-lg">What makes us different from traditional agencies</p>
              </div>
 

@@ -20,7 +20,7 @@ export default function PrivacyPage() {
             className="mb-16"
           >
             <h1 className="text-5xl font-bold text-charcoal mb-4">Privacy Policy</h1>
-            <p className="text-stone-600">Last updated: January 26, 2026</p>
+            <p className="text-stone-600">Last updated: March 4, 2026</p>
           </motion.div>
 
           {/* Content */}
@@ -35,10 +35,10 @@ export default function PrivacyPage() {
             >
               <h2 className="text-2xl font-bold text-charcoal mb-4">1. Introduction</h2>
               <p>
-                PandaGenCode LLC ("we," "us," "our," or "Company") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website (the "Site"), use our services, and interact with us.
+                PandaCodeGen LLC ("we," "us," "our," or "Company") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website (the "Site"), use our services, and interact with us.
               </p>
               <p className="mt-4">
-                Please read this Privacy Policy carefully. If you do not agree with our policies and practices, please do not use our Site or Services. By accessing and using PandaGenCode, you acknowledge that you have read, understood, and agree to be bound by all the terms of this Privacy Policy.
+                Please read this Privacy Policy carefully. If you do not agree with our policies and practices, please do not use our Site or Services. By accessing and using PandaCodeGen, you acknowledge that you have read, understood, and agree to be bound by all the terms of this Privacy Policy.
               </p>
             </motion.section>
 
@@ -194,7 +194,7 @@ export default function PrivacyPage() {
             >
               <h2 className="text-2xl font-bold text-charcoal mb-4">10. International Data Transfers</h2>
               <p>
-                PandaGenCode operates globally. Your information may be transferred to, stored, and processed in countries other than your country of residence. These countries may have different data protection laws. By providing information, you consent to such transfers.
+                PandaCodeGen operates globally. Your information may be transferred to, stored, and processed in countries other than your country of residence. These countries may have different data protection laws. By providing information, you consent to such transfers.
               </p>
             </motion.section>
 
@@ -229,18 +229,74 @@ export default function PrivacyPage() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6 mb-16"
+              className="border-l-2 border-stone-300 pl-6"
             >
               <h2 className="text-2xl font-bold text-charcoal mb-4">13. Contact Us</h2>
               <p>
                 If you have questions about this Privacy Policy or our privacy practices, please contact us:
               </p>
               <div className="mt-4 p-4 bg-stone-50 border border-stone-200 rounded-lg">
-                <p className="text-charcoal font-semibold">PandaGenCode LLC</p>
+                <p className="text-charcoal font-semibold">PandaCodeGen LLC</p>
                 <p>Missouri, USA</p>
                 <p>Email: <a href="mailto:info@pandacodegen.com" className="text-cognac hover:underline">info@pandacodegen.com</a></p>
                 <p>Response Time: Within 48 hours during business days</p>
               </div>
+            </motion.section>
+
+            {/* Section 14 */}
+            <motion.section
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="border-l-2 border-stone-300 pl-6"
+            >
+              <h2 className="text-2xl font-bold text-charcoal mb-4">14. GDPR Rights (EU/UK Users)</h2>
+              <p>
+                If you are located in the European Economic Area (EEA) or United Kingdom, your personal data is processed under the General Data Protection Regulation (GDPR). Our lawful basis for processing includes:
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-stone-600 mt-4">
+                <li><strong>Contractual necessity:</strong> To deliver the web development services you have engaged us for.</li>
+                <li><strong>Legitimate interests:</strong> Website analytics, fraud prevention, and business operations.</li>
+                <li><strong>Consent:</strong> For marketing communications and optional cookies.</li>
+                <li><strong>Legal obligation:</strong> Compliance with applicable laws and regulations.</li>
+              </ul>
+              <p className="mt-4">As an EEA or UK resident, you have the following rights under GDPR:</p>
+              <ul className="list-disc list-inside space-y-2 text-stone-600 mt-4">
+                <li><strong>Right to Access:</strong> Request a copy of the personal data we hold about you.</li>
+                <li><strong>Right to Rectification:</strong> Request correction of inaccurate or incomplete data.</li>
+                <li><strong>Right to Erasure:</strong> Request deletion of your personal data where there is no compelling reason for its continued processing.</li>
+                <li><strong>Right to Restrict Processing:</strong> Request that we limit how we use your data in certain circumstances.</li>
+                <li><strong>Right to Data Portability:</strong> Receive your personal data in a structured, machine-readable format.</li>
+                <li><strong>Right to Object:</strong> Object to processing based on legitimate interests or for direct marketing.</li>
+                <li><strong>Rights Related to Automated Decisions:</strong> We do not make solely automated decisions that significantly affect you.</li>
+              </ul>
+              <p className="mt-4">
+                To exercise these rights, contact us at <a href="mailto:info@pandacodegen.com" className="text-cognac hover:underline">info@pandacodegen.com</a>. You also have the right to lodge a complaint with your local Data Protection Authority. UK residents may contact the Information Commissioner's Office (ICO) at <a href="https://ico.org.uk" className="text-cognac hover:underline" target="_blank" rel="noopener noreferrer">ico.org.uk</a>.
+              </p>
+            </motion.section>
+
+            {/* Section 15 */}
+            <motion.section
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="border-l-2 border-stone-300 pl-6 mb-16"
+            >
+              <h2 className="text-2xl font-bold text-charcoal mb-4">15. CCPA Rights (California Residents)</h2>
+              <p>
+                If you are a California resident, the California Consumer Privacy Act (CCPA) grants you the following rights:
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-stone-600 mt-4">
+                <li><strong>Right to Know:</strong> Request information about the categories and specific pieces of personal data we have collected, used, disclosed, or sold in the past 12 months.</li>
+                <li><strong>Right to Delete:</strong> Request deletion of personal data we have collected from you, subject to certain exceptions (e.g., completing transactions, legal obligations).</li>
+                <li><strong>Right to Opt-Out of Sale:</strong> We do not sell your personal information to third parties. You will not be asked to opt in or out of data sales.</li>
+                <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising any CCPA rights, including by denying services or charging different prices.</li>
+                <li><strong>Right to Correct:</strong> Request correction of inaccurate personal information we maintain about you.</li>
+                <li><strong>Right to Limit Sensitive Information:</strong> We do not collect sensitive personal information beyond what is necessary for service delivery.</li>
+              </ul>
+              <p className="mt-4">
+                To submit a CCPA request, contact us at <a href="mailto:info@pandacodegen.com" className="text-cognac hover:underline">info@pandacodegen.com</a> or call <a href="tel:+13022504340" className="text-cognac hover:underline">+1 (302) 250-4340</a>. We will respond to verified requests within 45 days. You may designate an authorized agent to make requests on your behalf.
+              </p>
             </motion.section>
 
           </div>

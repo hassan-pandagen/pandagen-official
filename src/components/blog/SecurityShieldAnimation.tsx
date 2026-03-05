@@ -39,7 +39,7 @@ export default function SecurityShieldAnimation() {
   }, []);
 
   return (
-    <div className="relative w-full aspect-[2/1] bg-gradient-to-br from-stone-50 to-white rounded-2xl border border-stone-200 overflow-hidden">
+    <div role="img" aria-label="Interactive animation showing WordPress AI security vulnerabilities being detected, contrasted with a secure custom Next.js site" className="relative w-full aspect-[2/1] bg-gradient-to-br from-stone-50 to-white rounded-2xl border border-stone-200 overflow-hidden">
       <style>{`
         @keyframes secShake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-3px)} 75%{transform:translateX(3px)} }
         @keyframes secReveal { from{opacity:0;transform:translateX(-6px)} to{opacity:1;transform:translateX(0)} }
@@ -117,12 +117,12 @@ export default function SecurityShieldAnimation() {
           {/* VS */}
           <div className="text-stone-300 font-bold text-xs shrink-0">VS</div>
 
-          {/* PandaGen */}
+          {/* PandaCodeGen */}
           <div className="flex-1 flex flex-col items-center gap-2">
             <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-stone-900 border-2 border-stone-700 flex items-center justify-center shadow-sm">
               <ShieldCheck className="w-6 h-6 md:w-8 md:h-8 text-stone-300" />
             </div>
-            <span className="text-[8px] font-bold text-stone-500 uppercase tracking-widest">PandaGen</span>
+            <span className="text-[8px] font-bold text-stone-500 uppercase tracking-widest">PandaCodeGen</span>
             <div className="flex flex-col gap-0.5 items-center">
               {["Static HTML", "No PHP/DB", "Zero Plugins", "No Attack Surface"].map(l => (
                 <div key={l} className="text-[7px] md:text-[8px] text-charcoal font-bold flex items-center gap-1">

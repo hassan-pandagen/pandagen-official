@@ -35,7 +35,7 @@ export default function TermsPage() {
             >
               <h2 className="text-2xl font-bold text-charcoal mb-4">1. Agreement to Terms</h2>
               <p>
-                These Terms of Service ("Terms") constitute a legally binding agreement between you ("Client," "you," or "your") and PandaGenCode LLC ("Company," "we," "us," or "our"). By accessing our website and engaging with our services, you agree to be bound by these Terms. If you do not agree, do not use our services.
+                These Terms of Service ("Terms") constitute a legally binding agreement between you ("Client," "you," or "your") and PandaCodeGen LLC ("Company," "we," "us," or "our"). By accessing our website and engaging with our services, you agree to be bound by these Terms. If you do not agree, do not use our services.
               </p>
             </motion.section>
 
@@ -48,7 +48,7 @@ export default function TermsPage() {
             >
               <h2 className="text-2xl font-bold text-charcoal mb-4">2. Services Description</h2>
               <p>
-                PandaGenCode provides web development services, including but not limited to:
+                PandaCodeGen provides web development services, including but not limited to:
               </p>
               <ul className="list-disc list-inside space-y-2 text-stone-600 mt-4">
                 <li>WordPress to Next.js migration</li>
@@ -127,7 +127,7 @@ export default function TermsPage() {
 
               <h3 className="text-lg font-semibold text-charcoal mb-3 mt-6">4.2 Pre-Existing Work</h3>
               <p>
-                Any tools, frameworks, libraries, or methodologies developed by PandaGenCode prior to your project remain our intellectual property. You receive a perpetual license to use these within your project.
+                Any tools, frameworks, libraries, or methodologies developed by PandaCodeGen prior to your project remain our intellectual property. You receive a perpetual license to use these within your project.
               </p>
 
               <h3 className="text-lg font-semibold text-charcoal mb-3 mt-6">4.3 Third-Party Components</h3>
@@ -204,7 +204,7 @@ export default function TermsPage() {
             >
               <h2 className="text-2xl font-bold text-charcoal mb-4">8. Limitation of Liability</h2>
               <p>
-                To the maximum extent permitted by law, PandaGenCode is not liable for:
+                To the maximum extent permitted by law, PandaCodeGen is not liable for:
               </p>
               <ul className="list-disc list-inside space-y-2 text-stone-600 mt-4">
                 <li>Indirect, incidental, or consequential damages.</li>
@@ -264,12 +264,12 @@ export default function TermsPage() {
             >
               <h2 className="text-2xl font-bold text-charcoal mb-4">11. Indemnification</h2>
               <p>
-                You agree to indemnify and hold harmless PandaGenCode from any claims arising from:
+                You agree to indemnify and hold harmless PandaCodeGen from any claims arising from:
               </p>
               <ul className="list-disc list-inside space-y-2 text-stone-600 mt-4">
                 <li>Content or assets you provided that infringe third-party rights.</li>
                 <li>Your use of the deliverables in ways not approved by us.</li>
-                <li>Modifications to our work made by parties other than PandaGenCode.</li>
+                <li>Modifications to our work made by parties other than PandaCodeGen.</li>
               </ul>
             </motion.section>
 
@@ -314,7 +314,7 @@ export default function TermsPage() {
                 For questions about these Terms or to report violations, please contact us:
               </p>
               <div className="mt-4 p-4 bg-stone-50 border border-stone-200 rounded-lg">
-                <p className="text-charcoal font-semibold">PandaGenCode LLC</p>
+                <p className="text-charcoal font-semibold">PandaCodeGen LLC</p>
                 <p>Missouri, USA</p>
                 <p>Email: <a href="mailto:info@pandacodegen.com" className="text-cognac hover:underline">info@pandacodegen.com</a></p>
               </div>

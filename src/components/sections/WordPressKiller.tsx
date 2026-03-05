@@ -83,7 +83,7 @@ export default function WordPressKiller({ onOpenQuote }: WordPressKillerProps) {
 
                   {/* Table Header */}
                   <div className="flex justify-between items-center mb-6 pb-4 border-b border-gray-200">
-                    <h4 className="text-lg font-bold text-charcoal">WordPress vs PandaGen</h4>
+                    <h4 className="text-lg font-bold text-charcoal">WordPress vs PandaCodeGen</h4>
                   </div>
 
                   {/* Column Headers */}

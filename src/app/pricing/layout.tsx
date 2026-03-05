@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     'custom web app cost',
   ],
   openGraph: {
-    title: 'PandaGen Pricing - Simple, Transparent Investment',
+    title: 'PandaCodeGen Pricing - Simple, Transparent Investment',
     description: 'Fixed-price web development packages starting at $2,500. No hourly billing, guaranteed results. 30-day money-back guarantee.',
     url: 'https://www.pandacodegen.com/pricing',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'PandaGen Pricing - Simple, Transparent Investment',
+    title: 'PandaCodeGen Pricing - Simple, Transparent Investment',
     description: 'Fixed-price web development packages starting at $2,500. No hourly billing, guaranteed results. 30-day money-back guarantee.',
   },
   alternates: {

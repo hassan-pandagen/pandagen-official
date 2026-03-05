@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Globe, ArrowRight, Search, BarChart3, Smartphone, MousePointer, Heading, Code2, Zap, ShieldCheck, CreditCard, Bot } from "lucide-react";
+import { Globe, ArrowRight, Search } from "lucide-react";
 import AuditLoadingState from "./AuditLoadingState";
 import AuditEmailGate from "./AuditEmailGate";
 import { getScoreTextClass, getScoreBorderClass } from "@/lib/audit/scoring";
@@ -10,19 +10,11 @@ import type { PageSpeedResult } from "@/lib/audit/pagespeed";
 
 type WidgetState = "input" | "loading" | "results";
 
-/* The 11 deep checks — shown as preview in input state */
 const deepChecks = [
-  { icon: BarChart3, label: "Visual Hierarchy" },
-  { icon: Smartphone, label: "Mobile First Screen" },
-  { icon: MousePointer, label: "CTA Overload" },
-  { icon: Heading, label: "Heading Structure" },
-  { icon: Code2, label: "Structured Data" },
-  { icon: Globe, label: "Crawl Waste" },
-  { icon: Zap, label: "Indexing Speed" },
-  { icon: ShieldCheck, label: "Trust Signals" },
-  { icon: ShieldCheck, label: "Security Headers" },
-  { icon: CreditCard, label: "Mobile Checkout" },
-  { icon: Bot, label: "AI Readiness" },
+  "Visual Hierarchy", "Mobile First UX", "CTA Placement",
+  "Heading Structure", "Structured Data", "Crawl Budget",
+  "Indexing Speed", "Trust Signals", "Security Headers",
+  "Mobile Checkout", "AI Readiness",
 ];
 
 export default function AuditWidget() {
@@ -144,21 +136,22 @@ export default function AuditWidget() {
                   </div>
 
                   {/* 11 Deep Checks Preview */}
-                  <div className="pt-4 border-t border-gray-100">
-                    <div className="text-[10px] text-stone-500 uppercase tracking-widest font-bold mb-3">11 Deep Checks Included</div>
-                    <div className="flex flex-wrap gap-1.5">
-                      {deepChecks.map((check, i) => {
-                        const Icon = check.icon;
-                        return (
-                          <div
-                            key={i}
-                            className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-stone-50 border border-gray-100 text-[10px] font-medium text-stone-600"
-                          >
-                            <Icon className="w-2.5 h-2.5 text-cognac" />
-                            {check.label}
-                          </div>
-                        );
-                      })}
+                  <div className="mt-6 pt-6 border-t border-stone-100">
+                    <div className="flex items-center gap-2 mb-4">
+                      <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                      <p className="text-xs font-bold uppercase tracking-widest text-stone-400">
+                        11-Point Inspection Includes:
+                      </p>
+                    </div>
+                    <div className="grid grid-cols-2 gap-y-2 gap-x-4">
+                      {deepChecks.map((check, i) => (
+                        <div key={i} className="flex items-center gap-2">
+                          <svg className="w-3 h-3 text-charcoal flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                          </svg>
+                          <span className="text-xs font-medium text-stone-600">{check}</span>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </motion.div>

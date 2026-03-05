@@ -309,7 +309,7 @@ export default function CookiesPage() {
                 If you have questions about our cookie practices or need to update your preferences, please contact us:
               </p>
               <div className="mt-4 p-4 bg-stone-50 border border-stone-200 rounded-lg">
-                <p className="text-charcoal font-semibold">PandaGenCode LLC</p>
+                <p className="text-charcoal font-semibold">PandaCodeGen LLC</p>
                 <p>Missouri, USA</p>
                 <p>Email: <a href="mailto:info@pandacodegen.com" className="text-cognac hover:underline">info@pandacodegen.com</a></p>
                 <p className="mt-4 text-sm">

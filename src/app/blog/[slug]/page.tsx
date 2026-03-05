@@ -1,6 +1,7 @@
 import React from "react";
 import { Calendar, Clock, ShieldCheck, ArrowRight, Zap, CheckCircle2, DollarSign, ChevronRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import dynamic from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -51,6 +52,15 @@ export function generateStaticParams() {
         { slug: "shopify-plus-still-slow" },
         { slug: "wordpress-traffic-drop-speed" },
         { slug: "shopify-conversion-rate-speed-fix" },
+        { slug: "how-to-achieve-100-pagespeed" },
+        { slug: "why-competitor-outranks-you" },
+        { slug: "how-to-fix-slow-wordpress" },
+        { slug: "shopify-slow-losing-sales" },
+        { slug: "wordpress-ai-security-risk-2026" },
+        { slug: "for-agencies-offer-custom-web-development" },
+        { slug: "wordpress-vs-custom-code-real-cost-3-years" },
+        { slug: "why-we-chose-nextjs-over-wordpress-2026" },
+        { slug: "google-universal-commerce-protocol-what-it-means-for-your-store" },
     ];
 }
 
@@ -87,7 +97,7 @@ const blogPosts: Record<
         executiveSummary: [
             "You are overpaying: Cheap WordPress hosting actually costs you ~$3,750/year in plugins and maintenance.",
             "Security Risk: Plugins are the #1 way hackers steal customer data.",
-            "The Solution: Moving to custom code (PandaGen) cuts monthly costs to zero and makes your site impossible to hack.",
+            "The Solution: Moving to custom code (PandaCodeGen) cuts monthly costs to zero and makes your site impossible to hack.",
             "The Numbers: 1 migration = $0/month in plugins, $0/year in developer emergencies, sub-1-second load times. ROI achieved in 3-6 months."
         ],
         content: (
@@ -1492,7 +1502,7 @@ export default async function BlogPost(props: PageProps) {
                 "publisher": {
                     "@type": "Organization",
                     "@id": "https://www.pandacodegen.com/#organization",
-                    "name": "PandaGen",
+                    "name": "PandaCodeGen",
                     "url": "https://www.pandacodegen.com",
                     "logo": {
                         "@type": "ImageObject",
@@ -1564,8 +1574,8 @@ export default async function BlogPost(props: PageProps) {
             {
                 "@type": "Organization",
                 "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaGen",
-                "alternateName": "PandaGen Code",
+                "name": "PandaCodeGen",
+                "alternateName": "PandaCodeGen Code",
                 "url": "https://www.pandacodegen.com",
                 "logo": {
                     "@type": "ImageObject",
@@ -1678,7 +1688,7 @@ export default async function BlogPost(props: PageProps) {
                     {/* Author Block - Links to author page for E-E-A-T */}
                     <Link href="/about/hassan" className="flex items-center justify-center gap-4 mt-12 pt-10 border-t border-stone-200 opacity-70 hover:opacity-100 transition-opacity group">
                         <div className="w-12 h-12 rounded-full overflow-hidden border border-stone-200 group-hover:border-stone-400 transition-colors">
-                            <img src="/team/hassan.png" alt={`${post.author} - ${post.role} at PandaGen`} className="w-full h-full object-cover" />
+                            <Image src="/team/hassan.png" alt={`${post.author} - ${post.role} at PandaCodeGen`} width={48} height={48} className="w-full h-full object-cover" />
                         </div>
                         <div className="text-left">
                             <div className="text-charcoal font-bold text-sm group-hover:text-stone-700 transition-colors">{post.author}</div>

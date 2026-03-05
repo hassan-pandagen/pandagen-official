@@ -61,7 +61,7 @@ export default function SEORankingAnimation() {
   }
 
   return (
-    <div className="relative w-full aspect-[2/1] bg-gradient-to-br from-stone-50 to-white rounded-2xl border border-stone-200 overflow-hidden">
+    <div role="img" aria-label="Interactive animation showing Google search rankings improving as website load speed decreases from slow to fast" className="relative w-full aspect-[2/1] bg-gradient-to-br from-stone-50 to-white rounded-2xl border border-stone-200 overflow-hidden">
       <style>{`
         @keyframes rowSlide { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
         .row-in { animation: rowSlide 0.4s ease-out forwards; }

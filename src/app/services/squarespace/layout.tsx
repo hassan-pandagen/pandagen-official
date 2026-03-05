@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Squarespace Migration to Custom Code | PandaGen',
+  title: 'Squarespace Migration to Custom Code | PandaCodeGen',
   description: 'Outgrown Squarespace? We migrate your site to custom-coded Next.js. Faster loading, better SEO, zero monthly fees, and full code ownership.',
   keywords: [
     'Squarespace migration',
@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     'Squarespace SEO problems',
   ],
   openGraph: {
-    title: 'Squarespace Migration to Custom Code | PandaGen',
+    title: 'Squarespace Migration to Custom Code | PandaCodeGen',
     description: 'Outgrown Squarespace? We migrate your site to custom-coded Next.js. Faster loading, better SEO, zero monthly fees, and full code ownership.',
     url: 'https://www.pandacodegen.com/services/squarespace',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Squarespace Migration to Custom Code | PandaGen',
+    title: 'Squarespace Migration to Custom Code | PandaCodeGen',
     description: 'Outgrown Squarespace? We migrate your site to custom-coded Next.js. Faster loading, better SEO, zero monthly fees, and full code ownership.',
   },
   alternates: {

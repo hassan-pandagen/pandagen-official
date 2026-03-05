@@ -16,7 +16,7 @@ const SEORankingAnimation = dynamic(() => import("@/components/blog/SEORankingAn
 
 export const metadata: Metadata = {
     title: "Why Your Competitor Outranks You on Google (And Pays Less)",
-    description: "Your competitor is getting 3× your traffic with a faster coded website. Google, ChatGPT, and Bing all prefer fast sites. Here's the exact reason why and what to do about it.",
+    description: "Your competitor gets 3× your traffic with a faster coded site. Google, ChatGPT, and Bing all prefer fast sites. Here's the exact reason why — and the fix.",
     alternates: {
         canonical: '/blog/why-competitor-outranks-you',
     },
@@ -34,6 +34,7 @@ export const metadata: Metadata = {
         title: "Why Your Competitor Outranks You on Google (And Pays Less for Hosting)",
         description: "They're getting 3× your traffic with a coded website. Google, ChatGPT, and Bing all prefer fast sites. Here's why.",
     },
+    keywords: ["Google rankings", "competitor analysis", "website speed SEO", "WordPress vs Next.js", "AI search optimization", "coded website benefits"],
 };
 
 const articleSchema = {
@@ -59,14 +60,21 @@ const articleSchema = {
             "publisher": {
                 "@type": "Organization",
                 "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaGen",
+                "name": "PandaCodeGen",
                 "url": "https://www.pandacodegen.com",
-                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 512, "height": 512 }
+                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/why-competitor-outranks-you" },
             "articleSection": "Traffic Growth",
             "keywords": ["Google rankings", "competitor analysis", "website speed SEO", "WordPress vs Next.js", "AI search optimization", "coded website benefits"],
             "timeRequired": "PT11M",
+            "wordCount": 2700,
+            "about": [
+                {"@type": "Thing", "name": "Google SEO Rankings"},
+                {"@type": "Thing", "name": "Website Speed SEO"},
+                {"@type": "SoftwareApplication", "name": "Next.js"},
+                {"@type": "Thing", "name": "Custom Website vs WordPress"}
+            ],
             "inLanguage": "en-US",
             "speakable": {
                 "@type": "SpeakableSpecification",
@@ -106,12 +114,15 @@ const articleSchema = {
         {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
-            "name": "PandaGen",
-            "alternateName": "PandaGen Code",
+            "name": "PandaCodeGen",
+            "alternateName": "PandaCodeGen Code",
             "url": "https://www.pandacodegen.com",
-            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 512, "height": 512 },
+            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://linkedin.com/company/pandagen"],
-            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" }
+            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" },
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
+            "areaServed": "Worldwide",
+            "foundingDate": "2023"
         },
         {
             "@type": "FAQPage",
@@ -224,7 +235,7 @@ export default function CompetitorRankingsPage() {
                     </div>
 
                     {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
                         <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
                         <BlogList items={[
                             "Your competitor ranks 20-30 positions higher because their coded website loads in 1.2 seconds vs your 3.8-second WordPress/Shopify site",
@@ -417,7 +428,7 @@ export default function CompetitorRankingsPage() {
                         </BlogText>
 
                         <BlogText>
-                            The best-optimized WordPress site will load in 2.0-2.5 seconds. A basic coded website loads in 0.8-1.2 seconds with zero optimization.
+                            The best-optimized WordPress site will load in 2.0-2.5 seconds. <a href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">A basic coded website loads in 0.8-1.2 seconds with zero optimization</a>.
                         </BlogText>
 
                         <BlogText>
@@ -503,7 +514,7 @@ export default function CompetitorRankingsPage() {
                         ]} />
 
                         <BlogText>
-                            <strong>Option 2: Migrate to a Coded Website (Next.js)</strong>
+                            <strong>Option 2: <a href="/services/custom-engineering" className="text-cognac hover:underline">Migrate to a Coded Website</a> (Next.js)</strong>
                         </BlogText>
 
                         <BlogList items={[
@@ -516,7 +527,7 @@ export default function CompetitorRankingsPage() {
                         ]} />
 
                         <BlogText>
-                            The math is simple. If you're currently doing $200K+/year in revenue and losing 50-70% of potential traffic to slow load times, fixing your site will pay for itself in <BlogHighlight>2-6 months</BlogHighlight> and continue generating 2-4× more traffic every month after that.
+                            The math is simple. If you're currently doing $200K+/year in revenue and losing 50-70% of potential traffic to slow load times, <a href="/blog/wordpress-killer" className="text-cognac hover:underline">fixing your site will pay for itself</a> in <BlogHighlight>2-6 months</BlogHighlight> and continue generating 2-4× more traffic every month after that.
                         </BlogText>
 
                         <BlogHeader>Next Steps</BlogHeader>

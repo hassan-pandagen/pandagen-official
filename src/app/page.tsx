@@ -54,8 +54,8 @@ export default function Home() {
       {
         "@type": "Organization",
         "@id": "https://www.pandacodegen.com/#organization",
-        "name": "PandaGen",
-        "alternateName": "PandaGen Code",
+        "name": "PandaCodeGen",
+        "alternateName": "PandaCodeGen Code",
         "url": "https://www.pandacodegen.com",
         "logo": {
           "@type": "ImageObject",
@@ -74,7 +74,7 @@ export default function Home() {
         },
         "sameAs": [
           "https://twitter.com/pandacodegen",
-          "https://www.linkedin.com/company/pandagen",
+          "https://www.linkedin.com/company/pandacodegen",
           "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
           "https://github.com/hassan-pandagen"
         ],
@@ -98,7 +98,7 @@ export default function Home() {
         "@type": "WebSite",
         "@id": "https://www.pandacodegen.com/#website",
         "url": "https://www.pandacodegen.com",
-        "name": "PandaGen - Custom Web Development",
+        "name": "PandaCodeGen - Custom Web Development",
         "description": "We migrate WordPress & Shopify sites to custom-coded websites. Sub-second load times. Zero bloat. Enterprise-grade security.",
         "publisher": {
           "@id": "https://www.pandacodegen.com/#organization"
@@ -117,7 +117,7 @@ export default function Home() {
         "@type": "WebPage",
         "@id": "https://www.pandacodegen.com/#webpage",
         "url": "https://www.pandacodegen.com",
-        "name": "PandaGen | Custom Web Development & Shopify Optimization",
+        "name": "PandaCodeGen | Custom Web Development & Shopify Optimization",
         "description": "We migrate WordPress & Shopify sites to custom-coded websites. Sub-second load times. Zero bloat. Enterprise-grade security and SEO.",
         "isPartOf": {
           "@id": "https://www.pandacodegen.com/#website"
@@ -136,7 +136,7 @@ export default function Home() {
       {
         "@type": "ProfessionalService",
         "@id": "https://www.pandacodegen.com/#service",
-        "name": "PandaGen Development Services",
+        "name": "PandaCodeGen Development Services",
         "description": "Custom web development, WordPress migration, and Shopify optimization for growing businesses.",
         "provider": {
           "@id": "https://www.pandacodegen.com/#organization"
@@ -180,22 +180,6 @@ export default function Home() {
         "author": { "@type": "Organization", "name": "MyCustomPatches.net" },
         "itemReviewed": { "@id": "https://www.pandacodegen.com/#organization" },
         "reviewBody": "Migrated our 10-year-old WordPress site to a custom Next.js platform. Load time dropped from 3+ seconds to 0.7 seconds, PageSpeed went from 40 to 100/100, and hosting cost dropped from $150/month to $0. Zero data loss, zero downtime during cutover."
-      },
-      {
-        "@type": "Review",
-        "@id": "https://www.pandacodegen.com/#review-pandapatches",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "author": { "@type": "Organization", "name": "Panda Patches" },
-        "itemReviewed": { "@id": "https://www.pandacodegen.com/#organization" },
-        "reviewBody": "Built a custom e-commerce storefront with a real-time pricing calculator replacing WordPress + WooCommerce. Replaced 7 separate tools with one Supabase ops platform. Now generating $38K+/month on under $25/month in total tooling costs."
-      },
-      {
-        "@type": "Review",
-        "@id": "https://www.pandacodegen.com/#review-enterprise-ops",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "author": { "@type": "Organization", "name": "Enterprise Operations Client" },
-        "itemReviewed": { "@id": "https://www.pandacodegen.com/#organization" },
-        "reviewBody": "Replaced Google Sheets, a disconnected CRM, and WhatsApp-based status updates with a single custom platform. 95% process automation, live reporting, 10x efficiency gain. Rated 10/10 by independent senior developer review."
       }
     ]
   };

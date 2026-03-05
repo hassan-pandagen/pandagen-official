@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     'GoHighLevel custom website',
   ],
   openGraph: {
-    title: 'GoHighLevel Development & Migration | PandaGen',
+    title: 'GoHighLevel Development & Migration | PandaCodeGen',
     description: 'Keep GHL for CRM. Upgrade your funnels to custom-coded pages that load instantly, rank on Google, and convert 2-3x better.',
     url: 'https://www.pandacodegen.com/services/gohighlevel',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GoHighLevel Development & Migration | PandaGen',
+    title: 'GoHighLevel Development & Migration | PandaCodeGen',
     description: 'Keep GHL for CRM. Upgrade your funnels to custom-coded pages that load instantly, rank on Google, and convert 2-3x better.',
   },
   alternates: {

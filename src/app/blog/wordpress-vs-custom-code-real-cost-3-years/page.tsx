@@ -15,7 +15,7 @@ const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 const SalesImpactAnimation = dynamic(() => import("@/components/blog/SalesImpactAnimation"));
 
 export const metadata: Metadata = {
-    title: "WordPress vs Custom Code: Real Cost Comparison Over 3 Years | PandaGen",
+    title: "WordPress vs Custom Code: Real Cost Comparison Over 3 Years | PandaCodeGen",
     description: "Everyone says WordPress is cheap. They're not counting hosting, plugins, maintenance, and lost revenue. We ran the 3-year numbers. The results are shocking.",
     alternates: {
         canonical: '/blog/wordpress-vs-custom-code-real-cost-3-years',
@@ -34,6 +34,7 @@ export const metadata: Metadata = {
         title: "WordPress vs Custom Code: The Real Cost Comparison Over 3 Years",
         description: "Everyone says WordPress is cheap. They're not counting hosting, plugins, maintenance, security, and lost revenue.",
     },
+    keywords: ["wordpress vs custom code cost", "wordpress real cost", "custom website vs wordpress", "wordpress hidden costs", "website total cost of ownership"],
 };
 
 const articleSchema = {
@@ -59,7 +60,7 @@ const articleSchema = {
             "publisher": {
                 "@type": "Organization",
                 "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaGen",
+                "name": "PandaCodeGen",
                 "url": "https://www.pandacodegen.com",
                 "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
@@ -113,13 +114,13 @@ const articleSchema = {
         {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
-            "name": "PandaGen",
-            "alternateName": "PandaGen Code",
+            "name": "PandaCodeGen",
+            "alternateName": "PandaCodeGen Code",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://linkedin.com/company/pandagen"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" },
-            "description": "PandaGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
             "foundingDate": "2023"
         },
@@ -461,7 +462,7 @@ export default function WordPressVsCustomCodeCostPage() {
                         <BlogHeader>Real Client Example: MyCustomPatches — WordPress to Next.js</BlogHeader>
 
                         <BlogText>
-                            MyCustomPatches had a 10-year-old WordPress site. $150/month hosting (Kinsta). 30+ plugins. 3.2 second load time. 40/100 PageSpeed on mobile.
+                            MyCustomPatches had a 10-year-old WordPress site. $150/month hosting (Kinsta). <a href="/blog/wordpress-killer" className="text-cognac hover:underline">30+ plugins</a>. 3.2 second load time. <a href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">40/100 PageSpeed on mobile</a>.
                         </BlogText>
 
                         <BlogText>

@@ -1,6 +1,6 @@
 {
-  "name": "PandaGen",
-  "short_name": "PandaGen",
+  "name": "PandaCodeGen",
+  "short_name": "PandaCodeGen",
   "description": "Custom web development agency. WordPress migration, Shopify optimization, and custom web applications.",
   "start_url": "/",
   "display": "standalone",

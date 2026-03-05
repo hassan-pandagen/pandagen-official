@@ -9,7 +9,7 @@ export default function EcommercePage() {
         "@id": "https://www.pandacodegen.com/services/ecommerce#service",
         "name": "Shopify Headless & E-Commerce Development",
         "description": "Custom headless Shopify storefronts that load instantly. No templates, no monthly app fees, complete customization.",
-        "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaGen" },
+        "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
         "serviceType": ["Shopify Headless", "E-Commerce Development", "Shopify Migration", "Custom Shopify Storefront"]
       },
@@ -17,7 +17,7 @@ export default function EcommercePage() {
         "@type": "WebPage",
         "@id": "https://www.pandacodegen.com/services/ecommerce#webpage",
         "url": "https://www.pandacodegen.com/services/ecommerce",
-        "name": "Shopify Headless Development | PandaGen",
+        "name": "Shopify Headless Development | PandaCodeGen",
         "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
         "about": { "@id": "https://www.pandacodegen.com/services/ecommerce#service" },
         "inLanguage": "en-US"

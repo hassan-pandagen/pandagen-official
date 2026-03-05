@@ -35,6 +35,7 @@ export const metadata: Metadata = {
         title: "Google's Universal Commerce Protocol: What It Means for Your Store in 2026",
         description: "Customers can now buy without visiting your website. Google's UCP is live. Here's what store owners need to know.",
     },
+    keywords: ["Google Universal Commerce Protocol", "UCP ecommerce", "AI shopping 2026", "Google AI Mode shopping", "agentic commerce", "headless commerce AI"],
 };
 
 const articleSchema = {
@@ -60,14 +61,21 @@ const articleSchema = {
             "publisher": {
                 "@type": "Organization",
                 "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaGen",
+                "name": "PandaCodeGen",
                 "url": "https://www.pandacodegen.com",
-                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 512, "height": 512 }
+                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/google-universal-commerce-protocol-what-it-means-for-your-store" },
             "articleSection": "E-Commerce",
             "keywords": ["Google Universal Commerce Protocol", "UCP ecommerce", "AI shopping 2026", "Google AI Mode shopping", "agentic commerce", "buy without visiting website", "ecommerce store optimization", "structured product data", "Google Merchant Center UCP", "AI agents ecommerce", "zero-click shopping", "headless commerce AI"],
             "timeRequired": "PT12M",
+            "wordCount": 3000,
+            "about": [
+                {"@type": "Thing", "name": "Google Universal Commerce Protocol"},
+                {"@type": "Thing", "name": "AI Agentic Commerce"},
+                {"@type": "Thing", "name": "E-Commerce AI Integration"},
+                {"@type": "SoftwareApplication", "name": "Google AI Mode"}
+            ],
             "inLanguage": "en-US",
             "citation": [
                 { "@type": "CreativeWork", "name": "Universal Commerce Protocol Guide", "url": "https://developers.google.com/merchant/ucp" },
@@ -159,12 +167,15 @@ const articleSchema = {
         {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
-            "name": "PandaGen",
-            "alternateName": "PandaGen Code",
+            "name": "PandaCodeGen",
+            "alternateName": "PandaCodeGen Code",
             "url": "https://www.pandacodegen.com",
-            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 512, "height": 512 },
+            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://linkedin.com/company/pandagen"],
-            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" }
+            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" },
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
+            "areaServed": "Worldwide",
+            "foundingDate": "2023"
         }
     ]
 };
@@ -386,7 +397,7 @@ export default function UCPBlogPage() {
                                 <div>
                                     <h4 className="font-bold text-charcoal mb-1">Custom-Built Stores (Next.js + Headless CMS): Maximum Visibility</h4>
                                     <p className="text-sm text-stone-600">
-                                        A headless CMS (a content system where your product information lives separately from your website design, like a smart warehouse that sends data directly to any AI agent that requests it) can connect to UCP natively. These stores can also use the Model Context Protocol (MCP), a universal translator that lets AI assistants from Google, ChatGPT, and Bing all read your store in their own language at the same time. This is the most AI-ready store architecture available today.
+                                        A <a href="/blog/shopify-headless" className="text-cognac hover:underline">headless CMS</a> (a content system where your product information lives separately from your website design, like a smart warehouse that sends data directly to any AI agent that requests it) can connect to UCP natively. These stores can also use the Model Context Protocol (MCP), a universal translator that lets AI assistants from Google, ChatGPT, and Bing all read your store in their own language at the same time. This is the most AI-ready store architecture available today.
                                     </p>
                                 </div>
                             </div>
@@ -454,8 +465,8 @@ export default function UCPBlogPage() {
                         Being first doesn&apos;t mean you need to rebuild everything right now. It means making the right moves now so that when UCP becomes the standard way people shop, your store is already fluent in the new language.
                     </BlogText>
 
-                    {/* What PandaGen is doing */}
-                    <BlogHeader id="what-we-are-doing">What Has PandaGen Already Built to Keep Client Stores Ahead of Google UCP?</BlogHeader>
+                    {/* What PandaCodeGen is doing */}
+                    <BlogHeader id="what-we-are-doing">What Has PandaCodeGen Already Built to Keep Client Stores Ahead of Google UCP?</BlogHeader>
 
                     <BlogText>
                         We&apos;ve been tracking UCP since Google first announced it. We started implementing the groundwork for our clients before most agencies had even heard the term.
@@ -492,7 +503,7 @@ export default function UCPBlogPage() {
                     </div>
 
                     <BlogText>
-                        Some of our current clients are already positioned ahead of their competitors, with AI-readable product catalogs, fast sites that score 90+ on Google PageSpeed, and the infrastructure in place to connect to UCP as Google rolls it out more broadly.
+                        Some of our current clients are already <a href="/blog/why-competitor-outranks-you" className="text-cognac hover:underline">positioned ahead of their competitors</a>, with AI-readable product catalogs, fast sites that score 90+ on Google PageSpeed, and the infrastructure in place to connect to UCP as Google rolls it out more broadly.
                     </BlogText>
 
                     <BlogText>
@@ -574,7 +585,7 @@ export default function UCPBlogPage() {
                     ]} />
 
                     <BlogText>
-                        BCG estimates that by 2028, <strong>15–20% of all e-commerce transactions will be completed by AI agents on behalf of customers</strong>. The stores building for this now are the ones that will own that traffic.
+                        BCG estimates that by 2028, <strong>15–20% of all e-commerce transactions will be completed by AI agents on behalf of customers</strong>. <a href="/services/ecommerce" className="text-cognac hover:underline">The stores building for this now</a> are the ones that will own that traffic.
                     </BlogText>
 
                     {/* Bottom Line */}

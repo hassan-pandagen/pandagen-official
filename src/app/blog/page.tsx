@@ -467,7 +467,7 @@ export default function BlogPage() {
         "@type": "CollectionPage",
         "@id": "https://www.pandacodegen.com/blog#webpage",
         "url": "https://www.pandacodegen.com/blog",
-        "name": "PandaGen Blog - Insights from the Engine Room",
+        "name": "PandaCodeGen Blog - Insights from the Engine Room",
         "description": "Expert insights on Next.js development, WordPress migration, Shopify optimization, and enterprise web performance.",
         "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
         "breadcrumb": { "@id": "https://www.pandacodegen.com/blog#breadcrumb" },
@@ -484,7 +484,7 @@ export default function BlogPage() {
       {
         "@type": "Blog",
         "@id": "https://www.pandacodegen.com/blog#blog",
-        "name": "PandaGen Blog",
+        "name": "PandaCodeGen Blog",
         "description": "Technical insights on modern web development, WordPress alternatives, and performance optimization.",
         "publisher": { "@id": "https://www.pandacodegen.com/#organization" },
         "blogPost": articles.map((article) => ({

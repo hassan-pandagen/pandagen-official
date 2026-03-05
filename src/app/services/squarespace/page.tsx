@@ -9,7 +9,7 @@ export default function SquarespaceServicePage() {
         "@id": "https://www.pandacodegen.com/services/squarespace#service",
         "name": "Squarespace Migration to Custom Code",
         "description": "Professional Squarespace migration to custom-coded Next.js websites. Faster loading, real SEO, full code ownership.",
-        "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaGen" },
+        "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
         "serviceType": ["Squarespace Migration", "Squarespace to Next.js", "Squarespace Alternative", "Squarespace to Custom Code"]
       },
@@ -17,7 +17,7 @@ export default function SquarespaceServicePage() {
         "@type": "WebPage",
         "@id": "https://www.pandacodegen.com/services/squarespace#webpage",
         "url": "https://www.pandacodegen.com/services/squarespace",
-        "name": "Squarespace Migration | PandaGen",
+        "name": "Squarespace Migration | PandaCodeGen",
         "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
         "about": { "@id": "https://www.pandacodegen.com/services/squarespace#service" },
         "inLanguage": "en-US"

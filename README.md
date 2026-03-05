@@ -1,11 +1,11 @@
-# 🐼 PandaGen Code | The Agency Platform
+# 🐼 PandaCodeGen | The Agency Platform
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Next.js](https://img.shields.io/badge/Next.js-15-black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
 ![Tailwind](https://img.shields.io/badge/Tailwind-3.0-cyan)
 
-The official production source code for [PandaGenCode.com](https://www.pandacodegen.com).
+The official production source code for [PandaCodeGen.com](https://www.pandacodegen.com).
 
 We believe in **Open Engineering**. Most agencies hide their code because it's messy. We open-source our marketing platform to demonstrate our commitment to:
 - **Zero Bloat:** No CMS plugins, no page builders.
@@ -14,7 +14,7 @@ We believe in **Open Engineering**. Most agencies hide their code because it's m
 
 ## ⚡ Tech Stack
 
-This project is built on the **"PandaGen Enterprise Stack"**:
+This project is built on the **"PandaCodeGen Enterprise Stack"**:
 
 - **Framework:** [Next.js 15](https://nextjs.org/) (App Router + Server Actions)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
@@ -132,11 +132,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🔗 Links
 
-- Website: [PandaGenCode.com](https://www.pandacodegen.com)
+- Website: [PandaCodeGen.com](https://www.pandacodegen.com)
 - Services: [Our Services](https://www.pandacodegen.com/services)
 - Case Studies: [Our Work](https://www.pandacodegen.com/work)
 - Blog: [Engineering Insights](https://www.pandacodegen.com/blog)
 
 ---
 
-**Built with ❤️ by PandaGen Code**
+**Built with ❤️ by PandaCodeGen**

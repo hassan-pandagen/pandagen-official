@@ -2,11 +2,11 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef, useCallback } from "react";
-import { ChevronLeft, ChevronRight, DollarSign, TrendingUp, Zap, Search, Users, Shield, Clock, Award } from "lucide-react";
+import { ChevronLeft, ChevronRight, DollarSign, TrendingUp, Zap, Search, Users, Shield, Clock, Award, type LucideIcon } from "lucide-react";
 
 interface ComparisonSlide {
   id: number;
-  icon: any;
+  icon: LucideIcon;
   title: string;
   category: string;
   wordpress: {
@@ -88,7 +88,7 @@ export default function ROIComparisonCarousel() {
       },
       nextjs: {
         value: "40% Conversion",
-        label: "At 1-second load time (PandaGen standard)",
+        label: "At 1-second load time (PandaCodeGen standard)",
         positive: true,
       },
       impact: {
@@ -345,7 +345,7 @@ export default function ROIComparisonCarousel() {
                 </div>
               </motion.div>
 
-              {/* PandaGen (Positive) */}
+              {/* PandaCodeGen (Positive) */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
