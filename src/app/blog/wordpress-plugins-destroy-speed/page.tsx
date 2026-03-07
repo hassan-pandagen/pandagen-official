@@ -16,7 +16,7 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 
 export const metadata: Metadata = {
     title: "WordPress Slow? Your Plugins Are Killing Speed (And Costing You Customers) | PandaCodeGen",
-    description: "Most WordPress sites with 30+ plugins score 35/100 on mobile PageSpeed. See how to calculate the exact revenue you're losing, and what to do about it.",
+    description: "Most WordPress sites with 30+ plugins score 35/100 on mobile PageSpeed. Here's the exact revenue you're losing per month and how to actually fix the problem.",
     alternates: { canonical: "/blog/wordpress-plugins-destroy-speed" },
     keywords: ["wordpress plugins slow", "wordpress plugin performance", "too many wordpress plugins", "wordpress plugins killing speed", "fix slow wordpress plugins", "wordpress speed optimization"],
     openGraph: {
