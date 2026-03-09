@@ -1,4 +1,18 @@
+import type { Metadata } from 'next';
 import PageContent from './PageContent';
+
+export const metadata: Metadata = {
+  title: 'Wix to Custom Website Migration | PandaCodeGen',
+  description: "Escape Wix's SEO limits and slow load times. We migrate your Wix site to a custom-coded Next.js website that ranks higher and loads 5x faster.",
+  alternates: { canonical: '/services/wix' },
+  openGraph: {
+    title: 'Wix to Custom Website Migration | PandaCodeGen',
+    description: "Escape Wix SEO limits and slow load times. We migrate to custom Next.js — ranks higher and loads 5x faster.",
+    url: 'https://www.pandacodegen.com/services/wix',
+    siteName: 'PandaCodeGen',
+    type: 'website',
+  },
+};
 
 export default function WixServicePage() {
   const pageSchema = {

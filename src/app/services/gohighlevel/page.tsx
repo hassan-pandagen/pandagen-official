@@ -1,4 +1,18 @@
+import type { Metadata } from 'next';
 import PageContent from './PageContent';
+
+export const metadata: Metadata = {
+  title: 'GoHighLevel Custom Website & Integration | PandaCodeGen',
+  description: "Keep GoHighLevel for CRM. We build custom-coded websites that integrate with GHL's API — faster landing pages, real SEO, and lower cost per lead.",
+  alternates: { canonical: '/services/gohighlevel' },
+  openGraph: {
+    title: 'GoHighLevel Custom Website & Integration | PandaCodeGen',
+    description: "Keep GoHighLevel for CRM. We build custom-coded websites that integrate with GHL API — faster landing pages, real SEO, lower cost per lead.",
+    url: 'https://www.pandacodegen.com/services/gohighlevel',
+    siteName: 'PandaCodeGen',
+    type: 'website',
+  },
+};
 
 export default function GoHighLevelServicePage() {
   const pageSchema = {

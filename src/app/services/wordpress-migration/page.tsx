@@ -1,4 +1,18 @@
+import type { Metadata } from 'next';
 import PageContent from './PageContent';
+
+export const metadata: Metadata = {
+  title: 'WordPress Migration to Custom Code | PandaCodeGen',
+  description: 'Professional WordPress to Next.js migration. Zero data loss, 301 redirects, preserved SEO rankings, and sub-second load times. From $5,900.',
+  alternates: { canonical: '/services/wordpress-migration' },
+  openGraph: {
+    title: 'WordPress Migration to Custom Code | PandaCodeGen',
+    description: 'Professional WordPress to Next.js migration. Zero data loss, 301 redirects, preserved SEO rankings, and sub-second load times.',
+    url: 'https://www.pandacodegen.com/services/wordpress-migration',
+    siteName: 'PandaCodeGen',
+    type: 'website',
+  },
+};
 
 export default function MigrationPage() {
   const pageSchema = {

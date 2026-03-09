@@ -1,4 +1,18 @@
+import type { Metadata } from 'next';
 import PageContent from './PageContent';
+
+export const metadata: Metadata = {
+  title: 'Custom Web Apps & SaaS Development | PandaCodeGen',
+  description: 'We build scalable SaaS platforms, client portals, and AI-powered dashboards from scratch. Fixed-price quotes, you own the code, enterprise-grade architecture.',
+  alternates: { canonical: '/services/custom-engineering' },
+  openGraph: {
+    title: 'Custom Web Apps & SaaS Development | PandaCodeGen',
+    description: 'Scalable SaaS platforms, client portals, and AI dashboards. Fixed-price, code ownership, enterprise-grade architecture.',
+    url: 'https://www.pandacodegen.com/services/custom-engineering',
+    siteName: 'PandaCodeGen',
+    type: 'website',
+  },
+};
 
 export default function EngineeringPage() {
   const pageSchema = {

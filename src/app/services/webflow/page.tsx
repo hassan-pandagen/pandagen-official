@@ -1,4 +1,18 @@
+import type { Metadata } from 'next';
 import PageContent from './PageContent';
+
+export const metadata: Metadata = {
+  title: 'Webflow Migration to Custom Code | PandaCodeGen',
+  description: 'Stop paying Webflow hosting premiums. We migrate your Webflow site to custom Next.js — faster loading, full SEO control, and you own the code forever.',
+  alternates: { canonical: '/services/webflow' },
+  openGraph: {
+    title: 'Webflow Migration to Custom Code | PandaCodeGen',
+    description: 'Stop paying Webflow hosting premiums. We migrate your Webflow site to custom Next.js — faster loading, full SEO control, and you own the code forever.',
+    url: 'https://www.pandacodegen.com/services/webflow',
+    siteName: 'PandaCodeGen',
+    type: 'website',
+  },
+};
 
 export default function WebflowServicePage() {
   const pageSchema = {

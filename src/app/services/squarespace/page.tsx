@@ -1,4 +1,18 @@
+import type { Metadata } from 'next';
 import PageContent from './PageContent';
+
+export const metadata: Metadata = {
+  title: 'Squarespace Migration to Custom Code | PandaCodeGen',
+  description: "Escape Squarespace subscription fees and SEO limits. We migrate your site to custom Next.js — faster load times, better rankings, and you own it forever.",
+  alternates: { canonical: '/services/squarespace' },
+  openGraph: {
+    title: 'Squarespace Migration to Custom Code | PandaCodeGen',
+    description: "Escape Squarespace fees and SEO limits. We migrate to custom Next.js — faster, cheaper, and better rankings.",
+    url: 'https://www.pandacodegen.com/services/squarespace',
+    siteName: 'PandaCodeGen',
+    type: 'website',
+  },
+};
 
 export default function SquarespaceServicePage() {
   const pageSchema = {

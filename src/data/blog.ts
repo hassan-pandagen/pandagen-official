@@ -72,7 +72,7 @@ export const blogPosts: BlogPost[] = [
     author: "Hassan",
     role: "Lead Engineer",
     featured: false,
-    illustrationType: 'code',
+    illustrationType: 'saas',
     lastModified: "2026-03-06",
     faqs: [
       { question: "What is white-label web development?", answer: "White-label web development is when you hire a development agency to build websites under your brand. You sell the work to your clients, we build it, and your client never knows we exist. You keep your margins, client relationships, and brand reputation." },
@@ -237,7 +237,7 @@ export const blogPosts: BlogPost[] = [
     author: "Hassan",
     role: "Lead Engineer",
     featured: false,
-    illustrationType: 'saas',
+    illustrationType: 'speed',
     lastModified: "2026-01-10",
     faqs: [
       { question: "What is headless Shopify?", answer: "Headless Shopify means using Shopify for backend operations (inventory, orders, payments) while replacing the slow Liquid theme with a custom-built fast frontend. Your store loads 4-5x faster while you keep the same Shopify dashboard and checkout." },
@@ -255,7 +255,7 @@ export const blogPosts: BlogPost[] = [
     date: "Dec 28",
     author: "Hassan",
     role: "Lead Engineer",
-    featured: false,
+    featured: true,
     illustrationType: 'code',
     lastModified: "2025-12-28",
     faqs: [

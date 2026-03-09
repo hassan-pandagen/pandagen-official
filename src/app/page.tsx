@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -76,8 +76,16 @@ export default function Home() {
           "https://twitter.com/pandacodegen",
           "https://www.linkedin.com/company/pandacodegen",
           "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
-          "https://github.com/hassan-pandagen"
+          "https://github.com/hassan-pandagen",
+          "https://clutch.co/profile/panda-code-gen"
         ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "1",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
         "contactPoint": {
           "@type": "ContactPoint",
           "email": "info@pandacodegen.com",
@@ -175,11 +183,26 @@ export default function Home() {
       },
       {
         "@type": "Review",
-        "@id": "https://www.pandacodegen.com/#review-mycustompatches",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "author": { "@type": "Organization", "name": "MyCustomPatches.net" },
+        "@id": "https://www.pandacodegen.com/#review-clutch-mcpatches",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Executive, MC Patches LLC"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Clutch",
+          "url": "https://clutch.co"
+        },
         "itemReviewed": { "@id": "https://www.pandacodegen.com/#organization" },
-        "reviewBody": "Migrated our 10-year-old WordPress site to a custom Next.js platform. Load time dropped from 3+ seconds to 0.7 seconds, PageSpeed went from 40 to 100/100, and hosting cost dropped from $150/month to $0. Zero data loss, zero downtime during cutover."
+        "reviewBody": "Hassan was available to me at any time, and his response time was always less than an hour. Panda Code Gen successfully delivered a speedy, bug-free website using the latest coding language. The team was punctual, responsive, helpful, and communicative via email. They assisted with UI design and didn't charge for revisions. Overall, their expertise and support were commendable.",
+        "datePublished": "2026-03-08",
+        "url": "https://clutch.co/profile/panda-code-gen#reviews"
       }
     ]
   };
