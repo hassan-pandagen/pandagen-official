@@ -1,4 +1,18 @@
+import type { Metadata } from 'next';
 import PageContent from './PageContent';
+
+export const metadata: Metadata = {
+  title: 'Services & Capabilities | PandaCodeGen',
+  description: 'WordPress migration, Shopify headless commerce, and custom web app development. Sub-second load times, zero bloat, bank-grade security.',
+  alternates: { canonical: '/services' },
+  openGraph: {
+    title: 'Services & Capabilities | PandaCodeGen',
+    description: 'WordPress migration, Shopify headless commerce, and custom web app development. Sub-second load times, zero bloat.',
+    url: 'https://www.pandacodegen.com/services',
+    siteName: 'PandaCodeGen',
+    type: 'website',
+  },
+};
 
 export default function ServicesPage() {
   const serviceSchema = {

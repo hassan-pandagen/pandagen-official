@@ -373,7 +373,8 @@ export const blogPosts: BlogPost[] = [
     faqs: [
       { question: "How much money am I losing from a slow Shopify store?", answer: "For every second of load time over 2 seconds, you lose approximately 7% of conversions. A Shopify store making $500K/year with a 4-second load time is losing $75K-$150K annually to visitors who bounce before the page loads." },
       { question: "Why is my Shopify store so slow on mobile?", answer: "Shopify themes load 800KB-1.5MB of theme code plus 400KB-800KB of app scripts on every page. Combined with unoptimized images, the average Shopify store takes 3.5-5 seconds to load on mobile, well above the 2-second threshold where customers start leaving." },
-      { question: "How do I speed up my Shopify store?", answer: "Quick wins: remove unused apps, compress images, and minimize custom code in theme.liquid. But these only get you to 2.5-3 seconds. To reach sub-1-second load times, you need a custom headless storefront that replaces the slow Liquid theme entirely." }
+      { question: "How do I speed up my Shopify store?", answer: "Quick wins: remove unused apps, compress images, and minimize custom code in theme.liquid. But these only get you to 2.5-3 seconds. To reach sub-1-second load times, you need a custom headless storefront that replaces the slow Liquid theme entirely." },
+      { question: "What is the ROI of fixing Shopify speed?", answer: "For a store doing $500K/year at a 4-second load time, fixing speed to under 1 second can recover $75K-$150K in annual revenue. A headless storefront typically costs $15,000-$30,000 and pays for itself within 3-6 months through recovered conversions and reduced app fees." }
     ]
   },
   {

@@ -157,7 +157,6 @@ export default function TawkToChat() {
       const s0 = document.getElementsByTagName('script')[0];
       s1.async = true;
       s1.src = 'https://embed.tawk.to/69861ee219d9521c3a42fa82/1jgpuh9j5';
-      s1.setAttribute('crossorigin', '*');
       s0.parentNode?.insertBefore(s1, s0);
     };
 

@@ -90,6 +90,20 @@ const articleSchema = {
             ]
         },
         {
+            "@type": "HowTo",
+            "@id": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales#howto",
+            "name": "How to Calculate Your Shopify Revenue Loss from Slow Speed",
+            "description": "A 4-step process to measure how much revenue your slow Shopify store is losing every month — and determine whether a headless storefront pays for itself.",
+            "totalTime": "PT1H",
+            "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
+            "step": [
+                { "@type": "HowToStep", "position": 1, "name": "Run your Mobile PageSpeed test", "text": "Go to pagespeed.web.dev and test your store's homepage and your highest-traffic product page on Mobile. Note your score and load time. Anything below 60/100 or above 3 seconds on mobile is costing you sales right now." },
+                { "@type": "HowToStep", "position": 2, "name": "Calculate your bounce-related revenue loss", "text": "Take your monthly revenue and multiply by 0.07 for every second of load time over 2 seconds. A store loading in 4 seconds (2 seconds over threshold) loses approximately 14% of potential revenue. A store doing $500K/year losing 14% = $70,000/year in preventable lost sales." },
+                { "@type": "HowToStep", "position": 3, "name": "Identify the speed bottlenecks", "text": "In PageSpeed Insights, look at the 'Opportunities' section. The three most common Shopify killers: render-blocking third-party app scripts, oversized hero images, and Shopify's Liquid server-side rendering adding 300–600ms before any content appears." },
+                { "@type": "HowToStep", "position": 4, "name": "Evaluate headless storefront ROI", "text": "Multiply your monthly revenue by 10–15% (a conservative conversion improvement estimate for going from 50/100 to 95/100 PageSpeed). If that number exceeds the monthly cost of a headless build divided by 12, the investment pays for itself within the first year." }
+            ]
+        },
+        {
             "@type": "BreadcrumbList",
             "@id": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales#breadcrumb",
             "itemListElement": [

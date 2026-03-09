@@ -85,6 +85,20 @@ const articleSchema = {
             ]
         },
         {
+            "@type": "HowTo",
+            "@id": "https://www.pandacodegen.com/blog/wordpress-killer#howto",
+            "name": "How to Calculate Your True WordPress Annual Cost",
+            "description": "A 4-step audit to find the real cost of running WordPress for your business — including the hidden expenses most owners never add up.",
+            "totalTime": "PT1H",
+            "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
+            "step": [
+                { "@type": "HowToStep", "position": 1, "name": "Pull all WordPress-related invoices from the past 12 months", "text": "Search your email for invoices from your hosting provider (WP Engine, Kinsta, Bluehost, SiteGround), your plugin subscriptions (Yoast, WP Rocket, WooCommerce extensions, Elementor Pro, Gravity Forms), and your theme license renewals. Add them all up." },
+                { "@type": "HowToStep", "position": 2, "name": "Calculate your developer maintenance costs", "text": "Count how many hours you or a developer spent on WordPress maintenance in the past year: plugin updates, conflict fixes, crash recovery, security scans, database backups. Multiply by your developer's hourly rate or your own time value. For most businesses, this is $1,200–$4,800/year." },
+                { "@type": "HowToStep", "position": 3, "name": "Test your site speed and calculate traffic loss", "text": "Go to pagespeed.web.dev and run your homepage on Mobile. If your score is below 70, estimate the organic traffic you're losing vs a faster competitor. Google's research: sites scoring below 50 lose 20–30% of potential organic traffic vs sites scoring 90+. Multiply your monthly revenue by that percentage." },
+                { "@type": "HowToStep", "position": 4, "name": "Compare the total against custom code", "text": "Add your hosting + plugins + maintenance + estimated lost revenue. Compare that against the one-time cost of a custom Next.js site ($8,000–$15,000) plus $0–$240/year to host on Vercel. For most businesses doing over $150K/year, the custom site pays for itself within 18–24 months on direct costs alone." }
+            ]
+        },
+        {
             "@type": "BreadcrumbList",
             "@id": "https://www.pandacodegen.com/blog/wordpress-killer#breadcrumb",
             "itemListElement": [

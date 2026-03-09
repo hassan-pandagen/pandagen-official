@@ -85,6 +85,21 @@ const articleSchema = {
             ]
         },
         {
+            "@type": "HowTo",
+            "@id": "https://www.pandacodegen.com/blog/elementor-kills-seo#howto",
+            "name": "How to Fix Elementor PageSpeed Issues",
+            "description": "Practical steps to reduce Elementor's performance impact on your WordPress site. These optimizations can improve your score by 10–15 points, though the architectural ceiling for Elementor sites remains around 55–65/100 on mobile.",
+            "totalTime": "PT3H",
+            "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
+            "step": [
+                { "@type": "HowToStep", "position": 1, "name": "Run a baseline PageSpeed test", "text": "Go to pagespeed.web.dev and test your homepage and a key page on Mobile. Note your LCP, CLS, and INP scores alongside the overall score. Screenshot the results so you can compare before and after your changes." },
+                { "@type": "HowToStep", "position": 2, "name": "Enable Elementor's improved CSS loading", "text": "In Elementor → Settings → Advanced, enable 'Improved CSS Loading' and 'Improved Asset Loading'. These features load only the CSS and JavaScript needed for each specific page rather than Elementor's full framework on every page. This typically saves 200–400KB of CSS per page load." },
+                { "@type": "HowToStep", "position": 3, "name": "Optimise all images before uploading", "text": "Export images at their actual display dimensions and compress to under 150KB using Squoosh. Elementor displays images at your set dimensions but serves whatever file size you uploaded. A hero image that should be 80KB on mobile often loads at 600KB if the original was not compressed." },
+                { "@type": "HowToStep", "position": 4, "name": "Disable unused Elementor widgets globally", "text": "In Elementor → Settings → Elements, disable every widget you don't actively use on the live site. Each widget registers its CSS and JavaScript globally, even on pages where the widget doesn't appear. Disabling unused widgets reduces base page weight by 50–150KB." },
+                { "@type": "HowToStep", "position": 5, "name": "Evaluate migration if you're stuck below 65", "text": "After applying all optimizations, if your mobile score remains below 65/100, Elementor's DOM structure (2,000–4,000 nodes per page vs 400–800 for clean code) is the bottleneck — not your settings. Migrating to a custom Next.js site eliminates the framework overhead entirely and consistently scores 95–100/100." }
+            ]
+        },
+        {
             "@type": "BreadcrumbList",
             "@id": "https://www.pandacodegen.com/blog/elementor-kills-seo#breadcrumb",
             "itemListElement": [

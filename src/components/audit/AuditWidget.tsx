@@ -102,9 +102,9 @@ export default function AuditWidget() {
                   className="space-y-5"
                 >
                   <div>
-                    <h3 className="text-xl font-bold text-charcoal leading-tight mb-1">
+                    <h2 className="text-xl font-bold text-charcoal leading-tight mb-1">
                       Get Your AI Audit
-                    </h3>
+                    </h2>
                     <p className="text-sm text-stone-600">
                       PageSpeed scores don&apos;t tell you why people leave without buying. We go 11 layers deeper.
                     </p>
@@ -236,7 +236,7 @@ export default function AuditWidget() {
               {state === "input" && (
                 <motion.div key="m-input" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="space-y-4">
                   <div>
-                    <h3 className="text-lg font-bold text-charcoal mb-1">Get Your AI Audit</h3>
+                    <h2 className="text-lg font-bold text-charcoal mb-1">Get Your AI Audit</h2>
                     <p className="text-xs text-stone-600">11 deep checks beyond PageSpeed.</p>
                   </div>
                   <div className="relative">

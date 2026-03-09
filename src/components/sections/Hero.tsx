@@ -43,18 +43,13 @@ export default function Hero() {
             Accepting Q2 Clients
           </motion.div>
 
-          {/* Headline: sans bold + serif italic second line */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1, duration: 0.6 }}
-            className="text-5xl md:text-7xl font-sans font-bold text-charcoal tracking-tight mb-6 leading-[1.1]"
-          >
+          {/* Headline: LCP element — must render immediately, no opacity animation */}
+          <h1 className="text-5xl md:text-7xl font-sans font-bold text-charcoal tracking-tight mb-6 leading-[1.1]">
             Your website is <br />
             <span className="font-serif italic text-stone-500">
               costing you revenue.
             </span>
-          </motion.h1>
+          </h1>
 
           <motion.p
             initial={{ opacity: 0, y: 15 }}

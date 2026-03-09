@@ -38,7 +38,7 @@ export default function RevenueCalculator() {
             </p>
 
             <div className="p-6 bg-stone-50 rounded-2xl border border-stone-200 mb-8">
-              <h4 className="font-bold text-charcoal mb-2">The Calculation Logic</h4>
+              <h3 className="font-bold text-charcoal mb-2">The Calculation Logic</h3>
               <p className="text-sm text-stone-500 leading-relaxed">
                 Based on Google &amp; Deloitte data: a 2-second speed improvement typically lifts conversion rates by 20%. Custom Next.js sites average 0.8s vs. 3-5s on WordPress/Squarespace.
               </p>
@@ -70,10 +70,11 @@ export default function RevenueCalculator() {
                 {/* Monthly Visitors Slider */}
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <label className="text-xs font-bold text-stone-500 uppercase tracking-wider">Monthly Visitors</label>
+                    <label htmlFor="visitors-range" className="text-xs font-bold text-stone-500 uppercase tracking-wider">Monthly Visitors</label>
                     <span className="font-mono font-bold text-charcoal text-sm">{visitors.toLocaleString()}</span>
                   </div>
                   <input
+                    id="visitors-range"
                     type="range" min="5000" max="500000" step="5000"
                     value={visitors}
                     onChange={(e) => setVisitors(Number(e.target.value))}

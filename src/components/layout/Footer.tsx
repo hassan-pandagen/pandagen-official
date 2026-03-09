@@ -78,9 +78,9 @@ export default function Footer({ onOpenQuote }: FooterProps) {
 
           {/* Services List */}
           <div className="lg:col-span-3 lg:pl-8">
-            <h4 className="font-bold text-charcoal mb-8 text-xs uppercase tracking-widest border-b border-stone-300 pb-4">
+            <h3 className="font-bold text-charcoal mb-8 text-xs uppercase tracking-widest border-b border-stone-300 pb-4">
               Services
-            </h4>
+            </h3>
             <ul className="space-y-4">
               <ServiceLink href="/services/wordpress-migration" text="WordPress Migration" />
               <ServiceLink href="/services/custom-engineering" text="Custom Engineering" />
@@ -94,9 +94,9 @@ export default function Footer({ onOpenQuote }: FooterProps) {
 
           {/* Featured Company Cards */}
           <div className="lg:col-span-5">
-            <h4 className="font-bold text-charcoal mb-8 text-xs uppercase tracking-widest border-b border-stone-300 pb-4">
+            <h3 className="font-bold text-charcoal mb-8 text-xs uppercase tracking-widest border-b border-stone-300 pb-4">
               Company
-            </h4>
+            </h3>
             <div className="grid gap-4">
               <FeaturedLink
                 href="/work"

@@ -21,6 +21,8 @@ const nextConfig = {
   // 4. Optimize package imports for better tree-shaking
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
+    optimizeCss: true,           // Inlines critical CSS (uses critters) → eliminates render-blocking CSS
+    browsersListForSwc: true,    // Makes SWC respect the browserslist from package.json
   },
   // 5. Enable compression
   compress: true,

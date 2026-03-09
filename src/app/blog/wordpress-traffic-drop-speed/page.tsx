@@ -85,6 +85,21 @@ const articleSchema = {
             ]
         },
         {
+            "@type": "HowTo",
+            "@id": "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed#howto",
+            "name": "How to Diagnose and Fix WordPress Speed-Related Traffic Loss",
+            "description": "The 5-step process to diagnose whether slow speed is causing your WordPress traffic drop — and the path to recovery.",
+            "totalTime": "PT30M",
+            "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
+            "step": [
+                { "@type": "HowToStep", "position": 1, "name": "Test your Mobile PageSpeed score", "text": "Go to pagespeed.web.dev and test your homepage and top-traffic page on Mobile. Red (0–49): speed is actively destroying your rankings — urgent action required. Orange (50–89): you're losing some rankings, improvement will help. Green (90–100): speed is not your traffic problem, look at content gaps instead." },
+                { "@type": "HowToStep", "position": 2, "name": "Check Core Web Vitals in Google Search Console", "text": "Open Google Search Console → Experience → Core Web Vitals. Look at the 'Poor URLs' count on Mobile. If you have more than a handful of Poor-rated URLs, Google is already applying a ranking penalty to those pages. Note which pages are in the 'Poor' category — those are your highest-priority fixes." },
+                { "@type": "HowToStep", "position": 3, "name": "Correlate your traffic drop timeline", "text": "In Google Search Console, open Performance → Search Results and set the date range to 12 months. Look for when traffic started declining. Cross-reference with Google algorithm update dates (check Google Search Status Dashboard). If your decline started around a Core Web Vitals update, speed is confirmed as the cause." },
+                { "@type": "HowToStep", "position": 4, "name": "Audit your plugin count and hosting", "text": "In WordPress admin, count your active plugins. Each plugin adds 2–15 HTTP requests per page. More than 20 active plugins virtually guarantees a Mobile score below 60. Identify your hosting tier — shared hosting ($3–15/month) is always a performance problem; managed hosting (WP Engine, Kinsta) improves but doesn't eliminate the problem." },
+                { "@type": "HowToStep", "position": 5, "name": "Choose your recovery path", "text": "If you score 50–70 on Mobile: plugin reduction, image optimization, and a caching plugin can recover some rankings within 60–90 days. If you score below 50: these optimizations have a ceiling. Migrating to a custom Next.js site is the only reliable path to 95–100/100 Mobile scores, full Core Web Vitals recovery, and sustained traffic growth." }
+            ]
+        },
+        {
             "@type": "BreadcrumbList",
             "@id": "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed#breadcrumb",
             "itemListElement": [

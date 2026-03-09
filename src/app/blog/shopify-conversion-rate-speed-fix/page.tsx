@@ -85,6 +85,21 @@ const articleSchema = {
             ]
         },
         {
+            "@type": "HowTo",
+            "@id": "https://www.pandacodegen.com/blog/shopify-conversion-rate-speed-fix#howto",
+            "name": "How to Improve Shopify Conversion Rate by Fixing Site Speed",
+            "description": "The 5-step process to diagnose why your Shopify conversion rate is low and fix it by targeting speed — the single highest-ROI lever for e-commerce conversion.",
+            "totalTime": "PT2H",
+            "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
+            "step": [
+                { "@type": "HowToStep", "position": 1, "name": "Establish your speed and conversion baseline", "text": "Go to pagespeed.web.dev and test your store on Mobile. Note your score and load time. Then open Shopify Analytics and record your current conversion rate. You need both numbers to measure improvement." },
+                { "@type": "HowToStep", "position": 2, "name": "Remove unused Shopify apps", "text": "In your Shopify admin, review every installed app. Each app injects 80–200KB of JavaScript on every page load. Remove any app you haven't used in 30 days — including review apps, pop-up tools, upsell widgets, and loyalty programs. Every removal cuts 80–300ms of blocking time." },
+                { "@type": "HowToStep", "position": 3, "name": "Compress and resize product and hero images", "text": "Export product and hero images at actual display dimensions and compress them to under 200KB using Squoosh or TinyPNG before uploading. Oversized images are the #1 cause of high LCP scores and directly reduce conversion rates." },
+                { "@type": "HowToStep", "position": 4, "name": "Test your score after each change", "text": "Re-run pagespeed.web.dev after each optimization. Track the score incrementally. These changes typically improve your score by 10–20 points and can be done at no cost." },
+                { "@type": "HowToStep", "position": 5, "name": "Evaluate headless for 90+ scores", "text": "If after removing apps and compressing images your score is still below 70/100, Shopify's Liquid rendering and platform scripts are the ceiling. A custom Next.js storefront connected to Shopify's backend via API consistently scores 90–100/100 and converts at 2–3x the rate of a slow standard theme." }
+            ]
+        },
+        {
             "@type": "BreadcrumbList",
             "@id": "https://www.pandacodegen.com/blog/shopify-conversion-rate-speed-fix#breadcrumb",
             "itemListElement": [
