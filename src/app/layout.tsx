@@ -8,6 +8,7 @@ import { Analytics } from "@vercel/analytics/react";
 import TawkToChat from "@/components/TawkToChat";
 import FacebookPixel from "@/components/FacebookPixel";
 import MicrosoftClarity from "@/components/MicrosoftClarity";
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -137,6 +138,10 @@ export default function RootLayout({
           {children}
         </SmoothScroll>
         <Analytics />
+        <Script
+          src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );

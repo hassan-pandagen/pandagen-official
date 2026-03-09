@@ -150,6 +150,18 @@ export default function TawkToChat() {
           },
           (error: any) => { if (error) console.log('Tawk.to attr error:', error); }
         );
+
+        // Auto-popup after 12 seconds — one time only per visitor
+        if (!localStorage.getItem('tawk_popup_shown')) {
+          setTimeout(() => {
+            try {
+              if (tawkApi.isChatMinimized()) {
+                tawkApi.maximize();
+                localStorage.setItem('tawk_popup_shown', 'true');
+              }
+            } catch { /* widget not ready */ }
+          }, 12000);
+        }
       };
 
       // Inject Tawk.to script

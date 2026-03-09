@@ -77,12 +77,13 @@ export default function Home() {
           "https://www.linkedin.com/company/pandacodegen",
           "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
           "https://github.com/hassan-pandagen",
-          "https://clutch.co/profile/panda-code-gen"
+          "https://clutch.co/profile/panda-code-gen",
+          "https://www.trustpilot.com/review/pandacodegen.com"
         ],
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "5.0",
-          "reviewCount": "1",
+          "reviewCount": "2",
           "bestRating": "5",
           "worstRating": "1"
         },
@@ -203,6 +204,29 @@ export default function Home() {
         "reviewBody": "Hassan was available to me at any time, and his response time was always less than an hour. Panda Code Gen successfully delivered a speedy, bug-free website using the latest coding language. The team was punctual, responsive, helpful, and communicative via email. They assisted with UI design and didn't charge for revisions. Overall, their expertise and support were commendable.",
         "datePublished": "2026-03-08",
         "url": "https://clutch.co/profile/panda-code-gen#reviews"
+      },
+      {
+        "@type": "Review",
+        "@id": "https://www.pandacodegen.com/#review-trustpilot-marshall",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Marshall James"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Trustpilot",
+          "url": "https://www.trustpilot.com"
+        },
+        "itemReviewed": { "@id": "https://www.pandacodegen.com/#organization" },
+        "reviewBody": "I recently worked with PandaCodeGen and had a great experience. Hassan was super helpful and communicative throughout the process. Even though I'm not tech-savvy, he broke things down in a way that made sense to me. The service was pretty good overall.",
+        "datePublished": "2026-03-10",
+        "url": "https://www.trustpilot.com/review/pandacodegen.com"
       }
     ]
   };
