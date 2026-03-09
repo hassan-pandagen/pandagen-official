@@ -1,4 +1,4 @@
-import { ArrowLeft, Calendar, Clock, ArrowRight, TrendingDown } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, ArrowRight, TrendingDown, RefreshCw } from "lucide-react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import Header from "@/components/layout/Header";
@@ -45,7 +45,7 @@ const articleSchema = {
             "description": "Slow WordPress sites lose Google rankings fast. Every 1-second delay costs 20% of organic traffic. Here's the simple math on why speed = traffic.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-07",
-            "dateModified": "2026-02-07",
+            "dateModified": "2026-03-10",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -117,7 +117,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-07",
-            "dateModified": "2026-02-07",
+            "dateModified": "2026-03-10",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -185,7 +185,11 @@ export default function WordPressTrafficDropPage() {
                             <div className="flex items-center gap-2"><Calendar className="w-4 h-4" />Feb 7, 2026</div>
                             <div className="flex items-center gap-2"><Clock className="w-4 h-4" />7 min read</div>
                         </div>
-                        <BlogAuthor />
+                        <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
+                        <BlogAuthor
+                            bio="Hassan has built and migrated 40+ websites from WordPress and Shopify to Next.js. Every build scores 95–100/100 on Google PageSpeed. He writes about web performance, ecommerce speed, and why slow websites are a silent revenue killer."
+                            linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
+                        />
                     </div>
 
                     {/* Animation */}

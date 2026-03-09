@@ -1,4 +1,4 @@
-import { ArrowLeft, Calendar, Clock, ArrowRight } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, ArrowRight, RefreshCw } from "lucide-react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import Header from "@/components/layout/Header";
@@ -47,7 +47,7 @@ const articleSchema = {
             "description": "Dawn is Shopify's fastest theme but most stores using it still load in 3+ seconds. Here's why — and what actually fixes it.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-07",
-            "dateModified": "2026-03-07",
+            "dateModified": "2026-03-10",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -107,7 +107,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-07",
-            "dateModified": "2026-03-07",
+            "dateModified": "2026-03-10",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -225,7 +225,11 @@ export default function ShopifyDawnThemeSlowPage() {
                                 9 min read
                             </div>
                         </div>
-                        <BlogAuthor />
+                        <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
+                        <BlogAuthor
+                            bio="Hassan has built and migrated 40+ websites from WordPress and Shopify to Next.js. Every build scores 95–100/100 on Google PageSpeed. He writes about web performance, ecommerce speed, and why slow websites are a silent revenue killer."
+                            linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
+                        />
                     </div>
 
                     <div className="mb-12">

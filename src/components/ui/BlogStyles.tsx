@@ -188,18 +188,41 @@ export function StatCard({ stat, label, context }: { stat: string; label: string
 }
 
 // ─── BlogAuthor ────────────────────────────────────────────────────────────────
-export function BlogAuthor({ name = "Hassan Jamal", role = "Co-Founder & Lead Engineer · PandaCodeGen" }: { name?: string; role?: string }) {
+export function BlogAuthor({
+  name = "Hassan Jamal",
+  role = "Co-Founder & Lead Engineer · PandaCodeGen",
+  bio,
+  linkedIn,
+}: {
+  name?: string;
+  role?: string;
+  bio?: string;
+  linkedIn?: string;
+}) {
+  const nameEl = linkedIn ? (
+    <a href={linkedIn} target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-charcoal hover:text-cognac transition-colors">
+      {name}
+    </a>
+  ) : (
+    <div className="text-sm font-bold text-charcoal">{name}</div>
+  );
+
   return (
-    <div className="flex items-center gap-3 mt-6 pt-6 border-t border-stone-200">
-      <img
-        src="/team/hassan.png"
-        alt={name}
-        className="w-10 h-10 rounded-full object-cover border border-stone-200 flex-shrink-0"
-      />
-      <div>
-        <div className="text-sm font-bold text-charcoal">{name}</div>
-        <div className="text-xs text-stone-400">{role}</div>
+    <div className="mt-6 pt-6 border-t border-stone-200">
+      <div className="flex items-center gap-3">
+        <img
+          src="/team/hassan.png"
+          alt={name}
+          className="w-10 h-10 rounded-full object-cover border border-stone-200 flex-shrink-0"
+        />
+        <div>
+          {nameEl}
+          <div className="text-xs text-stone-400">{role}</div>
+        </div>
       </div>
+      {bio && (
+        <p className="text-xs text-stone-500 leading-relaxed mt-3 pl-[52px]">{bio}</p>
+      )}
     </div>
   );
 }

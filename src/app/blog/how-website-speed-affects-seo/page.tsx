@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, RefreshCw } from "lucide-react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import Header from "@/components/layout/Header";
@@ -47,7 +47,7 @@ const articleSchema = {
             "description": "Google confirmed page speed is a ranking factor. Here's exactly how site speed affects your SEO rankings, Core Web Vitals, and revenue — with real data from Google, Deloitte, and Portent.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-09",
-            "dateModified": "2026-03-09",
+            "dateModified": "2026-03-10",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -122,7 +122,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-09",
-            "dateModified": "2026-03-09",
+            "dateModified": "2026-03-10",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/how-website-speed-affects-seo#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -473,6 +473,7 @@ export default function WebsiteSpeedSEOPage() {
                             If you are on WordPress or Shopify and your mobile score is below 70, you are not competing on a level playing field. Your competitors who migrated to modern architecture two years ago are already 20 to 30 positions ahead. The gap widens every month you stay on a slower platform.
                         </BlogText>
 
+                        <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
                             name="Hassan Jamal"
                             role="Lead Engineer, PandaCodeGen"
@@ -516,7 +517,7 @@ export default function WebsiteSpeedSEOPage() {
                     {/* Related Posts */}
                     <RelatedPosts
                         currentPostId="how-website-speed-affects-seo"
-                        currentCategory="SEO"
+                        category="SEO"
                     />
 
                 </article>

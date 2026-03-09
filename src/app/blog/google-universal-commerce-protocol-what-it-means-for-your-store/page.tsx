@@ -1,4 +1,4 @@
-import { ArrowLeft, Calendar, Clock, ArrowRight, ExternalLink, Globe, ShoppingCart, CheckCircle2, AlertTriangle, Zap, TrendingUp } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, ArrowRight, ExternalLink, Globe, ShoppingCart, CheckCircle2, AlertTriangle, Zap, TrendingUp, RefreshCw } from "lucide-react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import Header from "@/components/layout/Header";
@@ -48,7 +48,7 @@ const articleSchema = {
             "description": "Google's new Universal Commerce Protocol lets AI assistants buy products for customers without visiting your website. Here's what every e-commerce store owner needs to know about UCP, platform readiness, and how to prepare.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-21",
-            "dateModified": "2026-02-21",
+            "dateModified": "2026-03-10",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -124,7 +124,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-21",
-            "dateModified": "2026-02-21",
+            "dateModified": "2026-03-10",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/google-universal-commerce-protocol-what-it-means-for-your-store#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -256,7 +256,11 @@ export default function UCPBlogPage() {
                                 E-Commerce / AI Shopping
                             </div>
                         </div>
-                        <BlogAuthor />
+                        <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
+                        <BlogAuthor
+                            bio="Hassan has built and migrated 40+ websites from WordPress and Shopify to Next.js. Every build scores 95–100/100 on Google PageSpeed. He writes about web performance, ecommerce speed, and why slow websites are a silent revenue killer."
+                            linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
+                        />
                     </div>
 
                     {/* Feature Visual — Animated UCP Flow */}
