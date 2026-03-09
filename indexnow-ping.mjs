@@ -48,6 +48,7 @@ const urls = [
   `${BASE}/blog/why-we-chose-nextjs-over-wordpress-2026`,
   `${BASE}/blog/wordpress-vs-custom-code-real-cost-3-years`,
   `${BASE}/blog/shopify-dawn-theme-slow`,
+  `${BASE}/blog/how-website-speed-affects-seo`,
 
   // Legal
   `${BASE}/privacy`,

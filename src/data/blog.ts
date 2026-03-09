@@ -23,6 +23,26 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "how-website-speed-affects-seo",
+    title: "How Website Speed Affects SEO Rankings in 2026 (With Real Data)",
+    excerpt: "Google made page speed an official ranking factor. A site loading in 1 second converts 3x better than one loading in 5 seconds. Here's exactly how speed kills your rankings and what to do about it.",
+    category: "SEO",
+    readTime: "10 min",
+    date: "Mar 9",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: true,
+    illustrationType: 'ranking',
+    lastModified: "2026-03-09",
+    faqs: [
+      { question: "Does website speed affect SEO rankings?", answer: "Yes, directly. Google made Core Web Vitals (LCP, INP, CLS) an official ranking factor in 2021. Research shows pages at position 1 are 10% more likely to pass Core Web Vitals than pages at position 9. A site scoring 90-100 on PageSpeed ranks an average of 3.7 percentage points higher in visibility than an equivalent slow site." },
+      { question: "What PageSpeed score do I need for good Google rankings?", answer: "Target 90+ on mobile — that's Google's 'Good' threshold. Below 50 is critical and actively hurts rankings. The mobile score matters more than desktop because Google uses mobile-first indexing. Most WordPress sites score 35-65 on mobile, which puts them at a structural ranking disadvantage against faster competitors." },
+      { question: "How much does a slow website hurt SEO?", answer: "Significantly. A 2-second delay in load time increases bounce rate by 103% (Akamai). Sites loading in 3 seconds have an 11% bounce rate vs 7% at 1 second. Google interprets high bounce rates as a quality signal and adjusts rankings accordingly. Slow sites also fail Core Web Vitals assessments, which directly impacts ranking eligibility for the page experience signal." },
+      { question: "What is the most important speed metric for SEO?", answer: "LCP (Largest Contentful Paint) is the most impactful Core Web Vital for SEO. It measures how fast the main content of your page loads — target under 2.5 seconds. Google replaced First Input Delay with INP (Interaction to Next Paint) in March 2024, making responsiveness the second key metric. CLS (Cumulative Layout Shift) measures visual stability — target below 0.1." },
+      { question: "How long does it take for speed improvements to affect SEO rankings?", answer: "Typically 30-90 days after improvements are live. Google needs to re-crawl your pages, reassess Core Web Vitals using real user data (Chrome User Experience Report), and update rankings accordingly. You can expect to see movement in 4-8 weeks for pages Google crawls frequently. Traffic and conversion improvements are visible immediately once speed is fixed." },
+    ]
+  },
+  {
     id: "shopify-dawn-theme-slow",
     title: "Shopify Dawn Theme Slow? Here's Exactly Why (and the Real Fix)",
     excerpt: "Dawn is Shopify's fastest theme — so why is your store still loading in 3+ seconds? Here's what's actually killing your speed and why theme-level fixes won't save you.",
