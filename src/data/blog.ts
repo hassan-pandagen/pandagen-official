@@ -92,7 +92,7 @@ export const blogPosts: BlogPost[] = [
     author: "Hassan",
     role: "Lead Engineer",
     featured: false,
-    illustrationType: 'performance',
+    illustrationType: 'conversion',
     lastModified: "2026-03-07",
     faqs: [
       { question: "Why is my Shopify Dawn theme slow?", answer: "Dawn is Shopify's fastest default theme, but it still loads in 2.5–4 seconds on most stores because of third-party apps injecting scripts, Liquid template rendering on every request, large unoptimized hero images, and Shopify's own checkout scripts. The theme isn't the bottleneck — Shopify's architecture is." },
