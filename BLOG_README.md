@@ -25,11 +25,14 @@ Header → Animation → Executive Summary (data-speakable) → Article → Mid 
 
 ---
 
-## Existing Blog Posts (16 total)
+## Existing Blog Posts (20 total)
 
 | # | Slug | Title | Category | Status |
 |---|------|-------|----------|--------|
-| 01 | `wordpress-killer` | Why WordPress Is Dying (And What Smart Businesses Are Doing Instead) | WordPress | Live ✅ |
+| 01 | `wordpress-vs-nextjs` | WordPress vs Next.js: Which Is Actually Better for Your Business? | Comparison | Live ✅ |
+| 02 | `how-website-speed-affects-seo` | How Website Speed Affects SEO Rankings in 2026 (With Real Data) | SEO | Live ✅ |
+| 03 | `shopify-dawn-theme-slow` | Shopify Dawn Theme Slow? Here's Exactly Why (and the Real Fix) | Shopify | Live ✅ |
+| 04 | `wordpress-killer` | Why WordPress Is Dying (And What Smart Businesses Are Doing Instead) | WordPress | Live ✅ |
 | 02 | `shopify-headless` | Why Shopify Headless Is the Future of E-Commerce (And How to Get There) | Shopify | Live ✅ |
 | 03 | `wordpress-plugins-destroy-speed` | WordPress Plugins Are Destroying Your Site Speed (Here's the Proof) | WordPress | Live ✅ |
 | 04 | `elementor-kills-seo` | Elementor Is Killing Your SEO Score — Here's the Data | WordPress | Live ✅ |
@@ -54,10 +57,10 @@ Posts to write next, ranked by ease of ranking + business value. New domain = ta
 
 | Priority | Slug | Title | Primary Keyword | Est. Volume | Competition | Target Date |
 |----------|------|-------|-----------------|-------------|-------------|-------------|
-| 🔴 1 | `shopify-dawn-theme-slow` | Shopify Dawn Theme Slow? Here's Exactly Why (and the Real Fix) | `shopify dawn theme slow` | 300–700/mo | **Low** | Mar 2026 |
-| 🔴 2 | `how-website-speed-affects-seo` | How Website Speed Affects SEO Rankings in 2026 | `how does website speed affect seo` | 1k–3k/mo | Low–Med | Mar 2026 |
-| 🔴 3 | `wordpress-vs-nextjs` | WordPress vs Next.js: Which Is Actually Better for Your Business? | `wordpress vs next.js` | 1.5k–4k/mo | Med | Apr 2026 |
-| 🟡 4 | `how-to-migrate-wordpress-to-nextjs` | How to Migrate WordPress to Next.js Without Losing SEO | `how to migrate wordpress to next.js` | 300–800/mo | Low–Med | Apr 2026 |
+| ✅ done | `shopify-dawn-theme-slow` | Shopify Dawn Theme Slow? Here's Exactly Why (and the Real Fix) | `shopify dawn theme slow` | 300–700/mo | **Low** | Mar 2026 |
+| ✅ done | `how-website-speed-affects-seo` | How Website Speed Affects SEO Rankings in 2026 | `how does website speed affect seo` | 1k–3k/mo | Low–Med | Mar 2026 |
+| ✅ done | `wordpress-vs-nextjs` | WordPress vs Next.js: Which Is Actually Better for Your Business? | `wordpress vs next.js` | 1.5k–4k/mo | Med | Mar 2026 |
+| ✅ done | `how-to-migrate-wordpress-to-nextjs` | How to Migrate WordPress to Next.js Without Losing SEO | `how to migrate wordpress to next.js` | 300–800/mo | Low–Med | Mar 2026 |
 | 🟡 5 | `nextjs-hosting-zero-cost` | How We Host Next.js Sites for $0 a Month (Vercel Free Tier Explained) | `free nextjs hosting` | 400–1k/mo | Low–Med | Apr 2026 |
 | 🟡 6 | `what-is-headless-commerce` | What Is Headless Commerce? A Plain-English Guide for Store Owners | `what is headless commerce` | 1.5k–4k/mo | Med | May 2026 |
 | 🟡 7 | `shopify-vs-custom-website` | Shopify vs Custom Website: When You've Outgrown Shopify | `shopify vs custom website` | 800–2.5k/mo | Med | May 2026 |

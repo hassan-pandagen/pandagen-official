@@ -29,10 +29,10 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.pandacodegen.com'),
   title: {
-    default: "PandaCodeGen | Custom-Coded Websites That Load in Under 1 Second",
+    default: "PandaCodeGen | WordPress & Shopify Migration — Sub-1s Load Time",
     template: "%s | PandaCodeGen",
   },
-  description: "We migrate WordPress & Shopify sites to custom-coded platforms. Sub-second load times. Zero bloat. Bank-grade security and SEO.",
+  description: "Get a free AI audit of your slow WordPress or Shopify site. We migrate to custom-coded websites — sub-second load times, zero bloat, bank-grade security.",
   alternates: {
     canonical: '/',
   },
@@ -92,8 +92,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.pandacodegen.com",
     siteName: "PandaCodeGen",
-    title: "PandaCodeGen | Custom-Coded Websites That Load in Under 1 Second",
-    description: "We migrate WordPress & Shopify sites to custom-coded platforms. Sub-second load times. Zero bloat.",
+    title: "PandaCodeGen | WordPress & Shopify Migration — Sub-1s Load Time",
+    description: "Get a free AI audit of your slow WordPress or Shopify site. We migrate to custom-coded websites — sub-second load times, zero bloat, bank-grade security.",
     images: [
       {
         url: "/opengraph-image",
@@ -105,8 +105,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "PandaCodeGen | Custom-Coded Websites That Load in Under 1 Second",
-    description: "We migrate WordPress & Shopify sites to custom-coded platforms. Sub-second load times. Zero bloat.",
+    title: "PandaCodeGen | WordPress & Shopify Migration — Sub-1s Load Time",
+    description: "Get a free AI audit of your slow WordPress or Shopify site. We migrate to custom-coded websites — sub-second load times, zero bloat, bank-grade security.",
     creator: "@pandacodegen",
     images: ["/opengraph-image"],
   },

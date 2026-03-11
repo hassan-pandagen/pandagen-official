@@ -18,13 +18,13 @@ export default function Footer({ onOpenQuote }: FooterProps) {
           <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-stone-800/60 blur-[100px] rounded-full pointer-events-none" />
 
           <div className="relative z-10 max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-bold uppercase tracking-widest text-stone-400 mb-8">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-bold uppercase tracking-widest text-stone-300 mb-8">
               <Sparkles className="w-3 h-3 text-cognac" />
               Limited Availability
             </div>
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tight">
               Ready to build something{" "}
-              <span className="font-serif italic text-stone-400">Legendary?</span>
+              <span className="font-serif italic text-stone-300">Legendary?</span>
             </h2>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button
@@ -57,7 +57,7 @@ export default function Footer({ onOpenQuote }: FooterProps) {
               <p className="mt-6 text-stone-600 leading-relaxed max-w-sm">
                 We replace slow WordPress &amp; Shopify sites with hand-built websites that load in under 1 second. No monthly fees. No vendor lock-in.
               </p>
-              <ul className="mt-6 space-y-2 text-sm text-stone-500">
+              <ul className="mt-6 space-y-2 text-sm text-stone-600">
                 <li>📍 Missouri City, TX, USA</li>
                 <li>
                   <Link href="tel:+13022504340" className="hover:text-charcoal transition-colors">
@@ -117,6 +117,11 @@ export default function Footer({ onOpenQuote }: FooterProps) {
                 href="/blog"
                 title="Engineering Blog"
                 desc="Deep dives into Next.js, SEO, and performance."
+              />
+              <FeaturedLink
+                href="/contact"
+                title="Contact Us"
+                desc="Get a free quote or book a strategy call."
               />
             </div>
           </div>
@@ -198,9 +203,9 @@ function FeaturedLink({ href, title, desc }: { href: string; title: string; desc
       className="group block bg-white border border-stone-200 p-5 rounded-xl hover:border-cognac hover:shadow-lg transition-all duration-300"
     >
       <div className="flex justify-between items-start">
-        <h5 className="font-semibold text-charcoal group-hover:text-cognac transition-colors">
+        <h3 className="font-semibold text-charcoal group-hover:text-cognac transition-colors">
           {title}
-        </h5>
+        </h3>
         <ArrowUpRight className="w-4 h-4 text-stone-300 group-hover:text-cognac transition-colors flex-shrink-0" />
       </div>
       <p className="text-sm text-stone-500 mt-1">{desc}</p>

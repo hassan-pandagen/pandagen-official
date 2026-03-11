@@ -19,7 +19,7 @@ const accentColor = (type: IllustrationType): string => {
       return "#8b5cf6";
     case "traffic":
     case "ranking":
-      return "#f97316";
+      return "#ea580c";
     case "security":
       return "#f43f5e";
     default:
@@ -39,7 +39,7 @@ export default function LatestBlog() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="h-px w-12 bg-charcoal" />
-              <span className="text-stone-500 tracking-widest text-xs font-bold uppercase">
+              <span className="text-stone-600 tracking-widest text-xs font-bold uppercase">
                 From the Blog
               </span>
             </div>

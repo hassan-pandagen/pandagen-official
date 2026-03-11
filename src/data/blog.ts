@@ -23,6 +23,46 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "how-to-migrate-wordpress-to-nextjs",
+    title: "How to Migrate WordPress to Next.js Without Losing SEO",
+    excerpt: "A step-by-step migration guide covering content export, redirect mapping, SEO preservation, and zero-downtime launch. What agencies charge $15K to do — explained in plain English.",
+    category: "WordPress",
+    readTime: "10 min",
+    date: "Mar 11",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: false,
+    illustrationType: 'performance',
+    lastModified: "2026-03-11",
+    faqs: [
+      { question: "How long does it take to migrate WordPress to Next.js?", answer: "A professional migration takes 2–6 weeks depending on site complexity. A basic 10–15 page site takes 2–3 weeks. A complex site with custom post types, WooCommerce, or third-party integrations takes 4–6 weeks. DIY migration takes significantly longer — 3–6 months if you're learning Next.js as you go. The migration timeline includes: audit (week 1), build (weeks 2–4), QA and redirect verification (week 5), and DNS cutover and monitoring (week 6)." },
+      { question: "Will I lose my Google rankings when migrating from WordPress to Next.js?", answer: "Not if the migration is done correctly. The critical steps are: preserve all existing URLs where possible, implement 301 redirects for any changed URLs, transfer all metadata (title tags, meta descriptions, canonical URLs), submit your new sitemap to Google Search Console, and monitor for crawl errors in the 30 days after launch. When done correctly, rankings hold steady or improve within 30–60 days because Google rewards the faster Core Web Vitals scores that Next.js delivers natively." },
+      { question: "Do I need to rebuild my content when migrating to Next.js?", answer: "Yes, but it's less work than it sounds. You export your WordPress content as XML and import it into a headless CMS (like Sanity or Contentful) or hardcode static pages. Most business sites have 10–30 pages of core content that takes 2–4 hours to migrate. Blog posts can be batch-converted from WordPress XML to Markdown files. Images need re-optimisation (WebP format, correct sizing) — Next.js handles this automatically via the next/image component once images are imported." },
+      { question: "What happens to my WordPress plugins after migration?", answer: "WordPress plugins don't carry over — Next.js doesn't have a plugin system. Each plugin's function needs to be replaced with a native solution or a lightweight alternative. Contact forms become API routes or services like Resend. SEO tools (Yoast) become metadata exports and schema JSON-LD. Analytics (Google Analytics) becomes a deferred script or server-side tracking. Most plugin functions can be replicated in under 4 hours of development time — and the result is faster than any plugin ever was." },
+      { question: "How much does it cost to hire someone to migrate WordPress to Next.js?", answer: "A professional WordPress to Next.js migration costs $8,000–$35,000 depending on site complexity. Basic 10–15 page business sites: $8,000–$15,000. Complex sites with WooCommerce, custom integrations, or large content libraries: $20,000–$35,000. Ongoing Next.js maintenance costs $1,000–$3,000/year — compared to $10,000–$20,000/year for WordPress hosting, plugins, and maintenance. Most clients recover the migration cost within 12–18 months through lower operating costs and higher organic traffic from improved PageSpeed scores." },
+    ]
+  },
+  {
+    id: "wordpress-vs-nextjs",
+    title: "WordPress vs Next.js: Which Is Actually Better for Your Business?",
+    excerpt: "WordPress powers 43% of the internet. Next.js powers the fastest 1%. Here's an honest comparison of speed, SEO, cost, and security — and exactly when each one makes sense for your business.",
+    category: "Comparison",
+    readTime: "11 min",
+    date: "Mar 11",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: true,
+    illustrationType: 'performance',
+    lastModified: "2026-03-11",
+    faqs: [
+      { question: "Is WordPress or Next.js better for SEO?", answer: "Next.js is significantly better for SEO in 2026. It achieves 95–100/100 mobile PageSpeed scores versus WordPress's ceiling of 65–75/100 even when fully optimised. Better Core Web Vitals = higher Google rankings. Next.js generates static HTML that Google crawls instantly, while WordPress generates pages dynamically on every request, creating slower crawl times. If SEO is a priority, Next.js has a structural advantage no WordPress plugin can overcome." },
+      { question: "How much faster is Next.js than WordPress?", answer: "Typically 4–8x faster on mobile load time. The average WordPress site loads in 3.5–5 seconds on mobile. A Next.js site built on our stack loads in 0.6–1.2 seconds. Next.js pre-builds pages at deploy time and serves them from a global edge CDN with zero server computation per request. WordPress generates each page on demand from a PHP server and database, adding 800ms–2+ seconds of overhead before a byte reaches the browser." },
+      { question: "Can I migrate from WordPress to Next.js without losing SEO?", answer: "Yes, with a proper migration plan. Key steps: preserve all existing URLs (or set up 301 redirects), migrate metadata and Open Graph tags, maintain all internal links, and submit the new sitemap to Google Search Console after launch. When done correctly, rankings hold or improve within 30–60 days because the faster site earns better Core Web Vitals scores. We handle this process on every client migration." },
+      { question: "Is Next.js harder to use than WordPress?", answer: "For non-developers: yes, initially. WordPress has a visual admin panel and page builder plugins. Next.js requires a developer to build and maintain. However, content management can be handled through a headless CMS (Sanity, Contentful) that gives you a WordPress-like editing experience. For business owners who don't touch code, Next.js is easier long-term — no plugin conflicts, no update failures, no security patches to manage." },
+      { question: "How much does it cost to migrate WordPress to Next.js?", answer: "A professional migration typically costs $8,000–$35,000 depending on complexity. A basic 10–15 page site is $8,000–$15,000. Complex sites with custom integrations are $20,000–$35,000. Compare this to the ongoing cost of WordPress: $150–$500/month hosting, $1,000–$3,000/year in plugin licences, $5,000–$15,000/year in maintenance — totalling $10,000–$20,000 over 3 years. Most clients break even within 12–18 months, then save $5,000–$15,000 every year after." },
+    ]
+  },
+  {
     id: "how-website-speed-affects-seo",
     title: "How Website Speed Affects SEO Rankings in 2026 (With Real Data)",
     excerpt: "Google made page speed an official ranking factor. A site loading in 1 second converts 3x better than one loading in 5 seconds. Here's exactly how speed kills your rankings and what to do about it.",

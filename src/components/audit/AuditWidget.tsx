@@ -87,7 +87,7 @@ export default function AuditWidget() {
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-charcoal animate-pulse" />
-              <span className="text-[10px] font-bold text-cognac uppercase tracking-wider">AI Audit Engine</span>
+              <span className="text-[10px] font-bold text-[#c2410c] uppercase tracking-wider">AI Audit Engine</span>
             </div>
           </div>
 
@@ -227,7 +227,7 @@ export default function AuditWidget() {
             </div>
             <div className="flex items-center gap-1.5">
               <div className="w-1.5 h-1.5 rounded-full bg-charcoal animate-pulse" />
-              <span className="text-[9px] font-bold text-cognac uppercase tracking-wider">AI Audit</span>
+              <span className="text-[9px] font-bold text-[#c2410c] uppercase tracking-wider">AI Audit</span>
             </div>
           </div>
 

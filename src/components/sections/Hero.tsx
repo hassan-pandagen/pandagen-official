@@ -45,7 +45,7 @@ export default function Hero() {
 
           {/* Headline: LCP element — must render immediately, no opacity animation */}
           <h1 className="text-5xl md:text-7xl font-sans font-bold text-charcoal tracking-tight mb-6 leading-[1.1]">
-            Your website is <br />
+            Your slow website is <br />
             <span className="font-serif italic text-stone-500">
               costing you revenue.
             </span>
