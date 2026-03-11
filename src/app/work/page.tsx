@@ -23,7 +23,11 @@ const projects = [
             { label: "PageSpeed", value: "100/100", from: "was ~40" },
             { label: "Hosting", value: "$0/mo", from: "was $150" },
         ],
-        insight: "Migrated with zero downtime. All 200+ pages and SEO rankings fully preserved.",
+        insight: "Migrated with zero downtime. Every SEO ranking preserved. Contact form runs on Web3Forms, free forever, no backend needed.",
+        review: {
+            quote: "We were nervous about losing our Google rankings during the migration. PandaCodeGen preserved every URL, our rankings held, and the site now loads faster than anything we've ever had. The $0 hosting alone paid for the project within two months.",
+            author: "Founder, MyCustomPatches",
+        },
         tags: ["WordPress Migration", "Speed Optimization", "SEO Preservation", "Custom Code"],
         image: "/work/mycustompatches.png",
         liveUrl: "https://www.mycustompatches.net",
@@ -284,6 +288,19 @@ function ProjectCard({ project, index }: any) {
                                 <div className="w-[3px] shrink-0 self-stretch bg-gradient-to-b from-cognac to-cognac/20 rounded-full" />
                                 <p className="text-sm text-stone-600 italic leading-relaxed">{project.insight}</p>
                             </div>
+
+                            {/* Client Review */}
+                            {project.review && (
+                                <div className="bg-stone-50 border border-stone-200 rounded-xl p-4 mb-5">
+                                    <div className="flex gap-2 mb-2">
+                                        {[1,2,3,4,5].map((s) => (
+                                            <svg key={s} className="w-3 h-3 fill-cognac" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                                        ))}
+                                    </div>
+                                    <p className="text-sm text-stone-600 leading-relaxed italic mb-2">"{project.review.quote}"</p>
+                                    <p className="text-[11px] font-bold text-stone-400 uppercase tracking-wider">{project.review.author}</p>
+                                </div>
+                            )}
 
                             {/* Tags */}
                             <div className="flex flex-wrap gap-1.5 mb-8">

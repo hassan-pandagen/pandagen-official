@@ -188,7 +188,7 @@ export default function MigrateWordPressToNextJSPage() {
                             How to Migrate WordPress to <span className="font-serif italic text-stone-500">Next.js</span> Without Losing SEO
                         </h1>
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            We have done this 40+ times. Here is the exact process — from crawling your WordPress site on day one to monitoring rankings 30 days after launch. No steps skipped.
+                            We have done this 40+ times. Here is the exact process, starting from crawling your WordPress site on day one all the way to monitoring rankings 30 days after launch. No steps skipped.
                         </p>
                         <div className="flex items-center gap-4 text-sm text-stone-500">
                             <span>Mar 11, 2026</span>
@@ -208,7 +208,7 @@ export default function MigrateWordPressToNextJSPage() {
                     <div data-speakable="true" className="bg-stone-50 border border-stone-200 rounded-xl p-6 mb-10">
                         <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-3">What This Guide Covers</p>
                         <p className="text-stone-700 leading-relaxed">
-                            Migrating WordPress to Next.js takes 2–6 weeks professionally. The SEO risk is real but manageable: preserve all URLs, map 301 redirects for any that change, transfer all metadata, and submit a new sitemap to Google Search Console on launch day. When done correctly, rankings hold or improve within 30–60 days — because Google rewards the faster Core Web Vitals that Next.js delivers. This guide covers every step in order.
+                            Migrating WordPress to Next.js takes 2–6 weeks professionally. The SEO risk is real but manageable: preserve all URLs, map 301 redirects for any that change, transfer all metadata, and submit a new sitemap to Google Search Console on launch day. When done correctly, rankings hold or improve within 30 to 60 days because Google rewards the faster Core Web Vitals that Next.js delivers natively. This guide covers every step in order.
                         </p>
                     </div>
 
@@ -216,7 +216,7 @@ export default function MigrateWordPressToNextJSPage() {
                     <section className="mb-10">
                         <h2 className="text-3xl font-bold mb-4">Why Businesses Migrate WordPress to Next.js</h2>
                         <BlogText>
-                            Before getting into the how, it is worth being clear on why. Businesses migrate WordPress to Next.js for one of three reasons — and understanding which one applies to you affects how you approach the migration.
+                            Before getting into the how, it is worth being clear on why. Businesses migrate WordPress to Next.js for one of three reasons. Understanding which one applies to you affects how you approach the migration.
                         </BlogText>
                         <BlogList items={[
                             "Speed ceiling: WordPress mobile PageSpeed scores plateau at 65–75/100 regardless of optimisation. Next.js sites score 95–100/100 natively. If you have spent money on speed optimisation and are still stuck, the platform is the problem.",
@@ -224,7 +224,7 @@ export default function MigrateWordPressToNextJSPage() {
                             "Cost and maintenance burden: WordPress hosting, plugin licences, and maintenance typically cost $10,000–$20,000 over 3 years. Next.js hosting on Vercel is free. The total cost of ownership drops significantly after the initial migration investment."
                         ]} />
                         <BlogText>
-                            If any of these sound familiar, the migration will pay back. If you're on WordPress and everything is working fine — traffic growing, conversions healthy, no major speed or security issues — there is no urgent reason to migrate. But most business owners reading this guide are dealing with at least one of these three problems.
+                            If any of these sound familiar, the migration will pay back. If you are on WordPress and everything is working fine, traffic growing, conversions healthy, no major speed or security issues, there is no urgent reason to migrate. But most business owners reading this guide are dealing with at least one of these three problems.
                         </BlogText>
                         <BlogQuote>
                             MyCustomPatches migrated from a slow WordPress site to Next.js. Before: 3.2s load time, 45/100 PageSpeed. After: 0.7s load time, 97/100 PageSpeed. Organic traffic increased 45% in 90 days.
@@ -238,12 +238,12 @@ export default function MigrateWordPressToNextJSPage() {
                             Do not start building until you have completed this checklist. Skipping these steps is why migrations fail or lose rankings.
                         </BlogText>
                         <BlogList items={[
-                            "Crawl your full site with Screaming Frog (free up to 500 URLs) — export every URL, title tag, meta description, H1, and status code",
-                            "Export your Google Search Console data: top 50 pages by clicks, top 50 by impressions — these are the pages you cannot afford to break",
-                            "Screenshot your current PageSpeed score on mobile for every key page — this is your baseline to beat",
-                            "Document every third-party integration: forms, chat, analytics, pixels, booking tools — each needs a Next.js equivalent",
-                            "List every plugin and its function — each will need a native replacement",
-                            "Set up Google Search Console for your domain if not already done — you will need it immediately after launch"
+                            "Crawl your full site with Screaming Frog (free up to 500 URLs) and export every URL, title tag, meta description, H1, and status code",
+                            "Export your Google Search Console data: top 50 pages by clicks, top 50 by impressions. These are the pages you cannot afford to break",
+                            "Screenshot your current PageSpeed score on mobile for every key page. This is your baseline to beat",
+                            "Document every third-party integration: forms, chat, analytics, pixels, booking tools. Each one needs a Next.js equivalent",
+                            "List every plugin and its function. Each will need a native replacement in Next.js",
+                            "Set up Google Search Console for your domain if not already done. You will need it immediately after launch"
                         ]} />
                         <BlogText>
                             This audit typically takes half a day. It is the most important half day of the entire migration.
@@ -259,10 +259,10 @@ export default function MigrateWordPressToNextJSPage() {
                                 <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-1">Step 1</p>
                                 <h3 className="text-lg font-bold mb-3">Audit Your WordPress Site</h3>
                                 <BlogText>
-                                    Crawl every URL using Screaming Frog or Sitebulb. Export a complete spreadsheet of all URLs with their title tags, meta descriptions, H1s, canonical URLs, and HTTP status codes. This document becomes your SEO bible for the migration — every page that returns a 200 status on WordPress must either return a 200 at the same URL in Next.js, or receive a 301 redirect to the correct new URL.
+                                    Crawl every URL using Screaming Frog or Sitebulb. Export a complete spreadsheet of all URLs with their title tags, meta descriptions, H1s, canonical URLs, and HTTP status codes. This document becomes your SEO bible for the migration. Every page that returns a 200 status on WordPress must either return a 200 at the same URL in Next.js or receive a 301 redirect to the correct new URL.
                                 </BlogText>
                                 <BlogText>
-                                    Also pull your top pages from Google Search Console sorted by clicks. These get the most scrutiny during QA — a broken redirect on your top landing page can cost you significant traffic.
+                                    Also pull your top pages from Google Search Console sorted by clicks. These get the most scrutiny during QA. A broken redirect on your top landing page can cost you significant traffic.
                                 </BlogText>
                             </div>
 
@@ -281,10 +281,10 @@ export default function MigrateWordPressToNextJSPage() {
                                 <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-1">Step 3</p>
                                 <h3 className="text-lg font-bold mb-3">Set Up Your Next.js Project</h3>
                                 <BlogText>
-                                    Scaffold your project with <code className="bg-stone-100 px-1 py-0.5 rounded text-sm">npx create-next-app@latest --typescript</code>. Install Tailwind CSS for styling. Deploy an empty shell to Vercel immediately — this sets up your CI/CD pipeline so every commit deploys automatically. You will use preview URLs for QA throughout the build.
+                                    Scaffold your project with <code className="bg-stone-100 px-1 py-0.5 rounded text-sm">npx create-next-app@latest --typescript</code>. Install Tailwind CSS for styling. Deploy an empty shell to Vercel immediately. This sets up your CI/CD pipeline so every commit deploys automatically. You will use preview URLs for QA throughout the build.
                                 </BlogText>
                                 <BlogText>
-                                    If you need a content management interface for blog posts or frequently updated pages, set up a headless CMS at this stage. Sanity is our recommendation — it has a clean editing UI similar to WordPress's Gutenberg editor, and the free tier supports most business sites. Contentful is a solid alternative for larger content libraries.
+                                    If you need a content management interface for blog posts or frequently updated pages, set up a headless CMS at this stage. Sanity is our recommendation. It has a clean editing UI similar to WordPress's Gutenberg editor, and the free tier supports most business sites. Contentful is a solid alternative for larger content libraries.
                                 </BlogText>
                             </div>
 
@@ -392,7 +392,7 @@ export default function MigrateWordPressToNextJSPage() {
                                     "Monitor Search Console daily for crawl errors in the first 2 weeks"
                                 ]} />
                                 <BlogText>
-                                    Rankings may fluctuate in the first 2–4 weeks as Google re-crawls and re-evaluates your pages. This is normal. By weeks 4–8, your Core Web Vitals field data begins updating in Search Console with real user data from the faster Next.js site — this is when ranking improvements typically start appearing.
+                                    Rankings may fluctuate in the first 2–4 weeks as Google re-crawls and re-evaluates your pages. This is normal. By weeks 4 to 8, your Core Web Vitals field data begins updating in Search Console with real user data from the faster Next.js site. That is when ranking improvements typically start appearing.
                                 </BlogText>
                             </div>
                         </div>
@@ -454,18 +454,18 @@ export default function MigrateWordPressToNextJSPage() {
                                 <BlogList items={[
                                     "Timeline: 3–6 months part-time",
                                     "Learning curve: React, Next.js, Tailwind, headless CMS",
-                                    "Risk: High — easy to break SEO during DNS cutover",
-                                    "Cost: $0–$2,000 in tools and hosting",
-                                    "PageSpeed result: Variable — depends on your optimisation knowledge",
-                                    "Redirect mapping: Manual — must be 100% complete"
+                                    "Risk: High. Easy to break SEO during DNS cutover if you miss redirects",
+                                    "Cost: $0 to $2,000 in tools and hosting",
+                                    "PageSpeed result: Variable, depends on your optimisation knowledge",
+                                    "Redirect mapping: Manual, must be 100% complete or rankings drop"
                                 ]} />
                             </div>
                             <div className="border-2 border-charcoal rounded-xl p-5">
                                 <p className="font-bold text-charcoal mb-3">Professional Migration</p>
                                 <BlogList items={[
                                     "Timeline: 2–6 weeks",
-                                    "Learning curve: None — handled end to end",
-                                    "Risk: Low — we have done this 40+ times",
+                                    "Learning curve: None, handled end to end by us",
+                                    "Risk: Low. We have done this 40+ times with zero ranking disasters",
                                     "Cost: $8,000–$35,000 depending on complexity",
                                     "PageSpeed result: Guaranteed 95–100/100 mobile",
                                     "Redirect mapping: Automated crawl + manual verification"
@@ -474,7 +474,7 @@ export default function MigrateWordPressToNextJSPage() {
                         </div>
 
                         <BlogText>
-                            The decision comes down to your technical background and the revenue your site generates. If your site generates $20,000+/month and you're losing rankings to slow Core Web Vitals, a professional migration pays back within months. If you are a developer who wants to learn Next.js by doing a real project, DIY is a legitimate path — just plan for the learning curve.
+                            The decision comes down to your technical background and the revenue your site generates. If your site generates $20,000+/month and you're losing rankings to slow Core Web Vitals, a professional migration pays back within months. If you are a developer who wants to learn Next.js by doing a real project, DIY is a legitimate path. Just budget time for the learning curve.
                         </BlogText>
                         <BlogText>
                             Either way, read our post on{" "}
@@ -502,7 +502,7 @@ export default function MigrateWordPressToNextJSPage() {
                         <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-2">Ready to Migrate?</p>
                         <h3 className="text-2xl font-bold mb-3">Get a Free WordPress Migration Assessment</h3>
                         <p className="text-stone-600 mb-3 leading-relaxed">
-                            We will audit your WordPress site, scope the migration, map every redirect, and give you a fixed-price quote — before you commit to anything.
+                            We will audit your WordPress site, scope the migration, map every redirect, and give you a fixed-price quote before you commit to anything.
                         </p>
                         <p className="text-stone-600 mb-6 leading-relaxed">
                             Every month on a slow WordPress platform is a month your competitors with faster Next.js sites are compounding their ranking advantage. The businesses that migrate in 2026 will dominate organic search for the next 3–5 years.

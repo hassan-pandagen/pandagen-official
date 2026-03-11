@@ -205,10 +205,10 @@ export default function WordPressVsNextJSPage() {
                             Under the hood, WordPress works like this: when someone visits your site, your server runs PHP code that queries a MySQL database, assembles the page, and sends it to the browser. Every single page load. Every single visitor. This architecture made sense in 2003. In 2026, it is the primary reason WordPress sites are slow.
                         </BlogText>
                         <BlogText>
-                            The plugin ecosystem is WordPress's biggest strength and biggest weakness simultaneously. Need a contact form? Install a plugin. SEO tools? Plugin. Speed optimisation? Three plugins. E-commerce? WooCommerce plus twelve more plugins. Each plugin adds JavaScript, database queries, and server overhead. By the time a typical business site has 15–20 plugins installed — which is average — it is carrying thousands of lines of extra code on every page load.
+                            The plugin ecosystem is WordPress's biggest strength and biggest weakness simultaneously. Need a contact form? Install a plugin. SEO tools? Plugin. Speed optimisation? Three plugins. E-commerce? WooCommerce plus twelve more plugins. Each plugin adds JavaScript, database queries, and server overhead. By the time a typical business site has 15 to 20 plugins installed, which is completely normal, it is carrying thousands of lines of extra code on every page load.
                         </BlogText>
                         <BlogHighlight>
-                            According to the HTTP Archive's CMS Performance Report, only 44% of WordPress sites pass Google's Core Web Vitals on mobile. The majority of WordPress sites are actively failing Google's speed benchmark — the same benchmark Google uses to rank pages in search results.
+                            According to the HTTP Archive's CMS Performance Report, only 44% of WordPress sites pass Google's Core Web Vitals on mobile. The majority of WordPress sites are actively failing Google's speed benchmark. That is the same benchmark Google uses to rank pages in search results.
                         </BlogHighlight>
                     </section>
 
@@ -216,10 +216,10 @@ export default function WordPressVsNextJSPage() {
                     <section className="mb-10">
                         <h2 className="text-3xl font-bold mb-4">What Next.js Actually Is (In Plain English)</h2>
                         <BlogText>
-                            Next.js is a React framework created by Vercel in 2016. Unlike WordPress, it does not have a drag-and-drop admin panel. It is a developer tool — a framework for building websites and web applications that are fast by design, not by effort.
+                            Next.js is a React framework created by Vercel in 2016. Unlike WordPress, it does not have a drag-and-drop admin panel. It is a developer tool, specifically a framework for building websites and web applications that are fast by design rather than by effort.
                         </BlogText>
                         <BlogText>
-                            The key architectural difference: Next.js pre-builds your pages at deployment time. When a visitor arrives, they get a pre-rendered HTML file served instantly from a CDN location near them. There is no PHP executing, no database query, no server computing a response — just a file being delivered. This is why Next.js sites load in under 1 second without any special optimisation.
+                            The key architectural difference: Next.js pre-builds your pages at deployment time. When a visitor arrives, they get a pre-rendered HTML file served instantly from a CDN location near them. There is no PHP executing, no database query, no server computing a response. Just a file being delivered. This is why Next.js sites load in under 1 second without any special optimisation.
                         </BlogText>
                         <BlogList items={[
                             "Static generation: Pages are built once at deploy time and cached globally",
@@ -229,7 +229,7 @@ export default function WordPressVsNextJSPage() {
                             "Code splitting: Each page only loads the JavaScript it actually needs"
                         ]} />
                         <BlogText>
-                            The trade-off is real: Next.js requires a developer to build and maintain. You cannot install it yourself and drag components around. But for any business where the website directly drives revenue, that trade-off pays back within months — not years.
+                            The trade-off is real: Next.js requires a developer to build and maintain. You cannot install it yourself and drag components around. But for any business where the website directly drives revenue, that trade-off pays back within months, not years.
                         </BlogText>
                     </section>
 
@@ -280,7 +280,7 @@ export default function WordPressVsNextJSPage() {
                         </div>
 
                         <BlogText>
-                            The ceiling matters more than the average. A WordPress site can be optimised — good hosting, aggressive caching, image compression, a premium CDN. With all of that, you reach 65–75/100 mobile PageSpeed. Then you hit a wall. PHP rendering overhead, database query latency, and plugin script weight cannot be optimised away. They are architectural.
+                            The ceiling matters more than the average. A WordPress site can be optimised with good hosting, aggressive caching, image compression, and a premium CDN. With all of that, you reach 65–75/100 mobile PageSpeed. Then you hit a wall. PHP rendering overhead, database query latency, and plugin script weight cannot be optimised away. They are architectural.
                         </BlogText>
                         <BlogQuote>
                             Our client MyCustomPatches came to us with a Shopify store scoring 45/100 on mobile, loading in 3.2 seconds. After migrating to a custom Next.js build: 97/100 mobile, 0.7 seconds, 45% increase in conversions. Not from new marketing. From speed alone.
@@ -447,7 +447,7 @@ export default function WordPressVsNextJSPage() {
                             "You want to own your code outright, with no vendor lock-in or platform dependencies"
                         ]} />
                         <BlogText>
-                            For businesses in these situations, the question is not whether to migrate to Next.js — it is how quickly the migration will pay back. Based on our client data, the answer is typically 12–18 months, after which the speed improvements drive compounding gains in traffic, conversions, and revenue that continue for years.
+                            For businesses in these situations, the question is not whether to migrate to Next.js. It is how quickly the migration will pay back. Based on our client data, the answer is typically 12–18 months, after which the speed improvements drive compounding gains in traffic, conversions, and revenue that continue for years.
                         </BlogText>
                     </section>
 
@@ -455,7 +455,7 @@ export default function WordPressVsNextJSPage() {
                     <section className="mb-10">
                         <h2 className="text-3xl font-bold mb-4">What a WordPress to Next.js Migration Actually Looks Like</h2>
                         <BlogText>
-                            The most common concern we hear is: "What happens to my SEO during a migration?" It is a valid concern. A badly handled migration can drop rankings significantly. A properly executed one preserves rankings — and improves them within 60 days because the faster site starts outperforming its old scores on Core Web Vitals.
+                            The most common concern we hear is: "What happens to my SEO during a migration?" It is a valid concern. A badly handled migration can drop rankings significantly. A properly executed one preserves rankings and typically improves them within 60 days because the faster site starts outperforming its old Core Web Vitals scores.
                         </BlogText>
                         <BlogText>
                             Here is what our migration process covers:
@@ -495,7 +495,7 @@ export default function WordPressVsNextJSPage() {
                             WordPress won the 2010s because it democratised website publishing. It gave everyone access to the web. That was genuinely important.
                         </BlogText>
                         <BlogText>
-                            Next.js is winning the 2020s because Google made speed a ranking factor, mobile became the primary device for browsing, and the revenue gap between fast and slow sites became impossible to ignore. The businesses taking market share from their competitors in 2026 are the ones that made the switch two or three years ago — and are now compounding the gains of being faster, more secure, and easier to find on Google.
+                            Next.js is winning the 2020s because Google made speed a ranking factor, mobile became the primary device for browsing, and the revenue gap between fast and slow sites became impossible to ignore. The businesses taking market share from their competitors in 2026 are the ones that made the switch two or three years ago. They are now compounding the gains of being faster, more secure, and easier to find on Google.
                         </BlogText>
                         <BlogHighlight>
                             If you are on WordPress and your site generates more than $10,000/month in revenue, a migration to Next.js is almost certainly one of the highest-ROI investments you can make this year. The combination of lower ongoing cost, higher search rankings, and better conversion rates creates a compounding advantage that widens every month you are on the faster platform.
@@ -504,7 +504,7 @@ export default function WordPressVsNextJSPage() {
                             If you are on WordPress and running a personal blog with no revenue implications, stay where you are. The complexity of Next.js is not justified by your use case.
                         </BlogText>
                         <BlogText>
-                            For everyone in between: the free discovery call takes 30 minutes. We will look at your current site, run a real speed and SEO audit, and give you an honest assessment of whether a migration makes financial sense — with numbers, not opinions.
+                            For everyone in between: the free discovery call takes 30 minutes. We will look at your current site, run a real speed and SEO audit, and give you an honest assessment of whether a migration makes financial sense. Numbers, not opinions.
                         </BlogText>
 
                         <div className="flex items-center gap-2 text-xs text-stone-400 mt-6"><RefreshCw className="w-3 h-3" />Published: Mar 11, 2026</div>
@@ -521,7 +521,7 @@ export default function WordPressVsNextJSPage() {
                         <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-2">Ready to Switch?</p>
                         <h3 className="text-2xl font-bold mb-3">Get Your Free WordPress Migration Assessment</h3>
                         <p className="text-stone-600 mb-3 leading-relaxed">
-                            We will audit your current WordPress site — speed, SEO, security, hosting costs — and give you a precise migration scope, timeline, and ROI projection. No obligation.
+                            We will audit your current WordPress site across speed, SEO, security, and hosting costs, then give you a precise migration scope, timeline, and ROI projection. No obligation.
                         </p>
                         <p className="text-stone-600 mb-6 leading-relaxed">
                             Every month on a slow platform is a month faster competitors are compounding their advantage. The businesses that move in 2026 will dominate their category for the next 3–5 years.

@@ -10,7 +10,7 @@ import { blogPosts, type IllustrationType } from "@/data/blog";
 // Light-mode editorial stat display — data report style (Stripe / McKinsey aesthetic)
 // bgTint = very light category color · statColor = deep category color · border = light border
 const cardDisplay: Record<IllustrationType, { stat: string; label: string; bgTint: string; statColor: string; border: string }> = {
-  aicommerce:  { stat: "AI Commerce",  label: "No website visit required",   bgTint: "#eff6ff", statColor: "#1d4ed8", border: "#bfdbfe" },
+  aicommerce:  { stat: "AI",           label: "No website visit required",   bgTint: "#eff6ff", statColor: "#1d4ed8", border: "#bfdbfe" },
   security:    { stat: "100K+",        label: "Sites exposed to takeover",   bgTint: "#fff1f2", statColor: "#be123c", border: "#fecdd3" },
   performance: { stat: "3.8s",         label: "Average WordPress load time", bgTint: "#fff1f2", statColor: "#be123c", border: "#fecdd3" },
   speed:       { stat: "100",          label: "Perfect Speed Score",         bgTint: "#ecfdf5", statColor: "#065f46", border: "#a7f3d0" },
@@ -50,7 +50,9 @@ export default function BlogPage() {
   });
 
   const featuredArticles = filteredArticles.filter(a => a.featured);
-  const [heroArticle, ...secondaryArticles] = featuredArticles;
+  const [heroArticle, ...allSecondary] = featuredArticles;
+  const secondaryArticles = allSecondary.slice(0, 2);
+  const overflowFeatured = allSecondary.slice(2);
   const heroDisplay = heroArticle ? cardDisplay[heroArticle.illustrationType] : null;
 
   const blogSchema = {
@@ -263,7 +265,7 @@ export default function BlogPage() {
       {/* Non-Featured Articles Grid */}
       <section className="container mx-auto px-6 pb-32">
         <div className="grid md:grid-cols-3 gap-6">
-          {filteredArticles.filter(a => !a.featured).map((article) => {
+          {[...overflowFeatured, ...filteredArticles.filter(a => !a.featured)].map((article) => {
             const display = cardDisplay[article.illustrationType];
             return (
               <Link

@@ -49,7 +49,7 @@ export default function Footer({ onOpenQuote }: FooterProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
 
           {/* Brand & Socials */}
-          <div className="lg:col-span-4 flex flex-col justify-between">
+          <div className="lg:col-span-4 flex flex-col">
             <div>
               <Link href="/" className="text-3xl font-bold text-charcoal tracking-tight">
                 PandaCodeGen<span className="text-cognac">.</span>
@@ -66,7 +66,7 @@ export default function Footer({ onOpenQuote }: FooterProps) {
                 </li>
               </ul>
             </div>
-            <div className="flex flex-wrap gap-3 mt-10">
+            <div className="flex flex-wrap gap-3 mt-6">
               <SocialPill href="https://x.com/PandaCodeGen" label="Twitter / X" isX />
               <SocialPill href="https://www.linkedin.com/company/pandacodegen" icon={Linkedin} label="LinkedIn" />
               <SocialPill href="https://github.com/hassan-pandagen" icon={Github} label="GitHub" />
@@ -97,7 +97,7 @@ export default function Footer({ onOpenQuote }: FooterProps) {
             <h3 className="font-bold text-charcoal mb-8 text-xs uppercase tracking-widest border-b border-stone-300 pb-4">
               Company
             </h3>
-            <div className="grid gap-4">
+            <div className="grid gap-2">
               <FeaturedLink
                 href="/work"
                 title="Case Studies"
@@ -200,15 +200,15 @@ function FeaturedLink({ href, title, desc }: { href: string; title: string; desc
   return (
     <Link
       href={href}
-      className="group block bg-white border border-stone-200 p-5 rounded-xl hover:border-cognac hover:shadow-lg transition-all duration-300"
+      className="group flex items-center justify-between gap-4 bg-white border border-stone-200 px-4 py-3 rounded-lg hover:border-cognac hover:shadow-sm transition-all duration-200"
     >
-      <div className="flex justify-between items-start">
-        <h3 className="font-semibold text-charcoal group-hover:text-cognac transition-colors">
+      <div>
+        <h3 className="font-semibold text-sm text-charcoal group-hover:text-cognac transition-colors">
           {title}
         </h3>
-        <ArrowUpRight className="w-4 h-4 text-stone-300 group-hover:text-cognac transition-colors flex-shrink-0" />
+        <p className="text-xs text-stone-500 mt-0.5">{desc}</p>
       </div>
-      <p className="text-sm text-stone-500 mt-1">{desc}</p>
+      <ArrowUpRight className="w-3.5 h-3.5 text-stone-300 group-hover:text-cognac transition-colors flex-shrink-0" />
     </Link>
   );
 }
