@@ -28,7 +28,9 @@ export default function Footer({ onOpenQuote }: FooterProps) {
             </h2>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button
-                onClick={onOpenQuote}
+                data-cal-namespace="discovery"
+                data-cal-link="pandagen/discovery"
+                data-cal-config='{"layout":"month_view"}'
                 className="w-full sm:w-auto px-8 py-4 bg-white text-charcoal font-bold rounded-full hover:bg-stone-100 transition-all flex items-center justify-center gap-2 shadow-lg hover:scale-105 transform duration-200"
               >
                 Book Strategy Call <ArrowRight className="w-4 h-4" />

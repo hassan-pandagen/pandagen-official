@@ -10,10 +10,10 @@
   },
   "browserslist": [
     "chrome >= 93",
-    "firefox >= 91",
-    "safari >= 15",
+    "firefox >= 92",
+    "safari >= 15.4",
     "edge >= 93",
-    "ios >= 15",
+    "ios >= 15.4",
     "not ie 11",
     "not dead"
   ],

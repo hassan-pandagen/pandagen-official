@@ -1,12 +1,9 @@
-"use client";
-
-import { useState, useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
-import QuoteModal from "@/components/ui/QuoteModal";
-import { ChevronDown } from "lucide-react";
+import ScrollProgressBar from "@/components/layout/ScrollProgressBar";
+import HomeFaqSection from "@/components/home/HomeFaqSection";
 
 // Lazy load below-the-fold components
 const TrustLogoBar = dynamic(() => import("@/components/sections/TrustLogoBar"));
@@ -48,34 +45,6 @@ const homeFaqs = [
 ];
 
 export default function Home() {
-  const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const progressRef = useRef<HTMLDivElement>(null);
-
-  // Optimized scroll progress - uses passive listener and requestAnimationFrame
-  useEffect(() => {
-    let ticking = false;
-    const updateProgress = () => {
-      if (progressRef.current) {
-        const scrollTop = window.scrollY;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const progress = docHeight > 0 ? scrollTop / docHeight : 0;
-        progressRef.current.style.transform = `scaleX(${progress})`;
-      }
-      ticking = false;
-    };
-
-    const onScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(updateProgress);
-        ticking = true;
-      }
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   // Schema.org structured data for homepage
   const organizationSchema = {
     "@context": "https://schema.org",
@@ -298,9 +267,9 @@ export default function Home() {
       <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
 
       {/* Scroll Progress Bar */}
-      <div ref={progressRef} className="fixed top-0 left-0 right-0 h-1 bg-cognac z-[70] origin-left will-change-transform" style={{ transform: "scaleX(0)" }} />
+      <ScrollProgressBar />
 
-      <Header onOpenQuote={() => setIsQuoteModalOpen(true)} />
+      <Header />
 
       {/* Hero */}
       <Hero />
@@ -333,44 +302,12 @@ export default function Home() {
       <AntiAgency />
 
       {/* FAQ Section */}
-      <section className="bg-paper py-24 border-t border-stone-200">
-        <div className="container mx-auto px-6 max-w-3xl">
-          <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-3">FAQ</p>
-          <h2 className="text-3xl md:text-4xl font-sans font-bold text-charcoal mb-12">
-            Common questions about WordPress &amp; Shopify migration
-          </h2>
-          <div className="divide-y divide-stone-200">
-            {homeFaqs.map((faq, i) => (
-              <div key={i} className="py-5">
-                <button
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full flex items-center justify-between text-left gap-4 group"
-                  aria-expanded={openFaq === i}
-                >
-                  <span className="font-semibold text-charcoal text-base md:text-lg group-hover:text-cognac transition-colors">
-                    {faq.q}
-                  </span>
-                  <ChevronDown
-                    className={`w-5 h-5 text-stone-400 flex-shrink-0 transition-transform duration-300 ${openFaq === i ? "rotate-180" : ""}`}
-                  />
-                </button>
-                {openFaq === i && (
-                  <p className="mt-4 text-stone-600 leading-relaxed text-base">
-                    {faq.a}
-                  </p>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <HomeFaqSection faqs={homeFaqs} />
 
       {/* Latest Blog Posts */}
       <LatestBlog />
 
-      <Footer onOpenQuote={() => setIsQuoteModalOpen(true)} />
-
-      <QuoteModal isOpen={isQuoteModalOpen} onClose={() => setIsQuoteModalOpen(false)} />
+      <Footer />
     </main>
   );
 }

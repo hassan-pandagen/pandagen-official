@@ -56,11 +56,7 @@ export default function FacebookPixel() {
 
     events.forEach(event => window.addEventListener(event, handleInteraction, { passive: true, once: true }));
 
-    // Fallback: Load after 3 seconds if no interaction
-    const fallbackTimer = setTimeout(loadFBPixel, 3000);
-
     return () => {
-      clearTimeout(fallbackTimer);
       events.forEach(event => window.removeEventListener(event, handleInteraction));
     };
   }, []);

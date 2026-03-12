@@ -5,7 +5,7 @@ import { ArrowRight, Clock } from "lucide-react";
 import { blogPosts } from "@/data/blog";
 import type { IllustrationType } from "@/data/blog";
 
-// Thin accent color per category — no heavy gradients
+// Thin accent color per category — used for decorative elements only
 const accentColor = (type: IllustrationType): string => {
   switch (type) {
     case "aicommerce":
@@ -24,6 +24,28 @@ const accentColor = (type: IllustrationType): string => {
       return "#f43f5e";
     default:
       return "#2563eb";
+  }
+};
+
+// Darker variants for text — all pass WCAG AA 4.5:1 against white
+const textColor = (type: IllustrationType): string => {
+  switch (type) {
+    case "aicommerce":
+    case "saas":
+      return "#047857"; // emerald-700
+    case "speed":
+    case "performance":
+      return "#1d4ed8"; // blue-700
+    case "wordpress":
+    case "plugins":
+      return "#6d28d9"; // violet-700
+    case "traffic":
+    case "ranking":
+      return "#9a3412"; // orange-800
+    case "security":
+      return "#be123c"; // rose-700
+    default:
+      return "#1d4ed8"; // blue-700
   }
 };
 
@@ -59,6 +81,7 @@ export default function LatestBlog() {
         <div className="grid md:grid-cols-3 gap-6">
           {latestPosts.map((post) => {
             const color = accentColor(post.illustrationType);
+            const tColor = textColor(post.illustrationType);
             return (
               <Link
                 key={post.id}
@@ -74,7 +97,7 @@ export default function LatestBlog() {
                   <div className="flex items-center justify-between mb-5">
                     <span
                       className="px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider"
-                      style={{ backgroundColor: `${color}15`, color }}
+                      style={{ backgroundColor: `${color}15`, color: tColor }}
                     >
                       {post.category}
                     </span>
@@ -97,7 +120,7 @@ export default function LatestBlog() {
                   {/* Footer */}
                   <div className="flex items-center justify-between mt-6 pt-5 border-t border-stone-100">
                     <span className="text-xs text-stone-500">{post.date}</span>
-                    <div className="flex items-center gap-1.5 text-sm font-bold group-hover:gap-2.5 transition-all" style={{ color }}>
+                    <div className="flex items-center gap-1.5 text-sm font-bold group-hover:gap-2.5 transition-all" style={{ color: tColor }}>
                       Read Article
                       <ArrowRight className="w-3.5 h-3.5" />
                     </div>

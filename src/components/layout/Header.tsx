@@ -1,11 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { Menu, X, ChevronDown, Linkedin, Twitter, Mail, Phone } from "lucide-react";
 import Image from "next/image";
+
+const QuoteModal = dynamic(() => import("@/components/ui/QuoteModal"), { ssr: false });
 
 interface HeaderProps {
   onOpenQuote?: () => void;
@@ -57,6 +60,9 @@ export default function Header({ onOpenQuote }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileOpenDropdown, setMobileOpenDropdown] = useState<string | null>(null);
+  const [internalQuoteOpen, setInternalQuoteOpen] = useState(false);
+
+  const handleOpenQuote = onOpenQuote ?? (() => setInternalQuoteOpen(true));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -157,21 +163,12 @@ export default function Header({ onOpenQuote }: HeaderProps) {
               <Phone className="w-3.5 h-3.5" />
               +1 (302) 250-4340
             </a>
-            {onOpenQuote ? (
-              <button
-                onClick={onOpenQuote}
-                className="px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105 bg-charcoal text-white hover:bg-stone-800"
-              >
-                Get Free Quote
-              </button>
-            ) : (
-              <Link
-                href="/contact"
-                className="px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105 bg-charcoal text-white hover:bg-stone-800"
-              >
-                Get Free Quote
-              </Link>
-            )}
+            <button
+              onClick={handleOpenQuote}
+              className="px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105 bg-charcoal text-white hover:bg-stone-800"
+            >
+              Get Free Quote
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -255,22 +252,12 @@ export default function Header({ onOpenQuote }: HeaderProps) {
 
           {/* Bottom Anchor */}
           <div className="flex flex-col items-center gap-5 mt-10">
-            {onOpenQuote ? (
-              <button
-                onClick={() => { setIsMobileMenuOpen(false); onOpenQuote(); }}
-                className="w-full max-w-xs py-4 bg-charcoal text-white font-bold rounded-full text-center hover:bg-stone-800 transition-all"
-              >
-                Get Free Quote
-              </button>
-            ) : (
-              <Link
-                href="/contact"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="w-full max-w-xs py-4 bg-charcoal text-white font-bold rounded-full text-center hover:bg-stone-800 transition-all block"
-              >
-                Get Free Quote
-              </Link>
-            )}
+            <button
+              onClick={() => { setIsMobileMenuOpen(false); handleOpenQuote(); }}
+              className="w-full max-w-xs py-4 bg-charcoal text-white font-bold rounded-full text-center hover:bg-stone-800 transition-all"
+            >
+              Get Free Quote
+            </button>
 
             <div className="w-full max-w-xs border-t border-stone-200 pt-5 flex flex-col items-center gap-4">
               <div className="flex gap-6">
@@ -296,6 +283,11 @@ export default function Header({ onOpenQuote }: HeaderProps) {
 
         </div>
       </div>
+
+      {/* Internal QuoteModal — only rendered when no external handler is provided */}
+      {!onOpenQuote && (
+        <QuoteModal isOpen={internalQuoteOpen} onClose={() => setInternalQuoteOpen(false)} />
+      )}
     </>
   );
 }
