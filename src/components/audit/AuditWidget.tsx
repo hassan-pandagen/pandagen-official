@@ -139,7 +139,7 @@ export default function AuditWidget() {
                   <div className="mt-6 pt-6 border-t border-stone-100">
                     <div className="flex items-center gap-2 mb-4">
                       <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                      <p className="text-xs font-bold uppercase tracking-widest text-stone-400">
+                      <p className="text-xs font-bold uppercase tracking-widest text-stone-600">
                         11-Point Inspection Includes:
                       </p>
                     </div>

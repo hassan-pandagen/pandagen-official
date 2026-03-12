@@ -36,7 +36,7 @@ export default function SocialProof() {
                     </svg>
                   ))}
                 </div>
-                <div className="text-xs font-bold text-stone-400 uppercase tracking-widest">5.0 · Verified Review</div>
+                <div className="text-xs font-bold text-stone-600 uppercase tracking-widest">5.0 · Verified Review</div>
               </div>
               {/* Clutch badge */}
               <Link
@@ -103,7 +103,7 @@ export default function SocialProof() {
                     </svg>
                   ))}
                 </div>
-                <div className="text-xs font-bold text-stone-400 uppercase tracking-widest">5.0 · Trustpilot Review</div>
+                <div className="text-xs font-bold text-stone-600 uppercase tracking-widest">5.0 · Trustpilot Review</div>
               </div>
               {/* Trustpilot badge */}
               <Link
@@ -166,7 +166,7 @@ export default function SocialProof() {
         >
           {metrics.map((m) => (
             <div key={m.label} className="text-center p-4 bg-stone-50 border border-stone-200 rounded-xl">
-              <div className="text-xs text-stone-400 uppercase tracking-wider mb-2 font-bold">{m.label}</div>
+              <div className="text-xs text-stone-600 uppercase tracking-wider mb-2 font-bold">{m.label}</div>
               <div className="flex items-center justify-center gap-1.5 text-sm font-bold">
                 <span className="text-stone-400 line-through">{m.before}</span>
                 <span className="text-stone-300">→</span>

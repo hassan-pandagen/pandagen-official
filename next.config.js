@@ -28,8 +28,6 @@ const nextConfig = {
   compress: true,
   // 7. Optimize for production
   poweredByHeader: false,
-  // 8. Generate smaller builds
-  output: 'standalone',
   // 9. Security headers + static asset caching
   async headers() {
     return [

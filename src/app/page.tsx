@@ -1,21 +1,25 @@
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
 import ScrollProgressBar from "@/components/layout/ScrollProgressBar";
 import HomeFaqSection from "@/components/home/HomeFaqSection";
 
+// Tell Next.js to statically generate this page at build time
+// so critters can inline critical CSS into the HTML output
+export const dynamic = "force-static";
+
 // Lazy load below-the-fold components
-const TrustLogoBar = dynamic(() => import("@/components/sections/TrustLogoBar"));
-const SocialProof = dynamic(() => import("@/components/home/SocialProof"));
-const UnfairAdvantage = dynamic(() => import("@/components/sections/UnfairAdvantage"));
-const ServicesHub = dynamic(() => import("@/components/sections/ServicesHub"));
-const HowItWorksSimple = dynamic(() => import("@/components/HowItWorksSimple"));
-const AIPowered = dynamic(() => import("@/components/sections/AIPowered"));
-const RevenueCalculator = dynamic(() => import("@/components/sections/RevenueCalculator"));
-const FounderSection = dynamic(() => import("@/components/sections/FounderSection"));
-const AntiAgency = dynamic(() => import("@/components/sections/AntiAgency"));
-const LatestBlog = dynamic(() => import("@/components/sections/LatestBlog"));
+const TrustLogoBar = lazyLoad(() => import("@/components/sections/TrustLogoBar"));
+const SocialProof = lazyLoad(() => import("@/components/home/SocialProof"));
+const UnfairAdvantage = lazyLoad(() => import("@/components/sections/UnfairAdvantage"));
+const ServicesHub = lazyLoad(() => import("@/components/sections/ServicesHub"));
+const HowItWorksSimple = lazyLoad(() => import("@/components/HowItWorksSimple"));
+const AIPowered = lazyLoad(() => import("@/components/sections/AIPowered"));
+const RevenueCalculator = lazyLoad(() => import("@/components/sections/RevenueCalculator"));
+const FounderSection = lazyLoad(() => import("@/components/sections/FounderSection"));
+const AntiAgency = lazyLoad(() => import("@/components/sections/AntiAgency"));
+const LatestBlog = lazyLoad(() => import("@/components/sections/LatestBlog"));
 
 const homeFaqs = [
   {
