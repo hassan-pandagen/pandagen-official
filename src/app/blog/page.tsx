@@ -81,16 +81,36 @@ export default function BlogPage() {
         "@id": "https://www.pandacodegen.com/blog#blog",
         "name": "PandaCodeGen Blog",
         "description": "Technical insights on modern web development, WordPress alternatives, and performance optimization.",
-        "publisher": { "@id": "https://www.pandacodegen.com/#organization" },
-        "blogPost": articles.map((article) => ({
-          "@type": "BlogPosting",
-          "headline": article.title,
-          "description": article.excerpt,
-          "url": `https://www.pandacodegen.com/blog/${article.id}`,
-          "datePublished": new Date(article.date).toISOString(),
-          "author": { "@type": "Person", "name": article.author },
-          "publisher": { "@id": "https://www.pandacodegen.com/#organization" }
-        }))
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://www.pandacodegen.com/#organization",
+          "name": "PandaCodeGen",
+          "url": "https://www.pandacodegen.com"
+        },
+        "blogPost": articles.map((article) => {
+          const raw = article.date;
+          const hasYear = /\d{4}/.test(raw);
+          const year = hasYear ? "" : raw.startsWith("Dec") ? ", 2025" : ", 2026";
+          const iso = new Date(`${raw}${year}`).toISOString();
+          return {
+            "@type": "BlogPosting",
+            "headline": article.title,
+            "description": article.excerpt,
+            "url": `https://www.pandacodegen.com/blog/${article.id}`,
+            "datePublished": iso,
+            "author": {
+              "@type": "Person",
+              "name": article.author,
+              "url": "https://www.pandacodegen.com/about/hassan"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "@id": "https://www.pandacodegen.com/#organization",
+              "name": "PandaCodeGen",
+              "url": "https://www.pandacodegen.com"
+            }
+          };
+        })
       }
     ]
   };

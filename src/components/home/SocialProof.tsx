@@ -60,7 +60,7 @@ export default function SocialProof() {
 
             {/* Feedback summary */}
             <p className="text-sm text-stone-500 leading-relaxed mb-6">
-              Panda Code Gen successfully delivered a speedy, bug-free website using the latest coding language. The team was punctual, responsive, helpful, and communicative via email. They assisted with UI design and didn&apos;t charge for revisions. Overall, their expertise and support were commendable.
+              Panda Code Gen successfully delivered a speedy, bug free website using the latest coding language. The team was punctual, responsive, helpful, and communicative via email. They assisted with UI design and didn&apos;t charge for revisions. Overall, their expertise and support were commendable.
             </p>
 
             {/* Reviewer + scores */}
@@ -122,7 +122,7 @@ export default function SocialProof() {
 
             {/* Quote */}
             <blockquote className="text-xl md:text-2xl font-serif italic text-charcoal leading-relaxed mb-5">
-              &ldquo;Hassan made all the difference so thanks&rdquo;
+              &ldquo;Hassan made all the difference. I&apos;m not tech-savvy, but he broke everything down in a way that made sense.&rdquo;
             </blockquote>
 
             {/* Feedback summary */}

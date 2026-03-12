@@ -27,8 +27,8 @@ const caseStudySchema = {
             "headline": "Panda Patches: $38K/mo E-Commerce Built on $25/mo Tooling",
             "description": "How we replaced WordPress + 3 paid tools + spreadsheets with a custom Next.js storefront and Supabase ops platform. Real-time pricing calculator across 9 patch types.",
             "image": "https://www.pandacodegen.com/work/panda-patches.png",
-            "datePublished": "2025-10-01",
-            "dateModified": "2026-02-01",
+            "datePublished": "2025-10-01T00:00:00Z",
+            "dateModified": "2026-02-01T00:00:00Z",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",

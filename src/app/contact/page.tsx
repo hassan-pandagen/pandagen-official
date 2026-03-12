@@ -35,13 +35,16 @@ export default function ContactPage() {
         "@id": "https://www.pandacodegen.com/#organization",
         "name": "PandaCodeGen",
         "url": "https://www.pandacodegen.com",
+        "image": "https://www.pandacodegen.com/og-image.jpg",
         "email": "info@pandacodegen.com",
         "telephone": "+13022504340",
         "address": [
           {
             "@type": "PostalAddress",
+            "streetAddress": "Missouri City",
             "addressLocality": "Missouri City",
             "addressRegion": "TX",
+            "postalCode": "77459",
             "addressCountry": "US",
             "name": "Headquarters"
           }

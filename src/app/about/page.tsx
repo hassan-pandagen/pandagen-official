@@ -41,13 +41,16 @@ export default function AboutPage() {
           "width": 512,
           "height": 512
         },
+        "image": "https://www.pandacodegen.com/og-image.jpg",
         "description": "Custom web development agency specializing in WordPress migration, Shopify optimization, and high-performance business websites.",
         "email": "info@pandacodegen.com",
         "telephone": "+13022504340",
         "address": {
           "@type": "PostalAddress",
+          "streetAddress": "Missouri City",
           "addressLocality": "Missouri City",
           "addressRegion": "TX",
+          "postalCode": "77459",
           "addressCountry": "US"
         },
         "founder": [

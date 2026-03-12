@@ -123,7 +123,7 @@ const steps = [
   {
     number: "01",
     title: "Discovery",
-    description: "We audit your existing site for performance gaps, SEO issues, and revenue leaks, then map the fastest route to sub-second load times.",
+    description: "We audit your existing site for performance gaps, SEO issues, and revenue leaks, then map the fastest route to load times under one second.",
     Diagram: DiscoveryDiagram,
   },
   {

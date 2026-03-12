@@ -15,7 +15,7 @@ const stats = [
     icon: Lock,
     number: "0",
     title: "Vulnerabilities",
-    body: "No plugins means no backdoors. We build bank-grade architecture compliant with OWASP.",
+    body: "No plugins means no backdoors. We build enterprise grade architecture compliant with OWASP.",
     borderRight: true,
   },
   {

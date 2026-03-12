@@ -27,8 +27,8 @@ const caseStudySchema = {
             "headline": "MyCustomPatches: WordPress Migration to Next.js 14 — 100/100 PageSpeed, $0 Hosting",
             "description": "A 10-year-old WordPress e-commerce site running on $150/mo hosting with a 3.2s load time and ~40 PageSpeed score. We migrated every page, product, and blog post to a custom Next.js 14 build. Result: 0.7s load time, 100/100 PageSpeed, $0/mo hosting, zero SEO rankings lost.",
             "image": "https://www.pandacodegen.com/work/mycustompatches.png",
-            "datePublished": "2025-10-01",
-            "dateModified": "2026-02-01",
+            "datePublished": "2025-10-01T00:00:00Z",
+            "dateModified": "2026-02-01T00:00:00Z",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",

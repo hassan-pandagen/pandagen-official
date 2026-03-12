@@ -57,9 +57,9 @@ export default function Hero() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="text-lg md:text-xl text-stone-600 mb-10 leading-relaxed max-w-lg font-medium"
           >
-            We replace slow WordPress &amp; Shopify sites with{" "}
+            We replace slow WordPress, Shopify, Wix, Squarespace, and drag and drop sites with{" "}
             <span className="text-charcoal font-bold underline decoration-cognac/40 decoration-2 underline-offset-2">
-              hand-built websites that actually perform
+              custom built websites that actually perform
             </span>
             . Under 1 second. No monthly fees. No vendor lock-in.
           </motion.p>
@@ -77,7 +77,7 @@ export default function Hero() {
               data-cal-config='{"layout":"month_view"}'
               className="w-full sm:w-auto px-8 py-4 bg-charcoal text-white font-bold text-base rounded-full hover:bg-black transition-all duration-300 flex items-center justify-center gap-2 shadow-xl hover:shadow-2xl hover:-translate-y-0.5"
             >
-              Get Migration Plan <ArrowRight className="w-5 h-5 text-cognac" />
+              Get a Free Quote <ArrowRight className="w-5 h-5 text-cognac" />
             </button>
 
             {/* Secondary CTA: White surface card */}
@@ -96,7 +96,7 @@ export default function Hero() {
             transition={{ delay: 0.45 }}
             className="text-xs text-stone-400 mt-1"
           >
-            WordPress &amp; Shopify migrations · Avg 100/100 PageSpeed · $0/mo hosting
+            WordPress · Shopify · Wix · Squarespace · Any platform · 100/100 PageSpeed · $0/mo hosting
           </motion.p>
 
           {/* Trust signals */}
@@ -112,7 +112,7 @@ export default function Hero() {
             </div>
             <div className="flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-charcoal flex-shrink-0" />
-              <span>Bank-Grade Security</span>
+              <span>Bank Grade Security</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-charcoal flex-shrink-0" />
