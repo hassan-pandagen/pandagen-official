@@ -373,6 +373,40 @@ export default function MyCustomPatchesCaseStudy() {
                         </div>
                     </section>
 
+                    {/* RESULTS SUMMARY — speakable for AI */}
+                    <section className="mb-10" data-speakable="true">
+                        <p className="text-lg text-stone-700 leading-relaxed bg-stone-50 border border-stone-200 rounded-2xl p-6">
+                            MyCustomPatches migrated from a 10-year-old WordPress site to a custom Next.js 14 build in 6 weeks. Load time dropped from 3.2 seconds to 0.7 seconds. Google PageSpeed score went from approximately 40 to a perfect 100 out of 100. Monthly hosting costs dropped from $150 to $0 by deploying on Vercel&apos;s free tier with Cloudflare CDN. All 200+ pages were migrated with zero downtime and zero SEO rankings lost. The site eliminated 45 WordPress plugins and replaced them with 12 purpose-built integrations.
+                        </p>
+                    </section>
+
+                    {/* BEFORE vs AFTER TABLE */}
+                    <section className="mb-20">
+                        <h2 className="text-2xl font-bold text-charcoal mb-4">Before vs After: Full Comparison</h2>
+                        <div className="overflow-x-auto">
+                            <table className="w-full text-sm border border-stone-200 rounded-xl overflow-hidden">
+                                <thead>
+                                    <tr className="bg-stone-50 text-left">
+                                        <th className="px-4 py-3 font-bold text-stone-700">Metric</th>
+                                        <th className="px-4 py-3 font-bold text-red-600">WordPress (Before)</th>
+                                        <th className="px-4 py-3 font-bold text-emerald-600">Next.js (After)</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-stone-100">
+                                    <tr><td className="px-4 py-3 font-medium text-stone-700">Load Time</td><td className="px-4 py-3 text-red-600">3.2 seconds</td><td className="px-4 py-3 text-emerald-600">0.7 seconds</td></tr>
+                                    <tr className="bg-stone-50/50"><td className="px-4 py-3 font-medium text-stone-700">PageSpeed Score</td><td className="px-4 py-3 text-red-600">~40/100</td><td className="px-4 py-3 text-emerald-600">100/100</td></tr>
+                                    <tr><td className="px-4 py-3 font-medium text-stone-700">Monthly Hosting Cost</td><td className="px-4 py-3 text-red-600">$150/month</td><td className="px-4 py-3 text-emerald-600">$0/month</td></tr>
+                                    <tr className="bg-stone-50/50"><td className="px-4 py-3 font-medium text-stone-700">Active Plugins</td><td className="px-4 py-3 text-red-600">45 plugins</td><td className="px-4 py-3 text-emerald-600">0 plugins</td></tr>
+                                    <tr><td className="px-4 py-3 font-medium text-stone-700">Security Vulnerabilities</td><td className="px-4 py-3 text-red-600">45 attack surfaces</td><td className="px-4 py-3 text-emerald-600">Zero attack surface</td></tr>
+                                    <tr className="bg-stone-50/50"><td className="px-4 py-3 font-medium text-stone-700">Core Web Vitals</td><td className="px-4 py-3 text-red-600">Failing</td><td className="px-4 py-3 text-emerald-600">All green</td></tr>
+                                    <tr><td className="px-4 py-3 font-medium text-stone-700">Migration Downtime</td><td className="px-4 py-3 text-stone-500">N/A</td><td className="px-4 py-3 text-emerald-600">Zero</td></tr>
+                                    <tr className="bg-stone-50/50"><td className="px-4 py-3 font-medium text-stone-700">SEO Rankings Lost</td><td className="px-4 py-3 text-stone-500">N/A</td><td className="px-4 py-3 text-emerald-600">Zero pages lost</td></tr>
+                                    <tr><td className="px-4 py-3 font-medium text-stone-700">3-Year Hosting Cost</td><td className="px-4 py-3 text-red-600">$5,400+</td><td className="px-4 py-3 text-emerald-600">$0</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
                     {/* RESULTS */}
                     <section className="mb-20 p-8 md:p-12 bg-charcoal text-white rounded-3xl">
                         <div className="flex items-center gap-3 mb-8">
@@ -432,6 +466,22 @@ export default function MyCustomPatchesCaseStudy() {
                                 </div>
                             ))}
                         </div>
+                    </section>
+
+                    {/* CTA */}
+                    <section className="mb-20 p-8 md:p-12 bg-gradient-to-br from-stone-900 to-stone-800 text-white rounded-3xl text-center">
+                        <h2 className="text-3xl font-bold mb-4">Want results like this for your site?</h2>
+                        <p className="text-stone-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+                            If your WordPress or Shopify site is slow, expensive to host, and losing you customers, we can fix it. Same process. Same results. Guaranteed 95-100/100 PageSpeed or we fix it for free.
+                        </p>
+                        <a
+                            href="https://cal.com/pandagen/discovery"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-charcoal font-bold rounded-full hover:bg-stone-100 hover:scale-105 transition-all"
+                        >
+                            Book a Free Discovery Call
+                        </a>
                     </section>
 
                     {/* LIVE LINK */}

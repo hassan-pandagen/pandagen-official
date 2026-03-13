@@ -11,17 +11,40 @@
 ## JSX Order (follow exactly)
 
 ```
-Header → Animation → Executive Summary (data-speakable) → Article → Mid CTA → Bottom CTA → FAQAccordion → RelatedPosts → Footer
+Header → Animation → Executive Summary (data-speakable) → Article → Mid CTA → Key Takeaways → Bottom CTA → FAQAccordion → RelatedPosts → Footer
 ```
 
 ## Schema @graph nodes required
 
-- `Article` — must include: `wordCount`, `timeRequired`, `about[]`, `speakable`, 6 `citation[]`
+- `Article` — must include: `wordCount`, `timeRequired` (ISO 8601 e.g. "PT8M"), `about[]`, `speakable`, 6 `citation[]`
 - `BreadcrumbList`
 - `WebPage`
-- `Organization` — logo 655×113, foundingDate: "2023"
+- `Organization` — logo 655x113, foundingDate: "2026", alternateName: "Panda Gen", postalCode: "77489", email: "info@pandacodegen.com"
 - `FAQPage`
-- `HowTo` — for tutorial/process posts only
+
+**Removed:** HowTo schema (deprecated by Google Sept 2023, no longer generates rich results)
+
+## Organization Schema (canonical values — use these everywhere)
+
+```json
+{
+  "name": "PandaCodeGen",
+  "alternateName": "Panda Gen",
+  "logo": { "width": 655, "height": 113 },
+  "email": "info@pandacodegen.com",
+  "foundingDate": "2026",
+  "areaServed": "Worldwide",
+  "postalCode": "77489",
+  "sameAs": [
+    "https://twitter.com/pandacodegen",
+    "https://www.linkedin.com/company/pandacodegen",
+    "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
+    "https://github.com/hassan-pandagen",
+    "https://clutch.co/profile/panda-code-gen",
+    "https://www.trustpilot.com/review/pandacodegen.com"
+  ]
+}
+```
 
 ---
 
@@ -33,42 +56,40 @@ Header → Animation → Executive Summary (data-speakable) → Article → Mid 
 | 02 | `how-website-speed-affects-seo` | How Website Speed Affects SEO Rankings in 2026 (With Real Data) | SEO | Live ✅ |
 | 03 | `shopify-dawn-theme-slow` | Shopify Dawn Theme Slow? Here's Exactly Why (and the Real Fix) | Shopify | Live ✅ |
 | 04 | `wordpress-killer` | Why WordPress Is Dying (And What Smart Businesses Are Doing Instead) | WordPress | Live ✅ |
-| 02 | `shopify-headless` | Why Shopify Headless Is the Future of E-Commerce (And How to Get There) | Shopify | Live ✅ |
-| 03 | `wordpress-plugins-destroy-speed` | WordPress Plugins Are Destroying Your Site Speed (Here's the Proof) | WordPress | Live ✅ |
-| 04 | `elementor-kills-seo` | Elementor Is Killing Your SEO Score — Here's the Data | WordPress | Live ✅ |
-| 05 | `shopify-plus-still-slow` | Shopify Plus Is Still Slow. Here's Why $2,000/Month Doesn't Buy You Speed | Shopify | Live ✅ |
-| 06 | `shopify-conversion-rate-speed-fix` | How Site Speed Fixes Shopify Conversion Rates (Real Data) | Shopify | Live ✅ |
-| 07 | `wordpress-traffic-drop-speed` | Why Your WordPress Site Traffic Is Dropping (Speed Is Killing You) | WordPress | Live ✅ |
-| 08 | `wordpress-ai-security-risk-2026` | WordPress AI Security Risk 2026: Why Plugin Vulnerabilities Are Getting Worse | Security | Live ✅ |
-| 09 | `how-to-fix-slow-wordpress` | How to Fix a Slow WordPress Site (The Real Answer) | WordPress | Live ✅ |
-| 10 | `how-to-achieve-100-pagespeed` | How to Achieve 100/100 PageSpeed Score: Complete Next.js Guide | Performance | Live ✅ |
-| 11 | `shopify-slow-losing-sales` | Your Slow Shopify Store Is Losing You Sales Every Day | Shopify | Live ✅ |
-| 12 | `why-competitor-outranks-you` | Why Your Competitor Outranks You (It's Not Their Content) | SEO | Live ✅ |
-| 13 | `google-universal-commerce-protocol-what-it-means-for-your-store` | Google Universal Commerce Protocol: What It Means for Your Store | Ecommerce | Live ✅ |
-| 14 | `for-agencies-offer-custom-web-development` | For Agencies: How to Offer Custom Web Development Without Hiring a Dev Team | Agency | Live ✅ |
-| 15 | `why-we-chose-nextjs-over-wordpress-2026` | Why We Chose Next.js Over WordPress for Every New Client in 2026 | Comparison | Live ✅ |
-| 16 | `wordpress-vs-custom-code-real-cost-3-years` | WordPress vs Custom Code: The Real Cost Over 3 Years | Comparison | Live ✅ |
+| 05 | `shopify-headless` | Why Shopify Headless Is the Future of E-Commerce (And How to Get There) | Shopify | Live ✅ |
+| 06 | `wordpress-plugins-destroy-speed` | WordPress Plugins Are Destroying Your Site Speed (Here's the Proof) | WordPress | Live ✅ |
+| 07 | `elementor-kills-seo` | Elementor Is Killing Your SEO Score — Here's the Data | WordPress | Live ✅ |
+| 08 | `shopify-plus-still-slow` | Shopify Plus Is Still Slow. Here's Why $2,000/Month Doesn't Buy You Speed | Shopify | Live ✅ |
+| 09 | `shopify-conversion-rate-speed-fix` | How Site Speed Fixes Shopify Conversion Rates (Real Data) | Shopify | Live ✅ |
+| 10 | `wordpress-traffic-drop-speed` | Why Your WordPress Site Traffic Is Dropping (Speed Is Killing You) | WordPress | Live ✅ |
+| 11 | `wordpress-ai-security-risk-2026` | WordPress AI Security Risk 2026: Why Plugin Vulnerabilities Are Getting Worse | Security | Live ✅ |
+| 12 | `how-to-fix-slow-wordpress` | How to Fix a Slow WordPress Site (The Real Answer) | WordPress | Live ✅ |
+| 13 | `how-to-achieve-100-pagespeed` | How to Achieve 100/100 PageSpeed Score: Complete Next.js Guide | Performance | Live ✅ |
+| 14 | `shopify-slow-losing-sales` | Your Slow Shopify Store Is Losing You Sales Every Day | Shopify | Live ✅ |
+| 15 | `why-competitor-outranks-you` | Why Your Competitor Outranks You (It's Not Their Content) | SEO | Live ✅ |
+| 16 | `google-universal-commerce-protocol-what-it-means-for-your-store` | Google Universal Commerce Protocol: What It Means for Your Store | Ecommerce | Live ✅ |
+| 17 | `for-agencies-offer-custom-web-development` | For Agencies: How to Offer Custom Web Development Without Hiring a Dev Team | Agency | Live ✅ |
+| 18 | `why-we-chose-nextjs-over-wordpress-2026` | Why We Chose Next.js Over WordPress for Every New Client in 2026 | Comparison | Live ✅ |
+| 19 | `wordpress-vs-custom-code-real-cost-3-years` | WordPress vs Custom Code: The Real Cost Over 3 Years | Comparison | Live ✅ |
+| 20 | `how-to-migrate-wordpress-to-nextjs` | How to Migrate WordPress to Next.js Without Losing SEO | Tutorial | Live ✅ |
+| 21 | `nextjs-hosting-zero-cost` | How We Host Client Websites for Free — $0/Month With Vercel | Performance | Live ✅ |
 
 ---
 
-## Planned Blog Posts — Next 10 (Priority Order)
+## Planned Blog Posts — Next 5 (Priority Order)
 
 Posts to write next, ranked by ease of ranking + business value. New domain = target low-competition keywords first.
 
 | Priority | Slug | Title | Primary Keyword | Est. Volume | Competition | Target Date |
 |----------|------|-------|-----------------|-------------|-------------|-------------|
-| ✅ done | `shopify-dawn-theme-slow` | Shopify Dawn Theme Slow? Here's Exactly Why (and the Real Fix) | `shopify dawn theme slow` | 300–700/mo | **Low** | Mar 2026 |
-| ✅ done | `how-website-speed-affects-seo` | How Website Speed Affects SEO Rankings in 2026 | `how does website speed affect seo` | 1k–3k/mo | Low–Med | Mar 2026 |
-| ✅ done | `wordpress-vs-nextjs` | WordPress vs Next.js: Which Is Actually Better for Your Business? | `wordpress vs next.js` | 1.5k–4k/mo | Med | Mar 2026 |
-| ✅ done | `how-to-migrate-wordpress-to-nextjs` | How to Migrate WordPress to Next.js Without Losing SEO | `how to migrate wordpress to next.js` | 300–800/mo | Low–Med | Mar 2026 |
-| 🟡 5 | `nextjs-hosting-zero-cost` | How We Host Next.js Sites for $0 a Month (Vercel Free Tier Explained) | `free nextjs hosting` | 400–1k/mo | Low–Med | Apr 2026 |
-| 🟡 6 | `what-is-headless-commerce` | What Is Headless Commerce? A Plain-English Guide for Store Owners | `what is headless commerce` | 1.5k–4k/mo | Med | May 2026 |
-| 🟡 7 | `shopify-vs-custom-website` | Shopify vs Custom Website: When You've Outgrown Shopify | `shopify vs custom website` | 800–2.5k/mo | Med | May 2026 |
-| 🟢 8 | `core-web-vitals-explained` | Core Web Vitals Explained for Business Owners (Not Developers) | `core web vitals explained` | 300–800/mo | Low–Med | May 2026 |
-| 🟢 9 | `woocommerce-too-slow` | WooCommerce Too Slow? Here's What's Actually Breaking Your Store | `woocommerce slow` | 500–1.5k/mo | Low–Med | Jun 2026 |
-| 🟢 10 | `custom-website-patch-company` | Does Your Patch Company Website Need a Custom Build? | `custom website for patch company` | 50–150/mo | **Very Low** | Jun 2026 |
+| ✅ 21 | `nextjs-hosting-zero-cost` | How We Host Client Websites for Free — $0/Month With Vercel | `free nextjs hosting` | 400–1k/mo | Low–Med | ~~Mar 13–14~~ Done |
+| 🔴 22 | `what-is-headless-commerce` | What Is Headless Commerce? A Plain-English Guide for Store Owners | `what is headless commerce` | 1.5k–4k/mo | Med | Mar 15–16 |
+| 🔴 23 | `shopify-vs-custom-website` | Shopify vs Custom Website: When You've Outgrown Shopify | `shopify vs custom website` | 800–2.5k/mo | Med | Mar 17–18 |
+| 🔴 24 | `core-web-vitals-explained` | Core Web Vitals Explained for Business Owners (Not Developers) | `core web vitals explained` | 300–800/mo | Low–Med | Mar 19–20 |
+| 🔴 25 | `woocommerce-too-slow` | WooCommerce Too Slow? Here's What's Actually Breaking Your Store | `woocommerce slow` | 500–1.5k/mo | Low–Med | Mar 21–22 |
+| 🔴 26 | `custom-website-patch-company` | Does Your Patch Company Website Need a Custom Build? | `custom website for patch company` | 50–150/mo | **Very Low** | Mar 23–24 |
 
-**Priority key:** 🔴 Write now (quickest ranking wins) · 🟡 Write next (med-term) · 🟢 Write when capacity allows
+**Pace: 3 blogs/week** — new domain needs content velocity to build topical authority fast
 
 ---
 
@@ -108,6 +129,9 @@ Every new post should link to:
 - Every post needs a "before/after" frame — readers need contrast to understand the value
 - End every post with a booking CTA: `https://cal.com/pandagen/discovery`
 - Read time target: 8–12 minutes (1,800–2,800 words)
+- Use HTML `<table>` elements for comparison data (AI systems extract tables at higher rates)
+- Include a "Key Takeaways" section before FAQ (3-5 numbered points, business-owner friendly)
+- Use `data-speakable="true"` on Executive Summary for AI citation readiness
 
 ---
 
@@ -115,10 +139,12 @@ Every new post should link to:
 
 1. Add entry to `src/data/blog.ts` with `id`, `title`, `excerpt`, `category`, `faqs[]`
 2. Create `src/app/blog/[slug]/page.tsx` following gold standard structure
-3. Add URL to `indexnow-ping.mjs` URL list
-4. Run `node indexnow-ping.mjs` ONCE after deployment (never repeat)
-5. Add to this README under "Existing Blog Posts" table
+3. Use relative canonical paths (e.g. `/blog/slug`) — `metadataBase` resolves them
+4. Organization schema must match canonical values above (no HowTo schema)
+5. Add URL to `indexnow-ping.mjs` URL list
+6. User runs `node indexnow-ping.mjs` ONCE after deployment (never run automatically)
+7. Add to this README under "Existing Blog Posts" table
 
 ---
 
-*Last updated: March 2026 — 16 live posts, 10 planned*
+*Last updated: March 13, 2026 — 21 live posts, 5 remaining planned (all 5 by Mar 24)*

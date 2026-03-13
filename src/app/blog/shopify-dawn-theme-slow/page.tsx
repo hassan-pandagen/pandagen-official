@@ -115,14 +115,14 @@ const articleSchema = {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
             "name": "PandaCodeGen",
-            "alternateName": "PandaCodeGen LLC",
+            "alternateName": "Panda Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://twitter.com/pandacodegen", "https://linkedin.com/company/pandacodegen"],
+            "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
             "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress and Shopify sites. We guarantee 95–100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
-            "foundingDate": "2023"
+            "foundingDate": "2026"
         },
         {
             "@type": "HowTo",
@@ -227,7 +227,7 @@ export default function ShopifyDawnThemeSlowPage() {
                         </div>
                         <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
-                            bio="Hassan has built and migrated 40+ websites from WordPress and Shopify to Next.js. Every build scores 95–100/100 on Google PageSpeed. He writes about web performance, ecommerce speed, and why slow websites are a silent revenue killer."
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom-coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -392,12 +392,34 @@ export default function ShopifyDawnThemeSlowPage() {
                             Here&apos;s the honest breakdown based on what we see auditing Shopify stores:
                         </BlogText>
 
-                        <BlogList items={[
-                            "Clean Dawn, no apps, optimized images: 65–80/100 mobile",
-                            "Dawn with 3–5 typical apps (reviews, chat, upsell): 40–60/100 mobile",
-                            "Dawn with 6+ apps + Klaviyo + Gorgias + loyalty program: 25–45/100 mobile",
-                            "Dawn on Shopify Plus with heavy customization: 30–55/100 mobile",
-                        ]} />
+                        <div className="overflow-x-auto my-6">
+                            <table className="w-full text-sm border border-stone-200 rounded-xl overflow-hidden">
+                                <thead>
+                                    <tr className="bg-stone-50">
+                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Store Configuration</th>
+                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Mobile PageSpeed Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-stone-100">
+                                    <tr>
+                                        <td className="px-4 py-3 text-stone-600">Clean Dawn, no apps, optimized images</td>
+                                        <td className="px-4 py-3 text-green-700 font-medium">65–80/100</td>
+                                    </tr>
+                                    <tr className="bg-stone-50/50">
+                                        <td className="px-4 py-3 text-stone-600">Dawn with 3–5 typical apps (reviews, chat, upsell)</td>
+                                        <td className="px-4 py-3 text-orange-600 font-medium">40–60/100</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="px-4 py-3 text-stone-600">Dawn with 6+ apps + Klaviyo + Gorgias + loyalty program</td>
+                                        <td className="px-4 py-3 text-red-600 font-medium">25–45/100</td>
+                                    </tr>
+                                    <tr className="bg-stone-50/50">
+                                        <td className="px-4 py-3 text-stone-600">Dawn on Shopify Plus with heavy customization</td>
+                                        <td className="px-4 py-3 text-red-600 font-medium">30–55/100</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
 
                         <BlogText>
                             The Deloitte &ldquo;Milliseconds Make Millions&rdquo; study found that a 0.1-second improvement in mobile load time increases conversions by 8%. A typical Shopify store scoring 45/100 is leaving 20–30% of conversions on the table compared to a 95/100 storefront.
@@ -413,28 +435,64 @@ export default function ShopifyDawnThemeSlowPage() {
                             Yes — with real limits. Here&apos;s what actually works and what the ceiling looks like:
                         </BlogText>
 
-                        <BlogText>
-                            <strong>What works (10–20 point improvement):</strong>
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Audit and remove unused apps — each app removed saves 80–200ms",
-                            "Compress and resize hero images before uploading (target under 150KB)",
-                            "Use Shopify&apos;s native lazy loading for all below-fold images",
-                            "Defer non-critical scripts using Shopify&apos;s Script Tag API where available",
-                            "Remove redundant theme sections that aren&apos;t visible on any live page",
-                        ]} />
-
-                        <BlogText>
-                            <strong>What doesn&apos;t work (and why):</strong>
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Switching to a &ldquo;faster&rdquo; paid theme — the app bloat follows you",
-                            "Installing a speed optimization app — adds another script to fix your scripts",
-                            "Using a CDN — Shopify already uses a CDN, this isn&apos;t the bottleneck",
-                            "Upgrading to Shopify Plus — Plus is faster at checkout, not at storefront rendering",
-                        ]} />
+                        <div className="overflow-x-auto my-6">
+                            <table className="w-full text-sm border border-stone-200 rounded-xl overflow-hidden">
+                                <thead>
+                                    <tr className="bg-stone-50">
+                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Optimization</th>
+                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Works?</th>
+                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Impact</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-stone-100">
+                                    <tr>
+                                        <td className="px-4 py-3 text-stone-600">Audit and remove unused apps</td>
+                                        <td className="px-4 py-3 text-green-700 font-medium">Yes</td>
+                                        <td className="px-4 py-3 text-stone-600">Each app removed saves 80–200ms</td>
+                                    </tr>
+                                    <tr className="bg-stone-50/50">
+                                        <td className="px-4 py-3 text-stone-600">Compress and resize hero images before uploading</td>
+                                        <td className="px-4 py-3 text-green-700 font-medium">Yes</td>
+                                        <td className="px-4 py-3 text-stone-600">Target under 150KB per image</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="px-4 py-3 text-stone-600">Enable native lazy loading for below-fold images</td>
+                                        <td className="px-4 py-3 text-green-700 font-medium">Yes</td>
+                                        <td className="px-4 py-3 text-stone-600">Reduces initial page weight and improves LCP</td>
+                                    </tr>
+                                    <tr className="bg-stone-50/50">
+                                        <td className="px-4 py-3 text-stone-600">Defer non-critical scripts via Script Tag API</td>
+                                        <td className="px-4 py-3 text-green-700 font-medium">Yes</td>
+                                        <td className="px-4 py-3 text-stone-600">Reduces blocking time where supported</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="px-4 py-3 text-stone-600">Remove redundant theme sections</td>
+                                        <td className="px-4 py-3 text-green-700 font-medium">Yes</td>
+                                        <td className="px-4 py-3 text-stone-600">Even hidden sections add rendering overhead</td>
+                                    </tr>
+                                    <tr className="bg-stone-50/50">
+                                        <td className="px-4 py-3 text-stone-600">Switching to a &ldquo;faster&rdquo; paid theme</td>
+                                        <td className="px-4 py-3 text-red-600 font-medium">No</td>
+                                        <td className="px-4 py-3 text-stone-600">App bloat follows you to any theme</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="px-4 py-3 text-stone-600">Installing a speed optimization app</td>
+                                        <td className="px-4 py-3 text-red-600 font-medium">No</td>
+                                        <td className="px-4 py-3 text-stone-600">Adds another script to fix your scripts</td>
+                                    </tr>
+                                    <tr className="bg-stone-50/50">
+                                        <td className="px-4 py-3 text-stone-600">Using a CDN</td>
+                                        <td className="px-4 py-3 text-red-600 font-medium">No</td>
+                                        <td className="px-4 py-3 text-stone-600">Shopify already uses a CDN — not the bottleneck</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="px-4 py-3 text-stone-600">Upgrading to Shopify Plus</td>
+                                        <td className="px-4 py-3 text-red-600 font-medium">No</td>
+                                        <td className="px-4 py-3 text-stone-600">Plus is faster at checkout, not storefront rendering</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
 
                         <BlogQuote>
                             We&apos;ve audited 30+ Shopify stores. The ceiling with theme-level optimization is 70–75/100 mobile. To get above that, you need to move outside Shopify&apos;s rendering layer.
@@ -550,6 +608,18 @@ export default function ShopifyDawnThemeSlowPage() {
                             Book Free Store Audit <ArrowRight className="w-5 h-5" />
                         </a>
                     </div>
+
+                    {/* Key Takeaways */}
+                    <section className="mb-10">
+                        <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
+                        <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
+                            <li><strong>Dawn is not the problem</strong> — third-party apps, Liquid rendering, and Shopify's own platform scripts are what make your store slow, not the theme.</li>
+                            <li><strong>Every app you install adds 80-200KB of JavaScript</strong> — five typical apps can add 1-2 seconds to every page load, dropping your score from 75 to 40.</li>
+                            <li><strong>Theme-level fixes only gain 10-20 points</strong> — removing unused apps, compressing images, and deferring scripts help, but the ceiling on standard Shopify is 70-75/100.</li>
+                            <li><strong>A store at 45/100 is leaving $10K-$15K/month on the table</strong> — every 0.1-second improvement increases conversions by 8%, and the gap between 45 and 95 is enormous.</li>
+                            <li><strong>Headless Shopify is the only path to 90-100/100</strong> — keeping your Shopify backend while replacing the storefront with Next.js eliminates every speed bottleneck the platform imposes.</li>
+                        </ol>
+                    </section>
 
                     {dawnFAQs.length > 0 && <FAQAccordion faqs={dawnFAQs} />}
 

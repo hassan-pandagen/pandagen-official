@@ -1,0 +1,40 @@
+# PandaCodeGen
+
+> PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95-100/100 Google PageSpeed on every build.
+
+## Services
+- [WordPress Migration](https://www.pandacodegen.com/services/wordpress-migration): Migrate from WordPress to a custom-coded Next.js site with sub-second load times
+- [E-Commerce Solutions](https://www.pandacodegen.com/services/ecommerce): Custom Shopify headless storefronts and e-commerce platforms
+- [Custom Engineering](https://www.pandacodegen.com/services/custom-engineering): SaaS dashboards, web applications, and custom development
+- [WooCommerce Migration](https://www.pandacodegen.com/services/woocommerce): Move from WooCommerce to headless Shopify or custom solutions
+- [Wix Migration](https://www.pandacodegen.com/services/wix): Escape Wix limitations with a custom-coded site
+- [Squarespace Migration](https://www.pandacodegen.com/services/squarespace): Migrate from Squarespace to Next.js
+- [Webflow Migration](https://www.pandacodegen.com/services/webflow): Move from Webflow to custom code
+- [GoHighLevel Migration](https://www.pandacodegen.com/services/gohighlevel): Migrate from GoHighLevel to custom Next.js
+
+## Blog
+- [How to Migrate WordPress to Next.js](https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs): Complete step-by-step migration guide
+- [WordPress vs Next.js](https://www.pandacodegen.com/blog/wordpress-vs-nextjs): Detailed comparison for business owners
+- [How Website Speed Affects SEO](https://www.pandacodegen.com/blog/how-website-speed-affects-seo): Core Web Vitals and ranking impact
+- [How to Achieve 100 PageSpeed](https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed): Technical guide to perfect PageSpeed scores
+- [WordPress vs Custom Code: Real Cost Over 3 Years](https://www.pandacodegen.com/blog/wordpress-vs-custom-code-real-cost-3-years): Total cost of ownership analysis
+- [Why We Chose Next.js Over WordPress in 2026](https://www.pandacodegen.com/blog/why-we-chose-nextjs-over-wordpress-2026): Technology decision framework
+- [Shopify Dawn Theme Slow](https://www.pandacodegen.com/blog/shopify-dawn-theme-slow): Why Shopify's default theme underperforms
+- [How to Fix Slow WordPress](https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress): WordPress performance optimization guide
+
+## Case Studies
+- [MyCustomPatches](https://www.pandacodegen.com/work/mycustompatches): E-commerce migration, PageSpeed 40 to 100
+- [Panda Patches](https://www.pandacodegen.com/work/panda-patches): Custom Shopify headless storefront
+- [Enterprise Ops](https://www.pandacodegen.com/work/enterprise-ops): Business operations dashboard
+- [Panda CodeLab](https://www.pandacodegen.com/work/panda-codelab): Internal development platform
+
+## Company
+- [About Us](https://www.pandacodegen.com/about): Our team, mission, and approach
+- [Pricing](https://www.pandacodegen.com/pricing): Transparent fixed-price packages
+- [Contact](https://www.pandacodegen.com/contact): Get in touch for a free consultation
+- [Partners](https://www.pandacodegen.com/partners): White-label development program
+
+## Contact
+- Email: info@pandacodegen.com
+- Phone: +1 (302) 250-4340
+- Location: Missouri City, TX, USA

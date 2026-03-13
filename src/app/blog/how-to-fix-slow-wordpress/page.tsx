@@ -132,14 +132,14 @@ const articleSchema = {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
             "name": "PandaCodeGen",
-            "alternateName": "PandaCodeGen Code",
+            "alternateName": "Panda Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://twitter.com/pandacodegen", "https://linkedin.com/company/pandagen"],
-            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" },
+            "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
+            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
             "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
-            "foundingDate": "2023"
+            "foundingDate": "2026"
         },
         {
             "@type": "FAQPage",
@@ -245,7 +245,7 @@ export default function FixSlowWordPressPage() {
                         </div>
                         <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
-                            bio="Hassan has built and migrated 40+ websites from WordPress and Shopify to Next.js. Every build scores 95–100/100 on Google PageSpeed. He writes about web performance, ecommerce speed, and why slow websites are a silent revenue killer."
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom-coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -761,6 +761,18 @@ export default function FixSlowWordPressPage() {
                             30-minute call • No commitment • See real before/after speeds
                         </p>
                     </div>
+
+                    {/* Key Takeaways */}
+                    <section className="mb-10">
+                        <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
+                        <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
+                            <li><strong>Removing unused plugins has the highest immediate impact</strong> — each plugin adds 2-15 HTTP requests, and cutting half your plugins can save 0.5-1.5 seconds of load time.</li>
+                            <li><strong>Image optimisation alone can gain 10-20 PageSpeed points</strong> — most WordPress sites load full-resolution images on mobile when a compressed WebP at the right size would be 80% smaller.</li>
+                            <li><strong>WordPress has a hard speed ceiling of 2-2.5 seconds</strong> — even with all 8 optimisations applied perfectly, the PHP architecture prevents sub-1-second load times.</li>
+                            <li><strong>Page builders are the single biggest speed killer</strong> — Elementor, Divi, and WPBakery generate 3x more code than needed and add 1-2 seconds to every page load.</li>
+                            <li><strong>If you are going to rebuild anyway, rebuild on Next.js</strong> — the same effort that gets WordPress to 2 seconds gets Next.js to 0.8 seconds with 95-100/100 PageSpeed.</li>
+                        </ol>
+                    </section>
 
                     {/* FAQ Section */}
                     {slowWordPressFAQs.length > 0 && <FAQAccordion faqs={slowWordPressFAQs} />}

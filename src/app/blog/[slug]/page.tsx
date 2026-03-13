@@ -1507,8 +1507,8 @@ export default async function BlogPost(props: PageProps) {
                     "logo": {
                         "@type": "ImageObject",
                         "url": "https://www.pandacodegen.com/logo.png",
-                        "width": 512,
-                        "height": 512
+                        "width": 655,
+                        "height": 113
                     }
                 },
                 "mainEntityOfPage": {
@@ -1517,14 +1517,23 @@ export default async function BlogPost(props: PageProps) {
                 },
                 "articleSection": post.category,
                 "keywords": [
+                    post.category,
                     "Next.js development",
                     "WordPress migration",
-                    "Shopify headless",
-                    "React development",
                     "web performance",
+                    "custom code",
                     "enterprise web development"
                 ],
-                "timeRequired": post.readTime,
+                "timeRequired": "PT" + post.readTime.replace(/[^0-9]/g, '') + "M",
+                "wordCount": parseInt(post.readTime) * 200,
+                "speakable": {
+                    "@type": "SpeakableSpecification",
+                    "cssSelector": ["h1", "h2", "[data-speakable='true']"]
+                },
+                "about": [
+                    { "@type": "Thing", "name": "Web Development" },
+                    { "@type": "Thing", "name": "Website Performance" }
+                ],
                 "inLanguage": "en-US"
             },
             {
@@ -1575,19 +1584,23 @@ export default async function BlogPost(props: PageProps) {
                 "@type": "Organization",
                 "@id": "https://www.pandacodegen.com/#organization",
                 "name": "PandaCodeGen",
-                "alternateName": "PandaCodeGen Code",
+                "alternateName": "Panda Gen",
                 "url": "https://www.pandacodegen.com",
                 "logo": {
                     "@type": "ImageObject",
                     "url": "https://www.pandacodegen.com/logo.png",
-                    "width": 512,
-                    "height": 512
+                    "width": 655,
+                    "height": 113
                 },
+                "foundingDate": "2026",
+                "areaServed": "Worldwide",
                 "sameAs": [
                     "https://twitter.com/pandacodegen",
-                    "https://www.linkedin.com/company/pandagen",
+                    "https://www.linkedin.com/company/pandacodegen",
                     "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
-                    "https://github.com/hassan-pandagen"
+                    "https://github.com/hassan-pandagen",
+                    "https://clutch.co/profile/panda-code-gen",
+                    "https://www.trustpilot.com/review/pandacodegen.com"
                 ],
                 "contactPoint": {
                     "@type": "ContactPoint",

@@ -1,5 +1,5 @@
 // Centralized blog data - Add new posts here and they'll automatically appear in sitemap
-export type IllustrationType = 'wordpress' | 'speed' | 'code' | 'saas' | 'plugins' | 'traffic' | 'sales' | 'conversion' | 'ranking' | 'cost' | 'performance' | 'security' | 'aicommerce';
+export type IllustrationType = 'wordpress' | 'speed' | 'code' | 'saas' | 'plugins' | 'traffic' | 'sales' | 'conversion' | 'ranking' | 'cost' | 'performance' | 'security' | 'aicommerce' | 'hosting';
 
 export interface FAQ {
   question: string;
@@ -22,6 +22,26 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    id: "nextjs-hosting-zero-cost",
+    title: "How We Host Client Websites for Free ($0/Month) With Vercel",
+    excerpt: "Most businesses pay $50 to $300/month for hosting that slows them down. We deploy every client site on Vercel's free tier with Cloudflare CDN. $0/month. Sub-second load times. Here's exactly how.",
+    category: "Performance",
+    readTime: "9 min",
+    date: "Mar 13",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: false,
+    illustrationType: 'hosting',
+    lastModified: "2026-03-13",
+    faqs: [
+      { question: "Is Vercel free hosting reliable for business websites?", answer: "Yes. Vercel's free tier runs on the same global edge network as their enterprise plans used by companies like Nike, Hulu, and The Washington Post. Your site is served from 80+ data centres worldwide. There is no speed difference between free and paid tiers for static sites. The free tier includes 100 GB bandwidth per month, which handles roughly 50,000–100,000 monthly visitors before you would need to upgrade." },
+      { question: "What is the catch with free Vercel hosting?", answer: "The free tier has three limits: 100 GB bandwidth per month, 100 hours of serverless function execution, and no team collaboration features. For a typical business website with 10,000–50,000 monthly visitors, you will never hit these limits. If you do grow past them, Vercel Pro costs $20/month — still 80–90% cheaper than traditional hosting. The real limitation is that free tier is for personal and hobby use per Vercel's terms, but the Pro tier at $20/month is still dramatically cheaper than WordPress hosting." },
+      { question: "How much does WordPress hosting actually cost per year?", answer: "WordPress hosting costs $600–$3,600 per year for a business site. Shared hosting ($10–$30/month) is slow and insecure. Managed WordPress hosting like WP Engine or Kinsta costs $30–$300/month. Add premium plugins ($200–$800/year), security scanning ($100–$300/year), and SSL certificates on some hosts. Over 3 years, a typical WordPress site costs $5,000–$15,000 in hosting and maintenance alone. A Next.js site on Vercel costs $0–$240/year." },
+      { question: "Can I host an e-commerce site for free on Vercel?", answer: "A headless e-commerce storefront (the customer-facing part) can absolutely run on Vercel for free. The product data and checkout are handled by Shopify, Snipcart, or Stripe — those have their own costs. But the actual website hosting, the part that affects your PageSpeed score and SEO rankings, costs $0. Our client MyCustomPatches runs their entire storefront on Vercel free tier with 100/100 PageSpeed." },
+      { question: "What happens if my site gets a traffic spike on free Vercel hosting?", answer: "Vercel handles traffic spikes automatically. There is no server to crash because static pages are served from a global CDN. If you exceed 100 GB bandwidth in a month, Vercel will ask you to upgrade to Pro ($20/month) rather than taking your site down. Compare this to shared WordPress hosting where a traffic spike can crash your server and take your site offline for hours." }
+    ]
+  },
   {
     id: "how-to-migrate-wordpress-to-nextjs",
     title: "How to Migrate WordPress to Next.js Without Losing SEO",

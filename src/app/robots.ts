@@ -20,6 +20,7 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'Gemini-Web', allow: '/' },
       { userAgent: 'Bingbot', allow: '/' },
       { userAgent: 'Applebot', allow: '/' },
+      { userAgent: 'OAI-SearchBot', allow: ['/'], disallow: ['/api/', '/_next/'] },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
   }

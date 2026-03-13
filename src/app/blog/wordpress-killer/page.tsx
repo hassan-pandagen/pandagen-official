@@ -124,14 +124,14 @@ const articleSchema = {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
             "name": "PandaCodeGen",
-            "alternateName": "PandaCodeGen Code",
+            "alternateName": "Panda Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://twitter.com/pandacodegen", "https://linkedin.com/company/pandagen"],
-            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" },
+            "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
+            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
             "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
-            "foundingDate": "2023"
+            "foundingDate": "2026"
         },
         {
             "@type": "FAQPage",
@@ -186,7 +186,7 @@ export default function WordPressKillerPage() {
                         </div>
                         <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
-                            bio="Hassan has built and migrated 40+ websites from WordPress and Shopify to Next.js. Every build scores 95–100/100 on Google PageSpeed. He writes about web performance, ecommerce speed, and why slow websites are a silent revenue killer."
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom-coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -321,6 +321,17 @@ export default function WordPressKillerPage() {
                             Book Free Cost Audit <ArrowRight className="w-5 h-5" />
                         </a>
                     </div>
+
+                    {/* Key Takeaways */}
+                    <section className="mb-10">
+                        <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
+                        <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
+                            <li><strong>WordPress costs 3-5x more than most owners think</strong> — when you add hosting, plugins, maintenance, security tools, and developer emergencies, the real annual cost is $2,300-$8,900.</li>
+                            <li><strong>Plugin conflicts and security incidents erase years of savings</strong> — a single WooCommerce update breaking 4 plugins cost one client $5,000 in downtime and emergency fixes.</li>
+                            <li><strong>The biggest hidden cost is lost revenue from slow speed</strong> — a PageSpeed score of 41/100 means you are losing 20-30% of organic traffic to faster competitors every single month.</li>
+                            <li><strong>A custom Next.js site pays for itself by Year 2-3</strong> — the one-time build cost is higher, but $0/year hosting and zero maintenance means the total 3-year cost is lower than WordPress.</li>
+                        </ol>
+                    </section>
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
                     <RelatedPosts currentPostId="wordpress-killer" category="Cost Analysis" />

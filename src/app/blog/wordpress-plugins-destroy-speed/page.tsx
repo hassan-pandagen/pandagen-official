@@ -124,14 +124,14 @@ const articleSchema = {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
             "name": "PandaCodeGen",
-            "alternateName": "PandaCodeGen Code",
+            "alternateName": "Panda Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://twitter.com/pandacodegen", "https://linkedin.com/company/pandagen"],
-            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" },
+            "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
+            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
             "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
-            "foundingDate": "2023"
+            "foundingDate": "2026"
         },
         {
             "@type": "FAQPage",
@@ -186,7 +186,7 @@ export default function WordPressPluginsSpeedPage() {
                         </div>
                         <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
-                            bio="Hassan has built and migrated 40+ websites from WordPress and Shopify to Next.js. Every build scores 95–100/100 on Google PageSpeed. He writes about web performance, ecommerce speed, and why slow websites are a silent revenue killer."
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom-coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -315,6 +315,18 @@ export default function WordPressPluginsSpeedPage() {
                             Book Free Speed Audit <ArrowRight className="w-5 h-5" />
                         </a>
                     </div>
+
+                    {/* Key Takeaways */}
+                    <section className="mb-10">
+                        <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
+                        <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
+                            <li><strong>Every plugin is a permanent tax on your speed</strong> — each one adds 2-15 HTTP requests, database queries, and JavaScript that load on every single page whether needed or not.</li>
+                            <li><strong>30+ plugins typically means a 35/100 PageSpeed score</strong> — that is Google's red zone, actively suppressing your organic rankings and handing traffic to faster competitors.</li>
+                            <li><strong>Plugin bloat costs real revenue</strong> — a 4-second load time on a $500K/year business translates to $75K-$150K in lost annual revenue from abandoned visits and lower conversions.</li>
+                            <li><strong>Removing half your plugins only gets you to 55-65/100</strong> — you can reduce the damage, but WordPress's hard ceiling of ~75/100 means you will never reach Google's green zone.</li>
+                            <li><strong>Migration is the only path to 95+ PageSpeed</strong> — once you have removed all non-essential plugins and still score below 70, the platform itself is the bottleneck, not your settings.</li>
+                        </ol>
+                    </section>
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
                     <RelatedPosts currentPostId="wordpress-plugins-destroy-speed" category="Performance" />

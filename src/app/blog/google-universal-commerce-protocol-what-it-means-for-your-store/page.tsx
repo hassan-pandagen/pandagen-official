@@ -183,14 +183,14 @@ const articleSchema = {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
             "name": "PandaCodeGen",
-            "alternateName": "PandaCodeGen Code",
+            "alternateName": "Panda Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://twitter.com/pandacodegen", "https://linkedin.com/company/pandagen"],
-            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" },
+            "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
+            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
             "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
-            "foundingDate": "2023"
+            "foundingDate": "2026"
         }
     ]
 };
@@ -258,7 +258,7 @@ export default function UCPBlogPage() {
                         </div>
                         <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
-                            bio="Hassan has built and migrated 40+ websites from WordPress and Shopify to Next.js. Every build scores 95–100/100 on Google PageSpeed. He writes about web performance, ecommerce speed, and why slow websites are a silent revenue killer."
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom-coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -727,6 +727,17 @@ export default function UCPBlogPage() {
                             </Link>
                         </div>
                     </div>
+
+                    <section className="mb-10">
+                        <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
+                        <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
+                            <li><strong>Customers can now buy without visiting your website</strong> — Google&apos;s Universal Commerce Protocol lets AI complete purchases inside search results, and stores not connected to UCP are invisible to these buyers.</li>
+                            <li><strong>Your product data is your new sales rep</strong> — AI agents decide what to recommend based on how complete and accurate your product titles, prices, stock levels, and specs are, not your website design.</li>
+                            <li><strong>Your platform determines your AI visibility</strong> — Shopify and custom-built stores are UCP-ready, WooCommerce requires costly developer work, and Wix/Squarespace have no clear path at all.</li>
+                            <li><strong>First movers will dominate AI-driven shopping</strong> — just like early SEO adopters in 2010, stores that prepare now will be the default AI recommendations when mass adoption hits in 2027.</li>
+                            <li><strong>Start with your product listings and Google Merchant Center</strong> — auditing your top 20 products for completeness and ensuring your Merchant Center feed is syncing are the highest-leverage actions you can take this week.</li>
+                        </ol>
+                    </section>
 
                 </article>
 

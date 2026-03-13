@@ -51,6 +51,7 @@ const urls = [
   `${BASE}/blog/how-website-speed-affects-seo`,
   `${BASE}/blog/wordpress-vs-nextjs`,
   `${BASE}/blog/how-to-migrate-wordpress-to-nextjs`,
+  `${BASE}/blog/nextjs-hosting-zero-cost`,
 
   // Legal
   `${BASE}/privacy`,

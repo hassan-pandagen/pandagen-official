@@ -130,14 +130,14 @@ const articleSchema = {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
             "name": "PandaCodeGen",
-            "alternateName": "PandaCodeGen Code",
+            "alternateName": "Panda Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://twitter.com/pandacodegen", "https://linkedin.com/company/pandagen"],
-            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" },
+            "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
+            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
             "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
-            "foundingDate": "2023"
+            "foundingDate": "2026"
         },
         {
             "@type": "FAQPage",
@@ -199,7 +199,7 @@ export default function WordPressVsCustomCodeCostPage() {
                         </div>
                         <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
-                            bio="Hassan has built and migrated 40+ websites from WordPress and Shopify to Next.js. Every build scores 95–100/100 on Google PageSpeed. He writes about web performance, ecommerce speed, and why slow websites are a silent revenue killer."
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom-coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -242,37 +242,71 @@ export default function WordPressVsCustomCodeCostPage() {
                             Let&apos;s go line by line. This is the real cost for a typical business WordPress site — not a hobby blog, but a site that&apos;s actually doing work.
                         </BlogText>
 
-                        <div className="my-10 border border-stone-200 rounded-2xl overflow-hidden shadow-sm">
-                            <div className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr] bg-stone-50 px-4 py-3 border-b border-stone-200 text-xs font-black text-stone-400 uppercase tracking-widest">
-                                <div>Cost Item</div>
-                                <div className="text-center">Year 1</div>
-                                <div className="text-center">Year 2</div>
-                                <div className="text-center">Year 3</div>
-                                <div className="text-center font-black text-red-400">3-Year Total</div>
-                            </div>
-                            {[
-                                { item: "Managed Hosting (WP Engine / Kinsta)", y1: "$1,800", y2: "$1,800", y3: "$1,800", total: "$5,400" },
-                                { item: "Premium Plugins (SEO, security, forms, cache, backup)", y1: "$800", y2: "$800", y3: "$800", total: "$2,400" },
-                                { item: "Developer Maintenance (updates, conflicts, fixes)", y1: "$1,500", y2: "$1,500", y3: "$1,500", total: "$4,500" },
-                                { item: "Security Tools (Wordfence Premium, MalCare)", y1: "$250", y2: "$250", y3: "$250", total: "$750" },
-                                { item: "Theme (premium theme or child theme)", y1: "$200", y2: "$0", y3: "$0", total: "$200" },
-                                { item: "Emergency Developer Fixes (avg 1-2/year)", y1: "$600", y2: "$600", y3: "$600", total: "$1,800" },
-                            ].map((row, i) => (
-                                <div key={i} className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr] px-4 py-3 border-b border-stone-100 last:border-0 text-sm hover:bg-stone-50/50 transition-colors">
-                                    <div className="text-charcoal font-medium">{row.item}</div>
-                                    <div className="text-center text-stone-500">{row.y1}</div>
-                                    <div className="text-center text-stone-500">{row.y2}</div>
-                                    <div className="text-center text-stone-500">{row.y3}</div>
-                                    <div className="text-center font-bold text-red-500">{row.total}</div>
-                                </div>
-                            ))}
-                            <div className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr] px-4 py-4 bg-stone-50 border-t border-stone-200 text-sm font-black">
-                                <div className="text-charcoal">TOTAL WordPress Cost</div>
-                                <div className="text-center text-red-500">$5,150</div>
-                                <div className="text-center text-red-500">$4,950</div>
-                                <div className="text-center text-red-500">$4,950</div>
-                                <div className="text-center text-red-600 text-base">$15,050</div>
-                            </div>
+                        <div className="overflow-x-auto my-10">
+                            <table className="w-full text-sm border border-stone-200 rounded-xl overflow-hidden">
+                                <thead>
+                                    <tr className="bg-stone-50">
+                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Cost Item</th>
+                                        <th className="text-center px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Year 1</th>
+                                        <th className="text-center px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Year 2</th>
+                                        <th className="text-center px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Year 3</th>
+                                        <th className="text-center px-4 py-3 font-semibold text-red-500 border-b border-stone-200">3-Year Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-stone-100">
+                                    <tr>
+                                        <td className="px-4 py-3 text-charcoal font-medium">Managed Hosting (WP Engine / Kinsta)</td>
+                                        <td className="px-4 py-3 text-center text-stone-500">$1,800</td>
+                                        <td className="px-4 py-3 text-center text-stone-500">$1,800</td>
+                                        <td className="px-4 py-3 text-center text-stone-500">$1,800</td>
+                                        <td className="px-4 py-3 text-center font-bold text-red-500">$5,400</td>
+                                    </tr>
+                                    <tr className="bg-stone-50/50">
+                                        <td className="px-4 py-3 text-charcoal font-medium">Premium Plugins (SEO, security, forms, cache, backup)</td>
+                                        <td className="px-4 py-3 text-center text-stone-500">$800</td>
+                                        <td className="px-4 py-3 text-center text-stone-500">$800</td>
+                                        <td className="px-4 py-3 text-center text-stone-500">$800</td>
+                                        <td className="px-4 py-3 text-center font-bold text-red-500">$2,400</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="px-4 py-3 text-charcoal font-medium">Developer Maintenance (updates, conflicts, fixes)</td>
+                                        <td className="px-4 py-3 text-center text-stone-500">$1,500</td>
+                                        <td className="px-4 py-3 text-center text-stone-500">$1,500</td>
+                                        <td className="px-4 py-3 text-center text-stone-500">$1,500</td>
+                                        <td className="px-4 py-3 text-center font-bold text-red-500">$4,500</td>
+                                    </tr>
+                                    <tr className="bg-stone-50/50">
+                                        <td className="px-4 py-3 text-charcoal font-medium">Security Tools (Wordfence Premium, MalCare)</td>
+                                        <td className="px-4 py-3 text-center text-stone-500">$250</td>
+                                        <td className="px-4 py-3 text-center text-stone-500">$250</td>
+                                        <td className="px-4 py-3 text-center text-stone-500">$250</td>
+                                        <td className="px-4 py-3 text-center font-bold text-red-500">$750</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="px-4 py-3 text-charcoal font-medium">Theme (premium theme or child theme)</td>
+                                        <td className="px-4 py-3 text-center text-stone-500">$200</td>
+                                        <td className="px-4 py-3 text-center text-stone-500">$0</td>
+                                        <td className="px-4 py-3 text-center text-stone-500">$0</td>
+                                        <td className="px-4 py-3 text-center font-bold text-red-500">$200</td>
+                                    </tr>
+                                    <tr className="bg-stone-50/50">
+                                        <td className="px-4 py-3 text-charcoal font-medium">Emergency Developer Fixes (avg 1-2/year)</td>
+                                        <td className="px-4 py-3 text-center text-stone-500">$600</td>
+                                        <td className="px-4 py-3 text-center text-stone-500">$600</td>
+                                        <td className="px-4 py-3 text-center text-stone-500">$600</td>
+                                        <td className="px-4 py-3 text-center font-bold text-red-500">$1,800</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr className="bg-stone-100">
+                                        <td className="px-4 py-4 font-bold text-charcoal">TOTAL WordPress Cost</td>
+                                        <td className="px-4 py-4 text-center font-bold text-red-500">$5,150</td>
+                                        <td className="px-4 py-4 text-center font-bold text-red-500">$4,950</td>
+                                        <td className="px-4 py-4 text-center font-bold text-red-500">$4,950</td>
+                                        <td className="px-4 py-4 text-center font-bold text-red-600 text-base">$15,050</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
                         </div>
 
                         <BlogText>
@@ -289,37 +323,71 @@ export default function WordPressVsCustomCodeCostPage() {
                             Now let&apos;s look at the other side. A custom-built Next.js site, professionally done.
                         </BlogText>
 
-                        <div className="my-10 border border-stone-200 rounded-2xl overflow-hidden shadow-sm">
-                            <div className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr] bg-stone-50 px-4 py-3 border-b border-stone-200 text-xs font-black text-stone-400 uppercase tracking-widest">
-                                <div>Cost Item</div>
-                                <div className="text-center">Year 1</div>
-                                <div className="text-center">Year 2</div>
-                                <div className="text-center">Year 3</div>
-                                <div className="text-center font-black text-charcoal">3-Year Total</div>
-                            </div>
-                            {[
-                                { item: "Build Cost (one-time, your site)", y1: "$10,000", y2: "$0", y3: "$0", total: "$10,000" },
-                                { item: "Hosting (Vercel — free for most sites)", y1: "$0", y2: "$0", y3: "$0", total: "$0" },
-                                { item: "CMS Subscription (Sanity free tier)", y1: "$0", y2: "$0", y3: "$0", total: "$0" },
-                                { item: "Security (zero plugins = zero attack surface)", y1: "$0", y2: "$0", y3: "$0", total: "$0" },
-                                { item: "Maintenance (no plugin updates needed)", y1: "$0", y2: "$0", y3: "$0", total: "$0" },
-                                { item: "Content updates (edit yourself via CMS)", y1: "$0", y2: "$0", y3: "$0", total: "$0" },
-                            ].map((row, i) => (
-                                <div key={i} className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr] px-4 py-3 border-b border-stone-100 last:border-0 text-sm hover:bg-stone-50/50 transition-colors">
-                                    <div className="text-charcoal font-medium">{row.item}</div>
-                                    <div className="text-center text-stone-500">{row.y1}</div>
-                                    <div className="text-center text-stone-500">{row.y2}</div>
-                                    <div className="text-center text-stone-500">{row.y3}</div>
-                                    <div className="text-center font-bold text-charcoal">{row.total}</div>
-                                </div>
-                            ))}
-                            <div className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr] px-4 py-4 bg-stone-50 border-t border-stone-200 text-sm font-black">
-                                <div className="text-charcoal">TOTAL Custom Site Cost</div>
-                                <div className="text-center text-charcoal">$10,000</div>
-                                <div className="text-center text-charcoal">$0</div>
-                                <div className="text-center text-charcoal">$0</div>
-                                <div className="text-center text-charcoal text-base">$10,000</div>
-                            </div>
+                        <div className="overflow-x-auto my-10">
+                            <table className="w-full text-sm border border-stone-200 rounded-xl overflow-hidden">
+                                <thead>
+                                    <tr className="bg-stone-50">
+                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Cost Item</th>
+                                        <th className="text-center px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Year 1</th>
+                                        <th className="text-center px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Year 2</th>
+                                        <th className="text-center px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Year 3</th>
+                                        <th className="text-center px-4 py-3 font-semibold text-charcoal border-b border-stone-200">3-Year Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-stone-100">
+                                    <tr>
+                                        <td className="px-4 py-3 text-charcoal font-medium">Build Cost (one-time, your site)</td>
+                                        <td className="px-4 py-3 text-center text-stone-500">$10,000</td>
+                                        <td className="px-4 py-3 text-center text-stone-500">$0</td>
+                                        <td className="px-4 py-3 text-center text-stone-500">$0</td>
+                                        <td className="px-4 py-3 text-center font-bold text-charcoal">$10,000</td>
+                                    </tr>
+                                    <tr className="bg-stone-50/50">
+                                        <td className="px-4 py-3 text-charcoal font-medium">Hosting (Vercel — free for most sites)</td>
+                                        <td className="px-4 py-3 text-center text-green-700">$0</td>
+                                        <td className="px-4 py-3 text-center text-green-700">$0</td>
+                                        <td className="px-4 py-3 text-center text-green-700">$0</td>
+                                        <td className="px-4 py-3 text-center font-bold text-green-700">$0</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="px-4 py-3 text-charcoal font-medium">CMS Subscription (Sanity free tier)</td>
+                                        <td className="px-4 py-3 text-center text-green-700">$0</td>
+                                        <td className="px-4 py-3 text-center text-green-700">$0</td>
+                                        <td className="px-4 py-3 text-center text-green-700">$0</td>
+                                        <td className="px-4 py-3 text-center font-bold text-green-700">$0</td>
+                                    </tr>
+                                    <tr className="bg-stone-50/50">
+                                        <td className="px-4 py-3 text-charcoal font-medium">Security (zero plugins = zero attack surface)</td>
+                                        <td className="px-4 py-3 text-center text-green-700">$0</td>
+                                        <td className="px-4 py-3 text-center text-green-700">$0</td>
+                                        <td className="px-4 py-3 text-center text-green-700">$0</td>
+                                        <td className="px-4 py-3 text-center font-bold text-green-700">$0</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="px-4 py-3 text-charcoal font-medium">Maintenance (no plugin updates needed)</td>
+                                        <td className="px-4 py-3 text-center text-green-700">$0</td>
+                                        <td className="px-4 py-3 text-center text-green-700">$0</td>
+                                        <td className="px-4 py-3 text-center text-green-700">$0</td>
+                                        <td className="px-4 py-3 text-center font-bold text-green-700">$0</td>
+                                    </tr>
+                                    <tr className="bg-stone-50/50">
+                                        <td className="px-4 py-3 text-charcoal font-medium">Content updates (edit yourself via CMS)</td>
+                                        <td className="px-4 py-3 text-center text-green-700">$0</td>
+                                        <td className="px-4 py-3 text-center text-green-700">$0</td>
+                                        <td className="px-4 py-3 text-center text-green-700">$0</td>
+                                        <td className="px-4 py-3 text-center font-bold text-green-700">$0</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr className="bg-stone-100">
+                                        <td className="px-4 py-4 font-bold text-charcoal">TOTAL Custom Site Cost</td>
+                                        <td className="px-4 py-4 text-center font-bold text-charcoal">$10,000</td>
+                                        <td className="px-4 py-4 text-center font-bold text-charcoal">$0</td>
+                                        <td className="px-4 py-4 text-center font-bold text-charcoal">$0</td>
+                                        <td className="px-4 py-4 text-center font-bold text-charcoal text-base">$10,000</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
                         </div>
 
                         <BlogText>
@@ -569,6 +637,17 @@ export default function WordPressVsCustomCodeCostPage() {
                             You can also read our <Link href="/services/wordpress-migration" className="text-charcoal font-bold underline hover:text-stone-600 transition-colors">WordPress Migration service page</Link> to see exactly how the transition works — what we migrate, how we protect your SEO, and what the timeline looks like.
                         </BlogText>
                     </div>
+
+                    {/* Key Takeaways */}
+                    <section className="mb-10">
+                        <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
+                        <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
+                            <li><strong>WordPress costs $15,000+ over 3 years</strong> — hosting, plugins, maintenance, and emergency fixes add up to far more than the $50/month most owners expect.</li>
+                            <li><strong>A custom Next.js site costs $0/year to run after the build</strong> — free Vercel hosting, no plugin fees, and no maintenance developer means your only cost is the one-time investment.</li>
+                            <li><strong>The break-even point is 18-24 months on direct costs</strong> — and as early as 4-5 months when you factor in recovered revenue from faster load times.</li>
+                            <li><strong>Slow WordPress sites silently lose $50K-$150K/year in revenue</strong> — the biggest cost is not on your invoices but in the organic traffic your slow speed is handing to competitors.</li>
+                        </ol>
+                    </section>
 
                     {/* FAQ Section */}
                     {costFAQs.length > 0 && <FAQAccordion faqs={costFAQs} />}

@@ -115,14 +115,14 @@ const articleSchema = {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
             "name": "PandaCodeGen",
-            "alternateName": "PandaCodeGen Code",
+            "alternateName": "Panda Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://twitter.com/pandacodegen", "https://linkedin.com/company/pandagen"],
-            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" },
+            "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
+            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
             "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
-            "foundingDate": "2023"
+            "foundingDate": "2026"
         },
         {
             "@type": "FAQPage",
@@ -184,7 +184,7 @@ export default function WhyNextjsOverWordPressPage() {
                         </div>
                         <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
-                            bio="Hassan has built and migrated 40+ websites from WordPress and Shopify to Next.js. Every build scores 95–100/100 on Google PageSpeed. He writes about web performance, ecommerce speed, and why slow websites are a silent revenue killer."
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom-coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -508,6 +508,18 @@ export default function WhyNextjsOverWordPressPage() {
                             page for more detail.
                         </BlogText>
                     </div>
+
+                    {/* Key Takeaways */}
+                    <section className="mb-10">
+                        <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
+                        <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
+                            <li><strong>The speed gap is structural, not fixable with plugins</strong> — WordPress loads in 3.8 seconds on average while Next.js loads in 0.9 seconds because they use fundamentally different architectures.</li>
+                            <li><strong>Hosting drops from $150-$400/month to $0</strong> — Vercel's free tier handles most business sites because pre-built static pages require no server computation per visit.</li>
+                            <li><strong>Zero plugins means zero security vulnerabilities</strong> — 43% of all website hacks target WordPress through its plugin ecosystem, an attack surface that does not exist in custom Next.js builds.</li>
+                            <li><strong>You own the code, not a licence</strong> — unlike WordPress where your site depends on third-party themes and plugins, a custom-coded site is a portable asset any developer can maintain.</li>
+                            <li><strong>WordPress is still right for hobby blogs and small personal sites</strong> — if speed, SEO, and revenue are not priorities, WordPress's convenience still makes sense.</li>
+                        </ol>
+                    </section>
 
                     {/* FAQ Section */}
                     {nextjsFAQs.length > 0 && <FAQAccordion faqs={nextjsFAQs} />}

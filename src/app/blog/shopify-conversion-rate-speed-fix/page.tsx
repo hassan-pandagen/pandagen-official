@@ -125,14 +125,14 @@ const articleSchema = {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
             "name": "PandaCodeGen",
-            "alternateName": "PandaCodeGen Code",
+            "alternateName": "Panda Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://twitter.com/pandacodegen", "https://linkedin.com/company/pandagen"],
-            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" },
+            "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
+            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
             "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
-            "foundingDate": "2023"
+            "foundingDate": "2026"
         },
         {
             "@type": "FAQPage",
@@ -187,7 +187,7 @@ export default function ShopifyConversionRateSpeedFixPage() {
                         </div>
                         <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
-                            bio="Hassan has built and migrated 40+ websites from WordPress and Shopify to Next.js. Every build scores 95–100/100 on Google PageSpeed. He writes about web performance, ecommerce speed, and why slow websites are a silent revenue killer."
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom-coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -315,6 +315,16 @@ export default function ShopifyConversionRateSpeedFixPage() {
                             Book Free Conversion Audit <ArrowRight className="w-5 h-5" />
                         </a>
                     </div>
+
+                    <section className="mb-10">
+                        <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
+                        <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
+                            <li><strong>Speed is the biggest conversion rate lever you&apos;re ignoring</strong> — a store loading in 1 second converts at 3.05%, while the same store at 5 seconds converts at just 0.99%.</li>
+                            <li><strong>CRO tools give misleading data on slow sites</strong> — heatmaps and A/B tests miss 53% of mobile visitors who leave before the page loads, so you&apos;re optimizing for the minority who stayed.</li>
+                            <li><strong>Standard Shopify optimization caps out at 2.5 seconds</strong> — removing apps and compressing images helps, but Liquid rendering and platform scripts create a speed ceiling well above the 1.5-second threshold needed for competitive conversions.</li>
+                            <li><strong>Headless stores double conversion rates within 60 days</strong> — a 3-4x improvement in load time consistently produces a 2-3x improvement in conversion rate because visitors finally see the page before they leave.</li>
+                        </ol>
+                    </section>
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
                     <RelatedPosts currentPostId="shopify-conversion-rate-speed-fix" category="Conversion" />

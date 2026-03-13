@@ -1,14 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { Menu, X, ChevronDown, Linkedin, Twitter, Mail, Phone } from "lucide-react";
 import Image from "next/image";
-
-const QuoteModal = dynamic(() => import("@/components/ui/QuoteModal"), { ssr: false });
+import QuoteModal from "@/components/ui/QuoteModal";
 
 interface HeaderProps {
   onOpenQuote?: () => void;

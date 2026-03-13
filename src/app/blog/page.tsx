@@ -13,6 +13,7 @@ const cardDisplay: Record<IllustrationType, { stat: string; label: string; bgTin
   aicommerce:  { stat: "AI",           label: "No website visit required",   bgTint: "#eff6ff", statColor: "#1d4ed8", border: "#bfdbfe" },
   security:    { stat: "100K+",        label: "Sites exposed to takeover",   bgTint: "#fff1f2", statColor: "#be123c", border: "#fecdd3" },
   performance: { stat: "3.8s",         label: "Average WordPress load time", bgTint: "#fff1f2", statColor: "#be123c", border: "#fecdd3" },
+  hosting:     { stat: "$0",           label: "Monthly hosting cost",        bgTint: "#ecfdf5", statColor: "#065f46", border: "#a7f3d0" },
   speed:       { stat: "100",          label: "Perfect Speed Score",         bgTint: "#ecfdf5", statColor: "#065f46", border: "#a7f3d0" },
   ranking:     { stat: "3×",           label: "More revenue from speed",     bgTint: "#fff7ed", statColor: "#c2410c", border: "#fed7aa" },
   conversion:  { stat: "1.2%",         label: "Avg Shopify store CVR",       bgTint: "#f5f3ff", statColor: "#5b21b6", border: "#ddd6fe" },

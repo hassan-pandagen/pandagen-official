@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "How to Migrate WordPress to Next.js Without Losing SEO",
     description: "Step-by-step WordPress to Next.js migration guide: content export, 301 redirects, SEO preservation, and zero-downtime launch. The complete process in plain English.",
     alternates: {
-        canonical: 'https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs',
+        canonical: '/blog/how-to-migrate-wordpress-to-nextjs',
     },
     keywords: ["how to migrate wordpress to next.js", "wordpress to nextjs migration", "migrate wordpress nextjs seo", "wordpress nextjs migration guide", "wordpress to nextjs without losing seo", "wordpress migration checklist"],
     openGraph: {
@@ -133,14 +133,14 @@ const articleSchema = {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
             "name": "PandaCodeGen",
-            "alternateName": "PandaCodeGen Code",
+            "alternateName": "Panda Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://twitter.com/pandacodegen", "https://linkedin.com/company/pandagen"],
-            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" },
+            "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
+            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
             "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
-            "foundingDate": "2023"
+            "foundingDate": "2026"
         },
         {
             "@type": "FAQPage",
@@ -188,7 +188,7 @@ export default function MigrateWordPressToNextJSPage() {
                             How to Migrate WordPress to <span className="font-serif italic text-stone-500">Next.js</span> Without Losing SEO
                         </h1>
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            We have done this 40+ times. Here is the exact process, starting from crawling your WordPress site on day one all the way to monitoring rankings 30 days after launch. No steps skipped.
+                            We have done this 6+ times. Here is the exact process, starting from crawling your WordPress site on day one all the way to monitoring rankings 30 days after launch. No steps skipped.
                         </p>
                         <div className="flex items-center gap-4 text-sm text-stone-500">
                             <span>Mar 11, 2026</span>
@@ -400,7 +400,7 @@ export default function MigrateWordPressToNextJSPage() {
 
                     {/* Mid CTA */}
                     <div className="bg-stone-900 text-white rounded-2xl p-8 mb-10">
-                        <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-2">Done It 40+ Times</p>
+                        <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-2">Done It 6+ Times</p>
                         <h3 className="text-2xl font-bold mb-3">Want Us to Handle the Migration?</h3>
                         <p className="text-stone-300 mb-6 leading-relaxed">
                             We handle the entire process: audit, build, QA, redirect mapping, DNS cutover, and 30-day post-launch monitoring. Guaranteed 95+ PageSpeed score or we fix it for free.
@@ -465,7 +465,7 @@ export default function MigrateWordPressToNextJSPage() {
                                 <BlogList items={[
                                     "Timeline: 2–6 weeks",
                                     "Learning curve: None, handled end to end by us",
-                                    "Risk: Low. We have done this 40+ times with zero ranking disasters",
+                                    "Risk: Low. We have done this 6+ times with zero ranking disasters",
                                     "Cost: $8,000–$35,000 depending on complexity",
                                     "PageSpeed result: Guaranteed 95–100/100 mobile",
                                     "Redirect mapping: Automated crawl + manual verification"
@@ -492,7 +492,7 @@ export default function MigrateWordPressToNextJSPage() {
                         <BlogAuthor
                             name="Hassan Jamal"
                             role="Lead Engineer, PandaCodeGen"
-                            bio="Hassan has built and migrated 40+ websites from WordPress and Shopify to Next.js. Every build scores 95–100/100 on Google PageSpeed. He writes about web performance, ecommerce speed, and why slow websites are a silent revenue killer."
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom-coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </section>
@@ -524,6 +524,18 @@ export default function MigrateWordPressToNextJSPage() {
                             </Link>
                         </div>
                     </div>
+
+                    {/* Key Takeaways */}
+                    <section className="mb-10">
+                        <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
+                        <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
+                            <li><strong>301 redirects are non-negotiable</strong> — every URL that changes during migration needs a permanent redirect or you will lose the SEO equity you spent years building.</li>
+                            <li><strong>A proper migration takes 2-6 weeks, not months</strong> — the 8-step process (audit, export, setup, build, redirects, metadata, QA, launch) is well-defined and repeatable.</li>
+                            <li><strong>Rankings recover in 30-60 days and then improve</strong> — temporary fluctuations are normal, but faster Core Web Vitals cause Google to reward your pages with better positions by month 2-3.</li>
+                            <li><strong>The pre-migration audit is the most important step</strong> — crawling every URL, documenting top pages, and mapping integrations prevents the mistakes that cause ranking drops.</li>
+                            <li><strong>Your WordPress site stays live until the new one is verified</strong> — zero-downtime DNS cutover means visitors never see a maintenance page during the transition.</li>
+                        </ol>
+                    </section>
 
                     {/* FAQ */}
                     <section className="mb-10">

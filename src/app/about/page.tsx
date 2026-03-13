@@ -33,35 +33,40 @@ export default function AboutPage() {
         "@type": "Organization",
         "@id": "https://www.pandacodegen.com/#organization",
         "name": "PandaCodeGen",
-        "alternateName": "PandaCodeGen Code",
+        "alternateName": "Panda Gen",
         "url": "https://www.pandacodegen.com",
         "logo": {
           "@type": "ImageObject",
           "url": "https://www.pandacodegen.com/logo.png",
-          "width": 512,
-          "height": 512
+          "width": 655,
+          "height": 113
         },
         "image": "https://www.pandacodegen.com/og-image.jpg",
         "description": "Custom web development agency specializing in WordPress migration, Shopify optimization, and high-performance business websites.",
         "email": "info@pandacodegen.com",
         "telephone": "+13022504340",
+        "foundingDate": "2026",
+        "areaServed": "Worldwide",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Missouri City",
+          "streetAddress": "1914 Quail Feather Ct",
           "addressLocality": "Missouri City",
           "addressRegion": "TX",
-          "postalCode": "77459",
+          "postalCode": "77489",
           "addressCountry": "US"
         },
         "founder": [
           { "@type": "Person", "name": "Imran", "jobTitle": "Lead Solutions Architect" },
           { "@type": "Person", "@id": "https://www.pandacodegen.com/#/schema/person/hassan", "name": "Hassan Jamal", "jobTitle": "Lead Full-Stack Engineer", "url": "https://www.pandacodegen.com/about/hassan", "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"] }
         ],
-        "foundingDate": "2026-02-10",
         "numberOfEmployees": { "@type": "QuantitativeValue", "value": 2 },
         "sameAs": [
           "https://twitter.com/pandacodegen",
-          "https://linkedin.com/company/pandagen"
+          "https://www.linkedin.com/company/pandacodegen",
+          "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
+          "https://github.com/hassan-pandagen",
+          "https://clutch.co/profile/panda-code-gen",
+          "https://www.trustpilot.com/review/pandacodegen.com"
         ]
       },
       {

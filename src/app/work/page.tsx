@@ -104,7 +104,7 @@ export default function WorkPage() {
                 "@id": "https://www.pandacodegen.com/work#webpage",
                 "url": "https://www.pandacodegen.com/work",
                 "name": "Our Work & Portfolio | PandaCodeGen",
-                "description": "Explore PandaCodeGen's portfolio of high-performance custom-coded projects.",
+                "description": "Real case studies: WordPress migrations, custom e-commerce platforms, and business dashboards with measurable results.",
                 "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
                 "about": { "@id": "https://www.pandacodegen.com/#organization" },
                 "inLanguage": "en-US"

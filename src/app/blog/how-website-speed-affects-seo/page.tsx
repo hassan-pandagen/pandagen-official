@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "How Website Speed Affects SEO Rankings in 2026 (With Real Data)",
     description: "Google confirmed page speed is a ranking factor. A site loading in 1 second converts 3x better than one at 5 seconds. Here's exactly how speed affects your rankings and what to do about it.",
     alternates: {
-        canonical: 'https://www.pandacodegen.com/blog/how-website-speed-affects-seo',
+        canonical: '/blog/how-website-speed-affects-seo',
     },
     keywords: ["how does website speed affect seo", "website speed seo ranking factor", "core web vitals seo", "page speed google ranking", "slow website seo impact", "website speed conversion rate", "core web vitals ranking 2026"],
     openGraph: {
@@ -130,14 +130,14 @@ const articleSchema = {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
             "name": "PandaCodeGen",
-            "alternateName": "PandaCodeGen Code",
+            "alternateName": "Panda Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://twitter.com/pandacodegen", "https://linkedin.com/company/pandagen"],
-            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" },
+            "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
+            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
             "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
-            "foundingDate": "2023"
+            "foundingDate": "2026"
         },
         {
             "@type": "FAQPage",
@@ -477,7 +477,7 @@ export default function WebsiteSpeedSEOPage() {
                         <BlogAuthor
                             name="Hassan Jamal"
                             role="Lead Engineer, PandaCodeGen"
-                            bio="Hassan has built and migrated 40+ websites from WordPress and Shopify to Next.js. Every build scores 95–100/100 on Google PageSpeed. He writes about web performance, ecommerce speed, and why slow websites are a silent revenue killer."
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom-coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </section>
@@ -507,6 +507,18 @@ export default function WebsiteSpeedSEOPage() {
                             </Link>
                         </div>
                     </div>
+
+                    {/* Key Takeaways */}
+                    <section className="mb-10">
+                        <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
+                        <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
+                            <li><strong>Google uses real user speed data to rank your pages</strong> — Core Web Vitals (LCP, INP, CLS) are official ranking signals measured from actual Chrome browser visits, not just lab tests.</li>
+                            <li><strong>A 1-second site converts 5x better than a 10-second site</strong> — Portent's research across 27,000+ pages shows conversion rates drop dramatically with each additional second of load time.</li>
+                            <li><strong>Every 0.1 second of improvement adds 8.4% to conversions</strong> — Deloitte found even tiny speed gains produce measurable revenue increases across retail, travel, and luxury brands.</li>
+                            <li><strong>WordPress and Shopify have hard speed ceilings</strong> — no amount of optimisation gets past 65-75/100 on WordPress or 60-70/100 on Shopify because the platform architecture is the bottleneck.</li>
+                            <li><strong>Speed gains compound over time</strong> — faster sites get crawled more, rank higher, attract more links, and earn better engagement signals, widening the gap against slower competitors every month.</li>
+                        </ol>
+                    </section>
 
                     {/* FAQ Section */}
                     <section className="mb-10">

@@ -125,14 +125,14 @@ const articleSchema = {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
             "name": "PandaCodeGen",
-            "alternateName": "PandaCodeGen Code",
+            "alternateName": "Panda Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://twitter.com/pandacodegen", "https://linkedin.com/company/pandagen"],
-            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" },
+            "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
+            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
             "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
-            "foundingDate": "2023"
+            "foundingDate": "2026"
         },
         {
             "@type": "FAQPage",
@@ -187,7 +187,7 @@ export default function WordPressTrafficDropPage() {
                         </div>
                         <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
-                            bio="Hassan has built and migrated 40+ websites from WordPress and Shopify to Next.js. Every build scores 95–100/100 on Google PageSpeed. He writes about web performance, ecommerce speed, and why slow websites are a silent revenue killer."
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom-coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -324,6 +324,16 @@ export default function WordPressTrafficDropPage() {
                             Book Free Traffic Audit <ArrowRight className="w-5 h-5" />
                         </a>
                     </div>
+
+                    <section className="mb-10">
+                        <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
+                        <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
+                            <li><strong>Google&apos;s Core Web Vitals update made speed a direct ranking factor</strong> — slow WordPress sites are being quietly demoted, losing 20-30% of organic traffic to faster competitors.</li>
+                            <li><strong>A Mobile PageSpeed score below 50 is a traffic emergency</strong> — most WordPress sites we audit score between 22 and 48, meaning their rankings are actively deteriorating every day.</li>
+                            <li><strong>Plugins and themes create an architectural speed ceiling</strong> — caching can get WordPress from 6 seconds down to 2.5, but you cannot reach sub-1-second without replacing the platform entirely.</li>
+                            <li><strong>Traffic recovers within 60-90 days after migrating to Next.js</strong> — clients typically return to their previous peak and then exceed it by 15-25% within three months of launching a fast site.</li>
+                        </ol>
+                    </section>
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
                     <RelatedPosts currentPostId="wordpress-traffic-drop-speed" category="Traffic Growth" />

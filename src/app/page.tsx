@@ -57,18 +57,20 @@ export default function Home() {
         "@type": "Organization",
         "@id": "https://www.pandacodegen.com/#organization",
         "name": "PandaCodeGen",
-        "alternateName": "PandaCodeGen Code",
+        "alternateName": "Panda Gen",
         "url": "https://www.pandacodegen.com",
         "image": "https://www.pandacodegen.com/logo.png",
         "logo": {
           "@type": "ImageObject",
           "url": "https://www.pandacodegen.com/logo.png",
-          "width": 512,
-          "height": 512
+          "width": 655,
+          "height": 113
         },
         "description": "Custom web development agency specializing in WordPress migration, Shopify optimization, and custom web applications. Sub-second load times guaranteed.",
         "email": "info@pandacodegen.com",
         "telephone": "+13022504340",
+        "foundingDate": "2026",
+        "areaServed": "Worldwide",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "1914 Quail Feather Ct",

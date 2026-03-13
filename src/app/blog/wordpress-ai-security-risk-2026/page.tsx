@@ -186,14 +186,14 @@ const articleSchema = {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
             "name": "PandaCodeGen",
-            "alternateName": "PandaCodeGen Code",
+            "alternateName": "Panda Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://twitter.com/pandacodegen", "https://linkedin.com/company/pandagen"],
-            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" },
+            "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
+            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
             "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
-            "foundingDate": "2023"
+            "foundingDate": "2026"
         }
     ]
 };
@@ -257,7 +257,7 @@ export default function WordPressAISecurityPage() {
                         </div>
                         <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
-                            bio="Hassan has built and migrated 40+ websites from WordPress and Shopify to Next.js. Every build scores 95–100/100 on Google PageSpeed. He writes about web performance, ecommerce speed, and why slow websites are a silent revenue killer."
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom-coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -657,6 +657,17 @@ export default function WordPressAISecurityPage() {
                             <ArrowRight className="w-5 h-5" />
                         </a>
                     </div>
+
+                    <section className="mb-10">
+                        <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
+                        <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
+                            <li><strong>WordPress 6.9 turned every plugin into an AI entry point</strong> — your 20-30 plugins are now 20-30 potential doorways for hackers, each needing its own secure authentication and permission settings.</li>
+                            <li><strong>One misconfigured checkbox exposed 100K+ sites</strong> — the AI Engine plugin accidentally published admin login credentials on a public page, giving attackers full site takeover.</li>
+                            <li><strong>43% of WordPress AI plugins have critical security flaws</strong> — security researchers found that nearly half let attackers run commands remotely on your server.</li>
+                            <li><strong>Using WordPress AI safely now requires technical expertise</strong> — configuring JWT tokens, OAuth authentication, and per-plugin permissions contradicts WordPress&apos;s original promise of simplicity.</li>
+                            <li><strong>Custom-built sites give you explicit security control</strong> — every AI integration point is intentionally defined with zero third-party plugin dependencies.</li>
+                        </ol>
+                    </section>
 
                 </article>
 

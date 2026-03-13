@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "Google Is Penalizing Your Slow Site. Here's How We Hit 100/100 PageSpeed on Every Build.",
     description: "Most websites score 35-55/100 on Google PageSpeed, and they're losing customers because of it. Here's the exact 8-step process we use to hit 98-100/100 on every client site.",
     alternates: {
-        canonical: 'https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed',
+        canonical: '/blog/how-to-achieve-100-pagespeed',
     },
     keywords: ["100 PageSpeed score", "Core Web Vitals optimization", "Next.js PageSpeed 100", "website speed optimization 2026", "how to improve PageSpeed score", "Google PageSpeed Insights guide", "fix slow website"],
     openGraph: {
@@ -90,24 +90,6 @@ const articleSchema = {
             ]
         },
         {
-            "@type": "HowTo",
-            "@id": "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed#howto",
-            "name": "How to Achieve 100/100 PageSpeed Score",
-            "description": "The exact 8-step optimization process we use to achieve 98-100/100 PageSpeed scores on every client site.",
-            "totalTime": "PT6W",
-            "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "15000" },
-            "step": [
-                { "@type": "HowToStep", "position": 1, "name": "Image Optimization", "text": "Use next/image component. Automatically serves WebP/AVIF (50% smaller). Responsive images for mobile vs desktop. Lazy loading for below-the-fold images." },
-                { "@type": "HowToStep", "position": 2, "name": "Font Optimization", "text": "Use next/font to self-host Google Fonts. Fonts preloaded during build, served instantly. No external requests, no FOIT (Flash of Invisible Text)." },
-                { "@type": "HowToStep", "position": 3, "name": "JavaScript Optimization", "text": "Code splitting: only load JS needed for current page. Tree shaking: remove unused code. Dynamic imports for heavy features. Server components send zero JS to browser." },
-                { "@type": "HowToStep", "position": 4, "name": "CSS Optimization", "text": "Tailwind CSS with tree-shaking: only CSS you use gets shipped. Critical CSS inlined for above-the-fold. No render-blocking CSS." },
-                { "@type": "HowToStep", "position": 5, "name": "Lazy Loading Everything", "text": "Lazy load below-the-fold components. Defer third-party scripts until user interaction. Only load what is visible on screen." },
-                { "@type": "HowToStep", "position": 6, "name": "Edge Caching & CDN", "text": "Deploy to Vercel Edge Network (300+ locations). Pages pre-built and cached at edge. Zero server computation on page load." },
-                { "@type": "HowToStep", "position": 7, "name": "Remove Third-Party Scripts", "text": "Defer all third-party scripts until after page load. Load on user interaction instead of page load. Use lightweight alternatives like Plausible vs Google Analytics." },
-                { "@type": "HowToStep", "position": 8, "name": "Server Components", "text": "Move data fetching and complex UI logic to the server. Send pre-rendered HTML to the browser. Zero client JavaScript for static content." }
-            ]
-        },
-        {
             "@type": "BreadcrumbList",
             "@id": "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed#breadcrumb",
             "itemListElement": [
@@ -133,14 +115,14 @@ const articleSchema = {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
             "name": "PandaCodeGen",
-            "alternateName": "PandaCodeGen Code",
+            "alternateName": "Panda Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://twitter.com/pandacodegen", "https://linkedin.com/company/pandagen"],
-            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" },
+            "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
+            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
             "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
-            "foundingDate": "2023"
+            "foundingDate": "2026"
         },
         {
             "@type": "FAQPage",
@@ -211,7 +193,7 @@ export default function AchievePageSpeedPage() {
                         </div>
                         <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
-                            bio="Hassan has built and migrated 40+ websites from WordPress and Shopify to Next.js. Every build scores 95–100/100 on Google PageSpeed. He writes about web performance, ecommerce speed, and why slow websites are a silent revenue killer."
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom-coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -602,7 +584,7 @@ export default function AchievePageSpeedPage() {
                         <BlogHeader>What Is the Professional Path to a Guaranteed 95-100/100 PageSpeed Score?</BlogHeader>
 
                         <BlogText>
-                            We've built 40+ Next.js sites. Every single one scores 95-100/100 on PageSpeed Mobile.
+                            We've built 6+ Next.js sites. Every single one scores 95-100/100 on PageSpeed Mobile.
                         </BlogText>
 
                         <BlogText>
@@ -725,6 +707,18 @@ export default function AchievePageSpeedPage() {
                             Schedule Free Audit <ArrowRight className="w-5 h-5" />
                         </a>
                     </div>
+
+                    {/* Key Takeaways */}
+                    <section className="mb-10">
+                        <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
+                        <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
+                            <li><strong>PageSpeed score directly determines Google rankings</strong> — sites below 70 lose 20-30% of organic traffic to faster competitors with identical content.</li>
+                            <li><strong>WordPress maxes out at 60-75/100 even fully optimised</strong> — the architecture prevents reaching the 90+ green zone that Google rewards with ranking boosts.</li>
+                            <li><strong>8 specific optimisations get any site to 100/100</strong> — image, font, JavaScript, CSS, lazy loading, edge caching, third-party script deferral, and server components.</li>
+                            <li><strong>Real clients see 2-4x traffic within 90 days</strong> — the pattern is consistent: migrate to Next.js, apply all 8 optimisations, and organic traffic multiplies as Google rewards faster Core Web Vitals.</li>
+                            <li><strong>Every 0.1 second of improvement increases conversions by 8%</strong> — speed is not an IT concern, it is a revenue line item that compounds month over month.</li>
+                        </ol>
+                    </section>
 
                     {/* FAQ Section */}
                     {pagespeedFAQs.length > 0 && <FAQAccordion faqs={pagespeedFAQs} />}

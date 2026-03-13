@@ -34,20 +34,34 @@ export default function ContactPage() {
         "@type": "Organization",
         "@id": "https://www.pandacodegen.com/#organization",
         "name": "PandaCodeGen",
+        "alternateName": "Panda Gen",
         "url": "https://www.pandacodegen.com",
         "image": "https://www.pandacodegen.com/og-image.jpg",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.pandacodegen.com/logo.png",
+          "width": 655,
+          "height": 113
+        },
         "email": "info@pandacodegen.com",
         "telephone": "+13022504340",
-        "address": [
-          {
-            "@type": "PostalAddress",
-            "streetAddress": "Missouri City",
-            "addressLocality": "Missouri City",
-            "addressRegion": "TX",
-            "postalCode": "77459",
-            "addressCountry": "US",
-            "name": "Headquarters"
-          }
+        "foundingDate": "2026",
+        "areaServed": "Worldwide",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1914 Quail Feather Ct",
+          "addressLocality": "Missouri City",
+          "addressRegion": "TX",
+          "postalCode": "77489",
+          "addressCountry": "US"
+        },
+        "sameAs": [
+          "https://twitter.com/pandacodegen",
+          "https://www.linkedin.com/company/pandacodegen",
+          "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
+          "https://github.com/hassan-pandagen",
+          "https://clutch.co/profile/panda-code-gen",
+          "https://www.trustpilot.com/review/pandacodegen.com"
         ],
         "contactPoint": {
           "@type": "ContactPoint",

@@ -125,14 +125,14 @@ const articleSchema = {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
             "name": "PandaCodeGen",
-            "alternateName": "PandaCodeGen Code",
+            "alternateName": "Panda Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://twitter.com/pandacodegen", "https://linkedin.com/company/pandagen"],
-            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "hello@pandacodegen.com" },
+            "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
+            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
             "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
-            "foundingDate": "2023"
+            "foundingDate": "2026"
         },
         {
             "@type": "FAQPage",
@@ -187,7 +187,7 @@ export default function ElementorKillsSEOPage() {
                         </div>
                         <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
-                            bio="Hassan has built and migrated 40+ websites from WordPress and Shopify to Next.js. Every build scores 95–100/100 on Google PageSpeed. He writes about web performance, ecommerce speed, and why slow websites are a silent revenue killer."
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom-coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -305,6 +305,16 @@ export default function ElementorKillsSEOPage() {
                             Book Free SEO Audit <ArrowRight className="w-5 h-5" />
                         </a>
                     </div>
+
+                    <section className="mb-10">
+                        <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
+                        <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
+                            <li><strong>Elementor&apos;s bloat is architectural, not fixable</strong> — the average Elementor site scores 38/100 on mobile because the drag-and-drop framework loads hundreds of kilobytes of unused code on every page.</li>
+                            <li><strong>71% of Elementor sites are in Google&apos;s red zone</strong> — our 500-site audit found that most Elementor sites fail Core Web Vitals, costing them 20-30% of organic traffic.</li>
+                            <li><strong>Optimization has a ceiling of 50-60/100</strong> — caching plugins and image compression help, but you cannot optimize past Elementor&apos;s built-in DOM bloat and render-blocking CSS.</li>
+                            <li><strong>Migrating to Next.js recovers rankings in 30-60 days</strong> — businesses that switch from Elementor to custom-coded sites consistently score 95-100/100 and gain 2-3x organic traffic within 90 days.</li>
+                        </ol>
+                    </section>
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
                     <RelatedPosts currentPostId="elementor-kills-seo" category="Performance" />

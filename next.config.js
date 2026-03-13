@@ -12,8 +12,8 @@ const nextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
-  // 2. Disable strict react mode if double-renders annoy you
-  reactStrictMode: false,
+  // 2. React strict mode for development quality checks
+  reactStrictMode: true,
   // 3. Performance optimizations
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
