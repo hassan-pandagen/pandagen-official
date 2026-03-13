@@ -72,7 +72,7 @@ const articleSchema = {
             "about": [
                 {"@type": "Thing", "name": "Google SEO Rankings"},
                 {"@type": "Thing", "name": "Website Speed SEO"},
-                {"@type": "SoftwareApplication", "name": "Next.js"},
+                {"@type": "Thing", "name": "Next.js"},
                 {"@type": "Thing", "name": "Custom Website vs WordPress"}
             ],
             "inLanguage": "en-US",

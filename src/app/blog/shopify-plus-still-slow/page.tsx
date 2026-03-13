@@ -68,10 +68,10 @@ const articleSchema = {
             "timeRequired": "PT10M",
             "wordCount": 2600,
             "about": [
-                { "@type": "SoftwareApplication", "name": "Shopify Plus" },
+                { "@type": "Thing", "name": "Shopify Plus" },
                 { "@type": "Thing", "name": "Core Web Vitals E-Commerce" },
                 { "@type": "Thing", "name": "Headless Commerce" },
-                { "@type": "SoftwareApplication", "name": "Next.js" }
+                { "@type": "Thing", "name": "Next.js" }
             ],
             "inLanguage": "en-US",
             "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2", "[data-speakable='true']"] },

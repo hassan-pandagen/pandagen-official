@@ -69,7 +69,7 @@ const articleSchema = {
             "wordCount": 2600,
             "about": [
                 { "@type": "Thing", "name": "Shopify Conversion Rate Optimisation" },
-                { "@type": "SoftwareApplication", "name": "Shopify" },
+                { "@type": "Thing", "name": "Shopify" },
                 { "@type": "Thing", "name": "E-Commerce Speed Optimisation" },
                 { "@type": "Thing", "name": "Core Web Vitals E-Commerce" }
             ],

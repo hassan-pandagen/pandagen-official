@@ -70,7 +70,7 @@ const articleSchema = {
             "about": [
                 { "@type": "Thing", "name": "WordPress Traffic Loss" },
                 { "@type": "Thing", "name": "Google Core Web Vitals SEO" },
-                { "@type": "SoftwareApplication", "name": "WordPress Speed" },
+                { "@type": "Thing", "name": "WordPress Speed" },
                 { "@type": "Thing", "name": "Website Traffic Optimization" }
             ],
             "inLanguage": "en-US",

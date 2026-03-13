@@ -72,8 +72,8 @@ const articleSchema = {
             "about": [
                 {"@type": "Thing", "name": "WordPress Total Cost of Ownership"},
                 {"@type": "Thing", "name": "Custom Website Development Cost"},
-                {"@type": "SoftwareApplication", "name": "WordPress"},
-                {"@type": "SoftwareApplication", "name": "Next.js"}
+                {"@type": "Thing", "name": "WordPress"},
+                {"@type": "Thing", "name": "Next.js"}
             ],
             "inLanguage": "en-US",
             "speakable": {

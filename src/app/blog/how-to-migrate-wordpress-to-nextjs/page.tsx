@@ -70,8 +70,8 @@ const articleSchema = {
             "timeRequired": "PT10M",
             "wordCount": 3000,
             "about": [
-                { "@type": "SoftwareApplication", "name": "WordPress" },
-                { "@type": "SoftwareApplication", "name": "Next.js" },
+                { "@type": "Thing", "name": "WordPress" },
+                { "@type": "Thing", "name": "Next.js" },
                 { "@type": "Thing", "name": "Website Migration" },
                 { "@type": "Thing", "name": "Search Engine Optimization" }
             ],

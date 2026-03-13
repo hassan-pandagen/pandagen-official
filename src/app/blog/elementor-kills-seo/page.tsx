@@ -68,7 +68,7 @@ const articleSchema = {
             "timeRequired": "PT9M",
             "wordCount": 2200,
             "about": [
-                { "@type": "SoftwareApplication", "name": "Elementor" },
+                { "@type": "Thing", "name": "Elementor" },
                 { "@type": "Thing", "name": "WordPress Page Builder SEO Impact" },
                 { "@type": "Thing", "name": "Google PageSpeed Score" },
                 { "@type": "Thing", "name": "Core Web Vitals" }

@@ -74,7 +74,7 @@ const articleSchema = {
                 {"@type": "Thing", "name": "Google Universal Commerce Protocol"},
                 {"@type": "Thing", "name": "AI Agentic Commerce"},
                 {"@type": "Thing", "name": "E-Commerce AI Integration"},
-                {"@type": "SoftwareApplication", "name": "Google AI Mode"}
+                {"@type": "Thing", "name": "Google AI Mode"}
             ],
             "inLanguage": "en-US",
             "citation": [

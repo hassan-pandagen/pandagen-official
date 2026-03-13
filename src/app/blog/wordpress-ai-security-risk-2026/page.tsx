@@ -73,7 +73,7 @@ const articleSchema = {
             "about": [
                 {"@type": "Thing", "name": "WordPress AI Security"},
                 {"@type": "Thing", "name": "AI Security Vulnerabilities"},
-                {"@type": "SoftwareApplication", "name": "WordPress"},
+                {"@type": "Thing", "name": "WordPress"},
                 {"@type": "Thing", "name": "Website Security for Business"}
             ],
             "inLanguage": "en-US",

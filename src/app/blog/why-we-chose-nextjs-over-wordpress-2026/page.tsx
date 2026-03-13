@@ -70,8 +70,8 @@ const articleSchema = {
             "timeRequired": "PT11M",
             "wordCount": 2500,
             "about": [
-                {"@type": "SoftwareApplication", "name": "Next.js"},
-                {"@type": "SoftwareApplication", "name": "WordPress"},
+                {"@type": "Thing", "name": "Next.js"},
+                {"@type": "Thing", "name": "WordPress"},
                 {"@type": "Thing", "name": "Website Performance Optimisation"},
                 {"@type": "Thing", "name": "WordPress to Next.js Migration"}
             ],

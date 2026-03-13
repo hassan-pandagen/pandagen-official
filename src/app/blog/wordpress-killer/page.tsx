@@ -69,9 +69,9 @@ const articleSchema = {
             "wordCount": 2500,
             "about": [
                 { "@type": "Thing", "name": "WordPress Total Cost of Ownership" },
-                { "@type": "SoftwareApplication", "name": "WordPress" },
+                { "@type": "Thing", "name": "WordPress" },
                 { "@type": "Thing", "name": "Custom Website Development Cost" },
-                { "@type": "SoftwareApplication", "name": "Next.js" }
+                { "@type": "Thing", "name": "Next.js" }
             ],
             "inLanguage": "en-US",
             "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2", "[data-speakable='true']"] },

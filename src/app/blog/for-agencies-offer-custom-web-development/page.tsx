@@ -73,7 +73,7 @@ const articleSchema = {
                 {"@type": "Thing", "name": "White-Label Web Development"},
                 {"@type": "Thing", "name": "Agency White-Label Services"},
                 {"@type": "Thing", "name": "Custom Web Development for Agencies"},
-                {"@type": "SoftwareApplication", "name": "Next.js"}
+                {"@type": "Thing", "name": "Next.js"}
             ],
             "inLanguage": "en-US",
             "speakable": {

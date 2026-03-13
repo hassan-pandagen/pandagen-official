@@ -73,7 +73,7 @@ const articleSchema = {
                 { "@type": "Thing", "name": "Shopify Dawn Theme" },
                 { "@type": "Thing", "name": "Shopify PageSpeed Score" },
                 { "@type": "Thing", "name": "E-Commerce Performance" },
-                { "@type": "SoftwareApplication", "name": "Shopify" }
+                { "@type": "Thing", "name": "Shopify" }
             ],
             "inLanguage": "en-US",
             "speakable": {

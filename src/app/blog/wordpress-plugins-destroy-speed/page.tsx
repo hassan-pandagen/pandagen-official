@@ -69,7 +69,7 @@ const articleSchema = {
             "wordCount": 2800,
             "about": [
                 { "@type": "Thing", "name": "WordPress Plugin Performance" },
-                { "@type": "SoftwareApplication", "name": "WordPress" },
+                { "@type": "Thing", "name": "WordPress" },
                 { "@type": "Thing", "name": "Website Speed Optimisation" },
                 { "@type": "Thing", "name": "Core Web Vitals" }
             ],

@@ -69,9 +69,9 @@ const articleSchema = {
             "wordCount": 3000,
             "about": [
                 { "@type": "Thing", "name": "Headless Shopify" },
-                { "@type": "SoftwareApplication", "name": "Shopify" },
+                { "@type": "Thing", "name": "Shopify" },
                 { "@type": "Thing", "name": "E-Commerce Speed Optimisation" },
-                { "@type": "SoftwareApplication", "name": "Next.js" }
+                { "@type": "Thing", "name": "Next.js" }
             ],
             "inLanguage": "en-US",
             "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2", "[data-speakable='true']"] },

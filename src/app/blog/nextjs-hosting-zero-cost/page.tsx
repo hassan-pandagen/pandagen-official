@@ -72,7 +72,7 @@ const articleSchema = {
             "about": [
                 {"@type": "Thing", "name": "Website Hosting Costs"},
                 {"@type": "Thing", "name": "Vercel Free Tier"},
-                {"@type": "SoftwareApplication", "name": "Next.js"},
+                {"@type": "Thing", "name": "Next.js"},
                 {"@type": "Thing", "name": "Static Site Generation"}
             ],
             "inLanguage": "en-US",

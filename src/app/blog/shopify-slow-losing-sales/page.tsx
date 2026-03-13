@@ -71,9 +71,9 @@ const articleSchema = {
             "wordCount": 2800,
             "about": [
                 {"@type": "Thing", "name": "Shopify Speed Optimisation"},
-                {"@type": "SoftwareApplication", "name": "Shopify"},
+                {"@type": "Thing", "name": "Shopify"},
                 {"@type": "Thing", "name": "E-Commerce Revenue Optimisation"},
-                {"@type": "SoftwareApplication", "name": "Next.js"}
+                {"@type": "Thing", "name": "Next.js"}
             ],
             "inLanguage": "en-US",
             "speakable": {
