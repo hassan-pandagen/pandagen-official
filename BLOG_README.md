@@ -72,7 +72,7 @@ Header → Animation → Executive Summary (data-speakable) → Article → Mid 
 | 18 | `why-we-chose-nextjs-over-wordpress-2026` | Why We Chose Next.js Over WordPress for Every New Client in 2026 | Comparison | Live ✅ |
 | 19 | `wordpress-vs-custom-code-real-cost-3-years` | WordPress vs Custom Code: The Real Cost Over 3 Years | Comparison | Live ✅ |
 | 20 | `how-to-migrate-wordpress-to-nextjs` | How to Migrate WordPress to Next.js Without Losing SEO | Tutorial | Live ✅ |
-| 21 | `nextjs-hosting-zero-cost` | How We Host Client Websites for Free — $0/Month With Vercel | Performance | Live ✅ |
+| 21 | `nextjs-hosting-zero-cost` | How We Host Client Websites for Free ($0/Month) With Vercel | Performance | Live ✅ |
 
 ---
 
@@ -82,7 +82,7 @@ Posts to write next, ranked by ease of ranking + business value. New domain = ta
 
 | Priority | Slug | Title | Primary Keyword | Est. Volume | Competition | Target Date |
 |----------|------|-------|-----------------|-------------|-------------|-------------|
-| ✅ 21 | `nextjs-hosting-zero-cost` | How We Host Client Websites for Free — $0/Month With Vercel | `free nextjs hosting` | 400–1k/mo | Low–Med | ~~Mar 13–14~~ Done |
+| ✅ 21 | `nextjs-hosting-zero-cost` | How We Host Client Websites for Free ($0/Month) With Vercel | `free nextjs hosting` | 400–1k/mo | Low–Med | ~~Mar 13–14~~ Done |
 | 🔴 22 | `what-is-headless-commerce` | What Is Headless Commerce? A Plain-English Guide for Store Owners | `what is headless commerce` | 1.5k–4k/mo | Med | Mar 15–16 |
 | 🔴 23 | `shopify-vs-custom-website` | Shopify vs Custom Website: When You've Outgrown Shopify | `shopify vs custom website` | 800–2.5k/mo | Med | Mar 17–18 |
 | 🔴 24 | `core-web-vitals-explained` | Core Web Vitals Explained for Business Owners (Not Developers) | `core web vitals explained` | 300–800/mo | Low–Med | Mar 19–20 |
@@ -147,4 +147,26 @@ Every new post should link to:
 
 ---
 
-*Last updated: March 13, 2026 — 21 live posts, 5 remaining planned (all 5 by Mar 24)*
+---
+
+## Backlink Outreach Plan (Target: Mar 15-16)
+
+### Vercel Showcase Submission
+- **Angle:** Agency running 5+ production e-commerce sites on Vercel free tier, all scoring 95-100 PageSpeed
+- **Sites to mention:** PandaCodeGen, PandaPatches, MyCustomPatches, PandaCodeLab, leather/jacket e-commerce (in pipeline)
+- **Key stat:** $0/month hosting across all client sites with perfect scores
+- **Action:** Find Vercel DevRel on Twitter/LinkedIn, pitch directly (not generic showcase form)
+- **Message template:** "We've built 5+ production e-commerce sites on Vercel + Supabase. All score 95-100 PageSpeed. Happy to write a case study or do a joint blog post if you're interested."
+
+### Supabase Community / Case Study
+- **Angle:** Real e-commerce dashboards running on Supabase with actual transactions (PandaPatches, MyCustomPatches, leather store)
+- **Action:** Reach out to Supabase DevRel, offer a "Built with Supabase" case study
+- **Bonus:** Offer to write a guest post on their blog about building e-commerce backends with Supabase
+
+### Other Opportunities
+- GitHub: Contribute a small docs fix or template to Next.js or Supabase repos (gets profile + site link in their ecosystem)
+- Write content that directly helps their ecosystem (the $0 hosting post already does this for Vercel)
+
+---
+
+*Last updated: March 14, 2026 — 21 live posts, 5 remaining planned (all 5 by Mar 24)*
