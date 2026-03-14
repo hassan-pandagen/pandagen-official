@@ -563,7 +563,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "what-is-headless-commerce",
-    title: "What Is Headless Commerce? A Plain-English Guide for Store Owners",
+    title: "What Is Headless Commerce? The Complete Guide for Store Owners",
     excerpt: "Headless commerce lets you keep your Shopify backend while replacing the slow theme with a custom, lightning-fast frontend. Best of both worlds. Here's what it means, what it costs, and whether your store actually needs it.",
     category: "E-Commerce",
     readTime: "12 min",

@@ -1,5 +1,5 @@
 ---
-title: "What Is Headless Commerce? A Plain-English Guide for Store Owners"
+title: "What Is Headless Commerce? The Complete Guide for Store Owners"
 published: true
 description: "Headless commerce separates your storefront from your backend so your store loads faster, converts better, and gives you full design control. Here's what it means, what it costs, and whether your store actually needs it."
 tags: [ecommerce, webdev, nextjs, shopify]

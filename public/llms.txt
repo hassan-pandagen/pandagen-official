@@ -13,7 +13,7 @@
 - [GoHighLevel Migration](https://www.pandacodegen.com/services/gohighlevel): Migrate from GoHighLevel to custom Next.js
 
 ## Blog
-- [What Is Headless Commerce](https://www.pandacodegen.com/blog/what-is-headless-commerce): Plain-English guide to headless commerce for store owners
+- [What Is Headless Commerce](https://www.pandacodegen.com/blog/what-is-headless-commerce): Complete guide to headless commerce for store owners
 - [How to Migrate WordPress to Next.js](https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs): Complete step-by-step migration guide
 - [WordPress vs Next.js](https://www.pandacodegen.com/blog/wordpress-vs-nextjs): Detailed comparison for business owners
 - [How Website Speed Affects SEO](https://www.pandacodegen.com/blog/how-website-speed-affects-seo): Core Web Vitals and ranking impact
