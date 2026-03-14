@@ -238,7 +238,7 @@ export default function WordPressAISecurityPage() {
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            Here's why that's a security risk.
+                            WordPress 6.9 introduces powerful AI features through the Abilities API. Here&apos;s what you need to know to use them safely and protect your site.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">

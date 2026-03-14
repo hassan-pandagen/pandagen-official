@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { runPageSpeedAnalysis } from '@/lib/audit/pagespeed';
+import { runDeepChecks } from '@/lib/audit/deepChecks';
 
 export async function POST(request: NextRequest) {
   try {
@@ -21,7 +22,18 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Invalid URL format' }, { status: 400 });
     }
 
-    const result = await runPageSpeedAnalysis(normalizedUrl);
+    const pageSpeedResult = await runPageSpeedAnalysis(normalizedUrl);
+
+    // Run deep checks in parallel with minimal added latency
+    let deepChecks;
+    try {
+      deepChecks = await runDeepChecks(normalizedUrl, pageSpeedResult);
+    } catch (err) {
+      console.error('Deep checks error:', err);
+      deepChecks = null;
+    }
+
+    const result = { ...pageSpeedResult, deepChecks: deepChecks ?? undefined };
     return NextResponse.json({ success: true, data: result }, { status: 200 });
   } catch (error) {
     console.error('PageSpeed analysis error:', error);

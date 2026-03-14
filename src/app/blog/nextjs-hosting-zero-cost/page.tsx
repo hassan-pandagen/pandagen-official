@@ -178,7 +178,7 @@ export default function NextjsHostingZeroCostPage() {
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            Most businesses pay $50-$300/month for hosting that makes their site slower. We deploy every client site for $0/month. Here&apos;s exactly how it works.
+                            What if you could host your business website for $0/month and still get sub-second load times? This guide walks you through exactly how we do it for every client.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">

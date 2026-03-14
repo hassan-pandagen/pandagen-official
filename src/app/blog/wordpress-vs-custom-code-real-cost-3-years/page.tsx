@@ -184,7 +184,7 @@ export default function WordPressVsCustomCodeCostPage() {
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            Everyone says WordPress is cheap. They&apos;re not counting hosting, plugins, maintenance, security, and lost revenue. We ran the numbers. The results will change how you think about your website.
+                            We compared the full 3-year cost of WordPress versus custom-coded websites, including hosting, plugins, maintenance, and security. Here&apos;s what the numbers look like.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">

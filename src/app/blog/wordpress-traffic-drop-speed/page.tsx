@@ -179,7 +179,7 @@ export default function WordPressTrafficDropPage() {
                             The Speed Tax You&apos;re Paying
                         </h1>
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            Slow WordPress sites don&apos;t just frustrate visitors — they get demoted by Google. Here&apos;s the simple math on why every second of load time is costing you rankings, traffic, and revenue.
+                            If your WordPress traffic has been dropping, site speed might be the reason. Here&apos;s how to check and what you can do to turn it around.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">
                             <div className="flex items-center gap-2"><Calendar className="w-4 h-4" />Feb 7, 2026</div>

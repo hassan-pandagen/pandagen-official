@@ -179,7 +179,7 @@ export default function ShopifyPlusStillSlowPage() {
                             Your Core Web Vitals
                         </h1>
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            53% of mobile visitors leave before your Shopify Plus store loads. Here&apos;s why the premium plan doesn&apos;t fix the fundamental speed problem — and what actually does.
+                            Shopify Plus gives you powerful backend features, but the speed ceiling is still there. This guide explains what causes it and how to break through it.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">
                             <div className="flex items-center gap-2"><Calendar className="w-4 h-4" />Feb 6, 2026</div>

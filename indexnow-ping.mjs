@@ -52,6 +52,7 @@ const urls = [
   `${BASE}/blog/wordpress-vs-nextjs`,
   `${BASE}/blog/how-to-migrate-wordpress-to-nextjs`,
   `${BASE}/blog/nextjs-hosting-zero-cost`,
+  `${BASE}/blog/what-is-headless-commerce`,
 
   // Legal
   `${BASE}/privacy`,

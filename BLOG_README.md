@@ -73,6 +73,7 @@ Header → Animation → Executive Summary (data-speakable) → Article → Mid 
 | 19 | `wordpress-vs-custom-code-real-cost-3-years` | WordPress vs Custom Code: The Real Cost Over 3 Years | Comparison | Live ✅ |
 | 20 | `how-to-migrate-wordpress-to-nextjs` | How to Migrate WordPress to Next.js Without Losing SEO | Tutorial | Live ✅ |
 | 21 | `nextjs-hosting-zero-cost` | How We Host Client Websites for Free ($0/Month) With Vercel | Performance | Live ✅ |
+| 22 | `what-is-headless-commerce` | What Is Headless Commerce? A Plain-English Guide for Store Owners | E-Commerce | Live ✅ |
 
 ---
 
@@ -83,7 +84,7 @@ Posts to write next, ranked by ease of ranking + business value. New domain = ta
 | Priority | Slug | Title | Primary Keyword | Est. Volume | Competition | Target Date |
 |----------|------|-------|-----------------|-------------|-------------|-------------|
 | ✅ 21 | `nextjs-hosting-zero-cost` | How We Host Client Websites for Free ($0/Month) With Vercel | `free nextjs hosting` | 400–1k/mo | Low–Med | ~~Mar 13–14~~ Done |
-| 🔴 22 | `what-is-headless-commerce` | What Is Headless Commerce? A Plain-English Guide for Store Owners | `what is headless commerce` | 1.5k–4k/mo | Med | Mar 15–16 |
+| ✅ 22 | `what-is-headless-commerce` | What Is Headless Commerce? A Plain-English Guide for Store Owners | `what is headless commerce` | 1.5k–4k/mo | Med | ~~Mar 15–16~~ Done Mar 14 |
 | 🔴 23 | `shopify-vs-custom-website` | Shopify vs Custom Website: When You've Outgrown Shopify | `shopify vs custom website` | 800–2.5k/mo | Med | Mar 17–18 |
 | 🔴 24 | `core-web-vitals-explained` | Core Web Vitals Explained for Business Owners (Not Developers) | `core web vitals explained` | 300–800/mo | Low–Med | Mar 19–20 |
 | 🔴 25 | `woocommerce-too-slow` | WooCommerce Too Slow? Here's What's Actually Breaking Your Store | `woocommerce slow` | 500–1.5k/mo | Low–Med | Mar 21–22 |

@@ -230,7 +230,7 @@ export default function FixSlowWordPressPage() {
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            Your WordPress site loads in 4 seconds. Your competitor loads in 0.9 seconds. Here's exactly how to speed up WordPress and close the gap.
+                            WordPress can be made significantly faster with the right approach. Here are 8 proven techniques to improve your load time and get better results from your site.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">

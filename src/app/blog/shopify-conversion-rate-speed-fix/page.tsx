@@ -179,7 +179,7 @@ export default function ShopifyConversionRateSpeedFixPage() {
                             Your Sales
                         </h1>
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            Your conversion rate is low because visitors leave before your page loads. The average Shopify store converts at 1.4% — but fast stores convert at 3–5%. The difference is almost always speed.
+                            The average Shopify store converts at 1.4%, but fast stores hit 3 to 5%. If you&apos;re looking to improve your conversion rate, speed is one of the most effective levers to pull.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">
                             <div className="flex items-center gap-2"><Calendar className="w-4 h-4" />Feb 11, 2026</div>

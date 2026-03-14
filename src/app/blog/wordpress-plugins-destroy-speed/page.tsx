@@ -178,7 +178,7 @@ export default function WordPressPluginsSpeedPage() {
                             (And Costing You Customers)
                         </h1>
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            Most WordPress sites with 30+ plugins score 35/100 on mobile PageSpeed. Here&apos;s how to calculate the exact revenue you&apos;re losing — and what to do about it.
+                            Plugins add powerful features to WordPress, but each one comes with a performance cost. This guide helps you identify which ones matter and how to optimize.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">
                             <div className="flex items-center gap-2"><Calendar className="w-4 h-4" />Feb 5, 2026</div>

@@ -186,7 +186,7 @@ export default function WebsiteSpeedSEOPage() {
                             How Website Speed Affects <span className="font-serif italic text-stone-500">SEO Rankings</span> in 2026
                         </h1>
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            Google confirmed it. The data proves it. A slow website does not just frustrate visitors. It hands your Google rankings to faster competitors, one second at a time, while you silently bleed revenue.
+                            Google uses site speed as a direct ranking factor. This guide covers the real data behind how speed impacts your rankings and what you can do to stay ahead.
                         </p>
                         <div className="flex items-center gap-4 text-sm text-stone-500">
                             <span>Mar 9, 2026</span>

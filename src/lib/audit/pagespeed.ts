@@ -1,3 +1,5 @@
+import type { DeepChecksResult } from './deepChecks';
+
 export interface PageSpeedResult {
   performanceScore: number;
   seoScore: number;
@@ -15,6 +17,7 @@ export interface PageSpeedResult {
   warnings: number;
   passedChecks: number;
   topIssues: AuditIssue[];
+  deepChecks?: DeepChecksResult;
 }
 
 export interface AuditIssue {

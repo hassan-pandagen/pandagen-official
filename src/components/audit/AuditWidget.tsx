@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Globe, ArrowRight, Search } from "lucide-react";
+import { Globe, ArrowRight, Search, CheckCircle2, AlertTriangle, XCircle } from "lucide-react";
 import AuditLoadingState from "./AuditLoadingState";
 import AuditEmailGate from "./AuditEmailGate";
 import { getScoreTextClass, getScoreBorderClass } from "@/lib/audit/scoring";
@@ -189,11 +189,52 @@ export default function AuditWidget() {
                     <MetricCard label="SEO Score" value={auditData.seoScore} suffix="/100" isScore delay={0.3} />
                   </div>
 
+                  {/* 11-Point Inspection Teaser — gated behind email */}
+                  {auditData.deepChecks && (
+                    <div className="border border-stone-200 rounded-xl overflow-hidden relative">
+                      <div className="px-4 py-2.5 bg-stone-50 border-b border-stone-100 flex items-center justify-between">
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-stone-500">11-Point Inspection</span>
+                        <span className={`text-xs font-bold font-mono ${getScoreTextClass(auditData.deepChecks.overallScore)}`}>
+                          {auditData.deepChecks.overallScore}/100
+                        </span>
+                      </div>
+                      {/* Show first 3 checks, blur the rest */}
+                      <div className="divide-y divide-stone-100">
+                        {auditData.deepChecks.checks.slice(0, 3).map((check) => (
+                          <div key={check.id} className="flex items-center gap-2.5 px-4 py-2.5">
+                            {check.status === 'pass' && <CheckCircle2 className="w-3.5 h-3.5 text-green-500 flex-shrink-0" />}
+                            {check.status === 'warn' && <AlertTriangle className="w-3.5 h-3.5 text-orange-500 flex-shrink-0" />}
+                            {check.status === 'fail' && <XCircle className="w-3.5 h-3.5 text-red-500 flex-shrink-0" />}
+                            <span className="text-xs font-medium text-stone-700 flex-1">{check.name}</span>
+                            <span className={`text-xs font-bold font-mono ${getScoreTextClass(check.score)}`}>
+                              {check.score}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                      {/* Blurred remaining checks */}
+                      <div className="relative">
+                        <div className="divide-y divide-stone-100 blur-[6px] select-none pointer-events-none">
+                          {auditData.deepChecks.checks.slice(3, 6).map((check) => (
+                            <div key={check.id} className="flex items-center gap-2.5 px-4 py-2.5">
+                              <CheckCircle2 className="w-3.5 h-3.5 text-stone-300 flex-shrink-0" />
+                              <span className="text-xs font-medium text-stone-700 flex-1">{check.name}</span>
+                              <span className="text-xs font-bold font-mono text-stone-400">{check.score}</span>
+                            </div>
+                          ))}
+                        </div>
+                        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/90 flex items-end justify-center pb-2">
+                          <span className="text-[10px] font-bold text-stone-500 uppercase tracking-wider">+8 more checks</span>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
                   <button
                     onClick={() => setIsEmailGateOpen(true)}
                     className="w-full py-4 bg-charcoal text-white font-bold rounded-xl hover:bg-stone-800 transition-all flex items-center justify-center gap-2 hover:scale-[1.01] group"
                   >
-                    Get Full AI Report
+                    Unlock Full 11-Point Report
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </button>
 
@@ -275,11 +316,49 @@ export default function AuditWidget() {
                     <MetricCard label="Page Size" value={auditData.pageSize} isText delay={0.2} />
                     <MetricCard label="SEO Score" value={auditData.seoScore} suffix="/100" isScore delay={0.3} />
                   </div>
+                  {/* Mobile Deep Checks — gated */}
+                  {auditData.deepChecks && (
+                    <div className="border border-stone-200 rounded-xl overflow-hidden relative">
+                      <div className="px-3 py-2 bg-stone-50 border-b border-stone-100 flex items-center justify-between">
+                        <span className="text-[9px] font-bold uppercase tracking-widest text-stone-500">11-Point Inspection</span>
+                        <span className={`text-[10px] font-bold font-mono ${getScoreTextClass(auditData.deepChecks.overallScore)}`}>
+                          {auditData.deepChecks.overallScore}/100
+                        </span>
+                      </div>
+                      <div className="divide-y divide-stone-100">
+                        {auditData.deepChecks.checks.slice(0, 3).map((check) => (
+                          <div key={check.id} className="flex items-center gap-2 px-3 py-2">
+                            {check.status === 'pass' && <CheckCircle2 className="w-3 h-3 text-green-500 flex-shrink-0" />}
+                            {check.status === 'warn' && <AlertTriangle className="w-3 h-3 text-orange-500 flex-shrink-0" />}
+                            {check.status === 'fail' && <XCircle className="w-3 h-3 text-red-500 flex-shrink-0" />}
+                            <span className="text-[11px] font-medium text-stone-700 flex-1">{check.name}</span>
+                            <span className={`text-[11px] font-bold font-mono ${getScoreTextClass(check.score)}`}>
+                              {check.score}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="relative">
+                        <div className="divide-y divide-stone-100 blur-[6px] select-none pointer-events-none">
+                          {auditData.deepChecks.checks.slice(3, 5).map((check) => (
+                            <div key={check.id} className="flex items-center gap-2 px-3 py-2">
+                              <CheckCircle2 className="w-3 h-3 text-stone-300 flex-shrink-0" />
+                              <span className="text-[11px] font-medium text-stone-700 flex-1">{check.name}</span>
+                              <span className="text-[11px] font-bold font-mono text-stone-400">{check.score}</span>
+                            </div>
+                          ))}
+                        </div>
+                        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/90 flex items-end justify-center pb-1.5">
+                          <span className="text-[9px] font-bold text-stone-500 uppercase tracking-wider">+8 more checks</span>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                   <button
                     onClick={() => setIsEmailGateOpen(true)}
                     className="w-full py-3 bg-charcoal text-white font-bold rounded-xl hover:bg-stone-800 transition-all flex items-center justify-center gap-2 group"
                   >
-                    Get Full AI Report <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    Unlock Full Report <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </button>
                   <button onClick={handleReset} className="w-full text-center text-xs text-gray-500 hover:text-cognac transition-colors">
                     Scan another site

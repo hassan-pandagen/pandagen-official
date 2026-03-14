@@ -13,6 +13,7 @@
 - [GoHighLevel Migration](https://www.pandacodegen.com/services/gohighlevel): Migrate from GoHighLevel to custom Next.js
 
 ## Blog
+- [What Is Headless Commerce](https://www.pandacodegen.com/blog/what-is-headless-commerce): Plain-English guide to headless commerce for store owners
 - [How to Migrate WordPress to Next.js](https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs): Complete step-by-step migration guide
 - [WordPress vs Next.js](https://www.pandacodegen.com/blog/wordpress-vs-nextjs): Detailed comparison for business owners
 - [How Website Speed Affects SEO](https://www.pandacodegen.com/blog/how-website-speed-affects-seo): Core Web Vitals and ranking impact
@@ -21,6 +22,19 @@
 - [Why We Chose Next.js Over WordPress in 2026](https://www.pandacodegen.com/blog/why-we-chose-nextjs-over-wordpress-2026): Technology decision framework
 - [Shopify Dawn Theme Slow](https://www.pandacodegen.com/blog/shopify-dawn-theme-slow): Why Shopify's default theme underperforms
 - [How to Fix Slow WordPress](https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress): WordPress performance optimization guide
+- [Free Hosting With Vercel](https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost): How we host client websites for $0/month
+- [For Agencies: Custom Web Development](https://www.pandacodegen.com/blog/for-agencies-offer-custom-web-development): White-label development without hiring a dev team
+- [Google Universal Commerce Protocol](https://www.pandacodegen.com/blog/google-universal-commerce-protocol-what-it-means-for-your-store): What Google's commerce protocol means for your store
+- [WordPress AI Security Risk](https://www.pandacodegen.com/blog/wordpress-ai-security-risk-2026): 100K+ sites exposed through plugin vulnerabilities
+- [Why WordPress Is a Waste of Money](https://www.pandacodegen.com/blog/wordpress-killer): Transparent cost breakdown for business owners
+- [Shopify Headless Build](https://www.pandacodegen.com/blog/shopify-headless): How we got a Shopify store from 4s to 0.8s load time
+- [Elementor Kills SEO](https://www.pandacodegen.com/blog/elementor-kills-seo): Audit of 500 sites on page builder performance
+- [WordPress Plugins Destroy Speed](https://www.pandacodegen.com/blog/wordpress-plugins-destroy-speed): Performance cost of WordPress plugins
+- [Shopify Plus Still Slow](https://www.pandacodegen.com/blog/shopify-plus-still-slow): Why $2,300/mo doesn't fix Core Web Vitals
+- [WordPress Traffic Drop From Speed](https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed): The speed tax killing your organic traffic
+- [Shopify Slow Losing Sales](https://www.pandacodegen.com/blog/shopify-slow-losing-sales): The math behind slow Shopify revenue loss
+- [Low Shopify Conversion Rate](https://www.pandacodegen.com/blog/shopify-conversion-rate-speed-fix): How speed kills Shopify conversions
+- [Why Your Competitor Outranks You](https://www.pandacodegen.com/blog/why-competitor-outranks-you): Speed and hosting advantages behind better rankings
 
 ## Case Studies
 - [MyCustomPatches](https://www.pandacodegen.com/work/mycustompatches): E-commerce migration, PageSpeed 40 to 100

@@ -210,7 +210,7 @@ export default function ShopifySlowPage() {
                         </h1>
                         
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            Every second your store takes to load costs you customers. We calculated exactly how much.
+                            Speed and conversions are directly connected. This guide breaks down the math so you can see exactly where the opportunity is for your store.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">

@@ -212,7 +212,7 @@ export default function ShopifyDawnThemeSlowPage() {
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            Dawn is Shopify&apos;s fastest theme — so why is your store still loading in 3+ seconds? The problem isn&apos;t the theme. Here&apos;s what&apos;s actually killing your speed.
+                            Dawn is Shopify&apos;s fastest theme, and it&apos;s a great starting point. But if your store is still loading in 3+ seconds, this guide explains what&apos;s behind it and how to get faster.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">

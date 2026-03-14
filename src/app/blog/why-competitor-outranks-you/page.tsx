@@ -213,7 +213,7 @@ export default function CompetitorRankingsPage() {
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            They're getting 3× your traffic with a coded website. Google, ChatGPT, and Bing all prefer fast sites. Here's why.
+                            Google, ChatGPT, and Bing all prioritize fast websites. This guide shows how site speed affects your search visibility and what you can do to level up.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">

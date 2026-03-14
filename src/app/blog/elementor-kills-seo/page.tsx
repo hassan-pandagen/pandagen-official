@@ -179,7 +179,7 @@ export default function ElementorKillsSEOPage() {
                             We Audited 500 Sites. The Results Are Brutal.
                         </h1>
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            The average Elementor site scores 38/100 on mobile PageSpeed. Here&apos;s exactly how much traffic and revenue page builders are costing business owners in 2026.
+                            We audited 500 Elementor sites to understand how page builders affect performance and rankings. Here&apos;s what the data revealed and what alternatives are available.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">
                             <div className="flex items-center gap-2"><Calendar className="w-4 h-4" />Dec 28, 2025</div>

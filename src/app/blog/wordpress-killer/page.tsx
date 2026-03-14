@@ -178,7 +178,7 @@ export default function WordPressKillerPage() {
                             in 2026
                         </h1>
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3–5×.
+                            WordPress costs more than most people realize once you add up hosting, plugins, maintenance, and security. Here&apos;s a transparent breakdown to help you plan better.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">
                             <div className="flex items-center gap-2"><Calendar className="w-4 h-4" />Jan 15, 2026</div>
