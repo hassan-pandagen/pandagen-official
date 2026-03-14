@@ -7,7 +7,7 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 
 export const metadata: Metadata = {
     title: "Panda CodeLab — Custom Agency Website, Spline 3D + Framer Motion + WCAG 2.1 AA | PandaCodeGen",
-    description: "How we built pandacodelab.com — a separate brand, fully custom. Next.js 15, React 19, Framer Motion spring physics, magnetic interactions, Spline 3D scenes, WCAG 2.1 AA. Zero templates. Zero page builders. Sub-second load.",
+    description: "How we built pandacodelab.com — a separate brand, fully custom. Next.js 15, React 19, Framer Motion spring physics, magnetic interactions, Spline 3D scenes, WCAG 2.1 AA. Zero templates. Zero page builders. Under a second load.",
     openGraph: {
         title: "Panda CodeLab — Custom Agency Website Built by PandaCodeGen",
         description: "Live at pandacodelab.com. Next.js 15. Spring physics. Magnetic buttons. Spline 3D. WCAG 2.1 AA. Full case study.",
@@ -98,7 +98,7 @@ const caseStudySchema = {
                 {
                     "@type": "Question",
                     "name": "Can you build a site like this for my agency or business?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Yes. We build premium agency and business websites on this exact stack: Next.js 14+, TypeScript, Tailwind CSS, Framer Motion, and Lenis smooth scroll. Pricing starts from $5,900 for a full custom-coded agency site. Timeline is typically 4-6 weeks. Every site includes schema markup, Core Web Vitals optimization, and WCAG 2.1 AA compliance." }
+                    "acceptedAnswer": { "@type": "Answer", "text": "Yes. We build premium agency and business websites on this exact stack: Next.js 14+, TypeScript, Tailwind CSS, Framer Motion, and Lenis smooth scroll. Pricing starts from $5,900 for a full custom coded agency site. Timeline is typically 4-6 weeks. Every site includes schema markup, Core Web Vitals optimization, and WCAG 2.1 AA compliance." }
                 }
             ]
         }
@@ -208,7 +208,7 @@ export default function PandaCodelabCaseStudy() {
                                     The credibility problem
                                 </h3>
                                 <p className="text-stone-600 text-sm leading-relaxed">
-                                    We were selling clients on the idea that custom-coded sites are faster, more secure, and more scalable than templates. But every sale required explaining why — because our own presence didn&apos;t prove it visually or technically. We needed the agency site itself to be the argument.
+                                    We were selling clients on the idea that custom coded sites are faster, more secure, and more scalable than templates. But every sale required explaining why — because our own presence didn&apos;t prove it visually or technically. We needed the agency site itself to be the argument.
                                 </p>
                             </div>
                             <div className="p-6 bg-emerald-50 border border-emerald-100 rounded-2xl">

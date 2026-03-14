@@ -75,7 +75,7 @@ export default function SquarespacePageContent() {
             transition={{ delay: 0.1 }}
             className="text-xl text-stone-600 leading-relaxed mb-8 max-w-2xl mx-auto"
           >
-            Squarespace was great to get started. But its limitations are now costing you rankings, speed, and revenue. We build custom-coded sites that <span className="text-charcoal font-medium">load 5x faster, rank higher, and you own forever</span>.
+            Squarespace was great to get started. But its limitations are now costing you rankings, speed, and revenue. We build custom coded sites that <span className="text-charcoal font-medium">load 5x faster, rank higher, and you own forever</span>.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -267,7 +267,7 @@ export default function SquarespacePageContent() {
                 {/* RIGHT: Comparison + Savings */}
                 <div className="p-6 md:p-10 md:border-l border-stone-200 bg-stone-50/50 overflow-x-hidden">
                   <div className="flex justify-between items-center mb-6 pb-4 border-b border-stone-200">
-                    <h4 className="text-lg font-bold text-charcoal">Squarespace vs Custom-Coded</h4>
+                    <h4 className="text-lg font-bold text-charcoal">Squarespace vs Custom Coded</h4>
                   </div>
 
                   {/* Column Headers */}
@@ -394,7 +394,7 @@ export default function SquarespacePageContent() {
             <span className="text-stone-500 font-bold tracking-widest uppercase text-sm">The Smarter Path</span>
             <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 text-white">Own Your Platform. Stop Renting.</h2>
             <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-              A custom-coded website gives you what Squarespace never will: full ownership, blazing speed, and zero monthly platform fees.
+              A custom coded website gives you what Squarespace never will: full ownership, blazing speed, and zero monthly platform fees.
             </p>
           </div>
 
@@ -459,7 +459,7 @@ export default function SquarespacePageContent() {
               <h4 className="text-3xl font-bold text-slate-900 mb-4">Full Migration to Next.js</h4>
               <p className="text-slate-600 mb-8">We rebuild your site from scratch. Perfect scores. Zero monthly fees. Full ownership. Built to last.</p>
               <ul className="space-y-4 mb-10">
-                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" /> Sub-second load times (&lt;0.8s)</li>
+                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" /> Under a second load times (&lt;0.8s)</li>
                 <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" /> 100% SEO Preservation</li>
                 <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" /> Zero Monthly Platform Fees</li>
                 <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" /> You Own the Code</li>
@@ -579,7 +579,7 @@ export default function SquarespacePageContent() {
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">WordPress Migration</h3>
-                <p className="text-stone-400 text-xs mt-0.5">Escape plugin bloat. Get sub-second load times with custom code.</p>
+                <p className="text-stone-400 text-xs mt-0.5">Escape plugin bloat. Get load times under 1 second with custom code.</p>
               </div>
               <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all flex-shrink-0" />
             </Link>

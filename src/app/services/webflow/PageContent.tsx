@@ -210,7 +210,7 @@ export default function WebflowPageContent() {
       {/* 4. COMPARISON TABLE */}
       <section id="comparison" className="py-10 md:py-20 px-6 border-y border-stone-200 bg-stone-50">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">Webflow vs Custom-Coded</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">Webflow vs Custom Coded</h2>
           <p className="text-stone-600 text-center mb-12">See exactly what you&apos;re missing and what you could have.</p>
 
           <div className="overflow-x-auto rounded-2xl border border-stone-200">
@@ -218,7 +218,7 @@ export default function WebflowPageContent() {
             <div className="grid grid-cols-3 bg-stone-50 p-4 border-b border-stone-200">
               <div className="text-stone-600 font-medium text-sm">Feature</div>
               <div className="text-stone-500 font-bold text-sm text-center">Webflow</div>
-              <div className="text-cognac font-bold text-sm text-center">Custom-Coded</div>
+              <div className="text-cognac font-bold text-sm text-center">Custom Coded</div>
             </div>
 
             {comparisonData.map((row, i) => (
@@ -280,12 +280,12 @@ export default function WebflowPageContent() {
             Everything Webflow Does. And Everything It Can&apos;t.
           </h2>
           <p className="text-stone-600 text-lg leading-relaxed mb-8 md:mb-12 max-w-2xl mx-auto">
-            A custom-coded website gives you what Webflow never will: full ownership, server-side power, unlimited CMS, and zero monthly hosting fees.
+            A custom coded website gives you what Webflow never will: full ownership, server-side power, unlimited CMS, and zero monthly hosting fees.
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             {[
-              { icon: Gauge, title: "Everything Webflow Does, But Better", desc: "Same visual polish, but with server-side rendering, unlimited CMS, real API routes, and sub-second load times. No compromises." },
+              { icon: Gauge, title: "Everything Webflow Does, But Better", desc: "Same visual polish, but with server-side rendering, unlimited CMS, real API routes, and load times under 1 second. No compromises." },
               { icon: Server, title: "Server-Side Power", desc: "User authentication, payment processing, database queries, API integrations. Everything Webflow can\u2019t do natively. Built into your codebase." },
               { icon: DollarSign, title: "Zero Hosting Fees, Full Ownership", desc: "Deploy on Vercel\u2019s free tier. Own every line of code. No vendor lock-in. Scale to millions of pages without hitting CMS limits." },
             ].map((item, i) => (
@@ -337,10 +337,10 @@ export default function WebflowPageContent() {
               <div className="text-cognac text-sm font-bold uppercase tracking-wider mb-4">Option B</div>
               <h3 className="text-2xl font-bold text-charcoal mb-4">Migrate to Custom Code</h3>
               <p className="text-stone-600 text-base mb-6 leading-relaxed">
-                Migrate from Webflow to a custom-coded platform you own forever. Faster, full server-side logic, unlimited CMS, zero monthly hosting fees.
+                Migrate from Webflow to a custom coded platform you own forever. Faster, full server-side logic, unlimited CMS, zero monthly hosting fees.
               </p>
               <ul className="space-y-3 mb-8">
-                {["Sub-second load times", "Full server-side logic", "Unlimited CMS", "100% code ownership", "No monthly hosting fees", "30-day money-back guarantee"].map((item, i) => (
+                {["Under a second load times", "Full server-side logic", "Unlimited CMS", "100% code ownership", "No monthly hosting fees", "30-day money-back guarantee"].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
                     <CheckCircle2 className="w-4 h-4 text-cognac flex-shrink-0" /> {item}
                   </li>
@@ -398,7 +398,7 @@ export default function WebflowPageContent() {
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">2x Faster or Your Money Back</h2>
             <p className="text-stone-600 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-              If your new custom-coded site isn&apos;t at least 2x faster than your Webflow site, doesn&apos;t rank better, and doesn&apos;t look better, we&apos;ll refund you. No questions asked.
+              If your new custom coded site isn&apos;t at least 2x faster than your Webflow site, doesn&apos;t rank better, and doesn&apos;t look better, we&apos;ll refund you. No questions asked.
             </p>
             <button
               data-cal-namespace="discovery"

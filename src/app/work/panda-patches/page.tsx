@@ -77,7 +77,7 @@ const caseStudySchema = {
             "mainEntity": [
                 {
                     "@type": "Question",
-                    "name": "Can you replace Shopify with a custom-coded e-commerce store?",
+                    "name": "Can you replace Shopify with a custom coded e-commerce store?",
                     "acceptedAnswer": { "@type": "Answer", "text": "Yes. We replaced WordPress + WooCommerce entirely for Panda Patches with a custom Next.js storefront. The new store generates $38K+/month with zero platform fees — compared to Shopify's $79–$299/month plus transaction fees. You own 100% of the code." }
                 },
                 {

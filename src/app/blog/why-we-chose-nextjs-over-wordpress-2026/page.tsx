@@ -46,8 +46,8 @@ const articleSchema = {
             "headline": "Why We Chose Next.js Over WordPress for Every New Client in 2026",
             "description": "In 2023 we still built in WordPress. By mid-2024 we stopped completely. Here's the data, the client stories, and the 7 reasons we made the switch permanent.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-03-04",
-            "dateModified": "2026-03-10",
+            "datePublished": "2026-03-04T00:00:00-05:00",
+            "dateModified": "2026-03-10T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -106,8 +106,8 @@ const articleSchema = {
             "description": "In 2023 we still built in WordPress. By mid-2024 we stopped completely.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
-            "datePublished": "2026-03-04",
-            "dateModified": "2026-03-10",
+            "datePublished": "2026-03-04T00:00:00-05:00",
+            "dateModified": "2026-03-10T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/why-we-chose-nextjs-over-wordpress-2026#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -184,7 +184,7 @@ export default function WhyNextjsOverWordPressPage() {
                         </div>
                         <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
-                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom-coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -406,7 +406,7 @@ export default function WhyNextjsOverWordPressPage() {
                         </BlogText>
 
                         <BlogText>
-                            With a custom-coded site:
+                            With a custom coded site:
                         </BlogText>
 
                         <BlogList items={[
@@ -516,7 +516,7 @@ export default function WhyNextjsOverWordPressPage() {
                             <li><strong>The speed gap is structural, not fixable with plugins</strong> — WordPress loads in 3.8 seconds on average while Next.js loads in 0.9 seconds because they use fundamentally different architectures.</li>
                             <li><strong>Hosting drops from $150-$400/month to $0</strong> — Vercel's free tier handles most business sites because pre-built static pages require no server computation per visit.</li>
                             <li><strong>Zero plugins means zero security vulnerabilities</strong> — 43% of all website hacks target WordPress through its plugin ecosystem, an attack surface that does not exist in custom Next.js builds.</li>
-                            <li><strong>You own the code, not a licence</strong> — unlike WordPress where your site depends on third-party themes and plugins, a custom-coded site is a portable asset any developer can maintain.</li>
+                            <li><strong>You own the code, not a licence</strong> — unlike WordPress where your site depends on third-party themes and plugins, a custom coded site is a portable asset any developer can maintain.</li>
                             <li><strong>WordPress is still right for hobby blogs and small personal sites</strong> — if speed, SEO, and revenue are not priorities, WordPress's convenience still makes sense.</li>
                         </ol>
                     </section>

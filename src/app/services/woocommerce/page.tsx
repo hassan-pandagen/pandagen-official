@@ -2,13 +2,13 @@ import PageContent from './PageContent';
 
 export const metadata = {
   title: 'WooCommerce to Custom Code Migration | PandaCodeGen',
-  description: 'Escape WooCommerce hosting bills, plugin conflicts, and slow checkouts. We migrate your WooCommerce store to a custom-coded Next.js storefront you own forever.',
+  description: 'Escape WooCommerce hosting bills, plugin conflicts, and slow checkouts. We migrate your WooCommerce store to a custom coded Next.js storefront you own forever.',
   alternates: {
     canonical: '/services/woocommerce',
   },
   openGraph: {
     title: 'WooCommerce to Custom Code Migration | PandaCodeGen',
-    description: 'Escape WooCommerce hosting bills, plugin conflicts, and slow checkouts. We migrate your WooCommerce store to a custom-coded Next.js storefront you own forever.',
+    description: 'Escape WooCommerce hosting bills, plugin conflicts, and slow checkouts. We migrate your WooCommerce store to a custom coded Next.js storefront you own forever.',
     url: 'https://www.pandacodegen.com/services/woocommerce',
     siteName: 'PandaCodeGen',
     type: 'website',
@@ -23,7 +23,7 @@ export default function WooCommerceServicePage() {
         "@type": "ProfessionalService",
         "@id": "https://www.pandacodegen.com/services/woocommerce#service",
         "name": "WooCommerce Migration & Custom E-Commerce Development",
-        "description": "Migrate from WooCommerce to a custom-coded Next.js storefront. Sub-second load times, zero plugin fees, and full code ownership. Serving UK, Australia, Canada, Europe and US.",
+        "description": "Migrate from WooCommerce to a custom coded Next.js storefront. Under a second load times, zero plugin fees, and full code ownership. Serving UK, Australia, Canada, Europe and US.",
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": ["US", "GB", "AU", "CA", "DE", "FR", "NL", "IE"],
         "serviceType": ["WooCommerce Migration", "WooCommerce to Next.js", "Custom E-Commerce", "Headless Commerce"]

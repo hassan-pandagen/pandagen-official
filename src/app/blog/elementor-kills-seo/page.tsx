@@ -44,7 +44,7 @@ const articleSchema = {
             "headline": "Is Elementor Killing Your Google Rankings? We Audited 500 Sites. The Results Are Brutal.",
             "description": "The average Elementor site scores 38/100 on mobile PageSpeed. We audited 500 sites to find out exactly how much traffic page builders cost.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2025-12-28",
+            "datePublished": "2025-12-28T00:00:00-05:00",
             "dateModified": "2026-03-10",
             "author": {
                 "@type": "Person",
@@ -116,7 +116,7 @@ const articleSchema = {
             "description": "The average Elementor site scores 38/100 on mobile PageSpeed. We audited 500 sites.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
-            "datePublished": "2025-12-28",
+            "datePublished": "2025-12-28T00:00:00-05:00",
             "dateModified": "2026-03-10",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/elementor-kills-seo#breadcrumb" },
             "inLanguage": "en-US"
@@ -187,7 +187,7 @@ export default function ElementorKillsSEOPage() {
                         </div>
                         <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
-                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom-coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -312,7 +312,7 @@ export default function ElementorKillsSEOPage() {
                             <li><strong>Elementor&apos;s bloat is architectural, not fixable</strong> — the average Elementor site scores 38/100 on mobile because the drag-and-drop framework loads hundreds of kilobytes of unused code on every page.</li>
                             <li><strong>71% of Elementor sites are in Google&apos;s red zone</strong> — our 500-site audit found that most Elementor sites fail Core Web Vitals, costing them 20-30% of organic traffic.</li>
                             <li><strong>Optimization has a ceiling of 50-60/100</strong> — caching plugins and image compression help, but you cannot optimize past Elementor&apos;s built-in DOM bloat and render-blocking CSS.</li>
-                            <li><strong>Migrating to Next.js recovers rankings in 30-60 days</strong> — businesses that switch from Elementor to custom-coded sites consistently score 95-100/100 and gain 2-3x organic traffic within 90 days.</li>
+                            <li><strong>Migrating to Next.js recovers rankings in 30-60 days</strong> — businesses that switch from Elementor to custom coded sites consistently score 95-100/100 and gain 2-3x organic traffic within 90 days.</li>
                         </ol>
                     </section>
 

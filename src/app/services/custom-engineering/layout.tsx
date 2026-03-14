@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Custom Web Apps & SaaS Development',
-  description: 'Build scalable SaaS platforms, client portals, and AI-powered dashboards with Next.js. Enterprise-grade architecture. Own your IP.',
+  description: 'Build scalable SaaS platforms, client portals, and AI-powered dashboards with Next.js. Enterprise level architecture. Own your IP.',
   keywords: [
     'custom web application development',
     'SaaS development',

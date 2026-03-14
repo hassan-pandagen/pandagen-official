@@ -228,7 +228,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                                  <option className="bg-white">Select a service...</option>
                                  <option className="bg-white">WordPress Migration</option>
                                  <option className="bg-white">Web Apps & Dashboards</option>
-                                 <option className="bg-white">High-Performance Stores</option>
+                                 <option className="bg-white">High Performance Stores</option>
                                  <option className="bg-white">Other</option>
                              </select>
                             {/* Custom Arrow */}

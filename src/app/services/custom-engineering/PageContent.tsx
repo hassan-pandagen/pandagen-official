@@ -232,7 +232,7 @@ export default function PageContent() {
       {/* 4. COMPARISON TABLE */}
       <section id="comparison" className="py-10 md:py-20 px-6 border-y border-stone-200 bg-stone-50/50">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">No-Code vs Custom-Coded</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">No-Code vs Custom Coded</h2>
           <p className="text-stone-600 text-center mb-8 md:mb-12">Build to last. Build to scale. Build to own.</p>
 
           <div className="overflow-x-auto rounded-2xl border border-stone-200">
@@ -240,7 +240,7 @@ export default function PageContent() {
             <div className="grid grid-cols-3 bg-stone-50 p-4 border-b border-stone-200">
               <div className="text-stone-600 font-medium text-sm">Feature</div>
               <div className="text-stone-500 font-bold text-sm text-center">No-Code / Templates</div>
-              <div className="text-cognac font-bold text-sm text-center">Custom-Coded</div>
+              <div className="text-cognac font-bold text-sm text-center">Custom Coded</div>
             </div>
 
             {comparisonData.map((row, i) => (
@@ -336,7 +336,7 @@ export default function PageContent() {
               <div className="text-cognac text-sm font-bold uppercase tracking-wider mb-4">For Growing Businesses</div>
               <h3 className="text-2xl font-bold text-charcoal mb-4">Full SaaS / Platform</h3>
               <p className="text-stone-600 text-base mb-6 leading-relaxed">
-                A complete custom-coded platform with AI integration, multi-tenant architecture, and everything you need to scale to millions of users.
+                A complete custom coded platform with AI integration, multi-tenant architecture, and everything you need to scale to millions of users.
               </p>
               <ul className="space-y-3 mb-8">
                 {["Full SaaS architecture", "AI-powered features", "Mobile app (PWA)", "Admin dashboard", "100% code ownership", "Scales to 1M+ users"].map((item, i) => (
@@ -444,7 +444,7 @@ export default function PageContent() {
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">WordPress Migration</h3>
-                <p className="text-stone-400 text-xs mt-0.5">Escape plugin bloat. Get sub-second load times with custom code.</p>
+                <p className="text-stone-400 text-xs mt-0.5">Escape plugin bloat. Get load times under 1 second with custom code.</p>
               </div>
               <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all flex-shrink-0" />
             </Link>

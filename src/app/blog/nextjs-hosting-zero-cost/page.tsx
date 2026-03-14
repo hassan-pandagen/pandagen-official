@@ -46,8 +46,8 @@ const articleSchema = {
             "headline": "How We Host Client Websites for Free ($0/Month) With Vercel",
             "description": "Most businesses pay $50 to $300/month for hosting. We deploy every client site for $0/month on Vercel's free tier. Faster, more secure, zero maintenance.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-03-13",
-            "dateModified": "2026-03-13",
+            "datePublished": "2026-03-13T00:00:00-05:00",
+            "dateModified": "2026-03-13T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -106,8 +106,8 @@ const articleSchema = {
             "description": "Most businesses pay $50 to $300/month for hosting. We deploy every client site for $0/month on Vercel's free tier with zero maintenance.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
-            "datePublished": "2026-03-13",
-            "dateModified": "2026-03-13",
+            "datePublished": "2026-03-13T00:00:00-05:00",
+            "dateModified": "2026-03-13T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -178,7 +178,7 @@ export default function NextjsHostingZeroCostPage() {
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            What if you could host your business website for $0/month and still get sub-second load times? This guide walks you through exactly how we do it for every client.
+                            What if you could host your business website for $0/month and still get load times under 1 second? This guide walks you through exactly how we do it for every client.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">
@@ -192,7 +192,7 @@ export default function NextjsHostingZeroCostPage() {
                             </div>
                         </div>
                         <BlogAuthor
-                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom-coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>

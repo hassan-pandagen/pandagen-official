@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'GoHighLevel Website & Funnel Development',
-  description: 'GoHighLevel funnel development and migration. Custom-coded landing pages that integrate with GHL CRM. Faster loading and better SEO.',
+  description: 'GoHighLevel funnel development and migration. Custom coded landing pages that integrate with GHL CRM. Faster loading and better SEO.',
   keywords: [
     'GoHighLevel developer',
     'GHL funnel builder',
@@ -16,14 +16,14 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'GoHighLevel Development & Migration | PandaCodeGen',
-    description: 'Keep GHL for CRM. Upgrade your funnels to custom-coded pages that load instantly, rank on Google, and convert 2-3x better.',
+    description: 'Keep GHL for CRM. Upgrade your funnels to custom coded pages that load instantly, rank on Google, and convert 2-3x better.',
     url: 'https://www.pandacodegen.com/services/gohighlevel',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'GoHighLevel Development & Migration | PandaCodeGen',
-    description: 'Keep GHL for CRM. Upgrade your funnels to custom-coded pages that load instantly, rank on Google, and convert 2-3x better.',
+    description: 'Keep GHL for CRM. Upgrade your funnels to custom coded pages that load instantly, rank on Google, and convert 2-3x better.',
   },
   alternates: {
     canonical: '/services/gohighlevel',

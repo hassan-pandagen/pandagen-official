@@ -22,7 +22,7 @@ export default function WebflowServicePage() {
         "@type": "ProfessionalService",
         "@id": "https://www.pandacodegen.com/services/webflow#service",
         "name": "Webflow Migration to Custom Code",
-        "description": "Professional Webflow migration to custom-coded Next.js. Stop paying premium hosting fees. Get faster loading, full SEO control, and own your code.",
+        "description": "Professional Webflow migration to custom coded Next.js. Stop paying premium hosting fees. Get faster loading, full SEO control, and own your code.",
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
         "serviceType": ["Webflow Migration", "Webflow to Next.js", "Webflow Alternative", "Webflow to Custom Code"]

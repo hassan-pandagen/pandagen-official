@@ -3,11 +3,11 @@ import PageContent from './PageContent';
 
 export const metadata: Metadata = {
   title: 'Services & Capabilities | PandaCodeGen',
-  description: 'WordPress migration, Shopify headless commerce, and custom web app development. Sub-second load times, zero bloat, bank-grade security.',
+  description: 'WordPress migration, Shopify headless commerce, and custom web app development. Under a second load times, zero bloat, bank level security.',
   alternates: { canonical: '/services' },
   openGraph: {
     title: 'Services & Capabilities | PandaCodeGen',
-    description: 'WordPress migration, Shopify headless commerce, and custom web app development. Sub-second load times, zero bloat.',
+    description: 'WordPress migration, Shopify headless commerce, and custom web app development. Under a second load times, zero bloat.',
     url: 'https://www.pandacodegen.com/services',
     siteName: 'PandaCodeGen',
     type: 'website',
@@ -47,7 +47,7 @@ export default function ServicesPage() {
               "itemOffered": {
                 "@type": "Service",
                 "name": "WordPress to Next.js Migration",
-                "description": "Migrate your WordPress site to a custom Next.js application with sub-second load times, perfect SEO, and zero plugin maintenance."
+                "description": "Migrate your WordPress site to a custom Next.js application with load times under 1 second, perfect SEO, and zero plugin maintenance."
               }
             },
             {
@@ -62,7 +62,7 @@ export default function ServicesPage() {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "High-Performance Shopify Stores",
+                "name": "High Performance Shopify Stores",
                 "description": "Custom headless Shopify storefronts that load instantly with Next.js. No templates, no monthly app fees."
               }
             }

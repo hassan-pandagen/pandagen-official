@@ -430,7 +430,7 @@ export default function EnterpriseOpsCaseStudy() {
                             <div className="h-px w-8 bg-cognac" />
                             <span className="text-cognac text-sm font-bold uppercase tracking-widest">Tech Stack</span>
                         </div>
-                        <h2 className="text-3xl font-bold text-charcoal mb-3">Enterprise-grade. Every layer.</h2>
+                        <h2 className="text-3xl font-bold text-charcoal mb-3">Enterprise level. Every layer.</h2>
                         <p className="text-stone-600 mb-8">
                             100% TypeScript. Offline-first. APM monitoring. Rated 9.4/10 code quality and 9.3/10 architecture by independent senior developer review.
                         </p>

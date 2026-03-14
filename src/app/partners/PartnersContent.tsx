@@ -113,7 +113,7 @@ export default function PartnersContent() {
             className="text-xl text-stone-600 max-w-2xl mx-auto mb-10"
           >
             White-label web development for agencies. Your brand, our engineering.
-            Deliver custom-coded websites to your clients without hiring a dev team.
+            Deliver custom coded websites to your clients without hiring a dev team.
           </motion.p>
 
           <motion.div
@@ -226,7 +226,7 @@ export default function PartnersContent() {
             <h2 className="text-3xl font-bold text-charcoal mb-8 text-center">What&apos;s Included</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {[
-                "Custom-coded websites (no templates)",
+                "Custom coded websites (no templates)",
                 "Full white-label delivery",
                 "Mutual NDA signed before every project",
                 "Weekly progress updates",

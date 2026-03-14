@@ -44,8 +44,8 @@ const articleSchema = {
             "headline": "Why Is My WordPress Site Losing Traffic? The Speed Tax You're Paying",
             "description": "Slow WordPress sites lose Google rankings fast. Every 1-second delay costs 20% of organic traffic. Here's the simple math on why speed = traffic.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-02-07",
-            "dateModified": "2026-03-10",
+            "datePublished": "2026-02-07T00:00:00-05:00",
+            "dateModified": "2026-03-10T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -116,8 +116,8 @@ const articleSchema = {
             "description": "Slow WordPress sites lose Google rankings fast. Every 1-second delay costs 20% of organic traffic.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
-            "datePublished": "2026-02-07",
-            "dateModified": "2026-03-10",
+            "datePublished": "2026-02-07T00:00:00-05:00",
+            "dateModified": "2026-03-10T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -187,7 +187,7 @@ export default function WordPressTrafficDropPage() {
                         </div>
                         <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
-                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom-coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -330,7 +330,7 @@ export default function WordPressTrafficDropPage() {
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
                             <li><strong>Google&apos;s Core Web Vitals update made speed a direct ranking factor</strong> — slow WordPress sites are being quietly demoted, losing 20-30% of organic traffic to faster competitors.</li>
                             <li><strong>A Mobile PageSpeed score below 50 is a traffic emergency</strong> — most WordPress sites we audit score between 22 and 48, meaning their rankings are actively deteriorating every day.</li>
-                            <li><strong>Plugins and themes create an architectural speed ceiling</strong> — caching can get WordPress from 6 seconds down to 2.5, but you cannot reach sub-1-second without replacing the platform entirely.</li>
+                            <li><strong>Plugins and themes create an architectural speed ceiling</strong> — caching can get WordPress from 6 seconds down to 2.5, but you cannot reach under 1 second without replacing the platform entirely.</li>
                             <li><strong>Traffic recovers within 60-90 days after migrating to Next.js</strong> — clients typically return to their previous peak and then exceed it by 15-25% within three months of launching a fast site.</li>
                         </ol>
                     </section>

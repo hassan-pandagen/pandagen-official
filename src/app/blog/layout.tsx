@@ -13,14 +13,14 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'PandaCodeGen Blog - Technical Insights & Best Practices',
-    description: 'Deep dives into Next.js, WordPress alternatives, Shopify optimization, and building high-performance web applications.',
+    description: 'Deep dives into Next.js, WordPress alternatives, Shopify optimization, and building high performance web applications.',
     url: 'https://www.pandacodegen.com/blog',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'PandaCodeGen Blog - Technical Insights & Best Practices',
-    description: 'Deep dives into Next.js, WordPress alternatives, Shopify optimization, and building high-performance web applications.',
+    description: 'Deep dives into Next.js, WordPress alternatives, Shopify optimization, and building high performance web applications.',
   },
   alternates: {
     canonical: '/blog',

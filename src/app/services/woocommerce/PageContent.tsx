@@ -36,7 +36,7 @@ const faqs = [
 ];
 
 const comparisonRows = [
-  { label: "Load Time",     woo: "2.5–5s average",              custom: "Sub-1s, guaranteed",        isPain: true  },
+  { label: "Load Time",     woo: "2.5–5s average",              custom: "Under 1s, guaranteed",        isPain: true  },
   { label: "Monthly Cost",  woo: "$300–$700/mo (hosting+plugins)", custom: "$0–$50/mo at any scale",  isPain: true  },
   { label: "Checkout",      woo: "Plugin-dependent, fragile",    custom: "Custom logic, bulletproof", isPain: true  },
   { label: "Security",      woo: "Self-managed, plugin surface", custom: "Static, no attack surface", isPain: true  },
@@ -77,7 +77,7 @@ export default function PageContent() {
             transition={{ delay: 0.1 }}
             className="text-xl text-stone-600 leading-relaxed mb-8 max-w-2xl mx-auto"
           >
-            WooCommerce is WordPress with a shopping cart bolted on. We rebuild your store as a custom-coded Next.js storefront with faster checkout and zero plugin fees, giving you complete code ownership. <span className="text-charcoal font-medium">No plugin conflicts. No surprise hosting bills.</span>
+            WooCommerce is WordPress with a shopping cart bolted on. We rebuild your store as a custom coded Next.js storefront with faster checkout and zero plugin fees, giving you complete code ownership. <span className="text-charcoal font-medium">No plugin conflicts. No surprise hosting bills.</span>
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -157,7 +157,7 @@ export default function PageContent() {
               { icon: DollarSign, title: "You're Paying $300–$700/Month to Run Your Store", detail: "Managed WooCommerce hosting (Kinsta, WP Engine): $50–$200/mo. WooCommerce extensions (subscriptions, bookings, B2B): $50–$300/yr. Security plugin: $10–$50/mo. Backups, CDN, caching. It never stops adding up." },
               { icon: XCircle, title: "Checkout Abandonment Is Killing Your Conversions", detail: "Every extra second of load time costs you 7% in conversions. WooCommerce checkouts average 3–5 seconds. On a store doing $50K/month, that's $3,500+ in revenue you're leaving on the table every single month." },
               { icon: AlertTriangle, title: "One Plugin Update Can Take Your Store Offline", detail: "Payment gateway plugin conflicts with your theme. WooCommerce updates break your custom checkout. And it always happens on a Saturday during a sale campaign. Every minute offline is orders you never get back." },
-              { icon: Lock, title: "Your Store Is One Hack Away From Disaster", detail: "WooCommerce stores hold payment data, customer addresses, and order history, making them high-value targets. WordPress is the #1 hacked CMS. A static custom-coded store has no database to breach and no plugin attack surface." },
+              { icon: Lock, title: "Your Store Is One Hack Away From Disaster", detail: "WooCommerce stores hold payment data, customer addresses, and order history, making them high-value targets. WordPress is the #1 hacked CMS. A static custom coded store has no database to breach and no plugin attack surface." },
               { icon: TrendingUp, title: "Google Penalizes Your Slow Checkout Pages", detail: "Google's Core Web Vitals directly impact your organic rankings. A WooCommerce site running PHP on shared hosting fails LCP and TTFB benchmarks. Your competitors with faster sites outrank you before a single keyword is written." },
               { icon: Code2, title: "You Can't Add Features Without Paying for Yet Another Plugin", detail: "Need a pricing calculator? $200/yr plugin. Need a custom B2B portal? Another plugin. Need loyalty points? Another plugin. Each one adds load time, maintenance risk, and another line on your monthly bill. On custom code, we build exactly what you need, once." },
             ].map((item, i) => (
@@ -297,7 +297,7 @@ export default function PageContent() {
                 A complete rebuild on custom Next.js. Faster checkout, zero platform fees, and a storefront you own forever.
               </p>
               <ul className="space-y-3 mb-8">
-                {["Sub-second checkout load time", "All products, orders & accounts migrated", "Native Stripe + PayPal + Apple Pay", "Zero monthly plugin fees", "Custom pricing logic built in", "100% code & IP ownership", "30-day money-back guarantee"].map((item, i) => (
+                {["Under a second checkout load time", "All products, orders & accounts migrated", "Native Stripe + PayPal + Apple Pay", "Zero monthly plugin fees", "Custom pricing logic built in", "100% code & IP ownership", "30-day money-back guarantee"].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
                     <CheckCircle2 className="w-4 h-4 text-cognac flex-shrink-0" /> {item}
                   </li>

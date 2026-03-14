@@ -46,8 +46,8 @@ const articleSchema = {
             "headline": "How to Fix a Slow WordPress Site (8 Ways That Actually Work)",
             "description": "Your WordPress site loads in 4 seconds. Your competitor loads in 0.9 seconds. Here's exactly how to speed up WordPress and close the gap.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-02-17",
-            "dateModified": "2026-03-10",
+            "datePublished": "2026-02-17T00:00:00-05:00",
+            "dateModified": "2026-03-10T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -123,8 +123,8 @@ const articleSchema = {
             "description": "Your WordPress site loads in 4 seconds. Your competitor loads in 0.9 seconds. Here's exactly how to speed up WordPress with 8 proven methods.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
-            "datePublished": "2026-02-17",
-            "dateModified": "2026-03-10",
+            "datePublished": "2026-02-17T00:00:00-05:00",
+            "dateModified": "2026-03-10T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -166,7 +166,7 @@ const articleSchema = {
                     "name": "Can I make WordPress load in under 1 second?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "No. Even with perfect optimization, WordPress struggles to break 1.5 seconds. The architecture is from 2003 and wasn't designed for modern performance standards. To get sub-1-second load times, you need to migrate to a modern framework like Next.js."
+                        "text": "No. Even with perfect optimization, WordPress struggles to break 1.5 seconds. The architecture is from 2003 and wasn't designed for modern performance standards. To get under 1 second load times, you need to migrate to a modern framework like Next.js."
                     }
                 },
                 {
@@ -245,7 +245,7 @@ export default function FixSlowWordPressPage() {
                         </div>
                         <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
-                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom-coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -262,7 +262,7 @@ export default function FixSlowWordPressPage() {
                             "Every 1 second of slowness costs you 7% in conversions. At 4 seconds load time, you're losing 28% of sales.",
                             "8 proven methods to speed up WordPress: Remove plugins, optimize images, enable caching, use global servers, compress files, clean database, better hosting, remove page builders.",
                             "WordPress has a speed ceiling of 2-2.5 seconds no matter how optimized. Can't beat modern platforms.",
-                            "If you need sub-1-second load times (to compete with fast sites), migration to Next.js is the only solution."
+                            "If you need under 1 second load times (to compete with fast sites), migration to Next.js is the only solution."
                         ]} />
                     </div>
 
@@ -618,7 +618,7 @@ export default function FixSlowWordPressPage() {
                         </BlogText>
 
                         <BlogList items={[
-                            "Sub-1-second load times (to compete with fast competitors)",
+                            "Under 1 second load times (to compete with fast competitors)",
                             "95-100 PageSpeed scores (to rank higher on Google)",
                             "50-70% lower hosting costs (no expensive managed WordPress hosting)",
                             "Zero plugin fees (no security plugins, caching plugins, optimization plugins)"
@@ -655,7 +655,7 @@ export default function FixSlowWordPressPage() {
                         {/* Mid-Article CTA */}
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Ready to go beyond WordPress&apos;s speed ceiling?</p>
-                            <p className="text-stone-600 mb-4 text-sm">Free migration audit. See what sub-1-second load times would do for your traffic and revenue.</p>
+                            <p className="text-stone-600 mb-4 text-sm">Free migration audit. See what under 1 second load times would do for your traffic and revenue.</p>
                             <a
                                 href="https://cal.com/pandagen/discovery"
                                 target="_blank"
@@ -768,7 +768,7 @@ export default function FixSlowWordPressPage() {
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
                             <li><strong>Removing unused plugins has the highest immediate impact</strong> — each plugin adds 2-15 HTTP requests, and cutting half your plugins can save 0.5-1.5 seconds of load time.</li>
                             <li><strong>Image optimisation alone can gain 10-20 PageSpeed points</strong> — most WordPress sites load full-resolution images on mobile when a compressed WebP at the right size would be 80% smaller.</li>
-                            <li><strong>WordPress has a hard speed ceiling of 2-2.5 seconds</strong> — even with all 8 optimisations applied perfectly, the PHP architecture prevents sub-1-second load times.</li>
+                            <li><strong>WordPress has a hard speed ceiling of 2-2.5 seconds</strong> — even with all 8 optimisations applied perfectly, the PHP architecture prevents under 1 second load times.</li>
                             <li><strong>Page builders are the single biggest speed killer</strong> — Elementor, Divi, and WPBakery generate 3x more code than needed and add 1-2 seconds to every page load.</li>
                             <li><strong>If you are going to rebuild anyway, rebuild on Next.js</strong> — the same effort that gets WordPress to 2 seconds gets Next.js to 0.8 seconds with 95-100/100 PageSpeed.</li>
                         </ol>

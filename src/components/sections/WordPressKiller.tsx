@@ -10,7 +10,7 @@ interface WordPressKillerProps {
 const comparisonRows = [
   { metric: "Load Speed", bad: "2-5s", good: "< 1s", icon: Gauge },
   { metric: "Monthly Cost", bad: "$150+", good: "$0", icon: DollarSign },
-  { metric: "Security", bad: "Vulnerable", good: "Bank-Grade", icon: Shield },
+  { metric: "Security", bad: "Vulnerable", good: "Bank Level", icon: Shield },
   { metric: "Maintenance", bad: "Daily Updates", good: "Zero", icon: RefreshCcw },
   { metric: "Ownership", bad: "Rented", good: "100% Yours", icon: Lock },
   { metric: "AI Search", bad: "Invisible", good: "Optimized", icon: Eye },

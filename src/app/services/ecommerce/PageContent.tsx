@@ -12,7 +12,7 @@ import ShopifyKiller from "@/components/sections/ShopifyKiller";
 const faqs = [
   {
     q: "What is custom Shopify?",
-    a: "Custom Shopify means you keep Shopify for everything it's great at (inventory, orders, payments, and customer management), but replace the slow Liquid theme with a custom-coded storefront that loads in under 1 second. Same dashboard, 4x faster store."
+    a: "Custom Shopify means you keep Shopify for everything it's great at (inventory, orders, payments, and customer management), but replace the slow Liquid theme with a custom coded storefront that loads in under 1 second. Same dashboard, 4x faster store."
   },
   {
     q: "Will my Shopify apps still work?",
@@ -65,7 +65,7 @@ export default function PageContent() {
             transition={{ delay: 0.1 }}
             className="text-xl text-stone-600 leading-relaxed mb-8 max-w-2xl mx-auto"
           >
-            We migrate high-volume brands from standard Shopify themes to high-performance custom-coded storefronts. <span className="text-charcoal font-medium">Keep the Shopify backend, destroy the frontend limitations.</span>
+            We migrate high-volume brands from standard Shopify themes to high performance custom coded storefronts. <span className="text-charcoal font-medium">Keep the Shopify backend, destroy the frontend limitations.</span>
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -146,7 +146,7 @@ export default function PageContent() {
                   </div>
                   <div>
                     <div className="flex justify-between text-sm mb-2">
-                      <span className="text-stone-600">Custom-Coded</span>
+                      <span className="text-stone-600">Custom Coded</span>
                       <span className="text-green-600 font-bold">0.8s</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-3">
@@ -317,12 +317,12 @@ export default function PageContent() {
             <div className="p-8 rounded-3xl bg-stone-50/50 border border-cognac/20 hover:border-cognac/40 transition-colors relative overflow-hidden">
               <div className="absolute top-4 right-4 px-3 py-1 bg-charcoal/10 text-cognac text-xs font-bold rounded-full">Recommended</div>
               <div className="text-cognac text-sm font-bold uppercase tracking-wider mb-4">Option B</div>
-              <h3 className="text-2xl font-bold text-charcoal mb-4">Go Headless (Custom-Coded)</h3>
+              <h3 className="text-2xl font-bold text-charcoal mb-4">Go Headless (Custom Coded)</h3>
               <p className="text-stone-600 text-base mb-6 leading-relaxed">
                 A fully custom storefront that keeps Shopify&apos;s backend but eliminates all frontend limitations. The ultimate e-commerce upgrade.
               </p>
               <ul className="space-y-3 mb-8">
-                {["Sub-second load times", "Zero monthly app fees", "Custom checkout flows", "90-95/100 PageSpeed score", "Unique brand experience", "30-day money-back guarantee"].map((item, i) => (
+                {["Under a second load times", "Zero monthly app fees", "Custom checkout flows", "90-95/100 PageSpeed score", "Unique brand experience", "30-day money-back guarantee"].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
                     <CheckCircle2 className="w-4 h-4 text-cognac flex-shrink-0" /> {item}
                   </li>
@@ -414,7 +414,7 @@ export default function PageContent() {
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">WordPress Migration</h3>
-                <p className="text-stone-400 text-xs mt-0.5">Escape plugin bloat. Get sub-second load times with custom code.</p>
+                <p className="text-stone-400 text-xs mt-0.5">Escape plugin bloat. Get load times under 1 second with custom code.</p>
               </div>
               <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all flex-shrink-0" />
             </Link>

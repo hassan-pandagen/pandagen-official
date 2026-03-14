@@ -24,7 +24,7 @@ const LatestBlog = lazyLoad(() => import("@/components/sections/LatestBlog"));
 const homeFaqs = [
   {
     q: "What is WordPress migration and why do I need it?",
-    a: "WordPress migration means moving your existing WordPress site to a custom-coded platform — typically Next.js or a similar modern framework. If your WordPress site has a slow load time, you're losing revenue. Studies show every 1-second delay in page load time reduces conversions by 7%. WordPress plugin bloat, shared hosting overhead, and theme weight are the primary causes of slow load times. We migrate your content, SEO settings, and design to a custom-coded website that loads in under 1 second, with no monthly plugin fees and no vendor lock-in.",
+    a: "WordPress migration means moving your existing WordPress site to a custom coded platform, typically Next.js or a similar modern framework. If your WordPress site has a slow load time, you're losing revenue. Studies show every 1 second delay in page load time reduces conversions by 7%. WordPress plugin bloat, shared hosting overhead, and theme weight are the primary causes of slow load times. We migrate your content, SEO settings, and design to a custom coded website that loads in under 1 second, with no monthly plugin fees and no vendor lock in.",
   },
   {
     q: "How does the free AI website audit work?",
@@ -32,19 +32,19 @@ const homeFaqs = [
   },
   {
     q: "How much faster will my site be after migration from WordPress or Shopify?",
-    a: "Most WordPress and Shopify sites we migrate go from 4–8 second load times to under 1 second — an improvement of 80–95%. Our average PageSpeed score across all builds is 100/100. Sub-second load times directly improve your Google rankings, lower bounce rates, and increase conversion rates. Faster sites also cost less to host long-term because they require fewer server resources.",
+    a: "Most WordPress and Shopify sites we migrate go from 4 to 8 second load times to under 1 second, an improvement of 80 to 95%. Our average PageSpeed score across all builds is 100/100. Load times under 1 second directly improve your Google rankings, lower bounce rates, and increase conversion rates. Faster sites also cost less to host because they require fewer server resources.",
   },
   {
     q: "Do you work with Shopify stores?",
-    a: "Yes. We build custom Shopify storefronts using headless architecture and purpose-built custom code. If your Shopify store is slow due to too many apps, a bloated theme, or unoptimized Liquid code, we replace it with a custom-coded solution that delivers 4x faster load times with zero app bloat. You keep your Shopify backend for product management while we replace the slow frontend entirely.",
+    a: "Yes. We build custom Shopify storefronts using headless architecture and purpose built custom code. If your Shopify store is slow due to too many apps, a bloated theme, or unoptimized Liquid code, we replace it with a custom coded solution that delivers 4x faster load times with zero app bloat. You keep your Shopify backend for product management while we replace the slow frontend entirely.",
   },
   {
     q: "How long does a WordPress or Shopify migration take?",
-    a: "Most migrations take 1–3 weeks depending on site complexity. Our process: Discovery call → Architecture planning → Build → QA testing → Launch. We handle the full migration including DNS transfer, redirect mapping, SEO preservation, and performance testing. There is zero downtime during the launch cutover — your old site stays live until the new one is fully verified.",
+    a: "Most migrations take 1 to 3 weeks depending on site complexity. Our process: Discovery call, Architecture planning, Build, QA testing, Launch. We handle the full migration including DNS transfer, redirect mapping, SEO preservation, and performance testing. There is zero downtime during the launch cutover. Your old site stays live until the new one is fully verified.",
   },
   {
     q: "Why not just use a faster WordPress host or a caching plugin?",
-    a: "Faster hosting and caching plugins help marginally, but they don't fix the root cause: WordPress itself is heavy. PHP server rendering, plugin overhead, database queries, and theme bloat all add to your average load time regardless of the host. Plugins like WP Rocket or W3 Total Cache can shave off 0.3–0.5 seconds at best. The only permanent fix for a slow WordPress site is replacing it with a purpose-built, custom-coded website — which is exactly what we do.",
+    a: "Faster hosting and caching plugins help marginally, but they don't fix the root cause: WordPress itself is heavy. PHP server rendering, plugin overhead, database queries, and theme bloat all add to your average load time regardless of the host. Plugins like WP Rocket or W3 Total Cache can shave off 0.3 to 0.5 seconds at best. The only permanent fix for a slow WordPress site is replacing it with a purpose built, custom coded website. That is exactly what we do.",
   },
 ];
 
@@ -66,7 +66,7 @@ export default function Home() {
           "width": 655,
           "height": 113
         },
-        "description": "Custom web development agency specializing in WordPress migration, Shopify optimization, and custom web applications. Sub-second load times guaranteed.",
+        "description": "Custom web development agency specializing in WordPress migration, Shopify optimization, and custom web applications. Load times under 1 second guaranteed.",
         "email": "info@pandacodegen.com",
         "telephone": "+13022504340",
         "foundingDate": "2026",
@@ -115,7 +115,7 @@ export default function Home() {
         "@id": "https://www.pandacodegen.com/#website",
         "url": "https://www.pandacodegen.com",
         "name": "PandaCodeGen - Custom Web Development",
-        "description": "We migrate WordPress & Shopify sites to custom-coded websites. Sub-second load times. Zero bloat. Enterprise-grade security.",
+        "description": "We migrate WordPress and Shopify sites to custom coded websites. Load times under 1 second. Zero bloat. Enterprise level security.",
         "publisher": {
           "@id": "https://www.pandacodegen.com/#organization"
         },
@@ -134,7 +134,7 @@ export default function Home() {
         "@id": "https://www.pandacodegen.com/#webpage",
         "url": "https://www.pandacodegen.com",
         "name": "PandaCodeGen | Custom Web Development & Shopify Optimization",
-        "description": "We migrate WordPress & Shopify sites to custom-coded websites. Sub-second load times. Zero bloat. Enterprise-grade security and SEO.",
+        "description": "We migrate WordPress and Shopify sites to custom coded websites. Load times under 1 second. Zero bloat. Enterprise level security and SEO.",
         "isPartOf": {
           "@id": "https://www.pandacodegen.com/#website"
         },
@@ -178,7 +178,7 @@ export default function Home() {
               "itemOffered": {
                 "@type": "Service",
                 "name": "WordPress Migration",
-                "description": "Migrate your WordPress site to a custom-coded website with sub-second load times."
+                "description": "Migrate your WordPress site to a custom coded website with load times under 1 second."
               }
             },
             {

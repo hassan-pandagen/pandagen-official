@@ -46,8 +46,8 @@ const articleSchema = {
             "headline": "How Website Speed Affects SEO Rankings in 2026 (With Real Data)",
             "description": "Google confirmed page speed is a ranking factor. Here's exactly how site speed affects your SEO rankings, Core Web Vitals, and revenue — with real data from Google, Deloitte, and Portent.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-03-09",
-            "dateModified": "2026-03-10",
+            "datePublished": "2026-03-09T00:00:00-05:00",
+            "dateModified": "2026-03-10T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -121,8 +121,8 @@ const articleSchema = {
             "description": "Google confirmed page speed is a ranking factor. Here's exactly how site speed affects your SEO rankings, Core Web Vitals, and revenue.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
-            "datePublished": "2026-03-09",
-            "dateModified": "2026-03-10",
+            "datePublished": "2026-03-09T00:00:00-05:00",
+            "dateModified": "2026-03-10T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/how-website-speed-affects-seo#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -477,7 +477,7 @@ export default function WebsiteSpeedSEOPage() {
                         <BlogAuthor
                             name="Hassan Jamal"
                             role="Lead Engineer, PandaCodeGen"
-                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom-coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </section>

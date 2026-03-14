@@ -98,7 +98,7 @@ const blogPosts: Record<
             "You are overpaying: Cheap WordPress hosting actually costs you ~$3,750/year in plugins and maintenance.",
             "Security Risk: Plugins are the #1 way hackers steal customer data.",
             "The Solution: Moving to custom code (PandaCodeGen) cuts monthly costs to zero and makes your site impossible to hack.",
-            "The Numbers: 1 migration = $0/month in plugins, $0/year in developer emergencies, sub-1-second load times. ROI achieved in 3-6 months."
+            "The Numbers: 1 migration = $0/month in plugins, $0/year in developer emergencies, under 1 second load times. ROI achieved in 3-6 months."
         ],
         content: (
             <>
@@ -244,7 +244,7 @@ const blogPosts: Record<
         serviceLink: "/services",
         executiveSummary: [
             "Shopify Liquid limits custom logic. Headless Next.js removes all constraints.",
-            "Achieving sub-second load times = 8% higher conversion rate = $80,000 annual gain.",
+            "Achieving load times under 1 second = 8% higher conversion rate = $80,000 annual gain.",
             "Own your frontend, keep Shopify backend. Best of both worlds.",
             "Migration cost: $15K-$35K one-time. Average client recoups this in month one from conversion gains alone."
         ],
@@ -306,7 +306,7 @@ const blogPosts: Record<
                 {/* Mid-Article CTA */}
                 <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                     <p className="font-bold text-charcoal mb-2">Is your Shopify store hitting The Wall?</p>
-                    <p className="text-stone-600 mb-4 text-sm">Free headless audit. We show you what your store would look like at sub-1-second load times.</p>
+                    <p className="text-stone-600 mb-4 text-sm">Free headless audit. We show you what your store would look like at under 1 second load times.</p>
                     <a
                         href="https://cal.com/pandagen/discovery"
                         target="_blank"
@@ -369,7 +369,7 @@ const blogPosts: Record<
         executiveSummary: [
             "Every plugin adds 2-15 HTTP requests. 30 plugins = 200+ requests per page load.",
             "Plugin bloat costs you: average WordPress site with 30+ plugins scores 35/100 on PageSpeed.",
-            "The Solution: Custom Next.js code replaces 30 plugins with zero dependencies and sub-second load times.",
+            "The Solution: Custom Next.js code replaces 30 plugins with zero dependencies and load times under 1 second.",
             "Real results: PageSpeed 35/100 → 98/100. HTTP requests: 200+ → 12. Plugin costs: $150-300/mo → $0."
         ],
         content: (
@@ -564,7 +564,7 @@ const blogPosts: Record<
                     "Average organic traffic decline year-over-year: -31%"
                 ]} />
                 <BlogText>
-                    Compare this to 50 custom-coded Next.js sites we audited in the same period:
+                    Compare this to 50 custom coded Next.js sites we audited in the same period:
                 </BlogText>
                 <BlogList items={[
                     "Average DOM node count: 820 (5× fewer than Elementor sites)",
@@ -689,8 +689,8 @@ const blogPosts: Record<
         executiveSummary: [
             "Shopify Plus costs $2,300/month ($27,600/year) but still loads in 3-4 seconds on mobile.",
             "Slow checkout = 53% visitor abandonment = you're losing $200K-$500K in annual revenue.",
-            "Custom fast storefront + keep Shopify = sub-1-second loads + 8-12% conversion lift.",
-            "The fix: Keep Shopify backend, replace the slow frontend. Sub-1-second loads, 8-12% conversion lift, payback in under 90 days."
+            "Custom fast storefront + keep Shopify = under 1 second loads + 8-12% conversion lift.",
+            "The fix: Keep Shopify backend, replace the slow frontend. Under 1 second loads, 8-12% conversion lift, payback in under 90 days."
         ],
         content: (
             <>
@@ -698,7 +698,7 @@ const blogPosts: Record<
                     You're paying $2,300 per month for Shopify Plus. That's $27,600 per year.
                 </BlogText>
                 <BlogText>
-                    Your sales rep promised you "enterprise-grade performance." Your developer said it would "solve all your speed problems." You believed them.
+                    Your sales rep promised you "enterprise level performance." Your developer said it would "solve all your speed problems." You believed them.
                 </BlogText>
                 <BlogText>
                     Now test your store on Google PageSpeed Insights.

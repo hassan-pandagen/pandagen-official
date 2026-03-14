@@ -140,7 +140,7 @@ export default function PageContent() {
               className="p-8 rounded-2xl bg-stone-50 border border-cognac/20"
             >
               <div className="text-cognac text-sm font-bold uppercase tracking-wider mb-2">The Alternative</div>
-              <h3 className="text-2xl font-bold text-charcoal mb-6">Custom-Coded</h3>
+              <h3 className="text-2xl font-bold text-charcoal mb-6">Custom Coded</h3>
               <div className="space-y-4">
                 <div className="flex justify-between items-center border-b border-stone-200 pb-3">
                   <span className="text-stone-600 text-sm">One-time build</span>
@@ -225,7 +225,7 @@ export default function PageContent() {
       {/* 4. COMPARISON TABLE */}
       <section id="comparison" className="py-10 md:py-20 px-6 border-y border-stone-200 bg-stone-50/50">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">Wix vs Custom-Coded</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">Wix vs Custom Coded</h2>
           <p className="text-stone-600 text-center mb-12">See exactly what you&apos;re missing and what you could have.</p>
 
           <div className="overflow-x-auto rounded-2xl border border-stone-200">
@@ -233,7 +233,7 @@ export default function PageContent() {
             <div className="grid grid-cols-3 bg-stone-50 p-4 border-b border-stone-200">
               <div className="text-stone-600 font-medium text-sm">Feature</div>
               <div className="text-stone-600 font-bold text-sm text-center">Wix</div>
-              <div className="text-cognac font-bold text-sm text-center">Custom-Coded</div>
+              <div className="text-cognac font-bold text-sm text-center">Custom Coded</div>
             </div>
 
             {comparisonData.map((row, i) => (
@@ -299,7 +299,7 @@ export default function PageContent() {
             <span className="text-stone-500 font-bold tracking-widest uppercase text-sm">The Smarter Path</span>
             <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 text-white">Own Your Platform. Stop Renting.</h2>
             <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-              A custom-coded website gives you what Wix never will: full ownership, blazing speed, and zero monthly platform fees.
+              A custom coded website gives you what Wix never will: full ownership, blazing speed, and zero monthly platform fees.
             </p>
           </div>
 
@@ -364,7 +364,7 @@ export default function PageContent() {
               <h4 className="text-3xl font-bold text-slate-900 mb-4">Full Migration to Next.js</h4>
               <p className="text-slate-600 mb-8">We rebuild your site from scratch. Perfect scores. Zero monthly fees. Full ownership. Built to last.</p>
               <ul className="space-y-4 mb-10">
-                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" /> Sub-second load times (&lt;0.8s)</li>
+                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" /> Under a second load times (&lt;0.8s)</li>
                 <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" /> 100% SEO Preservation</li>
                 <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" /> Zero Monthly Platform Fees</li>
                 <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" /> You Own the Code</li>
@@ -464,7 +464,7 @@ export default function PageContent() {
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">WordPress Migration</h3>
-                <p className="text-stone-400 text-xs mt-0.5">Escape plugin bloat. Get sub-second load times with custom code.</p>
+                <p className="text-stone-400 text-xs mt-0.5">Escape plugin bloat. Get load times under 1 second with custom code.</p>
               </div>
               <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all flex-shrink-0" />
             </Link>

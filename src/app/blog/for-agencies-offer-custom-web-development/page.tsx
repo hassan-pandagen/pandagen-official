@@ -46,8 +46,8 @@ const articleSchema = {
             "headline": "For Agencies: How to Offer Custom Web Development Without Hiring a Dev Team",
             "description": "Your client wants a custom-built website. You don't have a dev team. Here's how 40+ agencies deliver premium custom builds under their own brand.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-03-06",
-            "dateModified": "2026-03-10",
+            "datePublished": "2026-03-06T00:00:00-05:00",
+            "dateModified": "2026-03-10T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -106,8 +106,8 @@ const articleSchema = {
             "description": "Your client wants a custom-built website. You don't have a dev team. Here's how 40+ agencies deliver premium custom builds under their own brand.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
-            "datePublished": "2026-03-06",
-            "dateModified": "2026-03-10",
+            "datePublished": "2026-03-06T00:00:00-05:00",
+            "dateModified": "2026-03-10T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/for-agencies-offer-custom-web-development#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -197,7 +197,7 @@ export default function ForAgenciesCustomDevPage() {
                         </div>
                         <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
-                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom-coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -478,7 +478,7 @@ export default function ForAgenciesCustomDevPage() {
                         </BlogText>
 
                         <BlogList items={[
-                            "Custom-coded site — not a template, not a WordPress theme",
+                            "Custom coded site — not a template, not a WordPress theme",
                             "100/100 Google PageSpeed — the fastest possible loading experience",
                             "$0/month hosting on Vercel — no recurring infrastructure costs",
                             "They own the code — portable to any developer, not locked into a platform",

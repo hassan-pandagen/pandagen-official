@@ -64,9 +64,9 @@ export default function PageContent() {
           id="01"
           title="WordPress Migration"
           subtitle="Make Your Site Instant & Secure"
-          description="Is your WordPress site slow, getting hacked, or constantly breaking? We move you to a modern custom-coded platform that loads in 0.8–1.2 seconds."
-          tags={["Fix Slow Loading", "Bank-Grade Security", "Keep Your SEO Rankings"]}
-          features={["No More Plugin Updates", "95-100 Google PageSpeed Scores", "Enterprise-Grade Security (No Plugin Vulnerabilities)", "We Handle All Data Transfer"]}
+          description="Is your WordPress site slow, getting hacked, or constantly breaking? We move you to a modern custom coded platform that loads in 0.8–1.2 seconds."
+          tags={["Fix Slow Loading", "Bank Level Security", "Keep Your SEO Rankings"]}
+          features={["No More Plugin Updates", "95-100 Google PageSpeed Scores", "Enterprise Level Security (No Plugin Vulnerabilities)", "We Handle All Data Transfer"]}
           align="left"
           icon={Database}
           gradient="from-orange-500/20 to-red-600/5"
@@ -81,7 +81,7 @@ export default function PageContent() {
           id="02"
           title="Web Apps & Dashboards"
           subtitle="Custom Business Tools & Dashboards"
-          description="For founders who need more than just a website. We build custom client portals, internal dashboards, AI tools, and mobile-friendly apps."
+          description="For founders who need more than just a website. We build custom client portals, internal dashboards, AI tools, and mobile friendly apps."
           tags={["Client Portals", "AI Integration", "Mobile-Friendly Apps"]}
           features={["Works on iPhone & Android", "Chat with your Data (AI)", "Subscription Payments", "Real-time Admin Panels"]}
           align="right"
@@ -96,7 +96,7 @@ export default function PageContent() {
         {/* PILLAR 3 */}
         <ServiceSection
           id="03"
-          title="High-Performance Stores"
+          title="High Performance Stores"
           subtitle="Custom Shopify (No Templates)"
           description="Standard Shopify themes are slow. We build fully custom storefronts that load instantly, creating unique shopping experiences."
           tags={["Custom Checkout", "3D Product Views", "Instant Loading"]}

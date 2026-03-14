@@ -44,8 +44,8 @@ const articleSchema = {
             "headline": "Your Shopify Store Loads in 4 Seconds. We Got It to 0.8. Here's Exactly How.",
             "description": "Most Shopify stores fail Core Web Vitals because Liquid templates are render-blocking by design. Here's the exact headless stack we use.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-01-10",
-            "dateModified": "2026-03-10",
+            "datePublished": "2026-01-10T00:00:00-05:00",
+            "dateModified": "2026-03-10T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -117,8 +117,8 @@ const articleSchema = {
             "description": "Most Shopify stores fail Core Web Vitals because Liquid templates are render-blocking by design.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
-            "datePublished": "2026-01-10",
-            "dateModified": "2026-03-10",
+            "datePublished": "2026-01-10T00:00:00-05:00",
+            "dateModified": "2026-03-10T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/shopify-headless#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -188,7 +188,7 @@ export default function ShopifyHeadlessPage() {
                         </div>
                         <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
-                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom-coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -201,7 +201,7 @@ export default function ShopifyHeadlessPage() {
                         <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
                         <BlogList items={[
                             "Shopify's Liquid templates are server-rendered and render-blocking — you cannot fix this with apps or theme edits alone.",
-                            "The only way to reach sub-1-second load times on Shopify is a headless architecture with Next.js on the frontend.",
+                            "The only way to reach under 1 second load times on Shopify is a headless architecture with Next.js on the frontend.",
                             "Headless keeps your backend (orders, inventory, Shopify checkout) and replaces only the slow Liquid frontend.",
                             "Stores migrated headless see 55% more conversions and 4–5× faster load times within 30 days of launch."
                         ]} />
@@ -230,7 +230,7 @@ export default function ShopifyHeadlessPage() {
                             "Shopify's CDN is fast, but Liquid rendering adds 400–800ms you cannot eliminate"
                         ]} />
                         <BlogQuote>
-                            Shopify theme optimization is rearranging deck chairs. You can get from 3.5 seconds to 2.8 seconds — and that&apos;s roughly your ceiling. Sub-1-second requires a fundamentally different architecture.
+                            Shopify theme optimization is rearranging deck chairs. You can get from 3.5 seconds to 2.8 seconds — and that&apos;s roughly your ceiling. Under 1 second requires a fundamentally different architecture.
                         </BlogQuote>
 
                         <BlogHeader>What Is Headless Shopify and How Does It Fix This?</BlogHeader>
@@ -252,7 +252,7 @@ export default function ShopifyHeadlessPage() {
                             "Home Goods Brand: 4.4s → 0.7s, bounce rate 68% → 31%, revenue per visitor +2.8×"
                         ]} />
                         <BlogText>
-                            The pattern is consistent across every client: sub-1-second load time translates to <a href="/blog/shopify-conversion-rate-speed-fix" className="text-cognac hover:underline">2–3× more conversions</a> from the same traffic.
+                            The pattern is consistent across every client: under 1 second load time translates to <a href="/blog/shopify-conversion-rate-speed-fix" className="text-cognac hover:underline">2–3× more conversions</a> from the same traffic.
                         </BlogText>
 
                         {/* Mid-Article CTA */}
@@ -320,7 +320,7 @@ export default function ShopifyHeadlessPage() {
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
                             <li><strong>Shopify&apos;s Liquid templates are the bottleneck</strong> — no theme edit or app removal can break the 2.5-second floor because Liquid is server-rendered and render-blocking by design.</li>
-                            <li><strong>Headless Shopify cuts load time by 80%</strong> — replacing the Liquid frontend with Next.js while keeping your Shopify backend delivers sub-1-second load times and 55% more conversions.</li>
+                            <li><strong>Headless Shopify cuts load time by 80%</strong> — replacing the Liquid frontend with Next.js while keeping your Shopify backend delivers under 1 second load times and 55% more conversions.</li>
                             <li><strong>Your Shopify checkout stays untouched</strong> — headless replaces only the slow storefront; payments, fraud detection, and tax compliance remain on Shopify.</li>
                             <li><strong>ROI arrives in 3-6 months for stores doing $200K+/year</strong> — the conversion rate improvement from faster load times typically covers the entire headless build cost within the first few months.</li>
                         </ol>

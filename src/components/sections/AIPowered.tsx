@@ -13,9 +13,9 @@ const traditionalSteps = [
 ];
 
 const pandagenSteps = [
-  "AI-assisted discovery (2 days)",
+  "AI assisted discovery (2 days)",
   "Design + prototype (1 week)",
-  "AI-accelerated build (1-2 weeks)",
+  "AI powered build (1 to 2 weeks)",
   "Automated testing (2 days)",
   "Edge deployment (1 day)",
 ];
@@ -39,7 +39,7 @@ export default function AIPowered() {
           </h2>
           <p className="text-lg text-stone-600 max-w-2xl mx-auto">
             We combine AI-powered development tools with senior engineers
-            to ship production-grade websites in weeks, not months.
+            to ship production quality websites in weeks, not months.
           </p>
         </motion.div>
 

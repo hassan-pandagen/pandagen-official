@@ -47,8 +47,8 @@ const articleSchema = {
             "headline": "WordPress AI Security Risk 2026: Every Plugin Is Now an AI Endpoint",
             "description": "Is WordPress AI safe for business websites? WordPress 6.9's AI features exposed 100K+ sites through plugin vulnerabilities. Complete security analysis for business owners protecting their WordPress sites from AI threats.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-02-19",
-            "dateModified": "2026-03-10",
+            "datePublished": "2026-02-19T00:00:00-05:00",
+            "dateModified": "2026-03-10T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -131,8 +131,8 @@ const articleSchema = {
             "description": "Is WordPress AI safe for your business? 100K+ WordPress sites exposed through AI plugin security vulnerabilities. Learn how WordPress 6.9 AI features create security risks and how to protect your site.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
-            "datePublished": "2026-02-19",
-            "dateModified": "2026-03-10",
+            "datePublished": "2026-02-19T00:00:00-05:00",
+            "dateModified": "2026-03-10T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/wordpress-ai-security-risk-2026#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -257,7 +257,7 @@ export default function WordPressAISecurityPage() {
                         </div>
                         <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
-                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom-coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -645,7 +645,7 @@ export default function WordPressAISecurityPage() {
                     <div className="my-12 p-8 bg-stone-50 border border-stone-200 rounded-2xl">
                         <h3 className="text-2xl font-bold mb-4">Want a Website Built for Security?</h3>
                         <p className="text-stone-600 mb-6 leading-relaxed">
-                            Custom-coded sites give you explicit control over every AI integration point. Zero plugin dependencies. Zero third-party vulnerabilities. Just clean, secure code you own outright.
+                            Custom coded sites give you explicit control over every AI integration point. Zero plugin dependencies. Zero third-party vulnerabilities. Just clean, secure code you own outright.
                         </p>
                         <a
                             href="https://cal.com/pandagen/discovery"

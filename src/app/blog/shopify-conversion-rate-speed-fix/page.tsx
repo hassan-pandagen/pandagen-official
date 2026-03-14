@@ -44,8 +44,8 @@ const articleSchema = {
             "headline": "Low Shopify Conversion Rate? Speed Is Killing Your Sales",
             "description": "The average Shopify store converts at 1.4%. Stores loading in under 2 seconds convert at 3–5%. Your conversion rate problem is a speed problem — here's the fix.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-02-11",
-            "dateModified": "2026-03-10",
+            "datePublished": "2026-02-11T00:00:00-05:00",
+            "dateModified": "2026-03-10T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -116,8 +116,8 @@ const articleSchema = {
             "description": "The average Shopify store converts at 1.4%. Stores loading in under 2 seconds convert at 3–5%. Your conversion rate problem is a speed problem.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
-            "datePublished": "2026-02-11",
-            "dateModified": "2026-03-10",
+            "datePublished": "2026-02-11T00:00:00-05:00",
+            "dateModified": "2026-03-10T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/shopify-conversion-rate-speed-fix#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -187,7 +187,7 @@ export default function ShopifyConversionRateSpeedFixPage() {
                         </div>
                         <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
-                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom-coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -264,7 +264,7 @@ export default function ShopifyConversionRateSpeedFixPage() {
                             </a>
                         </div>
 
-                        <BlogHeader>The Real Fix: Sub-1-Second Load Times</BlogHeader>
+                        <BlogHeader>The Real Fix: Under 1 second Load Times</BlogHeader>
                         <BlogText>
                             The only reliable path to a Shopify conversion rate above 2.5% is getting your load time under 1.5 seconds on mobile. <a href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">Standard Shopify theme optimisation gets you to 2.5 seconds at best</a>. To break the 1.5-second barrier, you need a <a href="/blog/shopify-headless" className="text-cognac hover:underline">headless storefront</a>.
                         </BlogText>

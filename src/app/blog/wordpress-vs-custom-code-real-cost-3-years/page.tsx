@@ -46,8 +46,8 @@ const articleSchema = {
             "headline": "WordPress vs Custom Code: The Real Cost Comparison Over 3 Years",
             "description": "Everyone says WordPress is cheap. They're not counting hosting, plugins, maintenance, security, and lost revenue. We ran the 3-year numbers.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-02-20",
-            "dateModified": "2026-03-10",
+            "datePublished": "2026-02-20T00:00:00-05:00",
+            "dateModified": "2026-03-10T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -121,8 +121,8 @@ const articleSchema = {
             "description": "Everyone says WordPress is cheap. They're not counting hosting, plugins, maintenance, security, and lost revenue.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
-            "datePublished": "2026-02-20",
-            "dateModified": "2026-03-10",
+            "datePublished": "2026-02-20T00:00:00-05:00",
+            "dateModified": "2026-03-10T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/wordpress-vs-custom-code-real-cost-3-years#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -184,7 +184,7 @@ export default function WordPressVsCustomCodeCostPage() {
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            We compared the full 3-year cost of WordPress versus custom-coded websites, including hosting, plugins, maintenance, and security. Here&apos;s what the numbers look like.
+                            We compared the full 3-year cost of WordPress versus custom coded websites, including hosting, plugins, maintenance, and security. Here&apos;s what the numbers look like.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">
@@ -199,7 +199,7 @@ export default function WordPressVsCustomCodeCostPage() {
                         </div>
                         <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
-                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom-coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -214,7 +214,7 @@ export default function WordPressVsCustomCodeCostPage() {
                             "WordPress looks cheap at $50/month but costs $8,000–$15,000 over 3 years when you count hosting, plugins, maintenance, and security.",
                             "A custom Next.js site costs $8,000–$15,000 to build once, then $0–$240/year to run. It pays for itself in 18–24 months.",
                             "The hidden cost nobody talks about: slow WordPress sites lose 20–30% of organic traffic, translating to $50K–$150K/year in lost revenue.",
-                            "After 3 years, custom-coded sites are $10,000–$25,000 cheaper in direct costs alone — before counting the traffic and revenue difference."
+                            "After 3 years, custom coded sites are $10,000–$25,000 cheaper in direct costs alone — before counting the traffic and revenue difference."
                         ]} />
                     </div>
 
@@ -229,7 +229,7 @@ export default function WordPressVsCustomCodeCostPage() {
                         </BlogText>
 
                         <BlogText>
-                            We&apos;ve audited 40+ businesses switching from WordPress to custom-coded sites. Every single one was shocked when we showed them what their WordPress site actually costs. Not what they thought it cost. What it actually costs.
+                            We&apos;ve audited 40+ businesses switching from WordPress to custom coded sites. Every single one was shocked when we showed them what their WordPress site actually costs. Not what they thought it cost. What it actually costs.
                         </BlogText>
 
                         <BlogText>

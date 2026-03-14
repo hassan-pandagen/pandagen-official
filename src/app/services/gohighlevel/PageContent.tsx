@@ -76,7 +76,7 @@ export default function PageContent() {
             transition={{ delay: 0.1 }}
             className="text-xl text-stone-600 leading-relaxed mb-8 max-w-2xl mx-auto"
           >
-            Keep GHL for what it&apos;s best at: CRM, automations, and pipelines. But don&apos;t let its funnel builder be your website. We build custom-coded sites that <span className="text-charcoal font-medium">integrate seamlessly with GHL&apos;s API</span>, so you get real SEO, instant load times, and full code ownership.
+            Keep GHL for what it&apos;s best at: CRM, automations, and pipelines. But don&apos;t let its funnel builder be your website. We build custom coded sites that <span className="text-charcoal font-medium">integrate seamlessly with GHL&apos;s API</span>, so you get real SEO, instant load times, and full code ownership.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -207,7 +207,7 @@ export default function PageContent() {
       {/* 5. COMPARISON TABLE */}
       <section id="comparison" className="py-10 md:py-20 px-6">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">GHL Funnels vs Custom-Coded</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">GHL Funnels vs Custom Coded</h2>
           <p className="text-stone-600 text-center mb-12">Keep GHL for CRM. Upgrade your website and funnels.</p>
 
           <div className="overflow-x-auto rounded-2xl border border-stone-200">
@@ -215,7 +215,7 @@ export default function PageContent() {
             <div className="grid grid-cols-3 bg-stone-50 p-4 border-b border-stone-200">
               <div className="text-stone-600 font-medium text-sm">Feature</div>
               <div className="text-cognac font-bold text-sm text-center">GHL Funnels</div>
-              <div className="text-cognac font-bold text-sm text-center">Custom-Coded</div>
+              <div className="text-cognac font-bold text-sm text-center">Custom Coded</div>
             </div>
 
             {comparisonData.map((row, i) => (
@@ -307,10 +307,10 @@ export default function PageContent() {
               <div className="text-cognac text-sm font-bold uppercase tracking-wider mb-4">Option B</div>
               <h3 className="text-xl font-bold text-charcoal mb-4">Custom Site + GHL CRM</h3>
               <p className="text-stone-600 text-base mb-6 leading-relaxed">
-                Keep your GHL CRM and automations. We build a custom-coded website that integrates with GHL&apos;s API. You own the code.
+                Keep your GHL CRM and automations. We build a custom coded website that integrates with GHL&apos;s API. You own the code.
               </p>
               <ul className="space-y-3 mb-8">
-                {["Sub-second landing pages", "Full GHL API integration", "All automations keep working", "Organic SEO (free leads)", "100% code ownership", "30-day money-back guarantee"].map((item, i) => (
+                {["Under a second landing pages", "Full GHL API integration", "All automations keep working", "Organic SEO (free leads)", "100% code ownership", "30-day money-back guarantee"].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
                     <CheckCircle2 className="w-4 h-4 text-cognac flex-shrink-0" /> {item}
                   </li>
@@ -438,7 +438,7 @@ export default function PageContent() {
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">WordPress Migration</h3>
-                <p className="text-stone-400 text-xs mt-0.5">Escape plugin bloat. Get sub-second load times with custom code.</p>
+                <p className="text-stone-400 text-xs mt-0.5">Escape plugin bloat. Get load times under 1 second with custom code.</p>
               </div>
               <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all flex-shrink-0" />
             </Link>

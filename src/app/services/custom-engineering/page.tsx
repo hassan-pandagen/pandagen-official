@@ -3,11 +3,11 @@ import PageContent from './PageContent';
 
 export const metadata: Metadata = {
   title: 'Custom Web Apps & SaaS Development | PandaCodeGen',
-  description: 'We build scalable SaaS platforms, client portals, and AI-powered dashboards from scratch. Fixed-price quotes, you own the code, enterprise-grade architecture.',
+  description: 'We build scalable SaaS platforms, client portals, and AI-powered dashboards from scratch. Fixed-price quotes, you own the code, enterprise level architecture.',
   alternates: { canonical: '/services/custom-engineering' },
   openGraph: {
     title: 'Custom Web Apps & SaaS Development | PandaCodeGen',
-    description: 'Scalable SaaS platforms, client portals, and AI dashboards. Fixed-price, code ownership, enterprise-grade architecture.',
+    description: 'Scalable SaaS platforms, client portals, and AI dashboards. Fixed-price, code ownership, enterprise level architecture.',
     url: 'https://www.pandacodegen.com/services/custom-engineering',
     siteName: 'PandaCodeGen',
     type: 'website',
@@ -22,7 +22,7 @@ export default function EngineeringPage() {
         "@type": "ProfessionalService",
         "@id": "https://www.pandacodegen.com/services/custom-engineering#service",
         "name": "Custom Web Apps & SaaS Development",
-        "description": "Build scalable SaaS platforms, client portals, and AI-powered dashboards. Enterprise-grade architecture that scales to millions.",
+        "description": "Build scalable SaaS platforms, client portals, and AI-powered dashboards. Enterprise level architecture that scales to millions.",
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
         "serviceType": ["SaaS Development", "Web Application Development", "Custom Dashboard", "AI Integration"]

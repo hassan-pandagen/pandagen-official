@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
-export const alt = 'PandaCodeGen – Custom-Coded Websites That Load in Under 1 Second';
+export const alt = 'PandaCodeGen: Custom Coded Websites That Load in Under 1 Second';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -32,7 +32,7 @@ export default function Image() {
             fontWeight: 600,
           }}
         >
-          Custom-Coded · Next.js · Performance-First
+          Custom Coded · Next.js · Performance First
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', flex: 1, justifyContent: 'center', marginTop: '40px', marginBottom: '40px' }}>
@@ -45,7 +45,7 @@ export default function Image() {
             </div>
           </div>
           <div style={{ fontSize: '24px', color: '#999999', lineHeight: 1.4, maxWidth: '760px', display: 'flex' }}>
-            We migrate WordPress & Shopify to custom Next.js — sub-second load times, zero bloat, 100/100 PageSpeed on every build.
+            We migrate WordPress and Shopify to custom Next.js. Load times under 1 second, zero bloat, 100/100 PageSpeed on every build.
           </div>
         </div>
 

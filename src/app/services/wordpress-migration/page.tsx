@@ -3,11 +3,11 @@ import PageContent from './PageContent';
 
 export const metadata: Metadata = {
   title: 'WordPress Migration to Custom Code | PandaCodeGen',
-  description: 'Professional WordPress to Next.js migration. Zero data loss, 301 redirects, preserved SEO rankings, and sub-second load times. From $5,900.',
+  description: 'Professional WordPress to Next.js migration. Zero data loss, 301 redirects, preserved SEO rankings, and load times under 1 second. From $5,900.',
   alternates: { canonical: '/services/wordpress-migration' },
   openGraph: {
     title: 'WordPress Migration to Custom Code | PandaCodeGen',
-    description: 'Professional WordPress to Next.js migration. Zero data loss, 301 redirects, preserved SEO rankings, and sub-second load times.',
+    description: 'Professional WordPress to Next.js migration. Zero data loss, 301 redirects, preserved SEO rankings, and load times under 1 second.',
     url: 'https://www.pandacodegen.com/services/wordpress-migration',
     siteName: 'PandaCodeGen',
     type: 'website',
@@ -22,7 +22,7 @@ export default function MigrationPage() {
         "@type": "ProfessionalService",
         "@id": "https://www.pandacodegen.com/services/wordpress-migration#service",
         "name": "WordPress Migration to Custom Code",
-        "description": "Professional WordPress migration to custom-coded websites. Zero data loss, 2x faster load times, and bank-grade security.",
+        "description": "Professional WordPress migration to custom coded websites. Zero data loss, 2x faster load times, and bank level security.",
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
         "serviceType": ["WordPress Migration", "WordPress to Custom Code", "WordPress Alternative"]

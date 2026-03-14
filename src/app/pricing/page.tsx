@@ -7,10 +7,10 @@ import Footer from "@/components/layout/Footer";
 
 const comparisonRows = [
   { label: "Technology",   agency: "WordPress / Elementor",     pandagen: "Custom Next.js architecture",  isPain: false },
-  { label: "Load Time",    agency: "2.0s – 4.0s average",       pandagen: "Sub-1s, guaranteed",          isPain: true  },
+  { label: "Load Time",    agency: "2.0s to 4.0s average",       pandagen: "Under 1s, guaranteed",          isPain: true  },
   { label: "Security",     agency: "Plugin vulnerabilities",    pandagen: "Static, zero attack surface", isPain: true  },
   { label: "Ownership",    agency: "Locked to theme / agency",  pandagen: "100% code ownership",          isPain: true  },
-  { label: "Monthly Cost", agency: "Shopify Plus: $2,300+/mo + app fees", pandagen: "$0–$50/mo at any scale",       isPain: true  },
+  { label: "Monthly Cost", agency: "Shopify Plus: $2,300+/mo + app fees", pandagen: "$0 to $50/mo at any scale",       isPain: true  },
   { label: "Billing",      agency: "Hourly, unpredictable",     pandagen: "Fixed-price deposit",          isPain: true  },
 ];
 
@@ -38,7 +38,7 @@ const pricingSchema = {
       "@type": "Offer",
       "@id": "https://www.pandacodegen.com/pricing#offer-conversion",
       "name": "Conversion Site",
-      "description": "1 high-conversion landing page with custom animations, sub-1s load speed, and 3-day turnaround.",
+      "description": "1 high-conversion landing page with custom animations, under 1s load speed, and 3-day turnaround.",
       "price": "2900",
       "priceCurrency": "USD",
       "priceValidUntil": "2026-12-31",
@@ -159,7 +159,7 @@ export default function PricingPage() {
               <Feature text="Custom Animations &amp; Interactions" />
               <Feature text="3-Day Turnaround" />
               <Feature text="Mobile Optimised" />
-              <Feature text="Sub-1s Load Speed" />
+              <Feature text="Under 1s Load Speed" />
             </ul>
 
             <button
@@ -284,7 +284,7 @@ export default function PricingPage() {
                 <span>🚫</span> The Hourly Billing Trap
               </h3>
               <p>
-                Most agencies charge $100–$200/hour. This punishes efficiency. If they work slowly, you pay more. You never know the final bill. It creates a conflict of interest where their incentive is to go slow.
+                Most agencies charge $100 to $200/hour. This punishes efficiency. If they work slowly, you pay more. You never know the final bill. It creates a conflict of interest where their incentive is to go slow.
               </p>
             </div>
             <div>
@@ -327,7 +327,7 @@ export default function PricingPage() {
               {
                 num: "02",
                 title: "No final payment until you're satisfied",
-                body: "The remaining balance is only due after we deliver the project and you're happy with it. We don't charge you the rest just because the calendar says so — we charge when the work is done right.",
+                body: "The remaining balance is only due after we deliver the project and you're happy with it. We don't charge you the rest just because the calendar says so. We charge when the work is done right.",
               },
               {
                 num: "03",
@@ -473,11 +473,11 @@ export default function PricingPage() {
           />
           <FAQ
             q="Why not just hire a freelancer on Upwork or Fiverr?"
-            a="A freelancer gives you a file. We give you a system. Our builds include architecture review, SEO preservation, performance guarantees, 30 days of post-launch support, and full IP handover to your accounts. Freelancers disappear after delivery. We don't — and we have the case studies to prove it."
+            a="A freelancer gives you a file. We give you a system. Our builds include architecture review, SEO preservation, performance guarantees, 30 days of post-launch support, and full IP handover to your accounts. Freelancers disappear after delivery. We don't, and we have the case studies to prove it."
           />
           <FAQ
             q="Why is your price higher than a freelancer?"
-            a="Because we're not building templates. We're building assets. Clients typically see their investment pay for itself within 6–12 months through faster load times, higher conversion rates, and eliminated plugin and hosting fees. MyCustomPatches went from $150/mo in hosting to $0 and from a 40 PageSpeed score to 100/100 — the build paid for itself in under a year."
+            a="Because we're not building templates. We're building assets. Clients typically see their investment pay for itself within 6 to 12 months through faster load times, higher conversion rates, and eliminated plugin and hosting fees. MyCustomPatches went from $150/mo in hosting to $0 and from a 40 PageSpeed score to 100/100. The build paid for itself in under a year."
           />
           <FAQ
             q="What's in the Discovery Call?"

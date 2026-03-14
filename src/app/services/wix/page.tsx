@@ -3,7 +3,7 @@ import PageContent from './PageContent';
 
 export const metadata: Metadata = {
   title: 'Wix to Custom Website Migration | PandaCodeGen',
-  description: "Escape Wix's SEO limits and slow load times. We migrate your Wix site to a custom-coded Next.js website that ranks higher and loads 5x faster.",
+  description: "Escape Wix's SEO limits and slow load times. We migrate your Wix site to a custom coded Next.js website that ranks higher and loads 5x faster.",
   alternates: { canonical: '/services/wix' },
   openGraph: {
     title: 'Wix to Custom Website Migration | PandaCodeGen',
@@ -22,7 +22,7 @@ export default function WixServicePage() {
         "@type": "ProfessionalService",
         "@id": "https://www.pandacodegen.com/services/wix#service",
         "name": "Wix Website Development & Migration Services",
-        "description": "Professional Wix website development with migration path to custom-coded Next.js for businesses that want to own their platform and rank higher.",
+        "description": "Professional Wix website development with migration path to custom coded Next.js for businesses that want to own their platform and rank higher.",
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
         "serviceType": ["Wix Development", "Wix Migration", "Wix to Next.js", "Wix Alternative"]

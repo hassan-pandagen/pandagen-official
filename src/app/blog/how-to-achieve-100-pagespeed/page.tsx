@@ -46,8 +46,8 @@ const articleSchema = {
             "headline": "How to Achieve 100/100 PageSpeed Score: Complete Next.js Guide",
             "description": "We achieve 98-100/100 PageSpeed scores on every client site. Here's the exact optimization process we use, step by step.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-02-17",
-            "dateModified": "2026-03-10",
+            "datePublished": "2026-02-17T00:00:00-05:00",
+            "dateModified": "2026-03-10T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -106,8 +106,8 @@ const articleSchema = {
             "description": "We achieve 98-100/100 PageSpeed scores on every client site. Here's the exact 8-step optimization process we use.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
-            "datePublished": "2026-02-17",
-            "dateModified": "2026-03-10",
+            "datePublished": "2026-02-17T00:00:00-05:00",
+            "dateModified": "2026-03-10T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -193,7 +193,7 @@ export default function AchievePageSpeedPage() {
                         </div>
                         <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
-                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom-coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -681,7 +681,7 @@ export default function AchievePageSpeedPage() {
                         </BlogText>
 
                         <BlogText>
-                            Every build we do follows the same performance-first process — whether it's a{" "}
+                            Every build we do follows the same performance first process — whether it's a{" "}
                             <Link href="/blog/how-to-fix-slow-wordpress" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 slow WordPress site that needs migrating
                             </Link>{" "}

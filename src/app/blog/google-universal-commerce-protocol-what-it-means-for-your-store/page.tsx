@@ -47,8 +47,8 @@ const articleSchema = {
             "headline": "Google's Universal Commerce Protocol: What It Means for Your Online Store in 2026",
             "description": "Google's new Universal Commerce Protocol lets AI assistants buy products for customers without visiting your website. Here's what every e-commerce store owner needs to know about UCP, platform readiness, and how to prepare.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-02-21",
-            "dateModified": "2026-03-10",
+            "datePublished": "2026-02-21T00:00:00-05:00",
+            "dateModified": "2026-03-10T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -123,8 +123,8 @@ const articleSchema = {
             "description": "Google's new UCP lets customers buy products without ever visiting your website. Shopify, Etsy, and Wayfair are already live. Here's what every e-commerce store owner needs to understand.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
-            "datePublished": "2026-02-21",
-            "dateModified": "2026-03-10",
+            "datePublished": "2026-02-21T00:00:00-05:00",
+            "dateModified": "2026-03-10T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/google-universal-commerce-protocol-what-it-means-for-your-store#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -258,7 +258,7 @@ export default function UCPBlogPage() {
                         </div>
                         <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
-                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom-coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>

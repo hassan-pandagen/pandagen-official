@@ -218,7 +218,7 @@ export default function PageContent() {
             What If Your Website Was an Asset, Not a Liability?
           </h2>
           <p className="text-stone-600 text-lg leading-relaxed mb-12 max-w-2xl mx-auto">
-            A custom-coded website loads in under 1 second, can&apos;t be hacked, costs $0 to start hosting, and you own every line of code. No plugins. No monthly fees. No surprises.
+            A custom coded website loads in under 1 second, can&apos;t be hacked, costs $0 to start hosting, and you own every line of code. No plugins. No monthly fees. No surprises.
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
@@ -273,10 +273,10 @@ export default function PageContent() {
               <div className="text-cognac text-sm font-bold uppercase tracking-wider mb-4">Option B</div>
               <h3 className="text-2xl font-bold text-charcoal mb-4">Full Migration to Custom Code</h3>
               <p className="text-stone-600 text-base mb-6 leading-relaxed">
-                Complete migration from WordPress to a custom-coded platform you own forever. Faster, more secure, and cheaper to maintain long-term.
+                Complete migration from WordPress to a custom coded platform you own forever. Faster, more secure, and cheaper to maintain long-term.
               </p>
               <ul className="space-y-3 mb-8">
-                {["Sub-second load times", "90-95/100 PageSpeed score", "Zero monthly plugin fees", "Enterprise-grade security", "You own 100% of the code", "30-day money-back guarantee"].map((item, i) => (
+                {["Under a second load times", "90-95/100 PageSpeed score", "Zero monthly plugin fees", "Enterprise level security", "You own 100% of the code", "30-day money-back guarantee"].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
                     <CheckCircle2 className="w-4 h-4 text-cognac flex-shrink-0" /> {item}
                   </li>

@@ -14,7 +14,7 @@ const DATA: Record<Phase, {
   measuring: { score: 47,  lcp: "4.2s",  cls: "0.25", fid: "180ms", lcpPass: false, clsPass: false, fidPass: false, status: "Auditing site: 3 Core Web Vitals failing" },
   optimizing:{ score: 72,  lcp: "2.4s",  cls: "0.10", fid: "48ms",  lcpPass: false, clsPass: false, fidPass: true,  status: "Removing render-blocking JS, lazy-loading images" },
   improved:  { score: 91,  lcp: "1.4s",  cls: "0.04", fid: "22ms",  lcpPass: false, clsPass: true,  fidPass: true,  status: "Switching to static Next.js, almost there" },
-  perfect:   { score: 100, lcp: "0.9s",  cls: "0.01", fid: "8ms",   lcpPass: true,  clsPass: true,  fidPass: true,  status: "100/100: All Core Web Vitals passing · Sub-1s LCP" },
+  perfect:   { score: 100, lcp: "0.9s",  cls: "0.01", fid: "8ms",   lcpPass: true,  clsPass: true,  fidPass: true,  status: "100/100: All Core Web Vitals passing · Under 1s LCP" },
 };
 
 export default function PageSpeedAnimation() {

@@ -359,7 +359,7 @@ export default function MyCustomPatchesCaseStudy() {
                             <div className="h-px w-8 bg-cognac" />
                             <span className="text-cognac text-sm font-bold uppercase tracking-widest">Tech Stack</span>
                         </div>
-                        <h2 className="text-3xl font-bold text-charcoal mb-3">Replaced 45 plugins with 12 purpose-built tools.</h2>
+                        <h2 className="text-3xl font-bold text-charcoal mb-3">Replaced 45 plugins with 12 purpose built tools.</h2>
                         <p className="text-stone-600 mb-8">
                             Every tool in the stack does one job, does it well, and doesn&apos;t add unnecessary overhead. No plugin conflicts. No update anxiety. No security surface area from unmaintained code.
                         </p>
@@ -376,7 +376,7 @@ export default function MyCustomPatchesCaseStudy() {
                     {/* RESULTS SUMMARY — speakable for AI */}
                     <section className="mb-10" data-speakable="true">
                         <p className="text-lg text-stone-700 leading-relaxed bg-stone-50 border border-stone-200 rounded-2xl p-6">
-                            MyCustomPatches migrated from a 10-year-old WordPress site to a custom Next.js 14 build in 6 weeks. Load time dropped from 3.2 seconds to 0.7 seconds. Google PageSpeed score went from approximately 40 to a perfect 100 out of 100. Monthly hosting costs dropped from $150 to $0 by deploying on Vercel&apos;s free tier with Cloudflare CDN. All 200+ pages were migrated with zero downtime and zero SEO rankings lost. The site eliminated 45 WordPress plugins and replaced them with 12 purpose-built integrations.
+                            MyCustomPatches migrated from a 10-year-old WordPress site to a custom Next.js 14 build in 6 weeks. Load time dropped from 3.2 seconds to 0.7 seconds. Google PageSpeed score went from approximately 40 to a perfect 100 out of 100. Monthly hosting costs dropped from $150 to $0 by deploying on Vercel&apos;s free tier with Cloudflare CDN. All 200+ pages were migrated with zero downtime and zero SEO rankings lost. The site eliminated 45 WordPress plugins and replaced them with 12 purpose built integrations.
                         </p>
                     </section>
 
@@ -419,7 +419,7 @@ export default function MyCustomPatchesCaseStudy() {
                                 { before: "3.2s load time — competitors winning on speed", after: "0.7s load time. Fastest custom patches site in search results." },
                                 { before: "~40 PageSpeed — Google flagging every page as slow", after: "100/100 PageSpeed. Core Web Vitals all green." },
                                 { before: "$150/mo managed WordPress hosting", after: "$0/mo. Vercel free tier + Cloudflare. No monthly platform cost." },
-                                { before: "45 active plugins — security risk, update anxiety", after: "Zero plugins. 12 purpose-built integrations. No maintenance overhead." },
+                                { before: "45 active plugins — security risk, update anxiety", after: "Zero plugins. 12 purpose built integrations. No maintenance overhead." },
                                 { before: "200+ pages of SEO equity at risk during migration", after: "100% SEO rankings preserved. Zero pages lost. Zero 404s post-launch." },
                                 { before: "File uploads bloating the server", after: "All design uploads go to Cloudinary. Server never touches user files." },
                             ].map((r, i) => (

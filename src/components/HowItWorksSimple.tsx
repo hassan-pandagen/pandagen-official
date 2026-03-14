@@ -129,13 +129,13 @@ const steps = [
   {
     number: "02",
     title: "Architecture",
-    description: "Database schema, component tree, API design — all planned before a single line of production code is written.",
+    description: "Database schema, component tree, API design. All planned before a single line of production code is written.",
     Diagram: ArchitectureDiagram,
   },
   {
     number: "03",
     title: "Build",
-    description: "AI-accelerated sprints with senior engineers. Production-grade code shipped in weekly cycles with full transparency.",
+    description: "AI powered sprints with senior engineers. Production quality code shipped in weekly cycles with full transparency.",
     Diagram: BuildDiagram,
   },
   {

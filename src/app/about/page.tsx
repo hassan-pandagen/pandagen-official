@@ -42,7 +42,7 @@ export default function AboutPage() {
           "height": 113
         },
         "image": "https://www.pandacodegen.com/og-image.jpg",
-        "description": "Custom web development agency specializing in WordPress migration, Shopify optimization, and high-performance business websites.",
+        "description": "Custom web development agency specializing in WordPress migration, Shopify optimization, and high performance business websites.",
         "email": "info@pandacodegen.com",
         "telephone": "+13022504340",
         "foundingDate": "2026",
@@ -114,7 +114,7 @@ export default function AboutPage() {
         <div className="absolute bottom-0 left-0 right-0 border-t border-stone-200 bg-white py-4">
             <div className="flex justify-center gap-8 md:gap-16 text-xs md:text-sm font-mono text-stone-500 uppercase tracking-widest">
                 <span>Lightning Speed</span>
-                <span>Bank-Grade Security</span>
+                <span>Bank Level Security</span>
                 <span>Zero Monthly Fees</span>
                 <span>You Own Everything</span>
             </div>
@@ -230,7 +230,7 @@ export default function AboutPage() {
             <div className="md:col-span-3 space-y-6">
               <div>
                 <p className="text-stone-600 text-lg leading-relaxed mb-4">
-                  I help e-commerce brands ditch Shopify fees and WordPress bloat with high-performance custom code. One client was paying <strong className="text-charcoal">$3,200/month</strong> on Shopify Plus. Their storefront scored <strong className="text-charcoal">31 on Google PageSpeed</strong>. We migrated them to a custom build. Same features. Zero app fees. PageSpeed went from <strong className="text-charcoal">31 to 92</strong>.
+                  I help e-commerce brands ditch Shopify fees and WordPress bloat with high performance custom code. One client was paying <strong className="text-charcoal">$3,200/month</strong> on Shopify Plus. Their storefront scored <strong className="text-charcoal">31 on Google PageSpeed</strong>. We migrated them to a custom build. Same features. Zero app fees. PageSpeed went from <strong className="text-charcoal">31 to 92</strong>.
                 </p>
                 <p className="text-stone-600 leading-relaxed">
                   Most agencies hand you a WordPress theme and call it a day. I build from scratch: custom code, no plugins, no bloat. No $500/month in SaaS fees just to run your store. You get a website that loads in under a second and costs nearly nothing to host.
@@ -250,7 +250,7 @@ export default function AboutPage() {
               {/* What I Build — compact */}
               <div className="grid grid-cols-2 gap-3">
                 <div className="p-4 rounded-xl bg-white border border-stone-200">
-                  <h4 className="text-charcoal font-bold text-sm mb-1">Custom-Coded Storefronts</h4>
+                  <h4 className="text-charcoal font-bold text-sm mb-1">Custom Coded Storefronts</h4>
                   <p className="text-stone-500 text-xs">90+ PageSpeed. $0/month to run.</p>
                 </div>
                 <div className="p-4 rounded-xl bg-white border border-stone-200">

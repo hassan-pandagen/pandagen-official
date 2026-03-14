@@ -29,10 +29,10 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.pandacodegen.com'),
   title: {
-    default: "PandaCodeGen | WordPress & Shopify Migration — Sub-1s Load Time",
+    default: "PandaCodeGen | WordPress & Shopify Migration, Under 1s Load Time",
     template: "%s | PandaCodeGen",
   },
-  description: "Get a free AI audit of your slow WordPress or Shopify site. We migrate to custom-coded websites — sub-second load times, zero bloat, bank-grade security.",
+  description: "Get a free AI audit of your slow WordPress or Shopify site. We migrate to custom coded websites with load times under 1 second, zero bloat, and bank level security.",
   alternates: {
     canonical: '/',
   },
@@ -92,21 +92,21 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.pandacodegen.com",
     siteName: "PandaCodeGen",
-    title: "PandaCodeGen | WordPress & Shopify Migration — Sub-1s Load Time",
-    description: "Get a free AI audit of your slow WordPress or Shopify site. We migrate to custom-coded websites — sub-second load times, zero bloat, bank-grade security.",
+    title: "PandaCodeGen | WordPress & Shopify Migration, Under 1s Load Time",
+    description: "Get a free AI audit of your slow WordPress or Shopify site. We migrate to custom coded websites with load times under 1 second, zero bloat, and bank level security.",
     images: [
       {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "PandaCodeGen – Custom-Coded Websites That Load in Under 1 Second",
+        alt: "PandaCodeGen: Custom Coded Websites That Load in Under 1 Second",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "PandaCodeGen | WordPress & Shopify Migration — Sub-1s Load Time",
-    description: "Get a free AI audit of your slow WordPress or Shopify site. We migrate to custom-coded websites — sub-second load times, zero bloat, bank-grade security.",
+    title: "PandaCodeGen | WordPress & Shopify Migration, Under 1s Load Time",
+    description: "Get a free AI audit of your slow WordPress or Shopify site. We migrate to custom coded websites with load times under 1 second, zero bloat, and bank level security.",
     creator: "@pandacodegen",
     images: ["/opengraph-image"],
   },

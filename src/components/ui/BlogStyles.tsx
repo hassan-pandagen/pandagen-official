@@ -52,7 +52,7 @@ export function ComparisonTable() {
         <div className="text-charcoal">PandaCodeGen</div>
       </div>
       <TableRow label="Hosting Cost" bad="$150/mo (Kinsta)" good="$0 (Vercel)" />
-      <TableRow label="Security" bad="Plugin Risks" good="Bank-Grade Static" />
+      <TableRow label="Security" bad="Plugin Risks" good="Bank Level Static" />
       <TableRow label="Load Time" bad="1.5s - 4.0s" good="0.8-1.2s" />
       <div className="grid grid-cols-3 p-5 bg-stone-50 text-charcoal font-bold border-t border-stone-200">
         <div>Total / Year</div>

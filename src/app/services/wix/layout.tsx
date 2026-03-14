@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Wix Website Development & Migration',
-  description: 'Outgrown Wix? We help businesses migrate from Wix to custom-coded Next.js websites. Faster loading, better SEO, zero monthly fees, and full code ownership.',
+  description: 'Outgrown Wix? We help businesses migrate from Wix to custom coded Next.js websites. Faster loading, better SEO, zero monthly fees, and full code ownership.',
   keywords: [
     'Wix developer',
     'Wix website design',
@@ -16,14 +16,14 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Wix Development & Migration | PandaCodeGen',
-    description: 'Outgrown Wix? We help businesses break free from slow templates and own their platform with custom-coded websites.',
+    description: 'Outgrown Wix? We help businesses break free from slow templates and own their platform with custom coded websites.',
     url: 'https://www.pandacodegen.com/services/wix',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Wix Development & Migration | PandaCodeGen',
-    description: 'Outgrown Wix? We help businesses break free from slow templates and own their platform with custom-coded websites.',
+    description: 'Outgrown Wix? We help businesses break free from slow templates and own their platform with custom coded websites.',
   },
   alternates: {
     canonical: '/services/wix',

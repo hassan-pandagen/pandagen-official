@@ -3,11 +3,11 @@ import PageContent from './PageContent';
 
 export const metadata: Metadata = {
   title: 'GoHighLevel Custom Website & Integration | PandaCodeGen',
-  description: "Keep GoHighLevel for CRM. We build custom-coded websites that integrate with GHL's API — faster landing pages, real SEO, and lower cost per lead.",
+  description: "Keep GoHighLevel for CRM. We build custom coded websites that integrate with GHL's API — faster landing pages, real SEO, and lower cost per lead.",
   alternates: { canonical: '/services/gohighlevel' },
   openGraph: {
     title: 'GoHighLevel Custom Website & Integration | PandaCodeGen',
-    description: "Keep GoHighLevel for CRM. We build custom-coded websites that integrate with GHL API — faster landing pages, real SEO, lower cost per lead.",
+    description: "Keep GoHighLevel for CRM. We build custom coded websites that integrate with GHL API — faster landing pages, real SEO, lower cost per lead.",
     url: 'https://www.pandacodegen.com/services/gohighlevel',
     siteName: 'PandaCodeGen',
     type: 'website',
@@ -22,7 +22,7 @@ export default function GoHighLevelServicePage() {
         "@type": "ProfessionalService",
         "@id": "https://www.pandacodegen.com/services/gohighlevel#service",
         "name": "GoHighLevel Website & Funnel Development",
-        "description": "Keep GoHighLevel for CRM and automations. We build custom-coded websites that integrate with GHL's API, or build a fully custom CRM + website solution. You own the code.",
+        "description": "Keep GoHighLevel for CRM and automations. We build custom coded websites that integrate with GHL's API, or build a fully custom CRM + website solution. You own the code.",
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
         "serviceType": ["GoHighLevel Development", "GHL Funnel Building", "GoHighLevel Migration", "GoHighLevel Alternative"]

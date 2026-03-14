@@ -44,8 +44,8 @@ const articleSchema = {
             "headline": "Shopify Plus Still Slow? Why $2,300/mo Doesn't Fix Your Core Web Vitals",
             "description": "53% of mobile visitors leave before your Shopify Plus store loads. The Liquid template problem and the headless solution that actually works.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-02-06",
-            "dateModified": "2026-03-10",
+            "datePublished": "2026-02-06T00:00:00-05:00",
+            "dateModified": "2026-03-10T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -116,8 +116,8 @@ const articleSchema = {
             "description": "53% of mobile visitors leave before your Shopify Plus store loads. The Liquid template problem and the fix that works.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
-            "datePublished": "2026-02-06",
-            "dateModified": "2026-03-10",
+            "datePublished": "2026-02-06T00:00:00-05:00",
+            "dateModified": "2026-03-10T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/shopify-plus-still-slow#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -187,7 +187,7 @@ export default function ShopifyPlusStillSlowPage() {
                         </div>
                         <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
-                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom-coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -202,7 +202,7 @@ export default function ShopifyPlusStillSlowPage() {
                             "Shopify Plus gives you better infrastructure and backend features — but the Liquid template problem remains identical.",
                             "The average Shopify Plus store loads in 3.8 seconds on mobile despite the $2,300/month cost.",
                             "Liquid templates are server-rendered and render-blocking — this cannot be fixed with apps or theme edits.",
-                            "The only path to sub-1-second load times is a headless Next.js frontend connected to your Shopify Plus backend."
+                            "The only path to under 1 second load times is a headless Next.js frontend connected to your Shopify Plus backend."
                         ]} />
                     </div>
 
@@ -274,7 +274,7 @@ export default function ShopifyPlusStillSlowPage() {
                             "Frontend: Next.js with React Server Components — loads in 0.7–1.0 seconds",
                             "Connection: Shopify Storefront API feeds product data to Next.js in real-time",
                             "Checkout: Stays on Shopify Plus — you keep all compliance and payment reliability",
-                            "Result: Enterprise Shopify Plus features + consumer-grade sub-second speed"
+                            "Result: Enterprise Shopify Plus features + consumer-grade speed under 1 second"
                         ]} />
 
                         <BlogHeader>What Results Do Shopify Plus Stores See After Going Headless?</BlogHeader>
@@ -319,7 +319,7 @@ export default function ShopifyPlusStillSlowPage() {
                             <li><strong>Shopify Plus fixes your backend, not your speed</strong> — the $2,300/month plan gives you better automation and support, but uses the exact same slow Liquid template system as Basic Shopify.</li>
                             <li><strong>A 3.8-second load time costs a $2M store $400K-$600K/year</strong> — over half of mobile visitors leave before your Shopify Plus store finishes loading.</li>
                             <li><strong>The Liquid rendering problem is identical on every Shopify plan</strong> — you cannot buy your way out of a 400-800ms server rendering delay that exists by design.</li>
-                            <li><strong>Headless Next.js + Shopify Plus is the winning combination</strong> — keep the enterprise backend features you need while replacing the slow frontend with a sub-1-second storefront.</li>
+                            <li><strong>Headless Next.js + Shopify Plus is the winning combination</strong> — keep the enterprise backend features you need while replacing the slow frontend with a under 1 second storefront.</li>
                         </ol>
                     </section>
 

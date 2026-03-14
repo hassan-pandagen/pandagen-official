@@ -46,8 +46,8 @@ const articleSchema = {
             "headline": "WordPress vs Next.js: Which Is Actually Better for Your Business?",
             "description": "An honest, data-driven comparison of WordPress and Next.js across speed, SEO, cost, security, and ease of use — with clear guidance on which one is right for your business.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-03-11",
-            "dateModified": "2026-03-11",
+            "datePublished": "2026-03-11T00:00:00-05:00",
+            "dateModified": "2026-03-11T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -106,8 +106,8 @@ const articleSchema = {
             "description": "An honest comparison of WordPress and Next.js across speed, SEO, cost, and security — with real data.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
-            "datePublished": "2026-03-11",
-            "dateModified": "2026-03-11",
+            "datePublished": "2026-03-11T00:00:00-05:00",
+            "dateModified": "2026-03-11T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/wordpress-vs-nextjs#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -588,7 +588,7 @@ export default function WordPressVsNextJSPage() {
                         <BlogAuthor
                             name="Hassan Jamal"
                             role="Lead Engineer, PandaCodeGen"
-                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom-coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </section>

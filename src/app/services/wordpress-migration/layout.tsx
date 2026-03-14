@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'WordPress to Next.js Migration',
-  description: 'Escape WordPress bloat. We migrate your site to Next.js with zero data loss, 2x faster load times, and bank-grade security. Stop paying plugin fees forever.',
+  description: 'Escape WordPress bloat. We migrate your site to Next.js with zero data loss, 2x faster load times, and bank level security. Stop paying plugin fees forever.',
   keywords: [
     'WordPress to Next.js migration',
     'WordPress alternative',

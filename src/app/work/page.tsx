@@ -79,7 +79,7 @@ const projects = [
         category: "Agency Website",
         tagline: "A separate brand we built from scratch — premium animations, Spline 3D, WCAG 2.1 AA, and zero templates.",
         caseStudyUrl: "/work/panda-codelab",
-        outcome: "Custom agency site for Panda CodeLab built on Next.js with Framer Motion spring physics, magnetic interactions, Spline 3D scenes, and full accessibility compliance. Sub-second load. Zero page builder.",
+        outcome: "Custom agency site for Panda CodeLab built on Next.js with Framer Motion spring physics, magnetic interactions, Spline 3D scenes, and full accessibility compliance. Under a second load. Zero page builder.",
         results: [
             { label: "Load Time", value: "0.6s", from: "avg 3s+" },
             { label: "Accessibility", value: "AA", from: "WCAG 2.1" },

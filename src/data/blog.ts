@@ -25,7 +25,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "nextjs-hosting-zero-cost",
     title: "How We Host Client Websites for Free ($0/Month) With Vercel",
-    excerpt: "Most businesses pay $50 to $300/month for hosting that slows them down. We deploy every client site on Vercel's free tier with Cloudflare CDN. $0/month. Sub-second load times. Here's exactly how.",
+    excerpt: "Most businesses pay $50 to $300/month for hosting that slows them down. We deploy every client site on Vercel's free tier with Cloudflare CDN. $0/month. Under a second load times. Here's exactly how.",
     category: "Performance",
     readTime: "9 min",
     date: "Mar 13",
@@ -178,7 +178,7 @@ export const blogPosts: BlogPost[] = [
       { question: "What is the total cost of WordPress over 3 years?", answer: "The average WordPress business site costs $8,000-$15,000 over 3 years when you add hosting ($1,800-$4,800/yr), premium plugins ($500-$1,000/yr), developer maintenance ($1,200-$2,400/yr), and security tools ($200-$400/yr). Most business owners only count the $50/month hosting and ignore everything else." },
       { question: "Is a custom website cheaper than WordPress long-term?", answer: "Yes, typically after 18-24 months. A custom Next.js site costs $8,000-$15,000 to build but only $0-$240/year to host. Compared to WordPress at $3,600-$8,400/year in recurring costs, the custom site pays for itself within 2 years and saves money every year after." },
       { question: "What are the hidden costs of WordPress?", answer: "The hidden costs of WordPress include: premium plugins ($500-$2,000/year), developer maintenance for updates and conflicts ($100-$200/month), security incidents ($1,500-$5,000 per hack), downtime losses, and performance optimization tools. Most business owners underestimate total WordPress cost by 3-5x." },
-      { question: "Does WordPress cost more than Squarespace or Wix?", answer: "WordPress costs more than Squarespace and Wix for most businesses because of hosting, plugins, and maintenance. However, all three have hidden ongoing costs. Custom-coded sites have the highest upfront cost but the lowest total cost of ownership over 3+ years." },
+      { question: "Does WordPress cost more than Squarespace or Wix?", answer: "WordPress costs more than Squarespace and Wix for most businesses because of hosting, plugins, and maintenance. However, all three have hidden ongoing costs. Custom coded sites have the highest upfront cost but the lowest total cost of ownership over 3+ years." },
       { question: "What happens to my WordPress site costs if it gets hacked?", answer: "The average cost of a WordPress hack is $3,000-$10,000 including cleanup, data recovery, potential downtime, and reputation damage. Sites with premium security plugins reduce but don't eliminate this risk. Coded sites have no database to hack and no plugins to exploit." },
     ]
   },
@@ -283,7 +283,7 @@ export const blogPosts: BlogPost[] = [
     faqs: [
       { question: "How much does WordPress really cost per year?", answer: "The true cost of WordPress is $3,000-$10,000/year when you factor in premium plugins ($500-$2,000), managed hosting ($300-$1,200), security monitoring ($200-$600), developer maintenance ($1,200-$4,800), and lost revenue from downtime. The $50/month hosting fee is just the beginning." },
       { question: "Is WordPress still worth it in 2026?", answer: "For simple blogs, WordPress still works. But for business websites that need speed, security, and reliability, WordPress is an expensive liability. Modern alternatives like Next.js give you better performance at a fraction of the ongoing cost with zero plugin dependencies." },
-      { question: "What is the best alternative to WordPress for business websites?", answer: "Next.js is the leading WordPress alternative for businesses. It delivers sub-second load times, zero plugin vulnerabilities, free hosting on Vercel, and 95-100 PageSpeed scores. You own the code outright with no recurring platform fees." },
+      { question: "What is the best alternative to WordPress for business websites?", answer: "Next.js is the leading WordPress alternative for businesses. It delivers load times under 1 second, zero plugin vulnerabilities, free hosting on Vercel, and 95-100 PageSpeed scores. You own the code outright with no recurring platform fees." },
       { question: "Why do WordPress sites keep getting hacked?", answer: "98% of WordPress hacks come through outdated plugins. Each plugin is third-party code with its own vulnerabilities. With 30+ plugins, you have 30+ potential entry points for hackers. Custom coded sites have zero plugins and zero of these attack vectors." }
     ]
   },
@@ -320,7 +320,7 @@ export const blogPosts: BlogPost[] = [
     lastModified: "2025-12-28",
     faqs: [
       { question: "Does Elementor slow down WordPress?", answer: "Yes. Elementor adds 300-500KB of CSS and JavaScript to every page, plus generates 3-5x more DOM nodes than necessary. A typical Elementor page has 2,000-4,000 DOM elements vs 400-800 for clean code. This bloat directly causes slower load times and lower PageSpeed scores." },
-      { question: "What is the best alternative to Elementor?", answer: "For maximum performance, custom code (HTML/CSS/React) is the best alternative. If you need a visual builder, consider Webflow for design flexibility or migrate to Next.js for enterprise-grade performance with 95-100 PageSpeed scores." },
+      { question: "What is the best alternative to Elementor?", answer: "For maximum performance, custom code (HTML/CSS/React) is the best alternative. If you need a visual builder, consider Webflow for design flexibility or migrate to Next.js for enterprise level performance with 95-100 PageSpeed scores." },
       { question: "Why do page builders hurt SEO?", answer: "Page builders generate bloated HTML with excessive wrapper divs, inline styles, and render-blocking scripts. This increases page weight by 200-400%, slows load times to 4+ seconds, and tanks Core Web Vitals scores. Google directly uses these metrics for rankings." },
       { question: "Can I get a good PageSpeed score with Elementor?", answer: "Rarely above 50-60 on mobile, even with aggressive optimization. Elementor's architecture loads its entire framework on every page regardless of what widgets you use. The performance ceiling is fundamentally limited by the builder's design." }
     ]
@@ -379,7 +379,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: "How can I make my Shopify store faster?",
-        answer: "Theme optimization has a ceiling - you can only get marginal improvements. For true sub-1-second speed, you need a custom headless storefront built with Next.js that connects to Shopify's backend via API. This gives you instant load times while keeping all Shopify features."
+        answer: "Theme optimization has a ceiling - you can only get marginal improvements. For true under 1 second speed, you need a custom headless storefront built with Next.js that connects to Shopify's backend via API. This gives you instant load times while keeping all Shopify features."
       },
       {
         question: "What is headless Shopify?",
@@ -433,7 +433,7 @@ export const blogPosts: BlogPost[] = [
     faqs: [
       { question: "How much money am I losing from a slow Shopify store?", answer: "For every second of load time over 2 seconds, you lose approximately 7% of conversions. A Shopify store making $500K/year with a 4-second load time is losing $75K-$150K annually to visitors who bounce before the page loads." },
       { question: "Why is my Shopify store so slow on mobile?", answer: "Shopify themes load 800KB-1.5MB of theme code plus 400KB-800KB of app scripts on every page. Combined with unoptimized images, the average Shopify store takes 3.5-5 seconds to load on mobile, well above the 2-second threshold where customers start leaving." },
-      { question: "How do I speed up my Shopify store?", answer: "Quick wins: remove unused apps, compress images, and minimize custom code in theme.liquid. But these only get you to 2.5-3 seconds. To reach sub-1-second load times, you need a custom headless storefront that replaces the slow Liquid theme entirely." },
+      { question: "How do I speed up my Shopify store?", answer: "Quick wins: remove unused apps, compress images, and minimize custom code in theme.liquid. But these only get you to 2.5-3 seconds. To reach under 1 second load times, you need a custom headless storefront that replaces the slow Liquid theme entirely." },
       { question: "What is the ROI of fixing Shopify speed?", answer: "For a store doing $500K/year at a 4-second load time, fixing speed to under 1 second can recover $75K-$150K in annual revenue. A headless storefront typically costs $15,000-$30,000 and pays for itself within 3-6 months through recovered conversions and reduced app fees." }
     ]
   },
@@ -549,7 +549,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: "Can I make WordPress load in under 1 second?",
-        answer: "No. Even with perfect optimization, WordPress struggles to break 1.5 seconds. The architecture is from 2003 and wasn't designed for modern performance standards. To get sub-1-second load times, you need to migrate to a modern framework like Next.js."
+        answer: "No. Even with perfect optimization, WordPress struggles to break 1.5 seconds. The architecture is from 2003 and wasn't designed for modern performance standards. To get under 1 second load times, you need to migrate to a modern framework like Next.js."
       },
       {
         question: "What's the fastest way to speed up WordPress?",
@@ -564,7 +564,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "what-is-headless-commerce",
     title: "What Is Headless Commerce? A Plain-English Guide for Store Owners",
-    excerpt: "Your online store loads in 4 seconds and you can't customize the checkout. Headless commerce fixes both problems by separating the storefront from the backend. Here's what it actually means, what it costs, and whether your store needs it.",
+    excerpt: "Headless commerce lets you keep your Shopify backend while replacing the slow theme with a custom, lightning-fast frontend. Best of both worlds. Here's what it means, what it costs, and whether your store actually needs it.",
     category: "E-Commerce",
     readTime: "12 min",
     date: "Mar 14",
@@ -576,11 +576,11 @@ export const blogPosts: BlogPost[] = [
     faqs: [
       {
         question: "What is headless commerce in simple terms?",
-        answer: "Headless commerce means separating your online store into two parts: the storefront (what customers see) and the backend (where products, orders, and payments live). Instead of one platform doing everything, a custom-coded frontend connects to your existing backend through APIs. Think of it like replacing the body of a car while keeping the same engine. You get a faster, fully custom shopping experience without re-entering all your products."
+        answer: "Headless commerce means separating your online store into two parts: the storefront (what customers see) and the backend (where products, orders, and payments live). Instead of one platform doing everything, a custom coded frontend connects to your existing backend through APIs. Think of it like replacing the body of a car while keeping the same engine. You get a faster, fully custom shopping experience without re-entering all your products."
       },
       {
         question: "How much does a headless commerce build cost?",
-        answer: "A headless storefront typically costs $5,000 to $25,000 for a professional build, depending on the number of pages, custom features, and integrations. AI-assisted development has brought costs down significantly. Ongoing hosting is $0 to $20 per month on Vercel versus $30 to $300 per month for traditional e-commerce hosting. Most stores recoup the investment quickly through higher conversion rates and lower operating costs."
+        answer: "A headless storefront typically costs $5,000 to $25,000 for a professional build, depending on the number of pages, custom features, and integrations. AI assisted development has brought costs down significantly. Ongoing hosting is $0 to $20 per month on Vercel versus $30 to $300 per month for traditional e-commerce hosting. Most stores recoup the investment quickly through higher conversion rates and lower operating costs."
       },
       {
         question: "Do I need headless commerce for my store?",

@@ -46,8 +46,8 @@ const articleSchema = {
             "headline": "How to Migrate WordPress to Next.js Without Losing SEO",
             "description": "A complete step-by-step guide to migrating your WordPress site to Next.js while preserving rankings, redirects, metadata, and content — with a zero-downtime DNS cutover.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-03-11",
-            "dateModified": "2026-03-11",
+            "datePublished": "2026-03-11T00:00:00-05:00",
+            "dateModified": "2026-03-11T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -124,8 +124,8 @@ const articleSchema = {
             "description": "Step-by-step WordPress to Next.js migration: content export, redirects, SEO preservation, and zero-downtime launch.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
-            "datePublished": "2026-03-11",
-            "dateModified": "2026-03-11",
+            "datePublished": "2026-03-11T00:00:00-05:00",
+            "dateModified": "2026-03-11T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -492,7 +492,7 @@ export default function MigrateWordPressToNextJSPage() {
                         <BlogAuthor
                             name="Hassan Jamal"
                             role="Lead Engineer, PandaCodeGen"
-                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom-coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </section>

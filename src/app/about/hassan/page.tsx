@@ -8,10 +8,10 @@ import { blogPosts } from "@/data/blog";
 
 export const metadata: Metadata = {
     title: "Hassan Jamal - Founder & Lead Engineer at PandaCodeGen",
-    description: "Hassan Jamal builds high-performance custom-coded websites for e-commerce brands. Founder at PandaCodeGen. Based in Missouri City, TX.",
+    description: "Hassan Jamal builds high performance custom coded websites for e-commerce brands. Founder at PandaCodeGen. Based in Missouri City, TX.",
     openGraph: {
         title: "Hassan Jamal - Founder & Lead Engineer at PandaCodeGen",
-        description: "Helping e-commerce brands ditch Shopify fees & WordPress bloat with high-performance custom code. Founder @ PandaCodeGen.",
+        description: "Helping e-commerce brands ditch Shopify fees & WordPress bloat with high performance custom code. Founder @ PandaCodeGen.",
         type: "profile",
         url: "https://www.pandacodegen.com/about/hassan",
         images: [{ url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 }],
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary",
         title: "Hassan Jamal - Founder & Lead Engineer at PandaCodeGen",
-        description: "Helping e-commerce brands ditch Shopify fees & WordPress bloat with custom-coded storefronts.",
+        description: "Helping e-commerce brands ditch Shopify fees & WordPress bloat with custom coded storefronts.",
     },
     alternates: { canonical: "/about/hassan" },
 };
@@ -34,7 +34,7 @@ const personSchema = {
             "givenName": "Hassan",
             "familyName": "Jamal",
             "jobTitle": "Founder & Lead Full-Stack Engineer",
-            "description": "Helping e-commerce brands ditch Shopify fees and WordPress bloat with high-performance custom code. Founder at PandaCodeGen.",
+            "description": "Helping e-commerce brands ditch Shopify fees and WordPress bloat with high performance custom code. Founder at PandaCodeGen.",
             "url": "https://www.pandacodegen.com/about/hassan",
             "image": "https://www.pandacodegen.com/team/hassan.png",
             "worksFor": {
@@ -94,9 +94,9 @@ const expertise = [
 ];
 
 const builds = [
-    { title: "Custom-Coded Storefronts", desc: "Online stores that score 90+ on Google PageSpeed out of the box. $0/month to run." },
+    { title: "Custom Coded Storefronts", desc: "Online stores that score 90+ on Google PageSpeed out of the box. $0/month to run." },
     { title: "Shopify Plus & WordPress Migrations", desc: "Replace $3,200/month in platform fees with custom code. Same features. Zero app fees. PageSpeed from 31 to 92." },
-    { title: "Admin Dashboards & SaaS", desc: "Admin dashboards that replace $500+/mo in SaaS apps. Built with enterprise-grade architecture and bank-level security." },
+    { title: "Admin Dashboards & SaaS", desc: "Admin dashboards that replace $500+/mo in SaaS apps. Built with enterprise level architecture and bank-level security." },
     { title: "Speed & Cost Audits", desc: "Free speed and cost audit for e-commerce stores paying $1,000+/month in platform fees and still loading in 3+ seconds." },
 ];
 
@@ -138,7 +138,7 @@ export default function HassanAuthorPage() {
                             <h1 className="text-5xl md:text-6xl font-serif text-charcoal mb-3">Hassan Jamal.</h1>
                             <p className="text-lg font-mono text-cognac mb-6">Full-Stack Architect &middot; Missouri City, TX</p>
                             <p className="text-xl text-stone-600 leading-relaxed max-w-xl mb-8">
-                                I help e-commerce brands ditch Shopify fees and WordPress bloat with high-performance custom code. One client was paying $3,200/month on Shopify Plus. Their storefront scored 31 on Google PageSpeed. We migrated them to a custom build. Same features. Zero app fees. PageSpeed went from 31 to 92.
+                                I help e-commerce brands ditch Shopify fees and WordPress bloat with high performance custom code. One client was paying $3,200/month on Shopify Plus. Their storefront scored 31 on Google PageSpeed. We migrated them to a custom build. Same features. Zero app fees. PageSpeed went from 31 to 92.
                             </p>
                             <div className="flex flex-wrap gap-3">
                                 <a
