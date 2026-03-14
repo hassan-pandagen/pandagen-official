@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { Menu, X, ChevronDown, Linkedin, Twitter, Mail, Phone } from "lucide-react";
@@ -77,9 +76,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
 
   return (
     <>
-      <motion.header
-        initial={{ y: 0 }}
-        animate={{ y: 0 }}
+      <header
         className={cn(
           "fixed top-0 left-0 right-0 z-[60] transition-all duration-300",
           isScrolled
@@ -116,11 +113,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
 
                      {/* Dropdown Menu */}
                      {isOpen && (
-                       <motion.div
-                         initial={{ opacity: 0, y: -10 }}
-                         animate={{ opacity: 1, y: 0 }}
-                         exit={{ opacity: 0, y: -10 }}
-                         transition={{ duration: 0.2 }}
+                       <div
                          className="absolute top-full left-0 mt-0 w-56 bg-white border border-stone-200 rounded-lg shadow-elevated z-50 pointer-events-auto"
                        >
                          <div className="py-2">
@@ -135,7 +128,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
                              </Link>
                            ))}
                          </div>
-                       </motion.div>
+                       </div>
                      )}
                    </div>
                  );
@@ -178,7 +171,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-      </motion.header>
+      </header>
 
       {/* Mobile Menu Overlay */}
       <div
@@ -211,10 +204,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
                       <ChevronDown className={`w-5 h-5 transition-transform duration-200 not-italic ${isOpen ? 'rotate-180' : ''}`} />
                     </button>
                     {isOpen && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
+                      <div
                         className="flex flex-col items-center gap-1 w-full pb-2"
                       >
                         {dropdownItems.map((dropItem) => (
@@ -230,7 +220,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
                             {dropItem.name}
                           </Link>
                         ))}
-                      </motion.div>
+                      </div>
                     )}
                   </div>
                 );
