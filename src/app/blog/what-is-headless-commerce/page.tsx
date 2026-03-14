@@ -180,7 +180,7 @@ export default function WhatIsHeadlessCommercePage() {
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            If you&apos;ve been wondering whether headless commerce could make your store faster and easier to customize, you&apos;re in the right place. This guide breaks it all down in plain English so you can make the best decision for your business.
+                            If you&apos;ve been wondering whether headless commerce could make your store faster and easier to customize, you&apos;re in the right place. This guide covers everything you need to know so you can make the best decision for your business.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">
@@ -230,7 +230,7 @@ export default function WhatIsHeadlessCommercePage() {
                         </BlogText>
 
                         <BlogText>
-                            This guide explains headless commerce in plain English. No jargon. Just what it is, what it costs, and whether your store actually needs it.
+                            This guide covers everything you need to know about headless commerce. No jargon. Just what it is, what it costs, and whether your store actually needs it.
                         </BlogText>
 
                         <BlogHeader>What Does Headless Commerce Actually Mean?</BlogHeader>
