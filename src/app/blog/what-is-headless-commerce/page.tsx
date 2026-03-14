@@ -16,7 +16,7 @@ const HeadlessAnimation = dynamic(() => import("@/components/blog/PageSpeedAnima
 
 export const metadata: Metadata = {
     title: "What Is Headless Commerce? The Complete Guide for Store Owners",
-    description: "Headless commerce separates your storefront from your backend for faster loads, better conversions, and full design control. Learn what it costs and if your store needs it.",
+    description: "Headless commerce separates your storefront from your backend for faster loads, better conversions, and full design control. Learn what it costs.",
     alternates: {
         canonical: '/blog/what-is-headless-commerce',
     },
@@ -47,7 +47,7 @@ const articleSchema = {
             "description": "Headless commerce separates your storefront from your backend so your store loads faster, converts better, and gives you full design control. Here's what it means, what it costs, and whether your store actually needs it.",
             "image": "https://www.pandacodegen.com/blog/what-is-headless-commerce/opengraph-image",
             "datePublished": "2026-03-14T00:00:00-05:00",
-            "dateModified": "2026-03-15T00:00:00-05:00",
+            "dateModified": "2026-03-14T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -107,7 +107,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/blog/what-is-headless-commerce/opengraph-image" },
             "datePublished": "2026-03-14T00:00:00-05:00",
-            "dateModified": "2026-03-15T00:00:00-05:00",
+            "dateModified": "2026-03-14T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/what-is-headless-commerce#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -190,7 +190,7 @@ export default function WhatIsHeadlessCommercePage() {
                             </div>
                             <div className="flex items-center gap-2">
                                 <Clock className="w-4 h-4" />
-                                10 min read
+                                12 min read
                             </div>
                         </div>
                         <BlogAuthor
@@ -302,7 +302,7 @@ export default function WhatIsHeadlessCommercePage() {
                         </div>
 
                         <BlogText>
-                            The key difference: with traditional e-commerce, every app and customization makes your store slower. With headless, you get full control over performance because the storefront is custom code, not a theme with plugins stacked on top.
+                            The key difference: with traditional e-commerce, every app and customization makes your store slower. We documented exactly <Link href="/blog/wordpress-plugins-destroy-speed" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">how plugins destroy your site speed</Link>. With headless, you get full control over performance because the storefront is custom code, not a theme with plugins stacked on top.
                         </BlogText>
 
                         <BlogText>
@@ -461,7 +461,7 @@ export default function WhatIsHeadlessCommercePage() {
                         </div>
 
                         <BlogText>
-                            <strong>What about headless commerce SEO?</strong> A common concern is whether going headless hurts your search rankings. The opposite is true. Headless storefronts built with Next.js are server-side rendered, which means Google sees fully formed HTML on the first request. Combined with load times under 1 second and Core Web Vitals scores above 90, headless stores consistently outrank their template-based competitors.
+                            <strong>What about headless commerce SEO?</strong> A common concern is whether going headless hurts your search rankings. The opposite is true. Headless storefronts built with Next.js are server-side rendered, which means Google sees fully formed HTML on the first request. Combined with load times under 1 second and Core Web Vitals scores above 90, headless stores consistently outrank their template-based competitors. Hosting costs also drop dramatically. We break down the numbers in our post on <Link href="/blog/nextjs-hosting-zero-cost" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Next.js hosting at zero cost</Link>.
                         </BlogText>
 
                         <BlogText>
@@ -469,7 +469,7 @@ export default function WhatIsHeadlessCommercePage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>What about headless WooCommerce?</strong> The same architecture works for WooCommerce stores. You keep WooCommerce as the backend for products and orders, and replace the slow WordPress/Elementor frontend with a custom Next.js storefront connected through the WooCommerce REST API. The speed gains are even more dramatic because WordPress themes are typically slower than Shopify themes.
+                            <strong>What about headless WooCommerce?</strong> The same architecture works for WooCommerce stores. You keep WooCommerce as the backend for products and orders, and replace the slow WordPress/Elementor frontend with a custom Next.js storefront connected through the WooCommerce REST API. The speed gains are even more dramatic because WordPress themes are typically slower than Shopify themes. If you are considering the full migration path, we cover the step by step process in our guide on <Link href="/blog/how-to-migrate-wordpress-to-nextjs" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">how to migrate WordPress to Next.js</Link>.
                         </BlogText>
 
                         {/* Mid-Article CTA */}
