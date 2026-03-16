@@ -105,8 +105,7 @@ export default function PageContent() {
             {/* Wix Column */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, x: 0 }}
               className="p-8 rounded-2xl bg-red-500/5 border border-red-500/20"
             >
               <div className="text-red-400 text-sm font-bold uppercase tracking-wider mb-2">Current Platform</div>
@@ -135,8 +134,7 @@ export default function PageContent() {
             {/* Custom Column */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, x: 0 }}
               className="p-8 rounded-2xl bg-stone-50 border border-cognac/20"
             >
               <div className="text-cognac text-sm font-bold uppercase tracking-wider mb-2">The Alternative</div>
@@ -166,8 +164,7 @@ export default function PageContent() {
           {/* Bottom Note */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
             className="p-5 rounded-xl bg-stone-50 border border-stone-200 text-center"
           >
             <p className="text-stone-600 text-sm leading-relaxed">
@@ -202,8 +199,7 @@ export default function PageContent() {
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.08 }}
                 className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-red-500/40 transition-colors group"
               >
@@ -267,8 +263,7 @@ export default function PageContent() {
               <motion.div
                 key={i}
                 initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.08 }}
                 className="flex gap-6 items-start"
               >
@@ -312,8 +307,7 @@ export default function PageContent() {
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
                 className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
               >
@@ -396,8 +390,7 @@ export default function PageContent() {
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.05 }}
               >
                 <button

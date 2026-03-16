@@ -110,8 +110,7 @@ export default function SquarespacePageContent() {
             {/* LEFT: The Past (faded) */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, x: 0 }}
               className="p-10 rounded-3xl bg-white border border-slate-200 opacity-60 hover:opacity-100 transition-opacity duration-300"
             >
               <div className="flex items-center gap-3 mb-6">
@@ -138,8 +137,7 @@ export default function SquarespacePageContent() {
             {/* RIGHT: The Present (sharp/elevated) */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.1 }}
               className="p-10 rounded-3xl bg-white border-2 border-red-100 shadow-xl shadow-red-100/20 relative overflow-hidden"
             >
@@ -192,8 +190,7 @@ export default function SquarespacePageContent() {
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.08 }}
                 className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-red-500/40 transition-colors group"
               >
@@ -220,8 +217,7 @@ export default function SquarespacePageContent() {
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
             className="max-w-6xl mx-auto"
           >
             <div className="relative rounded-2xl md:rounded-[2rem] overflow-hidden bg-white border border-red-200 shadow-[0_20px_60px_rgba(0,0,0,0.06),0_0_0_1px_rgba(239,68,68,0.08)]">
@@ -283,8 +279,7 @@ export default function SquarespacePageContent() {
                       <motion.div
                         key={i}
                         initial={{ opacity: 0, x: 10 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: i * 0.06 }}
                         className="grid grid-cols-[1fr_80px_80px] md:grid-cols-[1fr_110px_110px] gap-2 md:gap-3 items-center py-3 px-3 -mx-3 rounded-xl hover:bg-white transition-all group cursor-default"
                       >
@@ -307,8 +302,7 @@ export default function SquarespacePageContent() {
                   {/* Savings Breakdown Card */}
                   <motion.div
                     initial={{ scale: 0.95, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    viewport={{ once: true }}
+                    animate={{ scale: 1, opacity: 1 }}
                     transition={{ delay: 0.3 }}
                     className="mt-6 p-5 bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-2xl"
                   >
@@ -362,8 +356,7 @@ export default function SquarespacePageContent() {
               <motion.div
                 key={i}
                 initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.08 }}
                 className="flex gap-6 items-start"
               >
@@ -407,8 +400,7 @@ export default function SquarespacePageContent() {
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
                 className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
               >
@@ -491,8 +483,7 @@ export default function SquarespacePageContent() {
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.05 }}
               >
                 <button

@@ -2,79 +2,167 @@
 
 **Domain:** pandacodegen.com
 **Started tracking:** March 14, 2026
+**Update cadence:** Weekly (every Sunday)
+
+---
 
 ## Weekly Snapshots
 
-| Date | Clicks | Impressions | CTR | Avg Position | Notes |
-|------|--------|-------------|-----|--------------|-------|
-| Mar 12, 2026 | 10 | 398 | 2.5% | 14.7 | Baseline. 33 indexed, 13 not indexed |
-| Mar 14, 2026 | 10 | 453 | 2.2% | 13.8 | +55 impressions, position improved ~1 spot. SEO fixes deployed (schema, org data, sitemap timestamps, author bios, tables, key takeaways). Blog #21 published (nextjs-hosting-zero-cost). LCP fix (framer-motion removed from critical path) pending deploy |
-| Mar 15, 2026 | 10 | 487 | 2.1% | 13.8 | +34 impressions in 1 day. Impressions spiking upward (visible trend). Published Medium cross-post (dofollow backlink) + Dev.to cross-post (dofollow backlink) for headless-commerce blog. Twitter/X thread posted. SEO fixes to headless-commerce page (meta desc, read time, 3 internal links, dateModified). 63 countries showing impressions. US: 255 impressions, 0 clicks (positions ~15-25). |
+| Week | Date | Clicks | Impressions | CTR | Avg Position | Notes |
+|------|------|--------|-------------|-----|--------------|-------|
+| 0 | Mar 12, 2026 | 10 | 398 | 2.5% | 14.7 | Baseline. 33 indexed, 13 not indexed |
+| 0 | Mar 14, 2026 | 10 | 453 | 2.2% | 13.8 | +55 impressions, position improved ~1 spot. SEO fixes deployed (schema, org data, sitemap timestamps, author bios, tables, key takeaways). Blog #21 published (nextjs-hosting-zero-cost). LCP fix (framer-motion removed from critical path) pending deploy |
+| 0 | Mar 15, 2026 | 10 | 487 | 2.1% | 13.8 | +34 impressions in 1 day. Published Medium + Dev.to cross-posts (dofollow backlinks). 63 countries showing impressions. US: 255 impressions, 0 clicks. |
+| **1** | **Mar 16, 2026** | **10** | **513** | **1.9%** | **14** | **+26 impressions. shopify-dawn-theme-slow exploding: 1,817% impression spike (GSC recommendation). 9 desktop clicks, 1 mobile. Blog #22 published (what-is-headless-commerce). Audit tool rewrite deployed (self-contained Resend flow, AI readiness scoring fix).** |
+
+> **Week-over-week (Mar 7-13 vs Feb 28-Mar 6):** Impressions 115 vs 6 = **+1,817%** on shopify-dawn-theme-slow page alone.
+
+---
 
 ## Indexed Pages
 
 | Date | Google Indexed | Google Not Indexed | Bing Indexed |
 |------|---------------|-------------------|-------------|
 | Mar 12, 2026 | 33 | 13 | 18 |
-| Mar 14, 2026 | — | — | — |
+| Mar 16, 2026 | — | — | — |
 
-## Top Queries
+> **Next check-in:** Share Indexing > Pages screenshot so we can update this.
 
-| Date | Query | Clicks | Impressions | Position |
-|------|-------|--------|-------------|----------|
-| Mar 14, 2026 | panda codegen | 1 | 22 | — |
-| Mar 15, 2026 | panda codegen | 1 | 22 | — |
-| Mar 15, 2026 | pandagen | 0 | 22 | — |
-| Mar 15, 2026 | pagespeed 100 | 0 | 11 | — |
-| Mar 15, 2026 | how to fix slow wordpress | 0 | 6 | — |
-| Mar 15, 2026 | why are my shopify conversion rates stuck at 1.4% despite good traffic? | 0 | 5 | — |
-| Mar 15, 2026 | do shortcodes slow down wordpress | 0 | 3 | — |
-| Mar 15, 2026 | wp rocket | 0 | 2 | — |
-| Mar 15, 2026 | shopify dawn theme performance improvements | 0 | 1 | — |
-| Mar 15, 2026 | yoast seo plugin vulnerability | 0 | 1 | — |
+---
 
-## Top Pages (Mar 15, 2026)
+## Top Pages
+
+### Mar 16, 2026 (from screenshots)
+
+| Page | Clicks | Impressions | Trend |
+|------|--------|-------------|-------|
+| /blog/shopify-dawn-theme-slow | 0 | 121+ | 1,817% spike, GSC recommendation |
+| /blog/how-to-achieve-100-pagespeed | 1 | 51 | Steady |
+| /blog/why-we-chose-nextjs-over-wordpress-2026 | 0 | 47 | Steady |
+| /blog/shopify-plus-still-slow | 0 | 43 | Steady |
+| pandacodegen.com/ | 8 | 38 | Homepage clicks holding |
+| /blog/wordpress-plugins-destroy-speed | 0 | 27 | Steady |
+| /services | 1 | 26 | — |
+| /about | 0 | 25 | — |
+
+### Mar 15, 2026 (previous)
 
 | Page | Clicks | Impressions |
 |------|--------|-------------|
 | pandacodegen.com/ | 8 | 38 |
 | /blog/how-to-achieve-100-pagespeed | 1 | 51 |
 | /services | 1 | 26 |
-| /about/imran | 1 | 1 |
 | /blog/shopify-dawn-theme-slow | 0 | 121 |
 | /blog/why-we-chose-nextjs-over-wordpress-2026 | 0 | 47 |
 | /blog/shopify-plus-still-slow | 0 | 43 |
 | /blog/wordpress-plugins-destroy-speed | 0 | 27 |
 | /about | 0 | 25 |
 
-## Top Countries (Mar 15, 2026)
+---
 
-| Country | Clicks | Impressions |
-|---------|--------|-------------|
-| Pakistan | 5 | 8 |
-| Spain | 1 | 13 |
-| Poland | 1 | 6 |
-| Philippines | 1 | 6 |
-| Australia | 1 | 4 |
-| China | 1 | 2 |
-| United States | 0 | 255 |
-| Canada | 0 | 46 |
-| France | 0 | 16 |
-| Indonesia | 0 | 14 |
-
-## Devices (Mar 15, 2026)
+## Devices (Mar 16, 2026)
 
 | Device | Clicks | Impressions |
 |--------|--------|-------------|
-| Desktop | 9 | 373 |
-| Mobile | 1 | 104 |
-| Tablet | 0 | 10 |
+| Desktop | 9 | 395 |
+| Mobile | 1 | — |
+| Tablet | 0 | — |
+
+> **Note:** 90% of clicks are desktop. This is typical for B2B/developer audiences. Shopify merchants searching on desktop during work hours.
+
+---
+
+## Top Queries
+
+| Date | Query | Clicks | Impressions | Position |
+|------|-------|--------|-------------|----------|
+| Mar 15 | panda codegen | 1 | 22 | — |
+| Mar 15 | pandagen | 0 | 22 | — |
+| Mar 15 | pagespeed 100 | 0 | 11 | — |
+| Mar 15 | how to fix slow wordpress | 0 | 6 | — |
+| Mar 15 | why are my shopify conversion rates stuck at 1.4% despite good traffic? | 0 | 5 | — |
+| Mar 15 | do shortcodes slow down wordpress | 0 | 3 | — |
+| Mar 15 | shopify dawn theme performance improvements | 0 | 1 | — |
+
+> **Next check-in:** Share Performance > Queries tab so we can see which queries are driving shopify-dawn-theme-slow impressions.
+
+---
+
+## Top Countries
+
+| Date | Country | Clicks | Impressions |
+|------|---------|--------|-------------|
+| Mar 15 | United States | 0 | 255 |
+| Mar 15 | Canada | 0 | 46 |
+| Mar 15 | France | 0 | 16 |
+| Mar 15 | Indonesia | 0 | 14 |
+| Mar 15 | Spain | 1 | 13 |
+| Mar 15 | Pakistan | 5 | 8 |
+
+> **Next check-in:** Share Performance > Countries tab for updated numbers.
+
+---
+
+## Blogs Going HAM (Top Performers)
+
+Track which posts are outperforming so we write more like them.
+
+### shopify-dawn-theme-slow (the breakout post)
+
+| Metric | Value |
+|--------|-------|
+| Impressions (3mo) | 121+ (highest of any blog post) |
+| GSC Recommendation | "A page recently got more impressions than usual" +1,817% |
+| Avg Position | 5.4 (page 1) |
+| Clicks | 0 (position 5-6 = clicks coming soon) |
+
+**Why Google loves this post:**
+
+1. **Exact-match frustration keyword.** "Shopify Dawn theme slow" is exactly what a merchant types after installing Dawn and still getting bad PageSpeed scores. The title mirrors the search query word-for-word.
+
+2. **Question-format title with immediate answer.** "Here's Exactly Why (and the Real Fix)" tells Google this is a direct answer to a problem query. Google's ranking algorithm heavily favors content that matches searcher intent precisely.
+
+3. **Low competition, high frustration.** Dawn launched as Shopify's "fast" theme, so when stores are still slow, merchants are confused and searching specifically for this. Few quality pages address this exact niche. Most content talks about "Shopify speed" generically.
+
+4. **Strong E-E-A-T signals.** Author byline, real data points, specific numbers (3+ seconds, 65-80/100 scores), citations to Shopify's own docs. Google sees this as first-hand experience, not generic advice.
+
+5. **FAQ schema with buyer-intent questions.** Questions like "Should I switch from Dawn to headless?" signal commercial intent. Google may surface these in People Also Ask or FAQ rich results.
+
+6. **Narrow about[] entities.** Schema targets "Shopify Dawn Theme" and "Shopify PageSpeed Score" specifically, not broad terms. Helps Google understand topical authority for this exact niche.
+
+7. **Fresh content on a trending topic.** Published Mar 7, 2026. Dawn is Shopify's current default, so the query volume is growing as more merchants adopt it and hit the speed wall.
+
+### Lessons: Write More Posts Like This
+
+| Pattern | Why It Works | Apply To |
+|---------|-------------|----------|
+| "[Platform Feature] Slow/Broken? Here's Why" | Matches exact frustration query | Shopify 2.0, Elementor, Divi, WooCommerce |
+| Niche platform-specific pain | Low competition, high intent | Shopify apps, WordPress themes, specific plugins |
+| Question title + immediate answer | Google rewards direct-answer format | All future posts |
+| Real numbers in first 150 words | AI citations + featured snippet eligibility | All future posts |
+| 5 FAQs with buyer-intent questions | People Also Ask + FAQ rich results | All future posts |
+
+### Other Strong Performers
+
+| Post | Impressions | Position | Notes |
+|------|-------------|----------|-------|
+| how-to-achieve-100-pagespeed | 51 | — | Gold standard post, steady growth |
+| why-we-chose-nextjs-over-wordpress-2026 | 47 | — | Year-tagged comparison post working |
+| shopify-plus-still-slow | 43 | — | Same frustration pattern as Dawn post |
+| wordpress-plugins-destroy-speed | 27 | — | WordPress pain point resonating |
+
+> **Pattern:** Shopify frustration posts are winning. WordPress posts are growing. Comparison posts are steady. Write more Shopify-specific pain posts.
+
+---
 
 ## Blog Posts Published
 
 | # | Date | Slug | Target Keyword |
 |---|------|------|----------------|
 | 21 | Mar 13, 2026 | nextjs-hosting-zero-cost | free nextjs hosting |
+| 22 | Mar 14, 2026 | what-is-headless-commerce | what is headless commerce |
+
+---
 
 ## Backlinks
 
@@ -83,6 +171,8 @@
 | Mar 15, 2026 | Dev.to | Dofollow (canonical) | headless-commerce cross-post | Published |
 | Mar 15, 2026 | Medium | Dofollow (canonical) | headless-commerce cross-post | Published |
 | Mar 15, 2026 | Clutch | Dofollow (profile) | Company profile + 1 review | Published |
+
+---
 
 ## Changes Log
 
@@ -103,6 +193,15 @@
 | Mar 15, 2026 | Dev.to cross-post with canonical URL (headless-commerce) | Dofollow backlink, DA boost |
 | Mar 15, 2026 | Twitter/X thread posted (headless-commerce) | Social signals, traffic |
 | Mar 15, 2026 | Headless commerce page: fixed meta desc, read time, 3 internal links, dateModified | On-page SEO improvement |
+| Mar 16, 2026 | Audit tool: replaced external lead engine with self-contained Resend email flow | No more external API dependency |
+| Mar 16, 2026 | Audit email: plain text report with business-friendly 11-point inspection | Better lead conversion |
+| Mar 16, 2026 | Audit email: smart CTA (healthy sites get soft CTA, not "losing customers") | Honest messaging for good sites |
+| Mar 16, 2026 | Email gate modal: rebranded to charcoal/cognac, removed PDF references | Brand consistency |
+| Mar 16, 2026 | AI Readiness scoring: rebalanced from max 90 to max 100, added @graph detection | Accurate scoring for optimized sites |
+| Mar 16, 2026 | CalEmbed: fixed [object Event] runtime error | Bug fix |
+| Mar 16, 2026 | ServicesHub: fixed hydration mismatch on "&" character | Bug fix |
+
+---
 
 ## Goals
 
@@ -110,37 +209,51 @@
 - **Mid-term (Jun 2026):** 5% CTR, 50+ clicks/month, first page for 3+ target keywords
 - **Long-term (Sep 2026):** 100+ clicks/month, domain authority established
 
-## April 2026 Targets (realistic for a 2-month-old site)
+## April 2026 Targets
 
-| Metric | Current (Mar 15) | Target (Apr 15) | Stretch Goal |
-|--------|-----------------|-----------------|--------------|
-| Total Impressions (3mo) | 487 | 1,500+ | 3,000 |
-| Total Clicks (3mo) | 10 | 40+ | 80 |
-| CTR | 2.1% | 3%+ | 5% |
-| Avg Position | 13.8 | 10 to 12 | Under 10 |
-| US Clicks | 0 | 5+ | 15 |
-| Dofollow Backlinks | 2 | 5+ | 8 |
-| Indexed Pages (Google) | 33 | 50+ | 60 |
-| Queries with Impressions | 11 | 25+ | 40 |
+| Metric | Baseline (Mar 15) | Current (Mar 16) | Target (Apr 15) | Stretch Goal |
+|--------|-------------------|-----------------|-----------------|--------------|
+| Total Impressions (3mo) | 487 | 513 | 1,500+ | 3,000 |
+| Total Clicks (3mo) | 10 | 10 | 40+ | 80 |
+| CTR | 2.1% | 1.9% | 3%+ | 5% |
+| Avg Position | 13.8 | 14 | 10 to 12 | Under 10 |
+| US Clicks | 0 | 0 | 5+ | 15 |
+| Dofollow Backlinks | 2 | 3 | 5+ | 8 |
+| Indexed Pages (Google) | 33 | — | 50+ | 60 |
+| Queries with Impressions | 11 | — | 25+ | 40 |
+
+> **On track?** Impressions growing steadily (+26 in 1 day). CTR dipped slightly because impressions grew faster than clicks (normal for new rankings). shopify-dawn-theme-slow at position 5.4 should start converting to clicks any day now. Once that flips, CTR will jump.
+
+---
 
 ## What to do next month to hit targets
 
 1. **Publish 4 new blog posts** targeting long-tail keywords with low competition
-2. **Cross-post each new blog** to Dev.to + Medium (4 more dofollow backlinks)
-3. **Get 1 to 2 guest posts** on web dev blogs or e-commerce blogs (pitch with your PageSpeed expertise)
-4. **List PandaCodeGen** on directories: Clutch, DesignRush, GoodFirms, Product Hunt (free dofollow backlinks)
-5. **Answer 5 to 10 Quora questions** about Shopify speed, headless commerce, Next.js (link back to blog posts)
-6. **Share on LinkedIn weekly** linking to your original blog posts
-7. **Deploy pending code changes** (the headless-commerce SEO fixes from today)
-8. **Check GSC weekly** and update this tracker every Saturday
+2. **Write more Shopify frustration posts** (follow the shopify-dawn-theme-slow pattern)
+3. **Cross-post each new blog** to Dev.to + Medium (4 more dofollow backlinks)
+4. **Get 1 to 2 guest posts** on web dev blogs or e-commerce blogs
+5. **List PandaCodeGen** on directories: DesignRush, GoodFirms, Product Hunt
+6. **Answer 5 to 10 Quora questions** about Shopify speed, headless commerce, Next.js
+7. **Share on LinkedIn weekly** linking to your original blog posts
+8. **Check GSC weekly** and update this tracker every Sunday
 
-## How to compare (next check-in)
+---
 
-When you show me your GSC data next time, share these screenshots:
-1. Performance > 3 months > overview (clicks, impressions, CTR, position)
-2. Performance > Pages tab
-3. Performance > Queries tab
-4. Performance > Countries tab
-5. Indexing > Pages (indexed vs not indexed count)
+## How to check in (weekly screenshots needed)
 
-I will compare against the Mar 15 baseline above and tell you if you are on track.
+Share these 5 screenshots every Sunday:
+
+1. **Performance > 3 months > overview** (clicks, impressions, CTR, position)
+2. **Performance > Pages tab** (which pages are getting impressions)
+3. **Performance > Queries tab** (which search terms are driving traffic)
+4. **Performance > Countries tab** (where your audience is)
+5. **Indexing > Pages** (indexed vs not indexed count)
+
+If you want deeper analysis on a specific page, also share:
+- **Performance > Pages > filter by that URL** (to see which queries drive it)
+
+If something looks off or you want to understand a trend, just tell me and I'll dig in.
+
+---
+
+*Last updated: March 16, 2026*

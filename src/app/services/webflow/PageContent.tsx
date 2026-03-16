@@ -118,8 +118,7 @@ export default function WebflowPageContent() {
                   <motion.div
                     key={i}
                     initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
+                    animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.1 }}
                     className="p-4 rounded-xl bg-green-500/5 border border-green-500/10 hover:border-green-500/20 transition-colors"
                   >
@@ -149,8 +148,7 @@ export default function WebflowPageContent() {
                   <motion.div
                     key={i}
                     initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
+                    animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.1 }}
                     className="p-4 rounded-xl bg-red-500/5 border border-red-500/10 hover:border-red-500/20 transition-colors"
                   >
@@ -191,8 +189,7 @@ export default function WebflowPageContent() {
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.08 }}
                 className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-orange-500/30 transition-all duration-300 group"
               >
@@ -253,8 +250,7 @@ export default function WebflowPageContent() {
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.08 }}
                 className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow"
               >

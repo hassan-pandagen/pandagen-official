@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     url: 'https://www.pandacodegen.com/services/gohighlevel',
     siteName: 'PandaCodeGen',
     type: 'website',
+    images: [{ url: 'https://www.pandacodegen.com/og-image.jpg', width: 1200, height: 630 }],
   },
 };
 
@@ -25,7 +26,9 @@ export default function GoHighLevelServicePage() {
         "description": "Keep GoHighLevel for CRM and automations. We build custom coded websites that integrate with GHL's API, or build a fully custom CRM + website solution. You own the code.",
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
-        "serviceType": ["GoHighLevel Development", "GHL Funnel Building", "GoHighLevel Migration", "GoHighLevel Alternative"]
+        "serviceType": ["GoHighLevel Development", "GHL Funnel Building", "GoHighLevel Migration", "GoHighLevel Alternative"],
+        "priceRange": "$5,000 - $35,000",
+        "image": "https://www.pandacodegen.com/og-image.jpg"
       },
       {
         "@type": "WebPage",
@@ -43,6 +46,18 @@ export default function GoHighLevelServicePage() {
           { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.pandacodegen.com/services" },
           { "@type": "ListItem", "position": 3, "name": "GoHighLevel", "item": "https://www.pandacodegen.com/services/gohighlevel" }
         ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.pandacodegen.com/#organization",
+        "name": "PandaCodeGen",
+        "alternateName": "Panda Gen",
+        "url": "https://www.pandacodegen.com",
+        "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
+        "email": "info@pandacodegen.com",
+        "foundingDate": "2026",
+        "areaServed": "Worldwide",
+        "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"]
       },
       {
         "@type": "FAQPage",

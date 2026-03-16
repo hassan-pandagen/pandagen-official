@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     url: 'https://www.pandacodegen.com/services/wordpress-migration',
     siteName: 'PandaCodeGen',
     type: 'website',
+    images: [{ url: 'https://www.pandacodegen.com/og-image.jpg', width: 1200, height: 630 }],
   },
 };
 
@@ -25,7 +26,9 @@ export default function MigrationPage() {
         "description": "Professional WordPress migration to custom coded websites. Zero data loss, 2x faster load times, and bank level security.",
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
-        "serviceType": ["WordPress Migration", "WordPress to Custom Code", "WordPress Alternative"]
+        "serviceType": ["WordPress Migration", "WordPress to Custom Code", "WordPress Alternative"],
+        "priceRange": "$5,000 - $15,000",
+        "image": "https://www.pandacodegen.com/og-image.jpg"
       },
       {
         "@type": "WebPage",
@@ -43,6 +46,18 @@ export default function MigrationPage() {
           { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.pandacodegen.com/services" },
           { "@type": "ListItem", "position": 3, "name": "WordPress Migration", "item": "https://www.pandacodegen.com/services/wordpress-migration" }
         ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.pandacodegen.com/#organization",
+        "name": "PandaCodeGen",
+        "alternateName": "Panda Gen",
+        "url": "https://www.pandacodegen.com",
+        "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
+        "email": "info@pandacodegen.com",
+        "foundingDate": "2026",
+        "areaServed": "Worldwide",
+        "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"]
       },
       {
         "@type": "FAQPage",

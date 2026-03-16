@@ -102,8 +102,7 @@ export default function PageContent() {
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
                 className="relative p-6 rounded-2xl bg-white border border-stone-200 shadow-card text-center"
               >
@@ -151,8 +150,7 @@ export default function PageContent() {
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.08 }}
                 className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-red-500/40 transition-colors group"
               >
@@ -188,8 +186,7 @@ export default function PageContent() {
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
                 className="bg-white p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-stone-200 transition-all group"
               >
@@ -309,8 +306,7 @@ export default function PageContent() {
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.05 }}
               >
                 <button

@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     url: 'https://www.pandacodegen.com/services/webflow',
     siteName: 'PandaCodeGen',
     type: 'website',
+    images: [{ url: 'https://www.pandacodegen.com/og-image.jpg', width: 1200, height: 630 }],
   },
 };
 
@@ -25,7 +26,9 @@ export default function WebflowServicePage() {
         "description": "Professional Webflow migration to custom coded Next.js. Stop paying premium hosting fees. Get faster loading, full SEO control, and own your code.",
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
-        "serviceType": ["Webflow Migration", "Webflow to Next.js", "Webflow Alternative", "Webflow to Custom Code"]
+        "serviceType": ["Webflow Migration", "Webflow to Next.js", "Webflow Alternative", "Webflow to Custom Code"],
+        "priceRange": "$6,000 - $40,000",
+        "image": "https://www.pandacodegen.com/og-image.jpg"
       },
       {
         "@type": "WebPage",
@@ -43,6 +46,18 @@ export default function WebflowServicePage() {
           { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.pandacodegen.com/services" },
           { "@type": "ListItem", "position": 3, "name": "Webflow Migration", "item": "https://www.pandacodegen.com/services/webflow" }
         ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.pandacodegen.com/#organization",
+        "name": "PandaCodeGen",
+        "alternateName": "Panda Gen",
+        "url": "https://www.pandacodegen.com",
+        "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
+        "email": "info@pandacodegen.com",
+        "foundingDate": "2026",
+        "areaServed": "Worldwide",
+        "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"]
       },
       {
         "@type": "FAQPage",

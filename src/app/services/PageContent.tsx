@@ -319,9 +319,8 @@ function DashboardDecoration() {
                                     <motion.div
                                         key={i}
                                         initial={{ height: 0 }}
-                                        whileInView={{ height: `${h}%` }}
+                                        animate={{ height: `${h}%` }}
                                         transition={{ duration: 0.5, delay: i * 0.05 }}
-                                        viewport={{ once: true }}
                                         className="flex-1 bg-gradient-to-t from-charcoal to-stone-600 rounded-t opacity-80"
                                     />
                                 ))}

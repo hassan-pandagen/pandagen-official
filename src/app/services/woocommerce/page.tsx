@@ -1,6 +1,7 @@
+import type { Metadata } from 'next';
 import PageContent from './PageContent';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'WooCommerce to Custom Code Migration | PandaCodeGen',
   description: 'Escape WooCommerce hosting bills, plugin conflicts, and slow checkouts. We migrate your WooCommerce store to a custom coded Next.js storefront you own forever.',
   alternates: {
@@ -12,6 +13,12 @@ export const metadata = {
     url: 'https://www.pandacodegen.com/services/woocommerce',
     siteName: 'PandaCodeGen',
     type: 'website',
+    images: [{ url: 'https://www.pandacodegen.com/og-image.jpg', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'WooCommerce to Custom Code Migration | PandaCodeGen',
+    description: 'Escape WooCommerce hosting bills, plugin conflicts, and slow checkouts. We migrate your store to a custom Next.js storefront you own forever.',
   },
 };
 
@@ -26,7 +33,9 @@ export default function WooCommerceServicePage() {
         "description": "Migrate from WooCommerce to a custom coded Next.js storefront. Under a second load times, zero plugin fees, and full code ownership. Serving UK, Australia, Canada, Europe and US.",
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": ["US", "GB", "AU", "CA", "DE", "FR", "NL", "IE"],
-        "serviceType": ["WooCommerce Migration", "WooCommerce to Next.js", "Custom E-Commerce", "Headless Commerce"]
+        "serviceType": ["WooCommerce Migration", "WooCommerce to Next.js", "Custom E-Commerce", "Headless Commerce"],
+        "priceRange": "$8,000 - $25,000",
+        "image": "https://www.pandacodegen.com/og-image.jpg"
       },
       {
         "@type": "WebPage",
@@ -44,6 +53,18 @@ export default function WooCommerceServicePage() {
           { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.pandacodegen.com/services" },
           { "@type": "ListItem", "position": 3, "name": "WooCommerce Migration", "item": "https://www.pandacodegen.com/services/woocommerce" }
         ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.pandacodegen.com/#organization",
+        "name": "PandaCodeGen",
+        "alternateName": "Panda Gen",
+        "url": "https://www.pandacodegen.com",
+        "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
+        "email": "info@pandacodegen.com",
+        "foundingDate": "2026",
+        "areaServed": "Worldwide",
+        "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"]
       },
       {
         "@type": "FAQPage",

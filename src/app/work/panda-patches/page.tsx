@@ -6,8 +6,8 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 
 export const metadata: Metadata = {
-    title: "Panda Patches Case Study, $38K/mo E-Commerce on $25/mo Tooling | PandaCodeGen",
-    description: "How we replaced WordPress + 3 paid tools + spreadsheets with a custom Next.js storefront and Supabase ops platform. Real-time pricing calculator across 9 patch types. $38K+/mo on under $25/mo.",
+    title: "Panda Patches: $38K/mo on $25/mo Tooling | PandaCodeGen",
+    description: "How we replaced WordPress + 3 paid tools with a custom Next.js storefront and Supabase ops platform. Real-time pricing across 9 patch types.",
     openGraph: {
         title: "Panda Patches Case Study, $38K/mo E-Commerce on $25/mo Tooling",
         description: "Real-time pricing calculator. Custom ops portal. 7 tools replaced by 1. Full case study.",
@@ -29,16 +29,30 @@ const caseStudySchema = {
             "image": "https://www.pandacodegen.com/work/panda-patches.png",
             "datePublished": "2025-10-01T00:00:00Z",
             "dateModified": "2026-02-01T00:00:00Z",
+            "articleSection": "Case Study",
+            "inLanguage": "en-US",
+            "wordCount": 1800,
+            "about": [
+                { "@type": "Thing", "name": "Custom E-Commerce Development" },
+                { "@type": "Thing", "name": "Real-Time Pricing Engine" },
+                { "@type": "Thing", "name": "WooCommerce Migration" },
+                { "@type": "Thing", "name": "Operations Platform" }
+            ],
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "url": "https://www.pandacodegen.com/about/hassan"
+                "jobTitle": "Lead Full-Stack Engineer",
+                "url": "https://www.pandacodegen.com/about/hassan",
+                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
+                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
             },
             "publisher": {
                 "@type": "Organization",
                 "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaCodeGen"
+                "name": "PandaCodeGen",
+                "url": "https://www.pandacodegen.com",
+                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
             "mainEntityOfPage": {
                 "@type": "WebPage",
@@ -70,6 +84,18 @@ const caseStudySchema = {
                 { "@type": "ListItem", "position": 2, "name": "Our Work", "item": "https://www.pandacodegen.com/work" },
                 { "@type": "ListItem", "position": 3, "name": "Panda Patches", "item": "https://www.pandacodegen.com/work/panda-patches" }
             ]
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://www.pandacodegen.com/#organization",
+            "name": "PandaCodeGen",
+            "alternateName": "Panda Gen",
+            "url": "https://www.pandacodegen.com",
+            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
+            "email": "info@pandacodegen.com",
+            "foundingDate": "2026",
+            "areaServed": "Worldwide",
+            "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"]
         },
         {
             "@type": "FAQPage",
@@ -379,6 +405,29 @@ export default function PandaPatchesCaseStudy() {
                                     <span className="text-stone-600 text-sm">{item}</span>
                                 </div>
                             ))}
+                        </div>
+                    </section>
+
+                    {/* RELATED SERVICES */}
+                    <section className="mb-20">
+                        <div className="flex items-center gap-3 mb-8">
+                            <div className="h-px w-8 bg-cognac" />
+                            <span className="text-cognac text-sm font-bold uppercase tracking-widest">Related Services</span>
+                        </div>
+                        <h2 className="text-3xl font-bold text-charcoal mb-6">Want results like this?</h2>
+                        <div className="grid md:grid-cols-3 gap-4">
+                            <Link href="/services/custom-engineering" className="group p-6 bg-white border border-stone-200 rounded-2xl hover:border-cognac/40 transition-all">
+                                <h3 className="font-bold text-charcoal group-hover:text-cognac transition-colors mb-2">Custom Engineering</h3>
+                                <p className="text-stone-500 text-sm">SaaS platforms, dashboards, and AI-powered tools built from scratch.</p>
+                            </Link>
+                            <Link href="/services/woocommerce" className="group p-6 bg-white border border-stone-200 rounded-2xl hover:border-cognac/40 transition-all">
+                                <h3 className="font-bold text-charcoal group-hover:text-cognac transition-colors mb-2">WooCommerce Migration</h3>
+                                <p className="text-stone-500 text-sm">Escape plugin conflicts and slow checkouts. Own your store.</p>
+                            </Link>
+                            <Link href="/services/ecommerce" className="group p-6 bg-white border border-stone-200 rounded-2xl hover:border-cognac/40 transition-all">
+                                <h3 className="font-bold text-charcoal group-hover:text-cognac transition-colors mb-2">E-Commerce Solutions</h3>
+                                <p className="text-stone-500 text-sm">Custom storefronts with real-time pricing and zero platform fees.</p>
+                            </Link>
                         </div>
                     </section>
 

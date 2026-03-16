@@ -90,6 +90,7 @@ export default function Footer({ onOpenQuote }: FooterProps) {
               <ServiceLink href="/services/wix" text="Wix Migration" />
               <ServiceLink href="/services/squarespace" text="Squarespace Migration" />
               <ServiceLink href="/services/webflow" text="Webflow Migration" />
+              <ServiceLink href="/services/woocommerce" text="WooCommerce Migration" />
               <ServiceLink href="/services/gohighlevel" text="GoHighLevel" />
             </ul>
           </div>

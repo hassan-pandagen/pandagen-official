@@ -4,8 +4,21 @@ import type { PageSpeedResult } from '@/lib/audit/pagespeed';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const scoreColor = (s: number) => s >= 90 ? '#22c55e' : s >= 50 ? '#f59e0b' : '#ef4444';
 const fmt = (n: number) => n >= 1000 ? `${(n / 1000).toFixed(1)}s` : `${Math.round(n)}ms`;
+
+// Disposable/throwaway email domains — fake success so bots don't retry
+const DISPOSABLE_DOMAINS = new Set([
+  'isfew.com', 'tempmail.com', 'guerrillamail.com', 'mailinator.com', 'yopmail.com',
+  'throwaway.email', 'temp-mail.org', 'dispostable.com', 'sharklasers.com', 'guerrillamailblock.com',
+  'grr.la', 'guerrillamail.info', 'guerrillamail.net', 'guerrillamail.de', 'emailondeck.com',
+  'getnada.com', 'tempail.com', 'tempr.email', 'mohmal.com', 'minutemail.com',
+  'maildrop.cc', 'harakirimail.com', 'trashmail.com', 'trashmail.me', 'trashmail.net',
+  'mailnesia.com', 'mailcatch.com', 'fakeinbox.com', 'mailnull.com', 'spamgourmet.com',
+  'mytemp.email', 'tmpmail.net', 'tmpmail.org', 'bupmail.com', 'emailfake.com',
+  'crazymailing.com', 'tmail.ws', 'tempinbox.com', 'discard.email', 'discardmail.com',
+  'mailsac.com', 'inboxkitten.com', 'burnermail.io', 'tempmailaddress.com', '10minutemail.com',
+  'guerrillamail.org', 'mailforspam.com', 'safetymail.info', 'filzmail.com', 'mailexpire.com',
+]);
 
 // Business-friendly check names
 const businessName: Record<string, string> = {
@@ -113,6 +126,86 @@ function buildUserReportText(url: string, d: PageSpeedResult): string {
   return text;
 }
 
+function buildOwnerNotification(email: string, url: string, auditData: PageSpeedResult, geo: { country: string; city: string; region: string; ip: string }): string {
+  const hasDeep = auditData.deepChecks && auditData.deepChecks.checks.length > 0;
+  const perfScore = auditData.performanceScore;
+  const failCount = hasDeep ? auditData.deepChecks!.checks.filter(c => c.status === 'fail').length : auditData.criticalIssues;
+  const warnCount = hasDeep ? auditData.deepChecks!.checks.filter(c => c.status === 'warn').length : auditData.warnings;
+  const issueCount = failCount + warnCount;
+  const emailDomain = email.split('@')[1] || '';
+
+  let text = `NEW AUDIT LEAD\n`;
+  text += `${new Date().toUTCString()}\n\n`;
+
+  // Lead info
+  text += `LEAD\n`;
+  text += `Email: ${email}\n`;
+  text += `Domain: ${emailDomain}\n`;
+  text += `Website: ${url}\n`;
+  text += `Platform: ${auditData.platformDetected}\n\n`;
+
+  // Location
+  text += `LOCATION\n`;
+  text += `Country: ${geo.country || 'Unknown'}\n`;
+  if (geo.city && geo.city !== 'Unknown') text += `City: ${geo.city}\n`;
+  if (geo.region && geo.region !== 'Unknown') text += `Region: ${geo.region}\n`;
+  text += `IP: ${geo.ip || 'Unknown'}\n\n`;
+
+  // Quick verdict
+  text += `VERDICT: ${perfScore >= 80 && failCount === 0 ? 'Healthy site (soft CTA sent)' : `${issueCount} issues found (urgency CTA sent)`}\n\n`;
+
+  // Scores
+  text += `SCORES\n`;
+  text += `Performance: ${perfScore}/100\n`;
+  text += `SEO: ${auditData.seoScore}/100\n`;
+  text += `Accessibility: ${auditData.accessibilityScore}/100\n`;
+  text += `Best Practices: ${auditData.bestPracticesScore}/100\n\n`;
+
+  // Core Web Vitals
+  text += `CORE WEB VITALS\n`;
+  text += `FCP: ${fmt(auditData.fcp)}\n`;
+  text += `LCP: ${fmt(auditData.lcp)}\n`;
+  text += `TBT: ${fmt(auditData.tbt)}\n`;
+  text += `CLS: ${auditData.cls.toFixed(3)}\n`;
+  text += `Load Time: ${auditData.loadTime}s\n\n`;
+
+  // 11-Point Inspection
+  if (hasDeep) {
+    text += `11-POINT INSPECTION\n`;
+    for (const check of auditData.deepChecks!.checks) {
+      const icon = check.status === 'pass' ? 'PASS' : check.status === 'warn' ? 'WARN' : 'FAIL';
+      text += `[${icon}] ${check.name} (${check.score}/100)\n`;
+    }
+    text += `\n`;
+  }
+
+  // Top issues with fixes (owner sees everything)
+  if (auditData.topIssues.length > 0) {
+    text += `TOP ISSUES\n`;
+    for (const issue of auditData.topIssues) {
+      text += `- ${issue.title}${issue.savings ? ` (${issue.savings})` : ''}\n`;
+    }
+    text += `\n`;
+  }
+
+  // Deep check findings + fixes (owner gets full detail)
+  if (hasDeep) {
+    const problems = auditData.deepChecks!.checks.filter(c => c.status !== 'pass');
+    if (problems.length > 0) {
+      text += `DETAILED FINDINGS\n`;
+      for (const check of problems) {
+        text += `\n${check.name} (${check.score}/100):\n`;
+        for (const finding of check.findings) {
+          text += `  - ${finding}\n`;
+        }
+        text += `  Fix: ${check.fix}\n`;
+      }
+    }
+  }
+
+  return text;
+}
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
@@ -137,6 +230,20 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Invalid email format' }, { status: 400 });
     }
 
+    // Block disposable emails (fake success so they don't retry)
+    const emailDomain = email.split('@')[1]?.toLowerCase() || '';
+    if (DISPOSABLE_DOMAINS.has(emailDomain)) {
+      return NextResponse.json({ success: true, message: 'Lead enrolled successfully' }, { status: 200 });
+    }
+
+    // Extract geo data from Vercel headers (available on Vercel deployments)
+    const geo = {
+      country: request.headers.get('x-vercel-ip-country') || 'Unknown',
+      city: decodeURIComponent(request.headers.get('x-vercel-ip-city') || 'Unknown'),
+      region: request.headers.get('x-vercel-ip-country-region') || 'Unknown',
+      ip: request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'Unknown',
+    };
+
     const fromEmail = process.env.RESEND_FROM_EMAIL!;
     const hasDeep = auditData.deepChecks && auditData.deepChecks.checks.length > 0;
     const perfScore = auditData.performanceScore;
@@ -154,72 +261,12 @@ export async function POST(request: NextRequest) {
       text: buildUserReportText(url, auditData),
     });
 
-    // 2. Send lead notification to business owner (HTML with full technical details)
+    // 2. Send plain text lead notification to business owner (full technical details + geo)
     await resend.emails.send({
       from: fromEmail,
       to: fromEmail,
-      subject: `New Audit Lead: ${url} | ${email} | Perf ${perfScore}/100 | ${issueCount} issues`,
-      html: `
-        <div style="font-family:sans-serif;max-width:600px;margin:0 auto;background:#0a0a0a;color:#fff;padding:32px;border-radius:12px">
-          <h1 style="font-size:22px;margin:0 0 4px">New Audit Lead</h1>
-          <p style="color:#888;margin:0 0 24px;font-size:14px">${new Date().toUTCString()}</p>
-
-          <table style="width:100%;border-collapse:collapse;margin-bottom:24px">
-            <tr><td style="padding:8px 0;color:#888;font-size:13px">Email</td><td style="padding:8px 0;font-weight:600">${email}</td></tr>
-            <tr><td style="padding:8px 0;color:#888;font-size:13px">Website</td><td style="padding:8px 0"><a href="${url}" style="color:#3b82f6">${url}</a></td></tr>
-            <tr><td style="padding:8px 0;color:#888;font-size:13px">Platform</td><td style="padding:8px 0;font-weight:600">${auditData.platformDetected}</td></tr>
-            <tr><td style="padding:8px 0;color:#888;font-size:13px">Performance</td><td style="padding:8px 0;font-weight:600;color:${scoreColor(perfScore)}">${perfScore}/100</td></tr>
-            <tr><td style="padding:8px 0;color:#888;font-size:13px">Issues</td><td style="padding:8px 0;font-weight:600;color:${issueCount > 0 ? '#f59e0b' : '#22c55e'}">${failCount} critical, ${warnCount} warnings</td></tr>
-          </table>
-
-          <h2 style="font-size:16px;margin:0 0 12px;color:#888;text-transform:uppercase;letter-spacing:1px">Scores</h2>
-          <table style="width:100%;border-collapse:collapse;margin-bottom:24px">
-            ${[
-              ['Performance', auditData.performanceScore],
-              ['SEO', auditData.seoScore],
-              ['Accessibility', auditData.accessibilityScore],
-              ['Best Practices', auditData.bestPracticesScore],
-            ].map(([label, score]) => `
-              <tr>
-                <td style="padding:8px 0;color:#ccc;font-size:14px">${label}</td>
-                <td style="padding:8px 0;text-align:right">
-                  <span style="background:${scoreColor(score as number)};color:#000;font-weight:700;padding:2px 10px;border-radius:20px;font-size:14px">${score}/100</span>
-                </td>
-              </tr>`).join('')}
-          </table>
-
-          <h2 style="font-size:16px;margin:0 0 12px;color:#888;text-transform:uppercase;letter-spacing:1px">Core Web Vitals</h2>
-          <table style="width:100%;border-collapse:collapse;margin-bottom:24px">
-            ${[
-              ['FCP', auditData.fcp],
-              ['LCP', auditData.lcp],
-              ['TBT', auditData.tbt],
-              ['CLS', auditData.cls],
-            ].map(([label, val]) => `
-              <tr>
-                <td style="padding:6px 0;color:#ccc;font-size:13px">${label}</td>
-                <td style="padding:6px 0;text-align:right;font-weight:600;font-size:13px">${label === 'CLS' ? (val as number).toFixed(3) : fmt(val as number)}</td>
-              </tr>`).join('')}
-          </table>
-
-          ${hasDeep ? `
-          <h2 style="font-size:16px;margin:0 0 12px;color:#888;text-transform:uppercase;letter-spacing:1px">11-Point Inspection</h2>
-          <table style="width:100%;border-collapse:collapse;margin-bottom:24px">
-            ${auditData.deepChecks!.checks.map(c => `
-              <tr>
-                <td style="padding:6px 0;color:${scoreColor(c.score)};font-size:14px;font-weight:600">${c.status === 'pass' ? '✓' : c.status === 'warn' ? '⚠' : '✗'}</td>
-                <td style="padding:6px 0;color:#ccc;font-size:13px">${c.name}</td>
-                <td style="padding:6px 0;text-align:right;font-weight:600;font-size:13px;color:${scoreColor(c.score)}">${c.score}/100</td>
-              </tr>`).join('')}
-          </table>` : ''}
-
-          ${auditData.topIssues.length > 0 ? `
-          <h2 style="font-size:16px;margin:0 0 12px;color:#888;text-transform:uppercase;letter-spacing:1px">Top Issues</h2>
-          <ul style="padding-left:20px;margin:0">
-            ${auditData.topIssues.map(i => `<li style="color:#ccc;font-size:13px;margin-bottom:4px">${i.title} ${i.savings ? `(${i.savings})` : ''}</li>`).join('')}
-          </ul>` : ''}
-        </div>
-      `,
+      subject: `Lead: ${perfScore}/100 | ${auditData.platformDetected} | ${geo.country} | ${email}`,
+      text: buildOwnerNotification(email, url, auditData, geo),
     }).catch((err) => console.error('Owner notification failed:', err));
 
     return NextResponse.json({ success: true, message: 'Lead enrolled successfully' }, { status: 200 });
