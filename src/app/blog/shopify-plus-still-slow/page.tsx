@@ -78,7 +78,7 @@ const articleSchema = {
             "citation": [
                 { "@type": "CreativeWork", "name": "Shopify Plus Pricing", "url": "https://www.shopify.com/plus/pricing" },
                 { "@type": "CreativeWork", "name": "Google Core Web Vitals", "url": "https://web.dev/vitals/" },
-                { "@type": "CreativeWork", "name": "Think With Google — Speed and Revenue", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
+                { "@type": "CreativeWork", "name": "Think With Google. Speed and Revenue", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
                 { "@type": "CreativeWork", "name": "Shopify Storefront API", "url": "https://shopify.dev/docs/api/storefront" },
                 { "@type": "CreativeWork", "name": "Vercel Edge Network", "url": "https://vercel.com/docs/edge-network/overview" },
                 { "@type": "CreativeWork", "name": "Next.js Commerce", "url": "https://nextjs.org/commerce" }
@@ -88,15 +88,15 @@ const articleSchema = {
             "@type": "HowTo",
             "@id": "https://www.pandacodegen.com/blog/shopify-plus-still-slow#howto",
             "name": "How to Speed Up a Slow Shopify Plus Store",
-            "description": "The 5-step process to diagnose and improve a slow Shopify Plus store. Theme-level changes can gain 10–20 points, but the architectural ceiling requires a headless approach for 90+ scores.",
+            "description": "The 5-step process to diagnose and improve a slow Shopify Plus store. Theme-level changes can gain 10 to 20 points, but the architectural ceiling requires a headless approach for 90+ scores.",
             "totalTime": "PT4H",
             "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
             "step": [
-                { "@type": "HowToStep", "position": 1, "name": "Run a full PageSpeed audit on your store", "text": "Test your homepage, top collection page, and top product page at pagespeed.web.dev on Mobile. Shopify Plus stores typically score 35–60/100 with 5+ apps installed. Note which pages score lowest — these are your highest-revenue speed problems." },
-                { "@type": "HowToStep", "position": 2, "name": "Audit and remove non-essential apps", "text": "In Shopify admin, list every installed app and its monthly cost. Each app injects 80–200KB of JavaScript on every page load regardless of whether the page uses it. Temporarily disable each app and re-test speed. Remove any app you can replace with native Shopify features or a lighter alternative." },
-                { "@type": "HowToStep", "position": 3, "name": "Compress product and hero images", "text": "Export your hero and banner images at actual mobile display dimensions and compress them below 150KB using Squoosh or TinyPNG before uploading. Shopify resizes images but the responsive sizing logic still serves larger files to mobile than necessary. This single step often improves LCP by 0.5–1.5 seconds." },
-                { "@type": "HowToStep", "position": 4, "name": "Check if Shopify Plus scripts are the ceiling", "text": "After optimizing apps and images, re-run PageSpeed. If you're still below 65/100, Shopify Plus's mandatory platform scripts are the bottleneck. Shopify loads checkout, cart, payment detection, and analytics scripts on every page — including product pages where checkout hasn't started. These cannot be removed on standard storefronts." },
-                { "@type": "HowToStep", "position": 5, "name": "Evaluate headless storefront ROI", "text": "Calculate your current monthly revenue multiplied by 10% (a conservative conversion improvement estimate). If that number exceeds the amortized monthly cost of a headless build, the investment pays for itself within 12 months. Most Shopify Plus stores doing $50K+/month recover the investment within 6–9 months at a 90–100/100 PageSpeed score." }
+                { "@type": "HowToStep", "position": 1, "name": "Run a full PageSpeed audit on your store", "text": "Test your homepage, top collection page, and top product page at pagespeed.web.dev on Mobile. Shopify Plus stores typically score 35 to 60/100 with 5+ apps installed. Note which pages score lowest: these are your highest-revenue speed problems." },
+                { "@type": "HowToStep", "position": 2, "name": "Audit and remove non-essential apps", "text": "In Shopify admin, list every installed app and its monthly cost. Each app injects 80 to 200KB of JavaScript on every page load regardless of whether the page uses it. Temporarily disable each app and re-test speed. Remove any app you can replace with native Shopify features or a lighter alternative." },
+                { "@type": "HowToStep", "position": 3, "name": "Compress product and hero images", "text": "Export your hero and banner images at actual mobile display dimensions and compress them below 150KB using Squoosh or TinyPNG before uploading. Shopify resizes images but the responsive sizing logic still serves larger files to mobile than necessary. This single step often improves LCP by 0.5 to 1.5 seconds." },
+                { "@type": "HowToStep", "position": 4, "name": "Check if Shopify Plus scripts are the ceiling", "text": "After optimizing apps and images, re-run PageSpeed. If you're still below 65/100, Shopify Plus's mandatory platform scripts are the bottleneck. Shopify loads checkout, cart, payment detection, and analytics scripts on every page, including product pages where checkout hasn't started. These cannot be removed on standard storefronts." },
+                { "@type": "HowToStep", "position": 5, "name": "Evaluate headless storefront ROI", "text": "Calculate your current monthly revenue multiplied by 10% (a conservative conversion improvement estimate). If that number exceeds the amortized monthly cost of a headless build, the investment pays for itself within 12 months. Most Shopify Plus stores doing $50K+/month recover the investment within 6 to 9 months at a 90 to 100/100 PageSpeed score." }
             ]
         },
         {
@@ -130,7 +130,7 @@ const articleSchema = {
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95 to 100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
             "foundingDate": "2026"
         },
@@ -199,9 +199,9 @@ export default function ShopifyPlusStillSlowPage() {
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
                         <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
                         <BlogList items={[
-                            "Shopify Plus gives you better infrastructure and backend features — but the Liquid template problem remains identical.",
+                            "Shopify Plus gives you better infrastructure and backend features, but the Liquid template problem remains identical.",
                             "The average Shopify Plus store loads in 3.8 seconds on mobile despite the $2,300/month cost.",
-                            "Liquid templates are server-rendered and render-blocking — this cannot be fixed with apps or theme edits.",
+                            "Liquid templates are server-rendered and render-blocking: this cannot be fixed with apps or theme edits.",
                             "The only path to under 1 second load times is a headless Next.js frontend connected to your Shopify Plus backend."
                         ]} />
                     </div>
@@ -216,7 +216,7 @@ export default function ShopifyPlusStillSlowPage() {
 
                         <BlogHeader>What Does Shopify Plus Actually Give You?</BlogHeader>
                         <BlogText>
-                            Shopify Plus is genuinely worth it for high-volume stores — but for backend reasons, not speed:
+                            Shopify Plus is genuinely worth it for high-volume stores, but for backend reasons, not speed:
                         </BlogText>
                         <BlogList items={[
                             "Unlimited staff accounts and granular permissions",
@@ -238,8 +238,8 @@ export default function ShopifyPlusStillSlowPage() {
                             "Are server-rendered: Every page request must hit Shopify's servers before the browser gets anything",
                             "Load your entire theme CSS and JS on every page, regardless of what's actually on that page",
                             "Allow third-party apps to inject scripts that block page rendering",
-                            "Average 1.2–1.8MB of JavaScript from apps alone on a typical Plus store",
-                            "Add 400–800ms of server rendering time that cannot be eliminated regardless of plan"
+                            "Average 1.2 to 1.8MB of JavaScript from apps alone on a typical Plus store",
+                            "Add 400 to 800ms of server rendering time that cannot be eliminated regardless of plan"
                         ]} />
                         <BlogQuote>
                             Shopify Plus infrastructure is faster than Basic, but you&apos;re paying for capacity, not speed architecture. The rendering problem is in the Liquid template system, which is the same on every plan. You can&apos;t buy your way out of it.
@@ -250,7 +250,7 @@ export default function ShopifyPlusStillSlowPage() {
                             "53% of mobile visitors abandon sites that load in 3+ seconds",
                             "Every additional second of load time reduces conversions by 7%",
                             "Average Shopify Plus store at 3.8s vs headless store at 0.9s: conversion rate 2× lower",
-                            "For a $2M/year Shopify Plus store: $400K–$600K in lost annual revenue from speed alone"
+                            "For a $2M/year Shopify Plus store: $400K to $600K in lost annual revenue from speed alone"
                         ]} />
                         <BlogText>
                             The irony: the $2,300/month Shopify Plus fee is less than 1% of <a href="/blog/shopify-conversion-rate-speed-fix" className="text-cognac hover:underline">the revenue you&apos;re losing from slow load times</a>.
@@ -259,7 +259,7 @@ export default function ShopifyPlusStillSlowPage() {
                         {/* Mid-Article CTA */}
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Is your Shopify Plus store losing revenue to slow speed?</p>
-                            <p className="text-stone-600 mb-4 text-sm">Free audit — we&apos;ll calculate your exact revenue loss and show you what headless would return.</p>
+                            <p className="text-stone-600 mb-4 text-sm">Free audit. We&apos;ll calculate your exact revenue loss and show you what headless would return.</p>
                             <a href="https://cal.com/pandagen/discovery" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                 Get Free Shopify Plus Audit <ArrowRight className="w-4 h-4" />
                             </a>
@@ -270,10 +270,10 @@ export default function ShopifyPlusStillSlowPage() {
                             <a href="/blog/shopify-headless" className="text-cognac hover:underline">Headless Shopify Plus</a>: keep the backend (everything Shopify Plus is good at) and replace the slow Liquid frontend with a <a href="/services/ecommerce" className="text-cognac hover:underline">custom Next.js storefront</a>.
                         </BlogText>
                         <BlogList items={[
-                            "Backend: Shopify Plus handles inventory, orders, payments, checkout, fraud — unchanged",
-                            "Frontend: Next.js with React Server Components — loads in 0.7–1.0 seconds",
+                            "Backend: Shopify Plus handles inventory, orders, payments, checkout, fraud, unchanged",
+                            "Frontend: Next.js with React Server Components, loads in 0.7 to 1.0 seconds",
                             "Connection: Shopify Storefront API feeds product data to Next.js in real-time",
-                            "Checkout: Stays on Shopify Plus — you keep all compliance and payment reliability",
+                            "Checkout: Stays on Shopify Plus: you keep all compliance and payment reliability",
                             "Result: Enterprise Shopify Plus features + consumer-grade speed under 1 second"
                         ]} />
 
@@ -289,13 +289,13 @@ export default function ShopifyPlusStillSlowPage() {
 
                         <BlogHeader>Is Shopify Plus Still Worth It After Going Headless?</BlogHeader>
                         <BlogText>
-                            Yes — for stores doing $500K+/year, Shopify Plus backend features justify the cost:
+                            Yes. For stores doing $500K+/year, Shopify Plus backend features justify the cost:
                         </BlogText>
                         <BlogList items={[
-                            "Checkout Extensibility: Customise checkout flow for higher conversions — works with headless",
-                            "Shopify Flow: Automate complex fulfilment, fraud rules, and inventory — works with headless",
-                            "Multi-location inventory and multi-currency — works with headless via Storefront API",
-                            "Dedicated merchant success manager — helps with headless transition planning"
+                            "Checkout Extensibility: Customise checkout flow for higher conversions. Works with headless",
+                            "Shopify Flow: Automate complex fulfilment, fraud rules, and inventory. Works with headless",
+                            "Multi-location inventory and multi-currency. Works with headless via Storefront API",
+                            "Dedicated merchant success manager. Helps with headless transition planning"
                         ]} />
                         <BlogText>
                             <BlogHighlight>Think of it this way: Shopify Plus is your reliable engine room. Headless Next.js is the fast car body around it.</BlogHighlight> You need both.
@@ -306,7 +306,7 @@ export default function ShopifyPlusStillSlowPage() {
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Get the Speed Your Shopify Plus Plan Doesn&apos;t Provide</h3>
                         <p className="text-stone-600 mb-6">
-                            Free audit — we&apos;ll calculate your exact revenue loss and show you the headless migration path for your store.
+                            Free audit. We&apos;ll calculate your exact revenue loss and show you the headless migration path for your store.
                         </p>
                         <a href="https://cal.com/pandagen/discovery" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
                             Book Free Shopify Plus Audit <ArrowRight className="w-5 h-5" />
@@ -316,10 +316,10 @@ export default function ShopifyPlusStillSlowPage() {
                     <section className="mb-10">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>Shopify Plus fixes your backend, not your speed</strong> — the $2,300/month plan gives you better automation and support, but uses the exact same slow Liquid template system as Basic Shopify.</li>
-                            <li><strong>A 3.8-second load time costs a $2M store $400K-$600K/year</strong> — over half of mobile visitors leave before your Shopify Plus store finishes loading.</li>
-                            <li><strong>The Liquid rendering problem is identical on every Shopify plan</strong> — you cannot buy your way out of a 400-800ms server rendering delay that exists by design.</li>
-                            <li><strong>Headless Next.js + Shopify Plus is the winning combination</strong> — keep the enterprise backend features you need while replacing the slow frontend with a under 1 second storefront.</li>
+                            <li><strong>Shopify Plus fixes your backend, not your speed</strong>: The $2,300/month plan gives you better automation and support, but uses the exact same slow Liquid template system as Basic Shopify.</li>
+                            <li><strong>A 3.8-second load time costs a $2M store $400K-$600K/year</strong>: Over half of mobile visitors leave before your Shopify Plus store finishes loading.</li>
+                            <li><strong>The Liquid rendering problem is identical on every Shopify plan</strong>: You cannot buy your way out of a 400-800ms server rendering delay that exists by design.</li>
+                            <li><strong>Headless Next.js + Shopify Plus is the winning combination</strong>: Keep the enterprise backend features you need while replacing the slow frontend with a under 1 second storefront.</li>
                         </ol>
                     </section>
 

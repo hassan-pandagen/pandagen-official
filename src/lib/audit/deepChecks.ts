@@ -610,69 +610,71 @@ function checkAIReadiness(html: string, robotsTxt: string, robotsOk: boolean, ll
   const id = 'ai-readiness';
   const name = 'AI Readiness';
   const findings: string[] = [];
-  let score = 20; // baseline
+  let score = 0;
 
-  // /llms.txt
+  // 1. /llms.txt (20 pts) — strongest AI-specific signal
   if (llmsTxtOk) {
     findings.push('llms.txt file found');
-    score += 15;
+    score += 20;
   } else {
     findings.push('No llms.txt file found');
   }
 
-  // Structured data depth
+  // 2. Structured data depth (20 pts)
   const ldJsonPattern = /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi;
   let schemaCount = 0;
+  let hasGraph = false;
   let m: RegExpExecArray | null;
   while ((m = ldJsonPattern.exec(html)) !== null) {
     schemaCount++;
+    if (m[1].includes('@graph')) hasGraph = true;
   }
-  if (schemaCount >= 2) {
-    findings.push(`${schemaCount} structured data blocks found (good depth)`);
-    score += 15;
+  if (hasGraph || schemaCount >= 2) {
+    findings.push(`${schemaCount} structured data block${schemaCount !== 1 ? 's' : ''} found${hasGraph ? ' (@graph detected)' : ''}`);
+    score += 20;
   } else if (schemaCount === 1) {
-    findings.push('1 structured data block found');
-    score += 8;
+    findings.push('1 structured data block found (no @graph)');
+    score += 10;
   } else {
     findings.push('No structured data found');
   }
 
-  // Speakable markup
+  // 3. Speakable markup (15 pts)
   const hasSpeakable = /speakable/i.test(html);
-  if (hasSpeakable) { findings.push('Speakable markup detected'); score += 10; }
+  if (hasSpeakable) { findings.push('Speakable markup detected'); score += 15; }
   else { findings.push('No speakable markup'); }
 
-  // Meta description quality
+  // 4. Meta description (15 pts) — AI tools pull this for summaries
   const metaDescMatch = html.match(/<meta[^>]*name=["']description["'][^>]*content=["']([^"']+)["']/i);
   if (metaDescMatch) {
     const descLen = metaDescMatch[1].length;
-    if (descLen >= 150 && descLen <= 160) {
+    if (descLen >= 140 && descLen <= 165) {
       findings.push(`Meta description: ${descLen} chars (optimal)`);
-      score += 10;
-    } else if (descLen >= 120 && descLen <= 170) {
+      score += 15;
+    } else if (descLen >= 100 && descLen <= 180) {
       findings.push(`Meta description: ${descLen} chars (acceptable)`);
-      score += 7;
+      score += 10;
     } else {
-      findings.push(`Meta description: ${descLen} chars (aim for 150-160)`);
-      score += 3;
+      findings.push(`Meta description: ${descLen} chars (aim for 140-165)`);
+      score += 5;
     }
   } else {
     findings.push('Missing meta description');
   }
 
-  // Open Graph tags
+  // 5. Open Graph tags (15 pts) — AI tools use OG for context
   const ogTags = html.match(/<meta[^>]*property=["']og:/gi) || [];
   if (ogTags.length >= 4) {
-    findings.push(`${ogTags.length} Open Graph tags found (good)`);
-    score += 10;
+    findings.push(`${ogTags.length} Open Graph tags found`);
+    score += 15;
   } else if (ogTags.length > 0) {
     findings.push(`${ogTags.length} Open Graph tag(s) found (add more)`);
-    score += 5;
+    score += 8;
   } else {
     findings.push('No Open Graph tags found');
   }
 
-  // Bot access in robots.txt
+  // 6. Bot access in robots.txt (15 pts)
   if (robotsOk) {
     const aiBlockedBots: string[] = [];
     const aiBots = ['GPTBot', 'ClaudeBot', 'PerplexityBot', 'CCBot', 'ChatGPT-User'];
@@ -684,13 +686,14 @@ function checkAIReadiness(html: string, robotsTxt: string, robotsOk: boolean, ll
     }
     if (aiBlockedBots.length > 0) {
       findings.push(`AI bots blocked in robots.txt: ${aiBlockedBots.join(', ')}`);
-      score -= aiBlockedBots.length * 5;
+      score -= aiBlockedBots.length * 3;
     } else {
       findings.push('AI bots not blocked in robots.txt');
-      score += 10;
+      score += 15;
     }
   } else {
     findings.push('Cannot check bot access (robots.txt unavailable)');
+    score += 5; // don't penalize for unreachable robots.txt
   }
 
   score = clamp(score);

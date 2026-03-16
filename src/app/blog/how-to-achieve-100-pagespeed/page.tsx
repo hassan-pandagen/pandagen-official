@@ -82,7 +82,7 @@ const articleSchema = {
             },
             "citation": [
                 { "@type": "CreativeWork", "name": "Google PageSpeed Insights", "url": "https://pagespeed.web.dev/" },
-                { "@type": "CreativeWork", "name": "Core Web Vitals — Google Web Dev", "url": "https://web.dev/vitals/" },
+                { "@type": "CreativeWork", "name": "Core Web Vitals. Google Web Dev", "url": "https://web.dev/vitals/" },
                 { "@type": "CreativeWork", "name": "Next.js Image Optimization", "url": "https://nextjs.org/docs/app/api-reference/components/image" },
                 { "@type": "CreativeWork", "name": "Next.js Font Optimization", "url": "https://nextjs.org/docs/app/building-your-application/optimizing/fonts" },
                 { "@type": "CreativeWork", "name": "Chrome Lighthouse Overview", "url": "https://developer.chrome.com/docs/lighthouse/overview/" },
@@ -120,7 +120,7 @@ const articleSchema = {
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95 to 100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
             "foundingDate": "2026"
         },
@@ -308,7 +308,7 @@ export default function AchievePageSpeedPage() {
                             <Link href="/blog/wordpress-killer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 the true cost of WordPress in 2026
                             </Link>{" "}
-                            breaks down exactly why most businesses are paying 3–5× more than they realise — in hosting, plugins, security, and lost revenue from slow speed.
+                            breaks down exactly why most businesses are paying 3 to 5× more than they realise. In hosting, plugins, security, and lost revenue from slow speed.
                         </BlogText>
 
                         <BlogHeader>What Results Do Real Clients Get After Migrating to Next.js?</BlogHeader>
@@ -681,7 +681,7 @@ export default function AchievePageSpeedPage() {
                         </BlogText>
 
                         <BlogText>
-                            Every build we do follows the same performance first process — whether it's a{" "}
+                            Every build we do follows the same performance first process, whether it's a{" "}
                             <Link href="/blog/how-to-fix-slow-wordpress" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 slow WordPress site that needs migrating
                             </Link>{" "}
@@ -712,11 +712,11 @@ export default function AchievePageSpeedPage() {
                     <section className="mb-10">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>PageSpeed score directly determines Google rankings</strong> — sites below 70 lose 20-30% of organic traffic to faster competitors with identical content.</li>
-                            <li><strong>WordPress maxes out at 60-75/100 even fully optimised</strong> — the architecture prevents reaching the 90+ green zone that Google rewards with ranking boosts.</li>
-                            <li><strong>8 specific optimisations get any site to 100/100</strong> — image, font, JavaScript, CSS, lazy loading, edge caching, third-party script deferral, and server components.</li>
-                            <li><strong>Real clients see 2-4x traffic within 90 days</strong> — the pattern is consistent: migrate to Next.js, apply all 8 optimisations, and organic traffic multiplies as Google rewards faster Core Web Vitals.</li>
-                            <li><strong>Every 0.1 second of improvement increases conversions by 8%</strong> — speed is not an IT concern, it is a revenue line item that compounds month over month.</li>
+                            <li><strong>PageSpeed score directly determines Google rankings</strong>: Sites below 70 lose 20-30% of organic traffic to faster competitors with identical content.</li>
+                            <li><strong>WordPress maxes out at 60-75/100 even fully optimised</strong>: The architecture prevents reaching the 90+ green zone that Google rewards with ranking boosts.</li>
+                            <li><strong>8 specific optimisations get any site to 100/100</strong>: Image, font, JavaScript, CSS, lazy loading, edge caching, third-party script deferral, and server components.</li>
+                            <li><strong>Real clients see 2-4x traffic within 90 days</strong>: The pattern is consistent: migrate to Next.js, apply all 8 optimisations, and organic traffic multiplies as Google rewards faster Core Web Vitals.</li>
+                            <li><strong>Every 0.1 second of improvement increases conversions by 8%</strong>: Speed is not an IT concern, it is a revenue line item that compounds month over month.</li>
                         </ol>
                     </section>
 

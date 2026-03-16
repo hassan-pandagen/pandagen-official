@@ -16,6 +16,8 @@ export default function ContactPage() {
    const [isSuccess, setIsSuccess] = useState(false);
    const [submitError, setSubmitError] = useState<string | null>(null);
    const [errors, setErrors] = useState<{name?: string; email?: string; message?: string}>({});
+   const [formLoadedAt] = useState<number>(Date.now());
+   const [honeypot, setHoneypot] = useState("");
 
   const contactSchema = {
     "@context": "https://schema.org",
@@ -156,7 +158,8 @@ export default function ContactPage() {
                     </div>
                     <div className="flex-1 min-w-0">
                        <div className="text-xs text-stone-500 uppercase tracking-wider font-bold mb-1">HQ</div>
-                       <div className="text-sm font-medium text-charcoal">Missouri, USA</div>
+                       <div className="text-sm font-medium text-charcoal">1914 Quail Feather Ct</div>
+                       <div className="text-xs text-stone-500">Missouri City, TX 77489</div>
                        <div className="text-xs text-stone-400 mt-0.5">Clients in UK · AU · CA · EU</div>
                     </div>
                  </motion.div>
@@ -271,6 +274,14 @@ export default function ContactPage() {
                  setErrors(newErrors);
 
                  if (Object.keys(newErrors).length === 0) {
+                    // Time-based bot trap: if submitted in under 3 seconds, fake success
+                    const elapsed = Date.now() - formLoadedAt;
+                    if (elapsed < 3000 || honeypot) {
+                       setIsSuccess(true);
+                       setIsSubmitting(false);
+                       return;
+                    }
+
                     try {
                        // Submit to your existing Resend API
                        const formDataToSend = new FormData();
@@ -278,6 +289,7 @@ export default function ContactPage() {
                        formDataToSend.append('email', formData.email);
                        formDataToSend.append('phone', 'Not provided'); // Contact form doesn't have phone field
                        formDataToSend.append('details', formData.message);
+                       formDataToSend.append('_t', String(formLoadedAt));
 
                        const response = await fetch("/api/submit-quote", {
                           method: "POST",
@@ -355,6 +367,12 @@ export default function ContactPage() {
                        required
                     />
                     {errors.message && <p className="text-sm text-red-700">{errors.message}</p>}
+                 </div>
+
+                 {/* HONEYPOT - invisible to humans, bots fill it */}
+                 <div className="absolute opacity-0 top-0 left-0 h-0 w-0 -z-10 overflow-hidden" aria-hidden="true" tabIndex={-1}>
+                    <label htmlFor="contact_website_url">Leave this empty</label>
+                    <input type="text" id="contact_website_url" tabIndex={-1} autoComplete="off" value={honeypot} onChange={(e) => setHoneypot(e.target.value)} />
                  </div>
 
                  {submitError && (

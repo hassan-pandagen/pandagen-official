@@ -32,7 +32,7 @@ export function HeroSubtitle() {
       <span className="text-charcoal font-bold underline decoration-cognac/40 decoration-2 underline-offset-2">
         custom built websites that actually perform
       </span>
-      . Under 1 second. No monthly fees. No vendor lock-in.
+      . Under 1 second. No monthly fees. No plugin updates. No vendor lock-in.
     </motion.p>
   );
 }
@@ -97,6 +97,10 @@ export function HeroTrustSignals() {
       <div className="flex items-center gap-2">
         <CheckCircle2 className="w-4 h-4 text-charcoal flex-shrink-0" />
         <span>Fixed Pricing</span>
+      </div>
+      <div className="flex items-center gap-2">
+        <CheckCircle2 className="w-4 h-4 text-charcoal flex-shrink-0" />
+        <span>Zero Maintenance</span>
       </div>
     </motion.div>
   );

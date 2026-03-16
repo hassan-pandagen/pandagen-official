@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     'agency portfolio results',
   ],
   openGraph: {
-    title: 'PandaCodeGen Portfolio — $38K/mo on $25/mo Tooling. 100/100 PageSpeed. Real Results.',
+    title: 'PandaCodeGen Portfolio, $38K/mo on $25/mo Tooling. 100/100 PageSpeed. Real Results.',
     description: 'WordPress migrations, custom e-commerce platforms, and internal ops tools. See the numbers behind the builds.',
     url: 'https://www.pandacodegen.com/work',
     type: 'website',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'PandaCodeGen Portfolio — Real Results, Not Mockups',
+    title: 'PandaCodeGen Portfolio, Real Results, Not Mockups',
     description: 'WordPress migrations, custom e-commerce builds, and ops platforms. Proof is in the numbers.',
     images: ['https://www.pandacodegen.com/og-image.jpg'],
   },

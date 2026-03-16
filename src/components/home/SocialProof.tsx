@@ -67,7 +67,7 @@ export default function SocialProof() {
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-5 border-t border-stone-200">
               <div>
                 <div className="text-sm font-bold text-charcoal">Executive, MC Patches LLC</div>
-                <div className="text-xs text-stone-400 mt-0.5">Manufacturing · Austin, Texas · Oct – Nov 2025</div>
+                <div className="text-xs text-stone-400 mt-0.5">Manufacturing · Austin, Texas · Oct, Nov 2025</div>
               </div>
               <div className="flex gap-4 text-xs text-stone-400">
                 {[["Quality","5.0"],["Schedule","5.0"],["Cost","5.0"],["Refer","5.0"]].map(([label, val]) => (
@@ -95,7 +95,7 @@ export default function SocialProof() {
             {/* Header: stars + Trustpilot badge */}
             <div className="flex items-start justify-between gap-4 mb-6">
               <div>
-                {/* 5 stars — Trustpilot green */}
+                {/* 5 stars, Trustpilot green */}
                 <div className="flex gap-1 mb-2">
                   {[...Array(5)].map((_, i) => (
                     <svg key={i} className="w-5 h-5 text-[#00b67a]" fill="currentColor" viewBox="0 0 20 20">

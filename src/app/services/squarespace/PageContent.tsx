@@ -212,7 +212,7 @@ export default function SquarespacePageContent() {
         </div>
       </section>
 
-      {/* 4. COMPARISON — Squarespace Killer Card */}
+      {/* 4. COMPARISON, Squarespace Killer Card */}
       <section id="comparison" className="py-12 md:py-24 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[800px] bg-red-100/30 blur-[180px] rounded-full pointer-events-none" />
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-stone-100/20 blur-[150px] rounded-full pointer-events-none" />

@@ -99,11 +99,11 @@ const articleSchema = {
             "totalTime": "PT2W",
             "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
             "step": [
-                { "@type": "HowToStep", "position": 1, "name": "Verify your platform's UCP readiness", "text": "Shopify: UCP support is built in — log into your Shopify admin, go to Sales Channels → Google, and verify your Google Merchant Center connection is active and your product feed is syncing. WooCommerce: requires a developer to build the MCP integration manually. Wix/Squarespace: no UCP support exists yet." },
+                { "@type": "HowToStep", "position": 1, "name": "Verify your platform's UCP readiness", "text": "Shopify: UCP support is built in: log into your Shopify admin, go to Sales Channels → Google, and verify your Google Merchant Center connection is active and your product feed is syncing. WooCommerce: requires a developer to build the MCP integration manually. Wix/Squarespace: no UCP support exists yet." },
                 { "@type": "HowToStep", "position": 2, "name": "Audit your product data completeness", "text": "AI agents need clean, structured data to recommend your products. Check every product has: accurate title, complete description (100+ words), high-quality images, correct pricing, live inventory count, and structured attributes (size, colour, material). Incomplete product data is the most common reason AI agents skip a store." },
                 { "@type": "HowToStep", "position": 3, "name": "Verify Google Merchant Center product feed", "text": "Log into Google Merchant Center and check your product feed for errors and warnings. UCP relies on the same structured data as Google Shopping. Resolve any disapproved products, fix missing GTINs or MPNs, and ensure all required attributes are present. A clean Merchant Center feed is a prerequisite for UCP transactions." },
                 { "@type": "HowToStep", "position": 4, "name": "Optimise product titles and descriptions for AI queries", "text": "AI agents match customer intent to product data using natural language. Rewrite product titles to include the full product name, key attributes, and use case (not just model numbers). Write descriptions that answer real purchase questions: what it is, who it is for, what problem it solves, and what differentiates it from alternatives." },
-                { "@type": "HowToStep", "position": 5, "name": "Evaluate headless architecture for full UCP flexibility", "text": "Shopify's UCP integration covers most use cases. For maximum flexibility — connecting to ChatGPT, Bing Copilot, and Perplexity simultaneously alongside Google — a custom Next.js storefront with a Headless CMS like Sanity lets you publish product data to all AI shopping channels at once via a single API, giving every AI agent a clean, real-time feed of your inventory." }
+                { "@type": "HowToStep", "position": 5, "name": "Evaluate headless architecture for full UCP flexibility", "text": "Shopify's UCP integration covers most use cases. For maximum flexibility: connecting to ChatGPT, Bing Copilot, and Perplexity simultaneously alongside Google: a custom Next.js storefront with a Headless CMS like Sanity lets you publish product data to all AI shopping channels at once via a single API, giving every AI agent a clean, real-time feed of your inventory." }
             ]
         },
         {
@@ -188,7 +188,7 @@ const articleSchema = {
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95 to 100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
             "foundingDate": "2026"
         }
@@ -263,7 +263,7 @@ export default function UCPBlogPage() {
                         />
                     </div>
 
-                    {/* Feature Visual — Animated UCP Flow */}
+                    {/* Feature Visual. Animated UCP Flow */}
                     <div className="mb-12">
                         <UCPFlowAnimation />
                     </div>
@@ -452,7 +452,7 @@ export default function UCPBlogPage() {
                     </BlogText>
 
                     {/* Early Mover Advantage */}
-                    <BlogHeader id="early-mover">Why Should You Prepare for Google UCP Now If It Won&apos;t Be Mainstream for 12–18 Months?</BlogHeader>
+                    <BlogHeader id="early-mover">Why Should You Prepare for Google UCP Now If It Won&apos;t Be Mainstream for 12 to 18 Months?</BlogHeader>
 
                     <BlogText>
                         UCP is live, but it&apos;s not everywhere yet. Most store owners have never heard of it. Most agencies haven&apos;t started preparing their clients for it. Your competitors almost certainly aren&apos;t thinking about it.
@@ -604,7 +604,7 @@ export default function UCPBlogPage() {
                     ]} />
 
                     <BlogText>
-                        BCG estimates that by 2028, <strong>15–20% of all e-commerce transactions will be completed by AI agents on behalf of customers</strong>. <a href="/services/ecommerce" className="text-cognac hover:underline">The stores building for this now</a> are the ones that will own that traffic.
+                        BCG estimates that by 2028, <strong>15 to 20% of all e-commerce transactions will be completed by AI agents on behalf of customers</strong>. <a href="/services/ecommerce" className="text-cognac hover:underline">The stores building for this now</a> are the ones that will own that traffic.
                     </BlogText>
 
                     {/* Bottom Line */}
@@ -731,11 +731,11 @@ export default function UCPBlogPage() {
                     <section className="mb-10">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>Customers can now buy without visiting your website</strong> — Google&apos;s Universal Commerce Protocol lets AI complete purchases inside search results, and stores not connected to UCP are invisible to these buyers.</li>
-                            <li><strong>Your product data is your new sales rep</strong> — AI agents decide what to recommend based on how complete and accurate your product titles, prices, stock levels, and specs are, not your website design.</li>
-                            <li><strong>Your platform determines your AI visibility</strong> — Shopify and custom-built stores are UCP-ready, WooCommerce requires costly developer work, and Wix/Squarespace have no clear path at all.</li>
-                            <li><strong>First movers will dominate AI-driven shopping</strong> — just like early SEO adopters in 2010, stores that prepare now will be the default AI recommendations when mass adoption hits in 2027.</li>
-                            <li><strong>Start with your product listings and Google Merchant Center</strong> — auditing your top 20 products for completeness and ensuring your Merchant Center feed is syncing are the highest-leverage actions you can take this week.</li>
+                            <li><strong>Customers can now buy without visiting your website</strong>. Google&apos;s Universal Commerce Protocol lets AI complete purchases inside search results, and stores not connected to UCP are invisible to these buyers.</li>
+                            <li><strong>Your product data is your new sales rep</strong>. AI agents decide what to recommend based on how complete and accurate your product titles, prices, stock levels, and specs are, not your website design.</li>
+                            <li><strong>Your platform determines your AI visibility</strong>. Shopify and custom-built stores are UCP-ready, WooCommerce requires costly developer work, and Wix/Squarespace have no clear path at all.</li>
+                            <li><strong>First movers will dominate AI-driven shopping</strong>, just like early SEO adopters in 2010, stores that prepare now will be the default AI recommendations when mass adoption hits in 2027.</li>
+                            <li><strong>Start with your product listings and Google Merchant Center</strong>: Auditing your top 20 products for completeness and ensuring your Merchant Center feed is syncing are the highest-leverage actions you can take this week.</li>
                         </ol>
                     </section>
 

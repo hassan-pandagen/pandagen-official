@@ -93,15 +93,15 @@ const articleSchema = {
             "@type": "HowTo",
             "@id": "https://www.pandacodegen.com/blog/wordpress-vs-custom-code-real-cost-3-years#howto",
             "name": "How to Calculate WordPress vs Custom Code Total Cost of Ownership Over 3 Years",
-            "description": "A 5-step process to calculate your real 3-year website cost — including the hidden expenses most business owners miss when comparing WordPress to a custom-built site.",
+            "description": "A 5-step process to calculate your real 3-year website cost, including the hidden expenses most business owners miss when comparing WordPress to a custom-built site.",
             "totalTime": "PT2H",
             "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
             "step": [
-                { "@type": "HowToStep", "position": 1, "name": "List all current WordPress direct costs", "text": "Search your email for hosting invoices, plugin subscription renewals, theme license fees, and any security tool subscriptions from the past 12 months. Multiply by 3 to get your 3-year direct cost estimate. For most business WordPress sites, this is $3,600–$8,400/year." },
+                { "@type": "HowToStep", "position": 1, "name": "List all current WordPress direct costs", "text": "Search your email for hosting invoices, plugin subscription renewals, theme license fees, and any security tool subscriptions from the past 12 months. Multiply by 3 to get your 3-year direct cost estimate. For most business WordPress sites, this is $3,600 to $8,400/year." },
                 { "@type": "HowToStep", "position": 2, "name": "Add developer maintenance costs", "text": "Estimate hours per month spent on WordPress: plugin updates, conflict resolution, crash recovery, security scans. Multiply by developer hourly rate. Add any emergency fix invoices from the past year and multiply by 3." },
                 { "@type": "HowToStep", "position": 3, "name": "Test your site speed and estimate revenue impact", "text": "Run pagespeed.web.dev on Mobile. If your score is below 70, estimate traffic loss vs faster competitors. Conservative estimate: sites scoring below 50 lose 20% of potential organic traffic. Calculate annual revenue × 20% = annual lost revenue from speed. Multiply by 3 for your 3-year hidden cost." },
-                { "@type": "HowToStep", "position": 4, "name": "Calculate custom site 3-year total", "text": "A custom Next.js site: one-time build ($8,000–$15,000) + Vercel hosting ($0–$240/year) + no plugin fees + no maintenance developer retainer. Over 3 years: $8,000–$15,000 total vs $15,000–$25,000+ for WordPress. In Year 2 and 3, the custom site costs near zero while WordPress continues at $4,000–$8,000/year." },
-                { "@type": "HowToStep", "position": 5, "name": "Calculate break-even date", "text": "Divide the custom site build cost by your current annual WordPress recurring costs (hosting + plugins + maintenance). The result is your break-even in years. Most businesses break even in 18–24 months on direct costs alone — and much sooner when including recovered traffic revenue." }
+                { "@type": "HowToStep", "position": 4, "name": "Calculate custom site 3-year total", "text": "A custom Next.js site: one-time build ($8,000 to $15,000) + Vercel hosting ($0 to $240/year) + no plugin fees + no maintenance developer retainer. Over 3 years: $8,000 to $15,000 total vs $15,000 to $25,000+ for WordPress. In Year 2 and 3, the custom site costs near zero while WordPress continues at $4,000 to $8,000/year." },
+                { "@type": "HowToStep", "position": 5, "name": "Calculate break-even date", "text": "Divide the custom site build cost by your current annual WordPress recurring costs (hosting + plugins + maintenance). The result is your break-even in years. Most businesses break even in 18 to 24 months on direct costs alone, and much sooner when including recovered traffic revenue." }
             ]
         },
         {
@@ -135,7 +135,7 @@ const articleSchema = {
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95 to 100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
             "foundingDate": "2026"
         },
@@ -211,10 +211,10 @@ export default function WordPressVsCustomCodeCostPage() {
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
                         <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
                         <BlogList items={[
-                            "WordPress looks cheap at $50/month but costs $8,000–$15,000 over 3 years when you count hosting, plugins, maintenance, and security.",
-                            "A custom Next.js site costs $8,000–$15,000 to build once, then $0–$240/year to run. It pays for itself in 18–24 months.",
-                            "The hidden cost nobody talks about: slow WordPress sites lose 20–30% of organic traffic, translating to $50K–$150K/year in lost revenue.",
-                            "After 3 years, custom coded sites are $10,000–$25,000 cheaper in direct costs alone — before counting the traffic and revenue difference."
+                            "WordPress looks cheap at $50/month but costs $8,000 to $15,000 over 3 years when you count hosting, plugins, maintenance, and security.",
+                            "A custom Next.js site costs $8,000 to $15,000 to build once, then $0 to $240/year to run. It pays for itself in 18 to 24 months.",
+                            "The hidden cost nobody talks about: slow WordPress sites lose 20 to 30% of organic traffic, translating to $50K to $150K/year in lost revenue.",
+                            "After 3 years, custom coded sites are $10,000 to $25,000 cheaper in direct costs alone. Before counting the traffic and revenue difference."
                         ]} />
                     </div>
 
@@ -225,7 +225,7 @@ export default function WordPressVsCustomCodeCostPage() {
                         </BlogText>
 
                         <BlogText>
-                            <BlogHighlight>That number is wrong. It&apos;s off by 3–5×.</BlogHighlight>
+                            <BlogHighlight>That number is wrong. It&apos;s off by 3 to 5×.</BlogHighlight>
                         </BlogText>
 
                         <BlogText>
@@ -239,7 +239,7 @@ export default function WordPressVsCustomCodeCostPage() {
                         <BlogHeader>What Does WordPress Actually Cost Over 3 Years? (The Complete Breakdown)</BlogHeader>
 
                         <BlogText>
-                            Let&apos;s go line by line. This is the real cost for a typical business WordPress site — not a hobby blog, but a site that&apos;s actually doing work.
+                            Let&apos;s go line by line. This is the real cost for a typical business WordPress site, not a hobby blog, but a site that&apos;s actually doing work.
                         </BlogText>
 
                         <div className="overflow-x-auto my-10">
@@ -310,11 +310,11 @@ export default function WordPressVsCustomCodeCostPage() {
                         </div>
 
                         <BlogText>
-                            That&apos;s <BlogHighlight>$15,050 over 3 years</BlogHighlight> — and that&apos;s the conservative estimate assuming nothing goes seriously wrong. No major hack. No data loss. No catastrophic plugin conflict that breaks the site for 3 days. Just normal maintenance.
+                            That&apos;s <BlogHighlight>$15,050 over 3 years</BlogHighlight>, and that&apos;s the conservative estimate assuming nothing goes seriously wrong. No major hack. No data loss. No catastrophic plugin conflict that breaks the site for 3 days. Just normal maintenance.
                         </BlogText>
 
                         <BlogText>
-                            Add one security incident and you&apos;re looking at $18,000–$25,000.
+                            Add one security incident and you&apos;re looking at $18,000 to $25,000.
                         </BlogText>
 
                         <BlogHeader>What Does a Custom Next.js Site Cost Over 3 Years?</BlogHeader>
@@ -343,7 +343,7 @@ export default function WordPressVsCustomCodeCostPage() {
                                         <td className="px-4 py-3 text-center font-bold text-charcoal">$10,000</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
-                                        <td className="px-4 py-3 text-charcoal font-medium">Hosting (Vercel — free for most sites)</td>
+                                        <td className="px-4 py-3 text-charcoal font-medium">Hosting (Vercel: Free for most sites)</td>
                                         <td className="px-4 py-3 text-center text-green-700">$0</td>
                                         <td className="px-4 py-3 text-center text-green-700">$0</td>
                                         <td className="px-4 py-3 text-center text-green-700">$0</td>
@@ -428,7 +428,7 @@ export default function WordPressVsCustomCodeCostPage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>Custom Next.js sites work differently:</strong> Pages are pre-built at deploy time. Vercel stores them across 300+ global edge locations. When a visitor requests a page, they get a cached file instantly — no server processing, no database query, no plugin overhead.
+                            <strong>Custom Next.js sites work differently:</strong> Pages are pre-built at deploy time. Vercel stores them across 300+ global edge locations. When a visitor requests a page, they get a cached file instantly, no server processing, no database query, no plugin overhead.
                         </BlogText>
 
                         <BlogText>
@@ -546,7 +546,7 @@ export default function WordPressVsCustomCodeCostPage() {
                             If you&apos;re under $150K, the break-even is still Year 1-2. Still worth it. Just less obviously so.
                         </BlogText>
 
-                        <BlogHeader>Real Client Example: MyCustomPatches — WordPress to Next.js</BlogHeader>
+                        <BlogHeader>Real Client Example: MyCustomPatches. WordPress to Next.js</BlogHeader>
 
                         <BlogText>
                             MyCustomPatches had a 10-year-old WordPress site. $150/month hosting (Kinsta). <a href="/blog/wordpress-killer" className="text-cognac hover:underline">30+ plugins</a>. 3.2 second load time. <a href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">40/100 PageSpeed on mobile</a>.
@@ -634,7 +634,7 @@ export default function WordPressVsCustomCodeCostPage() {
                         </BlogText>
 
                         <BlogText>
-                            You can also read our <Link href="/services/wordpress-migration" className="text-charcoal font-bold underline hover:text-stone-600 transition-colors">WordPress Migration service page</Link> to see exactly how the transition works — what we migrate, how we protect your SEO, and what the timeline looks like.
+                            You can also read our <Link href="/services/wordpress-migration" className="text-charcoal font-bold underline hover:text-stone-600 transition-colors">WordPress Migration service page</Link> to see exactly how the transition works. What we migrate, how we protect your SEO, and what the timeline looks like.
                         </BlogText>
                     </div>
 
@@ -642,10 +642,10 @@ export default function WordPressVsCustomCodeCostPage() {
                     <section className="mb-10">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>WordPress costs $15,000+ over 3 years</strong> — hosting, plugins, maintenance, and emergency fixes add up to far more than the $50/month most owners expect.</li>
-                            <li><strong>A custom Next.js site costs $0/year to run after the build</strong> — free Vercel hosting, no plugin fees, and no maintenance developer means your only cost is the one-time investment.</li>
-                            <li><strong>The break-even point is 18-24 months on direct costs</strong> — and as early as 4-5 months when you factor in recovered revenue from faster load times.</li>
-                            <li><strong>Slow WordPress sites silently lose $50K-$150K/year in revenue</strong> — the biggest cost is not on your invoices but in the organic traffic your slow speed is handing to competitors.</li>
+                            <li><strong>WordPress costs $15,000+ over 3 years</strong>: Hosting, plugins, maintenance, and emergency fixes add up to far more than the $50/month most owners expect.</li>
+                            <li><strong>A custom Next.js site costs $0/year to run after the build</strong>: Free Vercel hosting, no plugin fees, and no maintenance developer means your only cost is the one-time investment.</li>
+                            <li><strong>The break-even point is 18-24 months on direct costs</strong>, and as early as 4-5 months when you factor in recovered revenue from faster load times.</li>
+                            <li><strong>Slow WordPress sites silently lose $50K-$150K/year in revenue</strong>: The biggest cost is not on your invoices but in the organic traffic your slow speed is handing to competitors.</li>
                         </ol>
                     </section>
 

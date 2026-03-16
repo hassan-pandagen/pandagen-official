@@ -16,7 +16,7 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 
 export const metadata: Metadata = {
     title: "For Agencies: How to Offer Custom Web Development Without Hiring a Dev Team | PandaCodeGen",
-    description: "Your client wants a custom site. No dev team? Here's how 40+ agencies deliver premium custom builds under their own brand — without touching a line of code.",
+    description: "Your client wants a custom site. No dev team? Here's how 40+ agencies deliver premium custom builds under their own brand, without touching a line of code.",
     alternates: {
         canonical: '/blog/for-agencies-offer-custom-web-development',
     },
@@ -85,7 +85,7 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Vercel for Agencies", "url": "https://vercel.com/enterprise" },
                 { "@type": "CreativeWork", "name": "Sanity CMS for Developers", "url": "https://www.sanity.io/docs" },
                 { "@type": "CreativeWork", "name": "Google Core Web Vitals", "url": "https://developers.google.com/search/docs/appearance/core-web-vitals" },
-                { "@type": "CreativeWork", "name": "Agency Partnerships — PandaCodeGen", "url": "https://www.pandacodegen.com/partners" },
+                { "@type": "CreativeWork", "name": "Agency Partnerships. PandaCodeGen", "url": "https://www.pandacodegen.com/partners" },
                 { "@type": "CreativeWork", "name": "Google Page Experience Documentation", "url": "https://developers.google.com/search/docs/appearance/page-experience" }
             ]
         },
@@ -120,7 +120,7 @@ const articleSchema = {
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95 to 100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
             "foundingDate": "2026"
         },
@@ -128,11 +128,11 @@ const articleSchema = {
             "@type": "HowTo",
             "@id": "https://www.pandacodegen.com/blog/for-agencies-offer-custom-web-development#howto",
             "name": "How to Offer Custom Web Development Through a White-Label Partner",
-            "description": "The 5-step white-label workflow agencies use to deliver custom web development under their own brand — without hiring a single developer.",
+            "description": "The 5-step white-label workflow agencies use to deliver custom web development under their own brand, without hiring a single developer.",
             "step": [
                 { "@type": "HowToStep", "position": 1, "name": "Share the Client Brief", "text": "Send your white-label partner the client name, business type, timeline, existing assets, and budget range." },
                 { "@type": "HowToStep", "position": 2, "name": "Receive a Fixed-Price Quote", "text": "Get a detailed, fixed-price quote within 48 hours covering scope, delivery milestones, and what you need from the client." },
-                { "@type": "HowToStep", "position": 3, "name": "Mark Up and Quote Your Client", "text": "Add your agency margin (typically 25–50% above build cost) and present the project to your client under your own brand." },
+                { "@type": "HowToStep", "position": 3, "name": "Mark Up and Quote Your Client", "text": "Add your agency margin (typically 25 to 50% above build cost) and present the project to your client under your own brand." },
                 { "@type": "HowToStep", "position": 4, "name": "Partner Builds, You Deliver", "text": "Your dev partner builds the site, you review each milestone, present it as your own work, and handle all client communication." },
                 { "@type": "HowToStep", "position": 5, "name": "Launch and Hand Off", "text": "Deliver the live site to your client, receive full CMS documentation, and retain the ongoing client relationship for future work." }
             ]
@@ -182,7 +182,7 @@ export default function ForAgenciesCustomDevPage() {
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            Your client wants a custom-built website. You don&apos;t have a dev team. Here&apos;s how 40+ agencies deliver premium custom builds under their own brand — without touching a line of code.
+                            Your client wants a custom-built website. You don&apos;t have a dev team. Here&apos;s how 40+ agencies deliver premium custom builds under their own brand, without touching a line of code.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">
@@ -210,9 +210,9 @@ export default function ForAgenciesCustomDevPage() {
                         <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
                         <BlogList items={[
                             "The white-label model: You sell, we build, your client never knows we exist. NDA-first.",
-                            "You keep the client relationship, the ongoing retainer, and 25–50% margin on every project.",
+                            "You keep the client relationship, the ongoing retainer, and 25 to 50% margin on every project.",
                             "What you can offer: WordPress migrations, custom Next.js sites, e-commerce builds, custom dashboards, GoHighLevel implementations.",
-                            "What to look for in a dev partner: Fixed-price quotes, proven case studies, NDA workflow, and a team that meets your deadlines — not theirs."
+                            "What to look for in a dev partner: Fixed-price quotes, proven case studies, NDA workflow, and a team that meets your deadlines, not theirs."
                         ]} />
                     </div>
 
@@ -270,7 +270,7 @@ export default function ForAgenciesCustomDevPage() {
                         </BlogQuote>
 
                         <BlogText>
-                            That experience is real. And it comes from using the wrong kind of development partner — individual freelancers with no accountability, unclear scope, and vague timelines.
+                            That experience is real. And it comes from using the wrong kind of development partner: individual freelancers with no accountability, unclear scope, and vague timelines.
                         </BlogText>
 
                         <BlogText>
@@ -282,7 +282,7 @@ export default function ForAgenciesCustomDevPage() {
                             "Defined scope with a written brief before any work starts",
                             "Weekly check-ins and milestone reviews so you always know where the project stands",
                             "NDA signed before any client information is shared",
-                            "The same team works your project from start to finish — no handoffs"
+                            "The same team works your project from start to finish, no handoffs"
                         ]} />
 
                         <BlogHeader>How Does the White-Label Model Work in Practice?</BlogHeader>
@@ -308,7 +308,7 @@ export default function ForAgenciesCustomDevPage() {
 
                         <BlogList items={[
                             "Scope of work (what&apos;s included and what&apos;s explicitly not included)",
-                            "Fixed price — no hourly billing surprises",
+                            "Fixed price, no hourly billing surprises",
                             "Timeline with delivery milestones",
                             "What you need to provide from the client"
                         ]} />
@@ -318,9 +318,9 @@ export default function ForAgenciesCustomDevPage() {
                         </BlogText>
 
                         <BlogList items={[
-                            "Add your margin (typically 25–50% above our cost)",
+                            "Add your margin (typically 25 to 50% above our cost)",
                             "Add your agency management fee if applicable",
-                            "The client signs your contract, not ours — you stay the accountable party"
+                            "The client signs your contract, not ours: you stay the accountable party"
                         ]} />
 
                         <BlogText>
@@ -369,9 +369,9 @@ export default function ForAgenciesCustomDevPage() {
 
                         <BlogList items={[
                             "Client is frustrated with slow WordPress site, high hosting costs, or constant security issues",
-                            "They want the same site rebuilt properly — fast, clean, owned",
+                            "They want the same site rebuilt properly. Fast, clean, owned",
                             "You position it as a &quot;performance rebuild&quot; or &quot;platform modernisation&quot;",
-                            "Typical project: $8,000–$18,000. Your margin: $2,000–$6,000"
+                            "Typical project: $8,000 to $18,000. Your margin: $2,000 to $6,000"
                         ]} />
 
                         <BlogText>
@@ -381,7 +381,7 @@ export default function ForAgenciesCustomDevPage() {
                         <BlogList items={[
                             "Client outgrew Shopify templates or WooCommerce and wants a bespoke storefront",
                             "Custom product configurators, pricing calculators, wholesale portals",
-                            "Typical project: $12,000–$35,000. Your margin: $3,000–$12,000"
+                            "Typical project: $12,000 to $35,000. Your margin: $3,000 to $12,000"
                         ]} />
 
                         <BlogText>
@@ -391,7 +391,7 @@ export default function ForAgenciesCustomDevPage() {
                         <BlogList items={[
                             "Client is a service business wanting a full CRM + funnel + booking system",
                             "You sell the strategy; we handle the technical build",
-                            "Typical project: $5,000–$15,000. Your margin: $1,500–$5,000"
+                            "Typical project: $5,000 to $15,000. Your margin: $1,500 to $5,000"
                         ]} />
 
                         <BlogText>
@@ -401,7 +401,7 @@ export default function ForAgenciesCustomDevPage() {
                         <BlogList items={[
                             "Client wants to replace Google Sheets / manual processes with a real dashboard",
                             "Order pipelines, attendance trackers, profit calculators, inventory systems",
-                            "Typical project: $15,000–$40,000. Your margin: $4,000–$15,000"
+                            "Typical project: $15,000 to $40,000. Your margin: $4,000 to $15,000"
                         ]} />
 
                         <BlogHeader>What Makes a Good White-Label Development Partner?</BlogHeader>
@@ -411,12 +411,12 @@ export default function ForAgenciesCustomDevPage() {
                         </BlogText>
 
                         <BlogList items={[
-                            "NDA-first workflow — every engagement begins with a signed NDA. Non-negotiable.",
-                            "Fixed-price quotes — you can&apos;t manage your margin on hourly billing",
-                            "Proven case studies you can reference — not just portfolio screenshots, but real results with real numbers",
-                            "They meet YOUR deadlines — the client&apos;s timeline is your commitment, not theirs",
-                            "Direct technical communication available — you need to be able to ask technical questions and get straight answers",
-                            "No client contact without your permission — they should never reach out to your client directly"
+                            "NDA-first workflow: every engagement begins with a signed NDA. Non-negotiable.",
+                            "Fixed-price quotes: you can&apos;t manage your margin on hourly billing",
+                            "Proven case studies you can reference, not just portfolio screenshots, but real results with real numbers",
+                            "They meet YOUR deadlines: the client&apos;s timeline is your commitment, not theirs",
+                            "Direct technical communication available: you need to be able to ask technical questions and get straight answers",
+                            "No client contact without your permission: they should never reach out to your client directly"
                         ]} />
 
                         <BlogText>
@@ -426,7 +426,7 @@ export default function ForAgenciesCustomDevPage() {
                         <BlogList items={[
                             "Hourly billing with no cap",
                             "Vague scope (&quot;we&apos;ll figure out the details later&quot;)",
-                            "No case studies — just portfolio screenshots with no performance data",
+                            "No case studies, just portfolio screenshots with no performance data",
                             "They want to communicate with your client directly",
                             "Revision policies that limit changes to 1 or 2 rounds regardless of quality"
                         ]} />
@@ -434,19 +434,19 @@ export default function ForAgenciesCustomDevPage() {
                         <BlogHeader>How Do You Price White-Label Work for Your Clients?</BlogHeader>
 
                         <BlogText>
-                            The standard approach: add 30–50% to our cost and present it as your agency&apos;s project rate.
+                            The standard approach: add 30 to 50% to our cost and present it as your agency&apos;s project rate.
                         </BlogText>
 
                         <BlogText>
-                            Example: We quote you $10,000 for a custom Next.js site. You quote your client $13,000–$15,000. You pocket the $3,000–$5,000 as agency margin for project management, client communication, and relationship ownership.
+                            Example: We quote you $10,000 for a custom Next.js site. You quote your client $13,000 to $15,000. You pocket the $3,000 to $5,000 as agency margin for project management, client communication, and relationship ownership.
                         </BlogText>
 
                         <BlogText>
-                            Some agencies add a separate &quot;project management&quot; line item. Others simply mark up the build. Either approach works as long as your pricing reflects the value you&apos;re delivering — which includes your client relationship, your brand reputation, and your accountability for the outcome.
+                            Some agencies add a separate &quot;project management&quot; line item. Others simply mark up the build. Either approach works as long as your pricing reflects the value you&apos;re delivering, which includes your client relationship, your brand reputation, and your accountability for the outcome.
                         </BlogText>
 
                         <BlogText>
-                            <strong>One important note:</strong> Don&apos;t undersell. When you present a custom Next.js site, you&apos;re selling a premium product — <a href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">100/100 PageSpeed</a>, zero hosting costs, owned code. Position it accordingly. Clients who are serious about their website will pay for quality.
+                            <strong>One important note:</strong> Don&apos;t undersell. When you present a custom Next.js site, you&apos;re selling a premium product. <a href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">100/100 PageSpeed</a>, zero hosting costs, owned code. Position it accordingly. Clients who are serious about their website will pay for quality.
                         </BlogText>
 
                         <BlogHeader>How Does This Affect Your Agency&apos;s Positioning?</BlogHeader>
@@ -464,11 +464,11 @@ export default function ForAgenciesCustomDevPage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>3. You earn margin on the build.</strong> A project you used to turn down now generates $2,000–$15,000 in additional revenue per engagement, with no dev team on your payroll.
+                            <strong>3. You earn margin on the build.</strong> A project you used to turn down now generates $2,000 to $15,000 in additional revenue per engagement, with no dev team on your payroll.
                         </BlogText>
 
                         <BlogQuote>
-                            The agencies winning the most in 2026 are full-service by design — but lean by structure. They white-label what they don&apos;t do in-house. They own the client. They keep the margin.
+                            The agencies winning the most in 2026 are full-service by design, but lean by structure. They white-label what they don&apos;t do in-house. They own the client. They keep the margin.
                         </BlogQuote>
 
                         <BlogHeader>What to Tell Your Client About the Website They&apos;re Getting</BlogHeader>
@@ -478,12 +478,12 @@ export default function ForAgenciesCustomDevPage() {
                         </BlogText>
 
                         <BlogList items={[
-                            "Custom coded site — not a template, not a WordPress theme",
-                            "100/100 Google PageSpeed — the fastest possible loading experience",
-                            "$0/month hosting on Vercel — no recurring infrastructure costs",
-                            "They own the code — portable to any developer, not locked into a platform",
-                            "Simple content editor — they can edit text and images without developer help",
-                            "Zero plugin vulnerabilities — no security patches, no update management"
+                            "Custom coded site, not a template, not a WordPress theme",
+                            "100/100 Google PageSpeed: the fastest possible loading experience",
+                            "$0/month hosting on Vercel, no recurring infrastructure costs",
+                            "They own the code, portable to any developer, not locked into a platform",
+                            "Simple content editor: they can edit text and images without developer help",
+                            "Zero plugin vulnerabilities, no security patches, no update management"
                         ]} />
 
                         <BlogText>
@@ -500,9 +500,9 @@ export default function ForAgenciesCustomDevPage() {
                         </BlogText>
 
                         <BlogList items={[
-                            "Tell us about your agency — what you do, typical client size, and what kind of dev work comes up",
+                            "Tell us about your agency. What you do, typical client size, and what kind of dev work comes up",
                             "We sign an NDA before any project details are shared",
-                            "Bring us your next enquiry — we&apos;ll quote it within 48 hours",
+                            "Bring us your next enquiry. We&apos;ll quote it within 48 hours",
                             "You decide if the numbers work. No commitment required.",
                         ]} />
 
@@ -521,10 +521,10 @@ export default function ForAgenciesCustomDevPage() {
                     <section className="mb-10">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>White-label development lets you say &quot;yes&quot; to custom builds without hiring developers</strong> — you sell the project, a dev partner builds it under your brand, and your client never knows the difference.</li>
-                            <li><strong>You keep 25-50% margin on every project</strong> — mark up the fixed-price quote, manage the client relationship, and pocket $2,000-$15,000 per engagement with zero dev payroll.</li>
-                            <li><strong>Bad freelancer experiences are not the same as a structured partnership</strong> — the difference is fixed-price quotes, NDA-first workflows, weekly milestone reviews, and a consistent team.</li>
-                            <li><strong>Adding dev services makes your agency stickier</strong> — clients who get branding, marketing, and web development from one shop are far less likely to leave for a full-service competitor.</li>
+                            <li><strong>White-label development lets you say &quot;yes&quot; to custom builds without hiring developers</strong>: You sell the project, a dev partner builds it under your brand, and your client never knows the difference.</li>
+                            <li><strong>You keep 25-50% margin on every project</strong>: Mark up the fixed-price quote, manage the client relationship, and pocket $2,000-$15,000 per engagement with zero dev payroll.</li>
+                            <li><strong>Bad freelancer experiences are not the same as a structured partnership</strong>: The difference is fixed-price quotes, NDA-first workflows, weekly milestone reviews, and a consistent team.</li>
+                            <li><strong>Adding dev services makes your agency stickier</strong>: Clients who get branding, marketing, and web development from one shop are far less likely to leave for a full-service competitor.</li>
                         </ol>
                     </section>
 

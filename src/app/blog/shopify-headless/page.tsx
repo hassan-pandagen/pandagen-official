@@ -80,7 +80,7 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Next.js Commerce Starter", "url": "https://nextjs.org/commerce" },
                 { "@type": "CreativeWork", "name": "Vercel Edge Network", "url": "https://vercel.com/docs/edge-network/overview" },
                 { "@type": "CreativeWork", "name": "Google Core Web Vitals", "url": "https://web.dev/vitals/" },
-                { "@type": "CreativeWork", "name": "Think With Google — Speed and Revenue", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
+                { "@type": "CreativeWork", "name": "Think With Google. Speed and Revenue", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
                 { "@type": "CreativeWork", "name": "Shopify Partners: Headless Commerce", "url": "https://www.shopify.com/partners/headless-commerce" }
             ]
         },
@@ -95,9 +95,9 @@ const articleSchema = {
                 { "@type": "HowToStep", "position": 1, "name": "Audit Your Current Store Speed", "text": "Run your store through pagespeed.web.dev and GTmetrix. Document current load time, Mobile PageSpeed score, and which scripts are causing the most delay. This is your before benchmark." },
                 { "@type": "HowToStep", "position": 2, "name": "Create Shopify Storefront API Access", "text": "In your Shopify admin, create a Custom App with Storefront API permissions. You need read access to products, collections, cart, and checkout. Generate a Storefront API token." },
                 { "@type": "HowToStep", "position": 3, "name": "Build Next.js Frontend with Server Components", "text": "Create a Next.js 15 app using the Commerce starter. Configure it to connect to your Shopify Storefront API. Build product pages, collection pages, and cart as React Server Components for maximum speed." },
-                { "@type": "HowToStep", "position": 4, "name": "Optimise Images and Defer Third-Party Scripts", "text": "Use next/image for all product images with WebP serving, lazy loading, and responsive sizes. Defer all third-party scripts (reviews, chat, analytics) until after page load — zero blocking on initial render." },
+                { "@type": "HowToStep", "position": 4, "name": "Optimise Images and Defer Third-Party Scripts", "text": "Use next/image for all product images with WebP serving, lazy loading, and responsive sizes. Defer all third-party scripts (reviews, chat, analytics) until after page load: zero blocking on initial render." },
                 { "@type": "HowToStep", "position": 5, "name": "Deploy to Vercel Edge Network", "text": "Deploy to Vercel and enable Edge Runtime for product and collection pages. Pre-generate your top 100 product pages at build time. Set up ISR (Incremental Static Regeneration) for automatic cache refresh when products update." },
-                { "@type": "HowToStep", "position": 6, "name": "Keep Shopify Checkout Intact", "text": "Do not replace Shopify checkout. It handles payments, fraud detection, and tax compliance. Your headless frontend redirects to Shopify checkout for the final purchase step — you keep all Shopify reliability." }
+                { "@type": "HowToStep", "position": 6, "name": "Keep Shopify Checkout Intact", "text": "Do not replace Shopify checkout. It handles payments, fraud detection, and tax compliance. Your headless frontend redirects to Shopify checkout for the final purchase step: you keep all Shopify reliability." }
             ]
         },
         {
@@ -131,7 +131,7 @@ const articleSchema = {
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95 to 100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
             "foundingDate": "2026"
         },
@@ -200,16 +200,16 @@ export default function ShopifyHeadlessPage() {
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
                         <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
                         <BlogList items={[
-                            "Shopify's Liquid templates are server-rendered and render-blocking — you cannot fix this with apps or theme edits alone.",
+                            "Shopify's Liquid templates are server-rendered and render-blocking: you cannot fix this with apps or theme edits alone.",
                             "The only way to reach under 1 second load times on Shopify is a headless architecture with Next.js on the frontend.",
                             "Headless keeps your backend (orders, inventory, Shopify checkout) and replaces only the slow Liquid frontend.",
-                            "Stores migrated headless see 55% more conversions and 4–5× faster load times within 30 days of launch."
+                            "Stores migrated headless see 55% more conversions and 4 to 5× faster load times within 30 days of launch."
                         ]} />
                     </div>
 
                     <div className="space-y-8">
                         <BlogText>
-                            We got a call from a Shopify merchant doing $1.2M/year. His store loaded in 4.1 seconds on mobile. His mobile conversion rate was 0.8% — less than half the industry average.
+                            We got a call from a Shopify merchant doing $1.2M/year. His store loaded in 4.1 seconds on mobile. His mobile conversion rate was 0.8%, less than half the industry average.
                         </BlogText>
                         <BlogText>
                             He&apos;d tried everything. New theme. Image compression. Removed apps. Paid $2,300/month for Shopify Plus. <BlogHighlight>Nothing got him below 3.2 seconds.</BlogHighlight>
@@ -224,13 +224,13 @@ export default function ShopifyHeadlessPage() {
                         </BlogText>
                         <BlogList items={[
                             "Liquid templates are server-rendered: Every page request hits Shopify's servers before the browser gets anything",
-                            "All theme CSS and JS loads on every page — even code for sections not on that page",
+                            "All theme CSS and JS loads on every page, even code for sections not on that page",
                             "Third-party apps inject scripts directly into the theme, blocking page render",
-                            "The average Shopify store loads 1.2–1.8MB of JavaScript from apps alone",
-                            "Shopify's CDN is fast, but Liquid rendering adds 400–800ms you cannot eliminate"
+                            "The average Shopify store loads 1.2 to 1.8MB of JavaScript from apps alone",
+                            "Shopify's CDN is fast, but Liquid rendering adds 400 to 800ms you cannot eliminate"
                         ]} />
                         <BlogQuote>
-                            Shopify theme optimization is rearranging deck chairs. You can get from 3.5 seconds to 2.8 seconds — and that&apos;s roughly your ceiling. Under 1 second requires a fundamentally different architecture.
+                            Shopify theme optimization is rearranging deck chairs. You can get from 3.5 seconds to 2.8 seconds, and that&apos;s roughly your ceiling. Under 1 second requires a fundamentally different architecture.
                         </BlogQuote>
 
                         <BlogHeader>What Is Headless Shopify and How Does It Fix This?</BlogHeader>
@@ -241,7 +241,7 @@ export default function ShopifyHeadlessPage() {
                             "Backend stays on Shopify: Products, inventory, pricing, orders, Shopify Payments, fraud protection",
                             "Frontend becomes Next.js: Custom-built React pages that load in under 1 second",
                             "Connection: Shopify Storefront API feeds product data to the Next.js frontend in real-time",
-                            "Checkout: Stays on Shopify — they handle payments, tax, compliance",
+                            "Checkout: Stays on Shopify: they handle payments, tax, compliance",
                             "Result: All the reliability of Shopify + speed of a custom-built site"
                         ]} />
 
@@ -252,7 +252,7 @@ export default function ShopifyHeadlessPage() {
                             "Home Goods Brand: 4.4s → 0.7s, bounce rate 68% → 31%, revenue per visitor +2.8×"
                         ]} />
                         <BlogText>
-                            The pattern is consistent across every client: under 1 second load time translates to <a href="/blog/shopify-conversion-rate-speed-fix" className="text-cognac hover:underline">2–3× more conversions</a> from the same traffic.
+                            The pattern is consistent across every client: under 1 second load time translates to <a href="/blog/shopify-conversion-rate-speed-fix" className="text-cognac hover:underline">2 to 3× more conversions</a> from the same traffic.
                         </BlogText>
 
                         {/* Mid-Article CTA */}
@@ -269,12 +269,12 @@ export default function ShopifyHeadlessPage() {
                             Here&apos;s exactly what going headless involves, in the order we do it:
                         </BlogText>
                         <BlogList items={[
-                            "Step 1: Audit your current store — load time, PageSpeed score, which scripts are slowest",
+                            "Step 1: Audit your current store. Load time, PageSpeed score, which scripts are slowest",
                             "Step 2: Create a Shopify Custom App with Storefront API access (products, collections, cart)",
                             "Step 3: Build the Next.js frontend using React Server Components for product and collection pages",
                             "Step 4: Optimise all images with next/image, defer third-party scripts, lazy load below-the-fold content",
-                            "Step 5: Deploy to Vercel Edge Network — pre-generate top product pages at build time",
-                            "Step 6: Keep Shopify checkout — it handles payments, tax, and fraud protection"
+                            "Step 5: Deploy to Vercel Edge Network. Pre-generate top product pages at build time",
+                            "Step 6: Keep Shopify checkout: it handles payments, tax, and fraud protection"
                         ]} />
 
                         <BlogHeader>Can I Still Use Shopify Apps After Going Headless?</BlogHeader>
@@ -285,15 +285,15 @@ export default function ShopifyHeadlessPage() {
                             "Inventory and fulfilment apps: Work as before via Shopify admin",
                             "Email marketing (Klaviyo, Mailchimp): Work via Storefront API events",
                             "Shipping and tax apps: Work via Shopify backend",
-                            "Review apps: Rebuilt as custom React components — loads 10× faster than the original script"
+                            "Review apps: Rebuilt as custom React components, loads 10× faster than the original script"
                         ]} />
                         <BlogText>
-                            Frontend apps (popups, countdown timers, visual upsell widgets) need to be rebuilt as custom components. This actually makes your site faster — you replace a 200KB third-party script with a 4KB custom component.
+                            Frontend apps (popups, countdown timers, visual upsell widgets) need to be rebuilt as custom components. This actually makes your site faster: you replace a 200KB third-party script with a 4KB custom component.
                         </BlogText>
 
                         <BlogHeader>Is Headless Shopify Worth the Investment?</BlogHeader>
                         <BlogText>
-                            For stores doing $200K+/year, the ROI typically arrives in 3–6 months:
+                            For stores doing $200K+/year, the ROI typically arrives in 3 to 6 months:
                         </BlogText>
                         <BlogList items={[
                             "$200K/year store: 2× conversion rate improvement = $200K additional revenue",
@@ -309,7 +309,7 @@ export default function ShopifyHeadlessPage() {
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Ready to Cut Your Shopify Load Time by 80%?</h3>
                         <p className="text-stone-600 mb-6">
-                            Free audit — we&apos;ll show you your current speed impact and what headless would return for your specific store revenue.
+                            Free audit. We&apos;ll show you your current speed impact and what headless would return for your specific store revenue.
                         </p>
                         <a href="https://cal.com/pandagen/discovery" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
                             Book Free Shopify Audit <ArrowRight className="w-5 h-5" />
@@ -319,10 +319,10 @@ export default function ShopifyHeadlessPage() {
                     <section className="mb-10">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>Shopify&apos;s Liquid templates are the bottleneck</strong> — no theme edit or app removal can break the 2.5-second floor because Liquid is server-rendered and render-blocking by design.</li>
-                            <li><strong>Headless Shopify cuts load time by 80%</strong> — replacing the Liquid frontend with Next.js while keeping your Shopify backend delivers under 1 second load times and 55% more conversions.</li>
-                            <li><strong>Your Shopify checkout stays untouched</strong> — headless replaces only the slow storefront; payments, fraud detection, and tax compliance remain on Shopify.</li>
-                            <li><strong>ROI arrives in 3-6 months for stores doing $200K+/year</strong> — the conversion rate improvement from faster load times typically covers the entire headless build cost within the first few months.</li>
+                            <li><strong>Shopify&apos;s Liquid templates are the bottleneck</strong>, no theme edit or app removal can break the 2.5-second floor because Liquid is server-rendered and render-blocking by design.</li>
+                            <li><strong>Headless Shopify cuts load time by 80%</strong>: Replacing the Liquid frontend with Next.js while keeping your Shopify backend delivers under 1 second load times and 55% more conversions.</li>
+                            <li><strong>Your Shopify checkout stays untouched</strong>: Headless replaces only the slow storefront; payments, fraud detection, and tax compliance remain on Shopify.</li>
+                            <li><strong>ROI arrives in 3-6 months for stores doing $200K+/year</strong>: The conversion rate improvement from faster load times typically covers the entire headless build cost within the first few months.</li>
                         </ol>
                     </section>
 

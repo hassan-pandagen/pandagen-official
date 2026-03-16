@@ -16,7 +16,7 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 
 export const metadata: Metadata = {
     title: "WordPress vs Next.js: Which Is Actually Better for Your Business?",
-    description: "WordPress powers 43% of the internet. Next.js powers the fastest 1%. An honest head-to-head on speed, SEO, cost, and security — with real data to help you decide.",
+    description: "WordPress powers 43% of the internet. Next.js powers the fastest 1%. An honest head-to-head on speed, SEO, cost, and security, with real data to help you decide.",
     alternates: {
         canonical: '/blog/wordpress-vs-nextjs',
     },
@@ -44,7 +44,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-vs-nextjs#article",
             "headline": "WordPress vs Next.js: Which Is Actually Better for Your Business?",
-            "description": "An honest, data-driven comparison of WordPress and Next.js across speed, SEO, cost, security, and ease of use — with clear guidance on which one is right for your business.",
+            "description": "An honest, data-driven comparison of WordPress and Next.js across speed, SEO, cost, security, and ease of use, with clear guidance on which one is right for your business.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-11T00:00:00-05:00",
             "dateModified": "2026-03-11T00:00:00-05:00",
@@ -81,12 +81,12 @@ const articleSchema = {
                 "cssSelector": ["h1", "h2", "[data-speakable='true']"]
             },
             "citation": [
-                { "@type": "CreativeWork", "name": "W3Techs — CMS Market Share Report", "url": "https://w3techs.com/technologies/overview/content_management" },
-                { "@type": "CreativeWork", "name": "HTTP Archive — CMS Performance Report 2025", "url": "https://almanac.httparchive.org/en/2024/cms" },
+                { "@type": "CreativeWork", "name": "W3Techs. CMS Market Share Report", "url": "https://w3techs.com/technologies/overview/content_management" },
+                { "@type": "CreativeWork", "name": "HTTP Archive. CMS Performance Report 2025", "url": "https://almanac.httparchive.org/en/2024/cms" },
                 { "@type": "CreativeWork", "name": "Google Core Web Vitals Documentation", "url": "https://developers.google.com/search/docs/appearance/core-web-vitals" },
-                { "@type": "CreativeWork", "name": "Portent — Site Speed and Conversion Rate Study", "url": "https://portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" },
+                { "@type": "CreativeWork", "name": "Portent. Site Speed and Conversion Rate Study", "url": "https://portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" },
                 { "@type": "CreativeWork", "name": "Next.js Official Documentation", "url": "https://nextjs.org/docs" },
-                { "@type": "CreativeWork", "name": "Deloitte — Milliseconds Make Millions", "url": "https://www.deloitte.com/ie/en/services/consulting/research/milliseconds-make-millions.html" }
+                { "@type": "CreativeWork", "name": "Deloitte. Milliseconds Make Millions", "url": "https://www.deloitte.com/ie/en/services/consulting/research/milliseconds-make-millions.html" }
             ]
         },
         {
@@ -103,7 +103,7 @@ const articleSchema = {
             "@id": "https://www.pandacodegen.com/blog/wordpress-vs-nextjs#webpage",
             "url": "https://www.pandacodegen.com/blog/wordpress-vs-nextjs",
             "name": "WordPress vs Next.js: Which Is Actually Better for Your Business?",
-            "description": "An honest comparison of WordPress and Next.js across speed, SEO, cost, and security — with real data.",
+            "description": "An honest comparison of WordPress and Next.js across speed, SEO, cost, and security, with real data.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-11T00:00:00-05:00",
@@ -120,7 +120,7 @@ const articleSchema = {
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95 to 100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
             "foundingDate": "2026"
         },
@@ -190,7 +190,7 @@ export default function WordPressVsNextJSPage() {
                     <div data-speakable="true" className="bg-stone-50 border border-stone-200 rounded-xl p-6 mb-10">
                         <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-3">Quick Answer</p>
                         <p className="text-stone-700 leading-relaxed">
-                            Next.js is faster (0.8s vs 3.5s load time), better for SEO (95–100/100 vs 65–75/100 PageSpeed), and cheaper long-term (zero hosting fees vs $150–$500/month). WordPress is easier to set up for non-developers and remains the right choice for simple blogs or sites that never need to scale. If your website directly generates revenue, Next.js wins on every metric that matters: speed, rankings, conversions, and total cost of ownership.
+                            Next.js is faster (0.8s vs 3.5s load time), better for SEO (95 to 100/100 vs 65 to 75/100 PageSpeed), and cheaper long-term (zero hosting fees vs $150 to $500/month). WordPress is easier to set up for non-developers and remains the right choice for simple blogs or sites that never need to scale. If your website directly generates revenue, Next.js wins on every metric that matters: speed, rankings, conversions, and total cost of ownership.
                         </p>
                     </div>
 
@@ -199,7 +199,7 @@ export default function WordPressVsNextJSPage() {
                         <h2 className="text-3xl font-bold mb-4">What WordPress Actually Is (And Why It Dominates)</h2>
                         <BlogText>
                             WordPress started in 2003 as a blogging platform. Today it powers 43% of all websites on the internet, according to{" "}
-                            <a href="https://w3techs.com/technologies/overview/content_management" target="_blank" rel="noopener noreferrer" className="text-stone-700 underline underline-offset-2 hover:text-black">W3Techs</a>. That dominance did not happen by accident. WordPress made it possible for anyone to publish a website without touching a line of code. Visual editors, thousands of pre-built themes, a plugin ecosystem of 60,000+ tools — it reduced the barrier to getting online to almost zero.
+                            <a href="https://w3techs.com/technologies/overview/content_management" target="_blank" rel="noopener noreferrer" className="text-stone-700 underline underline-offset-2 hover:text-black">W3Techs</a>. That dominance did not happen by accident. WordPress made it possible for anyone to publish a website without touching a line of code. Visual editors, thousands of pre-built themes, a plugin ecosystem of 60,000+ tools: it reduced the barrier to getting online to almost zero.
                         </BlogText>
                         <BlogText>
                             Under the hood, WordPress works like this: when someone visits your site, your server runs PHP code that queries a MySQL database, assembles the page, and sends it to the browser. Every single page load. Every single visitor. This architecture made sense in 2003. In 2026, it is the primary reason WordPress sites are slow.
@@ -252,18 +252,18 @@ export default function WordPressVsNextJSPage() {
                                 <tbody className="divide-y divide-stone-100">
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">Mobile load time</td>
-                                        <td className="px-4 py-3 text-red-600 font-medium">3.5–5.0s</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">0.6–1.2s</td>
+                                        <td className="px-4 py-3 text-red-600 font-medium">3.5 to 5.0s</td>
+                                        <td className="px-4 py-3 text-green-700 font-medium">0.6 to 1.2s</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-stone-600">PageSpeed Mobile (avg)</td>
-                                        <td className="px-4 py-3 text-red-600 font-medium">38–65/100</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">95–100/100</td>
+                                        <td className="px-4 py-3 text-red-600 font-medium">38 to 65/100</td>
+                                        <td className="px-4 py-3 text-green-700 font-medium">95 to 100/100</td>
                                     </tr>
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">PageSpeed ceiling (optimised)</td>
-                                        <td className="px-4 py-3 text-orange-600 font-medium">65–75/100</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">98–100/100</td>
+                                        <td className="px-4 py-3 text-orange-600 font-medium">65 to 75/100</td>
+                                        <td className="px-4 py-3 text-green-700 font-medium">98 to 100/100</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-stone-600">Core Web Vitals pass rate</td>
@@ -272,22 +272,22 @@ export default function WordPressVsNextJSPage() {
                                     </tr>
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">TTFB (Time to First Byte)</td>
-                                        <td className="px-4 py-3 text-orange-600 font-medium">600ms–1.5s</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">50–120ms</td>
+                                        <td className="px-4 py-3 text-orange-600 font-medium">600ms to 1.5s</td>
+                                        <td className="px-4 py-3 text-green-700 font-medium">50 to 120ms</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
 
                         <BlogText>
-                            The ceiling matters more than the average. A WordPress site can be optimised with good hosting, aggressive caching, image compression, and a premium CDN. With all of that, you reach 65–75/100 mobile PageSpeed. Then you hit a wall. PHP rendering overhead, database query latency, and plugin script weight cannot be optimised away. They are architectural.
+                            The ceiling matters more than the average. A WordPress site can be optimised with good hosting, aggressive caching, image compression, and a premium CDN. With all of that, you reach 65 to 75/100 mobile PageSpeed. Then you hit a wall. PHP rendering overhead, database query latency, and plugin script weight cannot be optimised away. They are architectural.
                         </BlogText>
                         <BlogQuote>
                             Our client MyCustomPatches came to us with a Shopify store scoring 45/100 on mobile, loading in 3.2 seconds. After migrating to a custom Next.js build: 97/100 mobile, 0.7 seconds, 45% increase in conversions. Not from new marketing. From speed alone.
                         </BlogQuote>
                         <BlogText>
                             According to{" "}
-                            <a href="https://portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" target="_blank" rel="noopener noreferrer" className="text-stone-700 underline underline-offset-2 hover:text-black">Portent's research</a>, e-commerce sites loading in 1 second convert at 3.05%. At 3 seconds: 1.12%. For a business doing $50,000/month, the difference between a 1-second and 3-second load time is approximately $97,000 in annual revenue — without changing a single piece of marketing.
+                            <a href="https://portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" target="_blank" rel="noopener noreferrer" className="text-stone-700 underline underline-offset-2 hover:text-black">Portent's research</a>, e-commerce sites loading in 1 second convert at 3.05%. At 3 seconds: 1.12%. For a business doing $50,000/month, the difference between a 1-second and 3-second load time is approximately $97,000 in annual revenue, without changing a single piece of marketing.
                         </BlogText>
                     </section>
 
@@ -298,7 +298,7 @@ export default function WordPressVsNextJSPage() {
                             The common claim is that WordPress is great for SEO because of plugins like Yoast and Rank Math. This conflates content SEO (metadata, sitemaps, schema) with technical SEO (speed, Core Web Vitals, crawlability). Plugins handle the former. They cannot fix the latter.
                         </BlogText>
                         <BlogText>
-                            Google made Core Web Vitals a direct ranking factor in 2021. Since then, page speed and responsiveness feed directly into where your pages rank. WordPress's structural speed ceiling of 65–75/100 means it is chronically underperforming on the signals Google measures. No amount of Yoast optimisation compensates for a 4-second LCP.
+                            Google made Core Web Vitals a direct ranking factor in 2021. Since then, page speed and responsiveness feed directly into where your pages rank. WordPress's structural speed ceiling of 65 to 75/100 means it is chronically underperforming on the signals Google measures. No amount of Yoast optimisation compensates for a 4-second LCP.
                         </BlogText>
                         <div className="overflow-x-auto my-6">
                             <table className="w-full text-sm border border-stone-200 rounded-xl overflow-hidden">
@@ -312,24 +312,24 @@ export default function WordPressVsNextJSPage() {
                                 <tbody className="divide-y divide-stone-100">
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">Time to First Byte</td>
-                                        <td className="px-4 py-3 text-red-600 font-medium">600ms–1.5s (dynamic PHP rendering delays Googlebot crawling)</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">50–120ms (pre-rendered static HTML, faster crawling, more pages indexed per crawl budget)</td>
+                                        <td className="px-4 py-3 text-red-600 font-medium">600ms to 1.5s (dynamic PHP rendering delays Googlebot crawling)</td>
+                                        <td className="px-4 py-3 text-green-700 font-medium">50 to 120ms (pre-rendered static HTML, faster crawling, more pages indexed per crawl budget)</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-stone-600">Core Web Vitals</td>
-                                        <td className="px-4 py-3 text-red-600 font-medium">56% fail on mobile — directly suppressing Google rankings</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">97%+ pass — qualifying for Google's page experience ranking bonus</td>
+                                        <td className="px-4 py-3 text-red-600 font-medium">56% fail on mobile: Directly suppressing Google rankings</td>
+                                        <td className="px-4 py-3 text-green-700 font-medium">97%+ pass: Qualifying for Google's page experience ranking bonus</td>
                                     </tr>
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">INP (Interaction Responsiveness)</td>
                                         <td className="px-4 py-3 text-red-600 font-medium">Plugin JavaScript bloat increases INP failures</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">Server components ship zero client JS for static content — perfect INP scores</td>
+                                        <td className="px-4 py-3 text-green-700 font-medium">Server components ship zero client JS for static content: Perfect INP scores</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                         <BlogText>
-                            The result in practice: businesses that migrate from WordPress to Next.js consistently see organic traffic increases of 20–40% within 90 days, not from content changes, but from the rankings recovery that follows faster Core Web Vitals. Read more in our post on{" "}
+                            The result in practice: businesses that migrate from WordPress to Next.js consistently see organic traffic increases of 20 to 40% within 90 days, not from content changes, but from the rankings recovery that follows faster Core Web Vitals. Read more in our post on{" "}
                             <Link href="/blog/how-website-speed-affects-seo" className="text-stone-700 underline underline-offset-2 hover:text-black">
                                 how website speed directly affects SEO rankings
                             </Link>.
@@ -340,7 +340,7 @@ export default function WordPressVsNextJSPage() {
                     <section className="mb-10">
                         <h2 className="text-3xl font-bold mb-4">Cost Comparison: WordPress Is Cheaper to Start, Expensive to Run</h2>
                         <BlogText>
-                            WordPress has a low upfront cost. A theme costs $50–$200. Shared hosting starts at $10/month. You can have a site live in a weekend. This is why it dominates small sites and early-stage businesses.
+                            WordPress has a low upfront cost. A theme costs $50 to $200. Shared hosting starts at $10/month. You can have a site live in a weekend. This is why it dominates small sites and early-stage businesses.
                         </BlogText>
                         <BlogText>
                             But the long-term cost picture is very different. Here is the actual 3-year cost breakdown for a typical business WordPress site:
@@ -358,40 +358,40 @@ export default function WordPressVsNextJSPage() {
                                 <tbody className="divide-y divide-stone-100">
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">Hosting</td>
-                                        <td className="px-4 py-3 text-stone-700">$1,800–$6,000</td>
+                                        <td className="px-4 py-3 text-stone-700">$1,800 to $6,000</td>
                                         <td className="px-4 py-3 text-green-700 font-medium">$0 (Vercel free tier)</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-stone-600">Plugin licences</td>
-                                        <td className="px-4 py-3 text-stone-700">$3,000–$9,000</td>
+                                        <td className="px-4 py-3 text-stone-700">$3,000 to $9,000</td>
                                         <td className="px-4 py-3 text-green-700 font-medium">$0</td>
                                     </tr>
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">Maintenance &amp; updates</td>
-                                        <td className="px-4 py-3 text-stone-700">$5,000–$15,000</td>
-                                        <td className="px-4 py-3 text-stone-700">$1,000–$3,000</td>
+                                        <td className="px-4 py-3 text-stone-700">$5,000 to $15,000</td>
+                                        <td className="px-4 py-3 text-stone-700">$1,000 to $3,000</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-stone-600">Security incidents</td>
-                                        <td className="px-4 py-3 text-stone-700">$2,000–$10,000</td>
+                                        <td className="px-4 py-3 text-stone-700">$2,000 to $10,000</td>
                                         <td className="px-4 py-3 text-green-700 font-medium">Near zero</td>
                                     </tr>
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">Speed optimisation</td>
-                                        <td className="px-4 py-3 text-stone-700">$2,000–$5,000</td>
+                                        <td className="px-4 py-3 text-stone-700">$2,000 to $5,000</td>
                                         <td className="px-4 py-3 text-green-700 font-medium">Included in build</td>
                                     </tr>
                                     <tr className="bg-stone-100">
                                         <td className="px-4 py-3 font-semibold text-stone-800">3-Year Total</td>
-                                        <td className="px-4 py-3 font-semibold text-red-600">$13,800–$45,000</td>
-                                        <td className="px-4 py-3 font-semibold text-green-700">$1,000–$3,000</td>
+                                        <td className="px-4 py-3 font-semibold text-red-600">$13,800 to $45,000</td>
+                                        <td className="px-4 py-3 font-semibold text-green-700">$1,000 to $3,000</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
 
                         <BlogText>
-                            The upfront cost of a professional Next.js build ($8,000–$35,000) looks large compared to getting a WordPress site running for $200. But compare it to the 3-year operational cost of WordPress ($13,800–$45,000) and you find Next.js pays for itself in 12–18 months and saves $10,000–$40,000 over three years. Read our full breakdown in{" "}
+                            The upfront cost of a professional Next.js build ($8,000 to $35,000) looks large compared to getting a WordPress site running for $200. But compare it to the 3-year operational cost of WordPress ($13,800 to $45,000) and you find Next.js pays for itself in 12 to 18 months and saves $10,000 to $40,000 over three years. Read our full breakdown in{" "}
                             <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className="text-stone-700 underline underline-offset-2 hover:text-black">
                                 WordPress vs custom code: the real cost over 3 years
                             </Link>.
@@ -403,7 +403,7 @@ export default function WordPressVsNextJSPage() {
                         <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-2">Free Migration Plan</p>
                         <h3 className="text-2xl font-bold mb-3">See Exactly What Your WordPress Site Would Cost to Migrate</h3>
                         <p className="text-stone-300 mb-6 leading-relaxed">
-                            We analyse your current site, model the 3-year cost comparison, and give you a migration scope with timeline — no obligation, no sales pressure.
+                            We analyse your current site, model the 3-year cost comparison, and give you a migration scope with timeline, no obligation, no sales pressure.
                         </p>
                         <a
                             href="https://cal.com/pandagen/discovery"
@@ -434,22 +434,22 @@ export default function WordPressVsNextJSPage() {
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">Hack rate</td>
                                         <td className="px-4 py-3 text-red-600 font-medium">Over 90% of hacked CMS sites (Sucuri)</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">Near zero — static files have no attack surface</td>
+                                        <td className="px-4 py-3 text-green-700 font-medium">Near zero: Static files have no attack surface</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-stone-600">Incident cost</td>
-                                        <td className="px-4 py-3 text-red-600 font-medium">$2,000–$10,000 per incident (recovery, lost revenue, reputation)</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">Near zero — no PHP backend, no writable directories</td>
+                                        <td className="px-4 py-3 text-red-600 font-medium">$2,000 to $10,000 per incident (recovery, lost revenue, reputation)</td>
+                                        <td className="px-4 py-3 text-green-700 font-medium">Near zero, no PHP backend, no writable directories</td>
                                     </tr>
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">Vulnerability source</td>
-                                        <td className="px-4 py-3 text-red-600 font-medium">98% from plugins — the same plugins needed for basic functionality</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">No plugin ecosystem — no third-party code on server</td>
+                                        <td className="px-4 py-3 text-red-600 font-medium">98% from plugins: the same plugins needed for basic functionality</td>
+                                        <td className="px-4 py-3 text-green-700 font-medium">No plugin ecosystem, no third-party code on server</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-stone-600">Update risk</td>
                                         <td className="px-4 py-3 text-red-600 font-medium">Plugin updates introduce breaking changes; delayed updates leave vulnerabilities open</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">No plugin patching needed — maintenance burden eliminated</td>
+                                        <td className="px-4 py-3 text-green-700 font-medium">No plugin patching needed: Maintenance burden eliminated</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -458,7 +458,7 @@ export default function WordPressVsNextJSPage() {
                             Next.js has a fundamentally different security model. There is no plugin ecosystem with third-party code running on your server. There is no PHP backend with writable file directories. Static HTML files served from a CDN have no attack surface for SQL injection, remote code execution, or file upload exploits. The most common WordPress attack vectors do not exist in a Next.js architecture.
                         </BlogText>
                         <BlogText>
-                            This does not mean Next.js sites are impervious — any site can have vulnerabilities in custom code or third-party APIs. But the attack surface is orders of magnitude smaller, and the ongoing maintenance burden (patching plugins, updating WordPress core, managing PHP versions) is eliminated entirely.
+                            This does not mean Next.js sites are impervious. Any site can have vulnerabilities in custom code or third-party APIs. But the attack surface is orders of magnitude smaller, and the ongoing maintenance burden (patching plugins, updating WordPress core, managing PHP versions) is eliminated entirely.
                         </BlogText>
                     </section>
 
@@ -494,7 +494,7 @@ export default function WordPressVsNextJSPage() {
                                         <td className="px-4 py-3 text-stone-700 font-medium">WordPress</td>
                                     </tr>
                                     <tr>
-                                        <td className="px-4 py-3 text-stone-600">Website generates revenue — leads, e-commerce sales, or booking conversions</td>
+                                        <td className="px-4 py-3 text-stone-600">Website generates revenue. Leads, e-commerce sales, or booking conversions</td>
                                         <td className="px-4 py-3 text-green-700 font-medium">Next.js</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
@@ -524,7 +524,7 @@ export default function WordPressVsNextJSPage() {
                             Outside of the WordPress scenarios above, WordPress's convenience stops being an advantage. The moment your website is responsible for generating leads, sales, or brand credibility, every second of load time is costing you measurable money.
                         </BlogText>
                         <BlogText>
-                            For businesses in these situations, the question is not whether to migrate to Next.js. It is how quickly the migration will pay back. Based on our client data, the answer is typically 12–18 months, after which the speed improvements drive compounding gains in traffic, conversions, and revenue that continue for years.
+                            For businesses in these situations, the question is not whether to migrate to Next.js. It is how quickly the migration will pay back. Based on our client data, the answer is typically 12 to 18 months, after which the speed improvements drive compounding gains in traffic, conversions, and revenue that continue for years.
                         </BlogText>
                     </section>
 
@@ -542,9 +542,9 @@ export default function WordPressVsNextJSPage() {
                             {[
                                 { step: "01", title: "Discovery & Audit", desc: "We crawl your existing site, map every URL, document your current rankings, Core Web Vitals scores, and all inbound links. This becomes the baseline we protect." },
                                 { step: "02", title: "Architecture & Design", desc: "We design your new site architecture in Next.js, plan the URL structure, and map any changed URLs to 301 redirects. Your content strategy and internal linking are preserved in full." },
-                                { step: "03", title: "Build & Optimise", desc: "We build your site in Next.js with all 8 performance optimisations built into the standard process. Every page targets 95–100/100 mobile PageSpeed before launch." },
+                                { step: "03", title: "Build & Optimise", desc: "We build your site in Next.js with all 8 performance optimisations built into the standard process. Every page targets 95 to 100/100 mobile PageSpeed before launch." },
                                 { step: "04", title: "QA & Launch", desc: "We test every redirect, verify all metadata transferred correctly, confirm Core Web Vitals pass, and execute a zero-downtime launch. Your old site remains live until the new one is fully verified." },
-                                { step: "05", title: "Post-Launch SEO Monitoring", desc: "We submit your new sitemap to Google Search Console, monitor ranking changes for 30 days, and fix any crawl issues that emerge. Rankings typically recover within 30–60 days and then improve." },
+                                { step: "05", title: "Post-Launch SEO Monitoring", desc: "We submit your new sitemap to Google Search Console, monitor ranking changes for 30 days, and fix any crawl issues that emerge. Rankings typically recover within 30 to 60 days and then improve." },
                             ].map(({ step, title, desc }) => (
                                 <div key={step} className="flex gap-4 border border-stone-200 rounded-xl p-5">
                                     <span className="text-2xl font-bold text-stone-200 flex-shrink-0">{step}</span>
@@ -561,7 +561,7 @@ export default function WordPressVsNextJSPage() {
                             <Link href="/blog/how-to-fix-slow-wordpress" className="text-stone-700 underline underline-offset-2 hover:text-black">
                                 guide to fixing a slow WordPress site
                             </Link>{" "}
-                            — including what is worth trying before you commit to a full migration, and where WordPress's optimisation ceiling kicks in.
+                           , including what is worth trying before you commit to a full migration, and where WordPress's optimisation ceiling kicks in.
                         </BlogText>
                     </section>
 
@@ -601,7 +601,7 @@ export default function WordPressVsNextJSPage() {
                             We will audit your current WordPress site across speed, SEO, security, and hosting costs, then give you a precise migration scope, timeline, and ROI projection. No obligation.
                         </p>
                         <p className="text-stone-600 mb-6 leading-relaxed">
-                            Every month on a slow platform is a month faster competitors are compounding their advantage. The businesses that move in 2026 will dominate their category for the next 3–5 years.
+                            Every month on a slow platform is a month faster competitors are compounding their advantage. The businesses that move in 2026 will dominate their category for the next 3 to 5 years.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-3">
                             <a
@@ -625,11 +625,11 @@ export default function WordPressVsNextJSPage() {
                     <section className="mb-10">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>Next.js is structurally faster</strong> — it loads in under 1 second vs 3.5+ seconds for WordPress because pages are pre-built, not generated on every visit.</li>
-                            <li><strong>WordPress has a speed ceiling around 65-75/100</strong> — no amount of plugins or caching can overcome its PHP rendering and database query overhead.</li>
-                            <li><strong>Speed directly impacts revenue</strong> — sites loading in 1 second convert at 3x the rate of sites loading in 3 seconds, worth $97K+ annually for a $50K/month business.</li>
-                            <li><strong>Next.js saves $10K-$40K over 3 years</strong> — WordPress hidden costs (hosting, plugins, maintenance, security) add up to $13K-$45K while Next.js runs for near zero after the initial build.</li>
-                            <li><strong>WordPress is still fine for simple, non-revenue sites</strong> — personal blogs and early-stage projects under $3K budget do not need the performance advantages of Next.js.</li>
+                            <li><strong>Next.js is structurally faster</strong>: It loads in under 1 second vs 3.5+ seconds for WordPress because pages are pre-built, not generated on every visit.</li>
+                            <li><strong>WordPress has a speed ceiling around 65-75/100</strong>, no amount of plugins or caching can overcome its PHP rendering and database query overhead.</li>
+                            <li><strong>Speed directly impacts revenue</strong>: Sites loading in 1 second convert at 3x the rate of sites loading in 3 seconds, worth $97K+ annually for a $50K/month business.</li>
+                            <li><strong>Next.js saves $10K-$40K over 3 years</strong>. WordPress hidden costs (hosting, plugins, maintenance, security) add up to $13K-$45K while Next.js runs for near zero after the initial build.</li>
+                            <li><strong>WordPress is still fine for simple, non-revenue sites</strong>: Personal blogs and early-stage projects under $3K budget do not need the performance advantages of Next.js.</li>
                         </ol>
                     </section>
 

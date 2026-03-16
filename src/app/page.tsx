@@ -24,11 +24,11 @@ const LatestBlog = lazyLoad(() => import("@/components/sections/LatestBlog"));
 const homeFaqs = [
   {
     q: "What is WordPress migration and why do I need it?",
-    a: "WordPress migration means moving your existing WordPress site to a custom coded platform, typically Next.js or a similar modern framework. If your WordPress site has a slow load time, you're losing revenue. Studies show every 1 second delay in page load time reduces conversions by 7%. WordPress plugin bloat, shared hosting overhead, and theme weight are the primary causes of slow load times. We migrate your content, SEO settings, and design to a custom coded website that loads in under 1 second, with no monthly plugin fees and no vendor lock in.",
+    a: "WordPress migration means moving your existing WordPress site to a custom coded platform built with Next.js (a modern framework used by Nike, Netflix, and TikTok for its speed). If your WordPress site has a slow load time, you're losing revenue. Studies show every 1 second delay in page load time reduces conversions by 7%. WordPress plugin bloat, shared hosting overhead, and theme weight are the primary causes of slow load times. We migrate your content, SEO settings, and design to a custom coded website that loads in under 1 second, with no monthly plugin fees and no vendor lock in.",
   },
   {
     q: "How does the free AI website audit work?",
-    a: "Our free AI audit analyzes your website's load time, Core Web Vitals, SEO performance, and security vulnerabilities in real-time. Simply enter your URL above and get a full breakdown of what's costing you revenue — including your average load time, PageSpeed score, and specific actionable recommendations. The audit takes under 30 seconds and requires no signup.",
+    a: "Our free AI audit analyzes your website's load time, Core Web Vitals (the speed and stability scores Google uses to rank your site), SEO performance, and security vulnerabilities in real-time. Simply enter your URL above and get a full breakdown of what's costing you revenue, including your average load time, PageSpeed score, and specific actionable recommendations. The audit takes under 30 seconds and requires no signup.",
   },
   {
     q: "How much faster will my site be after migration from WordPress or Shopify?",
@@ -36,15 +36,15 @@ const homeFaqs = [
   },
   {
     q: "Do you work with Shopify stores?",
-    a: "Yes. We build custom Shopify storefronts using headless architecture and purpose built custom code. If your Shopify store is slow due to too many apps, a bloated theme, or unoptimized Liquid code, we replace it with a custom coded solution that delivers 4x faster load times with zero app bloat. You keep your Shopify backend for product management while we replace the slow frontend entirely.",
+    a: "Yes. We build custom Shopify storefronts using headless architecture (your customers see a lightning-fast custom site, while you still manage products and orders in Shopify as usual). If your Shopify store is slow due to too many apps, a bloated theme, or unoptimized code, we replace the slow storefront with a custom coded solution that delivers 4x faster load times. You keep your entire Shopify backend for product management, orders, and payments.",
   },
   {
     q: "How long does a WordPress or Shopify migration take?",
-    a: "Most migrations take 1 to 3 weeks depending on site complexity. Our process: Discovery call, Architecture planning, Build, QA testing, Launch. We handle the full migration including DNS transfer, redirect mapping, SEO preservation, and performance testing. There is zero downtime during the launch cutover. Your old site stays live until the new one is fully verified.",
+    a: "Most migrations take 1 to 3 weeks depending on site complexity. Our process: Discovery call, Architecture planning, Build, QA testing, Launch. We handle the full migration including DNS transfer (pointing your domain to the new site), redirect mapping (so none of your Google rankings are lost), SEO preservation, and performance testing. There is zero downtime during the switch. Your old site stays live until the new one is fully verified.",
   },
   {
     q: "Why not just use a faster WordPress host or a caching plugin?",
-    a: "Faster hosting and caching plugins help marginally, but they don't fix the root cause: WordPress itself is heavy. PHP server rendering, plugin overhead, database queries, and theme bloat all add to your average load time regardless of the host. Plugins like WP Rocket or W3 Total Cache can shave off 0.3 to 0.5 seconds at best. The only permanent fix for a slow WordPress site is replacing it with a purpose built, custom coded website. That is exactly what we do.",
+    a: "Faster hosting and caching plugins help marginally, but they don't fix the root cause: WordPress itself is heavy. Every time someone visits your WordPress site, the server has to build the page from scratch (querying the database, loading plugins, rendering the theme). This happens on every single visit. Plugins like WP Rocket or W3 Total Cache can shave off 0.3 to 0.5 seconds at best. The only permanent fix for a slow WordPress site is replacing it with a purpose built, custom coded website that is pre-built and ready to serve instantly. That is exactly what we do.",
   },
 ];
 
@@ -280,22 +280,22 @@ export default function Home() {
       {/* Hero */}
       <Hero />
 
-      {/* Trust Stats Strip — 98+ PageSpeed, <1s load, $0 fees, 100% ownership */}
+      {/* Trust Stats Strip, 98+ PageSpeed, <1s load, $0 fees, 100% ownership */}
       <TrustLogoBar />
 
-      {/* Social Proof — quiet confidence strip (Paper) */}
+      {/* Social Proof, quiet confidence strip (Paper) */}
       <SocialProof />
 
-      {/* Unfair Advantage — financial grid stats (White) */}
+      {/* Unfair Advantage, financial grid stats (White) */}
       <UnfairAdvantage />
 
-      {/* Services Bento — premium bento grid (Paper) */}
+      {/* Services Bento, premium bento grid (Paper) */}
       <ServicesHub />
 
-      {/* How It Works — 4 Steps with Visual Diagrams */}
+      {/* How It Works, 4 Steps with Visual Diagrams */}
       <HowItWorksSimple />
 
-      {/* AI-Powered — Speed Comparison */}
+      {/* AI-Powered, Speed Comparison */}
       <AIPowered />
 
       {/* Revenue Recovery Calculator */}

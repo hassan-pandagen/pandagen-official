@@ -6,10 +6,10 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 
 export const metadata: Metadata = {
-    title: "Panda Patches Case Study — $38K/mo E-Commerce on $25/mo Tooling | PandaCodeGen",
+    title: "Panda Patches Case Study, $38K/mo E-Commerce on $25/mo Tooling | PandaCodeGen",
     description: "How we replaced WordPress + 3 paid tools + spreadsheets with a custom Next.js storefront and Supabase ops platform. Real-time pricing calculator across 9 patch types. $38K+/mo on under $25/mo.",
     openGraph: {
-        title: "Panda Patches Case Study — $38K/mo E-Commerce on $25/mo Tooling",
+        title: "Panda Patches Case Study, $38K/mo E-Commerce on $25/mo Tooling",
         description: "Real-time pricing calculator. Custom ops portal. 7 tools replaced by 1. Full case study.",
         type: "article",
         url: "https://www.pandacodegen.com/work/panda-patches",
@@ -78,17 +78,17 @@ const caseStudySchema = {
                 {
                     "@type": "Question",
                     "name": "Can you replace Shopify with a custom coded e-commerce store?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Yes. We replaced WordPress + WooCommerce entirely for Panda Patches with a custom Next.js storefront. The new store generates $38K+/month with zero platform fees — compared to Shopify's $79–$299/month plus transaction fees. You own 100% of the code." }
+                    "acceptedAnswer": { "@type": "Answer", "text": "Yes. We replaced WordPress + WooCommerce entirely for Panda Patches with a custom Next.js storefront. The new store generates $38K+/month with zero platform fees, compared to Shopify's $79 to $299/month plus transaction fees. You own 100% of the code." }
                 },
                 {
                     "@type": "Question",
                     "name": "How does a real-time pricing calculator work without API calls?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "We built the pricing engine in TypeScript and run all calculations client-side. The full pricing matrix — 9 patch types, custom dimensions, 8+ quantity tiers, 3 backing options, 2 border types — is pre-compiled into a JavaScript function. Every price update takes under 5ms with zero server round-trips." }
+                    "acceptedAnswer": { "@type": "Answer", "text": "We built the pricing engine in TypeScript and run all calculations client-side. The full pricing matrix, 9 patch types, custom dimensions, 8+ quantity tiers, 3 backing options, 2 border types, is pre-compiled into a JavaScript function. Every price update takes under 5ms with zero server round-trips." }
                 },
                 {
                     "@type": "Question",
                     "name": "How much does it cost to build a custom e-commerce platform like this?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "A custom e-commerce platform with a real-time pricing engine, CMS, payment integrations (Stripe, PayPal, Apple Pay, Klarna, Afterpay), and an ops portal starts at $15,000–$30,000 depending on complexity. Panda Patches runs on under $25/month in total tooling costs after launch." }
+                    "acceptedAnswer": { "@type": "Answer", "text": "A custom e-commerce platform with a real-time pricing engine, CMS, payment integrations (Stripe, PayPal, Apple Pay, Klarna, Afterpay), and an ops portal starts at $15,000 to $30,000 depending on complexity. Panda Patches runs on under $25/month in total tooling costs after launch." }
                 },
                 {
                     "@type": "Question",
@@ -98,7 +98,7 @@ const caseStudySchema = {
                 {
                     "@type": "Question",
                     "name": "How long did it take to build the Panda Patches platform?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "The full platform — custom storefront with real-time pricing, Sanity CMS, 6 payment gateways, Supabase ops portal, and sales agent dashboards — was built and launched within 8 weeks. The Lighthouse score is 90+ across all Core Web Vitals." }
+                    "acceptedAnswer": { "@type": "Answer", "text": "The full platform, custom storefront with real-time pricing, Sanity CMS, 6 payment gateways, Supabase ops portal, and sales agent dashboards, was built and launched within 8 weeks. The Lighthouse score is 90+ across all Core Web Vitals." }
                 }
             ]
         }
@@ -130,7 +130,7 @@ const pricingDimensions = [
 ];
 
 const replacedTools = [
-    { tool: "WordPress + WooCommerce", cost: "$80/mo", problem: "Couldn't handle the pricing matrix — manual quotes only" },
+    { tool: "WordPress + WooCommerce", cost: "$80/mo", problem: "Couldn't handle the pricing matrix, manual quotes only" },
     { tool: "Separate CRM (HubSpot/Zoho)", cost: "$50/mo", problem: "No integration with orders, duplicate data entry" },
     { tool: "Google Sheets / spreadsheets", cost: "Free but 10hrs/wk", problem: "7 team members, zero real-time visibility, version conflicts" },
     { tool: "Manual attendance tracker", cost: "$30/mo", problem: "Clock in/out via WhatsApp messages" },
@@ -249,7 +249,7 @@ export default function PandaPatchesCaseStudy() {
                     <section className="mb-20">
                         <div className="flex items-center gap-3 mb-8">
                             <div className="h-px w-8 bg-cognac" />
-                            <span className="text-cognac text-sm font-bold uppercase tracking-widest">Solution — Storefront</span>
+                            <span className="text-cognac text-sm font-bold uppercase tracking-widest">Solution, Storefront</span>
                         </div>
                         <h2 className="text-3xl font-bold text-charcoal mb-3">Real-time pricing. No waiting, no quotes.</h2>
                         <p className="text-stone-600 mb-8 max-w-2xl">
@@ -285,7 +285,7 @@ export default function PandaPatchesCaseStudy() {
                     <section className="mb-20">
                         <div className="flex items-center gap-3 mb-8">
                             <div className="h-px w-8 bg-cognac" />
-                            <span className="text-cognac text-sm font-bold uppercase tracking-widest">Solution — Operations</span>
+                            <span className="text-cognac text-sm font-bold uppercase tracking-widest">Solution, Operations</span>
                         </div>
                         <h2 className="text-3xl font-bold text-charcoal mb-3">One platform. 7 tools gone.</h2>
                         <p className="text-stone-600 mb-8 max-w-2xl">
@@ -363,14 +363,14 @@ export default function PandaPatchesCaseStudy() {
                                 "4 additional product pages (lapel pins, challenge coins, keychains, PVC shoe charms)",
                                 "Real-time pricing calculator with all dimensions",
                                 "Stripe, PayPal, Cash App, Apple Pay, Klarna, Afterpay integrations",
-                                "Sanity CMS — content editors manage everything without code",
+                                "Sanity CMS, content editors manage everything without code",
                                 "Blog system with 50+ post capacity (dynamic + SEO-optimized)",
                                 "Order confirmation emails + customer order history",
                                 "File upload for custom design mockups",
-                                "Supabase ops portal — order pipeline with real-time status",
-                                "Sales agent dashboards — 7 individual performance views",
+                                "Supabase ops portal, order pipeline with real-time status",
+                                "Sales agent dashboards, 7 individual performance views",
                                 "Employee clock in/out with role-based access",
-                                "Full audit log — every change timestamped and attributed",
+                                "Full audit log, every change timestamped and attributed",
                                 "100% mobile responsive with touch-optimized UI",
                                 "Lighthouse 90+ on all core web vitals",
                             ].map((item, i) => (

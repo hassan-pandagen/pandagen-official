@@ -191,7 +191,7 @@ const articleSchema = {
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95 to 100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
             "foundingDate": "2026"
         }
@@ -271,10 +271,10 @@ export default function WordPressAISecurityPage() {
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
                         <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
                         <BlogList items={[
-                            "WordPress 6.9 turned every plugin into an AI endpoint — your 20-30 plugins are now 20-30 potential hacker entry points.",
+                            "WordPress 6.9 turned every plugin into an AI endpoint: your 20-30 plugins are now 20-30 potential hacker entry points.",
                             "The AI Engine plugin (100K+ sites) accidentally published admin credentials publicly. One checkbox = complete site takeover.",
                             "Security researchers found 43% of WordPress AI plugins let attackers run commands remotely on your server.",
-                            "If your site processes payments or customer data, this risk is active now — not theoretical."
+                            "If your site processes payments or customer data, this risk is active now, not theoretical."
                         ]} />
                     </div>
 
@@ -661,11 +661,11 @@ export default function WordPressAISecurityPage() {
                     <section className="mb-10">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>WordPress 6.9 turned every plugin into an AI entry point</strong> — your 20-30 plugins are now 20-30 potential doorways for hackers, each needing its own secure authentication and permission settings.</li>
-                            <li><strong>One misconfigured checkbox exposed 100K+ sites</strong> — the AI Engine plugin accidentally published admin login credentials on a public page, giving attackers full site takeover.</li>
-                            <li><strong>43% of WordPress AI plugins have critical security flaws</strong> — security researchers found that nearly half let attackers run commands remotely on your server.</li>
-                            <li><strong>Using WordPress AI safely now requires technical expertise</strong> — configuring JWT tokens, OAuth authentication, and per-plugin permissions contradicts WordPress&apos;s original promise of simplicity.</li>
-                            <li><strong>Custom-built sites give you explicit security control</strong> — every AI integration point is intentionally defined with zero third-party plugin dependencies.</li>
+                            <li><strong>WordPress 6.9 turned every plugin into an AI entry point</strong>: Your 20-30 plugins are now 20-30 potential doorways for hackers, each needing its own secure authentication and permission settings.</li>
+                            <li><strong>One misconfigured checkbox exposed 100K+ sites</strong>: The AI Engine plugin accidentally published admin login credentials on a public page, giving attackers full site takeover.</li>
+                            <li><strong>43% of WordPress AI plugins have critical security flaws</strong>: Security researchers found that nearly half let attackers run commands remotely on your server.</li>
+                            <li><strong>Using WordPress AI safely now requires technical expertise</strong>: Configuring JWT tokens, OAuth authentication, and per-plugin permissions contradicts WordPress&apos;s original promise of simplicity.</li>
+                            <li><strong>Custom-built sites give you explicit security control</strong>: Every AI integration point is intentionally defined with zero third-party plugin dependencies.</li>
                         </ol>
                     </section>
 

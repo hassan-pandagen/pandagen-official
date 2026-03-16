@@ -114,6 +114,7 @@ export default function PartnersContent() {
           >
             White-label web development for agencies. Your brand, our engineering.
             Deliver custom coded websites to your clients without hiring a dev team.
+            Currently partnered with agencies in the US and UK under NDA.
           </motion.p>
 
           <motion.div

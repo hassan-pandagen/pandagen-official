@@ -77,7 +77,7 @@ const projects = [
         id: "04",
         client: "Panda CodeLab",
         category: "Agency Website",
-        tagline: "A separate brand we built from scratch — premium animations, Spline 3D, WCAG 2.1 AA, and zero templates.",
+        tagline: "A separate brand we built from scratch, premium animations, Spline 3D, WCAG 2.1 AA, and zero templates.",
         caseStudyUrl: "/work/panda-codelab",
         outcome: "Custom agency site for Panda CodeLab built on Next.js with Framer Motion spring physics, magnetic interactions, Spline 3D scenes, and full accessibility compliance. Under a second load. Zero page builder.",
         results: [
@@ -85,7 +85,7 @@ const projects = [
             { label: "Accessibility", value: "AA", from: "WCAG 2.1" },
             { label: "Hosting", value: "$0/mo", from: "was $20-50" },
         ],
-        insight: "Live at pandacodelab.com — custom-built, no templates, no page builders.",
+        insight: "Live at pandacodelab.com, custom-built, no templates, no page builders.",
         tags: ["Custom Website", "Framer Motion", "Spline 3D", "WCAG 2.1 AA"],
         image: "/work/pandacodelab.png",
         liveUrl: "https://www.pandacodelab.com",
@@ -195,7 +195,7 @@ function ProjectCard({ project, index }: any) {
             <motion.div style={{ opacity, y }} className="group">
                 <div className="grid lg:grid-cols-12 items-stretch rounded-[2rem] overflow-hidden border border-stone-200 shadow-2xl shadow-stone-900/10 hover:shadow-stone-900/15 transition-shadow duration-500">
 
-                    {/* LEFT — Dark image panel */}
+                    {/* LEFT, Dark image panel */}
                     <div className="lg:col-span-7 relative bg-[#0C0A09] h-[300px] lg:h-auto min-h-[520px] overflow-hidden">
 
                         {/* Subtle radial glow behind screenshot */}
@@ -234,13 +234,13 @@ function ProjectCard({ project, index }: any) {
                             </span>
                         </div>
 
-                        {/* Project number — large ghost text bottom-right */}
+                        {/* Project number, large ghost text bottom-right */}
                         <div className="absolute bottom-4 right-6 text-[120px] font-black text-white/[0.04] leading-none select-none pointer-events-none">
                             {project.id}
                         </div>
                     </div>
 
-                    {/* RIGHT — White content panel */}
+                    {/* RIGHT, White content panel */}
                     <div className="lg:col-span-5 bg-white flex flex-col p-8 lg:p-10">
 
                         {/* Category + ID */}
@@ -255,19 +255,19 @@ function ProjectCard({ project, index }: any) {
                             {project.client}
                         </h3>
 
-                        {/* Tagline — punchy single sentence */}
+                        {/* Tagline, punchy single sentence */}
                         <p className="text-stone-800 text-base leading-relaxed mb-4 font-semibold">
                             {project.tagline}
                         </p>
 
-                        {/* Outcome — orange accent border = visual anchor */}
+                        {/* Outcome, orange accent border = visual anchor */}
                         <div className="pl-5 border-l-2 border-cognac mb-8">
                             <p className="text-stone-600 text-sm leading-relaxed">
                                 {project.outcome}
                             </p>
                         </div>
 
-                        {/* KEY RESULTS — big numbers, not cards */}
+                        {/* KEY RESULTS, big numbers, not cards */}
                         <div className="flex-1">
                             <p className="text-[10px] font-black text-stone-300 tracking-[0.18em] uppercase mb-4">Key Results</p>
                             <div className="grid grid-cols-3 gap-0 border border-stone-100 rounded-xl overflow-hidden mb-4">
@@ -283,7 +283,7 @@ function ProjectCard({ project, index }: any) {
                                 ))}
                             </div>
 
-                            {/* Insight — pull quote */}
+                            {/* Insight, pull quote */}
                             <div className="flex items-start gap-3 mb-6">
                                 <div className="w-[3px] shrink-0 self-stretch bg-gradient-to-b from-cognac to-cognac/20 rounded-full" />
                                 <p className="text-sm text-stone-600 italic leading-relaxed">{project.insight}</p>

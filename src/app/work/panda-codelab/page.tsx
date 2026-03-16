@@ -6,10 +6,10 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 
 export const metadata: Metadata = {
-    title: "Panda CodeLab — Custom Agency Website, Spline 3D + Framer Motion + WCAG 2.1 AA | PandaCodeGen",
-    description: "How we built pandacodelab.com — a separate brand, fully custom. Next.js 15, React 19, Framer Motion spring physics, magnetic interactions, Spline 3D scenes, WCAG 2.1 AA. Zero templates. Zero page builders. Under a second load.",
+    title: "Panda CodeLab, Custom Agency Website, Spline 3D + Framer Motion + WCAG 2.1 AA | PandaCodeGen",
+    description: "How we built pandacodelab.com, a separate brand, fully custom. Next.js 15, React 19, Framer Motion spring physics, magnetic interactions, Spline 3D scenes, WCAG 2.1 AA. Zero templates. Zero page builders. Under a second load.",
     openGraph: {
-        title: "Panda CodeLab — Custom Agency Website Built by PandaCodeGen",
+        title: "Panda CodeLab, Custom Agency Website Built by PandaCodeGen",
         description: "Live at pandacodelab.com. Next.js 15. Spring physics. Magnetic buttons. Spline 3D. WCAG 2.1 AA. Full case study.",
         type: "article",
         url: "https://www.pandacodegen.com/work/panda-codelab",
@@ -83,7 +83,7 @@ const caseStudySchema = {
                 {
                     "@type": "Question",
                     "name": "Do Framer Motion animations hurt performance?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Not when implemented correctly. We use hardware-accelerated CSS properties only (transform, opacity) — never layout-triggering properties. Spring physics are calculated in the browser compositor thread. We also detect prefers-reduced-motion and disable all animations for users who request it. The animated site scores the same as a static site on Lighthouse." }
+                    "acceptedAnswer": { "@type": "Answer", "text": "Not when implemented correctly. We use hardware-accelerated CSS properties only (transform, opacity), never layout-triggering properties. Spring physics are calculated in the browser compositor thread. We also detect prefers-reduced-motion and disable all animations for users who request it. The animated site scores the same as a static site on Lighthouse." }
                 },
                 {
                     "@type": "Question",
@@ -93,7 +93,7 @@ const caseStudySchema = {
                 {
                     "@type": "Question",
                     "name": "How does the Spline 3D integration affect page load time?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "The 3D scene is lazy-loaded — it only initializes after the critical above-the-fold content has rendered. We use Next.js dynamic imports with a lightweight placeholder, so the initial page load is unaffected. The 3D scene loads progressively in the background while the user reads the page." }
+                    "acceptedAnswer": { "@type": "Answer", "text": "The 3D scene is lazy-loaded, it only initializes after the critical above-the-fold content has rendered. We use Next.js dynamic imports with a lightweight placeholder, so the initial page load is unaffected. The 3D scene loads progressively in the background while the user reads the page." }
                 },
                 {
                     "@type": "Question",
@@ -119,10 +119,10 @@ const techStack = [
 ];
 
 const animationFeatures = [
-    { name: "TextReveal", desc: "Character-by-character reveal on scroll. Each letter enters with a spring easing — no linear timings." },
+    { name: "TextReveal", desc: "Character-by-character reveal on scroll. Each letter enters with a spring easing, no linear timings." },
     { name: "SpotlightCard", desc: "Mouse-tracking radial glow follows cursor across every card surface. GPU-composited, zero repaints." },
     { name: "MagneticButton", desc: "CTA buttons physically follow cursor within a 60px radius using spring physics. Snaps back on exit." },
-    { name: "Hero3D (Spline)", desc: "Full 3D scene loads lazily after LCP. Placeholder shown while 3D initialises — no CLS." },
+    { name: "Hero3D (Spline)", desc: "Full 3D scene loads lazily after LCP. Placeholder shown while 3D initialises, no CLS." },
     { name: "Lenis Scroll", desc: "Momentum-based smooth scrolling with configurable lerp factor. Disabled on mobile for native feel." },
     { name: "Motion Preferences", desc: "prefers-reduced-motion detected on mount. All animations replaced with instant transitions for accessibility." },
 ];
@@ -175,7 +175,7 @@ export default function PandaCodelabCaseStudy() {
                         </h1>
 
                         <p className="text-xl text-stone-600 leading-relaxed max-w-3xl mb-10">
-                            You can&apos;t sell custom-code performance to clients while running your own site on a page builder. We built the Panda CodeLab agency site on Next.js 15, React 19, and Framer Motion 12 — spring physics, magnetic interactions, Spline 3D, and full WCAG 2.1 AA compliance. Zero TypeScript errors. Zero ESLint errors. This is the live proof.
+                            You can&apos;t sell custom-code performance to clients while running your own site on a page builder. We built the Panda CodeLab agency site on Next.js 15, React 19, and Framer Motion 12, spring physics, magnetic interactions, Spline 3D, and full WCAG 2.1 AA compliance. Zero TypeScript errors. Zero ESLint errors. This is the live proof.
                         </p>
 
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -208,7 +208,7 @@ export default function PandaCodelabCaseStudy() {
                                     The credibility problem
                                 </h3>
                                 <p className="text-stone-600 text-sm leading-relaxed">
-                                    We were selling clients on the idea that custom coded sites are faster, more secure, and more scalable than templates. But every sale required explaining why — because our own presence didn&apos;t prove it visually or technically. We needed the agency site itself to be the argument.
+                                    We were selling clients on the idea that custom coded sites are faster, more secure, and more scalable than templates. But every sale required explaining why, because our own presence didn&apos;t prove it visually or technically. We needed the agency site itself to be the argument.
                                 </p>
                             </div>
                             <div className="p-6 bg-emerald-50 border border-emerald-100 rounded-2xl">
@@ -231,7 +231,7 @@ export default function PandaCodelabCaseStudy() {
                         </div>
                         <h2 className="text-3xl font-bold text-charcoal mb-3">Solar gradient. Hybrid depth.</h2>
                         <p className="text-stone-600 mb-8 max-w-2xl">
-                            A custom design system built around a solar gradient palette — deep red through magenta to amber — layered over a hybrid depth approach: 80% shadows, 20% glassmorphism. Premium feel without the performance cost of heavy blur effects.
+                            A custom design system built around a solar gradient palette, deep red through magenta to amber, layered over a hybrid depth approach: 80% shadows, 20% glassmorphism. Premium feel without the performance cost of heavy blur effects.
                         </p>
 
                         <div className="grid md:grid-cols-3 gap-4 mb-8">
@@ -247,17 +247,17 @@ export default function PandaCodelabCaseStudy() {
                             <div className="p-5 bg-white border border-stone-200 rounded-xl shadow-sm">
                                 <div className="text-sm font-bold text-charcoal mb-2">Typography</div>
                                 <div className="text-xs text-stone-500 space-y-1">
-                                    <div><span className="font-semibold">Poppins</span> — headings</div>
-                                    <div><span className="font-semibold">Inter</span> — body</div>
-                                    <div><span className="font-semibold">Outfit</span> — UI elements</div>
+                                    <div><span className="font-semibold">Poppins</span>, headings</div>
+                                    <div><span className="font-semibold">Inter</span>, body</div>
+                                    <div><span className="font-semibold">Outfit</span>, UI elements</div>
                                 </div>
                             </div>
                             <div className="p-5 bg-white border border-stone-200 rounded-xl shadow-sm">
                                 <div className="text-sm font-bold text-charcoal mb-2">Depth System</div>
                                 <div className="text-xs text-stone-500 space-y-1">
-                                    <div>80% — layered shadows</div>
-                                    <div>20% — glassmorphism</div>
-                                    <div>SpotlightCard — mouse tracking glow</div>
+                                    <div>80%, layered shadows</div>
+                                    <div>20%, glassmorphism</div>
+                                    <div>SpotlightCard, mouse tracking glow</div>
                                 </div>
                             </div>
                         </div>
@@ -271,7 +271,7 @@ export default function PandaCodelabCaseStudy() {
                         </div>
                         <h2 className="text-3xl font-bold text-charcoal mb-3">Six motion primitives. One coherent feel.</h2>
                         <p className="text-stone-600 mb-8 max-w-2xl">
-                            All animations are GPU-composited using only <code className="text-xs bg-stone-100 px-1 py-0.5 rounded">transform</code> and <code className="text-xs bg-stone-100 px-1 py-0.5 rounded">opacity</code> — never layout-triggering properties. Spring physics on every interaction. Lighthouse score unaffected.
+                            All animations are GPU-composited using only <code className="text-xs bg-stone-100 px-1 py-0.5 rounded">transform</code> and <code className="text-xs bg-stone-100 px-1 py-0.5 rounded">opacity</code>, never layout-triggering properties. Spring physics on every interaction. Lighthouse score unaffected.
                         </p>
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -290,7 +290,7 @@ export default function PandaCodelabCaseStudy() {
                                 <div>
                                     <p className="font-bold mb-2">prefers-reduced-motion is not optional</p>
                                     <p className="text-stone-300 text-sm leading-relaxed">
-                                        A dedicated <code className="text-cognac">usePrefersReducedMotion()</code> hook reads the system preference on mount. Every animated component checks this flag and substitutes instant transitions. Not just a Framer Motion prop — a first-class architectural decision.
+                                        A dedicated <code className="text-cognac">usePrefersReducedMotion()</code> hook reads the system preference on mount. Every animated component checks this flag and substitutes instant transitions. Not just a Framer Motion prop, a first-class architectural decision.
                                     </p>
                                 </div>
                             </div>
@@ -362,7 +362,7 @@ export default function PandaCodelabCaseStudy() {
                         </div>
                         <h2 className="text-3xl font-bold text-charcoal mb-3">Cutting edge. Every layer.</h2>
                         <p className="text-stone-600 mb-8">
-                            Next.js 15 + React 19 — shipped before most agencies updated from Next.js 13. Tailwind CSS 4 (the new oxide engine). Framer Motion 12 with the latest spring physics API.
+                            Next.js 15 + React 19, shipped before most agencies updated from Next.js 13. Tailwind CSS 4 (the new oxide engine). Framer Motion 12 with the latest spring physics API.
                         </p>
                         <div className="flex flex-wrap gap-3">
                             {techStack.map((t) => (
@@ -385,7 +385,7 @@ export default function PandaCodelabCaseStudy() {
                             {[
                                 { metric: "TypeScript", result: "Strict mode. Zero implicit any. 0 build errors." },
                                 { metric: "ESLint", result: "0 errors across all 9 pages and components." },
-                                { metric: "Accessibility", result: "WCAG 2.1 Level AA — keyboard nav, ARIA, contrast ratios." },
+                                { metric: "Accessibility", result: "WCAG 2.1 Level AA, keyboard nav, ARIA, contrast ratios." },
                                 { metric: "Performance", result: "Hardware-accelerated animations. No layout thrashing." },
                                 { metric: "Responsive", result: "Mobile-first from 375px through 4K (1440px+)." },
                                 { metric: "SEO", result: "Sitemap, robots.txt, meta tags, Open Graph, JSON-LD per page." },
@@ -412,13 +412,13 @@ export default function PandaCodelabCaseStudy() {
                             {[
                                 "Next.js 15 App Router with React 19 server + client components",
                                 "Solar gradient design system (#E60040 → #E91E63 → #F59E0B)",
-                                "TextReveal — character-by-character spring entry animation",
-                                "SpotlightCard — mouse-tracking radial glow on every card",
-                                "MagneticButton — spring physics cursor attraction on CTAs",
-                                "Hero3D — lazy-loaded Spline 3D scene, zero CLS impact",
+                                "TextReveal, character-by-character spring entry animation",
+                                "SpotlightCard, mouse-tracking radial glow on every card",
+                                "MagneticButton, spring physics cursor attraction on CTAs",
+                                "Hero3D, lazy-loaded Spline 3D scene, zero CLS impact",
                                 "Lenis 1.1 momentum scroll (disabled on mobile for native feel)",
-                                "usePrefersReducedMotion hook — site-wide animation kill switch",
-                                "WCAG 2.1 AA — focus rings, ARIA labels, semantic HTML",
+                                "usePrefersReducedMotion hook, site-wide animation kill switch",
+                                "WCAG 2.1 AA, focus rings, ARIA labels, semantic HTML",
                                 "React Hook Form + Zod validation on all form inputs",
                                 "Web3Forms API integration (no backend required)",
                                 "Dynamic service detail pages with custom quote forms",

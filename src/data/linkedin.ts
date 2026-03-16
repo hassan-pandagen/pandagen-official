@@ -5,7 +5,7 @@
  * 1. Copy your latest LinkedIn post text
  * 2. Replace/add entries below
  * 3. Update the impressions, reactions, comments numbers from your LinkedIn analytics
- * 4. Save the file — the site updates automatically
+ * 4. Save the file, the site updates automatically
  */
 
 export const linkedinPosts = [

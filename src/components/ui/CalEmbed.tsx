@@ -33,19 +33,20 @@ export default function CalEmbed() {
     }
 
     // Load on first user interaction (whichever comes first)
+    const trigger = () => loadCal();
     const events = ["mousedown", "touchstart", "scroll", "keydown"] as const;
-    events.forEach((e) => window.addEventListener(e, loadCal, { once: true, passive: true }));
+    events.forEach((e) => window.addEventListener(e, trigger, { once: true, passive: true }));
 
     // Fallback: load during browser idle time, or after 3s on Safari
     let idleId: ReturnType<typeof setTimeout> | number;
     if ("requestIdleCallback" in window) {
-      idleId = window.requestIdleCallback(loadCal, { timeout: 3000 });
+      idleId = window.requestIdleCallback(() => loadCal(), { timeout: 3000 });
     } else {
-      idleId = setTimeout(loadCal, 3000);
+      idleId = setTimeout(() => loadCal(), 3000);
     }
 
     return () => {
-      events.forEach((e) => window.removeEventListener(e, loadCal));
+      events.forEach((e) => window.removeEventListener(e, trigger));
       if ("cancelIdleCallback" in window) {
         window.cancelIdleCallback(idleId as number);
       } else {

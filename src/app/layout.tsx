@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     "Shopify custom store",
     "website speed optimization",
     "custom website vs template",
-    // Tier 2 — medium competition, ranking within 60-120 days
+    // Tier 2, medium competition, ranking within 60-120 days
     "wordpress migration service",
     "shopify slow loading fix",
     "custom web development agency",

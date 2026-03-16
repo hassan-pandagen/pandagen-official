@@ -140,7 +140,7 @@ export function ComparisonGrid({
 }) {
   return (
     <div className="my-10 grid grid-cols-2 gap-4">
-      {/* Left — Bad */}
+      {/* Left, Bad */}
       <div className="p-5 bg-red-50 border border-red-200 rounded-2xl">
         <div className="flex items-center gap-2 mb-4">
           <div className="w-5 h-5 rounded-full bg-red-500 flex items-center justify-center text-white text-[10px] font-bold flex-shrink-0">✗</div>
@@ -149,13 +149,13 @@ export function ComparisonGrid({
         <ul className="space-y-2">
           {left.items.map((item, i) => (
             <li key={i} className="flex items-start gap-2 text-sm text-red-800">
-              <span className="text-red-400 mt-0.5 shrink-0">—</span>
+              <span className="text-red-400 mt-0.5 shrink-0">, </span>
               {item}
             </li>
           ))}
         </ul>
       </div>
-      {/* Right — Good */}
+      {/* Right, Good */}
       <div className="p-5 bg-green-50 border border-green-200 rounded-2xl">
         <div className="flex items-center gap-2 mb-4">
           <div className="w-5 h-5 rounded-full bg-green-600 flex items-center justify-center text-white text-[10px] font-bold flex-shrink-0">✓</div>

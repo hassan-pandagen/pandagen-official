@@ -17,7 +17,7 @@ const pandagenSteps = [
   "Design + prototype (1 week)",
   "AI powered build (1 to 2 weeks)",
   "Automated testing (2 days)",
-  "Edge deployment (1 day)",
+  "Global deployment (1 day)",
 ];
 
 export default function AIPowered() {

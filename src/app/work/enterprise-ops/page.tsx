@@ -6,10 +6,10 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 
 export const metadata: Metadata = {
-    title: "Enterprise Operations Platform Case Study — Custom Business Dashboard | PandaCodeGen",
+    title: "Enterprise Operations Platform Case Study, Custom Business Dashboard | PandaCodeGen",
     description: "How we replaced spreadsheets, WhatsApp chains, and 3 SaaS tools with a single custom ops platform. Real-time order pipeline, RBAC, automated attendance, profit tracking. Rated 10/10 by senior developer review.",
     openGraph: {
-        title: "Enterprise Operations Platform Case Study — Custom Business Dashboard",
+        title: "Enterprise Operations Platform Case Study, Custom Business Dashboard",
         description: "Real-time order pipeline. Role-based access for 3 teams. Automated attendance (PKT timezone). 95% process automation. Full case study.",
         type: "article",
         url: "https://www.pandacodegen.com/work/enterprise-ops",
@@ -79,22 +79,22 @@ const caseStudySchema = {
                 {
                     "@type": "Question",
                     "name": "What is a custom business operations platform?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "A custom business operations platform is a single web application that replaces multiple disconnected SaaS tools — like CRMs, spreadsheets, attendance trackers, and reporting tools. For this client, we replaced 5 separate tools with one Supabase-backed platform featuring real-time order tracking, RBAC, employee attendance, and automated profit calculations." }
+                    "acceptedAnswer": { "@type": "Answer", "text": "A custom business operations platform is a single web application that replaces multiple disconnected SaaS tools, like CRMs, spreadsheets, attendance trackers, and reporting tools. For this client, we replaced 5 separate tools with one Supabase-backed platform featuring real-time order tracking, RBAC, employee attendance, and automated profit calculations." }
                 },
                 {
                     "@type": "Question",
                     "name": "How much does it cost to replace Google Sheets with a custom business dashboard?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "A custom business dashboard replacing spreadsheets, a CRM, and manual reporting typically starts at $10,000–$25,000 depending on the number of roles, data tables, and automation requirements. This platform replaced tools costing $80/month plus 20+ hours of manual work per month." }
+                    "acceptedAnswer": { "@type": "Answer", "text": "A custom business dashboard replacing spreadsheets, a CRM, and manual reporting typically starts at $10,000 to $25,000 depending on the number of roles, data tables, and automation requirements. This platform replaced tools costing $80/month plus 20+ hours of manual work per month." }
                 },
                 {
                     "@type": "Question",
                     "name": "What is role-based access control (RBAC) and why does a small business need it?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "RBAC means each user only sees the data their role requires. In this platform: ADMIN sees full financials and all agents; SALES sees their own pipeline only; PRODUCTION sees pending orders with no financial data. We enforce this at two layers — application logic AND Supabase Row-Level Security policies at the database level, so even direct API access is blocked." }
+                    "acceptedAnswer": { "@type": "Answer", "text": "RBAC means each user only sees the data their role requires. In this platform: ADMIN sees full financials and all agents; SALES sees their own pipeline only; PRODUCTION sees pending orders with no financial data. We enforce this at two layers, application logic AND Supabase Row-Level Security policies at the database level, so even direct API access is blocked." }
                 },
                 {
                     "@type": "Question",
                     "name": "How long did it take to build the Enterprise Operations platform?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "The full platform — 14-table Supabase schema, 5-stage order pipeline, RBAC with RLS policies, sales dashboards, attendance system with PKT timezone, automated profit calculations, and Supabase Edge Functions — was built in 10 weeks. It received a 10/10 rating from independent senior developer review: 9.4/10 code quality, 9.3/10 architecture, 10/10 UX." }
+                    "acceptedAnswer": { "@type": "Answer", "text": "The full platform, 14-table Supabase schema, 5-stage order pipeline, RBAC with RLS policies, sales dashboards, attendance system with PKT timezone, automated profit calculations, and Supabase Edge Functions, was built in 10 weeks. It received a 10/10 rating from independent senior developer review: 9.4/10 code quality, 9.3/10 architecture, 10/10 UX." }
                 },
                 {
                     "@type": "Question",
@@ -135,7 +135,7 @@ const roles = [
         color: "bg-red-50 border-red-200",
         badge: "bg-red-500 text-white",
         access: [
-            "Full order pipeline — all stages, all agents",
+            "Full order pipeline, all stages, all agents",
             "Profit calculations and margin analytics",
             "All attendance records + payroll export",
             "User management + role assignments",
@@ -147,7 +147,7 @@ const roles = [
         color: "bg-blue-50 border-blue-200",
         badge: "bg-blue-600 text-white",
         access: [
-            "Own pipeline only — no cross-agent visibility",
+            "Own pipeline only, no cross-agent visibility",
             "Create and update quotes + orders",
             "Customer communication thread",
             "Own performance metrics and targets",
@@ -173,7 +173,7 @@ const platformFeatures = [
     { icon: TrendingUp, title: "Profit Analytics", desc: "Automated profit per order: revenue minus production cost, shipping, and marketing. No manual calculations. Updated the moment costs are entered." },
     { icon: Users, title: "Sales Agent Dashboards", desc: "Per-agent views: revenue generated, quote conversion rate, response time, and monthly targets. Managers see aggregated team data." },
     { icon: Clock, title: "Attendance System", desc: "Clock in/out with PKT timezone (UTC+5). 5AM daily cutoff. Auto-clockout after 10 hours. Overtime and undertime calculated automatically." },
-    { icon: Lock, title: "Role-Based Access", desc: "ADMIN, SALES, PRODUCTION — granular permission sets stored in a JSONB permissions column. Row-Level Security enforced at the database level." },
+    { icon: Lock, title: "Role-Based Access", desc: "ADMIN, SALES, PRODUCTION, granular permission sets stored in a JSONB permissions column. Row-Level Security enforced at the database level." },
     { icon: Database, title: "Full Audit Trail", desc: "Every order change logged to order_history with old value, new value, changed-by user ID, and exact timestamp. Zero accountability gaps." },
     { icon: Shield, title: "Offline-First", desc: "Service Worker caches critical UI and data. Team in Pakistan can access order data during intermittent connectivity. Changes sync on reconnect." },
     { icon: AlertTriangle, title: "APM + Error Tracking", desc: "Sentry integration for real-time error monitoring and application performance metrics. Any production issue is caught before the team notices." },
@@ -184,7 +184,7 @@ const replacedTools = [
     { tool: "Google Sheets (order tracking)", cost: "Free but 8 hrs/wk", problem: "No real-time sync. 7 team members editing simultaneously caused version conflicts" },
     { tool: "Separate CRM", cost: "$50/mo", problem: "No connection to orders or production. Duplicate data entry for every customer" },
     { tool: "WhatsApp order updates", cost: "Free but chaotic", problem: "Status updates buried in chat threads. No searchability, no accountability" },
-    { tool: "Manual attendance tracking", cost: "$30/mo", problem: "Clock in/out via WhatsApp messages — no overtime tracking, no payroll export" },
+    { tool: "Manual attendance tracking", cost: "$30/mo", problem: "Clock in/out via WhatsApp messages, no overtime tracking, no payroll export" },
     { tool: "Spreadsheet reporting", cost: "20 hrs/mo", problem: "Monthly performance reports compiled manually from multiple sheets" },
 ];
 
@@ -225,7 +225,7 @@ export default function EnterpriseOpsCaseStudy() {
                         </h1>
 
                         <p className="text-xl text-stone-600 leading-relaxed max-w-3xl mb-10">
-                            A high-volume production business running entirely on Google Sheets, a disconnected CRM, and WhatsApp status updates. We replaced all of it — order pipeline, sales dashboards, attendance tracking, profit analytics, and role-based access — with a single custom platform rated 10/10 by independent senior developer review.
+                            A high-volume production business running entirely on Google Sheets, a disconnected CRM, and WhatsApp status updates. We replaced all of it, order pipeline, sales dashboards, attendance tracking, profit analytics, and role-based access, with a single custom platform rated 10/10 by independent senior developer review.
                         </p>
 
                         {/* Key metrics */}
@@ -259,7 +259,7 @@ export default function EnterpriseOpsCaseStudy() {
                                     Spreadsheet Hell
                                 </h3>
                                 <p className="text-stone-600 text-sm leading-relaxed">
-                                    Order tracking lived in Google Sheets. 7 team members editing simultaneously caused version conflicts, overwritten data, and no audit trail. When an order status changed, someone had to message the team on WhatsApp — and hope they saw it.
+                                    Order tracking lived in Google Sheets. 7 team members editing simultaneously caused version conflicts, overwritten data, and no audit trail. When an order status changed, someone had to message the team on WhatsApp, and hope they saw it.
                                 </p>
                             </div>
                             <div className="p-6 bg-red-50 border border-red-100 rounded-2xl">
@@ -294,7 +294,7 @@ export default function EnterpriseOpsCaseStudy() {
                     <section className="mb-20">
                         <div className="flex items-center gap-3 mb-8">
                             <div className="h-px w-8 bg-cognac" />
-                            <span className="text-cognac text-sm font-bold uppercase tracking-widest">Solution — Order Pipeline</span>
+                            <span className="text-cognac text-sm font-bold uppercase tracking-widest">Solution, Order Pipeline</span>
                         </div>
                         <h2 className="text-3xl font-bold text-charcoal mb-3">5-stage order lifecycle. Fully automated.</h2>
                         <p className="text-stone-600 mb-8 max-w-2xl">
@@ -335,7 +335,7 @@ export default function EnterpriseOpsCaseStudy() {
                     <section className="mb-20">
                         <div className="flex items-center gap-3 mb-8">
                             <div className="h-px w-8 bg-cognac" />
-                            <span className="text-cognac text-sm font-bold uppercase tracking-widest">Solution — Access Control</span>
+                            <span className="text-cognac text-sm font-bold uppercase tracking-widest">Solution, Access Control</span>
                         </div>
                         <h2 className="text-3xl font-bold text-charcoal mb-3">Three roles. Zero data leakage.</h2>
                         <p className="text-stone-600 mb-8 max-w-2xl">
@@ -363,7 +363,7 @@ export default function EnterpriseOpsCaseStudy() {
                     <section className="mb-20">
                         <div className="flex items-center gap-3 mb-8">
                             <div className="h-px w-8 bg-cognac" />
-                            <span className="text-cognac text-sm font-bold uppercase tracking-widest">Solution — Attendance</span>
+                            <span className="text-cognac text-sm font-bold uppercase tracking-widest">Solution, Attendance</span>
                         </div>
                         <h2 className="text-3xl font-bold text-charcoal mb-3">Clock in/out. Auto-everything.</h2>
                         <p className="text-stone-600 mb-8 max-w-2xl">
@@ -372,7 +372,7 @@ export default function EnterpriseOpsCaseStudy() {
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
                             {[
-                                { label: "Timezone", value: "PKT (UTC+5)", desc: "Pakistan Standard Time — no conversion errors" },
+                                { label: "Timezone", value: "PKT (UTC+5)", desc: "Pakistan Standard Time, no conversion errors" },
                                 { label: "Day Cutoff", value: "5AM PKT", desc: "Each business day calculated from 5AM to 5AM" },
                                 { label: "Auto-Clockout", value: "10 hrs", desc: "Automatic clockout prevents accidentally open sessions" },
                                 { label: "Overtime Calc", value: "Auto", desc: "Hours over target auto-flagged in attendance_summary" },
@@ -453,7 +453,7 @@ export default function EnterpriseOpsCaseStudy() {
                         <h2 className="text-3xl font-bold text-white mb-10">What changed after launch.</h2>
                         <div className="grid md:grid-cols-2 gap-6">
                             {[
-                                { before: "Order status updates via WhatsApp — buried in threads", after: "Real-time order board. Every agent sees live status. No messages needed." },
+                                { before: "Order status updates via WhatsApp, buried in threads", after: "Real-time order board. Every agent sees live status. No messages needed." },
                                 { before: "Monthly reports took 20 hours to compile manually", after: "Reports auto-generated. Monthly summaries run via Supabase Edge Functions." },
                                 { before: "7 team members editing the same Google Sheet", after: "One platform with row-level isolation. Zero version conflicts." },
                                 { before: "CRM completely disconnected from orders", after: "Customer data, order history, and communications in one view." },
@@ -482,9 +482,9 @@ export default function EnterpriseOpsCaseStudy() {
                             {[
                                 "14-table Supabase database schema with Row-Level Security",
                                 "5-stage order pipeline (NEW_ORDER → DELIVERED)",
-                                "Immutable order_history audit log — every change attributed",
+                                "Immutable order_history audit log, every change attributed",
                                 "RBAC: ADMIN, SALES, PRODUCTION roles with granular JSONB permissions",
-                                "Sales agent dashboards — revenue, conversion rate, response time per agent",
+                                "Sales agent dashboards, revenue, conversion rate, response time per agent",
                                 "Customer quote management with email template system",
                                 "Automated profit calculation: order_amount − production − shipping − marketing",
                                 "Employee attendance with PKT timezone, 5AM cutoff, auto-clockout",
@@ -494,10 +494,10 @@ export default function EnterpriseOpsCaseStudy() {
                                 "3 database views: orders_with_details, sales_agent_reports, active_attendance_sessions",
                                 "Supabase Edge Functions for automated monthly reporting",
                                 "Sentry APM + error tracking integration",
-                                "Offline-first via Service Worker — works on poor connectivity",
+                                "Offline-first via Service Worker, works on poor connectivity",
                                 "100% TypeScript with zero implicit any",
                                 "TanStack Query for optimistic updates + server state",
-                                "Framer Motion animated UI — rated UX 10/10",
+                                "Framer Motion animated UI, rated UX 10/10",
                             ].map((item, i) => (
                                 <div key={i} className="flex items-start gap-3 p-3 bg-stone-50 border border-stone-100 rounded-lg">
                                     <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" />

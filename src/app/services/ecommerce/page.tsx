@@ -3,7 +3,7 @@ import PageContent from './PageContent';
 
 export const metadata: Metadata = {
   title: 'Custom Shopify Headless & E-Commerce Development | PandaCodeGen',
-  description: "Custom headless Shopify storefronts that load in under 1 second. No slow themes, no monthly app fees, complete customization. Keep Shopify's backend — replace the front end.",
+  description: "Custom headless Shopify storefronts that load in under 1 second. No slow themes, no monthly app fees, complete customization. Keep Shopify's backend, replace the front end.",
   alternates: { canonical: '/services/ecommerce' },
   openGraph: {
     title: 'Custom Shopify Headless Development | PandaCodeGen',

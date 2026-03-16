@@ -5,7 +5,7 @@ import { ArrowRight, Clock } from "lucide-react";
 import { blogPosts } from "@/data/blog";
 import type { IllustrationType } from "@/data/blog";
 
-// Thin accent color per category — used for decorative elements only
+// Thin accent color per category, used for decorative elements only
 const accentColor = (type: IllustrationType): string => {
   switch (type) {
     case "aicommerce":
@@ -27,7 +27,7 @@ const accentColor = (type: IllustrationType): string => {
   }
 };
 
-// Darker variants for text — all pass WCAG AA 4.5:1 against white
+// Darker variants for text, all pass WCAG AA 4.5:1 against white
 const textColor = (type: IllustrationType): string => {
   switch (type) {
     case "aicommerce":
@@ -88,7 +88,7 @@ export default function LatestBlog() {
                 href={`/blog/${post.id}`}
                 className="group bg-white border border-stone-200 rounded-2xl overflow-hidden hover:shadow-lg hover:-translate-y-1 hover:border-stone-300 transition-all duration-300 flex flex-col"
               >
-                {/* Thin accent bar — all the color this card needs */}
+                {/* Thin accent bar, all the color this card needs */}
                 <div className="h-1 w-full flex-shrink-0" style={{ backgroundColor: color }} />
 
                 {/* Card Body */}

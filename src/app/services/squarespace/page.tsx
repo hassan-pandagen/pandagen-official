@@ -3,11 +3,11 @@ import PageContent from './PageContent';
 
 export const metadata: Metadata = {
   title: 'Squarespace Migration to Custom Code | PandaCodeGen',
-  description: "Escape Squarespace subscription fees and SEO limits. We migrate your site to custom Next.js — faster load times, better rankings, and you own it forever.",
+  description: "Escape Squarespace subscription fees and SEO limits. We migrate your site to custom Next.js, faster load times, better rankings, and you own it forever.",
   alternates: { canonical: '/services/squarespace' },
   openGraph: {
     title: 'Squarespace Migration to Custom Code | PandaCodeGen',
-    description: "Escape Squarespace fees and SEO limits. We migrate to custom Next.js — faster, cheaper, and better rankings.",
+    description: "Escape Squarespace fees and SEO limits. We migrate to custom Next.js, faster, cheaper, and better rankings.",
     url: 'https://www.pandacodegen.com/services/squarespace',
     siteName: 'PandaCodeGen',
     type: 'website',
@@ -48,10 +48,10 @@ export default function SquarespaceServicePage() {
         "@type": "FAQPage",
         "@id": "https://www.pandacodegen.com/services/squarespace#faq",
         "mainEntity": [
-          { "@type": "Question", "name": "Will my Squarespace site design transfer to custom code?", "acceptedAnswer": { "@type": "Answer", "text": "We don't copy-paste templates. We redesign your brand with custom code that's uniquely yours. We match your brand colors, fonts, and style — but make it faster, more professional, and fully customizable." } },
+          { "@type": "Question", "name": "Will my Squarespace site design transfer to custom code?", "acceptedAnswer": { "@type": "Answer", "text": "We don't copy-paste templates. We redesign your brand with custom code that's uniquely yours. We match your brand colors, fonts, and style, but make it faster, more professional, and fully customizable." } },
           { "@type": "Question", "name": "Can I still use Squarespace for my online store?", "acceptedAnswer": { "@type": "Answer", "text": "We recommend migrating fully. But if you have a small store, we can integrate Shopify's Buy Button or Stripe checkout into your custom site so you keep selling without Squarespace's monthly fees." } },
           { "@type": "Question", "name": "How much does a Squarespace migration cost?", "acceptedAnswer": { "@type": "Answer", "text": "Standard business sites typically range from $4,000-$12,000 depending on number of pages and complexity. Over 3 years, you'll save $1,200-$2,400 in Squarespace subscription fees alone." } },
-          { "@type": "Question", "name": "What if I have a blog on Squarespace?", "acceptedAnswer": { "@type": "Answer", "text": "All blog posts migrate with their content, images, dates, and URLs. We set up a content editor so you can write and publish new posts the same way — but your blog loads 4-5x faster." } },
+          { "@type": "Question", "name": "What if I have a blog on Squarespace?", "acceptedAnswer": { "@type": "Answer", "text": "All blog posts migrate with their content, images, dates, and URLs. We set up a content editor so you can write and publish new posts the same way, but your blog loads 4-5x faster." } },
           { "@type": "Question", "name": "Is the migration disruptive to my business?", "acceptedAnswer": { "@type": "Answer", "text": "No. Your Squarespace site stays live during the entire build. We develop the new site in parallel. On launch day, we point your domain to the new site. Zero downtime." } }
         ]
       }

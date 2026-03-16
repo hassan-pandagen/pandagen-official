@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 const comparisonRows = [
   { label: "Technology",   agency: "WordPress / Elementor",     pandagen: "Custom Next.js architecture",  isPain: false },
   { label: "Load Time",    agency: "2.0s to 4.0s average",       pandagen: "Under 1s, guaranteed",          isPain: true  },
-  { label: "Security",     agency: "Plugin vulnerabilities",    pandagen: "Static, zero attack surface", isPain: true  },
+  { label: "Security",     agency: "Plugin vulnerabilities",    pandagen: "No plugins, no backdoors",    isPain: true  },
   { label: "Ownership",    agency: "Locked to theme / agency",  pandagen: "100% code ownership",          isPain: true  },
   { label: "Monthly Cost", agency: "Shopify Plus: $2,300+/mo + app fees", pandagen: "$0 to $50/mo at any scale",       isPain: true  },
   { label: "Billing",      agency: "Hourly, unpredictable",     pandagen: "Fixed-price deposit",          isPain: true  },
@@ -121,7 +121,7 @@ export default function PricingPage() {
               </div>
             </div>
             <span className="text-sm font-bold text-stone-500 uppercase tracking-widest">
-              Join 50+ Founders Who Shipped Fast
+              12 Sites Migrated · Avg PageSpeed: 98/100 · Avg Load Time: 0.8s
             </span>
           </motion.div>
         </div>
@@ -166,13 +166,13 @@ export default function PricingPage() {
               data-cal-namespace="discovery"
               data-cal-link="pandagen/discovery"
               data-cal-config='{"layout":"month_view"}'
-              className="w-full py-4 rounded-xl border border-stone-200 text-charcoal font-bold hover:bg-stone-50 transition-colors"
+              className="w-full py-4 rounded-xl border border-stone-200 text-charcoal font-bold hover:border-cognac hover:text-cognac transition-colors"
             >
               Book Slot
             </button>
           </motion.div>
 
-          {/* CARD 2: Migration Engine — THE MIDNIGHT WINNER */}
+          {/* CARD 2: Migration Engine, THE MIDNIGHT WINNER */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -202,10 +202,10 @@ export default function PricingPage() {
             </div>
 
             <ul className="space-y-5 mb-10 flex-grow">
-              <Feature dark text="Full Site Migration (Up to 10 pages)" />
-              <Feature dark text="Next.js Headless Architecture" />
+              <Feature dark text="Full Site Migration (up to 10 custom pages, product pages generate automatically from your catalog)" />
+              <Feature dark text="Next.js Headless Architecture (your store loads 4x faster because the frontend is separated from the backend)" />
               <Feature dark text="Blog + CMS Integration" />
-              <Feature dark text="Perfect 100 Google PageSpeed" />
+              <Feature dark text="Perfect 100 Google PageSpeed (the score Google uses to rank your site)" />
               <Feature dark text="Zero Monthly Fees Forever" />
               <Feature dark text="30 Days Post-Launch Support" />
             </ul>
@@ -260,7 +260,7 @@ export default function PricingPage() {
               data-cal-namespace="discovery"
               data-cal-link="pandagen/discovery"
               data-cal-config='{"layout":"month_view"}'
-              className="w-full py-4 rounded-xl border border-stone-200 text-charcoal font-bold hover:bg-stone-50 transition-colors"
+              className="w-full py-4 rounded-xl border border-stone-200 text-charcoal font-bold hover:border-cognac hover:text-cognac transition-colors"
             >
               Book Strategy Call
             </button>
@@ -312,8 +312,8 @@ export default function PricingPage() {
               <ShieldCheck className="w-8 h-8 text-green-600" />
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-charcoal mb-1">Our Guarantee: Plain English</h3>
-              <p className="text-stone-500 text-sm">No legal jargon. Here&apos;s exactly how this works.</p>
+              <h3 className="text-2xl font-bold text-charcoal mb-1">Our Guarantee</h3>
+              <p className="text-stone-500 text-sm">Here&apos;s exactly how this works, step by step.</p>
             </div>
           </div>
 
@@ -322,7 +322,7 @@ export default function PricingPage() {
               {
                 num: "01",
                 title: "You only pay a deposit to start",
-                body: "We take a 30–50% deposit upfront to secure your engineering sprint and cover initial design and architecture work. That's all you owe until delivery.",
+                body: "We take a 30 to 50% deposit upfront to secure your engineering sprint and cover initial design and architecture work. That's all you owe until delivery.",
               },
               {
                 num: "02",
@@ -375,7 +375,7 @@ export default function PricingPage() {
         <div className="overflow-x-auto">
           <div className="min-w-[640px] rounded-3xl border border-stone-200 overflow-hidden shadow-sm">
 
-            {/* Cognac accent bar — top of PandaCodeGen column only */}
+            {/* Cognac accent bar, top of PandaCodeGen column only */}
             <div className="grid grid-cols-[1fr_1.4fr_1.4fr]">
               <div className="h-1 bg-stone-50" />
               <div className="h-1 bg-stone-50" />
@@ -409,7 +409,7 @@ export default function PricingPage() {
               </div>
             ))}
 
-            {/* Summary footer — inside the border */}
+            {/* Summary footer, inside the border */}
             <div className="grid grid-cols-[1fr_1.4fr_1.4fr] bg-charcoal">
               <div className="px-5 py-6 text-xs font-black uppercase tracking-widest text-white flex items-center">Net Result</div>
               <div className="px-5 py-6 border-l border-white/10 text-stone-300 font-medium text-sm flex items-center gap-2.5">

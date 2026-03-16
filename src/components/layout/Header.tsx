@@ -272,7 +272,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
         </div>
       </div>
 
-      {/* Internal QuoteModal — only rendered when no external handler is provided */}
+      {/* Internal QuoteModal, only rendered when no external handler is provided */}
       {!onOpenQuote && (
         <QuoteModal isOpen={internalQuoteOpen} onClose={() => setInternalQuoteOpen(false)} />
       )}

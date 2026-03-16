@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { X, CheckCircle2, Mail, Lock, ArrowRight } from "lucide-react";
+import { X, CheckCircle2, Mail, ArrowRight, Search } from "lucide-react";
 import { useState, useEffect } from "react";
 import { trackFBEvent } from "@/components/FacebookPixel";
 import type { PageSpeedResult } from "@/lib/audit/pagespeed";
@@ -18,10 +18,18 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData }: Audi
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [honeypot, setHoneypot] = useState("");
+  const [formLoadedAt, setFormLoadedAt] = useState<number>(0);
+
+  const hasDeep = auditData?.deepChecks && auditData.deepChecks.checks.length > 0;
+  const failCount = hasDeep ? auditData!.deepChecks!.checks.filter(c => c.status === 'fail').length : (auditData?.criticalIssues ?? 0);
+  const warnCount = hasDeep ? auditData!.deepChecks!.checks.filter(c => c.status === 'warn').length : (auditData?.warnings ?? 0);
+  const issueCount = failCount + warnCount;
 
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
+      setFormLoadedAt(Date.now());
     } else {
       document.body.style.overflow = "unset";
     }
@@ -37,11 +45,19 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData }: Audi
     setIsLoading(true);
     setError(null);
 
+    // Time-based bot trap + honeypot: fake success for bots
+    const elapsed = Date.now() - formLoadedAt;
+    if (elapsed < 3000 || honeypot) {
+      setIsSubmitted(true);
+      setTimeout(() => { setIsSubmitted(false); setIsLoading(false); setEmail(""); onClose(); }, 4000);
+      return;
+    }
+
     try {
       const response = await fetch("/api/audit/submit-lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: email.trim(), url, auditData }),
+        body: JSON.stringify({ email: email.trim(), url, auditData, _t: formLoadedAt }),
       });
 
       if (!response.ok) {
@@ -100,43 +116,40 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData }: Audi
                   >
                     <CheckCircle2 className="w-10 h-10" />
                   </motion.div>
-                  <h3 className="text-2xl font-bold text-charcoal mb-2">Report on the Way!</h3>
+                  <h3 className="text-2xl font-bold text-charcoal mb-2">Check Your Inbox</h3>
                   <p className="text-stone-600">
-                    Check your inbox shortly for the full audit report.
+                    Your full 11-point audit report is on the way.
                   </p>
                 </div>
               ) : (
                 <div className="relative">
                   {/* Header */}
-                  <div className="bg-gradient-to-br from-blue-600 via-indigo-600 to-blue-700 px-8 pt-8 pb-6 text-center relative overflow-hidden">
-                    {/* Top accent */}
-                    <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-red-500 via-orange-400 to-green-500" />
-
+                  <div className="bg-gradient-to-br from-charcoal to-stone-800 px-8 pt-8 pb-6 text-center relative overflow-hidden">
                     <button
                       onClick={onClose}
-                      className="absolute top-4 right-4 text-white/60 hover:text-white transition-colors"
+                      className="absolute top-4 right-4 text-white/40 hover:text-white transition-colors"
                     >
                       <X className="w-5 h-5" />
                     </button>
 
-                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/15 mb-4">
-                      <Lock className="w-6 h-6 text-white" />
+                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/10 mb-4">
+                      <Search className="w-6 h-6 text-cognac" />
                     </div>
 
-                    <h2 className="text-xl font-bold text-white mb-2">
-                      Report Ready for{" "}
-                      <span className="text-blue-300 truncate block text-sm font-mono mt-1 opacity-80">
-                        {url}
-                      </span>
+                    <h2 className="text-xl font-bold text-white mb-1">
+                      Your Audit is Ready
                     </h2>
+                    <p className="text-stone-400 text-sm font-mono truncate">
+                      {url}
+                    </p>
 
-                    {auditData && auditData.criticalIssues > 0 && (
-                      <p className="text-blue-100 text-sm mt-2">
+                    {issueCount > 0 && (
+                      <p className="text-stone-300 text-sm mt-3">
                         We found{" "}
-                        <span className="text-red-300 font-bold">
-                          {auditData.criticalIssues} critical issue{auditData.criticalIssues !== 1 ? "s" : ""}
+                        <span className="text-cognac font-bold">
+                          {issueCount} issue{issueCount !== 1 ? "s" : ""}
                         </span>{" "}
-                        costing you revenue.
+                        affecting your site.
                       </p>
                     )}
                   </div>
@@ -145,13 +158,13 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData }: Audi
                   <div className="p-8">
                     <div className="space-y-2 mb-6">
                       {[
-                        "Full Core Web Vitals breakdown",
-                        "Top issues with fix priorities",
-                        "Side-by-side speed comparison",
-                        "Revenue impact estimate",
+                        "Full 11-point inspection results",
+                        "Google performance scores",
+                        "Issues ranked by business impact",
+                        "Personalized next steps",
                       ].map((item) => (
                         <div key={item} className="flex items-center gap-2 text-sm text-stone-600">
-                          <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0" />
+                          <CheckCircle2 className="w-4 h-4 text-cognac flex-shrink-0" />
                           <span>{item}</span>
                         </div>
                       ))}
@@ -160,19 +173,25 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData }: Audi
                     <form onSubmit={handleSubmit} className="space-y-4">
                       <div>
                         <label className="block text-xs font-bold text-charcoal uppercase tracking-wide mb-2">
-                          Where should we send the PDF?
+                          Where should we send the report?
                         </label>
                         <div className="relative">
-                          <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                          <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-stone-400" />
                           <input
                             type="email"
                             required
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            placeholder="ceo@company.com"
-                            className="w-full bg-stone-50 border border-stone-200 rounded-xl pl-12 pr-4 py-4 text-charcoal placeholder:text-gray-400 focus:outline-none focus:border-cognac focus:ring-1 focus:ring-cognac/20 transition-all"
+                            placeholder="you@company.com"
+                            className="w-full bg-stone-50 border border-stone-200 rounded-xl pl-12 pr-4 py-4 text-charcoal placeholder:text-stone-400 focus:outline-none focus:border-cognac focus:ring-1 focus:ring-cognac/20 transition-all"
                           />
                         </div>
+                      </div>
+
+                      {/* HONEYPOT */}
+                      <div className="absolute opacity-0 top-0 left-0 h-0 w-0 -z-10 overflow-hidden" aria-hidden="true" tabIndex={-1}>
+                        <label htmlFor="audit_company_url">Leave this empty</label>
+                        <input type="text" id="audit_company_url" tabIndex={-1} autoComplete="off" value={honeypot} onChange={(e) => setHoneypot(e.target.value)} />
                       </div>
 
                       {error && (
@@ -184,24 +203,24 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData }: Audi
                       <button
                         type="submit"
                         disabled={isLoading}
-                        className="w-full py-4 bg-charcoal text-white font-bold text-base rounded-xl hover:bg-blue-700 transition-all flex items-center justify-center gap-2 hover:scale-[1.01] shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="w-full py-4 bg-charcoal text-white font-bold text-base rounded-xl hover:bg-stone-800 transition-all flex items-center justify-center gap-2 hover:scale-[1.01] shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                         {isLoading ? (
                           <>
                             <div className="w-5 h-5 border-2 border-white/20 border-t-white rounded-full animate-spin" />
-                            Generating Report...
+                            Sending Report...
                           </>
                         ) : (
                           <>
-                            Unlock Full Audit
+                            Get Full Report
                             <ArrowRight className="w-4 h-4" />
                           </>
                         )}
                       </button>
                     </form>
 
-                    <p className="text-xs text-stone-500 text-center mt-4">
-                      No spam. Unsubscribe anytime.
+                    <p className="text-xs text-stone-400 text-center mt-4">
+                      No spam. Just your audit results.
                     </p>
                   </div>
                 </div>

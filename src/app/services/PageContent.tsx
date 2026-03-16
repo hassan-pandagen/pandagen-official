@@ -64,7 +64,7 @@ export default function PageContent() {
           id="01"
           title="WordPress Migration"
           subtitle="Make Your Site Instant & Secure"
-          description="Is your WordPress site slow, getting hacked, or constantly breaking? We move you to a modern custom coded platform that loads in 0.8–1.2 seconds."
+          description="Is your WordPress site slow, getting hacked, or constantly breaking? We move you to a modern custom coded platform that loads in 0.8 to 1.2 seconds."
           tags={["Fix Slow Loading", "Bank Level Security", "Keep Your SEO Rankings"]}
           features={["No More Plugin Updates", "95-100 Google PageSpeed Scores", "Enterprise Level Security (No Plugin Vulnerabilities)", "We Handle All Data Transfer"]}
           align="left"

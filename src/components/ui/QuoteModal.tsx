@@ -16,11 +16,13 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
   const [error, setError] = useState<string | null>(null);
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [trafficSource, setTrafficSource] = useState<any>(null);
+  const [formLoadedAt, setFormLoadedAt] = useState<number>(0);
 
   // Prevent background scrolling when modal is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
+      setFormLoadedAt(Date.now());
       // Load traffic source from localStorage
       const sourceData = localStorage.getItem('trafficSource');
       if (sourceData) {
@@ -86,6 +88,24 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
     try {
       const formElement = e.currentTarget;
       const formData = new FormData(formElement);
+
+      // Time-based bot trap: if submitted in under 3 seconds, fake success
+      const elapsed = Date.now() - formLoadedAt;
+      if (elapsed < 3000) {
+        setIsSubmitted(true);
+        setTimeout(() => { setIsSubmitted(false); setIsLoading(false); setSelectedFiles([]); onClose(); }, 3000);
+        return;
+      }
+
+      // Honeypot check: if hidden field is filled, fake success
+      const honeypot = formData.get('website_url_confirm');
+      if (honeypot) {
+        setIsSubmitted(true);
+        setTimeout(() => { setIsSubmitted(false); setIsLoading(false); setSelectedFiles([]); onClose(); }, 3000);
+        return;
+      }
+
+      formData.append('_t', String(formLoadedAt));
 
       // Add all selected files to formData
       selectedFiles.forEach((file) => {
@@ -307,6 +327,12 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                         {error}
                       </div>
                     )}
+
+                    {/* HONEYPOT - invisible to humans, bots fill it */}
+                    <div className="absolute opacity-0 top-0 left-0 h-0 w-0 -z-10 overflow-hidden" aria-hidden="true" tabIndex={-1}>
+                      <label htmlFor="website_url_confirm">Leave this empty</label>
+                      <input type="text" id="website_url_confirm" name="website_url_confirm" tabIndex={-1} autoComplete="off" />
+                    </div>
 
                     {/* HIDDEN SOURCE TRACKING FIELDS */}
                     {trafficSource && (

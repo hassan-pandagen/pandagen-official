@@ -200,7 +200,7 @@ export default function AboutPage() {
          </div>
       </section>
 
-      {/* FOUNDER SPOTLIGHT — Hassan Jamal */}
+      {/* FOUNDER SPOTLIGHT, Hassan Jamal */}
       <section className="py-20 px-6 border-t border-stone-200">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-12">
@@ -247,7 +247,7 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              {/* What I Build — compact */}
+              {/* What I Build, compact */}
               <div className="grid grid-cols-2 gap-3">
                 <div className="p-4 rounded-xl bg-white border border-stone-200">
                   <h4 className="text-charcoal font-bold text-sm mb-1">Custom Coded Storefronts</h4>

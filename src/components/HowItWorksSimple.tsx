@@ -56,7 +56,7 @@ function ArchitectureDiagram() {
         </div>
         <div className="w-px h-4 bg-stone-300" />
         <div className="px-4 py-1.5 rounded-lg bg-white border border-stone-200 text-stone-500 font-medium text-xs">
-          Edge CDN · Global
+          300+ Locations · Worldwide
         </div>
       </div>
     </div>
@@ -129,7 +129,7 @@ const steps = [
   {
     number: "02",
     title: "Architecture",
-    description: "Database schema, component tree, API design. All planned before a single line of production code is written.",
+    description: "Database structure, page layouts, and how everything connects. All planned before a single line of production code is written.",
     Diagram: ArchitectureDiagram,
   },
   {
@@ -141,7 +141,7 @@ const steps = [
   {
     number: "04",
     title: "Launch",
-    description: "Edge deployment, full Git repo handover, zero monthly fees. You own everything. We disappear.",
+    description: "Deployed to a global network (your site loads fast from anywhere in the world), full source code handover, zero monthly fees. You own everything.",
     Diagram: LaunchDiagram,
   },
 ];

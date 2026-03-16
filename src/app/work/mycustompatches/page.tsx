@@ -6,10 +6,10 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 
 export const metadata: Metadata = {
-    title: "MyCustomPatches Case Study — WordPress Migration, 100/100 PageSpeed | PandaCodeGen",
+    title: "MyCustomPatches Case Study, WordPress Migration, 100/100 PageSpeed | PandaCodeGen",
     description: "How we migrated a 10-year-old WordPress patch business to Next.js 14. Load time dropped from 3.2s to 0.7s. PageSpeed went from ~40 to 100/100. Hosting cost dropped from $150/mo to $0. Zero downtime. All 200+ pages and SEO rankings fully preserved.",
     openGraph: {
-        title: "MyCustomPatches — WordPress to Next.js Migration. 100/100 PageSpeed.",
+        title: "MyCustomPatches, WordPress to Next.js Migration. 100/100 PageSpeed.",
         description: "3.2s → 0.7s load time. PageSpeed ~40 → 100/100. $150/mo → $0 hosting. Zero downtime. 200+ pages migrated. Full case study.",
         type: "article",
         url: "https://www.pandacodegen.com/work/mycustompatches",
@@ -24,7 +24,7 @@ const caseStudySchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/work/mycustompatches#article",
-            "headline": "MyCustomPatches: WordPress Migration to Next.js 14 — 100/100 PageSpeed, $0 Hosting",
+            "headline": "MyCustomPatches: WordPress Migration to Next.js 14, 100/100 PageSpeed, $0 Hosting",
             "description": "A 10-year-old WordPress e-commerce site running on $150/mo hosting with a 3.2s load time and ~40 PageSpeed score. We migrated every page, product, and blog post to a custom Next.js 14 build. Result: 0.7s load time, 100/100 PageSpeed, $0/mo hosting, zero SEO rankings lost.",
             "image": "https://www.pandacodegen.com/work/mycustompatches.png",
             "datePublished": "2025-10-01T00:00:00Z",
@@ -83,17 +83,17 @@ const caseStudySchema = {
                 {
                     "@type": "Question",
                     "name": "How did load time drop from 3.2s to 0.7s?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Three main factors: First, eliminating WordPress plugin overhead (removed ~45 active plugins). Second, switching to Next.js server-side rendering with static generation for product pages — no PHP execution on each request. Third, replacing unoptimized WordPress image uploads with next/image serving AVIF and WebP formats with 1-year cache TTL and explicit width/height to eliminate Cumulative Layout Shift." }
+                    "acceptedAnswer": { "@type": "Answer", "text": "Three main factors: First, eliminating WordPress plugin overhead (removed ~45 active plugins). Second, switching to Next.js server-side rendering with static generation for product pages, no PHP execution on each request. Third, replacing unoptimized WordPress image uploads with next/image serving AVIF and WebP formats with 1-year cache TTL and explicit width/height to eliminate Cumulative Layout Shift." }
                 },
                 {
                     "@type": "Question",
                     "name": "How did hosting costs drop from $150/mo to $0?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "The original site ran on managed WordPress hosting ($150/mo) plus paid plugins, premium theme fees, and security scanning. The new Next.js site deploys on Vercel's free tier with Cloudflare CDN. Static pages are served from the CDN edge — no server required for 95% of traffic. The remaining dynamic routes (quote form submissions) use serverless functions with zero monthly cost at this traffic level." }
+                    "acceptedAnswer": { "@type": "Answer", "text": "The original site ran on managed WordPress hosting ($150/mo) plus paid plugins, premium theme fees, and security scanning. The new Next.js site deploys on Vercel's free tier with Cloudflare CDN. Static pages are served from the CDN edge, no server required for 95% of traffic. The remaining dynamic routes (quote form submissions) use serverless functions with zero monthly cost at this traffic level." }
                 },
                 {
                     "@type": "Question",
                     "name": "Was there any downtime during the migration?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Zero. We ran the new Next.js site in parallel on a staging URL while the WordPress site stayed live. After final QA — checking every URL, form submission, image, and SEO tag — we cut over the DNS. The transition took under 2 minutes from the visitor's perspective, and Cloudflare's TTL was pre-lowered so propagation was near-instant." }
+                    "acceptedAnswer": { "@type": "Answer", "text": "Zero. We ran the new Next.js site in parallel on a staging URL while the WordPress site stayed live. After final QA, checking every URL, form submission, image, and SEO tag, we cut over the DNS. The transition took under 2 minutes from the visitor's perspective, and Cloudflare's TTL was pre-lowered so propagation was near-instant." }
                 },
                 {
                     "@type": "Question",
@@ -121,11 +121,11 @@ const techStack = [
 ];
 
 const optimizations = [
-    { label: "next/image", desc: "AVIF + WebP output formats. Explicit width/height on every image — zero CLS. 1-year cache TTL." },
+    { label: "next/image", desc: "AVIF + WebP output formats. Explicit width/height on every image, zero CLS. 1-year cache TTL." },
     { label: "above-fold priority", desc: "Hero images marked priority={true} for LCP optimization. All below-fold images lazy-loaded." },
     { label: "Static generation", desc: "All 8 product pages and blog posts pre-built at deploy time. Zero PHP execution per request." },
     { label: "Font optimization", desc: "Poppins loaded via next/font with display: swap. No FOUT, no render-blocking font requests." },
-    { label: "Bundle optimization", desc: "optimizePackageImports for lucide-react. .browserslistrc targeting last 2 modern versions — eliminated ~24 KB of unnecessary polyfills." },
+    { label: "Bundle optimization", desc: "optimizePackageImports for lucide-react. .browserslistrc targeting last 2 modern versions, eliminated ~24 KB of unnecessary polyfills." },
     { label: "Cloudflare CDN", desc: "Static assets served from edge. Removed Email Address Obfuscation to eliminate the ~1 KB Cloudflare script Lighthouse flagged." },
 ];
 
@@ -181,7 +181,7 @@ export default function MyCustomPatchesCaseStudy() {
                         </h1>
 
                         <p className="text-xl text-stone-600 leading-relaxed max-w-3xl mb-10">
-                            A custom patch business running a 10-year-old WordPress site: 3.2s load time, ~40 PageSpeed score, $150/mo in managed hosting, and 45 active plugins. We rebuilt every page in Next.js 14 — 8 product categories, full quote system, blog, live chat — and launched with zero downtime. Every SEO ranking preserved. Every dollar saved.
+                            A custom patch business running a 10-year-old WordPress site: 3.2s load time, ~40 PageSpeed score, $150/mo in managed hosting, and 45 active plugins. We rebuilt every page in Next.js 14, 8 product categories, full quote system, blog, live chat, and launched with zero downtime. Every SEO ranking preserved. Every dollar saved.
                         </p>
 
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
@@ -206,7 +206,7 @@ export default function MyCustomPatchesCaseStudy() {
                             className="inline-flex items-center gap-2 px-5 py-3 bg-charcoal text-white text-sm font-bold rounded-xl hover:bg-stone-800 transition-all"
                         >
                             <Globe className="w-4 h-4" />
-                            View Live Site — mycustompatches.net
+                            View Live Site, mycustompatches.net
                         </a>
                     </div>
 
@@ -233,7 +233,7 @@ export default function MyCustomPatchesCaseStudy() {
                                     45 plugins. Zero accountability.
                                 </h3>
                                 <p className="text-stone-600 text-sm leading-relaxed">
-                                    Each plugin added bloat, introduced security vulnerabilities, and needed manual updates. Plugin conflicts caused random breakage. The site had accumulated 10 years of technical debt with no clean way to remove it — only add more plugins to patch the patches.
+                                    Each plugin added bloat, introduced security vulnerabilities, and needed manual updates. Plugin conflicts caused random breakage. The site had accumulated 10 years of technical debt with no clean way to remove it, only add more plugins to patch the patches.
                                 </p>
                             </div>
                             <div className="p-6 bg-red-50 border border-red-100 rounded-2xl">
@@ -242,7 +242,7 @@ export default function MyCustomPatchesCaseStudy() {
                                     $150/mo for a problem
                                 </h3>
                                 <p className="text-stone-600 text-sm leading-relaxed">
-                                    Managed WordPress hosting at $150/month — on top of premium plugins, theme licenses, and security scanning fees. Total monthly cost exceeded $200. None of it was improving the site. It was just keeping a slow site alive.
+                                    Managed WordPress hosting at $150/month, on top of premium plugins, theme licenses, and security scanning fees. Total monthly cost exceeded $200. None of it was improving the site. It was just keeping a slow site alive.
                                 </p>
                             </div>
                             <div className="p-6 bg-red-50 border border-red-100 rounded-2xl">
@@ -251,7 +251,7 @@ export default function MyCustomPatchesCaseStudy() {
                                     SEO rankings at risk
                                 </h3>
                                 <p className="text-stone-600 text-sm leading-relaxed">
-                                    10 years of organic SEO equity across 200+ pages. Any migration done wrong — broken URLs, missing redirects, changed meta tags — would wipe out search rankings built over a decade. The business depended on that organic traffic to survive.
+                                    10 years of organic SEO equity across 200+ pages. Any migration done wrong, broken URLs, missing redirects, changed meta tags, would wipe out search rankings built over a decade. The business depended on that organic traffic to survive.
                                 </p>
                             </div>
                         </div>
@@ -271,9 +271,9 @@ export default function MyCustomPatchesCaseStudy() {
                         <div className="space-y-3 mb-8">
                             {[
                                 { step: "01", name: "Full Site Audit", desc: "Crawled every URL on the WordPress site. Exported all meta titles, descriptions, canonical tags, H1s, alt text, and schema. Mapped 200+ pages to their exact new equivalents." },
-                                { step: "02", name: "Architecture Build", desc: "Built the Next.js 14 site with static generation for all product and blog pages. Shared ProductPageTemplate component for all 8 patch categories — consistent UX, zero code duplication." },
+                                { step: "02", name: "Architecture Build", desc: "Built the Next.js 14 site with static generation for all product and blog pages. Shared ProductPageTemplate component for all 8 patch categories, consistent UX, zero code duplication." },
                                 { step: "03", name: "Content + Form Migration", desc: "Migrated all product copy, images, and blog posts. Rebuilt quote forms with React Hook Form + Zod. Moved file uploads to Cloudinary. Connected email delivery to Web3Forms." },
-                                { step: "04", name: "Performance Hardening", desc: "next/image with AVIF/WebP, explicit dimensions, priority LCP. Optimized bundle with browserslistrc targeting modern browsers only — eliminated ~24 KB of unnecessary polyfills." },
+                                { step: "04", name: "Performance Hardening", desc: "next/image with AVIF/WebP, explicit dimensions, priority LCP. Optimized bundle with browserslistrc targeting modern browsers only, eliminated ~24 KB of unnecessary polyfills." },
                                 { step: "05", name: "SEO Verification", desc: "Verified every canonical URL, meta tag, and structured data block. Ran Google Rich Results Test on all key pages. Pre-populated Search Console change-of-address request." },
                                 { step: "06", name: "Zero-Downtime Cutover", desc: "Lowered Cloudflare TTL to 60s pre-migration. DNS flip took under 2 minutes. WordPress site stayed live in parallel for 48 hours as fallback. Zero visitor downtime recorded." },
                             ].map((s) => (
@@ -296,7 +296,7 @@ export default function MyCustomPatchesCaseStudy() {
                         </div>
                         <h2 className="text-3xl font-bold text-charcoal mb-3">100/100 with real content. Not a blank page.</h2>
                         <p className="text-stone-600 mb-8 max-w-2xl">
-                            The 100/100 Lighthouse score runs on the live production site — with gallery images, Facebook Pixel, live chat, and form scripts loaded. Every optimization was deliberate.
+                            The 100/100 Lighthouse score runs on the live production site, with gallery images, Facebook Pixel, live chat, and form scripts loaded. Every optimization was deliberate.
                         </p>
 
                         <div className="grid md:grid-cols-2 gap-4">
@@ -373,7 +373,7 @@ export default function MyCustomPatchesCaseStudy() {
                         </div>
                     </section>
 
-                    {/* RESULTS SUMMARY — speakable for AI */}
+                    {/* RESULTS SUMMARY, speakable for AI */}
                     <section className="mb-10" data-speakable="true">
                         <p className="text-lg text-stone-700 leading-relaxed bg-stone-50 border border-stone-200 rounded-2xl p-6">
                             MyCustomPatches migrated from a 10-year-old WordPress site to a custom Next.js 14 build in 6 weeks. Load time dropped from 3.2 seconds to 0.7 seconds. Google PageSpeed score went from approximately 40 to a perfect 100 out of 100. Monthly hosting costs dropped from $150 to $0 by deploying on Vercel&apos;s free tier with Cloudflare CDN. All 200+ pages were migrated with zero downtime and zero SEO rankings lost. The site eliminated 45 WordPress plugins and replaced them with 12 purpose built integrations.
@@ -416,10 +416,10 @@ export default function MyCustomPatchesCaseStudy() {
                         <h2 className="text-3xl font-bold text-white mb-10">Before → After. Every metric.</h2>
                         <div className="grid md:grid-cols-2 gap-6">
                             {[
-                                { before: "3.2s load time — competitors winning on speed", after: "0.7s load time. Fastest custom patches site in search results." },
-                                { before: "~40 PageSpeed — Google flagging every page as slow", after: "100/100 PageSpeed. Core Web Vitals all green." },
+                                { before: "3.2s load time, competitors winning on speed", after: "0.7s load time. Fastest custom patches site in search results." },
+                                { before: "~40 PageSpeed, Google flagging every page as slow", after: "100/100 PageSpeed. Core Web Vitals all green." },
                                 { before: "$150/mo managed WordPress hosting", after: "$0/mo. Vercel free tier + Cloudflare. No monthly platform cost." },
-                                { before: "45 active plugins — security risk, update anxiety", after: "Zero plugins. 12 purpose built integrations. No maintenance overhead." },
+                                { before: "45 active plugins, security risk, update anxiety", after: "Zero plugins. 12 purpose built integrations. No maintenance overhead." },
                                 { before: "200+ pages of SEO equity at risk during migration", after: "100% SEO rankings preserved. Zero pages lost. Zero 404s post-launch." },
                                 { before: "File uploads bloating the server", after: "All design uploads go to Cloudinary. Server never touches user files." },
                             ].map((r, i) => (
@@ -446,19 +446,19 @@ export default function MyCustomPatchesCaseStudy() {
                                 "Next.js 14 App Router with TypeScript strict mode",
                                 "8 product category pages using shared ProductPageTemplate",
                                 "Dynamic blog system with per-post SEO metadata",
-                                "Quote form — React Hook Form + Zod validation + Cloudinary uploads",
+                                "Quote form, React Hook Form + Zod validation + Cloudinary uploads",
                                 "Web3Forms email delivery (no backend server required)",
                                 "Swiper gallery with yet-another-react-lightbox",
                                 "Tawk.to live chat integration",
                                 "Facebook Pixel loaded afterInteractive (no LCP impact)",
                                 "next/image with AVIF/WebP + 1-year cache TTL",
-                                "Explicit width/height on all images — zero CLS",
-                                ".browserslistrc — eliminated ~24 KB of unnecessary polyfills",
+                                "Explicit width/height on all images, zero CLS",
+                                ".browserslistrc, eliminated ~24 KB of unnecessary polyfills",
                                 "Cloudflare CDN with optimized cache rules",
                                 "Vercel deployment (free tier, $0/mo)",
-                                "Full 301 redirect map — every WordPress URL covered",
-                                "WCAG AA accessibility — all labels, contrast, keyboard nav",
-                                "Zero downtime DNS cutover — WordPress site kept live as fallback",
+                                "Full 301 redirect map, every WordPress URL covered",
+                                "WCAG AA accessibility, all labels, contrast, keyboard nav",
+                                "Zero downtime DNS cutover, WordPress site kept live as fallback",
                             ].map((item, i) => (
                                 <div key={i} className="flex items-start gap-3 p-3 bg-stone-50 border border-stone-100 rounded-lg">
                                     <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" />

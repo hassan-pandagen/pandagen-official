@@ -12,12 +12,12 @@ const pillars = [
   {
     icon: Code,
     title: "Zero Outsourcing",
-    body: "We don't white-label offshore labor. Every line of code is written by our core team — the same people you speak to on the discovery call.",
+    body: "We don't outsource to offshore teams. Every line of code is written by our core engineers, the same people you speak to on the discovery call.",
   },
   {
     icon: LockOpen,
     title: "You Own The IP",
-    body: "We hand over the full GitHub repo on day one. We deploy to your Vercel/AWS account, not ours. No monthly maintenance retainer required. You are in full control.",
+    body: "We hand over the full source code on day one. We deploy to your hosting account, not ours. No monthly maintenance retainer required. You are in full control.",
   },
 ];
 

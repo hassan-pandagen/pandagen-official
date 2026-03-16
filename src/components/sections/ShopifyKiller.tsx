@@ -120,7 +120,7 @@ export default function ShopifyKiller({ onOpenQuote }: ShopifyKillerProps) {
                     ))}
                   </div>
 
-                  {/* Savings Card — Line-Item Breakdown */}
+                  {/* Savings Card, Line-Item Breakdown */}
                   <motion.div
                     initial={{ scale: 0.95, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
@@ -149,9 +149,9 @@ export default function ShopifyKiller({ onOpenQuote }: ShopifyKillerProps) {
                     <div className="border-t border-green-200 pt-3 flex items-center justify-between">
                       <div>
                         <p className="text-[11px] text-green-700 uppercase font-bold tracking-wider">Your Potential Savings</p>
-                        <p className="text-xs text-green-600 mt-0.5">vs. $0–$50/mo on custom code</p>
+                        <p className="text-xs text-green-600 mt-0.5">vs. $0 to $50/mo on custom code</p>
                       </div>
-                      <p className="text-2xl md:text-3xl font-bold text-charcoal">$15K–$18K<span className="text-base text-stone-500">/yr</span></p>
+                      <p className="text-2xl md:text-3xl font-bold text-charcoal">$15K to $18K<span className="text-base text-stone-500">/yr</span></p>
                     </div>
                   </motion.div>
 

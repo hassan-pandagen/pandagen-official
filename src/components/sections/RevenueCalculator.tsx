@@ -113,7 +113,7 @@ export default function RevenueCalculator() {
                   </div>
                 </div>
 
-                {/* Result Box — Bank Statement style */}
+                {/* Result Box, Bank Statement style */}
                 <div className="mt-4 p-6 bg-stone-50 border border-stone-200 rounded-2xl">
                   <div className="text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-3">
                     Revenue Recovered Per Year

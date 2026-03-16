@@ -61,6 +61,12 @@ export function generateStaticParams() {
         { slug: "wordpress-vs-custom-code-real-cost-3-years" },
         { slug: "why-we-chose-nextjs-over-wordpress-2026" },
         { slug: "google-universal-commerce-protocol-what-it-means-for-your-store" },
+        { slug: "nextjs-hosting-zero-cost" },
+        { slug: "how-to-migrate-wordpress-to-nextjs" },
+        { slug: "wordpress-vs-nextjs" },
+        { slug: "how-website-speed-affects-seo" },
+        { slug: "shopify-dawn-theme-slow" },
+        { slug: "what-is-headless-commerce" },
     ];
 }
 
@@ -145,7 +151,7 @@ const blogPosts: Record<
                 <ComparisonTable />
 
                 <BlogQuote>
-                    Amazon found that every 0.1 second delay in load time cost them 1% in sales. If your site loads in 3.8 seconds instead of 0.9 seconds, you're losing roughly 29% of potential sales — every day.
+                    Amazon found that every 0.1 second delay in load time cost them 1% in sales. If your site loads in 3.8 seconds instead of 0.9 seconds, you're losing roughly 29% of potential sales: every day.
                 </BlogQuote>
 
                 <BlogHeader>Why Do WordPress Plugins Feel Free But Cost You So Much?</BlogHeader>
@@ -157,7 +163,7 @@ const blogPosts: Record<
                 </BlogText>
                 <BlogList items={[
                     "Speed: Every plugin adds HTTP requests. 30 plugins = 200+ requests per page load. Your PageSpeed drops from 90 to 38. Traffic drops.",
-                    "Stability: Plugins update independently. When WooCommerce updates, it can break your checkout. When Elementor updates, your layout can shatter. This is not rare — it happens to every WordPress site eventually.",
+                    "Stability: Plugins update independently. When WooCommerce updates, it can break your checkout. When Elementor updates, your layout can shatter. This is not rare: it happens to every WordPress site eventually.",
                     "Security: 98% of WordPress hacks come through outdated plugins. You have 25-35 plugins. Each one is a door. You can't keep them all locked."
                 ]} />
                 <BlogText>
@@ -222,7 +228,7 @@ const blogPosts: Record<
                     We don't use plugins. Our <Link href="/services/wordpress-migration" className="text-cognac hover:underline font-medium">WordPress migration service</Link> replaces everything with clean, custom code. It loads instantly. No plugins means no plugin conflicts, no plugin vulnerabilities, no plugin fees.
                 </BlogText>
                 <BlogText>
-                    Your site is built on Next.js 15 — the same technology used by companies like Vercel, OpenAI, and Stripe. It runs on Vercel's global edge network (300+ locations worldwide). Your pages are pre-built and served instantly from the closest server to your visitor.
+                    Your site is built on Next.js 15: the same technology used by companies like Vercel, OpenAI, and Stripe. It runs on Vercel's global edge network (300+ locations worldwide). Your pages are pre-built and served instantly from the closest server to your visitor.
                 </BlogText>
                 <BlogText>
                     <strong>You own the code outright.</strong> No monthly platform fees. No licensing. No vendor lock-in. If you want to change hosting providers in 2030, you can.
@@ -599,7 +605,7 @@ const blogPosts: Record<
 
                 <BlogHeader>Why Does Google Penalize Sites Built With Visual Page Builders?</BlogHeader>
                 <BlogText>
-                    Google's crawler has a "crawl budget" — a limited amount of processing power it allocates to each site per day. If your pages are 4.8MB of bloated Elementor HTML, Google's bot:
+                    Google's crawler has a "crawl budget": a limited amount of processing power it allocates to each site per day. If your pages are 4.8MB of bloated Elementor HTML, Google's bot:
                 </BlogText>
                 <BlogList items={[
                     "Takes 4-6 seconds to parse your page (vs 0.3 seconds for clean code)",
@@ -655,7 +661,7 @@ const blogPosts: Record<
 
                 <BlogHeader>What Does a 100/100 Lighthouse Score Actually Require?</BlogHeader>
                 <BlogText>
-                    Our <Link href="/services/custom-engineering" className="text-cognac hover:underline font-medium">custom engineering team</Link> writes semantic HTML by hand. Real engineering isn't dragging and dropping — it's architecting for performance, accessibility, and search ranking from the ground up.
+                    Our <Link href="/services/custom-engineering" className="text-cognac hover:underline font-medium">custom engineering team</Link> writes semantic HTML by hand. Real engineering isn't dragging and dropping. It's architecting for performance, accessibility, and search ranking from the ground up.
                 </BlogText>
                 <BlogList items={[
                     "DOM nodes: 800-1,200 (well under Google's 1,500 limit)",
@@ -1715,12 +1721,12 @@ export default async function BlogPost(props: PageProps) {
             <section className="relative px-4 pb-20">
                 <div className="container mx-auto max-w-3xl relative z-10">
                     <article className="bg-white rounded-2xl border border-stone-200 shadow-sm px-8 py-10 md:px-14">
-                        {/* Feature Visual — category-matched animated diagram */}
+                        {/* Feature Visual. Category-matched animated diagram */}
                         <BlogFeatureVisual category={post.category} />
                         {post.content}
                     </article>
 
-                    {/* FAQ Section — renders FAQs from blog.ts data, powers featured snippets */}
+                    {/* FAQ Section. Renders FAQs from blog.ts data, powers featured snippets */}
                     {blogPostData?.faqs && blogPostData.faqs.length > 0 && (
                         <FAQAccordion faqs={blogPostData.faqs} />
                     )}

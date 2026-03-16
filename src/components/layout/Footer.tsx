@@ -60,7 +60,7 @@ export default function Footer({ onOpenQuote }: FooterProps) {
                 We replace slow WordPress &amp; Shopify sites with custom built websites that load in under 1 second. No monthly fees. No vendor lock-in.
               </p>
               <ul className="mt-6 space-y-2 text-sm text-stone-600">
-                <li>📍 Missouri City, TX, USA</li>
+                <li>📍 1914 Quail Feather Ct, Missouri City, TX 77489</li>
                 <li>
                   <Link href="tel:+13022504340" className="hover:text-charcoal transition-colors">
                     📞 +1 (302) 250-4340

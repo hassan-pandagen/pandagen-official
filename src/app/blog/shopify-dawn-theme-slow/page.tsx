@@ -16,14 +16,14 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 
 export const metadata: Metadata = {
     title: "Shopify Dawn Theme Slow? Here's Exactly Why (and the Real Fix) | PandaCodeGen",
-    description: "Dawn is Shopify's fastest theme — so why is your store still loading in 3+ seconds? Here's what's actually killing your speed and why theme-level fixes won't save you.",
+    description: "Dawn is Shopify's fastest theme, so why is your store still loading in 3+ seconds? Here's what's actually killing your speed and why theme-level fixes won't save you.",
     alternates: {
         canonical: "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow",
     },
     keywords: ["shopify dawn theme slow", "shopify dawn theme speed", "shopify 2.0 performance", "why is shopify slow", "shopify pagespeed score", "shopify speed optimization", "shopify dawn pagespeed"],
     openGraph: {
         title: "Shopify Dawn Theme Slow? Here's Exactly Why (and the Real Fix)",
-        description: "Dawn is Shopify's fastest theme — so why is your store still loading in 3+ seconds? The real culprit isn't the theme.",
+        description: "Dawn is Shopify's fastest theme, so why is your store still loading in 3+ seconds? The real culprit isn't the theme.",
         type: "article",
         publishedTime: "2026-03-07",
         authors: ["Hassan"],
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Shopify Dawn Theme Slow? Here's Exactly Why (and the Real Fix)",
-        description: "Dawn is Shopify's fastest theme — so why is your store still loading in 3+ seconds?",
+        description: "Dawn is Shopify's fastest theme, so why is your store still loading in 3+ seconds?",
     },
 };
 
@@ -44,7 +44,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow#article",
             "headline": "Shopify Dawn Theme Slow? Here's Exactly Why (and the Real Fix)",
-            "description": "Dawn is Shopify's fastest theme but most stores using it still load in 3+ seconds. Here's why — and what actually fixes it.",
+            "description": "Dawn is Shopify's fastest theme but most stores using it still load in 3+ seconds. Here's why, and what actually fixes it.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-07T00:00:00-05:00",
             "dateModified": "2026-03-10T00:00:00-05:00",
@@ -82,11 +82,11 @@ const articleSchema = {
             },
             "citation": [
                 { "@type": "CreativeWork", "name": "Google PageSpeed Insights", "url": "https://pagespeed.web.dev/" },
-                { "@type": "CreativeWork", "name": "Shopify Dawn Theme — GitHub", "url": "https://github.com/Shopify/dawn" },
-                { "@type": "CreativeWork", "name": "Core Web Vitals — Google Web Dev", "url": "https://web.dev/vitals/" },
-                { "@type": "CreativeWork", "name": "Shopify Performance — Shopify Docs", "url": "https://shopify.dev/docs/storefronts/themes/best-practices/performance" },
+                { "@type": "CreativeWork", "name": "Shopify Dawn Theme. GitHub", "url": "https://github.com/Shopify/dawn" },
+                { "@type": "CreativeWork", "name": "Core Web Vitals. Google Web Dev", "url": "https://web.dev/vitals/" },
+                { "@type": "CreativeWork", "name": "Shopify Performance. Shopify Docs", "url": "https://shopify.dev/docs/storefronts/themes/best-practices/performance" },
                 { "@type": "CreativeWork", "name": "Deloitte: Milliseconds Make Millions", "url": "https://www2.deloitte.com/content/dam/Deloitte/ie/Documents/Consulting/Milliseconds_Make_Millions_report.pdf" },
-                { "@type": "CreativeWork", "name": "Next.js Commerce — Vercel", "url": "https://vercel.com/templates/next.js/nextjs-commerce" }
+                { "@type": "CreativeWork", "name": "Next.js Commerce. Vercel", "url": "https://vercel.com/templates/next.js/nextjs-commerce" }
             ]
         },
         {
@@ -120,7 +120,7 @@ const articleSchema = {
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress and Shopify sites. We guarantee 95–100/100 Google PageSpeed on every build.",
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress and Shopify sites. We guarantee 95 to 100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
             "foundingDate": "2026"
         },
@@ -128,7 +128,7 @@ const articleSchema = {
             "@type": "HowTo",
             "@id": "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow#howto",
             "name": "How to Speed Up a Slow Shopify Dawn Theme",
-            "description": "Practical steps to improve your Shopify Dawn theme PageSpeed score. These optimizations can gain 10–20 points, though the ceiling on standard Shopify is 70–75/100.",
+            "description": "Practical steps to improve your Shopify Dawn theme PageSpeed score. These optimizations can gain 10 to 20 points, though the ceiling on standard Shopify is 70 to 75/100.",
             "totalTime": "PT2H",
             "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
             "step": [
@@ -136,13 +136,13 @@ const articleSchema = {
                     "@type": "HowToStep",
                     "position": 1,
                     "name": "Audit and remove unused apps",
-                    "text": "Open your Shopify admin and review every installed app. Each app injects 80–200KB of JavaScript on every page load. Remove any app you haven't used in 30 days. Each removal saves 80–200ms of blocking time."
+                    "text": "Open your Shopify admin and review every installed app. Each app injects 80 to 200KB of JavaScript on every page load. Remove any app you haven't used in 30 days. Each removal saves 80 to 200ms of blocking time."
                 },
                 {
                     "@type": "HowToStep",
                     "position": 2,
                     "name": "Compress and resize hero images before uploading",
-                    "text": "Export your hero and banner images at the actual display dimensions, then compress them to under 150KB using Squoosh or TinyPNG. Do not upload high-resolution originals and rely on Shopify's resize — it still serves oversized files to mobile."
+                    "text": "Export your hero and banner images at the actual display dimensions, then compress them to under 150KB using Squoosh or TinyPNG. Do not upload high-resolution originals and rely on Shopify's resize: it still serves oversized files to mobile."
                 },
                 {
                     "@type": "HowToStep",
@@ -154,7 +154,7 @@ const articleSchema = {
                     "@type": "HowToStep",
                     "position": 4,
                     "name": "Defer non-critical app scripts using Shopify's Script Tag API",
-                    "text": "For apps that support it, switch their script load strategy from synchronous to deferred or async via the Shopify Script Tag API or the app's own settings panel. Not all apps support this — contact app support if you don't see the option."
+                    "text": "For apps that support it, switch their script load strategy from synchronous to deferred or async via the Shopify Script Tag API or the app's own settings panel. Not all apps support this. Contact app support if you don't see the option."
                 },
                 {
                     "@type": "HowToStep",
@@ -168,11 +168,11 @@ const articleSchema = {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow#faq",
             "mainEntity": [
-                { "@type": "Question", "name": "Why is my Shopify Dawn theme slow?", "acceptedAnswer": { "@type": "Answer", "text": "Dawn is Shopify's fastest default theme, but it still loads in 2.5–4 seconds on most stores because of third-party apps injecting scripts, Liquid template rendering on every request, large unoptimized hero images, and Shopify's own checkout scripts. The theme isn't the bottleneck — Shopify's architecture is." } },
-                { "@type": "Question", "name": "What PageSpeed score does Shopify Dawn get?", "acceptedAnswer": { "@type": "Answer", "text": "A basic Dawn store with no apps typically scores 65–80/100 on mobile. Add 3–5 apps and that drops to 35–55/100. No amount of theme optimization fixes app script bloat — those scripts load regardless of which theme you use." } },
-                { "@type": "Question", "name": "How can I speed up my Shopify Dawn theme?", "acceptedAnswer": { "@type": "Answer", "text": "You can compress images, remove unused apps, disable non-critical scripts, and use a Shopify speed optimization app. This typically improves your score by 10–20 points but you'll hit a ceiling at 70–75/100 because Shopify's Liquid rendering and checkout scripts can't be removed." } },
-                { "@type": "Question", "name": "Is Shopify Dawn better than other Shopify themes for speed?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, Dawn is the fastest Shopify theme by default. But even Dawn scores 25–40 points lower than a custom Next.js storefront. If you need 90–100/100 PageSpeed, you need to move beyond Shopify's theme system entirely." } },
-                { "@type": "Question", "name": "Should I switch from Shopify Dawn to a custom headless build?", "acceptedAnswer": { "@type": "Answer", "text": "If your store does $30K+/month and your PageSpeed mobile score is below 60, the ROI on going headless is significant. A 1-second improvement increases conversions 7–12%. For a $30K/month store, that's $2,100–$3,600/month recovered. Most headless builds pay for themselves in 6–9 months." } }
+                { "@type": "Question", "name": "Why is my Shopify Dawn theme slow?", "acceptedAnswer": { "@type": "Answer", "text": "Dawn is Shopify's fastest default theme, but it still loads in 2.5 to 4 seconds on most stores because of third-party apps injecting scripts, Liquid template rendering on every request, large unoptimized hero images, and Shopify's own checkout scripts. The theme isn't the bottleneck. Shopify's architecture is." } },
+                { "@type": "Question", "name": "What PageSpeed score does Shopify Dawn get?", "acceptedAnswer": { "@type": "Answer", "text": "A basic Dawn store with no apps typically scores 65 to 80/100 on mobile. Add 3 to 5 apps and that drops to 35 to 55/100. No amount of theme optimization fixes app script bloat, those scripts load regardless of which theme you use." } },
+                { "@type": "Question", "name": "How can I speed up my Shopify Dawn theme?", "acceptedAnswer": { "@type": "Answer", "text": "You can compress images, remove unused apps, disable non-critical scripts, and use a Shopify speed optimization app. This typically improves your score by 10 to 20 points but you'll hit a ceiling at 70 to 75/100 because Shopify's Liquid rendering and checkout scripts can't be removed." } },
+                { "@type": "Question", "name": "Is Shopify Dawn better than other Shopify themes for speed?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, Dawn is the fastest Shopify theme by default. But even Dawn scores 25 to 40 points lower than a custom Next.js storefront. If you need 90 to 100/100 PageSpeed, you need to move beyond Shopify's theme system entirely." } },
+                { "@type": "Question", "name": "Should I switch from Shopify Dawn to a custom headless build?", "acceptedAnswer": { "@type": "Answer", "text": "If your store does $30K+/month and your PageSpeed mobile score is below 60, the ROI on going headless is significant. A 1-second improvement increases conversions 7 to 12%. For a $30K/month store, that's $2,100 to $3,600/month recovered. Most headless builds pay for themselves in 6 to 9 months." } }
             ]
         }
     ]
@@ -240,10 +240,10 @@ export default function ShopifyDawnThemeSlowPage() {
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
                         <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
                         <BlogList items={[
-                            "Dawn is Shopify's fastest theme — but 'fastest Shopify theme' and 'fast website' are not the same thing.",
-                            "A clean Dawn store scores 65–80/100 on mobile. Add 5 apps and you're at 35–55/100.",
-                            "The speed killers are apps, Liquid rendering, Shopify's checkout scripts — none of which the theme controls.",
-                            "Theme-level fixes improve your score by 10–20 points. To hit 90–100/100, you need to leave Shopify's theme system.",
+                            "Dawn is Shopify's fastest theme, but 'fastest Shopify theme' and 'fast website' are not the same thing.",
+                            "A clean Dawn store scores 65 to 80/100 on mobile. Add 5 apps and you're at 35 to 55/100.",
+                            "The speed killers are apps, Liquid rendering, Shopify's checkout scripts. None of which the theme controls.",
+                            "Theme-level fixes improve your score by 10 to 20 points. To hit 90 to 100/100, you need to leave Shopify's theme system.",
                         ]} />
                     </div>
 
@@ -254,7 +254,7 @@ export default function ShopifyDawnThemeSlowPage() {
                         </BlogText>
 
                         <BlogText>
-                            Nothing. That&apos;s what made it so frustrating. They had done everything right — newest theme, no bloated plugins, compressed images. And they were still losing customers to a 3.8-second load time.
+                            Nothing. That&apos;s what made it so frustrating. They had done everything right, newest theme, no bloated plugins, compressed images. And they were still losing customers to a 3.8-second load time.
                         </BlogText>
 
                         <BlogText>
@@ -262,7 +262,7 @@ export default function ShopifyDawnThemeSlowPage() {
                         </BlogText>
 
                         <BlogText>
-                            If you&apos;ve already paid a developer to &ldquo;fix&rdquo; your speed, switched themes, installed a speed optimization app, or upgraded to Shopify Plus hoping it would solve this — and you&apos;re still sitting at 40–55/100 — you&apos;re not alone. That money wasn&apos;t wasted on bad work. It was spent solving the wrong problem.
+                            If you&apos;ve already paid a developer to &ldquo;fix&rdquo; your speed, switched themes, installed a speed optimization app, or upgraded to Shopify Plus hoping it would solve this, and you&apos;re still sitting at 40 to 55/100. You&apos;re not alone. That money wasn&apos;t wasted on bad work. It was spent solving the wrong problem.
                         </BlogText>
 
                         <BlogHeader>What Is Shopify Dawn and Why Should It Be Fast?</BlogHeader>
@@ -284,7 +284,7 @@ export default function ShopifyDawnThemeSlowPage() {
                         ]} />
 
                         <BlogText>
-                            A clean Dawn install with no apps and optimized images will score <BlogHighlight>65–80/100 on mobile PageSpeed.</BlogHighlight> That&apos;s genuinely good — for a Shopify theme.
+                            A clean Dawn install with no apps and optimized images will score <BlogHighlight>65 to 80/100 on mobile PageSpeed.</BlogHighlight> That&apos;s genuinely good. For a Shopify theme.
                         </BlogText>
 
                         <BlogText>
@@ -300,7 +300,7 @@ export default function ShopifyDawnThemeSlowPage() {
                         <BlogHeader>Reason 1: Third-Party Apps Are Injecting Scripts You Can&apos;t Control</BlogHeader>
 
                         <BlogText>
-                            This is the #1 speed killer on 90% of Shopify stores. Every app you install adds JavaScript to every page load — whether you want it there or not.
+                            This is the #1 speed killer on 90% of Shopify stores. Every app you install adds JavaScript to every page load, whether you want it there or not.
                         </BlogText>
 
                         <BlogText>
@@ -308,15 +308,15 @@ export default function ShopifyDawnThemeSlowPage() {
                         </BlogText>
 
                         <BlogList items={[
-                            "Reviews app (Okendo, Judge.me, Yotpo) — 80–150KB JS",
-                            "Upsell/cross-sell app — 60–120KB JS",
-                            "Live chat (Gorgias, Tidio) — 100–200KB JS",
-                            "Email pop-up (Klaviyo, Privy) — 80–140KB JS",
-                            "Loyalty/rewards (Smile.io) — 60–100KB JS",
+                            "Reviews app (Okendo, Judge.me, Yotpo). 80 to 150KB JS",
+                            "Upsell/cross-sell app. 60 to 120KB JS",
+                            "Live chat (Gorgias, Tidio). 100 to 200KB JS",
+                            "Email pop-up (Klaviyo, Privy). 80 to 140KB JS",
+                            "Loyalty/rewards (Smile.io). 60 to 100KB JS",
                         ]} />
 
                         <BlogText>
-                            That&apos;s 380–710KB of third-party JavaScript loading on every single page — before your theme loads a single line. Each script adds 100–300ms of blocking time.
+                            That&apos;s 380 to 710KB of third-party JavaScript loading on every single page. Before your theme loads a single line. Each script adds 100 to 300ms of blocking time.
                         </BlogText>
 
                         <BlogQuote>
@@ -334,7 +334,7 @@ export default function ShopifyDawnThemeSlowPage() {
                         </BlogText>
 
                         <BlogText>
-                            This is called server-side rendering — and it adds 200–600ms to every page load before anything even reaches the visitor&apos;s browser. On a busy store or during a traffic spike, this gets worse.
+                            This is called server-side rendering, and it adds 200 to 600ms to every page load before anything even reaches the visitor&apos;s browser. On a busy store or during a traffic spike, this gets worse.
                         </BlogText>
 
                         <BlogText>
@@ -344,38 +344,38 @@ export default function ShopifyDawnThemeSlowPage() {
                         <BlogHeader>Reason 3: Hero Images and Section Images Default to Oversized</BlogHeader>
 
                         <BlogText>
-                            Dawn includes image optimization — but it&apos;s only effective if you upload correctly sized images. Most store owners upload the high-resolution image from their photographer or product shoot and let Shopify handle the rest.
+                            Dawn includes image optimization, but it&apos;s only effective if you upload correctly sized images. Most store owners upload the high-resolution image from their photographer or product shoot and let Shopify handle the rest.
                         </BlogText>
 
                         <BlogText>
-                            Shopify does resize images, but the responsive sizing logic in Dawn still serves larger files than necessary to mobile visitors. A hero image that should be 120KB on mobile often loads at 380–600KB.
+                            Shopify does resize images, but the responsive sizing logic in Dawn still serves larger files than necessary to mobile visitors. A hero image that should be 120KB on mobile often loads at 380 to 600KB.
                         </BlogText>
 
                         <BlogText>
-                            This directly tanks your LCP (Largest Contentful Paint) — the Core Web Vital that most strongly correlates with Google rankings.
+                            This directly tanks your LCP (Largest Contentful Paint): the Core Web Vital that most strongly correlates with Google rankings.
                         </BlogText>
 
                         <BlogHeader>Reason 4: Shopify&apos;s Own Scripts Load Whether You Want Them or Not</BlogHeader>
 
                         <BlogText>
-                            Every Shopify store loads a set of platform scripts automatically — cart functionality, checkout, payment processing. These are not optional. You can&apos;t remove them, defer them, or replace them.
+                            Every Shopify store loads a set of platform scripts automatically. Cart functionality, checkout, payment processing. These are not optional. You can&apos;t remove them, defer them, or replace them.
                         </BlogText>
 
                         <BlogList items={[
-                            "Shopify Analytics script — loads on every page",
-                            "Cart drawer JavaScript — loads even on pages with no cart",
-                            "Payment method detection — loads checkout scripts on product pages",
-                            "Shopify Web Performance — monitoring scripts loaded automatically",
+                            "Shopify Analytics script, loads on every page",
+                            "Cart drawer JavaScript, loads even on pages with no cart",
+                            "Payment method detection, loads checkout scripts on product pages",
+                            "Shopify Web Performance. Monitoring scripts loaded automatically",
                         ]} />
 
                         <BlogText>
-                            These are baked into the platform. No theme — not even a custom one — can eliminate them while staying on Shopify&apos;s standard storefront.
+                            These are baked into the platform. No theme, not even a custom one. Can eliminate them while staying on Shopify&apos;s standard storefront.
                         </BlogText>
 
                         {/* Mid CTA */}
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">What&apos;s your store&apos;s real speed score?</p>
-                            <p className="text-stone-600 mb-4 text-sm">30 minutes, live screen-share. We run your store through PageSpeed, identify every bottleneck, and give you a written report — free, no obligation.</p>
+                            <p className="text-stone-600 mb-4 text-sm">30 minutes, live screen-share. We run your store through PageSpeed, identify every bottleneck, and give you a written report, free, no obligation.</p>
                             <a
                                 href="https://cal.com/pandagen/discovery"
                                 target="_blank"
@@ -403,36 +403,36 @@ export default function ShopifyDawnThemeSlowPage() {
                                 <tbody className="divide-y divide-stone-100">
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">Clean Dawn, no apps, optimized images</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">65–80/100</td>
+                                        <td className="px-4 py-3 text-green-700 font-medium">65 to 80/100</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
-                                        <td className="px-4 py-3 text-stone-600">Dawn with 3–5 typical apps (reviews, chat, upsell)</td>
-                                        <td className="px-4 py-3 text-orange-600 font-medium">40–60/100</td>
+                                        <td className="px-4 py-3 text-stone-600">Dawn with 3 to 5 typical apps (reviews, chat, upsell)</td>
+                                        <td className="px-4 py-3 text-orange-600 font-medium">40 to 60/100</td>
                                     </tr>
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">Dawn with 6+ apps + Klaviyo + Gorgias + loyalty program</td>
-                                        <td className="px-4 py-3 text-red-600 font-medium">25–45/100</td>
+                                        <td className="px-4 py-3 text-red-600 font-medium">25 to 45/100</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-stone-600">Dawn on Shopify Plus with heavy customization</td>
-                                        <td className="px-4 py-3 text-red-600 font-medium">30–55/100</td>
+                                        <td className="px-4 py-3 text-red-600 font-medium">30 to 55/100</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
 
                         <BlogText>
-                            The Deloitte &ldquo;Milliseconds Make Millions&rdquo; study found that a 0.1-second improvement in mobile load time increases conversions by 8%. A typical Shopify store scoring 45/100 is leaving 20–30% of conversions on the table compared to a 95/100 storefront.
+                            The Deloitte &ldquo;Milliseconds Make Millions&rdquo; study found that a 0.1-second improvement in mobile load time increases conversions by 8%. A typical Shopify store scoring 45/100 is leaving 20 to 30% of conversions on the table compared to a 95/100 storefront.
                         </BlogText>
 
                         <BlogText>
-                            On a store doing $50K/month, that&apos;s <BlogHighlight>$10,000–$15,000 in recoverable revenue every month.</BlogHighlight>
+                            On a store doing $50K/month, that&apos;s <BlogHighlight>$10,000 to $15,000 in recoverable revenue every month.</BlogHighlight>
                         </BlogText>
 
                         <BlogHeader>Can You Fix a Slow Dawn Theme? The Partial Wins</BlogHeader>
 
                         <BlogText>
-                            Yes — with real limits. Here&apos;s what actually works and what the ceiling looks like:
+                            Yes, with real limits. Here&apos;s what actually works and what the ceiling looks like:
                         </BlogText>
 
                         <div className="overflow-x-auto my-6">
@@ -448,7 +448,7 @@ export default function ShopifyDawnThemeSlowPage() {
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">Audit and remove unused apps</td>
                                         <td className="px-4 py-3 text-green-700 font-medium">Yes</td>
-                                        <td className="px-4 py-3 text-stone-600">Each app removed saves 80–200ms</td>
+                                        <td className="px-4 py-3 text-stone-600">Each app removed saves 80 to 200ms</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-stone-600">Compress and resize hero images before uploading</td>
@@ -483,7 +483,7 @@ export default function ShopifyDawnThemeSlowPage() {
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-stone-600">Using a CDN</td>
                                         <td className="px-4 py-3 text-red-600 font-medium">No</td>
-                                        <td className="px-4 py-3 text-stone-600">Shopify already uses a CDN — not the bottleneck</td>
+                                        <td className="px-4 py-3 text-stone-600">Shopify already uses a CDN, not the bottleneck</td>
                                     </tr>
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">Upgrading to Shopify Plus</td>
@@ -495,27 +495,27 @@ export default function ShopifyDawnThemeSlowPage() {
                         </div>
 
                         <BlogQuote>
-                            We&apos;ve audited 30+ Shopify stores. The ceiling with theme-level optimization is 70–75/100 mobile. To get above that, you need to move outside Shopify&apos;s rendering layer.
+                            We&apos;ve audited 30+ Shopify stores. The ceiling with theme-level optimization is 70 to 75/100 mobile. To get above that, you need to move outside Shopify&apos;s rendering layer.
                         </BlogQuote>
 
                         <BlogHeader>Why 75/100 Still Isn&apos;t Good Enough</BlogHeader>
 
                         <BlogText>
-                            Google classifies 75/100 as &ldquo;Needs Improvement&rdquo; — the orange zone. Your competitors running custom storefronts are at 90–100/100.
+                            Google classifies 75/100 as &ldquo;Needs Improvement&rdquo;. The orange zone. Your competitors running custom storefronts are at 90 to 100/100.
                         </BlogText>
 
                         <BlogText>
-                            In Google&apos;s ranking algorithm, Core Web Vitals (what PageSpeed measures) are a direct ranking factor. A site at 95/100 outranks a site at 65/100 with identical content. Not by one or two positions — by a full page in competitive categories.
+                            In Google&apos;s ranking algorithm, Core Web Vitals (what PageSpeed measures) are a direct ranking factor. A site at 95/100 outranks a site at 65/100 with identical content. Not by one or two positions. By a full page in competitive categories.
                         </BlogText>
 
                         <BlogText>
-                            And that&apos;s before accounting for the direct conversion impact. If two stores sell the same product at the same price, the one that loads in 0.8 seconds will outsell the one that loads in 3.5 seconds — every time.
+                            And that&apos;s before accounting for the direct conversion impact. If two stores sell the same product at the same price, the one that loads in 0.8 seconds will outsell the one that loads in 3.5 seconds: every time.
                         </BlogText>
 
                         <BlogHeader>What Does the Real Fix Look Like?</BlogHeader>
 
                         <BlogText>
-                            The fix that actually gets you to 90–100/100 is headless Shopify — keeping your Shopify backend (products, orders, inventory, payments) and replacing the Shopify storefront with a custom Next.js frontend.
+                            The fix that actually gets you to 90 to 100/100 is headless Shopify. Keeping your Shopify backend (products, orders, inventory, payments) and replacing the Shopify storefront with a custom Next.js frontend.
                         </BlogText>
 
                         <BlogText>
@@ -523,15 +523,15 @@ export default function ShopifyDawnThemeSlowPage() {
                         </BlogText>
 
                         <BlogList items={[
-                            "Pages pre-built at deploy time — no server rendering on each visit",
-                            "Served from Vercel&apos;s edge network (300+ locations) — instant global delivery",
-                            "Full control over every script — nothing loads unless you explicitly add it",
-                            "Custom image pipeline — serves WebP/AVIF at exact display dimensions",
-                            "App functionality rebuilt natively — no third-party scripts for reviews, cart, upsell",
+                            "Pages pre-built at deploy time, no server rendering on each visit",
+                            "Served from Vercel&apos;s edge network (300+ locations). Instant global delivery",
+                            "Full control over every script, nothing loads unless you explicitly add it",
+                            "Custom image pipeline. Serves WebP/AVIF at exact display dimensions",
+                            "App functionality rebuilt natively, no third-party scripts for reviews, cart, upsell",
                         ]} />
 
                         <BlogText>
-                            The result is a storefront that loads in under 1 second with a 90–100/100 PageSpeed score — while your Shopify backend handles all the e-commerce operations you already rely on.
+                            The result is a storefront that loads in under 1 second with a 90 to 100/100 PageSpeed score, while your Shopify backend handles all the e-commerce operations you already rely on.
                         </BlogText>
 
                         <BlogText>
@@ -560,7 +560,7 @@ export default function ShopifyDawnThemeSlowPage() {
                             "Mobile PageSpeed below 60/100 (significant conversion loss)",
                             "High-traffic store where every 0.1s matters at scale",
                             "Complex product configuration that Shopify&apos;s theme system can&apos;t handle cleanly",
-                            "Brand that needs precise design control — no theme limitations",
+                            "Brand that needs precise design control, no theme limitations",
                         ]} />
 
                         <BlogText>
@@ -568,13 +568,13 @@ export default function ShopifyDawnThemeSlowPage() {
                         </BlogText>
 
                         <BlogList items={[
-                            "Under $10K/month — the investment doesn&apos;t pay back fast enough yet",
+                            "Under $10K/month: the investment doesn&apos;t pay back fast enough yet",
                             "Simple product catalog with minimal app requirements",
                             "Speed isn&apos;t your primary conversion bottleneck",
                         ]} />
 
                         <BlogText>
-                            If you&apos;re in the middle — $10K–$20K/month with a PageSpeed score below 60 — the calculation is close. Run the numbers: multiply your monthly revenue by 10% (a conservative conversion improvement estimate). If that number is bigger than the build cost divided by 12, it pays for itself in the first year.
+                            If you&apos;re in the middle. $10K to $20K/month with a PageSpeed score below 60: the calculation is close. Run the numbers: multiply your monthly revenue by 10% (a conservative conversion improvement estimate). If that number is bigger than the build cost divided by 12, it pays for itself in the first year.
                         </BlogText>
 
                         <BlogText>
@@ -597,7 +597,7 @@ export default function ShopifyDawnThemeSlowPage() {
                             Every week your store runs at 45/100 PageSpeed is another week faster competitors are taking conversions that should be yours.
                         </p>
                         <p className="text-stone-600 mb-6">
-                            Book a free 30-minute audit. We screen-share, run your store live through PageSpeed and Core Web Vitals, identify every bottleneck, and tell you exactly what&apos;s recoverable — and what it&apos;s costing you. You leave with a written report. No pitch, no obligation.
+                            Book a free 30-minute audit. We screen-share, run your store live through PageSpeed and Core Web Vitals, identify every bottleneck, and tell you exactly what&apos;s recoverable, and what it&apos;s costing you. You leave with a written report. No pitch, no obligation.
                         </p>
                         <a
                             href="https://cal.com/pandagen/discovery"
@@ -613,11 +613,11 @@ export default function ShopifyDawnThemeSlowPage() {
                     <section className="mb-10">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>Dawn is not the problem</strong> — third-party apps, Liquid rendering, and Shopify's own platform scripts are what make your store slow, not the theme.</li>
-                            <li><strong>Every app you install adds 80-200KB of JavaScript</strong> — five typical apps can add 1-2 seconds to every page load, dropping your score from 75 to 40.</li>
-                            <li><strong>Theme-level fixes only gain 10-20 points</strong> — removing unused apps, compressing images, and deferring scripts help, but the ceiling on standard Shopify is 70-75/100.</li>
-                            <li><strong>A store at 45/100 is leaving $10K-$15K/month on the table</strong> — every 0.1-second improvement increases conversions by 8%, and the gap between 45 and 95 is enormous.</li>
-                            <li><strong>Headless Shopify is the only path to 90-100/100</strong> — keeping your Shopify backend while replacing the storefront with Next.js eliminates every speed bottleneck the platform imposes.</li>
+                            <li><strong>Dawn is not the problem</strong>: Third-party apps, Liquid rendering, and Shopify's own platform scripts are what make your store slow, not the theme.</li>
+                            <li><strong>Every app you install adds 80-200KB of JavaScript</strong>: Five typical apps can add 1-2 seconds to every page load, dropping your score from 75 to 40.</li>
+                            <li><strong>Theme-level fixes only gain 10-20 points</strong>: Removing unused apps, compressing images, and deferring scripts help, but the ceiling on standard Shopify is 70-75/100.</li>
+                            <li><strong>A store at 45/100 is leaving $10K-$15K/month on the table</strong>: Every 0.1-second improvement increases conversions by 8%, and the gap between 45 and 95 is enormous.</li>
+                            <li><strong>Headless Shopify is the only path to 90-100/100</strong>: Keeping your Shopify backend while replacing the storefront with Next.js eliminates every speed bottleneck the platform imposes.</li>
                         </ol>
                     </section>
 

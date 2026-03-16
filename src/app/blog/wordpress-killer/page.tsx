@@ -16,12 +16,12 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 
 export const metadata: Metadata = {
     title: "Why WordPress Is a Waste of Money in 2026 | PandaCodeGen",
-    description: "The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3–5×. Here's the real number.",
+    description: "The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3 to 5×. Here's the real number.",
     alternates: { canonical: "/blog/wordpress-killer" },
     keywords: ["wordpress cost 2026", "wordpress waste of money", "true cost of wordpress", "wordpress vs next.js cost", "wordpress alternative for business"],
     openGraph: {
         title: "Why WordPress Is a Waste of Money in 2026",
-        description: "The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3–5×.",
+        description: "The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3 to 5×.",
         type: "article",
         publishedTime: "2026-01-15",
         authors: ["Hassan"],
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Why WordPress Is a Waste of Money in 2026",
-        description: "The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3–5×.",
+        description: "The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3 to 5×.",
     },
 };
 
@@ -42,7 +42,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-killer#article",
             "headline": "Why WordPress Is a Waste of Money in 2026",
-            "description": "The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3–5×.",
+            "description": "The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3 to 5×.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-01-15T00:00:00-05:00",
             "dateModified": "2026-03-10T00:00:00-05:00",
@@ -79,23 +79,23 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "WP Engine Managed WordPress Hosting Pricing", "url": "https://wpengine.com/plans/" },
                 { "@type": "CreativeWork", "name": "Kinsta Managed WordPress Hosting Plans", "url": "https://kinsta.com/wordpress-hosting/pricing/" },
                 { "@type": "CreativeWork", "name": "Wordfence WordPress Security Plugin", "url": "https://www.wordfence.com/wordfence-signup/" },
-                { "@type": "CreativeWork", "name": "Vercel Pricing — Free to Enterprise", "url": "https://vercel.com/pricing" },
+                { "@type": "CreativeWork", "name": "Vercel Pricing. Free to Enterprise", "url": "https://vercel.com/pricing" },
                 { "@type": "CreativeWork", "name": "Google Core Web Vitals", "url": "https://web.dev/vitals/" },
-                { "@type": "CreativeWork", "name": "Think With Google — Speed Matters", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" }
+                { "@type": "CreativeWork", "name": "Think With Google. Speed Matters", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" }
             ]
         },
         {
             "@type": "HowTo",
             "@id": "https://www.pandacodegen.com/blog/wordpress-killer#howto",
             "name": "How to Calculate Your True WordPress Annual Cost",
-            "description": "A 4-step audit to find the real cost of running WordPress for your business — including the hidden expenses most owners never add up.",
+            "description": "A 4-step audit to find the real cost of running WordPress for your business, including the hidden expenses most owners never add up.",
             "totalTime": "PT1H",
             "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
             "step": [
                 { "@type": "HowToStep", "position": 1, "name": "Pull all WordPress-related invoices from the past 12 months", "text": "Search your email for invoices from your hosting provider (WP Engine, Kinsta, Bluehost, SiteGround), your plugin subscriptions (Yoast, WP Rocket, WooCommerce extensions, Elementor Pro, Gravity Forms), and your theme license renewals. Add them all up." },
-                { "@type": "HowToStep", "position": 2, "name": "Calculate your developer maintenance costs", "text": "Count how many hours you or a developer spent on WordPress maintenance in the past year: plugin updates, conflict fixes, crash recovery, security scans, database backups. Multiply by your developer's hourly rate or your own time value. For most businesses, this is $1,200–$4,800/year." },
-                { "@type": "HowToStep", "position": 3, "name": "Test your site speed and calculate traffic loss", "text": "Go to pagespeed.web.dev and run your homepage on Mobile. If your score is below 70, estimate the organic traffic you're losing vs a faster competitor. Google's research: sites scoring below 50 lose 20–30% of potential organic traffic vs sites scoring 90+. Multiply your monthly revenue by that percentage." },
-                { "@type": "HowToStep", "position": 4, "name": "Compare the total against custom code", "text": "Add your hosting + plugins + maintenance + estimated lost revenue. Compare that against the one-time cost of a custom Next.js site ($8,000–$15,000) plus $0–$240/year to host on Vercel. For most businesses doing over $150K/year, the custom site pays for itself within 18–24 months on direct costs alone." }
+                { "@type": "HowToStep", "position": 2, "name": "Calculate your developer maintenance costs", "text": "Count how many hours you or a developer spent on WordPress maintenance in the past year: plugin updates, conflict fixes, crash recovery, security scans, database backups. Multiply by your developer's hourly rate or your own time value. For most businesses, this is $1,200 to $4,800/year." },
+                { "@type": "HowToStep", "position": 3, "name": "Test your site speed and calculate traffic loss", "text": "Go to pagespeed.web.dev and run your homepage on Mobile. If your score is below 70, estimate the organic traffic you're losing vs a faster competitor. Google's research: sites scoring below 50 lose 20 to 30% of potential organic traffic vs sites scoring 90+. Multiply your monthly revenue by that percentage." },
+                { "@type": "HowToStep", "position": 4, "name": "Compare the total against custom code", "text": "Add your hosting + plugins + maintenance + estimated lost revenue. Compare that against the one-time cost of a custom Next.js site ($8,000 to $15,000) plus $0 to $240/year to host on Vercel. For most businesses doing over $150K/year, the custom site pays for itself within 18 to 24 months on direct costs alone." }
             ]
         },
         {
@@ -112,7 +112,7 @@ const articleSchema = {
             "@id": "https://www.pandacodegen.com/blog/wordpress-killer#webpage",
             "url": "https://www.pandacodegen.com/blog/wordpress-killer",
             "name": "Why WordPress Is a Waste of Money in 2026",
-            "description": "The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3–5×.",
+            "description": "The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3 to 5×.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-01-15T00:00:00-05:00",
@@ -129,7 +129,7 @@ const articleSchema = {
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95 to 100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
             "foundingDate": "2026"
         },
@@ -198,10 +198,10 @@ export default function WordPressKillerPage() {
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
                         <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
                         <BlogList items={[
-                            "The average WordPress business site costs $8,000–$15,000 over 3 years — not the $50/month most owners think.",
+                            "The average WordPress business site costs $8,000 to $15,000 over 3 years, not the $50/month most owners think.",
                             "Premium plugins, security tools, developer maintenance, and downtime are the hidden expenses nobody counts.",
-                            "Custom Next.js sites cost more upfront but pay for themselves within 18–24 months and save money every year after.",
-                            "The real cost isn't just money — it's the 20–30% organic traffic you lose to Google penalising your slow site."
+                            "Custom Next.js sites cost more upfront but pay for themselves within 18 to 24 months and save money every year after.",
+                            "The real cost isn't just money. It's the 20 to 30% organic traffic you lose to Google penalising your slow site."
                         ]} />
                     </div>
 
@@ -210,7 +210,7 @@ export default function WordPressKillerPage() {
                             A business owner came to us last year after paying $620/month for WordPress. Hosting, plugins, security monitoring, developer retainer. He thought he was running an efficient setup.
                         </BlogText>
                         <BlogText>
-                            We ran the numbers. Over three years, his WordPress site had cost him <BlogHighlight>$22,400 in direct costs</BlogHighlight> — and an estimated $85,000 in lost revenue from a PageSpeed score of 41/100.
+                            We ran the numbers. Over three years, his WordPress site had cost him <BlogHighlight>$22,400 in direct costs</BlogHighlight>, and an estimated $85,000 in lost revenue from a PageSpeed score of 41/100.
                         </BlogText>
                         <BlogText>
                             He had no idea. Most business owners don&apos;t.
@@ -221,15 +221,15 @@ export default function WordPressKillerPage() {
                             Here&apos;s the breakdown most WordPress tutorials skip completely:
                         </BlogText>
                         <BlogList items={[
-                            "Managed hosting (WP Engine, Kinsta): $300–$1,200/year",
-                            "Premium plugins (SEO, forms, security, backups, cache): $500–$2,000/year",
-                            "Developer maintenance (updates, conflict fixes, crash recovery): $1,200–$4,800/year",
-                            "Security tools (Wordfence Premium, Sucuri): $200–$600/year",
-                            "Theme licenses (Avada, Divi, Elementor Pro): $89–$299/year",
-                            "Total: $2,300–$8,900/year"
+                            "Managed hosting (WP Engine, Kinsta): $300 to $1,200/year",
+                            "Premium plugins (SEO, forms, security, backups, cache): $500 to $2,000/year",
+                            "Developer maintenance (updates, conflict fixes, crash recovery): $1,200 to $4,800/year",
+                            "Security tools (Wordfence Premium, Sucuri): $200 to $600/year",
+                            "Theme licenses (Avada, Divi, Elementor Pro): $89 to $299/year",
+                            "Total: $2,300 to $8,900/year"
                         ]} />
                         <BlogText>
-                            Compare that to a custom Next.js site: <BlogHighlight>$0–$240/year to host on Vercel.</BlogHighlight> No plugin licenses. No theme licenses. No security subscriptions.
+                            Compare that to a custom Next.js site: <BlogHighlight>$0 to $240/year to host on Vercel.</BlogHighlight> No plugin licenses. No theme licenses. No security subscriptions.
                         </BlogText>
 
                         <BlogHeader>Why Are WordPress Plugins the Biggest Hidden Cost?</BlogHeader>
@@ -237,11 +237,11 @@ export default function WordPressKillerPage() {
                             The average WordPress business site runs 22 active plugins. Here&apos;s what nobody tells you about each one:
                         </BlogText>
                         <BlogList items={[
-                            "Every plugin adds 2–15 HTTP requests per page load",
+                            "Every plugin adds 2 to 15 HTTP requests per page load",
                             "Every plugin is maintained by a different team with different update schedules",
                             "Plugin conflicts cause crashes that require a developer to fix",
                             "Security vulnerabilities in plugins cause 98% of WordPress hacks",
-                            "Each premium plugin renews annually — usually at a higher price than year one"
+                            "Each premium plugin renews annually, usually at a higher price than year one"
                         ]} />
                         <BlogQuote>
                             One client had a WooCommerce store running 34 plugins. When WooCommerce updated, 4 plugins broke simultaneously. The site was down for 6 hours. Lost revenue: $4,200. Emergency fix: $800. Total damage from a single update: $5,000.
@@ -249,19 +249,19 @@ export default function WordPressKillerPage() {
 
                         <BlogHeader>What Is the True 3-Year Cost of a WordPress Business Site?</BlogHeader>
                         <BlogList items={[
-                            "Year 1: $3,000–$6,000 (build + setup + first year running costs)",
-                            "Year 2: $2,300–$5,500 (recurring costs + 1–2 developer incidents)",
-                            "Year 3: $2,800–$6,800 (recurring + theme/plugin major upgrades)",
-                            "3-Year Total: $8,100–$18,300"
+                            "Year 1: $3,000 to $6,000 (build + setup + first year running costs)",
+                            "Year 2: $2,300 to $5,500 (recurring costs + 1 to 2 developer incidents)",
+                            "Year 3: $2,800 to $6,800 (recurring + theme/plugin major upgrades)",
+                            "3-Year Total: $8,100 to $18,300"
                         ]} />
                         <BlogText>
-                            Meanwhile, a custom Next.js site built for $15,000–$25,000 costs $0–$500/year to run after launch. By Year 2 the gap closes. <a href="/blog/wordpress-vs-custom-code-real-cost-3-years" className="text-cognac hover:underline">By Year 3, the custom site is cheaper</a> — every year after.
+                            Meanwhile, a custom Next.js site built for $15,000 to $25,000 costs $0 to $500/year to run after launch. By Year 2 the gap closes. <a href="/blog/wordpress-vs-custom-code-real-cost-3-years" className="text-cognac hover:underline">By Year 3, the custom site is cheaper</a>. Every year after.
                         </BlogText>
 
                         {/* Mid-Article CTA */}
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">What is your WordPress site actually costing you?</p>
-                            <p className="text-stone-600 mb-4 text-sm">Free cost audit — direct costs plus lost revenue from slow speed, calculated for your specific site.</p>
+                            <p className="text-stone-600 mb-4 text-sm">Free cost audit, direct costs plus lost revenue from slow speed, calculated for your specific site.</p>
                             <a href="https://cal.com/pandagen/discovery" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                 Get Free WordPress Cost Audit <ArrowRight className="w-4 h-4" />
                             </a>
@@ -272,18 +272,18 @@ export default function WordPressKillerPage() {
                             Direct costs are only half the story. Here&apos;s what slow WordPress costs in lost business:
                         </BlogText>
                         <BlogList items={[
-                            "WordPress average PageSpeed: 38–55/100 Mobile",
-                            "Traffic lost from slow speed vs fast competitors: 20–30%",
+                            "WordPress average PageSpeed: 38 to 55/100 Mobile",
+                            "Traffic lost from slow speed vs fast competitors: 20 to 30%",
                             "Conversion rate impact: 7% drop per additional second of load time",
-                            "For a business doing $500K/year: $75K–$150K in lost annual revenue from speed alone"
+                            "For a business doing $500K/year: $75K to $150K in lost annual revenue from speed alone"
                         ]} />
                         <BlogText>
-                            Google made Core Web Vitals a direct ranking factor in 2021. Every month your slow WordPress site stays live, faster competitors are taking your rankings — and keeping them.
+                            Google made Core Web Vitals a direct ranking factor in 2021. Every month your slow WordPress site stays live, faster competitors are taking your rankings, and keeping them.
                         </BlogText>
 
                         <BlogHeader>Is WordPress Still Worth It for Anything in 2026?</BlogHeader>
                         <BlogText>
-                            Yes — in specific situations:
+                            Yes. In specific situations:
                         </BlogText>
                         <BlogList items={[
                             "Hobby blogs with zero revenue at stake",
@@ -300,14 +300,14 @@ export default function WordPressKillerPage() {
                             <a href="/services/wordpress-migration" className="text-cognac hover:underline">Next.js with a headless CMS</a> (Sanity or Contentful) is the most cost-effective alternative for business websites in 2026:
                         </BlogText>
                         <BlogList items={[
-                            "Load time: 0.8–1.2 seconds (vs 3.5–4.5 for WordPress)",
-                            "PageSpeed: 95–100/100 Mobile (vs 38–55 for WordPress)",
-                            "Hosting: $0–$240/year on Vercel (vs $300–$1,200 for WordPress)",
+                            "Load time: 0.8 to 1.2 seconds (vs 3.5 to 4.5 for WordPress)",
+                            "PageSpeed: 95 to 100/100 Mobile (vs 38 to 55 for WordPress)",
+                            "Hosting: $0 to $240/year on Vercel (vs $300 to $1,200 for WordPress)",
                             "Hacks: Zero plugin vulnerabilities (vs 98% of hacks through WordPress plugins)",
-                            "Content editing: Cleaner CMS dashboard — simpler than WordPress admin"
+                            "Content editing: Cleaner CMS dashboard, simpler than WordPress admin"
                         ]} />
                         <BlogText>
-                            The migration pays for itself. Every year after, you save on hosting, plugins, and maintenance — and <a href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">gain back the traffic you were losing to faster competitors</a>.
+                            The migration pays for itself. Every year after, you save on hosting, plugins, and maintenance, and <a href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">gain back the traffic you were losing to faster competitors</a>.
                         </BlogText>
                     </div>
 
@@ -315,7 +315,7 @@ export default function WordPressKillerPage() {
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">See the Real Cost of Your WordPress Site</h3>
                         <p className="text-stone-600 mb-6">
-                            Free audit: We calculate your direct WordPress costs plus revenue you&apos;re losing from slow speed — no obligation.
+                            Free audit: We calculate your direct WordPress costs plus revenue you&apos;re losing from slow speed, no obligation.
                         </p>
                         <a href="https://cal.com/pandagen/discovery" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
                             Book Free Cost Audit <ArrowRight className="w-5 h-5" />
@@ -326,10 +326,10 @@ export default function WordPressKillerPage() {
                     <section className="mb-10">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>WordPress costs 3-5x more than most owners think</strong> — when you add hosting, plugins, maintenance, security tools, and developer emergencies, the real annual cost is $2,300-$8,900.</li>
-                            <li><strong>Plugin conflicts and security incidents erase years of savings</strong> — a single WooCommerce update breaking 4 plugins cost one client $5,000 in downtime and emergency fixes.</li>
-                            <li><strong>The biggest hidden cost is lost revenue from slow speed</strong> — a PageSpeed score of 41/100 means you are losing 20-30% of organic traffic to faster competitors every single month.</li>
-                            <li><strong>A custom Next.js site pays for itself by Year 2-3</strong> — the one-time build cost is higher, but $0/year hosting and zero maintenance means the total 3-year cost is lower than WordPress.</li>
+                            <li><strong>WordPress costs 3-5x more than most owners think</strong>, when you add hosting, plugins, maintenance, security tools, and developer emergencies, the real annual cost is $2,300-$8,900.</li>
+                            <li><strong>Plugin conflicts and security incidents erase years of savings</strong>: A single WooCommerce update breaking 4 plugins cost one client $5,000 in downtime and emergency fixes.</li>
+                            <li><strong>The biggest hidden cost is lost revenue from slow speed</strong>: A PageSpeed score of 41/100 means you are losing 20-30% of organic traffic to faster competitors every single month.</li>
+                            <li><strong>A custom Next.js site pays for itself by Year 2-3</strong>: The one-time build cost is higher, but $0/year hosting and zero maintenance means the total 3-year cost is lower than WordPress.</li>
                         </ol>
                     </section>
 

@@ -189,7 +189,7 @@ export default function AuditWidget() {
                     <MetricCard label="SEO Score" value={auditData.seoScore} suffix="/100" isScore delay={0.3} />
                   </div>
 
-                  {/* 11-Point Inspection Teaser — gated behind email */}
+                  {/* 11-Point Inspection Teaser, gated behind email */}
                   {auditData.deepChecks && (
                     <div className="border border-stone-200 rounded-xl overflow-hidden relative">
                       <div className="px-4 py-2.5 bg-stone-50 border-b border-stone-100 flex items-center justify-between">
@@ -316,7 +316,7 @@ export default function AuditWidget() {
                     <MetricCard label="Page Size" value={auditData.pageSize} isText delay={0.2} />
                     <MetricCard label="SEO Score" value={auditData.seoScore} suffix="/100" isScore delay={0.3} />
                   </div>
-                  {/* Mobile Deep Checks — gated */}
+                  {/* Mobile Deep Checks, gated */}
                   {auditData.deepChecks && (
                     <div className="border border-stone-200 rounded-xl overflow-hidden relative">
                       <div className="px-3 py-2 bg-stone-50 border-b border-stone-100 flex items-center justify-between">

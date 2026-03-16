@@ -32,6 +32,22 @@ export async function POST(request: NextRequest) {
   try {
     const formData = await request.formData();
 
+    // Anti-spam: honeypot field check
+    const honeypot = formData.get('website_url_confirm') as string;
+    if (honeypot) {
+      // Bot filled the hidden field - return fake success
+      return NextResponse.json({ success: true, message: 'Quote request sent successfully' }, { status: 200 });
+    }
+
+    // Anti-spam: time-based check (reject if submitted in under 3 seconds)
+    const formTimestamp = formData.get('_t') as string;
+    if (formTimestamp) {
+      const elapsed = Date.now() - Number(formTimestamp);
+      if (elapsed < 3000) {
+        return NextResponse.json({ success: true, message: 'Quote request sent successfully' }, { status: 200 });
+      }
+    }
+
     const name = formData.get('name') as string;
     const email = formData.get('email') as string;
     const phone = formData.get('phone') as string;

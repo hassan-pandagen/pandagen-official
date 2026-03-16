@@ -79,8 +79,8 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Google Core Web Vitals", "url": "https://web.dev/vitals/" },
                 { "@type": "CreativeWork", "name": "Chrome UX Report", "url": "https://developer.chrome.com/docs/crux/" },
                 { "@type": "CreativeWork", "name": "Google PageSpeed Insights", "url": "https://pagespeed.web.dev/" },
-                { "@type": "CreativeWork", "name": "Google Search Console — Page Experience", "url": "https://support.google.com/webmasters/answer/10218333" },
-                { "@type": "CreativeWork", "name": "Think With Google — Speed Benchmarks", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
+                { "@type": "CreativeWork", "name": "Google Search Console. Page Experience", "url": "https://support.google.com/webmasters/answer/10218333" },
+                { "@type": "CreativeWork", "name": "Think With Google. Speed Benchmarks", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
                 { "@type": "CreativeWork", "name": "Next.js Performance Optimisation", "url": "https://nextjs.org/docs/app/building-your-application/optimizing" }
             ]
         },
@@ -88,15 +88,15 @@ const articleSchema = {
             "@type": "HowTo",
             "@id": "https://www.pandacodegen.com/blog/elementor-kills-seo#howto",
             "name": "How to Fix Elementor PageSpeed Issues",
-            "description": "Practical steps to reduce Elementor's performance impact on your WordPress site. These optimizations can improve your score by 10–15 points, though the architectural ceiling for Elementor sites remains around 55–65/100 on mobile.",
+            "description": "Practical steps to reduce Elementor's performance impact on your WordPress site. These optimizations can improve your score by 10 to 15 points, though the architectural ceiling for Elementor sites remains around 55 to 65/100 on mobile.",
             "totalTime": "PT3H",
             "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
             "step": [
                 { "@type": "HowToStep", "position": 1, "name": "Run a baseline PageSpeed test", "text": "Go to pagespeed.web.dev and test your homepage and a key page on Mobile. Note your LCP, CLS, and INP scores alongside the overall score. Screenshot the results so you can compare before and after your changes." },
-                { "@type": "HowToStep", "position": 2, "name": "Enable Elementor's improved CSS loading", "text": "In Elementor → Settings → Advanced, enable 'Improved CSS Loading' and 'Improved Asset Loading'. These features load only the CSS and JavaScript needed for each specific page rather than Elementor's full framework on every page. This typically saves 200–400KB of CSS per page load." },
+                { "@type": "HowToStep", "position": 2, "name": "Enable Elementor's improved CSS loading", "text": "In Elementor → Settings → Advanced, enable 'Improved CSS Loading' and 'Improved Asset Loading'. These features load only the CSS and JavaScript needed for each specific page rather than Elementor's full framework on every page. This typically saves 200 to 400KB of CSS per page load." },
                 { "@type": "HowToStep", "position": 3, "name": "Optimise all images before uploading", "text": "Export images at their actual display dimensions and compress to under 150KB using Squoosh. Elementor displays images at your set dimensions but serves whatever file size you uploaded. A hero image that should be 80KB on mobile often loads at 600KB if the original was not compressed." },
-                { "@type": "HowToStep", "position": 4, "name": "Disable unused Elementor widgets globally", "text": "In Elementor → Settings → Elements, disable every widget you don't actively use on the live site. Each widget registers its CSS and JavaScript globally, even on pages where the widget doesn't appear. Disabling unused widgets reduces base page weight by 50–150KB." },
-                { "@type": "HowToStep", "position": 5, "name": "Evaluate migration if you're stuck below 65", "text": "After applying all optimizations, if your mobile score remains below 65/100, Elementor's DOM structure (2,000–4,000 nodes per page vs 400–800 for clean code) is the bottleneck — not your settings. Migrating to a custom Next.js site eliminates the framework overhead entirely and consistently scores 95–100/100." }
+                { "@type": "HowToStep", "position": 4, "name": "Disable unused Elementor widgets globally", "text": "In Elementor → Settings → Elements, disable every widget you don't actively use on the live site. Each widget registers its CSS and JavaScript globally, even on pages where the widget doesn't appear. Disabling unused widgets reduces base page weight by 50 to 150KB." },
+                { "@type": "HowToStep", "position": 5, "name": "Evaluate migration if you're stuck below 65", "text": "After applying all optimizations, if your mobile score remains below 65/100, Elementor's DOM structure (2,000 to 4,000 nodes per page vs 400 to 800 for clean code) is the bottleneck, not your settings. Migrating to a custom Next.js site eliminates the framework overhead entirely and consistently scores 95 to 100/100." }
             ]
         },
         {
@@ -130,7 +130,7 @@ const articleSchema = {
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95 to 100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
             "foundingDate": "2026"
         },
@@ -199,22 +199,22 @@ export default function ElementorKillsSEOPage() {
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
                         <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
                         <BlogList items={[
-                            "500 Elementor sites audited: average Mobile PageSpeed score of 38/100 — deep in Google's red zone.",
-                            "Elementor adds 300–500KB of CSS/JS to every page and generates 3–5× more DOM nodes than clean code.",
-                            "The performance ceiling for Elementor is around 50–60/100 even with aggressive optimization — never enough.",
-                            "Business owners using Elementor are losing 20–30% of organic traffic to competitors on faster stacks."
+                            "500 Elementor sites audited: average Mobile PageSpeed score of 38/100, deep in Google's red zone.",
+                            "Elementor adds 300 to 500KB of CSS/JS to every page and generates 3 to 5× more DOM nodes than clean code.",
+                            "The performance ceiling for Elementor is around 50 to 60/100 even with aggressive optimization: never enough.",
+                            "Business owners using Elementor are losing 20 to 30% of organic traffic to competitors on faster stacks."
                         ]} />
                     </div>
 
                     <div className="space-y-8">
                         <BlogText>
-                            We built a custom audit tool and ran it against 500 WordPress sites using Elementor. Every site was a real business — service companies, e-commerce stores, SaaS landing pages.
+                            We built a custom audit tool and ran it against 500 WordPress sites using Elementor. Every site was a real business: service companies, e-commerce stores, SaaS landing pages.
                         </BlogText>
                         <BlogText>
                             The average Mobile PageSpeed score: <BlogHighlight>38/100.</BlogHighlight>
                         </BlogText>
                         <BlogText>
-                            That&apos;s not just slow. That&apos;s losing 20–30% of organic traffic every single month to faster competitors who will never give it back.
+                            That&apos;s not just slow. That&apos;s losing 20 to 30% of organic traffic every single month to faster competitors who will never give it back.
                         </BlogText>
 
                         <BlogHeader>Why Does Elementor Score So Badly on PageSpeed?</BlogHeader>
@@ -222,10 +222,10 @@ export default function ElementorKillsSEOPage() {
                             Elementor&apos;s performance problems aren&apos;t bugs. They&apos;re architectural decisions baked into how the builder works:
                         </BlogText>
                         <BlogList items={[
-                            "Elementor loads its full CSS framework (300–500KB) on every page, regardless of which widgets you use",
+                            "Elementor loads its full CSS framework (300 to 500KB) on every page, regardless of which widgets you use",
                             "Every widget adds its own CSS and JavaScript to the global page load",
-                            "Elementor generates 3–5× more DOM nodes than clean HTML for the same visual result",
-                            "The editor injects inline styles everywhere — impossible to tree-shake or optimize",
+                            "Elementor generates 3 to 5× more DOM nodes than clean HTML for the same visual result",
+                            "The editor injects inline styles everywhere, impossible to tree-shake or optimize",
                             "Multiple conflicting CSS specificity layers slow render time on every single page"
                         ]} />
                         <BlogQuote>
@@ -236,7 +236,7 @@ export default function ElementorKillsSEOPage() {
                         <BlogList items={[
                             "Average Mobile PageSpeed: 38/100",
                             "Sites scoring below 50 (red zone): 71% of all sites audited",
-                            "Sites scoring above 70: only 4% — and those had disabled most Elementor features",
+                            "Sites scoring above 70: only 4%, and those had disabled most Elementor features",
                             "Average DOM element count: 3,200 (Google recommends under 1,500)",
                             "Average page weight: 4.2MB (Google recommends under 1.6MB for mobile)",
                             "Average LCP (Largest Contentful Paint): 5.8 seconds (Google threshold: under 2.5s)"
@@ -250,10 +250,10 @@ export default function ElementorKillsSEOPage() {
                             Google made Core Web Vitals a ranking factor in 2021. Here&apos;s the real-world traffic impact:
                         </BlogText>
                         <BlogList items={[
-                            "You rank 20–30 positions lower than competitors with identical content but faster sites",
+                            "You rank 20 to 30 positions lower than competitors with identical content but faster sites",
                             "53% of mobile users leave if a page takes more than 3 seconds to load",
                             "Every additional second of load time reduces conversions by 7%",
-                            "A business with 10,000 monthly organic visitors: roughly 2,000–3,000 leave before the page loads"
+                            "A business with 10,000 monthly organic visitors: roughly 2,000 to 3,000 leave before the page loads"
                         ]} />
 
                         {/* Mid-Article CTA */}
@@ -267,13 +267,13 @@ export default function ElementorKillsSEOPage() {
 
                         <BlogHeader>Can You Fix Elementor&apos;s Performance Problems?</BlogHeader>
                         <BlogText>
-                            You can reduce the damage — but you cannot solve it:
+                            You can reduce the damage, but you cannot solve it:
                         </BlogText>
                         <BlogList items={[
                             "Caching plugins (WP Rocket, W3 Total Cache): Marginally helpful, won't overcome architecture bloat",
                             "Image optimization: Helps with LCP but doesn't fix DOM bloat or render-blocking CSS",
                             "Disabling unused widgets: Reduces load slightly but Elementor still loads its core framework",
-                            "Best realistic outcome with Elementor + every optimization: 50–60/100 Mobile",
+                            "Best realistic outcome with Elementor + every optimization: 50 to 60/100 Mobile",
                             "What you actually need for competitive rankings: 90+ Mobile"
                         ]} />
                         <BlogText>
@@ -285,13 +285,13 @@ export default function ElementorKillsSEOPage() {
                             If Google traffic drives your business, here are your options ranked by performance:
                         </BlogText>
                         <BlogList items={[
-                            "Next.js with Tailwind CSS: 95–100/100 PageSpeed, zero builder bloat, full design control — the gold standard",
-                            "Webflow: Better than Elementor (60–75/100 typical), still JavaScript-heavy but manageable",
-                            "Clean WordPress theme (no builder): Can reach 70–80 without Elementor's overhead",
-                            "Elementor with all optimizations: Ceiling of 50–60/100 — not competitive for modern SEO"
+                            "Next.js with Tailwind CSS: 95 to 100/100 PageSpeed, zero builder bloat, full design control: the gold standard",
+                            "Webflow: Better than Elementor (60 to 75/100 typical), still JavaScript-heavy but manageable",
+                            "Clean WordPress theme (no builder): Can reach 70 to 80 without Elementor's overhead",
+                            "Elementor with all optimizations: Ceiling of 50 to 60/100, not competitive for modern SEO"
                         ]} />
                         <BlogText>
-                            Businesses we&apos;ve migrated off Elementor see <a href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">rankings recover within 30–60 days</a> and typically gain 2–3× organic traffic within 90 days of <a href="/services/wordpress-migration" className="text-cognac hover:underline">launching on Next.js</a>.
+                            Businesses we&apos;ve migrated off Elementor see <a href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">rankings recover within 30 to 60 days</a> and typically gain 2 to 3× organic traffic within 90 days of <a href="/services/wordpress-migration" className="text-cognac hover:underline">launching on Next.js</a>.
                         </BlogText>
                     </div>
 
@@ -299,7 +299,7 @@ export default function ElementorKillsSEOPage() {
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Find Out What Elementor Is Costing You</h3>
                         <p className="text-stone-600 mb-6">
-                            Free SEO audit — we&apos;ll score your current site and show you the exact traffic and revenue impact of your page builder.
+                            Free SEO audit. We&apos;ll score your current site and show you the exact traffic and revenue impact of your page builder.
                         </p>
                         <a href="https://cal.com/pandagen/discovery" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
                             Book Free SEO Audit <ArrowRight className="w-5 h-5" />
@@ -309,10 +309,10 @@ export default function ElementorKillsSEOPage() {
                     <section className="mb-10">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>Elementor&apos;s bloat is architectural, not fixable</strong> — the average Elementor site scores 38/100 on mobile because the drag-and-drop framework loads hundreds of kilobytes of unused code on every page.</li>
-                            <li><strong>71% of Elementor sites are in Google&apos;s red zone</strong> — our 500-site audit found that most Elementor sites fail Core Web Vitals, costing them 20-30% of organic traffic.</li>
-                            <li><strong>Optimization has a ceiling of 50-60/100</strong> — caching plugins and image compression help, but you cannot optimize past Elementor&apos;s built-in DOM bloat and render-blocking CSS.</li>
-                            <li><strong>Migrating to Next.js recovers rankings in 30-60 days</strong> — businesses that switch from Elementor to custom coded sites consistently score 95-100/100 and gain 2-3x organic traffic within 90 days.</li>
+                            <li><strong>Elementor&apos;s bloat is architectural, not fixable</strong>: The average Elementor site scores 38/100 on mobile because the drag-and-drop framework loads hundreds of kilobytes of unused code on every page.</li>
+                            <li><strong>71% of Elementor sites are in Google&apos;s red zone</strong>: Our 500-site audit found that most Elementor sites fail Core Web Vitals, costing them 20-30% of organic traffic.</li>
+                            <li><strong>Optimization has a ceiling of 50-60/100</strong>: Caching plugins and image compression help, but you cannot optimize past Elementor&apos;s built-in DOM bloat and render-blocking CSS.</li>
+                            <li><strong>Migrating to Next.js recovers rankings in 30-60 days</strong>: Businesses that switch from Elementor to custom coded sites consistently score 95-100/100 and gain 2-3x organic traffic within 90 days.</li>
                         </ol>
                     </section>
 

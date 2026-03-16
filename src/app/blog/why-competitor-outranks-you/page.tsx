@@ -16,7 +16,7 @@ const SEORankingAnimation = dynamic(() => import("@/components/blog/SEORankingAn
 
 export const metadata: Metadata = {
     title: "Why Your Competitor Outranks You on Google (And Pays Less)",
-    description: "Your competitor gets 3× your traffic with a faster coded site. Google, ChatGPT, and Bing all prefer fast sites. Here's the exact reason why — and the fix.",
+    description: "Your competitor gets 3× your traffic with a faster coded site. Google, ChatGPT, and Bing all prefer fast sites. Here's the exact reason why, and the fix.",
     alternates: {
         canonical: '/blog/why-competitor-outranks-you',
     },
@@ -120,7 +120,7 @@ const articleSchema = {
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95 to 100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
             "foundingDate": "2026"
         },
@@ -274,7 +274,7 @@ export default function CompetitorRankingsPage() {
                         <BlogHeader>How Does Your WordPress Site Compare to a Coded Competitor Over 12 Months?</BlogHeader>
 
                         <BlogText>
-                            Let's compare what happens over 12 months. Same product, same keywords, same content — only the website technology is different.
+                            Let's compare what happens over 12 months. Same product, same keywords, same content, only the website technology is different.
                         </BlogText>
 
                         <div className="my-12 border border-stone-200 rounded-2xl overflow-hidden shadow-2xl">
@@ -567,11 +567,11 @@ export default function CompetitorRankingsPage() {
                     <section className="mb-10">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>A 2.6-second speed difference costs you 3x the traffic</strong> — Google ranks the faster site higher when content is similar, putting your competitor on page 1 and you on page 2.</li>
-                            <li><strong>WordPress optimization has a hard ceiling</strong> — the best-optimized WordPress site loads in 2.0-2.5 seconds, while a basic Next.js site loads in 0.8-1.2 seconds with zero optimization.</li>
-                            <li><strong>Coded websites cost less to run</strong> — Next.js hosting costs $0-$20/month on Vercel versus $100-$400/month for managed WordPress hosting, saving you $960-$4,560 per year.</li>
-                            <li><strong>Staying slow costs $225K+ per year in lost revenue</strong> — the combination of lower rankings, higher bounce rates, and fewer conversions compounds into six figures of missed opportunity annually.</li>
-                            <li><strong>Migration pays for itself in 2-6 months</strong> — the one-time cost of switching to a coded site is recovered through hosting savings and increased traffic within the first half-year.</li>
+                            <li><strong>A 2.6-second speed difference costs you 3x the traffic</strong>. Google ranks the faster site higher when content is similar, putting your competitor on page 1 and you on page 2.</li>
+                            <li><strong>WordPress optimization has a hard ceiling</strong>: The best-optimized WordPress site loads in 2.0-2.5 seconds, while a basic Next.js site loads in 0.8-1.2 seconds with zero optimization.</li>
+                            <li><strong>Coded websites cost less to run</strong>. Next.js hosting costs $0-$20/month on Vercel versus $100-$400/month for managed WordPress hosting, saving you $960-$4,560 per year.</li>
+                            <li><strong>Staying slow costs $225K+ per year in lost revenue</strong>: The combination of lower rankings, higher bounce rates, and fewer conversions compounds into six figures of missed opportunity annually.</li>
+                            <li><strong>Migration pays for itself in 2-6 months</strong>: The one-time cost of switching to a coded site is recovered through hosting savings and increased traffic within the first half-year.</li>
                         </ol>
                     </section>
 

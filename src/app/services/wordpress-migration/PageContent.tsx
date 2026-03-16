@@ -122,7 +122,7 @@ export default function PageContent() {
         </div>
       </section>
 
-      {/* 4. PAIN POINTS — Dark Navy */}
+      {/* 4. PAIN POINTS, Dark Navy */}
       <section className="py-12 md:py-24 px-6 bg-[#0F172A]">
         <div className="container mx-auto max-w-5xl">
 
@@ -141,11 +141,11 @@ export default function PageContent() {
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { icon: DollarSign, title: "Your Ad Spend Is Being Wasted", detail: "Google penalizes slow landing pages with lower Quality Scores. You pay 30–50% more per click than a competitor with a faster site, and those visitors convert at half the rate. Every slow load is direct revenue loss." },
+              { icon: DollarSign, title: "Your Ad Spend Is Being Wasted", detail: "Google penalizes slow landing pages with lower Quality Scores. You pay 30 to 50% more per click than a competitor with a faster site, and those visitors convert at half the rate. Every slow load is direct revenue loss." },
               { icon: XCircle, title: "One Update Crashes Your Revenue", detail: "WordPress sites run 20-30 plugins on average. A single bad update can take your site offline during a campaign launch, a sale, or Black Friday. Every minute of downtime is orders you'll never recover." },
               { icon: AlertTriangle, title: "AI Search Sends Buyers to Competitors", detail: "ChatGPT, Perplexity, and Google's AI Overviews now answer 'which brand should I buy' directly. They only cite fast, clean-coded sites. WordPress page builder bloat makes you invisible to AI-driven traffic." },
               { icon: Lock, title: "A Single Hack Can End Your Business", detail: "WordPress is the #1 target for automated attacks. A breach means days offline, legal liability, potential GDPR fines, and customers who never return. A custom static site has no database at all. Nothing to inject." },
-              { icon: TrendingUp, title: "You're Bleeding $3,600–$9,600/Year", detail: "Managed hosting, security plugins, premium theme licenses, maintenance retainers. It adds up silently. That's real margin leaving your business every single month with nothing to show for it." },
+              { icon: TrendingUp, title: "You're Bleeding $3,600 to $9,600/Year", detail: "Managed hosting, security plugins, premium theme licenses, maintenance retainers. It adds up silently. That's real margin leaving your business every single month with nothing to show for it." },
               { icon: Code2, title: "Trapped: Can't Scale, Can't Sell", detail: "Your content lives inside a theme. Your traffic depends on plugins. Try to move platforms and you lose rankings, content, and data. Investors and acquirers discount WordPress-dependent businesses heavily." },
             ].map((item, i) => (
               <motion.div
@@ -182,7 +182,7 @@ export default function PageContent() {
             {[
               { step: "01", title: "Full Site Audit", desc: "We analyze your WordPress site top to bottom: speed, security, plugins, SEO, and database health. You get a detailed report showing exactly what's costing you money.", icon: FileSearch, duration: "Week 1" },
               { step: "02", title: "Data Export & Cleaning", desc: "We extract every page, post, image, and metadata from your WordPress database, then clean it. Plugin bloat removed. Broken links fixed. Images optimized.", icon: Database, duration: "Week 2" },
-              { step: "03", title: "Custom Website Build", desc: "Your new site is built in Next.js with SSR, automatic image optimization, and a content editor. Every page loads in under 1 second.", icon: Wrench, duration: "Weeks 3–5" },
+              { step: "03", title: "Custom Website Build", desc: "Your new site is built in Next.js with SSR, automatic image optimization, and a content editor. Every page loads in under 1 second.", icon: Wrench, duration: "Weeks 3 to 5" },
               { step: "04", title: "Migration & Launch", desc: "Every old URL maps to the new site with 301 redirects. Zero rankings lost. Zero downtime. We launch, monitor, and hand you the keys.", icon: Rocket, duration: "Week 6" },
             ].map((item, i) => (
               <motion.div

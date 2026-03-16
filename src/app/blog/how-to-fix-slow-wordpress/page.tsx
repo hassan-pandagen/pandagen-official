@@ -16,7 +16,7 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 
 export const metadata: Metadata = {
     title: { absolute: "How to Fix a Slow WordPress Site: 8 Ways That Work | PandaCodeGen" },
-    description: "WordPress loads in 4s. Your competitor: 0.9s. 8 speed methods ranked by impact — and the hard truth about WordPress's performance ceiling.",
+    description: "WordPress loads in 4s. Your competitor: 0.9s. 8 speed methods ranked by impact, and the hard truth about WordPress's performance ceiling.",
     alternates: {
         canonical: '/blog/how-to-fix-slow-wordpress',
     },
@@ -82,7 +82,7 @@ const articleSchema = {
             },
             "citation": [
                 { "@type": "CreativeWork", "name": "WordPress Performance Optimization Guide", "url": "https://wordpress.org/documentation/article/optimization/" },
-                { "@type": "CreativeWork", "name": "Core Web Vitals — Google Web Dev", "url": "https://web.dev/vitals/" },
+                { "@type": "CreativeWork", "name": "Core Web Vitals. Google Web Dev", "url": "https://web.dev/vitals/" },
                 { "@type": "CreativeWork", "name": "Google PageSpeed & Performance", "url": "https://developers.google.com/speed" },
                 { "@type": "CreativeWork", "name": "Cloudflare: How to Speed Up a Website", "url": "https://www.cloudflare.com/learning/performance/speed-up-a-website/" },
                 { "@type": "CreativeWork", "name": "Google Page Experience Guide", "url": "https://developers.google.com/search/docs/appearance/page-experience" },
@@ -137,7 +137,7 @@ const articleSchema = {
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95 to 100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
             "foundingDate": "2026"
         },
@@ -571,7 +571,7 @@ export default function FixSlowWordPressPage() {
                                         Even if you implement every optimization in this guide perfectly, <BlogHighlight>WordPress maxes out at 2-2.5 seconds load time.</BlogHighlight> Meanwhile, sites built with modern platforms (Next.js) load in 0.8-1 second with zero optimization effort.
                                     </BlogText>
                                     <BlogText>
-                                        <strong>If your competitors are using modern tech, you're already behind.</strong> This guide helped you get the most out of WordPress — but it also proves why <a href="/blog/wordpress-killer" className="text-cognac hover:underline">migration is the only path to truly competitive speed</a>.
+                                        <strong>If your competitors are using modern tech, you're already behind.</strong> This guide helped you get the most out of WordPress, but it also proves why <a href="/blog/wordpress-killer" className="text-cognac hover:underline">migration is the only path to truly competitive speed</a>.
                                     </BlogText>
                                 </div>
                             </div>
@@ -766,11 +766,11 @@ export default function FixSlowWordPressPage() {
                     <section className="mb-10">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>Removing unused plugins has the highest immediate impact</strong> — each plugin adds 2-15 HTTP requests, and cutting half your plugins can save 0.5-1.5 seconds of load time.</li>
-                            <li><strong>Image optimisation alone can gain 10-20 PageSpeed points</strong> — most WordPress sites load full-resolution images on mobile when a compressed WebP at the right size would be 80% smaller.</li>
-                            <li><strong>WordPress has a hard speed ceiling of 2-2.5 seconds</strong> — even with all 8 optimisations applied perfectly, the PHP architecture prevents under 1 second load times.</li>
-                            <li><strong>Page builders are the single biggest speed killer</strong> — Elementor, Divi, and WPBakery generate 3x more code than needed and add 1-2 seconds to every page load.</li>
-                            <li><strong>If you are going to rebuild anyway, rebuild on Next.js</strong> — the same effort that gets WordPress to 2 seconds gets Next.js to 0.8 seconds with 95-100/100 PageSpeed.</li>
+                            <li><strong>Removing unused plugins has the highest immediate impact</strong>: Each plugin adds 2-15 HTTP requests, and cutting half your plugins can save 0.5-1.5 seconds of load time.</li>
+                            <li><strong>Image optimisation alone can gain 10-20 PageSpeed points</strong>: Most WordPress sites load full-resolution images on mobile when a compressed WebP at the right size would be 80% smaller.</li>
+                            <li><strong>WordPress has a hard speed ceiling of 2-2.5 seconds</strong>, even with all 8 optimisations applied perfectly, the PHP architecture prevents under 1 second load times.</li>
+                            <li><strong>Page builders are the single biggest speed killer</strong>. Elementor, Divi, and WPBakery generate 3x more code than needed and add 1-2 seconds to every page load.</li>
+                            <li><strong>If you are going to rebuild anyway, rebuild on Next.js</strong>: The same effort that gets WordPress to 2 seconds gets Next.js to 0.8 seconds with 95-100/100 PageSpeed.</li>
                         </ol>
                     </section>
 

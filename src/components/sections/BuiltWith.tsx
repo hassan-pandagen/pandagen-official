@@ -6,19 +6,19 @@ import { Code2, Database, CreditCard, Globe, Lock, Zap } from "lucide-react";
 const techStack = [
   {
     name: "Next.js 15",
-    category: "Framework",
+    category: "Speed Engine",
     icon: Zap,
     color: "text-charcoal",
   },
   {
     name: "Vercel",
-    category: "Hosting",
+    category: "$0 Hosting",
     icon: Globe,
     color: "text-charcoal",
   },
   {
     name: "TypeScript",
-    category: "Language",
+    category: "Bug-Free Code",
     icon: Code2,
     color: "text-blue-600",
   },
@@ -36,7 +36,7 @@ const techStack = [
   },
   {
     name: "Auth0",
-    category: "Security",
+    category: "Login Security",
     icon: Lock,
     color: "text-orange-500",
   },

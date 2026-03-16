@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 
-// Only load Lenis on desktop — never downloaded on mobile
+// Only load Lenis on desktop, never downloaded on mobile
 const DesktopLenis = dynamic(
   () => import("lenis/react").then((m) => {
     const ReactLenis = m.ReactLenis;
@@ -19,7 +19,7 @@ const DesktopLenis = dynamic(
 );
 
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
-  const [isMobile, setIsMobile] = useState(true); // Default true — safe for SSR
+  const [isMobile, setIsMobile] = useState(true); // Default true, safe for SSR
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {

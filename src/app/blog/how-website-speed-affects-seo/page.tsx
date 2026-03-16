@@ -44,7 +44,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/how-website-speed-affects-seo#article",
             "headline": "How Website Speed Affects SEO Rankings in 2026 (With Real Data)",
-            "description": "Google confirmed page speed is a ranking factor. Here's exactly how site speed affects your SEO rankings, Core Web Vitals, and revenue — with real data from Google, Deloitte, and Portent.",
+            "description": "Google confirmed page speed is a ranking factor. Here's exactly how site speed affects your SEO rankings, Core Web Vitals, and revenue, with real data from Google, Deloitte, and Portent.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-09T00:00:00-05:00",
             "dateModified": "2026-03-10T00:00:00-05:00",
@@ -81,12 +81,12 @@ const articleSchema = {
                 "cssSelector": ["h1", "h2", "[data-speakable='true']"]
             },
             "citation": [
-                { "@type": "CreativeWork", "name": "Google Search Central — Core Web Vitals Documentation", "url": "https://developers.google.com/search/docs/appearance/core-web-vitals" },
-                { "@type": "CreativeWork", "name": "Deloitte — Milliseconds Make Millions", "url": "https://www.deloitte.com/ie/en/services/consulting/research/milliseconds-make-millions.html" },
-                { "@type": "CreativeWork", "name": "Portent — Site Speed is Impacting Your Conversion Rate", "url": "https://portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" },
-                { "@type": "CreativeWork", "name": "Akamai — Online Retail Performance Report", "url": "https://www.prnewswire.com/news-releases/akamai-online-retail-performance-report-milliseconds-are-critical-300441498.html" },
-                { "@type": "CreativeWork", "name": "RUMvision — Core Web Vitals SEO Impact Study", "url": "https://www.rumvision.com/blog/impact-core-web-vitals-seo/" },
-                { "@type": "CreativeWork", "name": "Google Web Dev — Web Vitals", "url": "https://web.dev/vitals/" }
+                { "@type": "CreativeWork", "name": "Google Search Central. Core Web Vitals Documentation", "url": "https://developers.google.com/search/docs/appearance/core-web-vitals" },
+                { "@type": "CreativeWork", "name": "Deloitte. Milliseconds Make Millions", "url": "https://www.deloitte.com/ie/en/services/consulting/research/milliseconds-make-millions.html" },
+                { "@type": "CreativeWork", "name": "Portent. Site Speed is Impacting Your Conversion Rate", "url": "https://portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" },
+                { "@type": "CreativeWork", "name": "Akamai. Online Retail Performance Report", "url": "https://www.prnewswire.com/news-releases/akamai-online-retail-performance-report-milliseconds-are-critical-300441498.html" },
+                { "@type": "CreativeWork", "name": "RUMvision. Core Web Vitals SEO Impact Study", "url": "https://www.rumvision.com/blog/impact-core-web-vitals-seo/" },
+                { "@type": "CreativeWork", "name": "Google Web Dev. Web Vitals", "url": "https://web.dev/vitals/" }
             ]
         },
         {
@@ -97,11 +97,11 @@ const articleSchema = {
             "totalTime": "PT4W",
             "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
             "step": [
-                { "@type": "HowToStep", "position": 1, "name": "Audit Your Current Speed", "text": "Go to pagespeed.web.dev and run your URL. Focus on the Mobile score — this is what Google uses for rankings. Note your LCP, INP, and CLS scores. Any metric in the red (LCP > 4s, INP > 500ms, CLS > 0.25) is actively hurting your rankings." },
+                { "@type": "HowToStep", "position": 1, "name": "Audit Your Current Speed", "text": "Go to pagespeed.web.dev and run your URL. Focus on the Mobile score: this is what Google uses for rankings. Note your LCP, INP, and CLS scores. Any metric in the red (LCP > 4s, INP > 500ms, CLS > 0.25) is actively hurting your rankings." },
                 { "@type": "HowToStep", "position": 2, "name": "Fix LCP First", "text": "LCP (Largest Contentful Paint) is the single most impactful metric. The fix depends on what your LCP element is: if it's an image, compress it and add loading='eager' with fetchpriority='high'. If it's text, eliminate render-blocking CSS and fonts. Target: under 2.5 seconds." },
-                { "@type": "HowToStep", "position": 3, "name": "Eliminate Render-Blocking Scripts", "text": "Every third-party script (chat widgets, analytics, pixels, popups) delays your page load. Audit what fires on page load and defer everything non-critical. A WordPress site with 12 plugins fires 12+ scripts on every page load — each one adds 100-400ms." },
+                { "@type": "HowToStep", "position": 3, "name": "Eliminate Render-Blocking Scripts", "text": "Every third-party script (chat widgets, analytics, pixels, popups) delays your page load. Audit what fires on page load and defer everything non-critical. A WordPress site with 12 plugins fires 12+ scripts on every page load: each one adds 100-400ms." },
                 { "@type": "HowToStep", "position": 4, "name": "Fix CLS With Proper Dimensions", "text": "CLS (layout shift) happens when images load without declared dimensions, or when fonts cause text reflow. Fix: always declare width and height on every image. Self-host fonts instead of loading from Google Fonts. Reserve space for ads and embeds." },
-                { "@type": "HowToStep", "position": 5, "name": "Switch to a Modern Framework if You've Hit the Ceiling", "text": "WordPress and Shopify have architectural speed ceilings. WordPress generates pages on every server request — you cannot eliminate this latency with plugins. Shopify's Liquid templating and checkout scripts are hardcoded. If your mobile score is stuck below 70 after optimizing, the platform is the bottleneck — not your settings." }
+                { "@type": "HowToStep", "position": 5, "name": "Switch to a Modern Framework if You've Hit the Ceiling", "text": "WordPress and Shopify have architectural speed ceilings. WordPress generates pages on every server request: you cannot eliminate this latency with plugins. Shopify's Liquid templating and checkout scripts are hardcoded. If your mobile score is stuck below 70 after optimizing, the platform is the bottleneck, not your settings." }
             ]
         },
         {
@@ -135,7 +135,7 @@ const articleSchema = {
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95 to 100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
             "foundingDate": "2026"
         },
@@ -206,7 +206,7 @@ export default function WebsiteSpeedSEOPage() {
                     <div data-speakable="true" className="bg-stone-50 border border-stone-200 rounded-xl p-6 mb-10">
                         <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-3">Quick Answer</p>
                         <p className="text-stone-700 leading-relaxed">
-                            Yes, website speed directly affects SEO rankings. Google made Core Web Vitals (LCP, INP, CLS) an official ranking signal in 2021. Pages at position #1 are 10% more likely to pass Core Web Vitals than pages at position #9. A site loading in 1 second converts 3x better than one loading in 5 seconds (Portent). Every 0.1-second improvement increases conversions by 8.4% (Deloitte). Fixing speed improves rankings within 30–90 days.
+                            Yes, website speed directly affects SEO rankings. Google made Core Web Vitals (LCP, INP, CLS) an official ranking signal in 2021. Pages at position #1 are 10% more likely to pass Core Web Vitals than pages at position #9. A site loading in 1 second converts 3x better than one loading in 5 seconds (Portent). Every 0.1-second improvement increases conversions by 8.4% (Deloitte). Fixing speed improves rankings within 30 to 90 days.
                         </p>
                     </div>
 
@@ -243,7 +243,7 @@ export default function WebsiteSpeedSEOPage() {
                     <section className="mb-10">
                         <h2 className="text-3xl font-bold mb-4">The Numbers That Should Concern You</h2>
                         <BlogText>
-                            Rankings are one side of the story. What happens to actual visitors on a slow site is the other — and the data from{" "}
+                            Rankings are one side of the story. What happens to actual visitors on a slow site is the other, and the data from{" "}
                             <a href="https://www.prnewswire.com/news-releases/akamai-online-retail-performance-report-milliseconds-are-critical-300441498.html" target="_blank" rel="noopener noreferrer" className="text-stone-700 underline underline-offset-2 hover:text-black">Akamai's Online Retail Performance Report</a>{" "}
                             is striking.
                         </BlogText>
@@ -260,7 +260,7 @@ export default function WebsiteSpeedSEOPage() {
                             It is a compounding problem. A slow site causes visitors to leave. Bounce rate climbs. Google lowers your ranking. Fewer people find the page. Revenue falls. You can publish the best content in your industry and still rank on page 3 simply because the page loads in 5 seconds.
                         </BlogText>
                         <BlogQuote>
-                            "The chance of a bounce increases 32% when page load time goes from 1 second to 3 seconds." — Google research
+                            "The chance of a bounce increases 32% when page load time goes from 1 second to 3 seconds.". Google research
                         </BlogQuote>
                         <BlogText>
                             On mobile, this is even more severe. 73% of ecommerce traffic comes from mobile devices in 2026. A page that loads in 2.1 seconds on your office WiFi loads in 4 or more seconds on a typical mobile connection. The people most likely to leave are the ones searching on their phones at the exact moment they are ready to buy. Those are your highest-intent customers and a slow page sends them directly to a competitor.
@@ -300,7 +300,7 @@ export default function WebsiteSpeedSEOPage() {
                     <section className="mb-10">
                         <h2 className="text-3xl font-bold mb-4">Core Web Vitals: What They Are and How to Check Yours</h2>
                         <BlogText>
-                            Google measures your site's speed using real Chrome user data, not just a one-off lab test. They call this the Chrome User Experience Report (CrUX). If enough real users visit your site, Google has field data on how fast your pages actually load for them. That field data is what feeds into rankings — not the lab number in PageSpeed Insights (though the lab score is a useful proxy).
+                            Google measures your site's speed using real Chrome user data, not just a one-off lab test. They call this the Chrome User Experience Report (CrUX). If enough real users visit your site, Google has field data on how fast your pages actually load for them. That field data is what feeds into rankings, not the lab number in PageSpeed Insights (though the lab score is a useful proxy).
                         </BlogText>
                         <BlogText>
                             Here's what each metric actually means in plain English:
@@ -338,7 +338,7 @@ export default function WebsiteSpeedSEOPage() {
                         </BlogText>
                         <BlogList items={[
                             "Good: below 0.1",
-                            "Needs improvement: 0.1–0.25",
+                            "Needs improvement: 0.1 to 0.25",
                             "Poor: above 0.25"
                         ]} />
                         <BlogText>
@@ -347,7 +347,7 @@ export default function WebsiteSpeedSEOPage() {
 
                         <h3 className="text-xl font-bold mb-2 mt-6">How to Check Your Core Web Vitals Right Now</h3>
                         <BlogList items={[
-                            "Go to pagespeed.web.dev and enter your URL. Run it on Mobile — this is your ranking score.",
+                            "Go to pagespeed.web.dev and enter your URL. Run it on Mobile: this is your ranking score.",
                             "Google Search Console → Experience → Core Web Vitals shows your field data across all pages.",
                             "Chrome DevTools → Lighthouse tab gives you a full breakdown with specific fix recommendations."
                         ]} />
@@ -360,17 +360,17 @@ export default function WebsiteSpeedSEOPage() {
                             Here is the frustrating reality most SEO guides skip: if you are on WordPress or Shopify, there is a hard ceiling on how fast your site can get, regardless of how much you optimise or how much you spend.
                         </BlogText>
                         <BlogText>
-                            WordPress generates every page dynamically on the server for each request. Even with caching plugins, you're fighting the PHP rendering overhead, database queries, and the sheer weight of plugin scripts that load on every page. The best-optimised WordPress site in the world typically scores 65–75/100 on mobile PageSpeed. Our clients come to us after spending thousands with agencies and developers, stuck at exactly this ceiling.
+                            WordPress generates every page dynamically on the server for each request. Even with caching plugins, you're fighting the PHP rendering overhead, database queries, and the sheer weight of plugin scripts that load on every page. The best-optimised WordPress site in the world typically scores 65 to 75/100 on mobile PageSpeed. Our clients come to us after spending thousands with agencies and developers, stuck at exactly this ceiling.
                         </BlogText>
                         <BlogText>
                             Shopify has a different ceiling. The platform is fully managed, meaning you cannot touch the server configuration. Shopify's checkout and cart scripts, which load on every single page, are hardcoded into the platform and cannot be removed. App scripts from reviews, loyalty programs, upsell tools, and chat widgets pile on top of that. Most Shopify stores with 5 or more apps score 40 to 60 out of 100 on mobile PageSpeed.
                         </BlogText>
                         <BlogHighlight>
-                            We've audited hundreds of WordPress and Shopify sites. The pattern is consistent: business owners spend $2,000–$5,000 on "speed optimisation" and end up at 68/100 mobile. The architecture, not the settings, is the bottleneck. Read more in our post on{" "}
+                            We've audited hundreds of WordPress and Shopify sites. The pattern is consistent: business owners spend $2,000 to $5,000 on "speed optimisation" and end up at 68/100 mobile. The architecture, not the settings, is the bottleneck. Read more in our post on{" "}
                             <Link href="/blog/shopify-dawn-theme-slow" className="text-stone-700 underline underline-offset-2 hover:text-black">why even Shopify's fastest theme still loads slowly</Link>.
                         </BlogHighlight>
                         <BlogText>
-                            The sites scoring 95–100/100 on mobile — the ones ranking above you on Google — are almost always built on modern frameworks: Next.js, Astro, or similar. These frameworks pre-render pages at build time, serve them from edge CDN nodes with no server computation, and ship zero unnecessary JavaScript to the browser. There's no ceiling to optimise around because the architecture itself is fast.
+                            The sites scoring 95 to 100/100 on mobile: the ones ranking above you on Google. Are almost always built on modern frameworks: Next.js, Astro, or similar. These frameworks pre-render pages at build time, serve them from edge CDN nodes with no server computation, and ship zero unnecessary JavaScript to the browser. There's no ceiling to optimise around because the architecture itself is fast.
                         </BlogText>
                     </section>
 
@@ -386,13 +386,13 @@ export default function WebsiteSpeedSEOPage() {
                                 <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-1">Step 1</p>
                                 <h3 className="text-lg font-bold mb-2">Audit Your Current Speed</h3>
                                 <BlogText>
-                                    Go to <a href="https://pagespeed.web.dev" target="_blank" rel="noopener noreferrer" className="text-stone-700 underline underline-offset-2 hover:text-black">pagespeed.web.dev</a> and run your URL. Focus entirely on the Mobile score — this is what Google uses for rankings. Note your LCP, INP, and CLS scores. Any metric flagged red is actively hurting your rankings right now. Screenshot the results so you can compare after making changes.
+                                    Go to <a href="https://pagespeed.web.dev" target="_blank" rel="noopener noreferrer" className="text-stone-700 underline underline-offset-2 hover:text-black">pagespeed.web.dev</a> and run your URL. Focus entirely on the Mobile score: this is what Google uses for rankings. Note your LCP, INP, and CLS scores. Any metric flagged red is actively hurting your rankings right now. Screenshot the results so you can compare after making changes.
                                 </BlogText>
                             </div>
 
                             <div className="border border-stone-200 rounded-xl p-6">
                                 <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-1">Step 2</p>
-                                <h3 className="text-lg font-bold mb-2">Fix Your Main Image First — It Has the Biggest Revenue Impact</h3>
+                                <h3 className="text-lg font-bold mb-2">Fix Your Main Image First. It Has the Biggest Revenue Impact</h3>
                                 <BlogText>
                                     Your hero image is the most common reason pages load slowly. Most business websites have a main photo that was never compressed or converted to a modern format, sometimes 5 to 10 times larger than it needs to be. A developer compresses it, converts it to a modern format, and tells the browser to load it first. This single change typically improves mobile PageSpeed scores by 10 to 20 points. Based on Deloitte's research, that improvement translates directly to higher conversion rates and more revenue from your existing traffic.
                                 </BlogText>
@@ -418,7 +418,7 @@ export default function WebsiteSpeedSEOPage() {
                                 <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-1">Step 5</p>
                                 <h3 className="text-lg font-bold mb-2">If You've Hit the Platform Ceiling, Migrate</h3>
                                 <BlogText>
-                                    If your mobile score is stuck below 70 after addressing the above, your platform is the bottleneck, not your settings. This is where businesses face a real financial decision: continue paying for ongoing optimisation that delivers diminishing returns and never escapes the ceiling, or make a one-time investment in a faster architecture that scores 95 to 100 natively. Our clients who migrate from WordPress to Next.js see rankings recover in 30–60 days and typically see 20–40% organic traffic increases within 90 days. See our <Link href="/blog/how-to-achieve-100-pagespeed" className="text-stone-700 underline underline-offset-2 hover:text-black">full guide to achieving 100/100 PageSpeed</Link>.
+                                    If your mobile score is stuck below 70 after addressing the above, your platform is the bottleneck, not your settings. This is where businesses face a real financial decision: continue paying for ongoing optimisation that delivers diminishing returns and never escapes the ceiling, or make a one-time investment in a faster architecture that scores 95 to 100 natively. Our clients who migrate from WordPress to Next.js see rankings recover in 30 to 60 days and typically see 20 to 40% organic traffic increases within 90 days. See our <Link href="/blog/how-to-achieve-100-pagespeed" className="text-stone-700 underline underline-offset-2 hover:text-black">full guide to achieving 100/100 PageSpeed</Link>.
                                 </BlogText>
                             </div>
                         </div>
@@ -487,7 +487,7 @@ export default function WebsiteSpeedSEOPage() {
                         <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-2">Ready to Fix It?</p>
                         <h3 className="text-2xl font-bold mb-3">Your Competitors Are Already Faster</h3>
                         <p className="text-stone-600 mb-3 leading-relaxed">
-                            Every month you're on a slow platform is a month faster competitors are compounding their ranking advantage. The businesses that fix this in 2026 will dominate organic search for the next 3–5 years.
+                            Every month you're on a slow platform is a month faster competitors are compounding their ranking advantage. The businesses that fix this in 2026 will dominate organic search for the next 3 to 5 years.
                         </p>
                         <p className="text-stone-600 mb-6 leading-relaxed">
                             Book a free 30-minute speed audit. We will show you your Core Web Vitals, what they are costing you in rankings and revenue, and what a realistic fix looks like. Whether that means optimising your current site or migrating to a faster architecture, we give you the data to make that decision. No sales pitch. Just the numbers.
@@ -512,11 +512,11 @@ export default function WebsiteSpeedSEOPage() {
                     <section className="mb-10">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>Google uses real user speed data to rank your pages</strong> — Core Web Vitals (LCP, INP, CLS) are official ranking signals measured from actual Chrome browser visits, not just lab tests.</li>
-                            <li><strong>A 1-second site converts 5x better than a 10-second site</strong> — Portent's research across 27,000+ pages shows conversion rates drop dramatically with each additional second of load time.</li>
-                            <li><strong>Every 0.1 second of improvement adds 8.4% to conversions</strong> — Deloitte found even tiny speed gains produce measurable revenue increases across retail, travel, and luxury brands.</li>
-                            <li><strong>WordPress and Shopify have hard speed ceilings</strong> — no amount of optimisation gets past 65-75/100 on WordPress or 60-70/100 on Shopify because the platform architecture is the bottleneck.</li>
-                            <li><strong>Speed gains compound over time</strong> — faster sites get crawled more, rank higher, attract more links, and earn better engagement signals, widening the gap against slower competitors every month.</li>
+                            <li><strong>Google uses real user speed data to rank your pages</strong>. Core Web Vitals (LCP, INP, CLS) are official ranking signals measured from actual Chrome browser visits, not just lab tests.</li>
+                            <li><strong>A 1-second site converts 5x better than a 10-second site</strong>. Portent's research across 27,000+ pages shows conversion rates drop dramatically with each additional second of load time.</li>
+                            <li><strong>Every 0.1 second of improvement adds 8.4% to conversions</strong>. Deloitte found even tiny speed gains produce measurable revenue increases across retail, travel, and luxury brands.</li>
+                            <li><strong>WordPress and Shopify have hard speed ceilings</strong>, no amount of optimisation gets past 65-75/100 on WordPress or 60-70/100 on Shopify because the platform architecture is the bottleneck.</li>
+                            <li><strong>Speed gains compound over time</strong>: Faster sites get crawled more, rank higher, attract more links, and earn better engagement signals, widening the gap against slower competitors every month.</li>
                         </ol>
                     </section>
 

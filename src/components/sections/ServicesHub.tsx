@@ -4,12 +4,18 @@ import { motion } from "framer-motion";
 import { ArrowRight, Code2, Globe } from "lucide-react";
 import Link from "next/link";
 
-const platforms = ["WordPress", "Wix", "Squarespace", "Shopify", "Webflow"];
+const platforms = [
+  { name: "WordPress", href: "/services/wordpress-migration" },
+  { name: "Wix", href: "/services/wix" },
+  { name: "Squarespace", href: "/services/squarespace" },
+  { name: "Shopify", href: "/services/ecommerce" },
+  { name: "Webflow", href: "/services/webflow" },
+];
 
 export default function ServicesHub() {
   return (
     <section className="py-12 md:py-32 bg-paper relative">
-      {/* Warm stone ambient glow — clipped to section only */}
+      {/* Warm stone ambient glow, clipped to section only */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-0 w-[500px] h-[500px] bg-stone-200/40 blur-[150px] rounded-full" />
         <div className="absolute bottom-20 right-0 w-[400px] h-[400px] bg-stone-200/30 blur-[120px] rounded-full" />
@@ -26,14 +32,14 @@ export default function ServicesHub() {
           <span className="text-cognac font-bold tracking-widest uppercase text-xs mb-4 block">Our Expertise</span>
           <h2 className="text-4xl md:text-5xl font-bold text-charcoal mb-6 tracking-tight leading-tight">
             We don&apos;t just &ldquo;build websites.&rdquo;<br />
-            <span className="font-serif italic text-stone-500">We engineer digital assets.</span>
+            <span className="font-serif italic text-stone-500">We engineer websites that make you money.</span>
           </h2>
         </motion.div>
 
         {/* BENTO GRID */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-          {/* CARD 1: MIGRATIONS (Large — 2 columns) */}
+          {/* CARD 1: MIGRATIONS (Large, 2 columns) */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -51,21 +57,22 @@ export default function ServicesHub() {
                 <div className="w-14 h-14 bg-stone-100 rounded-2xl flex items-center justify-center mb-8 transition-colors duration-300 group-hover:bg-charcoal">
                   <Globe className="w-7 h-7 text-charcoal group-hover:text-white transition-colors duration-300" />
                 </div>
-                <h3 className="text-3xl font-bold text-charcoal mb-4 font-serif">Legacy Migrations</h3>
+                <h3 className="text-3xl font-bold text-charcoal mb-4 font-serif">Migrations {"&"} New Builds</h3>
                 <p className="text-stone-600 text-lg max-w-md leading-relaxed">
-                  We move high-traffic sites off restrictive builders without losing SEO rankings or going offline for a single minute.
+                  Whether you&apos;re migrating off a slow platform or building a new store from scratch, we deliver sites that load in under 1 second with zero downtime.
                 </p>
               </div>
 
               {/* Platform logos row */}
               <div className="flex flex-wrap items-center gap-4 mt-8 pt-8 border-t border-stone-100 opacity-60 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
-                {platforms.map((name) => (
-                  <span
-                    key={name}
-                    className="px-3 py-1 bg-stone-100 border border-stone-200 rounded-full text-xs font-bold text-stone-600"
+                {platforms.map((p) => (
+                  <Link
+                    key={p.name}
+                    href={p.href}
+                    className="px-3 py-1 bg-stone-100 border border-stone-200 rounded-full text-xs font-bold text-stone-600 hover:border-cognac hover:text-cognac transition-colors"
                   >
-                    {name}
-                  </span>
+                    {p.name}
+                  </Link>
                 ))}
                 <Link
                   href="/services"
@@ -95,7 +102,7 @@ export default function ServicesHub() {
                 </div>
                 <h3 className="text-3xl font-bold mb-4 font-serif">Custom Engineering</h3>
                 <p className="text-stone-400 leading-relaxed">
-                  SaaS dashboards, internal tools, and AI integrations. When &ldquo;off-the-shelf&rdquo; isn&apos;t enough for your growth.
+                  SaaS dashboards, internal tools, and AI integrations. We built our own enterprise ops platform from scratch. When &ldquo;off-the-shelf&rdquo; isn&apos;t enough, we build exactly what you need.
                 </p>
               </div>
 

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/services/wix' },
   openGraph: {
     title: 'Wix to Custom Website Migration | PandaCodeGen',
-    description: "Escape Wix SEO limits and slow load times. We migrate to custom Next.js — ranks higher and loads 5x faster.",
+    description: "Escape Wix SEO limits and slow load times. We migrate to custom Next.js, ranks higher and loads 5x faster.",
     url: 'https://www.pandacodegen.com/services/wix',
     siteName: 'PandaCodeGen',
     type: 'website',
@@ -49,7 +49,7 @@ export default function WixServicePage() {
         "@id": "https://www.pandacodegen.com/services/wix#faq",
         "mainEntity": [
           { "@type": "Question", "name": "Will I lose my Google rankings if I leave Wix?", "acceptedAnswer": { "@type": "Answer", "text": "No. We set up 301 redirects from every old URL to the new URL. Google treats it as the same content at a faster address. Rankings typically improve within 30-60 days because the new site is significantly faster." } },
-          { "@type": "Question", "name": "Can I still edit my website without coding?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We set up a built-in content editor (like Sanity) with an easy visual editor. You can edit text, images, and blog posts just like you did on Wix — but without the speed and SEO limitations." } },
+          { "@type": "Question", "name": "Can I still edit my website without coding?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We set up a built-in content editor (like Sanity) with an easy visual editor. You can edit text, images, and blog posts just like you did on Wix, but without the speed and SEO limitations." } },
           { "@type": "Question", "name": "How long does it take to migrate from Wix?", "acceptedAnswer": { "@type": "Answer", "text": "4-6 weeks for a standard business site. Week 1: content export. Weeks 2-4: design and build. Week 5: SEO migration. Week 6: launch." } },
           { "@type": "Question", "name": "What about my Wix forms and contact pages?", "acceptedAnswer": { "@type": "Answer", "text": "All forms get rebuilt with better functionality. We can integrate with any email service (Mailchimp, ConvertKit) or CRM. Form submissions work exactly as before, but the page loads 5x faster." } },
           { "@type": "Question", "name": "Is custom code harder to maintain than Wix?", "acceptedAnswer": { "@type": "Answer", "text": "No. With a built-in content editor, content editing is just as easy. And because there are no plugins or themes to update, there's actually LESS maintenance. No monthly subscription fees, no broken updates." } }

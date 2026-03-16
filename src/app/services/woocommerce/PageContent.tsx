@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     q: "Do I keep my Google rankings after migrating from WooCommerce?",
-    a: "Yes. Every URL from your WooCommerce store is mapped with 301 redirects to the new site. Google treats it as the same page at a new address. Most clients see rankings recover within 2–4 weeks and improve within 60 days because the faster site gets rewarded."
+    a: "Yes. Every URL from your WooCommerce store is mapped with 301 redirects to the new site. Google treats it as the same page at a new address. Most clients see rankings recover within 2 to 4 weeks and improve within 60 days because the faster site gets rewarded."
   },
   {
     q: "Can I still manage products and orders without being technical?",
@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: "How much does a WooCommerce migration cost?",
-    a: "Most WooCommerce migrations range from $6,000–$18,000 depending on store size and complexity. A simple store (under 500 products) is at the lower end. Complex stores with custom pricing, subscriptions, or B2B logic are higher. We give a fixed-price quote upfront. No hourly surprises."
+    a: "Most WooCommerce migrations range from $6,000 to $18,000 depending on store size and complexity. A simple store (under 500 products) is at the lower end. Complex stores with custom pricing, subscriptions, or B2B logic are higher. We give a fixed-price quote upfront. No hourly surprises."
   },
   {
     q: "My WooCommerce store has subscriptions / bookings / B2B pricing. Can you handle that?",
@@ -36,8 +36,8 @@ const faqs = [
 ];
 
 const comparisonRows = [
-  { label: "Load Time",     woo: "2.5–5s average",              custom: "Under 1s, guaranteed",        isPain: true  },
-  { label: "Monthly Cost",  woo: "$300–$700/mo (hosting+plugins)", custom: "$0–$50/mo at any scale",  isPain: true  },
+  { label: "Load Time",     woo: "2.5 to 5s average",              custom: "Under 1s, guaranteed",        isPain: true  },
+  { label: "Monthly Cost",  woo: "$300 to $700/mo (hosting+plugins)", custom: "$0 to $50/mo at any scale",  isPain: true  },
   { label: "Checkout",      woo: "Plugin-dependent, fragile",    custom: "Custom logic, bulletproof", isPain: true  },
   { label: "Security",      woo: "Self-managed, plugin surface", custom: "Static, no attack surface", isPain: true  },
   { label: "Scalability",   woo: "Crashes under traffic spikes", custom: "Edge CDN, handles millions",isPain: true  },
@@ -136,7 +136,7 @@ export default function PageContent() {
         </div>
       </section>
 
-      {/* 3. PAIN POINTS — Dark Navy */}
+      {/* 3. PAIN POINTS, Dark Navy */}
       <section className="py-12 md:py-24 px-6 bg-[#0F172A]">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-16">
@@ -154,8 +154,8 @@ export default function PageContent() {
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { icon: DollarSign, title: "You're Paying $300–$700/Month to Run Your Store", detail: "Managed WooCommerce hosting (Kinsta, WP Engine): $50–$200/mo. WooCommerce extensions (subscriptions, bookings, B2B): $50–$300/yr. Security plugin: $10–$50/mo. Backups, CDN, caching. It never stops adding up." },
-              { icon: XCircle, title: "Checkout Abandonment Is Killing Your Conversions", detail: "Every extra second of load time costs you 7% in conversions. WooCommerce checkouts average 3–5 seconds. On a store doing $50K/month, that's $3,500+ in revenue you're leaving on the table every single month." },
+              { icon: DollarSign, title: "You're Paying $300 to $700/Month to Run Your Store", detail: "Managed WooCommerce hosting (Kinsta, WP Engine): $50 to $200/mo. WooCommerce extensions (subscriptions, bookings, B2B): $50 to $300/yr. Security plugin: $10 to $50/mo. Backups, CDN, caching. It never stops adding up." },
+              { icon: XCircle, title: "Checkout Abandonment Is Killing Your Conversions", detail: "Every extra second of load time costs you 7% in conversions. WooCommerce checkouts average 3 to 5 seconds. On a store doing $50K/month, that's $3,500+ in revenue you're leaving on the table every single month." },
               { icon: AlertTriangle, title: "One Plugin Update Can Take Your Store Offline", detail: "Payment gateway plugin conflicts with your theme. WooCommerce updates break your custom checkout. And it always happens on a Saturday during a sale campaign. Every minute offline is orders you never get back." },
               { icon: Lock, title: "Your Store Is One Hack Away From Disaster", detail: "WooCommerce stores hold payment data, customer addresses, and order history, making them high-value targets. WordPress is the #1 hacked CMS. A static custom coded store has no database to breach and no plugin attack surface." },
               { icon: TrendingUp, title: "Google Penalizes Your Slow Checkout Pages", detail: "Google's Core Web Vitals directly impact your organic rankings. A WooCommerce site running PHP on shared hosting fails LCP and TTFB benchmarks. Your competitors with faster sites outrank you before a single keyword is written." },
@@ -235,7 +235,7 @@ export default function PageContent() {
             {[
               { step: "01", title: "Full Store Audit", desc: "We audit your WooCommerce setup: products, plugins, checkout flow, SEO, and hosting costs. You get a full report showing what&apos;s costing you money.", icon: FileSearch, duration: "Week 1" },
               { step: "02", title: "Data Export & Mapping", desc: "Every product, order, customer account, review, and category is exported from your WooCommerce database and cleaned. All SEO URLs mapped for 301 redirects.", icon: Database, duration: "Week 2" },
-              { step: "03", title: "Custom Storefront Build", desc: "Your new Next.js storefront is built with native payment integrations (Stripe, PayPal, Apple Pay), your exact checkout flow, and any custom pricing logic.", icon: Wrench, duration: "Weeks 3–5" },
+              { step: "03", title: "Custom Storefront Build", desc: "Your new Next.js storefront is built with native payment integrations (Stripe, PayPal, Apple Pay), your exact checkout flow, and any custom pricing logic.", icon: Wrench, duration: "Weeks 3 to 5" },
               { step: "04", title: "Data Migration & Testing", desc: "We import all products, orders, and customer accounts into your new platform. Every checkout flow is tested across mobile and desktop before launch.", icon: Package, duration: "Week 6" },
               { step: "05", title: "Launch & Handoff", desc: "Zero-downtime launch. Every WooCommerce URL 301-redirected. DNS updated. SSL verified. You get full code ownership and admin access on day one.", icon: Rocket, duration: "Week 7" },
             ].map((item, i) => (

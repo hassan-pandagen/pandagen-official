@@ -84,7 +84,7 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Next.js Documentation", "url": "https://nextjs.org/docs" },
                 { "@type": "CreativeWork", "name": "Google Core Web Vitals Ranking Signal", "url": "https://developers.google.com/search/docs/appearance/core-web-vitals" },
                 { "@type": "CreativeWork", "name": "Vercel Pricing", "url": "https://vercel.com/pricing" },
-                { "@type": "CreativeWork", "name": "WordPress Security Report 2024 — Sucuri", "url": "https://sucuri.net/reports/website-hacked-report/" },
+                { "@type": "CreativeWork", "name": "WordPress Security Report 2024. Sucuri", "url": "https://sucuri.net/reports/website-hacked-report/" },
                 { "@type": "CreativeWork", "name": "Google PageSpeed Insights", "url": "https://pagespeed.web.dev/" },
                 { "@type": "CreativeWork", "name": "Sanity CMS Documentation", "url": "https://www.sanity.io/docs" }
             ]
@@ -120,7 +120,7 @@ const articleSchema = {
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95 to 100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
             "foundingDate": "2026"
         },
@@ -198,7 +198,7 @@ export default function WhyNextjsOverWordPressPage() {
                         <BlogList items={[
                             "In 2023, we built client sites in WordPress. By late 2024, every new project was Next.js. This is why.",
                             "The breaking point: A client showed us data proving their WordPress site (3.2s load) was outranked on every keyword by competitors loading in under 1 second.",
-                            "We now guarantee 95–100/100 PageSpeed, $0/month hosting, and zero plugin vulnerabilities on every build.",
+                            "We now guarantee 95 to 100/100 PageSpeed, $0/month hosting, and zero plugin vulnerabilities on every build.",
                             "When is WordPress still OK? Hobby blogs, small personal sites, and situations where the client will self-manage without developer help."
                         ]} />
                     </div>
@@ -214,13 +214,13 @@ export default function WhyNextjsOverWordPressPage() {
                         </BlogText>
 
                         <BlogText>
-                            But for business clients in 2026 — businesses that depend on their website for leads, sales, and Google traffic — <BlogHighlight>we can no longer in good conscience recommend WordPress.</BlogHighlight> Here&apos;s exactly why.
+                            But for business clients in 2026: businesses that depend on their website for leads, sales, and Google traffic. <BlogHighlight>we can no longer in good conscience recommend WordPress.</BlogHighlight> Here&apos;s exactly why.
                         </BlogText>
 
                         <BlogHeader>What Finally Changed Our Mind (The Client Who Showed Us the Data)</BlogHeader>
 
                         <BlogText>
-                            In mid-2024, we had a client — an e-commerce store on WordPress/WooCommerce — come to us frustrated. Their competitor, who had launched 18 months earlier, was outranking them on almost every keyword.
+                            In mid-2024, we had a client: an e-commerce store on WordPress/WooCommerce, come to us frustrated. Their competitor, who had launched 18 months earlier, was outranking them on almost every keyword.
                         </BlogText>
 
                         <BlogText>
@@ -230,7 +230,7 @@ export default function WhyNextjsOverWordPressPage() {
                         <BlogList items={[
                             "Our client's site: 3.2 second load time, 42/100 PageSpeed Mobile",
                             "Their competitor's site: 0.9 second load time, 97/100 PageSpeed Mobile",
-                            "Google ranking difference: 15–22 positions on every core keyword",
+                            "Google ranking difference: 15 to 22 positions on every core keyword",
                             "Traffic difference: Competitor was getting 6× more organic traffic",
                             "The competitor's tech stack: Next.js + Vercel"
                         ]} />
@@ -243,7 +243,7 @@ export default function WhyNextjsOverWordPressPage() {
                             <BlogHighlight>That&apos;s when we knew WordPress wasn&apos;t a cost-saving tool anymore. It was a competitive disadvantage.</BlogHighlight>
                         </BlogText>
 
-                        <BlogHeader>Reason 1: The Speed Difference Is Not Marginal — It&apos;s Structural</BlogHeader>
+                        <BlogHeader>Reason 1: The Speed Difference Is Not Marginal. It&apos;s Structural</BlogHeader>
 
                         <BlogText>
                             This is the core issue. WordPress and Next.js don&apos;t have a performance gap. They have a performance canyon.
@@ -257,11 +257,11 @@ export default function WhyNextjsOverWordPressPage() {
                             </div>
                             {[
                                 { metric: "Average Load Time", wp: "3.8s", nxt: "0.9s" },
-                                { metric: "Mobile PageSpeed", wp: "35–65/100", nxt: "95–100/100" },
+                                { metric: "Mobile PageSpeed", wp: "35 to 65/100", nxt: "95 to 100/100" },
                                 { metric: "Time to Interactive", wp: "5.2s", nxt: "1.1s" },
-                                { metric: "Monthly Hosting Cost", wp: "$150–$400", nxt: "$0–$20" },
-                                { metric: "Plugin Vulnerabilities", wp: "20–30+ surfaces", nxt: "Zero" },
-                                { metric: "Maintenance Required", wp: "4–8 hrs/month", nxt: "Near zero" },
+                                { metric: "Monthly Hosting Cost", wp: "$150 to $400", nxt: "$0 to $20" },
+                                { metric: "Plugin Vulnerabilities", wp: "20 to 30+ surfaces", nxt: "Zero" },
+                                { metric: "Maintenance Required", wp: "4 to 8 hrs/month", nxt: "Near zero" },
                             ].map((row, i) => (
                                 <div key={i} className="grid grid-cols-3 px-5 py-3 border-b border-stone-100 last:border-0 text-sm hover:bg-stone-50/50 transition-colors">
                                     <div className="text-charcoal font-medium">{row.metric}</div>
@@ -298,14 +298,14 @@ export default function WhyNextjsOverWordPressPage() {
                         </BlogText>
 
                         <BlogList items={[
-                            "WP Engine: $30–$400/month depending on traffic",
-                            "Kinsta: $35–$300/month for comparable performance",
-                            "Cloudways: $14–$80/month (plus server management overhead)",
-                            "SiteGround: $20–$100/month (and still slow under load)"
+                            "WP Engine: $30 to $400/month depending on traffic",
+                            "Kinsta: $35 to $300/month for comparable performance",
+                            "Cloudways: $14 to $80/month (plus server management overhead)",
+                            "SiteGround: $20 to $100/month (and still slow under load)"
                         ]} />
 
                         <BlogText>
-                            The savings over 3 years: <BlogHighlight>$1,800–$14,400 in hosting costs alone.</BlogHighlight> On top of the build investment, which pays for itself faster every month Vercel is free.
+                            The savings over 3 years: <BlogHighlight>$1,800 to $14,400 in hosting costs alone.</BlogHighlight> On top of the build investment, which pays for itself faster every month Vercel is free.
                         </BlogText>
 
                         <BlogHeader>Reason 3: Zero Security Vulnerabilities (No Plugins = No Attack Surface)</BlogHeader>
@@ -340,12 +340,12 @@ export default function WhyNextjsOverWordPressPage() {
                         </BlogText>
 
                         <BlogList items={[
-                            "Images are automatically compressed and sized for each device — no manual optimisation needed",
+                            "Images are automatically compressed and sized for each device, no manual optimisation needed",
                             "Fonts load instantly with no blank text or flicker while the page renders",
-                            "Each page only loads the code it actually needs — nothing extra to slow things down",
+                            "Each page only loads the code it actually needs, nothing extra to slow things down",
                             "Heavy processing happens on our servers before the page ever reaches your visitor",
-                            "Your pages are stored at 300+ locations worldwide — visitors load from the nearest one",
-                            "Your site only ships the design code it uses — zero bloat, zero wasted load time"
+                            "Your pages are stored at 300+ locations worldwide, visitors load from the nearest one",
+                            "Your site only ships the design code it uses: zero bloat, zero wasted load time"
                         ]} />
 
                         <BlogText>
@@ -353,7 +353,7 @@ export default function WhyNextjsOverWordPressPage() {
                         </BlogText>
 
                         <BlogText>
-                            Our recent clients: MyCustomPatches — <a href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">100/100</a>. Our own agency site (this one) — 100/100. Every project. Consistent.
+                            Our recent clients: MyCustomPatches. <a href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">100/100</a>. Our own agency site (this one). 100/100. Every project. Consistent.
                         </BlogText>
 
                         <BlogHeader>Reason 5: The Content Editor Is Better Than WordPress Admin</BlogHeader>
@@ -414,7 +414,7 @@ export default function WhyNextjsOverWordPressPage() {
                             "No subscriptions that can be cancelled or price-hiked",
                             "No third-party abandonment risk",
                             "Any developer can pick it up and work on it (clean, standard Next.js)",
-                            "You&apos;re not locked into our agency forever — the code is portable"
+                            "You&apos;re not locked into our agency forever: the code is portable"
                         ]} />
 
                         <BlogText>
@@ -449,7 +449,7 @@ export default function WhyNextjsOverWordPressPage() {
                         ]} />
 
                         <BlogText>
-                            For everything else — businesses where the website drives leads, sales, bookings, or brand credibility — <BlogHighlight>the economics of Next.js are better in every dimension that affects your business outcomes.</BlogHighlight>
+                            For everything else: businesses where the website drives leads, sales, bookings, or brand credibility. <BlogHighlight>the economics of Next.js are better in every dimension that affects your business outcomes.</BlogHighlight>
                         </BlogText>
 
                         <BlogHeader>What Happens to Your SEO When You Migrate?</BlogHeader>
@@ -472,11 +472,11 @@ export default function WhyNextjsOverWordPressPage() {
                         ]} />
 
                         <BlogText>
-                            Most clients see their Google rankings recover within 30–60 days. Within 90 days, rankings improve because Google now sees <a href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">a faster site</a> — and faster sites rank higher than slower ones with identical content.
+                            Most clients see their Google rankings recover within 30 to 60 days. Within 90 days, rankings improve because Google now sees <a href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">a faster site</a>, and faster sites rank higher than slower ones with identical content.
                         </BlogText>
 
                         <BlogText>
-                            See exactly how this worked for MyCustomPatches — a 200-page WordPress site with 10 years of content migrated with zero ranking drops — in our{" "}
+                            See exactly how this worked for MyCustomPatches: a 200-page WordPress site with 10 years of content migrated with zero ranking drops. In our{" "}
                             <Link href="/work/mycustompatches" className="text-charcoal font-bold underline hover:text-stone-600 transition-colors">
                                 MyCustomPatches case study
                             </Link>.
@@ -489,10 +489,10 @@ export default function WhyNextjsOverWordPressPage() {
                         </BlogText>
 
                         <BlogList items={[
-                            "Week 1: Full WordPress audit — every URL, page, image, plugin, and SEO tag catalogued",
-                            "Weeks 2–4: Build the new Next.js site — same content, same structure, zero WordPress",
+                            "Week 1: Full WordPress audit: every URL, page, image, plugin, and SEO tag catalogued",
+                            "Weeks 2 to 4: Build the new Next.js site. Same content, same structure, zero WordPress",
                             "Week 5: Content migration, URL mapping, redirect configuration, PageSpeed testing",
-                            "Week 6: Zero-downtime launch — DNS cutover while old WordPress site stays live in parallel",
+                            "Week 6: Zero-downtime launch. DNS cutover while old WordPress site stays live in parallel",
                             "30 days post-launch: Google Search Console monitoring, crawl error fixes, ranking tracking"
                         ]} />
 
@@ -513,11 +513,11 @@ export default function WhyNextjsOverWordPressPage() {
                     <section className="mb-10">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>The speed gap is structural, not fixable with plugins</strong> — WordPress loads in 3.8 seconds on average while Next.js loads in 0.9 seconds because they use fundamentally different architectures.</li>
-                            <li><strong>Hosting drops from $150-$400/month to $0</strong> — Vercel's free tier handles most business sites because pre-built static pages require no server computation per visit.</li>
-                            <li><strong>Zero plugins means zero security vulnerabilities</strong> — 43% of all website hacks target WordPress through its plugin ecosystem, an attack surface that does not exist in custom Next.js builds.</li>
-                            <li><strong>You own the code, not a licence</strong> — unlike WordPress where your site depends on third-party themes and plugins, a custom coded site is a portable asset any developer can maintain.</li>
-                            <li><strong>WordPress is still right for hobby blogs and small personal sites</strong> — if speed, SEO, and revenue are not priorities, WordPress's convenience still makes sense.</li>
+                            <li><strong>The speed gap is structural, not fixable with plugins</strong>. WordPress loads in 3.8 seconds on average while Next.js loads in 0.9 seconds because they use fundamentally different architectures.</li>
+                            <li><strong>Hosting drops from $150-$400/month to $0</strong>. Vercel's free tier handles most business sites because pre-built static pages require no server computation per visit.</li>
+                            <li><strong>Zero plugins means zero security vulnerabilities</strong>. 43% of all website hacks target WordPress through its plugin ecosystem, an attack surface that does not exist in custom Next.js builds.</li>
+                            <li><strong>You own the code, not a licence</strong>: Unlike WordPress where your site depends on third-party themes and plugins, a custom coded site is a portable asset any developer can maintain.</li>
+                            <li><strong>WordPress is still right for hobby blogs and small personal sites</strong>, if speed, SEO, and revenue are not priorities, WordPress's convenience still makes sense.</li>
                         </ol>
                     </section>
 

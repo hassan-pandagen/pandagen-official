@@ -15,14 +15,14 @@ const stats = [
     icon: Lock,
     number: "0",
     title: "Vulnerabilities",
-    body: "No plugins means no backdoors. We build enterprise grade architecture compliant with OWASP.",
+    body: "No plugins means no backdoors. We build enterprise grade architecture compliant with OWASP (the global security standard that protects against the top 10 most common website attacks).",
     borderRight: true,
   },
   {
     icon: FileCode,
     number: "100%",
     title: "Total Ownership",
-    body: "Stop renting your business. We hand over the Git repository. You own the IP and the data.",
+    body: "Stop renting your business. We hand over the full source code on day one. You own the IP, the data, and can take it to any developer if you ever want to.",
     borderRight: false,
   },
 ];

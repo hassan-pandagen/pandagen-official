@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 
-// Client-side animated elements — loaded after h1 already paints
+// Client-side animated elements, loaded after h1 already paints
 const HeroStatusPill = dynamic(
   () => import("./HeroAnimated").then((m) => m.HeroStatusPill),
   { ssr: true }
@@ -48,10 +48,10 @@ export default function Hero() {
         {/* --- LEFT: EDITORIAL COPY --- */}
         <div className="max-w-2xl">
 
-          {/* Status pill — animated client component */}
+          {/* Status pill, animated client component */}
           <HeroStatusPill />
 
-          {/* Headline: LCP element — pure server HTML, no JS needed to render */}
+          {/* Headline: LCP element, pure server HTML, no JS needed to render */}
           <h1 className="text-5xl md:text-7xl font-sans font-bold text-charcoal tracking-tight mb-6 leading-[1.1]">
             Your slow website is <br />
             <span className="font-serif italic text-stone-500">
@@ -59,13 +59,13 @@ export default function Hero() {
             </span>
           </h1>
 
-          {/* Subtitle — animated client component */}
+          {/* Subtitle, animated client component */}
           <HeroSubtitle />
 
-          {/* CTAs — animated client component */}
+          {/* CTAs, animated client component */}
           <HeroCTAs />
 
-          {/* Trust signals — animated client component */}
+          {/* Trust signals, animated client component */}
           <HeroTrustSignals />
 
         </div>

@@ -78,8 +78,8 @@ const articleSchema = {
             "citation": [
                 { "@type": "CreativeWork", "name": "WordPress Plugin Repository", "url": "https://wordpress.org/plugins/" },
                 { "@type": "CreativeWork", "name": "Google PageSpeed Insights", "url": "https://pagespeed.web.dev/" },
-                { "@type": "CreativeWork", "name": "Core Web Vitals — web.dev", "url": "https://web.dev/vitals/" },
-                { "@type": "CreativeWork", "name": "Think With Google — Mobile Speed", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
+                { "@type": "CreativeWork", "name": "Core Web Vitals. Web.dev", "url": "https://web.dev/vitals/" },
+                { "@type": "CreativeWork", "name": "Think With Google. Mobile Speed", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
                 { "@type": "CreativeWork", "name": "Wordfence Security Plugin", "url": "https://www.wordfence.com/" },
                 { "@type": "CreativeWork", "name": "WP Rocket Performance Plugin", "url": "https://wp-rocket.me/" }
             ]
@@ -91,11 +91,11 @@ const articleSchema = {
             "description": "Step-by-step process to identify which WordPress plugins are slowing your site and reduce load time.",
             "totalTime": "PT3H",
             "step": [
-                { "@type": "HowToStep", "position": 1, "name": "Baseline Your Current Speed", "text": "Go to pagespeed.web.dev and test your homepage, a key service page, and your blog. Note the Mobile score and load time for each. This is your before benchmark — you can't measure improvement without it." },
+                { "@type": "HowToStep", "position": 1, "name": "Baseline Your Current Speed", "text": "Go to pagespeed.web.dev and test your homepage, a key service page, and your blog. Note the Mobile score and load time for each. This is your before benchmark: you can't measure improvement without it." },
                 { "@type": "HowToStep", "position": 2, "name": "List Every Active Plugin", "text": "In WordPress admin, go to Plugins → Installed Plugins. Filter by Active. Note every plugin name, its purpose, and when it was last updated. Anything not updated in 12+ months is a security and performance risk." },
                 { "@type": "HowToStep", "position": 3, "name": "Identify the Worst Offenders", "text": "Install Query Monitor plugin to see which plugins add the most database queries per page. Run GTmetrix waterfall view to see which scripts take longest to load. Any plugin adding 200ms+ to load time is a priority removal." },
                 { "@type": "HowToStep", "position": 4, "name": "Deactivate Non-Essential Plugins One by One", "text": "Deactivate one plugin at a time and re-test speed after each removal. Common safe removals: social share buttons, related posts plugins, backup plugins that run on page load, older analytics scripts, duplicate SEO plugins." },
-                { "@type": "HowToStep", "position": 5, "name": "Replace Heavy Plugins with Lightweight Alternatives", "text": "Replace Jetpack (800KB+) with individual lightweight plugins for only the features you use. Replace heavy contact form plugins with simple HTML forms. Use only one SEO plugin — either Rank Math or Yoast, not both." }
+                { "@type": "HowToStep", "position": 5, "name": "Replace Heavy Plugins with Lightweight Alternatives", "text": "Replace Jetpack (800KB+) with individual lightweight plugins for only the features you use. Replace heavy contact form plugins with simple HTML forms. Use only one SEO plugin. Either Rank Math or Yoast, not both." }
             ]
         },
         {
@@ -129,7 +129,7 @@ const articleSchema = {
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95–100/100 Google PageSpeed on every build.",
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95 to 100/100 Google PageSpeed on every build.",
             "areaServed": "Worldwide",
             "foundingDate": "2026"
         },
@@ -198,8 +198,8 @@ export default function WordPressPluginsSpeedPage() {
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
                         <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
                         <BlogList items={[
-                            "Every WordPress plugin adds 2–15 HTTP requests, CSS files, and JavaScript to every single page load.",
-                            "Sites with 30+ plugins average 35/100 Mobile PageSpeed — Google's red zone for organic rankings.",
+                            "Every WordPress plugin adds 2 to 15 HTTP requests, CSS files, and JavaScript to every single page load.",
+                            "Sites with 30+ plugins average 35/100 Mobile PageSpeed. Google's red zone for organic rankings.",
                             "You can reduce damage by auditing plugins, but WordPress has a hard performance ceiling of ~75/100.",
                             "For under 1 second load times and 95+ PageSpeed, a full migration to Next.js is the only reliable path."
                         ]} />
@@ -218,7 +218,7 @@ export default function WordPressPluginsSpeedPage() {
                             Each plugin slows your site in several compounding ways:
                         </BlogText>
                         <BlogList items={[
-                            "HTTP requests: Every plugin adds 2–15 requests (CSS files, JavaScript files, web fonts)",
+                            "HTTP requests: Every plugin adds 2 to 15 requests (CSS files, JavaScript files, web fonts)",
                             "Database queries: Plugins run queries on every page load, even when not needed on that page",
                             "JavaScript execution: Plugin scripts block page rendering until they finish loading",
                             "CSS bloat: Plugin stylesheets load on every page even if the plugin is used on only one",
@@ -235,8 +235,8 @@ export default function WordPressPluginsSpeedPage() {
                         <BlogList items={[
                             "Google data: 53% of mobile visitors abandon sites that take 3+ seconds to load",
                             "Conversion impact: Every additional second reduces conversions by 7%",
-                            "If you do $500K/year with a 4-second load time: $75K–$150K in lost annual revenue",
-                            "If you do $200K/year with a 4-second load time: $30K–$60K in lost annual revenue"
+                            "If you do $500K/year with a 4-second load time: $75K to $150K in lost annual revenue",
+                            "If you do $200K/year with a 4-second load time: $30K to $60K in lost annual revenue"
                         ]} />
                         <BlogQuote>
                             A client came to us with 34 active plugins and a 4.3-second load time. Conservative estimate of lost annual revenue: $89,000. The plugins they were paying for were costing them far more than their subscription fees.
@@ -247,9 +247,9 @@ export default function WordPressPluginsSpeedPage() {
                             Use this 5-step audit process:
                         </BlogText>
                         <BlogList items={[
-                            "Step 1: Run your site through pagespeed.web.dev — get your Mobile baseline score",
-                            "Step 2: Install Query Monitor plugin — see which plugins run the most database queries per page",
-                            "Step 3: Run GTmetrix — look at the waterfall view to see which scripts take longest to load",
+                            "Step 1: Run your site through pagespeed.web.dev. Get your Mobile baseline score",
+                            "Step 2: Install Query Monitor plugin. See which plugins run the most database queries per page",
+                            "Step 3: Run GTmetrix. Look at the waterfall view to see which scripts take longest to load",
                             "Step 4: Deactivate plugins one at a time and re-test speed after each removal",
                             "Step 5: Keep deactivated anything that doesn't cause a visible loss in functionality"
                         ]} />
@@ -257,7 +257,7 @@ export default function WordPressPluginsSpeedPage() {
                         {/* Mid-Article CTA */}
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Want to know exactly what your plugins are costing you?</p>
-                            <p className="text-stone-600 mb-4 text-sm">Free speed audit — we identify your worst offending plugins and calculate your revenue loss.</p>
+                            <p className="text-stone-600 mb-4 text-sm">Free speed audit: we identify your worst offending plugins and calculate your revenue loss.</p>
                             <a href="https://cal.com/pandagen/discovery" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                 Get Free Speed Audit <ArrowRight className="w-4 h-4" />
                             </a>
@@ -268,11 +268,11 @@ export default function WordPressPluginsSpeedPage() {
                             Based on hundreds of audits, these categories consistently cause the most damage:
                         </BlogText>
                         <BlogList items={[
-                            "Jetpack: Adds 800KB+ for features you likely don't use — replace with individual lightweight alternatives",
-                            "Revolution Slider / WP Bakery: Heavy JavaScript that blocks rendering by 1–2 seconds",
+                            "Jetpack: Adds 800KB+ for features you likely don't use. Replace with individual lightweight alternatives",
+                            "Revolution Slider / WP Bakery: Heavy JavaScript that blocks rendering by 1 to 2 seconds",
                             "Social media plugins: Often load external iframes and scripts on every page",
                             "Backup plugins running on page load: Should only run in the background via scheduled cron",
-                            "Multiple SEO plugins running simultaneously: Pick one — either Rank Math or Yoast, never both"
+                            "Multiple SEO plugins running simultaneously: Pick one. Either Rank Math or Yoast, never both"
                         ]} />
 
                         <BlogHeader>What Is the Maximum Speed You Can Reach by Fixing WordPress Plugins?</BlogHeader>
@@ -281,12 +281,12 @@ export default function WordPressPluginsSpeedPage() {
                         </BlogText>
                         <BlogList items={[
                             "30+ plugins → remove half → best case: 4.5s to 2.8s load time",
-                            "PageSpeed improvement: 38/100 to 55–65/100 (still in orange/poor range)",
-                            "With WP Rocket + image optimization + CDN: Maybe 68–72/100",
-                            "Absolute best case WordPress: ~75/100 Mobile — still below Google's 90+ green zone"
+                            "PageSpeed improvement: 38/100 to 55 to 65/100 (still in orange/poor range)",
+                            "With WP Rocket + image optimization + CDN: Maybe 68 to 72/100",
+                            "Absolute best case WordPress: ~75/100 Mobile, still below Google's 90+ green zone"
                         ]} />
                         <BlogText>
-                            <BlogHighlight>You cannot reach 90+ on WordPress regardless of how many plugins you remove.</BlogHighlight> <a href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">The architecture itself is the limiting factor</a>. To consistently hit 95–100, you need <a href="/services/wordpress-migration" className="text-cognac hover:underline">Next.js</a>.
+                            <BlogHighlight>You cannot reach 90+ on WordPress regardless of how many plugins you remove.</BlogHighlight> <a href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">The architecture itself is the limiting factor</a>. To consistently hit 95 to 100, you need <a href="/services/wordpress-migration" className="text-cognac hover:underline">Next.js</a>.
                         </BlogText>
 
                         <BlogHeader>When Is It Time to Stop Optimizing and Migrate?</BlogHeader>
@@ -301,7 +301,7 @@ export default function WordPressPluginsSpeedPage() {
                             "You're paying $400+/month on hosting, plugins, and maintenance combined"
                         ]} />
                         <BlogText>
-                            If any of those apply, <a href="/blog/wordpress-killer" className="text-cognac hover:underline">the ROI on migrating to Next.js pays for itself within 6–12 months</a> — and every year after, you save money and gain back lost traffic.
+                            If any of those apply, <a href="/blog/wordpress-killer" className="text-cognac hover:underline">the ROI on migrating to Next.js pays for itself within 6 to 12 months</a>, and every year after, you save money and gain back lost traffic.
                         </BlogText>
                     </div>
 
@@ -309,7 +309,7 @@ export default function WordPressPluginsSpeedPage() {
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Find Out Which Plugins Are Costing You the Most</h3>
                         <p className="text-stone-600 mb-6">
-                            Free WordPress speed audit — we identify your worst plugins, calculate revenue loss, and show your path to 95+ PageSpeed.
+                            Free WordPress speed audit: we identify your worst plugins, calculate revenue loss, and show your path to 95+ PageSpeed.
                         </p>
                         <a href="https://cal.com/pandagen/discovery" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
                             Book Free Speed Audit <ArrowRight className="w-5 h-5" />
@@ -320,11 +320,11 @@ export default function WordPressPluginsSpeedPage() {
                     <section className="mb-10">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>Every plugin is a permanent tax on your speed</strong> — each one adds 2-15 HTTP requests, database queries, and JavaScript that load on every single page whether needed or not.</li>
-                            <li><strong>30+ plugins typically means a 35/100 PageSpeed score</strong> — that is Google's red zone, actively suppressing your organic rankings and handing traffic to faster competitors.</li>
-                            <li><strong>Plugin bloat costs real revenue</strong> — a 4-second load time on a $500K/year business translates to $75K-$150K in lost annual revenue from abandoned visits and lower conversions.</li>
-                            <li><strong>Removing half your plugins only gets you to 55-65/100</strong> — you can reduce the damage, but WordPress's hard ceiling of ~75/100 means you will never reach Google's green zone.</li>
-                            <li><strong>Migration is the only path to 95+ PageSpeed</strong> — once you have removed all non-essential plugins and still score below 70, the platform itself is the bottleneck, not your settings.</li>
+                            <li><strong>Every plugin is a permanent tax on your speed</strong>: Each one adds 2-15 HTTP requests, database queries, and JavaScript that load on every single page whether needed or not.</li>
+                            <li><strong>30+ plugins typically means a 35/100 PageSpeed score</strong>: That is Google's red zone, actively suppressing your organic rankings and handing traffic to faster competitors.</li>
+                            <li><strong>Plugin bloat costs real revenue</strong>: A 4-second load time on a $500K/year business translates to $75K-$150K in lost annual revenue from abandoned visits and lower conversions.</li>
+                            <li><strong>Removing half your plugins only gets you to 55-65/100</strong>: You can reduce the damage, but WordPress's hard ceiling of ~75/100 means you will never reach Google's green zone.</li>
+                            <li><strong>Migration is the only path to 95+ PageSpeed</strong>: Once you have removed all non-essential plugins and still score below 70, the platform itself is the bottleneck, not your settings.</li>
                         </ol>
                     </section>
 
