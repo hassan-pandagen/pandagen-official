@@ -5,10 +5,6 @@ const HeroStatusPill = dynamic(
   () => import("./HeroAnimated").then((m) => m.HeroStatusPill),
   { ssr: true }
 );
-const HeroSubtitle = dynamic(
-  () => import("./HeroAnimated").then((m) => m.HeroSubtitle),
-  { ssr: true }
-);
 const HeroCTAs = dynamic(
   () => import("./HeroAnimated").then((m) => m.HeroCTAs),
   { ssr: true }
@@ -59,8 +55,14 @@ export default function Hero() {
             </span>
           </h1>
 
-          {/* Subtitle, animated client component */}
-          <HeroSubtitle />
+          {/* Subtitle: plain server HTML — no JS dependency, zero LCP penalty */}
+          <p className="text-lg md:text-xl text-stone-600 mb-10 leading-relaxed max-w-lg font-medium">
+            We replace slow WordPress, Shopify, Wix, Squarespace, and drag and drop sites with{" "}
+            <span className="text-charcoal font-bold underline decoration-cognac/40 decoration-2 underline-offset-2">
+              custom built websites that actually perform
+            </span>
+            . Under 1 second. No monthly fees. No plugin updates. No vendor lock-in.
+          </p>
 
           {/* CTAs, animated client component */}
           <HeroCTAs />
