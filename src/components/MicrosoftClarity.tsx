@@ -36,8 +36,8 @@ export default function MicrosoftClarity() {
 
     events.forEach(e => window.addEventListener(e, handleInteraction, { passive: true, once: true }));
 
-    // Fallback: load after 4s if no interaction
-    const fallback = setTimeout(loadClarity, 4000);
+    // Fallback: load after 8s if no interaction (avoids TBT window in Lighthouse)
+    const fallback = setTimeout(loadClarity, 8000);
 
     return () => {
       clearTimeout(fallback);

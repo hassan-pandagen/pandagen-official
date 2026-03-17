@@ -24,6 +24,7 @@ const cardDisplay: Record<IllustrationType, { stat: string; label: string; bgTin
   wordpress:   { stat: "3.8s",         label: "WordPress average load time", bgTint: "#fff1f2", statColor: "#be123c", border: "#fecdd3" },
   saas:        { stat: "40+",          label: "Agencies we partner with",    bgTint: "#eff6ff", statColor: "#1d4ed8", border: "#bfdbfe" },
   code:        { stat: "5×",           label: "Faster than WordPress",       bgTint: "#ecfdf5", statColor: "#065f46", border: "#a7f3d0" },
+  webflow:     { stat: "$4,700",       label: "Saved yearly vs Webflow",     bgTint: "#fffbeb", statColor: "#92400e", border: "#fde68a" },
 };
 
 // Combine blog data and sort by newest first

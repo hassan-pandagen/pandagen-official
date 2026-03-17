@@ -86,7 +86,10 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Google Mobile-First Indexing", "url": "https://developers.google.com/search/docs/crawling-indexing/mobile/mobile-sites-mobile-first-indexing" },
                 { "@type": "CreativeWork", "name": "Google Search Essentials", "url": "https://developers.google.com/search/docs/essentials" },
                 { "@type": "CreativeWork", "name": "Structured Data for Google Search", "url": "https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data" },
-                { "@type": "CreativeWork", "name": "Next.js Documentation", "url": "https://nextjs.org/docs" }
+                { "@type": "CreativeWork", "name": "Next.js Documentation", "url": "https://nextjs.org/docs" },
+                { "@type": "CreativeWork", "name": "Google Think: Mobile Page Speed Benchmarks", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
+                { "@type": "CreativeWork", "name": "Deloitte: Milliseconds Make Millions", "url": "https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" },
+                { "@type": "CreativeWork", "name": "Portent: Site Speed and Revenue Research", "url": "https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" }
             ]
         },
         {

@@ -86,7 +86,10 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Google Search Console Help", "url": "https://support.google.com/webmasters/answer/9012289" },
                 { "@type": "CreativeWork", "name": "Vercel Deployment Documentation", "url": "https://vercel.com/docs/deployments/overview" },
                 { "@type": "CreativeWork", "name": "Google Core Web Vitals", "url": "https://developers.google.com/search/docs/appearance/core-web-vitals" },
-                { "@type": "CreativeWork", "name": "WordPress Export Tool Documentation", "url": "https://wordpress.org/documentation/article/tools-export-screen/" }
+                { "@type": "CreativeWork", "name": "WordPress Export Tool Documentation", "url": "https://wordpress.org/documentation/article/tools-export-screen/" },
+                { "@type": "CreativeWork", "name": "Google Think: Mobile Page Speed Benchmarks", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
+                { "@type": "CreativeWork", "name": "Deloitte: Milliseconds Make Millions", "url": "https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" },
+                { "@type": "CreativeWork", "name": "HTTP Archive Web Almanac 2024", "url": "https://almanac.httparchive.org/en/2024/" }
             ]
         },
         {

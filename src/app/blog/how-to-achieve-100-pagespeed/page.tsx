@@ -86,7 +86,10 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Next.js Image Optimization", "url": "https://nextjs.org/docs/app/api-reference/components/image" },
                 { "@type": "CreativeWork", "name": "Next.js Font Optimization", "url": "https://nextjs.org/docs/app/building-your-application/optimizing/fonts" },
                 { "@type": "CreativeWork", "name": "Chrome Lighthouse Overview", "url": "https://developer.chrome.com/docs/lighthouse/overview/" },
-                { "@type": "CreativeWork", "name": "Largest Contentful Paint (LCP) Optimization", "url": "https://web.dev/lcp/" }
+                { "@type": "CreativeWork", "name": "Largest Contentful Paint (LCP) Optimization", "url": "https://web.dev/lcp/" },
+                { "@type": "CreativeWork", "name": "Google Think: Mobile Page Speed Benchmarks", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
+                { "@type": "CreativeWork", "name": "Deloitte: Milliseconds Make Millions", "url": "https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" },
+                { "@type": "CreativeWork", "name": "Portent: Site Speed and Revenue Research", "url": "https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" }
             ]
         },
         {

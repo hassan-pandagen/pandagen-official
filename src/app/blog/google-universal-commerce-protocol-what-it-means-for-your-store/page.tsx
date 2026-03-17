@@ -84,7 +84,9 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Google announces a new protocol to facilitate commerce using AI agents", "url": "https://techcrunch.com/2026/01/11/google-announces-a-new-protocol-to-facilitate-commerce-using-ai-agents/" },
                 { "@type": "CreativeWork", "name": "You can now buy products in Google AI Mode without leaving the search results", "url": "https://www.neowin.net/news/you-can-now-buy-products-in-google-ai-mode-without-leaving-the-search-results/" },
                 { "@type": "CreativeWork", "name": "Google's Universal Commerce Protocol: The End of E-Commerce As We Know It", "url": "https://blog.lengow.com/googles-universal-commerce-protocol-the-end-of-e-commerce-as-we-know-it/" },
-                { "@type": "CreativeWork", "name": "Google UCP: How AI Shopping Is Rewarding Data-Ready Sellers", "url": "https://www.efulfillmentservice.com/2026/01/google-ucp-how-ai-shopping-is-rewarding-data-ready-sellers-and-punishing-everyone-else/" }
+                { "@type": "CreativeWork", "name": "Google UCP: How AI Shopping Is Rewarding Data-Ready Sellers", "url": "https://www.efulfillmentservice.com/2026/01/google-ucp-how-ai-shopping-is-rewarding-data-ready-sellers-and-punishing-everyone-else/" },
+                { "@type": "CreativeWork", "name": "Deloitte: Milliseconds Make Millions", "url": "https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" },
+                { "@type": "CreativeWork", "name": "Google Think: Mobile Page Speed Benchmarks", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" }
             ],
             "speakable": {
                 "@type": "SpeakableSpecification",

@@ -81,7 +81,9 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Shopify Storefront API", "url": "https://shopify.dev/docs/api/storefront" },
                 { "@type": "CreativeWork", "name": "Vercel Edge Network", "url": "https://vercel.com/docs/edge-network/overview" },
                 { "@type": "CreativeWork", "name": "Next.js Commerce", "url": "https://nextjs.org/commerce" },
-                { "@type": "CreativeWork", "name": "PageSpeed Insights", "url": "https://pagespeed.web.dev/" }
+                { "@type": "CreativeWork", "name": "PageSpeed Insights", "url": "https://pagespeed.web.dev/" },
+                { "@type": "CreativeWork", "name": "Deloitte: Milliseconds Make Millions", "url": "https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" },
+                { "@type": "CreativeWork", "name": "Portent Research: Site speed impact on conversion rates", "url": "https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" }
             ]
         },
         {

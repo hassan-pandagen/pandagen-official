@@ -1,4 +1,5 @@
 import lazyLoad from "next/dynamic";
+import Script from "next/script";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
@@ -314,6 +315,10 @@ export default function Home() {
       <LatestBlog />
 
       <Footer />
+      <Script
+        src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+        strategy="lazyOnload"
+      />
     </main>
   );
 }

@@ -1,0 +1,525 @@
+import { ArrowLeft, Calendar, Clock, ArrowRight } from "lucide-react";
+import Link from "next/link";
+import dynamic from "next/dynamic";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import Breadcrumb from "@/components/ui/Breadcrumb";
+import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
+import { FAQAccordion } from "@/components/ui/FAQAccordion";
+import { blogPosts } from "@/data/blog";
+import type { Metadata } from "next";
+
+const webflowFAQs = blogPosts.find(p => p.id === 'webflow-true-cost')?.faqs ?? [];
+
+const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
+const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
+
+export const metadata: Metadata = {
+    title: "Why Your Webflow Site Is Costing You More Than You Think | PandaCodeGen",
+    description: "Webflow looks affordable at $29/month. But add CMS hosting, form limits, bandwidth overages, and the SEO ceiling, and you are quietly losing $5K to $15K a year.",
+    alternates: {
+        canonical: '/blog/webflow-true-cost',
+    },
+    keywords: ["Webflow cost", "Webflow alternative", "Webflow vs custom code", "Webflow migration", "Webflow SEO limitations", "Webflow to Next.js", "Webflow pricing 2026"],
+    openGraph: {
+        title: "Why Your Webflow Site Is Costing You More Than You Think",
+        description: "Webflow looks affordable at $29/month. But add CMS hosting, form limits, and the SEO ceiling, and you are quietly losing thousands a year.",
+        type: "article",
+        publishedTime: "2026-03-18",
+        authors: ["Hassan Jamal"],
+        url: "https://www.pandacodegen.com/blog/webflow-true-cost",
+        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Why Your Webflow Site Is Costing You More Than You Think",
+        description: "Webflow looks affordable at $29/month. But add CMS hosting, form limits, and the SEO ceiling, and you are quietly losing thousands a year.",
+    },
+};
+
+const articleSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Article",
+            "@id": "https://www.pandacodegen.com/blog/webflow-true-cost#article",
+            "headline": "Why Your Webflow Site Is Costing You More Than You Think",
+            "description": "Webflow looks affordable at $29/month. But add CMS hosting, form limits, bandwidth overages, and the SEO ceiling, and you are quietly losing thousands a year in revenue.",
+            "image": "https://www.pandacodegen.com/og-image.jpg",
+            "datePublished": "2026-03-18T00:00:00-05:00",
+            "dateModified": "2026-03-18T00:00:00-05:00",
+            "author": {
+                "@type": "Person",
+                "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
+                "name": "Hassan Jamal",
+                "jobTitle": "Founder & Lead Full-Stack Engineer",
+                "url": "https://www.pandacodegen.com/about/hassan",
+                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
+                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
+            },
+            "publisher": {
+                "@type": "Organization",
+                "@id": "https://www.pandacodegen.com/#organization",
+                "name": "PandaCodeGen",
+                "url": "https://www.pandacodegen.com",
+                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
+            },
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/webflow-true-cost" },
+            "articleSection": "Comparison",
+            "keywords": ["Webflow cost", "Webflow alternative", "Webflow vs custom code", "Webflow migration", "Webflow SEO", "Webflow to Next.js", "Webflow pricing", "website builder limitations"],
+            "timeRequired": "PT10M",
+            "wordCount": 2800,
+            "about": [
+                { "@type": "Thing", "name": "Webflow" },
+                { "@type": "Thing", "name": "Website Builder Cost Analysis" },
+                { "@type": "Thing", "name": "Custom Web Development" },
+                { "@type": "Thing", "name": "Website Migration" }
+            ],
+            "inLanguage": "en-US",
+            "speakable": {
+                "@type": "SpeakableSpecification",
+                "cssSelector": ["h1", "h2", "[data-speakable='true']"]
+            },
+            "citation": [
+                { "@type": "CreativeWork", "name": "Webflow Pricing Plans", "url": "https://webflow.com/pricing" },
+                { "@type": "CreativeWork", "name": "Google Core Web Vitals", "url": "https://web.dev/vitals/" },
+                { "@type": "CreativeWork", "name": "Google PageSpeed Insights", "url": "https://pagespeed.web.dev/" },
+                { "@type": "CreativeWork", "name": "Next.js Documentation", "url": "https://nextjs.org/docs" },
+                { "@type": "CreativeWork", "name": "Webflow CMS Limits", "url": "https://university.webflow.com/lesson/cms-items-and-collections-limits" },
+                { "@type": "CreativeWork", "name": "Google Search Central - Page Experience", "url": "https://developers.google.com/search/docs/appearance/page-experience" },
+                { "@type": "CreativeWork", "name": "Google Think - Mobile Page Speed Benchmarks: 53% of mobile users abandon sites taking over 3 seconds", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
+                { "@type": "CreativeWork", "name": "Portent Research - Site Speed Is Impact on Conversion Rates", "url": "https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" },
+                { "@type": "CreativeWork", "name": "HTTP Archive Web Almanac - CMS Performance Report", "url": "https://almanac.httparchive.org/en/2024/cms" },
+                { "@type": "CreativeWork", "name": "Vercel Next.js Performance Case Studies", "url": "https://vercel.com/customers" },
+                { "@type": "CreativeWork", "name": "Deloitte - Milliseconds Make Millions: Page speed and revenue impact", "url": "https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" }
+            ]
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/webflow-true-cost#breadcrumb",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
+                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", "position": 3, "name": "Webflow True Cost", "item": "https://www.pandacodegen.com/blog/webflow-true-cost" }
+            ]
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/webflow-true-cost#webpage",
+            "url": "https://www.pandacodegen.com/blog/webflow-true-cost",
+            "name": "Why Your Webflow Site Is Costing You More Than You Think",
+            "description": "The real cost of Webflow beyond the monthly fee. CMS limits, SEO ceiling, and why custom code pays for itself.",
+            "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
+            "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
+            "datePublished": "2026-03-18T00:00:00-05:00",
+            "dateModified": "2026-03-18T00:00:00-05:00",
+            "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/webflow-true-cost#breadcrumb" },
+            "inLanguage": "en-US"
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://www.pandacodegen.com/#organization",
+            "name": "PandaCodeGen",
+            "alternateName": "Panda Gen",
+            "url": "https://www.pandacodegen.com",
+            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
+            "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
+            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95 to 100/100 Google PageSpeed on every build.",
+            "areaServed": "Worldwide",
+            "foundingDate": "2026"
+        },
+        {
+            "@type": "FAQPage",
+            "@id": "https://www.pandacodegen.com/blog/webflow-true-cost#faq",
+            "mainEntity": [
+                { "@type": "Question", "name": "How much does Webflow actually cost per year?", "acceptedAnswer": { "@type": "Answer", "text": "A business Webflow site costs $948 to $4,188 per year in hosting alone ($29 to $49/month for CMS plan, plus $14 to $300/month for e-commerce). Add domain ($12/year), form submissions ($19/month after the free tier), localization ($9/locale/month), and third party integrations. Most businesses spend $1,500 to $5,000 per year. A custom Next.js site on Vercel costs $0 to $240 per year for hosting with better performance." } },
+                { "@type": "Question", "name": "Is Webflow good for SEO?", "acceptedAnswer": { "@type": "Answer", "text": "Webflow is better than WordPress for SEO out of the box, but it has a hard ceiling. Webflow sites typically score 55 to 75 on Google PageSpeed Mobile because of render-blocking CSS, heavy JavaScript bundles, and no server-side rendering. Custom Next.js sites score 95 to 100. Since Google uses Core Web Vitals as a ranking factor, the 20 to 40 point gap means Webflow sites rank lower for competitive keywords." } },
+                { "@type": "Question", "name": "Can I migrate from Webflow to Next.js without losing SEO?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The migration process involves exporting your content, mapping all URLs with 301 redirects, transferring metadata and Open Graph tags, and submitting a new sitemap to Google Search Console. When done correctly, rankings hold steady or improve within 30 to 60 days because the new site loads 3 to 5 times faster." } },
+                { "@type": "Question", "name": "What are the limitations of Webflow?", "acceptedAnswer": { "@type": "Answer", "text": "Webflow has five main limitations that businesses hit as they grow. First, performance: sites score 55 to 75 on PageSpeed Mobile versus 95 to 100 for custom code. Second, pricing scales aggressively with CMS items, form submissions, and bandwidth. Third, no server-side logic means no custom APIs, no database queries, no real-time features. Fourth, you do not own your code, so you cannot leave without rebuilding. Fifth, the 10,000 CMS item limit blocks content-heavy sites." } },
+                { "@type": "Question", "name": "When should I leave Webflow for custom code?", "acceptedAnswer": { "@type": "Answer", "text": "Consider migrating when you hit any of these: your PageSpeed Mobile score is below 70 and hurting SEO, you are paying more than $100/month in Webflow fees, you need custom functionality Webflow cannot do (real-time pricing, custom checkout, API integrations), you have hit the 10,000 CMS item limit, or your conversion rate has plateaued despite good traffic. If two or more apply, custom code will pay for itself within 6 to 12 months." } }
+            ]
+        }
+    ]
+};
+
+export default function WebflowTrueCostPage() {
+    return (
+        <>
+            <Header />
+            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-32 pb-20">
+                <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
+
+                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-sm px-8 py-10 md:px-14">
+
+                    <script
+                        type="application/ld+json"
+                        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+                    />
+
+                    <Breadcrumb
+                        items={[
+                            { label: "Home", href: "/" },
+                            { label: "Blog", href: "/blog" },
+                            { label: "Webflow True Cost", href: "/blog/webflow-true-cost" }
+                        ]}
+                    />
+
+                    <Link href="/blog" className="inline-flex items-center gap-2 text-charcoal hover:text-stone-700 mb-8 transition-colors">
+                        <ArrowLeft className="w-4 h-4" />
+                        Back to Blog
+                    </Link>
+
+                    <div className="mb-10">
+                        <div className="inline-block px-3 py-1 text-xs font-medium bg-stone-100 text-stone-600 rounded-full mb-4">Comparison</div>
+                        <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
+                            Why Your Webflow Site Is <span className="font-serif italic text-stone-500">Costing You More</span> Than You Think
+                        </h1>
+
+                        <p className="text-xl text-stone-600 mb-6 leading-relaxed">
+                            Webflow looks affordable at $29/month. But add CMS hosting, form limits, bandwidth overages, and the SEO ceiling, and you are quietly bleeding thousands a year in lost revenue.
+                        </p>
+
+                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">
+                            <div className="flex items-center gap-2">
+                                <Calendar className="w-4 h-4" />
+                                Mar 18, 2026
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <Clock className="w-4 h-4" />
+                                10 min read
+                            </div>
+                        </div>
+                        <BlogAuthor
+                            bio="Hassan has migrated dozens of businesses from website builders to custom code. He specializes in Next.js builds that score 95 to 100 on Google PageSpeed and rank on the first page."
+                            linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
+                        />
+                    </div>
+
+                    <div className="mb-12">
+                        <PageSpeedAnimation />
+                    </div>
+
+                    {/* Executive Summary */}
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
+                        <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
+                        <BlogList items={[
+                            "Webflow's $29/month price tag hides $1,500 to $5,000 in real annual costs when you add CMS plans, forms, bandwidth, and integrations.",
+                            "Webflow sites score 55 to 75 on Google PageSpeed Mobile. Custom Next.js sites score 95 to 100. That gap costs you 20 to 30% of organic traffic.",
+                            "You do not own your Webflow code. If you leave, you rebuild from scratch. Custom code is yours forever.",
+                            "Businesses spending $100+/month on Webflow with PageSpeed below 70 will recover migration costs within 6 to 12 months through better SEO and lower hosting."
+                        ]} />
+                    </div>
+
+                    <div className="space-y-8">
+                        <BlogText>
+                            A prospect reached out last month. "We love our Webflow site," they said. "But our Google rankings keep dropping and we cannot figure out why."
+                        </BlogText>
+
+                        <BlogText>
+                            We ran their site through PageSpeed Insights. <BlogHighlight>Mobile score: 58/100.</BlogHighlight> Their competitor, a local firm with half the content, scored 96/100 on a custom site. Google was ranking the faster site higher for every shared keyword.
+                        </BlogText>
+
+                        <BlogText>
+                            Then we looked at their Webflow bill. CMS plan at $39/month. Form submissions add-on at $19/month. Localization for two languages at $18/month. Third-party integrations: $47/month. Total: $123/month, or $1,476 a year, for a site that was actively losing them rankings.
+                        </BlogText>
+
+                        <BlogText>
+                            This is the pattern we see repeatedly. Webflow markets itself as the affordable professional option. The reality is different once you scale past a basic brochure site.
+                        </BlogText>
+
+                        {/* Early Diagnostic - creates urgency before full breakdown */}
+                        <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 my-8">
+                            <p className="font-bold text-stone-900 mb-3 text-lg">Check your own site before reading further.</p>
+                            <p className="text-stone-700 mb-4 text-sm leading-relaxed">
+                                Two tests. Two minutes. You will know exactly where you stand.
+                            </p>
+                            <div className="space-y-3 mb-4">
+                                <div className="flex items-start gap-3">
+                                    <span className="font-bold text-amber-700 text-sm mt-0.5 flex-shrink-0">Test 1</span>
+                                    <p className="text-stone-700 text-sm">Go to <a href="https://pagespeed.web.dev" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 text-stone-900 font-medium">pagespeed.web.dev</a> or use our free <Link href="/" className="underline underline-offset-2 text-stone-900 font-medium">AI audit tool</Link> and test your site on Mobile. <strong>If you score below 70, you are losing customers to faster competitors right now.</strong></p>
+                                </div>
+                                <div className="flex items-start gap-3">
+                                    <span className="font-bold text-amber-700 text-sm mt-0.5 flex-shrink-0">Test 2</span>
+                                    <p className="text-stone-700 text-sm">Add up your total Webflow spend: hosting + forms + integrations + third-party tools. <strong>If the total is over $100/month, custom code is already cheaper for you.</strong></p>
+                                </div>
+                            </div>
+                            <p className="text-sm text-stone-600 italic">If either test fails, keep reading. The rest of this article shows you exactly what it is costing you and what to do about it.</p>
+                        </div>
+
+                        <BlogHeader>What Does Webflow Actually Cost When You Add Everything Up?</BlogHeader>
+
+                        <BlogText>
+                            Webflow pricing starts at $14/month for a basic site. That sounds reasonable. But business sites need the CMS plan ($29 to $49/month), and the costs stack from there:
+                        </BlogText>
+
+                        <BlogText>
+                            <strong>The Webflow bill for a real business site:</strong>
+                        </BlogText>
+
+                        <BlogList items={[
+                            "CMS Hosting: $29 to $49/month ($348 to $588/year)",
+                            "E-commerce plan (if selling): $29 to $212/month ($348 to $2,544/year)",
+                            "Form submissions beyond 50/month: $19/month ($228/year)",
+                            "Localization per language: $9/month per locale ($108/year each)",
+                            "Custom domain: $12/year",
+                            "Third-party tools (Zapier, Memberstack, analytics): $30 to $100/month ($360 to $1,200/year)"
+                        ]} />
+
+                        <BlogText>
+                            <strong>Realistic annual total: $1,500 to $5,000/year.</strong>
+                        </BlogText>
+
+                        <BlogText>
+                            <strong>Custom Next.js site on Vercel:</strong>
+                        </BlogText>
+
+                        <BlogList items={[
+                            "Hosting: $0 to $20/month ($0 to $240/year)",
+                            "Domain: $12/year",
+                            "Forms: Built into your code (free)",
+                            "Localization: Built into Next.js (free)",
+                            "Total: $12 to $252/year"
+                        ]} />
+
+                        <BlogQuote>
+                            The hosting cost difference alone is $1,200 to $4,700 per year. Over 3 years, that is $3,600 to $14,100 saved, before you factor in the SEO revenue you are leaving on the table.
+                        </BlogQuote>
+
+                        <BlogHeader>Why Does Webflow Have a Hard SEO Ceiling That Custom Code Does Not?</BlogHeader>
+
+                        <BlogText>
+                            Webflow generates clean HTML. It handles meta tags well. For basic SEO, it is better than WordPress out of the box.
+                        </BlogText>
+
+                        <BlogText>
+                            Here is the problem in plain terms: Webflow was built for designers, not for speed. Every Webflow site carries extra weight that slows it down, and there is nothing you can do about it because you do not control the code.
+                        </BlogText>
+
+                        <BlogText>
+                            Think of it like a delivery van that is always fully loaded even when you are only delivering one package. It gets there eventually, but slower than a car making the same trip. Google sees that slowness and ranks you accordingly.
+                        </BlogText>
+
+                        <BlogList items={[
+                            "Your page loads extra code on every visit that your visitors never use. It is like paying for 10 staff members when only 2 show up to work.",
+                            "Your images load in the slowest possible format unless you manually convert every single one. Most business owners never do.",
+                            "Every button click or page interaction has to wait for a large file to load before it responds. Customers feel that hesitation.",
+                            "You have no control over any of this. It is baked into Webflow."
+                        ]} />
+
+                        <BlogText>
+                            The result: <BlogHighlight>Webflow sites score 55 to 75 on Google PageSpeed Mobile. Custom-coded sites score 95 to 100.</BlogHighlight>
+                        </BlogText>
+
+                        <BlogText>
+                            Google ranks faster sites higher. That 20 to 40 point gap means your competitor with a faster site is capturing customers that should be yours. Every month you stay on Webflow is another month of lost leads.
+                        </BlogText>
+
+                        <BlogText>
+                            The numbers back this up. <a href="https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Google research</a> found that 53% of mobile users abandon a site that takes over 3 seconds to load. <a href="https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Deloitte's Milliseconds Make Millions study</a> found that a 0.1 second improvement in load time increases retail conversion rates by 8%. For a business doing $50,000 a year, that is $4,000 in additional revenue from one technical change.
+                        </BlogText>
+
+                        <BlogText>
+                            If your competitor has a faster site with similar content, Google will rank them higher. We wrote about exactly how this works in our{" "}
+                            <Link href="/blog/why-competitor-outranks-you" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                                guide to why your competitor outranks you
+                            </Link>.
+                        </BlogText>
+
+                        <BlogHeader>What Happens When You Hit Webflow's Platform Limits?</BlogHeader>
+
+                        <BlogText>
+                            Webflow works well for brochure sites with 5 to 15 pages. The problems start when your business grows:
+                        </BlogText>
+
+                        <BlogText>
+                            <strong>CMS item limit: 10,000 items.</strong> If you have a blog, product catalog, or directory, you will hit this ceiling. Webflow charges enterprise pricing to go beyond it.
+                        </BlogText>
+
+                        <BlogText>
+                            <strong>No server-side logic.</strong> Need a custom API? A database query? Real-time pricing calculations? A personalized dashboard? Webflow cannot do it. You end up bolting on third-party services that add cost and complexity.
+                        </BlogText>
+
+                        <BlogText>
+                            <strong>No code ownership.</strong> This is the big one. Webflow generates proprietary code. If you decide to leave, you cannot take your site with you. You rebuild from scratch. With custom code, you own every line. Move it to any host, any time, no permission needed.
+                        </BlogText>
+
+                        <BlogQuote>
+                            Webflow is renting a nice apartment. Custom code is buying the house. Both work, but only one builds equity.
+                        </BlogQuote>
+
+                        {/* Mid-Article CTA */}
+                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                            <p className="font-bold text-charcoal mb-2">Curious what your Webflow site is really costing you?</p>
+                            <p className="text-stone-600 mb-4 text-sm">Get a free audit. We will show you the PageSpeed gap, the hidden costs, and whether migration makes financial sense.</p>
+                            <a
+                                href="https://cal.com/pandagen/discovery"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all"
+                            >
+                                Schedule Free Audit <ArrowRight className="w-4 h-4" />
+                            </a>
+                        </div>
+
+                        <BlogHeader>How Does a Webflow Site Compare to Custom Code Side by Side?</BlogHeader>
+
+                        <BlogText>
+                            Here is what you are actually paying for and what you are getting in return:
+                        </BlogText>
+
+                        <BlogText>
+                            <strong>Speed (what Google and your customers feel):</strong>
+                        </BlogText>
+
+                        <BlogList items={[
+                            "Webflow: Your site loads in 2.5 to 4 seconds on mobile. Google research shows 53% of visitors abandon a site that takes over 3 seconds to load. You are losing more than half your mobile traffic before they even see your offer.",
+                            "Custom code: Loads in under 1 second. Visitors stay. Google rewards you with higher rankings."
+                        ]} />
+
+                        <BlogText>
+                            <strong>What you pay every year just to keep the lights on:</strong>
+                        </BlogText>
+
+                        <BlogList items={[
+                            "Webflow: $1,500 to $5,000 per year. That is $125 to $417 per month leaving your account every single month, forever.",
+                            "Custom code on Vercel: $12 to $252 per year. Most clients pay $0 per month in hosting."
+                        ]} />
+
+                        <BlogQuote>
+                            Over 5 years on Webflow at $200/month, you spend $12,000 just on hosting. A custom site costs $0/month. That $12,000 is gone with nothing to show for it.
+                        </BlogQuote>
+
+                        <BlogText>
+                            <strong>Do you own it or are you renting it?</strong>
+                        </BlogText>
+
+                        <BlogList items={[
+                            "Webflow: You are renting. If Webflow raises prices, you pay more. If you want to leave, you rebuild from zero. You have no leverage.",
+                            "Custom code: You own every line. Your developer can hand it to any agency. You can move hosts in an afternoon. No one can hold your business hostage."
+                        ]} />
+
+                        <BlogText>
+                            <strong>Can it grow with your business?</strong>
+                        </BlogText>
+
+                        <BlogList items={[
+                            "Webflow: Hard limit of 10,000 blog posts or products. Need a custom booking system, real-time pricing, or a member portal? Not possible. You pay for third-party tools to patch the gaps.",
+                            "Custom code: No limits. If you can describe what you need, it can be built."
+                        ]} />
+
+                        <BlogText>
+                            <strong>Google rankings (where your customers find you):</strong>
+                        </BlogText>
+
+                        <BlogList items={[
+                            "Webflow: Scores 55 to 75/100 on Google's speed test. Google uses this score to decide where you rank. A score below 70 means you are losing customers to faster competitors every day.",
+                            "Custom code: Scores 95 to 100/100. You compete at the top of the results page, not the bottom."
+                        ]} />
+
+                        <BlogHeader>When Does It Make Sense to Stay on Webflow?</BlogHeader>
+
+                        <BlogText>
+                            Webflow is not bad for everyone. It makes sense when:
+                        </BlogText>
+
+                        <BlogList items={[
+                            "You have a simple brochure site (5 to 10 pages, no blog or CMS)",
+                            "You are a designer who wants visual control without writing code",
+                            "Your budget is under $5,000 and you need a site live in 2 weeks",
+                            "SEO is not a primary growth channel for your business",
+                            "You do not need custom functionality beyond what Webflow offers"
+                        ]} />
+
+                        <BlogText>
+                            If all five apply, Webflow is fine. Stay on it.
+                        </BlogText>
+
+                        <BlogText>
+                            But if you are paying $100+/month, your PageSpeed is below 70, or you need features Webflow cannot do, the math changes. The migration pays for itself.
+                        </BlogText>
+
+                        <BlogHeader>What Does a Webflow to Custom Code Migration Look Like?</BlogHeader>
+
+                        <BlogText>
+                            The migration is simpler than most people expect:
+                        </BlogText>
+
+                        <BlogList items={[
+                            "Week 1: Full audit of your Webflow site. Map every page, URL, form, and integration.",
+                            "Week 2 to 4: Build your new Next.js site. Every page rebuilt with custom code, optimized for 95 to 100 PageSpeed.",
+                            "Week 5: Content migration. Export CMS content, transfer images, verify metadata.",
+                            "Week 6: Launch. 301 redirects for every URL. Zero downtime. Submit new sitemap to Google."
+                        ]} />
+
+                        <BlogText>
+                            <strong>Investment:</strong> $6,000 to $40,000 depending on site complexity.
+                        </BlogText>
+
+                        <BlogText>
+                            <strong>ROI:</strong> If you are spending $1,500+/year on Webflow and losing 20% of organic traffic to slow PageSpeed, the migration typically pays for itself within 6 to 12 months through lower costs and higher rankings.
+                        </BlogText>
+
+                        <BlogText>
+                            We handle the full process. See details on our{" "}
+                            <Link href="/services/webflow" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                                Webflow migration service page
+                            </Link>.
+                        </BlogText>
+
+                        <BlogText>
+                            You ran the two tests at the top. You know your score and your monthly spend. Now you have a simple decision: keep paying Webflow to rent a slow site, or invest once in a custom site you own that ranks higher and costs less to run.
+                        </BlogText>
+
+                        <BlogText>
+                            <BlogHighlight>Every month you wait is another month your competitors capture the customers searching for what you sell.</BlogHighlight> The traffic you lose to a faster site today does not come back when you eventually migrate.
+                        </BlogText>
+
+                        <BlogText>
+                            Want the full picture on what a 100/100 PageSpeed score actually does for your revenue? Read our{" "}
+                            <Link href="/blog/how-to-achieve-100-pagespeed" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                                complete guide to achieving 100/100 PageSpeed
+                            </Link>.
+                        </BlogText>
+                    </div>
+
+                    {/* CTA Section */}
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
+                        <h3 className="text-2xl font-bold mb-4">Ready to Own Your Website?</h3>
+                        <p className="text-stone-600 mb-6">
+                            Get a free migration assessment. We will show you the real cost of Webflow versus custom code for your specific site.
+                        </p>
+                        <a
+                            href="https://cal.com/pandagen/discovery"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all"
+                        >
+                            Schedule Free Assessment <ArrowRight className="w-5 h-5" />
+                        </a>
+                    </div>
+
+                    {/* Key Takeaways */}
+                    <section className="mb-10 mt-16">
+                        <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
+                        <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
+                            <li><strong>Webflow's real cost is $1,500 to $5,000/year</strong>: The $29/month starting price does not include CMS plans, form limits, localization, or the third-party tools you need to run a real business site.</li>
+                            <li><strong>Webflow has a hard PageSpeed ceiling of 55 to 75</strong>: The platform's CSS framework, JavaScript runtime, and lack of server-side rendering prevent it from reaching the 90+ zone Google rewards with higher rankings.</li>
+                            <li><strong>You do not own your Webflow code</strong>: If you leave, you rebuild from scratch. Custom code is an asset you own forever.</li>
+                            <li><strong>Custom Next.js costs $12 to $252/year to host</strong>: With 95 to 100 PageSpeed scores, server-side rendering, and zero platform limits.</li>
+                            <li><strong>Migration pays for itself in 6 to 12 months</strong>: Through lower hosting costs, better SEO rankings, and higher conversion rates from faster load times.</li>
+                        </ol>
+                    </section>
+
+                    {/* FAQ Section */}
+                    {webflowFAQs.length > 0 && <FAQAccordion faqs={webflowFAQs} />}
+
+                    {/* Related Posts */}
+                    <RelatedPosts currentPostId="webflow-true-cost" category="Comparison" />
+
+                </article>
+            </main>
+            <Footer />
+        </>
+    );
+}

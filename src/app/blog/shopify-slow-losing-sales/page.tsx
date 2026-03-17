@@ -86,7 +86,9 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Think With Google: Mobile Page Speed Benchmarks", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
                 { "@type": "CreativeWork", "name": "Shopify Storefront Performance", "url": "https://shopify.dev/docs/storefronts/themes/performance" },
                 { "@type": "CreativeWork", "name": "Next.js Documentation", "url": "https://nextjs.org/docs" },
-                { "@type": "CreativeWork", "name": "Google Page Experience Documentation", "url": "https://developers.google.com/search/docs/appearance/page-experience" }
+                { "@type": "CreativeWork", "name": "Google Page Experience Documentation", "url": "https://developers.google.com/search/docs/appearance/page-experience" },
+                { "@type": "CreativeWork", "name": "Portent Research: Site speed impact on conversion rates", "url": "https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" },
+                { "@type": "CreativeWork", "name": "HTTP Archive Web Almanac: Ecommerce performance", "url": "https://almanac.httparchive.org/en/2024/ecommerce" }
             ]
         },
         {
@@ -275,7 +277,7 @@ export default function ShopifySlowPage() {
                         <BlogHeader>How Does Your Store&apos;s Load Time Directly Reduce Shopify Revenue?</BlogHeader>
                         
                         <BlogText>
-                            Deloitte's research is crystal clear: <strong>For every 0.1 second improvement in load time, <a href="/blog/shopify-conversion-rate-speed-fix" className="text-cognac hover:underline">conversions increase by 8%</a>.</strong>
+                            <a href="https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Deloitte&apos;s Milliseconds Make Millions research</a> is crystal clear: <strong>For every 0.1 second improvement in load time, <a href="/blog/shopify-conversion-rate-speed-fix" className="text-cognac hover:underline">conversions increase by 8%</a>.</strong>
                         </BlogText>
 
                         <BlogText>

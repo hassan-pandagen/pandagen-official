@@ -86,7 +86,10 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Vercel Pricing", "url": "https://vercel.com/pricing" },
                 { "@type": "CreativeWork", "name": "WordPress Security Report 2024. Sucuri", "url": "https://sucuri.net/reports/website-hacked-report/" },
                 { "@type": "CreativeWork", "name": "Google PageSpeed Insights", "url": "https://pagespeed.web.dev/" },
-                { "@type": "CreativeWork", "name": "Sanity CMS Documentation", "url": "https://www.sanity.io/docs" }
+                { "@type": "CreativeWork", "name": "Sanity CMS Documentation", "url": "https://www.sanity.io/docs" },
+                { "@type": "CreativeWork", "name": "Google Think: Mobile Page Speed Benchmarks", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
+                { "@type": "CreativeWork", "name": "Deloitte: Milliseconds Make Millions", "url": "https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" },
+                { "@type": "CreativeWork", "name": "Portent: Site Speed and Revenue Research", "url": "https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" }
             ]
         },
         {

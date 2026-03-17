@@ -86,7 +86,10 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Google PageSpeed & Performance", "url": "https://developers.google.com/speed" },
                 { "@type": "CreativeWork", "name": "Cloudflare: How to Speed Up a Website", "url": "https://www.cloudflare.com/learning/performance/speed-up-a-website/" },
                 { "@type": "CreativeWork", "name": "Google Page Experience Guide", "url": "https://developers.google.com/search/docs/appearance/page-experience" },
-                { "@type": "CreativeWork", "name": "WPScan Vulnerability Database", "url": "https://wpscan.com/wordpress-security-database/" }
+                { "@type": "CreativeWork", "name": "WPScan Vulnerability Database", "url": "https://wpscan.com/wordpress-security-database/" },
+                { "@type": "CreativeWork", "name": "Google Think: Mobile Page Speed Benchmarks", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
+                { "@type": "CreativeWork", "name": "Deloitte: Milliseconds Make Millions", "url": "https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" },
+                { "@type": "CreativeWork", "name": "Portent: Site Speed and Revenue Research", "url": "https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" }
             ]
         },
         {

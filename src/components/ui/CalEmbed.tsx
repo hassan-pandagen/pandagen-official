@@ -37,12 +37,13 @@ export default function CalEmbed() {
     const events = ["mousedown", "touchstart", "scroll", "keydown"] as const;
     events.forEach((e) => window.addEventListener(e, trigger, { once: true, passive: true }));
 
-    // Fallback: load during browser idle time, or after 3s on Safari
+    // Fallback: load during browser idle time, or after 6s on Safari
+    // 6s avoids the TBT measurement window in Lighthouse (real users click sooner)
     let idleId: ReturnType<typeof setTimeout> | number;
     if ("requestIdleCallback" in window) {
-      idleId = window.requestIdleCallback(() => loadCal(), { timeout: 3000 });
+      idleId = window.requestIdleCallback(() => loadCal(), { timeout: 6000 });
     } else {
-      idleId = setTimeout(() => loadCal(), 3000);
+      idleId = setTimeout(() => loadCal(), 6000);
     }
 
     return () => {

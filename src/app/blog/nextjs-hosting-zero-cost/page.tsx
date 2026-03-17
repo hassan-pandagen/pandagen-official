@@ -86,7 +86,10 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Cloudflare CDN", "url": "https://www.cloudflare.com/cdn/" },
                 { "@type": "CreativeWork", "name": "Next.js Static Generation", "url": "https://nextjs.org/docs/app/building-your-application/rendering/server-components" },
                 { "@type": "CreativeWork", "name": "WP Engine Pricing", "url": "https://wpengine.com/plans/" },
-                { "@type": "CreativeWork", "name": "Google Core Web Vitals", "url": "https://web.dev/vitals/" }
+                { "@type": "CreativeWork", "name": "Google Core Web Vitals", "url": "https://web.dev/vitals/" },
+                { "@type": "CreativeWork", "name": "Deloitte: Milliseconds Make Millions", "url": "https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" },
+                { "@type": "CreativeWork", "name": "Portent: Site Speed and Revenue Research", "url": "https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" },
+                { "@type": "CreativeWork", "name": "HTTP Archive Web Almanac 2024", "url": "https://almanac.httparchive.org/en/2024/" }
             ]
         },
         {

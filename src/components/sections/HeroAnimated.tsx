@@ -23,9 +23,9 @@ export function HeroStatusPill() {
 export function HeroSubtitle() {
   return (
     <motion.p
-      initial={{ opacity: 0, y: 15 }}
+      initial={{ opacity: 1, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.2, duration: 0.6 }}
+      transition={{ delay: 0, duration: 0.5 }}
       className="text-lg md:text-xl text-stone-600 mb-10 leading-relaxed max-w-lg font-medium"
     >
       We replace slow WordPress, Shopify, Wix, Squarespace, and drag and drop sites with{" "}

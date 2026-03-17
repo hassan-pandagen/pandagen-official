@@ -81,7 +81,10 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Vercel Edge Network", "url": "https://vercel.com/docs/edge-network/overview" },
                 { "@type": "CreativeWork", "name": "Google Core Web Vitals", "url": "https://web.dev/vitals/" },
                 { "@type": "CreativeWork", "name": "Think With Google. Speed and Revenue", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
-                { "@type": "CreativeWork", "name": "Shopify Partners: Headless Commerce", "url": "https://www.shopify.com/partners/headless-commerce" }
+                { "@type": "CreativeWork", "name": "Shopify Partners: Headless Commerce", "url": "https://www.shopify.com/partners/headless-commerce" },
+                { "@type": "CreativeWork", "name": "Deloitte: Milliseconds Make Millions", "url": "https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" },
+                { "@type": "CreativeWork", "name": "Portent Research: Site speed impact on conversion rates", "url": "https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" },
+                { "@type": "CreativeWork", "name": "HTTP Archive Web Almanac: Ecommerce performance", "url": "https://almanac.httparchive.org/en/2024/ecommerce" }
             ]
         },
         {

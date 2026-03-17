@@ -86,7 +86,10 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Core Web Vitals. Google Web Dev", "url": "https://web.dev/vitals/" },
                 { "@type": "CreativeWork", "name": "Shopify Performance. Shopify Docs", "url": "https://shopify.dev/docs/storefronts/themes/best-practices/performance" },
                 { "@type": "CreativeWork", "name": "Deloitte: Milliseconds Make Millions", "url": "https://www2.deloitte.com/content/dam/Deloitte/ie/Documents/Consulting/Milliseconds_Make_Millions_report.pdf" },
-                { "@type": "CreativeWork", "name": "Next.js Commerce. Vercel", "url": "https://vercel.com/templates/next.js/nextjs-commerce" }
+                { "@type": "CreativeWork", "name": "Next.js Commerce. Vercel", "url": "https://vercel.com/templates/next.js/nextjs-commerce" },
+                { "@type": "CreativeWork", "name": "Google Think: 53% of mobile users abandon sites taking over 3 seconds", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
+                { "@type": "CreativeWork", "name": "Portent Research: Site speed impact on conversion rates", "url": "https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" },
+                { "@type": "CreativeWork", "name": "HTTP Archive Web Almanac: Ecommerce performance report", "url": "https://almanac.httparchive.org/en/2024/ecommerce" }
             ]
         },
         {
@@ -509,7 +512,7 @@ export default function ShopifyDawnThemeSlowPage() {
                         </BlogText>
 
                         <BlogText>
-                            And that&apos;s before accounting for the direct conversion impact. If two stores sell the same product at the same price, the one that loads in 0.8 seconds will outsell the one that loads in 3.5 seconds: every time.
+                            And that is before accounting for the direct conversion impact. <a href="https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Google research</a> found that 53% of mobile shoppers abandon a store that takes more than 3 seconds to load. If your Dawn store loads in 3.5 seconds, you are losing more than half your mobile traffic before they see a single product. <a href="https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Portent research</a> found that a site loading in 1 second converts 3 times better than a site loading in 5 seconds. That gap is exactly the difference between Dawn and a custom headless build.
                         </BlogText>
 
                         <BlogHeader>What Does the Real Fix Look Like?</BlogHeader>

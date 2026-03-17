@@ -1,5 +1,5 @@
 // Centralized blog data - Add new posts here and they'll automatically appear in sitemap
-export type IllustrationType = 'wordpress' | 'speed' | 'code' | 'saas' | 'plugins' | 'traffic' | 'sales' | 'conversion' | 'ranking' | 'cost' | 'performance' | 'security' | 'aicommerce' | 'hosting';
+export type IllustrationType = 'wordpress' | 'speed' | 'code' | 'saas' | 'plugins' | 'traffic' | 'sales' | 'conversion' | 'ranking' | 'cost' | 'performance' | 'security' | 'aicommerce' | 'hosting' | 'webflow';
 
 export interface FAQ {
   question: string;
@@ -22,6 +22,26 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    id: "webflow-true-cost",
+    title: "Why Your Webflow Site Is Costing You More Than You Think",
+    excerpt: "Webflow looks affordable at $29/month. But add CMS hosting, form limits, bandwidth overages, and the SEO ceiling, and you are quietly bleeding $5,000 to $15,000 a year in lost revenue. Here is the real math.",
+    category: "Comparison",
+    readTime: "10 min",
+    date: "Mar 18",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: false,
+    illustrationType: 'webflow',
+    lastModified: "2026-03-18",
+    faqs: [
+      { question: "How much does Webflow actually cost per year?", answer: "A business Webflow site costs $948 to $4,188 per year in hosting alone ($29 to $49/month for CMS plan, plus $14 to $300/month for e-commerce). Add domain ($12/year), form submissions ($19/month after the free tier), localization ($9/locale/month), and third party integrations. Most businesses spend $1,500 to $5,000 per year. A custom Next.js site on Vercel costs $0 to $240 per year for hosting with better performance." },
+      { question: "Is Webflow good for SEO?", answer: "Webflow is better than WordPress for SEO out of the box, but it has a hard ceiling. Webflow sites typically score 55 to 75 on Google PageSpeed Mobile because of render-blocking CSS, heavy JavaScript bundles, and no server-side rendering. Custom Next.js sites score 95 to 100. Since Google uses Core Web Vitals as a ranking factor, the 20 to 40 point gap means Webflow sites rank lower for competitive keywords." },
+      { question: "Can I migrate from Webflow to Next.js without losing SEO?", answer: "Yes. The migration process involves exporting your content, mapping all URLs with 301 redirects, transferring metadata and Open Graph tags, and submitting a new sitemap to Google Search Console. When done correctly, rankings hold steady or improve within 30 to 60 days because the new site loads 3 to 5 times faster." },
+      { question: "What are the limitations of Webflow?", answer: "Webflow has five main limitations that businesses hit as they grow. First, performance: sites score 55 to 75 on PageSpeed Mobile versus 95 to 100 for custom code. Second, pricing scales aggressively with CMS items, form submissions, and bandwidth. Third, no server-side logic means no custom APIs, no database queries, no real-time features. Fourth, you do not own your code, so you cannot leave without rebuilding. Fifth, the 10,000 CMS item limit blocks content-heavy sites." },
+      { question: "When should I leave Webflow for custom code?", answer: "Consider migrating when you hit any of these: your PageSpeed Mobile score is below 70 and hurting SEO, you are paying more than $100/month in Webflow fees, you need custom functionality Webflow cannot do (real-time pricing, custom checkout, API integrations), you have hit the 10,000 CMS item limit, or your conversion rate has plateaued despite good traffic. If two or more apply, custom code will pay for itself within 6 to 12 months." }
+    ]
+  },
   {
     id: "nextjs-hosting-zero-cost",
     title: "How We Host Client Websites for Free ($0/Month) With Vercel",

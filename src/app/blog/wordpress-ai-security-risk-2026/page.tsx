@@ -107,7 +107,9 @@ const articleSchema = {
                     "@type": "CreativeWork",
                     "name": "OWASP Top 10 Security Risks",
                     "url": "https://owasp.org/www-project-top-ten/"
-                }
+                },
+                { "@type": "CreativeWork", "name": "Google Think: Mobile Page Speed Benchmarks", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
+                { "@type": "CreativeWork", "name": "Deloitte: Milliseconds Make Millions", "url": "https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" }
             ],
             "speakable": {
                 "@type": "SpeakableSpecification",
