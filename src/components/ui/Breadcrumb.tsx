@@ -40,7 +40,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
               <span className="text-charcoal font-semibold">{item.label}</span>
             ) : (
               <Link
-                href={item.href}
+                href={item.href ?? "/"}
                 className="text-stone-600 hover:text-charcoal transition-colors font-medium"
               >
                 {item.label}
