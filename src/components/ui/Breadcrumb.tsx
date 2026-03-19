@@ -3,7 +3,7 @@ import { ChevronRight } from "lucide-react";
 
 interface BreadcrumbItem {
   label: string;
-  href: string;
+  href?: string;
 }
 
 interface BreadcrumbProps {
@@ -19,7 +19,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
       "@type": "ListItem",
       "position": index + 1,
       "name": item.label,
-      "item": `https://www.pandacodegen.com${item.href}`
+      "item": item.href ? `https://www.pandacodegen.com${item.href}` : undefined
     }))
   };
 
