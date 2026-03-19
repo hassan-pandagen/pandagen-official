@@ -13,6 +13,7 @@ const hostingFAQs = blogPosts.find(p => p.id === 'nextjs-hosting-zero-cost')?.fa
 
 const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
+const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "How We Host Client Websites for Free ($0/Month) With Vercel",
@@ -351,14 +352,9 @@ export default function NextjsHostingZeroCostPage() {
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Want to stop paying for slow hosting?</p>
                             <p className="text-stone-600 mb-4 text-sm">Book a free discovery call. We&apos;ll show you how much you can save.</p>
-                            <a
-                                href="https://cal.com/pandagen/discovery"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all"
-                            >
-                                Schedule Free Call <ArrowRight className="w-4 h-4" />
-                            </a>
+                            <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
+                                    Schedule Free Call <ArrowRight className="w-4 h-4" />
+                                </CalModalButton>
                         </div>
 
                         <BlogHeader>The Vercel Free Tier: What You Actually Get</BlogHeader>
@@ -476,14 +472,9 @@ export default function NextjsHostingZeroCostPage() {
                         <p className="text-stone-600 mb-6">
                             Book a free discovery call. We&apos;ll analyze your current hosting costs and show you exactly how much you&apos;ll save with a Next.js migration.
                         </p>
-                        <a
-                            href="https://cal.com/pandagen/discovery"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all"
-                        >
-                            Book Discovery Call <ArrowRight className="w-5 h-5" />
-                        </a>
+                        <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
+                                Book Discovery Call <ArrowRight className="w-5 h-5" />
+                            </CalModalButton>
                     </div>
 
                     {/* FAQ Section */}

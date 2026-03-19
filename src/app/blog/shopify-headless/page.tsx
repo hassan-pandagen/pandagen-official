@@ -13,6 +13,7 @@ const postFAQs = blogPosts.find(p => p.id === "shopify-headless")?.faqs ?? [];
 
 const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
+const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "Your Shopify Store Loads in 4 Seconds. We Got It to 0.8. Here's Exactly How. | PandaCodeGen",
@@ -262,9 +263,7 @@ export default function ShopifyHeadlessPage() {
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Is your Shopify store losing revenue to slow speed?</p>
                             <p className="text-stone-600 mb-4 text-sm">Free audit: We&apos;ll calculate exactly how much you&apos;re losing and show you what headless would return for your revenue.</p>
-                            <a href="https://cal.com/pandagen/discovery" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
-                                Get Free Shopify Speed Audit <ArrowRight className="w-4 h-4" />
-                            </a>
+                            <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free Shopify Speed Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
                         </div>
 
                         <BlogHeader>How Do You Go Headless on Shopify? The 6-Step Process</BlogHeader>
@@ -314,9 +313,7 @@ export default function ShopifyHeadlessPage() {
                         <p className="text-stone-600 mb-6">
                             Free audit. We&apos;ll show you your current speed impact and what headless would return for your specific store revenue.
                         </p>
-                        <a href="https://cal.com/pandagen/discovery" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
-                            Book Free Shopify Audit <ArrowRight className="w-5 h-5" />
-                        </a>
+                        <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Book Free Shopify Audit <ArrowRight className="w-5 h-5" /></CalModalButton>
                     </div>
 
                     <section className="mb-10">

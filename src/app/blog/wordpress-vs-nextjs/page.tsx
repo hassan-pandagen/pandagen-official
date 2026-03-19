@@ -13,6 +13,7 @@ const wpVsNextFAQs = blogPosts.find(p => p.id === 'wordpress-vs-nextjs')?.faqs ?
 
 const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
+const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "WordPress vs Next.js: Which Is Actually Better for Your Business?",
@@ -405,14 +406,9 @@ export default function WordPressVsNextJSPage() {
                         <p className="text-stone-300 mb-6 leading-relaxed">
                             We analyse your current site, model the 3-year cost comparison, and give you a migration scope with timeline, no obligation, no sales pressure.
                         </p>
-                        <a
-                            href="https://cal.com/pandagen/discovery"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 bg-white text-stone-900 font-semibold px-6 py-3 rounded-lg hover:bg-stone-100 transition-colors"
-                        >
-                            Book Free Discovery Call <ArrowRight className="w-4 h-4" />
-                        </a>
+                        <CalModalButton className="inline-flex items-center gap-2 bg-white text-stone-900 font-semibold px-6 py-3 rounded-lg hover:bg-stone-100 transition-colors">
+                                Book Free Discovery Call <ArrowRight className="w-4 h-4" />
+                            </CalModalButton>
                     </div>
 
                     {/* Section 6: Security */}
@@ -604,14 +600,9 @@ export default function WordPressVsNextJSPage() {
                             Every month on a slow platform is a month faster competitors are compounding their advantage. The businesses that move in 2026 will dominate their category for the next 3 to 5 years.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-3">
-                            <a
-                                href="https://cal.com/pandagen/discovery"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center justify-center gap-2 bg-stone-900 text-white font-semibold px-6 py-3 rounded-lg hover:bg-stone-700 transition-colors"
-                            >
-                                Book Free Migration Assessment <ArrowRight className="w-4 h-4" />
-                            </a>
+                            <CalModalButton className="inline-flex items-center justify-center gap-2 bg-stone-900 text-white font-semibold px-6 py-3 rounded-lg hover:bg-stone-700 transition-colors">
+                                    Book Free Migration Assessment <ArrowRight className="w-4 h-4" />
+                                </CalModalButton>
                             <Link
                                 href="/blog/wordpress-vs-custom-code-real-cost-3-years"
                                 className="inline-flex items-center justify-center gap-2 border border-stone-300 text-stone-700 font-semibold px-6 py-3 rounded-lg hover:bg-stone-50 transition-colors"

@@ -13,6 +13,7 @@ const competitorFAQs = blogPosts.find(p => p.id === 'why-competitor-outranks-you
 
 const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 const SEORankingAnimation = dynamic(() => import("@/components/blog/SEORankingAnimation"));
+const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "Why Your Competitor Outranks You on Google (And Pays Less)",
@@ -334,14 +335,9 @@ export default function CompetitorRankingsPage() {
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">See exactly how much traffic you&apos;re losing to your competitor.</p>
                             <p className="text-stone-600 mb-4 text-sm">Free speed audit. No sales pitch. Just data.</p>
-                            <a
-                                href="https://cal.com/pandagen/discovery"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all"
-                            >
-                                Get Free Speed Audit <ArrowRight className="w-4 h-4" />
-                            </a>
+                            <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
+                                    Get Free Speed Audit <ArrowRight className="w-4 h-4" />
+                                </CalModalButton>
                         </div>
 
                         <BlogHeader>Why Does Google Rank Coded Websites Higher Than WordPress Sites?</BlogHeader>
@@ -587,14 +583,9 @@ export default function CompetitorRankingsPage() {
                         <p className="text-stone-600 mb-6">
                             Get a free SEO audit. See exactly how much traffic you're losing to faster sites.
                         </p>
-                        <a
-                            href="https://cal.com/pandagen/discovery"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all"
-                        >
-                            Schedule Free Audit <ArrowRight className="w-5 h-5" />
-                        </a>
+                        <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
+                                Schedule Free Audit <ArrowRight className="w-5 h-5" />
+                            </CalModalButton>
                     </div>
 
                     {/* Related Posts */}

@@ -13,6 +13,7 @@ const postFAQs = blogPosts.find(p => p.id === "shopify-plus-still-slow")?.faqs ?
 
 const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 const SalesImpactAnimation = dynamic(() => import("@/components/blog/SalesImpactAnimation"));
+const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "Shopify Plus Still Slow? Why $2,300/mo Doesn't Fix Your Core Web Vitals | PandaCodeGen",
@@ -262,9 +263,7 @@ export default function ShopifyPlusStillSlowPage() {
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Is your Shopify Plus store losing revenue to slow speed?</p>
                             <p className="text-stone-600 mb-4 text-sm">Free audit. We&apos;ll calculate your exact revenue loss and show you what headless would return.</p>
-                            <a href="https://cal.com/pandagen/discovery" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
-                                Get Free Shopify Plus Audit <ArrowRight className="w-4 h-4" />
-                            </a>
+                            <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free Shopify Plus Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
                         </div>
 
                         <BlogHeader>What Is the Solution for Shopify Plus Speed?</BlogHeader>
@@ -310,9 +309,7 @@ export default function ShopifyPlusStillSlowPage() {
                         <p className="text-stone-600 mb-6">
                             Free audit. We&apos;ll calculate your exact revenue loss and show you the headless migration path for your store.
                         </p>
-                        <a href="https://cal.com/pandagen/discovery" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
-                            Book Free Shopify Plus Audit <ArrowRight className="w-5 h-5" />
-                        </a>
+                        <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Book Free Shopify Plus Audit <ArrowRight className="w-5 h-5" /></CalModalButton>
                     </div>
 
                     <section className="mb-10">

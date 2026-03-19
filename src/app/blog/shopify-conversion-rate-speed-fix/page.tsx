@@ -13,6 +13,7 @@ const postFAQs = blogPosts.find(p => p.id === "shopify-conversion-rate-speed-fix
 
 const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 const SalesImpactAnimation = dynamic(() => import("@/components/blog/SalesImpactAnimation"));
+const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "Low Shopify Conversion Rate? Speed Is Killing Your Sales | PandaCodeGen",
@@ -273,9 +274,7 @@ export default function ShopifyConversionRateSpeedFixPage() {
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Is your Shopify conversion rate limited by speed?</p>
                             <p className="text-stone-600 mb-4 text-sm">Free audit. We&apos;ll calculate your exact conversion rate loss from load time and show you the revenue you&apos;re leaving on the table.</p>
-                            <a href="https://cal.com/pandagen/discovery" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
-                                Get Free Conversion Audit <ArrowRight className="w-4 h-4" />
-                            </a>
+                            <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free Conversion Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
                         </div>
 
                         <BlogHeader>The Real Fix: Under 1 second Load Times</BlogHeader>
@@ -325,9 +324,7 @@ export default function ShopifyConversionRateSpeedFixPage() {
                         <p className="text-stone-600 mb-6">
                             Free audit. We&apos;ll analyse your store speed, calculate your exact conversion rate loss, and show you the headless migration path that recovers it.
                         </p>
-                        <a href="https://cal.com/pandagen/discovery" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
-                            Book Free Conversion Audit <ArrowRight className="w-5 h-5" />
-                        </a>
+                        <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Book Free Conversion Audit <ArrowRight className="w-5 h-5" /></CalModalButton>
                     </div>
 
                     <section className="mb-10">

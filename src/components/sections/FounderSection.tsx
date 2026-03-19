@@ -108,6 +108,7 @@ export default function FounderSection() {
                     href={founder.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`${founder.name} on LinkedIn`}
                     className="flex items-center gap-1.5 text-sm font-bold text-gray-500 hover:text-[#0077B5] transition-colors"
                   >
                     <Linkedin className="w-4 h-4" />

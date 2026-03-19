@@ -13,6 +13,7 @@ const pagespeedFAQs = blogPosts.find(p => p.id === 'how-to-achieve-100-pagespeed
 
 const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
+const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "Google Is Penalizing Your Slow Site. Here's How We Hit 100/100 PageSpeed on Every Build.",
@@ -358,14 +359,9 @@ export default function AchievePageSpeedPage() {
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Want these results on your site?</p>
                             <p className="text-stone-600 mb-4 text-sm">Get a free speed audit. We&apos;ll show you exactly how much traffic you&apos;re losing.</p>
-                            <a
-                                href="https://cal.com/pandagen/discovery"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all"
-                            >
-                                Schedule Free Audit <ArrowRight className="w-4 h-4" />
-                            </a>
+                            <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
+                                    Schedule Free Audit <ArrowRight className="w-4 h-4" />
+                                </CalModalButton>
                         </div>
 
                         <BlogHeader>What Are the 8 Specific Optimizations That Get Any Site to 100/100 PageSpeed?</BlogHeader>
@@ -701,14 +697,9 @@ export default function AchievePageSpeedPage() {
                         <p className="text-stone-600 mb-6">
                             Get a free speed audit. We'll analyze your site and show you exactly how much traffic you're losing.
                         </p>
-                        <a
-                            href="https://cal.com/pandagen/discovery"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all"
-                        >
-                            Schedule Free Audit <ArrowRight className="w-5 h-5" />
-                        </a>
+                        <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
+                                Schedule Free Audit <ArrowRight className="w-5 h-5" />
+                            </CalModalButton>
                     </div>
 
                     {/* Key Takeaways */}

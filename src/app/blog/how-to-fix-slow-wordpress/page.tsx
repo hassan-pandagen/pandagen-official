@@ -13,6 +13,7 @@ const slowWordPressFAQs = blogPosts.find(p => p.id === 'how-to-fix-slow-wordpres
 
 const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
+const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: { absolute: "How to Fix a Slow WordPress Site: 8 Ways That Work | PandaCodeGen" },
@@ -659,14 +660,9 @@ export default function FixSlowWordPressPage() {
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Ready to go beyond WordPress&apos;s speed ceiling?</p>
                             <p className="text-stone-600 mb-4 text-sm">Free migration audit. See what under 1 second load times would do for your traffic and revenue.</p>
-                            <a
-                                href="https://cal.com/pandagen/discovery"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all"
-                            >
-                                Book Free Migration Audit <ArrowRight className="w-4 h-4" />
-                            </a>
+                            <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
+                                    Book Free Migration Audit <ArrowRight className="w-4 h-4" />
+                                </CalModalButton>
                         </div>
 
                         <BlogHeader>What Is the Complete WordPress Speed Optimization Checklist in Order of Impact?</BlogHeader>
@@ -752,14 +748,9 @@ export default function FixSlowWordPressPage() {
                         <p className="text-stone-600 mb-8">
                             Free migration assessment: We analyze your WordPress site, calculate your current revenue loss, and show you the exact speed you'd get on Next.js. <strong className="text-charcoal">No sales pitch, just data.</strong>
                         </p>
-                        <a
-                            href="https://cal.com/pandagen/discovery"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-10 py-5 bg-charcoal text-white text-lg font-bold rounded-full hover:bg-stone-800 hover:scale-105 transition-all"
-                        >
-                            Get Your Free Speed Assessment <ArrowRight className="w-5 h-5" />
-                        </a>
+                        <CalModalButton className="inline-flex items-center gap-2 px-10 py-5 bg-charcoal text-white text-lg font-bold rounded-full hover:bg-stone-800 hover:scale-105 transition-all">
+                                Get Your Free Speed Assessment <ArrowRight className="w-5 h-5" />
+                            </CalModalButton>
                         <p className="text-sm text-stone-400 mt-4">
                             30-minute call • No commitment • See real before/after speeds
                         </p>

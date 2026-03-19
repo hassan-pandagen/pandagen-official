@@ -13,6 +13,7 @@ const postFAQs = blogPosts.find(p => p.id === "wordpress-plugins-destroy-speed")
 
 const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
+const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "WordPress Slow? Your Plugins Are Killing Speed (And Costing You Customers) | PandaCodeGen",
@@ -258,9 +259,7 @@ export default function WordPressPluginsSpeedPage() {
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Want to know exactly what your plugins are costing you?</p>
                             <p className="text-stone-600 mb-4 text-sm">Free speed audit: we identify your worst offending plugins and calculate your revenue loss.</p>
-                            <a href="https://cal.com/pandagen/discovery" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
-                                Get Free Speed Audit <ArrowRight className="w-4 h-4" />
-                            </a>
+                            <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free Speed Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
                         </div>
 
                         <BlogHeader>Which WordPress Plugins Are the Worst for Speed?</BlogHeader>
@@ -311,9 +310,7 @@ export default function WordPressPluginsSpeedPage() {
                         <p className="text-stone-600 mb-6">
                             Free WordPress speed audit: we identify your worst plugins, calculate revenue loss, and show your path to 95+ PageSpeed.
                         </p>
-                        <a href="https://cal.com/pandagen/discovery" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
-                            Book Free Speed Audit <ArrowRight className="w-5 h-5" />
-                        </a>
+                        <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Book Free Speed Audit <ArrowRight className="w-5 h-5" /></CalModalButton>
                     </div>
 
                     {/* Key Takeaways */}

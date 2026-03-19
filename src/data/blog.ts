@@ -23,6 +23,27 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "shopify-app-costs-real-monthly-bill",
+    title: "Your Shopify Bill Is $1,000/Month and You Don't Know It",
+    excerpt: "You signed up for $39/month. Then came Klaviyo, Loop Returns, Okendo, ReCharge, Smile.io. Here is the full breakdown of what Shopify actually costs in apps and how to cut it by $864/month.",
+    category: "Shopify",
+    readTime: "10 min",
+    date: "Mar 19",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: true,
+    illustrationType: 'cost',
+    lastModified: "2026-03-19",
+    faqs: [
+      { question: "How much do Shopify apps cost on average per month?", answer: "The average Shopify merchant spends $58 to $120/month on apps, but stores doing $20K to $100K/month in revenue commonly spend $300 to $1,000/month. The default stack of email marketing, reviews, returns, subscriptions, loyalty, and search apps costs around $1,000/month when using the most popular options like Klaviyo, Okendo, Loop Returns, and Smile.io." },
+      { question: "Does uninstalling a Shopify app cancel the subscription?", answer: "No. Uninstalling a Shopify app from your store does not automatically cancel the billing. You must cancel the subscription inside the app's own billing dashboard or contact the app developer directly. Many merchants have been charged for months after uninstalling without realizing it." },
+      { question: "What is the cheapest alternative to Klaviyo for Shopify?", answer: "For stores with under 10,000 contacts, Omnisend costs $59/month versus Klaviyo's $150/month. Brevo charges per email sent rather than per contact stored, making it ideal for stores with large inactive lists. Shopify's own email tool gives 10,000 free sends per month on all paid plans." },
+      { question: "What Shopify apps can I replace for free?", answer: "Shopify Flow replaces paid automation apps for order tagging, low stock alerts, and customer segmentation at zero cost. Shopify Search and Discovery replaces paid search apps for stores with under 500 products. Shopify Email gives 10,000 free sends per month. Shopify's native product recommendations API replaces basic upsell widgets at no cost." },
+      { question: "What is Shopify app creep?", answer: "Shopify app creep is the gradual accumulation of paid apps added one at a time, each seeming affordable on its own, that together create a large monthly bill. A store adding one $20/month app per quarter reaches $480/month in extra costs within two years, often without a single deliberate decision." },
+      { question: "When does it make financial sense to leave Shopify for a custom website?", answer: "When your combined Shopify plan, transaction fees, and app costs exceed $500 to $800/month, a custom Next.js build typically pays for itself within 6 to 12 months from savings alone. Custom builds eliminate monthly app fees, platform costs, and transaction surcharges while delivering faster load times that directly increase conversion rates." },
+    ]
+  },
+  {
     id: "webflow-true-cost",
     title: "Why Your Webflow Site Is Costing You More Than You Think",
     excerpt: "Webflow looks affordable at $29/month. But add CMS hosting, form limits, bandwidth overages, and the SEO ceiling, and you are quietly bleeding $5,000 to $15,000 a year in lost revenue. Here is the real math.",

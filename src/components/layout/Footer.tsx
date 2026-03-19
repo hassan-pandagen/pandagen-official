@@ -70,7 +70,7 @@ export default function Footer({ onOpenQuote }: FooterProps) {
             </div>
             <div className="flex flex-wrap gap-3 mt-6">
               <SocialPill href="https://x.com/PandaCodeGen" label="Twitter / X" isX />
-              <SocialPill href="https://www.linkedin.com/company/pandacodegen" icon={Linkedin} label="LinkedIn" />
+              <SocialPill href="https://www.linkedin.com/company/pandacodegen" icon={Linkedin} label="LinkedIn" ariaLabel="PandaCodeGen on LinkedIn" />
               <SocialPill href="https://github.com/hassan-pandagen" icon={Github} label="GitHub" />
               <SocialPill href="https://www.facebook.com/profile.php?id=61587111848962" icon={Facebook} label="Facebook" />
               <SocialPill href="https://www.instagram.com/pandacodegen/" icon={Instagram} label="Instagram" />
@@ -160,17 +160,18 @@ export default function Footer({ onOpenQuote }: FooterProps) {
 interface SocialPillProps {
   href: string;
   label: string;
+  ariaLabel?: string;
   icon?: LucideIcon;
   isX?: boolean;
 }
 
-function SocialPill({ href, icon: Icon, label, isX }: SocialPillProps) {
+function SocialPill({ href, icon: Icon, label, ariaLabel, isX }: SocialPillProps) {
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={label}
+      aria-label={ariaLabel ?? label}
       className="group flex items-center gap-2 px-4 py-2 bg-white border border-stone-200 rounded-full text-sm font-medium text-stone-600 hover:border-cognac hover:text-cognac transition-all shadow-sm hover:shadow-md"
     >
       {isX ? (

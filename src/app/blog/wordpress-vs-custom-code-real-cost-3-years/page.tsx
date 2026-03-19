@@ -13,6 +13,7 @@ const costFAQs = blogPosts.find(p => p.id === 'wordpress-vs-custom-code-real-cos
 
 const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 const SalesImpactAnimation = dynamic(() => import("@/components/blog/SalesImpactAnimation"));
+const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "WordPress vs Custom Code: Real Cost Comparison Over 3 Years | PandaCodeGen",
@@ -485,14 +486,9 @@ export default function WordPressVsCustomCodeCostPage() {
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Want the exact numbers for your site?</p>
                             <p className="text-stone-600 mb-4 text-sm">We audit your WordPress costs and show you the real 3-year comparison. Free, no obligation.</p>
-                            <a
-                                href="https://cal.com/pandagen/discovery"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all"
-                            >
-                                Get Free Cost Audit <ArrowRight className="w-4 h-4" />
-                            </a>
+                            <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
+                                    Get Free Cost Audit <ArrowRight className="w-4 h-4" />
+                                </CalModalButton>
                         </div>
 
                         <BlogHeader>When Does the Custom Site Break Even vs WordPress?</BlogHeader>
@@ -658,14 +654,9 @@ export default function WordPressVsCustomCodeCostPage() {
                         <p className="text-stone-600 mb-6">
                             We&apos;ll audit your current WordPress costs, add up what you&apos;re actually paying, and show you the honest comparison. Free, no sales pitch.
                         </p>
-                        <a
-                            href="https://cal.com/pandagen/discovery"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all"
-                        >
-                            Schedule Free Cost Audit <ArrowRight className="w-5 h-5" />
-                        </a>
+                        <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
+                                Schedule Free Cost Audit <ArrowRight className="w-5 h-5" />
+                            </CalModalButton>
                     </div>
 
                     {/* Related Posts */}

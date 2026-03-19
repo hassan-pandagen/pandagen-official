@@ -13,6 +13,7 @@ const postFAQs = blogPosts.find(p => p.id === "wordpress-killer")?.faqs ?? [];
 
 const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
+const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "Why WordPress Is a Waste of Money in 2026 | PandaCodeGen",
@@ -262,9 +263,7 @@ export default function WordPressKillerPage() {
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">What is your WordPress site actually costing you?</p>
                             <p className="text-stone-600 mb-4 text-sm">Free cost audit, direct costs plus lost revenue from slow speed, calculated for your specific site.</p>
-                            <a href="https://cal.com/pandagen/discovery" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
-                                Get Free WordPress Cost Audit <ArrowRight className="w-4 h-4" />
-                            </a>
+                            <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free WordPress Cost Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
                         </div>
 
                         <BlogHeader>Why Does a Slow WordPress Site Cost You Beyond the Monthly Bills?</BlogHeader>
@@ -317,9 +316,7 @@ export default function WordPressKillerPage() {
                         <p className="text-stone-600 mb-6">
                             Free audit: We calculate your direct WordPress costs plus revenue you&apos;re losing from slow speed, no obligation.
                         </p>
-                        <a href="https://cal.com/pandagen/discovery" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
-                            Book Free Cost Audit <ArrowRight className="w-5 h-5" />
-                        </a>
+                        <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Book Free Cost Audit <ArrowRight className="w-5 h-5" /></CalModalButton>
                     </div>
 
                     {/* Key Takeaways */}

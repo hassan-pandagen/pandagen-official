@@ -13,6 +13,7 @@ const postFAQs = blogPosts.find(p => p.id === "elementor-kills-seo")?.faqs ?? []
 
 const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 const SEORankingAnimation = dynamic(() => import("@/components/blog/SEORankingAnimation"));
+const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "Is Elementor Killing Your Google Rankings? We Audited 500 Sites. | PandaCodeGen",
@@ -260,9 +261,7 @@ export default function ElementorKillsSEOPage() {
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Is Elementor costing you rankings?</p>
                             <p className="text-stone-600 mb-4 text-sm">Free audit: We&apos;ll score your site and show you exactly how much traffic you&apos;re losing to faster competitors.</p>
-                            <a href="https://cal.com/pandagen/discovery" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
-                                Get Free SEO Audit <ArrowRight className="w-4 h-4" />
-                            </a>
+                            <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free SEO Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
                         </div>
 
                         <BlogHeader>Can You Fix Elementor&apos;s Performance Problems?</BlogHeader>
@@ -301,9 +300,7 @@ export default function ElementorKillsSEOPage() {
                         <p className="text-stone-600 mb-6">
                             Free SEO audit. We&apos;ll score your current site and show you the exact traffic and revenue impact of your page builder.
                         </p>
-                        <a href="https://cal.com/pandagen/discovery" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
-                            Book Free SEO Audit <ArrowRight className="w-5 h-5" />
-                        </a>
+                        <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Book Free SEO Audit <ArrowRight className="w-5 h-5" /></CalModalButton>
                     </div>
 
                     <section className="mb-10">

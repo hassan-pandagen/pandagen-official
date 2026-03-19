@@ -12,6 +12,7 @@ import type { Metadata } from "next";
 
 const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 const BlogFeatureVisual = dynamic(() => import("@/components/blog/BlogFeatureVisual"));
+const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 // --- SEO METADATA ---
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -191,14 +192,9 @@ const blogPosts: Record<
                 <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                     <p className="font-bold text-charcoal mb-2">How much is WordPress actually costing your business?</p>
                     <p className="text-stone-600 mb-4 text-sm">Free cost audit. We calculate your exact WordPress tax and show the migration ROI.</p>
-                    <a
-                        href="https://cal.com/pandagen/discovery"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all"
-                    >
-                        Get Free Cost Audit <ArrowRight className="w-4 h-4" />
-                    </a>
+                    <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
+                            Get Free Cost Audit <ArrowRight className="w-4 h-4" />
+                        </CalModalButton>
                 </div>
 
                 <BlogHeader>What Happens When You Migrate From WordPress to Custom Next.js?</BlogHeader>
@@ -313,14 +309,9 @@ const blogPosts: Record<
                 <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                     <p className="font-bold text-charcoal mb-2">Is your Shopify store hitting The Wall?</p>
                     <p className="text-stone-600 mb-4 text-sm">Free headless audit. We show you what your store would look like at under 1 second load times.</p>
-                    <a
-                        href="https://cal.com/pandagen/discovery"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all"
-                    >
-                        Get Free Headless Audit <ArrowRight className="w-4 h-4" />
-                    </a>
+                    <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
+                            Get Free Headless Audit <ArrowRight className="w-4 h-4" />
+                        </CalModalButton>
                 </div>
 
                 <BlogHeader>What Is a Headless Shopify Storefront and How Does It Work?</BlogHeader>
@@ -484,14 +475,9 @@ const blogPosts: Record<
                 <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                     <p className="font-bold text-charcoal mb-2">How many plugins is your site running right now?</p>
                     <p className="text-stone-600 mb-4 text-sm">Free plugin audit. We identify exactly which plugins are costing you speed, money, and traffic.</p>
-                    <a
-                        href="https://cal.com/pandagen/discovery"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all"
-                    >
-                        Get Free Plugin Audit <ArrowRight className="w-4 h-4" />
-                    </a>
+                    <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
+                            Get Free Plugin Audit <ArrowRight className="w-4 h-4" />
+                        </CalModalButton>
                 </div>
 
                 <BlogHeader>What Do Real Before and After PageSpeed Numbers Look Like After WordPress Migration?</BlogHeader>
@@ -621,14 +607,9 @@ const blogPosts: Record<
                 <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                     <p className="font-bold text-charcoal mb-2">Is Elementor killing your Google rankings?</p>
                     <p className="text-stone-600 mb-4 text-sm">Free DOM audit. We analyze your site and show you exactly how much traffic you&apos;re losing to page builder bloat.</p>
-                    <a
-                        href="https://cal.com/pandagen/discovery"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all"
-                    >
-                        Get Free DOM Audit <ArrowRight className="w-4 h-4" />
-                    </a>
+                    <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
+                            Get Free DOM Audit <ArrowRight className="w-4 h-4" />
+                        </CalModalButton>
                 </div>
 
                 <BlogHeader>What Is Semantic HTML and Why Does Google Rank It Higher?</BlogHeader>
@@ -899,14 +880,9 @@ const blogPosts: Record<
                 <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                     <p className="font-bold text-charcoal mb-2">Still paying $27,600/year for a slow Shopify Plus store?</p>
                     <p className="text-stone-600 mb-4 text-sm">Free performance audit. We calculate your exact revenue loss and show you the headless solution.</p>
-                    <a
-                        href="https://cal.com/pandagen/discovery"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all"
-                    >
-                        Get Free Performance Audit <ArrowRight className="w-4 h-4" />
-                    </a>
+                    <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
+                            Get Free Performance Audit <ArrowRight className="w-4 h-4" />
+                        </CalModalButton>
                 </div>
 
                 <BlogHeader>What Should You Do If Your Shopify Plus Mobile Score Is Below 70?</BlogHeader>
@@ -1062,14 +1038,9 @@ const blogPosts: Record<
                 <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                     <p className="font-bold text-charcoal mb-2">Is slow speed killing your Google traffic?</p>
                     <p className="text-stone-600 mb-4 text-sm">Free traffic recovery audit. We show you exactly why Google is hiding your site and how to fix it.</p>
-                    <a
-                        href="https://cal.com/pandagen/discovery"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all"
-                    >
-                        Get Free Traffic Audit <ArrowRight className="w-4 h-4" />
-                    </a>
+                    <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
+                            Get Free Traffic Audit <ArrowRight className="w-4 h-4" />
+                        </CalModalButton>
                 </div>
 
                 <BlogHeader>What Is the Only Real Fix for a WordPress Site That&apos;s Losing Google Traffic?</BlogHeader>
@@ -1226,14 +1197,9 @@ const blogPosts: Record<
                 <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                     <p className="font-bold text-charcoal mb-2">How many customers are you losing at each funnel stage?</p>
                     <p className="text-stone-600 mb-4 text-sm">Free conversion audit. We trace your exact funnel drop-off and calculate the revenue fix.</p>
-                    <a
-                        href="https://cal.com/pandagen/discovery"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all"
-                    >
-                        Get Free Conversion Audit <ArrowRight className="w-4 h-4" />
-                    </a>
+                    <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
+                            Get Free Conversion Audit <ArrowRight className="w-4 h-4" />
+                        </CalModalButton>
                 </div>
 
                 <BlogText>
@@ -1540,7 +1506,14 @@ export default async function BlogPost(props: PageProps) {
                     { "@type": "Thing", "name": "Web Development" },
                     { "@type": "Thing", "name": "Website Performance" }
                 ],
-                "inLanguage": "en-US"
+                "inLanguage": "en-US",
+                "citation": [
+                    { "@type": "CreativeWork", "name": "Google Think: Mobile Page Speed Benchmarks", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
+                    { "@type": "CreativeWork", "name": "Deloitte: Milliseconds Make Millions", "url": "https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" },
+                    { "@type": "CreativeWork", "name": "Portent: Site Speed Impact on Revenue", "url": "https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" },
+                    { "@type": "CreativeWork", "name": "HTTP Archive Web Almanac 2024", "url": "https://almanac.httparchive.org/en/2024/" },
+                    { "@type": "CreativeWork", "name": "Google Search Central: Core Web Vitals", "url": "https://developers.google.com/search/docs/appearance/core-web-vitals" }
+                ]
             },
             {
                 "@type": "BreadcrumbList",

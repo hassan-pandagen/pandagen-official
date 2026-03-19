@@ -13,6 +13,7 @@ const aiSecurityFAQs = blogPosts.find(p => p.id === 'wordpress-ai-security-risk-
 
 const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 const SecurityShieldAnimation = dynamic(() => import("@/components/blog/SecurityShieldAnimation"));
+const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: { absolute: "WordPress AI Security 2026: 100K+ Sites Exposed | PandaCodeGen" },
@@ -649,15 +650,10 @@ export default function WordPressAISecurityPage() {
                         <p className="text-stone-600 mb-6 leading-relaxed">
                             Custom coded sites give you explicit control over every AI integration point. Zero plugin dependencies. Zero third-party vulnerabilities. Just clean, secure code you own outright.
                         </p>
-                        <a
-                            href="https://cal.com/pandagen/discovery"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-xl hover:bg-stone-800 transition-all"
-                        >
-                            Book a Free Security Consultation
+                        <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-xl hover:bg-stone-800 transition-all">
+                                Book a Free Security Consultation
                             <ArrowRight className="w-5 h-5" />
-                        </a>
+                            </CalModalButton>
                     </div>
 
                     <section className="mb-10">

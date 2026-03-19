@@ -13,6 +13,7 @@ const dawnFAQs = blogPosts.find(p => p.id === 'shopify-dawn-theme-slow')?.faqs ?
 
 const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
+const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "Shopify Dawn Theme Slow? Here's Exactly Why (and the Real Fix) | PandaCodeGen",
@@ -379,14 +380,9 @@ export default function ShopifyDawnThemeSlowPage() {
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">What&apos;s your store&apos;s real speed score?</p>
                             <p className="text-stone-600 mb-4 text-sm">30 minutes, live screen-share. We run your store through PageSpeed, identify every bottleneck, and give you a written report, free, no obligation.</p>
-                            <a
-                                href="https://cal.com/pandagen/discovery"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all"
-                            >
-                                Get Free Store Audit <ArrowRight className="w-4 h-4" />
-                            </a>
+                            <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
+                                    Get Free Store Audit <ArrowRight className="w-4 h-4" />
+                                </CalModalButton>
                         </div>
 
                         <BlogHeader>What Does a Typical Dawn Store Actually Score on PageSpeed?</BlogHeader>
@@ -602,14 +598,9 @@ export default function ShopifyDawnThemeSlowPage() {
                         <p className="text-stone-600 mb-6">
                             Book a free 30-minute audit. We screen-share, run your store live through PageSpeed and Core Web Vitals, identify every bottleneck, and tell you exactly what&apos;s recoverable, and what it&apos;s costing you. You leave with a written report. No pitch, no obligation.
                         </p>
-                        <a
-                            href="https://cal.com/pandagen/discovery"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all"
-                        >
-                            Book Free Store Audit <ArrowRight className="w-5 h-5" />
-                        </a>
+                        <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
+                                Book Free Store Audit <ArrowRight className="w-5 h-5" />
+                            </CalModalButton>
                     </div>
 
                     {/* Key Takeaways */}

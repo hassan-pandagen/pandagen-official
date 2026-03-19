@@ -13,6 +13,7 @@ const shopifyLostSalesFAQs = blogPosts.find(p => p.id === 'shopify-slow-losing-s
 
 const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 const SalesImpactAnimation = dynamic(() => import("@/components/blog/SalesImpactAnimation"));
+const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: { absolute: "Your Shopify Store Is Costing You $75K/Year in Lost Sales | PandaCodeGen" },
@@ -422,14 +423,9 @@ export default function ShopifySlowPage() {
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">How much revenue is your store losing right now?</p>
                             <p className="text-stone-600 mb-4 text-sm">Free revenue audit. We calculate your exact loss and show you the fix.</p>
-                            <a
-                                href="https://cal.com/pandagen/discovery"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all"
-                            >
-                                Get Free Revenue Audit <ArrowRight className="w-4 h-4" />
-                            </a>
+                            <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
+                                    Get Free Revenue Audit <ArrowRight className="w-4 h-4" />
+                                </CalModalButton>
                         </div>
 
                         <BlogHeader>How Quickly Does a Custom Shopify Storefront Pay for Itself?</BlogHeader>
@@ -611,14 +607,9 @@ export default function ShopifySlowPage() {
                         <p className="text-stone-600 mb-6">
                             Get a free revenue audit. See exactly how much your store is losing to slow speed.
                         </p>
-                        <a
-                            href="https://cal.com/pandagen/discovery"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all"
-                        >
-                            Schedule Free Audit <ArrowRight className="w-5 h-5" />
-                        </a>
+                        <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
+                                Schedule Free Audit <ArrowRight className="w-5 h-5" />
+                            </CalModalButton>
                     </div>
 
                     {/* Related Posts */}
