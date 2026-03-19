@@ -492,7 +492,7 @@ export default function ShopifyAppCostsPage() {
                     <BlogHeader id="faq">Frequently Asked Questions</BlogHeader>
                     <FAQAccordion faqs={shopifyAppFAQs} />
 
-                    <RelatedPosts currentSlug="shopify-app-costs-real-monthly-bill" />
+                    <RelatedPosts currentPostId="shopify-app-costs-real-monthly-bill" />
 
                 </article>
             </section>
