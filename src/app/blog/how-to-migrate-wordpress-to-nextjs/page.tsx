@@ -165,7 +165,7 @@ export default function MigrateWordPressToNextJSPage() {
             <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-32 pb-20">
                 <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
 
-                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-sm px-8 py-10 md:px-14">
+                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
 
                     <script
                         type="application/ld+json"
@@ -189,18 +189,17 @@ export default function MigrateWordPressToNextJSPage() {
                     <div className="mb-10">
                         <span className="inline-block bg-stone-100 text-stone-600 text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-4">WordPress</span>
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                            How to Migrate WordPress to <span className="font-serif italic text-stone-500">Next.js</span> Without Losing SEO
+                            How to Migrate WordPress to <span className="font-serif italic text-cognac">Next.js</span> Without Losing SEO
                         </h1>
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
                             We have done this 6+ times. Here is the exact process, starting from crawling your WordPress site on day one all the way to monitoring rankings 30 days after launch. No steps skipped.
                         </p>
-                        <div className="flex items-center gap-4 text-sm text-stone-500">
-                            <span>Mar 11, 2026</span>
-                            <span>·</span>
-                            <span>10 min read</span>
-                            <span>·</span>
-                            <span>By Hassan Jamal</span>
-                        </div>
+                        <BlogAuthor
+                            date="Mar 11, 2026"
+                            readTime="10 min read"
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
+                            linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
+                        />
                     </div>
 
                     {/* Animation */}
@@ -274,10 +273,10 @@ export default function MigrateWordPressToNextJSPage() {
                                 <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-1">Step 2</p>
                                 <h3 className="text-lg font-bold mb-3">Export Your WordPress Content</h3>
                                 <BlogText>
-                                    Go to <strong>WordPress Admin → Tools → Export → All Content</strong>. Download the XML file: it contains every post, page, category, tag, and custom field. For images, download your full <code className="bg-stone-100 px-1 py-0.5 rounded text-sm">wp-content/uploads</code> folder via FTP or your host's file manager.
+                                    Go to <strong>WordPress Admin → Tools → Export → All Content</strong>. Download the XML file: it contains every post, page, category, tag, and custom field. For images, download your full <code className="bg-stone-100 px-1 py-0.5 rounded-sm text-sm">wp-content/uploads</code> folder via FTP or your host's file manager.
                                 </BlogText>
                                 <BlogText>
-                                    Before importing images into Next.js, convert them to WebP format and compress them to under 150KB where possible. Tools like Squoosh or ImageOptim work well for batch conversion. Next.js's <code className="bg-stone-100 px-1 py-0.5 rounded text-sm">next/image</code> component will handle responsive sizing automatically, but starting with well-optimised source images gives you the best PageSpeed baseline.
+                                    Before importing images into Next.js, convert them to WebP format and compress them to under 150KB where possible. Tools like Squoosh or ImageOptim work well for batch conversion. Next.js's <code className="bg-stone-100 px-1 py-0.5 rounded-sm text-sm">next/image</code> component will handle responsive sizing automatically, but starting with well-optimised source images gives you the best PageSpeed baseline.
                                 </BlogText>
                             </div>
 
@@ -285,7 +284,7 @@ export default function MigrateWordPressToNextJSPage() {
                                 <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-1">Step 3</p>
                                 <h3 className="text-lg font-bold mb-3">Set Up Your Next.js Project</h3>
                                 <BlogText>
-                                    Scaffold your project with <code className="bg-stone-100 px-1 py-0.5 rounded text-sm">npx create-next-app@latest --typescript</code>. Install Tailwind CSS for styling. Deploy an empty shell to Vercel immediately. This sets up your CI/CD pipeline so every commit deploys automatically. You will use preview URLs for QA throughout the build.
+                                    Scaffold your project with <code className="bg-stone-100 px-1 py-0.5 rounded-sm text-sm">npx create-next-app@latest --typescript</code>. Install Tailwind CSS for styling. Deploy an empty shell to Vercel immediately. This sets up your CI/CD pipeline so every commit deploys automatically. You will use preview URLs for QA throughout the build.
                                 </BlogText>
                                 <BlogText>
                                     If you need a content management interface for blog posts or frequently updated pages, set up a headless CMS at this stage. Sanity is our recommendation. It has a clean editing UI similar to WordPress's Gutenberg editor, and the free tier supports most business sites. Contentful is a solid alternative for larger content libraries.
@@ -296,7 +295,7 @@ export default function MigrateWordPressToNextJSPage() {
                                 <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-1">Step 4</p>
                                 <h3 className="text-lg font-bold mb-3">Build Your Pages and Migrate Content</h3>
                                 <BlogText>
-                                    Build each page as a React Server Component in Next.js. Replicate your navigation structure, internal linking, and page hierarchy exactly. Import your WordPress XML content into your CMS or convert blog posts to MDX files. Use <code className="bg-stone-100 px-1 py-0.5 rounded text-sm">next/image</code> for every image: this automatically serves WebP, handles lazy loading, and generates responsive sizes.
+                                    Build each page as a React Server Component in Next.js. Replicate your navigation structure, internal linking, and page hierarchy exactly. Import your WordPress XML content into your CMS or convert blog posts to MDX files. Use <code className="bg-stone-100 px-1 py-0.5 rounded-sm text-sm">next/image</code> for every image: this automatically serves WebP, handles lazy loading, and generates responsive sizes.
                                 </BlogText>
                                 <BlogText>
                                     For each WordPress plugin, implement the equivalent native solution:
@@ -314,7 +313,7 @@ export default function MigrateWordPressToNextJSPage() {
                                 <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-1">Step 5. Critical</p>
                                 <h3 className="text-lg font-bold mb-3">Set Up 301 Redirects</h3>
                                 <BlogText>
-                                    This step is non-negotiable for SEO preservation. Every URL that changes between your WordPress site and your Next.js site needs a 301 redirect. In <code className="bg-stone-100 px-1 py-0.5 rounded text-sm">next.config.js</code>, add a redirects array:
+                                    This step is non-negotiable for SEO preservation. Every URL that changes between your WordPress site and your Next.js site needs a 301 redirect. In <code className="bg-stone-100 px-1 py-0.5 rounded-sm text-sm">next.config.js</code>, add a redirects array:
                                 </BlogText>
                                 <div className="bg-stone-900 text-stone-100 rounded-lg p-4 my-4 text-sm font-mono overflow-x-auto">
                                     <pre>{`async redirects() {
@@ -328,7 +327,7 @@ export default function MigrateWordPressToNextJSPage() {
 }`}</pre>
                                 </div>
                                 <BlogText>
-                                    Common URL changes that need redirects: WordPress often adds <code className="bg-stone-100 px-1 py-0.5 rounded text-sm">/category/</code> prefixes to blog archives, date-based post URLs (<code className="bg-stone-100 px-1 py-0.5 rounded text-sm">/2024/03/post-name</code>), and tag pages. If you are simplifying your URL structure in Next.js, every old URL needs a redirect to its new equivalent.
+                                    Common URL changes that need redirects: WordPress often adds <code className="bg-stone-100 px-1 py-0.5 rounded-sm text-sm">/category/</code> prefixes to blog archives, date-based post URLs (<code className="bg-stone-100 px-1 py-0.5 rounded-sm text-sm">/2024/03/post-name</code>), and tag pages. If you are simplifying your URL structure in Next.js, every old URL needs a redirect to its new equivalent.
                                 </BlogText>
                                 <BlogHighlight>
                                     Missing a 301 redirect on a page with backlinks is the #1 cause of ranking drops during WordPress migrations. Check every URL in your Screaming Frog export against your Next.js routes before going live.
@@ -339,7 +338,7 @@ export default function MigrateWordPressToNextJSPage() {
                                 <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-1">Step 6</p>
                                 <h3 className="text-lg font-bold mb-3">Migrate All SEO Metadata</h3>
                                 <BlogText>
-                                    Transfer every title tag, meta description, Open Graph tag, and canonical URL from WordPress (via Yoast or RankMath) to Next.js. In Next.js 14+, use the metadata API in each <code className="bg-stone-100 px-1 py-0.5 rounded text-sm">page.tsx</code>:
+                                    Transfer every title tag, meta description, Open Graph tag, and canonical URL from WordPress (via Yoast or RankMath) to Next.js. In Next.js 14+, use the metadata API in each <code className="bg-stone-100 px-1 py-0.5 rounded-sm text-sm">page.tsx</code>:
                                 </BlogText>
                                 <div className="bg-stone-900 text-stone-100 rounded-lg p-4 my-4 text-sm font-mono overflow-x-auto">
                                     <pre>{`export const metadata = {
@@ -353,7 +352,7 @@ export default function MigrateWordPressToNextJSPage() {
                                     Add JSON-LD schema markup that Yoast was previously generating. At minimum: Organization, WebSite, BreadcrumbList, and WebPage on every page. Article schema on every blog post. This schema is now inline in your page rather than generated by a plugin: it is more reliable and Google processes it faster.
                                 </BlogText>
                                 <BlogText>
-                                    Generate a new <code className="bg-stone-100 px-1 py-0.5 rounded text-sm">sitemap.xml</code> using the <code className="bg-stone-100 px-1 py-0.5 rounded text-sm">next-sitemap</code> package. Configure it to include all your pages and exclude any admin or API routes.
+                                    Generate a new <code className="bg-stone-100 px-1 py-0.5 rounded-sm text-sm">sitemap.xml</code> using the <code className="bg-stone-100 px-1 py-0.5 rounded-sm text-sm">next-sitemap</code> package. Configure it to include all your pages and exclude any admin or API routes.
                                 </BlogText>
                             </div>
 
@@ -430,7 +429,7 @@ export default function MigrateWordPressToNextJSPage() {
                                 { period: "Month 3 to 6", title: "Compounding Advantage", desc: "The full impact becomes visible. Clients typically see 20 to 40% organic traffic increases from the combined effect of better Core Web Vitals, lower bounce rates, and the authority signals that come from faster, more engaging pages." },
                             ].map(({ period, title, desc }) => (
                                 <div key={period} className="flex gap-4 border border-stone-200 rounded-xl p-5">
-                                    <div className="flex-shrink-0 w-24 text-xs font-semibold text-cognac uppercase tracking-wider pt-0.5">{period}</div>
+                                    <div className="shrink-0 w-24 text-xs font-semibold text-cognac uppercase tracking-wider pt-0.5">{period}</div>
                                     <div>
                                         <p className="font-bold text-charcoal mb-1">{title}</p>
                                         <p className="text-stone-600 text-sm leading-relaxed">{desc}</p>
@@ -488,12 +487,6 @@ export default function MigrateWordPressToNextJSPage() {
                         </BlogText>
 
                         <div className="flex items-center gap-2 text-xs text-stone-400 mt-8"><RefreshCw className="w-3 h-3" />Published: Mar 11, 2026</div>
-                        <BlogAuthor
-                            name="Hassan Jamal"
-                            role="Lead Engineer, PandaCodeGen"
-                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
-                            linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
-                        />
                     </section>
 
                     {/* Bottom CTA */}

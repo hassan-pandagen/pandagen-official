@@ -203,7 +203,7 @@ export default function UCPBlogPage() {
             <Header />
             <main className="bg-paper min-h-screen overflow-x-hidden relative text-charcoal pt-32 pb-20">
 
-                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-sm px-8 py-10 md:px-14">
+                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
 
                     {/* Article Schema */}
                     <script
@@ -235,7 +235,7 @@ export default function UCPBlogPage() {
 
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight text-charcoal">
                             Customers Can Now Buy Inside Google{" "}
-                            <span className="font-serif italic text-stone-500">
+                            <span className="font-serif italic text-cognac">
                                 Without Ever Seeing Your Website. Is Your Store Ready?
                             </span>
                         </h1>
@@ -244,22 +244,9 @@ export default function UCPBlogPage() {
                             Here&apos;s what&apos;s already happening and what you need to do about it.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-600">
-                            <div className="flex items-center gap-2">
-                                <Calendar className="w-4 h-4" />
-                                Feb 21, 2026
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <Clock className="w-4 h-4" />
-                                12 min read
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <ShoppingCart className="w-4 h-4" />
-                                E-Commerce / AI Shopping
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
+                            date="Feb 21, 2026"
+                            readTime="12 min read"
                             bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
@@ -335,7 +322,7 @@ export default function UCPBlogPage() {
 
                     <div className="my-8 p-6 border border-stone-200 bg-stone-50 rounded-2xl">
                         <div className="flex items-start gap-4">
-                            <ShoppingCart className="w-6 h-6 text-charcoal flex-shrink-0 mt-1" />
+                            <ShoppingCart className="w-6 h-6 text-charcoal shrink-0 mt-1" />
                             <div className="space-y-3 text-stone-600 text-sm leading-relaxed">
                                 <p><span className="text-charcoal font-bold">1.</span> Customer types into Google: <em>&quot;Find me a cozy throw blanket under $50&quot;</em></p>
                                 <p><span className="text-charcoal font-bold">2.</span> Google&apos;s AI searches across stores that have connected to UCP</p>
@@ -394,7 +381,7 @@ export default function UCPBlogPage() {
                     <div className="my-8 space-y-4">
                         <div className="p-5 bg-stone-50 border border-stone-200 border-l-4 border-l-green-500 rounded-xl">
                             <div className="flex items-start gap-3">
-                                <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
+                                <CheckCircle2 className="w-5 h-5 text-success mt-0.5 shrink-0" />
                                 <div>
                                     <h4 className="font-bold text-charcoal mb-1">Shopify: Ready Now</h4>
                                     <p className="text-sm text-stone-600">Shopify co-built UCP with Google, so the connection is mostly a settings flip. If you&apos;re already on Shopify, you&apos;re in the best position of any hosted platform. You still need clean product data, but the technical plumbing is already in place.</p>
@@ -404,7 +391,7 @@ export default function UCPBlogPage() {
 
                         <div className="p-5 bg-stone-50 border border-stone-200 border-l-4 border-l-yellow-500 rounded-xl">
                             <div className="flex items-start gap-3">
-                                <AlertTriangle className="w-5 h-5 text-yellow-600 mt-0.5 flex-shrink-0" />
+                                <AlertTriangle className="w-5 h-5 text-yellow-600 mt-0.5 shrink-0" />
                                 <div>
                                     <h4 className="font-bold text-charcoal mb-1">WordPress / WooCommerce: Possible, But Costly to Maintain</h4>
                                     <p className="text-sm text-stone-600">A developer needs to manually build the connection to Google&apos;s AI system (called an API, which is basically a dedicated phone line between your store and Google). The problem is it requires ongoing maintenance, and one broken update can cut the connection entirely without you knowing.</p>
@@ -414,7 +401,7 @@ export default function UCPBlogPage() {
 
                         <div className="p-5 bg-stone-50 border border-stone-200 border-l-4 border-l-charcoal rounded-xl">
                             <div className="flex items-start gap-3">
-                                <Zap className="w-5 h-5 text-charcoal mt-0.5 flex-shrink-0" />
+                                <Zap className="w-5 h-5 text-charcoal mt-0.5 shrink-0" />
                                 <div>
                                     <h4 className="font-bold text-charcoal mb-1">Custom-Built Stores (Next.js + Headless CMS): Maximum Visibility</h4>
                                     <p className="text-sm text-stone-600">
@@ -426,7 +413,7 @@ export default function UCPBlogPage() {
 
                         <div className="p-5 bg-stone-50 border border-stone-200 border-l-4 border-l-red-500 rounded-xl">
                             <div className="flex items-start gap-3">
-                                <AlertTriangle className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
+                                <AlertTriangle className="w-5 h-5 text-red-600 mt-0.5 shrink-0" />
                                 <div>
                                     <h4 className="font-bold text-charcoal mb-1">Wix / Squarespace: No UCP Support Yet</h4>
                                     <p className="text-sm text-stone-600">These platforms were built for human visitors clicking through a website. They weren&apos;t designed to talk to AI agents. There&apos;s no UCP integration announced and no clear path to one. Stores on these platforms risk becoming completely invisible in AI-driven shopping.</p>
@@ -466,7 +453,7 @@ export default function UCPBlogPage() {
 
                     <div className="my-8 p-6 border border-stone-200 bg-stone-50 rounded-2xl">
                         <div className="flex items-start gap-4">
-                            <TrendingUp className="w-6 h-6 text-charcoal flex-shrink-0 mt-1" />
+                            <TrendingUp className="w-6 h-6 text-charcoal shrink-0 mt-1" />
                             <div>
                                 <h3 className="text-lg font-bold text-charcoal mb-3">The SEO Parallel</h3>
                                 <p className="text-stone-600 text-sm leading-relaxed mb-3">
@@ -497,25 +484,25 @@ export default function UCPBlogPage() {
                         <h3 className="text-lg font-bold text-charcoal mb-4">What this means for stores we build:</h3>
                         <div className="space-y-4">
                             <div className="flex items-start gap-3">
-                                <CheckCircle2 className="w-5 h-5 text-charcoal mt-0.5 flex-shrink-0" />
+                                <CheckCircle2 className="w-5 h-5 text-charcoal mt-0.5 shrink-0" />
                                 <p className="text-stone-600 text-sm leading-relaxed">
                                     <strong className="text-charcoal">Already structured for AI.</strong> Every store we build uses a headless CMS (a smart content system where your products are stored in a format AI agents can read directly, without going through a slow website interface). Our clients are already speaking the language Google UCP expects.
                                 </p>
                             </div>
                             <div className="flex items-start gap-3">
-                                <CheckCircle2 className="w-5 h-5 text-charcoal mt-0.5 flex-shrink-0" />
+                                <CheckCircle2 className="w-5 h-5 text-charcoal mt-0.5 shrink-0" />
                                 <p className="text-stone-600 text-sm leading-relaxed">
                                     <strong className="text-charcoal">MCP-ready infrastructure.</strong> We build stores that can connect via the Model Context Protocol (MCP, the universal translator that lets AI assistants like ChatGPT, Google Gemini, and Bing Copilot all talk to your store simultaneously, each in their own language). Our clients&apos; products can appear in Google AI Mode, ChatGPT Shopping, and Bing Copilot at the same time.
                                 </p>
                             </div>
                             <div className="flex items-start gap-3">
-                                <CheckCircle2 className="w-5 h-5 text-charcoal mt-0.5 flex-shrink-0" />
+                                <CheckCircle2 className="w-5 h-5 text-charcoal mt-0.5 shrink-0" />
                                 <p className="text-stone-600 text-sm leading-relaxed">
                                     <strong className="text-charcoal">We update as Google does.</strong> UCP is evolving fast, with new capabilities being added every few months. We monitor every release and update our implementations as the protocol grows. Our clients don&apos;t have to chase it. We do it for them.
                                 </p>
                             </div>
                             <div className="flex items-start gap-3">
-                                <CheckCircle2 className="w-5 h-5 text-charcoal mt-0.5 flex-shrink-0" />
+                                <CheckCircle2 className="w-5 h-5 text-charcoal mt-0.5 shrink-0" />
                                 <p className="text-stone-600 text-sm leading-relaxed">
                                     <strong className="text-charcoal">No other agency is doing this yet.</strong> Most agencies are still building WordPress sites. We built this practice before UCP hit mainstream news. That head start translates directly into a competitive advantage for the stores we work with.
                                 </p>
@@ -541,7 +528,7 @@ export default function UCPBlogPage() {
                     <div className="my-8 space-y-6">
                         <div className="p-6 border border-stone-200 bg-stone-50 rounded-2xl shadow-card">
                             <div className="flex items-start gap-4">
-                                <div className="w-8 h-8 rounded-full bg-stone-100 text-charcoal font-bold text-sm flex items-center justify-center flex-shrink-0 mt-0.5">1</div>
+                                <div className="w-8 h-8 rounded-full bg-stone-100 text-charcoal font-bold text-sm flex items-center justify-center shrink-0 mt-0.5">1</div>
                                 <div>
                                     <h3 className="text-lg font-bold text-charcoal mb-2">Audit Your Product Listings</h3>
                                     <p className="text-stone-600 text-sm leading-relaxed">Go through your top 20 products. Do they have complete titles with specific attributes? Accurate, live prices? Current stock levels? Full specs? This is the single highest-leverage action you can take. An AI agent that can&apos;t answer a customer&apos;s question about your product will recommend someone else&apos;s product instead.</p>
@@ -551,7 +538,7 @@ export default function UCPBlogPage() {
 
                         <div className="p-6 border border-stone-200 bg-stone-50 rounded-2xl shadow-card">
                             <div className="flex items-start gap-4">
-                                <div className="w-8 h-8 rounded-full bg-stone-100 text-charcoal font-bold text-sm flex items-center justify-center flex-shrink-0 mt-0.5">2</div>
+                                <div className="w-8 h-8 rounded-full bg-stone-100 text-charcoal font-bold text-sm flex items-center justify-center shrink-0 mt-0.5">2</div>
                                 <div>
                                     <h3 className="text-lg font-bold text-charcoal mb-2">Set Up Google Merchant Center</h3>
                                     <p className="text-stone-600 text-sm leading-relaxed">This is Google&apos;s product catalog system, the bridge between your store and Google&apos;s AI. If you&apos;re not already in it, you&apos;re invisible to Google Shopping and UCP both. If you are, check that your product feed (the live list of your products that Google reads) is complete and syncing correctly. Google is adding new fields specifically for AI discovery throughout 2026.</p>
@@ -561,7 +548,7 @@ export default function UCPBlogPage() {
 
                         <div className="p-6 border border-stone-200 bg-stone-50 rounded-2xl shadow-card">
                             <div className="flex items-start gap-4">
-                                <div className="w-8 h-8 rounded-full bg-stone-100 text-charcoal font-bold text-sm flex items-center justify-center flex-shrink-0 mt-0.5">3</div>
+                                <div className="w-8 h-8 rounded-full bg-stone-100 text-charcoal font-bold text-sm flex items-center justify-center shrink-0 mt-0.5">3</div>
                                 <div>
                                     <h3 className="text-lg font-bold text-charcoal mb-2">Evaluate Your Platform Honestly</h3>
                                     <p className="text-stone-600 text-sm leading-relaxed">Is your store on a platform that can connect to AI shopping systems? Shopify: yes. WordPress/WooCommerce: possible but requires ongoing developer work. Wix/Squarespace: no clear path. Custom-built: maximum flexibility. If you&apos;re on a platform with no UCP path, this is the conversation to have with your team sooner rather than later.</p>
@@ -571,7 +558,7 @@ export default function UCPBlogPage() {
 
                         <div className="p-6 border border-stone-200 bg-stone-50 rounded-2xl shadow-card">
                             <div className="flex items-start gap-4">
-                                <div className="w-8 h-8 rounded-full bg-stone-100 text-charcoal font-bold text-sm flex items-center justify-center flex-shrink-0 mt-0.5">4</div>
+                                <div className="w-8 h-8 rounded-full bg-stone-100 text-charcoal font-bold text-sm flex items-center justify-center shrink-0 mt-0.5">4</div>
                                 <div>
                                     <h3 className="text-lg font-bold text-charcoal mb-2">Make Your Site Fast</h3>
                                     <p className="text-stone-600 text-sm leading-relaxed">AI agents don&apos;t just read your product data. They also check your site speed before recommending you. A slow site signals unreliable infrastructure. Stores that score 90+ on Google PageSpeed are prioritized. Check yours at <strong className="text-charcoal">pagespeed.web.dev</strong>. If you&apos;re below 70 on mobile, that&apos;s hurting you now and will hurt you more as UCP scales.</p>
@@ -581,7 +568,7 @@ export default function UCPBlogPage() {
 
                         <div className="p-6 border border-stone-200 bg-stone-50 rounded-2xl shadow-card">
                             <div className="flex items-start gap-4">
-                                <div className="w-8 h-8 rounded-full bg-stone-100 text-charcoal font-bold text-sm flex items-center justify-center flex-shrink-0 mt-0.5">5</div>
+                                <div className="w-8 h-8 rounded-full bg-stone-100 text-charcoal font-bold text-sm flex items-center justify-center shrink-0 mt-0.5">5</div>
                                 <div>
                                     <h3 className="text-lg font-bold text-charcoal mb-2">Don&apos;t Neglect Your Direct Website</h3>
                                     <p className="text-stone-600 text-sm leading-relaxed">Your website is now the engine behind the scenes. It feeds clean data to AI agents and serves customers who want to browse before buying. A well-structured, fast website with organized product information is what makes you visible in both worlds: human search and AI search. These are not separate strategies. They reinforce each other.</p>
@@ -690,15 +677,15 @@ export default function UCPBlogPage() {
                         <h3 className="text-lg font-bold text-charcoal mb-4">Related Reading</h3>
                         <div className="space-y-2">
                             <Link href="/blog/how-to-fix-slow-wordpress" className="flex items-center gap-2 text-stone-600 hover:text-charcoal transition-colors text-sm">
-                                <ArrowRight className="w-4 h-4 flex-shrink-0" />
+                                <ArrowRight className="w-4 h-4 shrink-0" />
                                 How to Fix a Slow WordPress Site (8 Ways That Actually Work)
                             </Link>
                             <Link href="/blog/how-to-achieve-100-pagespeed" className="flex items-center gap-2 text-stone-600 hover:text-charcoal transition-colors text-sm">
-                                <ArrowRight className="w-4 h-4 flex-shrink-0" />
+                                <ArrowRight className="w-4 h-4 shrink-0" />
                                 How to Achieve 100/100 PageSpeed Score: Complete Next.js Guide
                             </Link>
                             <Link href="/blog/why-competitor-outranks-you" className="flex items-center gap-2 text-stone-600 hover:text-charcoal transition-colors text-sm">
-                                <ArrowRight className="w-4 h-4 flex-shrink-0" />
+                                <ArrowRight className="w-4 h-4 shrink-0" />
                                 Why Your Competitor Outranks You on Google (And Pays Less for Hosting)
                             </Link>
                         </div>

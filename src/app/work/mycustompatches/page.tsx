@@ -191,7 +191,7 @@ export default function MyCustomPatchesCaseStudy() {
                                 { value: "$0/mo", label: "Hosting Cost", sub: "was $150/mo" },
                                 { value: "200+", label: "Pages Migrated", sub: "zero rankings lost" },
                             ].map((m) => (
-                                <div key={m.label} className="p-5 bg-white border border-stone-200 rounded-2xl shadow-sm">
+                                <div key={m.label} className="p-5 bg-white border border-stone-200 rounded-2xl shadow-xs">
                                     <div className="text-3xl font-black text-charcoal mb-1">{m.value}</div>
                                     <div className="text-xs font-bold text-stone-700 uppercase tracking-wider mb-1">{m.label}</div>
                                     <div className="text-xs text-stone-400 leading-snug">{m.sub}</div>
@@ -277,8 +277,8 @@ export default function MyCustomPatchesCaseStudy() {
                                 { step: "05", name: "SEO Verification", desc: "Verified every canonical URL, meta tag, and structured data block. Ran Google Rich Results Test on all key pages. Pre-populated Search Console change-of-address request." },
                                 { step: "06", name: "Zero-Downtime Cutover", desc: "Lowered Cloudflare TTL to 60s pre-migration. DNS flip took under 2 minutes. WordPress site stayed live in parallel for 48 hours as fallback. Zero visitor downtime recorded." },
                             ].map((s) => (
-                                <div key={s.step} className="flex gap-4 p-5 bg-white border border-stone-200 rounded-xl shadow-sm">
-                                    <div className="w-8 h-8 rounded-full bg-stone-100 text-stone-400 text-xs font-black flex items-center justify-center flex-shrink-0">{s.step}</div>
+                                <div key={s.step} className="flex gap-4 p-5 bg-white border border-stone-200 rounded-xl shadow-xs">
+                                    <div className="w-8 h-8 rounded-full bg-stone-100 text-stone-400 text-xs font-black flex items-center justify-center shrink-0">{s.step}</div>
                                     <div>
                                         <div className="font-bold text-charcoal mb-1">{s.name}</div>
                                         <p className="text-stone-500 text-sm leading-relaxed">{s.desc}</p>
@@ -301,8 +301,8 @@ export default function MyCustomPatchesCaseStudy() {
 
                         <div className="grid md:grid-cols-2 gap-4">
                             {optimizations.map((o) => (
-                                <div key={o.label} className="flex items-start gap-3 p-5 bg-white border border-stone-200 rounded-xl shadow-sm">
-                                    <Zap className="w-4 h-4 text-cognac flex-shrink-0 mt-0.5" />
+                                <div key={o.label} className="flex items-start gap-3 p-5 bg-white border border-stone-200 rounded-xl shadow-xs">
+                                    <Zap className="w-4 h-4 text-cognac shrink-0 mt-0.5" />
                                     <div>
                                         <div className="font-bold text-charcoal text-sm mb-1">{o.label}</div>
                                         <p className="text-stone-500 text-xs leading-relaxed">{o.desc}</p>
@@ -313,7 +313,7 @@ export default function MyCustomPatchesCaseStudy() {
 
                         <div className="mt-6 p-6 bg-charcoal text-white rounded-2xl">
                             <div className="flex items-start gap-4">
-                                <BarChart3 className="w-6 h-6 text-cognac flex-shrink-0 mt-0.5" />
+                                <BarChart3 className="w-6 h-6 text-cognac shrink-0 mt-0.5" />
                                 <div>
                                     <p className="font-bold mb-2">Facebook Pixel was the only uncontrollable factor</p>
                                     <p className="text-stone-300 text-sm leading-relaxed">
@@ -332,10 +332,10 @@ export default function MyCustomPatchesCaseStudy() {
                         </div>
                         <h2 className="text-3xl font-bold text-charcoal mb-6">13 pages. One shared template.</h2>
                         <p className="text-stone-500 text-sm mb-6 max-w-2xl">
-                            All 8 product category pages use a single <code className="text-xs bg-stone-100 px-1 py-0.5 rounded">ProductPageTemplate</code> component. Add a new product: one file, no duplicated code.
+                            All 8 product category pages use a single <code className="text-xs bg-stone-100 px-1 py-0.5 rounded-sm">ProductPageTemplate</code> component. Add a new product: one file, no duplicated code.
                         </p>
 
-                        <div className="bg-white border border-stone-200 rounded-2xl overflow-hidden shadow-sm">
+                        <div className="bg-white border border-stone-200 rounded-2xl overflow-hidden shadow-xs">
                             <div className="grid grid-cols-[1fr_1fr_auto] bg-stone-50 border-b border-stone-200 px-5 py-3 text-xs font-black text-stone-400 uppercase tracking-widest">
                                 <div>Page</div>
                                 <div>Scope</div>
@@ -424,7 +424,7 @@ export default function MyCustomPatchesCaseStudy() {
                                 { before: "File uploads bloating the server", after: "All design uploads go to Cloudinary. Server never touches user files." },
                             ].map((r, i) => (
                                 <div key={i} className="flex gap-4">
-                                    <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+                                    <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
                                     <div>
                                         <p className="text-stone-400 text-sm line-through mb-1">{r.before}</p>
                                         <p className="text-white text-sm font-medium">{r.after}</p>
@@ -461,7 +461,7 @@ export default function MyCustomPatchesCaseStudy() {
                                 "Zero downtime DNS cutover, WordPress site kept live as fallback",
                             ].map((item, i) => (
                                 <div key={i} className="flex items-start gap-3 p-3 bg-stone-50 border border-stone-100 rounded-lg">
-                                    <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" />
+                                    <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
                                     <span className="text-stone-600 text-sm">{item}</span>
                                 </div>
                             ))}
@@ -469,7 +469,7 @@ export default function MyCustomPatchesCaseStudy() {
                     </section>
 
                     {/* CTA */}
-                    <section className="mb-20 p-8 md:p-12 bg-gradient-to-br from-stone-900 to-stone-800 text-white rounded-3xl text-center">
+                    <section className="mb-20 p-8 md:p-12 bg-linear-to-br from-stone-900 to-stone-800 text-white rounded-3xl text-center">
                         <h2 className="text-3xl font-bold mb-4">Want results like this for your site?</h2>
                         <p className="text-stone-300 mb-8 max-w-2xl mx-auto leading-relaxed">
                             If your WordPress or Shopify site is slow, expensive to host, and losing you customers, we can fix it. Same process. Same results. Guaranteed 95-100/100 PageSpeed or we fix it for free.

@@ -96,11 +96,11 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData }: Audi
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[9998]"
+            className="fixed inset-0 bg-black/50 backdrop-blur-xs z-9998"
           />
 
           {/* Modal */}
-          <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 pointer-events-none">
+          <div className="fixed inset-0 z-9999 flex items-center justify-center p-4 pointer-events-none">
             <motion.div
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -124,7 +124,7 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData }: Audi
               ) : (
                 <div className="relative">
                   {/* Header */}
-                  <div className="bg-gradient-to-br from-charcoal to-stone-800 px-8 pt-8 pb-6 text-center relative overflow-hidden">
+                  <div className="bg-linear-to-br from-charcoal to-stone-800 px-8 pt-8 pb-6 text-center relative overflow-hidden">
                     <button
                       onClick={onClose}
                       className="absolute top-4 right-4 text-white/40 hover:text-white transition-colors"
@@ -164,7 +164,7 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData }: Audi
                         "Personalized next steps",
                       ].map((item) => (
                         <div key={item} className="flex items-center gap-2 text-sm text-stone-600">
-                          <CheckCircle2 className="w-4 h-4 text-cognac flex-shrink-0" />
+                          <CheckCircle2 className="w-4 h-4 text-cognac shrink-0" />
                           <span>{item}</span>
                         </div>
                       ))}
@@ -183,7 +183,7 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData }: Audi
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="you@company.com"
-                            className="w-full bg-stone-50 border border-stone-200 rounded-xl pl-12 pr-4 py-4 text-charcoal placeholder:text-stone-400 focus:outline-none focus:border-cognac focus:ring-1 focus:ring-cognac/20 transition-all"
+                            className="w-full bg-stone-50 border border-stone-200 rounded-xl pl-12 pr-4 py-4 text-charcoal placeholder:text-stone-400 focus:outline-hidden focus:border-cognac focus:ring-1 focus:ring-cognac/20 transition-all"
                           />
                         </div>
                       </div>

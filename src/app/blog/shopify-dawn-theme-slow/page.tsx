@@ -189,7 +189,7 @@ export default function ShopifyDawnThemeSlowPage() {
             <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-32 pb-20">
                 <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
 
-                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-sm px-8 py-10 md:px-14">
+                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
 
                     <script
                         type="application/ld+json"
@@ -212,25 +212,16 @@ export default function ShopifyDawnThemeSlowPage() {
                     <div className="mb-10">
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
                             Shopify Dawn Theme Slow?{" "}
-                            <span className="font-serif italic text-stone-500">Here&apos;s Exactly Why.</span>
+                            <span className="font-serif italic text-cognac">Here&apos;s Exactly Why.</span>
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
                             Dawn is Shopify&apos;s fastest theme, and it&apos;s a great starting point. But if your store is still loading in 3+ seconds, this guide explains what&apos;s behind it and how to get faster.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">
-                            <div className="flex items-center gap-2">
-                                <Calendar className="w-4 h-4" />
-                                Mar 7, 2026
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <Clock className="w-4 h-4" />
-                                9 min read
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
+                            date="Mar 7, 2026"
+                            readTime="9 min read"
                             bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />

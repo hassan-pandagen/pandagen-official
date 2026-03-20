@@ -16,7 +16,7 @@ export default function RevenueCalculator() {
   const annualLoss = lostRevenue * 12;
 
   return (
-    <section className="py-12 md:py-24 bg-paper border-y border-stone-200">
+    <section className="py-12 md:py-24 pb-16 md:pb-24 bg-paper border-y border-stone-200">
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="grid md:grid-cols-2 gap-16 items-center">
 
@@ -61,7 +61,7 @@ export default function RevenueCalculator() {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
-            <div className="bg-white p-8 rounded-3xl shadow-sm border border-stone-200">
+            <div className="bg-white p-5 md:p-8 rounded-3xl shadow-xs border border-stone-200">
               <h3 className="text-xl font-bold text-charcoal mb-6 border-b border-stone-100 pb-4">
                 Revenue Recovery Calculator
               </h3>
@@ -89,26 +89,26 @@ export default function RevenueCalculator() {
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-bold text-stone-500 uppercase tracking-wider mb-2">
-                      Conversion Rate (%)
+                      Conv. Rate (%)
                     </label>
                     <input
                       type="number" min="0.1" max="20" step="0.1"
                       value={conversion}
                       onChange={(e) => setConversion(e.target.value)}
                       placeholder="1.5"
-                      className="w-full p-3 bg-stone-50 border border-stone-200 rounded-xl font-bold text-charcoal focus:outline-none focus:border-stone-400 transition-colors"
+                      className="w-full p-3 bg-stone-50 border border-stone-200 rounded-xl font-bold text-charcoal focus:outline-hidden focus:border-stone-400 transition-colors"
                     />
                   </div>
                   <div>
                     <label className="block text-xs font-bold text-stone-500 uppercase tracking-wider mb-2">
-                      Avg Order Value ($)
+                      Avg Order ($)
                     </label>
                     <input
                       type="number" min="1" max="10000" step="10"
                       value={aov}
                       onChange={(e) => setAov(e.target.value)}
                       placeholder="100"
-                      className="w-full p-3 bg-stone-50 border border-stone-200 rounded-xl font-bold text-charcoal focus:outline-none focus:border-stone-400 transition-colors"
+                      className="w-full p-3 bg-stone-50 border border-stone-200 rounded-xl font-bold text-charcoal focus:outline-hidden focus:border-stone-400 transition-colors"
                     />
                   </div>
                 </div>
@@ -118,7 +118,7 @@ export default function RevenueCalculator() {
                   <div className="text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-3">
                     Revenue Recovered Per Year
                   </div>
-                  <div className="text-6xl font-black text-charcoal leading-none tracking-tight">
+                  <div className="text-5xl md:text-6xl font-black text-charcoal leading-none tracking-tight">
                     ${annualLoss.toLocaleString()}
                   </div>
                   <div className="text-sm text-stone-400 font-normal mt-1">per year</div>

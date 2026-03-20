@@ -41,7 +41,7 @@ export default function PageContent() {
             className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6 leading-tight"
           >
             Capabilities <span className="text-gray-400">&</span> <br />
-            <span className="font-serif italic text-stone-500">
+            <span className="font-serif italic text-cognac">
               Architecture.
             </span>
           </motion.h1>
@@ -138,7 +138,7 @@ function ServiceSection({ id, title, subtitle, description, tags, features, alig
         <motion.div style={{ opacity, x }} className="flex-1">
            <div className="flex items-center gap-4 mb-8">
               <span className="text-7xl font-bold text-stone-100 font-mono">{id}</span>
-              <div className={`p-4 rounded-2xl bg-gradient-to-br ${gradient} border border-stone-200 shadow-lg`}>
+              <div className={`p-4 rounded-2xl bg-linear-to-br ${gradient} border border-stone-200 shadow-lg`}>
                  <Icon className="w-8 h-8 text-charcoal" />
               </div>
            </div>
@@ -158,7 +158,7 @@ function ServiceSection({ id, title, subtitle, description, tags, features, alig
            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
               {features.map((feature: string, i: number) => (
                  <div key={i} className="flex items-center gap-3 text-stone-600">
-                    <CheckCircle2 className="w-5 h-5 text-cognac flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-cognac shrink-0" />
                     <span className="text-sm">{feature}</span>
                  </div>
               ))}
@@ -174,9 +174,9 @@ function ServiceSection({ id, title, subtitle, description, tags, features, alig
         <div className="flex-1 w-full h-[450px] lg:h-[520px]">
            <div className="w-full h-full rounded-2xl bg-white border border-stone-200 relative overflow-hidden group shadow-card hover:shadow-elevated transition-all duration-500">
               {/* Grid pattern */}
-              <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.08)_1px,transparent_1px)] bg-[size:32px_32px]" />
+              <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.08)_1px,transparent_1px)] bg-size-[32px_32px]" />
               {/* Gradient glow */}
-              <div className={`absolute top-0 right-0 w-[300px] h-[300px] bg-gradient-to-br ${gradient} opacity-40 blur-[80px] group-hover:opacity-60 transition-opacity duration-700`} />
+              <div className={`absolute top-0 right-0 w-[300px] h-[300px] bg-linear-to-br ${gradient} opacity-40 blur-[80px] group-hover:opacity-60 transition-opacity duration-700`} />
               <div className="absolute inset-0 flex items-center justify-center p-6">
                  {children}
               </div>
@@ -194,7 +194,7 @@ function MigrationDecoration() {
         <div className="relative w-full h-full flex items-center justify-center px-4">
             {/* Connection line */}
             <div className="absolute top-1/2 left-[15%] right-[15%] h-[2px] -translate-y-1/2">
-                <div className="w-full h-full bg-gradient-to-r from-stone-300 to-stone-500 opacity-40 rounded-full" />
+                <div className="w-full h-full bg-linear-to-r from-stone-300 to-stone-500 opacity-40 rounded-full" />
                 {/* Animated dot traveling along the line */}
                 <motion.div
                     animate={{ left: ["0%", "100%"] }}
@@ -208,7 +208,7 @@ function MigrationDecoration() {
                 <motion.div
                     animate={{ y: [0, -6, 0] }}
                     transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                    className="w-24 h-24 md:w-28 md:h-28 rounded-2xl bg-gradient-to-br from-orange-50 to-orange-100 border-2 border-orange-200 flex items-center justify-center shadow-lg shadow-orange-500/10"
+                    className="w-24 h-24 md:w-28 md:h-28 rounded-2xl bg-linear-to-br from-orange-50 to-orange-100 border-2 border-orange-200 flex items-center justify-center shadow-lg shadow-orange-500/10"
                 >
                     <Database className="w-10 h-10 md:w-12 md:h-12 text-orange-500" />
                 </motion.div>
@@ -229,7 +229,7 @@ function MigrationDecoration() {
                 <motion.div
                     animate={{ y: [0, -6, 0] }}
                     transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                    className="w-24 h-24 md:w-28 md:h-28 rounded-2xl bg-gradient-to-br from-stone-50 to-stone-100 border-2 border-stone-200 flex items-center justify-center shadow-lg shadow-stone-900/8"
+                    className="w-24 h-24 md:w-28 md:h-28 rounded-2xl bg-linear-to-br from-stone-50 to-stone-100 border-2 border-stone-200 flex items-center justify-center shadow-lg shadow-stone-900/8"
                 >
                     <Zap className="w-10 h-10 md:w-12 md:h-12 text-stone-600" />
                 </motion.div>
@@ -244,7 +244,7 @@ function MigrationDecoration() {
             <motion.div
                 animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute top-[12%] right-[20%] px-3 py-1.5 bg-green-50 border border-green-200 rounded-lg shadow-sm"
+                className="absolute top-[12%] right-[20%] px-3 py-1.5 bg-green-50 border border-green-200 rounded-lg shadow-xs"
             >
                 <div className="flex items-center gap-1.5">
                     <Shield className="w-3.5 h-3.5 text-green-500" />
@@ -254,7 +254,7 @@ function MigrationDecoration() {
             <motion.div
                 animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-                className="absolute bottom-[15%] left-[25%] px-3 py-1.5 bg-stone-50 border border-stone-200 rounded-lg shadow-sm"
+                className="absolute bottom-[15%] left-[25%] px-3 py-1.5 bg-stone-50 border border-stone-200 rounded-lg shadow-xs"
             >
                 <div className="flex items-center gap-1.5">
                     <Gauge className="w-3.5 h-3.5 text-stone-600" />
@@ -272,7 +272,7 @@ function DashboardDecoration() {
             <motion.div
                 initial={{ rotate: -3 }}
                 whileHover={{ rotate: 0 }}
-                className="bg-white border border-stone-200 rounded-2xl overflow-hidden shadow-elevated transform rotate-[-3deg] group-hover:rotate-0 transition-transform duration-700"
+                className="bg-white border border-stone-200 rounded-2xl overflow-hidden shadow-elevated transform -rotate-3 group-hover:rotate-0 transition-transform duration-700"
             >
                 {/* Window Chrome */}
                 <div className="h-11 bg-stone-50 border-b border-stone-200 flex items-center px-4 gap-2">
@@ -321,7 +321,7 @@ function DashboardDecoration() {
                                         initial={{ height: 0 }}
                                         animate={{ height: `${h}%` }}
                                         transition={{ duration: 0.5, delay: i * 0.05 }}
-                                        className="flex-1 bg-gradient-to-t from-charcoal to-stone-600 rounded-t opacity-80"
+                                        className="flex-1 bg-linear-to-t from-charcoal to-stone-600 rounded-t opacity-80"
                                     />
                                 ))}
                             </div>
@@ -349,10 +349,10 @@ function EcommerceDecoration() {
             {/* Product Card */}
             <motion.div
                 initial={{ rotate: 2 }}
-                className="w-56 md:w-64 bg-white border border-stone-200 rounded-2xl overflow-hidden shadow-elevated transform rotate-[2deg] group-hover:rotate-0 transition-transform duration-500"
+                className="w-56 md:w-64 bg-white border border-stone-200 rounded-2xl overflow-hidden shadow-elevated transform rotate-2 group-hover:rotate-0 transition-transform duration-500"
             >
                 {/* Product Image Area */}
-                <div className="h-44 bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50 relative flex items-center justify-center border-b border-stone-100">
+                <div className="h-44 bg-linear-to-br from-emerald-50 via-green-50 to-teal-50 relative flex items-center justify-center border-b border-stone-100">
                     <motion.div
                         animate={{ y: [0, -8, 0] }}
                         transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
@@ -360,11 +360,11 @@ function EcommerceDecoration() {
                         <Layers className="w-20 h-20 text-emerald-500 drop-shadow-lg" />
                     </motion.div>
                     {/* Sale badge */}
-                    <div className="absolute top-3 left-3 px-2.5 py-1 bg-red-500 text-white text-[10px] font-bold rounded-full shadow-sm">
+                    <div className="absolute top-3 left-3 px-2.5 py-1 bg-red-500 text-white text-[10px] font-bold rounded-full shadow-xs">
                         -30%
                     </div>
                     {/* Wishlist */}
-                    <div className="absolute top-3 right-3 w-8 h-8 bg-white rounded-full border border-stone-200 flex items-center justify-center shadow-sm">
+                    <div className="absolute top-3 right-3 w-8 h-8 bg-white rounded-full border border-stone-200 flex items-center justify-center shadow-xs">
                         <svg className="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
                     </div>
                 </div>
@@ -384,7 +384,7 @@ function EcommerceDecoration() {
                             <span className="text-xl font-bold text-charcoal">$168</span>
                             <span className="text-sm text-stone-400 line-through">$240</span>
                         </div>
-                        <button className="px-4 py-2 bg-charcoal text-white text-xs font-bold rounded-lg shadow-sm">
+                        <button className="px-4 py-2 bg-charcoal text-white text-xs font-bold rounded-lg shadow-xs">
                             Add to Cart
                         </button>
                     </div>

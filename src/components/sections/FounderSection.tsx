@@ -63,7 +63,7 @@ export default function FounderSection() {
             >
               {/* Photo + Name */}
               <div className="flex items-center gap-4 mb-6">
-                <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-white/20 shadow-md flex-shrink-0">
+                <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-white/20 shadow-md shrink-0">
                   <Image
                     src={founder.image}
                     alt={founder.name}

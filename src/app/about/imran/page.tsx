@@ -109,7 +109,7 @@ export default function ImranAuthorPage() {
 
                     {/* Hero */}
                     <div className="flex flex-col md:flex-row gap-12 items-start mb-24">
-                        <div className="w-full md:w-64 flex-shrink-0 aspect-square relative rounded-2xl overflow-hidden shadow-xl shadow-stone-200/60 border border-white">
+                        <div className="w-full md:w-64 shrink-0 aspect-square relative rounded-2xl overflow-hidden shadow-xl shadow-stone-200/60 border border-white">
                             <Image
                                 src="/team/imran.png"
                                 fill
@@ -144,7 +144,7 @@ export default function ImranAuthorPage() {
 
                     {/* Skills Grid */}
                     <div className="grid md:grid-cols-2 gap-8 mb-16">
-                        <div className="p-8 bg-white border border-stone-200 rounded-2xl shadow-sm">
+                        <div className="p-8 bg-white border border-stone-200 rounded-2xl shadow-xs">
                             <div className="flex items-center gap-3 mb-6">
                                 <BarChart3 className="w-5 h-5 text-cognac" />
                                 <h3 className="text-xl font-serif text-charcoal">Strategic Expertise</h3>
@@ -158,7 +158,7 @@ export default function ImranAuthorPage() {
                             </div>
                         </div>
 
-                        <div className="p-8 bg-white border border-stone-200 rounded-2xl shadow-sm">
+                        <div className="p-8 bg-white border border-stone-200 rounded-2xl shadow-xs">
                             <div className="flex items-center gap-3 mb-6">
                                 <Target className="w-5 h-5 text-cognac" />
                                 <h3 className="text-xl font-serif text-charcoal">What I Do</h3>
@@ -196,7 +196,7 @@ export default function ImranAuthorPage() {
                                                 <span>{post.date}</span>
                                             </div>
                                         </div>
-                                        <ArrowRight className="w-4 h-4 text-stone-300 group-hover:text-cognac transition-colors flex-shrink-0 ml-4" />
+                                        <ArrowRight className="w-4 h-4 text-stone-300 group-hover:text-cognac transition-colors shrink-0 ml-4" />
                                     </Link>
                                 ))}
                             </div>

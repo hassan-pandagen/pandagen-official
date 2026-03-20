@@ -332,7 +332,7 @@ export default function ROIComparisonCarousel() {
               >
                 <div className="relative bg-red-50/80 border border-red-200 rounded-2xl p-6 hover:border-red-300 hover:shadow-red-glow transition-all duration-300">
                   <div className="flex items-center gap-2 mb-3">
-                    <div className="px-2 py-1 bg-red-100 border border-red-200 rounded text-xs text-red-700 font-bold">
+                    <div className="px-2 py-1 bg-red-100 border border-red-200 rounded-sm text-xs text-red-700 font-bold">
                       TRADITIONAL
                     </div>
                   </div>
@@ -354,7 +354,7 @@ export default function ROIComparisonCarousel() {
               >
                 <div className="relative bg-cognac/5 border border-cognac/20 rounded-2xl p-6 hover:border-cognac/40 hover:shadow-card-hover transition-all duration-300">
                   <div className="flex items-center gap-2 mb-3">
-                    <div className="px-2 py-1 bg-cognac/10 border border-cognac/20 rounded text-xs text-cognac font-bold">
+                    <div className="px-2 py-1 bg-cognac/10 border border-cognac/20 rounded-sm text-xs text-cognac font-bold">
                       PANDAGEN
                     </div>
                   </div>
@@ -374,7 +374,7 @@ export default function ROIComparisonCarousel() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="relative overflow-hidden bg-gradient-to-r from-green-50 via-emerald-50 to-green-50 border border-green-200 rounded-2xl p-6"
+              className="relative overflow-hidden bg-linear-to-r from-green-50 via-emerald-50 to-green-50 border border-green-200 rounded-2xl p-6"
             >
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(34,197,94,0.08),transparent_70%)]" />
               <div className="relative flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
@@ -392,7 +392,7 @@ export default function ROIComparisonCarousel() {
                 <motion.div
                   animate={{ rotate: [0, 5, 0, -5, 0] }}
                   transition={{ duration: 2, repeat: Infinity }}
-                  className="w-16 h-16 rounded-full bg-green-100 border border-green-200 flex items-center justify-center flex-shrink-0"
+                  className="w-16 h-16 rounded-full bg-green-100 border border-green-200 flex items-center justify-center shrink-0"
                 >
                   <TrendingUp className="w-8 h-8 text-green-600" />
                 </motion.div>

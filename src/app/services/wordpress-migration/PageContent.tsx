@@ -42,7 +42,7 @@ export default function PageContent() {
       <Header />
 
       {/* 1. HERO */}
-      <section className="relative pt-28 md:pt-40 pb-12 md:pb-20 px-6">
+      <section className="relative pt-20 md:pt-40 pb-12 md:pb-20 px-6">
         <div className="container mx-auto text-center relative z-10 max-w-4xl">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-200 text-sm text-cognac mb-8">
             <Zap className="w-4 h-4" /> Legacy Rescue
@@ -54,7 +54,7 @@ export default function PageContent() {
             className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6 leading-tight"
           >
             Escape WordPress. <br />
-            <span className="font-serif italic text-stone-500">
+            <span className="font-serif italic text-cognac">
               Scale with Custom Code.
             </span>
           </motion.h1>
@@ -155,7 +155,7 @@ export default function PageContent() {
                 className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-red-500/40 transition-colors group"
               >
                 <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-red-500/15 text-red-400 flex-shrink-0 group-hover:bg-red-500/25 transition-colors">
+                  <div className="p-3 rounded-xl bg-red-500/15 text-red-400 shrink-0 group-hover:bg-red-500/25 transition-colors">
                     <item.icon className="w-5 h-5" />
                   </div>
                   <div>
@@ -188,7 +188,7 @@ export default function PageContent() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-stone-200 transition-all group"
+                className="bg-white p-7 rounded-2xl border border-slate-200 shadow-xs hover:shadow-md hover:border-stone-200 transition-all group"
               >
                 <span className="text-5xl font-black text-stone-300 block mb-4 leading-none group-hover:text-stone-200 transition-colors">{item.step}</span>
                 <div className="w-10 h-10 rounded-xl bg-stone-50 border border-stone-100 flex items-center justify-center mb-4 group-hover:bg-stone-100 transition-colors">
@@ -251,7 +251,7 @@ export default function PageContent() {
               <ul className="space-y-3 mb-8">
                 {["Speed optimization (caching, images)", "Security hardening", "Plugin audit & cleanup", "SEO improvements", "30-day support"].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
-                    <CheckCircle2 className="w-4 h-4 text-orange-500 flex-shrink-0" /> {item}
+                    <CheckCircle2 className="w-4 h-4 text-orange-500 shrink-0" /> {item}
                   </li>
                 ))}
               </ul>
@@ -275,7 +275,7 @@ export default function PageContent() {
               <ul className="space-y-3 mb-8">
                 {["Under a second load times", "90-95/100 PageSpeed score", "Zero monthly plugin fees", "Enterprise level security", "You own 100% of the code", "30-day money-back guarantee"].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
-                    <CheckCircle2 className="w-4 h-4 text-cognac flex-shrink-0" /> {item}
+                    <CheckCircle2 className="w-4 h-4 text-cognac shrink-0" /> {item}
                   </li>
                 ))}
               </ul>
@@ -315,7 +315,7 @@ export default function PageContent() {
                 >
                   <div className="flex items-center justify-between gap-4">
                     <h3 className="text-charcoal font-medium text-base">{faq.q}</h3>
-                    <div className={`w-6 h-6 rounded-full bg-stone-100 flex items-center justify-center flex-shrink-0 transition-transform ${openFaq === i ? 'rotate-45' : ''}`}>
+                    <div className={`w-6 h-6 rounded-full bg-stone-100 flex items-center justify-center shrink-0 transition-transform ${openFaq === i ? 'rotate-45' : ''}`}>
                       <span className="text-charcoal text-sm font-bold">+</span>
                     </div>
                   </div>
@@ -359,34 +359,34 @@ export default function PageContent() {
           <p className="text-stone-400 text-center mb-10 text-sm">Every migration is different. Find the right path for your platform.</p>
           <div className="grid md:grid-cols-3 gap-4">
             <Link href="/services/ecommerce" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center flex-shrink-0 group-hover:bg-stone-100 transition-colors">
+              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
                 <ShoppingBag className="w-5 h-5 text-cognac" />
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">E-Commerce Solutions</h3>
                 <p className="text-stone-400 text-xs mt-0.5">Headless Shopify storefronts that convert.</p>
               </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all flex-shrink-0" />
+              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
             </Link>
             <Link href="/services/custom-engineering" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center flex-shrink-0 group-hover:bg-stone-100 transition-colors">
+              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
                 <Code2 className="w-5 h-5 text-cognac" />
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">Custom Engineering</h3>
                 <p className="text-stone-400 text-xs mt-0.5">SaaS platforms, dashboards, and APIs built from scratch.</p>
               </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all flex-shrink-0" />
+              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
             </Link>
             <Link href="/services/wix" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center flex-shrink-0 group-hover:bg-stone-100 transition-colors">
+              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
                 <Zap className="w-5 h-5 text-cognac" />
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">Wix Migration</h3>
                 <p className="text-stone-400 text-xs mt-0.5">Break free from Wix limitations. Own your code.</p>
               </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all flex-shrink-0" />
+              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
             </Link>
           </div>
         </div>

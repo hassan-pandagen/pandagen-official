@@ -181,19 +181,18 @@ export default function ShopifyAppCostsPage() {
                         </div>
                         <h1 className="text-4xl md:text-5xl font-bold text-charcoal leading-tight mb-4">
                             Your Shopify Bill Is{" "}
-                            <span className="font-serif italic text-stone-500">$1,000/Month</span>{" "}
+                            <span className="font-serif italic text-cognac">$1,000/Month</span>{" "}
                             and You Don&apos;t Know It
                         </h1>
                         <p className="text-lg text-stone-600 leading-relaxed mb-6" data-speakable="true">
                             You signed up for $39/month. Then Klaviyo charged $150. Loop Returns charged $155. Okendo charged $119. Smile.io charged $199. ReCharge charged $99 plus 1.25% of subscription revenue. Here is exactly where your money is going and how to cut $715/month from the bill with verified, accurate pricing.
                         </p>
-                        <div className="flex flex-wrap items-center gap-4 text-sm text-stone-500">
-                            <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" /> Mar 19, 2026</span>
-                            <span className="flex items-center gap-1.5"><Clock className="w-4 h-4" /> 10 min read</span>
-                        </div>
-                        <div className="mt-4">
-                            <BlogAuthor />
-                        </div>
+                        <BlogAuthor
+                            date="Mar 19, 2026"
+                            readTime="10 min read"
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
+                            linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
+                        />
                     </div>
                 </div>
             </section>
@@ -205,7 +204,7 @@ export default function ShopifyAppCostsPage() {
             </section>
 
             <section className="px-6 pb-20">
-                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-sm px-8 py-10 md:px-14">
+                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
 
                     {/* Executive Summary */}
                     <div className="mb-10 p-6 bg-amber-50 border border-amber-200 rounded-2xl" data-speakable="true">

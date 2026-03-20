@@ -61,7 +61,7 @@ export default function SEORankingAnimation() {
   }
 
   return (
-    <div role="img" aria-label="Interactive animation showing Google search rankings improving as website load speed decreases from slow to fast" className="relative w-full aspect-[2/1] bg-gradient-to-br from-stone-50 to-white rounded-2xl border border-stone-200 overflow-hidden">
+    <div role="img" aria-label="Interactive animation showing Google search rankings improving as website load speed decreases from slow to fast" className="relative w-full aspect-2/1 bg-linear-to-br from-stone-50 to-white rounded-2xl border border-stone-200 overflow-hidden">
       <style>{`
         @keyframes rowSlide { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
         .row-in { animation: rowSlide 0.4s ease-out forwards; }
@@ -83,7 +83,7 @@ export default function SEORankingAnimation() {
             key={`${idx}-${row.name}`}
             className={`row-in flex items-center gap-2 md:gap-3 px-2.5 md:px-3 py-1.5 rounded-lg border transition-all duration-500 ${
               row.isYou && phase === "top"
-                ? "bg-white border-cognac shadow-sm"
+                ? "bg-white border-cognac shadow-xs"
                 : row.isYou
                 ? "bg-stone-50 border-stone-300"
                 : "bg-white border-stone-100"
@@ -98,7 +98,7 @@ export default function SEORankingAnimation() {
             </span>
 
             {/* Favicon dot */}
-            <div className={`w-3 h-3 rounded-sm shrink-0 ${
+            <div className={`w-3 h-3 rounded-xs shrink-0 ${
               row.isYou ? "bg-cognac" : "bg-stone-200"
             }`} />
 

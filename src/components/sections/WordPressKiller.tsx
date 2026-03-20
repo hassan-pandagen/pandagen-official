@@ -33,7 +33,7 @@ export default function WordPressKiller({ onOpenQuote }: WordPressKillerProps) {
           viewport={{ once: true }}
           className="max-w-6xl mx-auto"
         >
-          <div className="relative rounded-2xl md:rounded-[2rem] overflow-hidden bg-white border border-red-200 shadow-[0_20px_60px_rgba(0,0,0,0.06),0_0_0_1px_rgba(239,68,68,0.08)]">
+          <div className="relative rounded-2xl md:rounded-4xl overflow-hidden bg-white border border-red-200 shadow-[0_20px_60px_rgba(0,0,0,0.06),0_0_0_1px_rgba(239,68,68,0.08)]">
 
               <div className="relative z-10 grid md:grid-cols-2 gap-8 md:gap-0">
 
@@ -50,7 +50,7 @@ export default function WordPressKiller({ onOpenQuote }: WordPressKillerProps) {
                   </h2>
 
                   <h3 className="text-3xl md:text-6xl font-black leading-tight mb-6 md:mb-8">
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-orange-500 to-red-500">
+                    <span className="text-transparent bg-clip-text bg-linear-to-r from-red-500 via-orange-500 to-red-500">
                       WordPress is a liability.
                     </span>
                   </h3>
@@ -105,7 +105,7 @@ export default function WordPressKiller({ onOpenQuote }: WordPressKillerProps) {
                         className="grid grid-cols-[1fr_80px_80px] md:grid-cols-[1fr_110px_110px] gap-2 md:gap-3 items-center py-3 px-3 -mx-3 rounded-xl hover:bg-white transition-all group cursor-default"
                       >
                         <div className="flex items-center gap-3">
-                          <div className="w-7 h-7 md:w-8 md:h-8 rounded-lg bg-stone-100 border border-stone-200 flex items-center justify-center group-hover:bg-stone-50 group-hover:border-stone-300 transition-colors flex-shrink-0">
+                          <div className="w-7 h-7 md:w-8 md:h-8 rounded-lg bg-stone-100 border border-stone-200 flex items-center justify-center group-hover:bg-stone-50 group-hover:border-stone-300 transition-colors shrink-0">
                             <row.icon className="w-3.5 h-3.5 md:w-4 md:h-4 text-stone-500 group-hover:text-cognac transition-colors" />
                           </div>
                           <span className="text-xs md:text-sm text-charcoal font-medium">{row.metric}</span>
@@ -126,7 +126,7 @@ export default function WordPressKiller({ onOpenQuote }: WordPressKillerProps) {
                     whileInView={{ scale: 1, opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.3 }}
-                    className="mt-6 p-5 bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-2xl shadow-green-glow"
+                    className="mt-6 p-5 bg-linear-to-br from-green-50 to-emerald-50 border border-green-200 rounded-2xl shadow-green-glow"
                   >
                     <div className="flex items-center justify-between mb-4">
                       <p className="text-[11px] text-green-700 uppercase font-bold tracking-wider">Your Potential Savings</p>

@@ -4,7 +4,8 @@ import { ArrowRight, Search, Filter, X } from "lucide-react";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import { blogPosts, type IllustrationType } from "@/data/blog";
 
 // Light-mode editorial stat display — data report style (Stripe / McKinsey aesthetic)
@@ -36,9 +37,23 @@ const articles = blogPosts
     return dateB.getTime() - dateA.getTime();
   });
 
-export default function BlogPage() {
-  const [activeCategory, setActiveCategory] = useState("All");
-  const [searchQuery, setSearchQuery] = useState("");
+function BlogPageInner() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const searchQuery = searchParams.get("q") ?? "";
+  const activeCategory = searchParams.get("cat") ?? "All";
+
+  function setSearchQuery(val: string) {
+    const params = new URLSearchParams(searchParams.toString());
+    if (val) params.set("q", val); else params.delete("q");
+    router.replace(`/blog?${params.toString()}`, { scroll: false });
+  }
+
+  function setActiveCategory(val: string) {
+    const params = new URLSearchParams(searchParams.toString());
+    if (val && val !== "All") params.set("cat", val); else params.delete("cat");
+    router.replace(`/blog?${params.toString()}`, { scroll: false });
+  }
 
   const categories = ["All", ...Array.from(new Set(blogPosts.map(post => post.category)))];
 
@@ -130,7 +145,7 @@ export default function BlogPage() {
       <section className="pt-40 pb-16 px-6 text-center relative border-b border-stone-200">
         <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-4">The Journal</p>
         <h1 className="text-5xl md:text-7xl font-bold text-charcoal relative z-10">
-          Insights from the <span className="font-serif italic text-stone-500">Engine Room.</span>
+          Insights from the <span className="font-serif italic text-cognac">Engine Room.</span>
         </h1>
         <p className="mt-6 text-lg text-stone-600 max-w-xl mx-auto">
           Technical guides on Next.js, WordPress migration, e-commerce performance, and web speed, written by the engineers who build it.
@@ -148,7 +163,7 @@ export default function BlogPage() {
               placeholder="Search articles..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-10 py-3 bg-white border border-stone-200 rounded-full text-charcoal placeholder-stone-400 focus:outline-none focus:border-stone-400 transition-colors"
+              className="w-full pl-12 pr-10 py-3 bg-white border border-stone-200 rounded-full text-charcoal placeholder-stone-400 focus:outline-hidden focus:border-stone-400 transition-colors"
             />
             {searchQuery && (
               <button
@@ -243,7 +258,7 @@ export default function BlogPage() {
                   const sd = cardDisplay[article.illustrationType];
                   return (
                     <Link key={article.id} href={`/blog/${article.id}`} className="group block h-full">
-                      <div className="relative rounded-[2rem] overflow-hidden border border-stone-200 bg-white grid grid-cols-[180px_1fr] hover:border-stone-300 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 h-full">
+                      <div className="relative rounded-4xl overflow-hidden border border-stone-200 bg-white grid grid-cols-[180px_1fr] hover:border-stone-300 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 h-full">
                         <div
                           className="relative overflow-hidden flex flex-col justify-center p-7"
                           style={{ backgroundColor: sd.bgTint, borderRight: `1px solid ${sd.border}` }}
@@ -297,7 +312,7 @@ export default function BlogPage() {
               >
                 {/* Light-mode data header — tinted bg, colored stat */}
                 <div
-                  className="p-6 relative overflow-hidden flex-shrink-0"
+                  className="p-6 relative overflow-hidden shrink-0"
                   style={{
                     backgroundColor: display.bgTint,
                     borderBottom: `1px solid ${display.border}`,
@@ -354,5 +369,13 @@ export default function BlogPage() {
 
       <Footer />
     </main>
+  );
+}
+
+export default function BlogPage() {
+  return (
+    <Suspense fallback={null}>
+      <BlogPageInner />
+    </Suspense>
   );
 }

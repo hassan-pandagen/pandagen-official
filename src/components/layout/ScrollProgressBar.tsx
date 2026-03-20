@@ -26,7 +26,7 @@ export default function ScrollProgressBar() {
   return (
     <div
       ref={ref}
-      className="fixed top-0 left-0 right-0 h-1 bg-cognac z-[70] origin-left will-change-transform"
+      className="fixed top-0 left-0 right-0 h-1 bg-cognac z-70 origin-left will-change-transform"
       style={{ transform: "scaleX(0)" }}
     />
   );

@@ -49,7 +49,7 @@ export default function SquarespacePageContent() {
       <Header />
 
       {/* 1. HERO */}
-      <section className="relative pt-28 md:pt-40 pb-12 md:pb-20 px-6">
+      <section className="relative pt-20 md:pt-40 pb-12 md:pb-20 px-6">
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "linear-gradient(#1C1917 1px, transparent 1px), linear-gradient(90deg, #1C1917 1px, transparent 1px)", backgroundSize: "50px 50px", opacity: 0.03 }} />
         <div className="absolute top-1/3 right-[10%] w-[500px] h-[500px] bg-stone-200/50 blur-[140px] rounded-full pointer-events-none" />
 
@@ -64,7 +64,7 @@ export default function SquarespacePageContent() {
             className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6 leading-tight"
           >
             Outgrown Squarespace? <br />
-            <span className="font-serif italic text-stone-500">
+            <span className="font-serif italic text-cognac">
               Own Your Platform.
             </span>
           </motion.h1>
@@ -127,7 +127,7 @@ export default function SquarespacePageContent() {
                   "Basic analytics to track your visitors.",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-slate-500">
-                    <div className="w-1.5 h-1.5 rounded-full bg-green-400 mt-2 flex-shrink-0" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-green-400 mt-2 shrink-0" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -155,7 +155,7 @@ export default function SquarespacePageContent() {
                   { title: "Rent vs Own:", body: "You've paid $2,000+ in fees over 3 years and own nothing. If they raise prices, you're hostage." },
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-slate-700">
-                    <Anchor className="w-4 h-4 text-red-400 mt-1 flex-shrink-0" />
+                    <Anchor className="w-4 h-4 text-red-400 mt-1 shrink-0" />
                     <span><strong>{item.title}</strong> {item.body}</span>
                   </li>
                 ))}
@@ -195,7 +195,7 @@ export default function SquarespacePageContent() {
                 className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-red-500/40 transition-colors group"
               >
                 <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-red-500/15 text-red-400 flex-shrink-0 group-hover:bg-red-500/25 transition-colors">
+                  <div className="p-3 rounded-xl bg-red-500/15 text-red-400 shrink-0 group-hover:bg-red-500/25 transition-colors">
                     <item.icon className="w-5 h-5" />
                   </div>
                   <div>
@@ -220,7 +220,7 @@ export default function SquarespacePageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-6xl mx-auto"
           >
-            <div className="relative rounded-2xl md:rounded-[2rem] overflow-hidden bg-white border border-red-200 shadow-[0_20px_60px_rgba(0,0,0,0.06),0_0_0_1px_rgba(239,68,68,0.08)]">
+            <div className="relative rounded-2xl md:rounded-4xl overflow-hidden bg-white border border-red-200 shadow-[0_20px_60px_rgba(0,0,0,0.06),0_0_0_1px_rgba(239,68,68,0.08)]">
               <div className="relative z-10 grid md:grid-cols-2 gap-8 md:gap-0">
 
                 {/* LEFT: The Pain */}
@@ -233,7 +233,7 @@ export default function SquarespacePageContent() {
                     Stop Losing Money.
                   </h2>
                   <h3 className="text-3xl md:text-6xl font-black leading-tight mb-6 md:mb-8">
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-orange-500 to-red-500">
+                    <span className="text-transparent bg-clip-text bg-linear-to-r from-red-500 via-orange-500 to-red-500">
                       Squarespace is a liability.
                     </span>
                   </h3>
@@ -284,7 +284,7 @@ export default function SquarespacePageContent() {
                         className="grid grid-cols-[1fr_80px_80px] md:grid-cols-[1fr_110px_110px] gap-2 md:gap-3 items-center py-3 px-3 -mx-3 rounded-xl hover:bg-white transition-all group cursor-default"
                       >
                         <div className="flex items-center gap-3">
-                          <div className="w-7 h-7 md:w-8 md:h-8 rounded-lg bg-stone-100 border border-stone-200 flex items-center justify-center group-hover:bg-stone-50 group-hover:border-stone-200 transition-colors flex-shrink-0">
+                          <div className="w-7 h-7 md:w-8 md:h-8 rounded-lg bg-stone-100 border border-stone-200 flex items-center justify-center group-hover:bg-stone-50 group-hover:border-stone-200 transition-colors shrink-0">
                             <row.icon className="w-3.5 h-3.5 md:w-4 md:h-4 text-stone-400 group-hover:text-cognac transition-colors" />
                           </div>
                           <span className="text-xs md:text-sm text-charcoal font-medium">{row.metric}</span>
@@ -304,7 +304,7 @@ export default function SquarespacePageContent() {
                     initial={{ scale: 0.95, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ delay: 0.3 }}
-                    className="mt-6 p-5 bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-2xl"
+                    className="mt-6 p-5 bg-linear-to-br from-green-50 to-emerald-50 border border-green-200 rounded-2xl"
                   >
                     <div className="flex items-center justify-between mb-4">
                       <p className="text-xs text-green-700 uppercase font-bold tracking-wider">Your Potential Savings</p>
@@ -360,7 +360,7 @@ export default function SquarespacePageContent() {
                 transition={{ delay: i * 0.08 }}
                 className="flex gap-6 items-start"
               >
-                <div className="flex flex-col items-center flex-shrink-0">
+                <div className="flex flex-col items-center shrink-0">
                   <div className="w-12 h-12 rounded-xl bg-stone-50 border border-cognac/20 flex items-center justify-center">
                     <item.icon className="w-5 h-5 text-cognac" />
                   </div>
@@ -427,10 +427,10 @@ export default function SquarespacePageContent() {
               <h4 className="text-2xl font-bold text-slate-900 mb-4">Optimization Only</h4>
               <p className="text-slate-500 mb-8 text-sm">We try to improve your existing Squarespace site, but we&apos;re limited by the platform&apos;s code bloat and template constraints.</p>
               <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-2 text-slate-600 text-sm"><CheckCircle2 className="w-4 h-4 text-slate-400 flex-shrink-0" /> Slight speed improvement</li>
-                <li className="flex items-center gap-2 text-slate-600 text-sm"><CheckCircle2 className="w-4 h-4 text-slate-400 flex-shrink-0" /> Image compression</li>
-                <li className="flex items-center gap-2 text-slate-400 text-sm"><XCircle className="w-4 h-4 text-red-300 flex-shrink-0" /> Still paying $33-65/mo forever</li>
-                <li className="flex items-center gap-2 text-slate-400 text-sm"><XCircle className="w-4 h-4 text-red-300 flex-shrink-0" /> Still locked into templates</li>
+                <li className="flex items-center gap-2 text-slate-600 text-sm"><CheckCircle2 className="w-4 h-4 text-slate-400 shrink-0" /> Slight speed improvement</li>
+                <li className="flex items-center gap-2 text-slate-600 text-sm"><CheckCircle2 className="w-4 h-4 text-slate-400 shrink-0" /> Image compression</li>
+                <li className="flex items-center gap-2 text-slate-400 text-sm"><XCircle className="w-4 h-4 text-red-300 shrink-0" /> Still paying $33-65/mo forever</li>
+                <li className="flex items-center gap-2 text-slate-400 text-sm"><XCircle className="w-4 h-4 text-red-300 shrink-0" /> Still locked into templates</li>
               </ul>
               <button
                 data-cal-namespace="discovery"
@@ -451,10 +451,10 @@ export default function SquarespacePageContent() {
               <h4 className="text-3xl font-bold text-slate-900 mb-4">Full Migration to Next.js</h4>
               <p className="text-slate-600 mb-8">We rebuild your site from scratch. Perfect scores. Zero monthly fees. Full ownership. Built to last.</p>
               <ul className="space-y-4 mb-10">
-                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" /> Under a second load times (&lt;0.8s)</li>
-                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" /> 100% SEO Preservation</li>
-                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" /> Zero Monthly Platform Fees</li>
-                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" /> You Own the Code</li>
+                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" /> Under a second load times (&lt;0.8s)</li>
+                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" /> 100% SEO Preservation</li>
+                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" /> Zero Monthly Platform Fees</li>
+                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" /> You Own the Code</li>
               </ul>
               <button
                 data-cal-namespace="discovery"
@@ -492,7 +492,7 @@ export default function SquarespacePageContent() {
                 >
                   <div className="flex items-center justify-between gap-4">
                     <h3 className="text-charcoal font-medium text-base">{faq.q}</h3>
-                    <div className={`w-6 h-6 rounded-full bg-stone-50 flex items-center justify-center flex-shrink-0 transition-transform ${openFaq === i ? 'rotate-45' : ''}`}>
+                    <div className={`w-6 h-6 rounded-full bg-stone-50 flex items-center justify-center shrink-0 transition-transform ${openFaq === i ? 'rotate-45' : ''}`}>
                       <span className="text-charcoal text-sm font-bold">+</span>
                     </div>
                   </div>
@@ -510,7 +510,7 @@ export default function SquarespacePageContent() {
       <section className="py-10 md:py-20 px-6 bg-white border-t border-slate-100">
         <div className="container mx-auto max-w-4xl">
           <div className="bg-[#F0FDF4] border border-green-200 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
-            <div className="flex-shrink-0">
+            <div className="shrink-0">
               <div className="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center text-green-600">
                 <ShieldCheck className="w-10 h-10" />
               </div>
@@ -545,34 +545,34 @@ export default function SquarespacePageContent() {
           <p className="text-stone-400 text-center mb-10 text-sm">Every migration is different. Find the right path for your platform.</p>
           <div className="grid md:grid-cols-3 gap-4">
             <Link href="/services/wix" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center flex-shrink-0 group-hover:bg-stone-100 transition-colors">
+              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
                 <Zap className="w-5 h-5 text-cognac" />
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">Wix Migration</h3>
                 <p className="text-stone-400 text-xs mt-0.5">Break free from Wix limitations. Own your code.</p>
               </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all flex-shrink-0" />
+              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
             </Link>
             <Link href="/services/webflow" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center flex-shrink-0 group-hover:bg-stone-100 transition-colors">
+              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
                 <Code2 className="w-5 h-5 text-cognac" />
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">Webflow Migration</h3>
                 <p className="text-stone-400 text-xs mt-0.5">Outgrow Webflow&apos;s constraints with custom architecture.</p>
               </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all flex-shrink-0" />
+              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
             </Link>
             <Link href="/services/wordpress-migration" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center flex-shrink-0 group-hover:bg-stone-100 transition-colors">
+              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
                 <Wrench className="w-5 h-5 text-cognac" />
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">WordPress Migration</h3>
                 <p className="text-stone-400 text-xs mt-0.5">Escape plugin bloat. Get load times under 1 second with custom code.</p>
               </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all flex-shrink-0" />
+              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
             </Link>
           </div>
         </div>

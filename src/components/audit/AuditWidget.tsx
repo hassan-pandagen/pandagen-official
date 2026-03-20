@@ -120,7 +120,7 @@ export default function AuditWidget() {
                         onChange={(e) => setUrl(e.target.value)}
                         onKeyDown={handleKeyDown}
                         placeholder="yourwebsite.com"
-                        className="w-full bg-stone-50 border border-gray-200 rounded-xl pl-12 pr-4 py-4 text-charcoal placeholder:text-gray-400 focus:outline-none focus:border-cognac focus:ring-2 focus:ring-cognac/20 transition-all text-base font-medium"
+                        className="w-full bg-stone-50 border border-gray-200 rounded-xl pl-12 pr-4 py-4 text-charcoal placeholder:text-gray-400 focus:outline-hidden focus:border-cognac focus:ring-2 focus:ring-cognac/20 transition-all text-base font-medium"
                       />
                     </div>
 
@@ -146,7 +146,7 @@ export default function AuditWidget() {
                     <div className="grid grid-cols-2 gap-y-2 gap-x-4">
                       {deepChecks.map((check, i) => (
                         <div key={i} className="flex items-center gap-2">
-                          <svg className="w-3 h-3 text-charcoal flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                          <svg className="w-3 h-3 text-charcoal shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                           </svg>
                           <span className="text-xs font-medium text-stone-600">{check}</span>
@@ -202,9 +202,9 @@ export default function AuditWidget() {
                       <div className="divide-y divide-stone-100">
                         {auditData.deepChecks.checks.slice(0, 3).map((check) => (
                           <div key={check.id} className="flex items-center gap-2.5 px-4 py-2.5">
-                            {check.status === 'pass' && <CheckCircle2 className="w-3.5 h-3.5 text-green-500 flex-shrink-0" />}
-                            {check.status === 'warn' && <AlertTriangle className="w-3.5 h-3.5 text-orange-500 flex-shrink-0" />}
-                            {check.status === 'fail' && <XCircle className="w-3.5 h-3.5 text-red-500 flex-shrink-0" />}
+                            {check.status === 'pass' && <CheckCircle2 className="w-3.5 h-3.5 text-green-500 shrink-0" />}
+                            {check.status === 'warn' && <AlertTriangle className="w-3.5 h-3.5 text-orange-500 shrink-0" />}
+                            {check.status === 'fail' && <XCircle className="w-3.5 h-3.5 text-red-500 shrink-0" />}
                             <span className="text-xs font-medium text-stone-700 flex-1">{check.name}</span>
                             <span className={`text-xs font-bold font-mono ${getScoreTextClass(check.score)}`}>
                               {check.score}
@@ -217,13 +217,13 @@ export default function AuditWidget() {
                         <div className="divide-y divide-stone-100 blur-[6px] select-none pointer-events-none">
                           {auditData.deepChecks.checks.slice(3, 6).map((check) => (
                             <div key={check.id} className="flex items-center gap-2.5 px-4 py-2.5">
-                              <CheckCircle2 className="w-3.5 h-3.5 text-stone-300 flex-shrink-0" />
+                              <CheckCircle2 className="w-3.5 h-3.5 text-stone-300 shrink-0" />
                               <span className="text-xs font-medium text-stone-700 flex-1">{check.name}</span>
                               <span className="text-xs font-bold font-mono text-stone-400">{check.score}</span>
                             </div>
                           ))}
                         </div>
-                        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/90 flex items-end justify-center pb-2">
+                        <div className="absolute inset-0 bg-linear-to-b from-transparent to-white/90 flex items-end justify-center pb-2">
                           <span className="text-[10px] font-bold text-stone-500 uppercase tracking-wider">+8 more checks</span>
                         </div>
                       </div>
@@ -288,7 +288,7 @@ export default function AuditWidget() {
                       onChange={(e) => setUrl(e.target.value)}
                       onKeyDown={handleKeyDown}
                       placeholder="yourwebsite.com"
-                      className="w-full bg-stone-50 border border-gray-200 rounded-xl pl-10 pr-4 py-3 text-charcoal placeholder:text-gray-400 focus:outline-none focus:border-cognac focus:ring-2 focus:ring-cognac/20 transition-all"
+                      className="w-full bg-stone-50 border border-gray-200 rounded-xl pl-10 pr-4 py-3 text-charcoal placeholder:text-gray-400 focus:outline-hidden focus:border-cognac focus:ring-2 focus:ring-cognac/20 transition-all"
                     />
                   </div>
                   {error && <p className="text-red-600 text-sm">{error}</p>}
@@ -328,9 +328,9 @@ export default function AuditWidget() {
                       <div className="divide-y divide-stone-100">
                         {auditData.deepChecks.checks.slice(0, 3).map((check) => (
                           <div key={check.id} className="flex items-center gap-2 px-3 py-2">
-                            {check.status === 'pass' && <CheckCircle2 className="w-3 h-3 text-green-500 flex-shrink-0" />}
-                            {check.status === 'warn' && <AlertTriangle className="w-3 h-3 text-orange-500 flex-shrink-0" />}
-                            {check.status === 'fail' && <XCircle className="w-3 h-3 text-red-500 flex-shrink-0" />}
+                            {check.status === 'pass' && <CheckCircle2 className="w-3 h-3 text-green-500 shrink-0" />}
+                            {check.status === 'warn' && <AlertTriangle className="w-3 h-3 text-orange-500 shrink-0" />}
+                            {check.status === 'fail' && <XCircle className="w-3 h-3 text-red-500 shrink-0" />}
                             <span className="text-[11px] font-medium text-stone-700 flex-1">{check.name}</span>
                             <span className={`text-[11px] font-bold font-mono ${getScoreTextClass(check.score)}`}>
                               {check.score}
@@ -342,13 +342,13 @@ export default function AuditWidget() {
                         <div className="divide-y divide-stone-100 blur-[6px] select-none pointer-events-none">
                           {auditData.deepChecks.checks.slice(3, 5).map((check) => (
                             <div key={check.id} className="flex items-center gap-2 px-3 py-2">
-                              <CheckCircle2 className="w-3 h-3 text-stone-300 flex-shrink-0" />
+                              <CheckCircle2 className="w-3 h-3 text-stone-300 shrink-0" />
                               <span className="text-[11px] font-medium text-stone-700 flex-1">{check.name}</span>
                               <span className="text-[11px] font-bold font-mono text-stone-400">{check.score}</span>
                             </div>
                           ))}
                         </div>
-                        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/90 flex items-end justify-center pb-1.5">
+                        <div className="absolute inset-0 bg-linear-to-b from-transparent to-white/90 flex items-end justify-center pb-1.5">
                           <span className="text-[9px] font-bold text-stone-500 uppercase tracking-wider">+8 more checks</span>
                         </div>
                       </div>

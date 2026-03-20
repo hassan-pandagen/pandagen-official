@@ -56,7 +56,7 @@ export default function ServiceSection({
                     <div className="flex items-center gap-4 mb-6">
                         <span className="text-6xl font-bold text-stone-100">{id}</span>
                         <div
-                            className={`p-3 rounded-2xl bg-gradient-to-br ${gradient} border border-stone-200`}
+                            className={`p-3 rounded-2xl bg-linear-to-br ${gradient} border border-stone-200`}
                         >
                             <Icon className="w-6 h-6 text-charcoal" />
                         </div>
@@ -95,10 +95,10 @@ export default function ServiceSection({
                 {/* VISUAL SIDE */}
                 <div className="flex-1 min-h-[400px]">
                     <div
-                        className={`w-full h-full rounded-[2rem] border border-stone-200 bg-stone-50 p-2 relative overflow-hidden group`}
+                        className={`w-full h-full rounded-4xl border border-stone-200 bg-stone-50 p-2 relative overflow-hidden group`}
                     >
                         <div
-                            className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-10 group-hover:opacity-20 transition-opacity duration-700`}
+                            className={`absolute inset-0 bg-linear-to-br ${gradient} opacity-10 group-hover:opacity-20 transition-opacity duration-700`}
                         />
                         {children}
                     </div>

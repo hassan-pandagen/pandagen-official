@@ -50,7 +50,7 @@ export default function PageContent() {
       <Header />
 
       {/* 1. HERO */}
-      <section className="relative pt-28 md:pt-40 pb-12 md:pb-20 px-6">
+      <section className="relative pt-20 md:pt-40 pb-12 md:pb-20 px-6">
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "linear-gradient(#1C1917 1px, transparent 1px), linear-gradient(90deg, #1C1917 1px, transparent 1px)", backgroundSize: "50px 50px", opacity: 0.03 }} />
         <div className="absolute top-1/3 right-[10%] w-[500px] h-[500px] bg-stone-200/50 blur-[140px] rounded-full pointer-events-none" />
 
@@ -65,7 +65,7 @@ export default function PageContent() {
             className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6 leading-tight"
           >
             Outgrown Wix? <br />
-            <span className="font-serif italic text-stone-500">
+            <span className="font-serif italic text-cognac">
               We&apos;ll Get You Unstuck.
             </span>
           </motion.h1>
@@ -204,7 +204,7 @@ export default function PageContent() {
                 className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-red-500/40 transition-colors group"
               >
                 <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-red-500/15 text-red-400 flex-shrink-0 group-hover:bg-red-500/25 transition-colors">
+                  <div className="p-3 rounded-xl bg-red-500/15 text-red-400 shrink-0 group-hover:bg-red-500/25 transition-colors">
                     <item.icon className="w-5 h-5" />
                   </div>
                   <div>
@@ -235,7 +235,7 @@ export default function PageContent() {
             {comparisonData.map((row, i) => (
               <div key={i} className={`grid grid-cols-3 p-4 items-center ${i % 2 === 0 ? 'bg-white border border-stone-100' : ''} border-b border-stone-200 last:border-b-0`}>
                 <div className="flex items-center gap-2 text-charcoal text-sm font-medium">
-                  <row.icon className="w-4 h-4 text-stone-400 flex-shrink-0" />
+                  <row.icon className="w-4 h-4 text-stone-400 shrink-0" />
                   {row.feature}
                 </div>
                 <div className="text-red-400/80 text-sm text-center">{row.wix}</div>
@@ -267,7 +267,7 @@ export default function PageContent() {
                 transition={{ delay: i * 0.08 }}
                 className="flex gap-6 items-start"
               >
-                <div className="flex flex-col items-center flex-shrink-0">
+                <div className="flex flex-col items-center shrink-0">
                   <div className="w-12 h-12 rounded-xl bg-stone-50 border border-cognac/20 flex items-center justify-center">
                     <item.icon className="w-5 h-5 text-cognac" />
                   </div>
@@ -334,10 +334,10 @@ export default function PageContent() {
               <h4 className="text-2xl font-bold text-slate-900 mb-4">Optimization Only</h4>
               <p className="text-slate-500 mb-8 text-sm">We try to speed up your existing Wix site, but we&apos;re limited by the platform&apos;s heavy JavaScript and template constraints.</p>
               <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-2 text-slate-600 text-sm"><CheckCircle2 className="w-4 h-4 text-slate-400 flex-shrink-0" /> Slight speed improvement</li>
-                <li className="flex items-center gap-2 text-slate-600 text-sm"><CheckCircle2 className="w-4 h-4 text-slate-400 flex-shrink-0" /> Image compression</li>
-                <li className="flex items-center gap-2 text-slate-400 text-sm"><XCircle className="w-4 h-4 text-red-300 flex-shrink-0" /> Still paying monthly fees forever</li>
-                <li className="flex items-center gap-2 text-slate-400 text-sm"><XCircle className="w-4 h-4 text-red-300 flex-shrink-0" /> Still locked into Wix</li>
+                <li className="flex items-center gap-2 text-slate-600 text-sm"><CheckCircle2 className="w-4 h-4 text-slate-400 shrink-0" /> Slight speed improvement</li>
+                <li className="flex items-center gap-2 text-slate-600 text-sm"><CheckCircle2 className="w-4 h-4 text-slate-400 shrink-0" /> Image compression</li>
+                <li className="flex items-center gap-2 text-slate-400 text-sm"><XCircle className="w-4 h-4 text-red-300 shrink-0" /> Still paying monthly fees forever</li>
+                <li className="flex items-center gap-2 text-slate-400 text-sm"><XCircle className="w-4 h-4 text-red-300 shrink-0" /> Still locked into Wix</li>
               </ul>
               <button
                 data-cal-namespace="discovery"
@@ -358,10 +358,10 @@ export default function PageContent() {
               <h4 className="text-3xl font-bold text-slate-900 mb-4">Full Migration to Next.js</h4>
               <p className="text-slate-600 mb-8">We rebuild your site from scratch. Perfect scores. Zero monthly fees. Full ownership. Built to last.</p>
               <ul className="space-y-4 mb-10">
-                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" /> Under a second load times (&lt;0.8s)</li>
-                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" /> 100% SEO Preservation</li>
-                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" /> Zero Monthly Platform Fees</li>
-                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" /> You Own the Code</li>
+                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" /> Under a second load times (&lt;0.8s)</li>
+                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" /> 100% SEO Preservation</li>
+                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" /> Zero Monthly Platform Fees</li>
+                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" /> You Own the Code</li>
               </ul>
               <button
                 data-cal-namespace="discovery"
@@ -399,7 +399,7 @@ export default function PageContent() {
                 >
                   <div className="flex items-center justify-between gap-4">
                     <h3 className="text-charcoal font-medium text-base">{faq.q}</h3>
-                    <div className={`w-6 h-6 rounded-full bg-stone-100 flex items-center justify-center flex-shrink-0 transition-transform ${openFaq === i ? 'rotate-45' : ''}`}>
+                    <div className={`w-6 h-6 rounded-full bg-stone-100 flex items-center justify-center shrink-0 transition-transform ${openFaq === i ? 'rotate-45' : ''}`}>
                       <span className="text-charcoal text-sm font-bold">+</span>
                     </div>
                   </div>
@@ -417,7 +417,7 @@ export default function PageContent() {
       <section className="py-10 md:py-20 px-6 bg-white border-t border-slate-100">
         <div className="container mx-auto max-w-4xl">
           <div className="bg-[#F0FDF4] border border-green-200 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
-            <div className="flex-shrink-0">
+            <div className="shrink-0">
               <div className="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center text-green-600">
                 <ShieldCheck className="w-10 h-10" />
               </div>
@@ -452,34 +452,34 @@ export default function PageContent() {
           <p className="text-stone-400 text-center mb-10 text-sm">Every migration is different. Find the right path for your platform.</p>
           <div className="grid md:grid-cols-3 gap-4">
             <Link href="/services/wordpress-migration" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center flex-shrink-0 group-hover:bg-stone-100 transition-colors">
+              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
                 <Wrench className="w-5 h-5 text-cognac" />
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">WordPress Migration</h3>
                 <p className="text-stone-400 text-xs mt-0.5">Escape plugin bloat. Get load times under 1 second with custom code.</p>
               </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all flex-shrink-0" />
+              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
             </Link>
             <Link href="/services/squarespace" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center flex-shrink-0 group-hover:bg-stone-100 transition-colors">
+              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
                 <Gauge className="w-5 h-5 text-cognac" />
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">Squarespace Migration</h3>
                 <p className="text-stone-400 text-xs mt-0.5">Leave Squarespace behind. Get a site you actually own.</p>
               </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all flex-shrink-0" />
+              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
             </Link>
             <Link href="/services/webflow" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center flex-shrink-0 group-hover:bg-stone-100 transition-colors">
+              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
                 <Code2 className="w-5 h-5 text-cognac" />
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">Webflow Migration</h3>
                 <p className="text-stone-400 text-xs mt-0.5">Outgrow Webflow&apos;s constraints with custom architecture.</p>
               </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all flex-shrink-0" />
+              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
             </Link>
           </div>
         </div>

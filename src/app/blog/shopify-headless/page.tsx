@@ -157,7 +157,7 @@ export default function ShopifyHeadlessPage() {
             <Header />
             <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-32 pb-20">
                 <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
-                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-sm px-8 py-10 md:px-14">
+                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
 
                     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
 
@@ -180,18 +180,15 @@ export default function ShopifyHeadlessPage() {
                         </div>
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight text-charcoal">
                             Your Shopify Store Loads in 4 Seconds.{" "}
-                            <span className="font-serif italic text-stone-500">We Got It to 0.8.</span>{" "}
+                            <span className="font-serif italic text-cognac">We Got It to 0.8.</span>{" "}
                             Here&apos;s Exactly How.
                         </h1>
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
                             Liquid templates are render-blocking by design. Here&apos;s the exact headless stack that cut load time from 4s to 0.8s and boosted conversions by 55%.
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">
-                            <div className="flex items-center gap-2"><Calendar className="w-4 h-4" />Jan 10, 2026</div>
-                            <div className="flex items-center gap-2"><Clock className="w-4 h-4" />12 min read</div>
-                        </div>
-                        <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
+                            date="Jan 10, 2026"
+                            readTime="12 min read"
                             bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />

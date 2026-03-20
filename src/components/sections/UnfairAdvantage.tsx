@@ -65,7 +65,7 @@ export default function UnfairAdvantage() {
               className={`group border-b ${stat.borderRight ? "border-r-0 md:border-r" : ""} border-stone-200 p-6 md:p-10 hover:bg-stone-50 transition-colors duration-500`}
             >
               <div className="mb-8">
-                <div className="w-12 h-12 bg-stone-100 rounded-full flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                <div className="w-12 h-12 bg-stone-100 rounded-full flex items-center justify-center group-hover:bg-cognac transition-all duration-300">
                   <stat.icon className="w-6 h-6 text-stone-500 group-hover:text-white transition-colors duration-300" />
                 </div>
               </div>

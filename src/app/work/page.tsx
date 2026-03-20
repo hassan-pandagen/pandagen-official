@@ -142,7 +142,7 @@ export default function WorkPage() {
             <Header />
 
             {/* HERO */}
-            <section className="relative pt-24 md:pt-40 pb-6 md:pb-10 px-6 bg-gradient-to-b from-white to-stone-50 overflow-hidden">
+            <section className="relative pt-24 md:pt-40 pb-6 md:pb-10 px-6 bg-linear-to-b from-white to-stone-50 overflow-hidden">
                 <div className="absolute top-20 right-1/4 w-[500px] h-[500px] bg-stone-200/30 blur-[120px] rounded-full pointer-events-none" />
                 <div className="container mx-auto relative z-10">
                     <motion.div
@@ -193,7 +193,7 @@ function ProjectCard({ project, index }: any) {
     return (
         <section ref={ref} className="container mx-auto px-6">
             <motion.div style={{ opacity, y }} className="group">
-                <div className="grid lg:grid-cols-12 items-stretch rounded-[2rem] overflow-hidden border border-stone-200 shadow-2xl shadow-stone-900/10 hover:shadow-stone-900/15 transition-shadow duration-500">
+                <div className="grid lg:grid-cols-12 items-stretch rounded-4xl overflow-hidden border border-stone-200 shadow-2xl shadow-stone-900/10 hover:shadow-stone-900/15 transition-shadow duration-500">
 
                     {/* LEFT, Dark image panel */}
                     <div className="lg:col-span-7 relative bg-[#0C0A09] h-[300px] lg:h-auto min-h-[520px] overflow-hidden">
@@ -219,7 +219,7 @@ function ProjectCard({ project, index }: any) {
                         )}
 
                         {/* Badge */}
-                        <div className={`absolute top-5 left-5 z-20 px-4 py-2 bg-white/10 backdrop-blur-sm border ${
+                        <div className={`absolute top-5 left-5 z-20 px-4 py-2 bg-white/10 backdrop-blur-xs border ${
                             project.badge === "In-House Brand" ? "border-cognac/40"
                             : project.isLive ? "border-white/20"
                             : "border-white/10"
@@ -235,7 +235,7 @@ function ProjectCard({ project, index }: any) {
                         </div>
 
                         {/* Project number, large ghost text bottom-right */}
-                        <div className="absolute bottom-4 right-6 text-[120px] font-black text-white/[0.04] leading-none select-none pointer-events-none">
+                        <div className="absolute bottom-4 right-6 text-[120px] font-black text-white/4 leading-none select-none pointer-events-none">
                             {project.id}
                         </div>
                     </div>
@@ -285,7 +285,7 @@ function ProjectCard({ project, index }: any) {
 
                             {/* Insight, pull quote */}
                             <div className="flex items-start gap-3 mb-6">
-                                <div className="w-[3px] shrink-0 self-stretch bg-gradient-to-b from-cognac to-cognac/20 rounded-full" />
+                                <div className="w-[3px] shrink-0 self-stretch bg-linear-to-b from-cognac to-cognac/20 rounded-full" />
                                 <p className="text-sm text-stone-600 italic leading-relaxed">{project.insight}</p>
                             </div>
 

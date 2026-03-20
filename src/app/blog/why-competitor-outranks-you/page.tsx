@@ -187,7 +187,7 @@ export default function CompetitorRankingsPage() {
 
                 {/* Ambient Glows */}
 
-                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-sm px-8 py-10 md:px-14">
+                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
 
                     {/* Article Schema */}
                     <script
@@ -213,25 +213,16 @@ export default function CompetitorRankingsPage() {
                     {/* Title & Meta */}
                     <div className="mb-10">
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                            Why Your Competitor <span className="font-serif italic text-stone-500">Outranks You</span> on Google (And Pays Less)
+                            Why Your Competitor <span className="font-serif italic text-cognac">Outranks You</span> on Google (And Pays Less)
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
                             Google, ChatGPT, and Bing all prioritize fast websites. This guide shows how site speed affects your search visibility and what you can do to level up.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">
-                            <div className="flex items-center gap-2">
-                                <Calendar className="w-4 h-4" />
-                                Feb 15, 2026
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <Clock className="w-4 h-4" />
-                                11 min read
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
+                            date="Feb 15, 2026"
+                            readTime="11 min read"
                             bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />

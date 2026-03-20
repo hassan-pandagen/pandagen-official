@@ -50,7 +50,7 @@ export default function WebflowPageContent() {
       <Header />
 
       {/* 1. HERO */}
-      <section className="relative pt-28 md:pt-40 pb-12 md:pb-20 px-6">
+      <section className="relative pt-20 md:pt-40 pb-12 md:pb-20 px-6">
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "linear-gradient(#1C1917 1px, transparent 1px), linear-gradient(90deg, #1C1917 1px, transparent 1px)", backgroundSize: "50px 50px", opacity: 0.03 }} />
         <div className="absolute top-1/3 right-[10%] w-[500px] h-[500px] bg-stone-200/50 blur-[140px] rounded-full pointer-events-none" />
 
@@ -65,7 +65,7 @@ export default function WebflowPageContent() {
             className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6 leading-tight"
           >
             Webflow Got You Started. <br />
-            <span className="font-serif italic text-stone-500">
+            <span className="font-serif italic text-cognac">
               Custom Code Takes You Further.
             </span>
           </motion.h1>
@@ -123,7 +123,7 @@ export default function WebflowPageContent() {
                     className="p-4 rounded-xl bg-green-500/5 border border-green-500/10 hover:border-green-500/20 transition-colors"
                   >
                     <div className="flex items-center gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 text-green-400 shrink-0" />
                       <p className="text-charcoal font-medium">{item}</p>
                     </div>
                   </motion.div>
@@ -153,7 +153,7 @@ export default function WebflowPageContent() {
                     className="p-4 rounded-xl bg-red-500/5 border border-red-500/10 hover:border-red-500/20 transition-colors"
                   >
                     <div className="flex items-center gap-3">
-                      <XCircle className="w-5 h-5 text-red-400 flex-shrink-0" />
+                      <XCircle className="w-5 h-5 text-red-400 shrink-0" />
                       <p className="text-charcoal font-medium">{item}</p>
                     </div>
                   </motion.div>
@@ -221,7 +221,7 @@ export default function WebflowPageContent() {
             {comparisonData.map((row, i) => (
               <div key={i} className={`grid grid-cols-3 p-4 items-center ${i % 2 === 0 ? 'bg-stone-50/50' : ''} border-b border-stone-200 last:border-b-0`}>
                 <div className="flex items-center gap-2 text-charcoal text-sm font-medium">
-                  <row.icon className="w-4 h-4 text-stone-400 flex-shrink-0" />
+                  <row.icon className="w-4 h-4 text-stone-400 shrink-0" />
                   {row.feature}
                 </div>
                 <div className="text-red-400/80 text-sm text-center">{row.webflow}</div>
@@ -252,9 +252,9 @@ export default function WebflowPageContent() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.08 }}
-                className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow"
+                className="bg-white p-6 rounded-xl border border-slate-200 shadow-xs hover:shadow-md transition-shadow"
               >
-                <div className="w-14 h-14 rounded-full bg-stone-50 border-4 border-white shadow flex items-center justify-center text-lg font-black text-cognac mb-6">
+                <div className="w-14 h-14 rounded-full bg-stone-50 border-4 border-white shadow-xs flex items-center justify-center text-lg font-black text-cognac mb-6">
                   {item.step}
                 </div>
                 <div className="text-xs font-semibold text-stone-600 uppercase tracking-widest mb-2">{item.duration}</div>
@@ -313,7 +313,7 @@ export default function WebflowPageContent() {
               <ul className="space-y-3 mb-8">
                 {["Performance optimization", "SEO improvements", "CMS restructuring", "Interaction refinements"].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
-                    <CheckCircle2 className="w-4 h-4 text-stone-500 flex-shrink-0" /> {item}
+                    <CheckCircle2 className="w-4 h-4 text-stone-500 shrink-0" /> {item}
                   </li>
                 ))}
               </ul>
@@ -338,7 +338,7 @@ export default function WebflowPageContent() {
               <ul className="space-y-3 mb-8">
                 {["Under a second load times", "Full server-side logic", "Unlimited CMS", "100% code ownership", "No monthly hosting fees", "30-day money-back guarantee"].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
-                    <CheckCircle2 className="w-4 h-4 text-cognac flex-shrink-0" /> {item}
+                    <CheckCircle2 className="w-4 h-4 text-cognac shrink-0" /> {item}
                   </li>
                 ))}
               </ul>
@@ -371,7 +371,7 @@ export default function WebflowPageContent() {
               <button key={i} onClick={() => setOpenFaq(openFaq === i ? null : i)} className="w-full text-left p-5 rounded-xl bg-stone-50/50 border border-stone-200 hover:border-stone-200 transition-all">
                 <div className="flex items-center justify-between gap-4">
                   <h3 className="text-charcoal font-medium text-base">{faq.q}</h3>
-                  <div className={`w-6 h-6 rounded-full bg-stone-50 flex items-center justify-center flex-shrink-0 transition-transform ${openFaq === i ? 'rotate-45' : ''}`}>
+                  <div className={`w-6 h-6 rounded-full bg-stone-50 flex items-center justify-center shrink-0 transition-transform ${openFaq === i ? 'rotate-45' : ''}`}>
                     <span className="text-charcoal text-sm font-bold">+</span>
                   </div>
                 </div>
@@ -386,7 +386,7 @@ export default function WebflowPageContent() {
 
       {/* 9. GUARANTEE */}
       <section className="py-10 md:py-20 px-6">
-        <div className="container mx-auto max-w-4xl bg-gradient-to-br from-green-50 to-white border border-green-500/30 rounded-[3rem] p-12 relative overflow-hidden">
+        <div className="container mx-auto max-w-4xl bg-linear-to-br from-green-50 to-white border border-green-500/30 rounded-[3rem] p-12 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-green-500/10 blur-[80px] pointer-events-none" />
           <div className="relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-600 text-xs font-bold uppercase tracking-wider mb-6">
@@ -415,34 +415,34 @@ export default function WebflowPageContent() {
           <p className="text-stone-400 text-center mb-10 text-sm">Every migration is different. Find the right path for your platform.</p>
           <div className="grid md:grid-cols-3 gap-4">
             <Link href="/services/squarespace" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center flex-shrink-0 group-hover:bg-stone-100 transition-colors">
+              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
                 <Globe className="w-5 h-5 text-cognac" />
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">Squarespace Migration</h3>
                 <p className="text-stone-400 text-xs mt-0.5">Leave Squarespace behind. Get a site you actually own.</p>
               </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all flex-shrink-0" />
+              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
             </Link>
             <Link href="/services/wix" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center flex-shrink-0 group-hover:bg-stone-100 transition-colors">
+              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
                 <Zap className="w-5 h-5 text-cognac" />
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">Wix Migration</h3>
                 <p className="text-stone-400 text-xs mt-0.5">Break free from Wix limitations. Own your code.</p>
               </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all flex-shrink-0" />
+              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
             </Link>
             <Link href="/services/custom-engineering" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center flex-shrink-0 group-hover:bg-stone-100 transition-colors">
+              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
                 <Code2 className="w-5 h-5 text-cognac" />
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">Custom Engineering</h3>
                 <p className="text-stone-400 text-xs mt-0.5">SaaS platforms, dashboards, and APIs built from scratch.</p>
               </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all flex-shrink-0" />
+              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
             </Link>
           </div>
         </div>

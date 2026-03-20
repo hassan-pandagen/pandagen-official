@@ -105,7 +105,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
                    >
                      <button
                        onClick={() => window.location.href = item.href}
-                       className="text-base font-medium text-stone-600 hover:text-cognac transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cognac tracking-wide flex items-center gap-2 py-2"
+                       className="text-base font-medium text-stone-600 hover:text-cognac transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-cognac tracking-wide flex items-center gap-2 py-2"
                      >
                        {item.name}
                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
@@ -138,7 +138,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
                  <Link
                    key={item.name}
                    href={item.href}
-                   className="text-base font-medium text-stone-600 hover:text-cognac transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cognac tracking-wide"
+                   className="text-base font-medium text-stone-600 hover:text-cognac transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-cognac tracking-wide"
                  >
                    {item.name}
                  </Link>
@@ -176,7 +176,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
       {/* Mobile Menu Overlay */}
       <div
         className={cn(
-          "fixed inset-0 z-[50] flex flex-col md:hidden transition-all duration-300 overflow-hidden",
+          "fixed inset-0 z-50 flex flex-col md:hidden transition-all duration-300 overflow-hidden",
           isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         )}
       >

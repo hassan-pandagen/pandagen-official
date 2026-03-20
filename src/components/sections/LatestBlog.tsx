@@ -89,7 +89,7 @@ export default function LatestBlog() {
                 className="group bg-white border border-stone-200 rounded-2xl overflow-hidden hover:shadow-lg hover:-translate-y-1 hover:border-stone-300 transition-all duration-300 flex flex-col"
               >
                 {/* Thin accent bar, all the color this card needs */}
-                <div className="h-1 w-full flex-shrink-0" style={{ backgroundColor: color }} />
+                <div className="h-1 w-full shrink-0" style={{ backgroundColor: color }} />
 
                 {/* Card Body */}
                 <div className="p-7 flex flex-col flex-1">

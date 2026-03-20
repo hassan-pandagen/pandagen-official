@@ -70,7 +70,7 @@ export default function UCPFlowAnimation() {
         }
       `}</style>
 
-      <div role="img" aria-label="Interactive animation showing Google Universal Commerce Protocol: an AI assistant searching and purchasing products on behalf of a customer" className="relative w-full aspect-[2/1] bg-gradient-to-br from-stone-50 to-white rounded-2xl border border-stone-200 overflow-hidden select-none">
+      <div role="img" aria-label="Interactive animation showing Google Universal Commerce Protocol: an AI assistant searching and purchasing products on behalf of a customer" className="relative w-full aspect-2/1 bg-linear-to-br from-stone-50 to-white rounded-2xl border border-stone-200 overflow-hidden select-none">
         {/* Background glow */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(234,88,12,0.04),transparent_70%)]" />
 
@@ -116,7 +116,7 @@ export default function UCPFlowAnimation() {
               />
             )}
             {/* Arrowhead */}
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent border-l-[7px] border-l-stone-300" />
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-0 h-0 border-t-4 border-t-transparent border-b-4 border-b-transparent border-l-[7px] border-l-stone-300" />
             {/* Flowing dots */}
             {isSearching && [0, 350, 700].map((delay, i) => (
               <div
@@ -173,7 +173,7 @@ export default function UCPFlowAnimation() {
                 style={{ animation: "ucpLineGrow 2s linear forwards" }}
               />
             )}
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent border-l-[7px] border-l-stone-300" />
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-0 h-0 border-t-4 border-t-transparent border-b-4 border-b-transparent border-l-[7px] border-l-stone-300" />
             {isProcessing && [0, 350, 700].map((delay, i) => (
               <div
                 key={i}

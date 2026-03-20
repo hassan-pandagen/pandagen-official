@@ -217,7 +217,7 @@ export default function PandaPatchesCaseStudy() {
                                 { value: "7 → 1", label: "Tools Replaced", sub: "CRM · ops · store · tracking" },
                                 { value: "13+", label: "Product Types", sub: "each with dynamic pricing" },
                             ].map((m) => (
-                                <div key={m.label} className="p-5 bg-white border border-stone-200 rounded-2xl shadow-sm">
+                                <div key={m.label} className="p-5 bg-white border border-stone-200 rounded-2xl shadow-xs">
                                     <div className="text-3xl font-black text-charcoal mb-1">{m.value}</div>
                                     <div className="text-xs font-bold text-stone-700 uppercase tracking-wider mb-1">{m.label}</div>
                                     <div className="text-xs text-stone-400 leading-snug">{m.sub}</div>
@@ -255,7 +255,7 @@ export default function PandaPatchesCaseStudy() {
                         </div>
 
                         {/* Replaced tools table */}
-                        <div className="bg-white border border-stone-200 rounded-2xl overflow-hidden shadow-sm">
+                        <div className="bg-white border border-stone-200 rounded-2xl overflow-hidden shadow-xs">
                             <div className="grid grid-cols-[1fr_auto_1fr] bg-stone-50 border-b border-stone-200 px-5 py-3 text-xs font-black text-stone-400 uppercase tracking-widest">
                                 <div>Tool Being Replaced</div>
                                 <div className="text-center px-4">Cost</div>
@@ -284,7 +284,7 @@ export default function PandaPatchesCaseStudy() {
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
                             {pricingDimensions.map((d) => (
-                                <div key={d.label} className="p-5 bg-white border border-stone-200 rounded-xl shadow-sm">
+                                <div key={d.label} className="p-5 bg-white border border-stone-200 rounded-xl shadow-xs">
                                     <div className="flex items-baseline gap-2 mb-2">
                                         <span className="text-2xl font-black text-cognac">{d.count}</span>
                                         <span className="text-xs font-bold text-stone-400 uppercase tracking-widest">{d.label}</span>
@@ -296,7 +296,7 @@ export default function PandaPatchesCaseStudy() {
 
                         <div className="p-6 bg-charcoal text-white rounded-2xl">
                             <div className="flex items-start gap-4">
-                                <Zap className="w-6 h-6 text-cognac flex-shrink-0 mt-0.5" />
+                                <Zap className="w-6 h-6 text-cognac shrink-0 mt-0.5" />
                                 <div>
                                     <p className="font-bold mb-2">The pricing engine calculates live</p>
                                     <p className="text-stone-300 text-sm leading-relaxed">
@@ -320,7 +320,7 @@ export default function PandaPatchesCaseStudy() {
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                             {opsFeatures.map((f) => (
-                                <div key={f.title} className="p-5 bg-white border border-stone-200 rounded-xl shadow-sm">
+                                <div key={f.title} className="p-5 bg-white border border-stone-200 rounded-xl shadow-xs">
                                     <f.icon className="w-5 h-5 text-cognac mb-3" />
                                     <h3 className="font-bold text-charcoal mb-2">{f.title}</h3>
                                     <p className="text-stone-500 text-sm leading-relaxed">{f.desc}</p>
@@ -366,7 +366,7 @@ export default function PandaPatchesCaseStudy() {
                                 { before: "No visibility into sales agent performance", after: "Per-agent revenue, conversion rate, and response time tracked live." },
                             ].map((r, i) => (
                                 <div key={i} className="flex gap-4">
-                                    <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+                                    <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
                                     <div>
                                         <p className="text-stone-400 text-sm line-through mb-1">{r.before}</p>
                                         <p className="text-white text-sm font-medium">{r.after}</p>
@@ -401,7 +401,7 @@ export default function PandaPatchesCaseStudy() {
                                 "Lighthouse 90+ on all core web vitals",
                             ].map((item, i) => (
                                 <div key={i} className="flex items-start gap-3 p-3 bg-stone-50 border border-stone-100 rounded-lg">
-                                    <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" />
+                                    <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
                                     <span className="text-stone-600 text-sm">{item}</span>
                                 </div>
                             ))}

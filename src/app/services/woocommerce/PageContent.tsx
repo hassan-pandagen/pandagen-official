@@ -54,7 +54,7 @@ export default function PageContent() {
       <Header />
 
       {/* 1. HERO */}
-      <section className="relative pt-28 md:pt-40 pb-12 md:pb-20 px-6">
+      <section className="relative pt-20 md:pt-40 pb-12 md:pb-20 px-6">
         <div className="container mx-auto text-center relative z-10 max-w-4xl">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-200 text-sm text-cognac mb-8">
             <ShoppingBag className="w-4 h-4" /> WooCommerce Migration
@@ -66,7 +66,7 @@ export default function PageContent() {
             className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6 leading-tight"
           >
             Escape WooCommerce. <br />
-            <span className="font-serif italic text-stone-500">
+            <span className="font-serif italic text-cognac">
               Own Your Store.
             </span>
           </motion.h1>
@@ -168,7 +168,7 @@ export default function PageContent() {
                 className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-red-500/40 transition-colors group"
               >
                 <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-red-500/15 text-red-400 flex-shrink-0 group-hover:bg-red-500/25 transition-colors">
+                  <div className="p-3 rounded-xl bg-red-500/15 text-red-400 shrink-0 group-hover:bg-red-500/25 transition-colors">
                     <item.icon className="w-5 h-5" />
                   </div>
                   <div>
@@ -189,7 +189,7 @@ export default function PageContent() {
           <p className="text-stone-600 text-center mb-10">The numbers speak for themselves.</p>
 
           <div className="overflow-x-auto">
-            <div className="min-w-[560px] rounded-2xl border border-stone-200 overflow-hidden shadow-sm">
+            <div className="min-w-[560px] rounded-2xl border border-stone-200 overflow-hidden shadow-xs">
               {/* Accent bar */}
               <div className="grid grid-cols-3">
                 <div className="h-1 bg-stone-50" />
@@ -207,11 +207,11 @@ export default function PageContent() {
                 <div key={i} className="grid grid-cols-3 border-b border-stone-200 text-sm last:border-b-0">
                   <div className="px-5 py-4 text-charcoal font-bold flex items-center">{row.label}</div>
                   <div className={`px-5 py-4 border-l border-stone-200 flex items-center gap-2 font-medium ${row.isPain ? "text-red-600 bg-red-50/40" : "text-stone-500"}`}>
-                    {row.isPain ? <XCircle className="w-4 h-4 text-red-400 flex-shrink-0" /> : null}
+                    {row.isPain ? <XCircle className="w-4 h-4 text-red-400 shrink-0" /> : null}
                     {row.woo}
                   </div>
                   <div className="px-5 py-4 border-l border-stone-200 bg-paper flex items-center gap-2 font-black text-charcoal">
-                    <div className="w-5 h-5 rounded-full bg-cognac flex items-center justify-center flex-shrink-0">
+                    <div className="w-5 h-5 rounded-full bg-cognac flex items-center justify-center shrink-0">
                       <CheckCircle2 className="w-3 h-3 text-white" />
                     </div>
                     {row.custom}
@@ -242,7 +242,7 @@ export default function PageContent() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group"
+                className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs hover:shadow-md transition-shadow group"
               >
                 <span className="text-4xl font-black text-stone-200 block mb-3 leading-none">{item.step}</span>
                 <div className="w-9 h-9 rounded-xl bg-stone-50 border border-stone-100 flex items-center justify-center mb-3">
@@ -272,7 +272,7 @@ export default function PageContent() {
               <ul className="space-y-3 mb-8">
                 {["Checkout speed optimization", "Plugin audit & dead weight removal", "Caching & CDN setup", "Security hardening", "SEO technical fixes", "30-day support"].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
-                    <CheckCircle2 className="w-4 h-4 text-stone-400 flex-shrink-0" /> {item}
+                    <CheckCircle2 className="w-4 h-4 text-stone-400 shrink-0" /> {item}
                   </li>
                 ))}
               </ul>
@@ -296,7 +296,7 @@ export default function PageContent() {
               <ul className="space-y-3 mb-8">
                 {["Under a second checkout load time", "All products, orders & accounts migrated", "Native Stripe + PayPal + Apple Pay", "Zero monthly plugin fees", "Custom pricing logic built in", "100% code & IP ownership", "30-day money-back guarantee"].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
-                    <CheckCircle2 className="w-4 h-4 text-cognac flex-shrink-0" /> {item}
+                    <CheckCircle2 className="w-4 h-4 text-cognac shrink-0" /> {item}
                   </li>
                 ))}
               </ul>
@@ -336,7 +336,7 @@ export default function PageContent() {
                 >
                   <div className="flex items-center justify-between gap-4">
                     <h3 className="text-charcoal font-medium text-base">{faq.q}</h3>
-                    <div className={`w-6 h-6 rounded-full bg-stone-100 flex items-center justify-center flex-shrink-0 transition-transform ${openFaq === i ? 'rotate-45' : ''}`}>
+                    <div className={`w-6 h-6 rounded-full bg-stone-100 flex items-center justify-center shrink-0 transition-transform ${openFaq === i ? 'rotate-45' : ''}`}>
                       <span className="text-charcoal text-sm font-bold">+</span>
                     </div>
                   </div>
@@ -380,34 +380,34 @@ export default function PageContent() {
           <p className="text-stone-400 text-center mb-10 text-sm">Every migration is different. Find the right path for your platform.</p>
           <div className="grid md:grid-cols-3 gap-4">
             <Link href="/services/ecommerce" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center flex-shrink-0 group-hover:bg-stone-100 transition-colors">
+              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
                 <ShoppingBag className="w-5 h-5 text-cognac" />
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">E-Commerce Solutions</h3>
                 <p className="text-stone-400 text-xs mt-0.5">Custom storefronts with any payment stack.</p>
               </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all flex-shrink-0" />
+              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
             </Link>
             <Link href="/services/wordpress-migration" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center flex-shrink-0 group-hover:bg-stone-100 transition-colors">
+              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
                 <Wrench className="w-5 h-5 text-cognac" />
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">WordPress Migration</h3>
                 <p className="text-stone-400 text-xs mt-0.5">Escape plugin bloat for good.</p>
               </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all flex-shrink-0" />
+              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
             </Link>
             <Link href="/services/custom-engineering" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center flex-shrink-0 group-hover:bg-stone-100 transition-colors">
+              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
                 <Code2 className="w-5 h-5 text-cognac" />
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">Custom Engineering</h3>
                 <p className="text-stone-400 text-xs mt-0.5">Build software that scales to millions.</p>
               </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all flex-shrink-0" />
+              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
             </Link>
           </div>
         </div>

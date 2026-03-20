@@ -45,7 +45,7 @@ export default function ServicesHub() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5 }}
-            className="group md:col-span-2 relative overflow-hidden rounded-[2rem] bg-gradient-to-b from-white to-stone-50 border border-white shadow-xl shadow-stone-200/40 ring-1 ring-stone-900/5 p-10 min-h-[450px] hover:border-cognac/20 hover:shadow-2xl hover:shadow-cognac/10 transition-all duration-500"
+            className="group md:col-span-2 relative overflow-hidden rounded-4xl bg-linear-to-b from-white to-stone-50 border border-white shadow-xl shadow-stone-200/40 ring-1 ring-stone-900/5 p-10 min-h-[450px] hover:border-cognac/20 hover:shadow-2xl hover:shadow-cognac/10 transition-all duration-500"
           >
             {/* Inner architectural grid texture */}
             <div
@@ -76,7 +76,7 @@ export default function ServicesHub() {
                 ))}
                 <Link
                   href="/services"
-                  className="ml-auto inline-flex items-center gap-2 text-charcoal font-bold text-sm group-hover:gap-3 transition-all duration-300"
+                  className="ml-auto inline-flex items-center gap-2 text-charcoal font-bold text-sm group-hover:gap-3 hover:text-cognac transition-all duration-300"
                 >
                   Explore Migrations <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -90,7 +90,7 @@ export default function ServicesHub() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="group relative overflow-hidden rounded-[2rem] bg-midnight text-white p-10 min-h-[450px] shadow-2xl"
+            className="group relative overflow-hidden rounded-4xl bg-midnight text-white p-10 min-h-[450px] shadow-2xl"
           >
             {/* Accent glow */}
             <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-cognac/20 blur-[100px] rounded-full pointer-events-none" />
@@ -108,7 +108,7 @@ export default function ServicesHub() {
 
               <Link
                 href="/services/custom-engineering"
-                className="mt-8 inline-flex items-center gap-3 text-white font-bold group-hover:gap-4 transition-all duration-300"
+                className="mt-8 inline-flex items-center gap-3 text-white font-bold group-hover:gap-4 hover:text-cognac transition-all duration-300"
               >
                 View Architecture <ArrowRight className="w-5 h-5 text-cognac" />
               </Link>

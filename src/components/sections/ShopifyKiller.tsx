@@ -33,7 +33,7 @@ export default function ShopifyKiller({ onOpenQuote }: ShopifyKillerProps) {
           viewport={{ once: true }}
           className="max-w-6xl mx-auto"
         >
-          <div className="relative rounded-2xl md:rounded-[2rem] overflow-hidden bg-white border border-green-200 shadow-[0_20px_60px_rgba(0,0,0,0.06),0_0_0_1px_rgba(34,197,94,0.08)]">
+          <div className="relative rounded-2xl md:rounded-4xl overflow-hidden bg-white border border-green-200 shadow-[0_20px_60px_rgba(0,0,0,0.06),0_0_0_1px_rgba(34,197,94,0.08)]">
 
               <div className="relative z-10 grid md:grid-cols-2 gap-8 md:gap-0">
 
@@ -105,7 +105,7 @@ export default function ShopifyKiller({ onOpenQuote }: ShopifyKillerProps) {
                         className="grid grid-cols-[1fr_80px_80px] md:grid-cols-[1fr_110px_110px] gap-2 md:gap-3 items-center py-3 px-3 -mx-3 rounded-xl hover:bg-white transition-all group cursor-default"
                       >
                         <div className="flex items-center gap-3">
-                          <div className="w-7 h-7 md:w-8 md:h-8 rounded-lg bg-stone-100 border border-stone-200 flex items-center justify-center group-hover:bg-stone-50 group-hover:border-stone-300 transition-colors flex-shrink-0">
+                          <div className="w-7 h-7 md:w-8 md:h-8 rounded-lg bg-stone-100 border border-stone-200 flex items-center justify-center group-hover:bg-stone-50 group-hover:border-stone-300 transition-colors shrink-0">
                             <row.icon className="w-3.5 h-3.5 md:w-4 md:h-4 text-stone-500 group-hover:text-cognac transition-colors" />
                           </div>
                           <span className="text-xs md:text-sm text-charcoal font-medium">{row.metric}</span>
@@ -126,7 +126,7 @@ export default function ShopifyKiller({ onOpenQuote }: ShopifyKillerProps) {
                     whileInView={{ scale: 1, opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.3 }}
-                    className="mt-6 p-5 bg-gradient-to-b from-green-50 to-emerald-50 border border-green-200 rounded-2xl shadow-green-glow"
+                    className="mt-6 p-5 bg-linear-to-b from-green-50 to-emerald-50 border border-green-200 rounded-2xl shadow-green-glow"
                   >
                     <p className="text-[11px] text-green-700 uppercase font-bold tracking-wider mb-4">Typical Shopify App Stack (Advanced Plan)</p>
                     <div className="space-y-1.5 mb-4">

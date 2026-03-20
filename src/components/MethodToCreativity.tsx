@@ -114,7 +114,7 @@ export default function MethodToCreativity() {
               {/* Progress Line */}
               <div
                 ref={progressLineRef}
-                className="absolute left-[-3px] top-0 w-[3px] bg-gradient-to-b from-cognac to-stone-400 z-30 transition-transform duration-75 ease-linear"
+                className="absolute left-[-3px] top-0 w-[3px] bg-linear-to-b from-cognac to-stone-400 z-30 transition-transform duration-75 ease-linear"
                 style={{ height: "100%", transformOrigin: "top", transform: "scaleY(0)" }}
               />
 

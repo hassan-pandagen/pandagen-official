@@ -204,7 +204,7 @@ export default function FixSlowWordPressPage() {
 
                 {/* Ambient Glows */}
 
-                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-sm px-8 py-10 md:px-14">
+                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
 
                     {/* Article Schema */}
                     <script
@@ -230,25 +230,16 @@ export default function FixSlowWordPressPage() {
                     {/* Title & Meta */}
                     <div className="mb-10">
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                            How to Fix a <span className="font-serif italic text-stone-500">Slow WordPress Site</span>
+                            How to Fix a <span className="font-serif italic text-cognac">Slow WordPress Site</span>
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
                             WordPress can be made significantly faster with the right approach. Here are 8 proven techniques to improve your load time and get better results from your site.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">
-                            <div className="flex items-center gap-2">
-                                <Calendar className="w-4 h-4" />
-                                Feb 19, 2026
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <Clock className="w-4 h-4" />
-                                10 min read
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
+                            date="Feb 19, 2026"
+                            readTime="10 min read"
                             bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
@@ -396,7 +387,7 @@ export default function FixSlowWordPressPage() {
                             <strong>Expected result:</strong> 1-2 second improvement, especially on mobile.
                         </BlogText>
 
-                        <div className="bg-stone-50 border-l-4 border-charcoal/50 rounded p-4 my-6">
+                        <div className="bg-stone-50 border-l-4 border-charcoal/50 rounded-sm p-4 my-6">
                             <BlogText>
                                 <strong>⚡ Reality Check:</strong> Image optimization helps, but <BlogHighlight>Next.js does this automatically in 0.2 seconds with zero plugins.</BlogHighlight> WordPress requires plugins ($49/year for ShortPixel Pro) + manual setup + ongoing maintenance. You're working 10× harder for a slower result.
                             </BlogText>
@@ -473,7 +464,7 @@ export default function FixSlowWordPressPage() {
                             <strong>Warning:</strong> File compression can sometimes break plugins. Test your site after enabling and disable if things break.
                         </BlogText>
 
-                        <div className="bg-stone-50 border-l-4 border-orange-500/50 rounded p-4 my-6">
+                        <div className="bg-stone-50 border-l-4 border-orange-500/50 rounded-sm p-4 my-6">
                             <BlogText>
                                 <strong>🔧 The Plugin Trap:</strong> Notice a pattern? Every WordPress optimization requires installing another plugin. <BlogHighlight>More plugins = slower site.</BlogHighlight> You're optimizing WordPress by adding more WordPress. Modern platforms don't have this problem-file compression happens automatically at build time.
                             </BlogText>
@@ -559,14 +550,14 @@ export default function FixSlowWordPressPage() {
                             <strong>Expected result:</strong> 1-2 second improvement. This alone can take you from 4s to 2s.
                         </BlogText>
 
-                        <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 border-l-4 border-orange-500 rounded p-5 my-8">
+                        <div className="bg-linear-to-r from-orange-500/10 to-red-500/10 border-l-4 border-orange-500 rounded-sm p-5 my-8">
                             <BlogText>
                                 <strong>💡 Did You Catch That?</strong> Removing page builders can save 1-2 seconds-but that means <BlogHighlight>rebuilding your entire site.</BlogHighlight> At that point, why rebuild in WordPress? You'd spend the same effort migrating to Next.js and get 0.8-second load times instead of 2+ seconds. Same work, 3× better result.
                             </BlogText>
                         </div>
 
                         {/* WARNING BANNER - after reader has done all 8 methods */}
-                        <div className="bg-gradient-to-r from-red-500/10 via-orange-500/10 to-red-500/10 border-l-4 border-red-500 rounded-lg p-6 my-8">
+                        <div className="bg-linear-to-r from-red-500/10 via-orange-500/10 to-red-500/10 border-l-4 border-red-500 rounded-lg p-6 my-8">
                             <div className="flex items-start gap-3">
                                 <span className="text-2xl">⚠️</span>
                                 <div>
@@ -687,7 +678,7 @@ export default function FixSlowWordPressPage() {
                             <strong>Expected result:</strong> 2-4 seconds faster. From 4s to 2s is realistic.
                         </BlogText>
 
-                        <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 border border-red-500/30 rounded-lg p-6 my-8">
+                        <div className="bg-linear-to-r from-red-500/10 to-orange-500/10 border border-red-500/30 rounded-lg p-6 my-8">
                             <BlogText>
                                 <strong>🚨 The Bottom Line:</strong> If you implement ALL 8 methods perfectly, you'll get to 2-2.5 seconds. Your competitor using Next.js loads in 0.9 seconds. <BlogHighlight>You just spent 20 hours optimizing to still be 2× slower.</BlogHighlight> That's the WordPress ceiling-no amount of optimization can break through it.
                             </BlogText>

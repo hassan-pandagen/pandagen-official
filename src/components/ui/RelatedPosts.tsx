@@ -39,7 +39,7 @@ export default function RelatedPosts({
             className="group bg-white border border-gray-200 rounded-2xl p-6 hover:border-cognac/40 hover:shadow-card-hover transition-all"
           >
             <div className="flex items-center gap-2 text-xs text-stone-600 mb-3">
-              <span className="px-2 py-1 bg-stone-50 border border-stone-200 rounded text-cognac font-bold uppercase">{post.category}</span>
+              <span className="px-2 py-1 bg-stone-50 border border-stone-200 rounded-sm text-cognac font-bold uppercase">{post.category}</span>
               <Clock className="w-3 h-3" />
               <span>{post.readTime}</span>
             </div>

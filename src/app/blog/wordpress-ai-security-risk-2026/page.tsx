@@ -211,7 +211,7 @@ export default function WordPressAISecurityPage() {
 
                 {/* Ambient Glows */}
 
-                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-sm px-8 py-10 md:px-14">
+                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
 
                     {/* Article Schema */}
                     <script
@@ -237,29 +237,16 @@ export default function WordPressAISecurityPage() {
                     {/* Title & Meta */}
                     <div className="mb-10">
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                            WordPress Just Made Every Plugin an <span className="font-serif italic text-stone-500">AI Endpoint</span>
+                            WordPress Just Made Every Plugin an <span className="font-serif italic text-cognac">AI Endpoint</span>
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
                             WordPress 6.9 introduces powerful AI features through the Abilities API. Here&apos;s what you need to know to use them safely and protect your site.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">
-                            <div className="flex items-center gap-2">
-                                <Calendar className="w-4 h-4" />
-                                Feb 19, 2026
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <Clock className="w-4 h-4" />
-                                9 min read
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <Shield className="w-4 h-4" />
-                                Security Analysis
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
+                            date="Feb 19, 2026"
+                            readTime="9 min read"
                             bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
@@ -342,7 +329,7 @@ export default function WordPressAISecurityPage() {
 
                     <div className="my-8 p-6 border border-red-500/30 bg-red-500/5 rounded-2xl">
                         <div className="flex items-start gap-4">
-                            <AlertTriangle className="w-6 h-6 text-red-500 flex-shrink-0 mt-1" />
+                            <AlertTriangle className="w-6 h-6 text-red-500 shrink-0 mt-1" />
                             <div>
                                 <h3 className="text-lg font-bold text-charcoal mb-2">The AI Engine Security Flaw: Complete Site Takeover</h3>
                                 <p className="text-stone-600 leading-relaxed mb-4">
@@ -538,7 +525,7 @@ export default function WordPressAISecurityPage() {
                     <div className="my-8 space-y-4">
                         <div className="p-4 border border-stone-200 bg-stone-50 rounded-xl">
                             <div className="flex items-start gap-3">
-                                <Code2 className="w-5 h-5 text-charcoal mt-1 flex-shrink-0" />
+                                <Code2 className="w-5 h-5 text-charcoal mt-1 shrink-0" />
                                 <div>
                                     <h4 className="font-bold text-charcoal mb-1">AI Server Setup</h4>
                                     <p className="text-sm text-stone-600">How to properly connect AI tools to your website without creating security holes</p>
@@ -548,7 +535,7 @@ export default function WordPressAISecurityPage() {
 
                         <div className="p-4 border border-stone-200 bg-stone-50 rounded-xl">
                             <div className="flex items-start gap-3">
-                                <Lock className="w-5 h-5 text-charcoal mt-1 flex-shrink-0" />
+                                <Lock className="w-5 h-5 text-charcoal mt-1 shrink-0" />
                                 <div>
                                     <h4 className="font-bold text-charcoal mb-1">Login & Password Security</h4>
                                     <p className="text-sm text-stone-600">Managing login credentials, automatic expiration, and preventing credential leaks</p>
@@ -558,7 +545,7 @@ export default function WordPressAISecurityPage() {
 
                         <div className="p-4 border border-stone-200 bg-stone-50 rounded-xl">
                             <div className="flex items-start gap-3">
-                                <Shield className="w-5 h-5 text-cognac mt-1 flex-shrink-0" />
+                                <Shield className="w-5 h-5 text-cognac mt-1 shrink-0" />
                                 <div>
                                     <h4 className="font-bold text-charcoal mb-1">Access Control</h4>
                                     <p className="text-sm text-stone-600">Making sure only authorized AI tools can access specific parts of your site</p>

@@ -39,7 +39,7 @@ export default function SecurityShieldAnimation() {
   }, []);
 
   return (
-    <div role="img" aria-label="Interactive animation showing WordPress AI security vulnerabilities being detected, contrasted with a secure custom Next.js site" className="relative w-full aspect-[2/1] bg-gradient-to-br from-stone-50 to-white rounded-2xl border border-stone-200 overflow-hidden">
+    <div role="img" aria-label="Interactive animation showing WordPress AI security vulnerabilities being detected, contrasted with a secure custom Next.js site" className="relative w-full aspect-2/1 bg-linear-to-br from-stone-50 to-white rounded-2xl border border-stone-200 overflow-hidden">
       <style>{`
         @keyframes secShake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-3px)} 75%{transform:translateX(3px)} }
         @keyframes secReveal { from{opacity:0;transform:translateX(-6px)} to{opacity:1;transform:translateX(0)} }
@@ -84,7 +84,7 @@ export default function SecurityShieldAnimation() {
           {/* Threat pills */}
           <div className="flex flex-col gap-1.5">
             {THREATS.slice(0, revealed).map((t, i) => (
-              <div key={i} className="flex items-center gap-2 px-3 py-1.5 bg-white border border-stone-200 border-l-4 border-l-cognac rounded-lg shadow-sm"
+              <div key={i} className="flex items-center gap-2 px-3 py-1.5 bg-white border border-stone-200 border-l-4 border-l-cognac rounded-lg shadow-xs"
                 style={{ animation: "secReveal 0.3s ease-out forwards" }}>
                 <AlertTriangle className="w-3 h-3 text-cognac shrink-0" />
                 <span className="text-[9px] font-mono font-bold text-charcoal">{t.id}</span>
@@ -101,7 +101,7 @@ export default function SecurityShieldAnimation() {
 
           {/* WordPress */}
           <div className="flex-1 flex flex-col items-center gap-2">
-            <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-stone-100 border-2 border-cognac flex items-center justify-center shadow-sm">
+            <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-stone-100 border-2 border-cognac flex items-center justify-center shadow-xs">
               <ShieldAlert className="w-6 h-6 md:w-8 md:h-8 text-cognac" />
             </div>
             <span className="text-[8px] font-bold text-stone-500 uppercase tracking-widest">WordPress</span>
@@ -119,7 +119,7 @@ export default function SecurityShieldAnimation() {
 
           {/* PandaCodeGen */}
           <div className="flex-1 flex flex-col items-center gap-2">
-            <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-stone-900 border-2 border-stone-700 flex items-center justify-center shadow-sm">
+            <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-stone-900 border-2 border-stone-700 flex items-center justify-center shadow-xs">
               <ShieldCheck className="w-6 h-6 md:w-8 md:h-8 text-stone-300" />
             </div>
             <span className="text-[8px] font-bold text-stone-500 uppercase tracking-widest">PandaCodeGen</span>

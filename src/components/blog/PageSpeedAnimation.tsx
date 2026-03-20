@@ -48,7 +48,7 @@ export default function PageSpeedAnimation() {
   ];
 
   return (
-    <div role="img" aria-label="Interactive animation showing website PageSpeed score improving from 47/100 to 100/100 through Next.js optimization" className="relative w-full aspect-[2/1] bg-gradient-to-br from-stone-50 to-white rounded-2xl border border-stone-200 overflow-hidden">
+    <div role="img" aria-label="Interactive animation showing website PageSpeed score improving from 47/100 to 100/100 through Next.js optimization" className="relative w-full aspect-2/1 bg-linear-to-br from-stone-50 to-white rounded-2xl border border-stone-200 overflow-hidden">
       <style>{`
         @keyframes psRing { from { stroke-dashoffset: 239; } to { stroke-dashoffset: var(--ps-off); } }
         .ps-ring { animation: psRing 0.9s cubic-bezier(0.4,0,0.2,1) forwards; }

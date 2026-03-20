@@ -59,7 +59,7 @@ export default function BuiltWith() {
             Enterprise Tech Stack
           </p>
           <h3 className="text-2xl md:text-3xl font-bold text-charcoal">
-            Built With <span className="text-transparent bg-clip-text bg-gradient-to-r from-cognac to-indigo-500">Industry Leaders</span>
+            Built With <span className="text-transparent bg-clip-text bg-linear-to-r from-cognac to-indigo-500">Industry Leaders</span>
           </h3>
         </motion.div>
 

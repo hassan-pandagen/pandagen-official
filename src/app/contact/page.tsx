@@ -121,7 +121,7 @@ export default function ContactPage() {
                     viewport={{ once: true }}
                     className="flex items-start gap-3 p-4 bg-white border border-stone-200 rounded-xl hover:bg-stone-50 transition-all"
                  >
-                    <div className="w-12 h-12 rounded-full bg-stone-50 flex items-center justify-center border border-stone-200 flex-shrink-0">
+                    <div className="w-12 h-12 rounded-full bg-stone-50 flex items-center justify-center border border-stone-200 shrink-0">
                        <Mail className="w-5 h-5 text-charcoal" />
                     </div>
                     <div className="flex-1 min-w-0">
@@ -137,7 +137,7 @@ export default function ContactPage() {
                     viewport={{ once: true }}
                     className="flex items-start gap-3 p-4 bg-white border border-stone-200 rounded-xl hover:bg-stone-50 transition-all"
                  >
-                    <div className="w-12 h-12 rounded-full bg-stone-50 flex items-center justify-center border border-stone-200 flex-shrink-0">
+                    <div className="w-12 h-12 rounded-full bg-stone-50 flex items-center justify-center border border-stone-200 shrink-0">
                        <Phone className="w-5 h-5 text-charcoal" />
                     </div>
                     <div className="flex-1 min-w-0">
@@ -153,7 +153,7 @@ export default function ContactPage() {
                     viewport={{ once: true }}
                     className="flex items-start gap-3 p-4 bg-white border border-stone-200 rounded-xl hover:bg-stone-50 transition-all"
                  >
-                    <div className="w-12 h-12 rounded-full bg-stone-50 flex items-center justify-center border border-stone-200 flex-shrink-0">
+                    <div className="w-12 h-12 rounded-full bg-stone-50 flex items-center justify-center border border-stone-200 shrink-0">
                        <MapPin className="w-5 h-5 text-charcoal" />
                     </div>
                     <div className="flex-1 min-w-0">
@@ -194,19 +194,19 @@ export default function ContactPage() {
                     </h3>
                     <div className="grid grid-cols-2 gap-3">
                        <div className="flex items-start gap-2 text-sm text-stone-600">
-                          <span className="text-charcoal font-bold flex-shrink-0 mt-0.5">&#10003;</span>
+                          <span className="text-charcoal font-bold shrink-0 mt-0.5">&#10003;</span>
                           <span>US-Registered LLC</span>
                         </div>
                        <div className="flex items-start gap-2 text-sm text-stone-600">
-                          <span className="text-charcoal font-bold flex-shrink-0 mt-0.5">&#10003;</span>
+                          <span className="text-charcoal font-bold shrink-0 mt-0.5">&#10003;</span>
                           <span>US Law Contracts</span>
                         </div>
                        <div className="flex items-start gap-2 text-sm text-stone-600">
-                          <span className="text-charcoal font-bold flex-shrink-0 mt-0.5">&#10003;</span>
+                          <span className="text-charcoal font-bold shrink-0 mt-0.5">&#10003;</span>
                           <span>100% IP Transfer</span>
                         </div>
                        <div className="flex items-start gap-2 text-sm text-stone-600">
-                          <span className="text-charcoal font-bold flex-shrink-0 mt-0.5">&#10003;</span>
+                          <span className="text-charcoal font-bold shrink-0 mt-0.5">&#10003;</span>
                           <span>Fixed Pricing</span>
                         </div>
                     </div>
@@ -219,21 +219,21 @@ export default function ContactPage() {
                     </h3>
                     <div className="grid grid-cols-2 gap-3">
                        <div className="flex items-start gap-2">
-                          <span className="text-charcoal font-bold flex-shrink-0 text-sm mt-0.5">&#10003;</span>
+                          <span className="text-charcoal font-bold shrink-0 text-sm mt-0.5">&#10003;</span>
                           <div>
                              <div className="font-semibold text-charcoal text-sm">30-Day Guarantee</div>
                              <div className="text-stone-500 text-xs">Refund if unsatisfied</div>
                            </div>
                         </div>
                        <div className="flex items-start gap-2">
-                          <span className="text-charcoal font-bold flex-shrink-0 text-sm mt-0.5">&#10003;</span>
+                          <span className="text-charcoal font-bold shrink-0 text-sm mt-0.5">&#10003;</span>
                           <div>
                              <div className="font-semibold text-charcoal text-sm">1-Month Support</div>
                              <div className="text-stone-500 text-xs">Free technical support</div>
                           </div>
                        </div>
                        <div className="flex items-start gap-2 col-span-2">
-                          <span className="text-charcoal font-bold flex-shrink-0 text-sm mt-0.5">&#10003;</span>
+                          <span className="text-charcoal font-bold shrink-0 text-sm mt-0.5">&#10003;</span>
                           <div>
                              <div className="font-semibold text-charcoal text-sm">100% Code Ownership</div>
                              <div className="text-stone-500 text-xs">Full source code & assets immediately</div>
@@ -245,7 +245,7 @@ export default function ContactPage() {
            </div>
 
            {/* RIGHT: FORM OR SUCCESS STATE */}
-           <div className="bg-white border border-stone-200 rounded-[2rem] p-8 md:p-10 relative overflow-hidden shadow-card">
+           <div className="bg-white border border-stone-200 rounded-4xl p-8 md:p-10 relative overflow-hidden shadow-card">
 
               {isSuccess ? (
                 <div className="relative z-10 flex flex-col items-center justify-center text-center py-16 space-y-6">
@@ -325,7 +325,7 @@ export default function ContactPage() {
                           if (errors.name) setErrors({...errors, name: undefined});
                        }}
                        required
-                       className={`w-full bg-white border rounded-xl p-4 text-base text-charcoal placeholder:text-stone-400 outline-none transition-colors ${
+                       className={`w-full bg-white border rounded-xl p-4 text-base text-charcoal placeholder:text-stone-400 outline-hidden transition-colors ${
                           errors.name ? "border-red-300 focus:border-red-500 focus:ring-1 focus:ring-red-500" : "border-stone-200 focus:border-cognac focus:ring-1 focus:ring-cognac"
                        }`}
                     />
@@ -344,7 +344,7 @@ export default function ContactPage() {
                           if (errors.email) setErrors({...errors, email: undefined});
                        }}
                        required
-                       className={`w-full bg-white border rounded-xl p-4 text-base text-charcoal placeholder:text-stone-400 outline-none transition-colors ${
+                       className={`w-full bg-white border rounded-xl p-4 text-base text-charcoal placeholder:text-stone-400 outline-hidden transition-colors ${
                           errors.email ? "border-red-300 focus:border-red-500 focus:ring-1 focus:ring-red-500" : "border-stone-200 focus:border-cognac focus:ring-1 focus:ring-cognac"
                        }`}
                     />
@@ -355,7 +355,7 @@ export default function ContactPage() {
                  <div className="space-y-2">
                     <label className="text-base font-bold text-charcoal">What can we help you with? *</label>
                     <textarea
-                       className={`w-full bg-white border rounded-xl p-4 text-charcoal placeholder:text-stone-400 outline-none h-40 resize-none transition-colors text-base ${
+                       className={`w-full bg-white border rounded-xl p-4 text-charcoal placeholder:text-stone-400 outline-hidden h-40 resize-none transition-colors text-base ${
                           errors.message ? "border-red-300 focus:border-red-500 focus:ring-1 focus:ring-red-500" : "border-stone-200 focus:border-cognac focus:ring-1 focus:ring-cognac"
                        }`}
                        placeholder="e.g., 'Need to migrate WordPress site with 50 pages' or 'Looking to build custom e-commerce platform'"
@@ -414,7 +414,7 @@ export default function ContactPage() {
             {/* THE PIPELINE (Desktop Only) */}
             <div className="hidden md:block absolute top-12 left-0 w-full h-[2px] bg-stone-200">
                 {/* The Moving Beam */}
-                <div className="absolute top-0 left-0 h-full w-[200px] bg-gradient-to-r from-transparent via-stone-400 to-transparent animate-shimmer" />
+                <div className="absolute top-0 left-0 h-full w-[200px] bg-linear-to-r from-transparent via-stone-400 to-transparent animate-shimmer" />
                 <style jsx>{`
                     @keyframes shimmer {
                         0% { transform: translateX(-100%); }

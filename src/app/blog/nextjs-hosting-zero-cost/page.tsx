@@ -152,7 +152,7 @@ export default function NextjsHostingZeroCostPage() {
 
                 {/* Ambient Glows */}
 
-                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-sm px-8 py-10 md:px-14">
+                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
 
                     {/* Article Schema */}
                     <script
@@ -178,24 +178,16 @@ export default function NextjsHostingZeroCostPage() {
                     {/* Title & Meta */}
                     <div className="mb-10">
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                            How We Host Client Websites for <span className="font-serif italic text-stone-500">Free ($0/Month)</span> With Vercel
+                            How We Host Client Websites for <span className="font-serif italic text-cognac">Free ($0/Month)</span> With Vercel
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
                             What if you could host your business website for $0/month and still get load times under 1 second? This guide walks you through exactly how we do it for every client.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">
-                            <div className="flex items-center gap-2">
-                                <Calendar className="w-4 h-4" />
-                                Mar 13, 2026
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <Clock className="w-4 h-4" />
-                                9 min read
-                            </div>
-                        </div>
                         <BlogAuthor
+                            date="Mar 13, 2026"
+                            readTime="9 min read"
                             bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />

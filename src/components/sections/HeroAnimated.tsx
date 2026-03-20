@@ -9,7 +9,7 @@ export function HeroStatusPill() {
     <motion.div
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
-      className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-stone-200 text-xs font-bold uppercase tracking-widest text-stone-500 mb-8 shadow-sm"
+      className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-stone-200 text-xs font-bold uppercase tracking-widest text-stone-500 mb-8 shadow-xs"
     >
       <span className="relative flex h-2 w-2">
         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cognac opacity-75" />
@@ -35,7 +35,7 @@ export function HeroCTAs() {
           data-cal-namespace="discovery"
           data-cal-link="pandagen/discovery"
           data-cal-config='{"layout":"month_view"}'
-          className="w-full sm:w-auto px-8 py-4 bg-charcoal text-white font-bold text-base rounded-full hover:bg-black transition-all duration-300 flex items-center justify-center gap-2 shadow-xl hover:shadow-2xl hover:-translate-y-0.5"
+          className="w-full sm:w-auto px-8 py-4 bg-charcoal text-white font-bold text-base rounded-full hover:bg-black transition-all duration-300 flex items-center justify-center gap-2 shadow-xl hover:shadow-2xl hover:-translate-y-0.5 cursor-pointer"
         >
           Get a Free Quote <ArrowRight className="w-5 h-5 text-cognac" />
         </button>
@@ -43,7 +43,7 @@ export function HeroCTAs() {
         {/* Secondary CTA: White surface card */}
         <Link
           href="/work"
-          className="w-full sm:w-auto px-8 py-4 bg-white border border-stone-200 text-charcoal font-bold text-base rounded-full hover:bg-stone-50 transition-all duration-300 flex items-center justify-center gap-2 shadow-card"
+          className="w-full sm:w-auto px-8 py-4 bg-white border border-stone-200 text-charcoal font-bold text-base rounded-full hover:bg-stone-50 transition-all duration-300 flex items-center justify-center gap-2 shadow-card cursor-pointer"
         >
           View Case Studies <ArrowRight className="w-4 h-4" />
         </Link>
@@ -71,19 +71,19 @@ export function HeroTrustSignals() {
       className="flex flex-wrap items-center gap-x-8 gap-y-3 mt-10 text-sm text-stone-500 font-medium"
     >
       <div className="flex items-center gap-2">
-        <Zap className="w-4 h-4 text-cognac flex-shrink-0" />
+        <Zap className="w-4 h-4 text-cognac shrink-0" />
         <span>&lt;1s Load Time</span>
       </div>
       <div className="flex items-center gap-2">
-        <ShieldCheck className="w-4 h-4 text-charcoal flex-shrink-0" />
+        <ShieldCheck className="w-4 h-4 text-charcoal shrink-0" />
         <span>Bank Grade Security</span>
       </div>
       <div className="flex items-center gap-2">
-        <CheckCircle2 className="w-4 h-4 text-charcoal flex-shrink-0" />
+        <CheckCircle2 className="w-4 h-4 text-charcoal shrink-0" />
         <span>Fixed Pricing</span>
       </div>
       <div className="flex items-center gap-2">
-        <CheckCircle2 className="w-4 h-4 text-charcoal flex-shrink-0" />
+        <CheckCircle2 className="w-4 h-4 text-charcoal shrink-0" />
         <span>Zero Maintenance</span>
       </div>
     </motion.div>

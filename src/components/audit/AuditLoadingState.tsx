@@ -60,7 +60,7 @@ export default function AuditLoadingState({ url }: { url: string }) {
                 isCurrent ? "bg-blue-50/50" : ""
               }`}
             >
-              <div className={`w-6 h-6 rounded-md flex items-center justify-center flex-shrink-0 ${
+              <div className={`w-6 h-6 rounded-md flex items-center justify-center shrink-0 ${
                 isDone
                   ? "bg-green-50 border border-green-200"
                   : isCurrent

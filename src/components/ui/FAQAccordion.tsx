@@ -32,7 +32,7 @@ export function FAQAccordion({ faqs }: { faqs: FAQ[] }) {
             >
               <span>{faq.question}</span>
               <ChevronDown
-                className={`w-5 h-5 text-cognac flex-shrink-0 transition-transform duration-200 ${
+                className={`w-5 h-5 text-cognac shrink-0 transition-transform duration-200 ${
                   openIndex === i ? 'rotate-180' : ''
                 }`}
               />

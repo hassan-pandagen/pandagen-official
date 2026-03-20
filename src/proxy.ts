@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
     const response = NextResponse.next();
 
     // Security Headers
@@ -24,7 +24,6 @@ export function middleware(request: NextRequest) {
 
 export const config = {
     matcher: [
-        // Match all paths except static files and API routes
         "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|css|js)$).*)",
     ],
 };

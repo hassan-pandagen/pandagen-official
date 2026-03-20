@@ -172,7 +172,7 @@ function SocialPill({ href, icon: Icon, label, ariaLabel, isX }: SocialPillProps
       target="_blank"
       rel="noopener noreferrer"
       aria-label={ariaLabel ?? label}
-      className="group flex items-center gap-2 px-4 py-2 bg-white border border-stone-200 rounded-full text-sm font-medium text-stone-600 hover:border-cognac hover:text-cognac transition-all shadow-sm hover:shadow-md"
+      className="group flex items-center gap-2 px-4 py-2 bg-white border border-stone-200 rounded-full text-sm font-medium text-stone-600 hover:border-cognac hover:text-cognac transition-all shadow-xs hover:shadow-md"
     >
       {isX ? (
         <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
@@ -204,7 +204,7 @@ function FeaturedLink({ href, title, desc }: { href: string; title: string; desc
   return (
     <Link
       href={href}
-      className="group flex items-center justify-between gap-4 bg-white border border-stone-200 px-4 py-3 rounded-lg hover:border-cognac hover:shadow-sm transition-all duration-200"
+      className="group flex items-center justify-between gap-4 bg-white border border-stone-200 px-4 py-3 rounded-lg hover:border-cognac hover:shadow-xs transition-all duration-200"
     >
       <div>
         <h3 className="font-semibold text-sm text-charcoal group-hover:text-cognac transition-colors">
@@ -212,7 +212,7 @@ function FeaturedLink({ href, title, desc }: { href: string; title: string; desc
         </h3>
         <p className="text-xs text-stone-500 mt-0.5">{desc}</p>
       </div>
-      <ArrowUpRight className="w-3.5 h-3.5 text-stone-300 group-hover:text-cognac transition-colors flex-shrink-0" />
+      <ArrowUpRight className="w-3.5 h-3.5 text-stone-300 group-hover:text-cognac transition-colors shrink-0" />
     </Link>
   );
 }

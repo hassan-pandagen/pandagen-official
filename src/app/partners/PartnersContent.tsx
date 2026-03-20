@@ -244,7 +244,7 @@ export default function PartnersContent() {
                   transition={{ delay: i * 0.05 }}
                   className="flex items-center gap-3 text-stone-500 p-3 rounded-xl hover:bg-stone-50 transition-colors"
                 >
-                  <CheckCircle2 className="w-5 h-5 text-charcoal flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-charcoal shrink-0" />
                   <span className="text-sm font-medium">{item}</span>
                 </motion.div>
               ))}

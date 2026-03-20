@@ -6,7 +6,7 @@ import { linkedinPosts, linkedinConfig } from "@/data/linkedin";
 
 export default function LinkedInProof() {
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-gray-50 via-white to-gray-50">
+    <section className="py-20 px-6 bg-linear-to-b from-gray-50 via-white to-gray-50">
       <div className="container mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -47,7 +47,7 @@ export default function LinkedInProof() {
                 </div>
               </div>
 
-              <p className="text-stone-600 text-sm leading-relaxed mb-6 flex-grow">
+              <p className="text-stone-600 text-sm leading-relaxed mb-6 grow">
                 {post.text}
               </p>
 

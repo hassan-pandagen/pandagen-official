@@ -14,7 +14,7 @@ const inter = Inter({
   display: 'swap',
   preload: true,
   adjustFontFallback: true,
-  variable: '--font-inter',
+  variable: '--font-sans',
 });
 
 const playfair = Playfair_Display({
@@ -22,7 +22,7 @@ const playfair = Playfair_Display({
   display: 'swap',
   weight: ['400'],
   style: ['italic'],
-  variable: '--font-playfair',
+  variable: '--font-serif',
 });
 
 export const metadata: Metadata = {

@@ -22,7 +22,7 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
     optimizeCss: true,           // Inlines critical CSS (uses critters) → eliminates render-blocking CSS
-    browsersListForSwc: true,    // Makes SWC respect the browserslist from package.json
+    // browsersListForSwc removed — not valid in Next.js 16
   },
   // 5. Enable compression
   compress: true,

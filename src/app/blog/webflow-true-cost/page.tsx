@@ -151,7 +151,7 @@ export default function WebflowTrueCostPage() {
             <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-32 pb-20">
                 <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
 
-                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-sm px-8 py-10 md:px-14">
+                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
 
                     <script
                         type="application/ld+json"
@@ -174,24 +174,16 @@ export default function WebflowTrueCostPage() {
                     <div className="mb-10">
                         <div className="inline-block px-3 py-1 text-xs font-medium bg-stone-100 text-stone-600 rounded-full mb-4">Comparison</div>
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                            Why Your Webflow Site Is <span className="font-serif italic text-stone-500">Costing You More</span> Than You Think
+                            Why Your Webflow Site Is <span className="font-serif italic text-cognac">Costing You More</span> Than You Think
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
                             Webflow looks affordable at $29/month. But add CMS hosting, form limits, bandwidth overages, and the SEO ceiling, and you are quietly bleeding thousands a year in lost revenue.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">
-                            <div className="flex items-center gap-2">
-                                <Calendar className="w-4 h-4" />
-                                Mar 18, 2026
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <Clock className="w-4 h-4" />
-                                10 min read
-                            </div>
-                        </div>
                         <BlogAuthor
+                            date="Mar 18, 2026"
+                            readTime="10 min read"
                             bio="Hassan has migrated dozens of businesses from website builders to custom code. He specializes in Next.js builds that score 95 to 100 on Google PageSpeed and rank on the first page."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
@@ -237,11 +229,11 @@ export default function WebflowTrueCostPage() {
                             </p>
                             <div className="space-y-3 mb-4">
                                 <div className="flex items-start gap-3">
-                                    <span className="font-bold text-amber-700 text-sm mt-0.5 flex-shrink-0">Test 1</span>
+                                    <span className="font-bold text-amber-700 text-sm mt-0.5 shrink-0">Test 1</span>
                                     <p className="text-stone-700 text-sm">Go to <a href="https://pagespeed.web.dev" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 text-stone-900 font-medium">pagespeed.web.dev</a> or use our free <Link href="/" className="underline underline-offset-2 text-stone-900 font-medium">AI audit tool</Link> and test your site on Mobile. <strong>If you score below 70, you are losing customers to faster competitors right now.</strong></p>
                                 </div>
                                 <div className="flex items-start gap-3">
-                                    <span className="font-bold text-amber-700 text-sm mt-0.5 flex-shrink-0">Test 2</span>
+                                    <span className="font-bold text-amber-700 text-sm mt-0.5 shrink-0">Test 2</span>
                                     <p className="text-stone-700 text-sm">Add up your total Webflow spend: hosting + forms + integrations + third-party tools. <strong>If the total is over $100/month, custom code is already cheaper for you.</strong></p>
                                 </div>
                             </div>

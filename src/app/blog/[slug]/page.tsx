@@ -1693,7 +1693,7 @@ export default async function BlogPost(props: PageProps) {
             {/* Article Content */}
             <section className="relative px-4 pb-20">
                 <div className="container mx-auto max-w-3xl relative z-10">
-                    <article className="bg-white rounded-2xl border border-stone-200 shadow-sm px-8 py-10 md:px-14">
+                    <article className="bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
                         {/* Feature Visual. Category-matched animated diagram */}
                         <BlogFeatureVisual category={post.category} />
                         {post.content}

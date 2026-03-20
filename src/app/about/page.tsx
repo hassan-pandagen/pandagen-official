@@ -154,12 +154,12 @@ export default function AboutPage() {
          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* IMRAN */}
             <div className="group relative bg-stone-900 border border-stone-800 rounded-3xl overflow-hidden hover:border-stone-700 transition-colors duration-500">
-               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-stone-950/95 z-10" />
+               <div className="absolute inset-0 bg-linear-to-b from-transparent to-stone-950/95 z-10" />
                <div className="h-96 w-full relative">
                   <Image src="/team/imran.png" fill sizes="(max-width: 768px) 100vw, 50vw" alt="Imran - Lead Solutions Architect at PandaCodeGen" className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700" />
                </div>
                <div className="absolute bottom-0 left-0 w-full p-8 z-20">
-                  <div className="px-3 py-1 bg-white/10 text-stone-300 text-[10px] font-bold uppercase tracking-wider rounded w-fit mb-2">Strategy</div>
+                  <div className="px-3 py-1 bg-white/10 text-stone-300 text-[10px] font-bold uppercase tracking-wider rounded-sm w-fit mb-2">Strategy</div>
                   <h3 className="text-3xl font-bold text-white mb-1">Imran</h3>
                   <p className="text-stone-400 font-mono text-sm mb-2">Lead Solutions Architect</p>
                   <div className="flex gap-3 mb-3 text-xs text-stone-500">
@@ -173,12 +173,12 @@ export default function AboutPage() {
 
             {/* HASSAN */}
             <Link href="/about/hassan" className="group relative bg-stone-900 border border-stone-800 rounded-3xl overflow-hidden hover:border-stone-700 transition-colors duration-500 block">
-               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-stone-950/95 z-10" />
+               <div className="absolute inset-0 bg-linear-to-b from-transparent to-stone-950/95 z-10" />
                <div className="h-96 w-full relative">
                   <Image src="/team/hassan.png" fill sizes="(max-width: 768px) 100vw, 50vw" alt="Hassan Jamal - Lead Full-Stack Engineer at PandaCodeGen" className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700" />
                </div>
                <div className="absolute bottom-0 left-0 w-full p-8 z-20">
-                  <div className="px-3 py-1 bg-white/10 text-stone-300 text-[10px] font-bold uppercase tracking-wider rounded w-fit mb-2">Engineering</div>
+                  <div className="px-3 py-1 bg-white/10 text-stone-300 text-[10px] font-bold uppercase tracking-wider rounded-sm w-fit mb-2">Engineering</div>
                   <h3 className="text-3xl font-bold text-white mb-1">Hassan Jamal</h3>
                   <p className="text-stone-400 font-mono text-sm mb-2">Lead Full-Stack Engineer</p>
                   <div className="flex gap-3 mb-3 text-xs text-stone-500">

@@ -152,7 +152,7 @@ export default function WordPressPluginsSpeedPage() {
             <Header />
             <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-32 pb-20">
                 <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
-                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-sm px-8 py-10 md:px-14">
+                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
 
                     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
 
@@ -175,18 +175,15 @@ export default function WordPressPluginsSpeedPage() {
                         </div>
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight text-charcoal">
                             WordPress Slow?{" "}
-                            <span className="font-serif italic text-stone-500">Your Plugins Are Killing Speed</span>{" "}
+                            <span className="font-serif italic text-cognac">Your Plugins Are Killing Speed</span>{" "}
                             (And Costing You Customers)
                         </h1>
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
                             Plugins add powerful features to WordPress, but each one comes with a performance cost. This guide helps you identify which ones matter and how to optimize.
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">
-                            <div className="flex items-center gap-2"><Calendar className="w-4 h-4" />Feb 5, 2026</div>
-                            <div className="flex items-center gap-2"><Clock className="w-4 h-4" />10 min read</div>
-                        </div>
-                        <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
+                            date="Feb 5, 2026"
+                            readTime="10 min read"
                             bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />

@@ -154,11 +154,11 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[9998]"
+            className="fixed inset-0 bg-black/50 backdrop-blur-xs z-9998"
           />
 
           {/* 2. THE MODAL CONTAINER */}
-          <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 pointer-events-none">
+          <div className="fixed inset-0 z-9999 flex items-center justify-center p-4 pointer-events-none">
             <motion.div
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -206,7 +206,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                             type="text"
                             name="name"
                             placeholder="John Doe"
-                            className="w-full bg-background border border-stone-200 rounded-xl px-4 py-3 text-charcoal placeholder:text-gray-400 focus:outline-none focus:border-cognac focus:ring-1 focus:ring-cognac transition-all"
+                            className="w-full bg-background border border-stone-200 rounded-xl px-4 py-3 text-charcoal placeholder:text-gray-400 focus:outline-hidden focus:border-cognac focus:ring-1 focus:ring-cognac transition-all"
                         />
                     </div>
 
@@ -221,7 +221,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                                 type="email"
                                 name="email"
                                 placeholder="john@company.com"
-                                className="w-full bg-background border border-stone-200 rounded-xl px-4 py-3 text-charcoal placeholder:text-gray-400 focus:outline-none focus:border-cognac focus:ring-1 focus:ring-cognac transition-all"
+                                className="w-full bg-background border border-stone-200 rounded-xl px-4 py-3 text-charcoal placeholder:text-gray-400 focus:outline-hidden focus:border-cognac focus:ring-1 focus:ring-cognac transition-all"
                             />
                         </div>
                         <div>
@@ -233,7 +233,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                                 type="tel"
                                 name="phone"
                                 placeholder="+1 (555) 000-0000"
-                                className="w-full bg-background border border-stone-200 rounded-xl px-4 py-3 text-charcoal placeholder:text-gray-400 focus:outline-none focus:border-cognac focus:ring-1 focus:ring-cognac transition-all"
+                                className="w-full bg-background border border-stone-200 rounded-xl px-4 py-3 text-charcoal placeholder:text-gray-400 focus:outline-hidden focus:border-cognac focus:ring-1 focus:ring-cognac transition-all"
                             />
                         </div>
                     </div>
@@ -244,7 +244,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                             Service Interested In (Optional)
                         </label>
                         <div className="relative">
-                             <select name="service" className="w-full bg-background border border-stone-200 rounded-xl px-4 py-3 text-charcoal focus:outline-none focus:border-cognac appearance-none">
+                             <select name="service" className="w-full bg-background border border-stone-200 rounded-xl px-4 py-3 text-charcoal focus:outline-hidden focus:border-cognac appearance-none">
                                  <option className="bg-white">Select a service...</option>
                                  <option className="bg-white">WordPress Migration</option>
                                  <option className="bg-white">Web Apps & Dashboards</option>
@@ -267,7 +267,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                             rows={3}
                             name="details"
                             placeholder="Briefly describe what you are looking to build..."
-                            className="w-full bg-background border border-stone-200 rounded-xl px-4 py-3 text-charcoal placeholder:text-gray-400 focus:outline-none focus:border-cognac focus:ring-1 focus:ring-cognac transition-all resize-none"
+                            className="w-full bg-background border border-stone-200 rounded-xl px-4 py-3 text-charcoal placeholder:text-gray-400 focus:outline-hidden focus:border-cognac focus:ring-1 focus:ring-cognac transition-all resize-none"
                         />
                     </div>
 

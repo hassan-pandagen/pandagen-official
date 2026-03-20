@@ -21,7 +21,7 @@ export function BlogList({ items }: { items: string[] }) {
     <ul className="space-y-3 mb-10">
       {items.map((item, i) => (
         <li key={i} className="flex items-start gap-4 p-4 bg-white border border-stone-200 rounded-xl shadow-card">
-          <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-charcoal text-white flex items-center justify-center text-[10px] font-bold">✓</div>
+          <div className="mt-1 shrink-0 w-5 h-5 rounded-full bg-charcoal text-white flex items-center justify-center text-[10px] font-bold">✓</div>
           <span className="text-stone-700 leading-relaxed">{item}</span>
         </li>
       ))}
@@ -143,7 +143,7 @@ export function ComparisonGrid({
       {/* Left, Bad */}
       <div className="p-5 bg-red-50 border border-red-200 rounded-2xl">
         <div className="flex items-center gap-2 mb-4">
-          <div className="w-5 h-5 rounded-full bg-red-500 flex items-center justify-center text-white text-[10px] font-bold flex-shrink-0">✗</div>
+          <div className="w-5 h-5 rounded-full bg-red-500 flex items-center justify-center text-white text-[10px] font-bold shrink-0">✗</div>
           <span className="font-bold text-red-700 text-sm uppercase tracking-wider">{left.label}</span>
         </div>
         <ul className="space-y-2">
@@ -158,7 +158,7 @@ export function ComparisonGrid({
       {/* Right, Good */}
       <div className="p-5 bg-green-50 border border-green-200 rounded-2xl">
         <div className="flex items-center gap-2 mb-4">
-          <div className="w-5 h-5 rounded-full bg-green-600 flex items-center justify-center text-white text-[10px] font-bold flex-shrink-0">✓</div>
+          <div className="w-5 h-5 rounded-full bg-green-600 flex items-center justify-center text-white text-[10px] font-bold shrink-0">✓</div>
           <span className="font-bold text-green-800 text-sm uppercase tracking-wider">{right.label}</span>
         </div>
         <ul className="space-y-2">
@@ -179,7 +179,7 @@ export function ComparisonGrid({
 // Pass multiple in a row inside a <div className="grid grid-cols-2 md:grid-cols-3 gap-4 my-10">
 export function StatCard({ stat, label, context }: { stat: string; label: string; context?: string }) {
   return (
-    <div className="flex flex-col gap-1 p-6 bg-white border border-stone-200 rounded-2xl shadow-sm">
+    <div className="flex flex-col gap-1 p-6 bg-white border border-stone-200 rounded-2xl shadow-xs">
       <div className="text-4xl md:text-5xl font-bold text-charcoal leading-none">{stat}</div>
       <div className="text-xs font-bold uppercase tracking-widest text-stone-500 mt-2">{label}</div>
       {context && <div className="text-sm text-stone-400 mt-1 leading-snug">{context}</div>}
@@ -193,36 +193,39 @@ export function BlogAuthor({
   role = "Co-Founder & Lead Engineer · PandaCodeGen",
   bio,
   linkedIn,
+  date,
+  readTime,
 }: {
   name?: string;
   role?: string;
   bio?: string;
   linkedIn?: string;
+  date?: string;
+  readTime?: string;
 }) {
   const nameEl = linkedIn ? (
-    <a href={linkedIn} target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-charcoal hover:text-cognac transition-colors">
+    <a href={linkedIn} target="_blank" rel="noopener noreferrer" className="font-semibold text-charcoal hover:text-cognac transition-colors">
       {name}
     </a>
   ) : (
-    <div className="text-sm font-bold text-charcoal">{name}</div>
+    <span className="font-semibold text-charcoal">{name}</span>
   );
 
   return (
-    <div className="mt-6 pt-6 border-t border-stone-200">
-      <div className="flex items-center gap-3">
+    <div className="mt-4">
+      <div className="flex items-center gap-2.5">
         <img
           src="/team/hassan.png"
           alt={name}
-          className="w-10 h-10 rounded-full object-cover border border-stone-200 flex-shrink-0"
+          className="w-8 h-8 rounded-full object-cover border border-stone-200 shrink-0"
         />
-        <div>
+        <p className="text-sm text-stone-500">
           {nameEl}
-          <div className="text-xs text-stone-400">{role}</div>
-        </div>
+          {date && <><span className="mx-1.5 text-stone-300">·</span>{date}</>}
+          {readTime && <><span className="mx-1.5 text-stone-300">·</span>{readTime}</>}
+          {!date && !readTime && <><span className="mx-1.5 text-stone-300">·</span><span className="text-xs">{role}</span></>}
+        </p>
       </div>
-      {bio && (
-        <p className="text-xs text-stone-500 leading-relaxed mt-3 pl-[52px]">{bio}</p>
-      )}
     </div>
   );
 }

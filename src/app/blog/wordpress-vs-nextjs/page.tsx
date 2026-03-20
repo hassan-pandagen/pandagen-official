@@ -144,7 +144,7 @@ export default function WordPressVsNextJSPage() {
             <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-32 pb-20">
                 <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
 
-                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-sm px-8 py-10 md:px-14">
+                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
 
                     <script
                         type="application/ld+json"
@@ -168,18 +168,17 @@ export default function WordPressVsNextJSPage() {
                     <div className="mb-10">
                         <span className="inline-block bg-stone-100 text-stone-600 text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-4">Comparison</span>
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                            WordPress vs <span className="font-serif italic text-stone-500">Next.js</span>: Which Is Actually Better for Your Business?
+                            WordPress vs <span className="font-serif italic text-cognac">Next.js</span>: Which Is Actually Better for Your Business?
                         </h1>
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
                             WordPress powers 43% of the internet. Next.js powers the fastest 1%. One is built for convenience. The other is built for performance. Here is the honest comparison nobody else is giving you.
                         </p>
-                        <div className="flex items-center gap-4 text-sm text-stone-500">
-                            <span>Mar 11, 2026</span>
-                            <span>·</span>
-                            <span>11 min read</span>
-                            <span>·</span>
-                            <span>By Hassan Jamal</span>
-                        </div>
+                        <BlogAuthor
+                            date="Mar 11, 2026"
+                            readTime="11 min read"
+                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
+                            linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
+                        />
                     </div>
 
                     {/* Animation */}
@@ -543,7 +542,7 @@ export default function WordPressVsNextJSPage() {
                                 { step: "05", title: "Post-Launch SEO Monitoring", desc: "We submit your new sitemap to Google Search Console, monitor ranking changes for 30 days, and fix any crawl issues that emerge. Rankings typically recover within 30 to 60 days and then improve." },
                             ].map(({ step, title, desc }) => (
                                 <div key={step} className="flex gap-4 border border-stone-200 rounded-xl p-5">
-                                    <span className="text-2xl font-bold text-stone-200 flex-shrink-0">{step}</span>
+                                    <span className="text-2xl font-bold text-stone-200 shrink-0">{step}</span>
                                     <div>
                                         <p className="font-bold text-charcoal mb-1">{title}</p>
                                         <p className="text-stone-600 text-sm leading-relaxed">{desc}</p>
@@ -581,12 +580,6 @@ export default function WordPressVsNextJSPage() {
                         </BlogText>
 
                         <div className="flex items-center gap-2 text-xs text-stone-400 mt-6"><RefreshCw className="w-3 h-3" />Published: Mar 11, 2026</div>
-                        <BlogAuthor
-                            name="Hassan Jamal"
-                            role="Lead Engineer, PandaCodeGen"
-                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
-                            linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
-                        />
                     </section>
 
                     {/* Bottom CTA */}

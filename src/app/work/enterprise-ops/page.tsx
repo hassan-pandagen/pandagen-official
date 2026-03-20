@@ -236,7 +236,7 @@ export default function EnterpriseOpsCaseStudy() {
                                 { value: "10×", label: "Efficiency Gain", sub: "team of 7, one platform" },
                                 { value: "10/10", label: "Developer Rating", sub: "Code 9.4 · Arch 9.3 · UX 10/10" },
                             ].map((m) => (
-                                <div key={m.label} className="p-5 bg-white border border-stone-200 rounded-2xl shadow-sm">
+                                <div key={m.label} className="p-5 bg-white border border-stone-200 rounded-2xl shadow-xs">
                                     <div className="text-3xl font-black text-charcoal mb-1">{m.value}</div>
                                     <div className="text-xs font-bold text-stone-700 uppercase tracking-wider mb-1">{m.label}</div>
                                     <div className="text-xs text-stone-400 leading-snug">{m.sub}</div>
@@ -274,7 +274,7 @@ export default function EnterpriseOpsCaseStudy() {
                         </div>
 
                         {/* Replaced tools table */}
-                        <div className="bg-white border border-stone-200 rounded-2xl overflow-hidden shadow-sm">
+                        <div className="bg-white border border-stone-200 rounded-2xl overflow-hidden shadow-xs">
                             <div className="grid grid-cols-[2fr_1fr_2fr] bg-stone-50 border-b border-stone-200 px-5 py-3 text-xs font-black text-stone-400 uppercase tracking-widest">
                                 <div>Tool Being Replaced</div>
                                 <div className="text-center">Cost</div>
@@ -304,7 +304,7 @@ export default function EnterpriseOpsCaseStudy() {
                         <div className="space-y-3 mb-8">
                             {orderStages.map((s, i) => (
                                 <div key={s.stage} className="flex items-start gap-4">
-                                    <div className="flex items-center gap-3 flex-shrink-0">
+                                    <div className="flex items-center gap-3 shrink-0">
                                         <div className="w-7 h-7 rounded-full bg-stone-100 text-stone-400 text-xs font-black flex items-center justify-center">{i + 1}</div>
                                         {i < orderStages.length - 1 && (
                                             <div className="hidden" />
@@ -320,7 +320,7 @@ export default function EnterpriseOpsCaseStudy() {
 
                         <div className="p-6 bg-charcoal text-white rounded-2xl">
                             <div className="flex items-start gap-4">
-                                <Database className="w-6 h-6 text-cognac flex-shrink-0 mt-0.5" />
+                                <Database className="w-6 h-6 text-cognac shrink-0 mt-0.5" />
                                 <div>
                                     <p className="font-bold mb-2">Every transition is immutable</p>
                                     <p className="text-stone-300 text-sm leading-relaxed">
@@ -349,7 +349,7 @@ export default function EnterpriseOpsCaseStudy() {
                                     <ul className="space-y-2">
                                         {r.access.map((item, i) => (
                                             <li key={i} className="flex items-start gap-2 text-sm text-stone-600">
-                                                <CheckCircle2 className="w-4 h-4 text-stone-400 flex-shrink-0 mt-0.5" />
+                                                <CheckCircle2 className="w-4 h-4 text-stone-400 shrink-0 mt-0.5" />
                                                 {item}
                                             </li>
                                         ))}
@@ -379,7 +379,7 @@ export default function EnterpriseOpsCaseStudy() {
                                 { label: "Undertime Calc", value: "Auto", desc: "Shortfall tracked per employee per month" },
                                 { label: "Payroll Export", value: "CSV", desc: "Monthly attendance summary ready for payroll processing" },
                             ].map((d) => (
-                                <div key={d.label} className="p-5 bg-white border border-stone-200 rounded-xl shadow-sm">
+                                <div key={d.label} className="p-5 bg-white border border-stone-200 rounded-xl shadow-xs">
                                     <div className="flex items-baseline gap-2 mb-2">
                                         <span className="text-xl font-black text-cognac">{d.value}</span>
                                         <span className="text-xs font-bold text-stone-400 uppercase tracking-widest">{d.label}</span>
@@ -391,7 +391,7 @@ export default function EnterpriseOpsCaseStudy() {
 
                         <div className="p-6 bg-charcoal text-white rounded-2xl">
                             <div className="flex items-start gap-4">
-                                <Clock className="w-6 h-6 text-cognac flex-shrink-0 mt-0.5" />
+                                <Clock className="w-6 h-6 text-cognac shrink-0 mt-0.5" />
                                 <div>
                                     <p className="font-bold mb-2">Profit tracked the same way</p>
                                     <p className="text-stone-300 text-sm leading-relaxed">
@@ -415,7 +415,7 @@ export default function EnterpriseOpsCaseStudy() {
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                             {platformFeatures.map((f) => (
-                                <div key={f.title} className="p-5 bg-white border border-stone-200 rounded-xl shadow-sm">
+                                <div key={f.title} className="p-5 bg-white border border-stone-200 rounded-xl shadow-xs">
                                     <f.icon className="w-5 h-5 text-cognac mb-3" />
                                     <h3 className="font-bold text-charcoal mb-2">{f.title}</h3>
                                     <p className="text-stone-500 text-sm leading-relaxed">{f.desc}</p>
@@ -461,7 +461,7 @@ export default function EnterpriseOpsCaseStudy() {
                                 { before: "Profit calculated manually from separate sheets", after: "Profit auto-computed per order as a database-generated column. Always accurate." },
                             ].map((r, i) => (
                                 <div key={i} className="flex gap-4">
-                                    <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+                                    <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
                                     <div>
                                         <p className="text-stone-400 text-sm line-through mb-1">{r.before}</p>
                                         <p className="text-white text-sm font-medium">{r.after}</p>
@@ -500,7 +500,7 @@ export default function EnterpriseOpsCaseStudy() {
                                 "Framer Motion animated UI, rated UX 10/10",
                             ].map((item, i) => (
                                 <div key={i} className="flex items-start gap-3 p-3 bg-stone-50 border border-stone-100 rounded-lg">
-                                    <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" />
+                                    <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
                                     <span className="text-stone-600 text-sm">{item}</span>
                                 </div>
                             ))}
@@ -508,7 +508,7 @@ export default function EnterpriseOpsCaseStudy() {
                     </section>
 
                     {/* DEV RATING CALLOUT */}
-                    <section className="mb-20 p-8 bg-gradient-to-br from-blue-50 to-stone-50 border border-blue-100 rounded-3xl">
+                    <section className="mb-20 p-8 bg-linear-to-br from-blue-50 to-stone-50 border border-blue-100 rounded-3xl">
                         <div className="flex items-center gap-3 mb-6">
                             <div className="h-px w-8 bg-blue-400" />
                             <span className="text-blue-500 text-sm font-bold uppercase tracking-widest">Independent Review</span>
@@ -520,7 +520,7 @@ export default function EnterpriseOpsCaseStudy() {
                                 { category: "Architecture", score: "9.3/10", notes: "RLS policies, audit trail, RBAC design, DB schema" },
                                 { category: "UX / Design", score: "10/10", notes: "Framer Motion transitions, dark/light, accessibility" },
                             ].map((r) => (
-                                <div key={r.category} className="p-5 bg-white border border-stone-200 rounded-2xl shadow-sm text-center">
+                                <div key={r.category} className="p-5 bg-white border border-stone-200 rounded-2xl shadow-xs text-center">
                                     <div className="text-3xl font-black text-charcoal mb-1">{r.score}</div>
                                     <div className="text-xs font-bold text-stone-600 uppercase tracking-wider mb-2">{r.category}</div>
                                     <div className="text-xs text-stone-400 leading-snug">{r.notes}</div>

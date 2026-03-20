@@ -159,7 +159,7 @@ export default function ForAgenciesCustomDevPage() {
             <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-32 pb-20">
                 <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
 
-                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-sm px-8 py-10 md:px-14">
+                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
 
                     <script
                         type="application/ld+json"
@@ -181,25 +181,16 @@ export default function ForAgenciesCustomDevPage() {
 
                     <div className="mb-10">
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                            For Agencies: How to Offer <span className="font-serif italic text-stone-500">Custom Web Development</span> Without Hiring a Dev Team
+                            For Agencies: How to Offer <span className="font-serif italic text-cognac">Custom Web Development</span> Without Hiring a Dev Team
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
                             Your client wants a custom-built website. You don&apos;t have a dev team. Here&apos;s how 40+ agencies deliver premium custom builds under their own brand, without touching a line of code.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-stone-400">
-                            <div className="flex items-center gap-2">
-                                <Calendar className="w-4 h-4" />
-                                Mar 6, 2026
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <Clock className="w-4 h-4" />
-                                10 min read
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-2 text-xs text-stone-400 mt-3"><RefreshCw className="w-3 h-3" />Updated: Mar 10, 2026</div>
                         <BlogAuthor
+                            date="Mar 6, 2026"
+                            readTime="10 min read"
                             bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />

@@ -68,7 +68,7 @@ export default function AIPowered() {
             <div className="space-y-3">
               {traditionalSteps.map((step, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-gray-300 flex-shrink-0" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-gray-300 shrink-0" />
                   <span className="text-sm text-stone-600">{step}</span>
                 </div>
               ))}
@@ -100,7 +100,7 @@ export default function AIPowered() {
             <div className="space-y-3">
               {pandagenSteps.map((step, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-charcoal flex-shrink-0" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-charcoal shrink-0" />
                   <span className="text-sm text-charcoal font-medium">{step}</span>
                 </div>
               ))}
