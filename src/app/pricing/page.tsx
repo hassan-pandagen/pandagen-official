@@ -91,7 +91,7 @@ export default function PricingPage() {
             className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6"
           >
             Production-grade engineering. <br />
-            <span className="font-serif italic text-stone-500">Fixed-price transparency.</span>
+            <span className="font-serif italic text-cognac">Fixed-price transparency.</span>
           </motion.h1>
 
           <motion.p
@@ -139,7 +139,7 @@ export default function PricingPage() {
               { icon: <DollarSign className="w-4 h-4" />, text: "$0/month hosting forever." },
               { icon: <RotateCcw className="w-4 h-4" />, text: "30-day money-back guarantee." },
             ].map((badge, i) => (
-              <div key={i} className="flex items-center gap-2 px-4 py-2 bg-white border border-stone-200 rounded-full text-sm font-semibold text-charcoal shadow-xs">
+              <div key={i} className="flex items-center gap-2 px-4 py-2 bg-white border border-stone-300 rounded-full text-sm font-semibold text-charcoal shadow-xs">
                 <span className="text-cognac">{badge.icon}</span>
                 {badge.text}
               </div>
@@ -318,7 +318,7 @@ export default function PricingPage() {
           viewport={{ once: true }}
           className="mt-12 max-w-3xl mx-auto"
         >
-          <div className="bg-white border border-stone-200 rounded-3xl p-8 shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div className="bg-white border border-stone-300 rounded-3xl p-8 shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div>
               <p className="text-xs font-black text-cognac uppercase tracking-widest mb-2">Prefer Hourly?</p>
               <h3 className="text-xl font-bold text-charcoal mb-1">Hourly &amp; Retainer Engagements</h3>
@@ -344,7 +344,7 @@ export default function PricingPage() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-white border border-stone-200 rounded-3xl p-8 md:p-12 shadow-xs"
+          className="bg-white border border-stone-300 rounded-3xl p-8 md:p-12 shadow-xs"
         >
           <h2 className="text-3xl font-bold text-charcoal mb-6">Why we use the Deposit Model.</h2>
           <div className="grid md:grid-cols-2 gap-10 text-stone-600 leading-relaxed">
@@ -374,7 +374,7 @@ export default function PricingPage() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-white border border-stone-200 rounded-3xl p-8 md:p-10 shadow-xs"
+          className="bg-white border border-stone-300 rounded-3xl p-8 md:p-10 shadow-xs"
         >
           <div className="flex items-start gap-4 mb-8">
             <div className="p-3 bg-green-50 border border-green-100 rounded-2xl shrink-0">
@@ -437,7 +437,7 @@ export default function PricingPage() {
           <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-3">The Real Cost</p>
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal">
             Why Standard Agencies{" "}
-            <span className="font-serif italic text-stone-500">Cost You More.</span>
+            <span className="font-serif italic text-cognac">Cost You More.</span>
           </h2>
         </motion.div>
 
@@ -501,7 +501,7 @@ export default function PricingPage() {
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-white border border-stone-200 rounded-3xl p-8 md:p-10 shadow-xs text-center"
+          className="bg-white border border-stone-300 rounded-3xl p-8 md:p-10 shadow-xs text-center"
         >
           <div className="flex justify-center gap-1 mb-4">
             {[...Array(5)].map((_, i) => (
@@ -571,9 +571,7 @@ export default function PricingPage() {
 function Feature({ text, dark }: { text: string; dark?: boolean }) {
   return (
     <li className="flex items-center gap-3">
-      <div className={`rounded-full p-1 shrink-0 ${dark ? "bg-stone-800" : "bg-cognac/10"}`}>
-        <Check className={`w-3 h-3 ${dark ? "text-cognac" : "text-cognac"}`} />
-      </div>
+      <span className="text-cognac font-bold text-base shrink-0 leading-none">&#x2713;</span>
       <span className={`text-sm font-medium ${dark ? "text-stone-300" : "text-stone-600"}`}
         dangerouslySetInnerHTML={{ __html: text }}
       />
@@ -588,7 +586,7 @@ function FAQ({ q, a }: { q: string; a: string }) {
       initial={{ opacity: 0, y: 10 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="bg-white border border-stone-200 rounded-2xl p-6 hover:shadow-xs transition-all"
+      className="bg-white border border-stone-300 rounded-2xl p-6 hover:shadow-xs transition-all"
     >
       <h3 className="text-lg font-bold text-charcoal mb-3">{q}</h3>
       <p className="text-stone-600 text-sm leading-relaxed">{a}</p>

@@ -177,7 +177,7 @@ export default function MyCustomPatchesCaseStudy() {
 
                         <h1 className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6 leading-[0.95]">
                             10 years on WordPress.<br />
-                            <span className="font-serif italic text-stone-400">Gone in 6 weeks.</span>
+                            <span className="font-serif italic text-cognac">Gone in 6 weeks.</span>
                         </h1>
 
                         <p className="text-xl text-stone-600 leading-relaxed max-w-3xl mb-10">
@@ -191,7 +191,7 @@ export default function MyCustomPatchesCaseStudy() {
                                 { value: "$0/mo", label: "Hosting Cost", sub: "was $150/mo" },
                                 { value: "200+", label: "Pages Migrated", sub: "zero rankings lost" },
                             ].map((m) => (
-                                <div key={m.label} className="p-5 bg-white border border-stone-200 rounded-2xl shadow-xs">
+                                <div key={m.label} className="p-5 bg-white border border-stone-300 rounded-2xl shadow-xs">
                                     <div className="text-3xl font-black text-charcoal mb-1">{m.value}</div>
                                     <div className="text-xs font-bold text-stone-700 uppercase tracking-wider mb-1">{m.label}</div>
                                     <div className="text-xs text-stone-400 leading-snug">{m.sub}</div>
@@ -277,7 +277,7 @@ export default function MyCustomPatchesCaseStudy() {
                                 { step: "05", name: "SEO Verification", desc: "Verified every canonical URL, meta tag, and structured data block. Ran Google Rich Results Test on all key pages. Pre-populated Search Console change-of-address request." },
                                 { step: "06", name: "Zero-Downtime Cutover", desc: "Lowered Cloudflare TTL to 60s pre-migration. DNS flip took under 2 minutes. WordPress site stayed live in parallel for 48 hours as fallback. Zero visitor downtime recorded." },
                             ].map((s) => (
-                                <div key={s.step} className="flex gap-4 p-5 bg-white border border-stone-200 rounded-xl shadow-xs">
+                                <div key={s.step} className="flex gap-4 p-5 bg-white border border-stone-300 rounded-xl shadow-xs">
                                     <div className="w-8 h-8 rounded-full bg-stone-100 text-stone-400 text-xs font-black flex items-center justify-center shrink-0">{s.step}</div>
                                     <div>
                                         <div className="font-bold text-charcoal mb-1">{s.name}</div>
@@ -301,7 +301,7 @@ export default function MyCustomPatchesCaseStudy() {
 
                         <div className="grid md:grid-cols-2 gap-4">
                             {optimizations.map((o) => (
-                                <div key={o.label} className="flex items-start gap-3 p-5 bg-white border border-stone-200 rounded-xl shadow-xs">
+                                <div key={o.label} className="flex items-start gap-3 p-5 bg-white border border-stone-300 rounded-xl shadow-xs">
                                     <Zap className="w-4 h-4 text-cognac shrink-0 mt-0.5" />
                                     <div>
                                         <div className="font-bold text-charcoal text-sm mb-1">{o.label}</div>
@@ -335,7 +335,7 @@ export default function MyCustomPatchesCaseStudy() {
                             All 8 product category pages use a single <code className="text-xs bg-stone-100 px-1 py-0.5 rounded-sm">ProductPageTemplate</code> component. Add a new product: one file, no duplicated code.
                         </p>
 
-                        <div className="bg-white border border-stone-200 rounded-2xl overflow-hidden shadow-xs">
+                        <div className="bg-white border border-stone-300 rounded-2xl overflow-hidden shadow-xs">
                             <div className="grid grid-cols-[1fr_1fr_auto] bg-stone-50 border-b border-stone-200 px-5 py-3 text-xs font-black text-stone-400 uppercase tracking-widest">
                                 <div>Page</div>
                                 <div>Scope</div>
@@ -429,6 +429,30 @@ export default function MyCustomPatchesCaseStudy() {
                                         <p className="text-stone-400 text-sm line-through mb-1">{r.before}</p>
                                         <p className="text-white text-sm font-medium">{r.after}</p>
                                     </div>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    {/* BUSINESS IMPACT */}
+                    <section className="mb-20 p-8 md:p-12 bg-cognac/5 border border-cognac/20 rounded-3xl">
+                        <div className="flex items-center gap-3 mb-6">
+                            <div className="h-px w-8 bg-cognac" />
+                            <span className="text-cognac text-sm font-bold uppercase tracking-widest">The Result</span>
+                        </div>
+                        <h2 className="text-2xl md:text-3xl font-bold text-charcoal mb-3">What this actually meant for the business.</h2>
+                        <p className="text-stone-500 mb-8 max-w-2xl">The numbers look impressive on paper. But here&apos;s what they mean in real life for the owner.</p>
+                        <div className="grid md:grid-cols-3 gap-4">
+                            {[
+                                { icon: "💰", label: "Annual Savings", value: "$1,800/yr", detail: "Was paying $150/mo for WP Engine hosting. Now paying $0. That&apos;s money back in the business every single month, forever." },
+                                { icon: "⚡", label: "Zero Migration Stress", value: "0 Downtime", detail: "200+ pages, all products, all blog posts, all SEO rankings — moved without losing a single order or dropping a single position in Google." },
+                                { icon: "😌", label: "Headache Eliminated", value: "0 Plugins", detail: "No more plugin update anxiety. No more security patches at 2am. No more site going down before a big sale. It just works." },
+                            ].map((item) => (
+                                <div key={item.label} className="bg-white border border-stone-300 rounded-2xl p-6">
+                                    <div className="text-2xl mb-3">{item.icon}</div>
+                                    <div className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">{item.label}</div>
+                                    <div className="text-2xl font-black text-charcoal mb-2">{item.value}</div>
+                                    <p className="text-sm text-stone-500 leading-relaxed">{item.detail}</p>
                                 </div>
                             ))}
                         </div>

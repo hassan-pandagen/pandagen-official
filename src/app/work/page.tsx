@@ -160,7 +160,7 @@ export default function WorkPage() {
                         className="text-6xl md:text-8xl font-bold text-charcoal tracking-tighter mb-2 md:mb-8 leading-[0.9]"
                     >
                         Results, not just <br />
-                        <span className="font-serif italic text-stone-500">Aesthetics.</span>
+                        <span className="font-serif italic text-cognac">Aesthetics.</span>
                     </motion.h1>
                 </div>
             </section>
@@ -212,7 +212,8 @@ function ProjectCard({ project, index }: any) {
                                     fill
                                     className="object-contain object-center drop-shadow-2xl"
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 50vw"
-                                    loading="lazy"
+                                    priority={project.image === "/work/mycustompatches.png"}
+                                    loading={project.image === "/work/mycustompatches.png" ? "eager" : "lazy"}
                                     quality={90}
                                 />
                             </div>

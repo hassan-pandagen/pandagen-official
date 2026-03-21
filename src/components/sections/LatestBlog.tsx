@@ -86,7 +86,7 @@ export default function LatestBlog() {
               <Link
                 key={post.id}
                 href={`/blog/${post.id}`}
-                className="group bg-white border border-stone-200 rounded-2xl overflow-hidden hover:shadow-lg hover:-translate-y-1 hover:border-stone-300 transition-all duration-300 flex flex-col"
+                className="group bg-white border border-stone-300 rounded-2xl overflow-hidden hover:shadow-lg hover:-translate-y-1 hover:border-stone-300 transition-all duration-300 flex flex-col"
               >
                 {/* Thin accent bar, all the color this card needs */}
                 <div className="h-1 w-full shrink-0" style={{ backgroundColor: color }} />

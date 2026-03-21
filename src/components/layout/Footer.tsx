@@ -24,7 +24,7 @@ export default function Footer({ onOpenQuote }: FooterProps) {
             </div>
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tight">
               Ready to build something{" "}
-              <span className="font-serif italic text-stone-300">Legendary?</span>
+              <span className="font-serif italic text-cognac">Legendary?</span>
             </h2>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button

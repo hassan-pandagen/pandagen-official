@@ -55,7 +55,7 @@ export default function PageContent() {
         <div className="absolute top-1/3 right-[10%] w-[500px] h-[500px] bg-stone-200/50 blur-[140px] rounded-full pointer-events-none" />
 
         <div className="container mx-auto text-center relative z-10 max-w-4xl">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-200 text-sm text-stone-600 mb-8">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-200 text-sm text-cognac mb-8">
             <Zap className="w-4 h-4" /> Wix Experts
           </motion.div>
 
@@ -84,11 +84,11 @@ export default function PageContent() {
               data-cal-namespace="discovery"
               data-cal-link="pandagen/discovery"
               data-cal-config='{"layout":"month_view"}'
-              className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all hover:scale-105 flex items-center justify-center gap-2"
+              className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all hover:scale-105 flex items-center justify-center gap-2"
             >
               Get Free Consultation <ArrowRight className="w-5 h-5" />
             </button>
-            <Link href="#cost-breakdown" className="px-8 py-4 border border-stone-200 text-charcoal font-medium rounded-full hover:border-stone-300 hover:bg-stone-50 transition-all flex items-center justify-center gap-2">
+            <Link href="#cost-breakdown" className="px-8 py-4 bg-white border border-stone-200 text-charcoal font-medium rounded-full hover:border-cognac/30 transition-all flex items-center justify-center gap-2">
               See the Cost Breakdown <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
@@ -334,8 +334,8 @@ export default function PageContent() {
               <h4 className="text-2xl font-bold text-slate-900 mb-4">Optimization Only</h4>
               <p className="text-slate-500 mb-8 text-sm">We try to speed up your existing Wix site, but we&apos;re limited by the platform&apos;s heavy JavaScript and template constraints.</p>
               <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-2 text-slate-600 text-sm"><CheckCircle2 className="w-4 h-4 text-slate-400 shrink-0" /> Slight speed improvement</li>
-                <li className="flex items-center gap-2 text-slate-600 text-sm"><CheckCircle2 className="w-4 h-4 text-slate-400 shrink-0" /> Image compression</li>
+                <li className="flex items-center gap-2 text-slate-600 text-sm"><CheckCircle2 className="w-4 h-4 text-cognac shrink-0" /> Slight speed improvement</li>
+                <li className="flex items-center gap-2 text-slate-600 text-sm"><CheckCircle2 className="w-4 h-4 text-cognac shrink-0" /> Image compression</li>
                 <li className="flex items-center gap-2 text-slate-400 text-sm"><XCircle className="w-4 h-4 text-red-300 shrink-0" /> Still paying monthly fees forever</li>
                 <li className="flex items-center gap-2 text-slate-400 text-sm"><XCircle className="w-4 h-4 text-red-300 shrink-0" /> Still locked into Wix</li>
               </ul>
@@ -358,16 +358,16 @@ export default function PageContent() {
               <h4 className="text-3xl font-bold text-slate-900 mb-4">Full Migration to Next.js</h4>
               <p className="text-slate-600 mb-8">We rebuild your site from scratch. Perfect scores. Zero monthly fees. Full ownership. Built to last.</p>
               <ul className="space-y-4 mb-10">
-                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" /> Under a second load times (&lt;0.8s)</li>
-                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" /> 100% SEO Preservation</li>
-                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" /> Zero Monthly Platform Fees</li>
-                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" /> You Own the Code</li>
+                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> Under a second load times (&lt;0.8s)</li>
+                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> 100% SEO Preservation</li>
+                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> Zero Monthly Platform Fees</li>
+                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> You Own the Code</li>
               </ul>
               <button
                 data-cal-namespace="discovery"
                 data-cal-link="pandagen/discovery"
                 data-cal-config='{"layout":"month_view"}'
-                className="w-full py-4 rounded-xl bg-charcoal text-white font-bold hover:bg-stone-800 transition-all shadow-lg flex items-center justify-center gap-2"
+                className="w-full py-4 rounded-xl bg-charcoal text-white font-bold hover:bg-cognac transition-all shadow-lg flex items-center justify-center gap-2"
               >
                 Get Migration Plan <ArrowRight className="w-5 h-5" />
               </button>
@@ -436,7 +436,7 @@ export default function PageContent() {
                 data-cal-namespace="discovery"
                 data-cal-link="pandagen/discovery"
                 data-cal-config='{"layout":"month_view"}'
-                className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all"
+                className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all"
               >
                 Book Free Discovery Call
               </button>

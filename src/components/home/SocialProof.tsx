@@ -12,6 +12,7 @@ const metrics = [
 ];
 
 export default function SocialProof() {
+
   return (
     <section className="py-14 bg-white border-b border-stone-200/80">
       <div className="container mx-auto px-6 max-w-5xl">

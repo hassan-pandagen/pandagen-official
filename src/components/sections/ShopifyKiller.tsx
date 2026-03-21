@@ -50,7 +50,7 @@ export default function ShopifyKiller({ onOpenQuote }: ShopifyKillerProps) {
                   </h2>
 
                   <h3 className="text-3xl md:text-6xl font-black leading-tight mb-6 md:mb-8">
-                    <span className="font-serif italic text-stone-500">
+                    <span className="font-serif italic text-cognac">
                       Go headless.
                     </span>
                   </h3>

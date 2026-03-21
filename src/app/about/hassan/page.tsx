@@ -164,7 +164,7 @@ export default function HassanAuthorPage() {
 
                     {/* Skills Grid */}
                     <div className="grid md:grid-cols-2 gap-8 mb-16">
-                        <div className="p-8 bg-white border border-stone-200 rounded-2xl shadow-xs">
+                        <div className="p-8 bg-white border border-stone-300 rounded-2xl shadow-xs">
                             <div className="flex items-center gap-3 mb-6">
                                 <Code2 className="w-5 h-5 text-cognac" />
                                 <h3 className="text-xl font-serif text-charcoal">Technical Expertise</h3>
@@ -178,7 +178,7 @@ export default function HassanAuthorPage() {
                             </div>
                         </div>
 
-                        <div className="p-8 bg-white border border-stone-200 rounded-2xl shadow-xs">
+                        <div className="p-8 bg-white border border-stone-300 rounded-2xl shadow-xs">
                             <div className="flex items-center gap-3 mb-6">
                                 <Target className="w-5 h-5 text-cognac" />
                                 <h3 className="text-xl font-serif text-charcoal">What I Build</h3>
@@ -224,7 +224,7 @@ export default function HassanAuthorPage() {
                     )}
 
                     {/* CTA */}
-                    <section className="text-center py-16 bg-white border border-stone-200 rounded-3xl px-8">
+                    <section className="text-center py-16 bg-white border border-stone-300 rounded-3xl px-8">
                         <h2 className="text-2xl font-serif text-charcoal mb-4">Work With Me</h2>
                         <p className="text-stone-500 mb-8 max-w-md mx-auto">No account managers. You talk directly to the engineer building your product.</p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">

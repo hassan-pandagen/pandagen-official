@@ -101,7 +101,7 @@ export default function PartnersContent() {
             className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6"
           >
             You Handle Clients. <br />
-            <span className="font-serif italic font-semibold text-stone-500">
+            <span className="font-serif italic font-semibold text-cognac">
               We Handle the Code.
             </span>
           </motion.h1>
@@ -125,7 +125,7 @@ export default function PartnersContent() {
           >
             <button
               onClick={() => setIsQuoteModalOpen(true)}
-              className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-700 transition-all inline-flex items-center justify-center gap-2"
+              className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all inline-flex items-center justify-center gap-2"
             >
               Apply for Partnership <ArrowRight className="w-5 h-5" />
             </button>
@@ -151,7 +151,7 @@ export default function PartnersContent() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="text-center p-5 bg-white border border-stone-200 rounded-2xl"
+              className="text-center p-5 bg-white border border-stone-300 rounded-2xl"
             >
               <stat.icon className="w-5 h-5 text-stone-400 mx-auto mb-2" />
               <div className="text-2xl font-bold text-charcoal mb-1">{stat.value}</div>
@@ -175,9 +175,9 @@ export default function PartnersContent() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="group bg-white border border-stone-200 rounded-2xl p-6 hover:border-stone-400 transition-all duration-300"
+              className="group bg-white border border-stone-300 rounded-2xl p-6 hover:border-stone-400 transition-all duration-300"
             >
-              <div className="w-12 h-12 rounded-xl bg-stone-100 flex items-center justify-center mb-4 group-hover:bg-charcoal group-hover:scale-110 transition-all duration-300">
+              <div className="w-12 h-12 rounded-xl bg-stone-100 flex items-center justify-center mb-4 group-hover:bg-cognac group-hover:scale-110 transition-all duration-300">
                 <benefit.icon className="w-6 h-6 text-stone-500 group-hover:text-white transition-colors duration-300" />
               </div>
               <h3 className="text-lg font-bold text-charcoal mb-2">{benefit.title}</h3>
@@ -204,7 +204,7 @@ export default function PartnersContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="relative bg-white border border-stone-200 rounded-2xl p-8 text-center"
+                className="relative bg-white border border-stone-300 rounded-2xl p-8 text-center"
               >
                 <div className="text-6xl font-bold text-stone-500 mb-2">{step.number}</div>
                 <h3 className="text-xl font-bold text-charcoal mb-3">{step.title}</h3>
@@ -222,7 +222,7 @@ export default function PartnersContent() {
 
       {/* What You Get */}
       <section className="container mx-auto px-6 pb-20">
-        <div className="bg-white border border-stone-200 rounded-3xl p-8 md:p-12 max-w-4xl mx-auto">
+        <div className="bg-white border border-stone-300 rounded-3xl p-8 md:p-12 max-w-4xl mx-auto">
           <div className="relative z-10">
             <h2 className="text-3xl font-bold text-charcoal mb-8 text-center">What&apos;s Included</h2>
             <div className="grid md:grid-cols-2 gap-4">
@@ -244,7 +244,7 @@ export default function PartnersContent() {
                   transition={{ delay: i * 0.05 }}
                   className="flex items-center gap-3 text-stone-500 p-3 rounded-xl hover:bg-stone-50 transition-colors"
                 >
-                  <CheckCircle2 className="w-5 h-5 text-charcoal shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-cognac shrink-0" />
                   <span className="text-sm font-medium">{item}</span>
                 </motion.div>
               ))}

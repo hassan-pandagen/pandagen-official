@@ -90,7 +90,7 @@ export default function MethodToCreativity() {
               </div>
               <h2 className="text-5xl md:text-6xl font-bold text-charcoal mb-6 leading-tight">
                 From Concept <br />
-                <span className="font-serif italic text-stone-500">to Empire.</span>
+                <span className="font-serif italic text-cognac">to Empire.</span>
               </h2>
               <p className="text-stone-600 text-lg max-w-sm leading-relaxed mb-8">
                 A proven development process designed to eliminate risk and guarantee speed.
@@ -156,7 +156,7 @@ function StepCard({ step, index }: { step: { id: string; title: string; icon: El
 
       {/* Card */}
       <div className="group relative p-8 rounded-3xl transition-all duration-500 bg-white border border-stone-200 shadow-card hover:shadow-card-hover hover:-translate-y-1">
-        <div className="absolute -top-4 left-8 px-4 py-1 bg-white border border-stone-200 rounded-full text-xs font-mono text-cognac uppercase tracking-wider shadow-card group-hover:border-cognac/30 transition-all duration-500">
+        <div className="absolute -top-4 left-8 px-4 py-1 bg-white border border-stone-300 rounded-full text-xs font-mono text-cognac uppercase tracking-wider shadow-card group-hover:border-cognac/30 transition-all duration-500">
           Phase {step.id}
         </div>
 

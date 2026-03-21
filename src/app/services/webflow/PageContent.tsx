@@ -55,7 +55,7 @@ export default function WebflowPageContent() {
         <div className="absolute top-1/3 right-[10%] w-[500px] h-[500px] bg-stone-200/50 blur-[140px] rounded-full pointer-events-none" />
 
         <div className="container mx-auto text-center relative z-10 max-w-4xl">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-500/10 border border-charcoal/20 text-sm text-stone-500 mb-8">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-200 text-sm text-cognac mb-8">
             <Zap className="w-4 h-4" /> Beyond Visual Builders
           </motion.div>
 
@@ -84,11 +84,11 @@ export default function WebflowPageContent() {
               data-cal-namespace="discovery"
               data-cal-link="pandagen/discovery"
               data-cal-config='{"layout":"month_view"}'
-              className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all hover:scale-105 flex items-center justify-center gap-2"
+              className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all hover:scale-105 flex items-center justify-center gap-2"
             >
               Get Free Consultation <ArrowRight className="w-5 h-5" />
             </button>
-            <Link href="#when-to-migrate" className="px-8 py-4 border border-stone-200 text-charcoal font-medium rounded-full hover:border-stone-400/50 hover:bg-stone-500/5 transition-all flex items-center justify-center gap-2">
+            <Link href="#when-to-migrate" className="px-8 py-4 bg-white border border-stone-200 text-charcoal font-medium rounded-full hover:border-cognac/30 transition-all flex items-center justify-center gap-2">
               When to Migrate <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
@@ -123,7 +123,7 @@ export default function WebflowPageContent() {
                     className="p-4 rounded-xl bg-green-500/5 border border-green-500/10 hover:border-green-500/20 transition-colors"
                   >
                     <div className="flex items-center gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-green-400 shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 text-cognac shrink-0" />
                       <p className="text-charcoal font-medium">{item}</p>
                     </div>
                   </motion.div>
@@ -313,7 +313,7 @@ export default function WebflowPageContent() {
               <ul className="space-y-3 mb-8">
                 {["Performance optimization", "SEO improvements", "CMS restructuring", "Interaction refinements"].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
-                    <CheckCircle2 className="w-4 h-4 text-stone-500 shrink-0" /> {item}
+                    <CheckCircle2 className="w-4 h-4 text-cognac shrink-0" /> {item}
                   </li>
                 ))}
               </ul>
@@ -346,7 +346,7 @@ export default function WebflowPageContent() {
                 data-cal-namespace="discovery"
                 data-cal-link="pandagen/discovery"
                 data-cal-config='{"layout":"month_view"}'
-                className="w-full px-6 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all"
+                className="w-full px-6 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all"
               >
                 Get Migration Quote
               </button>
@@ -400,7 +400,7 @@ export default function WebflowPageContent() {
               data-cal-namespace="discovery"
               data-cal-link="pandagen/discovery"
               data-cal-config='{"layout":"month_view"}'
-              className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all"
+              className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all"
             >
               Book Free Discovery Call
             </button>

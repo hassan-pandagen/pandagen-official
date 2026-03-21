@@ -164,7 +164,7 @@ function ServiceSection({ id, title, subtitle, description, tags, features, alig
               ))}
            </div>
 
-           <Link href={href} className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 hover:gap-3 transition-all shadow-lg shadow-stone-900/10">
+           <Link href={href} className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full hover:bg-cognac hover:gap-3 transition-all shadow-lg shadow-stone-900/10">
               Explore {title} <ArrowRight className="w-5 h-5" />
            </Link>
 

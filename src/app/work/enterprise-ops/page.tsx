@@ -169,15 +169,15 @@ const roles = [
 ];
 
 const platformFeatures = [
-    { icon: BarChart3, title: "Order Pipeline", desc: "Real-time order board with 5-stage lifecycle. Every status change triggers automated notifications and logs the responsible agent with timestamp." },
-    { icon: TrendingUp, title: "Profit Analytics", desc: "Automated profit per order: revenue minus production cost, shipping, and marketing. No manual calculations. Updated the moment costs are entered." },
-    { icon: Users, title: "Sales Agent Dashboards", desc: "Per-agent views: revenue generated, quote conversion rate, response time, and monthly targets. Managers see aggregated team data." },
-    { icon: Clock, title: "Attendance System", desc: "Clock in/out with PKT timezone (UTC+5). 5AM daily cutoff. Auto-clockout after 10 hours. Overtime and undertime calculated automatically." },
-    { icon: Lock, title: "Role-Based Access", desc: "ADMIN, SALES, PRODUCTION, granular permission sets stored in a JSONB permissions column. Row-Level Security enforced at the database level." },
-    { icon: Database, title: "Full Audit Trail", desc: "Every order change logged to order_history with old value, new value, changed-by user ID, and exact timestamp. Zero accountability gaps." },
-    { icon: Shield, title: "Offline-First", desc: "Service Worker caches critical UI and data. Team in Pakistan can access order data during intermittent connectivity. Changes sync on reconnect." },
+    { icon: BarChart3, title: "Email Automation", desc: "Order confirmation, follow-up, and overdue payment reminders fire automatically, no manual sending." },
+    { icon: Users, title: "Per-Agent Sales Reports", desc: "Each sales rep logs in and sees only their pipeline, targets, and conversion rate. Managers see the full picture." },
+    { icon: TrendingUp, title: "Pending Amounts Dashboard", desc: "Every unpaid invoice, outstanding balance, and overdue account visible at a glance. No more chasing people for what&apos;s owed." },
+    { icon: Clock, title: "Order History & Repeat Customer Flags", desc: "See who&apos;s bought before, how often, and what they spent without digging through files." },
+    { icon: Database, title: "Avg Order Value by Category", desc: "Instantly see which product lines are driving revenue and which are just taking up space." },
+    { icon: Lock, title: "Profit & Loss by Category", desc: "One click to see which categories are making money and which are bleeding it, no Excel required." },
+    { icon: Shield, title: "Single Dashboard", desc: "What used to live across 7 spreadsheets, 3 SaaS tools, and a WhatsApp group is now one screen. One login. One source of truth." },
     { icon: AlertTriangle, title: "APM + Error Tracking", desc: "Sentry integration for real-time error monitoring and application performance metrics. Any production issue is caught before the team notices." },
-    { icon: Zap, title: "Automated Summaries", desc: "Monthly attendance summaries and performance metrics auto-generated via Supabase Edge Functions. No manual report compilation." },
+    { icon: Zap, title: "Offline-First", desc: "Service Worker caches critical UI and data. Team in Pakistan can access order data during intermittent connectivity. Changes sync on reconnect." },
 ];
 
 const replacedTools = [
@@ -221,7 +221,7 @@ export default function EnterpriseOpsCaseStudy() {
 
                         <h1 className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6 leading-[0.95]">
                             Enterprise Ops.<br />
-                            <span className="font-serif italic text-stone-400">Spreadsheets to real-time.</span>
+                            <span className="font-serif italic text-cognac">Spreadsheets to real-time.</span>
                         </h1>
 
                         <p className="text-xl text-stone-600 leading-relaxed max-w-3xl mb-10">
@@ -236,7 +236,7 @@ export default function EnterpriseOpsCaseStudy() {
                                 { value: "10×", label: "Efficiency Gain", sub: "team of 7, one platform" },
                                 { value: "10/10", label: "Developer Rating", sub: "Code 9.4 · Arch 9.3 · UX 10/10" },
                             ].map((m) => (
-                                <div key={m.label} className="p-5 bg-white border border-stone-200 rounded-2xl shadow-xs">
+                                <div key={m.label} className="p-5 bg-white border border-stone-300 rounded-2xl shadow-xs">
                                     <div className="text-3xl font-black text-charcoal mb-1">{m.value}</div>
                                     <div className="text-xs font-bold text-stone-700 uppercase tracking-wider mb-1">{m.label}</div>
                                     <div className="text-xs text-stone-400 leading-snug">{m.sub}</div>
@@ -274,7 +274,7 @@ export default function EnterpriseOpsCaseStudy() {
                         </div>
 
                         {/* Replaced tools table */}
-                        <div className="bg-white border border-stone-200 rounded-2xl overflow-hidden shadow-xs">
+                        <div className="bg-white border border-stone-300 rounded-2xl overflow-hidden shadow-xs">
                             <div className="grid grid-cols-[2fr_1fr_2fr] bg-stone-50 border-b border-stone-200 px-5 py-3 text-xs font-black text-stone-400 uppercase tracking-widest">
                                 <div>Tool Being Replaced</div>
                                 <div className="text-center">Cost</div>
@@ -379,7 +379,7 @@ export default function EnterpriseOpsCaseStudy() {
                                 { label: "Undertime Calc", value: "Auto", desc: "Shortfall tracked per employee per month" },
                                 { label: "Payroll Export", value: "CSV", desc: "Monthly attendance summary ready for payroll processing" },
                             ].map((d) => (
-                                <div key={d.label} className="p-5 bg-white border border-stone-200 rounded-xl shadow-xs">
+                                <div key={d.label} className="p-5 bg-white border border-stone-300 rounded-xl shadow-xs">
                                     <div className="flex items-baseline gap-2 mb-2">
                                         <span className="text-xl font-black text-cognac">{d.value}</span>
                                         <span className="text-xs font-bold text-stone-400 uppercase tracking-widest">{d.label}</span>
@@ -415,7 +415,7 @@ export default function EnterpriseOpsCaseStudy() {
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                             {platformFeatures.map((f) => (
-                                <div key={f.title} className="p-5 bg-white border border-stone-200 rounded-xl shadow-xs">
+                                <div key={f.title} className="p-5 bg-white border border-stone-300 rounded-xl shadow-xs">
                                     <f.icon className="w-5 h-5 text-cognac mb-3" />
                                     <h3 className="font-bold text-charcoal mb-2">{f.title}</h3>
                                     <p className="text-stone-500 text-sm leading-relaxed">{f.desc}</p>
@@ -471,6 +471,30 @@ export default function EnterpriseOpsCaseStudy() {
                         </div>
                     </section>
 
+                    {/* BUSINESS IMPACT */}
+                    <section className="mb-20 p-8 md:p-12 bg-cognac/5 border border-cognac/20 rounded-3xl">
+                        <div className="flex items-center gap-3 mb-6">
+                            <div className="h-px w-8 bg-cognac" />
+                            <span className="text-cognac text-sm font-bold uppercase tracking-widest">The Result</span>
+                        </div>
+                        <h2 className="text-2xl md:text-3xl font-bold text-charcoal mb-3">What this actually meant for the business.</h2>
+                        <p className="text-stone-500 mb-8 max-w-2xl">Before this platform, running the business meant opening 7 spreadsheets, scrolling WhatsApp for updates, and hoping nothing fell through the cracks. Now it doesn&apos;t.</p>
+                        <div className="grid md:grid-cols-3 gap-4">
+                            {[
+                                { icon: "📊", label: "Spreadsheets Replaced", value: "7 → 1", detail: "Order tracking, agent reports, attendance, payments, inventory, profit tracking, and customer records — all in one place. One login. One screen." },
+                                { icon: "⏱", label: "Time Saved Weekly", value: "10+ hrs", detail: "No more manually compiling reports, chasing agents for updates, or cross-referencing files. The dashboard updates in real time." },
+                                { icon: "💡", label: "Decisions Made Faster", value: "1 Click", detail: "Which category is profitable? Who are your repeat customers? What&apos;s owed? The answer used to take 30 minutes. Now it takes one click." },
+                            ].map((item) => (
+                                <div key={item.label} className="bg-white border border-stone-300 rounded-2xl p-6">
+                                    <div className="text-2xl mb-3">{item.icon}</div>
+                                    <div className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">{item.label}</div>
+                                    <div className="text-2xl font-black text-charcoal mb-2">{item.value}</div>
+                                    <p className="text-sm text-stone-500 leading-relaxed">{item.detail}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
                     {/* WHAT WAS BUILT */}
                     <section className="mb-20">
                         <div className="flex items-center gap-3 mb-8">
@@ -520,7 +544,7 @@ export default function EnterpriseOpsCaseStudy() {
                                 { category: "Architecture", score: "9.3/10", notes: "RLS policies, audit trail, RBAC design, DB schema" },
                                 { category: "UX / Design", score: "10/10", notes: "Framer Motion transitions, dark/light, accessibility" },
                             ].map((r) => (
-                                <div key={r.category} className="p-5 bg-white border border-stone-200 rounded-2xl shadow-xs text-center">
+                                <div key={r.category} className="p-5 bg-white border border-stone-300 rounded-2xl shadow-xs text-center">
                                     <div className="text-3xl font-black text-charcoal mb-1">{r.score}</div>
                                     <div className="text-xs font-bold text-stone-600 uppercase tracking-wider mb-2">{r.category}</div>
                                     <div className="text-xs text-stone-400 leading-snug">{r.notes}</div>

@@ -249,7 +249,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
 
             <div className="w-full max-w-xs border-t border-stone-200 pt-5 flex flex-col items-center gap-4">
               <div className="flex gap-6">
-                <a href="https://linkedin.com/company/pandacodegen" target="_blank" rel="noopener noreferrer" aria-label="PandaCodeGen on LinkedIn">
+                <a href="https://www.linkedin.com/company/pandacodegen" target="_blank" rel="noopener noreferrer" aria-label="PandaCodeGen on LinkedIn">
                   <Linkedin className="w-5 h-5 text-stone-400 hover:text-charcoal transition-colors" />
                 </a>
                 <a href="https://twitter.com/pandacodegen" target="_blank" rel="noopener noreferrer" aria-label="Twitter">

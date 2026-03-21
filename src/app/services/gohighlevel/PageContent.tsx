@@ -84,11 +84,11 @@ export default function PageContent() {
               data-cal-namespace="discovery"
               data-cal-link="pandagen/discovery"
               data-cal-config='{"layout":"month_view"}'
-              className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all hover:scale-105 flex items-center justify-center gap-2"
+              className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all hover:scale-105 flex items-center justify-center gap-2"
             >
               Get Free Consultation <ArrowRight className="w-5 h-5" />
             </button>
-            <Link href="#how-it-works" className="px-8 py-4 border border-stone-200 text-charcoal font-medium rounded-full hover:border-stone-400/50 hover:bg-stone-500/5 transition-all flex items-center justify-center gap-2">
+            <Link href="#how-it-works" className="px-8 py-4 bg-white border border-stone-200 text-charcoal font-medium rounded-full hover:border-cognac/30 transition-all flex items-center justify-center gap-2">
               See How It Works <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
@@ -108,7 +108,7 @@ export default function PageContent() {
               <ul className="space-y-3">
                 {["CRM & pipeline management", "Email & SMS automations", "Appointment booking", "Reputation management", "Client communication"].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
-                    <CheckCircle2 className="w-4 h-4 text-green-600 shrink-0" /> {item}
+                    <CheckCircle2 className="w-4 h-4 text-cognac shrink-0" /> {item}
                   </li>
                 ))}
               </ul>
@@ -318,14 +318,14 @@ export default function PageContent() {
                 data-cal-namespace="discovery"
                 data-cal-link="pandagen/discovery"
                 data-cal-config='{"layout":"month_view"}'
-                className="w-full px-6 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all"
+                className="w-full px-6 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all"
               >
                 Get Custom + GHL Quote
               </button>
             </div>
 
             {/* Full Custom CRM + Website */}
-            <div className="p-8 rounded-3xl bg-stone-50 border border-stone-200 hover:border-stone-300 transition-colors relative overflow-hidden">
+            <div className="p-8 rounded-3xl bg-stone-50 border border-stone-200 hover:border-cognac/30 transition-colors relative overflow-hidden">
               <div className="absolute top-4 right-4 px-3 py-1 bg-stone-100 text-stone-600 text-xs font-bold rounded-full">Full Freedom</div>
               <div className="text-stone-600 text-sm font-bold uppercase tracking-wider mb-4">Option C</div>
               <h3 className="text-xl font-bold text-charcoal mb-4">Custom CRM + Website</h3>
@@ -335,7 +335,7 @@ export default function PageContent() {
               <ul className="space-y-3 mb-8">
                 {["Custom CRM dashboard", "Website + CRM in one codebase", "Connect existing automations", "No SaaS subscription fees", "100% code ownership", "Scale without limits"].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
-                    <CheckCircle2 className="w-4 h-4 text-stone-600 shrink-0" /> {item}
+                    <CheckCircle2 className="w-4 h-4 text-cognac shrink-0" /> {item}
                   </li>
                 ))}
               </ul>
@@ -405,7 +405,7 @@ export default function PageContent() {
               data-cal-namespace="discovery"
               data-cal-link="pandagen/discovery"
               data-cal-config='{"layout":"month_view"}'
-              className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all"
+              className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all"
             >
               Book Free Discovery Call
             </button>

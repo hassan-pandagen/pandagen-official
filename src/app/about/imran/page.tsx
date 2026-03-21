@@ -144,7 +144,7 @@ export default function ImranAuthorPage() {
 
                     {/* Skills Grid */}
                     <div className="grid md:grid-cols-2 gap-8 mb-16">
-                        <div className="p-8 bg-white border border-stone-200 rounded-2xl shadow-xs">
+                        <div className="p-8 bg-white border border-stone-300 rounded-2xl shadow-xs">
                             <div className="flex items-center gap-3 mb-6">
                                 <BarChart3 className="w-5 h-5 text-cognac" />
                                 <h3 className="text-xl font-serif text-charcoal">Strategic Expertise</h3>
@@ -158,7 +158,7 @@ export default function ImranAuthorPage() {
                             </div>
                         </div>
 
-                        <div className="p-8 bg-white border border-stone-200 rounded-2xl shadow-xs">
+                        <div className="p-8 bg-white border border-stone-300 rounded-2xl shadow-xs">
                             <div className="flex items-center gap-3 mb-6">
                                 <Target className="w-5 h-5 text-cognac" />
                                 <h3 className="text-xl font-serif text-charcoal">What I Do</h3>
@@ -204,7 +204,7 @@ export default function ImranAuthorPage() {
                     )}
 
                     {/* CTA */}
-                    <section className="text-center py-16 bg-white border border-stone-200 rounded-3xl px-8">
+                    <section className="text-center py-16 bg-white border border-stone-300 rounded-3xl px-8">
                         <h2 className="text-2xl font-serif text-charcoal mb-4">Work With Me</h2>
                         <p className="text-stone-500 mb-8 max-w-md mx-auto">Get a strategic architecture review and ROI analysis before committing to any platform migration.</p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -50,7 +50,7 @@ export default function Hero() {
           {/* Headline: LCP element, pure server HTML, no JS needed to render */}
           <h1 className="text-5xl md:text-7xl font-sans font-bold text-charcoal tracking-tight mb-6 leading-[1.1]">
             Your slow website is <br />
-            <span className="font-serif italic text-stone-500">
+            <span className="font-serif italic text-cognac">
               costing you revenue.
             </span>
           </h1>

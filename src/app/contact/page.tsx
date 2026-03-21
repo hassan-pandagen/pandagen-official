@@ -104,7 +104,7 @@ export default function ContactPage() {
               <div>
                  <h1 className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6">
                     Let&apos;s Talk <br />
-                    <span className="font-serif italic text-stone-500">
+                    <span className="font-serif italic text-cognac">
                        Engineering.
                     </span>
                  </h1>
@@ -119,7 +119,7 @@ export default function ContactPage() {
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    className="flex items-start gap-3 p-4 bg-white border border-stone-200 rounded-xl hover:bg-stone-50 transition-all"
+                    className="flex items-start gap-3 p-4 bg-white border border-stone-300 rounded-xl hover:bg-stone-50 transition-all"
                  >
                     <div className="w-12 h-12 rounded-full bg-stone-50 flex items-center justify-center border border-stone-200 shrink-0">
                        <Mail className="w-5 h-5 text-charcoal" />
@@ -135,7 +135,7 @@ export default function ContactPage() {
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    className="flex items-start gap-3 p-4 bg-white border border-stone-200 rounded-xl hover:bg-stone-50 transition-all"
+                    className="flex items-start gap-3 p-4 bg-white border border-stone-300 rounded-xl hover:bg-stone-50 transition-all"
                  >
                     <div className="w-12 h-12 rounded-full bg-stone-50 flex items-center justify-center border border-stone-200 shrink-0">
                        <Phone className="w-5 h-5 text-charcoal" />
@@ -151,7 +151,7 @@ export default function ContactPage() {
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    className="flex items-start gap-3 p-4 bg-white border border-stone-200 rounded-xl hover:bg-stone-50 transition-all"
+                    className="flex items-start gap-3 p-4 bg-white border border-stone-300 rounded-xl hover:bg-stone-50 transition-all"
                  >
                     <div className="w-12 h-12 rounded-full bg-stone-50 flex items-center justify-center border border-stone-200 shrink-0">
                        <MapPin className="w-5 h-5 text-charcoal" />
@@ -188,7 +188,7 @@ export default function ContactPage() {
                  className="space-y-3"
               >
                  {/* Why work with us - 2x2 Grid */}
-                 <div className="p-5 bg-white border border-stone-200 rounded-xl">
+                 <div className="p-5 bg-white border border-stone-300 rounded-xl">
                     <h3 className="text-charcoal font-bold mb-4 flex items-center gap-2 text-base">
                        <CheckCircle2 className="text-charcoal w-5 h-5" /> Why work with us?
                     </h3>
@@ -245,7 +245,7 @@ export default function ContactPage() {
            </div>
 
            {/* RIGHT: FORM OR SUCCESS STATE */}
-           <div className="bg-white border border-stone-200 rounded-4xl p-8 md:p-10 relative overflow-hidden shadow-card">
+           <div className="bg-white border border-stone-300 rounded-4xl p-8 md:p-10 relative overflow-hidden shadow-card">
 
               {isSuccess ? (
                 <div className="relative z-10 flex flex-col items-center justify-center text-center py-16 space-y-6">

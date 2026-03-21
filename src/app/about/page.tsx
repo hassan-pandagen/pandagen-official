@@ -102,7 +102,7 @@ export default function AboutPage() {
 
           <h1 className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-8 leading-tight">
             We don&apos;t build websites. <br />
-            <span className="font-serif italic text-stone-500">We build assets.</span>
+            <span className="font-serif italic text-cognac">We build assets.</span>
           </h1>
 
           <p className="text-xl text-stone-600 leading-relaxed mb-12">
@@ -124,19 +124,19 @@ export default function AboutPage() {
       {/* 2. TRACK RECORD (Quick Stats) */}
       <section className="container mx-auto px-6 py-12">
          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            <div className="text-center p-6 bg-white border border-stone-200 rounded-2xl">
+            <div className="text-center p-6 bg-white border border-stone-300 rounded-2xl">
                <div className="text-4xl font-bold text-charcoal mb-2">4</div>
                <div className="text-sm text-stone-500 uppercase tracking-wider">Live Projects</div>
             </div>
-            <div className="text-center p-6 bg-white border border-stone-200 rounded-2xl">
+            <div className="text-center p-6 bg-white border border-stone-300 rounded-2xl">
                <div className="text-4xl font-bold text-charcoal mb-2">98/100</div>
                <div className="text-sm text-stone-500 uppercase tracking-wider">Avg Lighthouse Score</div>
             </div>
-            <div className="text-center p-6 bg-white border border-stone-200 rounded-2xl">
+            <div className="text-center p-6 bg-white border border-stone-300 rounded-2xl">
                <div className="text-4xl font-bold text-charcoal mb-2">&lt;1s</div>
                <div className="text-sm text-stone-500 uppercase tracking-wider">Avg Load Time</div>
             </div>
-            <div className="text-center p-6 bg-white border border-stone-200 rounded-2xl">
+            <div className="text-center p-6 bg-white border border-stone-300 rounded-2xl">
                <div className="text-4xl font-bold text-charcoal mb-2">2026</div>
                <div className="text-sm text-stone-500 uppercase tracking-wider">Est. Year</div>
             </div>
@@ -215,7 +215,7 @@ export default function AboutPage() {
             {/* Left: Photo + Links */}
             <div className="md:col-span-2 flex flex-col items-center text-center">
               <div className="w-48 h-48 rounded-3xl overflow-hidden border-2 border-stone-200 relative mb-4">
-                <Image src="/team/hassan.png" fill alt="Hassan Jamal - Founder & Lead Engineer at PandaCodeGen" className="object-cover object-top" />
+                <Image src="/team/hassan.png" fill sizes="192px" alt="Hassan Jamal - Founder & Lead Engineer at PandaCodeGen" className="object-cover object-top" />
               </div>
               <h3 className="text-2xl font-bold text-charcoal">Hassan Jamal</h3>
               <p className="text-stone-500 font-mono text-sm mb-1">Founder & Lead Full-Stack Engineer</p>
@@ -285,7 +285,7 @@ export default function AboutPage() {
 
              <div className="grid md:grid-cols-3 gap-8">
                 {/* Benefit 1 */}
-                <div className="bg-white border border-stone-200 rounded-2xl p-8 hover:border-stone-400 transition-all">
+                <div className="bg-white border border-stone-300 rounded-2xl p-8 hover:border-stone-400 transition-all">
                    <div className="w-12 h-12 rounded-xl bg-stone-100 flex items-center justify-center mb-6">
                       <svg className="w-6 h-6 text-charcoal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
@@ -296,7 +296,7 @@ export default function AboutPage() {
                 </div>
 
                 {/* Benefit 2 */}
-                <div className="bg-white border border-stone-200 rounded-2xl p-8 hover:border-stone-400 transition-all">
+                <div className="bg-white border border-stone-300 rounded-2xl p-8 hover:border-stone-400 transition-all">
                    <div className="w-12 h-12 rounded-xl bg-stone-100 flex items-center justify-center mb-6">
                       <svg className="w-6 h-6 text-charcoal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -307,7 +307,7 @@ export default function AboutPage() {
                 </div>
 
                 {/* Benefit 3 */}
-                <div className="bg-white border border-stone-200 rounded-2xl p-8 hover:border-stone-400 transition-all">
+                <div className="bg-white border border-stone-300 rounded-2xl p-8 hover:border-stone-400 transition-all">
                    <div className="w-12 h-12 rounded-xl bg-stone-100 flex items-center justify-center mb-6">
                       <svg className="w-6 h-6 text-charcoal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -325,7 +325,7 @@ export default function AboutPage() {
 
       {/* 5. MANIFESTO */}
       <section className="py-20 px-6">
-         <div className="container mx-auto max-w-4xl bg-white border border-stone-200 rounded-2xl overflow-hidden text-sm">
+         <div className="container mx-auto max-w-4xl bg-white border border-stone-300 rounded-2xl overflow-hidden text-sm">
             <div className="p-8 md:p-12 space-y-6">
                 <h2 className="text-3xl md:text-4xl font-bold text-charcoal">Our Mission: Eradicate Bloat.</h2>
                 <p className="text-stone-500 text-lg leading-relaxed">

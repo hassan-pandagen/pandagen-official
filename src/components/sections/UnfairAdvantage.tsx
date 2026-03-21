@@ -29,7 +29,7 @@ const stats = [
 
 export default function UnfairAdvantage() {
   return (
-    <section className="py-12 md:py-32 bg-white text-charcoal">
+    <section className="py-12 md:py-20 bg-white text-charcoal">
       <div className="container mx-auto px-6">
 
         <motion.div
@@ -41,7 +41,7 @@ export default function UnfairAdvantage() {
           <div className="max-w-2xl">
             <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
               The Unfair{" "}
-              <span className="font-serif italic text-stone-500">Advantage.</span>
+              <span className="font-serif italic text-cognac">Advantage.</span>
             </h2>
             <p className="text-lg text-stone-600 leading-relaxed">
               Most agencies sell you a car with the hood welded shut. We sell you the engine blueprints.

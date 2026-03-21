@@ -71,7 +71,7 @@ export default function RevenueCalculator() {
                 <div>
                   <div className="flex items-center justify-between mb-2">
                     <label htmlFor="visitors-range" className="text-xs font-bold text-stone-500 uppercase tracking-wider">Monthly Visitors</label>
-                    <span className="font-mono font-bold text-charcoal text-sm">{visitors.toLocaleString()}</span>
+                    <span className="font-mono font-bold text-charcoal text-sm">{visitors.toLocaleString('en-US')}</span>
                   </div>
                   <input
                     id="visitors-range"
@@ -119,7 +119,7 @@ export default function RevenueCalculator() {
                     Revenue Recovered Per Year
                   </div>
                   <div className="text-5xl md:text-6xl font-black text-charcoal leading-none tracking-tight">
-                    ${annualLoss.toLocaleString()}
+                    ${annualLoss.toLocaleString('en-US')}
                   </div>
                   <div className="text-sm text-stone-400 font-normal mt-1">per year</div>
                   <p className="text-[11px] text-stone-400 mt-4 pt-4 border-t border-stone-200">
@@ -130,11 +130,11 @@ export default function RevenueCalculator() {
                 {/* Monthly breakdown */}
                 <div className="flex items-center justify-between text-sm text-stone-500 px-1">
                   <span>Monthly revenue at current speed</span>
-                  <span className="font-bold text-charcoal">${monthlyRevenue.toLocaleString()}</span>
+                  <span className="font-bold text-charcoal">${monthlyRevenue.toLocaleString('en-US')}</span>
                 </div>
                 <div className="flex items-center justify-between text-sm text-stone-500 px-1 -mt-4">
                   <span>Revenue lost to slow load times</span>
-                  <span className="font-bold text-cognac">-${lostRevenue.toLocaleString()}/mo</span>
+                  <span className="font-bold text-cognac">-${lostRevenue.toLocaleString('en-US')}/mo</span>
                 </div>
               </div>
             </div>

@@ -56,7 +56,7 @@ export default function PageContent() {
         <div className="absolute top-1/3 right-[10%] w-[500px] h-[500px] bg-stone-200/50 blur-[140px] rounded-full pointer-events-none" />
 
         <div className="container mx-auto text-center relative z-10 max-w-4xl">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-500/10 border border-charcoal/20 text-sm text-stone-500 mb-8">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-200 text-sm text-cognac mb-8">
             <Zap className="w-4 h-4" /> Build Your Own Software
           </motion.div>
 
@@ -85,11 +85,11 @@ export default function PageContent() {
               data-cal-namespace="discovery"
               data-cal-link="pandagen/discovery"
               data-cal-config='{"layout":"month_view"}'
-              className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all hover:scale-105 flex items-center justify-center gap-2"
+              className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all hover:scale-105 flex items-center justify-center gap-2"
             >
               Get Free Consultation <ArrowRight className="w-5 h-5" />
             </button>
-            <Link href="#what-we-build" className="px-8 py-4 border border-stone-200 text-charcoal font-medium rounded-full hover:border-stone-400/50 hover:bg-stone-500/5 transition-all flex items-center justify-center gap-2">
+            <Link href="#what-we-build" className="px-8 py-4 bg-white border border-stone-200 text-charcoal font-medium rounded-full hover:border-cognac/30 transition-all flex items-center justify-center gap-2">
               See What We Build <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
@@ -112,11 +112,11 @@ export default function PageContent() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="p-8 md:p-10 rounded-2xl bg-white border border-stone-200 hover:border-charcoal/30 transition-all group"
+              className="p-8 md:p-10 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 transition-all group"
             >
               <div className="flex flex-col md:flex-row gap-8 items-start">
-                <div className="w-16 h-16 rounded-2xl bg-stone-500/10 border border-charcoal/20 flex items-center justify-center shrink-0 group-hover:bg-stone-500/20 transition-colors">
-                  <Gauge className="w-8 h-8 text-stone-500" />
+                <div className="w-16 h-16 rounded-2xl bg-stone-50 border border-cognac/20 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
+                  <Gauge className="w-8 h-8 text-cognac" />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold text-charcoal mb-3">SaaS Platforms</h3>
@@ -124,7 +124,7 @@ export default function PageContent() {
                   <div className="grid sm:grid-cols-2 gap-3">
                     {["Subscription management dashboards", "Marketplace platforms with payments", "Project management tools", "CRM & client portals", "Multi-tenant auth with role-based access", "Stripe/payment gateway integration"].map((ex, i) => (
                       <div key={i} className="flex items-start gap-2 text-sm text-stone-600">
-                        <CheckCircle2 className="w-4 h-4 text-stone-500 mt-0.5 shrink-0" /> {ex}
+                        <CheckCircle2 className="w-4 h-4 text-cognac mt-0.5 shrink-0" /> {ex}
                       </div>
                     ))}
                   </div>
@@ -137,11 +137,11 @@ export default function PageContent() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="p-8 md:p-10 rounded-2xl bg-white border border-stone-200 hover:border-charcoal/30 transition-all group"
+              className="p-8 md:p-10 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 transition-all group"
             >
               <div className="flex flex-col md:flex-row gap-8 items-start">
-                <div className="w-16 h-16 rounded-2xl bg-stone-500/10 border border-stone-200 flex items-center justify-center shrink-0 group-hover:bg-stone-500/20 transition-colors">
-                  <Users className="w-8 h-8 text-stone-500" />
+                <div className="w-16 h-16 rounded-2xl bg-stone-50 border border-cognac/20 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
+                  <Users className="w-8 h-8 text-cognac" />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold text-charcoal mb-3">Internal Tools</h3>
@@ -149,7 +149,7 @@ export default function PageContent() {
                   <div className="grid sm:grid-cols-2 gap-3">
                     {["Operations & logistics dashboards", "Inventory management systems", "Employee onboarding portals", "Real-time analytics & reporting", "Workflow automation engines", "Custom admin panels"].map((ex, i) => (
                       <div key={i} className="flex items-start gap-2 text-sm text-stone-600">
-                        <CheckCircle2 className="w-4 h-4 text-stone-500 mt-0.5 shrink-0" /> {ex}
+                        <CheckCircle2 className="w-4 h-4 text-cognac mt-0.5 shrink-0" /> {ex}
                       </div>
                     ))}
                   </div>
@@ -311,7 +311,7 @@ export default function PageContent() {
               <ul className="space-y-3 mb-8">
                 {["Functional prototype in weeks", "Real code (not no-code)", "Scalable from day one", "Investor-ready architecture", "User testing ready"].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
-                    <CheckCircle2 className="w-4 h-4 text-stone-500 shrink-0" /> {item}
+                    <CheckCircle2 className="w-4 h-4 text-cognac shrink-0" /> {item}
                   </li>
                 ))}
               </ul>
@@ -319,7 +319,7 @@ export default function PageContent() {
                 data-cal-namespace="discovery"
                 data-cal-link="pandagen/discovery"
                 data-cal-config='{"layout":"month_view"}'
-                className="w-full px-6 py-4 border border-charcoal/30 text-stone-500 font-bold rounded-full hover:bg-stone-500/10 transition-all"
+                className="w-full px-6 py-4 border border-charcoal text-charcoal font-bold rounded-full hover:bg-cognac hover:text-white hover:border-cognac transition-all"
               >
                 Build My MVP
               </button>
@@ -344,7 +344,7 @@ export default function PageContent() {
                 data-cal-namespace="discovery"
                 data-cal-link="pandagen/discovery"
                 data-cal-config='{"layout":"month_view"}'
-                className="w-full px-6 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all"
+                className="w-full px-6 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all"
               >
                 Build My Platform
               </button>
@@ -408,7 +408,7 @@ export default function PageContent() {
               data-cal-namespace="discovery"
               data-cal-link="pandagen/discovery"
               data-cal-config='{"layout":"month_view"}'
-              className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all"
+              className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all"
             >
               Book Free Discovery Call
             </button>

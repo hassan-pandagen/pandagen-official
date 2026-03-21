@@ -202,7 +202,7 @@ export default function PandaPatchesCaseStudy() {
 
                         <h1 className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6 leading-[0.95]">
                             Panda Patches.<br />
-                            <span className="font-serif italic text-stone-400">$38K/mo. $25 in tooling.</span>
+                            <span className="font-serif italic text-cognac">$38K/mo. $25 in tooling.</span>
                         </h1>
 
                         <p className="text-xl text-stone-600 leading-relaxed max-w-3xl mb-10">
@@ -217,7 +217,7 @@ export default function PandaPatchesCaseStudy() {
                                 { value: "7 → 1", label: "Tools Replaced", sub: "CRM · ops · store · tracking" },
                                 { value: "13+", label: "Product Types", sub: "each with dynamic pricing" },
                             ].map((m) => (
-                                <div key={m.label} className="p-5 bg-white border border-stone-200 rounded-2xl shadow-xs">
+                                <div key={m.label} className="p-5 bg-white border border-stone-300 rounded-2xl shadow-xs">
                                     <div className="text-3xl font-black text-charcoal mb-1">{m.value}</div>
                                     <div className="text-xs font-bold text-stone-700 uppercase tracking-wider mb-1">{m.label}</div>
                                     <div className="text-xs text-stone-400 leading-snug">{m.sub}</div>
@@ -237,10 +237,10 @@ export default function PandaPatchesCaseStudy() {
                             <div className="p-6 bg-red-50 border border-red-100 rounded-2xl">
                                 <h3 className="font-bold text-charcoal mb-4 flex items-center gap-2">
                                     <span className="w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-black">✕</span>
-                                    The Pricing Ceiling
+                                    No Calculator. Every Sale Was a Waiting Game.
                                 </h3>
                                 <p className="text-stone-600 text-sm leading-relaxed">
-                                    Custom patches aren&apos;t a simple product. Every order depends on: patch type (9 options), size dimensions, quantity tier, backing choice, and border type. That&apos;s thousands of price combinations. WordPress + WooCommerce had no way to calculate this dynamically. Every customer submitted a form and waited 24+ hours for a manual quote.
+                                    Custom patches have complex pricing. The final price depends on patch type (9 options), size, quantity, backing, and border. That&apos;s thousands of combinations. WordPress had no way to calculate this live. So every customer filled out a contact form and waited 24+ hours for someone to manually work out a price and email it back. Most of them didn&apos;t wait — they went to a competitor who showed them the price instantly.
                                 </p>
                             </div>
                             <div className="p-6 bg-red-50 border border-red-100 rounded-2xl">
@@ -255,7 +255,7 @@ export default function PandaPatchesCaseStudy() {
                         </div>
 
                         {/* Replaced tools table */}
-                        <div className="bg-white border border-stone-200 rounded-2xl overflow-hidden shadow-xs">
+                        <div className="bg-white border border-stone-300 rounded-2xl overflow-hidden shadow-xs">
                             <div className="grid grid-cols-[1fr_auto_1fr] bg-stone-50 border-b border-stone-200 px-5 py-3 text-xs font-black text-stone-400 uppercase tracking-widest">
                                 <div>Tool Being Replaced</div>
                                 <div className="text-center px-4">Cost</div>
@@ -277,14 +277,14 @@ export default function PandaPatchesCaseStudy() {
                             <div className="h-px w-8 bg-cognac" />
                             <span className="text-cognac text-sm font-bold uppercase tracking-widest">Solution, Storefront</span>
                         </div>
-                        <h2 className="text-3xl font-bold text-charcoal mb-3">Real-time pricing. No waiting, no quotes.</h2>
+                        <h2 className="text-3xl font-bold text-charcoal mb-3">An instant business calculator. Pick your options, see your price.</h2>
                         <p className="text-stone-600 mb-8 max-w-2xl">
-                            We rebuilt the entire customer-facing side in Next.js with a real-time pricing engine. Customers select their patch type, enter dimensions, pick quantity and options, and the price updates instantly. No forms. No waiting. The quote is the checkout.
+                            We built a custom quote calculator directly into the storefront. Customers select patch type, enter their dimensions, choose quantity and finish options — and the exact price appears instantly. No forms. No waiting. No back-and-forth emails. The calculator is the checkout. What used to take 24 hours now takes 30 seconds.
                         </p>
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
                             {pricingDimensions.map((d) => (
-                                <div key={d.label} className="p-5 bg-white border border-stone-200 rounded-xl shadow-xs">
+                                <div key={d.label} className="p-5 bg-white border border-stone-300 rounded-xl shadow-xs">
                                     <div className="flex items-baseline gap-2 mb-2">
                                         <span className="text-2xl font-black text-cognac">{d.count}</span>
                                         <span className="text-xs font-bold text-stone-400 uppercase tracking-widest">{d.label}</span>
@@ -320,7 +320,7 @@ export default function PandaPatchesCaseStudy() {
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                             {opsFeatures.map((f) => (
-                                <div key={f.title} className="p-5 bg-white border border-stone-200 rounded-xl shadow-xs">
+                                <div key={f.title} className="p-5 bg-white border border-stone-300 rounded-xl shadow-xs">
                                     <f.icon className="w-5 h-5 text-cognac mb-3" />
                                     <h3 className="font-bold text-charcoal mb-2">{f.title}</h3>
                                     <p className="text-stone-500 text-sm leading-relaxed">{f.desc}</p>
@@ -376,6 +376,30 @@ export default function PandaPatchesCaseStudy() {
                         </div>
                     </section>
 
+                    {/* BUSINESS IMPACT */}
+                    <section className="mb-20 p-8 md:p-12 bg-cognac/5 border border-cognac/20 rounded-3xl">
+                        <div className="flex items-center gap-3 mb-6">
+                            <div className="h-px w-8 bg-cognac" />
+                            <span className="text-cognac text-sm font-bold uppercase tracking-widest">The Result</span>
+                        </div>
+                        <h2 className="text-2xl md:text-3xl font-bold text-charcoal mb-3">What this actually meant for the business.</h2>
+                        <p className="text-stone-500 mb-8 max-w-2xl">This is our own brand. We built the tech and the business runs on it. These aren&apos;t projections — they&apos;re live numbers.</p>
+                        <div className="grid md:grid-cols-3 gap-4">
+                            {[
+                                { icon: "💰", label: "Monthly Revenue", value: "$38K+/mo", detail: "A patch business running on custom Next.js + a bespoke ops platform. No Shopify cut. No app fees. No platform holding the business hostage." },
+                                { icon: "🔧", label: "Tools Replaced", value: "7 → 1", detail: "Shopify, WooCommerce, Airtable, spreadsheets, and a CRM — all replaced by one custom platform built exactly for how this business actually operates." },
+                                { icon: "📈", label: "Cost vs Revenue", value: "$25/mo", detail: "The entire tech stack — storefront, ops dashboard, email, hosting — costs $25 a month to run. The revenue it processes is over $38,000." },
+                            ].map((item) => (
+                                <div key={item.label} className="bg-white border border-stone-300 rounded-2xl p-6">
+                                    <div className="text-2xl mb-3">{item.icon}</div>
+                                    <div className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">{item.label}</div>
+                                    <div className="text-2xl font-black text-charcoal mb-2">{item.value}</div>
+                                    <p className="text-sm text-stone-500 leading-relaxed">{item.detail}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
                     {/* WHAT WAS BUILT */}
                     <section className="mb-20">
                         <div className="flex items-center gap-3 mb-8">
@@ -416,15 +440,15 @@ export default function PandaPatchesCaseStudy() {
                         </div>
                         <h2 className="text-3xl font-bold text-charcoal mb-6">Want results like this?</h2>
                         <div className="grid md:grid-cols-3 gap-4">
-                            <Link href="/services/custom-engineering" className="group p-6 bg-white border border-stone-200 rounded-2xl hover:border-cognac/40 transition-all">
+                            <Link href="/services/custom-engineering" className="group p-6 bg-white border border-stone-300 rounded-2xl hover:border-cognac/40 transition-all">
                                 <h3 className="font-bold text-charcoal group-hover:text-cognac transition-colors mb-2">Custom Engineering</h3>
                                 <p className="text-stone-500 text-sm">SaaS platforms, dashboards, and AI-powered tools built from scratch.</p>
                             </Link>
-                            <Link href="/services/woocommerce" className="group p-6 bg-white border border-stone-200 rounded-2xl hover:border-cognac/40 transition-all">
+                            <Link href="/services/woocommerce" className="group p-6 bg-white border border-stone-300 rounded-2xl hover:border-cognac/40 transition-all">
                                 <h3 className="font-bold text-charcoal group-hover:text-cognac transition-colors mb-2">WooCommerce Migration</h3>
                                 <p className="text-stone-500 text-sm">Escape plugin conflicts and slow checkouts. Own your store.</p>
                             </Link>
-                            <Link href="/services/ecommerce" className="group p-6 bg-white border border-stone-200 rounded-2xl hover:border-cognac/40 transition-all">
+                            <Link href="/services/ecommerce" className="group p-6 bg-white border border-stone-300 rounded-2xl hover:border-cognac/40 transition-all">
                                 <h3 className="font-bold text-charcoal group-hover:text-cognac transition-colors mb-2">E-Commerce Solutions</h3>
                                 <p className="text-stone-500 text-sm">Custom storefronts with real-time pricing and zero platform fees.</p>
                             </Link>

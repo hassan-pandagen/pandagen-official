@@ -148,7 +148,7 @@ const steps = [
 
 export default function HowItWorksSimple() {
   return (
-    <section className="relative py-12 md:py-20 bg-paper overflow-hidden">
+    <section className="relative pt-8 pb-12 md:pt-12 md:pb-20 bg-paper overflow-hidden">
       <div className="container mx-auto px-6">
 
         <motion.div
@@ -160,7 +160,7 @@ export default function HowItWorksSimple() {
         >
           <h2 className="text-4xl md:text-5xl font-bold text-charcoal mb-4 tracking-tight">
             From First Call to{" "}
-            <span className="font-serif italic text-stone-500">Launch.</span>
+            <span className="font-serif italic text-cognac">Launch.</span>
           </h2>
           <p className="text-lg text-stone-600 max-w-xl mx-auto">
             Four steps. No complexity. No confusion. Just results.
@@ -178,7 +178,7 @@ export default function HowItWorksSimple() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="group relative bg-white rounded-2xl border border-stone-200 p-7 flex flex-col gap-5 hover:-translate-y-1 hover:shadow-xl hover:border-stone-300 transition-all duration-300 cursor-default"
+                className="group relative bg-white rounded-2xl border border-stone-300 p-7 flex flex-col gap-5 hover:-translate-y-1 hover:shadow-xl hover:border-stone-400 transition-all duration-300 cursor-default"
               >
                 {/* Step number */}
                 <div className="text-[11px] font-black tracking-widest text-cognac uppercase">

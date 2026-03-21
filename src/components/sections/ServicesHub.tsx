@@ -14,7 +14,7 @@ const platforms = [
 
 export default function ServicesHub() {
   return (
-    <section className="py-12 md:py-32 bg-paper relative">
+    <section className="py-12 md:py-20 bg-paper relative">
       {/* Warm stone ambient glow, clipped to section only */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-0 w-[500px] h-[500px] bg-stone-200/40 blur-[150px] rounded-full" />
@@ -32,7 +32,7 @@ export default function ServicesHub() {
           <span className="text-cognac font-bold tracking-widest uppercase text-xs mb-4 block">Our Expertise</span>
           <h2 className="text-4xl md:text-5xl font-bold text-charcoal mb-6 tracking-tight leading-tight">
             We don&apos;t just &ldquo;build websites.&rdquo;<br />
-            <span className="font-serif italic text-stone-500">We engineer websites that make you money.</span>
+            <span className="font-serif italic text-cognac">We engineer websites that make you money.</span>
           </h2>
         </motion.div>
 
