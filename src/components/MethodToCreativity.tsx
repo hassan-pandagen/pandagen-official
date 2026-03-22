@@ -23,7 +23,7 @@ const steps = [
     id: "03",
     title: "Execution (Sprint)",
     icon: Code2,
-    description: "The heavy lifting. We work in 1-week sprints with transparent updates. Using Next.js 15, we build components that are 100% type-safe.",
+    description: "The heavy lifting. We work in 1-week sprints with transparent updates. Using Next.js 16, we build components that are 100% type-safe.",
     tags: ["Clean Code", "Weekly Sprints", "CI/CD Setup"],
   },
   {

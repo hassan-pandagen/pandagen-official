@@ -282,7 +282,7 @@ export default function NextjsHostingZeroCostPage() {
                             This is the same technology behind some of the fastest websites on the internet. It&apos;s not a hack or a workaround. It&apos;s how modern websites are supposed to work. For a deeper look at why this architecture wins, read our{" "}
                             <Link href="/blog/how-to-achieve-100-pagespeed" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 guide to achieving 100/100 PageSpeed scores
-                            </Link>.
+                            </Link>. If you are still deciding between platforms, our <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress vs Next.js comparison</Link> covers every tradeoff in detail.
                         </BlogText>
 
                         {/* Comparison Table */}

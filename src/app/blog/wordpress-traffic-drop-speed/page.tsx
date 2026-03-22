@@ -86,21 +86,6 @@ const articleSchema = {
             ]
         },
         {
-            "@type": "HowTo",
-            "@id": "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed#howto",
-            "name": "How to Diagnose and Fix WordPress Speed-Related Traffic Loss",
-            "description": "The 5-step process to diagnose whether slow speed is causing your WordPress traffic drop, and the path to recovery.",
-            "totalTime": "PT30M",
-            "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
-            "step": [
-                { "@type": "HowToStep", "position": 1, "name": "Test your Mobile PageSpeed score", "text": "Go to pagespeed.web.dev and test your homepage and top-traffic page on Mobile. Red (0 to 49): speed is actively destroying your rankings. Urgent action required. Orange (50 to 89): you're losing some rankings, improvement will help. Green (90 to 100): speed is not your traffic problem, look at content gaps instead." },
-                { "@type": "HowToStep", "position": 2, "name": "Check Core Web Vitals in Google Search Console", "text": "Open Google Search Console → Experience → Core Web Vitals. Look at the 'Poor URLs' count on Mobile. If you have more than a handful of Poor-rated URLs, Google is already applying a ranking penalty to those pages. Note which pages are in the 'Poor' category, those are your highest-priority fixes." },
-                { "@type": "HowToStep", "position": 3, "name": "Correlate your traffic drop timeline", "text": "In Google Search Console, open Performance → Search Results and set the date range to 12 months. Look for when traffic started declining. Cross-reference with Google algorithm update dates (check Google Search Status Dashboard). If your decline started around a Core Web Vitals update, speed is confirmed as the cause." },
-                { "@type": "HowToStep", "position": 4, "name": "Audit your plugin count and hosting", "text": "In WordPress admin, count your active plugins. Each plugin adds 2 to 15 HTTP requests per page. More than 20 active plugins virtually guarantees a Mobile score below 60. Identify your hosting tier. Shared hosting ($3 to 15/month) is always a performance problem; managed hosting (WP Engine, Kinsta) improves but doesn't eliminate the problem." },
-                { "@type": "HowToStep", "position": 5, "name": "Choose your recovery path", "text": "If you score 50 to 70 on Mobile: plugin reduction, image optimization, and a caching plugin can recover some rankings within 60 to 90 days. If you score below 50: these optimizations have a ceiling. Migrating to a custom Next.js site is the only reliable path to 95 to 100/100 Mobile scores, full Core Web Vitals recovery, and sustained traffic growth." }
-            ]
-        },
-        {
             "@type": "BreadcrumbList",
             "@id": "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed#breadcrumb",
             "itemListElement": [
@@ -307,6 +292,29 @@ export default function WordPressTrafficDropPage() {
                         ]} />
                         <BlogText>
                             <BlogHighlight>Result: PageSpeed 95 to 100 on mobile. LCP under 1.2 seconds. Traffic grows, not shrinks.</BlogHighlight>
+                        </BlogText>
+
+                        <BlogHeader>What the Migration Timeline Looks Like</BlogHeader>
+                        <BlogText>
+                            If you decide to fix the root cause, here is what a proper migration covers and how long each phase takes:
+                        </BlogText>
+                        <BlogList items={[
+                            "Week 1: Full site audit. Every page catalogued, redirect map built, keyword rankings recorded as a baseline.",
+                            "Weeks 2 to 4: Build phase. The new Next.js site is built to mirror your existing structure and content, with performance baked in from the start.",
+                            "Week 5: QA and testing. Mobile and desktop PageSpeed verified at 90+. All redirects tested. Zero broken links.",
+                            "Week 6: Launch with zero downtime. Old site stays live until the DNS cutover is confirmed. Google Search Console updated immediately.",
+                            "Day 30 to 60: Rankings begin recovering. Core Web Vitals switch from Poor to Good in Search Console. Organic traffic trends upward."
+                        ]} />
+                        <BlogText>
+                            The entire process is designed so your site is never down and no SEO equity is lost. The most common fear we hear is "I'll lose my rankings during the move." It does not happen when the migration is executed properly. All URL structure is preserved, all meta data is ported, and every old URL redirects to its new equivalent with a 301.
+                        </BlogText>
+
+                        <BlogHeader>When Should You Act?</BlogHeader>
+                        <BlogText>
+                            The longer a slow site stays live, the more ground it loses. Google's ranking signals are cumulative: a site that has been slow for 12 months takes longer to recover than one that just turned slow. If your traffic has been declining for more than 3 months and your Mobile PageSpeed is below 60, every additional month of delay makes the recovery harder and longer.
+                        </BlogText>
+                        <BlogText>
+                            The calculation is simple. If your site generates $10,000 per month in revenue and you are losing 25% of potential traffic to speed, that is $2,500 per month in missed revenue. A migration that takes 6 weeks and costs $8,000 to $15,000 pays for itself within the first quarter and then compounds every month after.
                         </BlogText>
                     </div>
 

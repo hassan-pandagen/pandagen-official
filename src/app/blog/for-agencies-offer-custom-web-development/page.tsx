@@ -15,13 +15,13 @@ const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
 
 export const metadata: Metadata = {
-    title: "For Agencies: How to Offer Custom Web Development Without Hiring a Dev Team | PandaCodeGen",
+    title: "White Label Web Development for Agencies: Custom Builds Without a Dev Team | PandaCodeGen",
     description: "Your client wants a custom site. No dev team? Here's how 40+ agencies deliver premium custom builds under their own brand, without touching a line of code.",
     alternates: {
         canonical: '/blog/for-agencies-offer-custom-web-development',
     },
     openGraph: {
-        title: "For Agencies: How to Offer Custom Web Development Without Hiring a Dev Team",
+        title: "White Label Web Development for Agencies: Custom Builds Without a Dev Team",
         description: "Your client wants a custom-built website. You don't have a dev team. Here's how 40+ agencies deliver premium custom builds without touching a line of code.",
         type: "article",
         publishedTime: "2026-03-06",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "For Agencies: How to Offer Custom Web Development Without Hiring a Dev Team",
+        title: "White Label Web Development for Agencies: Custom Builds Without a Dev Team",
         description: "Your client wants a custom-built website. You don't have a dev team. Here's how 40+ agencies deliver it.",
     },
     keywords: ["white label web development", "outsource web development for agencies", "offer custom web development without dev team", "white label nextjs", "agency web development partner"],
@@ -43,7 +43,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/for-agencies-offer-custom-web-development#article",
-            "headline": "For Agencies: How to Offer Custom Web Development Without Hiring a Dev Team",
+            "headline": "White Label Web Development for Agencies: Custom Builds Without a Dev Team",
             "description": "Your client wants a custom-built website. You don't have a dev team. Here's how 40+ agencies deliver premium custom builds under their own brand.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-06T00:00:00-05:00",
@@ -128,19 +128,6 @@ const articleSchema = {
             "foundingDate": "2026"
         },
         {
-            "@type": "HowTo",
-            "@id": "https://www.pandacodegen.com/blog/for-agencies-offer-custom-web-development#howto",
-            "name": "How to Offer Custom Web Development Through a White-Label Partner",
-            "description": "The 5-step white-label workflow agencies use to deliver custom web development under their own brand, without hiring a single developer.",
-            "step": [
-                { "@type": "HowToStep", "position": 1, "name": "Share the Client Brief", "text": "Send your white-label partner the client name, business type, timeline, existing assets, and budget range." },
-                { "@type": "HowToStep", "position": 2, "name": "Receive a Fixed-Price Quote", "text": "Get a detailed, fixed-price quote within 48 hours covering scope, delivery milestones, and what you need from the client." },
-                { "@type": "HowToStep", "position": 3, "name": "Mark Up and Quote Your Client", "text": "Add your agency margin (typically 25 to 50% above build cost) and present the project to your client under your own brand." },
-                { "@type": "HowToStep", "position": 4, "name": "Partner Builds, You Deliver", "text": "Your dev partner builds the site, you review each milestone, present it as your own work, and handle all client communication." },
-                { "@type": "HowToStep", "position": 5, "name": "Launch and Hand Off", "text": "Deliver the live site to your client, receive full CMS documentation, and retain the ongoing client relationship for future work." }
-            ]
-        },
-        {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/blog/for-agencies-offer-custom-web-development#faq",
             "mainEntity": agencyFAQs.map(faq => ({
@@ -181,7 +168,7 @@ export default function ForAgenciesCustomDevPage() {
 
                     <div className="mb-10">
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                            For Agencies: How to Offer <span className="font-serif italic text-cognac">Custom Web Development</span> Without Hiring a Dev Team
+                            White Label Web Development for Agencies: <span className="font-serif italic text-cognac">Custom Builds</span> Without Hiring a Dev Team
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">

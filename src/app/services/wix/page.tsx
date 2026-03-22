@@ -11,6 +11,12 @@ export const metadata: Metadata = {
     url: 'https://www.pandacodegen.com/services/wix',
     siteName: 'PandaCodeGen',
     type: 'website',
+    images: [{ url: 'https://www.pandacodegen.com/og-image.jpg', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Wix to Custom Website Migration | PandaCodeGen',
+    description: "Escape Wix SEO limits and slow load times. We migrate to custom Next.js that ranks higher and loads 5x faster.",
   },
 };
 
@@ -25,7 +31,15 @@ export default function WixServicePage() {
         "description": "Professional Wix website development with migration path to custom coded Next.js for businesses that want to own their platform and rank higher.",
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
-        "serviceType": ["Wix Development", "Wix Migration", "Wix to Next.js", "Wix Alternative"]
+        "serviceType": ["Wix Development", "Wix Migration", "Wix to Next.js", "Wix Alternative"],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "2",
+          "reviewCount": "2"
+        }
       },
       {
         "@type": "WebPage",
@@ -34,7 +48,8 @@ export default function WixServicePage() {
         "name": "Wix Development & Migration | PandaCodeGen",
         "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
         "about": { "@id": "https://www.pandacodegen.com/services/wix#service" },
-        "inLanguage": "en-US"
+        "inLanguage": "en-US",
+        "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2", "[data-speakable='true']"] }
       },
       {
         "@type": "BreadcrumbList",
@@ -43,6 +58,36 @@ export default function WixServicePage() {
           { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.pandacodegen.com/services" },
           { "@type": "ListItem", "position": 3, "name": "Wix", "item": "https://www.pandacodegen.com/services/wix" }
         ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.pandacodegen.com/#organization",
+        "name": "PandaCodeGen",
+        "alternateName": "Panda Gen",
+        "url": "https://www.pandacodegen.com",
+        "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
+        "email": "info@pandacodegen.com",
+        "foundingDate": "2026",
+        "areaServed": "Worldwide",
+        "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"]
+      },
+      {
+        "@type": "Review",
+        "@id": "https://www.pandacodegen.com/services/wix#review-clutch",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+        "author": { "@type": "Person", "name": "Executive, MC Patches LLC" },
+        "reviewBody": "Panda Code Gen successfully delivered a speedy, bug free website. They did exactly what they said they would, delivering a blazing fast Next.js website with a 100/100 PageSpeed score. The communication throughout was excellent.",
+        "datePublished": "2025-11-01",
+        "itemReviewed": { "@id": "https://www.pandacodegen.com/services/wix#service" }
+      },
+      {
+        "@type": "Review",
+        "@id": "https://www.pandacodegen.com/services/wix#review-trustpilot",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+        "author": { "@type": "Person", "name": "Marshall James" },
+        "reviewBody": "I recently worked with PandaCodeGen on rebuilding my business website and I am beyond impressed. Hassan handled everything professionally, and the final product exceeded my expectations. The site loads incredibly fast and looks stunning.",
+        "datePublished": "2026-03-01",
+        "itemReviewed": { "@id": "https://www.pandacodegen.com/services/wix#service" }
       },
       {
         "@type": "FAQPage",

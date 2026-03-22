@@ -77,7 +77,7 @@ export default function PageContent() {
             transition={{ delay: 0.1 }}
             className="text-xl text-stone-600 leading-relaxed mb-8 max-w-2xl mx-auto"
           >
-            Templates can&apos;t build unicorns. We architect scalable SaaS platforms, internal dashboards, and AI-powered tools. <span className="text-charcoal font-medium">You own the code. You own the IP. You own the future.</span>
+            Templates can&apos;t build unicorns. We architect scalable SaaS platforms, internal dashboards, and AI-powered tools. <span className="text-charcoal font-medium">You own the code. You own the IP. You own the future.</span> We run our own custom CRM and AI automation systems on the same stack we build for clients.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -120,7 +120,8 @@ export default function PageContent() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold text-charcoal mb-3">SaaS Platforms</h3>
-                  <p className="text-stone-600 text-base leading-relaxed mb-6">Multi-tenant applications with authentication, subscription billing, user dashboards, and scalable architecture built to grow with your business.</p>
+                  <p className="text-stone-600 text-base leading-relaxed mb-4">Multi-tenant applications with authentication, subscription billing, user dashboards, and scalable architecture built to grow with your business.</p>
+                  <p className="text-sm text-cognac font-medium mb-4">We use this exact stack ourselves. Our internal CRM and AI automation system are built on Next.js and Supabase — the same architecture we deliver to clients.</p>
                   <div className="grid sm:grid-cols-2 gap-3">
                     {["Subscription management dashboards", "Marketplace platforms with payments", "Project management tools", "CRM & client portals", "Multi-tenant auth with role-based access", "Stripe/payment gateway integration"].map((ex, i) => (
                       <div key={i} className="flex items-start gap-2 text-sm text-stone-600">
@@ -452,6 +453,33 @@ export default function PageContent() {
               </div>
               <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Author Attribution */}
+      <section className="py-10 border-t border-stone-200 bg-white">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <p className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-4">Built by</p>
+          <div className="flex flex-col sm:flex-row gap-6">
+            <div className="flex items-start gap-4">
+              <Link href="/about/hassan" className="shrink-0">
+                <div className="w-12 h-12 rounded-full bg-stone-100 border border-stone-200 flex items-center justify-center text-charcoal font-bold text-lg">H</div>
+              </Link>
+              <div>
+                <Link href="/about/hassan" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Hassan Jamal</Link>
+                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. Builds SaaS platforms, AI-integrated dashboards, and client portals from scratch. Fixed-price, sprint-based delivery with working features every week, not just at the end.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <Link href="/about/imran" className="shrink-0">
+                <div className="w-12 h-12 rounded-full bg-stone-100 border border-stone-200 flex items-center justify-center text-charcoal font-bold text-lg">I</div>
+              </Link>
+              <div>
+                <Link href="/about/imran" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Imran</Link>
+                <p className="text-xs text-stone-500 mt-0.5">Lead Solutions Architect. Designs scalable system architecture for custom web apps, SaaS products, and no-code-to-custom migrations. Specialises in auth systems, API design, and data modelling. 8+ years in enterprise software.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

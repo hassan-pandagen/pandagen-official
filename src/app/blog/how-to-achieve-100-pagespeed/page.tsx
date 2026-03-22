@@ -527,7 +527,7 @@ export default function AchievePageSpeedPage() {
                         </BlogText>
 
                         <BlogHeader>
-                            Optimization #8: Server Components (Next.js 15 Only)
+                            Optimization #8: Server Components (Next.js 16 Only)
                         </BlogHeader>
 
                         <BlogText>
@@ -562,7 +562,7 @@ export default function AchievePageSpeedPage() {
 
                         <BlogList items={[
                             "Optimization #1-7 require Next.js knowledge. If you're on WordPress, you can't use them.",
-                            "Optimization #8 (Server Components) requires Next.js 15. Most developers are still on Next.js 13.",
+                            "Optimization #8 (Server Components) requires Next.js 16. Most developers are still on Next.js 13.",
                             "Getting from 90 to 100 requires finding and fixing tiny issues. One unused CSS file can drop you to 88.",
                             "Testing and debugging takes 40-60 hours if you're learning as you go."
                         ]} />
@@ -582,7 +582,7 @@ export default function AchievePageSpeedPage() {
                         </BlogText>
 
                         <BlogList items={[
-                            "Migrate your WordPress/Shopify site to Next.js 15",
+                            "Migrate your WordPress/Shopify site to Next.js 16",
                             "Implement all 8 optimizations (built into our standard process)",
                             "Test on real devices to ensure 95-100 score",
                             "Launch with zero downtime, zero SEO loss",
@@ -643,7 +643,7 @@ export default function AchievePageSpeedPage() {
                         </BlogText>
 
                         <BlogList items={[
-                            "Learn Next.js 15 (40-80 hours)",
+                            "Learn Next.js 16 (40-80 hours)",
                             "Rebuild your site from scratch (80-200 hours)",
                             "Implement all 8 optimizations (20-40 hours)",
                             "Test, debug, launch (40-60 hours)",
@@ -655,7 +655,7 @@ export default function AchievePageSpeedPage() {
                         </BlogText>
 
                         <BlogList items={[
-                            "We migrate your site to Next.js 15 (4-6 weeks)",
+                            "We migrate your site to Next.js 16 (4-6 weeks)",
                             "All 8 optimizations included in standard build",
                             "Guaranteed 95-100 PageSpeed score",
                             "Zero downtime, zero SEO loss",

@@ -94,24 +94,6 @@ const articleSchema = {
             ]
         },
         {
-            "@type": "HowTo",
-            "@id": "https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs#howto",
-            "name": "How to Migrate WordPress to Next.js Without Losing SEO",
-            "description": "The complete 8-step process for migrating a WordPress site to Next.js while preserving Google rankings, redirects, and all SEO equity.",
-            "totalTime": "PT6W",
-            "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "8000" },
-            "step": [
-                { "@type": "HowToStep", "position": 1, "name": "Audit Your WordPress Site", "text": "Crawl every URL using Screaming Frog or Sitebulb. Export a complete list of all URLs, their title tags, meta descriptions, H1s, and inbound links. This becomes your SEO baseline: every page in this list must either be preserved at the same URL or receive a 301 redirect in the new Next.js site." },
-                { "@type": "HowToStep", "position": 2, "name": "Export Your WordPress Content", "text": "Go to WordPress Admin → Tools → Export. Export All Content as XML. This file contains all your posts, pages, categories, tags, and metadata. For images, download your wp-content/uploads folder via FTP or your host's file manager. Optimise all images to WebP format before importing them into Next.js." },
-                { "@type": "HowToStep", "position": 3, "name": "Set Up Your Next.js Project", "text": "Run 'npx create-next-app@latest' to scaffold your project. Install Tailwind CSS for styling. Set up your headless CMS (Sanity or Contentful) if you need a content management interface. Configure next.config.js with your image domains and any required redirects. Deploy an empty shell to Vercel immediately to set up your deployment pipeline." },
-                { "@type": "HowToStep", "position": 4, "name": "Migrate Your Content and Design", "text": "Build your pages in Next.js using React components. Import your WordPress XML content into your headless CMS or convert it to MDX files for blog posts. Use next/image for all images (automatic WebP conversion and lazy loading). Replicate your navigation structure and internal linking exactly as it exists in WordPress." },
-                { "@type": "HowToStep", "position": 5, "name": "Set Up 301 Redirects", "text": "In next.config.js, add a redirects array mapping any changed URLs to their new destinations. Every URL that existed on your WordPress site must either exist at the same path in Next.js or have a 301 redirect. Missing redirects mean lost SEO equity. Google cannot follow broken links. Test every redirect before going live using a tool like Redirect Checker." },
-                { "@type": "HowToStep", "position": 6, "name": "Migrate All SEO Metadata", "text": "Transfer every title tag, meta description, Open Graph tag, and canonical URL from WordPress to your Next.js metadata exports. Use Next.js 14's metadata API: export const metadata = { title, description, openGraph } in each page.tsx. Add JSON-LD schema (Article, BreadcrumbList, Organization) that was previously handled by Yoast. Generate a new sitemap.xml using next-sitemap." },
-                { "@type": "HowToStep", "position": 7, "name": "QA and Pre-Launch Testing", "text": "Run PageSpeed Insights on your staging URL. Target 90+ mobile before going live. Verify every 301 redirect works. Check all forms, contact flows, and third-party integrations. Test on mobile, tablet, and desktop. Run Google's Rich Results Test on key pages. Verify your sitemap.xml renders correctly. Check for any console errors. Do not go live until PageSpeed mobile score is above 90." },
-                { "@type": "HowToStep", "position": 8, "name": "DNS Cutover and Post-Launch Monitoring", "text": "Point your domain DNS to Vercel by updating your A records or CNAME. Verify SSL certificate is provisioned (Vercel does this automatically). Submit your new sitemap to Google Search Console immediately. Set up a Google Search Console property for the new site if moving hosts. Monitor crawl errors daily for 30 days. Watch your Core Web Vitals field data update in Search Console over weeks 4 to 8." }
-            ]
-        },
-        {
             "@type": "BreadcrumbList",
             "@id": "https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs#breadcrumb",
             "itemListElement": [
@@ -472,7 +454,7 @@ export default function MigrateWordPressToNextJSPage() {
                         </div>
 
                         <BlogText>
-                            The decision comes down to your technical background and the revenue your site generates. If your site generates $20,000+/month and you're losing rankings to slow Core Web Vitals, a professional migration pays back within months. If you are a developer who wants to learn Next.js by doing a real project, DIY is a legitimate path. Just budget time for the learning curve.
+                            The decision comes down to your technical background and the revenue your site generates. If your site generates $20,000+/month and you're losing rankings to slow Core Web Vitals, a professional migration pays back within months. If you are a developer who wants to learn Next.js by doing a real project, DIY is a legitimate path. Just budget time for the learning curve. To see exactly what 95+ PageSpeed looks like in practice, read our post on <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">achieving 100/100 PageSpeed scores</Link>.
                         </BlogText>
                         <BlogText>
                             Either way, read our post on{" "}

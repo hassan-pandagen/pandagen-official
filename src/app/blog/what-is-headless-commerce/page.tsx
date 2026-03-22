@@ -510,7 +510,7 @@ export default function WhatIsHeadlessCommercePage() {
                         <BlogHeader>How Does PandaCodeGen Build Headless Storefronts?</BlogHeader>
 
                         <BlogText>
-                            We build headless storefronts using Next.js 15 connected to your existing Shopify (or BigCommerce) backend through the Storefront API. Here is our process:
+                            We build headless storefronts using Next.js 16 connected to your existing Shopify (or BigCommerce) backend through the Storefront API. Here is our process:
                         </BlogText>
 
                         <BlogList items={[
@@ -573,7 +573,7 @@ export default function WhatIsHeadlessCommercePage() {
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Ready to Go Headless?</h3>
                         <p className="text-stone-600 mb-6">
-                            Get a free store audit. We&apos;ll analyze your speed, conversion rate, and architecture to tell you if headless is worth it for your store.
+                            Get a free store audit. We will analyze your speed, conversion rate, and architecture to tell you if headless is worth it. See our <Link href="/services/ecommerce" className="text-cognac hover:underline font-medium">headless Shopify development service</Link> for scope and pricing.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
                                 Schedule Free Audit <ArrowRight className="w-5 h-5" />

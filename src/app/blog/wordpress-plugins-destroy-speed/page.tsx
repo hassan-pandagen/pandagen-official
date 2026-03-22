@@ -86,20 +86,6 @@ const articleSchema = {
             ]
         },
         {
-            "@type": "HowTo",
-            "@id": "https://www.pandacodegen.com/blog/wordpress-plugins-destroy-speed#howto",
-            "name": "How to Audit and Remove Speed-Killing WordPress Plugins",
-            "description": "Step-by-step process to identify which WordPress plugins are slowing your site and reduce load time.",
-            "totalTime": "PT3H",
-            "step": [
-                { "@type": "HowToStep", "position": 1, "name": "Baseline Your Current Speed", "text": "Go to pagespeed.web.dev and test your homepage, a key service page, and your blog. Note the Mobile score and load time for each. This is your before benchmark: you can't measure improvement without it." },
-                { "@type": "HowToStep", "position": 2, "name": "List Every Active Plugin", "text": "In WordPress admin, go to Plugins → Installed Plugins. Filter by Active. Note every plugin name, its purpose, and when it was last updated. Anything not updated in 12+ months is a security and performance risk." },
-                { "@type": "HowToStep", "position": 3, "name": "Identify the Worst Offenders", "text": "Install Query Monitor plugin to see which plugins add the most database queries per page. Run GTmetrix waterfall view to see which scripts take longest to load. Any plugin adding 200ms+ to load time is a priority removal." },
-                { "@type": "HowToStep", "position": 4, "name": "Deactivate Non-Essential Plugins One by One", "text": "Deactivate one plugin at a time and re-test speed after each removal. Common safe removals: social share buttons, related posts plugins, backup plugins that run on page load, older analytics scripts, duplicate SEO plugins." },
-                { "@type": "HowToStep", "position": 5, "name": "Replace Heavy Plugins with Lightweight Alternatives", "text": "Replace Jetpack (800KB+) with individual lightweight plugins for only the features you use. Replace heavy contact form plugins with simple HTML forms. Use only one SEO plugin. Either Rank Math or Yoast, not both." }
-            ]
-        },
-        {
             "@type": "BreadcrumbList",
             "@id": "https://www.pandacodegen.com/blog/wordpress-plugins-destroy-speed#breadcrumb",
             "itemListElement": [
@@ -297,7 +283,7 @@ export default function WordPressPluginsSpeedPage() {
                             "You're paying $400+/month on hosting, plugins, and maintenance combined"
                         ]} />
                         <BlogText>
-                            If any of those apply, <a href="/blog/wordpress-killer" className="text-cognac hover:underline">the ROI on migrating to Next.js pays for itself within 6 to 12 months</a>, and every year after, you save money and gain back lost traffic.
+                            If any of those apply, <a href="/blog/wordpress-killer" className="text-cognac hover:underline">the ROI on migrating to Next.js pays for itself within 6 to 12 months</a>, and every year after, you save money and gain back lost traffic. See a full side-by-side breakdown in our <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress vs Next.js comparison</Link>.
                         </BlogText>
                     </div>
 

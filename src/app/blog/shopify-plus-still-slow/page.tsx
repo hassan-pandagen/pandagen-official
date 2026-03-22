@@ -88,21 +88,6 @@ const articleSchema = {
             ]
         },
         {
-            "@type": "HowTo",
-            "@id": "https://www.pandacodegen.com/blog/shopify-plus-still-slow#howto",
-            "name": "How to Speed Up a Slow Shopify Plus Store",
-            "description": "The 5-step process to diagnose and improve a slow Shopify Plus store. Theme-level changes can gain 10 to 20 points, but the architectural ceiling requires a headless approach for 90+ scores.",
-            "totalTime": "PT4H",
-            "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
-            "step": [
-                { "@type": "HowToStep", "position": 1, "name": "Run a full PageSpeed audit on your store", "text": "Test your homepage, top collection page, and top product page at pagespeed.web.dev on Mobile. Shopify Plus stores typically score 35 to 60/100 with 5+ apps installed. Note which pages score lowest: these are your highest-revenue speed problems." },
-                { "@type": "HowToStep", "position": 2, "name": "Audit and remove non-essential apps", "text": "In Shopify admin, list every installed app and its monthly cost. Each app injects 80 to 200KB of JavaScript on every page load regardless of whether the page uses it. Temporarily disable each app and re-test speed. Remove any app you can replace with native Shopify features or a lighter alternative." },
-                { "@type": "HowToStep", "position": 3, "name": "Compress product and hero images", "text": "Export your hero and banner images at actual mobile display dimensions and compress them below 150KB using Squoosh or TinyPNG before uploading. Shopify resizes images but the responsive sizing logic still serves larger files to mobile than necessary. This single step often improves LCP by 0.5 to 1.5 seconds." },
-                { "@type": "HowToStep", "position": 4, "name": "Check if Shopify Plus scripts are the ceiling", "text": "After optimizing apps and images, re-run PageSpeed. If you're still below 65/100, Shopify Plus's mandatory platform scripts are the bottleneck. Shopify loads checkout, cart, payment detection, and analytics scripts on every page, including product pages where checkout hasn't started. These cannot be removed on standard storefronts." },
-                { "@type": "HowToStep", "position": 5, "name": "Evaluate headless storefront ROI", "text": "Calculate your current monthly revenue multiplied by 10% (a conservative conversion improvement estimate). If that number exceeds the amortized monthly cost of a headless build, the investment pays for itself within 12 months. Most Shopify Plus stores doing $50K+/month recover the investment within 6 to 9 months at a 90 to 100/100 PageSpeed score." }
-            ]
-        },
-        {
             "@type": "BreadcrumbList",
             "@id": "https://www.pandacodegen.com/blog/shopify-plus-still-slow#breadcrumb",
             "itemListElement": [
@@ -253,7 +238,7 @@ export default function ShopifyPlusStillSlowPage() {
                             "For a $2M/year Shopify Plus store: $400K to $600K in lost annual revenue from speed alone"
                         ]} />
                         <BlogText>
-                            The irony: the $2,300/month Shopify Plus fee is less than 1% of <a href="/blog/shopify-conversion-rate-speed-fix" className="text-cognac hover:underline">the revenue you&apos;re losing from slow load times</a>.
+                            The irony: the $2,300/month Shopify Plus fee is less than 1% of <a href="/blog/shopify-conversion-rate-speed-fix" className="text-cognac hover:underline">the revenue you&apos;re losing from slow load times</a>. We broke down the exact dollar amounts in our post on <Link href="/blog/shopify-slow-losing-sales" className="text-cognac hover:underline">how much slow Shopify costs per year</Link>.
                         </BlogText>
 
                         {/* Mid-Article CTA */}

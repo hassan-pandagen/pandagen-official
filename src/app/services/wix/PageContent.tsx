@@ -485,6 +485,33 @@ export default function PageContent() {
         </div>
       </section>
 
+      {/* Author Attribution */}
+      <section className="py-10 border-t border-stone-200 bg-white">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <p className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-4">Built by</p>
+          <div className="flex flex-col sm:flex-row gap-6">
+            <div className="flex items-start gap-4">
+              <Link href="/about/hassan" className="shrink-0">
+                <div className="w-12 h-12 rounded-full bg-stone-100 border border-stone-200 flex items-center justify-center text-charcoal font-bold text-lg">H</div>
+              </Link>
+              <div>
+                <Link href="/about/hassan" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Hassan Jamal</Link>
+                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. Wix-to-Next.js migrations that score 95 to 100 on PageSpeed. Full site rebuilds with 301-mapped URLs, zero downtime, and content editors clients can use without developer help.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <Link href="/about/imran" className="shrink-0">
+                <div className="w-12 h-12 rounded-full bg-stone-100 border border-stone-200 flex items-center justify-center text-charcoal font-bold text-lg">I</div>
+              </Link>
+              <div>
+                <Link href="/about/imran" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Imran</Link>
+                <p className="text-xs text-stone-500 mt-0.5">Lead Solutions Architect. Scopes Wix escapes to protect organic rankings, eliminate monthly subscription fees, and migrate all content without data loss. 8+ years in web architecture.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </main>
   );

@@ -93,20 +93,6 @@ const articleSchema = {
             ]
         },
         {
-            "@type": "HowTo",
-            "@id": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales#howto",
-            "name": "How to Calculate Your Shopify Revenue Loss from Slow Speed",
-            "description": "A 4-step process to measure how much revenue your slow Shopify store is losing every month, and determine whether a headless storefront pays for itself.",
-            "totalTime": "PT1H",
-            "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
-            "step": [
-                { "@type": "HowToStep", "position": 1, "name": "Run your Mobile PageSpeed test", "text": "Go to pagespeed.web.dev and test your store's homepage and your highest-traffic product page on Mobile. Note your score and load time. Anything below 60/100 or above 3 seconds on mobile is costing you sales right now." },
-                { "@type": "HowToStep", "position": 2, "name": "Calculate your bounce-related revenue loss", "text": "Take your monthly revenue and multiply by 0.07 for every second of load time over 2 seconds. A store loading in 4 seconds (2 seconds over threshold) loses approximately 14% of potential revenue. A store doing $500K/year losing 14% = $70,000/year in preventable lost sales." },
-                { "@type": "HowToStep", "position": 3, "name": "Identify the speed bottlenecks", "text": "In PageSpeed Insights, look at the 'Opportunities' section. The three most common Shopify killers: render-blocking third-party app scripts, oversized hero images, and Shopify's Liquid server-side rendering adding 300 to 600ms before any content appears." },
-                { "@type": "HowToStep", "position": 4, "name": "Evaluate headless storefront ROI", "text": "Multiply your monthly revenue by 10 to 15% (a conservative conversion improvement estimate for going from 50/100 to 95/100 PageSpeed). If that number exceeds the monthly cost of a headless build divided by 12, the investment pays for itself within the first year." }
-            ]
-        },
-        {
             "@type": "BreadcrumbList",
             "@id": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales#breadcrumb",
             "itemListElement": [
@@ -468,7 +454,7 @@ export default function ShopifySlowPage() {
                         </BlogText>
 
                         <BlogList items={[
-                            "Frontend: Next.js 15 app with React Server Components, no unnecessary JavaScript sent to the browser",
+                            "Frontend: Next.js 16 app with React Server Components, no unnecessary JavaScript sent to the browser",
                             "Data layer: Shopify Storefront API fetches products, collections, and inventory in real time",
                             "Checkout: Shopify's native checkout (trusted by customers, handles all payment complexity)",
                             "Hosting: Vercel Edge Network. 300+ global locations, sub-50ms response times worldwide",
@@ -498,7 +484,7 @@ export default function ShopifySlowPage() {
                         ]} />
 
                         <BlogText>
-                            These mistakes compound. A store with 40 apps, a premium theme, and unoptimized images doesn't have a 4-second load time: it has a <BlogHighlight>7-10 second load time</BlogHighlight>. At that point, 70%+ of your visitors leave before seeing a single product.
+                            These mistakes compound. A store with 40 apps, a premium theme, and unoptimized images doesn't have a 4-second load time: it has a <BlogHighlight>7-10 second load time</BlogHighlight>. At that point, 70%+ of your visitors leave before seeing a single product. To see the exact revenue impact of that speed gap, read our breakdown of <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">how 100/100 PageSpeed scores are achieved</Link>.
                         </BlogText>
 
                         <BlogText>

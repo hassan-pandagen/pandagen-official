@@ -129,46 +129,6 @@ const articleSchema = {
             "foundingDate": "2026"
         },
         {
-            "@type": "HowTo",
-            "@id": "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow#howto",
-            "name": "How to Speed Up a Slow Shopify Dawn Theme",
-            "description": "Practical steps to improve your Shopify Dawn theme PageSpeed score. These optimizations can gain 10 to 20 points, though the ceiling on standard Shopify is 70 to 75/100.",
-            "totalTime": "PT2H",
-            "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
-            "step": [
-                {
-                    "@type": "HowToStep",
-                    "position": 1,
-                    "name": "Audit and remove unused apps",
-                    "text": "Open your Shopify admin and review every installed app. Each app injects 80 to 200KB of JavaScript on every page load. Remove any app you haven't used in 30 days. Each removal saves 80 to 200ms of blocking time."
-                },
-                {
-                    "@type": "HowToStep",
-                    "position": 2,
-                    "name": "Compress and resize hero images before uploading",
-                    "text": "Export your hero and banner images at the actual display dimensions, then compress them to under 150KB using Squoosh or TinyPNG. Do not upload high-resolution originals and rely on Shopify's resize: it still serves oversized files to mobile."
-                },
-                {
-                    "@type": "HowToStep",
-                    "position": 3,
-                    "name": "Enable native lazy loading for below-fold images",
-                    "text": "In Dawn's theme settings, verify that lazy loading is enabled for collection and product images. This defers images that aren't visible on initial load, improving LCP and reducing initial page weight."
-                },
-                {
-                    "@type": "HowToStep",
-                    "position": 4,
-                    "name": "Defer non-critical app scripts using Shopify's Script Tag API",
-                    "text": "For apps that support it, switch their script load strategy from synchronous to deferred or async via the Shopify Script Tag API or the app's own settings panel. Not all apps support this. Contact app support if you don't see the option."
-                },
-                {
-                    "@type": "HowToStep",
-                    "position": 5,
-                    "name": "Remove unused theme sections from all page templates",
-                    "text": "In the Dawn theme editor, open each page template and delete any sections that are hidden or empty. Even invisible sections can register in Shopify's rendering pipeline and add load overhead."
-                }
-            ]
-        },
-        {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow#faq",
             "mainEntity": [
@@ -505,7 +465,7 @@ export default function ShopifyDawnThemeSlowPage() {
                         <BlogHeader>What Does the Real Fix Look Like?</BlogHeader>
 
                         <BlogText>
-                            The fix that actually gets you to 90 to 100/100 is headless Shopify. Keeping your Shopify backend (products, orders, inventory, payments) and replacing the Shopify storefront with a custom Next.js frontend.
+                            The fix that actually gets you to 90 to 100/100 is headless Shopify. Keeping your Shopify backend (products, orders, inventory, payments) and replacing the Shopify storefront with a custom Next.js frontend. Our <Link href="/services/ecommerce" className="text-cognac hover:underline font-medium">headless Shopify development service</Link> covers the full transition.
                         </BlogText>
 
                         <BlogText>

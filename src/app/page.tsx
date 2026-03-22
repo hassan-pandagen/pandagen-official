@@ -60,7 +60,7 @@ export default function Home() {
         "name": "PandaCodeGen",
         "alternateName": "Panda Gen",
         "url": "https://www.pandacodegen.com",
-        "image": "https://www.pandacodegen.com/logo.png",
+        "image": "https://www.pandacodegen.com/og-image.jpg",
         "logo": {
           "@type": "ImageObject",
           "url": "https://www.pandacodegen.com/logo.png",
@@ -144,18 +144,36 @@ export default function Home() {
         },
         "inLanguage": "en-US",
         "datePublished": "2026-02-10",
-        "dateModified": "2026-03-01",
+        "dateModified": "2026-03-22",
         "speakable": {
           "@type": "SpeakableSpecification",
           "cssSelector": ["h1", "h2", "[data-speakable='true']"]
         }
       },
       {
+        "@type": "Review",
+        "@id": "https://www.pandacodegen.com/#review-clutch",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+        "author": { "@type": "Person", "name": "Executive, MC Patches LLC" },
+        "reviewBody": "Panda Code Gen successfully delivered a speedy, bug free website using the latest coding language. The team was punctual, responsive, helpful, and communicative via email. They assisted with UI design and did not charge for revisions. Overall, their expertise and support were commendable.",
+        "datePublished": "2025-11-01",
+        "itemReviewed": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization" }
+      },
+      {
+        "@type": "Review",
+        "@id": "https://www.pandacodegen.com/#review-trustpilot",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+        "author": { "@type": "Person", "name": "Marshall James" },
+        "reviewBody": "I recently worked with PandaCodeGen and had a great experience. Hassan was super helpful and communicative throughout the process. Even though I am not tech-savvy, he broke things down in a way that made sense to me. The service was excellent overall.",
+        "datePublished": "2026-03-01",
+        "itemReviewed": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization" }
+      },
+      {
         "@type": "ProfessionalService",
         "@id": "https://www.pandacodegen.com/#service",
         "name": "PandaCodeGen Development Services",
         "description": "Custom web development, WordPress migration, and Shopify optimization for growing businesses.",
-        "image": "https://www.pandacodegen.com/logo.png",
+        "image": "https://www.pandacodegen.com/og-image.jpg",
         "telephone": "+13022504340",
         "priceRange": "$$",
         "address": {

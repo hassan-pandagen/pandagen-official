@@ -13,6 +13,11 @@ export const metadata: Metadata = {
     type: 'website',
     images: [{ url: 'https://www.pandacodegen.com/og-image.jpg', width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Webflow Migration to Custom Code | PandaCodeGen',
+    description: 'Stop paying Webflow hosting premiums. We migrate to custom Next.js, faster loading, full SEO control, and you own the code forever.',
+  },
 };
 
 export default function WebflowServicePage() {
@@ -28,7 +33,15 @@ export default function WebflowServicePage() {
         "areaServed": "Worldwide",
         "serviceType": ["Webflow Migration", "Webflow to Next.js", "Webflow Alternative", "Webflow to Custom Code"],
         "priceRange": "$6,000 - $40,000",
-        "image": "https://www.pandacodegen.com/og-image.jpg"
+        "image": "https://www.pandacodegen.com/og-image.jpg",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "2",
+          "reviewCount": "2"
+        }
       },
       {
         "@type": "WebPage",
@@ -37,7 +50,8 @@ export default function WebflowServicePage() {
         "name": "Webflow Migration | PandaCodeGen",
         "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
         "about": { "@id": "https://www.pandacodegen.com/services/webflow#service" },
-        "inLanguage": "en-US"
+        "inLanguage": "en-US",
+        "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2", "[data-speakable='true']"] }
       },
       {
         "@type": "BreadcrumbList",
@@ -58,6 +72,24 @@ export default function WebflowServicePage() {
         "foundingDate": "2026",
         "areaServed": "Worldwide",
         "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"]
+      },
+      {
+        "@type": "Review",
+        "@id": "https://www.pandacodegen.com/services/webflow#review-clutch",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+        "author": { "@type": "Person", "name": "Executive, MC Patches LLC" },
+        "reviewBody": "Panda Code Gen successfully delivered a speedy, bug free website. They did exactly what they said they would, delivering a blazing fast Next.js website with a 100/100 PageSpeed score. The communication throughout was excellent.",
+        "datePublished": "2025-11-01",
+        "itemReviewed": { "@id": "https://www.pandacodegen.com/services/webflow#service" }
+      },
+      {
+        "@type": "Review",
+        "@id": "https://www.pandacodegen.com/services/webflow#review-trustpilot",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+        "author": { "@type": "Person", "name": "Marshall James" },
+        "reviewBody": "I recently worked with PandaCodeGen on rebuilding my business website and I am beyond impressed. Hassan handled everything professionally, and the final product exceeded my expectations. The site loads incredibly fast and looks stunning.",
+        "datePublished": "2026-03-01",
+        "itemReviewed": { "@id": "https://www.pandacodegen.com/services/webflow#service" }
       },
       {
         "@type": "FAQPage",

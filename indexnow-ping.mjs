@@ -53,6 +53,10 @@ const urls = [
   `${BASE}/blog/how-to-migrate-wordpress-to-nextjs`,
   `${BASE}/blog/nextjs-hosting-zero-cost`,
   `${BASE}/blog/what-is-headless-commerce`,
+  `${BASE}/blog/webflow-true-cost`,
+  `${BASE}/blog/shopify-app-costs-real-monthly-bill`,
+  `${BASE}/blog/wordpress-migration-cost`,
+  `${BASE}/blog/gohighlevel-website-speed`,
 
   // Legal
   `${BASE}/privacy`,

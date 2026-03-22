@@ -1,5 +1,5 @@
 // Centralized blog data - Add new posts here and they'll automatically appear in sitemap
-export type IllustrationType = 'wordpress' | 'speed' | 'code' | 'saas' | 'plugins' | 'traffic' | 'sales' | 'conversion' | 'ranking' | 'cost' | 'performance' | 'security' | 'aicommerce' | 'hosting' | 'webflow';
+export type IllustrationType = 'wordpress' | 'speed' | 'code' | 'saas' | 'plugins' | 'traffic' | 'sales' | 'conversion' | 'ranking' | 'cost' | 'performance' | 'security' | 'aicommerce' | 'hosting' | 'webflow' | 'migration';
 
 export interface FAQ {
   question: string;
@@ -22,6 +22,48 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    id: "wordpress-migration-cost",
+    title: "How Much Does a WordPress to Next.js Migration Cost in 2026?",
+    excerpt: "The honest answer is $3,000 to $25,000. This breakdown explains exactly what drives migration cost, what tier your site falls into, and how to calculate whether migration makes financial sense.",
+    category: "WordPress",
+    readTime: "9 min",
+    date: "Mar 22",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: true,
+    illustrationType: 'migration',
+    lastModified: "2026-03-22",
+    faqs: [
+      { question: "How much does it cost to migrate a WordPress site to Next.js?", answer: "A WordPress to Next.js migration costs $3,000 to $25,000 depending on site complexity. Basic business sites with 5 to 15 pages cost $3,000 to $8,000. Mid-complexity sites with custom post types, blog, forms, and integrations cost $8,000 to $15,000. Complex WooCommerce or large content sites with 50+ pages cost $15,000 to $25,000. Enterprise sites with 500+ pages and multiple custom integrations start at $25,000. The range reflects real scope differences, not arbitrary agency pricing." },
+      { question: "How long does a WordPress to Next.js migration take?", answer: "A basic 5 to 15 page site migrates in 2 to 3 weeks. A mid-complexity site with custom post types, blog migration, and integrations takes 3 to 5 weeks. A complex WooCommerce or large content site takes 5 to 8 weeks. Enterprise projects with 500+ pages and multiple integrations take 8 to 16 weeks. Timeline depends on scope clarity, content readiness, and how many third-party integrations need to be rebuilt as API connections." },
+      { question: "Will I lose my Google rankings when I migrate from WordPress to Next.js?", answer: "Not if the migration is done correctly. The critical steps are: map every URL with 301 redirects, preserve all title tags and meta descriptions, maintain canonical URLs, implement equivalent schema markup on the new site, submit a new sitemap to Google Search Console immediately after launch, and monitor for crawl errors for 30 days post-launch. When executed properly, rankings hold steady or improve within 30 to 60 days because Google rewards the faster Core Web Vitals scores that Next.js delivers." },
+      { question: "Is migrating from WordPress to Next.js worth it financially?", answer: "For most business sites, yes. The ROI calculation has three components. First, cost savings: WordPress hosting, plugins, and maintenance typically cost $3,000 to $12,000 per year. A Next.js site on Vercel costs $0 to $240 per year, saving $2,500 to $11,000 annually. Second, traffic improvement: moving PageSpeed Mobile from 45 to 95 typically produces a 15 to 40% organic traffic improvement over 3 to 6 months. Third, conversion improvement: faster load times directly increase conversion rates. Most sites with $200+ per month in operating costs recover a $10,000 migration within 18 months." },
+      { question: "What is included in a professional WordPress migration to Next.js?", answer: "A complete migration should include: full URL audit and 301 redirect mapping, migration of all metadata (title tags, meta descriptions, canonical URLs, Open Graph tags), image optimisation to WebP/AVIF format with correct sizing, schema markup implementation for all page types, Google Search Console setup and sitemap submission, Core Web Vitals baseline verification (target 90+ on all three), zero-downtime DNS cutover, and 30-day post-launch monitoring for crawl errors and ranking stability. Get any quote in writing that specifies each item." },
+      { question: "What happens to my WordPress plugins after migration?", answer: "WordPress plugins do not transfer to Next.js. Each plugin function needs a replacement. Contact forms become API routes or services like Resend. SEO tools like Yoast become metadata exports and JSON-LD schema. Analytics like Google Analytics become deferred scripts or server-side tracking. WooCommerce becomes a headless e-commerce solution. The key difference is that plugin replacements in Next.js are typically built once with no ongoing subscription cost, while WordPress plugin licenses renew annually." },
+    ]
+  },
+  {
+    id: "gohighlevel-website-speed",
+    title: "GoHighLevel Website Speed: Why GHL Sites Are Slow in 2026",
+    excerpt: "GoHighLevel sites score 20 to 45 on Google PageSpeed Mobile. Here is exactly why GHL is slow, what it costs you in SEO and conversions, and how agencies are solving it with custom Next.js frontends.",
+    category: "Performance",
+    readTime: "9 min",
+    date: "Mar 22",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: false,
+    illustrationType: 'performance',
+    lastModified: "2026-03-22",
+    faqs: [
+      { question: "Why is GoHighLevel so slow?", answer: "GoHighLevel's website builder is slow because of its architectural design. Pages render client-side with heavy JavaScript bundles that must execute before content appears, directly penalizing Largest Contentful Paint. Images are not automatically optimized to WebP or AVIF format. Pages are served without edge caching, resulting in Time to First Byte of 800ms to 1.5 seconds. Multiple tracking scripts add cumulative load time. The result is mobile PageSpeed scores of 20 to 45, well below the 90 threshold needed for SEO competitiveness." },
+      { question: "What is a typical GoHighLevel PageSpeed score?", answer: "GoHighLevel-hosted websites and funnels typically score 20 to 45 on Google PageSpeed Mobile and 55 to 75 on Desktop. Desktop scores are higher because desktop devices have more processing power to run JavaScript quickly. Google uses mobile-first indexing, meaning the mobile score is the one that affects your rankings. A score of 28 on mobile means Google is seeing a slow page as your primary ranking signal, putting you at a disadvantage against competitors scoring 85 to 95." },
+      { question: "Can you improve GoHighLevel page speed without leaving the platform?", answer: "You can partially improve GHL speed through image optimization, reducing tracking scripts, and simplifying page layouts. This typically moves scores from 20 to 30 range into the 35 to 50 range. However, you cannot overcome the fundamental architecture constraints of client-side rendering and the lack of edge caching while staying on GHL's hosting infrastructure. A complete fix requires moving the public website to a server-side rendered platform like Next.js while keeping GHL for CRM and automation functions." },
+      { question: "Does GoHighLevel website speed affect SEO?", answer: "Yes, directly. Google has used Core Web Vitals as a ranking signal since the 2021 Page Experience update. Largest Contentful Paint, Interaction to Next Paint, and Cumulative Layout Shift all score poorly on GHL sites. Google ranks slower sites lower than faster sites with equivalent content when competing for the same keyword. For local businesses using GHL, where organic search often drives the majority of inbound leads, the speed penalty can mean ranking 3 to 5 positions lower than competitors with faster custom-coded sites." },
+      { question: "Do you need to leave GoHighLevel to fix the speed problem?", answer: "You do not need to leave GoHighLevel entirely. The recommended solution is a decoupled architecture: build a custom Next.js website for all public-facing pages (homepage, service pages, landing pages, blog), and keep GoHighLevel for CRM, automation, email sequences, pipeline management, and appointment scheduling. Forms on the custom website submit to GHL via webhook or API so all leads flow into your existing pipeline. This preserves every GHL workflow while eliminating the speed penalty on the pages Google indexes." },
+      { question: "How much does a custom Next.js frontend for GoHighLevel cost?", answer: "A custom Next.js website that replaces GHL's public-facing pages while maintaining GHL backend integration costs $5,000 to $15,000 depending on the number of pages and complexity of custom features. This is a one-time cost compared to the ongoing conversion rate penalty from slow load times. For a business spending $3,000 per month on paid advertising into a GHL funnel, even a 10% conversion rate improvement from faster load times generates $3,600 additional revenue per year from the same ad spend." },
+    ]
+  },
   {
     id: "shopify-app-costs-real-monthly-bill",
     title: "Your Shopify Bill Is $1,000/Month and You Don't Know It",

@@ -524,6 +524,41 @@ export default function CompetitorRankingsPage() {
                             The math is simple. If you're currently doing $200K+/year in revenue and losing 50-70% of potential traffic to slow load times, <a href="/blog/wordpress-killer" className="text-cognac hover:underline">fixing your site will pay for itself</a> in <BlogHighlight>2-6 months</BlogHighlight> and continue generating 2-4× more traffic every month after that.
                         </BlogText>
 
+                        <BlogHeader>How AI Search Engines Like ChatGPT and Google AI Overviews Factor Into This</BlogHeader>
+
+                        <BlogText>
+                            Google AI Overviews and ChatGPT search launched in 2025. Both pull answers from the web in real time. And both follow the same logic traditional search has always used: they prioritize fast, well-structured, authoritative sites.
+                        </BlogText>
+
+                        <BlogText>
+                            When a user asks ChatGPT or Perplexity a question, the AI crawls the web and cites sources. The sites it chooses to cite are those with clean HTML, fast load times, and clear information architecture. A slow WordPress site with a messy DOM and 30 scripts is harder for AI crawlers to parse and less likely to be cited.
+                        </BlogText>
+
+                        <BlogText>
+                            Your competitor with a fast, coded website is not just winning in Google search. They are also getting cited in AI Overviews, showing up in ChatGPT answers, and being referenced by Perplexity. Each citation is free brand exposure that compounds over time.
+                        </BlogText>
+
+                        <BlogText>
+                            The gap between your site and your competitor will widen in 2026 as AI-assisted search drives a larger share of traffic. Speed and structure are no longer just SEO factors. They are AI visibility factors.
+                        </BlogText>
+
+                        <BlogHeader>How to Diagnose Whether Speed Is Why You Are Losing</BlogHeader>
+
+                        <BlogText>
+                            Before you do anything else, run these three checks:
+                        </BlogText>
+
+                        <BlogList items={[
+                            "Go to pagespeed.web.dev and enter your URL. If your mobile score is below 70, speed is a confirmed ranking problem.",
+                            "Search for your top five keywords in Google Incognito. Note your position and your competitor's position.",
+                            "Open your competitor's site. Time how long it takes to load. Then time yours.",
+                            "Go to GTmetrix.com and run a comparison between your site and your competitor's. It will show you exactly where the gap is."
+                        ]} />
+
+                        <BlogText>
+                            If your PageSpeed mobile score is 40 to 65 and your competitor is above 85, that gap alone explains most of the ranking difference. Everything else (content quality, backlinks, domain authority) matters less than a 3-second speed differential when Google is choosing between two otherwise similar pages.
+                        </BlogText>
+
                         <BlogHeader>Next Steps</BlogHeader>
 
                         <BlogText>

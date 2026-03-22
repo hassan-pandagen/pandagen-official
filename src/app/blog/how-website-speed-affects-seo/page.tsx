@@ -90,21 +90,6 @@ const articleSchema = {
             ]
         },
         {
-            "@type": "HowTo",
-            "@id": "https://www.pandacodegen.com/blog/how-website-speed-affects-seo#howto",
-            "name": "How to Fix Website Speed for Better SEO Rankings",
-            "description": "The 5-step process to diagnose and fix website speed issues that are hurting your Google rankings and Core Web Vitals scores.",
-            "totalTime": "PT4W",
-            "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
-            "step": [
-                { "@type": "HowToStep", "position": 1, "name": "Audit Your Current Speed", "text": "Go to pagespeed.web.dev and run your URL. Focus on the Mobile score: this is what Google uses for rankings. Note your LCP, INP, and CLS scores. Any metric in the red (LCP > 4s, INP > 500ms, CLS > 0.25) is actively hurting your rankings." },
-                { "@type": "HowToStep", "position": 2, "name": "Fix LCP First", "text": "LCP (Largest Contentful Paint) is the single most impactful metric. The fix depends on what your LCP element is: if it's an image, compress it and add loading='eager' with fetchpriority='high'. If it's text, eliminate render-blocking CSS and fonts. Target: under 2.5 seconds." },
-                { "@type": "HowToStep", "position": 3, "name": "Eliminate Render-Blocking Scripts", "text": "Every third-party script (chat widgets, analytics, pixels, popups) delays your page load. Audit what fires on page load and defer everything non-critical. A WordPress site with 12 plugins fires 12+ scripts on every page load: each one adds 100-400ms." },
-                { "@type": "HowToStep", "position": 4, "name": "Fix CLS With Proper Dimensions", "text": "CLS (layout shift) happens when images load without declared dimensions, or when fonts cause text reflow. Fix: always declare width and height on every image. Self-host fonts instead of loading from Google Fonts. Reserve space for ads and embeds." },
-                { "@type": "HowToStep", "position": 5, "name": "Switch to a Modern Framework if You've Hit the Ceiling", "text": "WordPress and Shopify have architectural speed ceilings. WordPress generates pages on every server request: you cannot eliminate this latency with plugins. Shopify's Liquid templating and checkout scripts are hardcoded. If your mobile score is stuck below 70 after optimizing, the platform is the bottleneck, not your settings." }
-            ]
-        },
-        {
             "@type": "BreadcrumbList",
             "@id": "https://www.pandacodegen.com/blog/how-website-speed-affects-seo#breadcrumb",
             "itemListElement": [
@@ -417,7 +402,7 @@ export default function WebsiteSpeedSEOPage() {
                                 <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-1">Step 5</p>
                                 <h3 className="text-lg font-bold mb-2">If You've Hit the Platform Ceiling, Migrate</h3>
                                 <BlogText>
-                                    If your mobile score is stuck below 70 after addressing the above, your platform is the bottleneck, not your settings. This is where businesses face a real financial decision: continue paying for ongoing optimisation that delivers diminishing returns and never escapes the ceiling, or make a one-time investment in a faster architecture that scores 95 to 100 natively. Our clients who migrate from WordPress to Next.js see rankings recover in 30 to 60 days and typically see 20 to 40% organic traffic increases within 90 days. See our <Link href="/blog/how-to-achieve-100-pagespeed" className="text-stone-700 underline underline-offset-2 hover:text-black">full guide to achieving 100/100 PageSpeed</Link>.
+                                    If your mobile score is stuck below 70 after addressing the above, your platform is the bottleneck, not your settings. This is where businesses face a real financial decision: continue paying for ongoing optimisation that delivers diminishing returns and never escapes the ceiling, or make a one-time investment in a faster architecture that scores 95 to 100 natively. Our clients who migrate from WordPress to Next.js see rankings recover in 30 to 60 days and typically see 20 to 40% organic traffic increases within 90 days. See our <Link href="/blog/how-to-achieve-100-pagespeed" className="text-stone-700 underline underline-offset-2 hover:text-black">full guide to achieving 100/100 PageSpeed</Link>. The platform-level comparison is covered in our <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress vs Next.js breakdown</Link>.
                                 </BlogText>
                             </div>
                         </div>

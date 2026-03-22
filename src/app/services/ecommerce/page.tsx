@@ -11,6 +11,12 @@ export const metadata: Metadata = {
     url: 'https://www.pandacodegen.com/services/ecommerce',
     siteName: 'PandaCodeGen',
     type: 'website',
+    images: [{ url: 'https://www.pandacodegen.com/og-image.jpg', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Custom Shopify Headless Development | PandaCodeGen',
+    description: "Custom headless Shopify storefronts that load in under 1 second. No slow themes, no monthly app fees.",
   },
 };
 
@@ -34,7 +40,11 @@ export default function EcommercePage() {
         "name": "Shopify Headless Development | PandaCodeGen",
         "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
         "about": { "@id": "https://www.pandacodegen.com/services/ecommerce#service" },
-        "inLanguage": "en-US"
+        "inLanguage": "en-US",
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": ["h1", "h2", "[data-speakable='true']"]
+        }
       },
       {
         "@type": "BreadcrumbList",
@@ -54,6 +64,24 @@ export default function EcommercePage() {
           { "@type": "Question", "name": "Will I lose sales during the migration?", "acceptedAnswer": { "@type": "Answer", "text": "No. Your existing Shopify store stays live throughout the entire build. We develop the new storefront in parallel. On launch day, we simply point your domain to the new site. Zero downtime, zero lost sales." } },
           { "@type": "Question", "name": "How much does a custom Shopify storefront cost?", "acceptedAnswer": { "@type": "Answer", "text": "A custom storefront typically ranges from $10,000-$30,000 depending on complexity (number of products, custom checkout flows, subscription features). Most stores recover this investment within 4-6 months through eliminated app fees and increased conversion rates." } }
         ]
+      },
+      {
+        "@type": "Review",
+        "@id": "https://www.pandacodegen.com/services/ecommerce#review-1",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+        "author": { "@type": "Person", "name": "Executive, MC Patches LLC" },
+        "reviewBody": "Panda Code Gen successfully delivered a speedy, bug free website using the latest coding language. The team was punctual, responsive, helpful, and communicative via email. They assisted with UI design and did not charge for revisions. Overall, their expertise and support were commendable.",
+        "datePublished": "2025-11-01",
+        "itemReviewed": { "@id": "https://www.pandacodegen.com/services/ecommerce#service" }
+      },
+      {
+        "@type": "Review",
+        "@id": "https://www.pandacodegen.com/services/ecommerce#review-2",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+        "author": { "@type": "Person", "name": "Marshall James" },
+        "reviewBody": "I recently worked with PandaCodeGen and had a great experience. Hassan was super helpful and communicative throughout the process. Even though I am not tech-savvy, he broke things down in a way that made sense to me. The service was excellent overall.",
+        "datePublished": "2026-03-01",
+        "itemReviewed": { "@id": "https://www.pandacodegen.com/services/ecommerce#service" }
       }
     ]
   };

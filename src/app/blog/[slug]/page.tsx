@@ -224,7 +224,7 @@ const blogPosts: Record<
                     We don't use plugins. Our <Link href="/services/wordpress-migration" className="text-cognac hover:underline font-medium">WordPress migration service</Link> replaces everything with clean, custom code. It loads instantly. No plugins means no plugin conflicts, no plugin vulnerabilities, no plugin fees.
                 </BlogText>
                 <BlogText>
-                    Your site is built on Next.js 15: the same technology used by companies like Vercel, OpenAI, and Stripe. It runs on Vercel's global edge network (300+ locations worldwide). Your pages are pre-built and served instantly from the closest server to your visitor.
+                    Your site is built on Next.js 16: the same technology used by companies like Vercel, OpenAI, and Stripe. It runs on Vercel's global edge network (300+ locations worldwide). Your pages are pre-built and served instantly from the closest server to your visitor.
                 </BlogText>
                 <BlogText>
                     <strong>You own the code outright.</strong> No monthly platform fees. No licensing. No vendor lock-in. If you want to change hosting providers in 2030, you can.
@@ -321,7 +321,7 @@ const blogPosts: Record<
 
                 <BlogHeader>What Tech Stack Powers a Sub-Second Shopify Storefront?</BlogHeader>
                 <BlogList items={[
-                    "Frontend: Next.js 15 (your custom storefront)",
+                    "Frontend: Next.js 16 (your custom storefront)",
                     "Backend: Shopify Storefront API (inventory, orders, payments)",
                     "Content: Sanity CMS (blogs, landing pages)",
                     "Hosting: Vercel Edge Network (global, instant)"

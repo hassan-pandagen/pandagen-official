@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import PageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'WordPress Migration to Custom Code | PandaCodeGen',
+  title: 'WordPress to Next.js Migration Service | PandaCodeGen',
   description: 'Professional WordPress to Next.js migration. Zero data loss, 301 redirects, preserved SEO rankings, and load times under 1 second. From $5,900.',
   alternates: { canonical: '/services/wordpress-migration' },
   openGraph: {
-    title: 'WordPress Migration to Custom Code | PandaCodeGen',
+    title: 'WordPress to Next.js Migration Service | PandaCodeGen',
     description: 'Professional WordPress to Next.js migration. Zero data loss, 301 redirects, preserved SEO rankings, and load times under 1 second.',
     url: 'https://www.pandacodegen.com/services/wordpress-migration',
     siteName: 'PandaCodeGen',
@@ -37,7 +37,11 @@ export default function MigrationPage() {
         "name": "WordPress Migration | PandaCodeGen",
         "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
         "about": { "@id": "https://www.pandacodegen.com/services/wordpress-migration#service" },
-        "inLanguage": "en-US"
+        "inLanguage": "en-US",
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": ["h1", "h2", "[data-speakable='true']"]
+        }
       },
       {
         "@type": "BreadcrumbList",
@@ -69,6 +73,24 @@ export default function MigrationPage() {
           { "@type": "Question", "name": "How much does a WordPress to Next.js migration cost?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on the size and complexity of your site. A standard business site (10-30 pages) typically ranges from $5,000-$15,000. The ROI usually pays for itself within 3-6 months through reduced hosting costs, lower ad spend, and increased conversions." } },
           { "@type": "Question", "name": "Can I still edit my website after migration?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We set up a content editor with a user-friendly dashboard. You can edit text, images, blog posts, and pages without any coding knowledge. It's simpler than WordPress: no plugins to update, no themes to manage." } }
         ]
+      },
+      {
+        "@type": "Review",
+        "@id": "https://www.pandacodegen.com/services/wordpress-migration#review-1",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+        "author": { "@type": "Person", "name": "Executive, MC Patches LLC" },
+        "reviewBody": "Panda Code Gen successfully delivered a speedy, bug free website using the latest coding language. The team was punctual, responsive, helpful, and communicative via email. They assisted with UI design and did not charge for revisions. Overall, their expertise and support were commendable.",
+        "datePublished": "2025-11-01",
+        "itemReviewed": { "@id": "https://www.pandacodegen.com/services/wordpress-migration#service" }
+      },
+      {
+        "@type": "Review",
+        "@id": "https://www.pandacodegen.com/services/wordpress-migration#review-2",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+        "author": { "@type": "Person", "name": "Marshall James" },
+        "reviewBody": "I recently worked with PandaCodeGen and had a great experience. Hassan was super helpful and communicative throughout the process. Even though I am not tech-savvy, he broke things down in a way that made sense to me. The service was excellent overall.",
+        "datePublished": "2026-03-01",
+        "itemReviewed": { "@id": "https://www.pandacodegen.com/services/wordpress-migration#service" }
       }
     ]
   };

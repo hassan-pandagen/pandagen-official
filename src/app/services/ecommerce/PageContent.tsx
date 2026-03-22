@@ -53,9 +53,9 @@ export default function PageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6 leading-tight"
           >
-            Stop Paying <br />
+            Stop Losing Sales <br />
             <span className="font-serif italic text-cognac">
-              Shopify App Taxes.
+              to Slow Shopify.
             </span>
           </motion.h1>
 
@@ -67,6 +67,21 @@ export default function PageContent() {
           >
             We migrate high-volume brands from standard Shopify themes to high performance custom coded storefronts. <span className="text-charcoal font-medium">Keep the Shopify backend, destroy the frontend limitations.</span>
           </motion.p>
+
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.15 }} className="flex flex-wrap justify-center gap-3 mb-8">
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-stone-200 shadow-xs text-sm">
+              <span className="text-cognac font-black">98/100</span>
+              <span className="text-stone-500">PageSpeed</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-stone-200 shadow-xs text-sm">
+              <span className="text-cognac font-black">3.8s → 0.8s</span>
+              <span className="text-stone-500">Load Time</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-stone-200 shadow-xs text-sm">
+              <span className="text-yellow-500 font-black">★★★★★</span>
+              <span className="text-stone-500">Clutch Verified</span>
+            </div>
+          </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
@@ -398,6 +413,30 @@ export default function PageContent() {
         </div>
       </section>
 
+      {/* From the Blog - Internal Linking */}
+      <section className="py-10 md:py-16 px-6 bg-white">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-2xl font-bold text-charcoal text-center mb-3">From the Blog</h2>
+          <p className="text-stone-400 text-center mb-10 text-sm">Research, case studies, and guides on headless e-commerce.</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: "/blog/shopify-headless", title: "Why Go Headless with Shopify?", desc: "The performance case for decoupling your Shopify storefront." },
+              { href: "/blog/shopify-app-costs-real-monthly-bill", title: "Shopify App Costs: The Real Bill", desc: "How app fees quietly eat your margins every month." },
+              { href: "/blog/shopify-plus-still-slow", title: "Why Shopify Plus Is Still Slow", desc: "Liquid themes cap your speed even on enterprise plans." },
+              { href: "/blog/shopify-slow-losing-sales", title: "Your Slow Shopify Is Losing Sales", desc: "Every second of load time costs you real revenue." },
+              { href: "/blog/shopify-conversion-rate-speed-fix", title: "Speed Fix That Lifts Conversions", desc: "How faster load times directly increase conversion rates." },
+              { href: "/blog/what-is-headless-commerce", title: "What Is Headless Commerce?", desc: "A plain-English explainer for store owners and founders." },
+            ].map((post) => (
+              <Link key={post.href} href={post.href} className="group flex flex-col gap-2 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
+                <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors leading-snug">{post.title}</h3>
+                <p className="text-stone-400 text-xs leading-relaxed flex-1">{post.desc}</p>
+                <span className="text-cognac text-xs font-semibold flex items-center gap-1 mt-1">Read more <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" /></span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Related Services - Internal Linking */}
       <section className="py-10 md:py-16 px-6 bg-[#F8FAFC]">
         <div className="container mx-auto max-w-5xl">
@@ -434,6 +473,33 @@ export default function PageContent() {
               </div>
               <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Author Attribution */}
+      <section className="py-10 border-t border-stone-200 bg-white">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <p className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-4">Built by</p>
+          <div className="flex flex-col sm:flex-row gap-6">
+            <div className="flex items-start gap-4">
+              <Link href="/about/hassan" className="shrink-0">
+                <div className="w-12 h-12 rounded-full bg-stone-100 border border-stone-200 flex items-center justify-center text-charcoal font-bold text-lg">H</div>
+              </Link>
+              <div>
+                <Link href="/about/hassan" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Hassan Jamal</Link>
+                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. Headless Shopify builds that score 95 to 100 on PageSpeed. Full storefront migrations from Liquid templates to custom Next.js storefronts, with zero downtime and zero lost orders.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <Link href="/about/imran" className="shrink-0">
+                <div className="w-12 h-12 rounded-full bg-stone-100 border border-stone-200 flex items-center justify-center text-charcoal font-bold text-lg">I</div>
+              </Link>
+              <div>
+                <Link href="/about/imran" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Imran</Link>
+                <p className="text-xs text-stone-500 mt-0.5">Lead Solutions Architect. Scopes headless migrations to protect your conversion rate and ad spend ROI. 8+ years in enterprise e-commerce architecture.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

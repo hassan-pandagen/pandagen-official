@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: { absolute: "Your Shopify Bill Is $1,000/Month and You Don't Know It | PandaCodeGen" },
     description: "You signed up for $39/month. Klaviyo, Loop Returns, Okendo, and ReCharge turned it into $1,000. Here is the full Shopify app cost breakdown and how to cut it by $864/month.",
     alternates: {
-        canonical: "https://www.pandacodegen.com/blog/shopify-app-costs-real-monthly-bill",
+        canonical: "/blog/shopify-app-costs-real-monthly-bill",
     },
     keywords: [
         "shopify app costs",
@@ -450,7 +450,7 @@ export default function ShopifyAppCostsPage() {
                     <BlogText>
                         Research from{" "}
                         <a href="https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Deloitte</a>{" "}
-                        shows a 0.1 second improvement in load time increases conversion rates by 8%. For a store doing $50K/month, that is $4,000/month in additional revenue from speed alone. The apps slowing your store down are costing you more than their subscription fees.
+                        shows a 0.1 second improvement in load time increases conversion rates by 8%. For a store doing $50K/month, that is $4,000/month in additional revenue from speed alone. The apps slowing your store down are costing you more than their subscription fees. We calculated the full annual revenue loss in our post on <Link href="/blog/shopify-slow-losing-sales" className="text-cognac hover:underline">how slow Shopify costs stores $75K per year</Link>.
                     </BlogText>
                     <BlogText>
                         If your combined Shopify costs (plan + transaction fees + apps) exceed $500 to $800/month, a custom Next.js build typically pays for itself within 6 to 12 months from savings alone. You own the code outright. No monthly platform fees. No app subscriptions for features that should have been built in. No percentage cuts on your revenue.

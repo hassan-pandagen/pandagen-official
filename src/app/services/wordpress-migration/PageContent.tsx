@@ -53,7 +53,7 @@ export default function PageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6 leading-tight"
           >
-            Escape WordPress. <br />
+            Migrate WordPress. <br />
             <span className="font-serif italic text-cognac">
               Scale with Custom Code.
             </span>
@@ -67,6 +67,21 @@ export default function PageContent() {
           >
             We don&apos;t just &apos;redesign&apos; your site. We surgically extract your data from WordPress and rebuild your frontend with custom code. <span className="text-charcoal font-medium">Zero plugins. Instant load times.</span>
           </motion.p>
+
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.15 }} className="flex flex-wrap justify-center gap-3 mb-8">
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-stone-200 shadow-xs text-sm">
+              <span className="text-cognac font-black">98/100</span>
+              <span className="text-stone-500">PageSpeed</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-stone-200 shadow-xs text-sm">
+              <span className="text-cognac font-black">4.2s → 0.8s</span>
+              <span className="text-stone-500">Load Time</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-stone-200 shadow-xs text-sm">
+              <span className="text-yellow-500 font-black">★★★★★</span>
+              <span className="text-stone-500">Clutch Verified</span>
+            </div>
+          </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
@@ -352,6 +367,32 @@ export default function PageContent() {
         </div>
       </section>
 
+      {/* From the Blog - Internal Linking */}
+      <section className="py-10 md:py-16 px-6 bg-white">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-2xl font-bold text-charcoal text-center mb-3">From the Blog</h2>
+          <p className="text-stone-400 text-center mb-10 text-sm">Deep dives on WordPress, migration, and performance.</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { href: "/blog/how-to-migrate-wordpress-to-nextjs", title: "How to Migrate WordPress to Next.js", desc: "Step-by-step migration guide with zero downtime." },
+              { href: "/blog/wordpress-vs-nextjs", title: "WordPress vs Next.js", desc: "The honest comparison every site owner needs." },
+              { href: "/blog/wordpress-plugins-destroy-speed", title: "How Plugins Destroy Your Speed", desc: "Why plugin bloat is costing you rankings." },
+              { href: "/blog/wordpress-ai-security-risk-2026", title: "WordPress AI Security Risk 2026", desc: "New attack vectors targeting WordPress in 2026." },
+              { href: "/blog/wordpress-killer", title: "The WordPress Killer", desc: "Why Next.js is replacing WordPress for good." },
+              { href: "/blog/elementor-kills-seo", title: "Elementor Kills SEO", desc: "The hidden cost of page builders on Core Web Vitals." },
+              { href: "/blog/wordpress-traffic-drop-speed", title: "WordPress Traffic Drop Fix", desc: "How site speed directly causes ranking drops." },
+              { href: "/blog/how-to-fix-slow-wordpress", title: "How to Fix Slow WordPress", desc: "Practical fixes that actually move the needle." },
+            ].map((post) => (
+              <Link key={post.href} href={post.href} className="group flex flex-col gap-2 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
+                <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors leading-snug">{post.title}</h3>
+                <p className="text-stone-400 text-xs leading-relaxed flex-1">{post.desc}</p>
+                <span className="text-cognac text-xs font-semibold flex items-center gap-1 mt-1">Read more <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" /></span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Related Services - Internal Linking */}
       <section className="py-10 md:py-16 px-6 bg-[#F8FAFC]">
         <div className="container mx-auto max-w-5xl">
@@ -388,6 +429,33 @@ export default function PageContent() {
               </div>
               <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Author Attribution */}
+      <section className="py-10 border-t border-stone-200 bg-white">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <p className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-4">Built by</p>
+          <div className="flex flex-col sm:flex-row gap-6">
+            <div className="flex items-start gap-4">
+              <Link href="/about/hassan" className="shrink-0">
+                <div className="w-12 h-12 rounded-full bg-stone-100 border border-stone-200 flex items-center justify-center text-charcoal font-bold text-lg">H</div>
+              </Link>
+              <div>
+                <Link href="/about/hassan" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Hassan Jamal</Link>
+                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. 40+ WordPress to Next.js migrations. Every site scores 95 to 100 on Google PageSpeed. Specialises in zero-downtime launches and full SEO preservation.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <Link href="/about/imran" className="shrink-0">
+                <div className="w-12 h-12 rounded-full bg-stone-100 border border-stone-200 flex items-center justify-center text-charcoal font-bold text-lg">I</div>
+              </Link>
+              <div>
+                <Link href="/about/imran" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Imran</Link>
+                <p className="text-xs text-stone-500 mt-0.5">Lead Solutions Architect. 8+ years in enterprise architecture. Scopes every migration to protect your ROI, timeline, and existing SEO rankings.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

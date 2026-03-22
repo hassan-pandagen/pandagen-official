@@ -7,10 +7,10 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 
 export const metadata: Metadata = {
     title: "Panda CodeLab, Custom Agency Website, Spline 3D + Framer Motion + WCAG 2.1 AA | PandaCodeGen",
-    description: "How we built pandacodelab.com, a separate brand, fully custom. Next.js 15, React 19, Framer Motion spring physics, magnetic interactions, Spline 3D scenes, WCAG 2.1 AA. Zero templates. Zero page builders. Under a second load.",
+    description: "How we built pandacodelab.com, a separate brand, fully custom. Next.js 16, React 19, Framer Motion spring physics, magnetic interactions, Spline 3D scenes, WCAG 2.1 AA. Zero templates. Zero page builders. Under a second load.",
     openGraph: {
         title: "Panda CodeLab, Custom Agency Website Built by PandaCodeGen",
-        description: "Live at pandacodelab.com. Next.js 15. Spring physics. Magnetic buttons. Spline 3D. WCAG 2.1 AA. Full case study.",
+        description: "Live at pandacodelab.com. Next.js 16. Spring physics. Magnetic buttons. Spline 3D. WCAG 2.1 AA. Full case study.",
         type: "article",
         url: "https://www.pandacodegen.com/work/panda-codelab",
         images: [{ url: "https://www.pandacodegen.com/work/pandacodelab.png", width: 1200, height: 630 }],
@@ -25,7 +25,7 @@ const caseStudySchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/work/panda-codelab#article",
             "headline": "Panda CodeLab: Building Our Agency Site on the Tech We Sell",
-            "description": "How we built our own agency website using Next.js 15, React 19, Framer Motion 12 spring physics, Spline 3D scenes, and full WCAG 2.1 AA accessibility compliance. Zero TypeScript errors. Zero ESLint errors. Live proof we practice what we sell.",
+            "description": "How we built our own agency website using Next.js 16, React 19, Framer Motion 12 spring physics, Spline 3D scenes, and full WCAG 2.1 AA accessibility compliance. Zero TypeScript errors. Zero ESLint errors. Live proof we practice what we sell.",
             "image": "https://www.pandacodegen.com/work/pandacodelab.png",
             "datePublished": "2025-12-01T00:00:00Z",
             "dateModified": "2026-02-01T00:00:00Z",
@@ -45,7 +45,7 @@ const caseStudySchema = {
                 "@id": "https://www.pandacodegen.com/work/panda-codelab"
             },
             "keywords": [
-                "agency website Next.js 15",
+                "agency website Next.js 16",
                 "React 19 agency site",
                 "Framer Motion spring physics",
                 "WCAG 2.1 AA compliance",
@@ -77,8 +77,8 @@ const caseStudySchema = {
             "mainEntity": [
                 {
                     "@type": "Question",
-                    "name": "Why build an agency website in Next.js 15 instead of a website builder?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "We couldn't sell custom-code performance to clients while running our own site on Webflow or WordPress. Next.js 15 gave us App Router, React 19, server components, and full control over every render. The result: sub-700ms load times, 100/100 PageSpeed, and zero platform fees. It's our live proof of concept." }
+                    "name": "Why build an agency website in Next.js 16 instead of a website builder?",
+                    "acceptedAnswer": { "@type": "Answer", "text": "We couldn't sell custom-code performance to clients while running our own site on Webflow or WordPress. Next.js 16 gave us App Router, React 19, server components, and full control over every render. The result: sub-700ms load times, 100/100 PageSpeed, and zero platform fees. It's our live proof of concept." }
                 },
                 {
                     "@type": "Question",
@@ -106,7 +106,7 @@ const caseStudySchema = {
 };
 
 const techStack = [
-    { name: "Next.js 15", role: "App Router + RSC", color: "bg-stone-900 text-white" },
+    { name: "Next.js 16", role: "App Router + RSC", color: "bg-stone-900 text-white" },
     { name: "React 19", role: "Latest stable", color: "bg-sky-500 text-white" },
     { name: "TypeScript", role: "Strict mode, 0 errors", color: "bg-blue-600 text-white" },
     { name: "Tailwind CSS 4", role: "Styling", color: "bg-sky-400 text-white" },
@@ -175,7 +175,7 @@ export default function PandaCodelabCaseStudy() {
                         </h1>
 
                         <p className="text-xl text-stone-600 leading-relaxed max-w-3xl mb-10">
-                            You can&apos;t sell custom-code performance to clients while running your own site on a page builder. We built the Panda CodeLab agency site on Next.js 15, React 19, and Framer Motion 12, spring physics, magnetic interactions, Spline 3D, and full WCAG 2.1 AA compliance. Zero TypeScript errors. Zero ESLint errors. This is the live proof.
+                            You can&apos;t sell custom-code performance to clients while running your own site on a page builder. We built the Panda CodeLab agency site on Next.js 16, React 19, and Framer Motion 12, spring physics, magnetic interactions, Spline 3D, and full WCAG 2.1 AA compliance. Zero TypeScript errors. Zero ESLint errors. This is the live proof.
                         </p>
 
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -217,7 +217,7 @@ export default function PandaCodelabCaseStudy() {
                                     The constraint
                                 </h3>
                                 <p className="text-stone-600 text-sm leading-relaxed">
-                                    Ship on Next.js 15 + React 19 before most agencies had even updated from Next.js 13. Hit 100/100 PageSpeed with full motion animations running. Pass WCAG 2.1 AA. Zero compromises on design quality.
+                                    Ship on Next.js 16 + React 19 before most agencies had even updated from Next.js 13. Hit 100/100 PageSpeed with full motion animations running. Pass WCAG 2.1 AA. Zero compromises on design quality.
                                 </p>
                             </div>
                         </div>
@@ -362,7 +362,7 @@ export default function PandaCodelabCaseStudy() {
                         </div>
                         <h2 className="text-3xl font-bold text-charcoal mb-3">Cutting edge. Every layer.</h2>
                         <p className="text-stone-600 mb-8">
-                            Next.js 15 + React 19, shipped before most agencies updated from Next.js 13. Tailwind CSS 4 (the new oxide engine). Framer Motion 12 with the latest spring physics API.
+                            Next.js 16 + React 19, shipped before most agencies updated from Next.js 13. Tailwind CSS 4 (the new oxide engine). Framer Motion 12 with the latest spring physics API.
                         </p>
                         <div className="flex flex-wrap gap-3">
                             {techStack.map((t) => (
@@ -434,7 +434,7 @@ export default function PandaCodelabCaseStudy() {
                         <h2 className="text-3xl font-bold text-charcoal mb-6">Everything that was built.</h2>
                         <div className="grid md:grid-cols-2 gap-3">
                             {[
-                                "Next.js 15 App Router with React 19 server + client components",
+                                "Next.js 16 App Router with React 19 server + client components",
                                 "Solar gradient design system (#E60040 → #E91E63 → #F59E0B)",
                                 "TextReveal, character-by-character spring entry animation",
                                 "SpotlightCard, mouse-tracking radial glow on every card",

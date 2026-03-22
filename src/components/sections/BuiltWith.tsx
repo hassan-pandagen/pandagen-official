@@ -5,7 +5,7 @@ import { Code2, Database, CreditCard, Globe, Lock, Zap } from "lucide-react";
 
 const techStack = [
   {
-    name: "Next.js 15",
+    name: "Next.js 16",
     category: "Speed Engine",
     icon: Zap,
     color: "text-charcoal",

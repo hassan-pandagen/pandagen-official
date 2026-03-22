@@ -11,6 +11,12 @@ export const metadata: Metadata = {
     url: 'https://www.pandacodegen.com/services',
     siteName: 'PandaCodeGen',
     type: 'website',
+    images: [{ url: 'https://www.pandacodegen.com/og-image.jpg', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Services & Capabilities | PandaCodeGen',
+    description: 'WordPress migration, Shopify headless commerce, and custom web app development. Under a second load times, zero bloat.',
   },
 };
 

@@ -37,7 +37,11 @@ export default function GoHighLevelServicePage() {
         "name": "GoHighLevel Development & Migration | PandaCodeGen",
         "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
         "about": { "@id": "https://www.pandacodegen.com/services/gohighlevel#service" },
-        "inLanguage": "en-US"
+        "inLanguage": "en-US",
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": ["h1", "h2", "[data-speakable='true']"]
+        }
       },
       {
         "@type": "BreadcrumbList",
@@ -69,6 +73,24 @@ export default function GoHighLevelServicePage() {
           { "@type": "Question", "name": "Can you build custom landing pages that work with GHL?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We build custom landing pages that load in under 1 second and push leads directly into your GHL CRM via API. Higher Quality Scores on Google Ads means lower cost per lead." } },
           { "@type": "Question", "name": "What if I want to leave GHL later?", "acceptedAnswer": { "@type": "Answer", "text": "If you chose Option B, your custom website already works independently. We can replace the GHL API connections with a custom backend whenever you're ready. No vendor lock-in, no rebuilding from scratch." } }
         ]
+      },
+      {
+        "@type": "Review",
+        "@id": "https://www.pandacodegen.com/services/gohighlevel#review-1",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+        "author": { "@type": "Person", "name": "Executive, MC Patches LLC" },
+        "reviewBody": "Panda Code Gen successfully delivered a speedy, bug free website using the latest coding language. The team was punctual, responsive, helpful, and communicative via email. They assisted with UI design and did not charge for revisions. Overall, their expertise and support were commendable.",
+        "datePublished": "2025-11-01",
+        "itemReviewed": { "@id": "https://www.pandacodegen.com/services/gohighlevel#service" }
+      },
+      {
+        "@type": "Review",
+        "@id": "https://www.pandacodegen.com/services/gohighlevel#review-2",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+        "author": { "@type": "Person", "name": "Marshall James" },
+        "reviewBody": "I recently worked with PandaCodeGen and had a great experience. Hassan was super helpful and communicative throughout the process. Even though I am not tech-savvy, he broke things down in a way that made sense to me. The service was excellent overall.",
+        "datePublished": "2026-03-01",
+        "itemReviewed": { "@id": "https://www.pandacodegen.com/services/gohighlevel#service" }
       }
     ]
   };

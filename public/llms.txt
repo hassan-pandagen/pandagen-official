@@ -2,17 +2,34 @@
 
 > PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95-100/100 Google PageSpeed on every build.
 
+## What We Do
+
+PandaCodeGen is a custom web development agency based in Missouri City, TX. We specialize in migrating businesses off slow, expensive platforms (WordPress, Shopify, Webflow, Squarespace, Wix, WooCommerce, GoHighLevel) to custom-coded Next.js websites that load in under 1 second and score 95-100/100 on Google PageSpeed.
+
+Every project is fixed-price, fully custom, and delivers code ownership. Clients own the code. $0/month hosting on Vercel. No plugins. No recurring platform fees.
+
+**Key facts:**
+- Founded: 2026
+- Location: Missouri City, TX, USA
+- Email: info@pandacodegen.com
+- Phone: +1 (302) 250-4340
+- Guaranteed PageSpeed: 95-100/100 on every build
+- Typical timeline: 4-6 weeks
+- Price range: $4,000-$60,000 depending on project type
+
 ## Services
-- [WordPress Migration](https://www.pandacodegen.com/services/wordpress-migration): Migrate from WordPress to a custom-coded Next.js site with sub-second load times
-- [E-Commerce Solutions](https://www.pandacodegen.com/services/ecommerce): Custom Shopify headless storefronts and e-commerce platforms
-- [Custom Engineering](https://www.pandacodegen.com/services/custom-engineering): SaaS dashboards, web applications, and custom development
-- [WooCommerce Migration](https://www.pandacodegen.com/services/woocommerce): Move from WooCommerce to headless Shopify or custom solutions
-- [Wix Migration](https://www.pandacodegen.com/services/wix): Escape Wix limitations with a custom-coded site
-- [Squarespace Migration](https://www.pandacodegen.com/services/squarespace): Migrate from Squarespace to Next.js
-- [Webflow Migration](https://www.pandacodegen.com/services/webflow): Move from Webflow to custom code
-- [GoHighLevel Migration](https://www.pandacodegen.com/services/gohighlevel): Migrate from GoHighLevel to custom Next.js
+
+- [WordPress Migration](https://www.pandacodegen.com/services/wordpress-migration): Migrate from WordPress to a custom-coded Next.js site with sub-second load times. Fixed-price. Guaranteed 95+ PageSpeed. Full URL redirect mapping.
+- [E-Commerce Solutions](https://www.pandacodegen.com/services/ecommerce): Custom Shopify headless storefronts and e-commerce platforms. Direct Stripe/PayPal integration. Zero plugin fees.
+- [Custom Engineering](https://www.pandacodegen.com/services/custom-engineering): SaaS dashboards, web applications, and AI-integrated custom development. Fixed-price MVP in 4-6 weeks.
+- [WooCommerce Migration](https://www.pandacodegen.com/services/woocommerce): Move from WooCommerce to headless Shopify or custom solutions. Zero lost orders. 6-8 week timeline.
+- [Wix Migration](https://www.pandacodegen.com/services/wix): Escape Wix SEO limits with a custom-coded Next.js site that ranks higher and loads 5x faster.
+- [Squarespace Migration](https://www.pandacodegen.com/services/squarespace): Migrate from Squarespace to Next.js. Eliminate $33-$65/month fees. Keep all blog content and URLs.
+- [Webflow Migration](https://www.pandacodegen.com/services/webflow): Move from Webflow to custom code. Full CMS migration to headless Sanity or Contentful. Stop paying Webflow hosting premiums.
+- [GoHighLevel Migration](https://www.pandacodegen.com/services/gohighlevel): Migrate from GoHighLevel to custom Next.js. Fix the 20-45 PageSpeed scores common on GHL sites.
 
 ## Blog
+
 - [What Is Headless Commerce](https://www.pandacodegen.com/blog/what-is-headless-commerce): Complete guide to headless commerce for store owners
 - [How to Migrate WordPress to Next.js](https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs): Complete step-by-step migration guide
 - [WordPress vs Next.js](https://www.pandacodegen.com/blog/wordpress-vs-nextjs): Detailed comparison for business owners
@@ -21,34 +38,63 @@
 - [WordPress vs Custom Code: Real Cost Over 3 Years](https://www.pandacodegen.com/blog/wordpress-vs-custom-code-real-cost-3-years): Total cost of ownership analysis
 - [Why We Chose Next.js Over WordPress in 2026](https://www.pandacodegen.com/blog/why-we-chose-nextjs-over-wordpress-2026): Technology decision framework
 - [Shopify Dawn Theme Slow](https://www.pandacodegen.com/blog/shopify-dawn-theme-slow): Why Shopify's default theme underperforms
-- [How to Fix Slow WordPress](https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress): WordPress performance optimization guide
+- [How to Fix Slow WordPress](https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress): 8 proven WordPress performance optimization methods, plus the hard speed ceiling WordPress cannot break
 - [Free Hosting With Vercel](https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost): How we host client websites for $0/month
-- [For Agencies: Custom Web Development](https://www.pandacodegen.com/blog/for-agencies-offer-custom-web-development): White-label development without hiring a dev team
+- [For Agencies: Custom Web Development](https://www.pandacodegen.com/blog/for-agencies-offer-custom-web-development): White-label development without hiring a dev team. 40+ agency partnerships.
 - [Google Universal Commerce Protocol](https://www.pandacodegen.com/blog/google-universal-commerce-protocol-what-it-means-for-your-store): What Google's commerce protocol means for your store
-- [WordPress AI Security Risk](https://www.pandacodegen.com/blog/wordpress-ai-security-risk-2026): 100K+ sites exposed through plugin vulnerabilities
+- [WordPress AI Security Risk 2026](https://www.pandacodegen.com/blog/wordpress-ai-security-risk-2026): 100K+ sites exposed through plugin vulnerabilities
 - [Why WordPress Is a Waste of Money](https://www.pandacodegen.com/blog/wordpress-killer): Transparent cost breakdown for business owners
-- [Shopify Headless Build](https://www.pandacodegen.com/blog/shopify-headless): How we got a Shopify store from 4s to 0.8s load time
+- [Shopify Headless Build](https://www.pandacodegen.com/blog/shopify-headless): How we got a Shopify store from 4s to 0.8s load time with headless architecture
 - [Elementor Kills SEO](https://www.pandacodegen.com/blog/elementor-kills-seo): Audit of 500 sites on page builder performance
 - [WordPress Plugins Destroy Speed](https://www.pandacodegen.com/blog/wordpress-plugins-destroy-speed): Performance cost of WordPress plugins
-- [Shopify Plus Still Slow](https://www.pandacodegen.com/blog/shopify-plus-still-slow): Why $2,300/mo doesn't fix Core Web Vitals
+- [Shopify Plus Still Slow](https://www.pandacodegen.com/blog/shopify-plus-still-slow): Why $2,300/mo does not fix Core Web Vitals
 - [WordPress Traffic Drop From Speed](https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed): The speed tax killing your organic traffic
 - [Shopify Slow Losing Sales](https://www.pandacodegen.com/blog/shopify-slow-losing-sales): The math behind slow Shopify revenue loss
 - [Low Shopify Conversion Rate](https://www.pandacodegen.com/blog/shopify-conversion-rate-speed-fix): How speed kills Shopify conversions
 - [Why Your Competitor Outranks You](https://www.pandacodegen.com/blog/why-competitor-outranks-you): Speed and hosting advantages behind better rankings
+- [How Much Does a WordPress to Next.js Migration Cost in 2026?](https://www.pandacodegen.com/blog/wordpress-migration-cost): Full price breakdown by project type with ROI calculation
+- [GoHighLevel Website Speed: Why GHL Sites Are Slow in 2026](https://www.pandacodegen.com/blog/gohighlevel-website-speed): Why GHL scores 20 to 45 on PageSpeed and how to fix it
+- [Your Real Shopify Monthly Bill](https://www.pandacodegen.com/blog/shopify-app-costs-real-monthly-bill): The hidden app costs that push Shopify bills past $1,000/month
+- [Webflow True Cost 2026](https://www.pandacodegen.com/blog/webflow-true-cost): What Webflow actually costs when you add up every fee
 
 ## Case Studies
-- [MyCustomPatches](https://www.pandacodegen.com/work/mycustompatches): E-commerce migration, PageSpeed 40 to 100
-- [Panda Patches](https://www.pandacodegen.com/work/panda-patches): Custom Shopify headless storefront
-- [Enterprise Ops](https://www.pandacodegen.com/work/enterprise-ops): Business operations dashboard
-- [Panda CodeLab](https://www.pandacodegen.com/work/panda-codelab): Internal development platform
+
+- [MyCustomPatches](https://www.pandacodegen.com/work/mycustompatches): E-commerce migration from slow Shopify theme to headless Next.js. PageSpeed went from 40 to 100.
+- [Panda Patches](https://www.pandacodegen.com/work/panda-patches): Custom Shopify headless storefront. Sub-second load time.
+- [Enterprise Ops](https://www.pandacodegen.com/work/enterprise-ops): Business operations dashboard built from scratch.
+- [Panda CodeLab](https://www.pandacodegen.com/work/panda-codelab): Custom agency website with Spline 3D, Framer Motion, and WCAG 2.1 AA. Under 1 second load.
+
+## Frequently Asked Questions
+
+**How much does a WordPress to Next.js migration cost?**
+Most migrations range from $8,000 to $35,000 depending on site size and complexity. Simple business sites start at $8,000. Complex sites with e-commerce, custom features, or large content libraries range from $15,000 to $35,000. See full breakdown at https://www.pandacodegen.com/blog/wordpress-migration-cost
+
+**How long does a migration take?**
+4-6 weeks for most business sites. Week 1: discovery and architecture. Weeks 2-4: build. Week 5: SEO migration and redirect mapping. Week 6: testing and zero-downtime launch.
+
+**What PageSpeed score do you guarantee?**
+95-100/100 on mobile and desktop. We have never delivered a site below 95. See proof at https://www.pandacodegen.com/how-to-achieve-100-pagespeed
+
+**Will I lose my Google rankings after migration?**
+No. We map every URL with 301 redirects before launch. Google sees continuity. Most clients see rankings improve within 30-60 days because the new site is significantly faster.
+
+**Do I own the code after the project?**
+Yes. You get the full GitHub repository, all documentation, and deployment access. No lock-in. Any developer in the world can maintain or extend it.
+
+**What is the hosting cost after migration?**
+$0/month on Vercel for most sites. Large enterprise sites may use paid Vercel plans at $20/month. Compare to WordPress managed hosting at $30-$100/month plus plugin fees.
 
 ## Company
+
 - [About Us](https://www.pandacodegen.com/about): Our team, mission, and approach
 - [Pricing](https://www.pandacodegen.com/pricing): Transparent fixed-price packages
 - [Contact](https://www.pandacodegen.com/contact): Get in touch for a free consultation
-- [Partners](https://www.pandacodegen.com/partners): White-label development program
+- [Partners](https://www.pandacodegen.com/partners): White-label development program for agencies
 
 ## Contact
+
 - Email: info@pandacodegen.com
 - Phone: +1 (302) 250-4340
 - Location: Missouri City, TX, USA
+- Clutch profile: https://clutch.co/profile/panda-code-gen
+- Trustpilot: https://www.trustpilot.com/review/pandacodegen.com

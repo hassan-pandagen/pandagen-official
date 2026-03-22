@@ -422,7 +422,7 @@ export default function WhyNextjsOverWordPressPage() {
                         </BlogText>
 
                         <BlogText>
-                            For e-commerce clients running campaigns, this is a non-trivial advantage. Your Shopify sale gets featured on a big newsletter. Traffic spikes 50×. The WordPress/WooCommerce site crashes. The Next.js custom store doesn&apos;t notice.
+                            For e-commerce clients running campaigns, this is a non-trivial advantage. Your Shopify sale gets featured on a big newsletter. Traffic spikes 50×. The WordPress/WooCommerce site crashes. The Next.js custom store doesn&apos;t notice. For a side-by-side look at how these platforms compare on every axis, see our full <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress vs Next.js breakdown</Link>.
                         </BlogText>
 
                         <BlogHeader>When Is WordPress Still the Right Choice?</BlogHeader>

@@ -94,23 +94,6 @@ const articleSchema = {
             ]
         },
         {
-            "@type": "HowTo",
-            "@id": "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress#howto",
-            "name": "How to Fix a Slow WordPress Site",
-            "description": "8 proven methods to speed up WordPress, ranked by impact, with realistic time savings for each.",
-            "totalTime": "PT20H",
-            "step": [
-                { "@type": "HowToStep", "position": 1, "name": "Remove Unused Plugins", "text": "Go to Plugins → Installed Plugins. Deactivate and delete plugins you haven't used in 30 days. Every plugin removed saves 2-15 HTTP requests per page load." },
-                { "@type": "HowToStep", "position": 2, "name": "Optimize Images", "text": "Install ShortPixel or Imagify. Compress all images to WebP format (50-70% smaller). Enable lazy loading so images below the fold don't load until scrolled." },
-                { "@type": "HowToStep", "position": 3, "name": "Enable Caching", "text": "Install WP Rocket ($49/year) or W3 Total Cache (free). Enable page caching, browser caching, and object caching to reduce server queries per visit." },
-                { "@type": "HowToStep", "position": 4, "name": "Use Global Servers (CDN)", "text": "Sign up for Cloudflare (free tier). Connect your website. Your site gets copied to 300+ servers worldwide so visitors load from the nearest location." },
-                { "@type": "HowToStep", "position": 5, "name": "Compress Files", "text": "Install Autoptimize or WP Rocket. Enable CSS/JS minification to remove extra whitespace. Combine small files into fewer requests." },
-                { "@type": "HowToStep", "position": 6, "name": "Database Optimization", "text": "Install WP-Optimize. Delete post revisions, remove spam comments, clean transients. Schedule weekly automatic cleanup." },
-                { "@type": "HowToStep", "position": 7, "name": "Choose Better Hosting", "text": "Switch from shared hosting to managed WordPress hosting: Kinsta ($35/mo), WP Engine ($30/mo), or Flywheel ($25/mo). These include caching and speed-optimized servers." },
-                { "@type": "HowToStep", "position": 8, "name": "Remove Page Builders", "text": "Replace Elementor, Divi, or WPBakery with a lightweight theme (GeneratePress, Astra) or Gutenberg blocks. Page builders add 1-2 seconds to every page load." }
-            ]
-        },
-        {
             "@type": "BreadcrumbList",
             "@id": "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress#breadcrumb",
             "itemListElement": [
@@ -625,7 +608,7 @@ export default function FixSlowWordPressPage() {
 
                         <BlogList items={[
                             "Export all content from WordPress (posts, pages, images)",
-                            "Rebuild on Next.js 15 with modern architecture",
+                            "Rebuild on Next.js 16 with modern architecture",
                             "301 redirects for all URLs (zero SEO loss)",
                             "Launch with zero downtime",
                             "Guarantee: 95+ PageSpeed score or we fix it for free"
@@ -726,7 +709,7 @@ export default function FixSlowWordPressPage() {
                         </div>
 
                         <BlogText>
-                            The math is simple. The choice is yours. But ask yourself: <BlogHighlight>If you're going to rebuild anyway (Method 8), why rebuild in WordPress?</BlogHighlight>
+                            The math is simple. The choice is yours. But ask yourself: <BlogHighlight>If you're going to rebuild anyway (Method 8), why rebuild in WordPress?</BlogHighlight> If a faster competitor is already outranking you, read our post on <Link href="/blog/why-competitor-outranks-you" className="text-cognac hover:underline">why your competitor outranks you</Link> to understand the full gap.
                         </BlogText>
                     </div>
 

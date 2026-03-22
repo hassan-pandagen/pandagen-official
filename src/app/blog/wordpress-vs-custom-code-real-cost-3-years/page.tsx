@@ -91,21 +91,6 @@ const articleSchema = {
             ]
         },
         {
-            "@type": "HowTo",
-            "@id": "https://www.pandacodegen.com/blog/wordpress-vs-custom-code-real-cost-3-years#howto",
-            "name": "How to Calculate WordPress vs Custom Code Total Cost of Ownership Over 3 Years",
-            "description": "A 5-step process to calculate your real 3-year website cost, including the hidden expenses most business owners miss when comparing WordPress to a custom-built site.",
-            "totalTime": "PT2H",
-            "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
-            "step": [
-                { "@type": "HowToStep", "position": 1, "name": "List all current WordPress direct costs", "text": "Search your email for hosting invoices, plugin subscription renewals, theme license fees, and any security tool subscriptions from the past 12 months. Multiply by 3 to get your 3-year direct cost estimate. For most business WordPress sites, this is $3,600 to $8,400/year." },
-                { "@type": "HowToStep", "position": 2, "name": "Add developer maintenance costs", "text": "Estimate hours per month spent on WordPress: plugin updates, conflict resolution, crash recovery, security scans. Multiply by developer hourly rate. Add any emergency fix invoices from the past year and multiply by 3." },
-                { "@type": "HowToStep", "position": 3, "name": "Test your site speed and estimate revenue impact", "text": "Run pagespeed.web.dev on Mobile. If your score is below 70, estimate traffic loss vs faster competitors. Conservative estimate: sites scoring below 50 lose 20% of potential organic traffic. Calculate annual revenue × 20% = annual lost revenue from speed. Multiply by 3 for your 3-year hidden cost." },
-                { "@type": "HowToStep", "position": 4, "name": "Calculate custom site 3-year total", "text": "A custom Next.js site: one-time build ($8,000 to $15,000) + Vercel hosting ($0 to $240/year) + no plugin fees + no maintenance developer retainer. Over 3 years: $8,000 to $15,000 total vs $15,000 to $25,000+ for WordPress. In Year 2 and 3, the custom site costs near zero while WordPress continues at $4,000 to $8,000/year." },
-                { "@type": "HowToStep", "position": 5, "name": "Calculate break-even date", "text": "Divide the custom site build cost by your current annual WordPress recurring costs (hosting + plugins + maintenance). The result is your break-even in years. Most businesses break even in 18 to 24 months on direct costs alone, and much sooner when including recovered traffic revenue." }
-            ]
-        },
-        {
             "@type": "BreadcrumbList",
             "@id": "https://www.pandacodegen.com/blog/wordpress-vs-custom-code-real-cost-3-years#breadcrumb",
             "itemListElement": [
@@ -609,7 +594,7 @@ export default function WordPressVsCustomCodeCostPage() {
                         ]} />
 
                         <BlogText>
-                            Step 2: Test your site speed at <strong>pagespeed.web.dev</strong>. If your Mobile Score is below 70, estimate how much traffic you&apos;re losing to faster competitors.
+                            Step 2: Test your site speed at <strong>pagespeed.web.dev</strong>. If your Mobile Score is below 70, estimate how much traffic you&apos;re losing to faster competitors. Our <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress vs Next.js comparison</Link> shows exactly where that gap comes from.
                         </BlogText>
 
                         <BlogText>

@@ -35,7 +35,15 @@ export default function WooCommerceServicePage() {
         "areaServed": ["US", "GB", "AU", "CA", "DE", "FR", "NL", "IE"],
         "serviceType": ["WooCommerce Migration", "WooCommerce to Next.js", "Custom E-Commerce", "Headless Commerce"],
         "priceRange": "$8,000 - $25,000",
-        "image": "https://www.pandacodegen.com/og-image.jpg"
+        "image": "https://www.pandacodegen.com/og-image.jpg",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "2",
+          "reviewCount": "2"
+        }
       },
       {
         "@type": "WebPage",
@@ -44,7 +52,8 @@ export default function WooCommerceServicePage() {
         "name": "WooCommerce Migration to Custom Code | PandaCodeGen",
         "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
         "about": { "@id": "https://www.pandacodegen.com/services/woocommerce#service" },
-        "inLanguage": "en-US"
+        "inLanguage": "en-US",
+        "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2", "[data-speakable='true']"] }
       },
       {
         "@type": "BreadcrumbList",
@@ -65,6 +74,24 @@ export default function WooCommerceServicePage() {
         "foundingDate": "2026",
         "areaServed": "Worldwide",
         "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"]
+      },
+      {
+        "@type": "Review",
+        "@id": "https://www.pandacodegen.com/services/woocommerce#review-clutch",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+        "author": { "@type": "Person", "name": "Executive, MC Patches LLC" },
+        "reviewBody": "Panda Code Gen successfully delivered a speedy, bug free website. They did exactly what they said they would, delivering a blazing fast Next.js website with a 100/100 PageSpeed score. The communication throughout was excellent.",
+        "datePublished": "2025-11-01",
+        "itemReviewed": { "@id": "https://www.pandacodegen.com/services/woocommerce#service" }
+      },
+      {
+        "@type": "Review",
+        "@id": "https://www.pandacodegen.com/services/woocommerce#review-trustpilot",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+        "author": { "@type": "Person", "name": "Marshall James" },
+        "reviewBody": "I recently worked with PandaCodeGen on rebuilding my business website and I am beyond impressed. Hassan handled everything professionally, and the final product exceeded my expectations. The site loads incredibly fast and looks stunning.",
+        "datePublished": "2026-03-01",
+        "itemReviewed": { "@id": "https://www.pandacodegen.com/services/woocommerce#service" }
       },
       {
         "@type": "FAQPage",

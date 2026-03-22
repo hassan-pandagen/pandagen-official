@@ -15,7 +15,7 @@ const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 const UCPFlowAnimation = dynamic(() => import("@/components/blog/UCPFlowAnimation"));
 
 export const metadata: Metadata = {
-    title: { absolute: "Customers Can Now Buy Inside Google Without Visiting Your Website | Is Your Store Ready?" },
+    title: { absolute: "Google UCP: Buy Without Leaving Search | PandaCodeGen" },
     description: "Google's new UCP lets customers buy products without ever visiting your website. Here's what every e-commerce store owner needs to understand, in plain English.",
     alternates: {
         canonical: '/blog/google-universal-commerce-protocol-what-it-means-for-your-store',
@@ -92,21 +92,6 @@ const articleSchema = {
                 "@type": "SpeakableSpecification",
                 "cssSelector": ["h1", "h2", "[data-speakable='true']"]
             }
-        },
-        {
-            "@type": "HowTo",
-            "@id": "https://www.pandacodegen.com/blog/google-universal-commerce-protocol-what-it-means-for-your-store#howto",
-            "name": "How to Prepare Your Store for Google Universal Commerce Protocol",
-            "description": "A 5-step process to make your e-commerce store discoverable and purchasable through Google's AI Mode and Universal Commerce Protocol before mass adoption hits.",
-            "totalTime": "PT2W",
-            "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
-            "step": [
-                { "@type": "HowToStep", "position": 1, "name": "Verify your platform's UCP readiness", "text": "Shopify: UCP support is built in: log into your Shopify admin, go to Sales Channels → Google, and verify your Google Merchant Center connection is active and your product feed is syncing. WooCommerce: requires a developer to build the MCP integration manually. Wix/Squarespace: no UCP support exists yet." },
-                { "@type": "HowToStep", "position": 2, "name": "Audit your product data completeness", "text": "AI agents need clean, structured data to recommend your products. Check every product has: accurate title, complete description (100+ words), high-quality images, correct pricing, live inventory count, and structured attributes (size, colour, material). Incomplete product data is the most common reason AI agents skip a store." },
-                { "@type": "HowToStep", "position": 3, "name": "Verify Google Merchant Center product feed", "text": "Log into Google Merchant Center and check your product feed for errors and warnings. UCP relies on the same structured data as Google Shopping. Resolve any disapproved products, fix missing GTINs or MPNs, and ensure all required attributes are present. A clean Merchant Center feed is a prerequisite for UCP transactions." },
-                { "@type": "HowToStep", "position": 4, "name": "Optimise product titles and descriptions for AI queries", "text": "AI agents match customer intent to product data using natural language. Rewrite product titles to include the full product name, key attributes, and use case (not just model numbers). Write descriptions that answer real purchase questions: what it is, who it is for, what problem it solves, and what differentiates it from alternatives." },
-                { "@type": "HowToStep", "position": 5, "name": "Evaluate headless architecture for full UCP flexibility", "text": "Shopify's UCP integration covers most use cases. For maximum flexibility: connecting to ChatGPT, Bing Copilot, and Perplexity simultaneously alongside Google: a custom Next.js storefront with a Headless CMS like Sanity lets you publish product data to all AI shopping channels at once via a single API, giving every AI agent a clean, real-time feed of your inventory." }
-            ]
         },
         {
             "@type": "BreadcrumbList",
@@ -561,7 +546,7 @@ export default function UCPBlogPage() {
                                 <div className="w-8 h-8 rounded-full bg-stone-100 text-charcoal font-bold text-sm flex items-center justify-center shrink-0 mt-0.5">4</div>
                                 <div>
                                     <h3 className="text-lg font-bold text-charcoal mb-2">Make Your Site Fast</h3>
-                                    <p className="text-stone-600 text-sm leading-relaxed">AI agents don&apos;t just read your product data. They also check your site speed before recommending you. A slow site signals unreliable infrastructure. Stores that score 90+ on Google PageSpeed are prioritized. Check yours at <strong className="text-charcoal">pagespeed.web.dev</strong>. If you&apos;re below 70 on mobile, that&apos;s hurting you now and will hurt you more as UCP scales.</p>
+                                    <p className="text-stone-600 text-sm leading-relaxed">AI agents don&apos;t just read your product data. They also check your site speed before recommending you. A slow site signals unreliable infrastructure. Stores that score 90+ on Google PageSpeed are prioritized. Check yours at <strong className="text-charcoal">pagespeed.web.dev</strong>. If you&apos;re below 70 on mobile, that&apos;s hurting you now and will hurt you more as UCP scales. Our guide on <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">achieving 100/100 PageSpeed</Link> covers the exact steps.</p>
                                 </div>
                             </div>
                         </div>

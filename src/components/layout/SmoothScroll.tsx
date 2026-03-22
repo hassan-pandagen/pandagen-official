@@ -1,38 +1,43 @@
 "use client";
 
-import dynamic from "next/dynamic";
-import { useEffect, useState } from "react";
-
-// Only load Lenis on desktop, never downloaded on mobile
-const DesktopLenis = dynamic(
-  () => import("lenis/react").then((m) => {
-    const ReactLenis = m.ReactLenis;
-    return function LenisWrapper({ children }: { children: React.ReactNode }) {
-      return (
-        <ReactLenis root options={{ lerp: 0.1, duration: 1.5, smoothWheel: true }}>
-          <div className="relative z-10">{children}</div>
-        </ReactLenis>
-      );
-    };
-  }),
-  { ssr: false }
-);
+import { useEffect } from "react";
 
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
-  const [isMobile, setIsMobile] = useState(true); // Default true, safe for SSR
-  const [mounted, setMounted] = useState(false);
-
   useEffect(() => {
-    setMounted(true);
-    setIsMobile(window.innerWidth < 768);
-    const onResize = () => setIsMobile(window.innerWidth < 768);
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
+    // Skip on mobile — smooth scroll is a desktop-only enhancement
+    if (window.innerWidth < 768) return;
+
+    let lenis: import("lenis").default | null = null;
+    let rafId: number;
+    let loaded = false;
+
+    const init = async () => {
+      if (loaded) return;
+      loaded = true;
+
+      const { default: Lenis } = await import("lenis");
+      lenis = new Lenis({ lerp: 0.1, duration: 1.5, smoothWheel: true });
+
+      function raf(time: number) {
+        lenis!.raf(time);
+        rafId = requestAnimationFrame(raf);
+      }
+      rafId = requestAnimationFrame(raf);
+    };
+
+    // Defer to idle so it never blocks LCP paint
+    if ("requestIdleCallback" in window) {
+      window.requestIdleCallback(() => init(), { timeout: 3000 });
+    } else {
+      setTimeout(() => init(), 3000);
+    }
+
+    return () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      if (lenis) lenis.destroy();
+    };
   }, []);
 
-  if (!mounted || isMobile) {
-    return <div className="overflow-x-hidden relative z-10">{children}</div>;
-  }
-
-  return <DesktopLenis>{children}</DesktopLenis>;
+  // No wrapper div — children render exactly as-is, zero re-render on mount
+  return <>{children}</>;
 }

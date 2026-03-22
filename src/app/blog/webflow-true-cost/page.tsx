@@ -16,14 +16,14 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Why Your Webflow Site Is Costing You More Than You Think | PandaCodeGen",
+    title: "Webflow True Cost 2026: Why It Costs More Than You Think | PandaCodeGen",
     description: "Webflow looks affordable at $29/month. But add CMS hosting, form limits, bandwidth overages, and the SEO ceiling, and you are quietly losing $5K to $15K a year.",
     alternates: {
         canonical: '/blog/webflow-true-cost',
     },
     keywords: ["Webflow cost", "Webflow alternative", "Webflow vs custom code", "Webflow migration", "Webflow SEO limitations", "Webflow to Next.js", "Webflow pricing 2026"],
     openGraph: {
-        title: "Why Your Webflow Site Is Costing You More Than You Think",
+        title: "Webflow True Cost 2026: Why It Costs More Than You Think",
         description: "Webflow looks affordable at $29/month. But add CMS hosting, form limits, and the SEO ceiling, and you are quietly losing thousands a year.",
         type: "article",
         publishedTime: "2026-03-18",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Why Your Webflow Site Is Costing You More Than You Think",
+        title: "Webflow True Cost 2026: Why It Costs More Than You Think",
         description: "Webflow looks affordable at $29/month. But add CMS hosting, form limits, and the SEO ceiling, and you are quietly losing thousands a year.",
     },
 };
@@ -44,7 +44,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/webflow-true-cost#article",
-            "headline": "Why Your Webflow Site Is Costing You More Than You Think",
+            "headline": "Webflow True Cost 2026: Why It Costs More Than You Think",
             "description": "Webflow looks affordable at $29/month. But add CMS hosting, form limits, bandwidth overages, and the SEO ceiling, and you are quietly losing thousands a year in revenue.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-18T00:00:00-05:00",
@@ -174,7 +174,7 @@ export default function WebflowTrueCostPage() {
                     <div className="mb-10">
                         <div className="inline-block px-3 py-1 text-xs font-medium bg-stone-100 text-stone-600 rounded-full mb-4">Comparison</div>
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                            Why Your Webflow Site Is <span className="font-serif italic text-cognac">Costing You More</span> Than You Think
+                            Webflow True Cost 2026: <span className="font-serif italic text-cognac">Why It Costs More</span> Than You Think
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
@@ -468,6 +468,35 @@ export default function WebflowTrueCostPage() {
                             <Link href="/blog/how-to-achieve-100-pagespeed" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 complete guide to achieving 100/100 PageSpeed
                             </Link>.
+                        </BlogText>
+
+                        <BlogHeader>3-Year Total Cost of Ownership: Webflow vs Custom Code</BlogHeader>
+                        <BlogText>
+                            Most people only look at the monthly price. The true picture is the 3-year total, including both platform costs and the revenue impact of your PageSpeed score:
+                        </BlogText>
+                        <BlogList items={[
+                            "Webflow CMS plan at $49/month + forms + integrations ($150/month average): $5,400 over 3 years",
+                            "Lost organic traffic from PageSpeed 60 vs 97: assuming $5,000/month in organic revenue, a 20% gap = $1,000/month lost = $36,000 over 3 years",
+                            "Webflow 3-year true cost: $5,400 platform + $36,000 lost revenue = $41,400",
+                            "Custom Next.js: $0 to $20/month hosting = $720 over 3 years. Build cost: $8,000 to $15,000 one time",
+                            "Custom code 3-year true cost: $720 + $12,000 build = $12,720"
+                        ]} />
+                        <BlogText>
+                            That is a difference of approximately $28,680 over 3 years in this example. The numbers shift based on your actual Webflow spend and your current traffic, but the direction is always the same: custom code has a higher upfront cost and a lower 3-year total cost once you account for platform fees and the SEO revenue gap.
+                        </BlogText>
+
+                        <BlogHeader>What Type of Business Actually Migrates Away from Webflow?</BlogHeader>
+                        <BlogText>
+                            The businesses we migrate from Webflow share a few common characteristics. If any of these match your situation, the migration conversation is worth having:
+                        </BlogText>
+                        <BlogList items={[
+                            "Professional services firms (lawyers, consultants, agencies) spending $100+/month on Webflow and frustrated that organic traffic has plateaued despite good content",
+                            "SaaS companies that have outgrown Webflow's static pages and need marketing pages to connect to their app's API",
+                            "E-commerce businesses that tried Webflow's native e-commerce and found the limitations too restrictive as the product catalog grew",
+                            "Any business where a competitor with a coded site is consistently ranking higher for the same keywords, despite lower content quality"
+                        ]} />
+                        <BlogText>
+                            The businesses that stay on Webflow are typically solo operators or small teams where the visual editor's ease of use outweighs the performance and cost trade-offs. That is a legitimate choice for that stage of business. But as you grow, the constraints of a platform you do not own become more expensive than the build cost of something you do.
                         </BlogText>
                     </div>
 

@@ -42,7 +42,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/shopify-headless#article",
-            "headline": "Your Shopify Store Loads in 4 Seconds. We Got It to 0.8. Here's Exactly How.",
+            "headline": "Your Shopify Store Loads in 4 Seconds. Headless Shopify Got It to 0.8. Here's Exactly How.",
             "description": "Most Shopify stores fail Core Web Vitals because Liquid templates are render-blocking by design. Here's the exact headless stack we use.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-01-10T00:00:00-05:00",
@@ -86,22 +86,6 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Deloitte: Milliseconds Make Millions", "url": "https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" },
                 { "@type": "CreativeWork", "name": "Portent Research: Site speed impact on conversion rates", "url": "https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" },
                 { "@type": "CreativeWork", "name": "HTTP Archive Web Almanac: Ecommerce performance", "url": "https://almanac.httparchive.org/en/2024/ecommerce" }
-            ]
-        },
-        {
-            "@type": "HowTo",
-            "@id": "https://www.pandacodegen.com/blog/shopify-headless#howto",
-            "name": "How to Make Your Shopify Store Load in Under 1 Second with Headless Architecture",
-            "description": "The exact 6-step process to go from a slow Shopify Liquid theme to a blazing-fast Next.js headless storefront.",
-            "totalTime": "PT6W",
-            "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "18000" },
-            "step": [
-                { "@type": "HowToStep", "position": 1, "name": "Audit Your Current Store Speed", "text": "Run your store through pagespeed.web.dev and GTmetrix. Document current load time, Mobile PageSpeed score, and which scripts are causing the most delay. This is your before benchmark." },
-                { "@type": "HowToStep", "position": 2, "name": "Create Shopify Storefront API Access", "text": "In your Shopify admin, create a Custom App with Storefront API permissions. You need read access to products, collections, cart, and checkout. Generate a Storefront API token." },
-                { "@type": "HowToStep", "position": 3, "name": "Build Next.js Frontend with Server Components", "text": "Create a Next.js 15 app using the Commerce starter. Configure it to connect to your Shopify Storefront API. Build product pages, collection pages, and cart as React Server Components for maximum speed." },
-                { "@type": "HowToStep", "position": 4, "name": "Optimise Images and Defer Third-Party Scripts", "text": "Use next/image for all product images with WebP serving, lazy loading, and responsive sizes. Defer all third-party scripts (reviews, chat, analytics) until after page load: zero blocking on initial render." },
-                { "@type": "HowToStep", "position": 5, "name": "Deploy to Vercel Edge Network", "text": "Deploy to Vercel and enable Edge Runtime for product and collection pages. Pre-generate your top 100 product pages at build time. Set up ISR (Incremental Static Regeneration) for automatic cache refresh when products update." },
-                { "@type": "HowToStep", "position": 6, "name": "Keep Shopify Checkout Intact", "text": "Do not replace Shopify checkout. It handles payments, fraud detection, and tax compliance. Your headless frontend redirects to Shopify checkout for the final purchase step: you keep all Shopify reliability." }
             ]
         },
         {
@@ -180,7 +164,7 @@ export default function ShopifyHeadlessPage() {
                         </div>
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight text-charcoal">
                             Your Shopify Store Loads in 4 Seconds.{" "}
-                            <span className="font-serif italic text-cognac">We Got It to 0.8.</span>{" "}
+                            <span className="font-serif italic text-cognac">Headless Shopify Got It to 0.8.</span>{" "}
                             Here&apos;s Exactly How.
                         </h1>
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
@@ -301,6 +285,36 @@ export default function ShopifyHeadlessPage() {
                         ]} />
                         <BlogText>
                             <BlogHighlight>If your store does under $150K/year, optimise your current theme first.</BlogHighlight> <a href="/services/ecommerce" className="text-cognac hover:underline">Headless</a> is a significant investment that requires meaningful revenue to justify the ROI within 12 months.
+                        </BlogText>
+
+                        <BlogHeader>Shopify Hydrogen vs Custom Next.js: Which Should You Build On?</BlogHeader>
+                        <BlogText>
+                            Shopify has its own headless framework called Hydrogen. It is built on React and Remix. Before committing to a build, you need to understand the trade-offs:
+                        </BlogText>
+                        <BlogList items={[
+                            "Hydrogen is Shopify-native: Deeply integrated with Shopify APIs, Oxygen hosting (Shopify's edge network), and built-in cart/checkout components",
+                            "Hydrogen lock-in: You host on Shopify Oxygen, which ties you to Shopify's infrastructure and pricing for the long term",
+                            "Custom Next.js: Hosted on Vercel, completely independent of Shopify. You could swap your commerce backend later without rebuilding the frontend",
+                            "Performance: Both deliver similar load times when built correctly. The difference is in maintenance cost and flexibility",
+                            "Cost: Hydrogen requires Remix expertise, which is a narrower talent pool. Next.js developers are more widely available"
+                        ]} />
+                        <BlogText>
+                            Our recommendation: most growing brands ($200K to $2M/year) benefit more from a custom Next.js build because it keeps vendor options open and is easier to maintain long-term. Hydrogen is best if you are deeply committed to Shopify's ecosystem and want the tightest possible integration with Shopify's own roadmap.
+                        </BlogText>
+
+                        <BlogHeader>What Happens in the First 90 Days After Going Headless?</BlogHeader>
+                        <BlogText>
+                            The performance improvement is immediate. The SEO and revenue compounding take 60 to 90 days to fully materialise:
+                        </BlogText>
+                        <BlogList items={[
+                            "Day 1 to 7: PageSpeed jumps to 90 to 97. Google Search Console shows Core Web Vitals switching from Poor to Good",
+                            "Week 2 to 3: Bounce rate drops. Sessions that previously ended within 3 seconds now stay and browse. Mobile engagement metrics improve significantly",
+                            "Month 1 to 2: Conversion rate improvement becomes measurable. Most stores see a 40 to 80% lift in mobile conversions within the first 30 days of full traffic on the new site",
+                            "Month 2 to 3: Organic rankings begin recovering and improving. Pages that were stuck at position 8 to 12 start moving toward position 3 to 5 as Google registers the improved Core Web Vitals",
+                            "Month 3+: Revenue impact compounds. Better rankings bring more traffic, and the higher conversion rate means each new visitor is worth more than before"
+                        ]} />
+                        <BlogText>
+                            The stores that see the fastest ROI are those that launch during a high-traffic period (Q4 for most e-commerce). Every percentage point improvement in conversion rate is worth more per month during peak season than during a slow month. Timing your headless launch to coincide with your seasonal peak is a strategy worth discussing during the planning phase.
                         </BlogText>
                     </div>
 
