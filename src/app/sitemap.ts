@@ -16,11 +16,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '', lastModified: '2026-03-22', changeFrequency: 'weekly', priority: 1.0 },
     { path: '/services', lastModified: '2026-03-22', changeFrequency: 'monthly', priority: 0.9 },
     { path: '/pricing', lastModified: '2026-03-01', changeFrequency: 'monthly', priority: 0.8 },
-    { path: '/contact', lastModified: '2026-03-01', changeFrequency: 'monthly', priority: 0.7 },
+    { path: '/contact', lastModified: '2026-03-23', changeFrequency: 'monthly', priority: 0.7 },
 
     // 2. Service Pillars
-    { path: '/services/wordpress-migration', lastModified: '2026-03-01', changeFrequency: 'monthly', priority: 0.9 },
-    { path: '/services/ecommerce', lastModified: '2026-03-01', changeFrequency: 'monthly', priority: 0.9 },
+    { path: '/services/wordpress-migration', lastModified: '2026-03-23', changeFrequency: 'monthly', priority: 0.9 },
+    { path: '/services/ecommerce', lastModified: '2026-03-23', changeFrequency: 'monthly', priority: 0.9 },
     { path: '/services/custom-engineering', lastModified: '2026-03-01', changeFrequency: 'monthly', priority: 0.8 },
 
     // 3. Platform-Specific Service Pages
