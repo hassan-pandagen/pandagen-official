@@ -23,6 +23,27 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "webflow-migration-cost",
+    title: "How Much Does a Webflow Migration Cost? The 2026 Breakdown by Site Size",
+    excerpt: "A 5 to 20 page Webflow site costs $3,000 to $7,000 to migrate. A 50 to 100 page site costs $12,000 to $20,000. Here is the full breakdown by site size, what drives the cost, and exactly when migration pays for itself.",
+    category: "Webflow",
+    readTime: "10 min",
+    date: "Mar 25",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: true,
+    illustrationType: 'migration',
+    lastModified: "2026-03-25",
+    faqs: [
+      { question: "How much does it cost to migrate a Webflow site to custom code?", answer: "A Webflow to Next.js migration costs $3,000 to $20,000 depending on site size. Small sites with 5 to 20 pages cost $3,000 to $7,000. Mid-size sites with 20 to 50 pages cost $7,000 to $14,000. Large sites with 50 to 100 pages cost $12,000 to $20,000. Enterprise sites with 100+ pages or complex CMS integrations start at $18,000. The cost range reflects real differences in scope: page count, custom animations, CMS collections, form complexity, and integration work." },
+      { question: "How long does a Webflow to Next.js migration take for a 50-100 page site?", answer: "A 50 to 100 page Webflow migration takes 4 to 8 weeks. Week 1 is audit and planning: URL mapping, content inventory, redirect strategy. Weeks 2 to 5 are the build: converting pages, migrating CMS content, rebuilding animations and forms. Week 6 is QA and redirect verification. Weeks 7 to 8 are zero-downtime DNS cutover and post-launch monitoring. Timeline depends heavily on how many custom CMS collections you have and whether you need third-party API integrations rebuilt." },
+      { question: "Will I lose my Google rankings when migrating from Webflow to Next.js?", answer: "Not if the migration is done correctly. The critical steps are: map every URL with 301 redirects, preserve all title tags and meta descriptions, maintain canonical URLs, implement equivalent schema markup on the new site, and submit a new sitemap to Google Search Console immediately after launch. When executed properly, rankings hold steady within 30 days and typically improve within 60 to 90 days because Google rewards the faster Core Web Vitals scores that Next.js delivers. Webflow sites score 55 to 75 on mobile. Next.js sites score 95 to 100." },
+      { question: "What is included in a professional Webflow migration?", answer: "A complete Webflow migration should include: full URL audit and 301 redirect mapping, migration of all metadata (title tags, meta descriptions, canonical URLs, Open Graph tags), content migration from Webflow CMS to static or headless CMS, image optimisation to WebP format with correct sizing, schema markup implementation for all page types, Google Search Console setup and sitemap submission, Core Web Vitals baseline verification (target 90+ on all three), zero-downtime DNS cutover, and 30-day post-launch monitoring. Get any quote in writing that specifies each item." },
+      { question: "Is migrating from Webflow to Next.js worth the investment?", answer: "For most businesses spending $100+/month on Webflow with a PageSpeed Mobile score below 70, migration pays for itself within 12 to 18 months. The ROI calculation has three components: hosting savings ($1,200 to $4,700/year), traffic improvement from better Core Web Vitals (15 to 35% organic traffic increase over 90 days), and conversion improvement from faster load times. A business with $500K/year in revenue that improves conversion rate by 10% from speed alone generates $50,000 in additional revenue, dwarfing a $12,000 to $20,000 migration cost." },
+      { question: "How much can I save per year by leaving Webflow?", answer: "Moving from Webflow to a custom Next.js site on Vercel saves $1,200 to $4,700 per year in hosting alone. A typical business on Webflow's CMS plan ($39/month) with form submissions ($19/month) and third-party integrations ($50/month) pays $1,296 to $2,400/year. A custom Next.js site on Vercel costs $0 to $240/year. Over 3 years, the hosting difference alone is $3,600 to $14,100. Add the revenue from improved SEO rankings and the savings compound significantly." },
+    ]
+  },
+  {
     id: "wordpress-migration-cost",
     title: "How Much Does a WordPress to Next.js Migration Cost in 2026?",
     excerpt: "The honest answer is $3,000 to $25,000. This breakdown explains exactly what drives migration cost, what tier your site falls into, and how to calculate whether migration makes financial sense.",

@@ -28,6 +28,13 @@ export default function MigrationPage() {
         "areaServed": "Worldwide",
         "serviceType": ["WordPress Migration", "WordPress to Custom Code", "WordPress Alternative"],
         "priceRange": "$5,000 - $15,000",
+        "telephone": "+13022504340",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Missouri City",
+          "addressRegion": "TX",
+          "addressCountry": "US"
+        },
         "image": "https://www.pandacodegen.com/og-image.jpg"
       },
       {

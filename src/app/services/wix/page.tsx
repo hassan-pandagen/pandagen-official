@@ -32,6 +32,13 @@ export default function WixServicePage() {
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
         "serviceType": ["Wix Development", "Wix Migration", "Wix to Next.js", "Wix Alternative"],
+        "telephone": "+13022504340",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Missouri City",
+          "addressRegion": "TX",
+          "addressCountry": "US"
+        },
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "5",

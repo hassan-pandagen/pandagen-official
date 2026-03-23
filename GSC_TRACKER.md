@@ -14,6 +14,7 @@
 | 0 | Mar 14, 2026 | 10 | 453 | 2.2% | 13.8 | +55 impressions, position improved ~1 spot. SEO fixes deployed (schema, org data, sitemap timestamps, author bios, tables, key takeaways). Blog #21 published (nextjs-hosting-zero-cost). LCP fix (framer-motion removed from critical path) pending deploy |
 | 0 | Mar 15, 2026 | 10 | 487 | 2.1% | 13.8 | +34 impressions in 1 day. Published Medium + Dev.to cross-posts (dofollow backlinks). 63 countries showing impressions. US: 255 impressions, 0 clicks. |
 | **1** | **Mar 16, 2026** | **10** | **513** | **1.9%** | **14** | **+26 impressions. shopify-dawn-theme-slow exploding: 1,817% impression spike (GSC recommendation). 9 desktop clicks, 1 mobile. Blog #22 published (what-is-headless-commerce). Audit tool rewrite deployed (self-contained Resend flow, AI readiness scoring fix).** |
+| **2** | **Mar 24, 2026** | **11** | **744** | **1.5%** | **15** | **+231 impressions (+45%). 42 indexed (+9 pages). shopify-dawn-theme-slow: 171 impressions at pos 6.4 — clicks imminent. US: 396 impressions, 1 click only (0.3% CTR). Vercel 308 fix deployed. Canonical validation started.** |
 
 > **Week-over-week (Mar 7-13 vs Feb 28-Mar 6):** Impressions 115 vs 6 = **+1,817%** on shopify-dawn-theme-slow page alone.
 
@@ -25,12 +26,26 @@
 |------|---------------|-------------------|-------------|
 | Mar 12, 2026 | 33 | 13 | 18 |
 | Mar 16, 2026 | — | — | — |
+| Mar 24, 2026 | 42 | 13 | 20+ (Bing Site Explorer: 20 root + 6 blog) |
 
 > **Next check-in:** Share Indexing > Pages screenshot so we can update this.
 
 ---
 
 ## Top Pages
+
+### Mar 24, 2026 (from screenshots)
+
+| Page | Clicks | Impressions | CTR | Position | Trend |
+|------|--------|-------------|-----|----------|-------|
+| /blog/shopify-dawn-theme-slow | 0 | 171 | 0% | 6.4 | UP from 121 — clicks coming soon |
+| /blog/how-to-achieve-100-pagespeed | 1 | 63 | 1.6% | 23.2 | UP from 51 |
+| /blog/why-we-chose-nextjs-over-wordpress-2026 | 0 | 55 | 0% | 11.2 | UP from 47 |
+| /blog/shopify-plus-still-slow | 0 | 45 | 0% | 7.1 | UP from 43 |
+| pandacodegen.com/ (non-www) | 8 | 38 | 21.1% | 2.2 | Branded — non-www version |
+| www.pandacodegen.com/ | 1 | 39 | 2.6% | 2.7 | www version |
+| /services | 1 | 27 | 3.7% | 5.0 | Steady |
+| /about/imran | 1 | 1 | 100% | 5.0 | Branded name search |
 
 ### Mar 16, 2026 (from screenshots)
 
@@ -74,6 +89,23 @@
 
 ## Top Queries
 
+### Mar 24, 2026
+
+| Query | Clicks | Impressions | CTR | Position | Notes |
+|-------|--------|-------------|-----|----------|-------|
+| panda codegen | 1 | 24 | 4.2% | 2.3 | Branded |
+| pandagen | 0 | 30 | 0% | 3.0 | Branded variant |
+| pagespeed 100 | 0 | 11 | 0% | 88.4 | Too competitive |
+| headless bigcommerce | 0 | 10 | 0% | 61.6 | New organic discovery |
+| webflow migration cost 50-100 page site | 0 | 8 | 0% | 9.6 | NEAR PAGE 1 — write Webflow migration cost post |
+| do shortcodes slow down wordpress | 0 | 7 | 0% | 67.4 | — |
+| how to fix slow wordpress | 0 | 7 | 0% | 95.7 | Post exists, needs more links |
+| webflow ongoing costs after initial migration | 0 | — | 0% | — | New intent signal |
+
+> **Opportunity:** "webflow migration cost 50-100 page site" at position 9.6 — one new post targeting Webflow migration cost could rank page 1.
+
+### Mar 15, 2026 (previous)
+
 | Date | Query | Clicks | Impressions | Position |
 |------|-------|--------|-------------|----------|
 | Mar 15 | panda codegen | 1 | 22 | — |
@@ -84,11 +116,28 @@
 | Mar 15 | do shortcodes slow down wordpress | 0 | 3 | — |
 | Mar 15 | shopify dawn theme performance improvements | 0 | 1 | — |
 
-> **Next check-in:** Share Performance > Queries tab so we can see which queries are driving shopify-dawn-theme-slow impressions.
-
 ---
 
 ## Top Countries
+
+| Date | Country | Clicks | Impressions |
+|------|---------|--------|-------------|
+### Mar 24, 2026
+
+| Country | Clicks | Impressions | CTR | Position | Notes |
+|---------|--------|-------------|-----|----------|-------|
+| Pakistan | 5 | 12 | 41.7% | 5.7 | Branded searches, not target market |
+| United States | 1 | 396 | 0.3% | 16.0 | Target market — impressions strong, CTR awful |
+| Spain | 1 | 15 | 6.7% | 37.9 | — |
+| Philippines | 1 | 9 | 11.1% | 4.7 | — |
+| Poland | 1 | 9 | 11.1% | 10.1 | — |
+| China | 1 | 5 | 20% | 7.6 | — |
+| Australia | 1 | 5 | 20% | 17.2 | — |
+| Canada | 0 | 59 | 0% | — | High impressions, no clicks — same CTR issue as US |
+
+> **Critical insight:** US has 396 impressions (53% of total) but only 1 click = 0.3% CTR. Average position 16 (page 2). The shopify-dawn-theme-slow post at position 6.4 will be the first US click-driver once it breaks into top 5. Title/meta optimization on top pages needed to improve CTR from page 2.
+
+### Mar 15, 2026 (previous)
 
 | Date | Country | Clicks | Impressions |
 |------|---------|--------|-------------|
@@ -98,8 +147,6 @@
 | Mar 15 | Indonesia | 0 | 14 |
 | Mar 15 | Spain | 1 | 13 |
 | Mar 15 | Pakistan | 5 | 8 |
-
-> **Next check-in:** Share Performance > Countries tab for updated numbers.
 
 ---
 
@@ -161,6 +208,8 @@ Track which posts are outperforming so we write more like them.
 |---|------|------|----------------|
 | 21 | Mar 13, 2026 | nextjs-hosting-zero-cost | free nextjs hosting |
 | 22 | Mar 14, 2026 | what-is-headless-commerce | what is headless commerce |
+| 23 | Mar 22, 2026 | wordpress-migration-cost | wordpress migration cost |
+| 24 | Mar 22, 2026 | gohighlevel-website-speed | gohighlevel website speed |
 
 ---
 
@@ -171,6 +220,8 @@ Track which posts are outperforming so we write more like them.
 | Mar 15, 2026 | Dev.to | Dofollow (canonical) | headless-commerce cross-post | Published |
 | Mar 15, 2026 | Medium | Dofollow (canonical) | headless-commerce cross-post | Published |
 | Mar 15, 2026 | Clutch | Dofollow (profile) | Company profile + 1 review | Published |
+| Mar 24, 2026 | GoodFirms | Dofollow (profile) | Company profile + 1 review (Matt Conner, MC Patches LLC) | Published |
+| Mar 24, 2026 | Google | Review | 5-star review (Matt Conner, MC Patches LLC) | Published |
 
 ---
 
@@ -200,6 +251,27 @@ Track which posts are outperforming so we write more like them.
 | Mar 16, 2026 | AI Readiness scoring: rebalanced from max 90 to max 100, added @graph detection | Accurate scoring for optimized sites |
 | Mar 16, 2026 | CalEmbed: fixed [object Event] runtime error | Bug fix |
 | Mar 16, 2026 | ServicesHub: fixed hydration mismatch on "&" character | Bug fix |
+| Mar 22, 2026 | Published blogs #23 + #24 (wordpress-migration-cost, gohighlevel-website-speed) | New content, IndexNow eligible |
+| Mar 22, 2026 | Fixed 11 blog @graph schema JSON comma errors (build was failing) | Schema now valid across all 26 posts |
+| Mar 23, 2026 | WordPress migration H1: "Escape" → "Migrate" + proof strip added above CTA | PPC ad copy match, CRO |
+| Mar 23, 2026 | Ecommerce H1: "Stop Paying Shopify App Taxes" → "Stop Losing Sales to Slow Shopify" + proof strip | PPC ad copy match, CRO |
+| Mar 23, 2026 | Contact form: phone field added (optional), message made optional | Higher form completion rate |
+| Mar 23, 2026 | Sitemap lastModified updated for /services/wordpress-migration, /services/ecommerce, /contact | Fresher crawl signals |
+| Mar 24, 2026 | Vercel: pandacodegen.com → 308 permanent redirect to www.pandacodegen.com | Fixes GSC canonical split, consolidates link equity |
+| Mar 24, 2026 | GSC "Alternative page with proper canonical tag" — 3 pages — Validate Fix clicked | Root cause: apex domain serving content directly. Now fixed. |
+| Mar 24, 2026 | Mobile PageSpeed fix: hid blur-[140px]/blur-3xl (Hero) + blur-[150px]/blur-[120px] (ServicesHub) on mobile | Removes GPU-heavy CSS, improves mobile LCP |
+| Mar 24, 2026 | Blog card $2,300 stat font reduced (text-4xl/5xl → text-3xl/4xl) — was clipping in 180px column | Visual bug fix |
+
+---
+
+## Indexing Issues Log
+
+| Issue | Pages | Status | Action |
+|-------|-------|--------|--------|
+| Page with redirect (HTTP versions) | 2 | Validation Failed — NOT a real issue | `http://pandacodegen.com/` and `http://www.pandacodegen.com/` redirect to HTTPS. This is correct behavior. GSC marks them "not indexed" because they redirect — that's intended. No action needed. |
+| Alternative page with proper canonical tag | 3 | Validation Started 23/03/2026 | Root cause: apex domain was serving content instead of redirecting. Fixed via Vercel 308 redirect (Mar 24). Affected: /blog/nextjs-hosting-zero-cost, /blog/shopify-app-costs-real-monthly-bill, pandacodegen.com/. Should auto-resolve within 2-4 weeks. |
+| Discovered — currently not indexed | 8 | Validation Started 10/02/2026 | Normal for newer pages. Affected: /blog/webflow-true-cost, /services/custom-engineering, /services/gohighlevel, /services/squarespace, /services/webflow, /services/woocommerce, /services/wordpress-migration, /work/panda-patches. Will index as domain authority builds. Can request indexing manually. |
+| Crawled — currently not indexed | 0 | Passed | Resolved. |
 
 ---
 
@@ -256,4 +328,4 @@ If something looks off or you want to understand a trend, just tell me and I'll 
 
 ---
 
-*Last updated: March 16, 2026*
+*Last updated: March 24, 2026 — Week 2 screenshots processed*

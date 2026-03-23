@@ -264,7 +264,7 @@ function BlogPageInner() {
                           className="relative overflow-hidden flex flex-col justify-center p-7"
                           style={{ backgroundColor: sd.bgTint, borderRight: `1px solid ${sd.border}` }}
                         >
-                          <div className="text-4xl md:text-5xl font-black leading-none" style={{ color: sd.statColor }}>
+                          <div className="text-3xl md:text-4xl font-black leading-none" style={{ color: sd.statColor }}>
                             {sd.stat}
                           </div>
                           <div className="text-[10px] font-bold uppercase tracking-wider mt-2" style={{ color: `${sd.statColor}99` }}>

@@ -36,8 +36,8 @@ export default function Hero() {
         }}
       />
 
-      {/* Soft warm glow */}
-      <div className="absolute top-1/3 right-[10%] w-[500px] h-[500px] bg-stone-200/50 blur-[140px] rounded-full pointer-events-none" />
+      {/* Soft warm glow — hidden on mobile (expensive GPU blur) */}
+      <div className="hidden md:block absolute top-1/3 right-[10%] w-[500px] h-[500px] bg-stone-200/50 blur-[140px] rounded-full pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
@@ -74,7 +74,7 @@ export default function Hero() {
 
         {/* --- RIGHT: AUDIT WIDGET --- */}
         <div className="relative">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-white/50 blur-3xl rounded-full pointer-events-none" />
+          <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-white/50 blur-3xl rounded-full pointer-events-none" />
           <div className="relative z-10">
             <AuditWidget />
           </div>

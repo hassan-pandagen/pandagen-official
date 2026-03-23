@@ -31,7 +31,14 @@ export default function EcommercePage() {
         "description": "Custom headless Shopify storefronts that load instantly. No templates, no monthly app fees, complete customization.",
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
-        "serviceType": ["Shopify Headless", "E-Commerce Development", "Shopify Migration", "Custom Shopify Storefront"]
+        "serviceType": ["Shopify Headless", "E-Commerce Development", "Shopify Migration", "Custom Shopify Storefront"],
+        "telephone": "+13022504340",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Missouri City",
+          "addressRegion": "TX",
+          "addressCountry": "US"
+        }
       },
       {
         "@type": "WebPage",

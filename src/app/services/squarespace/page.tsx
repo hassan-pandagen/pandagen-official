@@ -33,6 +33,13 @@ export default function SquarespaceServicePage() {
         "areaServed": "Worldwide",
         "serviceType": ["Squarespace Migration", "Squarespace to Next.js", "Squarespace Alternative", "Squarespace to Custom Code"],
         "priceRange": "$4,000 - $12,000",
+        "telephone": "+13022504340",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Missouri City",
+          "addressRegion": "TX",
+          "addressCountry": "US"
+        },
         "image": "https://www.pandacodegen.com/og-image.jpg",
         "aggregateRating": {
           "@type": "AggregateRating",

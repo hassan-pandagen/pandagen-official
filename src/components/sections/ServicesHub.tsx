@@ -16,7 +16,7 @@ export default function ServicesHub() {
   return (
     <section className="py-12 md:py-20 bg-paper relative">
       {/* Warm stone ambient glow, clipped to section only */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none hidden md:block">
         <div className="absolute top-20 left-0 w-[500px] h-[500px] bg-stone-200/40 blur-[150px] rounded-full" />
         <div className="absolute bottom-20 right-0 w-[400px] h-[400px] bg-stone-200/30 blur-[120px] rounded-full" />
       </div>

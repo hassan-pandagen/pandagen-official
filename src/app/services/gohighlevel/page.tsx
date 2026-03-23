@@ -28,6 +28,13 @@ export default function GoHighLevelServicePage() {
         "areaServed": "Worldwide",
         "serviceType": ["GoHighLevel Development", "GHL Funnel Building", "GoHighLevel Migration", "GoHighLevel Alternative"],
         "priceRange": "$5,000 - $35,000",
+        "telephone": "+13022504340",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Missouri City",
+          "addressRegion": "TX",
+          "addressCountry": "US"
+        },
         "image": "https://www.pandacodegen.com/og-image.jpg"
       },
       {

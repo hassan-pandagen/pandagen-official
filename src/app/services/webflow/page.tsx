@@ -33,6 +33,13 @@ export default function WebflowServicePage() {
         "areaServed": "Worldwide",
         "serviceType": ["Webflow Migration", "Webflow to Next.js", "Webflow Alternative", "Webflow to Custom Code"],
         "priceRange": "$6,000 - $40,000",
+        "telephone": "+13022504340",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Missouri City",
+          "addressRegion": "TX",
+          "addressCountry": "US"
+        },
         "image": "https://www.pandacodegen.com/og-image.jpg",
         "aggregateRating": {
           "@type": "AggregateRating",
