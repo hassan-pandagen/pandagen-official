@@ -32,10 +32,10 @@ export default function WixServicePage() {
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
         "serviceType": ["Wix Development", "Wix Migration", "Wix to Next.js", "Wix Alternative"],
-        "telephone": "+13022504340",
+        "telephone": "+13027738982",
         "address": {
           "@type": "PostalAddress",
-          "addressLocality": "Missouri City",
+          "addressLocality": "Austin",
           "addressRegion": "TX",
           "addressCountry": "US"
         },
@@ -76,7 +76,7 @@ export default function WixServicePage() {
         "email": "info@pandacodegen.com",
         "foundingDate": "2026",
         "areaServed": "Worldwide",
-        "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"]
+        "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158"]
       },
       {
         "@type": "Review",

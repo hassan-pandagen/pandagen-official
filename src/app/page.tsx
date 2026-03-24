@@ -69,15 +69,15 @@ export default function Home() {
         },
         "description": "Custom web development agency specializing in WordPress migration, Shopify optimization, and custom web applications. Load times under 1 second guaranteed.",
         "email": "info@pandacodegen.com",
-        "telephone": "+13022504340",
+        "telephone": "+13027738982",
         "foundingDate": "2026",
         "areaServed": "Worldwide",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "1914 Quail Feather Ct",
-          "addressLocality": "Missouri City",
+          "streetAddress": "701 Tillery St Ste 12",
+          "addressLocality": "Austin",
           "addressRegion": "TX",
-          "postalCode": "77489",
+          "postalCode": "78702",
           "addressCountry": "US"
         },
         "sameAs": [
@@ -86,7 +86,7 @@ export default function Home() {
           "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
           "https://github.com/hassan-pandagen",
           "https://clutch.co/profile/panda-code-gen",
-          "https://www.trustpilot.com/review/pandacodegen.com"
+          "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158"
         ],
         "aggregateRating": {
           "@type": "AggregateRating",
@@ -98,7 +98,7 @@ export default function Home() {
         "contactPoint": {
           "@type": "ContactPoint",
           "email": "info@pandacodegen.com",
-          "telephone": "+13022504340",
+          "telephone": "+13027738982",
           "contactType": "customer service",
           "availableLanguage": "English"
         },
@@ -174,14 +174,14 @@ export default function Home() {
         "name": "PandaCodeGen Development Services",
         "description": "Custom web development, WordPress migration, and Shopify optimization for growing businesses.",
         "image": "https://www.pandacodegen.com/og-image.jpg",
-        "telephone": "+13022504340",
+        "telephone": "+13027738982",
         "priceRange": "$$",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "1914 Quail Feather Ct",
-          "addressLocality": "Missouri City",
+          "streetAddress": "701 Tillery St Ste 12",
+          "addressLocality": "Austin",
           "addressRegion": "TX",
-          "postalCode": "77489",
+          "postalCode": "78702",
           "addressCountry": "US"
         },
         "provider": {

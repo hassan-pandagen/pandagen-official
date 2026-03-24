@@ -148,11 +148,11 @@ export default function Header({ onOpenQuote }: HeaderProps) {
 
           <div className="hidden md:flex items-center gap-4 z-[61]">
             <a
-              href="tel:+13022504340"
+              href="tel:+13027738982"
               className="flex items-center gap-1.5 text-sm font-medium text-stone-600 hover:text-cognac transition-colors tracking-wide"
             >
               <Phone className="w-3.5 h-3.5" />
-              +1 (302) 250-4340
+              +1 (302) 773-8982
             </a>
             <button
               onClick={handleOpenQuote}
@@ -259,9 +259,9 @@ export default function Header({ onOpenQuote }: HeaderProps) {
                   <Mail className="w-5 h-5 text-stone-400 hover:text-charcoal transition-colors" />
                 </a>
               </div>
-              <a href="tel:+13022504340" className="flex items-center gap-1.5 text-xs font-bold text-stone-400 hover:text-charcoal transition-colors uppercase tracking-widest">
+              <a href="tel:+13027738982" className="flex items-center gap-1.5 text-xs font-bold text-stone-400 hover:text-charcoal transition-colors uppercase tracking-widest">
                 <Phone className="w-3.5 h-3.5" />
-                +1 (302) 250-4340
+                +1 (302) 773-8982
               </a>
               <p className="text-xs text-stone-400 uppercase tracking-widest font-bold">
                 info@pandacodegen.com

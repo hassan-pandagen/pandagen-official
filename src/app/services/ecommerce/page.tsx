@@ -32,10 +32,10 @@ export default function EcommercePage() {
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
         "serviceType": ["Shopify Headless", "E-Commerce Development", "Shopify Migration", "Custom Shopify Storefront"],
-        "telephone": "+13022504340",
+        "telephone": "+13027738982",
         "address": {
           "@type": "PostalAddress",
-          "addressLocality": "Missouri City",
+          "addressLocality": "Austin",
           "addressRegion": "TX",
           "addressCountry": "US"
         }

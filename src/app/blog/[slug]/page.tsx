@@ -1585,7 +1585,7 @@ export default async function BlogPost(props: PageProps) {
                     "@type": "ContactPoint",
                     "contactType": "Customer Service",
                     "email": "info@pandacodegen.com",
-                    "telephone": "+13022504340"
+                    "telephone": "+13027738982"
                 }
             },
             // Add FAQ schema if the post has FAQs (helps win featured snippets)
@@ -1617,7 +1617,7 @@ export default async function BlogPost(props: PageProps) {
             <Header />
 
             {/* Article Header */}
-            <section className="relative pt-40 pb-20 px-6 overflow-hidden">
+            <section className="relative pt-24 md:pt-40 pb-20 px-6 overflow-hidden">
                 <div className="container mx-auto text-center max-w-4xl relative z-10">
                     {/* Breadcrumb Navigation - SEO & UX */}
                     <nav aria-label="Breadcrumb" className="flex items-center justify-center gap-3 text-lg mb-10 font-semibold">

@@ -41,15 +41,15 @@ const aboutSchema = {
       "image": "https://www.pandacodegen.com/og-image.jpg",
       "description": "Custom web development agency specializing in WordPress migration, Shopify optimization, and high performance business websites.",
       "email": "info@pandacodegen.com",
-      "telephone": "+13022504340",
+      "telephone": "+13027738982",
       "foundingDate": "2026",
       "areaServed": "Worldwide",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "1914 Quail Feather Ct",
-        "addressLocality": "Missouri City",
+        "streetAddress": "701 Tillery St Ste 12",
+        "addressLocality": "Austin",
         "addressRegion": "TX",
-        "postalCode": "77489",
+        "postalCode": "78702",
         "addressCountry": "US"
       },
       "founder": [
@@ -63,7 +63,7 @@ const aboutSchema = {
         "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
         "https://github.com/hassan-pandagen",
         "https://clutch.co/profile/panda-code-gen",
-        "https://www.trustpilot.com/review/pandacodegen.com"
+        "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158"
       ]
     },
     {
@@ -89,7 +89,7 @@ export default function AboutPageClient() {
       <Header onOpenQuote={() => setIsQuoteModalOpen(true)} />
 
       {/* 1. HERO with DNA STRIP */}
-      <section className="relative pt-40 pb-32 px-6 overflow-hidden bg-paper">
+      <section className="relative pt-24 md:pt-40 pb-32 px-6 overflow-hidden bg-paper">
         <div className="absolute top-20 left-1/3 w-[500px] h-[500px] bg-stone-200/40 blur-[150px] rounded-full pointer-events-none" />
 
         <div className="container mx-auto max-w-4xl text-center relative z-10">
@@ -215,7 +215,7 @@ export default function AboutPageClient() {
               </div>
               <h3 className="text-2xl font-bold text-charcoal">Hassan Jamal</h3>
               <p className="text-stone-500 font-mono text-sm mb-1">Founder & Lead Full-Stack Engineer</p>
-              <p className="text-stone-500 text-xs mb-4">Karachi University &middot; Missouri City, TX</p>
+              <p className="text-stone-500 text-xs mb-4">Karachi University &middot; Austin, TX</p>
               <div className="flex gap-3">
                 <a href="https://www.linkedin.com/in/hassan-jamal-713ba6228/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-[#0A66C2]/20 border border-[#0A66C2]/30 rounded-full text-xs font-bold text-[#0A66C2] hover:bg-[#0A66C2]/30 transition-all"><Linkedin className="w-3.5 h-3.5" /> LinkedIn</a>
                 <a href="https://github.com/hassan-pandagen" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-stone-50 border border-stone-200 rounded-full text-xs font-medium hover:bg-stone-100 hover:border-stone-400 transition-all text-stone-500">GitHub</a>

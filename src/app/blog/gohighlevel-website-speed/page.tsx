@@ -159,7 +159,7 @@ export default function GHLWebsiteSpeedPage() {
             />
             <Header />
 
-            <section className="relative pt-40 pb-10 px-6">
+            <section className="relative pt-24 md:pt-40 pb-10 px-6">
                 <div className="max-w-3xl mx-auto">
                     <Breadcrumb items={[
                         { label: "Home", href: "/" },

@@ -10,7 +10,7 @@ export default function CookiesPage() {
       <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]" />
       <Header />
       
-      <div className="pt-32 pb-20 px-6">
+      <div className="pt-20 md:pt-32 pb-20 px-6">
         <div className="container mx-auto max-w-4xl">
           
           {/* Header */}

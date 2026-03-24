@@ -30,11 +30,11 @@ export default function ServicesPage() {
         "name": "PandaCodeGen Development Services",
         "url": "https://www.pandacodegen.com/services",
         "image": "https://www.pandacodegen.com/og-image.jpg",
-        "telephone": "+1-302-250-4340",
+        "telephone": "+1-302-773-8982",
         "priceRange": "$$",
         "address": {
           "@type": "PostalAddress",
-          "addressLocality": "Missouri City",
+          "addressLocality": "Austin",
           "addressRegion": "TX",
           "addressCountry": "US"
         },

@@ -142,7 +142,7 @@ export default function WorkPageClient() {
             <Header />
 
             {/* HERO */}
-            <section className="relative pt-24 md:pt-40 pb-6 md:pb-10 px-6 bg-linear-to-b from-white to-stone-50 overflow-hidden">
+            <section className="relative pt-24 md:pt-24 md:pt-40 pb-6 md:pb-10 px-6 bg-linear-to-b from-white to-stone-50 overflow-hidden">
                 <div className="absolute top-20 right-1/4 w-[500px] h-[500px] bg-stone-200/30 blur-[120px] rounded-full pointer-events-none" />
                 <div className="container mx-auto relative z-10">
                     <motion.div

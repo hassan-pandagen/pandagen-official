@@ -143,7 +143,7 @@ function BlogPageInner() {
 
       <Header />
 
-      <section className="pt-40 pb-16 px-6 text-center relative border-b border-stone-200">
+      <section className="pt-24 md:pt-40 pb-16 px-6 text-center relative border-b border-stone-200">
         <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-4">The Journal</p>
         <h1 className="text-5xl md:text-7xl font-bold text-charcoal relative z-10">
           Insights from the <span className="font-serif italic text-cognac">Engine Room.</span>

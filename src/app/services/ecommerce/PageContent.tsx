@@ -42,7 +42,7 @@ export default function PageContent() {
       <Header />
 
       {/* 1. HERO */}
-      <section className="relative pt-20 md:pt-40 pb-12 md:pb-20 px-6">
+      <section className="relative pt-20 md:pt-24 md:pt-40 pb-12 md:pb-20 px-6">
         <div className="container mx-auto text-center relative z-10 max-w-4xl">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-200 text-sm text-cognac mb-8">
             <Zap className="w-4 h-4" /> E-Commerce Engineering

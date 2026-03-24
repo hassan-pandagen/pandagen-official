@@ -47,15 +47,15 @@ export default function ContactPageClient() {
           "height": 113
         },
         "email": "info@pandacodegen.com",
-        "telephone": "+13022504340",
+        "telephone": "+13027738982",
         "foundingDate": "2026",
         "areaServed": "Worldwide",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "1914 Quail Feather Ct",
-          "addressLocality": "Missouri City",
+          "streetAddress": "701 Tillery St Ste 12",
+          "addressLocality": "Austin",
           "addressRegion": "TX",
-          "postalCode": "77489",
+          "postalCode": "78702",
           "addressCountry": "US"
         },
         "sameAs": [
@@ -64,13 +64,13 @@ export default function ContactPageClient() {
           "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
           "https://github.com/hassan-pandagen",
           "https://clutch.co/profile/panda-code-gen",
-          "https://www.trustpilot.com/review/pandacodegen.com"
+          "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158"
         ],
         "contactPoint": {
           "@type": "ContactPoint",
           "contactType": "Sales",
           "email": "info@pandacodegen.com",
-          "telephone": "+13022504340",
+          "telephone": "+13027738982",
           "availableLanguage": "English"
         }
       },
@@ -94,7 +94,7 @@ export default function ContactPageClient() {
 
       <Header />
 
-      <section className="relative pt-40 pb-20 px-6 bg-paper overflow-hidden">
+      <section className="relative pt-24 md:pt-40 pb-20 px-6 bg-paper overflow-hidden">
         {/* Decorative orb */}
         <div className="absolute top-20 right-1/3 w-[500px] h-[500px] bg-stone-200/40 blur-[120px] rounded-full pointer-events-none" />
 
@@ -143,7 +143,7 @@ export default function ContactPageClient() {
                     </div>
                     <div className="flex-1 min-w-0">
                        <div className="text-xs text-stone-500 uppercase tracking-wider font-bold mb-1">Call</div>
-                       <a href="tel:+13022504340" className="text-sm font-medium text-charcoal hover:text-stone-600 transition-colors">+1 (302) 250-4340</a>
+                       <a href="tel:+13027738982" className="text-sm font-medium text-charcoal hover:text-stone-600 transition-colors">+1 (302) 773-8982</a>
                     </div>
                  </motion.div>
 
@@ -159,8 +159,8 @@ export default function ContactPageClient() {
                     </div>
                     <div className="flex-1 min-w-0">
                        <div className="text-xs text-stone-500 uppercase tracking-wider font-bold mb-1">HQ</div>
-                       <div className="text-sm font-medium text-charcoal">1914 Quail Feather Ct</div>
-                       <div className="text-xs text-stone-500">Missouri City, TX 77489</div>
+                       <div className="text-sm font-medium text-charcoal">701 Tillery St Ste 12, </div>
+                       <div className="text-xs text-stone-500">Austin, TX 78702</div>
                        <div className="text-xs text-stone-400 mt-0.5">Clients in UK · AU · CA · EU</div>
                     </div>
                  </motion.div>

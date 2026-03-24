@@ -4,15 +4,15 @@
 
 ## What We Do
 
-PandaCodeGen is a custom web development agency based in Missouri City, TX. We specialize in migrating businesses off slow, expensive platforms (WordPress, Shopify, Webflow, Squarespace, Wix, WooCommerce, GoHighLevel) to custom-coded Next.js websites that load in under 1 second and score 95-100/100 on Google PageSpeed.
+PandaCodeGen is a custom web development agency based in Austin, TX. We specialize in migrating businesses off slow, expensive platforms (WordPress, Shopify, Webflow, Squarespace, Wix, WooCommerce, GoHighLevel) to custom-coded Next.js websites that load in under 1 second and score 95-100/100 on Google PageSpeed.
 
 Every project is fixed-price, fully custom, and delivers code ownership. Clients own the code. $0/month hosting on Vercel. No plugins. No recurring platform fees.
 
 **Key facts:**
 - Founded: 2026
-- Location: Missouri City, TX, USA
+- Location: Austin, TX, USA
 - Email: info@pandacodegen.com
-- Phone: +1 (302) 250-4340
+- Phone: +1 (302) 773-8982
 - Guaranteed PageSpeed: 95-100/100 on every build
 - Typical timeline: 4-6 weeks
 - Price range: $4,000-$60,000 depending on project type
@@ -94,7 +94,7 @@ $0/month on Vercel for most sites. Large enterprise sites may use paid Vercel pl
 ## Contact
 
 - Email: info@pandacodegen.com
-- Phone: +1 (302) 250-4340
-- Location: Missouri City, TX, USA
+- Phone: +1 (302) 773-8982
+- Location: Austin, TX, USA
 - Clutch profile: https://clutch.co/profile/panda-code-gen
 - Trustpilot: https://www.trustpilot.com/review/pandacodegen.com

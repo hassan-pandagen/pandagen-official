@@ -1,14 +1,38 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Zap, Clock, DollarSign, ShieldOff } from "lucide-react";
 import Link from "next/link";
 
 const metrics = [
-  { before: "3.2s", after: "0.7s", label: "Load Time" },
-  { before: "45", after: "100", label: "Lighthouse Score" },
-  { before: "$150/mo", after: "$0/mo", label: "Hosting Cost" },
-  { before: "25+", after: "0", label: "Plugins Killed" },
+  {
+    icon: Clock,
+    before: "3.2s",
+    after: "0.7s",
+    label: "Load Time",
+    desc: "Guaranteed under 1 second on every build.",
+  },
+  {
+    icon: Zap,
+    before: "45",
+    after: "100",
+    label: "PageSpeed Score",
+    desc: "Perfect 100/100 Lighthouse. Not 98. Not 99.",
+  },
+  {
+    icon: DollarSign,
+    before: "$150/mo",
+    after: "$0/mo",
+    label: "Hosting Cost",
+    desc: "Zero monthly fees. Forever. You own the code.",
+  },
+  {
+    icon: ShieldOff,
+    before: "25+",
+    after: "0",
+    label: "Plugins Killed",
+    desc: "No plugins means no vulnerabilities, no bloat.",
+  },
 ];
 
 export default function SocialProof() {
@@ -139,21 +163,33 @@ export default function SocialProof() {
 
           </div>
 
-            {/* Trustpilot Review Collector Widget */}
-            <div className="mt-6 max-w-3xl mx-auto">
-              <div
-                className="trustpilot-widget"
-                data-locale="en-US"
-                data-template-id="56278e9abfbbba0bdcd568bc"
-                data-businessunit-id="699e1b4403ccbc9e6b4641aa"
-                data-style-height="52px"
-                data-style-width="100%"
-                data-token="b2f33c7c-6119-420f-a4a8-cc0e3f7b55f9"
+            {/* Review Buttons */}
+            <div className="mt-6 max-w-3xl mx-auto flex flex-col sm:flex-row gap-3">
+              <a
+                href="https://www.trustpilot.com/review/pandacodegen.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 h-[52px] px-6 rounded-xl border border-stone-200 bg-white text-sm font-bold text-stone-700 hover:border-stone-300 hover:shadow-sm transition-all"
               >
-                <a href="https://www.trustpilot.com/review/pandacodegen.com" target="_blank" rel="noopener noreferrer">
-                  Trustpilot
-                </a>
-              </div>
+                <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="#00b67a">
+                  <path d="M12 0L14.7 8.3H23.4L16.35 13.4L19.05 21.7L12 16.6L4.95 21.7L7.65 13.4L0.6 8.3H9.3L12 0Z"/>
+                </svg>
+                Review us on Trustpilot
+              </a>
+              <a
+                href="https://g.page/r/CU6JJpd0jNDhEBM/review"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 h-[52px] px-6 rounded-xl border border-stone-200 bg-white text-sm font-bold text-stone-700 hover:border-stone-300 hover:shadow-sm transition-all"
+              >
+                <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24">
+                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                </svg>
+                Review us on Google
+              </a>
             </div>
         </motion.div>
 
@@ -163,16 +199,21 @@ export default function SocialProof() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.15 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto"
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto"
         >
           {metrics.map((m) => (
-            <div key={m.label} className="text-center p-4 bg-stone-50 border border-stone-200 rounded-xl">
-              <div className="text-xs text-stone-600 uppercase tracking-wider mb-2 font-bold">{m.label}</div>
-              <div className="flex items-center justify-center gap-1.5 text-sm font-bold">
-                <span className="text-stone-400 line-through">{m.before}</span>
-                <span className="text-stone-300">→</span>
-                <span className="text-charcoal">{m.after}</span>
+            <div key={m.label} className="p-5 bg-white border border-stone-200 rounded-2xl shadow-xs hover:border-cognac/30 hover:shadow-md transition-all duration-200">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-cognac/10">
+                  <m.icon className="w-4 h-4 text-cognac" />
+                </span>
+                <span className="text-xs font-black text-stone-500 uppercase tracking-widest">{m.label}</span>
               </div>
+              <div className="mb-2">
+                <div className="text-2xl font-black text-cognac leading-none">{m.after}</div>
+                <div className="text-stone-500 line-through text-xs font-medium mt-0.5">{m.before}</div>
+              </div>
+              <p className="text-xs text-stone-500 leading-relaxed">{m.desc}</p>
             </div>
           ))}
         </motion.div>

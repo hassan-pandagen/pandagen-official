@@ -80,7 +80,7 @@ export default function PartnersContent() {
       <Header onOpenQuote={() => setIsQuoteModalOpen(true)} />
 
       {/* Hero */}
-      <section className="relative pt-40 pb-16 px-6 text-center bg-paper overflow-hidden">
+      <section className="relative pt-24 md:pt-40 pb-16 px-6 text-center bg-paper overflow-hidden">
         {/* Warm stone glow */}
         <div className="absolute top-20 left-1/3 w-[500px] h-[500px] bg-stone-200/40 blur-[150px] rounded-full pointer-events-none" />
 

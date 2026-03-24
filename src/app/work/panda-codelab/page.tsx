@@ -146,7 +146,7 @@ export default function PandaCodelabCaseStudy() {
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudySchema) }} />
             <Header />
 
-            <div className="pt-40 pb-24 px-6">
+            <div className="pt-24 md:pt-40 pb-24 px-6">
                 <div className="container mx-auto max-w-5xl">
 
                     <Breadcrumb items={[

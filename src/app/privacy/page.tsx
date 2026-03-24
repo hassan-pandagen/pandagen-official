@@ -10,7 +10,7 @@ export default function PrivacyPage() {
       <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]" />
       <Header />
       
-      <div className="pt-32 pb-20 px-6">
+      <div className="pt-20 md:pt-32 pb-20 px-6">
         <div className="container mx-auto max-w-4xl">
           
           {/* Header */}
@@ -295,7 +295,7 @@ export default function PrivacyPage() {
                 <li><strong>Right to Limit Sensitive Information:</strong> We do not collect sensitive personal information beyond what is necessary for service delivery.</li>
               </ul>
               <p className="mt-4">
-                To submit a CCPA request, contact us at <a href="mailto:info@pandacodegen.com" className="text-cognac hover:underline">info@pandacodegen.com</a> or call <a href="tel:+13022504340" className="text-cognac hover:underline">+1 (302) 250-4340</a>. We will respond to verified requests within 45 days. You may designate an authorized agent to make requests on your behalf.
+                To submit a CCPA request, contact us at <a href="mailto:info@pandacodegen.com" className="text-cognac hover:underline">info@pandacodegen.com</a> or call <a href="tel:+13027738982" className="text-cognac hover:underline">+1 (302) 773-8982</a>. We will respond to verified requests within 45 days. You may designate an authorized agent to make requests on your behalf.
               </p>
             </motion.section>
 

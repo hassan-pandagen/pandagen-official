@@ -98,7 +98,7 @@ export default function ImranAuthorPage() {
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
             <Header />
 
-            <div className="pt-40 pb-24 px-6">
+            <div className="pt-24 md:pt-40 pb-24 px-6">
                 <div className="container mx-auto max-w-5xl">
 
                     {/* Back */}

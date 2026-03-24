@@ -92,7 +92,7 @@ export default function PricingPageClient() {
       <Header />
 
       {/* 1. HERO */}
-      <section className="relative pt-40 pb-20 px-6 text-center overflow-hidden">
+      <section className="relative pt-24 md:pt-40 pb-20 px-6 text-center overflow-hidden">
         <div className="absolute top-10 right-1/4 w-[500px] h-[500px] bg-stone-200/40 blur-[120px] rounded-full pointer-events-none" />
 
         <div className="container mx-auto relative z-10 max-w-4xl">

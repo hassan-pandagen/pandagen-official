@@ -8,7 +8,7 @@ import { blogPosts } from "@/data/blog";
 
 export const metadata: Metadata = {
     title: "Hassan Jamal - Founder & Lead Engineer at PandaCodeGen",
-    description: "Hassan Jamal builds high performance custom coded websites for e-commerce brands. Founder at PandaCodeGen. Based in Missouri City, TX.",
+    description: "Hassan Jamal builds high performance custom coded websites for e-commerce brands. Founder at PandaCodeGen. Based in Austin, TX.",
     openGraph: {
         title: "Hassan Jamal - Founder & Lead Engineer at PandaCodeGen",
         description: "Helping e-commerce brands ditch Shopify fees & WordPress bloat with high performance custom code. Founder @ PandaCodeGen.",
@@ -44,7 +44,7 @@ const personSchema = {
             },
             "address": {
                 "@type": "PostalAddress",
-                "addressLocality": "Missouri City",
+                "addressLocality": "Austin",
                 "addressRegion": "Texas",
                 "addressCountry": "US",
             },
@@ -109,7 +109,7 @@ export default function HassanAuthorPage() {
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
             <Header />
 
-            <div className="pt-40 pb-24 px-6">
+            <div className="pt-24 md:pt-40 pb-24 px-6">
                 <div className="container mx-auto max-w-5xl">
 
                     {/* Back */}
@@ -136,7 +136,7 @@ export default function HassanAuthorPage() {
                                 Founder &amp; Lead Engineer
                             </div>
                             <h1 className="text-5xl md:text-6xl font-serif text-charcoal mb-3">Hassan Jamal.</h1>
-                            <p className="text-lg font-mono text-cognac mb-6">Full-Stack Architect &middot; Missouri City, TX</p>
+                            <p className="text-lg font-mono text-cognac mb-6">Full-Stack Architect &middot; Austin, TX</p>
                             <p className="text-xl text-stone-600 leading-relaxed max-w-xl mb-8">
                                 I help e-commerce brands ditch Shopify fees and WordPress bloat with high performance custom code. One client was paying $3,200/month on Shopify Plus. Their storefront scored 31 on Google PageSpeed. We migrated them to a custom build. Same features. Zero app fees. PageSpeed went from 31 to 92.
                             </p>

@@ -21,7 +21,7 @@ const AuditWidget = dynamic(() => import("@/components/audit/AuditWidget"), {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex flex-col justify-center pt-32 pb-20 overflow-hidden bg-paper">
+    <section className="relative min-h-[90vh] flex flex-col justify-center pt-20 md:pt-32 pb-20 overflow-hidden bg-paper">
 
       {/* Noise texture overlay */}
       <div className="absolute inset-0 bg-noise opacity-40 mix-blend-overlay pointer-events-none" />
