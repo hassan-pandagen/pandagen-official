@@ -16,8 +16,8 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Webflow Migration Cost 2026: Full Breakdown by Site Size | PandaCodeGen",
-    description: "A 5 to 20 page Webflow site costs $3,000 to $7,000 to migrate to custom code. A 50 to 100 page site costs $12,000 to $20,000. Full breakdown by site size, scope, and ROI.",
+    title: "Webflow Migration Cost 2026: Breakdown by Site Size | PandaCodeGen",
+    description: "5 to 20 page Webflow site: $3,000 to $7,000. 50 to 100 pages: $12,000 to $20,000. Full cost breakdown by site size, what drives pricing, and ROI.",
     alternates: {
         canonical: '/blog/webflow-migration-cost',
     },
