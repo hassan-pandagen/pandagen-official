@@ -36,8 +36,10 @@ export default function EngineeringPage() {
         "telephone": "+13027738982",
         "address": {
           "@type": "PostalAddress",
+          "streetAddress": "701 Tillery St Ste 12",
           "addressLocality": "Austin",
           "addressRegion": "TX",
+          "postalCode": "78702",
           "addressCountry": "US"
         },
         "image": "https://www.pandacodegen.com/og-image.jpg",

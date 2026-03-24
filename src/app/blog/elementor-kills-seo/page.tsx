@@ -46,7 +46,7 @@ const articleSchema = {
             "description": "The average Elementor site scores 38/100 on mobile PageSpeed. We audited 500 sites to find out exactly how much traffic page builders cost.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2025-12-28T00:00:00-05:00",
-            "dateModified": "2026-03-10",
+            "dateModified": "2026-03-10T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -103,7 +103,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2025-12-28T00:00:00-05:00",
-            "dateModified": "2026-03-10",
+            "dateModified": "2026-03-10T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/elementor-kills-seo#breadcrumb" },
             "inLanguage": "en-US"
         },

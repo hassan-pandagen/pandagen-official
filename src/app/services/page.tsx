@@ -31,10 +31,12 @@ export default function ServicesPage() {
         "url": "https://www.pandacodegen.com/services",
         "image": "https://www.pandacodegen.com/og-image.jpg",
         "telephone": "+1-302-773-8982",
-        "priceRange": "$$",
+        "priceRange": "$3,000 - $60,000",
         "address": {
           "@type": "PostalAddress",
+          "streetAddress": "701 Tillery St Ste 12",
           "addressLocality": "Austin",
+          "postalCode": "78702",
           "addressRegion": "TX",
           "addressCountry": "US"
         },

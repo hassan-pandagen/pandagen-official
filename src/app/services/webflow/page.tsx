@@ -36,7 +36,9 @@ export default function WebflowServicePage() {
         "telephone": "+13027738982",
         "address": {
           "@type": "PostalAddress",
+          "streetAddress": "701 Tillery St Ste 12",
           "addressLocality": "Austin",
+          "postalCode": "78702",
           "addressRegion": "TX",
           "addressCountry": "US"
         },

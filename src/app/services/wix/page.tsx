@@ -32,10 +32,14 @@ export default function WixServicePage() {
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
         "serviceType": ["Wix Development", "Wix Migration", "Wix to Next.js", "Wix Alternative"],
+        "priceRange": "$3,000 - $12,000",
+        "image": "https://www.pandacodegen.com/og-image.jpg",
         "telephone": "+13027738982",
         "address": {
           "@type": "PostalAddress",
+          "streetAddress": "701 Tillery St Ste 12",
           "addressLocality": "Austin",
+          "postalCode": "78702",
           "addressRegion": "TX",
           "addressCountry": "US"
         },

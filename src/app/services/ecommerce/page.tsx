@@ -32,10 +32,14 @@ export default function EcommercePage() {
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
         "serviceType": ["Shopify Headless", "E-Commerce Development", "Shopify Migration", "Custom Shopify Storefront"],
+        "priceRange": "$8,000 - $25,000",
+        "image": "https://www.pandacodegen.com/og-image.jpg",
         "telephone": "+13027738982",
         "address": {
           "@type": "PostalAddress",
+          "streetAddress": "701 Tillery St Ste 12",
           "addressLocality": "Austin",
+          "postalCode": "78702",
           "addressRegion": "TX",
           "addressCountry": "US"
         }
