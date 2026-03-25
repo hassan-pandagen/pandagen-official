@@ -284,7 +284,7 @@ export default function ShopifyHeadlessPage() {
                             "$1M+/year store: The first month of improved conversion usually covers the entire build cost"
                         ]} />
                         <BlogText>
-                            <BlogHighlight>If your store does under $150K/year, optimise your current theme first.</BlogHighlight> <a href="/services/ecommerce" className="text-cognac hover:underline">Headless</a> is a significant investment that requires meaningful revenue to justify the ROI within 12 months.
+                            Not sure if the numbers work for your store? <a href="/services/ecommerce" className="text-cognac hover:underline">Book a free call</a> and we will run the ROI calculation for your specific situation before you commit to anything.
                         </BlogText>
 
                         <BlogHeader>Shopify Hydrogen vs Custom Next.js: Which Should You Build On?</BlogHeader>

@@ -571,7 +571,7 @@ export default function ShopifySlowPage() {
                             <li><strong>Theme optimization cannot fix the core problem</strong>: All Shopify themes share the same slow Liquid foundation, so switching themes or compressing images only moves you from 35 to 48 on PageSpeed.</li>
                             <li><strong>A custom headless storefront pays for itself in 3-5 months</strong>: A $15K-$35K one-time investment typically returns $45K-$95K in additional revenue in Year 1 alone.</li>
                             <li><strong>Same products, same traffic, different results</strong>: One client went from $420K/year to $890K/year after replacing their slow Shopify theme with a fast custom frontend.</li>
-                            <li><strong>Headless is best for stores doing $200K+/year</strong>, if you have consistent traffic and your speed is costing conversions, the math clearly favors building a faster storefront.</li>
+                            <li><strong>If speed is visibly costing you conversions, headless pays for itself</strong>: the math works for stores of all sizes when speed is the bottleneck. Not sure? Book a free call and we will run the numbers for your specific store.</li>
                         </ol>
                     </section>
 

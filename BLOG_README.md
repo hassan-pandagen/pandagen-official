@@ -34,14 +34,18 @@ Header → Animation → Executive Summary (data-speakable) → Article → Mid 
   "email": "info@pandacodegen.com",
   "foundingDate": "2026",
   "areaServed": "Worldwide",
-  "postalCode": "77489",
+  "streetAddress": "701 Tillery St Ste 12",
+  "addressLocality": "Austin",
+  "addressRegion": "TX",
+  "postalCode": "78702",
   "sameAs": [
     "https://twitter.com/pandacodegen",
     "https://www.linkedin.com/company/pandacodegen",
     "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
     "https://github.com/hassan-pandagen",
     "https://clutch.co/profile/panda-code-gen",
-    "https://www.trustpilot.com/review/pandacodegen.com"
+    "https://www.trustpilot.com/review/pandacodegen.com",
+    "https://www.google.com/maps?cid=16271659886069582158"
   ]
 }
 ```

@@ -502,25 +502,25 @@ export default function ShopifyDawnThemeSlowPage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>Good candidate for headless:</strong>
+                            <strong>Strong fit for headless:</strong>
                         </BlogText>
 
                         <BlogList items={[
-                            "Doing $20K+/month in revenue (ROI justifies the investment)",
-                            "Mobile PageSpeed below 60/100 (significant conversion loss)",
+                            "Mobile PageSpeed below 60/100 and you can see it in your bounce rate or analytics",
                             "High-traffic store where every 0.1s matters at scale",
                             "Complex product configuration that Shopify&apos;s theme system can&apos;t handle cleanly",
-                            "Brand that needs precise design control, no theme limitations",
+                            "Brand that needs precise design control with no theme limitations",
+                            "Speed is costing you conversions and you want it fixed permanently, not patched",
                         ]} />
 
                         <BlogText>
-                            <strong>Stay on Shopify standard for now:</strong>
+                            <strong>Probably not the right time:</strong>
                         </BlogText>
 
                         <BlogList items={[
-                            "Under $10K/month: the investment doesn&apos;t pay back fast enough yet",
+                            "Store is brand new with minimal traffic and no conversion data yet",
                             "Simple product catalog with minimal app requirements",
-                            "Speed isn&apos;t your primary conversion bottleneck",
+                            "Not sure? Book a free call and we will tell you honestly whether it makes sense for your store",
                         ]} />
 
                         <BlogText>

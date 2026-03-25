@@ -328,4 +328,4 @@ If something looks off or you want to understand a trend, just tell me and I'll 
 
 ---
 
-*Last updated: March 24, 2026 — Week 2 screenshots processed*
+*Last updated: March 24, 2026*

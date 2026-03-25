@@ -14,6 +14,7 @@ export const dynamic = "force-static";
 const TrustLogoBar = lazyLoad(() => import("@/components/sections/TrustLogoBar"));
 const SocialProof = lazyLoad(() => import("@/components/home/SocialProof"));
 const UnfairAdvantage = lazyLoad(() => import("@/components/sections/UnfairAdvantage"));
+const FounderOffer = lazyLoad(() => import("@/components/sections/FounderOffer"));
 const ServicesHub = lazyLoad(() => import("@/components/sections/ServicesHub"));
 const HowItWorksSimple = lazyLoad(() => import("@/components/HowItWorksSimple"));
 const AIPowered = lazyLoad(() => import("@/components/sections/AIPowered"));
@@ -21,6 +22,7 @@ const RevenueCalculator = lazyLoad(() => import("@/components/sections/RevenueCa
 const FounderSection = lazyLoad(() => import("@/components/sections/FounderSection"));
 const AntiAgency = lazyLoad(() => import("@/components/sections/AntiAgency"));
 const LatestBlog = lazyLoad(() => import("@/components/sections/LatestBlog"));
+const FounderOfferModal = lazyLoad(() => import("@/components/sections/FounderOfferModal"));
 
 const homeFaqs = [
   {
@@ -291,6 +293,9 @@ export default function Home() {
       {/* Paper grain texture */}
       <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
 
+      {/* Founder Offer Modal — fires after 45s, once per visitor */}
+      <FounderOfferModal />
+
       {/* Scroll Progress Bar */}
       <ScrollProgressBar />
 
@@ -304,6 +309,9 @@ export default function Home() {
 
       {/* Social Proof, quiet confidence strip (Paper) */}
       <SocialProof />
+
+      {/* Founder Offer — $500 migration for review */}
+      <FounderOffer />
 
       {/* Unfair Advantage, financial grid stats (White) */}
       <UnfairAdvantage />
