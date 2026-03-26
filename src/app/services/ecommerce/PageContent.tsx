@@ -42,16 +42,16 @@ export default function PageContent() {
       <Header />
 
       {/* 1. HERO */}
-      <section className="relative pt-20 md:pt-24 md:pt-40 pb-12 md:pb-20 px-6">
+      <section className="relative pt-20 md:pt-28 pb-8 md:pb-12 px-6">
         <div className="container mx-auto text-center relative z-10 max-w-4xl">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-200 text-sm text-cognac mb-8">
-            <Zap className="w-4 h-4" /> E-Commerce Engineering
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-200 text-sm text-cognac mb-6">
+            <Zap className="w-4 h-4" /> Shopify Speed Optimization
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6 leading-tight"
+            className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-4 leading-tight"
           >
             Stop Losing Sales <br />
             <span className="font-serif italic text-cognac">
@@ -63,12 +63,12 @@ export default function PageContent() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1 }}
-            className="text-xl text-stone-600 leading-relaxed mb-8 max-w-2xl mx-auto"
+            className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto"
           >
             We migrate high-volume brands from standard Shopify themes to high performance custom coded storefronts. <span className="text-charcoal font-medium">Keep the Shopify backend, destroy the frontend limitations.</span>
           </motion.p>
 
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.15 }} className="flex flex-wrap justify-center gap-3 mb-8">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.15 }} className="flex flex-wrap justify-center gap-3 mb-6">
             <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-stone-200 shadow-xs text-sm">
               <span className="text-cognac font-black">98/100</span>
               <span className="text-stone-500">PageSpeed</span>
@@ -81,6 +81,10 @@ export default function PageContent() {
               <span className="text-yellow-500 font-black">★★★★★</span>
               <span className="text-stone-500">Clutch Verified</span>
             </div>
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-stone-200 shadow-xs text-sm">
+              <span className="text-[#00b67a] font-black">★★★★★</span>
+              <span className="text-stone-500">Trustpilot</span>
+            </div>
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -92,10 +96,11 @@ export default function PageContent() {
             >
               Get Free Consultation <ArrowRight className="w-5 h-5" />
             </button>
-            <Link href="#our-work" className="px-8 py-4 bg-white border border-stone-200 text-charcoal font-medium rounded-full hover:border-cognac/30 transition-all flex items-center justify-center gap-2">
+            <Link href="#our-work" className="px-8 py-4 bg-white border border-cognac/30 text-cognac font-bold rounded-full hover:bg-cognac hover:text-white transition-all flex items-center justify-center gap-2">
               See Our Work <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
+          <p className="text-sm text-stone-500 mt-4 text-center max-w-xl mx-auto leading-relaxed">30-min call. Drop your store URL when you book. We test your speed live, calculate your revenue loss, and quote you on the spot. <span className="text-charcoal font-medium">Best fit for stores doing $50K to $5M/year.</span></p>
         </div>
       </section>
 
@@ -105,7 +110,7 @@ export default function PageContent() {
       {/* 3. OUR WORK - Portfolio Section */}
       <section id="our-work" className="py-10 md:py-20 px-6 border-y border-stone-200 bg-white">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">See It In Action</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">Shopify Speed Optimization: Real Results</h2>
           <p className="text-stone-600 text-center mb-8 md:mb-12 max-w-2xl mx-auto">We don&apos;t just talk about speed. We ship it.</p>
 
           <motion.div
@@ -187,7 +192,46 @@ export default function PageContent() {
         </div>
       </section>
 
-      {/* 4. PAIN POINTS */}
+      {/* 4. HOW IT WORKS - Headless Process */}
+      <section className="py-10 md:py-20 px-6 border-y border-stone-200 bg-white">
+        <div className="container mx-auto max-w-3xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How We Go Headless</h2>
+          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">Your existing Shopify store stays live. We build in parallel. Zero downtime.</p>
+
+          <div className="space-y-8">
+            {[
+              { step: "01", title: "Store Audit & API Architecture", desc: "We audit your apps, theme speed, and conversion data. Then we map out how every feature connects through Shopify's Storefront API: products, cart, checkout, and customer accounts.", duration: "Weeks 1-2" },
+              { step: "02", title: "Custom Storefront Build", desc: "We build your new storefront in Next.js: product pages that load instantly, a cart that never lags, and search that actually works. Every app feature gets rebuilt natively. No more third-party JavaScript.", duration: "Weeks 3-6" },
+              { step: "03", title: "Live Data Testing", desc: "We connect to your real Shopify data. Test every product, every variant, every checkout flow. Your team reviews and approves before anything goes live.", duration: "Week 7" },
+              { step: "04", title: "Launch & Optimize", desc: "We point your domain to the new storefront. Your Shopify dashboard stays exactly the same. Then we A/B test, monitor Core Web Vitals, and optimize conversion rates.", duration: "Week 8" },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: i * 0.08 }}
+                className="flex gap-6 items-start"
+              >
+                <div className="flex flex-col items-center shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-stone-50 border border-stone-200 flex items-center justify-center text-cognac font-mono font-bold text-sm">
+                    {item.step}
+                  </div>
+                  {i < 3 && <div className="w-px h-8 bg-border mt-2" />}
+                </div>
+                <div className="pb-2">
+                  <div className="flex items-center gap-3 mb-1">
+                    <h3 className="text-lg font-bold text-charcoal">{item.title}</h3>
+                    <span className="text-xs px-2 py-0.5 rounded-full bg-stone-50 border border-stone-200 text-stone-600">{item.duration}</span>
+                  </div>
+                  <p className="text-stone-600 text-base leading-relaxed">{item.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. PAIN POINTS */}
       <section className="py-12 md:py-24 px-6 bg-[#0F172A]">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-8 md:mb-16">
@@ -221,45 +265,6 @@ export default function PageContent() {
                 </div>
                 <h3 className="text-white font-bold text-lg mb-2">{item.pain}</h3>
                 <p className="text-slate-400 leading-relaxed text-sm">{item.detail}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 5. HOW IT WORKS - Headless Process */}
-      <section className="py-10 md:py-20 px-6 border-y border-stone-200 bg-white">
-        <div className="container mx-auto max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How We Go Headless</h2>
-          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">Your existing Shopify store stays live. We build in parallel. Zero downtime.</p>
-
-          <div className="space-y-8">
-            {[
-              { step: "01", title: "Store Audit & API Architecture", desc: "We audit your apps, theme speed, and conversion data. Then we map out how every feature connects through Shopify's Storefront API: products, cart, checkout, and customer accounts.", duration: "Weeks 1-2" },
-              { step: "02", title: "Custom Storefront Build", desc: "We build your new storefront in Next.js: product pages that load instantly, a cart that never lags, and search that actually works. Every app feature gets rebuilt natively. No more third-party JavaScript.", duration: "Weeks 3-6" },
-              { step: "03", title: "Live Data Testing", desc: "We connect to your real Shopify data. Test every product, every variant, every checkout flow. Your team reviews and approves before anything goes live.", duration: "Week 7" },
-              { step: "04", title: "Launch & Optimize", desc: "We point your domain to the new storefront. Your Shopify dashboard stays exactly the same. Then we A/B test, monitor Core Web Vitals, and optimize conversion rates.", duration: "Week 8" },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.08 }}
-                className="flex gap-6 items-start"
-              >
-                <div className="flex flex-col items-center shrink-0">
-                  <div className="w-12 h-12 rounded-xl bg-stone-50 border border-stone-200 flex items-center justify-center text-cognac font-mono font-bold text-sm">
-                    {item.step}
-                  </div>
-                  {i < 3 && <div className="w-px h-8 bg-border mt-2" />}
-                </div>
-                <div className="pb-2">
-                  <div className="flex items-center gap-3 mb-1">
-                    <h3 className="text-lg font-bold text-charcoal">{item.title}</h3>
-                    <span className="text-xs px-2 py-0.5 rounded-full bg-stone-50 border border-stone-200 text-stone-600">{item.duration}</span>
-                  </div>
-                  <p className="text-stone-600 text-base leading-relaxed">{item.desc}</p>
-                </div>
               </motion.div>
             ))}
           </div>

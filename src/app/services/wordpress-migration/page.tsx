@@ -3,15 +3,32 @@ import PageContent from './PageContent';
 
 export const metadata: Metadata = {
   title: 'WordPress to Next.js Migration Service | PandaCodeGen',
-  description: 'Professional WordPress to Next.js migration. Zero data loss, 301 redirects, preserved SEO rankings, and load times under 1 second. From $5,900.',
+  description: 'WordPress sites average 40 to 60 on Google PageSpeed Mobile. We migrate to custom Next.js in 2 to 4 weeks. 95+ PageSpeed guaranteed, zero SEO loss, 301 redirects included. From $5,900.',
   alternates: { canonical: '/services/wordpress-migration' },
+  keywords: [
+    'wordpress to nextjs migration',
+    'wordpress migration service',
+    'wordpress speed optimization service',
+    'migrate wordpress to nextjs',
+    'wordpress nextjs agency',
+    'replace wordpress with nextjs',
+    'wordpress slow website fix',
+    'wordpress to custom code migration',
+    'wordpress migration cost',
+    'wordpress headless migration',
+  ],
   openGraph: {
     title: 'WordPress to Next.js Migration Service | PandaCodeGen',
-    description: 'Professional WordPress to Next.js migration. Zero data loss, 301 redirects, preserved SEO rankings, and load times under 1 second.',
+    description: 'WordPress sites average 40 to 60 on Google PageSpeed. We migrate to custom Next.js in 2 to 4 weeks. 95+ PageSpeed guaranteed, zero SEO loss. From $5,900.',
     url: 'https://www.pandacodegen.com/services/wordpress-migration',
     siteName: 'PandaCodeGen',
     type: 'website',
     images: [{ url: 'https://www.pandacodegen.com/og-image.jpg', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'WordPress to Next.js Migration Service | PandaCodeGen',
+    description: 'WordPress averaging 40 to 60 on PageSpeed Mobile. We migrate to custom Next.js. 95+ PageSpeed guaranteed, zero SEO loss. From $5,900.',
   },
 };
 

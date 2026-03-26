@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Lock, Database, Server, FileSearch, Wrench, Rocket, HelpCircle, ShoppingBag, CreditCard, Package } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
@@ -54,18 +55,18 @@ export default function PageContent() {
       <Header />
 
       {/* 1. HERO */}
-      <section className="relative pt-20 md:pt-24 md:pt-40 pb-12 md:pb-20 px-6">
+      <section className="relative pt-20 md:pt-28 pb-8 md:pb-12 px-6">
         <div className="container mx-auto text-center relative z-10 max-w-4xl">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-200 text-sm text-cognac mb-8">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-200 text-sm text-cognac mb-6">
             <ShoppingBag className="w-4 h-4" /> WooCommerce Migration
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6 leading-tight"
+            className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-4 leading-tight"
           >
-            Escape WooCommerce. <br />
+            WooCommerce Too Slow? <br />
             <span className="font-serif italic text-cognac">
               Own Your Store.
             </span>
@@ -75,7 +76,7 @@ export default function PageContent() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1 }}
-            className="text-xl text-stone-600 leading-relaxed mb-8 max-w-2xl mx-auto"
+            className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto"
           >
             WooCommerce is WordPress with a shopping cart bolted on. We rebuild your store as a custom coded Next.js storefront with faster checkout and zero plugin fees, giving you complete code ownership. <span className="text-charcoal font-medium">No plugin conflicts. No surprise hosting bills.</span>
           </motion.p>
@@ -89,13 +90,14 @@ export default function PageContent() {
             >
               Get Free Migration Audit <ArrowRight className="w-5 h-5" />
             </button>
-            <Link href="#how-it-works" className="px-8 py-4 bg-white border border-stone-200 text-charcoal font-medium rounded-full hover:border-cognac/30 transition-all flex items-center justify-center gap-2">
+            <Link href="#how-it-works" className="px-8 py-4 bg-white border border-cognac/30 text-cognac font-bold rounded-full hover:bg-cognac hover:text-white transition-all flex items-center justify-center gap-2">
               See How It Works <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
+          <p className="text-sm text-stone-500 mt-4 text-center max-w-xl mx-auto leading-relaxed">30-min call. Drop your store URL when you book. We run your checkout speed live, calculate your monthly loss, and give you a fixed quote. <span className="text-charcoal font-medium">Best fit for stores doing $50K+/year.</span></p>
 
           {/* Trust line */}
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className="text-sm text-stone-400 mt-6">
+          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className="text-xs text-stone-400 mt-4">
             Serving stores in UK · Australia · Canada · Europe · United States
           </motion.p>
         </div>
@@ -104,7 +106,7 @@ export default function PageContent() {
       {/* 2. BEFORE / AFTER RESULTS */}
       <section className="py-10 md:py-20 px-6 border-y border-stone-200 bg-white">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">What Migration Actually Delivers</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">WooCommerce Speed Optimization: What You Get</h2>
           <p className="text-stone-600 text-center mb-12 max-w-2xl mx-auto">Real numbers from WooCommerce stores we&apos;ve migrated.</p>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -135,47 +137,34 @@ export default function PageContent() {
         </div>
       </section>
 
-      {/* 3. PAIN POINTS, Dark Navy */}
-      <section className="py-12 md:py-24 px-6 bg-[#0F172A]">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 text-red-400 border border-red-500/20 text-sm font-bold uppercase tracking-widest mb-6">
-              <AlertTriangle className="w-4 h-4" />
-              The Real Cost of WooCommerce
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Your Store Is Bleeding Revenue
-            </h2>
-            <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-              WooCommerce was built for blogs, not e-commerce at scale. Here&apos;s what that costs you.
-            </p>
-          </div>
+      {/* 3. HOW IT WORKS */}
+      <section id="how-it-works" className="py-12 md:py-24 px-6 bg-[#F8FAFC]">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How We Migrate Your WooCommerce Store</h2>
+          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A proven 5-step process. Zero downtime. Zero lost orders.</p>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-5 gap-4">
             {[
-              { icon: DollarSign, title: "You're Paying $300 to $700/Month to Run Your Store", detail: "Managed WooCommerce hosting (Kinsta, WP Engine): $50 to $200/mo. WooCommerce extensions (subscriptions, bookings, B2B): $50 to $300/yr. Security plugin: $10 to $50/mo. Backups, CDN, caching. It never stops adding up." },
-              { icon: XCircle, title: "Checkout Abandonment Is Killing Your Conversions", detail: "Every extra second of load time costs you 7% in conversions. WooCommerce checkouts average 3 to 5 seconds. On a store doing $50K/month, that's $3,500+ in revenue you're leaving on the table every single month." },
-              { icon: AlertTriangle, title: "One Plugin Update Can Take Your Store Offline", detail: "Payment gateway plugin conflicts with your theme. WooCommerce updates break your custom checkout. And it always happens on a Saturday during a sale campaign. Every minute offline is orders you never get back." },
-              { icon: Lock, title: "Your Store Is One Hack Away From Disaster", detail: "WooCommerce stores hold payment data, customer addresses, and order history, making them high-value targets. WordPress is the #1 hacked CMS. A static custom coded store has no database to breach and no plugin attack surface." },
-              { icon: TrendingUp, title: "Google Penalizes Your Slow Checkout Pages", detail: "Google's Core Web Vitals directly impact your organic rankings. A WooCommerce site running PHP on shared hosting fails LCP and TTFB benchmarks. Your competitors with faster sites outrank you before a single keyword is written." },
-              { icon: Code2, title: "You Can't Add Features Without Paying for Yet Another Plugin", detail: "Need a pricing calculator? $200/yr plugin. Need a custom B2B portal? Another plugin. Need loyalty points? Another plugin. Each one adds load time, maintenance risk, and another line on your monthly bill. On custom code, we build exactly what you need, once." },
+              { step: "01", title: "Full Store Audit", desc: "We audit your WooCommerce setup: products, plugins, checkout flow, SEO, and hosting costs. You get a full report showing what&apos;s costing you money.", icon: FileSearch, duration: "Week 1" },
+              { step: "02", title: "Data Export & Mapping", desc: "Every product, order, customer account, review, and category is exported from your WooCommerce database and cleaned. All SEO URLs mapped for 301 redirects.", icon: Database, duration: "Week 2" },
+              { step: "03", title: "Custom Storefront Build", desc: "Your new Next.js storefront is built with native payment integrations (Stripe, PayPal, Apple Pay), your exact checkout flow, and any custom pricing logic.", icon: Wrench, duration: "Weeks 3 to 5" },
+              { step: "04", title: "Data Migration & Testing", desc: "We import all products, orders, and customer accounts into your new platform. Every checkout flow is tested across mobile and desktop before launch.", icon: Package, duration: "Week 6" },
+              { step: "05", title: "Launch & Handoff", desc: "Zero-downtime launch. Every WooCommerce URL 301-redirected. DNS updated. SSL verified. You get full code ownership and admin access on day one.", icon: Rocket, duration: "Week 7" },
             ].map((item, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.08 }}
-                className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-red-500/40 transition-colors group"
+                transition={{ delay: i * 0.1 }}
+                className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs hover:shadow-md transition-shadow group"
               >
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-red-500/15 text-red-400 shrink-0 group-hover:bg-red-500/25 transition-colors">
-                    <item.icon className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
-                    <p className="text-slate-400 leading-relaxed text-sm">{item.detail}</p>
-                  </div>
+                <span className="text-4xl font-black text-stone-200 block mb-3 leading-none">{item.step}</span>
+                <div className="w-9 h-9 rounded-xl bg-stone-50 border border-stone-100 flex items-center justify-center mb-3">
+                  <item.icon className="w-4 h-4 text-cognac" />
                 </div>
+                <h3 className="text-sm font-bold text-charcoal mb-1">{item.title}</h3>
+                <p className="text-xs text-stone-500 leading-relaxed mb-3">{item.desc}</p>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-cognac bg-stone-50 border border-stone-100 px-2 py-1 rounded-full">{item.duration}</span>
               </motion.div>
             ))}
           </div>
@@ -223,34 +212,47 @@ export default function PageContent() {
         </div>
       </section>
 
-      {/* 5. HOW IT WORKS */}
-      <section id="how-it-works" className="py-12 md:py-24 px-6 bg-[#F8FAFC]">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How We Migrate Your WooCommerce Store</h2>
-          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A proven 5-step process. Zero downtime. Zero lost orders.</p>
+      {/* 5. PAIN POINTS, Dark Navy */}
+      <section className="py-12 md:py-24 px-6 bg-[#0F172A]">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 text-red-400 border border-red-500/20 text-sm font-bold uppercase tracking-widest mb-6">
+              <AlertTriangle className="w-4 h-4" />
+              The Real Cost of WooCommerce
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Your Store Is Bleeding Revenue
+            </h2>
+            <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+              WooCommerce was built for blogs, not e-commerce at scale. Here&apos;s what that costs you.
+            </p>
+          </div>
 
-          <div className="grid md:grid-cols-5 gap-4">
+          <div className="grid md:grid-cols-2 gap-6">
             {[
-              { step: "01", title: "Full Store Audit", desc: "We audit your WooCommerce setup: products, plugins, checkout flow, SEO, and hosting costs. You get a full report showing what&apos;s costing you money.", icon: FileSearch, duration: "Week 1" },
-              { step: "02", title: "Data Export & Mapping", desc: "Every product, order, customer account, review, and category is exported from your WooCommerce database and cleaned. All SEO URLs mapped for 301 redirects.", icon: Database, duration: "Week 2" },
-              { step: "03", title: "Custom Storefront Build", desc: "Your new Next.js storefront is built with native payment integrations (Stripe, PayPal, Apple Pay), your exact checkout flow, and any custom pricing logic.", icon: Wrench, duration: "Weeks 3 to 5" },
-              { step: "04", title: "Data Migration & Testing", desc: "We import all products, orders, and customer accounts into your new platform. Every checkout flow is tested across mobile and desktop before launch.", icon: Package, duration: "Week 6" },
-              { step: "05", title: "Launch & Handoff", desc: "Zero-downtime launch. Every WooCommerce URL 301-redirected. DNS updated. SSL verified. You get full code ownership and admin access on day one.", icon: Rocket, duration: "Week 7" },
+              { icon: DollarSign, title: "You're Paying $300 to $700/Month to Run Your Store", detail: "Managed WooCommerce hosting (Kinsta, WP Engine): $50 to $200/mo. WooCommerce extensions (subscriptions, bookings, B2B): $50 to $300/yr. Security plugin: $10 to $50/mo. Backups, CDN, caching. It never stops adding up." },
+              { icon: XCircle, title: "Checkout Abandonment Is Killing Your Conversions", detail: "Every extra second of load time costs you 7% in conversions. WooCommerce checkouts average 3 to 5 seconds. On a store doing $50K/month, that's $3,500+ in revenue you're leaving on the table every single month." },
+              { icon: AlertTriangle, title: "One Plugin Update Can Take Your Store Offline", detail: "Payment gateway plugin conflicts with your theme. WooCommerce updates break your custom checkout. And it always happens on a Saturday during a sale campaign. Every minute offline is orders you never get back." },
+              { icon: Lock, title: "Your Store Is One Hack Away From Disaster", detail: "WooCommerce stores hold payment data, customer addresses, and order history, making them high-value targets. WordPress is the #1 hacked CMS. A static custom coded store has no database to breach and no plugin attack surface." },
+              { icon: TrendingUp, title: "Google Penalizes Your Slow Checkout Pages", detail: "Google's Core Web Vitals directly impact your organic rankings. A WooCommerce site running PHP on shared hosting fails LCP and TTFB benchmarks. Your competitors with faster sites outrank you before a single keyword is written." },
+              { icon: Code2, title: "You Can't Add Features Without Paying for Yet Another Plugin", detail: "Need a pricing calculator? $200/yr plugin. Need a custom B2B portal? Another plugin. Need loyalty points? Another plugin. Each one adds load time, maintenance risk, and another line on your monthly bill. On custom code, we build exactly what you need, once." },
             ].map((item, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs hover:shadow-md transition-shadow group"
+                transition={{ delay: i * 0.08 }}
+                className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-red-500/40 transition-colors group"
               >
-                <span className="text-4xl font-black text-stone-200 block mb-3 leading-none">{item.step}</span>
-                <div className="w-9 h-9 rounded-xl bg-stone-50 border border-stone-100 flex items-center justify-center mb-3">
-                  <item.icon className="w-4 h-4 text-cognac" />
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-xl bg-red-500/15 text-red-400 shrink-0 group-hover:bg-red-500/25 transition-colors">
+                    <item.icon className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
+                    <p className="text-slate-400 leading-relaxed text-sm">{item.detail}</p>
+                  </div>
                 </div>
-                <h3 className="text-sm font-bold text-charcoal mb-1">{item.title}</h3>
-                <p className="text-xs text-stone-500 leading-relaxed mb-3">{item.desc}</p>
-                <span className="text-[10px] font-bold uppercase tracking-widest text-cognac bg-stone-50 border border-stone-100 px-2 py-1 rounded-full">{item.duration}</span>
               </motion.div>
             ))}
           </div>
@@ -420,7 +422,7 @@ export default function PageContent() {
           <div className="flex flex-col sm:flex-row gap-6">
             <div className="flex items-start gap-4">
               <Link href="/about/hassan" className="shrink-0">
-                <div className="w-12 h-12 rounded-full bg-stone-100 border border-stone-200 flex items-center justify-center text-charcoal font-bold text-lg">H</div>
+                <Image src="/team/hassan.png" alt="Hassan Jamal" width={48} height={48} className="w-12 h-12 rounded-full border border-stone-200 object-cover" />
               </Link>
               <div>
                 <Link href="/about/hassan" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Hassan Jamal</Link>
@@ -429,7 +431,7 @@ export default function PageContent() {
             </div>
             <div className="flex items-start gap-4">
               <Link href="/about/imran" className="shrink-0">
-                <div className="w-12 h-12 rounded-full bg-stone-100 border border-stone-200 flex items-center justify-center text-charcoal font-bold text-lg">I</div>
+                <Image src="/team/imran.png" alt="Imran" width={48} height={48} className="w-12 h-12 rounded-full border border-stone-200 object-cover" />
               </Link>
               <div>
                 <Link href="/about/imran" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Imran</Link>

@@ -334,7 +334,7 @@ export default function ShopifySlowPage() {
                         ]} />
 
                         <BlogText>
-                            And your Google PageSpeed went from... 35 to 48. Still red. Still slow. Still losing $6,000-$12,000 every single month.
+                            And your Google PageSpeed went from... 35 to 48. Still red. Still slow. Still losing $6,000-$12,000 every single month. Shopify&apos;s own Dawn theme, the one they built specifically for speed, hits the same ceiling. We documented <Link href="/blog/shopify-dawn-theme-slow" className="text-cognac hover:underline">exactly why the Shopify Dawn theme is slow</Link> and what the hard ceiling looks like before you invest more time optimizing the wrong layer.
                         </BlogText>
 
                         <BlogText>
@@ -398,8 +398,8 @@ export default function ShopifySlowPage() {
 
                         {/* Mid-Article CTA */}
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
-                            <p className="font-bold text-charcoal mb-2">How much revenue is your store losing right now?</p>
-                            <p className="text-stone-600 mb-4 text-sm">Free revenue audit. We calculate your exact loss and show you the fix.</p>
+                            <p className="font-bold text-charcoal mb-2">How much is your Shopify store bleeding per month?</p>
+                            <p className="text-stone-600 mb-4 text-sm">Drop your store URL in the booking form. We run your PageSpeed live on the call, calculate your exact monthly revenue loss to the dollar, and give you a fixed quote before we hang up.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                     Get Free Revenue Audit <ArrowRight className="w-4 h-4" />
                                 </CalModalButton>

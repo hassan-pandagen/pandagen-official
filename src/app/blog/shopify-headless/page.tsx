@@ -242,8 +242,8 @@ export default function ShopifyHeadlessPage() {
 
                         {/* Mid-Article CTA */}
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
-                            <p className="font-bold text-charcoal mb-2">Is your Shopify store losing revenue to slow speed?</p>
-                            <p className="text-stone-600 mb-4 text-sm">Free audit: We&apos;ll calculate exactly how much you&apos;re losing and show you what headless would return for your revenue.</p>
+                            <p className="font-bold text-charcoal mb-2">Is your Shopify store bleeding revenue to slow load times right now?</p>
+                            <p className="text-stone-600 mb-4 text-sm">Drop your store URL when you book. We run your PageSpeed live on the call, calculate your exact monthly conversion loss, and show you the headless build that fixes it.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free Shopify Speed Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
                         </div>
 

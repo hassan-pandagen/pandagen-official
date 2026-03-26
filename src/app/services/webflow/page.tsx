@@ -2,12 +2,24 @@ import type { Metadata } from 'next';
 import PageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'Webflow Migration to Custom Code | PandaCodeGen',
-  description: 'Stop paying Webflow hosting premiums. We migrate your Webflow site to custom Next.js, faster loading, full SEO control, and you own the code forever.',
+  title: 'Webflow to Next.js Migration Service | PandaCodeGen',
+  description: 'Webflow charges $23 to $49 per month and still scores 55 to 75 on mobile PageSpeed. We migrate to custom Next.js. 95+ PageSpeed, no monthly fees, you own the code.',
   alternates: { canonical: '/services/webflow' },
+  keywords: [
+    'webflow migration service',
+    'webflow to nextjs migration',
+    'webflow alternative',
+    'webflow too expensive',
+    'webflow migration cost',
+    'webflow to custom code',
+    'webflow nextjs agency',
+    'webflow slow website fix',
+    'replace webflow',
+    'webflow seo limitations',
+  ],
   openGraph: {
-    title: 'Webflow Migration to Custom Code | PandaCodeGen',
-    description: 'Stop paying Webflow hosting premiums. We migrate your Webflow site to custom Next.js, faster loading, full SEO control, and you own the code forever.',
+    title: 'Webflow to Next.js Migration Service | PandaCodeGen',
+    description: 'Webflow charges $23 to $49/month and still scores 55 to 75 on PageSpeed. We migrate to custom Next.js. 95+ PageSpeed, no monthly fees.',
     url: 'https://www.pandacodegen.com/services/webflow',
     siteName: 'PandaCodeGen',
     type: 'website',
@@ -15,8 +27,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Webflow Migration to Custom Code | PandaCodeGen',
-    description: 'Stop paying Webflow hosting premiums. We migrate to custom Next.js, faster loading, full SEO control, and you own the code forever.',
+    title: 'Webflow to Next.js Migration Service | PandaCodeGen',
+    description: 'Webflow costs $23 to $49/month and still scores 55 to 75 on PageSpeed. We migrate to custom Next.js. 95+ PageSpeed, no monthly fees.',
   },
 };
 

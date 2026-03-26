@@ -2,14 +2,26 @@ import type { Metadata } from 'next';
 import PageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'WooCommerce to Custom Code Migration | PandaCodeGen',
-  description: 'Escape WooCommerce hosting bills, plugin conflicts, and slow checkouts. We migrate your WooCommerce store to a custom coded Next.js storefront you own forever.',
+  title: 'WooCommerce Speed Optimization & Migration Service | PandaCodeGen',
+  description: 'WooCommerce stores score 30 to 55 on mobile PageSpeed. We fix the root cause with a headless Next.js frontend. Keep your product catalog, get 95+ PageSpeed and sub-1-second load times.',
   alternates: {
     canonical: '/services/woocommerce',
   },
+  keywords: [
+    'woocommerce speed optimization',
+    'woocommerce headless',
+    'woocommerce slow fix',
+    'woocommerce migration service',
+    'headless woocommerce development',
+    'woocommerce to nextjs',
+    'woocommerce performance agency',
+    'fix woocommerce slow website',
+    'woocommerce too slow',
+    'woocommerce checkout slow',
+  ],
   openGraph: {
-    title: 'WooCommerce to Custom Code Migration | PandaCodeGen',
-    description: 'Escape WooCommerce hosting bills, plugin conflicts, and slow checkouts. We migrate your WooCommerce store to a custom coded Next.js storefront you own forever.',
+    title: 'WooCommerce Speed Optimization & Migration Service | PandaCodeGen',
+    description: 'WooCommerce stores score 30 to 55 on mobile PageSpeed. We fix it with a headless Next.js frontend. Keep your catalog, get 95+ PageSpeed.',
     url: 'https://www.pandacodegen.com/services/woocommerce',
     siteName: 'PandaCodeGen',
     type: 'website',
@@ -17,8 +29,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'WooCommerce to Custom Code Migration | PandaCodeGen',
-    description: 'Escape WooCommerce hosting bills, plugin conflicts, and slow checkouts. We migrate your store to a custom Next.js storefront you own forever.',
+    title: 'WooCommerce Speed Optimization & Migration Service | PandaCodeGen',
+    description: 'WooCommerce scoring 30 to 55 on PageSpeed Mobile. We fix it with a headless Next.js frontend. 95+ PageSpeed, keep your product catalog.',
   },
 };
 

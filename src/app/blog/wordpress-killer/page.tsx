@@ -244,8 +244,8 @@ export default function WordPressKillerPage() {
 
                         {/* Mid-Article CTA */}
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
-                            <p className="font-bold text-charcoal mb-2">What is your WordPress site actually costing you?</p>
-                            <p className="text-stone-600 mb-4 text-sm">Free cost audit, direct costs plus lost revenue from slow speed, calculated for your specific site.</p>
+                            <p className="font-bold text-charcoal mb-2">Is WordPress holding your business back right now?</p>
+                            <p className="text-stone-600 mb-4 text-sm">Drop your URL when you book. We run your PageSpeed live on the call, compare it against what custom Next.js delivers, and give you a fixed migration quote on the spot.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free WordPress Cost Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
                         </div>
 

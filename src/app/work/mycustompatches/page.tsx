@@ -527,7 +527,7 @@ export default function MyCustomPatchesCaseStudy() {
                             </a>
                             <Link
                                 href="/work"
-                                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white border border-stone-200 text-charcoal font-bold rounded-full hover:bg-stone-50 hover:border-stone-400 transition-all"
+                                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white border border-cognac/30 text-cognac font-bold rounded-full hover:bg-cognac hover:text-white hover:border-cognac transition-all"
                             >
                                 See All Projects
                             </Link>

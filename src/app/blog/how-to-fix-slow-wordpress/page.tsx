@@ -632,8 +632,8 @@ export default function FixSlowWordPressPage() {
 
                         {/* Mid-Article CTA */}
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
-                            <p className="font-bold text-charcoal mb-2">Ready to go beyond WordPress&apos;s speed ceiling?</p>
-                            <p className="text-stone-600 mb-4 text-sm">Free migration audit. See what under 1 second load times would do for your traffic and revenue.</p>
+                            <p className="font-bold text-charcoal mb-2">Is your WordPress site still loading in 3+ seconds right now?</p>
+                            <p className="text-stone-600 mb-4 text-sm">Drop your URL when you book. We run your PageSpeed live on the call, find the exact bottlenecks killing your speed, and show you what custom code changes.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                     Book Free Migration Audit <ArrowRight className="w-4 h-4" />
                                 </CalModalButton>

@@ -212,7 +212,7 @@ export default function ShopifyPlusStillSlowPage() {
                             "Multi-channel and multi-currency support at scale"
                         ]} />
                         <BlogText>
-                            What Shopify Plus does <strong>not</strong> give you: a faster frontend. The Liquid templating system is identical across all Shopify plans, from Basic to Plus.
+                            What Shopify Plus does <strong>not</strong> give you: a faster frontend. The Liquid templating system is identical across all Shopify plans, from Basic to Plus. This includes Dawn, Shopify&apos;s own flagship theme that they market as their fastest. A clean Dawn store with no apps scores 65 to 80/100 on mobile. Add 3 apps and it drops to 35 to 55/100. We broke down <Link href="/blog/shopify-dawn-theme-slow" className="text-cognac hover:underline">exactly why the Shopify Dawn theme is still slow</Link> and where the real ceiling is.
                         </BlogText>
 
                         <BlogHeader>Why Is Shopify Plus Still Slow on Mobile?</BlogHeader>
@@ -243,8 +243,8 @@ export default function ShopifyPlusStillSlowPage() {
 
                         {/* Mid-Article CTA */}
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
-                            <p className="font-bold text-charcoal mb-2">Is your Shopify Plus store losing revenue to slow speed?</p>
-                            <p className="text-stone-600 mb-4 text-sm">Free audit. We&apos;ll calculate your exact revenue loss and show you what headless would return.</p>
+                            <p className="font-bold text-charcoal mb-2">Still paying $2,300/month for a 3-second load time?</p>
+                            <p className="text-stone-600 mb-4 text-sm">Drop your Shopify URL when you book. We pull your PageSpeed score live on the call, calculate exactly how much your slow store is costing you in lost conversions, and show you the headless fix.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free Shopify Plus Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
                         </div>
 

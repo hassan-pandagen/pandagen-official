@@ -2,12 +2,24 @@ import type { Metadata } from 'next';
 import PageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'Custom Web Apps & SaaS Development | PandaCodeGen',
-  description: 'We build scalable SaaS platforms, client portals, and AI-powered dashboards from scratch. Fixed-price quotes, you own the code, enterprise level architecture.',
+  title: 'Next.js Development Agency | Custom Web Apps & SaaS | PandaCodeGen',
+  description: 'We build custom Next.js web apps, SaaS platforms, and client portals from scratch. Fixed-price quotes, you own the code, built to scale from day one.',
   alternates: { canonical: '/services/custom-engineering' },
+  keywords: [
+    'nextjs development agency',
+    'custom web development agency',
+    'saas development agency',
+    'custom web app development',
+    'nextjs agency',
+    'custom website development',
+    'nextjs saas development',
+    'custom next.js development',
+    'web app development agency',
+    'custom portal development',
+  ],
   openGraph: {
-    title: 'Custom Web Apps & SaaS Development | PandaCodeGen',
-    description: 'Scalable SaaS platforms, client portals, and AI dashboards. Fixed-price, code ownership, enterprise level architecture.',
+    title: 'Next.js Development Agency | Custom Web Apps & SaaS | PandaCodeGen',
+    description: 'Custom Next.js web apps, SaaS platforms, and client portals from scratch. Fixed-price quotes, you own the code, built to scale.',
     url: 'https://www.pandacodegen.com/services/custom-engineering',
     siteName: 'PandaCodeGen',
     type: 'website',
@@ -15,8 +27,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Custom Web Apps & SaaS Development | PandaCodeGen',
-    description: 'Scalable SaaS platforms, client portals, and AI dashboards. Fixed-price, code ownership, enterprise level architecture.',
+    title: 'Next.js Development Agency | Custom Web Apps & SaaS | PandaCodeGen',
+    description: 'Custom Next.js web apps, SaaS platforms, and client portals. Fixed-price quotes, you own the code, built to scale.',
   },
 };
 

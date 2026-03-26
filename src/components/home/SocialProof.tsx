@@ -169,9 +169,9 @@ export default function SocialProof() {
                 href="https://www.trustpilot.com/review/pandacodegen.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 flex items-center justify-center gap-2 h-[52px] px-6 rounded-xl border border-stone-200 bg-white text-sm font-bold text-stone-700 hover:border-stone-300 hover:shadow-sm transition-all"
+                className="flex-1 flex items-center justify-center gap-2 h-[52px] px-6 rounded-xl border border-stone-200 bg-white text-sm font-bold text-stone-700 hover:bg-[#00b67a] hover:text-white hover:border-[#00b67a] transition-all"
               >
-                <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="#00b67a">
+                <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 0L14.7 8.3H23.4L16.35 13.4L19.05 21.7L12 16.6L4.95 21.7L7.65 13.4L0.6 8.3H9.3L12 0Z"/>
                 </svg>
                 Review us on Trustpilot
@@ -180,7 +180,7 @@ export default function SocialProof() {
                 href="https://g.page/r/CU6JJpd0jNDhEBM/review"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 flex items-center justify-center gap-2 h-[52px] px-6 rounded-xl border border-stone-200 bg-white text-sm font-bold text-stone-700 hover:border-stone-300 hover:shadow-sm transition-all"
+                className="flex-1 flex items-center justify-center gap-2 h-[52px] px-6 rounded-xl border border-stone-200 bg-white text-sm font-bold text-stone-700 hover:bg-charcoal hover:text-white hover:border-charcoal transition-all"
               >
                 <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24">
                   <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>

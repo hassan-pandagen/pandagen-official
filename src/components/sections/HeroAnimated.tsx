@@ -35,7 +35,7 @@ export function HeroCTAs() {
           data-cal-namespace="discovery"
           data-cal-link="pandagen/discovery"
           data-cal-config='{"layout":"month_view"}'
-          className="w-full sm:w-auto px-8 py-4 bg-charcoal text-white font-bold text-base rounded-full hover:bg-black transition-all duration-300 flex items-center justify-center gap-2 shadow-xl hover:shadow-2xl hover:-translate-y-0.5 cursor-pointer"
+          className="w-full sm:w-auto px-8 py-4 bg-charcoal text-white font-bold text-base rounded-full hover:bg-cognac transition-all duration-300 flex items-center justify-center gap-2 shadow-xl hover:shadow-2xl hover:-translate-y-0.5 hover:scale-105 cursor-pointer"
         >
           Get a Free Quote <ArrowRight className="w-5 h-5 text-cognac" />
         </button>
@@ -43,7 +43,7 @@ export function HeroCTAs() {
         {/* Secondary CTA: White surface card */}
         <Link
           href="/work"
-          className="w-full sm:w-auto px-8 py-4 bg-white border border-stone-200 text-charcoal font-bold text-base rounded-full hover:bg-stone-50 transition-all duration-300 flex items-center justify-center gap-2 shadow-card cursor-pointer"
+          className="w-full sm:w-auto px-8 py-4 bg-white border border-cognac/30 text-cognac font-bold text-base rounded-full hover:bg-cognac hover:text-white transition-all duration-300 flex items-center justify-center gap-2 shadow-card hover:scale-105 cursor-pointer"
         >
           View Case Studies <ArrowRight className="w-4 h-4" />
         </Link>

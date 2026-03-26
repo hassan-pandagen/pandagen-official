@@ -156,7 +156,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
             </a>
             <button
               onClick={handleOpenQuote}
-              className="px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105 bg-charcoal text-white hover:bg-stone-800"
+              className="px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105 bg-charcoal text-white hover:bg-cognac"
             >
               Get Free Quote
             </button>
@@ -242,7 +242,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
           <div className="flex flex-col items-center gap-5 mt-10">
             <button
               onClick={() => { setIsMobileMenuOpen(false); handleOpenQuote(); }}
-              className="w-full max-w-xs py-4 bg-charcoal text-white font-bold rounded-full text-center hover:bg-stone-800 transition-all"
+              className="w-full max-w-xs py-4 bg-charcoal text-white font-bold rounded-full text-center hover:bg-cognac transition-all"
             >
               Get Free Quote
             </button>

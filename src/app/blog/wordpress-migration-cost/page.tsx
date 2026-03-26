@@ -348,8 +348,8 @@ export default function WordPressMigrationCostPage() {
 
                     {/* Mid-Article CTA */}
                     <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
-                        <p className="font-bold text-charcoal mb-2">What will your migration cost?</p>
-                        <p className="text-stone-600 mb-4 text-sm">We review your current site and give you a precise quote with full line-item breakdown. Free, no obligation, 24-hour turnaround.</p>
+                        <p className="font-bold text-charcoal mb-2">Ready to know the exact cost of your WordPress migration?</p>
+                        <p className="text-stone-600 mb-4 text-sm">Drop your URL when you book. We scope your migration live on the call, give you a fixed-price quote, and calculate your break-even point before we hang up.</p>
                         <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-cognac transition-all">
                             Get a Free Migration Quote <ArrowRight className="w-4 h-4" />
                         </CalModalButton>

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Lock, Cpu, Users, Palette, HelpCircle, FileSearch, Lightbulb, Code, Rocket, Gauge, ShoppingBag, Wrench } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
@@ -51,21 +52,21 @@ export default function PageContent() {
       <Header />
 
       {/* 1. HERO */}
-      <section className="relative pt-20 md:pt-24 md:pt-40 pb-12 md:pb-20 px-6">
+      <section className="relative pt-20 md:pt-28 pb-8 md:pb-12 px-6">
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "linear-gradient(#1C1917 1px, transparent 1px), linear-gradient(90deg, #1C1917 1px, transparent 1px)", backgroundSize: "50px 50px", opacity: 0.03 }} />
         <div className="absolute top-1/3 right-[10%] w-[500px] h-[500px] bg-stone-200/50 blur-[140px] rounded-full pointer-events-none" />
 
         <div className="container mx-auto text-center relative z-10 max-w-4xl">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-200 text-sm text-cognac mb-8">
-            <Zap className="w-4 h-4" /> Build Your Own Software
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-200 text-sm text-cognac mb-6">
+            <Zap className="w-4 h-4" /> Next.js Development Agency
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6 leading-tight"
+            className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-4 leading-tight"
           >
-            Build Software <br />
+            Custom Next.js Development: <br />
             <span className="font-serif italic text-cognac">
               That You Own.
             </span>
@@ -75,7 +76,7 @@ export default function PageContent() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1 }}
-            className="text-xl text-stone-600 leading-relaxed mb-8 max-w-2xl mx-auto"
+            className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto"
           >
             Templates can&apos;t build unicorns. We architect scalable SaaS platforms, internal dashboards, and AI-powered tools. <span className="text-charcoal font-medium">You own the code. You own the IP. You own the future.</span> We run our own custom CRM and AI automation systems on the same stack we build for clients.
           </motion.p>
@@ -89,10 +90,11 @@ export default function PageContent() {
             >
               Get Free Consultation <ArrowRight className="w-5 h-5" />
             </button>
-            <Link href="#what-we-build" className="px-8 py-4 bg-white border border-stone-200 text-charcoal font-medium rounded-full hover:border-cognac/30 transition-all flex items-center justify-center gap-2">
+            <Link href="#what-we-build" className="px-8 py-4 bg-white border border-cognac/30 text-cognac font-bold rounded-full hover:bg-cognac hover:text-white transition-all flex items-center justify-center gap-2">
               See What We Build <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
+          <p className="text-sm text-stone-500 mt-4 text-center max-w-xl mx-auto leading-relaxed">30-min call. Describe your idea or share your current tool when you book. We scope it live, identify what custom code replaces, and <span className="text-charcoal font-medium">give you a fixed MVP quote.</span></p>
         </div>
       </section>
 
@@ -103,7 +105,7 @@ export default function PageContent() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-100 text-sm text-stone-600 font-bold uppercase tracking-widest mb-6">
               What We Build
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">Three Categories. Infinite Possibilities.</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">What Our Next.js Development Agency Builds</h2>
             <p className="text-stone-600 text-lg max-w-2xl mx-auto">Every project we take on falls into one of these categories. Here&apos;s what we&apos;ve built for companies like yours.</p>
           </div>
 
@@ -186,7 +188,45 @@ export default function PageContent() {
         </div>
       </section>
 
-      {/* 3. PAIN POINTS */}
+      {/* 3. HOW WE BUILD - Process Timeline */}
+      <section id="how-we-build" className="py-12 md:py-24 px-6 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-8 md:mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-100 text-sm text-stone-600 font-bold uppercase tracking-widest mb-6">
+              How We Build
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">From Idea to Production in Sprints</h2>
+            <p className="text-slate-500 text-lg max-w-2xl mx-auto">No 6-month waterfall projects. We ship in 2-week sprints with weekly demos. You see progress every single week.</p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-6 relative">
+            <div className="hidden md:block absolute top-8 left-0 w-full h-0.5 bg-slate-100 -z-10" />
+            {[
+              { step: "01", title: "Discovery Sprint", duration: "Week 1", desc: "We map your requirements, user flows, and technical architecture. You get a detailed spec doc and timeline before a single line of code is written." },
+              { step: "02", title: "Prototype & Validate", duration: "Weeks 2-3", desc: "We build a working prototype with real functionality, not mockups. You test it, your users test it, we iterate until it's right." },
+              { step: "03", title: "Full Development", duration: "Weeks 4-8", desc: "Sprint-based development with weekly demos. Auth, payments, real-time features, AI integration. Everything gets built and reviewed." },
+              { step: "04", title: "Launch & Scale", duration: "Week 9+", desc: "We deploy to production, set up monitoring, and hand over the codebase. You own 100% of the code and IP. We stay on for support." },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.08 }}
+                className="bg-white p-6 rounded-xl border border-slate-200 shadow-xs hover:shadow-md transition-shadow"
+              >
+                <div className="w-14 h-14 rounded-full bg-stone-50 border-4 border-white shadow-xs flex items-center justify-center text-lg font-black text-cognac mb-6">
+                  {item.step}
+                </div>
+                <div className="text-xs font-semibold text-stone-600 uppercase tracking-widest mb-2">{item.duration}</div>
+                <h3 className="font-bold text-lg text-slate-900 mb-2">{item.title}</h3>
+                <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4. PAIN POINTS */}
       <section className="py-12 md:py-24 px-6 bg-[#0F172A]">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-8 md:mb-16">
@@ -226,7 +266,7 @@ export default function PageContent() {
         </div>
       </section>
 
-      {/* 4. COMPARISON TABLE */}
+      {/* 5. COMPARISON TABLE */}
       <section id="comparison" className="py-10 md:py-20 px-6 border-y border-stone-200 bg-stone-50/50">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">No-Code vs Custom Coded</h2>
@@ -251,44 +291,6 @@ export default function PageContent() {
               </div>
             ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. HOW WE BUILD - Process Timeline */}
-      <section id="how-we-build" className="py-12 md:py-24 px-6 bg-white">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-8 md:mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-100 text-sm text-stone-600 font-bold uppercase tracking-widest mb-6">
-              How We Build
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">From Idea to Production in Sprints</h2>
-            <p className="text-slate-500 text-lg max-w-2xl mx-auto">No 6-month waterfall projects. We ship in 2-week sprints with weekly demos. You see progress every single week.</p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-6 relative">
-            <div className="hidden md:block absolute top-8 left-0 w-full h-0.5 bg-slate-100 -z-10" />
-            {[
-              { step: "01", title: "Discovery Sprint", duration: "Week 1", desc: "We map your requirements, user flows, and technical architecture. You get a detailed spec doc and timeline before a single line of code is written." },
-              { step: "02", title: "Prototype & Validate", duration: "Weeks 2-3", desc: "We build a working prototype with real functionality, not mockups. You test it, your users test it, we iterate until it's right." },
-              { step: "03", title: "Full Development", duration: "Weeks 4-8", desc: "Sprint-based development with weekly demos. Auth, payments, real-time features, AI integration. Everything gets built and reviewed." },
-              { step: "04", title: "Launch & Scale", duration: "Week 9+", desc: "We deploy to production, set up monitoring, and hand over the codebase. You own 100% of the code and IP. We stay on for support." },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.08 }}
-                className="bg-white p-6 rounded-xl border border-slate-200 shadow-xs hover:shadow-md transition-shadow"
-              >
-                <div className="w-14 h-14 rounded-full bg-stone-50 border-4 border-white shadow-xs flex items-center justify-center text-lg font-black text-cognac mb-6">
-                  {item.step}
-                </div>
-                <div className="text-xs font-semibold text-stone-600 uppercase tracking-widest mb-2">{item.duration}</div>
-                <h3 className="font-bold text-lg text-slate-900 mb-2">{item.title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>
@@ -464,7 +466,7 @@ export default function PageContent() {
           <div className="flex flex-col sm:flex-row gap-6">
             <div className="flex items-start gap-4">
               <Link href="/about/hassan" className="shrink-0">
-                <div className="w-12 h-12 rounded-full bg-stone-100 border border-stone-200 flex items-center justify-center text-charcoal font-bold text-lg">H</div>
+                <Image src="/team/hassan.png" alt="Hassan Jamal" width={48} height={48} className="w-12 h-12 rounded-full border border-stone-200 object-cover" />
               </Link>
               <div>
                 <Link href="/about/hassan" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Hassan Jamal</Link>
@@ -473,7 +475,7 @@ export default function PageContent() {
             </div>
             <div className="flex items-start gap-4">
               <Link href="/about/imran" className="shrink-0">
-                <div className="w-12 h-12 rounded-full bg-stone-100 border border-stone-200 flex items-center justify-center text-charcoal font-bold text-lg">I</div>
+                <Image src="/team/imran.png" alt="Imran" width={48} height={48} className="w-12 h-12 rounded-full border border-stone-200 object-cover" />
               </Link>
               <div>
                 <Link href="/about/imran" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Imran</Link>

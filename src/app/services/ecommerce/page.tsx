@@ -2,12 +2,24 @@ import type { Metadata } from 'next';
 import PageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'Custom Shopify Headless & E-Commerce Development | PandaCodeGen',
-  description: "Custom headless Shopify storefronts that load in under 1 second. No slow themes, no monthly app fees, complete customization. Keep Shopify's backend, replace the front end.",
+  title: 'Shopify Speed Optimization & Headless Development | PandaCodeGen',
+  description: "Your Shopify store scores 40 to 60 on PageSpeed. We rebuild the frontend in Next.js, loading under 1 second. 95+ PageSpeed guaranteed, no app fees, you own the code.",
   alternates: { canonical: '/services/ecommerce' },
+  keywords: [
+    'shopify speed optimization service',
+    'headless shopify development',
+    'shopify slow website fix',
+    'shopify performance optimization',
+    'headless shopify storefront',
+    'shopify app fees alternative',
+    'shopify nextjs migration',
+    'shopify headless commerce agency',
+    'slow shopify store fix',
+    'shopify speed fix agency',
+  ],
   openGraph: {
-    title: 'Custom Shopify Headless Development | PandaCodeGen',
-    description: "Custom headless Shopify storefronts that load in under 1 second. No slow themes, no monthly app fees, complete customization.",
+    title: 'Shopify Speed Optimization & Headless Development | PandaCodeGen',
+    description: "Your Shopify store scores 40 to 60 on PageSpeed. We rebuild the frontend in Next.js. 95+ PageSpeed guaranteed, no app fees, you own the code.",
     url: 'https://www.pandacodegen.com/services/ecommerce',
     siteName: 'PandaCodeGen',
     type: 'website',
@@ -15,8 +27,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Custom Shopify Headless Development | PandaCodeGen',
-    description: "Custom headless Shopify storefronts that load in under 1 second. No slow themes, no monthly app fees.",
+    title: 'Shopify Speed Optimization & Headless Development | PandaCodeGen',
+    description: "Shopify scoring 40 to 60 on PageSpeed. We rebuild in Next.js. 95+ PageSpeed guaranteed, no app fees, you own the code.",
   },
 };
 

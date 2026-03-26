@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Gauge, Lock, Server, Database, Globe, FileSearch, Wrench, Rocket, HelpCircle } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -50,19 +51,19 @@ export default function WebflowPageContent() {
       <Header />
 
       {/* 1. HERO */}
-      <section className="relative pt-20 md:pt-24 md:pt-40 pb-12 md:pb-20 px-6">
+      <section className="relative pt-20 md:pt-28 pb-8 md:pb-12 px-6">
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "linear-gradient(#1C1917 1px, transparent 1px), linear-gradient(90deg, #1C1917 1px, transparent 1px)", backgroundSize: "50px 50px", opacity: 0.03 }} />
         <div className="absolute top-1/3 right-[10%] w-[500px] h-[500px] bg-stone-200/50 blur-[140px] rounded-full pointer-events-none" />
 
         <div className="container mx-auto text-center relative z-10 max-w-4xl">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-200 text-sm text-cognac mb-8">
-            <Zap className="w-4 h-4" /> Beyond Visual Builders
+            <Zap className="w-4 h-4" /> Webflow Migration Service
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6 leading-tight"
+            className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-4 leading-tight"
           >
             Webflow Got You Started. <br />
             <span className="font-serif italic text-cognac">
@@ -74,7 +75,7 @@ export default function WebflowPageContent() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1 }}
-            className="text-xl text-stone-600 leading-relaxed mb-8 max-w-2xl mx-auto"
+            className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto"
           >
             Webflow is the best visual builder out there. But if you&apos;re hitting its ceiling: slow CMS, expensive hosting, limited logic. It&apos;s time for <span className="text-charcoal font-medium">custom code that you actually own</span>.
           </motion.p>
@@ -88,10 +89,11 @@ export default function WebflowPageContent() {
             >
               Get Free Consultation <ArrowRight className="w-5 h-5" />
             </button>
-            <Link href="#when-to-migrate" className="px-8 py-4 bg-white border border-stone-200 text-charcoal font-medium rounded-full hover:border-cognac/30 transition-all flex items-center justify-center gap-2">
+            <Link href="#when-to-migrate" className="px-8 py-4 bg-white border border-cognac/30 text-cognac font-bold rounded-full hover:bg-cognac hover:text-white transition-all flex items-center justify-center gap-2">
               When to Migrate <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
+          <p className="text-sm text-stone-500 mt-4 text-center max-w-xl mx-auto leading-relaxed">30-min call. Drop your Webflow URL when you book. We test the speed gap, scope the migration, and <span className="text-charcoal font-medium">quote you before we hang up.</span></p>
         </div>
       </section>
 
@@ -321,7 +323,7 @@ export default function WebflowPageContent() {
                 data-cal-namespace="discovery"
                 data-cal-link="pandagen/discovery"
                 data-cal-config='{"layout":"month_view"}'
-                className="w-full px-6 py-4 border border-charcoal/30 text-stone-500 font-bold rounded-full hover:bg-stone-500/10 transition-all"
+                className="w-full px-6 py-4 border border-cognac/30 text-cognac font-bold rounded-full hover:bg-cognac hover:text-white transition-all"
               >
                 Optimize My Webflow
               </button>
@@ -455,7 +457,7 @@ export default function WebflowPageContent() {
           <div className="flex flex-col sm:flex-row gap-6">
             <div className="flex items-start gap-4">
               <Link href="/about/hassan" className="shrink-0">
-                <div className="w-12 h-12 rounded-full bg-stone-100 border border-stone-200 flex items-center justify-center text-charcoal font-bold text-lg">H</div>
+                <Image src="/team/hassan.png" alt="Hassan Jamal" width={48} height={48} className="w-12 h-12 rounded-full border border-stone-200 object-cover" />
               </Link>
               <div>
                 <Link href="/about/hassan" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Hassan Jamal</Link>
@@ -464,7 +466,7 @@ export default function WebflowPageContent() {
             </div>
             <div className="flex items-start gap-4">
               <Link href="/about/imran" className="shrink-0">
-                <div className="w-12 h-12 rounded-full bg-stone-100 border border-stone-200 flex items-center justify-center text-charcoal font-bold text-lg">I</div>
+                <Image src="/team/imran.png" alt="Imran" width={48} height={48} className="w-12 h-12 rounded-full border border-stone-200 object-cover" />
               </Link>
               <div>
                 <Link href="/about/imran" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Imran</Link>

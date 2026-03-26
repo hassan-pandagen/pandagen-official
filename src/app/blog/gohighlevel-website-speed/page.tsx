@@ -288,6 +288,10 @@ export default function GHLWebsiteSpeedPage() {
 
                     <p className="text-xs text-stone-400 mt-2 mb-8">Scores are typical ranges. Your site may vary. Test yours at pagespeed.web.dev to get your actual number.</p>
 
+                    <BlogText>
+                        If Webflow stands out from that table as a reasonable upgrade from GHL, our <Link href="/blog/webflow-migration-cost" className="text-cognac hover:underline">Webflow migration cost breakdown</Link> covers exact pricing by site size so you know what that path actually costs before committing.
+                    </BlogText>
+
                     <BlogHeader id="seo-cost">What Does a Low PageSpeed Score Cost You in Leads?</BlogHeader>
                     <BlogText>
                         Google confirmed Core Web Vitals as a ranking signal in the{" "}

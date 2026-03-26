@@ -241,8 +241,8 @@ export default function WordPressTrafficDropPage() {
 
                         {/* Mid-Article CTA */}
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
-                            <p className="font-bold text-charcoal mb-2">Is speed killing your WordPress rankings?</p>
-                            <p className="text-stone-600 mb-4 text-sm">Free audit. We&apos;ll show you your PageSpeed score, Core Web Vitals, and exactly how much traffic you&apos;re losing.</p>
+                            <p className="font-bold text-charcoal mb-2">Has your WordPress traffic been dropping?</p>
+                            <p className="text-stone-600 mb-4 text-sm">Drop your URL when you book. We test your Core Web Vitals live on the call, show you what Google is penalizing, and give you the fix with a fixed-price quote.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free Traffic Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
                         </div>
 

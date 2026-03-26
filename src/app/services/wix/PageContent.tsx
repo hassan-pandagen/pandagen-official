@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Gauge, Lock, Palette, HelpCircle, FileSearch, Wrench, Rocket, Search } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
@@ -50,19 +51,19 @@ export default function PageContent() {
       <Header />
 
       {/* 1. HERO */}
-      <section className="relative pt-20 md:pt-24 md:pt-40 pb-12 md:pb-20 px-6">
+      <section className="relative pt-20 md:pt-28 pb-8 md:pb-12 px-6">
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "linear-gradient(#1C1917 1px, transparent 1px), linear-gradient(90deg, #1C1917 1px, transparent 1px)", backgroundSize: "50px 50px", opacity: 0.03 }} />
         <div className="absolute top-1/3 right-[10%] w-[500px] h-[500px] bg-stone-200/50 blur-[140px] rounded-full pointer-events-none" />
 
         <div className="container mx-auto text-center relative z-10 max-w-4xl">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-200 text-sm text-cognac mb-8">
-            <Zap className="w-4 h-4" /> Wix Experts
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-200 text-sm text-cognac mb-6">
+            <Zap className="w-4 h-4" /> Wix Migration Service
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6 leading-tight"
+            className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-4 leading-tight"
           >
             Outgrown Wix? <br />
             <span className="font-serif italic text-cognac">
@@ -74,7 +75,7 @@ export default function PageContent() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1 }}
-            className="text-xl text-stone-600 leading-relaxed mb-8 max-w-2xl mx-auto"
+            className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto"
           >
             Wix got your business online fast. But now it&apos;s holding you back with slow loading, limited SEO, and a monthly subscription that never ends. We help businesses <span className="text-charcoal font-medium">break free and own their platform</span>.
           </motion.p>
@@ -88,10 +89,11 @@ export default function PageContent() {
             >
               Get Free Consultation <ArrowRight className="w-5 h-5" />
             </button>
-            <Link href="#cost-breakdown" className="px-8 py-4 bg-white border border-stone-200 text-charcoal font-medium rounded-full hover:border-cognac/30 transition-all flex items-center justify-center gap-2">
+            <Link href="#cost-breakdown" className="px-8 py-4 bg-white border border-cognac/30 text-cognac font-bold rounded-full hover:bg-cognac hover:text-white transition-all flex items-center justify-center gap-2">
               See the Cost Breakdown <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
+          <p className="text-sm text-stone-500 mt-4 text-center max-w-xl mx-auto leading-relaxed">30-min call. Drop your Wix URL when you book. We run your PageSpeed live and <span className="text-charcoal font-medium">give you a fixed migration quote before we hang up.</span></p>
         </div>
       </section>
 
@@ -174,7 +176,76 @@ export default function PageContent() {
         </div>
       </section>
 
-      {/* 3. PAIN POINTS */}
+      {/* 3. HOW WE MIGRATE - Process Timeline */}
+      <section id="how-it-works" className="py-10 md:py-20 px-6">
+        <div className="container mx-auto max-w-3xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How We Migrate Your Wix Site</h2>
+          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A proven 4-step process. Your current Wix site stays live the entire time.</p>
+
+          <div className="space-y-8">
+            {[
+              { step: "01", title: "Content Export", desc: "We extract every page, image, blog post, and form from your Wix site. Nothing gets left behind.", icon: FileSearch, duration: "Week 1" },
+              { step: "02", title: "Custom Design & Build", desc: "Your new site gets designed and coded from scratch. No templates. Pixel-perfect, unique design that reflects your brand.", icon: Wrench, duration: "Weeks 2-4" },
+              { step: "03", title: "SEO Migration", desc: "We map every old URL, set up 301 redirects, and transfer all your SEO metadata. Google sees a faster version of the same site.", icon: Search, duration: "Week 5" },
+              { step: "04", title: "Launch & Handover", desc: "We deploy, set up analytics, and hand over the keys. You get a built-in content editor for easy content editing. No coding needed.", icon: Rocket, duration: "Week 6" },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: i * 0.08 }}
+                className="flex gap-6 items-start"
+              >
+                <div className="flex flex-col items-center shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-stone-50 border border-cognac/20 flex items-center justify-center">
+                    <item.icon className="w-5 h-5 text-cognac" />
+                  </div>
+                  {i < 3 && <div className="w-px h-8 bg-border mt-2" />}
+                </div>
+                <div className="pb-2">
+                  <div className="flex items-center gap-3 mb-1">
+                    <span className="text-xs font-mono text-gray-600">{item.step}</span>
+                    <h3 className="text-lg font-bold text-charcoal">{item.title}</h3>
+                    <span className="text-xs px-2 py-0.5 rounded-full bg-stone-50 border border-stone-200 text-stone-600">{item.duration}</span>
+                  </div>
+                  <p className="text-stone-600 text-base leading-relaxed">{item.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4. COMPARISON TABLE */}
+      <section id="comparison" className="py-10 md:py-20 px-6 border-y border-stone-200 bg-stone-50/50">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">Wix vs Next.js: Speed and SEO Compared</h2>
+          <p className="text-stone-600 text-center mb-12">See exactly what you&apos;re missing and what you could have.</p>
+
+          <div className="overflow-x-auto rounded-2xl border border-stone-200">
+            <div className="min-w-[500px]">
+            <div className="grid grid-cols-3 bg-stone-50 p-4 border-b border-stone-200">
+              <div className="text-stone-600 font-medium text-sm">Feature</div>
+              <div className="text-stone-600 font-bold text-sm text-center">Wix</div>
+              <div className="text-cognac font-bold text-sm text-center">Custom Coded</div>
+            </div>
+
+            {comparisonData.map((row, i) => (
+              <div key={i} className={`grid grid-cols-3 p-4 items-center ${i % 2 === 0 ? 'bg-white border border-stone-100' : ''} border-b border-stone-200 last:border-b-0`}>
+                <div className="flex items-center gap-2 text-charcoal text-sm font-medium">
+                  <row.icon className="w-4 h-4 text-stone-400 shrink-0" />
+                  {row.feature}
+                </div>
+                <div className="text-red-400/80 text-sm text-center">{row.wix}</div>
+                <div className="text-green-600 text-sm text-center font-medium">{row.custom}</div>
+              </div>
+            ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. PAIN POINTS */}
       <section className="py-12 md:py-24 px-6 bg-[#0F172A]">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-8 md:mb-16">
@@ -211,75 +282,6 @@ export default function PageContent() {
                     <h3 className="text-lg font-bold text-white mb-2">{item.pain}</h3>
                     <p className="text-slate-400 leading-relaxed text-sm">{item.detail}</p>
                   </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 4. COMPARISON TABLE */}
-      <section id="comparison" className="py-10 md:py-20 px-6 border-y border-stone-200 bg-stone-50/50">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">Wix vs Custom Coded</h2>
-          <p className="text-stone-600 text-center mb-12">See exactly what you&apos;re missing and what you could have.</p>
-
-          <div className="overflow-x-auto rounded-2xl border border-stone-200">
-            <div className="min-w-[500px]">
-            <div className="grid grid-cols-3 bg-stone-50 p-4 border-b border-stone-200">
-              <div className="text-stone-600 font-medium text-sm">Feature</div>
-              <div className="text-stone-600 font-bold text-sm text-center">Wix</div>
-              <div className="text-cognac font-bold text-sm text-center">Custom Coded</div>
-            </div>
-
-            {comparisonData.map((row, i) => (
-              <div key={i} className={`grid grid-cols-3 p-4 items-center ${i % 2 === 0 ? 'bg-white border border-stone-100' : ''} border-b border-stone-200 last:border-b-0`}>
-                <div className="flex items-center gap-2 text-charcoal text-sm font-medium">
-                  <row.icon className="w-4 h-4 text-stone-400 shrink-0" />
-                  {row.feature}
-                </div>
-                <div className="text-red-400/80 text-sm text-center">{row.wix}</div>
-                <div className="text-green-600 text-sm text-center font-medium">{row.custom}</div>
-              </div>
-            ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. HOW WE MIGRATE - Process Timeline */}
-      <section id="how-it-works" className="py-10 md:py-20 px-6">
-        <div className="container mx-auto max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How We Migrate Your Wix Site</h2>
-          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A proven 4-step process. Your current Wix site stays live the entire time.</p>
-
-          <div className="space-y-8">
-            {[
-              { step: "01", title: "Content Export", desc: "We extract every page, image, blog post, and form from your Wix site. Nothing gets left behind.", icon: FileSearch, duration: "Week 1" },
-              { step: "02", title: "Custom Design & Build", desc: "Your new site gets designed and coded from scratch. No templates. Pixel-perfect, unique design that reflects your brand.", icon: Wrench, duration: "Weeks 2-4" },
-              { step: "03", title: "SEO Migration", desc: "We map every old URL, set up 301 redirects, and transfer all your SEO metadata. Google sees a faster version of the same site.", icon: Search, duration: "Week 5" },
-              { step: "04", title: "Launch & Handover", desc: "We deploy, set up analytics, and hand over the keys. You get a built-in content editor for easy content editing. No coding needed.", icon: Rocket, duration: "Week 6" },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.08 }}
-                className="flex gap-6 items-start"
-              >
-                <div className="flex flex-col items-center shrink-0">
-                  <div className="w-12 h-12 rounded-xl bg-stone-50 border border-cognac/20 flex items-center justify-center">
-                    <item.icon className="w-5 h-5 text-cognac" />
-                  </div>
-                  {i < 3 && <div className="w-px h-8 bg-border mt-2" />}
-                </div>
-                <div className="pb-2">
-                  <div className="flex items-center gap-3 mb-1">
-                    <span className="text-xs font-mono text-gray-600">{item.step}</span>
-                    <h3 className="text-lg font-bold text-charcoal">{item.title}</h3>
-                    <span className="text-xs px-2 py-0.5 rounded-full bg-stone-50 border border-stone-200 text-stone-600">{item.duration}</span>
-                  </div>
-                  <p className="text-stone-600 text-base leading-relaxed">{item.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -492,7 +494,7 @@ export default function PageContent() {
           <div className="flex flex-col sm:flex-row gap-6">
             <div className="flex items-start gap-4">
               <Link href="/about/hassan" className="shrink-0">
-                <div className="w-12 h-12 rounded-full bg-stone-100 border border-stone-200 flex items-center justify-center text-charcoal font-bold text-lg">H</div>
+                <Image src="/team/hassan.png" alt="Hassan Jamal" width={48} height={48} className="w-12 h-12 rounded-full border border-stone-200 object-cover" />
               </Link>
               <div>
                 <Link href="/about/hassan" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Hassan Jamal</Link>
@@ -501,7 +503,7 @@ export default function PageContent() {
             </div>
             <div className="flex items-start gap-4">
               <Link href="/about/imran" className="shrink-0">
-                <div className="w-12 h-12 rounded-full bg-stone-100 border border-stone-200 flex items-center justify-center text-charcoal font-bold text-lg">I</div>
+                <Image src="/team/imran.png" alt="Imran" width={48} height={48} className="w-12 h-12 rounded-full border border-stone-200 object-cover" />
               </Link>
               <div>
                 <Link href="/about/imran" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Imran</Link>

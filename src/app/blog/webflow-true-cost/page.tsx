@@ -343,8 +343,8 @@ export default function WebflowTrueCostPage() {
 
                         {/* Mid-Article CTA */}
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
-                            <p className="font-bold text-charcoal mb-2">Curious what your Webflow site is really costing you?</p>
-                            <p className="text-stone-600 mb-4 text-sm">Get a free audit. We will show you the PageSpeed gap, the hidden costs, and whether migration makes financial sense.</p>
+                            <p className="font-bold text-charcoal mb-2">Is Webflow&apos;s real cost starting to add up?</p>
+                            <p className="text-stone-600 mb-4 text-sm">Drop your Webflow URL when you book. We calculate your actual 3-year Webflow cost live on the call and show you exactly what migration saves you.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                     Schedule Free Audit <ArrowRight className="w-4 h-4" />
                                 </CalModalButton>
@@ -452,6 +452,9 @@ export default function WebflowTrueCostPage() {
                             We handle the full process. See details on our{" "}
                             <Link href="/services/webflow" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 Webflow migration service page
+                            </Link>. For a detailed price breakdown by site size, read our guide on{" "}
+                            <Link href="/blog/webflow-migration-cost" className="text-cognac hover:underline">
+                                how much a Webflow migration actually costs in 2026
                             </Link>.
                         </BlogText>
 

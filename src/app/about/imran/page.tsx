@@ -218,7 +218,7 @@ export default function ImranAuthorPage() {
                             </button>
                             <Link
                                 href="/about"
-                                className="px-8 py-4 bg-white border border-stone-200 text-charcoal font-bold rounded-full hover:bg-stone-50 hover:border-stone-400 transition-all"
+                                className="px-8 py-4 bg-white border border-stone-200 text-charcoal font-bold rounded-full hover:bg-cognac hover:text-white hover:border-cognac transition-all"
                             >
                                 Meet the Full Team
                             </Link>

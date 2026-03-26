@@ -324,8 +324,8 @@ export default function CompetitorRankingsPage() {
 
                         {/* Mid-Article CTA */}
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
-                            <p className="font-bold text-charcoal mb-2">See exactly how much traffic you&apos;re losing to your competitor.</p>
-                            <p className="text-stone-600 mb-4 text-sm">Free speed audit. No sales pitch. Just data.</p>
+                            <p className="font-bold text-charcoal mb-2">Are your competitors outranking you because of site speed?</p>
+                            <p className="text-stone-600 mb-4 text-sm">Drop your URL and one competitor URL when you book. We run both speed scores live on the call, show you the exact gap, and quote what it takes to overtake them.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                     Get Free Speed Audit <ArrowRight className="w-4 h-4" />
                                 </CalModalButton>

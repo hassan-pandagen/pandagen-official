@@ -1,8 +1,10 @@
 # Google Search Console Performance Tracker
 
 **Domain:** pandacodegen.com
+**Site launched:** ~February 5, 2026 (site is ~50 days old as of Mar 26)
 **Started tracking:** March 14, 2026
 **Update cadence:** Weekly (every Sunday)
+**Note:** GSC defaults to a 3-month filter, but this site has only existed for ~50 days. All data represents ~50 days of real performance, not 90.
 
 ---
 
@@ -15,6 +17,7 @@
 | 0 | Mar 15, 2026 | 10 | 487 | 2.1% | 13.8 | +34 impressions in 1 day. Published Medium + Dev.to cross-posts (dofollow backlinks). 63 countries showing impressions. US: 255 impressions, 0 clicks. |
 | **1** | **Mar 16, 2026** | **10** | **513** | **1.9%** | **14** | **+26 impressions. shopify-dawn-theme-slow exploding: 1,817% impression spike (GSC recommendation). 9 desktop clicks, 1 mobile. Blog #22 published (what-is-headless-commerce). Audit tool rewrite deployed (self-contained Resend flow, AI readiness scoring fix).** |
 | **2** | **Mar 24, 2026** | **11** | **744** | **1.5%** | **15** | **+231 impressions (+45%). 42 indexed (+9 pages). shopify-dawn-theme-slow: 171 impressions at pos 6.4 — clicks imminent. US: 396 impressions, 1 click only (0.3% CTR). Vercel 308 fix deployed. Canonical validation started.** |
+| **3** | **Mar 26, 2026** | **12** | **847** | **1.4%** | **14.4** | **+103 impressions in 2 days from webflow-migration-cost + woocommerce-too-slow publish. "webflow migration cost 50-100 page site" at pos 9.3 — page 1, clicks imminent. pagespeed 100 at pos 86 — ignore. Impression spike visible on graph right side.** |
 
 > **Week-over-week (Mar 7-13 vs Feb 28-Mar 6):** Impressions 115 vs 6 = **+1,817%** on shopify-dawn-theme-slow page alone.
 
@@ -210,6 +213,9 @@ Track which posts are outperforming so we write more like them.
 | 22 | Mar 14, 2026 | what-is-headless-commerce | what is headless commerce |
 | 23 | Mar 22, 2026 | wordpress-migration-cost | wordpress migration cost |
 | 24 | Mar 22, 2026 | gohighlevel-website-speed | gohighlevel website speed |
+| 25 | Mar 25, 2026 | webflow-migration-cost | webflow migration cost |
+| 26 | Mar 25, 2026 | woocommerce-too-slow | woocommerce slow |
+| 27 | Mar 27, 2026 | squarespace-too-slow | squarespace too slow |
 
 ---
 

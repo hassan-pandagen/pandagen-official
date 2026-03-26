@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Gauge, Lock, Palette, Search, HelpCircle, FileSearch, Wrench, Rocket, PenTool, Heart, AlertOctagon, Anchor, Wallet, Layout, Smartphone, Check } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
@@ -49,19 +50,19 @@ export default function SquarespacePageContent() {
       <Header />
 
       {/* 1. HERO */}
-      <section className="relative pt-20 md:pt-24 md:pt-40 pb-12 md:pb-20 px-6">
+      <section className="relative pt-20 md:pt-28 pb-8 md:pb-12 px-6">
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "linear-gradient(#1C1917 1px, transparent 1px), linear-gradient(90deg, #1C1917 1px, transparent 1px)", backgroundSize: "50px 50px", opacity: 0.03 }} />
         <div className="absolute top-1/3 right-[10%] w-[500px] h-[500px] bg-stone-200/50 blur-[140px] rounded-full pointer-events-none" />
 
         <div className="container mx-auto text-center relative z-10 max-w-4xl">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-200 text-sm text-cognac mb-8">
-            <Zap className="w-4 h-4" /> Platform Upgrade
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-200 text-sm text-cognac mb-6">
+            <Zap className="w-4 h-4" /> Squarespace Migration Service
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6 leading-tight"
+            className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-4 leading-tight"
           >
             Outgrown Squarespace? <br />
             <span className="font-serif italic text-cognac">
@@ -73,7 +74,7 @@ export default function SquarespacePageContent() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1 }}
-            className="text-xl text-stone-600 leading-relaxed mb-8 max-w-2xl mx-auto"
+            className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto"
           >
             Squarespace was great to get started. But its limitations are now costing you rankings, speed, and revenue. We build custom coded sites that <span className="text-charcoal font-medium">load 5x faster, rank higher, and you own forever</span>.
           </motion.p>
@@ -87,10 +88,11 @@ export default function SquarespacePageContent() {
             >
               Get Free Consultation <ArrowRight className="w-5 h-5" />
             </button>
-            <Link href="#comparison" className="px-8 py-4 bg-white border border-stone-200 text-charcoal font-medium rounded-full hover:border-cognac/30 transition-all flex items-center justify-center gap-2">
+            <Link href="#comparison" className="px-8 py-4 bg-white border border-cognac/30 text-cognac font-bold rounded-full hover:bg-cognac hover:text-white transition-all flex items-center justify-center gap-2">
               See the Comparison <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
+          <p className="text-sm text-stone-500 mt-4 text-center max-w-xl mx-auto leading-relaxed">30-min call. Drop your Squarespace URL when you book. We test your speed live, scope the migration, and <span className="text-charcoal font-medium">quote you on the spot.</span></p>
         </div>
       </section>
 
@@ -165,43 +167,39 @@ export default function SquarespacePageContent() {
         </div>
       </section>
 
-      {/* 3. THE HIDDEN COST OF SQUARESPACE */}
-      <section className="py-12 md:py-24 px-6 bg-[#0F172A]">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-8 md:mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 text-red-400 border border-red-500/20 text-sm font-bold uppercase tracking-widest mb-6">
-              <AlertTriangle className="w-4 h-4" /> Revenue Leak
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">The Hidden Cost of Squarespace</h2>
-            <p className="text-slate-400 max-w-2xl mx-auto">
-              These are the exact problems growing businesses hit when Squarespace stops being enough:
-            </p>
-          </div>
+      {/* 3. HOW WE MIGRATE - Process Timeline */}
+      <section id="how-it-works" className="py-10 md:py-20 px-6">
+        <div className="container mx-auto max-w-3xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How We Migrate Your Squarespace Site</h2>
+          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A proven 4-step process. Your Squarespace site stays live the entire time.</p>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="space-y-8">
             {[
-              { icon: Gauge, pain: "Slow Pages Are Draining Your Ad ROI Every Day", detail: "Squarespace consistently scores 30-50 on mobile PageSpeed. Every second of delay costs 7% in conversions. If you're running paid ads, you're funding traffic that bounces before your page even loads." },
-              { icon: Palette, pain: "Your Brand Looks Identical to Millions of Other Sites", detail: "Squarespace has tens of millions of users on the same templates. Enterprise buyers recognize template sites instantly. Generic design signals 'small operation,' not 'established business.'" },
-              { icon: DollarSign, pain: "You're Paying Platform Rent With No Equity", detail: "Over 3 years, you'll spend $1,200-$2,400 in subscription fees alone. If Squarespace raises prices or discontinues your plan, you have zero leverage. Cancel and you lose everything you built." },
-              { icon: Search, pain: "Technical SEO Blocks Are Capping Your Organic Traffic", detail: "No custom schema markup, no server-side rendering, no full URL control. Squarespace's code bloat means you hit a technical SEO ceiling from day one. Custom sites rank significantly higher for the same content." },
-              { icon: Code2, pain: "Real Business Features Require a Full Rebuild Anyway", detail: "Need a client portal? A booking system with custom logic? API integrations? Squarespace can't do it. You'll outgrow the platform and rebuild from scratch eventually. Better to build the right foundation now." },
-              { icon: TrendingUp, pain: "AI Search Can't Read Bloated Squarespace Code", detail: "ChatGPT, Perplexity, and AI Overviews now cite specific brands by name when answering buying questions. They prioritize clean, fast, structured code. Squarespace's JavaScript-heavy pages make you invisible to AI-driven buyers." },
+              { step: "01", title: "Content Export", desc: "We extract every page, blog post, image, and gallery from Squarespace. Your content is cleaned and organized for the new platform.", icon: FileSearch, duration: "Week 1" },
+              { step: "02", title: "Custom Design", desc: "We recreate your brand with a custom design that\u2019s uniquely yours. No more sharing templates with millions of other sites.", icon: PenTool, duration: "Weeks 2-3" },
+              { step: "03", title: "Build & SEO Migration", desc: "Your site gets coded in Next.js with server-side rendering. We map all URLs, set up 301 redirects, and preserve your Google rankings.", icon: Wrench, duration: "Weeks 4-5" },
+              { step: "04", title: "Launch & Training", desc: "We launch your new site, set up a content editor for easy editing, and train your team. No coding required to update content.", icon: Rocket, duration: "Week 6" },
             ].map((item, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.08 }}
-                className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-red-500/40 transition-colors group"
+                className="flex gap-6 items-start"
               >
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-red-500/15 text-red-400 shrink-0 group-hover:bg-red-500/25 transition-colors">
-                    <item.icon className="w-5 h-5" />
+                <div className="flex flex-col items-center shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-stone-50 border border-cognac/20 flex items-center justify-center">
+                    <item.icon className="w-5 h-5 text-cognac" />
                   </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-white mb-2">{item.pain}</h3>
-                    <p className="text-slate-400 leading-relaxed text-sm">{item.detail}</p>
+                  {i < 3 && <div className="w-px h-8 bg-border mt-2" />}
+                </div>
+                <div className="pb-2">
+                  <div className="flex items-center gap-3 mb-1">
+                    <span className="text-xs font-mono text-gray-600">{item.step}</span>
+                    <h3 className="text-lg font-bold text-charcoal">{item.title}</h3>
+                    <span className="text-xs px-2 py-0.5 rounded-full bg-stone-50 border border-stone-200 text-stone-600">{item.duration}</span>
                   </div>
+                  <p className="text-stone-600 text-base leading-relaxed">{item.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -263,7 +261,7 @@ export default function SquarespacePageContent() {
                 {/* RIGHT: Comparison + Savings */}
                 <div className="p-6 md:p-10 md:border-l border-stone-200 bg-stone-50/50 overflow-x-hidden">
                   <div className="flex justify-between items-center mb-6 pb-4 border-b border-stone-200">
-                    <h4 className="text-lg font-bold text-charcoal">Squarespace vs Custom Coded</h4>
+                    <h4 className="text-lg font-bold text-charcoal">Squarespace vs Next.js: Performance and Cost</h4>
                   </div>
 
                   {/* Column Headers */}
@@ -340,39 +338,43 @@ export default function SquarespacePageContent() {
         </div>
       </section>
 
-      {/* 5. HOW WE MIGRATE - Process Timeline */}
-      <section id="how-it-works" className="py-10 md:py-20 px-6">
-        <div className="container mx-auto max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How We Migrate Your Squarespace Site</h2>
-          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A proven 4-step process. Your Squarespace site stays live the entire time.</p>
+      {/* 5. THE HIDDEN COST OF SQUARESPACE */}
+      <section className="py-12 md:py-24 px-6 bg-[#0F172A]">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-8 md:mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 text-red-400 border border-red-500/20 text-sm font-bold uppercase tracking-widest mb-6">
+              <AlertTriangle className="w-4 h-4" /> Revenue Leak
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">The Hidden Cost of Squarespace</h2>
+            <p className="text-slate-400 max-w-2xl mx-auto">
+              These are the exact problems growing businesses hit when Squarespace stops being enough:
+            </p>
+          </div>
 
-          <div className="space-y-8">
+          <div className="grid md:grid-cols-2 gap-6">
             {[
-              { step: "01", title: "Content Export", desc: "We extract every page, blog post, image, and gallery from Squarespace. Your content is cleaned and organized for the new platform.", icon: FileSearch, duration: "Week 1" },
-              { step: "02", title: "Custom Design", desc: "We recreate your brand with a custom design that\u2019s uniquely yours. No more sharing templates with millions of other sites.", icon: PenTool, duration: "Weeks 2-3" },
-              { step: "03", title: "Build & SEO Migration", desc: "Your site gets coded in Next.js with server-side rendering. We map all URLs, set up 301 redirects, and preserve your Google rankings.", icon: Wrench, duration: "Weeks 4-5" },
-              { step: "04", title: "Launch & Training", desc: "We launch your new site, set up a content editor for easy editing, and train your team. No coding required to update content.", icon: Rocket, duration: "Week 6" },
+              { icon: Gauge, pain: "Slow Pages Are Draining Your Ad ROI Every Day", detail: "Squarespace consistently scores 30-50 on mobile PageSpeed. Every second of delay costs 7% in conversions. If you're running paid ads, you're funding traffic that bounces before your page even loads." },
+              { icon: Palette, pain: "Your Brand Looks Identical to Millions of Other Sites", detail: "Squarespace has tens of millions of users on the same templates. Enterprise buyers recognize template sites instantly. Generic design signals 'small operation,' not 'established business.'" },
+              { icon: DollarSign, pain: "You're Paying Platform Rent With No Equity", detail: "Over 3 years, you'll spend $1,200-$2,400 in subscription fees alone. If Squarespace raises prices or discontinues your plan, you have zero leverage. Cancel and you lose everything you built." },
+              { icon: Search, pain: "Technical SEO Blocks Are Capping Your Organic Traffic", detail: "No custom schema markup, no server-side rendering, no full URL control. Squarespace's code bloat means you hit a technical SEO ceiling from day one. Custom sites rank significantly higher for the same content." },
+              { icon: Code2, pain: "Real Business Features Require a Full Rebuild Anyway", detail: "Need a client portal? A booking system with custom logic? API integrations? Squarespace can't do it. You'll outgrow the platform and rebuild from scratch eventually. Better to build the right foundation now." },
+              { icon: TrendingUp, pain: "AI Search Can't Read Bloated Squarespace Code", detail: "ChatGPT, Perplexity, and AI Overviews now cite specific brands by name when answering buying questions. They prioritize clean, fast, structured code. Squarespace's JavaScript-heavy pages make you invisible to AI-driven buyers." },
             ].map((item, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.08 }}
-                className="flex gap-6 items-start"
+                className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-red-500/40 transition-colors group"
               >
-                <div className="flex flex-col items-center shrink-0">
-                  <div className="w-12 h-12 rounded-xl bg-stone-50 border border-cognac/20 flex items-center justify-center">
-                    <item.icon className="w-5 h-5 text-cognac" />
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-xl bg-red-500/15 text-red-400 shrink-0 group-hover:bg-red-500/25 transition-colors">
+                    <item.icon className="w-5 h-5" />
                   </div>
-                  {i < 3 && <div className="w-px h-8 bg-border mt-2" />}
-                </div>
-                <div className="pb-2">
-                  <div className="flex items-center gap-3 mb-1">
-                    <span className="text-xs font-mono text-gray-600">{item.step}</span>
-                    <h3 className="text-lg font-bold text-charcoal">{item.title}</h3>
-                    <span className="text-xs px-2 py-0.5 rounded-full bg-stone-50 border border-stone-200 text-stone-600">{item.duration}</span>
+                  <div>
+                    <h3 className="text-lg font-bold text-white mb-2">{item.pain}</h3>
+                    <p className="text-slate-400 leading-relaxed text-sm">{item.detail}</p>
                   </div>
-                  <p className="text-stone-600 text-base leading-relaxed">{item.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -585,7 +587,7 @@ export default function SquarespacePageContent() {
           <div className="flex flex-col sm:flex-row gap-6">
             <div className="flex items-start gap-4">
               <Link href="/about/hassan" className="shrink-0">
-                <div className="w-12 h-12 rounded-full bg-stone-100 border border-stone-200 flex items-center justify-center text-charcoal font-bold text-lg">H</div>
+                <Image src="/team/hassan.png" alt="Hassan Jamal" width={48} height={48} className="w-12 h-12 rounded-full border border-stone-200 object-cover" />
               </Link>
               <div>
                 <Link href="/about/hassan" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Hassan Jamal</Link>
@@ -594,7 +596,7 @@ export default function SquarespacePageContent() {
             </div>
             <div className="flex items-start gap-4">
               <Link href="/about/imran" className="shrink-0">
-                <div className="w-12 h-12 rounded-full bg-stone-100 border border-stone-200 flex items-center justify-center text-charcoal font-bold text-lg">I</div>
+                <Image src="/team/imran.png" alt="Imran" width={48} height={48} className="w-12 h-12 rounded-full border border-stone-200 object-cover" />
               </Link>
               <div>
                 <Link href="/about/imran" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Imran</Link>

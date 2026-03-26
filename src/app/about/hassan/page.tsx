@@ -154,7 +154,7 @@ export default function HassanAuthorPage() {
                                     href="https://github.com/hassan-pandagen"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="px-5 py-2.5 bg-white border border-stone-200 text-charcoal rounded-full text-sm font-bold hover:bg-stone-50 hover:border-stone-400 transition-all"
+                                    className="px-5 py-2.5 bg-white border border-stone-200 text-charcoal rounded-full text-sm font-bold hover:bg-cognac hover:text-white hover:border-cognac transition-all"
                                 >
                                     GitHub
                                 </a>
@@ -238,7 +238,7 @@ export default function HassanAuthorPage() {
                             </button>
                             <Link
                                 href="/about"
-                                className="px-8 py-4 bg-white border border-stone-200 text-charcoal font-bold rounded-full hover:bg-stone-50 hover:border-stone-400 transition-all"
+                                className="px-8 py-4 bg-white border border-stone-200 text-charcoal font-bold rounded-full hover:bg-cognac hover:text-white hover:border-cognac transition-all"
                             >
                                 Meet the Full Team
                             </Link>

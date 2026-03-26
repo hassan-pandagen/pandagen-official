@@ -394,8 +394,8 @@ export default function ShopifyAppCostsPage() {
 
                     {/* Mid-Article CTA */}
                     <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
-                        <p className="font-bold text-charcoal mb-2">Is your Shopify store costing more than it should?</p>
-                        <p className="text-stone-600 mb-4 text-sm">We audit your full app stack and show you the exact migration ROI to a custom build. Free, no obligation.</p>
+                        <p className="font-bold text-charcoal mb-2">How much are your Shopify apps actually costing you every month?</p>
+                        <p className="text-stone-600 mb-4 text-sm">Drop your store URL when you book. We audit your app stack live on the call, add up your exact monthly bleed, and show you what a custom build eliminates permanently.</p>
                         <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                             Book a Free Cost Audit <ArrowRight className="w-4 h-4" />
                         </CalModalButton>

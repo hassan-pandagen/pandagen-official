@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Gauge, Lock, Palette, Users, BarChart3, HelpCircle, FileSearch, Wrench, Rocket, Cable } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -50,19 +51,19 @@ export default function PageContent() {
       <Header />
 
       {/* 1. HERO */}
-      <section className="relative pt-20 md:pt-24 md:pt-40 pb-12 md:pb-20 px-6">
+      <section className="relative pt-20 md:pt-28 pb-8 md:pb-12 px-6">
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "linear-gradient(#1C1917 1px, transparent 1px), linear-gradient(90deg, #1C1917 1px, transparent 1px)", backgroundSize: "50px 50px", opacity: 0.03 }} />
         <div className="absolute top-1/3 right-[10%] w-[500px] h-[500px] bg-stone-200/50 blur-[140px] rounded-full pointer-events-none" />
 
         <div className="container mx-auto text-center relative z-10 max-w-4xl">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-200 text-sm text-cognac mb-8">
-            <Zap className="w-4 h-4" /> GHL Experts
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-200 text-sm text-cognac mb-6">
+            <Zap className="w-4 h-4" /> GoHighLevel Website Fix
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6 leading-tight"
+            className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-4 leading-tight"
           >
             Keep GHL. Upgrade <br />
             <span className="font-serif italic text-cognac">
@@ -74,7 +75,7 @@ export default function PageContent() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1 }}
-            className="text-xl text-stone-600 leading-relaxed mb-8 max-w-2xl mx-auto"
+            className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto"
           >
             Keep GHL for what it&apos;s best at: CRM, automations, and pipelines. But don&apos;t let its funnel builder be your website. We build custom coded sites that <span className="text-charcoal font-medium">integrate seamlessly with GHL&apos;s API</span>, so you get real SEO, instant load times, and full code ownership.
           </motion.p>
@@ -88,10 +89,11 @@ export default function PageContent() {
             >
               Get Free Consultation <ArrowRight className="w-5 h-5" />
             </button>
-            <Link href="#how-it-works" className="px-8 py-4 bg-white border border-stone-200 text-charcoal font-medium rounded-full hover:border-cognac/30 transition-all flex items-center justify-center gap-2">
+            <Link href="#how-it-works" className="px-8 py-4 bg-white border border-cognac/30 text-cognac font-bold rounded-full hover:bg-cognac hover:text-white transition-all flex items-center justify-center gap-2">
               See How It Works <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
+          <p className="text-sm text-stone-500 mt-4 text-center max-w-xl mx-auto leading-relaxed">30-min call. Drop your GHL site URL when you book. We run your PageSpeed live and <span className="text-charcoal font-medium">show you the custom integration path with a fixed quote.</span></p>
         </div>
       </section>
 
@@ -129,7 +131,40 @@ export default function PageContent() {
         </div>
       </section>
 
-      {/* 3. PAIN POINTS */}
+      {/* 3. HOW IT WORKS - Process Timeline */}
+      <section id="how-it-works" className="py-12 md:py-24 px-6 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-4">How GoHighLevel Custom Website Integration Works</h2>
+          <p className="text-slate-500 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A proven 4-step process. Your GHL stays running the entire time.</p>
+
+          <div className="grid md:grid-cols-4 gap-6 relative">
+            <div className="hidden md:block absolute top-8 left-0 w-full h-0.5 bg-slate-100 -z-10" />
+            {[
+              { step: "01", title: "GHL Audit", desc: "We map your funnels, automations, pipelines, and workflows. We identify which GHL features to keep and which to replace with custom code.", duration: "Week 1" },
+              { step: "02", title: "API Architecture", desc: "We design the integration between your custom website and GHL's API. Forms, lead capture, booking widgets, and pipeline triggers, all connected seamlessly.", duration: "Week 2" },
+              { step: "03", title: "Custom Site Build", desc: "Your new website is built in Next.js with GHL API baked in. Landing pages load instantly. Forms push directly into your GHL CRM. All automations keep firing.", duration: "Weeks 3-5" },
+              { step: "04", title: "Testing & Launch", desc: "We test every automation, form, and pipeline trigger. You verify everything works. Then we launch with zero disruption to your existing GHL workflows.", duration: "Week 6" },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.08 }}
+                className="bg-white p-6 rounded-xl border border-slate-200 shadow-xs hover:shadow-md transition-shadow"
+              >
+                <div className="w-14 h-14 rounded-full bg-stone-50 border-4 border-white shadow-xs flex items-center justify-center text-lg font-black text-cognac mb-6">
+                  {item.step}
+                </div>
+                <div className="text-xs font-semibold text-stone-600 uppercase tracking-widest mb-2">{item.duration}</div>
+                <h3 className="font-bold text-lg text-slate-900 mb-2">{item.title}</h3>
+                <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4. PAIN POINTS */}
       <section className="py-12 md:py-24 px-6 bg-[#0F172A]">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-8 md:mb-16">
@@ -163,39 +198,6 @@ export default function PageContent() {
                 </div>
                 <h3 className="text-white font-bold text-lg mb-2">{item.pain}</h3>
                 <p className="text-slate-400 leading-relaxed text-sm">{item.detail}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 4. HOW IT WORKS - Process Timeline */}
-      <section id="how-it-works" className="py-12 md:py-24 px-6 bg-white">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-4">How the Integration Works</h2>
-          <p className="text-slate-500 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A proven 4-step process. Your GHL stays running the entire time.</p>
-
-          <div className="grid md:grid-cols-4 gap-6 relative">
-            <div className="hidden md:block absolute top-8 left-0 w-full h-0.5 bg-slate-100 -z-10" />
-            {[
-              { step: "01", title: "GHL Audit", desc: "We map your funnels, automations, pipelines, and workflows. We identify which GHL features to keep and which to replace with custom code.", duration: "Week 1" },
-              { step: "02", title: "API Architecture", desc: "We design the integration between your custom website and GHL's API. Forms, lead capture, booking widgets, and pipeline triggers, all connected seamlessly.", duration: "Week 2" },
-              { step: "03", title: "Custom Site Build", desc: "Your new website is built in Next.js with GHL API baked in. Landing pages load instantly. Forms push directly into your GHL CRM. All automations keep firing.", duration: "Weeks 3-5" },
-              { step: "04", title: "Testing & Launch", desc: "We test every automation, form, and pipeline trigger. You verify everything works. Then we launch with zero disruption to your existing GHL workflows.", duration: "Week 6" },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.08 }}
-                className="bg-white p-6 rounded-xl border border-slate-200 shadow-xs hover:shadow-md transition-shadow"
-              >
-                <div className="w-14 h-14 rounded-full bg-stone-50 border-4 border-white shadow-xs flex items-center justify-center text-lg font-black text-cognac mb-6">
-                  {item.step}
-                </div>
-                <div className="text-xs font-semibold text-stone-600 uppercase tracking-widest mb-2">{item.duration}</div>
-                <h3 className="font-bold text-lg text-slate-900 mb-2">{item.title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -293,7 +295,7 @@ export default function PageContent() {
                 data-cal-namespace="discovery"
                 data-cal-link="pandagen/discovery"
                 data-cal-config='{"layout":"month_view"}'
-                className="w-full px-6 py-4 border border-stone-200 text-cognac font-bold rounded-full hover:bg-stone-50 transition-all"
+                className="w-full px-6 py-4 border border-cognac/30 text-cognac font-bold rounded-full hover:bg-cognac hover:text-white transition-all"
               >
                 Optimize My Funnels
               </button>
@@ -343,7 +345,7 @@ export default function PageContent() {
                 data-cal-namespace="discovery"
                 data-cal-link="pandagen/discovery"
                 data-cal-config='{"layout":"month_view"}'
-                className="w-full px-6 py-4 border border-stone-200 text-stone-600 font-bold rounded-full hover:bg-stone-50 transition-all"
+                className="w-full px-6 py-4 border border-cognac/30 text-cognac font-bold rounded-full hover:bg-cognac hover:text-white transition-all"
               >
                 Build My Custom CRM
               </button>
@@ -460,7 +462,7 @@ export default function PageContent() {
           <div className="flex flex-col sm:flex-row gap-6">
             <div className="flex items-start gap-4">
               <Link href="/about/hassan" className="shrink-0">
-                <div className="w-12 h-12 rounded-full bg-stone-100 border border-stone-200 flex items-center justify-center text-charcoal font-bold text-lg">H</div>
+                <Image src="/team/hassan.png" alt="Hassan Jamal" width={48} height={48} className="w-12 h-12 rounded-full border border-stone-200 object-cover" />
               </Link>
               <div>
                 <Link href="/about/hassan" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Hassan Jamal</Link>
@@ -469,7 +471,7 @@ export default function PageContent() {
             </div>
             <div className="flex items-start gap-4">
               <Link href="/about/imran" className="shrink-0">
-                <div className="w-12 h-12 rounded-full bg-stone-100 border border-stone-200 flex items-center justify-center text-charcoal font-bold text-lg">I</div>
+                <Image src="/team/imran.png" alt="Imran" width={48} height={48} className="w-12 h-12 rounded-full border border-stone-200 object-cover" />
               </Link>
               <div>
                 <Link href="/about/imran" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Imran</Link>

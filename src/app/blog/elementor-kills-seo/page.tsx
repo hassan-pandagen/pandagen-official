@@ -241,8 +241,8 @@ export default function ElementorKillsSEOPage() {
 
                         {/* Mid-Article CTA */}
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
-                            <p className="font-bold text-charcoal mb-2">Is Elementor costing you rankings?</p>
-                            <p className="text-stone-600 mb-4 text-sm">Free audit: We&apos;ll score your site and show you exactly how much traffic you&apos;re losing to faster competitors.</p>
+                            <p className="font-bold text-charcoal mb-2">Is Elementor killing your SEO and speed right now?</p>
+                            <p className="text-stone-600 mb-4 text-sm">Drop your URL when you book. We run your PageSpeed and Core Web Vitals live on the call, show you what Elementor is costing you in rankings, and quote the migration.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free SEO Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
                         </div>
 
@@ -273,6 +273,9 @@ export default function ElementorKillsSEOPage() {
                         ]} />
                         <BlogText>
                             Businesses we&apos;ve migrated off Elementor see <a href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">rankings recover within 30 to 60 days</a> and typically gain 2 to 3× organic traffic within 90 days of <a href="/services/wordpress-migration" className="text-cognac hover:underline">launching on Next.js</a>. The full platform comparison is covered in our <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress vs Next.js guide</Link>.
+                        </BlogText>
+                        <BlogText>
+                            If Webflow is on your shortlist as a stepping stone, read our full <Link href="/blog/webflow-migration-cost" className="text-cognac hover:underline">Webflow migration cost breakdown</Link> before committing. Webflow scores better than Elementor, but it is still a rented platform with its own SEO ceiling.
                         </BlogText>
                     </div>
 

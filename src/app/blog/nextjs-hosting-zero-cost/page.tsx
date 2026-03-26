@@ -342,8 +342,8 @@ export default function NextjsHostingZeroCostPage() {
 
                         {/* Mid-Article CTA */}
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
-                            <p className="font-bold text-charcoal mb-2">Want to stop paying for slow hosting?</p>
-                            <p className="text-stone-600 mb-4 text-sm">Book a free discovery call. We&apos;ll show you how much you can save.</p>
+                            <p className="font-bold text-charcoal mb-2">Are you still paying for hosting you don&apos;t need to?</p>
+                            <p className="text-stone-600 mb-4 text-sm">Drop your current site URL when you book. We audit your hosting costs and performance live on the call and show you the zero-cost Next.js path.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                     Schedule Free Call <ArrowRight className="w-4 h-4" />
                                 </CalModalButton>

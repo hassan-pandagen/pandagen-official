@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Lock, Database, Server, FileSearch, Wrench, Rocket, HelpCircle, ShoppingBag } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
@@ -42,16 +43,16 @@ export default function PageContent() {
       <Header />
 
       {/* 1. HERO */}
-      <section className="relative pt-20 md:pt-24 md:pt-40 pb-12 md:pb-20 px-6">
+      <section className="relative pt-20 md:pt-28 pb-8 md:pb-12 px-6">
         <div className="container mx-auto text-center relative z-10 max-w-4xl">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-200 text-sm text-cognac mb-8">
-            <Zap className="w-4 h-4" /> Legacy Rescue
+            <Zap className="w-4 h-4" /> WordPress Migration Service
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6 leading-tight"
+            className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-4 leading-tight"
           >
             Migrate WordPress. <br />
             <span className="font-serif italic text-cognac">
@@ -63,12 +64,12 @@ export default function PageContent() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1 }}
-            className="text-xl text-stone-600 leading-relaxed mb-8 max-w-2xl mx-auto"
+            className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto"
           >
             We don&apos;t just &apos;redesign&apos; your site. We surgically extract your data from WordPress and rebuild your frontend with custom code. <span className="text-charcoal font-medium">Zero plugins. Instant load times.</span>
           </motion.p>
 
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.15 }} className="flex flex-wrap justify-center gap-3 mb-8">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.15 }} className="flex flex-wrap justify-center gap-3 mb-6">
             <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-stone-200 shadow-xs text-sm">
               <span className="text-cognac font-black">98/100</span>
               <span className="text-stone-500">PageSpeed</span>
@@ -81,6 +82,10 @@ export default function PageContent() {
               <span className="text-yellow-500 font-black">★★★★★</span>
               <span className="text-stone-500">Clutch Verified</span>
             </div>
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-stone-200 shadow-xs text-sm">
+              <span className="text-[#00b67a] font-black">★★★★★</span>
+              <span className="text-stone-500">Trustpilot</span>
+            </div>
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -92,15 +97,18 @@ export default function PageContent() {
             >
               Get Free Consultation <ArrowRight className="w-5 h-5" />
             </button>
-            <Link href="#how-it-works" className="px-8 py-4 bg-white border border-stone-200 text-charcoal font-medium rounded-full hover:border-cognac/30 transition-all flex items-center justify-center gap-2">
+            <Link href="#how-it-works" className="px-8 py-4 bg-white border border-cognac/30 text-cognac font-bold rounded-full hover:bg-cognac hover:text-white transition-all flex items-center justify-center gap-2">
               See How It Works <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
+          <p className="text-sm text-stone-500 mt-4 text-center max-w-xl mx-auto leading-relaxed">30-min call. Drop your WordPress URL when you book. We run your PageSpeed live and give you a <span className="text-charcoal font-medium">fixed migration quote on the spot.</span></p>
         </div>
       </section>
 
-      {/* 2. WORDPRESS KILLER - Comparison Card */}
-      <WordPressKiller />
+      {/* 2. WORDPRESS KILLER - Comparison Card (tight spacing) */}
+      <div className="-mt-4">
+        <WordPressKiller />
+      </div>
 
       {/* 3. BEFORE / AFTER RESULTS */}
       <section className="py-10 md:py-20 px-6 border-y border-stone-200 bg-white">
@@ -136,8 +144,43 @@ export default function PageContent() {
         </div>
       </section>
 
-      {/* 4. PAIN POINTS, Dark Navy */}
-      <section className="py-12 md:py-24 px-6 bg-[#0F172A]">
+      {/* 4. HOW IT WORKS - Horizontal Grid (process clarity first for buyers) */}
+      <section id="how-it-works" className="py-12 md:py-20 px-6 bg-[#F8FAFC]">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How Our WordPress to Next.js Migration Works</h2>
+          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A proven 4-step process. No surprises. No downtime.</p>
+
+          <div className="grid md:grid-cols-4 gap-6">
+            {[
+              { step: "01", title: "Full Site Audit", desc: "We analyze your WordPress site top to bottom: speed, security, plugins, SEO, and database health. You get a detailed report showing exactly what's costing you money.", icon: FileSearch, duration: "Week 1" },
+              { step: "02", title: "Data Export & Cleaning", desc: "We extract every page, post, image, and metadata from your WordPress database, then clean it. Plugin bloat removed. Broken links fixed. Images optimized.", icon: Database, duration: "Week 2" },
+              { step: "03", title: "Custom Website Build", desc: "Your new site is built in Next.js with SSR, automatic image optimization, and a content editor. Every page loads in under 1 second.", icon: Wrench, duration: "Weeks 3 to 5" },
+              { step: "04", title: "Migration & Launch", desc: "Every old URL maps to the new site with 301 redirects. Zero rankings lost. Zero downtime. We launch, monitor, and hand you the keys.", icon: Rocket, duration: "Week 6" },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-white p-7 rounded-2xl border border-slate-200 shadow-xs hover:shadow-md hover:border-stone-200 transition-all group"
+              >
+                <span className="text-5xl font-black text-stone-300 block mb-4 leading-none group-hover:text-stone-200 transition-colors">{item.step}</span>
+                <div className="w-10 h-10 rounded-xl bg-stone-50 border border-stone-100 flex items-center justify-center mb-4 group-hover:bg-stone-100 transition-colors">
+                  <item.icon className="w-5 h-5 text-cognac" />
+                </div>
+                <div className="flex items-center gap-2 mb-2">
+                  <h3 className="text-base font-bold text-charcoal">{item.title}</h3>
+                </div>
+                <p className="text-sm text-stone-600 leading-relaxed mb-4">{item.desc}</p>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-cognac bg-stone-50 border border-stone-100 px-2.5 py-1 rounded-full">{item.duration}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. PAIN POINTS - Reinforcement after process (buyer already knows WP is bad) */}
+      <section className="py-12 md:py-20 px-6 bg-[#0F172A]">
         <div className="container mx-auto max-w-5xl">
 
           <div className="text-center mb-16">
@@ -182,41 +225,6 @@ export default function PageContent() {
             ))}
           </div>
 
-        </div>
-      </section>
-
-      {/* 5. HOW IT WORKS - Horizontal Grid */}
-      <section id="how-it-works" className="py-12 md:py-24 px-6 bg-[#F8FAFC]">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How We Migrate Your Site</h2>
-          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A proven 4-step process. No surprises. No downtime.</p>
-
-          <div className="grid md:grid-cols-4 gap-6">
-            {[
-              { step: "01", title: "Full Site Audit", desc: "We analyze your WordPress site top to bottom: speed, security, plugins, SEO, and database health. You get a detailed report showing exactly what's costing you money.", icon: FileSearch, duration: "Week 1" },
-              { step: "02", title: "Data Export & Cleaning", desc: "We extract every page, post, image, and metadata from your WordPress database, then clean it. Plugin bloat removed. Broken links fixed. Images optimized.", icon: Database, duration: "Week 2" },
-              { step: "03", title: "Custom Website Build", desc: "Your new site is built in Next.js with SSR, automatic image optimization, and a content editor. Every page loads in under 1 second.", icon: Wrench, duration: "Weeks 3 to 5" },
-              { step: "04", title: "Migration & Launch", desc: "Every old URL maps to the new site with 301 redirects. Zero rankings lost. Zero downtime. We launch, monitor, and hand you the keys.", icon: Rocket, duration: "Week 6" },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-white p-7 rounded-2xl border border-slate-200 shadow-xs hover:shadow-md hover:border-stone-200 transition-all group"
-              >
-                <span className="text-5xl font-black text-stone-300 block mb-4 leading-none group-hover:text-stone-200 transition-colors">{item.step}</span>
-                <div className="w-10 h-10 rounded-xl bg-stone-50 border border-stone-100 flex items-center justify-center mb-4 group-hover:bg-stone-100 transition-colors">
-                  <item.icon className="w-5 h-5 text-cognac" />
-                </div>
-                <div className="flex items-center gap-2 mb-2">
-                  <h3 className="text-base font-bold text-charcoal">{item.title}</h3>
-                </div>
-                <p className="text-sm text-stone-600 leading-relaxed mb-4">{item.desc}</p>
-                <span className="text-[10px] font-bold uppercase tracking-widest text-cognac bg-stone-50 border border-stone-100 px-2.5 py-1 rounded-full">{item.duration}</span>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -440,7 +448,7 @@ export default function PageContent() {
           <div className="flex flex-col sm:flex-row gap-6">
             <div className="flex items-start gap-4">
               <Link href="/about/hassan" className="shrink-0">
-                <div className="w-12 h-12 rounded-full bg-stone-100 border border-stone-200 flex items-center justify-center text-charcoal font-bold text-lg">H</div>
+                <Image src="/team/hassan.png" alt="Hassan Jamal" width={48} height={48} className="w-12 h-12 rounded-full border border-stone-200 object-cover" />
               </Link>
               <div>
                 <Link href="/about/hassan" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Hassan Jamal</Link>
@@ -449,7 +457,7 @@ export default function PageContent() {
             </div>
             <div className="flex items-start gap-4">
               <Link href="/about/imran" className="shrink-0">
-                <div className="w-12 h-12 rounded-full bg-stone-100 border border-stone-200 flex items-center justify-center text-charcoal font-bold text-lg">I</div>
+                <Image src="/team/imran.png" alt="Imran" width={48} height={48} className="w-12 h-12 rounded-full border border-stone-200 object-cover" />
               </Link>
               <div>
                 <Link href="/about/imran" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Imran</Link>

@@ -16,8 +16,8 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: { absolute: "WooCommerce Too Slow? Here's What's Actually Breaking Your Store | PandaCodeGen" },
-    description: "WooCommerce stores average 30 to 55 on Google PageSpeed Mobile. Here is exactly why WooCommerce is slow, what it costs in lost sales, and why caching plugins only mask the problem.",
+    title: { absolute: "WooCommerce Too Slow? Here's the Real Fix | PandaCodeGen" },
+    description: "WooCommerce stores score 30 to 55 on mobile PageSpeed. The cause is architectural, not plugins. Here is what breaks your speed and the only fix.",
     alternates: {
         canonical: "/blog/woocommerce-too-slow",
     },
@@ -341,9 +341,9 @@ export default function WooCommerceTooSlowPage() {
 
                         {/* Mid CTA */}
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-lg">
-                            <p className="text-sm font-bold text-charcoal mb-2">Running WooCommerce?</p>
+                            <p className="text-sm font-bold text-charcoal mb-2">Is your WooCommerce store bleeding revenue to slow checkout right now?</p>
                             <p className="text-sm text-stone-500 mb-4">
-                                Get a free speed audit of your store. We will show you your exact PageSpeed score, which Core Web Vitals you are failing, and how much revenue your current load time is costing you monthly.
+                                Drop your store URL when you book. We run your checkout speed live on the call, calculate your monthly conversion loss to the dollar, and give you a fixed migration quote on the spot.
                             </p>
                             <CalModalButton className="inline-flex items-center gap-2 px-5 py-2.5 bg-charcoal text-white font-semibold rounded-full text-sm hover:bg-stone-800 transition-all">
                                 Get Free WooCommerce Audit <ArrowRight className="w-4 h-4" />

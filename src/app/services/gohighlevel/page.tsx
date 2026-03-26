@@ -2,16 +2,33 @@ import type { Metadata } from 'next';
 import PageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'GoHighLevel Custom Website & Integration | PandaCodeGen',
-  description: "Keep GoHighLevel for CRM. We build custom coded websites that integrate with GHL's API, faster landing pages, real SEO, and lower cost per lead.",
+  title: 'GoHighLevel Slow Website Fix | Custom Next.js Build | PandaCodeGen',
+  description: "GoHighLevel sites score 20 to 45 on mobile PageSpeed and cannot rank on Google. We build a custom Next.js site that integrates with GHL's CRM, ranks organically, and loads under 1 second.",
   alternates: { canonical: '/services/gohighlevel' },
+  keywords: [
+    'gohighlevel slow website fix',
+    'gohighlevel website alternative',
+    'gohighlevel custom website',
+    'ghl website replacement',
+    'gohighlevel nextjs integration',
+    'gohighlevel seo problems',
+    'gohighlevel slow landing page',
+    'replace gohighlevel website',
+    'gohighlevel custom development',
+    'ghl slow website',
+  ],
   openGraph: {
-    title: 'GoHighLevel Custom Website & Integration | PandaCodeGen',
-    description: "Keep GoHighLevel for CRM. We build custom coded websites that integrate with GHL API, faster landing pages, real SEO, lower cost per lead.",
+    title: 'GoHighLevel Slow Website Fix | Custom Next.js Build | PandaCodeGen',
+    description: "GoHighLevel sites score 20 to 45 on mobile PageSpeed. We build a custom Next.js site that integrates with GHL's CRM and ranks on Google.",
     url: 'https://www.pandacodegen.com/services/gohighlevel',
     siteName: 'PandaCodeGen',
     type: 'website',
     images: [{ url: 'https://www.pandacodegen.com/og-image.jpg', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'GoHighLevel Slow Website Fix | Custom Next.js Build | PandaCodeGen',
+    description: "GHL sites score 20 to 45 on mobile PageSpeed. We build a custom Next.js site that integrates with GHL and ranks on Google.",
   },
 };
 

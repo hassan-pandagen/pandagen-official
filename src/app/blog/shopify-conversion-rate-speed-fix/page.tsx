@@ -254,8 +254,8 @@ export default function ShopifyConversionRateSpeedFixPage() {
 
                         {/* Mid-Article CTA */}
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
-                            <p className="font-bold text-charcoal mb-2">Is your Shopify conversion rate limited by speed?</p>
-                            <p className="text-stone-600 mb-4 text-sm">Free audit. We&apos;ll calculate your exact conversion rate loss from load time and show you the revenue you&apos;re leaving on the table.</p>
+                            <p className="font-bold text-charcoal mb-2">Is your Shopify conversion rate suffering from slow load times right now?</p>
+                            <p className="text-stone-600 mb-4 text-sm">Drop your store URL when you book. We test your load time live on the call, calculate your exact conversion loss per month, and show you what a custom storefront returns in Year 1.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free Conversion Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
                         </div>
 

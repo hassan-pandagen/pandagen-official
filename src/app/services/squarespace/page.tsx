@@ -2,12 +2,24 @@ import type { Metadata } from 'next';
 import PageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'Squarespace Migration to Custom Code | PandaCodeGen',
-  description: "Escape Squarespace subscription fees and SEO limits. We migrate your site to custom Next.js, faster load times, better rankings, and you own it forever.",
+  title: 'Squarespace to Next.js Migration Service | PandaCodeGen',
+  description: "Squarespace scores 30 to 55 on Google PageSpeed Mobile. No plugin fixes it. We migrate to custom Next.js, delivering 95+ PageSpeed, full SEO control, and no monthly fees.",
   alternates: { canonical: '/services/squarespace' },
+  keywords: [
+    'squarespace migration service',
+    'squarespace to nextjs',
+    'squarespace alternative',
+    'squarespace slow website',
+    'squarespace seo limitations',
+    'replace squarespace',
+    'squarespace migration cost',
+    'squarespace too slow',
+    'squarespace speed fix',
+    'squarespace to custom code',
+  ],
   openGraph: {
-    title: 'Squarespace Migration to Custom Code | PandaCodeGen',
-    description: "Escape Squarespace fees and SEO limits. We migrate to custom Next.js, faster, cheaper, and better rankings.",
+    title: 'Squarespace to Next.js Migration Service | PandaCodeGen',
+    description: "Squarespace scores 30 to 55 on Google PageSpeed. No plugin fixes it. We migrate to custom Next.js. 95+ PageSpeed, full SEO control, no monthly fees.",
     url: 'https://www.pandacodegen.com/services/squarespace',
     siteName: 'PandaCodeGen',
     type: 'website',
@@ -15,8 +27,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Squarespace Migration to Custom Code | PandaCodeGen',
-    description: "Escape Squarespace fees and SEO limits. We migrate to custom Next.js, faster, cheaper, and better rankings.",
+    title: 'Squarespace to Next.js Migration Service | PandaCodeGen',
+    description: "Squarespace scores 30 to 55 on PageSpeed. No plugin fixes it. We migrate to custom Next.js. 95+ PageSpeed, no monthly fees.",
   },
 };
 

@@ -348,8 +348,8 @@ export default function AchievePageSpeedPage() {
 
                         {/* Mid-Article CTA */}
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
-                            <p className="font-bold text-charcoal mb-2">Want these results on your site?</p>
-                            <p className="text-stone-600 mb-4 text-sm">Get a free speed audit. We&apos;ll show you exactly how much traffic you&apos;re losing.</p>
+                            <p className="font-bold text-charcoal mb-2">Want to see what 100/100 actually looks like for your site?</p>
+                            <p className="text-stone-600 mb-4 text-sm">Drop your URL when you book. We run your PageSpeed live on the call, show you your exact gaps, and quote what it takes to get you to 90-100/100.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                     Schedule Free Audit <ArrowRight className="w-4 h-4" />
                                 </CalModalButton>

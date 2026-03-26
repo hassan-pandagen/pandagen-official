@@ -5,49 +5,11 @@ import { ArrowRight, Clock } from "lucide-react";
 import { blogPosts } from "@/data/blog";
 import type { IllustrationType } from "@/data/blog";
 
-// Thin accent color per category, used for decorative elements only
-const accentColor = (type: IllustrationType): string => {
-  switch (type) {
-    case "aicommerce":
-    case "saas":
-      return "#10b981";
-    case "speed":
-    case "performance":
-      return "#2563eb";
-    case "wordpress":
-    case "plugins":
-      return "#8b5cf6";
-    case "traffic":
-    case "ranking":
-      return "#ea580c";
-    case "security":
-      return "#f43f5e";
-    default:
-      return "#2563eb";
-  }
-};
+// Brand-consistent accent color for decorative elements
+const accentColor = (_type: IllustrationType): string => "#c2410c"; // cognac
 
-// Darker variants for text, all pass WCAG AA 4.5:1 against white
-const textColor = (type: IllustrationType): string => {
-  switch (type) {
-    case "aicommerce":
-    case "saas":
-      return "#047857"; // emerald-700
-    case "speed":
-    case "performance":
-      return "#1d4ed8"; // blue-700
-    case "wordpress":
-    case "plugins":
-      return "#6d28d9"; // violet-700
-    case "traffic":
-    case "ranking":
-      return "#9a3412"; // orange-800
-    case "security":
-      return "#be123c"; // rose-700
-    default:
-      return "#1d4ed8"; // blue-700
-  }
-};
+// Brand-consistent text color for category badges
+const textColor = (_type: IllustrationType): string => "#c2410c"; // cognac
 
 export default function LatestBlog() {
   const latestPosts = [...blogPosts].reverse().slice(0, 3);

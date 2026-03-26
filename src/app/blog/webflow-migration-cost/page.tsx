@@ -465,8 +465,8 @@ export default function WebflowMigrationCostPage() {
 
                         {/* Mid CTA */}
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
-                            <p className="text-lg font-bold text-charcoal mb-2">Get an accurate quote for your Webflow migration</p>
-                            <p className="text-stone-600 text-sm mb-6">We audit your site, count the real scope, and give you a fixed-price quote. No surprises.</p>
+                            <p className="text-lg font-bold text-charcoal mb-2">Ready to know the exact cost of your Webflow migration?</p>
+                            <p className="text-stone-600 text-sm mb-6">Drop your Webflow URL when you book. We scope your migration live by page count and complexity, give you a fixed-price quote, and show you your break-even date before we hang up.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                 Get Your Migration Quote <ArrowRight className="w-4 h-4" />
                             </CalModalButton>

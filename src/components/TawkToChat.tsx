@@ -181,7 +181,7 @@ export default function TawkToChat() {
     };
 
     window.addEventListener('scroll', load, { passive: true, once: true });
-    const timer = setTimeout(load, 5000);
+    const timer = setTimeout(load, 15000);
 
     // Keep "Current Page" fresh on Next.js client-side navigation
     const updatePage = () => {

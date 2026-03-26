@@ -2,12 +2,24 @@ import type { Metadata } from 'next';
 import PageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'Wix to Custom Website Migration | PandaCodeGen',
-  description: "Escape Wix's SEO limits and slow load times. We migrate your Wix site to a custom coded Next.js website that ranks higher and loads 5x faster.",
+  title: 'Wix to Next.js Migration Service | PandaCodeGen',
+  description: "Wix scores 30 to 60 on Google PageSpeed and blocks advanced SEO controls. We migrate to custom Next.js in 1 to 3 weeks. 95+ PageSpeed, no monthly fees, full SEO ownership.",
   alternates: { canonical: '/services/wix' },
+  keywords: [
+    'wix migration service',
+    'wix to nextjs',
+    'wix alternative',
+    'wix slow website',
+    'wix seo problems',
+    'replace wix website',
+    'wix migration cost',
+    'wix to custom code',
+    'wix slow loading fix',
+    'wix seo limitations',
+  ],
   openGraph: {
-    title: 'Wix to Custom Website Migration | PandaCodeGen',
-    description: "Escape Wix SEO limits and slow load times. We migrate to custom Next.js, ranks higher and loads 5x faster.",
+    title: 'Wix to Next.js Migration Service | PandaCodeGen',
+    description: "Wix scores 30 to 60 on PageSpeed and blocks advanced SEO. We migrate to custom Next.js in 1 to 3 weeks. 95+ PageSpeed, no monthly fees.",
     url: 'https://www.pandacodegen.com/services/wix',
     siteName: 'PandaCodeGen',
     type: 'website',
@@ -15,8 +27,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Wix to Custom Website Migration | PandaCodeGen',
-    description: "Escape Wix SEO limits and slow load times. We migrate to custom Next.js that ranks higher and loads 5x faster.",
+    title: 'Wix to Next.js Migration Service | PandaCodeGen',
+    description: "Wix scores 30 to 60 on PageSpeed and blocks SEO. We migrate to custom Next.js in 1 to 3 weeks. 95+ PageSpeed, no monthly fees.",
   },
 };
 

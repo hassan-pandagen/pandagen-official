@@ -23,6 +23,26 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "squarespace-too-slow",
+    title: "Squarespace Too Slow? Here's Why It Can't Be Fixed",
+    excerpt: "Squarespace sites score 30 to 55 on Google PageSpeed Mobile and there is no plugin or setting that changes that. Here is the exact reason Squarespace is slow, what that costs you in rankings and leads, and what actually works.",
+    category: "Squarespace",
+    readTime: "10 min",
+    date: "Mar 27",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: false,
+    illustrationType: 'speed',
+    lastModified: "2026-03-27",
+    faqs: [
+      { question: "Why is my Squarespace site so slow?", answer: "Squarespace loads a large proprietary JavaScript bundle on every page regardless of what that page needs. The bundle includes the full Squarespace editor framework, animations, fonts, and commerce code even on a simple blog post. On mobile, this produces load times of 4 to 8 seconds and PageSpeed scores of 30 to 55. You cannot remove the bundle, swap it for a lighter library, or opt out of it. It is baked into the platform. This is why Squarespace speed optimization has a hard ceiling: the root cause cannot be addressed from inside the platform." },
+      { question: "Can I fix Squarespace speed without leaving the platform?", answer: "You can make marginal improvements. Compressing images before upload, reducing the number of fonts, disabling animations, and removing unused sections can recover 5 to 10 PageSpeed points. But the JavaScript bundle that drives most of the slowness loads regardless of what you do in the Squarespace settings. The ceiling for an optimized Squarespace site is roughly 55 to 65 on mobile. Reaching 90+ requires a platform change. If your current score is below 40, image compression will not move the needle meaningfully." },
+      { question: "Does Squarespace hurt my Google rankings?", answer: "Yes, indirectly. Google uses Core Web Vitals (Largest Contentful Paint, Interaction to Next Paint, Cumulative Layout Shift) as ranking signals. Squarespace sites typically have an LCP of 4 to 8 seconds on mobile. Google's threshold for a good LCP is 2.5 seconds. Sites with poor Core Web Vitals are ranked below comparable sites with better performance when other factors are equal. For competitive local service keywords and B2B terms, this is often the tiebreaker. Squarespace is not penalized explicitly, but it loses the performance tiebreaker consistently." },
+      { question: "What is the best alternative to Squarespace for a fast site?", answer: "Custom Next.js is the gold standard. Next.js pre-renders every page at build time, serving static HTML with no server-side processing on each request. There is no proprietary JavaScript bundle. Images are automatically optimized and lazy loaded. The result is PageSpeed scores of 95 to 100 on mobile and LCP under 1.2 seconds. For businesses that need to stay on a no-code platform, Framer is the best Squarespace alternative at 65 to 80 on mobile. But if organic search drives your revenue, only a custom build delivers the performance gap that changes rankings." },
+      { question: "How much does it cost to migrate from Squarespace to a custom site?", answer: "A Squarespace to Next.js migration for a 5 to 20 page business site typically costs $3,000 to $7,000 and takes 1 to 2 weeks. This includes rebuilding all pages in Next.js, setting up 301 redirects from every old Squarespace URL, migrating your blog content, and connecting your domain with zero downtime. The ROI depends on how much revenue your site generates. A site doing $10,000/month in leads that improves conversion rate 15% covers a $5,000 migration cost in about 3 months." },
+    ]
+  },
+  {
     id: "woocommerce-too-slow",
     title: "WooCommerce Too Slow? Here's What's Actually Breaking Your Store",
     excerpt: "WooCommerce stores average 30 to 55 on Google PageSpeed Mobile. Here is exactly why WooCommerce is slow, what it costs you in lost sales every day, and why caching plugins only hide the problem without fixing it.",
