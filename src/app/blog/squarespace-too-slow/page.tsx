@@ -17,7 +17,7 @@ const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: { absolute: "Squarespace Too Slow? Here's Why It Can't Be Fixed | PandaCodeGen" },
-    description: "Squarespace sites score 30 to 55 on Google PageSpeed Mobile. Here is exactly why Squarespace is slow, what it costs you in rankings and leads, and the only fix that actually works.",
+    description: "Squarespace sites score 30 to 55 on Google PageSpeed Mobile. No setting or plugin fixes it. Here is why your site is slow and what actually works.",
     alternates: {
         canonical: "/blog/squarespace-too-slow",
     },
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
         title: "Squarespace Too Slow? Here's Why It Can't Be Fixed",
         description: "Squarespace's JavaScript bundle loads on every page regardless of content. No setting or plugin removes it. Here is the full breakdown of why Squarespace is slow and what actually fixes it.",
         type: "article",
-        publishedTime: "2026-03-27",
-        modifiedTime: "2026-03-27",
+        publishedTime: "2026-03-27T00:00:00-05:00",
+        modifiedTime: "2026-03-27T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/squarespace-too-slow",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -59,8 +59,8 @@ const schemaData = {
             "headline": "Squarespace Too Slow? Here's Why It Can't Be Fixed",
             "description": "Squarespace sites score 30 to 55 on Google PageSpeed Mobile. Here is exactly why Squarespace is slow, what it costs you in rankings and leads, and the only fix that actually works.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-03-27",
-            "dateModified": "2026-03-27",
+            "datePublished": "2026-03-27T00:00:00-05:00",
+            "dateModified": "2026-03-27T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "name": "Hassan Jamal",
@@ -140,8 +140,8 @@ const schemaData = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/squarespace-too-slow#breadcrumb" },
             "inLanguage": "en-US",
-            "datePublished": "2026-03-27",
-            "dateModified": "2026-03-27"
+            "datePublished": "2026-03-27T00:00:00-05:00",
+            "dateModified": "2026-03-27T00:00:00-05:00"
         },
         {
             "@type": "Organization",
