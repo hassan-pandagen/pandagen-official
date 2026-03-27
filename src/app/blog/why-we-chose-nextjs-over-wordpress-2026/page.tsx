@@ -327,7 +327,7 @@ export default function WhyNextjsOverWordPressPage() {
                         <BlogHeader>Reason 4: 100/100 PageSpeed Is Achievable and Repeatable</BlogHeader>
 
                         <BlogText>
-                            We guarantee 95-100/100 PageSpeed Mobile on every client site. Not because we&apos;re magicians. Because Next.js makes it structurally achievable.
+                            We guarantee 95-100/100 PageSpeed Mobile on every client site. Not because we&apos;re magicians. Because Next.js makes it structurally achievable. You can see exactly what goes into each build on our <Link href="/services/custom-engineering" className="text-charcoal font-bold underline hover:text-stone-600 transition-colors">custom engineering service page</Link>.
                         </BlogText>
 
                         <BlogText>

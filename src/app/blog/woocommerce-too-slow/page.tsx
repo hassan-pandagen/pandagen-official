@@ -446,7 +446,7 @@ export default function WooCommerceTooSlowPage() {
                         </BlogText>
 
                         <BlogText>
-                            This is not a configuration change or a plugin swap. It is a rebuild of the customer-facing layer of your store. It takes 3 to 6 weeks depending on store complexity. But unlike plugin optimization, it does not degrade over time. The performance is structural, not maintained.
+                            This is not a configuration change or a plugin swap. It is a rebuild of the customer-facing layer of your store. It takes 3 to 6 weeks depending on store complexity. But unlike plugin optimization, it does not degrade over time. The performance is structural, not maintained. You can see the full process and what is included on our <Link href="/services/woocommerce" className="text-cognac underline underline-offset-2 hover:text-amber-700">WooCommerce migration service page</Link>.
                         </BlogText>
 
                         <BlogHeader>Is Headless WooCommerce Right for Your Store?</BlogHeader>

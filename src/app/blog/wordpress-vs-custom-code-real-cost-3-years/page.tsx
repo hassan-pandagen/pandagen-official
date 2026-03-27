@@ -602,7 +602,7 @@ export default function WordPressVsCustomCodeCostPage() {
                         </BlogText>
 
                         <BlogText>
-                            For most businesses doing over $150K/year, the custom site wins on direct costs alone within 2 years, and wins on total business impact (traffic + revenue + time) within the first year.
+                            For most businesses doing over $150K/year, the custom site wins on direct costs alone within 2 years, and wins on total business impact (traffic + revenue + time) within the first year. See what a custom build includes and how we scope projects on our <Link href="/services/custom-engineering" className="text-charcoal font-bold underline hover:text-stone-600 transition-colors">custom engineering service page</Link>.
                         </BlogText>
 
                         <BlogText>
