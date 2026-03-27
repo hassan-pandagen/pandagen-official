@@ -310,7 +310,7 @@ export default function WebflowVsCustomWebsitePage() {
                         <BlogHeader>What a Custom Website Actually Gives You</BlogHeader>
 
                         <BlogText>
-                            &quot;Custom website&quot; sounds expensive and complicated. Here is what it actually means in practice:
+                            &quot;Custom website&quot; sounds expensive and complicated. Five years ago it cost $25,000+ and took 4 to 6 months. AI-assisted development has changed that. Today a custom site costs $5,000 to $20,000 and takes 4 to 8 weeks. Here is what it actually means in practice:
                         </BlogText>
 
                         <BlogText>

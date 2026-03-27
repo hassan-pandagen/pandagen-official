@@ -267,7 +267,7 @@ export default function WebflowMigrationCostPage() {
                         </div>
 
                         <BlogText>
-                            These are ranges, not quotes. Two 60-page sites can cost very different amounts depending on what is in them. The next section explains why.
+                            These are ranges, not quotes. Two 60-page sites can cost very different amounts depending on what is in them. These costs have come down over the past two years thanks to AI-assisted development. Work that used to take a developer 3 days now takes half a day. The next section explains why the range is still wide.
                         </BlogText>
 
                         <BlogHeader>What Actually Drives the Cost of a Webflow Migration</BlogHeader>

@@ -297,7 +297,7 @@ export default function WordPressVsCustomCodeCostPage() {
                         <BlogHeader>What Does a Custom Next.js Site Cost Over 3 Years?</BlogHeader>
 
                         <BlogText>
-                            Now let&apos;s look at the other side. A custom-built Next.js site, professionally done.
+                            Now let&apos;s look at the other side. A custom-built Next.js site, professionally done. AI-assisted development has made custom code affordable for businesses that could not justify it three years ago. The build cost has dropped while the quality has gone up.
                         </BlogText>
 
                         <div className="overflow-x-auto my-10">

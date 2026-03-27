@@ -419,7 +419,7 @@ export default function ForAgenciesCustomDevPage() {
                         </BlogText>
 
                         <BlogText>
-                            Example: We quote you $10,000 for a custom Next.js site. You quote your client $13,000 to $15,000. You pocket the $3,000 to $5,000 as agency margin for project management, client communication, and relationship ownership.
+                            Example: We quote you $10,000 for a custom Next.js site. You quote your client $13,000 to $15,000. You pocket the $3,000 to $5,000 as agency margin for project management, client communication, and relationship ownership. AI-assisted development means we deliver custom builds in weeks, not months. That is how we keep fixed prices low enough for agencies to mark up and still beat template pricing.
                         </BlogText>
 
                         <BlogText>

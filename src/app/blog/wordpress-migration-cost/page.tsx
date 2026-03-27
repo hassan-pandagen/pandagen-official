@@ -274,7 +274,7 @@ export default function WordPressMigrationCostPage() {
 
                     <BlogHeader id="what-drives-cost">What Drives Migration Cost Up?</BlogHeader>
                     <BlogText>
-                        The line items that separate a $5,000 migration from a $20,000 one are predictable. Every quote you receive should be justifiable against these factors.
+                        The line items that separate a $5,000 migration from a $20,000 one are predictable. Every quote you receive should be justifiable against these factors. AI-assisted development has brought migration timelines down significantly. The AI handles code scaffolding and boilerplate, so developers can focus on the SEO-critical and custom elements.
                     </BlogText>
                     <BlogList items={[
                         "Custom post types and taxonomies: WordPress custom post types (portfolio, team members, testimonials, events) need to be rebuilt as typed data structures in Next.js. Each custom post type adds 4 to 12 hours of build time.",
