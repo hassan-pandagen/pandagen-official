@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import { X, CheckCircle2, Loader2 } from "lucide-react";
 
 const STORAGE_KEY = "founder_modal_dismissed";
-const TRIGGER_DELAY = 45000;
+const TRIGGER_DELAY = 30000;
 
 export default function FounderOfferModal() {
   const [visible, setVisible] = useState(false);
@@ -110,7 +110,7 @@ export default function FounderOfferModal() {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cognac opacity-75" />
                     <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-cognac" />
                   </span>
-                  Limited. 3 Spots This Month
+                  Limited. 2 Spots Left This Month
                 </div>
 
                 {/* Price */}
@@ -124,7 +124,7 @@ export default function FounderOfferModal() {
 
                 {/* Copy */}
                 <p className="text-white text-sm leading-relaxed mb-1">
-                  We select 3 businesses each month for a discounted Next.js migration. 1 spot is already taken.
+                  We select 3 businesses each month for a discounted Next.js migration. 1 spot is already taken, 2 remaining.
                 </p>
                 <p className="text-white/80 text-sm leading-relaxed mb-1">
                   This is not a discount for everyone. We review each site and only take projects that make a strong case study. Custom build, 95+ PageSpeed guaranteed, 1 week delivery. You own the code.

@@ -101,7 +101,7 @@ export default function FounderSection() {
                   href={founder.about}
                   className="text-sm font-bold text-white hover:text-cognac transition-colors flex items-center gap-1.5"
                 >
-                  Full Bio <ArrowUpRight className="w-3.5 h-3.5" />
+                  {founder.name.split(" ")[0]}&apos;s Bio <ArrowUpRight className="w-3.5 h-3.5" />
                 </Link>
                 {founder.linkedin && (
                   <a

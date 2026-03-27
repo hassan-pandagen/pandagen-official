@@ -43,7 +43,7 @@ export function HeroCTAs() {
         {/* Secondary CTA: White surface card */}
         <Link
           href="/work"
-          className="w-full sm:w-auto px-8 py-4 bg-white border border-cognac/30 text-cognac font-bold text-base rounded-full hover:bg-cognac hover:text-white transition-all duration-300 flex items-center justify-center gap-2 shadow-card hover:scale-105 cursor-pointer"
+          className="w-full sm:w-auto px-8 py-4 bg-white border border-stone-300 text-charcoal font-bold text-base rounded-full hover:bg-cognac hover:text-white transition-all duration-300 flex items-center justify-center gap-2 shadow-card hover:scale-105 cursor-pointer"
         >
           View Case Studies <ArrowRight className="w-4 h-4" />
         </Link>
