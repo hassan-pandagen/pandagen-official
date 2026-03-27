@@ -44,7 +44,7 @@ export default function MigrationPage() {
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
         "serviceType": ["WordPress Migration", "WordPress to Custom Code", "WordPress Alternative"],
-        "priceRange": "$5,000 - $15,000",
+        "priceRange": "$2,000 - $25,000",
         "telephone": "+13027738982",
         "address": {
           "@type": "PostalAddress",

@@ -16,15 +16,15 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Shopify Dawn Theme Slow? Here's Exactly Why (and the Real Fix) | PandaCodeGen",
-    description: "Dawn is Shopify's fastest theme, so why is your store still loading in 3+ seconds? Here's what's actually killing your speed and why theme-level fixes won't save you.",
+    title: "Shopify Dawn Theme Slow? The Fix Shopify Won't Tell You",
+    description: "Dawn is Shopify's fastest theme but your store still loads in 3+ seconds. The problem is not the theme. It is Shopify's architecture. Here is what actually fixes it.",
     alternates: {
         canonical: "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow",
     },
     keywords: ["shopify dawn theme slow", "shopify dawn theme speed", "shopify 2.0 performance", "why is shopify slow", "shopify pagespeed score", "shopify speed optimization", "shopify dawn pagespeed"],
     openGraph: {
-        title: "Shopify Dawn Theme Slow? Here's Exactly Why (and the Real Fix)",
-        description: "Dawn is Shopify's fastest theme, so why is your store still loading in 3+ seconds? The real culprit isn't the theme.",
+        title: "Shopify Dawn Theme Slow? The Fix Shopify Won't Tell You",
+        description: "Dawn is Shopify's fastest theme but your store still loads in 3+ seconds. The problem is not the theme. It is Shopify's architecture. Here is what actually fixes it.",
         type: "article",
         publishedTime: "2026-03-07",
         authors: ["Hassan"],
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Shopify Dawn Theme Slow? Here's Exactly Why (and the Real Fix)",
-        description: "Dawn is Shopify's fastest theme, so why is your store still loading in 3+ seconds?",
+        title: "Shopify Dawn Theme Slow? The Fix Shopify Won't Tell You",
+        description: "Dawn is Shopify's fastest theme but your store still loads in 3+ seconds. The problem is not the theme. It is Shopify's architecture. Here is what actually fixes it.",
     },
 };
 
@@ -44,8 +44,8 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow#article",
-            "headline": "Shopify Dawn Theme Slow? Here's Exactly Why (and the Real Fix)",
-            "description": "Dawn is Shopify's fastest theme but most stores using it still load in 3+ seconds. Here's why, and what actually fixes it.",
+            "headline": "Shopify Dawn Theme Slow? The Fix Shopify Won't Tell You",
+            "description": "Dawn is Shopify's fastest theme but your store still loads in 3+ seconds. The problem is not the theme. It is Shopify's architecture. Here is what actually fixes it.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-07T00:00:00-05:00",
             "dateModified": "2026-03-10T00:00:00-05:00",

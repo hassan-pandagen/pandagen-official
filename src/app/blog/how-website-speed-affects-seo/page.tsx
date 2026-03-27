@@ -15,15 +15,15 @@ const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 const SEORankingAnimation = dynamic(() => import("@/components/blog/SEORankingAnimation"));
 
 export const metadata: Metadata = {
-    title: "How Website Speed Affects SEO Rankings in 2026 (With Real Data)",
-    description: "Google confirmed page speed is a ranking factor. A site loading in 1 second converts 3x better than one at 5 seconds. Here's exactly how speed affects your rankings and what to do about it.",
+    title: "How Website Speed Affects SEO: Real Data on Rankings and Revenue",
+    description: "A site loading in 1 second converts 3x better than one at 5 seconds. Google confirmed page speed is a ranking factor. Here is exactly how speed affects your revenue.",
     alternates: {
         canonical: '/blog/how-website-speed-affects-seo',
     },
     keywords: ["how does website speed affect seo", "website speed seo ranking factor", "core web vitals seo", "page speed google ranking", "slow website seo impact", "website speed conversion rate", "core web vitals ranking 2026"],
     openGraph: {
-        title: "How Website Speed Affects SEO Rankings in 2026 (With Real Data)",
-        description: "Google confirmed page speed is a ranking factor. A site loading in 1 second converts 3x better than one at 5 seconds.",
+        title: "How Website Speed Affects SEO: Real Data on Rankings and Revenue",
+        description: "A site loading in 1 second converts 3x better than one at 5 seconds. Google confirmed page speed is a ranking factor. Here is exactly how speed affects your revenue.",
         type: "article",
         publishedTime: "2026-03-09",
         authors: ["Hassan"],
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "How Website Speed Affects SEO Rankings in 2026 (With Real Data)",
-        description: "Google confirmed page speed is a ranking factor. A site loading in 1 second converts 3x better than one at 5 seconds.",
+        title: "How Website Speed Affects SEO: Real Data on Rankings and Revenue",
+        description: "A site loading in 1 second converts 3x better than one at 5 seconds. Google confirmed page speed is a ranking factor. Here is exactly how speed affects your revenue.",
     },
 };
 
@@ -43,8 +43,8 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/how-website-speed-affects-seo#article",
-            "headline": "How Website Speed Affects SEO Rankings in 2026 (With Real Data)",
-            "description": "Google confirmed page speed is a ranking factor. Here's exactly how site speed affects your SEO rankings, Core Web Vitals, and revenue, with real data from Google, Deloitte, and Portent.",
+            "headline": "How Website Speed Affects SEO: Real Data on Rankings and Revenue",
+            "description": "A site loading in 1 second converts 3x better than one at 5 seconds. Google confirmed page speed is a ranking factor. Here is exactly how speed affects your revenue.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-09T00:00:00-05:00",
             "dateModified": "2026-03-10T00:00:00-05:00",
@@ -102,8 +102,8 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/how-website-speed-affects-seo#webpage",
             "url": "https://www.pandacodegen.com/blog/how-website-speed-affects-seo",
-            "name": "How Website Speed Affects SEO Rankings in 2026 (With Real Data)",
-            "description": "Google confirmed page speed is a ranking factor. Here's exactly how site speed affects your SEO rankings, Core Web Vitals, and revenue.",
+            "name": "How Website Speed Affects SEO: Real Data on Rankings and Revenue",
+            "description": "A site loading in 1 second converts 3x better than one at 5 seconds. Google confirmed page speed is a ranking factor. Here is exactly how speed affects your revenue.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-09T00:00:00-05:00",

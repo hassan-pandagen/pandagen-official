@@ -16,13 +16,13 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Why WordPress Is a Waste of Money in 2026 | PandaCodeGen",
-    description: "The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3 to 5×. Here's the real number.",
+    title: "WordPress Is Costing You 3x to 5x More Than You Think (2026)",
+    description: "The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3 to 5x. Here are the real numbers.",
     alternates: { canonical: "/blog/wordpress-killer" },
     keywords: ["wordpress cost 2026", "wordpress waste of money", "true cost of wordpress", "wordpress vs next.js cost", "wordpress alternative for business"],
     openGraph: {
-        title: "Why WordPress Is a Waste of Money in 2026",
-        description: "The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3 to 5×.",
+        title: "WordPress Is Costing You 3x to 5x More Than You Think (2026)",
+        description: "The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3 to 5x. Here are the real numbers.",
         type: "article",
         publishedTime: "2026-01-15",
         authors: ["Hassan"],
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Why WordPress Is a Waste of Money in 2026",
-        description: "The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3 to 5×.",
+        title: "WordPress Is Costing You 3x to 5x More Than You Think (2026)",
+        description: "The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3 to 5x. Here are the real numbers.",
     },
 };
 
@@ -42,8 +42,8 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-killer#article",
-            "headline": "Why WordPress Is a Waste of Money in 2026",
-            "description": "The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3 to 5×.",
+            "headline": "WordPress Is Costing You 3x to 5x More Than You Think (2026)",
+            "description": "The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3 to 5x. Here are the real numbers.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-01-15T00:00:00-05:00",
             "dateModified": "2026-03-10T00:00:00-05:00",

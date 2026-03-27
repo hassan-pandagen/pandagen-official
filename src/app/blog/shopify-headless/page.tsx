@@ -16,13 +16,13 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Your Shopify Store Loads in 4 Seconds. We Got It to 0.8. Here's Exactly How. | PandaCodeGen",
-    description: "Most Shopify stores fail Core Web Vitals because Liquid templates are render-blocking by design. Here's the exact headless stack we used to cut load time from 4s to 0.8s.",
+    title: "Shopify Headless: We Cut Load Time From 4s to 0.8s",
+    description: "Most Shopify stores fail Core Web Vitals because Liquid templates are render-blocking. Here is the exact headless stack that took a store from 4 seconds to 0.8 seconds.",
     alternates: { canonical: "/blog/shopify-headless" },
     keywords: ["headless shopify", "shopify speed optimization", "shopify core web vitals", "shopify next.js", "shopify storefront api", "shopify liquid slow"],
     openGraph: {
-        title: "Your Shopify Store Loads in 4 Seconds. We Got It to 0.8. Here's Exactly How.",
-        description: "Liquid templates are render-blocking by design. Here's the exact headless stack that cut load time from 4s to 0.8s and boosted conversions 55%.",
+        title: "Shopify Headless: We Cut Load Time From 4s to 0.8s",
+        description: "Most Shopify stores fail Core Web Vitals because Liquid templates are render-blocking. Here is the exact headless stack that took a store from 4 seconds to 0.8 seconds.",
         type: "article",
         publishedTime: "2026-01-10",
         authors: ["Hassan"],
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Your Shopify Store Loads in 4 Seconds. We Got It to 0.8. Here's Exactly How.",
-        description: "Liquid templates are render-blocking by design. Here's the exact headless stack we used.",
+        title: "Shopify Headless: We Cut Load Time From 4s to 0.8s",
+        description: "Most Shopify stores fail Core Web Vitals because Liquid templates are render-blocking. Here is the exact headless stack that took a store from 4 seconds to 0.8 seconds.",
     },
 };
 
@@ -42,8 +42,8 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/shopify-headless#article",
-            "headline": "Your Shopify Store Loads in 4 Seconds. Headless Shopify Got It to 0.8. Here's Exactly How.",
-            "description": "Most Shopify stores fail Core Web Vitals because Liquid templates are render-blocking by design. Here's the exact headless stack we use.",
+            "headline": "Shopify Headless: We Cut Load Time From 4s to 0.8s",
+            "description": "Most Shopify stores fail Core Web Vitals because Liquid templates are render-blocking. Here is the exact headless stack that took a store from 4 seconds to 0.8 seconds.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-01-10T00:00:00-05:00",
             "dateModified": "2026-03-10T00:00:00-05:00",

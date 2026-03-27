@@ -16,8 +16,8 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: { absolute: "Squarespace Too Slow? Here's Why It Can't Be Fixed | PandaCodeGen" },
-    description: "Squarespace sites score 30 to 55 on Google PageSpeed Mobile. No setting or plugin fixes it. Here is why your site is slow and what actually works.",
+    title: { absolute: "Squarespace Too Slow? No Setting or Plugin Fixes This" },
+    description: "Squarespace sites score 30 to 55 on Google PageSpeed Mobile. The JavaScript bundle that causes it cannot be removed. Here is why your site is slow and what actually works.",
     alternates: {
         canonical: "/blog/squarespace-too-slow",
     },
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
         "migrate squarespace to nextjs"
     ],
     openGraph: {
-        title: "Squarespace Too Slow? Here's Why It Can't Be Fixed",
-        description: "Squarespace's JavaScript bundle loads on every page regardless of content. No setting or plugin removes it. Here is the full breakdown of why Squarespace is slow and what actually fixes it.",
+        title: "Squarespace Too Slow? No Setting or Plugin Fixes This",
+        description: "Squarespace sites score 30 to 55 on Google PageSpeed Mobile. The JavaScript bundle that causes it cannot be removed. Here is why your site is slow and what actually works.",
         type: "article",
         publishedTime: "2026-03-27T00:00:00-05:00",
         modifiedTime: "2026-03-27T00:00:00-05:00",
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Squarespace Too Slow? Here's Why It Can't Be Fixed",
-        description: "30 to 55 on mobile PageSpeed. LCP of 4 to 8 seconds. The JavaScript bundle is the culprit and you cannot remove it.",
+        title: "Squarespace Too Slow? No Setting or Plugin Fixes This",
+        description: "Squarespace sites score 30 to 55 on Google PageSpeed Mobile. The JavaScript bundle that causes it cannot be removed. Here is why your site is slow and what actually works.",
     },
 };
 
@@ -56,8 +56,8 @@ const schemaData = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/squarespace-too-slow#article",
-            "headline": "Squarespace Too Slow? Here's Why It Can't Be Fixed",
-            "description": "Squarespace sites score 30 to 55 on Google PageSpeed Mobile. Here is exactly why Squarespace is slow, what it costs you in rankings and leads, and the only fix that actually works.",
+            "headline": "Squarespace Too Slow? No Setting or Plugin Fixes This",
+            "description": "Squarespace sites score 30 to 55 on Google PageSpeed Mobile. The JavaScript bundle that causes it cannot be removed. Here is why your site is slow and what actually works.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-27T00:00:00-05:00",
             "dateModified": "2026-03-27T00:00:00-05:00",

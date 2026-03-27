@@ -16,8 +16,8 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: { absolute: "How Much Does a WordPress to Next.js Migration Cost in 2026? | PandaCodeGen" },
-    description: "WordPress to Next.js migration costs $3,000 to $25,000 depending on site complexity. Here is the full price breakdown by project type, what drives cost up, and how to calculate your ROI.",
+    title: { absolute: "WordPress to Next.js Migration: From $2,000 (2026 Pricing)" },
+    description: "A simple WordPress site starts at $2,000 to migrate to Next.js. Complex sites with WooCommerce cost $10,000 to $25,000. Full pricing by project type and ROI calculation.",
     alternates: {
         canonical: "/blog/wordpress-migration-cost",
     },
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
         "wordpress migration budget"
     ],
     openGraph: {
-        title: "How Much Does a WordPress to Next.js Migration Cost in 2026?",
-        description: "The full price breakdown: from $3,000 DIY-assisted builds to $25,000+ enterprise migrations. What drives cost, what is included, and when the ROI makes sense.",
+        title: "WordPress to Next.js Migration: From $2,000 (2026 Pricing)",
+        description: "A simple WordPress site starts at $2,000 to migrate to Next.js. Complex sites with WooCommerce cost $10,000 to $25,000. Full pricing by project type and ROI calculation.",
         type: "article",
         publishedTime: "2026-03-22",
         modifiedTime: "2026-03-22",
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "How Much Does a WordPress to Next.js Migration Cost in 2026?",
-        description: "Full price breakdown by project type. What drives cost up. ROI calculator logic. When migration pays for itself.",
+        title: "WordPress to Next.js Migration: From $2,000 (2026 Pricing)",
+        description: "A simple WordPress site starts at $2,000 to migrate to Next.js. Complex sites with WooCommerce cost $10,000 to $25,000. Full pricing by project type and ROI calculation.",
     },
 };
 
@@ -56,8 +56,8 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-migration-cost#article",
-            "headline": "How Much Does a WordPress to Next.js Migration Cost in 2026?",
-            "description": "WordPress to Next.js migration costs $3,000 to $25,000 depending on site complexity. Here is the full price breakdown by project type, what drives cost up, and how to calculate your ROI.",
+            "headline": "WordPress to Next.js Migration: From $2,000 (2026 Pricing)",
+            "description": "A simple WordPress site starts at $2,000 to migrate to Next.js. Complex sites with WooCommerce cost $10,000 to $25,000. Full pricing by project type and ROI calculation.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-22T00:00:00-05:00",
             "dateModified": "2026-03-22T00:00:00-05:00",
@@ -124,8 +124,8 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/wordpress-migration-cost#webpage",
             "url": "https://www.pandacodegen.com/blog/wordpress-migration-cost",
-            "name": "How Much Does a WordPress to Next.js Migration Cost in 2026?",
-            "description": "Full price breakdown: $3,000 to $25,000 depending on site complexity. What drives cost up. ROI calculation. When migration pays for itself.",
+            "name": "WordPress to Next.js Migration: From $2,000 (2026 Pricing)",
+            "description": "A simple WordPress site starts at $2,000 to migrate to Next.js. Complex sites with WooCommerce cost $10,000 to $25,000. Full pricing by project type and ROI calculation.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-03-22T00:00:00-05:00",
             "dateModified": "2026-03-22T00:00:00-05:00",
@@ -178,7 +178,7 @@ export default function WordPressMigrationCostPage() {
                             <span className="font-serif italic text-cognac">Cost in 2026?</span>
                         </h1>
                         <p className="text-lg text-stone-600 leading-relaxed mb-6" data-speakable="true">
-                            The honest answer is $3,000 to $25,000. The range is wide because a 10-page brochure site and a 500-page WooCommerce store with custom integrations are completely different projects. This breakdown explains exactly what drives migration cost, what tier your site falls into, and how to calculate whether migration makes financial sense for your business.
+                            The honest answer is $2,000 to $25,000. The range is wide because a 10-page brochure site and a 500-page WooCommerce store with custom integrations are completely different projects. This breakdown explains exactly what drives migration cost, what tier your site falls into, and how to calculate whether migration makes financial sense for your business.
                         </p>
                         <BlogAuthor
                             date="Mar 22, 2026"
@@ -203,7 +203,7 @@ export default function WordPressMigrationCostPage() {
                     <div className="mb-10 p-6 bg-orange-50 border border-orange-200 rounded-2xl" data-speakable="true">
                         <p className="font-bold text-charcoal mb-3 text-sm uppercase tracking-wide">Cost Summary</p>
                         <ul className="space-y-2 text-sm text-stone-700">
-                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-cognac mt-0.5 shrink-0" /> Basic business site (5 to 15 pages, no custom features): $3,000 to $8,000.</li>
+                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-cognac mt-0.5 shrink-0" /> Simple site (1 to 5 pages): from $2,000. Business site (5 to 15 pages): $3,000 to $8,000.</li>
                             <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-cognac mt-0.5 shrink-0" /> Mid-complexity site (custom post types, blog, contact forms, integrations): $8,000 to $15,000.</li>
                             <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-cognac mt-0.5 shrink-0" /> WooCommerce or large content site (500 pages, custom checkout, API integrations): $15,000 to $25,000+.</li>
                             <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-cognac mt-0.5 shrink-0" /> Most clients recover the full migration cost within 12 to 18 months from lower hosting, plugin, and maintenance costs alone.</li>
@@ -255,7 +255,8 @@ export default function WordPressMigrationCostPage() {
                             </thead>
                             <tbody className="divide-y divide-stone-100">
                                 {[
-                                    ["Basic", "5 to 15 pages, no custom features", "$3,000 to $8,000", "2 to 3 weeks"],
+                                    ["Starter", "1 to 5 pages, simple brochure", "$2,000 to $3,500", "1 to 2 weeks"],
+                                    ["Basic", "5 to 15 pages, no custom features", "$3,500 to $8,000", "2 to 3 weeks"],
                                     ["Mid", "15 to 50 pages, blog, forms, integrations", "$8,000 to $15,000", "3 to 5 weeks"],
                                     ["Complex", "50+ pages, WooCommerce, custom post types", "$15,000 to $25,000", "5 to 8 weeks"],
                                     ["Enterprise", "500+ pages, multiple integrations, custom APIs", "$25,000+", "8 to 16 weeks"],

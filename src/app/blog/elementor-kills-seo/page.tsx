@@ -16,13 +16,13 @@ const SEORankingAnimation = dynamic(() => import("@/components/blog/SEORankingAn
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Is Elementor Killing Your Google Rankings? We Audited 500 Sites. | PandaCodeGen",
-    description: "The average Elementor site scores 38/100 on mobile PageSpeed. We audited 500 sites to measure how much traffic page builders cost business owners.",
+    title: "Elementor Sites Average 38/100 PageSpeed (We Audited 500 Sites)",
+    description: "The average Elementor site scores 38/100 on mobile PageSpeed. We audited 500 sites to measure exactly how much traffic and revenue page builders cost business owners.",
     alternates: { canonical: "/blog/elementor-kills-seo" },
     keywords: ["elementor seo", "elementor slow", "elementor kills rankings", "page builder seo impact", "elementor pagespeed score", "wordpress page builder performance"],
     openGraph: {
-        title: "Is Elementor Killing Your Google Rankings? We Audited 500 Sites. The Results Are Brutal.",
-        description: "The average Elementor site scores 38/100 on mobile PageSpeed. We audited 500 sites to find out how much traffic page builders are costing you.",
+        title: "Elementor Sites Average 38/100 PageSpeed (We Audited 500 Sites)",
+        description: "The average Elementor site scores 38/100 on mobile PageSpeed. We audited 500 sites to measure exactly how much traffic and revenue page builders cost business owners.",
         type: "article",
         publishedTime: "2025-12-28",
         authors: ["Hassan"],
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Is Elementor Killing Your Google Rankings? We Audited 500 Sites.",
-        description: "The average Elementor site scores 38/100 on mobile PageSpeed. The results are brutal.",
+        title: "Elementor Sites Average 38/100 PageSpeed (We Audited 500 Sites)",
+        description: "The average Elementor site scores 38/100 on mobile PageSpeed. We audited 500 sites to measure exactly how much traffic and revenue page builders cost business owners.",
     },
 };
 
@@ -42,8 +42,8 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/elementor-kills-seo#article",
-            "headline": "Is Elementor Killing Your Google Rankings? We Audited 500 Sites. The Results Are Brutal.",
-            "description": "The average Elementor site scores 38/100 on mobile PageSpeed. We audited 500 sites to find out exactly how much traffic page builders cost.",
+            "headline": "Elementor Sites Average 38/100 PageSpeed (We Audited 500 Sites)",
+            "description": "The average Elementor site scores 38/100 on mobile PageSpeed. We audited 500 sites to measure exactly how much traffic and revenue page builders cost business owners.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2025-12-28T00:00:00-05:00",
             "dateModified": "2026-03-10T00:00:00-05:00",
@@ -98,8 +98,8 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/elementor-kills-seo#webpage",
             "url": "https://www.pandacodegen.com/blog/elementor-kills-seo",
-            "name": "Is Elementor Killing Your Google Rankings? We Audited 500 Sites.",
-            "description": "The average Elementor site scores 38/100 on mobile PageSpeed. We audited 500 sites.",
+            "name": "Elementor Sites Average 38/100 PageSpeed (We Audited 500 Sites)",
+            "description": "The average Elementor site scores 38/100 on mobile PageSpeed. We audited 500 sites to measure exactly how much traffic and revenue page builders cost business owners.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2025-12-28T00:00:00-05:00",

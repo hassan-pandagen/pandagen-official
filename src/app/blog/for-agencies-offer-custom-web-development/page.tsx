@@ -15,14 +15,14 @@ const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
 
 export const metadata: Metadata = {
-    title: "White Label Web Development for Agencies: Custom Builds Without a Dev Team | PandaCodeGen",
-    description: "Your client wants a custom site. No dev team? Here's how 40+ agencies deliver premium custom builds under their own brand, without touching a line of code.",
+    title: "White Label Web Development: Custom Builds Without a Dev Team",
+    description: "Your client wants a custom site but you have no dev team. Here is how 40+ agencies deliver premium custom builds under their own brand without writing code.",
     alternates: {
         canonical: '/blog/for-agencies-offer-custom-web-development',
     },
     openGraph: {
-        title: "White Label Web Development for Agencies: Custom Builds Without a Dev Team",
-        description: "Your client wants a custom-built website. You don't have a dev team. Here's how 40+ agencies deliver premium custom builds without touching a line of code.",
+        title: "White Label Web Development: Custom Builds Without a Dev Team",
+        description: "Your client wants a custom site but you have no dev team. Here is how 40+ agencies deliver premium custom builds under their own brand without writing code.",
         type: "article",
         publishedTime: "2026-03-06",
         authors: ["Hassan"],
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "White Label Web Development for Agencies: Custom Builds Without a Dev Team",
-        description: "Your client wants a custom-built website. You don't have a dev team. Here's how 40+ agencies deliver it.",
+        title: "White Label Web Development: Custom Builds Without a Dev Team",
+        description: "Your client wants a custom site but you have no dev team. Here is how 40+ agencies deliver premium custom builds under their own brand without writing code.",
     },
     keywords: ["white label web development", "outsource web development for agencies", "offer custom web development without dev team", "white label nextjs", "agency web development partner"],
 };
@@ -43,8 +43,8 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/for-agencies-offer-custom-web-development#article",
-            "headline": "White Label Web Development for Agencies: Custom Builds Without a Dev Team",
-            "description": "Your client wants a custom-built website. You don't have a dev team. Here's how 40+ agencies deliver premium custom builds under their own brand.",
+            "headline": "White Label Web Development: Custom Builds Without a Dev Team",
+            "description": "Your client wants a custom site but you have no dev team. Here is how 40+ agencies deliver premium custom builds under their own brand without writing code.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-06T00:00:00-05:00",
             "dateModified": "2026-03-10T00:00:00-05:00",

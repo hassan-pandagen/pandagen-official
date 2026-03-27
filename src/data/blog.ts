@@ -23,8 +23,28 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "webflow-vs-custom-website",
+    title: "Webflow vs Custom Website: When Webflow Stops Making Sense",
+    excerpt: "Webflow works until it does not. Here are the 5 signs you have outgrown Webflow, what a custom website actually gives you, and how to decide without overspending.",
+    category: "Webflow",
+    readTime: "11 min",
+    date: "Mar 27",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: false,
+    illustrationType: 'webflow',
+    lastModified: "2026-03-27",
+    faqs: [
+      { question: "When should I switch from Webflow to a custom website?", answer: "Switch when any of these are true: your Google PageSpeed Mobile score is below 70 and you cannot improve it, your Webflow bill exceeds $100 per month including add-ons and third-party tools, you need custom functionality like a booking system or API integration that Webflow cannot handle natively, you have hit the 10,000 CMS item limit, or a competitor with a custom site is consistently outranking you for the same keywords despite similar content. If none of these apply, Webflow is still the right choice for your stage." },
+      { question: "How much does a custom website cost compared to Webflow?", answer: "A custom Next.js website costs $5,000 to $20,000 to build depending on the number of pages and features. Hosting is $0 to $20 per month on Vercel. Webflow costs $0 to build if you do it yourself but $1,500 to $5,000 per year in platform fees once you add CMS hosting, forms, localization, and third-party integrations. Over 3 years, a custom site typically costs 30 to 60% less than Webflow when you include both build and ongoing costs." },
+      { question: "Will I lose my Google rankings if I migrate from Webflow?", answer: "Not if the migration is done correctly. A proper Webflow to custom code migration includes 301 redirects from every old Webflow URL to the new URL, preserving all metadata and content structure, submitting a new sitemap to Google Search Console, and verifying that no pages return 404 errors. When done right, rankings typically improve within 30 to 90 days because the faster custom site earns better Core Web Vitals scores. We have never seen a client lose rankings after a properly executed migration." },
+      { question: "Can Webflow sites rank well on Google?", answer: "Webflow sites can rank for low-competition keywords. Webflow generates clean HTML and handles basic SEO well. The limitation is performance: Webflow sites score 55 to 75 on Google PageSpeed Mobile due to the platform's CSS framework and JavaScript runtime. For competitive keywords where multiple sites have similar content quality, Google uses Core Web Vitals as a tiebreaker. A custom site scoring 95 to 100 will consistently outrank a Webflow site scoring 60 to 70 for the same keyword. If organic search is your primary growth channel, this gap matters." },
+      { question: "What can a custom website do that Webflow cannot?", answer: "Custom websites have no platform limits. Specific capabilities that Webflow cannot provide: server-side rendering for dynamic content, API integrations with any external service, custom databases and user authentication, unlimited CMS items (Webflow caps at 10,000), real-time features like live pricing or availability, full control over page load performance, and the ability to move your site to any hosting provider at any time. Webflow's visual editor is powerful for static design, but any feature that requires backend logic or data processing is either impossible or requires expensive third-party workarounds." },
+    ]
+  },
+  {
     id: "squarespace-too-slow",
-    title: "Squarespace Too Slow? Here's Why It Can't Be Fixed",
+    title: "Squarespace Too Slow? No Setting or Plugin Fixes This",
     excerpt: "Squarespace sites score 30 to 55 on Google PageSpeed Mobile and there is no plugin or setting that changes that. Here is the exact reason Squarespace is slow, what that costs you in rankings and leads, and what actually works.",
     category: "Squarespace",
     readTime: "10 min",
@@ -39,12 +59,12 @@ export const blogPosts: BlogPost[] = [
       { question: "Can I fix Squarespace speed without leaving the platform?", answer: "You can make marginal improvements. Compressing images before upload, reducing the number of fonts, disabling animations, and removing unused sections can recover 5 to 10 PageSpeed points. But the JavaScript bundle that drives most of the slowness loads regardless of what you do in the Squarespace settings. The ceiling for an optimized Squarespace site is roughly 55 to 65 on mobile. Reaching 90+ requires a platform change. If your current score is below 40, image compression will not move the needle meaningfully." },
       { question: "Does Squarespace hurt my Google rankings?", answer: "Yes, indirectly. Google uses Core Web Vitals (Largest Contentful Paint, Interaction to Next Paint, Cumulative Layout Shift) as ranking signals. Squarespace sites typically have an LCP of 4 to 8 seconds on mobile. Google's threshold for a good LCP is 2.5 seconds. Sites with poor Core Web Vitals are ranked below comparable sites with better performance when other factors are equal. For competitive local service keywords and B2B terms, this is often the tiebreaker. Squarespace is not penalized explicitly, but it loses the performance tiebreaker consistently." },
       { question: "What is the best alternative to Squarespace for a fast site?", answer: "Custom Next.js is the gold standard. Next.js pre-renders every page at build time, serving static HTML with no server-side processing on each request. There is no proprietary JavaScript bundle. Images are automatically optimized and lazy loaded. The result is PageSpeed scores of 95 to 100 on mobile and LCP under 1.2 seconds. For businesses that need to stay on a no-code platform, Framer is the best Squarespace alternative at 65 to 80 on mobile. But if organic search drives your revenue, only a custom build delivers the performance gap that changes rankings." },
-      { question: "How much does it cost to migrate from Squarespace to a custom site?", answer: "A Squarespace to Next.js migration for a 5 to 20 page business site typically costs $3,000 to $7,000 and takes 1 to 2 weeks. This includes rebuilding all pages in Next.js, setting up 301 redirects from every old Squarespace URL, migrating your blog content, and connecting your domain with zero downtime. The ROI depends on how much revenue your site generates. A site doing $10,000/month in leads that improves conversion rate 15% covers a $5,000 migration cost in about 3 months." },
+      { question: "How much does it cost to migrate from Squarespace to a custom site?", answer: "A Squarespace to Next.js migration starts at $2,000 for simple sites and $3,000 to $7,000 for a 5 to 20 page business site. It takes 1 to 2 weeks. This includes rebuilding all pages in Next.js, setting up 301 redirects from every old Squarespace URL, migrating your blog content, and connecting your domain with zero downtime. The ROI depends on how much revenue your site generates. A site doing $10,000/month in leads that improves conversion rate 15% covers a $5,000 migration cost in about 3 months." },
     ]
   },
   {
     id: "woocommerce-too-slow",
-    title: "WooCommerce Too Slow? Here's What's Actually Breaking Your Store",
+    title: "WooCommerce Too Slow? The Problem Is Not Your Plugins",
     excerpt: "WooCommerce stores average 30 to 55 on Google PageSpeed Mobile. Here is exactly why WooCommerce is slow, what it costs you in lost sales every day, and why caching plugins only hide the problem without fixing it.",
     category: "WooCommerce",
     readTime: "11 min",
@@ -64,8 +84,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "webflow-migration-cost",
-    title: "How Much Does a Webflow Migration Cost? The 2026 Breakdown by Site Size",
-    excerpt: "A 5 to 20 page Webflow site costs $3,000 to $7,000 to migrate. A 50 to 100 page site costs $12,000 to $20,000. Here is the full breakdown by site size, what drives the cost, and exactly when migration pays for itself.",
+    title: "Webflow Migration Cost: From $2,000 for Small Sites (2026 Pricing)",
+    excerpt: "A small Webflow site starts at $2,000 to migrate. A 50 to 100 page site costs $12,000 to $20,000. Here is the full breakdown by site size, what drives the cost, and exactly when migration pays for itself.",
     category: "Webflow",
     readTime: "10 min",
     date: "Mar 25",
@@ -85,8 +105,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "wordpress-migration-cost",
-    title: "How Much Does a WordPress to Next.js Migration Cost in 2026?",
-    excerpt: "The honest answer is $3,000 to $25,000. This breakdown explains exactly what drives migration cost, what tier your site falls into, and how to calculate whether migration makes financial sense.",
+    title: "WordPress to Next.js Migration: From $2,000 (2026 Pricing)",
+    excerpt: "A simple WordPress site starts at $2,000. Complex WooCommerce stores go up to $25,000. This breakdown explains exactly what drives migration cost, what tier your site falls into, and how to calculate whether migration makes financial sense.",
     category: "WordPress",
     readTime: "9 min",
     date: "Mar 22",
@@ -96,7 +116,7 @@ export const blogPosts: BlogPost[] = [
     illustrationType: 'migration',
     lastModified: "2026-03-22",
     faqs: [
-      { question: "How much does it cost to migrate a WordPress site to Next.js?", answer: "A WordPress to Next.js migration costs $3,000 to $25,000 depending on site complexity. Basic business sites with 5 to 15 pages cost $3,000 to $8,000. Mid-complexity sites with custom post types, blog, forms, and integrations cost $8,000 to $15,000. Complex WooCommerce or large content sites with 50+ pages cost $15,000 to $25,000. Enterprise sites with 500+ pages and multiple custom integrations start at $25,000. The range reflects real scope differences, not arbitrary agency pricing." },
+      { question: "How much does it cost to migrate a WordPress site to Next.js?", answer: "A WordPress to Next.js migration starts at $2,000 for simple sites and goes up to $25,000 depending on site complexity. Basic business sites with 5 to 15 pages cost $3,000 to $8,000. Mid-complexity sites with custom post types, blog, forms, and integrations cost $8,000 to $15,000. Complex WooCommerce or large content sites with 50+ pages cost $15,000 to $25,000. Enterprise sites with 500+ pages and multiple custom integrations start at $25,000. The range reflects real scope differences, not arbitrary agency pricing." },
       { question: "How long does a WordPress to Next.js migration take?", answer: "A basic 5 to 15 page site migrates in 2 to 3 weeks. A mid-complexity site with custom post types, blog migration, and integrations takes 3 to 5 weeks. A complex WooCommerce or large content site takes 5 to 8 weeks. Enterprise projects with 500+ pages and multiple integrations take 8 to 16 weeks. Timeline depends on scope clarity, content readiness, and how many third-party integrations need to be rebuilt as API connections." },
       { question: "Will I lose my Google rankings when I migrate from WordPress to Next.js?", answer: "Not if the migration is done correctly. The critical steps are: map every URL with 301 redirects, preserve all title tags and meta descriptions, maintain canonical URLs, implement equivalent schema markup on the new site, submit a new sitemap to Google Search Console immediately after launch, and monitor for crawl errors for 30 days post-launch. When executed properly, rankings hold steady or improve within 30 to 60 days because Google rewards the faster Core Web Vitals scores that Next.js delivers." },
       { question: "Is migrating from WordPress to Next.js worth it financially?", answer: "For most business sites, yes. The ROI calculation has three components. First, cost savings: WordPress hosting, plugins, and maintenance typically cost $3,000 to $12,000 per year. A Next.js site on Vercel costs $0 to $240 per year, saving $2,500 to $11,000 annually. Second, traffic improvement: moving PageSpeed Mobile from 45 to 95 typically produces a 15 to 40% organic traffic improvement over 3 to 6 months. Third, conversion improvement: faster load times directly increase conversion rates. Most sites with $200+ per month in operating costs recover a $10,000 migration within 18 months." },
@@ -106,7 +126,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "gohighlevel-website-speed",
-    title: "GoHighLevel Website Speed: Why GHL Sites Are Slow in 2026",
+    title: "GoHighLevel Sites Score 20 to 45 on PageSpeed (Here Is Why)",
     excerpt: "GoHighLevel sites score 20 to 45 on Google PageSpeed Mobile. Here is exactly why GHL is slow, what it costs you in SEO and conversions, and how agencies are solving it with custom Next.js frontends.",
     category: "Performance",
     readTime: "9 min",
@@ -127,7 +147,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "shopify-app-costs-real-monthly-bill",
-    title: "Your Shopify Bill Is $1,000/Month and You Don't Know It",
+    title: "Your Real Shopify Bill Is $1,000/Month (Here Is the Breakdown)",
     excerpt: "You signed up for $39/month. Then came Klaviyo, Loop Returns, Okendo, ReCharge, Smile.io. Here is the full breakdown of what Shopify actually costs in apps and how to cut it by $864/month.",
     category: "Shopify",
     readTime: "10 min",
@@ -148,7 +168,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "webflow-true-cost",
-    title: "Why Your Webflow Site Is Costing You More Than You Think",
+    title: "Webflow Costs More Than $29/Month: The Real Price in 2026",
     excerpt: "Webflow looks affordable at $29/month. But add CMS hosting, form limits, bandwidth overages, and the SEO ceiling, and you are quietly bleeding $5,000 to $15,000 a year in lost revenue. Here is the real math.",
     category: "Comparison",
     readTime: "10 min",
@@ -168,7 +188,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "nextjs-hosting-zero-cost",
-    title: "How We Host Client Websites for Free ($0/Month) With Vercel",
+    title: "How We Host 5+ Client Sites for $0/Month on Vercel",
     excerpt: "Most businesses pay $50 to $300/month for hosting that slows them down. We deploy every client site on Vercel's free tier with Cloudflare CDN. $0/month. Under a second load times. Here's exactly how.",
     category: "Performance",
     readTime: "9 min",
@@ -188,7 +208,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "how-to-migrate-wordpress-to-nextjs",
-    title: "How to Migrate WordPress to Next.js Without Losing SEO",
+    title: "WordPress to Next.js Migration: Step-by-Step Without Losing SEO",
     excerpt: "A step-by-step migration guide covering content export, redirect mapping, SEO preservation, and zero-downtime launch. What agencies charge $15K to do. explained in plain English.",
     category: "WordPress",
     readTime: "10 min",
@@ -208,7 +228,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "wordpress-vs-nextjs",
-    title: "WordPress vs Next.js: Which Is Actually Better for Your Business?",
+    title: "WordPress vs Next.js: Real Speed, Cost, and SEO Comparison (2026)",
     excerpt: "WordPress powers 43% of the internet. Next.js powers the fastest 1%. Here's an honest comparison of speed, SEO, cost, and security. and exactly when each one makes sense for your business.",
     category: "Comparison",
     readTime: "11 min",
@@ -228,7 +248,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "how-website-speed-affects-seo",
-    title: "How Website Speed Affects SEO Rankings in 2026 (With Real Data)",
+    title: "How Website Speed Affects SEO: Real Data on Rankings and Revenue",
     excerpt: "Google made page speed an official ranking factor. A site loading in 1 second converts 3x better than one loading in 5 seconds. Here's exactly how speed kills your rankings and what to do about it.",
     category: "SEO",
     readTime: "10 min",
@@ -248,7 +268,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "shopify-dawn-theme-slow",
-    title: "Shopify Dawn Theme Slow? Here's Exactly Why (and the Real Fix)",
+    title: "Shopify Dawn Theme Slow? The Fix Shopify Won't Tell You",
     excerpt: "Dawn is Shopify's fastest theme. so why is your store still loading in 3+ seconds? Here's what's actually killing your speed and why theme-level fixes won't save you.",
     category: "Shopify",
     readTime: "9 min",
@@ -268,7 +288,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "for-agencies-offer-custom-web-development",
-    title: "For Agencies: How to Offer Custom Web Development Without Hiring a Dev Team",
+    title: "White Label Web Development: Custom Builds Without a Dev Team",
     excerpt: "Your client wants a custom-built website. You don't have a dev team. Here's how 40+ agencies deliver premium custom builds without touching a line of code.",
     category: "Agency",
     readTime: "10 min",
@@ -288,7 +308,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "why-we-chose-nextjs-over-wordpress-2026",
-    title: "Why We Chose Next.js Over WordPress for Every New Client in 2026",
+    title: "Why We Stopped Building WordPress Sites in 2026",
     excerpt: "In 2023 we still built in WordPress. By mid-2024 we stopped completely. Here's the data, the client stories, and the 7 technical reasons we made the switch permanent.",
     category: "Comparison",
     readTime: "11 min",
@@ -308,7 +328,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "wordpress-vs-custom-code-real-cost-3-years",
-    title: "WordPress vs Custom Code: The Real Cost Comparison Over 3 Years",
+    title: "WordPress vs Custom Code: The Real 3-Year Cost (With Numbers)",
     excerpt: "Everyone says WordPress is cheap. They're not counting hosting, plugins, maintenance, security, and lost revenue. We ran the numbers. The results will change how you think about your website.",
     category: "Cost Analysis",
     readTime: "12 min",
@@ -328,7 +348,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "google-universal-commerce-protocol-what-it-means-for-your-store",
-    title: "Customers Can Now Buy Inside Google Without Ever Seeing Your Website. Is Your Store Ready?",
+    title: "Google UCP: Customers Can Now Buy Without Visiting Your Site",
     excerpt: "Google's Universal Commerce Protocol lets AI buy for customers without visiting your site. Here's what every e-commerce store owner needs to know about AI commerce in 2026.",
     category: "E-Commerce",
     readTime: "12 min",
@@ -379,7 +399,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "wordpress-ai-security-risk-2026",
-    title: "WordPress AI Security Risk: 100K+ Sites Exposed Through Plugin Vulnerabilities",
+    title: "WordPress AI Plugins Exposed 100K+ Sites in 2026",
     excerpt: "Is WordPress AI safe for business? WordPress 6.9 AI features exposed 100K+ sites through plugin security flaws. What you need to know to protect your site in 2026.",
     category: "Security",
     readTime: "9 min",
@@ -414,7 +434,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "wordpress-killer",
-    title: "Why WordPress Is a Waste of Money in 2026",
+    title: "WordPress Is Costing You 3x to 5x More Than You Think (2026)",
     excerpt: "The hidden math behind plugins, hosting, and lost revenue.",
     category: "Cost Analysis",
     readTime: "8 min",
@@ -433,7 +453,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "shopify-headless",
-    title: "Your Shopify Store Loads in 4 Seconds. We Got It to 0.8. Here's Exactly How.",
+    title: "Shopify Headless: We Cut Load Time From 4s to 0.8s",
     excerpt: "Most Shopify stores fail Core Web Vitals because Liquid templates are render-blocking by design. Here's the exact stack we used to cut load time from 4 seconds to 0.8.",
     category: "E-Commerce",
     readTime: "12 min",
@@ -452,7 +472,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "elementor-kills-seo",
-    title: "Is Elementor Killing Your Google Rankings? We Audited 500 Sites. The Results Are Brutal.",
+    title: "Elementor Sites Average 38/100 PageSpeed (We Audited 500 Sites)",
     excerpt: "The average Elementor site scores 38/100 on mobile PageSpeed. We audited 500 sites to find out exactly how much traffic and revenue page builders are costing business owners.",
     category: "Performance",
     readTime: "6 min",
@@ -471,7 +491,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "wordpress-plugins-destroy-speed",
-    title: "WordPress Slow? Your Plugins Are Killing Speed (And Costing You Customers)",
+    title: "WordPress Plugins Are Costing You Customers (Speed Data Inside)",
     excerpt: "Most WordPress sites with 30+ plugins score 35/100 on mobile PageSpeed. See how to calculate the exact revenue you're losing, and what to do about it.",
     category: "Performance",
     readTime: "10 min",
@@ -502,7 +522,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "shopify-plus-still-slow",
-    title: "Shopify Plus Still Slow? Why $2,300/mo Doesn't Fix Your Core Web Vitals",
+    title: "Shopify Plus Still Slow? Why $2,300/Month Does Not Buy Speed",
     excerpt: "53% of mobile visitors leave before your Shopify Plus store loads. We break down the Liquid template problem and the headless solution that actually works.",
     category: "E-Commerce",
     readTime: "9 min",
@@ -533,7 +553,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "wordpress-traffic-drop-speed",
-    title: "Why Is My WordPress Site Losing Traffic? (The Speed Tax You're Paying)",
+    title: "WordPress Traffic Dropping? Speed Is Killing Your Rankings",
     excerpt: "Slow WordPress sites lose Google rankings fast. Here's the simple math on why speed = traffic.",
     category: "Traffic Growth",
     readTime: "7 min",
@@ -564,7 +584,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "shopify-slow-losing-sales",
-    title: "Your Shopify Store Is Costing You $75K/Year in Lost Sales (Here's the Math)",
+    title: "Slow Shopify Store? You Are Losing $75K/Year in Sales",
     excerpt: "Every second your store takes to load costs you customers. We calculated exactly how much.",
     category: "E-Commerce",
     readTime: "8 min",
@@ -583,7 +603,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "shopify-conversion-rate-speed-fix",
-    title: "Low Shopify Conversion Rate? Speed Is Killing Your Sales",
+    title: "Low Shopify Conversion Rate? Your Speed Is the Problem",
     excerpt: "Your conversion rate is low because visitors leave before your page loads. The fix is simpler than you think.",
     category: "Conversion",
     readTime: "9 min",
@@ -602,7 +622,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "why-competitor-outranks-you",
-    title: "Why Your Competitor Outranks You on Google (And Pays Less for Hosting)",
+    title: "Why Your Competitor Outranks You (It Is Not Their Content)",
     excerpt: "They're getting 3× your traffic with a coded website. Google, ChatGPT, and Bing all prefer fast sites. Here's why.",
     category: "Traffic Growth",
     readTime: "11 min",
@@ -637,7 +657,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "how-to-achieve-100-pagespeed",
-    title: "Google Is Penalizing Your Slow Site. Here's How We Hit 100/100 PageSpeed on Every Build.",
+    title: "How to Hit 100/100 PageSpeed Score (Our Exact 8-Step Process)",
     excerpt: "Most websites score 35-55/100 on Google PageSpeed, and they're losing customers because of it. Here's the exact 8-step process we use to hit 98-100/100 on every client site.",
     category: "Performance",
     readTime: "12 min",
@@ -672,7 +692,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "how-to-fix-slow-wordpress",
-    title: "How to Fix a Slow WordPress Site (8 Ways That Actually Work)",
+    title: "How to Fix a Slow WordPress Site (8 Methods Ranked by Impact)",
     excerpt: "Your WordPress site loads in 4 seconds. Your competitor loads in 0.9 seconds. Here's how to close the gap.",
     category: "Performance",
     readTime: "10 min",
@@ -707,7 +727,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "what-is-headless-commerce",
-    title: "What Is Headless Commerce? The Complete Guide for Store Owners",
+    title: "What Is Headless Commerce? Plain-English Guide for Store Owners",
     excerpt: "Headless commerce lets you keep your Shopify backend while replacing the slow theme with a custom, lightning-fast frontend. Best of both worlds. Here's what it means, what it costs, and whether your store actually needs it.",
     category: "E-Commerce",
     readTime: "12 min",

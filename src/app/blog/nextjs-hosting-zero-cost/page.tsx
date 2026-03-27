@@ -16,15 +16,15 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "How We Host Client Websites for Free ($0/Month) With Vercel",
-    description: "Most businesses pay $50 to $300/month for hosting. We deploy every client site for $0/month on Vercel's free tier. Faster, more secure, zero maintenance. Here's how.",
+    title: "How We Host 5+ Client Sites for $0/Month on Vercel",
+    description: "Most businesses pay $50 to $300/month for hosting. We deploy every client site on Vercel's free tier. Faster, more secure, zero maintenance. Here is exactly how.",
     alternates: {
         canonical: '/blog/nextjs-hosting-zero-cost',
     },
     keywords: ["free nextjs hosting", "vercel free tier", "free website hosting 2026", "nextjs hosting cost", "vercel vs wordpress hosting", "zero cost website hosting", "vercel free tier limits"],
     openGraph: {
-        title: "How We Host Client Websites for Free ($0/Month) With Vercel",
-        description: "Most businesses pay $50 to $300/month for hosting. We deploy every client site for $0/month. Here's exactly how.",
+        title: "How We Host 5+ Client Sites for $0/Month on Vercel",
+        description: "Most businesses pay $50 to $300/month for hosting. We deploy every client site on Vercel's free tier. Faster, more secure, zero maintenance. Here is exactly how.",
         type: "article",
         publishedTime: "2026-03-13",
         authors: ["Hassan"],
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "How We Host Client Websites for Free ($0/Month) With Vercel",
-        description: "Most businesses pay $50 to $300/month for hosting. We deploy every client site for $0/month. Here's exactly how.",
+        title: "How We Host 5+ Client Sites for $0/Month on Vercel",
+        description: "Most businesses pay $50 to $300/month for hosting. We deploy every client site on Vercel's free tier. Faster, more secure, zero maintenance. Here is exactly how.",
     },
 };
 
@@ -44,8 +44,8 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost#article",
-            "headline": "How We Host Client Websites for Free ($0/Month) With Vercel",
-            "description": "Most businesses pay $50 to $300/month for hosting. We deploy every client site for $0/month on Vercel's free tier. Faster, more secure, zero maintenance.",
+            "headline": "How We Host 5+ Client Sites for $0/Month on Vercel",
+            "description": "Most businesses pay $50 to $300/month for hosting. We deploy every client site on Vercel's free tier. Faster, more secure, zero maintenance. Here is exactly how.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-13T00:00:00-05:00",
             "dateModified": "2026-03-13T00:00:00-05:00",

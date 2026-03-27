@@ -16,13 +16,13 @@ const SalesImpactAnimation = dynamic(() => import("@/components/blog/SalesImpact
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Low Shopify Conversion Rate? Speed Is Killing Your Sales | PandaCodeGen",
-    description: "The average Shopify store converts at 1.4%. Stores loading in under 2 seconds convert at 3 to 5%. Your conversion rate problem is a speed problem, here's the fix.",
+    title: "Low Shopify Conversion Rate? Your Speed Is the Problem",
+    description: "The average Shopify store converts at 1.4%. Stores loading in under 2 seconds convert at 3 to 5%. Your conversion problem is a speed problem. Here is the fix.",
     alternates: { canonical: "/blog/shopify-conversion-rate-speed-fix" },
     keywords: ["shopify conversion rate", "low shopify conversion rate", "shopify speed conversion", "improve shopify conversion rate", "shopify store slow", "shopify cro speed"],
     openGraph: {
-        title: "Low Shopify Conversion Rate? Speed Is Killing Your Sales",
-        description: "The average Shopify store converts at 1.4%. Stores loading in under 2 seconds convert at 3 to 5%. Your conversion rate problem is a speed problem.",
+        title: "Low Shopify Conversion Rate? Your Speed Is the Problem",
+        description: "The average Shopify store converts at 1.4%. Stores loading in under 2 seconds convert at 3 to 5%. Your conversion problem is a speed problem. Here is the fix.",
         type: "article",
         publishedTime: "2026-02-11",
         authors: ["Hassan"],
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Low Shopify Conversion Rate? Speed Is Killing Your Sales",
-        description: "The average Shopify store converts at 1.4%. Stores loading under 2 seconds convert at 3 to 5%.",
+        title: "Low Shopify Conversion Rate? Your Speed Is the Problem",
+        description: "The average Shopify store converts at 1.4%. Stores loading in under 2 seconds convert at 3 to 5%. Your conversion problem is a speed problem. Here is the fix.",
     },
 };
 
@@ -42,8 +42,8 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/shopify-conversion-rate-speed-fix#article",
-            "headline": "Low Shopify Conversion Rate? Speed Is Killing Your Sales",
-            "description": "The average Shopify store converts at 1.4%. Stores loading in under 2 seconds convert at 3 to 5%. Your conversion rate problem is a speed problem, here's the fix.",
+            "headline": "Low Shopify Conversion Rate? Your Speed Is the Problem",
+            "description": "The average Shopify store converts at 1.4%. Stores loading in under 2 seconds convert at 3 to 5%. Your conversion problem is a speed problem. Here is the fix.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-11T00:00:00-05:00",
             "dateModified": "2026-03-15T00:00:00-05:00",

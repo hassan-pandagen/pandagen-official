@@ -16,14 +16,14 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: { absolute: "How to Fix a Slow WordPress Site: 8 Ways That Work | PandaCodeGen" },
-    description: "WordPress loads in 4s. Your competitor: 0.9s. 8 speed methods ranked by impact, and the hard truth about WordPress's performance ceiling.",
+    title: { absolute: "How to Fix a Slow WordPress Site (8 Methods Ranked by Impact)" },
+    description: "WordPress loads in 4 seconds. Your competitor loads in 0.9 seconds. Here are 8 speed methods ranked by impact, plus the hard truth about WordPress's performance ceiling.",
     alternates: {
         canonical: '/blog/how-to-fix-slow-wordpress',
     },
     openGraph: {
-        title: "How to Fix a Slow WordPress Site: 8 Ways That Actually Work",
-        description: "Your WordPress site loads in 4 seconds. Your competitor loads in 0.9 seconds. Here's how to close the gap.",
+        title: "How to Fix a Slow WordPress Site (8 Methods Ranked by Impact)",
+        description: "WordPress loads in 4 seconds. Your competitor loads in 0.9 seconds. Here are 8 speed methods ranked by impact, plus the hard truth about WordPress's performance ceiling.",
         type: "article",
         publishedTime: "2026-02-17",
         authors: ["Hassan"],
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "How to Fix a Slow WordPress Site: 8 Ways That Actually Work",
-        description: "Your WordPress site loads in 4 seconds. Your competitor loads in 0.9 seconds. Here's how to close the gap.",
+        title: "How to Fix a Slow WordPress Site (8 Methods Ranked by Impact)",
+        description: "WordPress loads in 4 seconds. Your competitor loads in 0.9 seconds. Here are 8 speed methods ranked by impact, plus the hard truth about WordPress's performance ceiling.",
     },
     keywords: ["slow WordPress", "WordPress speed optimization", "fix slow WordPress", "WordPress performance", "WordPress vs Next.js", "Core Web Vitals"],
 };
@@ -44,8 +44,8 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress#article",
-            "headline": "How to Fix a Slow WordPress Site (8 Ways That Actually Work)",
-            "description": "Your WordPress site loads in 4 seconds. Your competitor loads in 0.9 seconds. Here's exactly how to speed up WordPress and close the gap.",
+            "headline": "How to Fix a Slow WordPress Site (8 Methods Ranked by Impact)",
+            "description": "WordPress loads in 4 seconds. Your competitor loads in 0.9 seconds. Here are 8 speed methods ranked by impact, plus the hard truth about WordPress's performance ceiling.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-17T00:00:00-05:00",
             "dateModified": "2026-03-10T00:00:00-05:00",
@@ -106,8 +106,8 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress#webpage",
             "url": "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress",
-            "name": "How to Fix a Slow WordPress Site: 8 Ways That Work",
-            "description": "Your WordPress site loads in 4 seconds. Your competitor loads in 0.9 seconds. Here's exactly how to speed up WordPress with 8 proven methods.",
+            "name": "How to Fix a Slow WordPress Site (8 Methods Ranked by Impact)",
+            "description": "WordPress loads in 4 seconds. Your competitor loads in 0.9 seconds. Here are 8 speed methods ranked by impact, plus the hard truth about WordPress's performance ceiling.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-17T00:00:00-05:00",

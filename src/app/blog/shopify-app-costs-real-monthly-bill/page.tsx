@@ -16,8 +16,8 @@ const SalesImpactAnimation = dynamic(() => import("@/components/blog/SalesImpact
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: { absolute: "Your Shopify Bill Is $1,000/Month and You Don't Know It | PandaCodeGen" },
-    description: "You signed up for $39/month. Klaviyo, Loop Returns, Okendo, and ReCharge turned it into $1,000. Here is the full Shopify app cost breakdown and how to cut it by $864/month.",
+    title: "Your Real Shopify Bill Is $1,000/Month (Here Is the Breakdown)",
+    description: "You signed up for $39/month. Klaviyo, Loop Returns, Okendo, and ReCharge turned it into $1,000. Full Shopify app cost breakdown and how to cut it by $864/month.",
     alternates: {
         canonical: "/blog/shopify-app-costs-real-monthly-bill",
     },
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
         "how much do shopify apps cost"
     ],
     openGraph: {
-        title: "Your Shopify Bill Is $1,000/Month and You Don't Know It",
-        description: "You signed up for $39/month. Here is the full breakdown of what Shopify actually costs in apps and how to cut it by $864/month.",
+        title: "Your Real Shopify Bill Is $1,000/Month (Here Is the Breakdown)",
+        description: "You signed up for $39/month. Klaviyo, Loop Returns, Okendo, and ReCharge turned it into $1,000. Full Shopify app cost breakdown and how to cut it by $864/month.",
         type: "article",
         publishedTime: "2026-03-19",
         modifiedTime: "2026-03-19",
@@ -49,8 +49,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Your Shopify Bill Is $1,000/Month and You Don't Know It",
-        description: "You signed up for $39/month. Here is the full Shopify app cost breakdown and how to cut it by $864/month.",
+        title: "Your Real Shopify Bill Is $1,000/Month (Here Is the Breakdown)",
+        description: "You signed up for $39/month. Klaviyo, Loop Returns, Okendo, and ReCharge turned it into $1,000. Full Shopify app cost breakdown and how to cut it by $864/month.",
     },
 };
 
@@ -60,8 +60,8 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/shopify-app-costs-real-monthly-bill#article",
-            "headline": "Your Shopify Bill Is $1,000/Month and You Don't Know It: The App Cost Breakdown",
-            "description": "You signed up for $39/month. Klaviyo, Loop Returns, Okendo, and ReCharge turned it into $1,000. Here is the full Shopify app cost breakdown and how to cut it by $864/month.",
+            "headline": "Your Real Shopify Bill Is $1,000/Month (Here Is the Breakdown)",
+            "description": "You signed up for $39/month. Klaviyo, Loop Returns, Okendo, and ReCharge turned it into $1,000. Full Shopify app cost breakdown and how to cut it by $864/month.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-19T00:00:00-05:00",
             "dateModified": "2026-03-19T00:00:00-05:00",

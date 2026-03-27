@@ -16,15 +16,15 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "How to Migrate WordPress to Next.js Without Losing SEO",
-    description: "Step-by-step WordPress to Next.js migration guide: content export, 301 redirects, SEO preservation, and zero-downtime launch. The complete process in plain English.",
+    title: "WordPress to Next.js Migration: Step-by-Step Without Losing SEO",
+    description: "Complete WordPress to Next.js migration guide: content export, 301 redirects, SEO preservation, and zero-downtime launch. The full process in plain English.",
     alternates: {
         canonical: '/blog/how-to-migrate-wordpress-to-nextjs',
     },
     keywords: ["how to migrate wordpress to next.js", "wordpress to nextjs migration", "migrate wordpress nextjs seo", "wordpress nextjs migration guide", "wordpress to nextjs without losing seo", "wordpress migration checklist"],
     openGraph: {
-        title: "How to Migrate WordPress to Next.js Without Losing SEO",
-        description: "Step-by-step WordPress to Next.js migration guide: content export, 301 redirects, SEO preservation, and zero-downtime launch.",
+        title: "WordPress to Next.js Migration: Step-by-Step Without Losing SEO",
+        description: "Complete WordPress to Next.js migration guide: content export, 301 redirects, SEO preservation, and zero-downtime launch. The full process in plain English.",
         type: "article",
         publishedTime: "2026-03-11",
         authors: ["Hassan"],
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "How to Migrate WordPress to Next.js Without Losing SEO",
-        description: "Step-by-step WordPress to Next.js migration guide: content export, 301 redirects, SEO preservation, and zero-downtime launch.",
+        title: "WordPress to Next.js Migration: Step-by-Step Without Losing SEO",
+        description: "Complete WordPress to Next.js migration guide: content export, 301 redirects, SEO preservation, and zero-downtime launch. The full process in plain English.",
     },
 };
 
@@ -44,8 +44,8 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs#article",
-            "headline": "How to Migrate WordPress to Next.js Without Losing SEO",
-            "description": "A complete step-by-step guide to migrating your WordPress site to Next.js while preserving rankings, redirects, metadata, and content, with a zero-downtime DNS cutover.",
+            "headline": "WordPress to Next.js Migration: Step-by-Step Without Losing SEO",
+            "description": "Complete WordPress to Next.js migration guide: content export, 301 redirects, SEO preservation, and zero-downtime launch. The full process in plain English.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-11T00:00:00-05:00",
             "dateModified": "2026-03-11T00:00:00-05:00",
@@ -106,8 +106,8 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs#webpage",
             "url": "https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs",
-            "name": "How to Migrate WordPress to Next.js Without Losing SEO",
-            "description": "Step-by-step WordPress to Next.js migration: content export, redirects, SEO preservation, and zero-downtime launch.",
+            "name": "WordPress to Next.js Migration: Step-by-Step Without Losing SEO",
+            "description": "Complete WordPress to Next.js migration guide: content export, 301 redirects, SEO preservation, and zero-downtime launch. The full process in plain English.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-11T00:00:00-05:00",

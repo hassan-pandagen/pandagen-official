@@ -16,15 +16,15 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Webflow Migration Cost 2026: Breakdown by Site Size | PandaCodeGen",
-    description: "5 to 20 page Webflow site: $3,000 to $7,000. 50 to 100 pages: $12,000 to $20,000. Full cost breakdown by site size, what drives pricing, and ROI.",
+    title: "Webflow Migration Cost: From $2,000 for Small Sites (2026 Pricing)",
+    description: "A 1 to 5 page Webflow site starts at $2,000. A 50 to 100 page site costs $12,000 to $20,000. Full pricing by site size, what drives cost, and when migration pays for itself.",
     alternates: {
         canonical: '/blog/webflow-migration-cost',
     },
     keywords: ["webflow migration cost", "webflow to next.js cost", "webflow migration pricing", "how much does webflow migration cost", "webflow to custom code", "webflow migration 50 page site", "webflow migration 100 page site"],
     openGraph: {
-        title: "Webflow Migration Cost 2026: Full Breakdown by Site Size",
-        description: "A 50 to 100 page Webflow site costs $12,000 to $20,000 to migrate to custom code. Here is the full breakdown by site size and when it pays for itself.",
+        title: "Webflow Migration Cost: From $2,000 for Small Sites (2026 Pricing)",
+        description: "A 1 to 5 page Webflow site starts at $2,000. 50 to 100 pages: $12,000 to $20,000. Full pricing by site size and when migration pays for itself.",
         type: "article",
         publishedTime: "2026-03-25",
         authors: ["Hassan Jamal"],
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Webflow Migration Cost 2026: Full Breakdown by Site Size",
-        description: "A 50 to 100 page Webflow site costs $12,000 to $20,000 to migrate to custom code. Full breakdown and ROI analysis.",
+        title: "Webflow Migration Cost: From $2,000 for Small Sites (2026 Pricing)",
+        description: "A 1 to 5 page Webflow site starts at $2,000. 50 to 100 pages: $12,000 to $20,000. Full pricing and ROI analysis.",
     },
 };
 
@@ -44,8 +44,8 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/webflow-migration-cost#article",
-            "headline": "How Much Does a Webflow Migration Cost? The 2026 Breakdown by Site Size",
-            "description": "A Webflow to Next.js migration costs $3,000 to $20,000 depending on site size. Full cost breakdown by page count, what drives pricing, and ROI analysis.",
+            "headline": "Webflow Migration Cost: From $2,000 for Small Sites (2026 Pricing)",
+            "description": "A Webflow to Next.js migration starts at $2,000 for small sites and goes up to $20,000 for 100+ page sites. Full cost breakdown by page count, what drives pricing, and ROI analysis.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-25T00:00:00-05:00",
             "dateModified": "2026-03-25T00:00:00-05:00",
@@ -174,7 +174,7 @@ export default function WebflowMigrationCostPage() {
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            A 5 to 20 page site costs $3,000 to $7,000. A 50 to 100 page site costs $12,000 to $20,000. Here is the full breakdown by site size, what drives the price, and exactly when migration pays for itself.
+                            A small Webflow site starts at $2,000. A 50 to 100 page site costs $12,000 to $20,000. Here is the full breakdown by site size, what drives the price, and exactly when migration pays for itself.
                         </p>
 
                         <BlogAuthor
@@ -193,7 +193,7 @@ export default function WebflowMigrationCostPage() {
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
                         <h3 className="font-bold text-charcoal mb-4">Key Takeaways</h3>
                         <BlogList items={[
-                            "A 5 to 20 page Webflow site costs $3,000 to $7,000 to migrate to custom Next.js.",
+                            "A small Webflow site starts at $2,000 to migrate to custom Next.js. A 5 to 20 page site costs $3,000 to $7,000.",
                             "A 50 to 100 page Webflow site costs $12,000 to $20,000 depending on CMS complexity and integrations.",
                             "Page count is only one factor. Custom animations, CMS collections, e-commerce, and API integrations each add cost.",
                             "Most businesses spending $100+/month on Webflow recover migration costs within 12 to 18 months through hosting savings and improved SEO.",
@@ -233,9 +233,15 @@ export default function WebflowMigrationCostPage() {
                                 </thead>
                                 <tbody>
                                     <tr className="hover:bg-stone-50">
+                                        <td className="p-3 border border-stone-200 font-medium">Starter</td>
+                                        <td className="p-3 border border-stone-200">1 to 5 pages</td>
+                                        <td className="p-3 border border-stone-200 font-bold text-cognac">$2,000 to $3,500</td>
+                                        <td className="p-3 border border-stone-200">1 to 2 weeks</td>
+                                    </tr>
+                                    <tr className="hover:bg-stone-50 bg-stone-50/50">
                                         <td className="p-3 border border-stone-200 font-medium">Small Business</td>
                                         <td className="p-3 border border-stone-200">5 to 20 pages</td>
-                                        <td className="p-3 border border-stone-200 font-bold text-cognac">$3,000 to $7,000</td>
+                                        <td className="p-3 border border-stone-200 font-bold text-cognac">$3,500 to $7,000</td>
                                         <td className="p-3 border border-stone-200">2 to 3 weeks</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">

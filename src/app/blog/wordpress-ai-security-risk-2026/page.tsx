@@ -16,14 +16,14 @@ const SecurityShieldAnimation = dynamic(() => import("@/components/blog/Security
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: { absolute: "WordPress AI Security 2026: 100K+ Sites Exposed | PandaCodeGen" },
-    description: "100K+ WordPress sites exposed through AI plugin flaws. Why WordPress 6.9 AI features create security risks & what business owners must know in 2026.",
+    title: { absolute: "WordPress AI Plugins Exposed 100K+ Sites in 2026" },
+    description: "AI plugins are the newest WordPress vulnerability. 100K+ sites exposed through AI plugin flaws. Here is what business owners need to know and how to protect your site.",
     alternates: {
         canonical: '/blog/wordpress-ai-security-risk-2026',
     },
     openGraph: {
-        title: "WordPress AI Security Risk: 100K+ Sites Exposed Through AI Plugin Vulnerabilities",
-        description: "WordPress 6.9 AI features put your business at risk. The AI Engine plugin exposed 100K+ sites to complete takeover. Learn how to protect your WordPress site from AI security threats.",
+        title: "WordPress AI Plugins Exposed 100K+ Sites in 2026",
+        description: "AI plugins are the newest WordPress vulnerability. 100K+ sites exposed through AI plugin flaws. Here is what business owners need to know and how to protect your site.",
         type: "article",
         publishedTime: "2026-02-19",
         modifiedTime: "2026-02-20",
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "WordPress AI Security Risk: 100K+ Sites Exposed Through Plugin Vulnerabilities",
-        description: "Is WordPress AI safe? 100K+ sites exposed through AI Engine vulnerability. What business owners need to know about WordPress 6.9 security risks.",
+        title: "WordPress AI Plugins Exposed 100K+ Sites in 2026",
+        description: "AI plugins are the newest WordPress vulnerability. 100K+ sites exposed through AI plugin flaws. Here is what business owners need to know and how to protect your site.",
     },
     keywords: ["WordPress AI security risk", "is WordPress AI safe", "WordPress 6.9 security vulnerabilities", "AI Engine plugin security flaw", "WordPress site security 2026"],
 };
@@ -45,8 +45,8 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-ai-security-risk-2026#article",
-            "headline": "WordPress AI Security Risk 2026: Every Plugin Is Now an AI Endpoint",
-            "description": "Is WordPress AI safe for business websites? WordPress 6.9's AI features exposed 100K+ sites through plugin vulnerabilities. Complete security analysis for business owners protecting their WordPress sites from AI threats.",
+            "headline": "WordPress AI Plugins Exposed 100K+ Sites in 2026",
+            "description": "AI plugins are the newest WordPress vulnerability. 100K+ sites exposed through AI plugin flaws. Here is what business owners need to know and how to protect your site.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-19T00:00:00-05:00",
             "dateModified": "2026-03-10T00:00:00-05:00",
@@ -130,8 +130,8 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/wordpress-ai-security-risk-2026#webpage",
             "url": "https://www.pandacodegen.com/blog/wordpress-ai-security-risk-2026",
-            "name": "WordPress AI Security Risk 2026: Is Your Business Site Safe from AI Vulnerabilities?",
-            "description": "Is WordPress AI safe for your business? 100K+ WordPress sites exposed through AI plugin security vulnerabilities. Learn how WordPress 6.9 AI features create security risks and how to protect your site.",
+            "name": "WordPress AI Plugins Exposed 100K+ Sites in 2026",
+            "description": "AI plugins are the newest WordPress vulnerability. 100K+ sites exposed through AI plugin flaws. Here is what business owners need to know and how to protect your site.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-19T00:00:00-05:00",

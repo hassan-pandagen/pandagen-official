@@ -60,10 +60,10 @@ function BlogPageInner() {
 
   const filteredArticles = articles.filter(article => {
     const matchesCategory = activeCategory === "All" || article.category === activeCategory;
-    const matchesSearch = searchQuery === "" ||
-      article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      article.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      article.category.toLowerCase().includes(searchQuery.toLowerCase());
+    if (searchQuery === "") return matchesCategory;
+    const searchWords = searchQuery.toLowerCase().split(/\s+/).filter(Boolean);
+    const searchable = `${article.title} ${article.excerpt} ${article.category} ${article.id.replace(/-/g, ' ')}`.toLowerCase();
+    const matchesSearch = searchWords.every(word => searchable.includes(word));
     return matchesCategory && matchesSearch;
   });
 

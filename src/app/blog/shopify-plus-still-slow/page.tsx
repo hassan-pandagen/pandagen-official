@@ -16,13 +16,13 @@ const SalesImpactAnimation = dynamic(() => import("@/components/blog/SalesImpact
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Shopify Plus Still Slow? Why $2,300/mo Doesn't Fix Your Core Web Vitals | PandaCodeGen",
-    description: "53% of mobile visitors leave before your Shopify Plus store loads. We break down the Liquid template problem and the headless solution that actually works.",
+    title: "Shopify Plus Still Slow? Why $2,300/Month Does Not Buy Speed",
+    description: "You pay $2,300/month for Shopify Plus but your store still fails Core Web Vitals. 53% of mobile visitors leave before it loads. Here is why and the fix that works.",
     alternates: { canonical: "/blog/shopify-plus-still-slow" },
     keywords: ["shopify plus slow", "shopify plus core web vitals", "shopify plus speed", "shopify plus performance", "shopify plus liquid template", "shopify plus headless"],
     openGraph: {
-        title: "Shopify Plus Still Slow? Why $2,300/mo Doesn't Fix Your Core Web Vitals",
-        description: "53% of mobile visitors leave before your Shopify Plus store loads. Here's the Liquid template problem and the fix that actually works.",
+        title: "Shopify Plus Still Slow? Why $2,300/Month Does Not Buy Speed",
+        description: "You pay $2,300/month for Shopify Plus but your store still fails Core Web Vitals. 53% of mobile visitors leave before it loads. Here is why and the fix that works.",
         type: "article",
         publishedTime: "2026-02-06",
         authors: ["Hassan"],
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Shopify Plus Still Slow? Why $2,300/mo Doesn't Fix Your Core Web Vitals",
-        description: "53% of mobile visitors leave before your Shopify Plus store loads.",
+        title: "Shopify Plus Still Slow? Why $2,300/Month Does Not Buy Speed",
+        description: "You pay $2,300/month for Shopify Plus but your store still fails Core Web Vitals. 53% of mobile visitors leave before it loads. Here is why and the fix that works.",
     },
 };
 
@@ -42,8 +42,8 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/shopify-plus-still-slow#article",
-            "headline": "Shopify Plus Still Slow? Why $2,300/mo Doesn't Fix Your Core Web Vitals",
-            "description": "53% of mobile visitors leave before your Shopify Plus store loads. The Liquid template problem and the headless solution that actually works.",
+            "headline": "Shopify Plus Still Slow? Why $2,300/Month Does Not Buy Speed",
+            "description": "You pay $2,300/month for Shopify Plus but your store still fails Core Web Vitals. 53% of mobile visitors leave before it loads. Here is why and the fix that works.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-06T00:00:00-05:00",
             "dateModified": "2026-03-10T00:00:00-05:00",

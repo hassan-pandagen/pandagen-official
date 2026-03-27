@@ -174,4 +174,16 @@ Every new post should link to:
 
 ---
 
-*Last updated: March 14, 2026 — 21 live posts, 5 remaining planned (all 5 by Mar 24)*
+### Confirmed Press / Backlinks
+
+| Date | Publication | DA | Type | Status | Action on Publish |
+|------|------------|-----|------|--------|-------------------|
+| May 30, 2026 | **Woman's World** (WomansWorld.com) | 70+ | Editorial quote + link | CONFIRMED Mar 27 | Add "Featured In" strip to homepage, About page mention, LinkedIn post, blog author bio update |
+| Mar 27, 2026 | **G2** (g2.com) | 90+ | Vercel product review | Submitted, in moderation | Profile shows "Hassan Jamal, CEO & Founder, PandaCodeGen" |
+
+**Journalist contacts (do NOT over-message):**
+- Gabrielle Lichterman (Woman's World) - offered to keep Hassan in mind for future tech articles
+
+---
+
+*Last updated: March 27, 2026 — 30 live posts, webflow-vs-custom-website added today*

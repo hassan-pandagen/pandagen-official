@@ -16,8 +16,8 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: { absolute: "WooCommerce Too Slow? Here's the Real Fix | PandaCodeGen" },
-    description: "WooCommerce stores score 30 to 55 on mobile PageSpeed. The cause is architectural, not plugins. Here is what breaks your speed and the only fix.",
+    title: { absolute: "WooCommerce Too Slow? The Problem Is Not Your Plugins" },
+    description: "WooCommerce stores score 30 to 55 on mobile PageSpeed. The cause is architectural, not plugins. Here is what actually breaks your speed and the only fix that works.",
     alternates: {
         canonical: "/blog/woocommerce-too-slow",
     },
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
         "slow woocommerce store"
     ],
     openGraph: {
-        title: "WooCommerce Too Slow? Here's What's Actually Breaking Your Store",
-        description: "WooCommerce stores average 30 to 55 on Google PageSpeed Mobile. The root cause is architectural, not a plugin problem. Here is what is actually happening and what actually fixes it.",
+        title: "WooCommerce Too Slow? The Problem Is Not Your Plugins",
+        description: "WooCommerce stores score 30 to 55 on mobile PageSpeed. The cause is architectural, not plugins. Here is what actually breaks your speed and the only fix that works.",
         type: "article",
         publishedTime: "2026-03-25",
         modifiedTime: "2026-03-25",
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "WooCommerce Too Slow? Here's What's Actually Breaking Your Store",
-        description: "The root cause is not your theme or your images. It is how WooCommerce works at the architecture level. Here is the real breakdown.",
+        title: "WooCommerce Too Slow? The Problem Is Not Your Plugins",
+        description: "WooCommerce stores score 30 to 55 on mobile PageSpeed. The cause is architectural, not plugins. Here is what actually breaks your speed and the only fix that works.",
     },
 };
 
@@ -56,8 +56,8 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/woocommerce-too-slow#article",
-            "headline": "WooCommerce Too Slow? Here's What's Actually Breaking Your Store",
-            "description": "WooCommerce stores average 30 to 55 on Google PageSpeed Mobile. Here is exactly why WooCommerce is slow, what it costs in lost sales, and why caching plugins only mask the problem.",
+            "headline": "WooCommerce Too Slow? The Problem Is Not Your Plugins",
+            "description": "WooCommerce stores score 30 to 55 on mobile PageSpeed. The cause is architectural, not plugins. Here is what actually breaks your speed and the only fix that works.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-25T00:00:00-05:00",
             "dateModified": "2026-03-25T00:00:00-05:00",

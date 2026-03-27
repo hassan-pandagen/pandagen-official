@@ -16,14 +16,14 @@ const SalesImpactAnimation = dynamic(() => import("@/components/blog/SalesImpact
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: { absolute: "Your Shopify Store Is Costing You $75K/Year in Lost Sales | PandaCodeGen" },
-    description: "Every second your store takes to load costs you customers. We calculated exactly how much revenue you're losing from slow Shopify speed.",
+    title: "Slow Shopify Store? You Are Losing $75K/Year in Sales",
+    description: "Every second your Shopify store takes to load costs you customers. We calculated exactly how much revenue a slow store loses per month and how to fix it.",
     alternates: {
         canonical: '/blog/shopify-slow-losing-sales',
     },
     openGraph: {
-        title: "Your Shopify Store Is Costing You $75K/Year in Lost Sales",
-        description: "Every second your store takes to load costs you customers. We calculated exactly how much.",
+        title: "Slow Shopify Store? You Are Losing $75K/Year in Sales",
+        description: "Every second your Shopify store takes to load costs you customers. We calculated exactly how much revenue a slow store loses per month and how to fix it.",
         type: "article",
         publishedTime: "2026-02-10",
         authors: ["Hassan"],
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Your Shopify Store Is Costing You $75K/Year in Lost Sales",
-        description: "Every second your store takes to load costs you customers. We calculated exactly how much.",
+        title: "Slow Shopify Store? You Are Losing $75K/Year in Sales",
+        description: "Every second your Shopify store takes to load costs you customers. We calculated exactly how much revenue a slow store loses per month and how to fix it.",
     },
     keywords: ["Shopify speed optimization", "headless Shopify", "Shopify slow", "e-commerce performance", "Shopify lost sales", "custom storefront"],
 };
@@ -44,8 +44,8 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales#article",
-            "headline": "Your Shopify Store Is Costing You $75K/Year in Lost Sales (Here's the Math)",
-            "description": "Every second your store takes to load costs you customers. We calculated exactly how much revenue you're losing from slow Shopify speed.",
+            "headline": "Slow Shopify Store? You Are Losing $75K/Year in Sales",
+            "description": "Every second your Shopify store takes to load costs you customers. We calculated exactly how much revenue a slow store loses per month and how to fix it.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-10T00:00:00-05:00",
             "dateModified": "2026-03-15T00:00:00-05:00",

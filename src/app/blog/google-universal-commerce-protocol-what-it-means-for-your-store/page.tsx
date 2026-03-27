@@ -15,14 +15,14 @@ const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 const UCPFlowAnimation = dynamic(() => import("@/components/blog/UCPFlowAnimation"));
 
 export const metadata: Metadata = {
-    title: { absolute: "Google UCP: Buy Without Leaving Search | PandaCodeGen" },
-    description: "Google's new UCP lets customers buy products without ever visiting your website. Here's what every e-commerce store owner needs to understand, in plain English.",
+    title: { absolute: "Google UCP: Customers Can Now Buy Without Visiting Your Site" },
+    description: "Google's Universal Commerce Protocol lets customers buy products directly from search results. Here is what every store owner needs to understand and how to prepare.",
     alternates: {
         canonical: '/blog/google-universal-commerce-protocol-what-it-means-for-your-store',
     },
     openGraph: {
-        title: "Google's Universal Commerce Protocol: What It Means for Your Online Store in 2026",
-        description: "Google's UCP lets AI buy for customers without visiting your site. Shopify, Etsy, and Wayfair are already live. Here's what every store owner needs to know.",
+        title: "Google UCP: Customers Can Now Buy Without Visiting Your Site",
+        description: "Google's Universal Commerce Protocol lets customers buy products directly from search results. Here is what every store owner needs to understand and how to prepare.",
         type: "article",
         publishedTime: "2026-02-21",
         modifiedTime: "2026-02-21",
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Google's Universal Commerce Protocol: What It Means for Your Store in 2026",
-        description: "Customers can now buy without visiting your website. Google's UCP is live. Here's what store owners need to know.",
+        title: "Google UCP: Customers Can Now Buy Without Visiting Your Site",
+        description: "Google's Universal Commerce Protocol lets customers buy products directly from search results. Here is what every store owner needs to understand and how to prepare.",
     },
     keywords: ["Google Universal Commerce Protocol", "UCP ecommerce", "AI shopping 2026", "Google AI Mode shopping", "agentic commerce", "headless commerce AI"],
 };
@@ -44,8 +44,8 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/google-universal-commerce-protocol-what-it-means-for-your-store#article",
-            "headline": "Google's Universal Commerce Protocol: What It Means for Your Online Store in 2026",
-            "description": "Google's new Universal Commerce Protocol lets AI assistants buy products for customers without visiting your website. Here's what every e-commerce store owner needs to know about UCP, platform readiness, and how to prepare.",
+            "headline": "Google UCP: Customers Can Now Buy Without Visiting Your Site",
+            "description": "Google's Universal Commerce Protocol lets customers buy products directly from search results. Here is what every store owner needs to understand and how to prepare.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-21T00:00:00-05:00",
             "dateModified": "2026-03-10T00:00:00-05:00",

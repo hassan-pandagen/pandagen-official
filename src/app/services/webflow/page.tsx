@@ -44,7 +44,7 @@ export default function WebflowServicePage() {
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
         "serviceType": ["Webflow Migration", "Webflow to Next.js", "Webflow Alternative", "Webflow to Custom Code"],
-        "priceRange": "$6,000 - $40,000",
+        "priceRange": "$2,000 - $40,000",
         "telephone": "+13027738982",
         "address": {
           "@type": "PostalAddress",

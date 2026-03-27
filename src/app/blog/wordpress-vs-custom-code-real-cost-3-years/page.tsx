@@ -16,14 +16,14 @@ const SalesImpactAnimation = dynamic(() => import("@/components/blog/SalesImpact
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "WordPress vs Custom Code: Real Cost Comparison Over 3 Years | PandaCodeGen",
-    description: "Everyone says WordPress is cheap. They're not counting hosting, plugins, maintenance, and lost revenue. We ran the 3-year numbers. The results are shocking.",
+    title: "WordPress vs Custom Code: The Real 3-Year Cost (With Numbers)",
+    description: "WordPress costs $9,000 to $30,000 over 3 years when you add hosting, plugins, maintenance, and lost revenue. Custom code costs $5,000 to $15,000 total. Full breakdown.",
     alternates: {
         canonical: '/blog/wordpress-vs-custom-code-real-cost-3-years',
     },
     openGraph: {
-        title: "WordPress vs Custom Code: The Real Cost Comparison Over 3 Years",
-        description: "Everyone says WordPress is cheap. They're not counting hosting, plugins, maintenance, security, and lost revenue. We ran the numbers.",
+        title: "WordPress vs Custom Code: The Real 3-Year Cost (With Numbers)",
+        description: "WordPress costs $9,000 to $30,000 over 3 years when you add hosting, plugins, maintenance, and lost revenue. Custom code costs $5,000 to $15,000 total. Full breakdown.",
         type: "article",
         publishedTime: "2026-02-20",
         authors: ["Hassan"],
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "WordPress vs Custom Code: The Real Cost Comparison Over 3 Years",
-        description: "Everyone says WordPress is cheap. They're not counting hosting, plugins, maintenance, security, and lost revenue.",
+        title: "WordPress vs Custom Code: The Real 3-Year Cost (With Numbers)",
+        description: "WordPress costs $9,000 to $30,000 over 3 years when you add hosting, plugins, maintenance, and lost revenue. Custom code costs $5,000 to $15,000 total. Full breakdown.",
     },
     keywords: ["wordpress vs custom code cost", "wordpress real cost", "custom website vs wordpress", "wordpress hidden costs", "website total cost of ownership"],
 };
@@ -44,8 +44,8 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-vs-custom-code-real-cost-3-years#article",
-            "headline": "WordPress vs Custom Code: The Real Cost Comparison Over 3 Years",
-            "description": "Everyone says WordPress is cheap. They're not counting hosting, plugins, maintenance, security, and lost revenue. We ran the 3-year numbers.",
+            "headline": "WordPress vs Custom Code: The Real 3-Year Cost (With Numbers)",
+            "description": "WordPress costs $9,000 to $30,000 over 3 years when you add hosting, plugins, maintenance, and lost revenue. Custom code costs $5,000 to $15,000 total. Full breakdown.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-20T00:00:00-05:00",
             "dateModified": "2026-03-10T00:00:00-05:00",
@@ -103,8 +103,8 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/wordpress-vs-custom-code-real-cost-3-years#webpage",
             "url": "https://www.pandacodegen.com/blog/wordpress-vs-custom-code-real-cost-3-years",
-            "name": "WordPress vs Custom Code: The Real Cost Comparison Over 3 Years",
-            "description": "Everyone says WordPress is cheap. They're not counting hosting, plugins, maintenance, security, and lost revenue.",
+            "name": "WordPress vs Custom Code: The Real 3-Year Cost (With Numbers)",
+            "description": "WordPress costs $9,000 to $30,000 over 3 years when you add hosting, plugins, maintenance, and lost revenue. Custom code costs $5,000 to $15,000 total. Full breakdown.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-20T00:00:00-05:00",

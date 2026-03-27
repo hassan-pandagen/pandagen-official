@@ -16,13 +16,13 @@ const SEORankingAnimation = dynamic(() => import("@/components/blog/SEORankingAn
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Why Is My WordPress Site Losing Traffic? The Speed Tax You're Paying | PandaCodeGen",
-    description: "Slow WordPress sites lose Google rankings fast. Every 1-second delay costs 20% of organic traffic. Here's the simple math on why speed = traffic, and how to fix it.",
+    title: "WordPress Traffic Dropping? Speed Is Killing Your Rankings",
+    description: "Slow WordPress sites lose 20% of organic traffic for every 1 second of delay. Here is the math behind why your traffic is dropping and how to reverse it.",
     alternates: { canonical: "/blog/wordpress-traffic-drop-speed" },
     keywords: ["wordpress losing traffic", "wordpress traffic drop", "wordpress speed seo", "core web vitals wordpress", "wordpress traffic decrease", "wordpress google ranking drop"],
     openGraph: {
-        title: "Why Is My WordPress Site Losing Traffic? The Speed Tax You're Paying",
-        description: "Slow WordPress sites lose Google rankings fast. Every 1-second delay costs 20% of organic traffic. Here's the simple math.",
+        title: "WordPress Traffic Dropping? Speed Is Killing Your Rankings",
+        description: "Slow WordPress sites lose 20% of organic traffic for every 1 second of delay. Here is the math behind why your traffic is dropping and how to reverse it.",
         type: "article",
         publishedTime: "2026-02-07",
         authors: ["Hassan"],
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Why Is My WordPress Site Losing Traffic? The Speed Tax You're Paying",
-        description: "Slow WordPress sites lose Google rankings fast. Every 1-second delay costs 20% of organic traffic.",
+        title: "WordPress Traffic Dropping? Speed Is Killing Your Rankings",
+        description: "Slow WordPress sites lose 20% of organic traffic for every 1 second of delay. Here is the math behind why your traffic is dropping and how to reverse it.",
     },
 };
 
@@ -42,8 +42,8 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed#article",
-            "headline": "Why Is My WordPress Site Losing Traffic? The Speed Tax You're Paying",
-            "description": "Slow WordPress sites lose Google rankings fast. Every 1-second delay costs 20% of organic traffic. Here's the simple math on why speed = traffic.",
+            "headline": "WordPress Traffic Dropping? Speed Is Killing Your Rankings",
+            "description": "Slow WordPress sites lose 20% of organic traffic for every 1 second of delay. Here is the math behind why your traffic is dropping and how to reverse it.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-07T00:00:00-05:00",
             "dateModified": "2026-03-10T00:00:00-05:00",
@@ -98,8 +98,8 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed#webpage",
             "url": "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed",
-            "name": "Why Is My WordPress Site Losing Traffic? The Speed Tax You're Paying",
-            "description": "Slow WordPress sites lose Google rankings fast. Every 1-second delay costs 20% of organic traffic.",
+            "name": "WordPress Traffic Dropping? Speed Is Killing Your Rankings",
+            "description": "Slow WordPress sites lose 20% of organic traffic for every 1 second of delay. Here is the math behind why your traffic is dropping and how to reverse it.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-07T00:00:00-05:00",

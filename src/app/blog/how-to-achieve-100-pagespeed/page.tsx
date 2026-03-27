@@ -16,15 +16,15 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Google Is Penalizing Your Slow Site. Here's How We Hit 100/100 PageSpeed on Every Build.",
-    description: "Most websites score 35-55/100 on Google PageSpeed, and they're losing customers because of it. Here's the exact 8-step process we use to hit 98-100/100 on every client site.",
+    title: "How to Hit 100/100 PageSpeed Score (Our Exact 8-Step Process)",
+    description: "Most websites score 35 to 55 on Google PageSpeed. We hit 98 to 100 on every client site. Here is the exact 8-step process we use, with real before/after data.",
     alternates: {
         canonical: '/blog/how-to-achieve-100-pagespeed',
     },
     keywords: ["100 PageSpeed score", "Core Web Vitals optimization", "Next.js PageSpeed 100", "website speed optimization 2026", "how to improve PageSpeed score", "Google PageSpeed Insights guide", "fix slow website"],
     openGraph: {
-        title: "Google Is Penalizing Your Slow Site. Here's How We Hit 100/100 PageSpeed on Every Build.",
-        description: "Most websites score 35-55/100 on Google PageSpeed, and they're losing customers because of it. Here's the exact process we use to hit 98-100/100.",
+        title: "How to Hit 100/100 PageSpeed Score (Our Exact 8-Step Process)",
+        description: "Most websites score 35 to 55 on Google PageSpeed. We hit 98 to 100 on every client site. Here is the exact 8-step process we use, with real before/after data.",
         type: "article",
         publishedTime: "2026-02-17",
         authors: ["Hassan"],
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Google Is Penalizing Your Slow Site. Here's How We Hit 100/100 PageSpeed on Every Build.",
-        description: "Most websites score 35-55/100 on Google PageSpeed, and they're losing customers because of it. Here's the exact process we use to hit 98-100/100.",
+        title: "How to Hit 100/100 PageSpeed Score (Our Exact 8-Step Process)",
+        description: "Most websites score 35 to 55 on Google PageSpeed. We hit 98 to 100 on every client site. Here is the exact 8-step process we use, with real before/after data.",
     },
 };
 
@@ -44,8 +44,8 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed#article",
-            "headline": "How to Achieve 100/100 PageSpeed Score: Complete Next.js Guide",
-            "description": "We achieve 98-100/100 PageSpeed scores on every client site. Here's the exact optimization process we use, step by step.",
+            "headline": "How to Hit 100/100 PageSpeed Score (Our Exact 8-Step Process)",
+            "description": "Most websites score 35 to 55 on Google PageSpeed. We hit 98 to 100 on every client site. Here is the exact 8-step process we use, with real before/after data.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-17T00:00:00-05:00",
             "dateModified": "2026-03-10T00:00:00-05:00",
@@ -106,8 +106,8 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed#webpage",
             "url": "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed",
-            "name": "How to Achieve 100/100 PageSpeed Score: Complete Next.js Guide",
-            "description": "We achieve 98-100/100 PageSpeed scores on every client site. Here's the exact 8-step optimization process we use.",
+            "name": "How to Hit 100/100 PageSpeed Score (Our Exact 8-Step Process)",
+            "description": "Most websites score 35 to 55 on Google PageSpeed. We hit 98 to 100 on every client site. Here is the exact 8-step process we use, with real before/after data.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-17T00:00:00-05:00",
