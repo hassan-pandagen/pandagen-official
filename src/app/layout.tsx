@@ -95,7 +95,7 @@ export const metadata: Metadata = {
     description: "Get a free AI audit of your slow WordPress or Shopify site. We migrate to custom coded websites with load times under 1 second, zero bloat, and bank level security.",
     images: [
       {
-        url: "/opengraph-image",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "PandaCodeGen: Custom Coded Websites That Load in Under 1 Second",
@@ -107,7 +107,7 @@ export const metadata: Metadata = {
     title: "PandaCodeGen | WordPress & Shopify Migration, Under 1s Load Time",
     description: "Get a free AI audit of your slow WordPress or Shopify site. We migrate to custom coded websites with load times under 1 second, zero bloat, and bank level security.",
     creator: "@pandacodegen",
-    images: ["/opengraph-image"],
+    images: ["/og-image.jpg"],
   },
 };
 
