@@ -1,10 +1,4 @@
-import dynamic from "next/dynamic";
-import { HeroStatusPill, HeroCTAs, HeroTrustSignals } from "./HeroClient";
-
-// Audit widget is already a client component
-const AuditWidget = dynamic(() => import("@/components/audit/AuditWidget"), {
-  ssr: true,
-});
+import { HeroStatusPill, HeroCTAs, HeroTrustSignals, HeroAuditWidget } from "./HeroClient";
 
 export default function Hero() {
   return (
@@ -79,7 +73,7 @@ export default function Hero() {
         <div className="relative min-h-[400px]">
           <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-white/50 blur-3xl rounded-full pointer-events-none" />
           <div className="relative z-10">
-            <AuditWidget />
+            <HeroAuditWidget />
           </div>
         </div>
 

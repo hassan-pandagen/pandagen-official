@@ -33,4 +33,30 @@ const HeroTrustSignals = dynamic(
   { ssr: false }
 );
 
-export { HeroStatusPill, HeroCTAs, HeroTrustSignals };
+const HeroAuditWidget = dynamic(
+  () => import("@/components/audit/AuditWidget"),
+  { ssr: false, loading: () => (
+    <div className="relative hidden lg:flex justify-center items-center">
+      <div className="relative w-full max-w-xl bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-xl">
+        <div className="flex items-center justify-between px-6 py-3 border-b border-gray-100 bg-stone-50/80">
+          <div className="flex items-center gap-1.5">
+            <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
+            <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
+            <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
+          </div>
+          <span className="text-[10px] font-bold text-[#c2410c] uppercase tracking-wider">AI Audit Engine</span>
+        </div>
+        <div className="p-6 md:p-8 space-y-5">
+          <div>
+            <div className="text-xl font-bold text-charcoal leading-tight mb-1">Get Your AI Audit</div>
+            <div className="text-sm text-stone-600">11 deep checks beyond PageSpeed. Run AI Audit</div>
+          </div>
+          <div className="w-full bg-stone-50 border border-gray-200 rounded-xl h-14" />
+          <div className="w-full h-14 bg-charcoal rounded-xl" />
+        </div>
+      </div>
+    </div>
+  )}
+);
+
+export { HeroStatusPill, HeroCTAs, HeroTrustSignals, HeroAuditWidget };

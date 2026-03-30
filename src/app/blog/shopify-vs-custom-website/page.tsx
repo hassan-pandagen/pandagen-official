@@ -17,7 +17,7 @@ const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "Shopify vs Custom Website: 5 Signs You Have Outgrown Shopify (2026)",
-    description: "Shopify works until app fees hit $1,000/month and your store loads in 4+ seconds. Here are the 5 signs you have outgrown Shopify and what a custom site actually costs.",
+    description: "Shopify works until app fees hit $1,000/month and your store loads in 4+ seconds. 5 signs you have outgrown Shopify and what to do next.",
     alternates: {
         canonical: '/blog/shopify-vs-custom-website',
     },
