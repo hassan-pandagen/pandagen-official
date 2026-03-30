@@ -263,6 +263,10 @@ export default function WordPressKillerPage() {
                             Google made Core Web Vitals a direct ranking factor in 2021. Every month your slow WordPress site stays live, faster competitors are taking your rankings, and keeping them.
                         </BlogText>
 
+                        <BlogText>
+                            Downtime makes the numbers even uglier. Downtime costs US small businesses $140 to $540 per hour in lost revenue and customer trust. The average cost of recovering from a WordPress hack is $3,000 to $10,000 once you factor in cleanup, data recovery, and reputation damage. These are not rare events for unmaintained WordPress sites.
+                        </BlogText>
+
                         <BlogHeader>Is WordPress Still Worth It for Anything in 2026?</BlogHeader>
                         <BlogText>
                             Yes. In specific situations:

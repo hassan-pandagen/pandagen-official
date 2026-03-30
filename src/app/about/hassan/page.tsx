@@ -56,6 +56,9 @@ const personSchema = {
             "sameAs": [
                 "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
                 "https://github.com/hassan-pandagen",
+                "https://clutch.co/profile/panda-code-gen",
+                "https://www.crunchbase.com/person/hassan-jamal",
+                "https://www.google.com/maps?cid=16271659886069582158",
             ],
         },
         {
@@ -193,6 +196,43 @@ export default function HassanAuthorPage() {
                             </ul>
                         </div>
                     </div>
+
+                    {/* Trust Signals & Credentials */}
+                    <section className="mb-16 p-8 bg-white border border-stone-300 rounded-2xl shadow-xs">
+                        <h3 className="text-xl font-serif text-charcoal mb-6">Credentials &amp; Press</h3>
+                        <div className="space-y-4 text-stone-600 text-sm leading-relaxed">
+                            <p><strong>Quoted in Woman&apos;s World magazine</strong> (1.6M readers) as a technology expert on AI and web development. Article publishing June 8, 2026.</p>
+                            <p><strong>Google Business Profile:</strong> 5-star rating with verified client reviews including MyCustomPatches (Matt Conner) and James Peace.</p>
+                            <p><strong>31 published articles</strong> on web performance, SEO, and e-commerce migration. Every article uses first-hand data from real client projects, not generic advice.</p>
+                        </div>
+                        <div className="flex flex-wrap gap-3 mt-6">
+                            <a href="https://clutch.co/profile/panda-code-gen" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-stone-50 border border-stone-200 text-stone-600 text-xs font-bold rounded-full hover:border-cognac/40 transition-all">Clutch</a>
+                            <a href="https://www.crunchbase.com/person/hassan-jamal" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-stone-50 border border-stone-200 text-stone-600 text-xs font-bold rounded-full hover:border-cognac/40 transition-all">Crunchbase</a>
+                            <a href="https://www.goodfirms.co/company/pandacodegen" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-stone-50 border border-stone-200 text-stone-600 text-xs font-bold rounded-full hover:border-cognac/40 transition-all">GoodFirms</a>
+                            <a href="https://www.google.com/maps?cid=16271659886069582158" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-stone-50 border border-stone-200 text-stone-600 text-xs font-bold rounded-full hover:border-cognac/40 transition-all">Google Reviews</a>
+                        </div>
+                    </section>
+
+                    {/* Client Reviews */}
+                    <section className="mb-16">
+                        <h3 className="text-xl font-serif text-charcoal mb-6">What Clients Say</h3>
+                        <div className="grid md:grid-cols-2 gap-6">
+                            <div className="p-6 bg-white border border-stone-200 rounded-2xl">
+                                <div className="flex items-center gap-1 mb-3">
+                                    {[1,2,3,4,5].map(i => <svg key={i} className="w-4 h-4 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>)}
+                                </div>
+                                <p className="text-stone-600 text-sm leading-relaxed mb-3">&quot;Load time dropped from 3+ seconds to 0.7 seconds. PageSpeed went from 40 to 100/100. Hosting cost dropped from $150/month to $0. Zero data loss, zero downtime during cutover.&quot;</p>
+                                <p className="text-xs font-bold text-charcoal">Matt Conner, MyCustomPatches LLC</p>
+                            </div>
+                            <div className="p-6 bg-white border border-stone-200 rounded-2xl">
+                                <div className="flex items-center gap-1 mb-3">
+                                    {[1,2,3,4,5].map(i => <svg key={i} className="w-4 h-4 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>)}
+                                </div>
+                                <p className="text-stone-600 text-sm leading-relaxed mb-3">&quot;I was not sure at first. Can a custom website really be built for $300 with no costs? Hassan showed me it can be done. They worked with me to make a website that I could afford. No costs or extra fees. PandaCodeGen and Hassan are good at what they do.&quot;</p>
+                                <p className="text-xs font-bold text-charcoal">James Peace</p>
+                            </div>
+                        </div>
+                    </section>
 
                     {/* Articles */}
                     {hassanPosts.length > 0 && (

@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import SocialProof from "@/components/home/SocialProof";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 
 const comparisonData = [
@@ -298,6 +299,8 @@ export default function WebflowPageContent() {
           </div>
         </div>
       </section>
+
+      <SocialProof />
 
       {/* 7. DUAL CTA */}
       <section className="py-10 md:py-20 px-6">

@@ -240,6 +240,9 @@ export default function ShopifyPlusStillSlowPage() {
                         <BlogText>
                             The irony: the $2,300/month Shopify Plus fee is less than 1% of <a href="/blog/shopify-conversion-rate-speed-fix" className="text-cognac hover:underline">the revenue you&apos;re losing from slow load times</a>. We broke down the exact dollar amounts in our post on <Link href="/blog/shopify-slow-losing-sales" className="text-cognac hover:underline">how much slow Shopify costs per year</Link>.
                         </BlogText>
+                        <BlogText>
+                            Speed is not the only cost that compounds at Plus scale. Each chargeback costs you the product, the shipping fees, plus a $15 to $25 dispute fee from Shopify. Visa dropped its excessive chargeback threshold to 1.5% in March 2026 for North America, Europe, and Asia-Pacific, making it easier to land in a monitoring program. If your chargeback rate approaches 1%, Shopify holds 20% of your funds for up to 120 days, creating a cash flow problem on top of the performance problem.
+                        </BlogText>
 
                         {/* Mid-Article CTA */}
                         <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">

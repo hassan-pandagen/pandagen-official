@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import SocialProof from "@/components/home/SocialProof";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 
 const comparisonData = [
@@ -323,6 +324,8 @@ export default function PageContent() {
           </div>
         </div>
       </section>
+
+      <SocialProof />
 
       {/* 7. DUAL CTA */}
       <section className="py-12 md:py-24 px-6 bg-[#F8FAFC]">

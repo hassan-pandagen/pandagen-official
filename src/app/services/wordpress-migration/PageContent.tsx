@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import SocialProof from "@/components/home/SocialProof";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 import WordPressKiller from "@/components/sections/WordPressKiller";
 
@@ -140,7 +141,7 @@ export default function PageContent() {
             ))}
           </div>
 
-          <p className="text-center text-xs text-stone-500 mt-6">Based on average results across WordPress to Next.js migrations</p>
+          <p className="text-center text-xs text-stone-600 font-medium mt-6">Based on average results across WordPress to Next.js migrations</p>
         </div>
       </section>
 
@@ -258,6 +259,8 @@ export default function PageContent() {
           </div>
         </div>
       </section>
+
+      <SocialProof />
 
       {/* 7. DUAL CTA */}
       <section className="py-10 md:py-20 px-6 border-y border-stone-200 bg-white">

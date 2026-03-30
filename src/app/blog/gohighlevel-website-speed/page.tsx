@@ -219,7 +219,7 @@ export default function GHLWebsiteSpeedPage() {
                         <a href="https://pagespeed.web.dev" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">pagespeed.web.dev</a>,
                         paste your GHL site URL, and test it right now. GHL users on the platform's own community forum have reported mobile scores of{" "}
                         <a href="https://ideas.gohighlevel.com/website/p/fix-mobile-page-speed" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">35, 47, and 62 on mobile</a>{" "}
-                        even after doing everything they could to optimize. One user described 47 as "the best I can get on any HighLevel site." GHL has marked the issue resolved multiple times. Users have kept filing the same complaint through 2025.
+                        even after doing everything they could to optimize. One user described 47 as "the best I can get on any HighLevel site." GHL has marked the issue resolved multiple times. Users have kept filing the same complaint through 2026.
                     </BlogText>
                     <BlogText>
                         This is not a setting you missed. It is the result of how GHL builds and delivers pages, and the fix is not inside GHL at all.
@@ -372,7 +372,7 @@ export default function GHLWebsiteSpeedPage() {
                     </BlogText>
                     <BlogList items={[
                         "Local service businesses (dentists, chiropractors, lawyers, contractors) competing for organic rankings against other local businesses with faster sites.",
-                        "Marketing agencies using GHL for client websites who want to offer better SEO performance as a differentiator.",
+                        "Marketing agencies using GHL for client websites who want to offer better SEO performance as a differentiator. When you provide a GoHighLevel sub-account to a client, you become their software provider. That means you handle setup, build workflows, train their AI bots, and troubleshoot technical issues. The support burden compounds as you add more clients.",
                         "Coaches and consultants who rely on content marketing and organic search alongside GHL's paid funnel traffic.",
                         "SaaS and software companies using GHL for their marketing site who need PageSpeed scores that reflect the quality of their product.",
                     ]} />

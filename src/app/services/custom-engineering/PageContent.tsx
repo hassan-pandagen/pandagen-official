@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import SocialProof from "@/components/home/SocialProof";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 import BuiltWith from "@/components/sections/BuiltWith";
 
@@ -297,6 +298,8 @@ export default function PageContent() {
 
       {/* 6. TECH STACK */}
       <BuiltWith />
+
+      <SocialProof />
 
       {/* 7. DUAL CTA */}
       <section className="py-10 md:py-20 px-6">

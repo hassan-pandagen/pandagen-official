@@ -43,6 +43,26 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
+    id: "shopify-vs-custom-website",
+    title: "Shopify vs Custom Website: When You Have Outgrown Shopify",
+    excerpt: "Shopify works until app fees hit $1,000/month, your store loads in 4+ seconds, and checkout conversion stalls at 1.4%. Here are the 5 signs and what to do next.",
+    category: "Shopify",
+    readTime: "11 min",
+    date: "Mar 30",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: false,
+    illustrationType: 'cost',
+    lastModified: "2026-03-30",
+    faqs: [
+      { question: "When should I switch from Shopify to a custom website?", answer: "Switch when your monthly Shopify bill exceeds $500 including apps, your store loads in 4+ seconds on mobile, your conversion rate is stuck below 2% despite good traffic, you need custom checkout logic that Shopify restricts, or you are paying transaction fees on a non-Shopify payment gateway. If none of these apply, Shopify is still the right tool for your stage." },
+      { question: "How much does a custom e-commerce website cost compared to Shopify?", answer: "A custom headless e-commerce site costs $8,000 to $25,000 to build. Hosting is $0 to $20 per month. Shopify costs $39 to $2,300 per month in platform fees plus $500 to $1,000 per month in app subscriptions for a serious store. Over 3 years, a custom site typically costs 40 to 60% less than Shopify when you include platform fees, app costs, and transaction fees." },
+      { question: "Will I lose sales during a Shopify migration?", answer: "Not if the migration is planned correctly. A proper Shopify to custom migration includes a parallel build phase where the new site is built while the old store keeps running, 301 redirects for every product and collection URL, a zero-downtime DNS cutover, and post-launch monitoring for 30 days. Revenue should continue uninterrupted. Most stores see conversion rates improve within 60 days because the custom site loads 3 to 4 times faster." },
+      { question: "Can a custom website do everything Shopify does?", answer: "Yes, and more. A custom site handles product catalogs, cart, checkout, payments via Stripe or any processor, inventory management, order tracking, email notifications, discount codes, and subscription billing. The difference is that custom code has no app limits, no transaction fees beyond the payment processor, no variant caps, and no checkout restrictions. Anything you can describe can be built." },
+      { question: "What is headless Shopify and is it worth it?", answer: "Headless Shopify means keeping Shopify as your backend for product and order management while replacing the slow Liquid frontend with a custom Next.js storefront. This gives you Shopify's admin panel with custom code performance. Load times drop from 4+ seconds to under 1 second. It is worth it if you want to keep your Shopify product catalog and order history but need significantly better speed and conversion rates. Build cost is $8,000 to $20,000 depending on store complexity." },
+    ]
+  },
+  {
     id: "squarespace-too-slow",
     title: "Squarespace Too Slow? No Setting or Plugin Fixes This",
     excerpt: "Squarespace sites score 30 to 55 on Google PageSpeed Mobile and there is no plugin or setting that changes that. Here is the exact reason Squarespace is slow, what that costs you in rankings and leads, and what actually works.",

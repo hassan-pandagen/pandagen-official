@@ -219,7 +219,7 @@ export default function ShopifyConversionRateSpeedFixPage() {
                                 "Top 20% of Shopify stores convert at 3.2%+ with sub-2-second load times",
                                 "Mobile commerce now accounts for 73% of all e-commerce sales (Statista 2026)",
                                 "Stores scoring 90+ on mobile PageSpeed convert 2.4x higher than stores scoring below 50",
-                                "Google's INP metric (replaced FID in March 2024) now penalizes stores with heavy JavaScript: most Shopify themes fail this test"
+                                "Google's INP metric measures interaction responsiveness and penalizes stores with heavy JavaScript: most Shopify themes fail this test"
                             ]} />
                         </div>
                         <BlogText>

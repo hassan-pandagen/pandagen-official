@@ -372,6 +372,10 @@ export default function ShopifyDawnThemeSlowPage() {
                         </div>
 
                         <BlogText>
+                            A 2026 benchmark study of 1,000 Shopify stores found that only 48% pass all three Core Web Vitals on mobile. The median Shopify store LCP is 2.26 seconds, sitting right at the edge of Google&apos;s &ldquo;good&rdquo; threshold. One additional app install or an unoptimized hero image pushes that number into the failing range. Shopify&apos;s admin dashboard speed score makes this worse by creating a false sense of security. That number comes from a simplified Lighthouse test, not real Core Web Vitals field data from actual visitors browsing your store.
+                        </BlogText>
+
+                        <BlogText>
                             The Deloitte &ldquo;Milliseconds Make Millions&rdquo; study found that a 0.1-second improvement in mobile load time increases conversions by 8%. A typical Shopify store scoring 45/100 is leaving 20 to 30% of conversions on the table compared to a 95/100 storefront.
                         </BlogText>
 

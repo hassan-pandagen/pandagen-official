@@ -239,6 +239,9 @@ export default function ShopifyAppCostsPage() {
                         <a href="https://shopthemedetector.com/blog/shopify-app-store-statistics/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Shopify App Store statistics</a>,
                         87% of merchants use at least one paid app, and the average app spend for a growing store sits between $120 and $300/month. Serious stores doing $20K to $100K/month routinely spend $500 to $1,000/month.
                     </BlogText>
+                    <BlogText>
+                        The worst part is that many of these apps use usage-based pricing that spikes without warning. Support apps like Gorgias can jump from $300/month to $1,200/month during Black Friday because they charge per ticket or per conversation. Currency conversion fees on international orders are another hidden cost that scales quietly with global sales and never appears on your Shopify invoice.
+                    </BlogText>
 
                     <BlogHeader id="default-vs-optimized">The Default Stack vs. The Optimized Stack</BlogHeader>
                     <BlogText>

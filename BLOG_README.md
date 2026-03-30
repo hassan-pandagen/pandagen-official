@@ -138,6 +138,25 @@ Every new post should link to:
 - Include a "Key Takeaways" section before FAQ (3-5 numbered points, business-owner friendly)
 - Use `data-speakable="true"` on Executive Summary for AI citation readiness
 
+### Pain Point Research Rule (MANDATORY for every new blog)
+**Before writing ANY new blog post, search the web for at least 50 buyer-intent pain points related to the topic as of the current date.** This is not optional. Every blog must reflect what real people are searching for RIGHT NOW, not cached knowledge.
+
+Steps:
+1. Search for "[platform] problems [current year]" (e.g. "shopify problems 2026")
+2. Search for "[platform] complaints reddit [current year]"
+3. Search for "[platform] hidden costs [current year]"
+4. Search for "[platform] limitations [current year]"
+5. Search for "leaving [platform] [current year]" or "outgrown [platform]"
+6. Search for "[platform] vs custom website [current year]"
+7. Check People Also Ask queries on Google for the target keyword
+8. Compile at least 50 pain points with buyer intent
+9. Check which pain points are already covered in existing blogs
+10. Add missing pain points to the new blog AND update existing blogs if relevant
+
+**Why:** Google ranks pages that comprehensively answer the searcher's question. A blog covering 50 pain points ranks for 50 queries. A blog covering 10 ranks for 10. More pain points = more impressions = more clicks = more buyers.
+
+**Also:** Always search with the CURRENT YEAR (2026 as of March 2026). Never rely on cached knowledge. Platform pricing, features, and problems change every quarter.
+
 ---
 
 ## Adding a New Blog Post — Checklist

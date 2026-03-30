@@ -1,197 +1,237 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Zap, Clock, DollarSign, ShieldOff } from "lucide-react";
-import Link from "next/link";
+import { Zap, Clock, DollarSign, ShieldOff, ChevronLeft, ChevronRight } from "lucide-react";
+import { useRef } from "react";
 
-const metrics = [
+const reviews = [
   {
-    icon: Clock,
-    before: "3.2s",
-    after: "0.7s",
-    label: "Load Time",
-    desc: "Guaranteed under 1 second on every build.",
+    platform: "Clutch",
+    platformColor: "#e8222f",
+    starColor: "#e8222f",
+    title: "Available at any time. Response always under an hour.",
+    body: "Panda Code Gen successfully delivered a speedy, bug free website using the latest coding language. The team was punctual, responsive, helpful, and communicative via email. They assisted with UI design and didn't charge for revisions. Overall, their expertise and support were commendable.",
+    name: "Matt Conner",
+    initials: "MC",
+    initialsColor: "#e8222f",
+    detail: "MC Patches LLC",
+    date: "Nov 2025",
+    verified: true,
+    url: "https://clutch.co/profile/panda-code-gen#reviews",
   },
   {
-    icon: Zap,
-    before: "45",
-    after: "100",
-    label: "PageSpeed Score",
-    desc: "Perfect 100/100 Lighthouse. Not 98. Not 99.",
+    platform: "Trustpilot",
+    platformColor: "#00b67a",
+    starColor: "#00b67a",
+    title: "Hassan made all the difference",
+    body: "I recently worked with PandaCodeGen and had a great experience. Hassan was super helpful and communicative throughout the process. Even though I'm not tech-savvy, he broke things down in a way that made sense to me. The service was pretty good overall.",
+    name: "Marshall James",
+    initials: "MJ",
+    initialsColor: "#00b67a",
+    detail: "",
+    date: "Mar 2026",
+    verified: true,
+    url: "https://www.trustpilot.com/review/pandacodegen.com",
   },
   {
-    icon: DollarSign,
-    before: "$150/mo",
-    after: "$0/mo",
-    label: "Hosting Cost",
-    desc: "Zero monthly fees. Forever. You own the code.",
+    platform: "Google",
+    platformColor: "#1a73e8",
+    starColor: "#f4b400",
+    title: "They worked with me to make a website I could afford",
+    body: "I was not sure at first. Can a custom website really be built for $300 with no costs? PandaCodeGen. Hassan showed me it can be done. They gave me a quote at first. They worked with me to make a website that I could afford. They made sure there are no costs or extra fees. PandaCodeGen and Hassan are good at what they do. They care about their customers.",
+    name: "James Peace",
+    initials: "JP",
+    initialsColor: "#34a853",
+    detail: "",
+    date: "Mar 2026",
+    verified: true,
+    url: "https://www.google.com/maps?cid=16271659886069582158",
   },
   {
-    icon: ShieldOff,
-    before: "25+",
-    after: "0",
-    label: "Plugins Killed",
-    desc: "No plugins means no vulnerabilities, no bloat.",
+    platform: "GoodFirms",
+    platformColor: "#b8860b",
+    starColor: "#b8860b",
+    title: "Speedy, bug free website with the latest technology",
+    body: "Hassan was available to me at any time, and his response time was always less than an hour. The team was punctual, responsive, helpful, and communicative. They assisted with UI design and didn't charge for revisions. Their expertise and support were commendable.",
+    name: "Matt Conner",
+    initials: "MC",
+    initialsColor: "#b8860b",
+    detail: "MC Patches LLC",
+    date: "Mar 2026",
+    verified: true,
+    url: "https://www.goodfirms.co/company/pandacodegen",
   },
 ];
 
+const platformBadges = [
+  { name: "Clutch", rating: "5.0", count: "1", color: "#e8222f", url: "https://clutch.co/profile/panda-code-gen" },
+  { name: "Trustpilot", rating: "5.0", count: "1", color: "#00b67a", url: "https://www.trustpilot.com/review/pandacodegen.com" },
+  { name: "Google", rating: "5.0", count: "3", color: "#1a73e8", url: "https://www.google.com/maps?cid=16271659886069582158" },
+  { name: "GoodFirms", rating: "5.0", count: "1", color: "#b8860b", url: "https://www.goodfirms.co/company/pandacodegen" },
+];
+
+const metrics = [
+  { icon: Clock, before: "3.2s", after: "0.7s", label: "Load Time", desc: "Guaranteed under 1 second on every build." },
+  { icon: Zap, before: "45", after: "100", label: "PageSpeed Score", desc: "Perfect 100/100 Lighthouse. Not 98. Not 99." },
+  { icon: DollarSign, before: "$150/mo", after: "$0/mo", label: "Hosting Cost", desc: "Zero monthly fees. Forever. You own the code." },
+  { icon: ShieldOff, before: "25+", after: "0", label: "Plugins Killed", desc: "No plugins means no vulnerabilities, no bloat." },
+];
+
+function Stars({ color, count = 5 }: { color: string; count?: number }) {
+  return (
+    <div className="flex gap-0.5">
+      {[...Array(count)].map((_, i) => (
+        <svg key={i} className="w-5 h-5" style={{ color }} fill="currentColor" viewBox="0 0 20 20">
+          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+      ))}
+    </div>
+  );
+}
+
 export default function SocialProof() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (dir: "left" | "right") => {
+    if (!scrollRef.current) return;
+    const amount = scrollRef.current.offsetWidth * 0.8;
+    scrollRef.current.scrollBy({ left: dir === "left" ? -amount : amount, behavior: "smooth" });
+  };
 
   return (
-    <section className="py-14 bg-white border-b border-stone-200/80">
-      <div className="container mx-auto px-6 max-w-5xl">
+    <section className="py-16 bg-[#faf9f7] border-b border-stone-200/80">
+      <div className="container mx-auto px-6 max-w-6xl">
 
-        {/* Clutch Review Card */}
+        {/* Platform Badges */}
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-10"
+          className="flex flex-wrap items-center justify-center gap-3 mb-4"
         >
-          <div className="bg-stone-50 border border-stone-200 rounded-2xl p-8 md:p-10 max-w-3xl mx-auto">
+          {platformBadges.map((b) => (
+            <a
+              key={b.name}
+              href={b.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-stone-200 rounded-full text-xs font-bold text-stone-600 hover:border-stone-400 transition-all"
+            >
+              <span className="w-2 h-2 rounded-full" style={{ backgroundColor: b.color }} />
+              {b.name} {b.rating} · {b.count} {Number(b.count) === 1 ? "review" : "reviews"}
+            </a>
+          ))}
+        </motion.div>
 
-            {/* Header: stars + Clutch badge */}
-            <div className="flex items-start justify-between gap-4 mb-6">
-              <div>
-                {/* 5 stars */}
-                <div className="flex gap-1 mb-2">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-[#e8222f]" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <div className="text-xs font-bold text-stone-600 uppercase tracking-widest">5.0 · Verified Review</div>
-              </div>
-              {/* Clutch badge */}
-              <Link
-                href="https://clutch.co/profile/panda-code-gen#reviews"
+        {/* Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-10"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-2">What Our Clients Say</h2>
+          <p className="text-stone-500 text-sm">Real projects. Real results. Real people.</p>
+        </motion.div>
+
+        {/* Reviews Carousel */}
+        <div className="relative">
+          {/* Scroll Arrows (desktop only) */}
+          <button
+            onClick={() => scroll("left")}
+            className="hidden md:flex absolute -left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 items-center justify-center rounded-full bg-white border border-stone-200 shadow-md hover:bg-stone-50 transition-all"
+            aria-label="Scroll left"
+          >
+            <ChevronLeft className="w-5 h-5 text-stone-600" />
+          </button>
+          <button
+            onClick={() => scroll("right")}
+            className="hidden md:flex absolute -right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 items-center justify-center rounded-full bg-white border border-stone-200 shadow-md hover:bg-stone-50 transition-all"
+            aria-label="Scroll right"
+          >
+            <ChevronRight className="w-5 h-5 text-stone-600" />
+          </button>
+
+          {/* Grid on desktop, horizontal scroll on mobile */}
+          <div
+            ref={scrollRef}
+            className="flex md:grid md:grid-cols-4 gap-5 overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none scrollbar-hide pb-4 md:pb-0"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            {reviews.map((r, i) => (
+              <a
+                key={i}
+                href={r.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#e8222f] text-white text-xs font-bold hover:bg-[#c91a26] transition-colors"
+                className="group flex-shrink-0 w-[280px] sm:w-[300px] md:w-auto snap-start bg-white border border-stone-200 rounded-2xl p-5 hover:shadow-lg hover:border-stone-300 transition-all duration-200 flex flex-col"
               >
-                <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
-                </svg>
-                clutch.co
-                <ExternalLink className="w-3 h-3 opacity-70" />
-              </Link>
-            </div>
+                {/* Stars */}
+                <Stars color={r.starColor} />
 
-            {/* Quote */}
-            <blockquote className="text-xl md:text-2xl font-serif italic text-charcoal leading-relaxed mb-5">
-              &ldquo;Hassan was available to me at any time, and his response time was always less than an hour.&rdquo;
-            </blockquote>
+                {/* Title */}
+                <h3 className="font-bold text-charcoal text-base mt-3 mb-2 leading-snug">{r.title}</h3>
 
-            {/* Feedback summary */}
-            <p className="text-sm text-stone-500 leading-relaxed mb-6">
-              Panda Code Gen successfully delivered a speedy, bug free website using the latest coding language. The team was punctual, responsive, helpful, and communicative via email. They assisted with UI design and didn&apos;t charge for revisions. Overall, their expertise and support were commendable.
-            </p>
+                {/* Full Review Body */}
+                <p className="text-stone-600 text-sm leading-relaxed flex-1 mb-4">{r.body}</p>
 
-            {/* Reviewer + scores */}
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-5 border-t border-stone-200">
-              <div>
-                <div className="text-sm font-bold text-charcoal">Executive, MC Patches LLC</div>
-                <div className="text-xs text-stone-400 mt-0.5">Manufacturing · Austin, Texas · Oct, Nov 2025</div>
-              </div>
-              <div className="flex gap-4 text-xs text-stone-400">
-                {[["Quality","5.0"],["Schedule","5.0"],["Cost","5.0"],["Refer","5.0"]].map(([label, val]) => (
-                  <div key={label} className="text-center">
-                    <div className="font-bold text-charcoal text-sm">{val}</div>
-                    <div>{label}</div>
+                {/* Reviewer Footer */}
+                <div className="flex items-center gap-3 pt-4 border-t border-stone-100">
+                  <div
+                    className="w-9 h-9 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0"
+                    style={{ backgroundColor: r.initialsColor }}
+                  >
+                    {r.initials}
                   </div>
-                ))}
-              </div>
-            </div>
-
-          </div>
-        </motion.div>
-
-        {/* Trustpilot Review Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="mb-10"
-        >
-          <div className="bg-stone-50 border border-stone-200 rounded-2xl p-8 md:p-10 max-w-3xl mx-auto">
-
-            {/* Header: stars + Trustpilot badge */}
-            <div className="flex items-start justify-between gap-4 mb-6">
-              <div>
-                {/* 5 stars, Trustpilot green */}
-                <div className="flex gap-1 mb-2">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-[#00b67a]" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm font-bold text-charcoal truncate">{r.name}</span>
+                      {r.verified && (
+                        <svg className="w-4 h-4 text-[#00b67a] shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                      )}
+                    </div>
+                    <div className="text-xs text-stone-400">{r.detail}{r.detail && " · "}{r.date}</div>
+                  </div>
+                  <span
+                    className="text-[9px] font-bold uppercase tracking-wider px-2 py-1 rounded text-white shrink-0"
+                    style={{ backgroundColor: r.platformColor }}
+                  >
+                    {r.platform}
+                  </span>
                 </div>
-                <div className="text-xs font-bold text-stone-600 uppercase tracking-widest">5.0 · Trustpilot Review</div>
-              </div>
-              {/* Trustpilot badge */}
-              <Link
-                href="https://www.trustpilot.com/review/pandacodegen.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#00b67a] text-white text-xs font-bold hover:bg-[#009e6a] transition-colors"
-              >
-                <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                trustpilot.com
-                <ExternalLink className="w-3 h-3 opacity-70" />
-              </Link>
-            </div>
-
-            {/* Quote */}
-            <blockquote className="text-xl md:text-2xl font-serif italic text-charcoal leading-relaxed mb-5">
-              &ldquo;Hassan made all the difference. I&apos;m not tech-savvy, but he broke everything down in a way that made sense.&rdquo;
-            </blockquote>
-
-            {/* Feedback summary */}
-            <p className="text-sm text-stone-500 leading-relaxed mb-6">
-              I recently worked with PandaCodeGen and had a great experience. Hassan was super helpful and communicative throughout the process. Even though I&apos;m not tech-savvy, he broke things down in a way that made sense to me. The service was pretty good overall.
-            </p>
-
-            {/* Reviewer */}
-            <div className="pt-5 border-t border-stone-200">
-              <div className="text-sm font-bold text-charcoal">Marshall James</div>
-              <div className="text-xs text-stone-400 mt-0.5">Source: Organic · Mar 2026</div>
-            </div>
-
+              </a>
+            ))}
           </div>
 
-            {/* Review Buttons */}
-            <div className="mt-6 max-w-3xl mx-auto flex flex-col sm:flex-row gap-3">
-              <a
-                href="https://www.trustpilot.com/review/pandacodegen.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 flex items-center justify-center gap-2 h-[52px] px-6 rounded-xl border border-stone-200 bg-white text-sm font-bold text-stone-700 hover:bg-[#00b67a] hover:text-white hover:border-[#00b67a] transition-all"
-              >
-                <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 0L14.7 8.3H23.4L16.35 13.4L19.05 21.7L12 16.6L4.95 21.7L7.65 13.4L0.6 8.3H9.3L12 0Z"/>
-                </svg>
-                Review us on Trustpilot
-              </a>
-              <a
-                href="https://g.page/r/CU6JJpd0jNDhEBM/review"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 flex items-center justify-center gap-2 h-[52px] px-6 rounded-xl border border-stone-200 bg-white text-sm font-bold text-stone-700 hover:bg-charcoal hover:text-white hover:border-charcoal transition-all"
-              >
-                <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24">
-                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
-                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
-                </svg>
-                Review us on Google
-              </a>
-            </div>
-        </motion.div>
+          {/* Scroll Hint (mobile) */}
+          <div className="flex md:hidden justify-center mt-2 gap-1.5">
+            {reviews.map((_, i) => (
+              <div key={i} className="w-1.5 h-1.5 rounded-full bg-stone-300" />
+            ))}
+          </div>
+        </div>
+
+        {/* Review CTAs */}
+        <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mt-8 mb-12">
+          <a
+            href="https://www.trustpilot.com/review/pandacodegen.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 flex items-center justify-center gap-2 h-11 px-5 rounded-xl border border-stone-200 bg-white text-xs font-bold text-stone-700 hover:bg-[#00b67a] hover:text-white hover:border-[#00b67a] transition-all"
+          >
+            Review us on Trustpilot
+          </a>
+          <a
+            href="https://g.page/r/CU6JJpd0jNDhEBM/review"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 flex items-center justify-center gap-2 h-11 px-5 rounded-xl border border-stone-200 bg-white text-xs font-bold text-stone-700 hover:bg-charcoal hover:text-white hover:border-charcoal transition-all"
+          >
+            Review us on Google
+          </a>
+        </div>
 
         {/* Metrics Strip */}
         <motion.div

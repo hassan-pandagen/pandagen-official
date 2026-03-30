@@ -309,6 +309,10 @@ export default function WooCommerceTooSlowPage() {
                             Here is what most store owners do not know: plugins do not run selectively. Your review plugin, your wishlist plugin, your upsell plugin, your currency switcher, your abandoned cart plugin, all of them load their JavaScript on your homepage, your blog posts, and your contact page, even when those features are only relevant on product and cart pages. Every plugin adds between 1 and 8 HTTP requests per page load. At 35 plugins, you are adding 35 to 280 HTTP requests to every page, regardless of whether those features are needed.
                         </BlogText>
 
+                        <BlogText>
+                            WooCommerce needs separate extensions for almost everything beyond the basics: payment gateways, shipping calculators, tax automation, and subscription products are all separate plugins, many of them paid. This plugin dependency means every feature you add introduces another potential conflict, another update to manage, and another monthly cost.
+                        </BlogText>
+
                         <h3 className="text-xl font-bold text-charcoal mt-2">3. Dynamic Cart State Kills CDN Caching</h3>
 
                         <BlogText>

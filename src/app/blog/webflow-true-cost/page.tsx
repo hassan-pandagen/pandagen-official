@@ -264,6 +264,10 @@ export default function WebflowTrueCostPage() {
                         </BlogText>
 
                         <BlogText>
+                            Webflow shifted to a more usage-based pricing model in 2026, meaning costs increase as your traffic grows. The Basic plan has a 10GB bandwidth cap that runs out quickly if your site uses high-quality images or video. Per-seat workspace fees add up for teams, making collaboration more expensive than expected. CPU minutes limits can also cause builds to fail on larger sites during peak editing periods.
+                        </BlogText>
+
+                        <BlogText>
                             <strong>Custom Next.js site on Vercel:</strong>
                         </BlogText>
 

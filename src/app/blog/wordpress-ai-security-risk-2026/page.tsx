@@ -407,6 +407,10 @@ export default function WordPressAISecurityPage() {
                         These aren't rare problems. This is what happens when you <strong>add AI features to a platform that wasn't designed for them</strong>.
                     </BlogText>
 
+                    <BlogText>
+                        The broader WordPress security picture makes this worse. The average WordPress site experiences 172 attack attempts per day in 2026, and 94% of hacked websites were running WordPress that lacked proper maintenance. WordPress vulnerabilities jumped 34% year over year, with 7,966 new security flaws discovered in 2024 alone, roughly 22 per day. The Patchstack 2026 State of WordPress Security whitepaper documented these escalating threats. Adding AI endpoints on top of an already targeted platform compounds the risk significantly.
+                    </BlogText>
+
                     {/* WordPress vs Custom Built */}
                     <BlogHeader id="wordpress-vs-custom">How Wide Is the Security Gap Between WordPress AI Features and Custom-Built Sites?</BlogHeader>
 

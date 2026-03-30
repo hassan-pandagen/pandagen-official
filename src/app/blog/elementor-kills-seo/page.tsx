@@ -168,7 +168,7 @@ export default function ElementorKillsSEOPage() {
                             We audited 500 Elementor sites to understand how page builders affect performance and rankings. Here&apos;s what the data revealed and what alternatives are available.
                         </p>
                         <BlogAuthor
-                            date="Dec 28, 2025"
+                            date="Mar 10, 2026"
                             readTime="6 min read"
                             bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
