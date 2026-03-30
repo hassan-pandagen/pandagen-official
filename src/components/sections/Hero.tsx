@@ -1,18 +1,5 @@
 import dynamic from "next/dynamic";
-
-// Client-side animated elements, loaded after h1 already paints
-const HeroStatusPill = dynamic(
-  () => import("./HeroAnimated").then((m) => m.HeroStatusPill),
-  { ssr: true }
-);
-const HeroCTAs = dynamic(
-  () => import("./HeroAnimated").then((m) => m.HeroCTAs),
-  { ssr: true }
-);
-const HeroTrustSignals = dynamic(
-  () => import("./HeroAnimated").then((m) => m.HeroTrustSignals),
-  { ssr: true }
-);
+import { HeroStatusPill, HeroCTAs, HeroTrustSignals } from "./HeroClient";
 
 // Audit widget is already a client component
 const AuditWidget = dynamic(() => import("@/components/audit/AuditWidget"), {
