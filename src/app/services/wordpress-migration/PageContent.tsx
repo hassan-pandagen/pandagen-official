@@ -117,25 +117,27 @@ export default function PageContent() {
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">Real Results. Not Promises.</h2>
           <p className="text-stone-600 text-center mb-12 max-w-2xl mx-auto">Here&apos;s what happens when you migrate from WordPress to custom code.</p>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-5">
             {[
-              { label: "PageSpeed Mobile", before: "34", after: "98", suffix: "/100" },
-              { label: "Load Time", before: "4.2s", after: "0.8s", suffix: "" },
-              { label: "Monthly Cost", before: "$350", after: "$0", suffix: "" },
+              { label: "PageSpeed Mobile", before: "34", after: "98", suffix: "/100", color: "#b87a3d" },
+              { label: "Load Time", before: "4.2s", after: "0.8s", suffix: "", color: "#16a34a" },
+              { label: "Monthly Cost", before: "$350", after: "$0", suffix: "/mo", color: "#2563eb" },
             ].map((stat, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className="relative p-6 rounded-2xl bg-white border border-stone-200 shadow-card text-center"
+                className="relative overflow-hidden rounded-2xl bg-white border border-stone-200 shadow-xs hover:shadow-md transition-shadow"
               >
-                <p className="text-xs text-stone-500 uppercase tracking-widest font-bold mb-4">{stat.label}</p>
-                <div className="flex items-center justify-center gap-3 mb-2">
-                  <span className="text-2xl font-bold text-red-600 line-through opacity-60">{stat.before}</span>
-                  <ArrowRight className="w-4 h-4 text-gray-400" />
-                  <span className="text-3xl font-black text-cognac">{stat.after}</span>
-                  <span className="text-sm text-stone-600">{stat.suffix}</span>
+                <div className="h-1 w-full" style={{ backgroundColor: stat.color }} />
+                <div className="p-6 text-center">
+                  <p className="text-[11px] text-stone-400 uppercase tracking-widest font-bold mb-3">{stat.label}</p>
+                  <div className="flex items-baseline justify-center gap-1">
+                    <span className="text-4xl font-black" style={{ color: stat.color }}>{stat.after}</span>
+                    {stat.suffix && <span className="text-sm font-medium text-stone-400">{stat.suffix}</span>}
+                  </div>
+                  <p className="text-xs text-stone-400 mt-2">was <span className="line-through">{stat.before}</span></p>
                 </div>
               </motion.div>
             ))}

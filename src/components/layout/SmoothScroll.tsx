@@ -16,7 +16,7 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
       loaded = true;
 
       const { default: Lenis } = await import("lenis");
-      lenis = new Lenis({ lerp: 0.1, duration: 1.5, smoothWheel: true });
+      lenis = new Lenis({ lerp: 0.075, duration: 1.2, smoothWheel: true, touchMultiplier: 0 });
 
       function raf(time: number) {
         lenis!.raf(time);
@@ -25,11 +25,11 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
       rafId = requestAnimationFrame(raf);
     };
 
-    // Defer to idle so it never blocks LCP paint
+    // Defer briefly so it never blocks LCP paint, but starts quickly
     if ("requestIdleCallback" in window) {
-      window.requestIdleCallback(() => init(), { timeout: 3000 });
+      window.requestIdleCallback(() => init(), { timeout: 1000 });
     } else {
-      setTimeout(() => init(), 3000);
+      setTimeout(() => init(), 1000);
     }
 
     return () => {

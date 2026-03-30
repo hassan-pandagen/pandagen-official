@@ -162,10 +162,10 @@ export default function ElementorKillsSEOPage() {
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight text-charcoal">
                             Is Elementor{" "}
                             <span className="font-serif italic text-cognac">Killing Your Google Rankings?</span>{" "}
-                            We Audited 500 Sites. The Results Are Brutal.
+                            The Results Are Brutal.
                         </h1>
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            We audited 500 Elementor sites to understand how page builders affect performance and rankings. Here&apos;s what the data revealed and what alternatives are available.
+                            Based on our experience auditing dozens of Elementor sites, we measured how page builders affect performance and rankings. Here&apos;s what the data revealed and what alternatives are available.
                         </p>
                         <BlogAuthor
                             date="Mar 10, 2026"
@@ -182,7 +182,7 @@ export default function ElementorKillsSEOPage() {
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
                         <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
                         <BlogList items={[
-                            "500 Elementor sites audited: average Mobile PageSpeed score of 38/100, deep in Google's red zone.",
+                            "Across the Elementor sites we've worked on, the average Mobile PageSpeed score is 38/100, deep in Google's red zone.",
                             "Elementor adds 300 to 500KB of CSS/JS to every page and generates 3 to 5× more DOM nodes than clean code.",
                             "The performance ceiling for Elementor is around 50 to 60/100 even with aggressive optimization: never enough.",
                             "Business owners using Elementor are losing 20 to 30% of organic traffic to competitors on faster stacks."
@@ -191,7 +191,7 @@ export default function ElementorKillsSEOPage() {
 
                     <div className="space-y-8">
                         <BlogText>
-                            We built a custom audit tool and ran it against 500 WordPress sites using Elementor. Every site was a real business: service companies, e-commerce stores, SaaS landing pages.
+                            We built a custom audit tool and ran it across dozens of WordPress sites using Elementor. Every site was a real business: service companies, e-commerce stores, SaaS landing pages.
                         </BlogText>
                         <BlogText>
                             The average Mobile PageSpeed score: <BlogHighlight>38/100.</BlogHighlight>
@@ -215,7 +215,7 @@ export default function ElementorKillsSEOPage() {
                             You can&apos;t optimize Elementor to perform like clean code. The bloat is the product. Visual drag-and-drop convenience comes at a direct, measurable cost to your <a href="/blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline">Google rankings</a>.
                         </BlogQuote>
 
-                        <BlogHeader>What Were the Exact Results of the 500-Site Audit?</BlogHeader>
+                        <BlogHeader>What Were the Exact Results of Our Elementor Audit?</BlogHeader>
                         <BlogList items={[
                             "Average Mobile PageSpeed: 38/100",
                             "Sites scoring below 50 (red zone): 71% of all sites audited",
@@ -292,7 +292,7 @@ export default function ElementorKillsSEOPage() {
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
                             <li><strong>Elementor&apos;s bloat is architectural, not fixable</strong>: The average Elementor site scores 38/100 on mobile because the drag-and-drop framework loads hundreds of kilobytes of unused code on every page.</li>
-                            <li><strong>71% of Elementor sites are in Google&apos;s red zone</strong>: Our 500-site audit found that most Elementor sites fail Core Web Vitals, costing them 20-30% of organic traffic.</li>
+                            <li><strong>71% of Elementor sites are in Google&apos;s red zone</strong>: Across the Elementor sites we audited, most fail Core Web Vitals, costing them 20-30% of organic traffic.</li>
                             <li><strong>Optimization has a ceiling of 50-60/100</strong>: Caching plugins and image compression help, but you cannot optimize past Elementor&apos;s built-in DOM bloat and render-blocking CSS.</li>
                             <li><strong>Migrating to Next.js recovers rankings in 30-60 days</strong>: Businesses that switch from Elementor to custom coded sites consistently score 95-100/100 and gain 2-3x organic traffic within 90 days.</li>
                         </ol>

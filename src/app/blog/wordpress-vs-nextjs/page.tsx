@@ -617,6 +617,11 @@ export default function WordPressVsNextJSPage() {
                         </ol>
                     </section>
 
+                    <blockquote className="border-l-4 border-cognac/30 pl-6 my-8 py-2">
+                        <p className="text-stone-600 italic text-lg leading-relaxed">&quot;Panda Code Gen successfully delivered a speedy, bug free website using the latest coding language. The team was punctual, responsive, helpful, and communicative.&quot;</p>
+                        <cite className="text-sm text-stone-500 not-italic block mt-2">Matt Conner, MC Patches LLC (Clutch)</cite>
+                    </blockquote>
+
                     {/* FAQ Section */}
                     <section className="mb-10">
                         <h2 className="text-3xl font-bold mb-6">Frequently Asked Questions</h2>

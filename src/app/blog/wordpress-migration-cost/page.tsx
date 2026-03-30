@@ -421,7 +421,7 @@ export default function WordPressMigrationCostPage() {
                         covers the full scope: audit, architecture, build, SEO preservation, launch, and 30-day monitoring. We guarantee your new site will score at least 90/100 on Google PageSpeed Mobile, or we continue working until it does.
                     </BlogText>
                     <BlogText>
-                        Every migration includes a full URL-to-redirect map, schema markup implementation, Vercel deployment with edge caching, and a detailed handover document. We also cover the migration process step by step in our post on{" "}
+                        Every migration includes a full URL-to-redirect map, schema markup implementation, Vercel deployment with edge caching, and a detailed handover document. For example, MC Patches LLC completed their full WordPress to Next.js migration for a fixed price with no hidden fees. The project included UI design assistance and unlimited revisions at no extra charge. Matt Conner, the owner, rated the experience 5 stars on both Clutch and GoodFirms. We also cover the migration process step by step in our post on{" "}
                         <Link href="/blog/how-to-migrate-wordpress-to-nextjs" className="text-cognac hover:underline font-medium">how to migrate WordPress to Next.js without losing SEO</Link>.
                     </BlogText>
                     <BlogText>

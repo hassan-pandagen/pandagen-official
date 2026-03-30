@@ -1,16 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Non-www → www canonical redirect
-  async redirects() {
-    return [
-      {
-        source: '/(.*)',
-        has: [{ type: 'host', value: 'pandacodegen.com' }],
-        destination: 'https://www.pandacodegen.com/:path*',
-        permanent: true,
-      },
-    ];
-  },
+  // Non-www → www redirect handled by Vercel domain config (edge-level, no function overhead)
   // 1. Image optimization for external images
   images: {
     remotePatterns: [
@@ -33,7 +23,7 @@ const nextConfig = {
   // 4. Optimize package imports for better tree-shaking
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
-    optimizeCss: true,
+    inlineCss: true,
   },
   // 5. Enable compression
   compress: true,

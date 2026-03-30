@@ -161,7 +161,7 @@ export default function ContactPageClient() {
                        <div className="text-xs text-stone-500 uppercase tracking-wider font-bold mb-1">HQ</div>
                        <div className="text-sm font-medium text-charcoal">701 Tillery St Ste 12, </div>
                        <div className="text-xs text-stone-500">Austin, TX 78702</div>
-                       <div className="text-xs text-stone-400 mt-0.5">Clients in UK · AU · CA · EU</div>
+                       <div className="text-xs text-stone-500 mt-0.5">Clients in UK · AU · CA · EU</div>
                     </div>
                  </motion.div>
 
@@ -315,9 +315,10 @@ export default function ContactPageClient() {
               }}>
                  {/* Name */}
                  <div className="space-y-2">
-                    <label className="text-base font-bold text-charcoal">Name *</label>
+                    <label htmlFor="contact-name" className="text-base font-bold text-charcoal">Name *</label>
                     <input
                        type="text"
+                       id="contact-name"
                        placeholder="John Doe"
                        value={formData.name}
                        onChange={(e) => {
@@ -334,9 +335,10 @@ export default function ContactPageClient() {
 
                  {/* Email */}
                  <div className="space-y-2">
-                    <label className="text-base font-bold text-charcoal">Email *</label>
+                    <label htmlFor="contact-email" className="text-base font-bold text-charcoal">Email *</label>
                     <input
                        type="email"
+                       id="contact-email"
                        placeholder="john@company.com"
                        value={formData.email}
                        onChange={(e) => {
@@ -353,9 +355,10 @@ export default function ContactPageClient() {
 
                  {/* Phone (optional) */}
                  <div className="space-y-2">
-                    <label className="text-base font-bold text-charcoal">Phone <span className="text-stone-400 font-normal text-sm">(optional — for faster response)</span></label>
+                    <label htmlFor="contact-phone" className="text-base font-bold text-charcoal">Phone <span className="text-stone-500 font-normal text-sm">(optional, for faster response)</span></label>
                     <input
                        type="tel"
+                       id="contact-phone"
                        placeholder="+1 (555) 000-0000"
                        value={formData.phone}
                        onChange={(e) => setFormData({...formData, phone: e.target.value})}
@@ -365,8 +368,9 @@ export default function ContactPageClient() {
 
                  {/* Message (optional) */}
                  <div className="space-y-2">
-                    <label className="text-base font-bold text-charcoal">What can we help you with? <span className="text-stone-400 font-normal text-sm">(optional)</span></label>
+                    <label htmlFor="contact-message" className="text-base font-bold text-charcoal">What can we help you with? <span className="text-stone-500 font-normal text-sm">(optional)</span></label>
                     <textarea
+                       id="contact-message"
                        className="w-full bg-white border border-stone-200 rounded-xl p-4 text-charcoal placeholder:text-stone-400 outline-hidden h-32 resize-none transition-colors text-base focus:border-cognac focus:ring-1 focus:ring-cognac"
                        placeholder="e.g., 'Need to migrate WordPress site with 50 pages' or 'Looking to build custom e-commerce platform'"
                        value={formData.message}

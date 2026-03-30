@@ -345,7 +345,7 @@ body {
   #tawkchat-minified-box,
   .tawk-min-container,
   #tawk-bubble-container {
-    bottom: max(8px, env(safe-area-inset-bottom)) !important;
+    bottom: max(70px, calc(70px + env(safe-area-inset-bottom))) !important;
     padding-bottom: env(safe-area-inset-bottom) !important;
   }
 }

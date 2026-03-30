@@ -469,6 +469,11 @@ export default function NextjsHostingZeroCostPage() {
                             </CalModalButton>
                     </div>
 
+                    <blockquote className="border-l-4 border-cognac/30 pl-6 my-8 py-2">
+                        <p className="text-stone-600 italic text-lg leading-relaxed">&quot;They worked with me to make a website that I could afford. They made sure there are no costs or extra fees.&quot;</p>
+                        <cite className="text-sm text-stone-500 not-italic block mt-2">James Peace (Google)</cite>
+                    </blockquote>
+
                     {/* FAQ Section */}
                     {hostingFAQs.length > 0 && <FAQAccordion faqs={hostingFAQs} />}
 

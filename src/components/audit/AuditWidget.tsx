@@ -120,6 +120,7 @@ export default function AuditWidget() {
                         onChange={(e) => setUrl(e.target.value)}
                         onKeyDown={handleKeyDown}
                         placeholder="yourwebsite.com"
+                        aria-label="Website URL to audit"
                         className="w-full bg-stone-50 border border-gray-200 rounded-xl pl-12 pr-4 py-4 text-charcoal placeholder:text-gray-400 focus:outline-hidden focus:border-cognac focus:ring-2 focus:ring-cognac/20 transition-all text-base font-medium"
                       />
                     </div>
@@ -288,6 +289,7 @@ export default function AuditWidget() {
                       onChange={(e) => setUrl(e.target.value)}
                       onKeyDown={handleKeyDown}
                       placeholder="yourwebsite.com"
+                      aria-label="Website URL to audit"
                       className="w-full bg-stone-50 border border-gray-200 rounded-xl pl-10 pr-4 py-3 text-charcoal placeholder:text-gray-400 focus:outline-hidden focus:border-cognac focus:ring-2 focus:ring-cognac/20 transition-all"
                     />
                   </div>

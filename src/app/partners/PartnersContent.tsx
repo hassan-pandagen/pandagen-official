@@ -86,7 +86,7 @@ export default function PartnersContent() {
 
         <div className="container mx-auto relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-100 border border-stone-200 text-sm text-stone-600 mb-8"
           >
@@ -95,7 +95,7 @@ export default function PartnersContent() {
           </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 1, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
             className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6"
@@ -107,10 +107,10 @@ export default function PartnersContent() {
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-xl text-stone-600 max-w-2xl mx-auto mb-10"
+            className="text-xl text-stone-700 max-w-2xl mx-auto mb-10"
           >
             White-label web development for agencies. Your brand, our engineering.
             Deliver custom coded websites to your clients without hiring a dev team.
@@ -118,7 +118,7 @@ export default function PartnersContent() {
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
             className="flex flex-col sm:flex-row justify-center gap-4"

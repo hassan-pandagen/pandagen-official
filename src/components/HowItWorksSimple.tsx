@@ -14,7 +14,7 @@ function DiscoveryDiagram() {
           <div className="w-2 h-2 rounded-full bg-yellow-400" />
           <div className="w-2 h-2 rounded-full bg-green-400" />
         </div>
-        <div className="text-[11px] text-stone-400 font-mono">yoursite.com · audit running</div>
+        <div className="text-[11px] text-stone-500 font-mono">yoursite.com · audit running</div>
       </div>
       {[
         { label: "Performance", score: 42, w: "42%", color: "bg-red-400" },
@@ -81,7 +81,7 @@ function BuildDiagram() {
         <div key={s.label} className="space-y-1">
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold text-stone-600">{s.label}</span>
-            <span className="text-[10px] text-stone-400">{s.note}</span>
+            <span className="text-[10px] text-stone-500">{s.note}</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="flex-1 h-2 bg-stone-200 rounded-full overflow-hidden">
@@ -220,7 +220,7 @@ export default function HowItWorksSimple() {
           >
             Start with Step 1 <ArrowRight className="w-5 h-5" />
           </button>
-          <p className="text-sm text-stone-400 mt-3">Response within 2 hours. No credit card required.</p>
+          <p className="text-sm text-stone-500 mt-3">Response within 2 hours. No credit card required.</p>
         </motion.div>
 
       </div>

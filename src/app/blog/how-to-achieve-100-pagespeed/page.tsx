@@ -342,6 +342,13 @@ export default function AchievePageSpeedPage() {
                             "Result: 228% more traffic, 15 qualified leads/month vs 3 before"
                         ]} />
 
+                        <BlogText>
+                            <strong>MC Patches LLC (WordPress → Next.js):</strong>
+                        </BlogText>
+                        <BlogText>
+                            MC Patches LLC achieved near-perfect PageSpeed scores after migrating from WordPress to a custom Next.js build, with load times consistently under 1 second. Matt Conner, the owner, described the end result as a speedy, bug-free website built with the latest technology. Response time from the team was always under an hour.
+                        </BlogText>
+
                         <BlogQuote>
                             The pattern is consistent: Move from WordPress/Shopify to Next.js with these 8 optimizations → 95-100 PageSpeed score → 2-4× more traffic within 90 days.
                         </BlogQuote>

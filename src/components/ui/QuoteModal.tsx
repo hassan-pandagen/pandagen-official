@@ -184,6 +184,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                   {/* Close Button */}
                   <button
                     onClick={onClose}
+                    aria-label="Close quote modal"
                     className="absolute top-4 right-4 p-2 bg-stone-100 rounded-full text-gray-500 hover:text-charcoal hover:bg-stone-200 transition-colors"
                   >
                     <X className="w-5 h-5" />
@@ -198,12 +199,13 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
 
                     {/* NAME (Required) */}
                     <div>
-                        <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">
+                        <label htmlFor="quote-name" className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">
                             Name <span className="text-red-500">*</span>
                         </label>
                         <input
                             required
                             type="text"
+                            id="quote-name"
                             name="name"
                             placeholder="John Doe"
                             className="w-full bg-background border border-stone-200 rounded-xl px-4 py-3 text-charcoal placeholder:text-gray-400 focus:outline-hidden focus:border-cognac focus:ring-1 focus:ring-cognac transition-all"
@@ -213,24 +215,26 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                     {/* EMAIL & PHONE GRID (Required) */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                         <div>
-                            <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">
+                            <label htmlFor="quote-email" className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">
                                 Email <span className="text-red-500">*</span>
                             </label>
                             <input
                                 required
                                 type="email"
+                                id="quote-email"
                                 name="email"
                                 placeholder="john@company.com"
                                 className="w-full bg-background border border-stone-200 rounded-xl px-4 py-3 text-charcoal placeholder:text-gray-400 focus:outline-hidden focus:border-cognac focus:ring-1 focus:ring-cognac transition-all"
                             />
                         </div>
                         <div>
-                            <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">
+                            <label htmlFor="quote-phone" className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">
                                 Phone <span className="text-red-500">*</span>
                             </label>
                             <input
                                 required
                                 type="tel"
+                                id="quote-phone"
                                 name="phone"
                                 placeholder="+1 (555) 000-0000"
                                 className="w-full bg-background border border-stone-200 rounded-xl px-4 py-3 text-charcoal placeholder:text-gray-400 focus:outline-hidden focus:border-cognac focus:ring-1 focus:ring-cognac transition-all"
@@ -240,11 +244,11 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
 
                     {/* SERVICE (Optional) */}
                     <div>
-                        <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">
+                        <label htmlFor="quote-service" className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">
                             Service Interested In (Optional)
                         </label>
                         <div className="relative">
-                             <select name="service" className="w-full bg-background border border-stone-200 rounded-xl px-4 py-3 text-charcoal focus:outline-hidden focus:border-cognac appearance-none">
+                             <select id="quote-service" name="service" className="w-full bg-background border border-stone-200 rounded-xl px-4 py-3 text-charcoal focus:outline-hidden focus:border-cognac appearance-none">
                                  <option className="bg-white">Select a service...</option>
                                  <option className="bg-white">WordPress Migration</option>
                                  <option className="bg-white">Web Apps & Dashboards</option>
@@ -260,11 +264,12 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
 
                     {/* DETAILS (Optional) */}
                     <div>
-                        <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">
+                        <label htmlFor="quote-details" className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">
                             Project Details (Optional)
                         </label>
                         <textarea
                             rows={3}
+                            id="quote-details"
                             name="details"
                             placeholder="Briefly describe what you are looking to build..."
                             className="w-full bg-background border border-stone-200 rounded-xl px-4 py-3 text-charcoal placeholder:text-gray-400 focus:outline-hidden focus:border-cognac focus:ring-1 focus:ring-cognac transition-all resize-none"
@@ -290,6 +295,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                             <button
                               type="button"
                               onClick={() => handleRemoveFile(index)}
+                              aria-label={`Remove file ${file.name}`}
                               className="p-1.5 hover:bg-stone-100 rounded-lg text-gray-400 hover:text-red-500 transition-colors"
                             >
                               <X className="w-4 h-4" />

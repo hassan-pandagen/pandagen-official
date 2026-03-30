@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import BlogPageClient from "./BlogPageClient";
 
 export const metadata: Metadata = {
-    title: "Web Development & Performance Blog | PandaCodeGen",
+    title: "Web Development & Performance Blog",
     description: "Guides on WordPress migration, Shopify speed, Next.js performance, and Core Web Vitals. Written by engineers who build 100/100 PageSpeed sites.",
     alternates: {
         canonical: "/blog",

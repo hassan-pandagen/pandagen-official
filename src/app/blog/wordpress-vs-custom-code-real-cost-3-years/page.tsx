@@ -372,7 +372,7 @@ export default function WordPressVsCustomCodeCostPage() {
                         </BlogText>
 
                         <BlogText>
-                            And it gets better. In Year 2 and Year 3, the custom site costs <strong>zero dollars</strong> to run. WordPress costs $4,950/year. Every year.
+                            And it gets better. In Year 2 and Year 3, the custom site costs <strong>zero dollars</strong> to run. WordPress costs $4,950/year. Every year. MC Patches LLC is one example. After migrating from WordPress to custom code, their monthly platform cost dropped to $0 with no plugin fees, no hosting bills, and full code ownership.
                         </BlogText>
 
                         <BlogQuote>

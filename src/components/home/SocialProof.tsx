@@ -7,13 +7,13 @@ import { useRef } from "react";
 const reviews = [
   {
     platform: "Clutch",
-    platformColor: "#e8222f",
+    platformColor: "#b91c25",
     starColor: "#e8222f",
     title: "Available at any time. Response always under an hour.",
     body: "Panda Code Gen successfully delivered a speedy, bug free website using the latest coding language. The team was punctual, responsive, helpful, and communicative via email. They assisted with UI design and didn't charge for revisions. Overall, their expertise and support were commendable.",
     name: "Matt Conner",
     initials: "MC",
-    initialsColor: "#e8222f",
+    initialsColor: "#b91c25",
     detail: "MC Patches LLC",
     date: "Nov 2025",
     verified: true,
@@ -21,13 +21,13 @@ const reviews = [
   },
   {
     platform: "Trustpilot",
-    platformColor: "#00b67a",
+    platformColor: "#007a54",
     starColor: "#00b67a",
     title: "Hassan made all the difference",
     body: "I recently worked with PandaCodeGen and had a great experience. Hassan was super helpful and communicative throughout the process. Even though I'm not tech-savvy, he broke things down in a way that made sense to me. The service was pretty good overall.",
     name: "Marshall James",
     initials: "MJ",
-    initialsColor: "#00b67a",
+    initialsColor: "#007a54",
     detail: "",
     date: "Mar 2026",
     verified: true,
@@ -41,7 +41,7 @@ const reviews = [
     body: "I was not sure at first. Can a custom website really be built for $300 with no costs? PandaCodeGen. Hassan showed me it can be done. They gave me a quote at first. They worked with me to make a website that I could afford. They made sure there are no costs or extra fees. PandaCodeGen and Hassan are good at what they do. They care about their customers.",
     name: "James Peace",
     initials: "JP",
-    initialsColor: "#34a853",
+    initialsColor: "#1e7e34",
     detail: "",
     date: "Mar 2026",
     verified: true,
@@ -49,13 +49,13 @@ const reviews = [
   },
   {
     platform: "GoodFirms",
-    platformColor: "#b8860b",
+    platformColor: "#7a5f09",
     starColor: "#b8860b",
     title: "Speedy, bug free website with the latest technology",
     body: "Hassan was available to me at any time, and his response time was always less than an hour. The team was punctual, responsive, helpful, and communicative. They assisted with UI design and didn't charge for revisions. Their expertise and support were commendable.",
     name: "Matt Conner",
     initials: "MC",
-    initialsColor: "#b8860b",
+    initialsColor: "#7a5f09",
     detail: "MC Patches LLC",
     date: "Mar 2026",
     verified: true,
@@ -192,11 +192,11 @@ export default function SocialProof() {
                         </svg>
                       )}
                     </div>
-                    <div className="text-xs text-stone-400">{r.detail}{r.detail && " · "}{r.date}</div>
+                    <div className="text-xs text-stone-500">{r.detail}{r.detail && " · "}{r.date}</div>
                   </div>
                   <span
-                    className="text-[9px] font-bold uppercase tracking-wider px-2 py-1 rounded text-white shrink-0"
-                    style={{ backgroundColor: r.platformColor }}
+                    className="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded shrink-0"
+                    style={{ backgroundColor: r.platformColor, color: "#fff" }}
                   >
                     {r.platform}
                   </span>

@@ -250,20 +250,20 @@ export default function Header({ onOpenQuote }: HeaderProps) {
             <div className="w-full max-w-xs border-t border-stone-200 pt-5 flex flex-col items-center gap-4">
               <div className="flex gap-6">
                 <a href="https://www.linkedin.com/company/pandacodegen" target="_blank" rel="noopener noreferrer" aria-label="PandaCodeGen on LinkedIn">
-                  <Linkedin className="w-5 h-5 text-stone-400 hover:text-charcoal transition-colors" />
+                  <Linkedin className="w-5 h-5 text-stone-500 hover:text-charcoal transition-colors" />
                 </a>
                 <a href="https://twitter.com/pandacodegen" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                  <Twitter className="w-5 h-5 text-stone-400 hover:text-charcoal transition-colors" />
+                  <Twitter className="w-5 h-5 text-stone-500 hover:text-charcoal transition-colors" />
                 </a>
                 <a href="mailto:info@pandacodegen.com" aria-label="Email">
-                  <Mail className="w-5 h-5 text-stone-400 hover:text-charcoal transition-colors" />
+                  <Mail className="w-5 h-5 text-stone-500 hover:text-charcoal transition-colors" />
                 </a>
               </div>
-              <a href="tel:+13027738982" className="flex items-center gap-1.5 text-xs font-bold text-stone-400 hover:text-charcoal transition-colors uppercase tracking-widest">
+              <a href="tel:+13027738982" className="flex items-center gap-1.5 text-xs font-bold text-stone-500 hover:text-charcoal transition-colors uppercase tracking-widest">
                 <Phone className="w-3.5 h-3.5" />
                 +1 (302) 773-8982
               </a>
-              <p className="text-xs text-stone-400 uppercase tracking-widest font-bold">
+              <p className="text-xs text-stone-500 uppercase tracking-widest font-bold">
                 info@pandacodegen.com
               </p>
             </div>

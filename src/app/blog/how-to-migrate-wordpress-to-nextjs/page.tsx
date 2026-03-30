@@ -214,6 +214,9 @@ export default function MigrateWordPressToNextJSPage() {
                         <BlogQuote>
                             MyCustomPatches migrated from a slow WordPress site to Next.js. Before: 3.2s load time, 45/100 PageSpeed. After: 0.7s load time, 97/100 PageSpeed. Organic traffic increased 45% in 90 days.
                         </BlogQuote>
+                        <BlogText>
+                            MC Patches LLC followed the same path. Matt Conner migrated his custom patches business from WordPress to a fully custom Next.js build with PandaCodeGen. The result: a bug-free site built with the latest technology, sub-1-second load times, and zero monthly hosting costs. The entire project included UI design assistance and unlimited revisions at no extra charge.
+                        </BlogText>
                     </section>
 
                     {/* Pre-migration checklist */}

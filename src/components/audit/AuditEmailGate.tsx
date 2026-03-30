@@ -172,13 +172,14 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData }: Audi
 
                     <form onSubmit={handleSubmit} className="space-y-4">
                       <div>
-                        <label className="block text-xs font-bold text-charcoal uppercase tracking-wide mb-2">
+                        <label htmlFor="audit-email" className="block text-xs font-bold text-charcoal uppercase tracking-wide mb-2">
                           Where should we send the report?
                         </label>
                         <div className="relative">
-                          <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-stone-400" />
+                          <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-stone-500" />
                           <input
                             type="email"
+                            id="audit-email"
                             required
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}

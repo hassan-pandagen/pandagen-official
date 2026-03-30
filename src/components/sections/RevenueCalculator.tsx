@@ -80,7 +80,7 @@ export default function RevenueCalculator() {
                     onChange={(e) => setVisitors(Number(e.target.value))}
                     className="w-full h-2 bg-stone-200 rounded-lg appearance-none cursor-pointer accent-[#EA580C]"
                   />
-                  <div className="flex justify-between text-xs text-stone-400 mt-1">
+                  <div className="flex justify-between text-xs text-stone-500 mt-1">
                     <span>5K</span><span>500K</span>
                   </div>
                 </div>
@@ -115,14 +115,14 @@ export default function RevenueCalculator() {
 
                 {/* Result Box, Bank Statement style */}
                 <div className="mt-4 p-6 bg-stone-50 border border-stone-200 rounded-2xl">
-                  <div className="text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-3">
+                  <div className="text-[10px] font-bold text-stone-500 uppercase tracking-widest mb-3">
                     Revenue Recovered Per Year
                   </div>
                   <div className="text-5xl md:text-6xl font-black text-charcoal leading-none tracking-tight">
                     ${annualLoss.toLocaleString('en-US')}
                   </div>
-                  <div className="text-sm text-stone-400 font-normal mt-1">per year</div>
-                  <p className="text-[11px] text-stone-400 mt-4 pt-4 border-t border-stone-200">
+                  <div className="text-sm text-stone-500 font-normal mt-1">per year</div>
+                  <p className="text-[11px] text-stone-500 mt-4 pt-4 border-t border-stone-200">
                     Based on 20% CVR lift from a 2s speed improvement (Google &amp; Deloitte, 2023)
                   </p>
                 </div>

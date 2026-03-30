@@ -54,7 +54,7 @@ export function HeroCTAs() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.45 }}
-        className="text-xs text-stone-400 mt-1"
+        className="text-xs text-stone-500 mt-1"
       >
         WordPress · Shopify · Wix · Squarespace · Any platform · 100/100 PageSpeed · $0/mo hosting
       </motion.p>

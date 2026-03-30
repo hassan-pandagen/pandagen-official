@@ -151,7 +151,7 @@ export default function TawkToChat() {
           (error: any) => { if (error) console.log('Tawk.to attr error:', error); }
         );
 
-        // Auto-popup after 12 seconds, one time only per visitor
+        // Auto-popup after 15 seconds, one time only per visitor
         if (!localStorage.getItem('tawk_popup_shown')) {
           setTimeout(() => {
             try {
@@ -160,7 +160,7 @@ export default function TawkToChat() {
                 localStorage.setItem('tawk_popup_shown', 'true');
               }
             } catch { /* widget not ready */ }
-          }, 12000);
+          }, 15000);
         }
       };
 

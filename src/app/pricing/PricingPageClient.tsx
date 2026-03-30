@@ -97,7 +97,7 @@ export default function PricingPageClient() {
 
         <div className="container mx-auto relative z-10 max-w-4xl">
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6"
           >
@@ -106,17 +106,17 @@ export default function PricingPageClient() {
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-xl text-stone-600 max-w-2xl mx-auto mb-12"
+            className="text-xl text-stone-700 max-w-2xl mx-auto mb-12"
           >
             Stop paying for hours. Pay for outcomes. We require a 30% deposit to secure your engineering sprint.
           </motion.p>
 
           {/* Work Teaser Strip */}
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 1, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
             className="flex justify-center items-center gap-4 mb-8"
@@ -132,14 +132,14 @@ export default function PricingPageClient() {
                 <div className="w-full h-full bg-linear-to-br from-stone-500 to-stone-700" />
               </div>
             </div>
-            <span className="text-sm font-bold text-stone-500 uppercase tracking-widest">
+            <span className="text-sm font-bold text-stone-600 uppercase tracking-widest">
               12 Sites Migrated · Avg PageSpeed: 98/100 · Avg Load Time: 0.8s
             </span>
           </motion.div>
 
           {/* Guarantee Badges */}
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 1, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
             className="flex flex-wrap md:flex-nowrap justify-center gap-3"
@@ -439,7 +439,7 @@ export default function PricingPageClient() {
               <div className="h-1 bg-cognac" />
             </div>
             <div className="grid grid-cols-[1fr_1.4fr_1.4fr] bg-stone-50 border-b border-stone-200">
-              <div className="px-5 py-4 text-xs font-black text-stone-400 uppercase tracking-widest">Feature</div>
+              <div className="px-5 py-4 text-xs font-black text-stone-500 uppercase tracking-widest">Feature</div>
               <div className="px-5 py-4 text-sm font-bold text-stone-600 border-l border-stone-200">Standard Agency</div>
               <div className="px-5 py-4 text-sm font-bold text-cognac border-l border-stone-200 bg-paper">PandaCodeGen</div>
             </div>
@@ -495,7 +495,7 @@ export default function PricingPageClient() {
             <div className="h-px w-8 bg-stone-300" />
             <div>
               <div className="text-sm font-bold text-charcoal">MyCustomPatches</div>
-              <div className="text-xs text-stone-400">Patch Manufacturing · WordPress Migration</div>
+              <div className="text-xs text-stone-500">Patch Manufacturing · WordPress Migration</div>
             </div>
             <div className="h-px w-8 bg-stone-300" />
           </div>
