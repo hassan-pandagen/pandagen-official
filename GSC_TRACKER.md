@@ -282,26 +282,66 @@ Track which posts are outperforming so we write more like them.
 
 ---
 
+## Performance Rating Scale
+
+| Metric | Bad | Okay | Good | Excellent |
+|--------|-----|------|------|-----------|
+| Weekly Impressions | < 500 | 500-2K | 2K-10K | 10K+ |
+| Weekly Clicks | < 3 | 3-10 | 10-50 | 50+ |
+| CTR | < 0.5% | 0.5-2% | 2-5% | 5%+ |
+| Indexed Pages | < 30 | 30-50 | 50-80 | 80+ |
+| Avg Position | > 50 | 20-50 | 10-20 | < 10 |
+
+## 30/60/90 Day Targets (from Mar 31, 2026)
+
+| Metric | 30 days (Apr 30) | 60 days (May 30) | 90 days (Jun 30) |
+|--------|------------------|-------------------|-------------------|
+| Weekly Impressions | 1K | 3K | 5K+ |
+| Weekly Clicks | 10 | 30 | 75+ |
+| CTR | 1% | 2% | 3%+ |
+| Indexed Pages | 55 | 65 | 80+ |
+| Google Reviews | 5 | 10 | 15+ |
+| Clutch Reviews | 3 | 5 | 8+ |
+
+## Current Rating (Week 5, Mar 31, 2026)
+- Impressions (28d): 1,460 (up 89%) — **OKAY, trending toward GOOD**
+- Clicks (28d): 5 — **BAD, but improving (was 0 from US)**
+- CTR: 0.34% — **BAD (new titles awaiting re-index)**
+- Indexed Pages: ~50 — **GOOD**
+- Google Reviews: 3
+- PageSpeed Mobile: 99
+- Accessibility: 100
+
+## What To Watch For
+
+### Positive signals (update is helping you)
+- Impressions trending up week over week
+- New queries appearing that you didn't rank for before
+- Position improving on existing queries
+- Blog posts appearing in "Trending up" tab
+
+### Warning signals (update may be hurting you)
+- Impressions drop 30%+ in a single week
+- Pages moving from "indexed" to "crawled but not indexed"
+- Position dropping on queries you were ranking for
+- CTR dropping even though position is stable (AI Overviews stealing clicks)
+
+### When to take action
+- If impressions drop 2 weeks in a row: audit which pages lost rankings
+- If CTR stays under 0.5% after titles are re-indexed: rewrite titles again
+- If a specific blog drops: check if a competitor published better content on that topic
+
+## How To Check If Google Recrawled Your Pages
+1. GSC > URL Inspection > paste URL
+2. Check "Last crawl" date
+3. If after your deploy date, Google has seen the new version
+4. Priority pages to check weekly: homepage, top 5 blog posts, service pages
+
 ## Goals
 
 - **Short-term (Apr 2026):** 50+ indexed pages, avg position < 10, 1000+ impressions/month
 - **Mid-term (Jun 2026):** 5% CTR, 50+ clicks/month, first page for 3+ target keywords
 - **Long-term (Sep 2026):** 100+ clicks/month, domain authority established
-
-## April 2026 Targets
-
-| Metric | Baseline (Mar 15) | Current (Mar 16) | Target (Apr 15) | Stretch Goal |
-|--------|-------------------|-----------------|-----------------|--------------|
-| Total Impressions (3mo) | 487 | 513 | 1,500+ | 3,000 |
-| Total Clicks (3mo) | 10 | 10 | 40+ | 80 |
-| CTR | 2.1% | 1.9% | 3%+ | 5% |
-| Avg Position | 13.8 | 14 | 10 to 12 | Under 10 |
-| US Clicks | 0 | 0 | 5+ | 15 |
-| Dofollow Backlinks | 2 | 3 | 5+ | 8 |
-| Indexed Pages (Google) | 33 | — | 50+ | 60 |
-| Queries with Impressions | 11 | — | 25+ | 40 |
-
-> **On track?** Impressions growing steadily (+26 in 1 day). CTR dipped slightly because impressions grew faster than clicks (normal for new rankings). shopify-dawn-theme-slow at position 5.4 should start converting to clicks any day now. Once that flips, CTR will jump.
 
 ---
 
@@ -335,4 +375,4 @@ If something looks off or you want to understand a trend, just tell me and I'll 
 
 ---
 
-*Last updated: March 24, 2026*
+*Last updated: March 31, 2026*
