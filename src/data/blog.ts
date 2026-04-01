@@ -23,6 +23,26 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "google-march-2026-update",
+    title: "Google's March 2026 Update Rewards Fast Sites: What It Means for Your Business",
+    excerpt: "Google's March 2026 core update tightened speed requirements and dropped 47% of slow sites. Here is what changed and what your business should do now.",
+    category: "SEO",
+    readTime: "10 min",
+    date: "Apr 1",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: false,
+    illustrationType: 'ranking',
+    lastModified: "2026-04-01",
+    faqs: [
+      { question: "Did Google penalize slow websites in March 2026?", answer: "Yes. 47% of sites with slow performance saw rank drops. The update tightened the LCP threshold from 2.5 seconds to 2.0 seconds and made INP (Interaction to Next Paint) a primary ranking signal. Sites that failed both metrics were hit hardest." },
+      { question: "How long does it take to recover from the March 2026 update?", answer: "3 to 6 months minimum. There is no quick fix. Google has stated that changes may not fully reflect until the next core update rolls out. Recovery requires fixing both technical speed issues and content quality signals." },
+      { question: "Is WordPress too slow for the March 2026 update?", answer: "Only 44% of WordPress sites pass Core Web Vitals on mobile. Sites built with Elementor average 3.8 to 5.2 seconds LCP, more than double the new 2.0 second threshold. Most WordPress sites need a full rebuild on a modern framework to meet the new requirements." },
+      { question: "Does the March 2026 update affect e-commerce sites?", answer: "Yes. 52% of e-commerce sites were affected by the update. Sites with optimized Core Web Vitals see 25% higher conversions compared to slow competitors. Product pages with heavy images and scripts were hit especially hard." },
+      { question: "What is the fastest way to fix my website speed for Google?", answer: "Rebuild on a modern framework like Next.js. Custom-coded sites consistently score 95 to 100 on PageSpeed with load times under 1 second. Plugin-based optimization on WordPress or Shopify can help, but it rarely brings LCP below 2.0 seconds on mobile." },
+    ]
+  },
+  {
     id: "webflow-vs-custom-website",
     title: "Webflow vs Custom Website: When Webflow Stops Making Sense",
     excerpt: "Webflow works until it does not. Here are the 5 signs you have outgrown Webflow, what a custom website actually gives you, and how to decide without overspending.",

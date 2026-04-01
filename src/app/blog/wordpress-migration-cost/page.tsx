@@ -354,6 +354,7 @@ export default function WordPressMigrationCostPage() {
                         <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-cognac transition-all">
                             Get a Free Migration Quote <ArrowRight className="w-4 h-4" />
                         </CalModalButton>
+                        <p className="text-sm text-stone-500 mt-3">Founder&apos;s offer: $500 flat for qualifying WordPress migrations. You pay after the site is live and working. No deposits upfront. No hourly billing that spirals. No hidden fees at the end. One price, one invoice, done.</p>
                     </div>
 
                     <BlogHeader id="agency-vs-freelance">Agency vs Freelancer vs Boutique Studio: Which Is Right?</BlogHeader>
@@ -439,6 +440,7 @@ export default function WordPressMigrationCostPage() {
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-orange-600 transition-all">
                             Book Free Discovery Call <ArrowRight className="w-4 h-4" />
                         </CalModalButton>
+                        <p className="text-sm text-stone-400 mt-3">Founder&apos;s offer: $500 flat for qualifying WordPress migrations. You pay after the site is live and working. No deposits upfront. No hourly billing that spirals. No hidden fees at the end. One price, one invoice, done.</p>
                     </div>
 
                     <BlogHeader id="faq">Frequently Asked Questions</BlogHeader>

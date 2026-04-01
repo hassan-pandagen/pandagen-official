@@ -396,6 +396,7 @@ export default function MigrateWordPressToNextJSPage() {
                         <CalModalButton className="inline-flex items-center gap-2 bg-white text-stone-900 font-semibold px-6 py-3 rounded-lg hover:bg-stone-100 transition-colors">
                                 Book Free Migration Assessment <ArrowRight className="w-4 h-4" />
                             </CalModalButton>
+                        <p className="text-sm text-stone-400 mt-3">Don&apos;t want to handle this yourself? Founder&apos;s offer: $500 for a complete WordPress to Next.js migration done by our team. You pay after the site is live. Every URL redirected. Every page tested. Zero downtime.</p>
                     </div>
 
                     {/* What to expect */}
@@ -488,6 +489,7 @@ export default function MigrateWordPressToNextJSPage() {
                             <CalModalButton className="inline-flex items-center justify-center gap-2 bg-stone-900 text-white font-semibold px-6 py-3 rounded-lg hover:bg-stone-700 transition-colors">
                                     Book Free Migration Assessment <ArrowRight className="w-4 h-4" />
                                 </CalModalButton>
+                            <p className="text-sm text-stone-500 mt-3">Don&apos;t want to handle this yourself? Founder&apos;s offer: $500 for a complete WordPress to Next.js migration done by our team. You pay after the site is live. Every URL redirected. Every page tested. Zero downtime.</p>
                             <Link
                                 href="/services/wordpress-migration"
                                 className="inline-flex items-center justify-center gap-2 border border-stone-300 text-stone-700 font-semibold px-6 py-3 rounded-lg hover:bg-stone-50 transition-colors"

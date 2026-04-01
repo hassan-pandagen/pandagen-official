@@ -334,6 +334,7 @@ export default function GHLWebsiteSpeedPage() {
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-orange-600 transition-all">
                             Book a Free Audit Call <ArrowRight className="w-4 h-4" />
                         </CalModalButton>
+                        <p className="text-sm text-stone-500 mt-3">Founder&apos;s offer: $500 for a complete migration off GoHighLevel. You pay once. No $297/month platform fee. No usage charges. No monthly bills ever again. We build it, you own it, you keep it.</p>
                     </div>
 
                     <BlogHeader id="the-fix">What Is the Actual Fix for GHL Speed Problems?</BlogHeader>
@@ -402,6 +403,7 @@ export default function GHLWebsiteSpeedPage() {
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-orange-600 transition-all">
                             Book Free Discovery Call <ArrowRight className="w-4 h-4" />
                         </CalModalButton>
+                        <p className="text-sm text-stone-400 mt-3">Founder&apos;s offer: $500 for a complete migration off GoHighLevel. You pay once. No $297/month platform fee. No usage charges. No monthly bills ever again. We build it, you own it, you keep it.</p>
                     </div>
 
                     <BlogHeader id="faq">Frequently Asked Questions</BlogHeader>

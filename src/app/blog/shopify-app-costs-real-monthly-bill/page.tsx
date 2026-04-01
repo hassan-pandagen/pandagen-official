@@ -402,6 +402,7 @@ export default function ShopifyAppCostsPage() {
                         <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                             Book a Free Cost Audit <ArrowRight className="w-4 h-4" />
                         </CalModalButton>
+                        <p className="text-sm text-stone-500 mt-3">Founder&apos;s offer: $500 for a complete Shopify migration. Add up your monthly Shopify bill right now: platform fee, every app, every transaction fee. That number is probably $200 to $1,000/month. Pay us $500 once and all of those monthly charges go away.</p>
                     </div>
 
                     <BlogHeader id="loyalty-search">Loyalty and Search: Two Categories Where Free Wins</BlogHeader>
@@ -489,6 +490,7 @@ export default function ShopifyAppCostsPage() {
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-3 bg-amber-400 text-charcoal font-bold rounded-full text-sm hover:bg-amber-300 transition-all">
                             Book Free Cost Audit Call <ArrowRight className="w-4 h-4" />
                         </CalModalButton>
+                        <p className="text-sm text-stone-400 mt-3">Founder&apos;s offer: $500 for a complete Shopify migration. Add up your monthly Shopify bill right now: platform fee, every app, every transaction fee. That number is probably $200 to $1,000/month. Pay us $500 once and all of those monthly charges go away.</p>
                     </div>
 
                     <BlogHeader id="faq">Frequently Asked Questions</BlogHeader>

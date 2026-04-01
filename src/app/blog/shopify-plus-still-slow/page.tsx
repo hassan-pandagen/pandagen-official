@@ -249,6 +249,7 @@ export default function ShopifyPlusStillSlowPage() {
                             <p className="font-bold text-charcoal mb-2">Still paying $2,300/month for a 3-second load time?</p>
                             <p className="text-stone-600 mb-4 text-sm">Drop your Shopify URL when you book. We pull your PageSpeed score live on the call, calculate exactly how much your slow store is costing you in lost conversions, and show you the headless fix.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free Shopify Plus Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
+                            <p className="text-sm text-stone-500 mt-3">Founder&apos;s offer: $500 for a Shopify migration. You&apos;re currently paying $2,000+/month for Shopify Plus and still getting slow load times. Pay us $500 once and your monthly platform cost goes to $0. That&apos;s $24,000/year back in your pocket.</p>
                         </div>
 
                         <BlogHeader>What Is the Solution for Shopify Plus Speed?</BlogHeader>
@@ -295,6 +296,7 @@ export default function ShopifyPlusStillSlowPage() {
                             Free audit. We&apos;ll calculate your exact revenue loss and show you the headless migration path for your store.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Book Free Shopify Plus Audit <ArrowRight className="w-5 h-5" /></CalModalButton>
+                        <p className="text-sm text-stone-500 mt-3">Founder&apos;s offer: $500 for a Shopify migration. You&apos;re currently paying $2,000+/month for Shopify Plus and still getting slow load times. Pay us $500 once and your monthly platform cost goes to $0. That&apos;s $24,000/year back in your pocket.</p>
                     </div>
 
                     <section className="mb-10">

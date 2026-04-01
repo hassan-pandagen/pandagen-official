@@ -352,6 +352,7 @@ export default function WebflowTrueCostPage() {
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                     Schedule Free Audit <ArrowRight className="w-4 h-4" />
                                 </CalModalButton>
+                            <p className="text-sm text-stone-500 mt-3">Founder&apos;s offer: $500 for a complete Webflow migration. No more surprise overage charges. No more paying per team member. No more forced plan upgrades when your site gets traffic. You pay us once and your monthly website bill goes to $0.</p>
                         </div>
 
                         <BlogHeader>How Does a Webflow Site Compare to Custom Code Side by Side?</BlogHeader>
@@ -516,6 +517,7 @@ export default function WebflowTrueCostPage() {
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
                                 Schedule Free Assessment <ArrowRight className="w-5 h-5" />
                             </CalModalButton>
+                        <p className="text-sm text-stone-500 mt-3">Founder&apos;s offer: $500 for a complete Webflow migration. No more surprise overage charges. No more paying per team member. No more forced plan upgrades when your site gets traffic. You pay us once and your monthly website bill goes to $0.</p>
                     </div>
 
                     {/* Key Takeaways */}

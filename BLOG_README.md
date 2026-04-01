@@ -205,4 +205,200 @@ Steps:
 
 ---
 
-*Last updated: March 27, 2026 — 30 live posts, webflow-vs-custom-website added today*
+---
+
+## Blog Queue: April 2026
+
+### Week 1 Schedule
+
+| Day | Blog | Status |
+|-----|------|--------|
+| Tue Apr 1 | Google March 2026 Update: What It Means for Your Business | TODO |
+| Wed Apr 2 | Break (submit to GSC + Bing) | - |
+| Thu Apr 3 | GoHighLevel Website Migration: Fast Site Without Leaving GHL | TODO |
+| Fri Apr 4 | Break (submit to GSC + Bing) | - |
+| Sat Apr 5 | Webflow Migration Case Study: 50-Page Site to Next.js | TODO |
+
+### Upcoming (Week 2+)
+
+| Blog | Notes |
+|------|-------|
+| Wix Speed Problems / Migration 2026 | People complaining in 2026. Research 50+ pain points before writing. HIGH priority. |
+| Squarespace vs Custom Website 2026 | Complement existing squarespace-too-slow post |
+| How We Built a 99/100 PageSpeed Site | Show methodology, EEAT proof |
+
+---
+
+### Blog 32: Google March 2026 Core Update
+
+**Title:** Google's March 2026 Update Rewards Fast Sites: Here's What That Means for Your Business
+**Angle:** Business owner friendly, not SEO practitioner. Ties update to speed = our service.
+**Word count:** 2,000-2,400
+
+**Fresh Citations (zero overlap with existing posts):**
+1. Digital Applied: March 2026 Core Update Impact Analysis
+2. Nventory: March 2026 Core Update Ecommerce
+3. Words Guru: March 2026 Update Winners and Losers
+4. Click Rank: March 2026 Core Update
+5. Queue-it: Ecommerce Website Speed Statistics
+6. ALM Corp: March 2026 Core Update
+
+**Key Stats:**
+- 55% of tracked sites saw ranking changes within 2 weeks
+- LCP threshold tightened from 2.5s to 2.0s
+- INP elevated to primary ranking signal (43% of sites fail 200ms threshold)
+- 47% of slow sites saw rank drops
+- Only 44% of WordPress sites pass CWV on mobile
+- Elementor sites average 3.8-5.2s LCP (double the new threshold)
+- Small businesses lose avg $20,172/year from slow sites
+- Every 1s delay reduces conversions by 7%
+- Sites loading in 1s convert at 3x rate of 5s sites
+- Recovery takes 3-6 months minimum
+- HubSpot lost 70-80% organic traffic
+- Affiliate sites hit hardest: 71% negative impact
+- 72% of top pages now show detailed author credentials
+- Sites with original research gained ~22% visibility
+- AI Overviews appear in 48% of queries, slash CTR by 61%
+- E-commerce pages with optimized CWV see 25% higher conversions
+- 53% of mobile users abandon sites taking over 3 seconds
+- Mobile cart abandonment hits 80% vs 66% desktop
+
+**Keywords:**
+- Primary: Google March 2026 core update, Google algorithm update 2026, website ranking dropped March 2026
+- Long-tail: why did my website traffic drop March 2026, Google update penalizing slow websites, WordPress site slow after Google update, fast website ranking advantage 2026, LCP threshold 2026, INP ranking signal
+- Business owner: lost customers after Google update, website not showing up on Google anymore, slow website costing me sales, need faster website for Google rankings
+
+---
+
+### Blog 33: GoHighLevel Migration
+
+**Title:** GoHighLevel Website Migration: How to Get a Fast Site Without Leaving GHL (2026)
+**Angle:** GHL users frustrated with speed. Show them the alternative.
+**Word count:** 2,000-2,400
+
+**Fresh Citations (zero overlap with existing GHL post):**
+1. HighLevel Ideas: Overall Speed/Performance Updates forum
+2. W3Speedup: GHL Speed Optimization Service
+3. Automate The Journey: GHL Page Speed Core Web Vitals
+4. E2M Solutions: Technical SEO GoHighLevel
+5. Millo: GoHighLevel Review
+6. SupplyGem: GoHighLevel Website Builder
+
+**Key Stats:**
+- First page load takes 10-30 seconds on GHL sites
+- Best mobile PageSpeed achievable: 47/100
+- Blank GHL page scores only 80/100 mobile
+- Mobile websites take 3-5 seconds average to load
+- Google Ads Quality Score on GHL: 2-4 out of 10 (never reaches 5)
+- Adding HighLevel forms drops scores from high 90s to low 70s
+- GHL injects every Google Font ever chosen into every page
+- FontAwesome loaded on all pages regardless of icon usage
+- No native schema builder for years
+- Cannot add schema to individual blog posts
+- GHL "isn't built for blogging"
+- Monthly downtime incidents
+- Mobile app described as "genuinely terrible"
+- $297/month for Unlimited plan, still slow
+- Fiverr freelancers charge $45+ just to optimize GHL speed
+- UK users report slowdown when USA wakes up (shared infrastructure)
+- Platform randomly unclickable ~50% of the time when loading
+- No staging environment, changes go live immediately
+- Some pages take over 30 seconds to load or never load at all
+- Eliminating render-blocking font requests could improve load times by 30-40%
+
+**Keywords:**
+- Primary: GoHighLevel website speed, GHL website migration, GoHighLevel slow
+- Long-tail: GoHighLevel funnel speed optimization, GoHighLevel PageSpeed score, GoHighLevel website builder limitations 2026, GoHighLevel vs custom website
+- Buyer intent: leave GoHighLevel website builder, GoHighLevel Core Web Vitals fail, GoHighLevel Google Ads Quality Score low
+
+---
+
+### Blog 34: Webflow Migration Case Study
+
+**Title:** We Migrated a 50-Page Webflow Site to Next.js: Here's What Happened (2026)
+**Angle:** Case study format. Different structure from existing Webflow posts. Real migration data.
+**Word count:** 2,000-2,400
+
+**Fresh Citations (zero overlap with 3 existing Webflow posts):**
+1. BRIX Agency: Webflow Bandwidth Limit
+2. Contentstack: 10 Webflow Disadvantages
+3. BrowserCat: Migrate Webflow to Code
+4. Kyle Frost: I Moved My Websites Off Webflow
+5. Webflow Forum: Platform Stability Crisis (open letter)
+6. Flow Ninja: Webflow Bandwidth Explained
+
+**Key Stats:**
+- Bandwidth slashed: Basic 50GB to 10GB, CMS 200GB to 50GB
+- Auto-forced plan upgrades: bills jumping $25/mo to $170/mo overnight
+- Business-to-Enterprise cliff: $15,000-60,000/year
+- Localization costs $29-40/month per additional language
+- Per-seat pricing: 5 users = $2,340/year extra
+- E-commerce 2% transaction fee on every sale (on top of Stripe)
+- Webflow raised prices 23% in 2023
+- Code export strips all dynamic functionality (CMS, forms, e-commerce break)
+- CMS content cannot be exported
+- webflow.js monolithic bundle, biggest contributor to blocking time
+- Webflow sunset Memberships Jan 29, 2026
+- Major outage July 2025 described as "tipping point"
+- Open letter from community about constant crashes and lost work
+- API rate limit: 60 requests per minute
+- CMS caps: 2,000 items (CMS plan), 10,000-20,000 (Business)
+- AI-assisted migration costs $0-500 in API tokens (Cursor did it in 3 days for $260)
+- Only 48% of mobile pages pass all 3 Core Web Vitals
+- CSS-only animations perform 10x better than Webflow's JS-driven Interactions
+- No server-side rendering or ISR (Next.js offers SSR, SSG, ISR, streaming)
+
+**Keywords:**
+- Primary: Webflow migration to Next.js, Webflow to custom code, migrate from Webflow 2026
+- Long-tail: Webflow migration cost 50-100 pages, Webflow too expensive 2026, Webflow bandwidth limit problems, Webflow CMS item limit workaround
+- Buyer intent: leave Webflow 2026, Webflow alternative custom code, Webflow vendor lock-in escape
+
+---
+
+---
+
+### Blog 35: Wix Speed and Migration (Week 2, Apr 7-12)
+
+**Title:** Why Your Wix Site Is Slow in 2026 (and What to Do About It)
+**Angle:** Wix users frustrated with speed. Biggest content gap: 0 Wix blog posts vs 6 Shopify, 5 WordPress.
+**Word count:** 2,000-2,400
+
+**Existing Wix coverage (avoid duplicating):**
+- /services/wix covers: cost comparison, 3-year breakdown, migration process, 5 FAQs
+- Service page pain points: speed (30-60 PageSpeed), code ownership, monthly costs, SEO limits, AI invisibility
+- DO NOT repeat the service page content. Blog should be NEW angle: technical speed breakdown, user complaints, comparison data
+
+**Fresh Citations (zero overlap with service page):**
+1. Wix Studio Forum: "Loading time is SO SLOW" thread
+2. One Smart Sheep: "Why is Wix So Slow, 13 Proven Tips"
+3. Custom Web Audits: "Wix Breaking Performance Myths 2025"
+4. PageSpeed Matters: Ultimate Wix Speed Guide
+5. Website Planet: Wix Pricing Plans Hidden Fees 2026
+6. Content Powered: "Wix Bad for SEO, Pages Not Indexed"
+
+**Key Stats:**
+- Average Wix mobile score: 32-55/100 (out of box score: 32)
+- Wix Studio loads 5-10x slower than Classic Editor
+- Wix bottom 2 in performance testing for 4 consecutive years
+- Can't switch templates without rebuilding entire site
+- Premium apps add $40-100/month on top of base plan
+- Editor laggy even on 32GB RAM high-end systems
+- Payment payout holds and frozen accounts without warning
+- Wix holds payouts for extended verification periods
+- Domain renewal $14.95-24.95/year (vs $10-12 at Namecheap)
+- Professional email not included, Google Workspace costs $6/user/month
+- No multi-currency checkout support
+- Wix reliance on JavaScript means pages require extensive processing before content visible
+- Need to restart browser every 30-45 minutes to clear memory leaks in editor
+- Users describe Wix as "beautifully designed cage" they've outgrown
+- Wix growing +32.6% YoY at WordPress expense, meaning MORE users hitting these limits
+- Above 60% CWV pass rate (better than WordPress 44%) but still 40% fail
+
+**Keywords:**
+- Primary: Wix website slow 2026, Wix PageSpeed score, why is my Wix site slow
+- Long-tail: Wix Studio slow laggy, Wix Core Web Vitals fail, Wix hidden costs 2026, Wix migration to custom code
+- Buyer intent: leave Wix 2026, Wix alternative fast website, Wix too slow for Google, outgrown Wix website builder
+
+---
+
+*Last updated: April 1, 2026 — 31 live posts, 3 queued this week, 1 queued next week (Wix)*

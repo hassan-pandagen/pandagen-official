@@ -257,6 +257,7 @@ export default function ShopifyConversionRateSpeedFixPage() {
                             <p className="font-bold text-charcoal mb-2">Is your Shopify conversion rate suffering from slow load times right now?</p>
                             <p className="text-stone-600 mb-4 text-sm">Drop your store URL when you book. We test your load time live on the call, calculate your exact conversion loss per month, and show you what a custom storefront returns in Year 1.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free Conversion Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
+                            <p className="text-sm text-stone-500 mt-3">Founder&apos;s offer: $500 for a complete Shopify migration. A faster checkout means more completed purchases from the same traffic you already have. You pay after the new store is live and tested.</p>
                         </div>
 
                         <BlogHeader>The Real Fix: Under 1 second Load Times</BlogHeader>
@@ -307,6 +308,7 @@ export default function ShopifyConversionRateSpeedFixPage() {
                             Free audit. We&apos;ll analyse your store speed, calculate your exact conversion rate loss, and show you the headless migration path that recovers it.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Book Free Conversion Audit <ArrowRight className="w-5 h-5" /></CalModalButton>
+                        <p className="text-sm text-stone-500 mt-3">Founder&apos;s offer: $500 for a complete Shopify migration. A faster checkout means more completed purchases from the same traffic you already have. You pay after the new store is live and tested.</p>
                     </div>
 
                     <section className="mb-10">

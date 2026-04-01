@@ -476,6 +476,7 @@ export default function WebflowMigrationCostPage() {
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                 Get Your Migration Quote <ArrowRight className="w-4 h-4" />
                             </CalModalButton>
+                            <p className="text-sm text-stone-500 mt-3">Founder&apos;s offer: $500 flat for qualifying Webflow migrations. Most agencies quote $7,000 to $15,000 for the same work. You pay after the site is live and working. No deposits. No hourly billing. No surprises.</p>
                         </div>
 
                         <BlogHeader>How to Get an Accurate Quote for Your Webflow Migration</BlogHeader>
@@ -509,6 +510,7 @@ export default function WebflowMigrationCostPage() {
                                 <CalModalButton className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
                                     Book a Migration Audit <ArrowRight className="w-4 h-4" />
                                 </CalModalButton>
+                                <p className="text-sm text-stone-400 mt-3">Founder&apos;s offer: $500 flat for qualifying Webflow migrations. Most agencies quote $7,000 to $15,000 for the same work. You pay after the site is live and working. No deposits. No hourly billing. No surprises.</p>
                                 <Link
                                     href="/services/webflow"
                                     className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-white/20 text-white font-bold rounded-full text-sm hover:border-white/40 transition-all"

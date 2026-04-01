@@ -352,6 +352,7 @@ export default function WooCommerceTooSlowPage() {
                             <CalModalButton className="inline-flex items-center gap-2 px-5 py-2.5 bg-charcoal text-white font-semibold rounded-full text-sm hover:bg-stone-800 transition-all">
                                 Get Free WooCommerce Audit <ArrowRight className="w-4 h-4" />
                             </CalModalButton>
+                            <p className="text-sm text-stone-500 mt-3">Founder&apos;s offer: $500 for a complete WooCommerce migration. No more $50 to $200/month in hosting bills. No more paying for 15 different tools just to keep your store running. One price, one time, and your monthly website cost drops to $0.</p>
                         </div>
 
                         <BlogHeader>What a Slow WooCommerce Store Costs You Right Now</BlogHeader>
@@ -530,6 +531,7 @@ export default function WooCommerceTooSlowPage() {
                         <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                             Get My Free Store Audit <ArrowRight className="w-4 h-4" />
                         </CalModalButton>
+                        <p className="text-sm text-stone-500 mt-3">Founder&apos;s offer: $500 for a complete WooCommerce migration. No more $50 to $200/month in hosting bills. No more paying for 15 different tools just to keep your store running. One price, one time, and your monthly website cost drops to $0.</p>
                     </div>
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}

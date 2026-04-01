@@ -340,6 +340,7 @@ export default function WebflowVsCustomWebsitePage() {
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                     Schedule Free Assessment <ArrowRight className="w-4 h-4" />
                                 </CalModalButton>
+                            <p className="text-sm text-stone-500 mt-3">Founder&apos;s offer: $500 for a complete Webflow migration. Your Webflow bill right now is probably $50 to $200/month. Pay us $500 once and that monthly cost disappears forever. Limited spots this month.</p>
                         </div>
 
                         <BlogHeader>The Real Cost Comparison: Webflow vs Custom Over 3 Years</BlogHeader>
@@ -479,6 +480,7 @@ export default function WebflowVsCustomWebsitePage() {
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
                                 Schedule Free Assessment <ArrowRight className="w-5 h-5" />
                             </CalModalButton>
+                        <p className="text-sm text-stone-500 mt-3">Founder&apos;s offer: $500 for a complete Webflow migration. Your Webflow bill right now is probably $50 to $200/month. Pay us $500 once and that monthly cost disappears forever. Limited spots this month.</p>
                     </div>
 
                     {/* Key Takeaways */}

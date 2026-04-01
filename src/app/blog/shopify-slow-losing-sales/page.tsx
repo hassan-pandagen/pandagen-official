@@ -403,6 +403,7 @@ export default function ShopifySlowPage() {
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                     Get Free Revenue Audit <ArrowRight className="w-4 h-4" />
                                 </CalModalButton>
+                            <p className="text-sm text-stone-500 mt-3">Founder&apos;s offer: $500 for a complete Shopify migration. Every second your site takes to load, you lose 7% of your sales. A faster site pays for itself in the first week. You pay after the new site is live.</p>
                         </div>
 
                         <BlogHeader>How Quickly Does a Custom Shopify Storefront Pay for Itself?</BlogHeader>
@@ -587,6 +588,7 @@ export default function ShopifySlowPage() {
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
                                 Schedule Free Audit <ArrowRight className="w-5 h-5" />
                             </CalModalButton>
+                        <p className="text-sm text-stone-500 mt-3">Founder&apos;s offer: $500 for a complete Shopify migration. Every second your site takes to load, you lose 7% of your sales. A faster site pays for itself in the first week. You pay after the new site is live.</p>
                     </div>
 
                     {/* Related Posts */}

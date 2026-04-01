@@ -244,6 +244,7 @@ export default function ElementorKillsSEOPage() {
                             <p className="font-bold text-charcoal mb-2">Is Elementor killing your SEO and speed right now?</p>
                             <p className="text-stone-600 mb-4 text-sm">Drop your URL when you book. We run your PageSpeed and Core Web Vitals live on the call, show you what Elementor is costing you in rankings, and quote the migration.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free SEO Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
+                            <p className="text-sm text-stone-500 mt-3">Founder&apos;s offer: $500 for a complete WordPress/Elementor migration. Your Google PageSpeed score goes from the 30s and 40s to 95+. Your monthly website cost goes from $50 to $200/month down to $0. You pay after the site is live.</p>
                         </div>
 
                         <BlogHeader>Can You Fix Elementor&apos;s Performance Problems?</BlogHeader>
@@ -286,6 +287,7 @@ export default function ElementorKillsSEOPage() {
                             Free SEO audit. We&apos;ll score your current site and show you the exact traffic and revenue impact of your page builder.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Book Free SEO Audit <ArrowRight className="w-5 h-5" /></CalModalButton>
+                        <p className="text-sm text-stone-500 mt-3">Founder&apos;s offer: $500 for a complete WordPress/Elementor migration. Your Google PageSpeed score goes from the 30s and 40s to 95+. Your monthly website cost goes from $50 to $200/month down to $0. You pay after the site is live.</p>
                     </div>
 
                     <section className="mb-10">
