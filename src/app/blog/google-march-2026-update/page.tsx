@@ -292,7 +292,10 @@ export default function GoogleMarchUpdatePage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>WordPress:</strong> Only 44% of WordPress sites pass Core Web Vitals on mobile. Sites built with Elementor, the most popular WordPress page builder, average 3.8 to 5.2 seconds LCP. That is more than double the new 2.0-second threshold.
+                            <strong>WordPress:</strong> Only 44% of WordPress sites pass Core Web Vitals on mobile. Sites built with{" "}
+                            <Link href="/blog/elementor-kills-seo" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                                Elementor, the most popular WordPress page builder
+                            </Link>, average 3.8 to 5.2 seconds LCP. That is more than double the new 2.0-second threshold.
                         </BlogText>
 
                         <BlogText>
@@ -300,7 +303,10 @@ export default function GoogleMarchUpdatePage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>Shopify:</strong> Standard Shopify themes perform better than WordPress, but still struggle with the tighter thresholds. Heavy product images, third-party apps for reviews, upsells, and tracking scripts push most Shopify stores past the 2.0-second LCP target on mobile.
+                            <strong>Shopify:</strong> Standard Shopify themes perform better than WordPress, but still struggle with the tighter thresholds.{" "}
+                            <Link href="/blog/shopify-dawn-theme-slow" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                                Even Shopify&apos;s fastest theme still loads slowly
+                            </Link>. Heavy product images, third-party apps for reviews, upsells, and tracking scripts push most Shopify stores past the 2.0-second LCP target on mobile.
                         </BlogText>
 
                         <BlogText>
@@ -343,7 +349,10 @@ export default function GoogleMarchUpdatePage() {
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                 Schedule Free Speed Audit <ArrowRight className="w-4 h-4" />
                             </CalModalButton>
-                            <p className="text-sm text-stone-500 mt-3">Founder&apos;s offer: $500 to migrate your website to a platform that meets Google&apos;s new speed requirements. You pay after the site is live and scores 95+ on PageSpeed. No monthly fees after that. Limited spots this month.</p>
+                            <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
+                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
+                              <p className="text-sm text-stone-700 mt-1">$500 to migrate your website to a platform that meets Google&apos;s new speed requirements. 30% upfront, the rest after the site is live and scores 95+ on PageSpeed. No monthly fees after that. Limited spots this month.</p>
+                            </div>
                         </div>
 
                         <BlogHeader>What This Means for Your Business (Action Steps)</BlogHeader>
@@ -365,7 +374,13 @@ export default function GoogleMarchUpdatePage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>Step 3: Decide whether to optimize or rebuild.</strong> If your LCP is between 2.0 and 2.5 seconds, targeted optimization might get you below the threshold. Compress images, defer scripts, and remove unused plugins. If your LCP is above 3.0 seconds, optimization alone will not be enough. You need modern architecture.
+                            <strong>Step 3: Decide whether to optimize or rebuild.</strong> If your LCP is between 2.0 and 2.5 seconds, targeted optimization might get you below the threshold. Compress images, defer scripts, and remove unused tools. If your LCP is above 3.0 seconds, optimization alone will not be enough. This applies whether you are on WordPress, Shopify,{" "}
+                            <Link href="/services/webflow" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                                Webflow
+                            </Link>,{" "}
+                            <Link href="/services/wix" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                                Wix
+                            </Link>, or any template-based platform. You need modern architecture.
                         </BlogText>
 
                         <BlogText>
@@ -410,7 +425,10 @@ export default function GoogleMarchUpdatePage() {
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
                             Schedule Free Audit <ArrowRight className="w-5 h-5" />
                         </CalModalButton>
-                        <p className="text-sm text-stone-500 mt-3">Founder&apos;s offer: $500 to migrate your website to a platform that meets Google&apos;s new speed requirements. You pay after the site is live and scores 95+ on PageSpeed. No monthly fees after that. Limited spots this month.</p>
+                        <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
+                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
+                          <p className="text-sm text-stone-700 mt-1">$500 to migrate your website to a platform that meets Google&apos;s new speed requirements. 30% upfront, the rest after the site is live and scores 95+ on PageSpeed. No monthly fees after that. Limited spots this month.</p>
+                        </div>
                     </div>
 
                     {/* Key Takeaways */}

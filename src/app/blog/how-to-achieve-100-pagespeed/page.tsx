@@ -360,7 +360,10 @@ export default function AchievePageSpeedPage() {
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                     Schedule Free Audit <ArrowRight className="w-4 h-4" />
                                 </CalModalButton>
-                            <p className="text-sm text-stone-500 mt-3">Founder&apos;s offer: $500 for a complete migration to a site that scores 95 to 100 on Google PageSpeed. You pay after the site is live. No monthly fees. No annual contracts. If your site doesn&apos;t score 95+, you don&apos;t pay.</p>
+                            <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
+                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
+                              <p className="text-sm text-stone-700 mt-1">$500 for a complete migration to a site that scores 95 to 100 on Google PageSpeed. 30% upfront, the rest after the site is live. No monthly fees. No annual contracts. If your site doesn&apos;t score 95+, you don&apos;t pay the balance.</p>
+                            </div>
                         </div>
 
                         <BlogHeader>What Are the 8 Specific Optimizations That Get Any Site to 100/100 PageSpeed?</BlogHeader>
@@ -699,7 +702,10 @@ export default function AchievePageSpeedPage() {
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
                                 Schedule Free Audit <ArrowRight className="w-5 h-5" />
                             </CalModalButton>
-                        <p className="text-sm text-stone-500 mt-3">Founder&apos;s offer: $500 for a complete migration to a site that scores 95 to 100 on Google PageSpeed. You pay after the site is live. No monthly fees. No annual contracts. If your site doesn&apos;t score 95+, you don&apos;t pay.</p>
+                        <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
+                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
+                          <p className="text-sm text-stone-700 mt-1">$500 for a complete migration to a site that scores 95 to 100 on Google PageSpeed. 30% upfront, the rest after the site is live. No monthly fees. No annual contracts. If your site doesn&apos;t score 95+, you don&apos;t pay the balance.</p>
+                        </div>
                     </div>
 
                     {/* Key Takeaways */}

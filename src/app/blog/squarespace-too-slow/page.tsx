@@ -420,7 +420,10 @@ export default function SquarespaceToSlowPage() {
                             <CalModalButton className="shrink-0 inline-flex items-center gap-2 px-5 py-3 bg-cognac text-white font-bold rounded-xl text-sm hover:bg-amber-700 transition-all">
                                 Get Free Audit <ArrowRight className="w-4 h-4" />
                             </CalModalButton>
-                            <p className="text-sm text-stone-500 mt-3">Founder&apos;s offer: $500 for a complete Squarespace migration. You pay once after the site is live. No more annual renewal surprises. No more price increases you can&apos;t control. Your website, your code, zero monthly cost.</p>
+                            <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
+                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
+                              <p className="text-sm text-stone-700 mt-1">$500 for a complete Squarespace migration. You pay once after the site is live. No more annual renewal surprises. No more price increases you can&apos;t control. Your website, your code, zero monthly cost.</p>
+                            </div>
                         </div>
 
                         <BlogHeader>The Only Fix That Actually Works</BlogHeader>
@@ -500,7 +503,10 @@ export default function SquarespaceToSlowPage() {
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
                                 Book a Free Audit <ArrowRight className="w-4 h-4" />
                             </CalModalButton>
-                            <p className="text-sm text-stone-400 mt-3">Founder&apos;s offer: $500 for a complete Squarespace migration. You pay once after the site is live. No more annual renewal surprises. No more price increases you can&apos;t control. Your website, your code, zero monthly cost.</p>
+                            <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
+                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
+                              <p className="text-sm text-stone-700 mt-1">$500 for a complete Squarespace migration. You pay once after the site is live. No more annual renewal surprises. No more price increases you can&apos;t control. Your website, your code, zero monthly cost.</p>
+                            </div>
                         </div>
 
                     </article>

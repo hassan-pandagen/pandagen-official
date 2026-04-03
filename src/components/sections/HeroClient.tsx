@@ -48,8 +48,8 @@ const HeroAuditWidget = dynamic(
         </div>
         <div className="p-6 md:p-8 space-y-5">
           <div>
-            <div className="text-xl font-bold text-charcoal leading-tight mb-1">Get Your AI Audit</div>
-            <div className="text-sm text-stone-600">11 deep checks beyond PageSpeed. Run AI Audit</div>
+            <div className="text-xl font-bold text-charcoal leading-tight mb-1">Get Your Free Website Audit</div>
+            <div className="text-sm text-stone-600">11 deep checks by our AI. Speed, SEO, security, and more.</div>
           </div>
           <div className="w-full bg-stone-50 border border-gray-200 rounded-xl h-14" />
           <div className="w-full h-14 bg-charcoal rounded-xl" />

@@ -465,7 +465,10 @@ export default function WordPressVsCustomCodeCostPage() {
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                     Get Free Cost Audit <ArrowRight className="w-4 h-4" />
                                 </CalModalButton>
-                            <p className="text-sm text-stone-500 mt-3">Founder&apos;s offer: $500 for a complete WordPress migration. Compare that to the $3,000 to $10,000 you&apos;ll spend on WordPress hosting, tools, and emergency fixes over the next 3 years. $500 once vs thousands every year. The math is simple.</p>
+                            <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
+                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
+                              <p className="text-sm text-stone-700 mt-1">$500 for a complete WordPress migration. Compare that to the $3,000 to $10,000 you&apos;ll spend on WordPress hosting, tools, and emergency fixes over the next 3 years. $500 once vs thousands every year. The math is simple.</p>
+                            </div>
                         </div>
 
                         <BlogHeader>When Does the Custom Site Break Even vs WordPress?</BlogHeader>
@@ -634,7 +637,10 @@ export default function WordPressVsCustomCodeCostPage() {
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
                                 Schedule Free Cost Audit <ArrowRight className="w-5 h-5" />
                             </CalModalButton>
-                        <p className="text-sm text-stone-500 mt-3">Founder&apos;s offer: $500 for a complete WordPress migration. Compare that to the $3,000 to $10,000 you&apos;ll spend on WordPress hosting, tools, and emergency fixes over the next 3 years. $500 once vs thousands every year. The math is simple.</p>
+                        <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
+                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
+                          <p className="text-sm text-stone-700 mt-1">$500 for a complete WordPress migration. Compare that to the $3,000 to $10,000 you&apos;ll spend on WordPress hosting, tools, and emergency fixes over the next 3 years. $500 once vs thousands every year. The math is simple.</p>
+                        </div>
                     </div>
 
                     {/* Related Posts */}

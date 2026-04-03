@@ -396,7 +396,10 @@ export default function MigrateWordPressToNextJSPage() {
                         <CalModalButton className="inline-flex items-center gap-2 bg-white text-stone-900 font-semibold px-6 py-3 rounded-lg hover:bg-stone-100 transition-colors">
                                 Book Free Migration Assessment <ArrowRight className="w-4 h-4" />
                             </CalModalButton>
-                        <p className="text-sm text-stone-400 mt-3">Don&apos;t want to handle this yourself? Founder&apos;s offer: $500 for a complete WordPress to Next.js migration done by our team. You pay after the site is live. Every URL redirected. Every page tested. Zero downtime.</p>
+                        <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
+                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
+                          <p className="text-sm text-stone-700 mt-1">Don&apos;t want to handle this yourself? $500 for a complete WordPress to Next.js migration done by our team. 30% upfront, the rest after the site is live. Every URL redirected. Every page tested. Zero downtime.</p>
+                        </div>
                     </div>
 
                     {/* What to expect */}
@@ -489,7 +492,10 @@ export default function MigrateWordPressToNextJSPage() {
                             <CalModalButton className="inline-flex items-center justify-center gap-2 bg-stone-900 text-white font-semibold px-6 py-3 rounded-lg hover:bg-stone-700 transition-colors">
                                     Book Free Migration Assessment <ArrowRight className="w-4 h-4" />
                                 </CalModalButton>
-                            <p className="text-sm text-stone-500 mt-3">Don&apos;t want to handle this yourself? Founder&apos;s offer: $500 for a complete WordPress to Next.js migration done by our team. You pay after the site is live. Every URL redirected. Every page tested. Zero downtime.</p>
+                            <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
+                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
+                              <p className="text-sm text-stone-700 mt-1">Don&apos;t want to handle this yourself? $500 for a complete WordPress to Next.js migration done by our team. 30% upfront, the rest after the site is live. Every URL redirected. Every page tested. Zero downtime.</p>
+                            </div>
                             <Link
                                 href="/services/wordpress-migration"
                                 className="inline-flex items-center justify-center gap-2 border border-stone-300 text-stone-700 font-semibold px-6 py-3 rounded-lg hover:bg-stone-50 transition-colors"

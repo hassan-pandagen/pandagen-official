@@ -334,7 +334,10 @@ export default function ShopifyDawnThemeSlowPage() {
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                     Get Free Store Audit <ArrowRight className="w-4 h-4" />
                                 </CalModalButton>
-                            <p className="text-sm text-stone-500 mt-3">Founder&apos;s offer: $500 for a complete Shopify migration. No more paying $100 to $500/month in app subscriptions. No more transaction fees on top of transaction fees. You pay once, your store loads in under 1 second, and your monthly platform cost drops to $0.</p>
+                            <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
+                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
+                              <p className="text-sm text-stone-700 mt-1">$500 for a complete Shopify migration. No more paying $100 to $500/month in app subscriptions. No more transaction fees on top of transaction fees. You pay once, your store loads in under 1 second, and your monthly platform cost drops to $0.</p>
+                            </div>
                         </div>
 
                         <BlogHeader>What Does a Typical Dawn Store Actually Score on PageSpeed?</BlogHeader>
@@ -557,7 +560,10 @@ export default function ShopifyDawnThemeSlowPage() {
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
                                 Book Free Store Audit <ArrowRight className="w-5 h-5" />
                             </CalModalButton>
-                        <p className="text-sm text-stone-500 mt-3">Founder&apos;s offer: $500 for a complete Shopify migration. No more paying $100 to $500/month in app subscriptions. No more transaction fees on top of transaction fees. You pay once, your store loads in under 1 second, and your monthly platform cost drops to $0.</p>
+                        <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
+                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
+                          <p className="text-sm text-stone-700 mt-1">$500 for a complete Shopify migration. No more paying $100 to $500/month in app subscriptions. No more transaction fees on top of transaction fees. You pay once, your store loads in under 1 second, and your monthly platform cost drops to $0.</p>
+                        </div>
                     </div>
 
                     {/* Key Takeaways */}

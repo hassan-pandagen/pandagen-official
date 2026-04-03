@@ -151,17 +151,7 @@ export default function TawkToChat() {
           (error: any) => { if (error) console.log('Tawk.to attr error:', error); }
         );
 
-        // Auto-popup after 15 seconds, one time only per visitor
-        if (!localStorage.getItem('tawk_popup_shown')) {
-          setTimeout(() => {
-            try {
-              if (tawkApi.isChatMinimized()) {
-                tawkApi.maximize();
-                localStorage.setItem('tawk_popup_shown', 'true');
-              }
-            } catch { /* widget not ready */ }
-          }, 15000);
-        }
+        // No auto-popup. Passive chat only. Our sticky bar handles mobile engagement.
       };
 
       // Inject Tawk.to script
@@ -172,7 +162,7 @@ export default function TawkToChat() {
       s0.parentNode?.insertBefore(s1, s0);
     };
 
-    // Lazy-load: on first scroll OR after 5 s, keeps PageSpeed unaffected
+    // Lazy-load: on first scroll OR after 15s, keeps PageSpeed unaffected
     let loaded = false;
     const load = () => {
       if (loaded) return;

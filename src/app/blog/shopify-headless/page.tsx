@@ -245,7 +245,10 @@ export default function ShopifyHeadlessPage() {
                             <p className="font-bold text-charcoal mb-2">Is your Shopify store bleeding revenue to slow load times right now?</p>
                             <p className="text-stone-600 mb-4 text-sm">Drop your store URL when you book. We run your PageSpeed live on the call, calculate your exact monthly conversion loss, and show you the headless build that fixes it.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free Shopify Speed Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
-                            <p className="text-sm text-stone-500 mt-3">Don&apos;t want to build this yourself? Founder&apos;s offer: $500 for a complete headless Shopify build. You keep your Shopify dashboard for products and orders. We build you a storefront that loads in under 1 second. You pay after it&apos;s live.</p>
+                            <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
+                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
+                              <p className="text-sm text-stone-700 mt-1">Don&apos;t want to build this yourself? $500 for a complete headless Shopify build. You keep your Shopify dashboard for products and orders. We build you a storefront that loads in under 1 second. You pay after it&apos;s live.</p>
+                            </div>
                         </div>
 
                         <BlogHeader>How Do You Go Headless on Shopify? The 6-Step Process</BlogHeader>
@@ -326,7 +329,10 @@ export default function ShopifyHeadlessPage() {
                             Free audit. We&apos;ll show you your current speed impact and what headless would return for your specific store revenue.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Book Free Shopify Audit <ArrowRight className="w-5 h-5" /></CalModalButton>
-                        <p className="text-sm text-stone-500 mt-3">Don&apos;t want to build this yourself? Founder&apos;s offer: $500 for a complete headless Shopify build. You keep your Shopify dashboard for products and orders. We build you a storefront that loads in under 1 second. You pay after it&apos;s live.</p>
+                        <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
+                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
+                          <p className="text-sm text-stone-700 mt-1">Don&apos;t want to build this yourself? $500 for a complete headless Shopify build. You keep your Shopify dashboard for products and orders. We build you a storefront that loads in under 1 second. You pay after it&apos;s live.</p>
+                        </div>
                     </div>
 
                     <section className="mb-10">

@@ -65,8 +65,18 @@ export default function AuditWidget() {
     setError(null);
   };
 
+  // Auto-scroll to audit widget if URL has #audit-widget hash
+  useEffect(() => {
+    if (window.location.hash === "#audit-widget") {
+      setTimeout(() => {
+        const el = document.getElementById("audit-widget");
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 500);
+    }
+  }, []);
+
   return (
-    <>
+    <div id="audit-widget">
       {/* Desktop Widget */}
       <motion.div
         initial={{ opacity: 0, x: 50 }}
@@ -103,10 +113,10 @@ export default function AuditWidget() {
                 >
                   <div>
                     <h2 className="text-xl font-bold text-charcoal leading-tight mb-1">
-                      Get Your AI Audit
+                      Get Your Free Website Audit
                     </h2>
                     <p className="text-sm text-stone-600">
-                      PageSpeed scores don&apos;t tell you why people leave without buying. We go 11 layers deeper.
+                      Our AI runs 11 deep checks that PageSpeed can&apos;t. Speed, SEO, security, conversions, and more.
                     </p>
                   </div>
 
@@ -278,8 +288,8 @@ export default function AuditWidget() {
               {state === "input" && (
                 <motion.div key="m-input" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="space-y-4">
                   <div>
-                    <h2 className="text-lg font-bold text-charcoal mb-1">Get Your AI Audit</h2>
-                    <p className="text-xs text-stone-600">11 deep checks beyond PageSpeed.</p>
+                    <h2 className="text-lg font-bold text-charcoal mb-1">Get Your Free Website Audit</h2>
+                    <p className="text-xs text-stone-600">11 deep checks by our AI. Speed, SEO, security, and more.</p>
                   </div>
                   <div className="relative">
                     <Globe className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
@@ -379,7 +389,7 @@ export default function AuditWidget() {
         url={url}
         auditData={auditData}
       />
-    </>
+    </div>
   );
 }
 

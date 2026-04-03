@@ -243,7 +243,10 @@ export default function WordPressPluginsSpeedPage() {
                             <p className="font-bold text-charcoal mb-2">How many plugins are killing your speed right now?</p>
                             <p className="text-stone-600 mb-4 text-sm">Drop your URL when you book. We audit your plugin stack live on the call, show you your real speed ceiling, and quote the migration that permanently fixes it.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free Speed Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
-                            <p className="text-sm text-stone-500 mt-3">Founder&apos;s offer: $500 for a complete WordPress migration. No more paying for 20+ tools just to keep your site running. No more surprise security bills. No more monthly hosting fees. You pay once, we build it, you own it forever.</p>
+                            <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
+                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
+                              <p className="text-sm text-stone-700 mt-1">$500 for a complete WordPress migration. No more paying for 20+ tools just to keep your site running. No more surprise security bills. No more monthly hosting fees. You pay once, we build it, you own it forever.</p>
+                            </div>
                         </div>
 
                         <BlogHeader>Which WordPress Plugins Are the Worst for Speed?</BlogHeader>
@@ -295,7 +298,10 @@ export default function WordPressPluginsSpeedPage() {
                             Free WordPress speed audit: we identify your worst plugins, calculate revenue loss, and show your path to 95+ PageSpeed.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Book Free Speed Audit <ArrowRight className="w-5 h-5" /></CalModalButton>
-                        <p className="text-sm text-stone-500 mt-3">Founder&apos;s offer: $500 for a complete WordPress migration. No more paying for 20+ tools just to keep your site running. No more surprise security bills. No more monthly hosting fees. You pay once, we build it, you own it forever.</p>
+                        <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
+                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
+                          <p className="text-sm text-stone-700 mt-1">$500 for a complete WordPress migration. No more paying for 20+ tools just to keep your site running. No more surprise security bills. No more monthly hosting fees. You pay once, we build it, you own it forever.</p>
+                        </div>
                     </div>
 
                     {/* Key Takeaways */}

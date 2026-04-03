@@ -23,6 +23,26 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "gohighlevel-migration",
+    title: "GoHighLevel Website Migration: How to Get a Fast Site Without Leaving GHL (2026)",
+    excerpt: "GHL sites score 35 to 47 on mobile PageSpeed. Your ads cost more and your leads cost more. Here is how to fix it without losing your CRM.",
+    category: "Performance",
+    readTime: "10 min",
+    date: "Apr 3",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: false,
+    illustrationType: 'migration',
+    lastModified: "2026-04-03",
+    faqs: [
+      { question: "Can I keep using GoHighLevel if I get a custom website?", answer: "Yes. GHL stays as your CRM, automation, and pipeline tool. The custom site replaces only the front end that your visitors and Google see." },
+      { question: "How much does it cost to migrate from GoHighLevel?", answer: "Our founder's offer is $500 for a complete front end rebuild. 30% upfront, the rest after the site is live and tested. No hourly billing, no surprise fees." },
+      { question: "Will I lose my GHL automations and workflows?", answer: "No. Your automations, email sequences, pipelines, and contacts stay exactly where they are. We only replace the website layer." },
+      { question: "How long does a GHL website migration take?", answer: "3 to 4 weeks from kickoff to launch. We handle the build, testing, DNS transfer, and redirect mapping." },
+      { question: "What PageSpeed score will my new site get?", answer: "We guarantee 95 to 100 on Google PageSpeed. Every site we build hits that benchmark. If it doesn't score 95+, you don't pay." },
+    ]
+  },
+  {
     id: "google-march-2026-update",
     title: "Google's March 2026 Update Rewards Fast Sites: What It Means for Your Business",
     excerpt: "Google's March 2026 core update tightened speed requirements and dropped 47% of slow sites. Here is what changed and what your business should do now.",

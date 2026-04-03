@@ -381,7 +381,10 @@ export default function ShopifyVsCustomWebsitePage() {
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                     Schedule Free Store Audit <ArrowRight className="w-4 h-4" />
                                 </CalModalButton>
-                            <p className="text-sm text-stone-500 mt-3">Founder&apos;s offer: $500 for a complete Shopify migration. Add up what you pay Shopify every month: platform fee, apps, transaction fees, theme updates. That total is probably more than $500. Pay us once and those monthly bills disappear.</p>
+                            <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
+                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
+                              <p className="text-sm text-stone-700 mt-1">$500 for a complete Shopify migration. Add up what you pay Shopify every month: platform fee, apps, transaction fees, theme updates. That total is probably more than $500. Pay us once and those monthly bills disappear.</p>
+                            </div>
                         </div>
 
                         <BlogHeader>What a Custom E-Commerce Site Actually Gives You</BlogHeader>
@@ -484,7 +487,10 @@ export default function ShopifyVsCustomWebsitePage() {
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
                                 Schedule Free Store Audit <ArrowRight className="w-5 h-5" />
                             </CalModalButton>
-                        <p className="text-sm text-stone-500 mt-3">Founder&apos;s offer: $500 for a complete Shopify migration. Add up what you pay Shopify every month: platform fee, apps, transaction fees, theme updates. That total is probably more than $500. Pay us once and those monthly bills disappear.</p>
+                        <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
+                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
+                          <p className="text-sm text-stone-700 mt-1">$500 for a complete Shopify migration. Add up what you pay Shopify every month: platform fee, apps, transaction fees, theme updates. That total is probably more than $500. Pay us once and those monthly bills disappear.</p>
+                        </div>
                     </div>
 
                     {/* Key Takeaways */}
