@@ -17,14 +17,14 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Cloudflare Just Built a WordPress Replacement. Here's Why That Matters for Your Business.",
+    title: "Cloudflare Built a WordPress Replacement (2026)",
     description: "Cloudflare launched EmDash, calling it WordPress's spiritual successor. 96% of WordPress security issues come from plugins. Here is what this means for you.",
     alternates: {
         canonical: '/blog/cloudflare-emdash-wordpress-replacement',
     },
     keywords: ["Cloudflare EmDash", "EmDash CMS", "WordPress replacement 2026", "WordPress alternative", "EmDash vs WordPress", "Cloudflare CMS", "WordPress security issues plugins"],
     openGraph: {
-        title: "Cloudflare Just Built a WordPress Replacement. Here's Why That Matters for Your Business.",
+        title: "Cloudflare Built a WordPress Replacement (2026)",
         description: "Cloudflare launched EmDash, calling it WordPress's spiritual successor. 96% of WordPress security issues come from plugins. Here is what this means for you.",
         type: "article",
         publishedTime: "2026-04-04",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Cloudflare Just Built a WordPress Replacement. Here's Why That Matters for Your Business.",
+        title: "Cloudflare Built a WordPress Replacement (2026)",
         description: "Cloudflare launched EmDash, calling it WordPress's spiritual successor. 96% of WordPress security issues come from plugins. Here is what this means for you.",
     },
 };
@@ -45,7 +45,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/cloudflare-emdash-wordpress-replacement#article",
-            "headline": "Cloudflare Just Built a WordPress Replacement. Here's Why That Matters for Your Business.",
+            "headline": "Cloudflare Built a WordPress Replacement (2026)",
             "description": "Cloudflare launched EmDash, calling it WordPress's spiritual successor. 96% of WordPress security issues come from plugins. Here is what this means for you.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-04T00:00:00-05:00",
@@ -103,7 +103,7 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/cloudflare-emdash-wordpress-replacement#webpage",
             "url": "https://www.pandacodegen.com/blog/cloudflare-emdash-wordpress-replacement",
-            "name": "Cloudflare Just Built a WordPress Replacement. Here's Why That Matters for Your Business.",
+            "name": "Cloudflare Built a WordPress Replacement (2026)",
             "description": "Cloudflare launched EmDash, calling it WordPress's spiritual successor. 96% of WordPress security issues come from plugins. Here is what this means for you.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },

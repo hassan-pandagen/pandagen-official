@@ -24,7 +24,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: "cloudflare-emdash-wordpress-replacement",
-    title: "Cloudflare Just Built a WordPress Replacement. Here's Why That Matters.",
+    title: "Cloudflare Built a WordPress Replacement (2026)",
     excerpt: "Cloudflare launched EmDash, calling it WordPress's spiritual successor. 96% of WordPress security issues come from plugins. Here is what this means for you.",
     category: "Security",
     readTime: "10 min",
@@ -32,7 +32,7 @@ export const blogPosts: BlogPost[] = [
     author: "Hassan",
     role: "Lead Engineer",
     featured: false,
-    illustrationType: 'wordpress',
+    illustrationType: 'plugins',
     lastModified: "2026-04-04",
     faqs: [
       { question: "What is Cloudflare EmDash?", answer: "EmDash is a new open-source CMS launched by Cloudflare on April 2, 2026. They describe it as the spiritual successor to WordPress. It is built on TypeScript and Astro, runs serverless on Cloudflare Workers, and isolates plugins in sandboxed environments for better security." },
