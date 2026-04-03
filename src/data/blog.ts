@@ -23,6 +23,26 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "cloudflare-emdash-wordpress-replacement",
+    title: "Cloudflare Just Built a WordPress Replacement. Here's Why That Matters.",
+    excerpt: "Cloudflare launched EmDash, calling it WordPress's spiritual successor. 96% of WordPress security issues come from plugins. Here is what this means for you.",
+    category: "Security",
+    readTime: "10 min",
+    date: "Apr 4",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: false,
+    illustrationType: 'wordpress',
+    lastModified: "2026-04-04",
+    faqs: [
+      { question: "What is Cloudflare EmDash?", answer: "EmDash is a new open-source CMS launched by Cloudflare on April 2, 2026. They describe it as the spiritual successor to WordPress. It is built on TypeScript and Astro, runs serverless on Cloudflare Workers, and isolates plugins in sandboxed environments for better security." },
+      { question: "Should I switch from WordPress to EmDash?", answer: "Not yet. EmDash is in beta with zero plugin ecosystem, no community support, and requires CLI setup. It is technically impressive but not ready for businesses that need their website to work today." },
+      { question: "Is WordPress dead in 2026?", answer: "WordPress still powers 42% of the web, so it is not dead. But its market share dropped for the first time in 20 years. Google's March 2026 update penalizes slow sites, and most WordPress sites fail Core Web Vitals on mobile. The trend is clear." },
+      { question: "What is the best WordPress alternative for businesses right now?", answer: "Custom-coded websites built on Next.js. They score 95 to 100 on PageSpeed, load in under 1 second, have zero monthly platform fees, and you own every line of code. No vendor lock-in to Cloudflare, WordPress, or any platform." },
+      { question: "How much does it cost to leave WordPress?", answer: "Our founder's offer is $500 for a complete WordPress migration. 30% upfront, the rest after the site is live and tested. If it does not score 95+ on PageSpeed, you do not pay the balance." },
+    ]
+  },
+  {
     id: "gohighlevel-migration",
     title: "GoHighLevel Website Migration: How to Get a Fast Site Without Leaving GHL (2026)",
     excerpt: "GHL sites score 35 to 47 on mobile PageSpeed. Your ads cost more and your leads cost more. Here is how to fix it without losing your CRM.",

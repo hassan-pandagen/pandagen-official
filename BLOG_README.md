@@ -401,4 +401,78 @@ Steps:
 
 ---
 
-*Last updated: April 1, 2026 — 31 live posts, 3 queued this week, 1 queued next week (Wix)*
+---
+
+### Blog 35: Cloudflare EmDash and the Death of WordPress (TIME-SENSITIVE, post ASAP)
+
+**Title:** Cloudflare Just Built a WordPress Replacement. Here's Why That Matters for Your Business.
+**Angle:** A $30B company just confirmed WordPress is broken. This validates custom-coded sites. But EmDash is beta, you don't have to wait. You can get a fast site today.
+**Word count:** 2,000-2,400
+**Priority:** HIGH. Trending topic, post within 48 hours for maximum search volume.
+
+**Fresh Citations:**
+1. Cloudflare Blog: Introducing EmDash (blog.cloudflare.com/emdash-wordpress/)
+2. CMSWire: Right Architecture, Empty Ecosystem (cmswire.com)
+3. Search Engine Journal: 6 Reasons EmDash Can't Compete With WordPress (searchenginejournal.com)
+4. The Register: Cloudflare Previews AI Rebuild of WordPress (theregister.com)
+5. SiliconANGLE: Cloudflare Debuts EmDash (siliconangle.com)
+6. Matt Mullenweg EmDash Feedback (ma.tt/2026/04/emdash-feedback/)
+
+**Key Stats and Facts:**
+- Cloudflare calls EmDash the "spiritual successor to WordPress"
+- 96% of WordPress security issues come from plugins (Cloudflare's own data)
+- EmDash is serverless, scales to zero, built on Astro 6.0 (acquired by Cloudflare Jan 2026)
+- Built in 2 months using AI. Cloudflare recreated Next.js in 1 week.
+- Passkeys by default, no passwords
+- AI native with MCP server integration and agent support
+- Plugin isolation via Dynamic Workers (V8 isolates, not containers)
+- Open source under MIT license
+- Matt Mullenweg called it "very solid, excellent engineering"
+- BUT: zero plugin ecosystem, no community, CLI required for setup
+- Cloudflare lock-in: plugin isolation only works on Cloudflare's runtime
+- Jamie Marsland (Automattic): "focused on infrastructure issues, not daily problems users care about like bookings, SEO, customer acquisition"
+- 61% of companies use multiple CMS, half trying to escape legacy systems like WordPress
+- WordPress market share declining for first time in 20+ years (43.6% to 42.6%)
+
+**Content sections (H2s):**
+1. "A $30 Billion Company Just Said WordPress Is Broken" - Cloudflare's announcement, what EmDash is
+2. "96% of WordPress Security Issues Come From Plugins" - the problem Cloudflare is solving
+3. "What EmDash Gets Right (and What It Doesn't)" - honest assessment, beta limitations
+4. "Why This Matters Even If You Never Use EmDash" - the industry is moving away from WordPress
+5. "You Don't Have to Wait for EmDash" - custom Next.js is available today, battle tested
+6. "What a Post-WordPress Website Looks Like" - your 99 PageSpeed, $0/month, under 1 second
+7. "Key Takeaways"
+
+**Keywords:**
+- Primary: Cloudflare EmDash, EmDash WordPress replacement, WordPress alternative 2026
+- Long-tail: Cloudflare EmDash review, EmDash vs WordPress, is WordPress dead 2026, WordPress replacement for business
+- Buyer intent: switch from WordPress 2026, WordPress too slow alternative, custom website vs WordPress 2026
+
+**Internal links:**
+- /blog/wordpress-vs-nextjs
+- /blog/wordpress-killer
+- /blog/wordpress-plugins-destroy-speed
+- /blog/google-march-2026-update
+- /services/wordpress-migration
+- /services/custom-engineering
+- /blog/how-to-achieve-100-pagespeed
+
+**Positioning:**
+- EmDash validates the direction (WordPress is the problem)
+- EmDash is beta with zero ecosystem (not ready for business owners)
+- Custom Next.js is battle tested TODAY (99 PageSpeed, under 1 second, $0/month)
+- $500 founder's offer vs waiting months/years for EmDash to mature
+
+---
+
+### Updated Schedule
+
+| Day | Blog | Status |
+|-----|------|--------|
+| Tue Apr 1 | Google March 2026 Update (#32) | LIVE |
+| Thu Apr 3 | GoHighLevel Migration (#33) | Ready to push |
+| Fri Apr 4 | Cloudflare EmDash WordPress Replacement (#35) | WRITE NOW (trending) |
+| Sat Apr 5 | Webflow Migration Case Study (#34) | Research done |
+| Week of Apr 7 | Wix Speed and Migration (#36) | Research done |
+
+*Last updated: April 3, 2026 — 32 live posts, 1 ready to push, 3 queued*

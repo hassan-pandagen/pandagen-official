@@ -42,9 +42,7 @@ next-env.d.ts
 .claude/
 
 # Internal docs and trackers (not for repo)
-GSC_TRACKER.md
-BLOG_README.md
-AUDIT_TOOL_PLAN.md
-PRE_PUBLISH_CHECKLIST.md
+*.md
+!README.md
 PandaCodeGen_*.pdf
 PandaCodeGen_*.docx
