@@ -74,7 +74,8 @@ const articleSchema = {
             "about": [
                 { "@type": "Thing", "name": "Cloudflare EmDash", "description": "An open-source CMS launched by Cloudflare as a modern WordPress alternative built on TypeScript and Astro" },
                 { "@type": "Thing", "name": "WordPress", "description": "The world's most popular content management system powering approximately 42% of websites globally" },
-                { "@type": "Thing", "name": "Website Migration", "description": "The process of moving a website from one platform or technology stack to another" }
+                { "@type": "Thing", "name": "Website Migration", "description": "The process of moving a website from one platform or technology stack to another" },
+                { "@type": "Thing", "name": "Web Performance Optimization", "description": "The practice of improving website speed, Core Web Vitals, and Google PageSpeed scores to improve rankings and conversions" }
             ],
             "inLanguage": "en-US",
             "speakable": {
