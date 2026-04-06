@@ -91,7 +91,7 @@ const articleSchema = {
                 "cssSelector": ["h1", "h2", "[data-speakable='true']"]
             },
             "about": [
-                { "@type": "SoftwareApplication", "name": "Wix", "description": "Cloud-based website builder platform used by over 230 million registered users worldwide" },
+                { "@type": "Thing", "name": "Wix", "description": "Cloud-based website builder platform used by over 230 million registered users worldwide" },
                 { "@type": "Thing", "name": "Core Web Vitals", "description": "Google's set of performance metrics including LCP, FID, and CLS used as search ranking signals" },
                 { "@type": "Thing", "name": "PageSpeed Performance", "description": "Google's PageSpeed Insights scoring system measuring mobile and desktop page load performance on a 0-100 scale" },
                 { "@type": "Thing", "name": "Website Migration", "description": "The process of moving a website from one platform to another while preserving SEO rankings and content" }

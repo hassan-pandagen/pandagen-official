@@ -84,10 +84,10 @@ const articleSchema = {
             "timeRequired": "PT11M",
             "inLanguage": "en-US",
             "about": [
-                { "@type": "SoftwareApplication", "name": "WooCommerce" },
+                { "@type": "Thing", "name": "WooCommerce" },
                 { "@type": "Thing", "name": "Core Web Vitals" },
                 { "@type": "Thing", "name": "E-Commerce Speed Optimization" },
-                { "@type": "SoftwareApplication", "name": "Next.js" }
+                { "@type": "Thing", "name": "Next.js" }
             ],
             "speakable": {
                 "@type": "SpeakableSpecification",
