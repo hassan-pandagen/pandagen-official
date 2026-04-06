@@ -16,15 +16,15 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Shopify Dawn Theme Slow? The Fix Shopify Won't Tell You",
-    description: "Dawn is Shopify's fastest theme but your store still loads in 3+ seconds. The problem is not the theme. It is Shopify's architecture. Here is what actually fixes it.",
+    title: "Shopify Dawn Theme Slow in 2026? It Scores 60/100 and Here Is Why",
+    description: "Dawn is Shopify's fastest theme and it still scores 55 to 65 on mobile PageSpeed. The problem is not the theme. It is Shopify's infrastructure. Here is the only real fix, and why plugins cannot solve it.",
     alternates: {
         canonical: "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow",
     },
     keywords: ["shopify dawn theme slow", "shopify dawn theme speed", "shopify 2.0 performance", "why is shopify slow", "shopify pagespeed score", "shopify speed optimization", "shopify dawn pagespeed"],
     openGraph: {
-        title: "Shopify Dawn Theme Slow? The Fix Shopify Won't Tell You",
-        description: "Dawn is Shopify's fastest theme but your store still loads in 3+ seconds. The problem is not the theme. It is Shopify's architecture. Here is what actually fixes it.",
+        title: "Shopify Dawn Theme Slow in 2026? It Scores 60/100 and Here Is Why",
+        description: "Dawn is Shopify's fastest theme and it still scores 55 to 65 on mobile PageSpeed. The problem is not the theme. It is Shopify's infrastructure. Here is the only real fix.",
         type: "article",
         publishedTime: "2026-03-07",
         authors: ["Hassan"],
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Shopify Dawn Theme Slow? The Fix Shopify Won't Tell You",
-        description: "Dawn is Shopify's fastest theme but your store still loads in 3+ seconds. The problem is not the theme. It is Shopify's architecture. Here is what actually fixes it.",
+        title: "Shopify Dawn Theme Slow in 2026? It Scores 60/100 and Here Is Why",
+        description: "Dawn is Shopify's fastest theme and it still scores 55 to 65 on mobile PageSpeed. The problem is not the theme. It is Shopify's infrastructure. Here is the only real fix.",
     },
 };
 

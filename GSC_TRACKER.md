@@ -19,6 +19,7 @@
 | **2** | **Mar 24, 2026** | **11** | **744** | **1.5%** | **15** | **+231 impressions (+45%). 42 indexed (+9 pages). shopify-dawn-theme-slow: 171 impressions at pos 6.4 — clicks imminent. US: 396 impressions, 1 click only (0.3% CTR). Vercel 308 fix deployed. Canonical validation started.** |
 | **3** | **Mar 26, 2026** | **12** | **847** | **1.4%** | **14.4** | **+103 impressions in 2 days from webflow-migration-cost + woocommerce-too-slow publish. "webflow migration cost 50-100 page site" at pos 9.3 — page 1, clicks imminent. pagespeed 100 at pos 86 — ignore. Impression spike visible on graph right side.** |
 | **4** | **Mar 30, 2026** | **5** | **1,460** | **0.34%** | **~13** | **Impressions up 89% to 1.46K (28-day). Clicks down to 5 (CTR crisis). webflow-migration-cost: 402 imp, 0 clicks, pos 7.0. shopify-dawn-theme-slow: 180 imp, down 89% (GSC flagged). webflow-true-cost canonical split: 198 imp across www/non-www. 50 indexed, 11 not indexed (6 service pages still undiscovered). 30 blog title rewrites deployed, awaiting re-index. US: 925 imp, 1 click (0.11% CTR). 95 countries showing impressions. "how much should we budget for webflow migration 50-100 page site" at pos 2.75 with 0 clicks.** |
+| **5** | **Apr 6, 2026** | **6** | **2,856** | **0.21%** | **~12** | **28-day impressions up 95% to 2,856. webflow-migration-cost EXPLODING: 1,206 impressions at pos 7.38 with 0 clicks — CTR crisis on single post costing most. shopify-dawn-theme-slow: 229 imp pos 6.65. gohighlevel-website-speed: 164 imp pos 6.8, 1 click. squarespace-too-slow: 75 imp pos 9.08. US: 1,833 impressions, 1 click, 0.05% CTR (avg pos 12). 118 countries. Daily impressions now 175-292 consistently. External links: 1 (LinkedIn only). Internal links: 426.** |
 
 > **Week-over-week (Mar 7-13 vs Feb 28-Mar 6):** Impressions 115 vs 6 = **+1,817%** on shopify-dawn-theme-slow page alone.
 
@@ -37,6 +38,23 @@
 ---
 
 ## Top Pages
+
+### Apr 6, 2026 (CSV export — full 3-month data)
+
+| Page | Clicks | Impressions | CTR | Position | Notes |
+|------|--------|-------------|-----|----------|-------|
+| /blog/webflow-migration-cost | 0 | 1,206 | 0% | 7.38 | **BREAKOUT — CTR crisis. Rewrite title/meta urgently.** |
+| /blog/webflow-true-cost | 0 | 287 | 0% | 10.94 | Growing. Canonical now resolved. |
+| /blog/shopify-dawn-theme-slow | 0 | 229 | 0% | 6.65 | Stable page 1, no clicks yet |
+| /blog/gohighlevel-website-speed | 1 | 164 | 0.61% | 6.80 | Getting clicks, new post |
+| /blog/wordpress-migration-cost | 0 | 160 | 0% | 23.96 | Page 3, needs more links |
+| /blog/how-to-achieve-100-pagespeed | 1 | 80 | 1.25% | 21.02 | Steady |
+| /blog/squarespace-too-slow | 1 | 75 | 1.33% | 9.08 | Clicking through |
+| /blog/nextjs-hosting-zero-cost | 0 | 77 | 0% | 19.82 | Steady |
+| /blog/why-we-chose-nextjs-over-wordpress-2026 | 0 | 68 | 0% | 11.28 | Steady |
+| /blog/how-to-migrate-wordpress-to-nextjs | 0 | 56 | 0% | 8.66 | Page 1, no clicks |
+| pandacodegen.com/ (non-www) | 8 | 38 | 21.1% | 2.18 | Branded |
+| www.pandacodegen.com/ | 2 | 64 | 3.12% | 4.28 | Branded |
 
 ### Mar 24, 2026 (from screenshots)
 
@@ -93,6 +111,25 @@
 
 ## Top Queries
 
+### Apr 6, 2026 (CSV export — full 3-month data)
+
+| Query | Clicks | Impressions | CTR | Position | Notes |
+|-------|--------|-------------|-----|----------|-------|
+| panda codegen | 2 | 29 | 6.9% | 2.24 | Branded |
+| iron horse studio webflow migration cost | 0 | 107 | 0% | 9.59 | Competitor name — ranking for their brand |
+| webflow migration cost for 50-100 page website | 0 | 59 | 0% | 6.69 | Page 1, 0 clicks — CTR fix needed |
+| webflow migration cost 2026 | 0 | 50 | 0% | 6.42 | Page 1, 0 clicks |
+| factors that increase cost of webflow migration project | 0 | 43 | 0% | 5.47 | Page 1, 0 clicks |
+| how much should we budget for webflow migration 50-100 page site | 0 | 11 | 0% | 2.27 | **POSITION 2 — still 0 clicks. Title/meta broken.** |
+| webflow enterprise migration cost | 0 | 17 | 0% | 4.71 | Page 1 |
+| how much does a webflow migration actually cost in 2026? | 0 | 14 | 0% | 4.36 | Page 1 |
+| why is ghl so slow | 0 | 4 | 0% | 10 | New GHL query appearing |
+| shopify dawn theme lighthouse score | 0 | 1 | 0% | 6 | Dawn post still relevant |
+
+> **CRITICAL:** webflow-migration-cost has 1,206 impressions at pos 7.38 with 0 clicks. Multiple queries ranking page 1 including position 2.27 with 0 clicks. The title/meta description is failing to convert impressions. Rewrite immediately.
+
+> **Competitor signal:** "iron horse studio webflow migration cost" — 107 impressions. Write a comparison post or add Iron Horse Studio to the migration cost post as a named competitor with price comparison.
+
 ### Mar 24, 2026
 
 | Query | Clicks | Impressions | CTR | Position | Notes |
@@ -105,8 +142,6 @@
 | do shortcodes slow down wordpress | 0 | 7 | 0% | 67.4 | — |
 | how to fix slow wordpress | 0 | 7 | 0% | 95.7 | Post exists, needs more links |
 | webflow ongoing costs after initial migration | 0 | — | 0% | — | New intent signal |
-
-> **Opportunity:** "webflow migration cost 50-100 page site" at position 9.6 — one new post targeting Webflow migration cost could rank page 1.
 
 ### Mar 15, 2026 (previous)
 
@@ -303,14 +338,16 @@ Track which posts are outperforming so we write more like them.
 | Google Reviews | 5 | 10 | 15+ |
 | Clutch Reviews | 3 | 5 | 8+ |
 
-## Current Rating (Week 5, Mar 31, 2026)
-- Impressions (28d): 1,460 (up 89%) — **OKAY, trending toward GOOD**
-- Clicks (28d): 5 — **BAD, but improving (was 0 from US)**
-- CTR: 0.34% — **BAD (new titles awaiting re-index)**
+## Current Rating (Week 6, Apr 6, 2026)
+- Impressions (28d): 2,856 (up 95% from 1,460) — **GOOD, trending toward EXCELLENT**
+- Clicks (28d): 6 — **BAD — CTR crisis on webflow-migration-cost bleeding clicks**
+- CTR: 0.21% — **BAD — webflow post at pos 2 with 0 clicks = title/meta must be rewritten**
 - Indexed Pages: ~50 — **GOOD**
+- External Backlinks: 1 (LinkedIn only) — **BAD — directories not showing yet**
+- Internal Links: 426 — **GOOD**
 - Google Reviews: 3
 - PageSpeed Mobile: 99
-- Accessibility: 100
+- Countries with impressions: 118
 
 ## What To Watch For
 
@@ -375,4 +412,4 @@ If something looks off or you want to understand a trend, just tell me and I'll 
 
 ---
 
-*Last updated: March 31, 2026*
+*Last updated: April 6, 2026*

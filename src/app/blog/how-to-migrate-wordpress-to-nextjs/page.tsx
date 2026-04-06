@@ -16,15 +16,15 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "WordPress to Next.js Migration: Step-by-Step Without Losing SEO",
-    description: "Complete WordPress to Next.js migration guide: content export, 301 redirects, SEO preservation, and zero-downtime launch. The full process in plain English.",
+    title: "WordPress to Next.js Migration (2026): We Do It for $500. Here Is How.",
+    description: "301 redirects, full content transfer, zero downtime, SEO preserved. Complete migration guide in plain English. Founder's offer: $500 flat. 95+ PageSpeed guaranteed or you do not pay the balance.",
     alternates: {
         canonical: '/blog/how-to-migrate-wordpress-to-nextjs',
     },
     keywords: ["how to migrate wordpress to next.js", "wordpress to nextjs migration", "migrate wordpress nextjs seo", "wordpress nextjs migration guide", "wordpress to nextjs without losing seo", "wordpress migration checklist"],
     openGraph: {
-        title: "WordPress to Next.js Migration: Step-by-Step Without Losing SEO",
-        description: "Complete WordPress to Next.js migration guide: content export, 301 redirects, SEO preservation, and zero-downtime launch. The full process in plain English.",
+        title: "WordPress to Next.js Migration (2026): We Do It for $500. Here Is How.",
+        description: "301 redirects, full content transfer, zero downtime, SEO preserved. Complete migration guide in plain English. Founder's offer: $500 flat. 95+ PageSpeed guaranteed.",
         type: "article",
         publishedTime: "2026-03-11",
         authors: ["Hassan"],
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "WordPress to Next.js Migration: Step-by-Step Without Losing SEO",
-        description: "Complete WordPress to Next.js migration guide: content export, 301 redirects, SEO preservation, and zero-downtime launch. The full process in plain English.",
+        title: "WordPress to Next.js Migration (2026): We Do It for $500. Here Is How.",
+        description: "301 redirects, full content transfer, zero downtime, SEO preserved. Complete migration guide in plain English. Founder's offer: $500 flat. 95+ PageSpeed guaranteed.",
     },
 };
 
