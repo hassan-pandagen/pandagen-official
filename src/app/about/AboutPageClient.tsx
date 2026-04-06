@@ -30,7 +30,7 @@ const aboutSchema = {
       "@type": "Organization",
       "@id": "https://www.pandacodegen.com/#organization",
       "name": "PandaCodeGen",
-      "alternateName": "Panda Gen",
+      "alternateName": "Panda Code Gen",
       "url": "https://www.pandacodegen.com",
       "logo": {
         "@type": "ImageObject",

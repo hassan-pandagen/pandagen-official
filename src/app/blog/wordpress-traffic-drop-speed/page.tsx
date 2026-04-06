@@ -16,12 +16,12 @@ const SEORankingAnimation = dynamic(() => import("@/components/blog/SEORankingAn
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "WordPress Traffic Dropping? Speed Is Killing Your Rankings",
+    title: "WordPress Traffic Dropping in 2026? Speed Is Behind 47% of Ranking Losses",
     description: "Slow WordPress sites lose 20% of organic traffic for every 1 second of delay. Here is the math behind why your traffic is dropping and how to reverse it.",
     alternates: { canonical: "/blog/wordpress-traffic-drop-speed" },
     keywords: ["wordpress losing traffic", "wordpress traffic drop", "wordpress speed seo", "core web vitals wordpress", "wordpress traffic decrease", "wordpress google ranking drop"],
     openGraph: {
-        title: "WordPress Traffic Dropping? Speed Is Killing Your Rankings",
+        title: "WordPress Traffic Dropping in 2026? Speed Is Behind 47% of Ranking Losses",
         description: "Slow WordPress sites lose 20% of organic traffic for every 1 second of delay. Here is the math behind why your traffic is dropping and how to reverse it.",
         type: "article",
         publishedTime: "2026-02-07",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "WordPress Traffic Dropping? Speed Is Killing Your Rankings",
+        title: "WordPress Traffic Dropping in 2026? Speed Is Behind 47% of Ranking Losses",
         description: "Slow WordPress sites lose 20% of organic traffic for every 1 second of delay. Here is the math behind why your traffic is dropping and how to reverse it.",
     },
 };
@@ -42,7 +42,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed#article",
-            "headline": "WordPress Traffic Dropping? Speed Is Killing Your Rankings",
+            "headline": "WordPress Traffic Dropping in 2026? Speed Is Behind 47% of Ranking Losses",
             "description": "Slow WordPress sites lose 20% of organic traffic for every 1 second of delay. Here is the math behind why your traffic is dropping and how to reverse it.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-07T00:00:00-05:00",
@@ -111,7 +111,7 @@ const articleSchema = {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
             "name": "PandaCodeGen",
-            "alternateName": "Panda Gen",
+            "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158"],

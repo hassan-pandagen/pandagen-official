@@ -16,7 +16,7 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: { absolute: "Squarespace Too Slow? No Setting or Plugin Fixes This" },
+    title: { absolute: "Squarespace Too Slow? Sites Score 30/100 on Mobile PageSpeed in 2026" },
     description: "Squarespace sites score 30 to 55 on Google PageSpeed Mobile. No setting or plugin fixes it. Here is why it is slow and what works.",
     alternates: {
         canonical: "/blog/squarespace-too-slow",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         "migrate squarespace to nextjs"
     ],
     openGraph: {
-        title: "Squarespace Too Slow? No Setting or Plugin Fixes This",
+        title: "Squarespace Too Slow? Sites Score 30/100 on Mobile PageSpeed in 2026",
         description: "Squarespace sites score 30 to 55 on Google PageSpeed Mobile. No setting or plugin fixes it. Here is why it is slow and what works.",
         type: "article",
         publishedTime: "2026-03-27T00:00:00-05:00",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Squarespace Too Slow? No Setting or Plugin Fixes This",
+        title: "Squarespace Too Slow? Sites Score 30/100 on Mobile PageSpeed in 2026",
         description: "Squarespace sites score 30 to 55 on Google PageSpeed Mobile. No setting or plugin fixes it. Here is why it is slow and what works.",
     },
 };
@@ -56,7 +56,7 @@ const schemaData = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/squarespace-too-slow#article",
-            "headline": "Squarespace Too Slow? No Setting or Plugin Fixes This",
+            "headline": "Squarespace Too Slow? Sites Score 30/100 on Mobile PageSpeed in 2026",
             "description": "Squarespace sites score 30 to 55 on Google PageSpeed Mobile. No setting or plugin fixes it. Here is why it is slow and what works.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-27T00:00:00-05:00",

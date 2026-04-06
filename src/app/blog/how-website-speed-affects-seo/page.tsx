@@ -15,14 +15,14 @@ const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 const SEORankingAnimation = dynamic(() => import("@/components/blog/SEORankingAnimation"));
 
 export const metadata: Metadata = {
-    title: "How Website Speed Affects SEO: Real Data on Rankings and Revenue",
+    title: "How Website Speed Affects SEO in 2026: Every 100ms Costs 1% in Revenue",
     description: "A site loading in 1 second converts 3x better than one at 5 seconds. Google confirmed page speed is a ranking factor. Here is exactly how speed affects your revenue.",
     alternates: {
         canonical: '/blog/how-website-speed-affects-seo',
     },
     keywords: ["how does website speed affect seo", "website speed seo ranking factor", "core web vitals seo", "page speed google ranking", "slow website seo impact", "website speed conversion rate", "core web vitals ranking 2026"],
     openGraph: {
-        title: "How Website Speed Affects SEO: Real Data on Rankings and Revenue",
+        title: "How Website Speed Affects SEO in 2026: Every 100ms Costs 1% in Revenue",
         description: "A site loading in 1 second converts 3x better than one at 5 seconds. Google confirmed page speed is a ranking factor. Here is exactly how speed affects your revenue.",
         type: "article",
         publishedTime: "2026-03-09",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "How Website Speed Affects SEO: Real Data on Rankings and Revenue",
+        title: "How Website Speed Affects SEO in 2026: Every 100ms Costs 1% in Revenue",
         description: "A site loading in 1 second converts 3x better than one at 5 seconds. Google confirmed page speed is a ranking factor. Here is exactly how speed affects your revenue.",
     },
 };
@@ -43,7 +43,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/how-website-speed-affects-seo#article",
-            "headline": "How Website Speed Affects SEO: Real Data on Rankings and Revenue",
+            "headline": "How Website Speed Affects SEO in 2026: Every 100ms Costs 1% in Revenue",
             "description": "A site loading in 1 second converts 3x better than one at 5 seconds. Google confirmed page speed is a ranking factor. Here is exactly how speed affects your revenue.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-09T00:00:00-05:00",
@@ -115,7 +115,7 @@ const articleSchema = {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
             "name": "PandaCodeGen",
-            "alternateName": "Panda Gen",
+            "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158"],

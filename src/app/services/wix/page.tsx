@@ -86,7 +86,7 @@ export default function WixServicePage() {
         "@type": "Organization",
         "@id": "https://www.pandacodegen.com/#organization",
         "name": "PandaCodeGen",
-        "alternateName": "Panda Gen",
+        "alternateName": "Panda Code Gen",
         "url": "https://www.pandacodegen.com",
         "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
         "email": "info@pandacodegen.com",

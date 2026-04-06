@@ -23,6 +23,46 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "wix-too-slow",
+    title: "Wix Website Too Slow? 48% of Wix Sites Fail Core Web Vitals in 2026",
+    excerpt: "Wix sites average 6.8-second LCP. The cause is 200-400KB of platform JavaScript that cannot be removed. No app or setting fixes this. Here is the real data and the only fix that works.",
+    category: "Wix",
+    readTime: "12 min",
+    date: "Apr 6",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: false,
+    illustrationType: 'speed',
+    lastModified: "2026-04-06",
+    faqs: [
+      { question: "Why is my Wix website so slow?", answer: "Wix loads 200 to 400KB of platform JavaScript on every page before your content appears. This code comes from Wix's own servers and cannot be removed, deferred, or replaced. It is a platform constraint, not a configuration issue. No app, optimization, or setting can eliminate this baseline overhead." },
+      { question: "What PageSpeed score does a Wix site get?", answer: "Most Wix sites score between 50 and 83 on mobile PageSpeed. The 2025 platform average is 83 with heavy optimization. Unoptimized Wix sites regularly score 50 to 65. By comparison, custom Next.js sites built with static generation consistently score 95 to 100." },
+      { question: "Can I fix Wix speed with apps or optimization?", answer: "Partially. You can improve your score by compressing images, removing unused apps, limiting animations to 3 to 5 per page, and distributing content across pages. But Wix's architectural ceiling is around 83 on mobile. You cannot remove the platform JavaScript, control the CDN, or implement custom caching. The ceiling is baked in." },
+      { question: "How much does it cost to migrate from Wix to a faster site?", answer: "Our founder's offer is $500 for a complete Wix migration to custom Next.js. That includes design, build, content transfer, 301 redirects for every URL, DNS cutover, and post-launch monitoring. If the new site does not score 95 or higher on Google PageSpeed, you do not pay the balance." },
+      { question: "Will I lose my Google rankings when I leave Wix?", answer: "No, if the migration is handled correctly. Every URL gets a 301 redirect to its equivalent on the new site. Your domain authority, backlinks, and indexed pages all carry over. We have migrated multiple sites from Wix without a single ranking drop." },
+    ]
+  },
+  {
+    id: "leaving-webflow-2026",
+    title: "Leaving Webflow in 2026: What Actually Happened After We Migrated",
+    excerpt: "Bandwidth cut 75%. Bills jumped to $170 overnight. Cart buttons disappeared on live sites. Memberships killed with 6 weeks notice. Here is the real story of leaving Webflow and what we built instead.",
+    category: "Webflow",
+    readTime: "11 min",
+    date: "Apr 6",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: false,
+    illustrationType: 'webflow',
+    lastModified: "2026-04-06",
+    faqs: [
+      { question: "Is Webflow worth it in 2026?", answer: "For small brochure sites with low traffic, Webflow can still work. But for any business that has grown past 50 GB of monthly bandwidth, needs e-commerce, uses localization, or relies on memberships, Webflow's pricing and reliability have become serious problems. The platform killed its own membership and automation tools in 2025 and 2026, raised prices 71%, and cut bandwidth limits by 75% without reducing costs." },
+      { question: "How much does it cost to migrate from Webflow?", answer: "Our founder's offer is $500 for a complete Webflow migration to custom Next.js. That includes design, build, content transfer, 301 redirects, DNS cutover, and post-launch monitoring. 30% upfront, the rest after the site is live and tested. If it does not score 95 or higher on Google PageSpeed, you do not pay the balance." },
+      { question: "Will I lose my SEO rankings when I leave Webflow?", answer: "No, if the migration is done correctly. Every URL gets a 301 redirect to its new equivalent. Your existing backlinks, domain authority, and indexed pages all carry over. We have done this process on multiple sites without a single ranking drop." },
+      { question: "How long does a Webflow migration take?", answer: "A typical 20 to 50 page site takes 3 to 4 weeks from start to launch. That includes design, development, content transfer, QA, redirects, and DNS cutover. You stay on Webflow until the new site is fully tested and ready." },
+      { question: "What happens to my Webflow CMS content when I migrate?", answer: "We export and transfer all your CMS content manually. Webflow's code export strips all dynamic content, so we handle this ourselves. Blog posts, product pages, team members, and any other CMS collections are all moved to the new site. Nothing gets lost." },
+    ]
+  },
+  {
     id: "cloudflare-emdash-wordpress-replacement",
     title: "Cloudflare Built a WordPress Replacement (2026)",
     excerpt: "Cloudflare launched EmDash, calling it WordPress's spiritual successor. 96% of WordPress security issues come from plugins. Here is what this means for you.",

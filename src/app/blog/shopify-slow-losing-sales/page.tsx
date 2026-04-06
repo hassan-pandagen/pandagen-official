@@ -16,13 +16,13 @@ const SalesImpactAnimation = dynamic(() => import("@/components/blog/SalesImpact
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Slow Shopify Store? You Are Losing $75K/Year in Sales",
+    title: "Slow Shopify Store in 2026? You Are Losing $75,000/Year. Here Is the Fix.",
     description: "Every second your Shopify store takes to load costs you customers. We calculated exactly how much revenue a slow store loses per month and how to fix it.",
     alternates: {
         canonical: '/blog/shopify-slow-losing-sales',
     },
     openGraph: {
-        title: "Slow Shopify Store? You Are Losing $75K/Year in Sales",
+        title: "Slow Shopify Store in 2026? You Are Losing $75,000/Year. Here Is the Fix.",
         description: "Every second your Shopify store takes to load costs you customers. We calculated exactly how much revenue a slow store loses per month and how to fix it.",
         type: "article",
         publishedTime: "2026-02-10",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Slow Shopify Store? You Are Losing $75K/Year in Sales",
+        title: "Slow Shopify Store in 2026? You Are Losing $75,000/Year. Here Is the Fix.",
         description: "Every second your Shopify store takes to load costs you customers. We calculated exactly how much revenue a slow store loses per month and how to fix it.",
     },
     keywords: ["Shopify speed optimization", "headless Shopify", "Shopify slow", "e-commerce performance", "Shopify lost sales", "custom storefront"],
@@ -44,7 +44,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales#article",
-            "headline": "Slow Shopify Store? You Are Losing $75K/Year in Sales",
+            "headline": "Slow Shopify Store in 2026? You Are Losing $75,000/Year. Here Is the Fix.",
             "description": "Every second your Shopify store takes to load costs you customers. We calculated exactly how much revenue a slow store loses per month and how to fix it.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-10T00:00:00-05:00",
@@ -118,7 +118,7 @@ const articleSchema = {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
             "name": "PandaCodeGen",
-            "alternateName": "Panda Gen",
+            "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158"],

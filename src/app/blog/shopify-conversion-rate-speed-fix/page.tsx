@@ -16,12 +16,12 @@ const SalesImpactAnimation = dynamic(() => import("@/components/blog/SalesImpact
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Low Shopify Conversion Rate? Your Speed Is the Problem",
+    title: "Low Shopify Conversion Rate in 2026? A 1-Second Delay Costs You 7% of Sales",
     description: "The average Shopify store converts at 1.4%. Stores loading in under 2 seconds convert at 3 to 5%. Your conversion problem is a speed problem. Here is the fix.",
     alternates: { canonical: "/blog/shopify-conversion-rate-speed-fix" },
     keywords: ["shopify conversion rate", "low shopify conversion rate", "shopify speed conversion", "improve shopify conversion rate", "shopify store slow", "shopify cro speed"],
     openGraph: {
-        title: "Low Shopify Conversion Rate? Your Speed Is the Problem",
+        title: "Low Shopify Conversion Rate in 2026? A 1-Second Delay Costs You 7% of Sales",
         description: "The average Shopify store converts at 1.4%. Stores loading in under 2 seconds convert at 3 to 5%. Your conversion problem is a speed problem. Here is the fix.",
         type: "article",
         publishedTime: "2026-02-11",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Low Shopify Conversion Rate? Your Speed Is the Problem",
+        title: "Low Shopify Conversion Rate in 2026? A 1-Second Delay Costs You 7% of Sales",
         description: "The average Shopify store converts at 1.4%. Stores loading in under 2 seconds convert at 3 to 5%. Your conversion problem is a speed problem. Here is the fix.",
     },
 };
@@ -42,7 +42,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/shopify-conversion-rate-speed-fix#article",
-            "headline": "Low Shopify Conversion Rate? Your Speed Is the Problem",
+            "headline": "Low Shopify Conversion Rate in 2026? A 1-Second Delay Costs You 7% of Sales",
             "description": "The average Shopify store converts at 1.4%. Stores loading in under 2 seconds convert at 3 to 5%. Your conversion problem is a speed problem. Here is the fix.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-11T00:00:00-05:00",
@@ -113,7 +113,7 @@ const articleSchema = {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
             "name": "PandaCodeGen",
-            "alternateName": "Panda Gen",
+            "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158"],

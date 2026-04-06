@@ -16,12 +16,12 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "WordPress Is Costing You 3x to 5x More Than You Think (2026)",
+    title: "WordPress Costs 3 to 5 Times More Than You Think: Hidden Fees Every Business Owner Pays in 2026",
     description: "The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3 to 5x. Here are the real numbers.",
     alternates: { canonical: "/blog/wordpress-killer" },
     keywords: ["wordpress cost 2026", "wordpress waste of money", "true cost of wordpress", "wordpress vs next.js cost", "wordpress alternative for business"],
     openGraph: {
-        title: "WordPress Is Costing You 3x to 5x More Than You Think (2026)",
+        title: "WordPress Costs 3 to 5 Times More Than You Think: Hidden Fees Every Business Owner Pays in 2026",
         description: "The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3 to 5x. Here are the real numbers.",
         type: "article",
         publishedTime: "2026-01-15",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "WordPress Is Costing You 3x to 5x More Than You Think (2026)",
+        title: "WordPress Costs 3 to 5 Times More Than You Think: Hidden Fees Every Business Owner Pays in 2026",
         description: "The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3 to 5x. Here are the real numbers.",
     },
 };
@@ -42,7 +42,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-killer#article",
-            "headline": "WordPress Is Costing You 3x to 5x More Than You Think (2026)",
+            "headline": "WordPress Costs 3 to 5 Times More Than You Think: Hidden Fees Every Business Owner Pays in 2026",
             "description": "The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3 to 5x. Here are the real numbers.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-01-15T00:00:00-05:00",
@@ -111,7 +111,7 @@ const articleSchema = {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
             "name": "PandaCodeGen",
-            "alternateName": "Panda Gen",
+            "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158"],

@@ -3,7 +3,7 @@ import { HeroStatusPill, HeroCTAs, HeroTrustSignals, HeroAuditWidget } from "./H
 export default function Hero() {
   return (
     <section
-      className="relative min-h-[90vh] flex flex-col justify-center pt-20 md:pt-32 pb-20 overflow-hidden bg-paper"
+      className="relative flex flex-col justify-center pt-24 md:pt-36 pb-16 md:pb-24 overflow-hidden bg-paper"
       style={{ backgroundColor: "#f5f5f4" }}
     >
 
@@ -34,13 +34,13 @@ export default function Hero() {
           {/* Headline: LCP element, pure server HTML, no JS needed to render */}
           {/* LCP element: inline styles ensure paint before CSS loads */}
           <h1
-            className="text-5xl md:text-7xl font-sans font-bold text-charcoal tracking-tight mb-6 leading-[1.1]"
-            style={{ fontSize: "clamp(3rem, 5vw, 4.5rem)", fontWeight: 700, color: "#1C1917", letterSpacing: "-0.025em", lineHeight: 1.1, marginBottom: "1.5rem" }}
+            className="text-[2rem] md:text-[3.5rem] font-sans font-bold text-charcoal tracking-tight mb-6 leading-[1.1]"
+            style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", fontWeight: 700, color: "#1C1917", letterSpacing: "-0.025em", lineHeight: 1.1, marginBottom: "1.5rem" }}
           >
             Your slow website is <br />
             <span
               className="font-serif italic text-cognac"
-              style={{ color: "#b87a3d", fontStyle: "italic" }}
+              style={{ fontStyle: "italic" }}
             >
               costing you revenue.
             </span>

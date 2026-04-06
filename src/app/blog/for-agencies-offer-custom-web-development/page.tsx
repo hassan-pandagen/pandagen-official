@@ -15,13 +15,13 @@ const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
 const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
 
 export const metadata: Metadata = {
-    title: "White Label Web Development: Custom Builds Without a Dev Team",
+    title: "White Label Web Development for Agencies: Custom Next.js Sites, 100% Margin (2026)",
     description: "Your client wants a custom site but you have no dev team. Here is how 40+ agencies deliver premium custom builds under their own brand without writing code.",
     alternates: {
         canonical: '/blog/for-agencies-offer-custom-web-development',
     },
     openGraph: {
-        title: "White Label Web Development: Custom Builds Without a Dev Team",
+        title: "White Label Web Development for Agencies: Custom Next.js Sites, 100% Margin (2026)",
         description: "Your client wants a custom site but you have no dev team. Here is how 40+ agencies deliver premium custom builds under their own brand without writing code.",
         type: "article",
         publishedTime: "2026-03-06",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "White Label Web Development: Custom Builds Without a Dev Team",
+        title: "White Label Web Development for Agencies: Custom Next.js Sites, 100% Margin (2026)",
         description: "Your client wants a custom site but you have no dev team. Here is how 40+ agencies deliver premium custom builds under their own brand without writing code.",
     },
     keywords: ["white label web development", "outsource web development for agencies", "offer custom web development without dev team", "white label nextjs", "agency web development partner"],
@@ -43,7 +43,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/for-agencies-offer-custom-web-development#article",
-            "headline": "White Label Web Development: Custom Builds Without a Dev Team",
+            "headline": "White Label Web Development for Agencies: Custom Next.js Sites, 100% Margin (2026)",
             "description": "Your client wants a custom site but you have no dev team. Here is how 40+ agencies deliver premium custom builds under their own brand without writing code.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-06T00:00:00-05:00",
@@ -118,7 +118,7 @@ const articleSchema = {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
             "name": "PandaCodeGen",
-            "alternateName": "Panda Gen",
+            "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158"],

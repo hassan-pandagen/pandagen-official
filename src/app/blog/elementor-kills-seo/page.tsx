@@ -111,7 +111,7 @@ const articleSchema = {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
             "name": "PandaCodeGen",
-            "alternateName": "Panda Gen",
+            "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158"],
@@ -256,7 +256,7 @@ export default function ElementorKillsSEOPage() {
                         </BlogText>
                         <BlogList items={[
                             "Caching plugins (WP Rocket, W3 Total Cache): Marginally helpful, won't overcome architecture bloat",
-                            "Image optimization: Helps with LCP but doesn't fix DOM bloat or render-blocking CSS",
+                            "Image optimization: Helps with load speed but doesn't fix bloated page code or render-blocking files",
                             "Disabling unused widgets: Reduces load slightly but Elementor still loads its core framework",
                             "Best realistic outcome with Elementor + every optimization: 50 to 60/100 Mobile",
                             "What you actually need for competitive rankings: 90+ Mobile"

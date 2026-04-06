@@ -57,6 +57,12 @@ const urls = [
   `${BASE}/blog/shopify-app-costs-real-monthly-bill`,
   `${BASE}/blog/wordpress-migration-cost`,
   `${BASE}/blog/gohighlevel-website-speed`,
+  `${BASE}/blog/squarespace-too-slow`,
+  `${BASE}/blog/woocommerce-too-slow`,
+  `${BASE}/blog/webflow-migration-cost`,
+  `${BASE}/blog/cloudflare-emdash-wordpress-replacement`,
+  `${BASE}/blog/leaving-webflow-2026`,
+  `${BASE}/blog/wix-too-slow`,
 
   // Legal
   `${BASE}/privacy`,

@@ -116,7 +116,7 @@ const articleSchema = {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
             "name": "PandaCodeGen",
-            "alternateName": "Panda Gen",
+            "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158"],
@@ -212,7 +212,7 @@ export default function GoHighLevelMigrationPage() {
                             If you have ever run a Google PageSpeed test on your GHL site, you already know. <BlogHighlight>Most GoHighLevel websites score between 35 and 47 on mobile PageSpeed.</BlogHighlight> After Google&apos;s{" "}
                             <Link href="/blog/google-march-2026-update" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 March 2026 core update
-                            </Link>, the bar is even higher. Google tightened the LCP threshold from 2.5 seconds to 2.0 seconds and made INP a primary ranking signal. Anything below 70 on mobile is now considered failing by most SEO standards. Below 50, Google won&apos;t even send you organic traffic. Your only option at that point is paying for ads, and even those cost more because Google penalizes slow landing pages with lower Quality Scores.
+                            </Link>, the bar is even higher. Google tightened the load time requirement from 2.5 seconds to 2.0 seconds and made page responsiveness a primary ranking signal. Anything below 70 on mobile is now considered failing by most SEO standards. Below 50, Google won&apos;t even send you organic traffic. Your only option at that point is paying for ads, and even those cost more because Google penalizes slow landing pages with lower Quality Scores.
                         </BlogText>
 
                         <BlogText>

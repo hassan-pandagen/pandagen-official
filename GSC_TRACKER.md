@@ -252,6 +252,9 @@ Track which posts are outperforming so we write more like them.
 | 25 | Mar 25, 2026 | webflow-migration-cost | webflow migration cost |
 | 26 | Mar 25, 2026 | woocommerce-too-slow | woocommerce slow |
 | 27 | Mar 27, 2026 | squarespace-too-slow | squarespace too slow |
+| 28 | Apr 1, 2026 | google-march-2026-update | google march 2026 core update |
+| 29 | Apr 3, 2026 | gohighlevel-migration | gohighlevel website migration |
+| 30 | Apr 4, 2026 | cloudflare-emdash-wordpress-replacement | cloudflare emdash wordpress replacement |
 
 ---
 
@@ -264,6 +267,9 @@ Track which posts are outperforming so we write more like them.
 | Mar 15, 2026 | Clutch | Dofollow (profile) | Company profile + 1 review | Published |
 | Mar 24, 2026 | GoodFirms | Dofollow (profile) | Company profile + 1 review (Matt Conner, MC Patches LLC) | Published |
 | Mar 24, 2026 | Google | Review | 5-star review (Matt Conner, MC Patches LLC) | Published |
+| Mar 27, 2026 | Trustpilot | Review | Marshall James review | Published |
+| Apr 4, 2026 | Agency Spotter | Dofollow (profile) | Verified badge, 2 projects added | Under review |
+| Apr 6, 2026 | Yelp | Dofollow (profile) | Business listing submitted | Pending |
 
 ---
 
@@ -303,6 +309,9 @@ Track which posts are outperforming so we write more like them.
 | Mar 24, 2026 | GSC "Alternative page with proper canonical tag" — 3 pages — Validate Fix clicked | Root cause: apex domain serving content directly. Now fixed. |
 | Mar 24, 2026 | Mobile PageSpeed fix: hid blur-[140px]/blur-3xl (Hero) + blur-[150px]/blur-[120px] (ServicesHub) on mobile | Removes GPU-heavy CSS, improves mobile LCP |
 | Mar 24, 2026 | Blog card $2,300 stat font reduced (text-4xl/5xl → text-3xl/4xl) — was clipping in 180px column | Visual bug fix |
+| Apr 4, 2026 | Published cloudflare-emdash-wordpress-replacement (trending topic, time-sensitive) | New content, IndexNow eligible |
+| Apr 6, 2026 | Rewrote title+meta for webflow-migration-cost, shopify-dawn-theme-slow, how-to-migrate-wordpress-to-nextjs | CTR fix — all 3 had page 1 positions with 0 clicks |
+| Apr 6, 2026 | Requested indexing for 10 URLs: 3 rewritten posts + 6 service pages + gohighlevel-migration | Faster recrawl of stale pages |
 
 ---
 

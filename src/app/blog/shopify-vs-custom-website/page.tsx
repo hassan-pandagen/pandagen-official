@@ -16,14 +16,14 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Shopify vs Custom Website: 5 Signs You Have Outgrown Shopify (2026)",
+    title: "Shopify vs Custom Website in 2026: 5 Signs You Have Outgrown Shopify and Need a Change",
     description: "Shopify works until app fees hit $1,000/month and your store loads in 4+ seconds. 5 signs you have outgrown Shopify and what to do next.",
     alternates: {
         canonical: '/blog/shopify-vs-custom-website',
     },
     keywords: ["shopify vs custom website", "outgrown shopify", "shopify alternative", "shopify too expensive", "shopify slow", "custom ecommerce website", "shopify hidden costs", "shopify to custom migration", "headless shopify", "shopify app costs", "shopify plus price increase 2026", "shopify core web vitals failing", "shopify checkout restrictions", "leaving shopify", "shopify transaction fees", "shopify duplicate content seo", "shopify frozen funds"],
     openGraph: {
-        title: "Shopify vs Custom Website: 5 Signs You Have Outgrown Shopify (2026)",
+        title: "Shopify vs Custom Website in 2026: 5 Signs You Have Outgrown Shopify and Need a Change",
         description: "Shopify works until app fees hit $1,000/month and your store loads in 4+ seconds. Here are the 5 signs and what to do next.",
         type: "article",
         publishedTime: "2026-03-30",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Shopify vs Custom Website: 5 Signs You Have Outgrown Shopify",
+        title: "Shopify vs Custom Website in 2026: 5 Signs You Have Outgrown Shopify and Need a Change",
         description: "Shopify works until app fees hit $1,000/month and your store loads in 4+ seconds. Here are the 5 signs.",
     },
 };
@@ -116,7 +116,7 @@ const articleSchema = {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
             "name": "PandaCodeGen",
-            "alternateName": "Panda Gen",
+            "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158"],

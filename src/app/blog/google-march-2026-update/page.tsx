@@ -116,7 +116,7 @@ const articleSchema = {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
             "name": "PandaCodeGen",
-            "alternateName": "Panda Gen",
+            "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158"],
@@ -234,7 +234,7 @@ export default function GoogleMarchUpdatePage() {
                             The update finished rolling out on April 3, but most of the impact was visible within the first week. If you have not checked your rankings since late March, now is the time.
                         </BlogText>
 
-                        <BlogHeader>The New Speed Requirements: LCP 2.0s and INP 200ms</BlogHeader>
+                        <BlogHeader>The New Speed Requirements: 2.0 Seconds to Load, 200ms to Respond</BlogHeader>
 
                         <BlogText>
                             Google measures website speed using three metrics called Core Web Vitals. You do not need to memorize these, but you do need to understand what they mean for your business.

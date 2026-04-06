@@ -16,13 +16,13 @@ const SEORankingAnimation = dynamic(() => import("@/components/blog/SEORankingAn
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Why Your Competitor Outranks You (It Is Not Their Content)",
+    title: "Why Your Competitor Outranks You in 2026: Website Speed Is 40% of Google Search Ranking Score",
     description: "Your competitor gets 3x your traffic with a faster coded site. Google, ChatGPT, and Bing all prefer fast sites. Here is the exact reason and the fix.",
     alternates: {
         canonical: '/blog/why-competitor-outranks-you',
     },
     openGraph: {
-        title: "Why Your Competitor Outranks You (It Is Not Their Content)",
+        title: "Why Your Competitor Outranks You in 2026: Website Speed Is 40% of Google Search Ranking Score",
         description: "Your competitor gets 3x your traffic with a faster coded site. Google, ChatGPT, and Bing all prefer fast sites. Here is the exact reason and the fix.",
         type: "article",
         publishedTime: "2026-02-15",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Why Your Competitor Outranks You (It Is Not Their Content)",
+        title: "Why Your Competitor Outranks You in 2026: Website Speed Is 40% of Google Search Ranking Score",
         description: "Your competitor gets 3x your traffic with a faster coded site. Google, ChatGPT, and Bing all prefer fast sites. Here is the exact reason and the fix.",
     },
     keywords: ["Google rankings", "competitor analysis", "website speed SEO", "WordPress vs Next.js", "AI search optimization", "coded website benefits"],
@@ -44,7 +44,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/why-competitor-outranks-you#article",
-            "headline": "Why Your Competitor Outranks You (It Is Not Their Content)",
+            "headline": "Why Your Competitor Outranks You in 2026: Website Speed Is 40% of Google Search Ranking Score",
             "description": "Your competitor gets 3x your traffic with a faster coded site. Google, ChatGPT, and Bing all prefer fast sites. Here is the exact reason and the fix.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-15T00:00:00-05:00",
@@ -119,7 +119,7 @@ const articleSchema = {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
             "name": "PandaCodeGen",
-            "alternateName": "Panda Gen",
+            "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158"],
