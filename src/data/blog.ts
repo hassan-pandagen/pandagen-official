@@ -23,6 +23,26 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "divi-theme-slow",
+    title: "Divi Theme Slow in 2026? Real Scores, Real Costs, and the Only Fix That Works",
+    excerpt: "Divi scores 64 to 68 out of 100 on mobile. That ceiling is built into its architecture. Caching plugins raise your score 10 to 15 points but cannot remove the render-blocking builder JavaScript that fires on every page load. Here is what that costs your business.",
+    category: "WordPress",
+    readTime: "10 min",
+    date: "Apr 8",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: false,
+    illustrationType: 'speed',
+    lastModified: "2026-04-08",
+    faqs: [
+      { question: "Why is my Divi website so slow?", answer: "Divi generates up to 500KB of inline CSS on every page load, including styles for every module you have ever used even on pages where those modules do not appear. The Divi Builder JavaScript also loads on every page and is render-blocking. Together these add 1.5 to 3 seconds to your load time before your content appears. Caching plugins can improve your score by 10 to 15 points but cannot remove this architectural overhead." },
+      { question: "What PageSpeed score does a Divi site typically get?", answer: "Most Divi sites score between 25 and 55 on mobile PageSpeed. A heavily optimized Divi site with a caching plugin, CDN, and image compression can reach 55 to 70 on mobile. That ceiling exists because the Divi Builder JavaScript and inline CSS cannot be removed. Custom Next.js sites consistently score 95 to 100." },
+      { question: "Can caching plugins fix Divi speed problems?", answer: "Partially. Plugins like WP Rocket, Perfmatters, and LiteSpeed Cache can improve your Divi score by 10 to 20 points through CSS minification, JavaScript deferral, and page caching. But they cannot remove the Divi Builder scripts, eliminate inline CSS bloat, or give you static page generation. The architectural ceiling for Divi is around 65 to 70 on mobile regardless of how many plugins you add." },
+      { question: "How much does it cost to migrate from Divi to a faster site?", answer: "Our standard Divi migration to custom Next.js starts at $3,000. That includes full design, build, content migration, 301 redirects for every URL, DNS cutover, and post-launch monitoring. The new site will score 95 to 100 on Google PageSpeed and load in under 1 second. No monthly platform fees. You own the code." },
+      { question: "Will I lose my Google rankings when I migrate away from Divi?", answer: "No, if the migration is handled correctly. Every URL gets a 301 permanent redirect to its equivalent on the new site. Your domain authority, backlinks, and indexed pages all carry over. We have migrated multiple WordPress and Divi sites without a single ranking drop. In most cases rankings improve within 60 to 90 days as Google rewards the faster Core Web Vitals." },
+    ]
+  },
+  {
     id: "wix-too-slow",
     title: "Wix Website Too Slow? 48% of Wix Sites Fail Core Web Vitals in 2026",
     excerpt: "Wix sites average 6.8-second LCP. The cause is 200-400KB of platform JavaScript that cannot be removed. No app or setting fixes this. Here is the real data and the only fix that works.",
