@@ -123,6 +123,15 @@ const articleSchema = {
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "email": "info@pandacodegen.com",
             "telephone": "+13027738982",
+            "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg", "width": 1200, "height": 630 },
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "701 Tillery St Ste 12",
+                "addressLocality": "Austin",
+                "addressRegion": "TX",
+                "postalCode": "78702",
+                "addressCountry": "US"
+            },
             "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
             "description": "PandaCodeGen builds custom Next.js websites for businesses losing revenue to slow WordPress and Divi sites. We guarantee 95 to 100/100 Google PageSpeed on every build.",

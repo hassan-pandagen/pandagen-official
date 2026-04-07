@@ -604,7 +604,8 @@ export default function WixTooSlowPage() {
                     ]} />
 
                     <BlogText>
-                        We have completed this process on Wix sites, WordPress sites, Squarespace sites, and Webflow sites. The result is always the same: a score between 95 and 100, a load time under 1 second, and $0 per month in ongoing platform fees.
+                        We have completed this process on Wix sites, WordPress sites, Squarespace sites, and Webflow sites. The result is always the same: a score between 95 and 100, a load time under 1 second, and $0 per month in ongoing platform fees. If you are also evaluating a{" "}
+                        <Link href="/blog/webflow-migration-cost" className="text-cognac hover:underline">Webflow migration</Link>, the cost breakdown and process are similar.
                     </BlogText>
                     <BlogText>
                         The migration takes 3 to 4 weeks for a typical 10 to 30 page Wix site. Larger sites with more pages and complex layouts take 4 to 6 weeks. You get a staging preview before anything goes live.

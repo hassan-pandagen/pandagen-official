@@ -375,7 +375,7 @@ export default function GoogleMarchUpdatePage() {
 
                         <BlogText>
                             <strong>Step 3: Decide whether to optimize or rebuild.</strong> If your LCP is between 2.0 and 2.5 seconds, targeted optimization might get you below the threshold. Compress images, defer scripts, and remove unused tools. If your LCP is above 3.0 seconds, optimization alone will not be enough. This applies whether you are on WordPress, Shopify,{" "}
-                            <Link href="/services/webflow" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                            <Link href="/blog/webflow-migration-cost" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 Webflow
                             </Link>,{" "}
                             <Link href="/services/wix" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
