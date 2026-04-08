@@ -106,10 +106,11 @@ function BlogPageInner() {
           "url": "https://www.pandacodegen.com"
         },
         "blogPost": articles.map((article) => {
-          const raw = article.date;
+          const raw = article.lastModified || article.date;
           const hasYear = /\d{4}/.test(raw);
           const year = hasYear ? "" : raw.startsWith("Dec") ? ", 2025" : ", 2026";
-          const iso = new Date(`${raw}${year}`).toISOString();
+          const parsed = new Date(`${raw}${year}`);
+          const iso = isNaN(parsed.getTime()) ? "2026-01-01T00:00:00.000Z" : parsed.toISOString();
           return {
             "@type": "BlogPosting",
             "headline": article.title,

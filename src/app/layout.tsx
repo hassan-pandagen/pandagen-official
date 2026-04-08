@@ -20,6 +20,7 @@ const inter = Inter({
 const playfair = Playfair_Display({
   subsets: ["latin"],
   display: 'swap',
+  preload: true,
   weight: ['400'],
   style: ['italic'],
   variable: '--font-serif',
