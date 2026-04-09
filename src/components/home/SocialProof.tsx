@@ -48,26 +48,27 @@ const reviews = [
     url: "https://www.google.com/maps?cid=16271659886069582158",
   },
   {
-    platform: "GoodFirms",
-    platformColor: "#7a5f09",
-    starColor: "#b8860b",
-    title: "Speedy, bug free website with the latest technology",
-    body: "Hassan was available to me at any time, and his response time was always less than an hour. The team was punctual, responsive, helpful, and communicative. They assisted with UI design and didn't charge for revisions. Their expertise and support were commendable.",
-    name: "Matt Conner",
-    initials: "MC",
-    initialsColor: "#7a5f09",
-    detail: "MC Patches LLC",
-    date: "Mar 2026",
+    platform: "Trustpilot",
+    platformColor: "#007a54",
+    starColor: "#00b67a",
+    title: "PandaCodeGen really understood what I needed",
+    body: "I was on the fence about leaving Squarespace, but PandaCodeGen really understood what I needed. I talked to a few other agencies and PandaCodeGen's proposal aligned best with my vision. They migrated my site in 10 days and did exactly what they said they'd do. Super happy with the result! Would definitely recommend them.",
+    name: "Richard Junior",
+    initials: "RJ",
+    initialsColor: "#007a54",
+    detail: "",
+    date: "Apr 2026",
     verified: true,
-    url: "https://www.goodfirms.co/company/pandacodegen",
+    url: "https://www.trustpilot.com/review/pandacodegen.com",
   },
 ];
 
 const platformBadges = [
   { name: "Clutch", rating: "5.0", count: "1", color: "#e8222f", url: "https://clutch.co/profile/panda-code-gen" },
-  { name: "Trustpilot", rating: "5.0", count: "2", color: "#00b67a", url: "https://www.trustpilot.com/review/pandacodegen.com" },
-  { name: "Google", rating: "5.0", count: "3", color: "#1a73e8", url: "https://www.google.com/maps?cid=16271659886069582158" },
+  { name: "Trustpilot", rating: "5.0", count: "3", color: "#00b67a", url: "https://www.trustpilot.com/review/pandacodegen.com" },
+  { name: "Google", rating: "5.0", count: "4", color: "#1a73e8", url: "https://www.google.com/maps?cid=16271659886069582158" },
   { name: "GoodFirms", rating: "5.0", count: "1", color: "#b8860b", url: "https://www.goodfirms.co/company/pandacodegen" },
+  { name: "Sortlist", rating: "5.0", count: "2", color: "#0f172a", url: "https://www.sortlist.com/agency/pandacodegen" },
 ];
 
 const metrics = [
@@ -185,7 +186,7 @@ export default function SocialProof() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2">
-                      <span className="text-sm font-bold text-charcoal truncate">{r.name}</span>
+                      <span className="text-sm font-bold text-charcoal">{r.name}</span>
                       {r.verified && (
                         <svg className="w-4 h-4 text-[#00b67a] shrink-0" viewBox="0 0 20 20" fill="currentColor">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />

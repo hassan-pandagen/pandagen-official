@@ -46,3 +46,12 @@ next-env.d.ts
 !README.md
 PandaCodeGen_*.pdf
 PandaCodeGen_*.docx
+
+# Rendered video files (Remotion output / Swishy exports)
+renders/
+public/videos/
+remotion/assets/*.mp4
+remotion/assets/*.mov
+*.mp4
+*.mov
+*.webm

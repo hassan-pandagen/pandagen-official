@@ -60,8 +60,8 @@ export default function WebflowServicePage() {
           "ratingValue": "5",
           "bestRating": "5",
           "worstRating": "1",
-          "ratingCount": "2",
-          "reviewCount": "2"
+          "ratingCount": "11",
+          "reviewCount": "11"
         }
       },
       {

@@ -23,6 +23,27 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "squarespace-migration-cost",
+    title: "Squarespace Migration Cost in 2026: What You Will Actually Pay",
+    excerpt: "Squarespace looks affordable at $23 a month. Add domain renewal, email hosting, and extensions and the real 3-year cost is $1,500 to $5,500. Here is the full migration cost breakdown by site size and when it pays for itself.",
+    category: "Squarespace",
+    readTime: "11 min",
+    date: "Apr 9",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: false,
+    illustrationType: 'cost',
+    lastModified: "2026-04-09",
+    faqs: [
+      { question: "How much does it cost to migrate from Squarespace?", answer: "A Squarespace to custom Next.js migration costs $3,500 to $30,000 depending on site size and complexity. A small portfolio or service site with 5 to 10 pages costs $3,500 to $6,000. A small business site with 10 to 20 pages costs $6,000 to $10,000. A mid-size site with 20 to 50 pages costs $10,000 to $18,000. E-commerce migrations add 20 to 30% to any tier due to product data, checkout flows, and payment integration work." },
+      { question: "What does Squarespace actually cost per year?", answer: "Squarespace's real annual cost is $552 to $1,992 for a standard business site. The Core plan ($23/month billed annually) costs $276/year. Add domain renewal ($20 to $70/year after year one), Google Workspace email ($84/user/year), and any premium extensions ($5 to $50/month each). E-commerce businesses on the Basic plan also pay a 2% transaction fee on every sale, which adds $600 to $2,400/year for businesses doing $30,000 to $120,000 in annual revenue." },
+      { question: "How long does a Squarespace migration take?", answer: "A Squarespace migration takes 1 to 8 weeks depending on site size. Small sites (5 to 10 pages) take 1 to 2 weeks. Medium sites (10 to 30 pages) take 2 to 4 weeks. Large sites (30 to 60 pages) take 4 to 8 weeks. E-commerce migrations with significant product catalogues add 1 to 3 weeks to any tier. The timeline includes URL mapping, redirect setup, content migration, and post-launch Search Console verification." },
+      { question: "Will I lose my Google rankings when I migrate from Squarespace?", answer: "Not if the migration includes proper 301 redirects and SEO preservation. Every URL must be mapped to its new equivalent, all meta titles and descriptions must be preserved, canonicals must be correct, and a new sitemap must be submitted to Google Search Console on launch day. Rankings typically stabilise within 30 days and improve within 60 to 90 days because Google rewards the faster Core Web Vitals that a custom Next.js site delivers." },
+      { question: "Is migrating from Squarespace worth the cost?", answer: "For most businesses, yes. A business on Squarespace Core ($276/year) plus email ($84/year) plus extensions ($360/year) spends $720 to $1,200/year to maintain a site that scores 30 to 55 on Google PageSpeed Mobile. A custom Next.js site on Vercel costs $0 to $240/year and scores 95 to 100. The hosting savings alone recover a $6,000 migration cost in 5 to 8 years. Add the SEO improvement from faster Core Web Vitals and the payback period drops to 2 to 4 years for most businesses." },
+      { question: "What is Squarespace's mobile PageSpeed score?", answer: "Squarespace sites score 30 to 55 on Google PageSpeed Mobile in 2026. The average Largest Contentful Paint (LCP) for Squarespace sites is 8.79 seconds on mobile, which is more than three times over Google's 2.5-second threshold. No setting, plugin, or image optimisation fix removes this ceiling because it is built into the platform's template rendering system. Custom Next.js sites consistently score 95 to 100 with LCP under 1.5 seconds." }
+    ]
+  },
+  {
     id: "top-custom-web-development-agencies-usa-2026",
     title: "Top 10 Custom Web Development Agencies in the USA: 2026 Honest Review",
     excerpt: "We ranked the 10 best US custom web development agencies by pricing transparency, tech stack, verified reviews, and real PageSpeed scores. Most agencies hide pricing and build on WordPress. Here is the full comparison.",
