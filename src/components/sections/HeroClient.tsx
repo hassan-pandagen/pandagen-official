@@ -3,18 +3,6 @@
 import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 
-const HeroStatusPill = dynamic(
-  () => import("./HeroAnimated").then((m) => m.HeroStatusPill),
-  { ssr: false, loading: () => (
-    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-stone-200 text-xs font-bold uppercase tracking-widest text-stone-500 mb-8 shadow-xs">
-      <span className="relative flex h-2 w-2">
-        <span className="relative inline-flex rounded-full h-2 w-2 bg-cognac" />
-      </span>
-      Accepting Q2 Clients
-    </div>
-  )}
-);
-
 const HeroCTAs = dynamic(
   () => import("./HeroAnimated").then((m) => m.HeroCTAs),
   { ssr: false, loading: () => (
@@ -29,10 +17,6 @@ const HeroCTAs = dynamic(
   )}
 );
 
-const HeroTrustSignals = dynamic(
-  () => import("./HeroAnimated").then((m) => m.HeroTrustSignals),
-  { ssr: false }
-);
 
 const AuditWidgetLazy = dynamic(
   () => import("@/components/audit/AuditWidget"),
@@ -90,4 +74,4 @@ function HeroAuditWidget() {
   return <div ref={ref}>{isVisible ? <AuditWidgetLazy /> : <AuditFallback />}</div>;
 }
 
-export { HeroStatusPill, HeroCTAs, HeroTrustSignals, HeroAuditWidget };
+export { HeroCTAs, HeroAuditWidget };

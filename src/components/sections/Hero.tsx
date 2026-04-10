@@ -1,4 +1,5 @@
-import { HeroStatusPill, HeroCTAs, HeroTrustSignals, HeroAuditWidget } from "./HeroClient";
+import { Zap, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { HeroCTAs, HeroAuditWidget } from "./HeroClient";
 
 export default function Hero() {
   return (
@@ -28,8 +29,13 @@ export default function Hero() {
         {/* --- LEFT: EDITORIAL COPY --- */}
         <div className="max-w-2xl">
 
-          {/* Status pill, animated client component */}
-          <HeroStatusPill />
+          {/* Status pill: pure server HTML, zero CLS */}
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-stone-200 text-xs font-bold uppercase tracking-widest text-stone-500 mb-8 shadow-xs">
+            <span className="relative flex h-2 w-2">
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-cognac" />
+            </span>
+            Accepting Q2 Clients
+          </div>
 
           {/* Headline: LCP element, pure server HTML, no JS needed to render */}
           {/* LCP element: inline styles ensure paint before CSS loads */}
@@ -64,8 +70,25 @@ export default function Hero() {
           {/* CTAs, animated client component */}
           <HeroCTAs />
 
-          {/* Trust signals, animated client component */}
-          <HeroTrustSignals />
+          {/* Trust signals: pure server HTML, zero CLS */}
+          <div className="flex flex-wrap items-center gap-x-8 gap-y-3 mt-10 text-sm text-stone-500 font-medium">
+            <div className="flex items-center gap-2">
+              <Zap className="w-4 h-4 text-cognac shrink-0" />
+              <span>&lt;1s Load Time</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <ShieldCheck className="w-4 h-4 text-charcoal shrink-0" />
+              <span>Bank Grade Security</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-charcoal shrink-0" />
+              <span>Fixed Pricing</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-charcoal shrink-0" />
+              <span>Zero Maintenance</span>
+            </div>
+          </div>
 
         </div>
 
