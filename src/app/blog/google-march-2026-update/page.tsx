@@ -143,7 +143,7 @@ export default function GoogleMarchUpdatePage() {
     return (
         <>
             <Header />
-            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-20 md:pt-32 pb-20">
+            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-16 md:pt-32 pb-10 md:pb-20">
                 {/* Global Noise Texture */}
                 <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
 

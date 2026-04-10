@@ -112,24 +112,24 @@ export default function HassanAuthorPage() {
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
             <Header />
 
-            <div className="pt-24 md:pt-40 pb-24 px-6">
+            <div className="pt-20 md:pt-40 pb-12 md:pb-24 px-6">
                 <div className="container mx-auto max-w-5xl">
 
                     {/* Back */}
-                    <Link href="/about" className="group inline-flex items-center gap-2 text-stone-500 hover:text-cognac transition-colors mb-12 font-medium">
+                    <Link href="/about" className="group inline-flex items-center gap-2 text-stone-500 hover:text-cognac transition-colors mb-6 md:mb-12 font-medium">
                         <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
                         Back to Team
                     </Link>
 
                     {/* Hero */}
-                    <div className="flex flex-col md:flex-row gap-12 items-start mb-24">
-                        <div className="w-full md:w-64 shrink-0 aspect-square relative rounded-2xl overflow-hidden shadow-xl shadow-stone-200/60 border border-white">
+                    <div className="flex flex-col md:flex-row gap-6 md:gap-12 items-start mb-10 md:mb-24">
+                        <div className="w-full max-w-[280px] mx-auto md:mx-0 md:w-64 shrink-0 aspect-square relative rounded-2xl overflow-hidden shadow-xl shadow-stone-200/60 border border-white">
                             <Image
                                 src="/team/hassan.png"
                                 fill
                                 sizes="(max-width: 768px) 100vw, 256px"
                                 alt="Hassan Jamal - Lead Full-Stack Engineer at PandaCodeGen"
-                                className="object-cover object-top grayscale hover:grayscale-0 transition-all duration-700"
+                                className="object-cover object-top"
                                 priority
                             />
                         </div>
@@ -166,7 +166,7 @@ export default function HassanAuthorPage() {
                     </div>
 
                     {/* Skills Grid */}
-                    <div className="grid md:grid-cols-2 gap-8 mb-16">
+                    <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-10 md:mb-16">
                         <div className="p-8 bg-white border border-stone-300 rounded-2xl shadow-xs">
                             <div className="flex items-center gap-3 mb-6">
                                 <Code2 className="w-5 h-5 text-cognac" />
@@ -198,7 +198,7 @@ export default function HassanAuthorPage() {
                     </div>
 
                     {/* Trust Signals & Credentials */}
-                    <section className="mb-16 p-8 bg-white border border-stone-300 rounded-2xl shadow-xs">
+                    <section className="mb-10 md:mb-16 p-6 md:p-8 bg-white border border-stone-300 rounded-2xl shadow-xs">
                         <h3 className="text-xl font-serif text-charcoal mb-6">Credentials &amp; Press</h3>
                         <div className="space-y-4 text-stone-600 text-sm leading-relaxed">
                             <p><strong>Quoted in Woman&apos;s World magazine</strong> (1.6M readers) as a technology expert on AI and web development. Article publishing June 8, 2026.</p>
@@ -214,7 +214,7 @@ export default function HassanAuthorPage() {
                     </section>
 
                     {/* Client Reviews */}
-                    <section className="mb-16">
+                    <section className="mb-10 md:mb-16">
                         <h3 className="text-xl font-serif text-charcoal mb-6">What Clients Say</h3>
                         <div className="grid md:grid-cols-2 gap-6">
                             <div className="p-6 bg-white border border-stone-200 rounded-2xl">
@@ -236,7 +236,7 @@ export default function HassanAuthorPage() {
 
                     {/* Articles */}
                     {hassanPosts.length > 0 && (
-                        <section className="border-t border-stone-200 pt-16 mb-16">
+                        <section className="border-t border-stone-200 pt-10 md:pt-16 mb-10 md:mb-16">
                             <h2 className="text-2xl font-serif text-charcoal mb-2">Articles by Hassan</h2>
                             <p className="text-stone-500 mb-8">Technical deep-dives on web performance, SEO, and modern architecture.</p>
                             <div className="grid gap-3">
@@ -264,7 +264,7 @@ export default function HassanAuthorPage() {
                     )}
 
                     {/* CTA */}
-                    <section className="text-center py-16 bg-white border border-stone-300 rounded-3xl px-8">
+                    <section className="text-center py-10 md:py-16 bg-white border border-stone-300 rounded-3xl px-6 md:px-8">
                         <h2 className="text-2xl font-serif text-charcoal mb-4">Work With Me</h2>
                         <p className="text-stone-500 mb-8 max-w-md mx-auto">No account managers. You talk directly to the engineer building your product.</p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">

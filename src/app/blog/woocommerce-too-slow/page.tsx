@@ -236,8 +236,9 @@ export default function WooCommerceTooSlowPage() {
                             Let&apos;s start with what you are actually dealing with. According to data from Google&apos;s Core Web Vitals benchmarks and WooCommerce performance audits across hundreds of stores:
                         </BlogText>
 
-                        <div className="overflow-x-auto">
-                            <table className="w-full border-collapse text-sm">
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                            <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
+                            <table className="w-full border-collapse text-sm min-w-[560px]">
                                 <thead>
                                     <tr className="bg-stone-100">
                                         <th className="border border-stone-200 px-4 py-3 text-left font-semibold text-charcoal">Metric</th>
@@ -368,8 +369,9 @@ export default function WooCommerceTooSlowPage() {
                             Here is what that means for a typical WooCommerce store:
                         </BlogText>
 
-                        <div className="overflow-x-auto">
-                            <table className="w-full border-collapse text-sm">
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                            <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
+                            <table className="w-full border-collapse text-sm min-w-[560px]">
                                 <thead>
                                     <tr className="bg-stone-100">
                                         <th className="border border-stone-200 px-4 py-3 text-left font-semibold text-charcoal">Annual Revenue</th>
@@ -463,8 +465,9 @@ export default function WooCommerceTooSlowPage() {
                             Headless is not for every WooCommerce store. Here are the signals that make it a strong fit:
                         </BlogText>
 
-                        <div className="overflow-x-auto">
-                            <table className="w-full border-collapse text-sm">
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                            <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
+                            <table className="w-full border-collapse text-sm min-w-[560px]">
                                 <thead>
                                     <tr className="bg-stone-100">
                                         <th className="border border-stone-200 px-4 py-3 text-left font-semibold text-charcoal">Strong fit for headless</th>

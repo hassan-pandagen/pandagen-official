@@ -141,7 +141,7 @@ export default function WordPressVsNextJSPage() {
     return (
         <>
             <Header />
-            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-20 md:pt-32 pb-20">
+            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-16 md:pt-32 pb-10 md:pb-20">
                 <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
 
                 <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
@@ -190,7 +190,7 @@ export default function WordPressVsNextJSPage() {
                     <div data-speakable="true" className="bg-stone-50 border border-stone-200 rounded-xl p-6 mb-10">
                         <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-3">Quick Answer</p>
                         <p className="text-stone-700 leading-relaxed">
-                            Next.js is faster (0.8s vs 3.5s load time), better for SEO (95 to 100/100 vs 65 to 75/100 PageSpeed), and cheaper long-term (zero hosting fees vs $150 to $500/month). WordPress is easier to set up for non-developers and remains the right choice for simple blogs or sites that never need to scale. If your website directly generates revenue, Next.js wins on every metric that matters: speed, rankings, conversions, and total cost of ownership.
+                            A custom coded website loads in under 1 second. A WordPress site loads in 3 to 4 seconds. That speed difference costs WordPress owners an average of $20,172 per year in lost sales, according to a 2025 Liquid Web study of 206 businesses. Custom built sites also skip the $150 to $500 per month in hosting and plugin fees that WordPress charges forever. If your website brings in real money, custom built is the better investment. If it is a simple hobby blog you will never grow, WordPress is fine. The only question that matters: is your website losing you sales right now?
                         </p>
                     </div>
 
@@ -240,8 +240,9 @@ export default function WordPressVsNextJSPage() {
                             This is where the comparison becomes uncomfortable for WordPress advocates. The speed gap between WordPress and Next.js is not marginal. It is structural.
                         </BlogText>
 
-                        <div className="overflow-x-auto my-6">
-                            <table className="w-full text-sm border border-stone-200 rounded-xl overflow-hidden">
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4">
+                            <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px]">
                                 <thead>
                                     <tr className="bg-stone-50">
                                         <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Metric</th>
@@ -300,8 +301,9 @@ export default function WordPressVsNextJSPage() {
                         <BlogText>
                             Google made Core Web Vitals a direct ranking factor in 2021. Since then, page speed and responsiveness feed directly into where your pages rank. WordPress's structural speed ceiling of 65 to 75/100 means it is chronically underperforming on the signals Google measures. No amount of Yoast optimisation compensates for a 4-second LCP.
                         </BlogText>
-                        <div className="overflow-x-auto my-6">
-                            <table className="w-full text-sm border border-stone-200 rounded-xl overflow-hidden">
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4">
+                            <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px]">
                                 <thead>
                                     <tr className="bg-stone-50">
                                         <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Feature</th>
@@ -346,8 +348,9 @@ export default function WordPressVsNextJSPage() {
                             But the long-term cost picture is very different. Here is the actual 3-year cost breakdown for a typical business WordPress site:
                         </BlogText>
 
-                        <div className="overflow-x-auto my-6">
-                            <table className="w-full text-sm border border-stone-200 rounded-xl overflow-hidden">
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4">
+                            <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px]">
                                 <thead>
                                     <tr className="bg-stone-50">
                                         <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Cost Category</th>
@@ -408,9 +411,9 @@ export default function WordPressVsNextJSPage() {
                         <CalModalButton className="inline-flex items-center gap-2 bg-white text-stone-900 font-semibold px-6 py-3 rounded-lg hover:bg-stone-100 transition-colors">
                                 Book Free Discovery Call <ArrowRight className="w-4 h-4" />
                             </CalModalButton>
-                        <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                          <p className="text-sm text-stone-700 mt-1">$500 for a complete WordPress to Next.js migration. Most agencies charge $5,000 to $15,000 for the same work. You pay after your new site is live. No monthly hosting bills. No annual renewal fees. We&apos;re building our portfolio and passing the savings to you.</p>
+                        <div className="mt-4 p-4 bg-cognac/20 border border-cognac/50 rounded-xl">
+                          <p className="text-sm font-bold text-cognac">FOUNDER&apos;S OFFER: $500 Migration</p>
+                          <p className="text-sm text-white mt-1">$500 for a complete custom built migration. Most agencies charge $5,000 to $15,000 for the same work. You pay after your new site is live. No monthly hosting bills. No annual renewal fees. We are building our portfolio and passing the savings to you.</p>
                         </div>
                     </div>
 
@@ -420,8 +423,9 @@ export default function WordPressVsNextJSPage() {
                         <BlogText>
                             WordPress's 43% market share makes it the most targeted platform for hackers, by a wide margin. Sucuri's annual website threat report consistently shows WordPress accounting for over 90% of all hacked CMS websites they clean each year. The attack vectors are predictable: outdated plugins with known vulnerabilities, weak admin passwords, and insecure shared hosting environments.
                         </BlogText>
-                        <div className="overflow-x-auto my-6">
-                            <table className="w-full text-sm border border-stone-200 rounded-xl overflow-hidden">
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4">
+                            <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px]">
                                 <thead>
                                     <tr className="bg-stone-50">
                                         <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Security Aspect</th>
@@ -467,8 +471,9 @@ export default function WordPressVsNextJSPage() {
                         <BlogText>
                             We build in Next.js. We think it is the right choice for almost every business website. But WordPress is still the right answer in specific situations, and we would rather give you an honest answer than a biased one.
                         </BlogText>
-                        <div className="overflow-x-auto my-6">
-                            <table className="w-full text-sm border border-stone-200 rounded-xl overflow-hidden">
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4">
+                            <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px]">
                                 <thead>
                                     <tr className="bg-stone-50">
                                         <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Use Case</th>

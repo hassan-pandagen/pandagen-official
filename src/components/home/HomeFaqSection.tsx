@@ -12,10 +12,10 @@ export default function HomeFaqSection({ faqs }: { faqs: Faq[] }) {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
-    <section className="bg-paper py-24 border-t border-stone-200">
+    <section className="bg-paper py-12 md:py-24 border-t border-stone-200">
       <div className="container mx-auto px-6 max-w-3xl">
         <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#9a3412" }}>FAQ</p>
-        <h2 className="text-3xl md:text-4xl font-sans font-bold text-charcoal mb-12">
+        <h2 className="text-3xl md:text-4xl font-sans font-bold text-charcoal mb-8 md:mb-12">
           Common questions about WordPress &amp; Shopify migration
         </h2>
         <div className="divide-y divide-stone-200">

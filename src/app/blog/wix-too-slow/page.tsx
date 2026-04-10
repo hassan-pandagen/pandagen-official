@@ -163,7 +163,7 @@ export default function WixTooSlowPage() {
     return (
         <>
             <Header />
-            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-16 md:pt-24 pb-20">
+            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-16 md:pt-24 pb-10 md:pb-20">
                 <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
 
                 <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
@@ -256,8 +256,9 @@ export default function WixTooSlowPage() {
                         For comparison: the gold standard for web performance is 90 and above. Custom Next.js sites built with static generation consistently score 95 to 100. Not because of clever tricks. Because the underlying architecture generates minimal JavaScript and serves pre-rendered HTML.
                     </BlogText>
 
-                    <div className="overflow-x-auto my-8">
-                        <table className="w-full text-sm border-collapse">
+                    <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4">
+                        <table className="w-full text-sm border-collapse min-w-[560px]">
                             <thead>
                                 <tr className="border-b border-[var(--border)]">
                                     <th className="text-left py-3 px-4 font-semibold text-[var(--foreground)]">Platform</th>
@@ -408,8 +409,9 @@ export default function WixTooSlowPage() {
                             <p className="text-stone-700 text-sm leading-relaxed mb-3">
                                 Every app you install on Wix loads its JavaScript on every page of your site, even pages where the app does nothing. The more apps, the slower every single page. Here are the most common culprits:
                             </p>
-                            <div className="overflow-x-auto">
-                                <table className="w-full text-sm border-collapse">
+                            <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                                <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
+                                <table className="w-full text-sm border-collapse min-w-[560px]">
                                     <thead>
                                         <tr className="border-b-2 border-stone-200">
                                             <th className="text-left py-2 pr-4 font-semibold text-charcoal">App</th>
@@ -483,8 +485,9 @@ export default function WixTooSlowPage() {
                         Here is what the performance difference looks like in practice. This comparison is based on migrating three Wix sites to custom Next.js over the past six months. The before numbers are from Google PageSpeed Insights on the live Wix sites before migration. The after numbers are from the same tool after the new sites went live.
                     </BlogText>
 
-                    <div className="overflow-x-auto my-8">
-                        <table className="w-full text-sm border-collapse">
+                    <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4">
+                        <table className="w-full text-sm border-collapse min-w-[560px]">
                             <thead>
                                 <tr className="border-b border-[var(--border)]">
                                     <th className="text-left py-3 px-4 font-semibold">Metric</th>

@@ -143,7 +143,7 @@ export default function LeavingWebflow2026Page() {
     return (
         <>
             <Header />
-            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-20 md:pt-32 pb-20">
+            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-16 md:pt-32 pb-10 md:pb-20">
                 <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
 
                 <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
@@ -234,8 +234,9 @@ export default function LeavingWebflow2026Page() {
                             Here is what a mid-sized business running a Webflow site might be paying today, before they realize it:
                         </BlogText>
 
-                        <div className="my-8 overflow-x-auto">
-                            <table className="w-full text-left border-collapse">
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
+                            <table className="w-full text-left border-collapse min-w-[560px]">
                                 <thead>
                                     <tr className="border-b-2 border-stone-300">
                                         <th className="py-3 pr-4 text-charcoal font-bold">Item</th>
@@ -392,8 +393,9 @@ export default function LeavingWebflow2026Page() {
                             Here is what the data looks like when a real business completes a migration from a template-based platform to a custom Next.js site. These are not projections. These are numbers from sites we have built.
                         </BlogText>
 
-                        <div className="my-8 overflow-x-auto">
-                            <table className="w-full text-left border-collapse">
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
+                            <table className="w-full text-left border-collapse min-w-[560px]">
                                 <thead>
                                     <tr className="border-b-2 border-stone-300">
                                         <th className="py-3 pr-4 text-charcoal font-bold">Metric</th>

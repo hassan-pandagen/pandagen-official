@@ -290,8 +290,9 @@ export default function SquarespaceToSlowPage() {
                         </BlogText>
 
                         {/* Score comparison table */}
-                        <div className="overflow-x-auto my-8 rounded-xl border border-stone-200">
-                            <table className="w-full text-sm">
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4 rounded-xl border border-stone-300">
+                            <table className="w-full text-sm min-w-[560px]">
                                 <thead className="bg-stone-50">
                                     <tr>
                                         <th className="text-left p-3 font-semibold text-stone-700">Platform</th>

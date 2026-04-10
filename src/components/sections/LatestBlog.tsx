@@ -15,11 +15,11 @@ export default function LatestBlog() {
   const latestPosts = [...blogPosts].reverse().slice(0, 3);
 
   return (
-    <section className="py-20 px-6 bg-paper relative overflow-hidden">
+    <section className="py-12 md:py-20 px-6 bg-paper relative overflow-hidden">
       <div className="container mx-auto max-w-6xl">
 
         {/* Section Header */}
-        <div className="flex items-center justify-between mb-12">
+        <div className="flex items-center justify-between mb-8 md:mb-12">
           <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="h-px w-12 bg-charcoal" />

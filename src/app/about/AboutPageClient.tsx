@@ -89,7 +89,7 @@ export default function AboutPageClient() {
       <Header onOpenQuote={() => setIsQuoteModalOpen(true)} />
 
       {/* 1. HERO with DNA STRIP */}
-      <section className="relative pt-24 md:pt-40 pb-32 px-6 overflow-hidden bg-paper">
+      <section className="relative pt-20 md:pt-40 pb-16 md:pb-32 px-6 overflow-hidden bg-paper">
         <div className="absolute top-20 left-1/3 w-[500px] h-[500px] bg-stone-200/40 blur-[150px] rounded-full pointer-events-none" />
 
         <div className="container mx-auto max-w-4xl text-center relative z-10">
@@ -102,18 +102,18 @@ export default function AboutPageClient() {
             <span className="font-serif italic text-cognac">We build assets.</span>
           </h1>
 
-          <p className="text-xl text-stone-600 leading-relaxed mb-12">
+          <p className="text-xl text-stone-600 leading-relaxed mb-8 md:mb-12">
             Most agencies sell you a template and disappear. We are engineers who grew up breaking WordPress sites and fixing them. PandaCodeGen was born from a simple truth: <strong className="text-charcoal">The web is too slow, and business owners are paying the price.</strong>
           </p>
         </div>
 
         {/* DNA STRIP */}
-        <div className="absolute bottom-0 left-0 right-0 border-t border-stone-200 bg-white py-4">
-            <div className="flex justify-center gap-8 md:gap-16 text-xs md:text-sm font-mono text-stone-500 uppercase tracking-widest">
-                <span>Lightning Speed</span>
-                <span>Bank Level Security</span>
-                <span>Zero Monthly Fees</span>
-                <span>You Own Everything</span>
+        <div className="absolute bottom-0 left-0 right-0 border-t border-stone-200 bg-white py-4 overflow-hidden">
+            <div className="flex md:justify-center gap-6 md:gap-16 text-[10px] md:text-sm font-mono text-stone-500 uppercase tracking-widest overflow-x-auto scrollbar-hide px-6">
+                <span className="shrink-0">Lightning Speed</span>
+                <span className="shrink-0">Bank Level Security</span>
+                <span className="shrink-0">Zero Monthly Fees</span>
+                <span className="shrink-0">You Own Everything</span>
             </div>
         </div>
       </section>
@@ -141,19 +141,19 @@ export default function AboutPageClient() {
       </section>
 
       {/* 3. THE ENGINEERS */}
-      <section className="bg-[#0C0A09] py-20 px-6">
+      <section className="bg-[#0C0A09] py-12 md:py-20 px-6">
          <div className="container mx-auto">
-         <div className="text-center mb-16">
+         <div className="text-center mb-8 md:mb-16">
             <h2 className="text-3xl font-bold text-white">Meet the Engineers</h2>
             <p className="text-stone-500">No account managers. You talk directly to the architects.</p>
          </div>
 
-         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+         <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
             {/* IMRAN */}
             <div className="group relative bg-stone-900 border border-stone-800 rounded-3xl overflow-hidden hover:border-stone-700 transition-colors duration-500">
                <div className="absolute inset-0 bg-linear-to-b from-transparent to-stone-950/95 z-10" />
                <div className="h-96 w-full relative">
-                  <Image src="/team/imran.png" fill sizes="(max-width: 768px) 100vw, 50vw" alt="Imran - Lead Solutions Architect at PandaCodeGen" className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700" />
+                  <Image src="/team/imran.png" fill sizes="(max-width: 768px) 100vw, 50vw" alt="Imran - Lead Solutions Architect at PandaCodeGen" className="object-cover object-top" />
                </div>
                <div className="absolute bottom-0 left-0 w-full p-8 z-20">
                   <div className="px-3 py-1 bg-white/10 text-stone-300 text-[10px] font-bold uppercase tracking-wider rounded-sm w-fit mb-2">Strategy</div>
@@ -172,7 +172,7 @@ export default function AboutPageClient() {
             <Link href="/about/hassan" className="group relative bg-stone-900 border border-stone-800 rounded-3xl overflow-hidden hover:border-stone-700 transition-colors duration-500 block">
                <div className="absolute inset-0 bg-linear-to-b from-transparent to-stone-950/95 z-10" />
                <div className="h-96 w-full relative">
-                  <Image src="/team/hassan.png" fill sizes="(max-width: 768px) 100vw, 50vw" alt="Hassan Jamal - Lead Full-Stack Engineer at PandaCodeGen" className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700" />
+                  <Image src="/team/hassan.png" fill sizes="(max-width: 768px) 100vw, 50vw" alt="Hassan Jamal - Lead Full-Stack Engineer at PandaCodeGen" className="object-cover object-top" />
                </div>
                <div className="absolute bottom-0 left-0 w-full p-8 z-20">
                   <div className="px-3 py-1 bg-white/10 text-stone-300 text-[10px] font-bold uppercase tracking-wider rounded-sm w-fit mb-2">Engineering</div>
@@ -198,9 +198,9 @@ export default function AboutPageClient() {
       </section>
 
       {/* FOUNDER SPOTLIGHT */}
-      <section className="py-20 px-6 border-t border-stone-200">
+      <section className="py-12 md:py-20 px-6 border-t border-stone-200">
         <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 md:mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-100 border border-stone-200 text-sm text-stone-600 mb-6">
               <Code2 className="w-4 h-4 text-stone-500" /> Founder Spotlight
             </div>
@@ -269,14 +269,14 @@ export default function AboutPageClient() {
       </section>
 
       {/* 4. WHY CHOOSE US */}
-      <section className="py-20 px-6 border-y border-stone-200 relative overflow-hidden">
+      <section className="py-12 md:py-20 px-6 border-y border-stone-200 relative overflow-hidden">
          <div className="relative z-10 container mx-auto max-w-5xl">
-             <div className="text-center mb-16">
+             <div className="text-center mb-8 md:mb-16">
                 <h2 className="text-charcoal font-bold text-4xl mb-4">Why Choose PandaCodeGen</h2>
                 <p className="text-stone-500 text-lg">What makes us different from traditional agencies</p>
              </div>
 
-             <div className="grid md:grid-cols-3 gap-8">
+             <div className="grid md:grid-cols-3 gap-6 md:gap-8">
                 <div className="bg-white border border-stone-300 rounded-2xl p-8 hover:border-stone-400 transition-all">
                    <div className="w-12 h-12 rounded-xl bg-stone-100 flex items-center justify-center mb-6">
                       <svg className="w-6 h-6 text-charcoal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -314,7 +314,7 @@ export default function AboutPageClient() {
       <LinkedInProof />
 
       {/* 5. MANIFESTO */}
-      <section className="py-20 px-6">
+      <section className="py-12 md:py-20 px-6">
          <div className="container mx-auto max-w-4xl bg-white border border-stone-300 rounded-2xl overflow-hidden text-sm">
             <div className="p-8 md:p-12 space-y-6">
                 <h2 className="text-3xl md:text-4xl font-bold text-charcoal">Our Mission: Eradicate Bloat.</h2>

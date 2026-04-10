@@ -98,24 +98,24 @@ export default function ImranAuthorPage() {
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
             <Header />
 
-            <div className="pt-24 md:pt-40 pb-24 px-6">
+            <div className="pt-20 md:pt-40 pb-12 md:pb-24 px-6">
                 <div className="container mx-auto max-w-5xl">
 
                     {/* Back */}
-                    <Link href="/about" className="group inline-flex items-center gap-2 text-stone-500 hover:text-cognac transition-colors mb-12 font-medium">
+                    <Link href="/about" className="group inline-flex items-center gap-2 text-stone-500 hover:text-cognac transition-colors mb-6 md:mb-12 font-medium">
                         <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
                         Back to Team
                     </Link>
 
                     {/* Hero */}
-                    <div className="flex flex-col md:flex-row gap-12 items-start mb-24">
-                        <div className="w-full md:w-64 shrink-0 aspect-square relative rounded-2xl overflow-hidden shadow-xl shadow-stone-200/60 border border-white">
+                    <div className="flex flex-col md:flex-row gap-6 md:gap-12 items-start mb-10 md:mb-24">
+                        <div className="w-full max-w-[280px] mx-auto md:mx-0 md:w-64 shrink-0 aspect-square relative rounded-2xl overflow-hidden shadow-xl shadow-stone-200/60 border border-white">
                             <Image
                                 src="/team/imran.png"
                                 fill
                                 sizes="(max-width: 768px) 100vw, 256px"
                                 alt="Imran - Lead Solutions Architect at PandaCodeGen"
-                                className="object-cover object-top grayscale hover:grayscale-0 transition-all duration-700"
+                                className="object-cover object-top"
                                 priority
                             />
                         </div>
@@ -143,7 +143,7 @@ export default function ImranAuthorPage() {
                     </div>
 
                     {/* Skills Grid */}
-                    <div className="grid md:grid-cols-2 gap-8 mb-16">
+                    <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-10 md:mb-16">
                         <div className="p-8 bg-white border border-stone-300 rounded-2xl shadow-xs">
                             <div className="flex items-center gap-3 mb-6">
                                 <BarChart3 className="w-5 h-5 text-cognac" />
@@ -176,7 +176,7 @@ export default function ImranAuthorPage() {
 
                     {/* Articles */}
                     {imranPosts.length > 0 && (
-                        <section className="border-t border-stone-200 pt-16 mb-16">
+                        <section className="border-t border-stone-200 pt-10 md:pt-16 mb-10 md:mb-16">
                             <h2 className="text-2xl font-serif text-charcoal mb-2">Articles by Imran</h2>
                             <p className="text-stone-500 mb-8">Strategic insights on enterprise migrations and ROI optimization.</p>
                             <div className="grid gap-3">
@@ -204,7 +204,7 @@ export default function ImranAuthorPage() {
                     )}
 
                     {/* CTA */}
-                    <section className="text-center py-16 bg-white border border-stone-300 rounded-3xl px-8">
+                    <section className="text-center py-10 md:py-16 bg-white border border-stone-300 rounded-3xl px-6 md:px-8">
                         <h2 className="text-2xl font-serif text-charcoal mb-4">Work With Me</h2>
                         <p className="text-stone-500 mb-8 max-w-md mx-auto">Get a strategic architecture review and ROI analysis before committing to any platform migration.</p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">

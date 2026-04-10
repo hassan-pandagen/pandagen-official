@@ -48,27 +48,23 @@ export default function SalesImpactAnimation() {
   const maxVal = 80;
 
   return (
-    <div role="img" aria-label="Interactive animation showing revenue loss from slow page load times and conversion rate gains from speed improvements" className="relative w-full aspect-2/1 bg-linear-to-br from-stone-50 to-white rounded-2xl border border-stone-200 overflow-hidden">
+    <div role="img" aria-label="Interactive animation showing revenue loss from slow page load times and conversion rate gains from speed improvements" className="relative w-full aspect-[4/3] sm:aspect-2/1 bg-linear-to-br from-stone-50 to-white rounded-2xl border border-stone-200 overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(234,88,12,0.04),transparent_60%)]" />
 
       {/* Top label */}
-      <div className="absolute top-4 left-0 right-0 text-center">
-        <span className="text-[9px] font-bold text-stone-400 uppercase tracking-[0.2em]">
+      <div className="absolute top-3 md:top-4 left-0 right-0 text-center px-4">
+        <span className="text-[8px] md:text-[9px] font-bold text-stone-400 uppercase tracking-[0.15em] md:tracking-[0.2em]">
           Revenue Impact of Page Speed, Per Year
         </span>
       </div>
 
       {/* PHASE: counting */}
       {(phase === "counting" || phase === "reset") && (
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
-          <div className="text-[10px] font-bold text-stone-400 uppercase tracking-widest">Annual Revenue Lost to Slow Load Times</div>
-          <div className="text-5xl md:text-7xl font-bold text-cognac tabular-nums transition-all duration-300">
+        <div className="absolute inset-x-0 top-10 bottom-10 flex flex-col items-center justify-center gap-1.5 md:gap-2 px-4">
+          <div className="text-4xl md:text-7xl font-bold text-cognac tabular-nums transition-all duration-300 leading-none">
             ${counter.toLocaleString()}
           </div>
-          <div className="text-xs text-stone-500">per average e-commerce store · 4s load time</div>
-          <div className="mt-2 text-[9px] text-stone-400 font-bold uppercase tracking-widest">
-            Every +1s delay = 7% drop in conversions
-          </div>
+          <div className="text-[10px] md:text-xs text-stone-500 text-center leading-tight">per year lost on a 4 second load time</div>
         </div>
       )}
 

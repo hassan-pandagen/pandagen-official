@@ -143,7 +143,7 @@ export default function WebflowVsCustomWebsitePage() {
     return (
         <>
             <Header />
-            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-20 md:pt-32 pb-20">
+            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-16 md:pt-32 pb-10 md:pb-20">
                 <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
 
                 <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
@@ -353,8 +353,9 @@ export default function WebflowVsCustomWebsitePage() {
                         </BlogText>
 
                         {/* Comparison Table */}
-                        <div className="overflow-x-auto my-8">
-                            <table className="w-full border-collapse text-sm">
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4">
+                            <table className="w-full border-collapse text-sm min-w-[560px]">
                                 <thead>
                                     <tr className="bg-stone-50">
                                         <th className="border border-stone-200 px-4 py-3 text-left font-bold">Cost Category</th>

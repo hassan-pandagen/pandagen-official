@@ -18,7 +18,7 @@ const spots = [
 
 export default function FounderOffer() {
   return (
-    <section className="py-20 bg-white border-y border-stone-200">
+    <section className="py-12 md:py-20 bg-white border-y border-stone-200">
       <div className="container mx-auto px-6 max-w-5xl">
 
         <motion.div

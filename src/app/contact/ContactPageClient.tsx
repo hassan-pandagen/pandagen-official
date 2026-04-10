@@ -94,7 +94,7 @@ export default function ContactPageClient() {
 
       <Header />
 
-      <section className="relative pt-24 md:pt-40 pb-20 px-6 bg-paper overflow-hidden">
+      <section className="relative pt-20 md:pt-40 pb-10 md:pb-20 px-6 bg-paper overflow-hidden">
         {/* Decorative orb */}
         <div className="absolute top-20 right-1/3 w-[500px] h-[500px] bg-stone-200/40 blur-[120px] rounded-full pointer-events-none" />
 

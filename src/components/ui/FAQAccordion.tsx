@@ -12,10 +12,10 @@ export function FAQAccordion({ faqs }: { faqs: FAQ[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="mt-20 mb-8" aria-labelledby="faq-heading">
+    <section className="mt-10 md:mt-20 mb-0" aria-labelledby="faq-heading">
       <h2
         id="faq-heading"
-        className="text-3xl md:text-4xl font-bold text-charcoal mb-8 border-l-4 border-cognac pl-6"
+        className="text-3xl md:text-4xl font-bold text-charcoal mb-6 md:mb-8 border-l-4 border-cognac pl-6"
       >
         Frequently Asked Questions
       </h2>

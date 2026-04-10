@@ -548,7 +548,7 @@ Examples:
 
 ---
 
-## Part 10 — Existing Blog Posts (33 total as of Apr 6, 2026)
+## Part 10 — Existing Blog Posts (39 total as of Apr 9, 2026)
 
 | # | Slug | Title | Category | Status |
 |---|------|-------|----------|--------|
@@ -585,19 +585,47 @@ Examples:
 | 31 | `cloudflare-emdash-wordpress-replacement` | Cloudflare Built a WordPress Replacement (2026) | Security | Live |
 | 32 | `leaving-webflow-2026` | Leaving Webflow in 2026: Real Costs, Cart Failures, and What We Migrated To | Webflow | Live |
 | 33 | `wix-too-slow` | Wix Website Too Slow? 48% of Wix Sites Fail Core Web Vitals in 2026 | Performance | Live |
+| 34 | `gohighlevel-website-speed` | GoHighLevel Sites Score 20 to 45 on PageSpeed (Here Is Why) | Performance | Live |
+| 35 | `shopify-app-costs-real-monthly-bill` | Shopify App Costs: The Real Monthly Bill | Shopify | Live |
+| 36 | `wordpress-migration-cost` | WordPress Migration Cost 2026 | WordPress | Live |
+| 37 | `top-custom-web-development-agencies-usa-2026` | Top Custom Web Development Agencies USA 2026 | Agency | Live |
+| 38 | `divi-theme-slow` | Divi Theme Slow in 2026? Real Scores, Real Costs, and the Only Fix That Works | WordPress | Live |
+| 39 | `squarespace-migration-cost` | Squarespace Migration Cost 2026 | Squarespace | Live |
 
 ---
 
 ## Part 11 — Blog Queue: April 2026
 
-### Upcoming Posts
+### Cluster Completion (High Priority)
 
 | Priority | Slug | Title | Notes |
 |----------|------|-------|-------|
-| High | `shopify-app-costs-real-monthly-bill` | Shopify App Costs: The Real Monthly Bill | Research 50 pain points first |
-| High | `squarespace-vs-custom-website` | Squarespace vs Custom Website 2026 | Complements squarespace-too-slow |
-| Med | `core-web-vitals-explained` | Core Web Vitals Explained for Business Owners (Not Developers) | Low competition |
-| Med | `wix-vs-custom-website` | Wix vs Custom Website: When Wix Stops Working for You | Complements wix-too-slow |
+| ~~High~~ | ~~`shopify-app-costs-real-monthly-bill`~~ | ~~Shopify App Costs: The Real Monthly Bill~~ | DONE (post #35) |
+| High | `wix-vs-custom-website` | Wix vs Custom Website: When Wix Stops Working for You | 52 pain points researched. Completes Wix cluster. Sunday Apr 13. |
+| High | `core-web-vitals-explained` | Core Web Vitals Explained for Business Owners (Not Developers) | No overlap with Google March 2026 post (confirmed). Business-owner angle nobody else does. |
+| High | `squarespace-vs-custom-website` | Squarespace vs Custom Website 2026 | Focus on features/flexibility/scalability (speed+cost covered in other 2 posts). Completes Squarespace cluster. |
+
+### New Topics (From Competitor Gap Analysis Apr 9, 2026)
+
+| Priority | Slug | Title | Notes |
+|----------|------|-------|-------|
+| High | `ecommerce-platform-speed-comparison-2026` | Ecommerce Platform Speed Comparison 2026: Shopify vs WooCommerce vs BigCommerce vs Custom | Nobody owns this. Head-to-head PageSpeed benchmarks with screenshots. Highly shareable. |
+| High | `website-rebuild-cost-2026` | How Much Does a Website Rebuild Cost in 2026? (Honest Pricing Guide) | Transactional keyword. Catches people who haven't decided what platform to leave yet. General version of platform-specific cost posts. |
+| Med | `website-rebuild-vs-redesign` | Website Rebuild vs Redesign: How to Know Which One You Need in 2026 | Decision-stage. "Should I patch or start fresh?" Naturally leads to migration service. |
+| Med | `custom-website-vs-template-cost` | Custom Website vs Template: The Real Cost Over 3 Years | Broader version of wordpress-vs-custom-code. Covers all platforms. 3-year cost angle proven. |
+| Low | `nextjs-ecommerce-2026` | Next.js for Ecommerce: Why Fast-Growing Brands Are Switching in 2026 | Mid-funnel. Different from headless-commerce (definitional) and shopify-headless (Shopify-specific). |
+
+### Competitor Intelligence (Apr 9, 2026)
+
+Top agencies analyzed: WebFX ($260M/yr), Coalition Technologies ($5.4M/yr), Single Grain ($4-14M/yr), Lounge Lizard ($5.8-10M/yr), Pagepro, FocusReactive.
+
+**Our advantages over all of them:**
+- 5-node @graph schema (none of them do this)
+- speakable + citations in Article schema (none)
+- Real before/after PageSpeed scores with proof (none)
+- Platform-specific pain-point targeting (none)
+- $0/month hosting angle (unique to us)
+- Business-owner language, not developer jargon (Pagepro/FocusReactive write for devs)
 
 ---
 

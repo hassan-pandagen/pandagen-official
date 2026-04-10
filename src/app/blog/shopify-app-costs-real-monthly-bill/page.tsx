@@ -249,9 +249,10 @@ export default function ShopifyAppCostsPage() {
                     </BlogText>
 
                     {/* Default Stack Table */}
-                    <div className="my-8 overflow-x-auto">
+                    <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
                         <p className="text-xs font-semibold text-stone-500 uppercase tracking-wide mb-3">Default Stack (what most stores are running)</p>
-                        <table className="w-full text-sm border-collapse">
+                        <table className="w-full text-sm border-collapse min-w-[560px]">
                             <thead>
                                 <tr className="bg-red-50 border border-red-200">
                                     <th className="text-left p-3 font-semibold text-stone-700">App</th>
@@ -285,9 +286,10 @@ export default function ShopifyAppCostsPage() {
                     </div>
 
                     {/* Optimized Stack Table */}
-                    <div className="my-8 overflow-x-auto">
+                    <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
                         <p className="text-xs font-semibold text-stone-500 uppercase tracking-wide mb-3">Optimized Stack for a $20K to $50K/month store</p>
-                        <table className="w-full text-sm border-collapse">
+                        <table className="w-full text-sm border-collapse min-w-[560px]">
                             <thead>
                                 <tr className="bg-green-50 border border-green-200">
                                     <th className="text-left p-3 font-semibold text-stone-700">Swap To</th>

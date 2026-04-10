@@ -9,20 +9,20 @@ interface FooterProps {
 
 export default function Footer({ onOpenQuote }: FooterProps) {
   return (
-    <footer className="bg-[#F5F5F4] pt-20 border-t border-stone-200">
+    <footer className="bg-[#F5F5F4] pt-10 md:pt-20 border-t border-stone-200">
 
       {/* 1. FLOATING CTA CARD */}
-      <div className="container mx-auto px-6 mb-24">
-        <div className="relative rounded-[2.5rem] bg-[#0C0A09] overflow-hidden px-8 py-20 text-center shadow-2xl">
+      <div className="container mx-auto px-6 mb-12 md:mb-24">
+        <div className="relative rounded-[2.5rem] bg-[#0C0A09] overflow-hidden px-6 md:px-8 py-12 md:py-20 text-center shadow-2xl">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-cognac/10 blur-[120px] rounded-full pointer-events-none" />
           <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-stone-800/60 blur-[100px] rounded-full pointer-events-none" />
 
           <div className="relative z-10 max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-bold uppercase tracking-widest text-stone-300 mb-8">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-bold uppercase tracking-widest text-stone-300 mb-5 md:mb-8">
               <Sparkles className="w-3 h-3 text-cognac" />
               Limited Availability
             </div>
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tight">
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-5 md:mb-8 tracking-tight">
               Ready to build something{" "}
               <span className="font-serif italic text-cognac">Legendary?</span>
             </h2>
@@ -47,8 +47,8 @@ export default function Footer({ onOpenQuote }: FooterProps) {
       </div>
 
       {/* 2. EDITORIAL LINKS */}
-      <div className="container mx-auto px-6 pb-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+      <div className="container mx-auto px-6 pb-10 md:pb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16">
 
           {/* Brand & Socials */}
           <div className="lg:col-span-4 flex flex-col">

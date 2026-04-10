@@ -39,7 +39,7 @@ export default function SecurityShieldAnimation() {
   }, []);
 
   return (
-    <div role="img" aria-label="Interactive animation showing WordPress AI security vulnerabilities being detected, contrasted with a secure custom Next.js site" className="relative w-full aspect-2/1 bg-linear-to-br from-stone-50 to-white rounded-2xl border border-stone-200 overflow-hidden">
+    <div role="img" aria-label="Interactive animation showing WordPress AI security vulnerabilities being detected, contrasted with a secure custom Next.js site" className="relative w-full aspect-[4/3] sm:aspect-2/1 bg-linear-to-br from-stone-50 to-white rounded-2xl border border-stone-200 overflow-hidden">
       <style>{`
         @keyframes secShake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-3px)} 75%{transform:translateX(3px)} }
         @keyframes secReveal { from{opacity:0;transform:translateX(-6px)} to{opacity:1;transform:translateX(0)} }

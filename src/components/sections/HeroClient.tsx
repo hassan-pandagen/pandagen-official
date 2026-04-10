@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import { useEffect, useRef, useState } from "react";
 
 const HeroStatusPill = dynamic(
   () => import("./HeroAnimated").then((m) => m.HeroStatusPill),
@@ -33,30 +34,60 @@ const HeroTrustSignals = dynamic(
   { ssr: false }
 );
 
-const HeroAuditWidget = dynamic(
+const AuditWidgetLazy = dynamic(
   () => import("@/components/audit/AuditWidget"),
-  { ssr: false, loading: () => (
-    <div className="relative flex justify-center items-center">
+  { ssr: false }
+);
+
+function AuditFallback() {
+  return (
+    <div
+      className="relative flex justify-center items-center w-full"
+      style={{ contain: "layout" }}
+    >
       <div className="relative w-full max-w-xl bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-xl">
         <div className="flex items-center justify-between px-6 py-3 border-b border-gray-100 bg-stone-50/80">
-          <div className="flex items-center gap-1.5">
-            <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
-            <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
-            <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
-          </div>
           <span className="text-[10px] font-bold text-[#c2410c] uppercase tracking-wider">AI Audit Engine</span>
         </div>
-        <div className="p-6 md:p-8 space-y-5">
-          <div>
-            <div className="text-xl font-bold text-charcoal leading-tight mb-1">Get Your Free Website Audit</div>
-            <div className="text-sm text-stone-600">11 deep checks by our AI. Speed, SEO, security, and more.</div>
-          </div>
-          <div className="w-full bg-stone-50 border border-gray-200 rounded-xl h-14" />
-          <div className="w-full h-14 bg-charcoal rounded-xl" />
+        <div className="p-5 md:p-6 space-y-3 md:space-y-4">
+          <div className="text-base md:text-xl font-bold text-charcoal leading-tight">Get Your Free Website Audit</div>
+          <div className="w-full bg-stone-50 border border-gray-200 rounded-xl h-11 md:h-12" />
+          <div className="w-full h-11 md:h-12 bg-charcoal rounded-xl" />
         </div>
       </div>
     </div>
-  )}
-);
+  );
+}
+
+function HeroAuditWidget() {
+  const ref = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    if (!ref.current) return;
+
+    // Desktop: load immediately (audit is above the fold on desktop lg breakpoint)
+    // Mobile/tablet: defer until scrolled near it
+    if (window.innerWidth >= 1024) {
+      setIsVisible(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px" }
+    );
+
+    observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return <div ref={ref}>{isVisible ? <AuditWidgetLazy /> : <AuditFallback />}</div>;
+}
 
 export { HeroStatusPill, HeroCTAs, HeroTrustSignals, HeroAuditWidget };

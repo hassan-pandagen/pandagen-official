@@ -62,7 +62,10 @@ function BlogPageInner() {
     const matchesCategory = activeCategory === "All" || article.category === activeCategory;
     if (searchQuery === "") return matchesCategory;
     const searchWords = searchQuery.toLowerCase().split(/\s+/).filter(Boolean);
-    const searchable = `${article.title} ${article.excerpt} ${article.category} ${article.id.replace(/-/g, ' ')}`.toLowerCase();
+    const faqText = article.faqs
+      ? article.faqs.map(f => `${f.question} ${f.answer}`).join(" ")
+      : "";
+    const searchable = `${article.title} ${article.excerpt} ${article.category} ${article.id.replace(/-/g, ' ')} ${article.illustrationType} ${faqText}`.toLowerCase();
     const matchesSearch = searchWords.every(word => searchable.includes(word));
     return matchesCategory && matchesSearch;
   });
@@ -144,7 +147,7 @@ function BlogPageInner() {
 
       <Header />
 
-      <section className="pt-24 md:pt-40 pb-16 px-6 text-center relative border-b border-stone-200">
+      <section className="pt-20 md:pt-40 pb-10 md:pb-16 px-6 text-center relative border-b border-stone-200">
         <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-4">The Journal</p>
         <h1 className="text-5xl md:text-7xl font-bold text-charcoal relative z-10">
           Insights from the <span className="font-serif italic text-cognac">Engine Room.</span>
@@ -177,14 +180,14 @@ function BlogPageInner() {
             )}
           </div>
 
-          {/* Category Filters */}
-          <div className="flex flex-wrap gap-2 items-center">
-            <Filter className="w-4 h-4 text-stone-600" />
+          {/* Category Filters: horizontal scroll on mobile, wrap on desktop */}
+          <div className="w-full md:w-auto flex items-center gap-2 overflow-x-auto md:overflow-visible md:flex-wrap scrollbar-hide -mx-6 px-6 md:mx-0 md:px-0 snap-x snap-mandatory md:snap-none">
+            <Filter className="w-4 h-4 text-stone-600 shrink-0" />
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                className={`shrink-0 snap-start px-4 py-2 rounded-full text-sm font-medium transition-all whitespace-nowrap ${
                   activeCategory === category
                     ? 'bg-charcoal text-white'
                     : 'bg-white text-stone-500 border border-stone-200 hover:border-stone-400 hover:text-charcoal'
@@ -302,7 +305,7 @@ function BlogPageInner() {
       )}
 
       {/* Non-Featured Articles Grid */}
-      <section className="container mx-auto px-6 pb-32">
+      <section className="container mx-auto px-6 pb-16 md:pb-32">
         <div className="grid md:grid-cols-3 gap-6">
           {[...overflowFeatured, ...filteredArticles.filter(a => !a.featured)].map((article) => {
             const display = cardDisplay[article.illustrationType];

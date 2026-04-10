@@ -100,7 +100,7 @@ export default function SocialProof() {
   };
 
   return (
-    <section className="py-16 bg-[#faf9f7] border-b border-stone-200/80">
+    <section className="py-10 md:py-16 bg-[#faf9f7] border-b border-stone-200/80">
       <div className="container mx-auto px-6 max-w-6xl">
 
         {/* Platform Badges */}

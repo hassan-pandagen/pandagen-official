@@ -352,3 +352,17 @@ article > p:first-of-type::first-letter {
   margin-top: 0.1rem;
   color: #1C1917;
 }
+
+/* ── Footer social pills: no sticky hover on touch devices ──
+   Mobile browsers keep :hover styles "stuck" after a tap until user taps elsewhere.
+   Scoped to footer social pills only so it doesn't break intentional hover states elsewhere. */
+@media (hover: none) and (pointer: coarse) {
+  footer .group:hover {
+    border-color: var(--color-stone-200) !important;
+    color: var(--color-stone-600) !important;
+    box-shadow: var(--shadow-xs) !important;
+  }
+  footer .group:hover .text-cognac {
+    color: var(--color-cognac) !important;
+  }
+}

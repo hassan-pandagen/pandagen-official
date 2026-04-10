@@ -258,8 +258,9 @@ export default function GHLWebsiteSpeedPage() {
                         The mobile score is what matters. Google has used mobile-first indexing since 2019, meaning the mobile version of your page is what it crawls and ranks. A low mobile score means Google is seeing a slow page as your primary ranking signal, regardless of how good your desktop version looks.
                     </BlogText>
 
-                    <div className="my-8 overflow-x-auto">
-                        <table className="w-full text-sm border-collapse">
+                    <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
+                        <table className="w-full text-sm border-collapse min-w-[560px]">
                             <thead>
                                 <tr className="bg-stone-50 border border-stone-200">
                                     <th className="text-left p-3 font-semibold text-stone-700">Platform</th>

@@ -3,7 +3,7 @@ import { HeroStatusPill, HeroCTAs, HeroTrustSignals, HeroAuditWidget } from "./H
 export default function Hero() {
   return (
     <section
-      className="relative flex flex-col justify-center pt-24 md:pt-36 pb-16 md:pb-24 overflow-hidden bg-paper"
+      className="relative flex flex-col justify-center pt-20 md:pt-36 pb-8 md:pb-24 overflow-hidden bg-paper"
       style={{ backgroundColor: "#f5f5f4" }}
     >
 
@@ -23,7 +23,7 @@ export default function Hero() {
       {/* Soft warm glow — hidden on mobile (expensive GPU blur) */}
       <div className="hidden md:block absolute top-1/3 right-[10%] w-[500px] h-[500px] bg-stone-200/50 blur-[140px] rounded-full pointer-events-none" />
 
-      <div className="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-6 lg:gap-16 items-center">
 
         {/* --- LEFT: EDITORIAL COPY --- */}
         <div className="max-w-2xl">
@@ -48,8 +48,8 @@ export default function Hero() {
 
           {/* Subtitle: LCP element — inline styles force paint before CSS loads */}
           <p
-            className="text-lg md:text-xl text-stone-600 mb-10 leading-relaxed max-w-lg font-medium"
-            style={{ color: "#57534e", fontSize: "1.125rem", lineHeight: 1.75, marginBottom: "2.5rem", maxWidth: "32rem", fontWeight: 500, display: "block", visibility: "visible" }}
+            className="text-lg md:text-xl text-stone-600 mb-6 md:mb-10 leading-relaxed max-w-lg font-medium"
+            style={{ color: "#57534e", fontSize: "1.125rem", lineHeight: 1.75, maxWidth: "32rem", fontWeight: 500, display: "block", visibility: "visible" }}
           >
             We replace slow WordPress, Shopify, Wix, Squarespace, and drag and drop sites with{" "}
             <span
@@ -70,7 +70,10 @@ export default function Hero() {
         </div>
 
         {/* --- RIGHT: AUDIT WIDGET --- */}
-        <div className="relative lg:min-h-[400px]">
+        <div
+          className="relative lg:min-h-[400px]"
+          style={{ contain: "layout" }}
+        >
           <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-white/50 blur-3xl rounded-full pointer-events-none" />
           <div className="relative z-10">
             <HeroAuditWidget />

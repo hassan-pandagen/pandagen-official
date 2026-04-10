@@ -275,11 +275,11 @@ function ProjectCard({ project, index }: any) {
                                 {project.results.map((result: any, i: number) => (
                                     <div
                                         key={i}
-                                        className={`p-4 ${i < project.results.length - 1 ? "border-r border-stone-100" : ""} bg-stone-50 hover:bg-stone-100 transition-colors`}
+                                        className={`p-2.5 md:p-4 min-w-0 ${i < project.results.length - 1 ? "border-r border-stone-100" : ""} bg-stone-50 hover:bg-stone-100 transition-colors`}
                                     >
-                                        <div className="text-2xl lg:text-3xl font-black text-charcoal tracking-tight leading-none mb-1.5">{result.value}</div>
+                                        <div className="text-lg sm:text-2xl lg:text-3xl font-black text-charcoal tracking-tight leading-none mb-1.5 truncate">{result.value}</div>
                                         <div className="text-[9px] font-bold text-stone-400 uppercase tracking-wider leading-tight">{result.label}</div>
-                                        <div className="text-[9px] text-stone-300 mt-1 leading-tight">{result.from}</div>
+                                        <div className="text-[9px] text-stone-300 mt-1 leading-tight truncate">{result.from}</div>
                                     </div>
                                 ))}
                             </div>

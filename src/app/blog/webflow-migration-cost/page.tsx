@@ -144,7 +144,7 @@ export default function WebflowMigrationCostPage() {
     return (
         <>
             <Header />
-            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-20 md:pt-32 pb-20">
+            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-16 md:pt-32 pb-10 md:pb-20">
                 <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
 
                 <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
@@ -221,7 +221,8 @@ export default function WebflowMigrationCostPage() {
                         </BlogText>
 
                         {/* Cost Tier Table */}
-                        <div className="my-8 overflow-x-auto -mx-4 px-4">
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 flex items-center gap-1">← Swipe to see more →</p>
+                        <div className="my-4 overflow-x-auto -mx-4 px-4">
                             <table className="w-full text-sm border-collapse min-w-[500px]">
                                 <thead>
                                     <tr className="bg-stone-100">
@@ -348,8 +349,9 @@ export default function WebflowMigrationCostPage() {
                         </BlogText>
 
                         {/* Cost Comparison Table */}
-                        <div className="my-8 overflow-x-auto">
-                            <table className="w-full text-sm border-collapse">
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
+                            <table className="w-full text-sm border-collapse min-w-[560px]">
                                 <thead>
                                     <tr className="bg-stone-100">
                                         <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Cost Item</th>
@@ -405,8 +407,10 @@ export default function WebflowMigrationCostPage() {
                             We have tracked 14 Webflow to Next.js migrations. The average organic traffic improvement was 28% within 90 days of launch. For a business getting 5,000 organic visits per month, that is 1,400 additional visitors per month with no increase in ad spend.
                         </BlogText>
 
-                        <div className="my-8 overflow-x-auto">
-                            <table className="w-full text-sm border-collapse">
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+
+                        <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
+                            <table className="w-full text-sm border-collapse min-w-[560px]">
                                 <thead>
                                     <tr className="bg-stone-100">
                                         <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Metric</th>

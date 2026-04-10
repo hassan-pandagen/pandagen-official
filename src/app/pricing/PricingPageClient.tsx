@@ -92,7 +92,7 @@ export default function PricingPageClient() {
       <Header />
 
       {/* 1. HERO */}
-      <section className="relative pt-24 md:pt-40 pb-20 px-6 text-center overflow-hidden">
+      <section className="relative pt-20 md:pt-40 pb-10 md:pb-20 px-6 text-center overflow-hidden">
         <div className="absolute top-10 right-1/4 w-[500px] h-[500px] bg-stone-200/40 blur-[120px] rounded-full pointer-events-none" />
 
         <div className="container mx-auto relative z-10 max-w-4xl">
@@ -160,7 +160,7 @@ export default function PricingPageClient() {
       </section>
 
       {/* 2. PRICING GRID */}
-      <section className="container mx-auto px-6 pb-24 max-w-6xl">
+      <section className="container mx-auto px-6 pb-12 md:pb-24 max-w-6xl">
         <div className="grid lg:grid-cols-3 gap-8 items-stretch">
 
           {/* CARD 1: Conversion Site */}
@@ -379,7 +379,7 @@ export default function PricingPageClient() {
       </section>
 
       {/* 4. RISK REVERSAL */}
-      <section className="container mx-auto px-6 pb-24 max-w-3xl">
+      <section className="container mx-auto px-6 pb-12 md:pb-24 max-w-3xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -417,21 +417,22 @@ export default function PricingPageClient() {
       </section>
 
       {/* 5. COMPARISON TABLE */}
-      <section className="container mx-auto px-6 pb-24 max-w-4xl">
+      <section className="container mx-auto px-6 pb-12 md:pb-24 max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-8 md:mb-12"
         >
           <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-3">The Real Cost</p>
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal">
             Why Standard Agencies{" "}
             <span className="font-serif italic text-cognac">Cost You More.</span>
           </h2>
+          <p className="md:hidden text-xs font-bold text-cognac mt-4 flex items-center justify-center gap-1">← Swipe to see more →</p>
         </motion.div>
 
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto -mx-6 px-6">
           <div className="min-w-[640px] rounded-3xl border border-stone-200 overflow-hidden shadow-xs">
             <div className="grid grid-cols-[1fr_1.4fr_1.4fr]">
               <div className="h-1 bg-stone-50" />
@@ -474,7 +475,7 @@ export default function PricingPageClient() {
       </section>
 
       {/* 6. TESTIMONIAL */}
-      <section className="container mx-auto px-6 pb-16 max-w-3xl">
+      <section className="container mx-auto px-6 pb-10 md:pb-16 max-w-3xl">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -503,8 +504,8 @@ export default function PricingPageClient() {
       </section>
 
       {/* 7. FAQ */}
-      <section className="container mx-auto px-6 pb-32 max-w-3xl">
-        <h2 className="text-3xl font-bold text-charcoal text-center mb-12">Common Questions</h2>
+      <section className="container mx-auto px-6 pb-16 md:pb-32 max-w-3xl">
+        <h2 className="text-3xl font-bold text-charcoal text-center mb-8 md:mb-12">Common Questions</h2>
         <div className="space-y-6">
           <FAQ q="How does the deposit model work?" a="You pay 30% upfront to secure your engineering sprint and lock in your timeline. The remaining 70% is due on launch day, after you've seen the finished product and approved it." />
           <FAQ q="What if I need more custom work?" a="Every project is unique. After the discovery call, we'll scope and quote your specific requirements. The tiers above are starting points, not ceilings." />

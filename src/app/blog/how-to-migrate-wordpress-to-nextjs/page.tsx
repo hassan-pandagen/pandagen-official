@@ -144,7 +144,7 @@ export default function MigrateWordPressToNextJSPage() {
     return (
         <>
             <Header />
-            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-20 md:pt-32 pb-20">
+            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-16 md:pt-32 pb-10 md:pb-20">
                 <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
 
                 <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
@@ -396,9 +396,9 @@ export default function MigrateWordPressToNextJSPage() {
                         <CalModalButton className="inline-flex items-center gap-2 bg-white text-stone-900 font-semibold px-6 py-3 rounded-lg hover:bg-stone-100 transition-colors">
                                 Book Free Migration Assessment <ArrowRight className="w-4 h-4" />
                             </CalModalButton>
-                        <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                          <p className="text-sm text-stone-700 mt-1">Don&apos;t want to handle this yourself? $500 for a complete WordPress to Next.js migration done by our team. 30% upfront, the rest after the site is live. Every URL redirected. Every page tested. Zero downtime.</p>
+                        <div className="mt-4 p-4 bg-cognac/20 border border-cognac/50 rounded-xl">
+                          <p className="text-sm font-bold text-cognac">FOUNDER&apos;S OFFER: $500 Migration</p>
+                          <p className="text-sm text-white mt-1">Don&apos;t want to handle this yourself? $500 for a complete custom built migration done by our team. 30% upfront, the rest after the site is live. Every URL redirected. Every page tested. Zero downtime.</p>
                         </div>
                     </div>
 

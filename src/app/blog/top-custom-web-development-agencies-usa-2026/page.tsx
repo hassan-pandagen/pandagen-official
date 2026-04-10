@@ -193,7 +193,7 @@ export default function TopWebDevAgenciesPage() {
     return (
         <>
             <Header />
-            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-20 md:pt-32 pb-20">
+            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-16 md:pt-32 pb-10 md:pb-20">
                 <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
 
                 <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
@@ -336,7 +336,8 @@ export default function TopWebDevAgenciesPage() {
                         {/* Comparison Table */}
                         <BlogHeader>At a Glance: How the Top 10 Compare</BlogHeader>
 
-                        <div className="my-8 overflow-x-auto -mx-4 px-4">
+                        <p className="md:hidden text-xs font-bold text-cognac mt-2 mb-2 flex items-center gap-1">← Swipe to see more →</p>
+                        <div className="my-4 overflow-x-auto -mx-4 px-4">
                             <table className="w-full text-sm border-collapse min-w-[720px]">
                                 <thead>
                                     <tr className="bg-stone-100">

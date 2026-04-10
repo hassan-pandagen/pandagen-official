@@ -70,7 +70,7 @@ export default function UCPFlowAnimation() {
         }
       `}</style>
 
-      <div role="img" aria-label="Interactive animation showing Google Universal Commerce Protocol: an AI assistant searching and purchasing products on behalf of a customer" className="relative w-full aspect-2/1 bg-linear-to-br from-stone-50 to-white rounded-2xl border border-stone-200 overflow-hidden select-none">
+      <div role="img" aria-label="Interactive animation showing Google Universal Commerce Protocol: an AI assistant searching and purchasing products on behalf of a customer" className="relative w-full aspect-[4/3] sm:aspect-2/1 bg-linear-to-br from-stone-50 to-white rounded-2xl border border-stone-200 overflow-hidden select-none">
         {/* Background glow */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(234,88,12,0.04),transparent_70%)]" />
 
