@@ -3,6 +3,7 @@ import Script from "next/script";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
+import TrustLogoBar from "@/components/sections/TrustLogoBar";
 import ScrollProgressBar from "@/components/layout/ScrollProgressBar";
 import HomeFaqSection from "@/components/home/HomeFaqSection";
 
@@ -11,7 +12,6 @@ import HomeFaqSection from "@/components/home/HomeFaqSection";
 export const dynamic = "force-static";
 
 // Lazy load below-the-fold components
-const TrustLogoBar = lazyLoad(() => import("@/components/sections/TrustLogoBar"));
 const SocialProof = lazyLoad(() => import("@/components/home/SocialProof"));
 const UnfairAdvantage = lazyLoad(() => import("@/components/sections/UnfairAdvantage"));
 const FounderOffer = lazyLoad(() => import("@/components/sections/FounderOffer"));
