@@ -43,7 +43,70 @@ const articles = blogPosts
     return dateB.getTime() - dateA.getTime();
   });
 
-function BlogPageInner() {
+// Hoist schema to module scope so it renders server-side (no client state dependency)
+const blogSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.pandacodegen.com/blog#webpage",
+      "url": "https://www.pandacodegen.com/blog",
+      "name": "PandaCodeGen Blog - Insights from the Engine Room",
+      "description": "Expert insights on Next.js development, WordPress migration, Shopify optimization, and enterprise web performance.",
+      "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
+      "breadcrumb": { "@id": "https://www.pandacodegen.com/blog#breadcrumb" },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.pandacodegen.com/blog#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" }
+      ]
+    },
+    {
+      "@type": "Blog",
+      "@id": "https://www.pandacodegen.com/blog#blog",
+      "name": "PandaCodeGen Blog",
+      "description": "Technical insights on modern web development, WordPress alternatives, and performance optimization.",
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.pandacodegen.com/#organization",
+        "name": "PandaCodeGen",
+        "url": "https://www.pandacodegen.com"
+      },
+      "blogPost": articles.map((article) => {
+        const raw = article.lastModified || article.date;
+        const hasYear = /\d{4}/.test(raw);
+        const year = hasYear ? "" : raw.startsWith("Dec") ? ", 2025" : ", 2026";
+        const parsed = new Date(`${raw}${year}`);
+        const iso = isNaN(parsed.getTime()) ? "2026-01-01T00:00:00.000Z" : parsed.toISOString();
+        return {
+          "@type": "BlogPosting",
+          "headline": article.title,
+          "description": article.excerpt,
+          "url": `https://www.pandacodegen.com/blog/${article.id}`,
+          "datePublished": iso,
+          "author": {
+            "@type": "Person",
+            "name": article.author,
+            "url": "https://www.pandacodegen.com/about/hassan"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "@id": "https://www.pandacodegen.com/#organization",
+            "name": "PandaCodeGen",
+            "url": "https://www.pandacodegen.com"
+          }
+        };
+      })
+    }
+  ]
+};
+
+// Interactive filter + article list — wrapped in Suspense because it calls useSearchParams()
+function BlogArticlesSection() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const activeCategory = searchParams.get("cat") ?? "All";
@@ -66,87 +129,8 @@ function BlogPageInner() {
   const overflowFeatured = allSecondary.slice(2);
   const heroDisplay = heroArticle ? cardDisplay[heroArticle.illustrationType] : null;
 
-  const blogSchema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "CollectionPage",
-        "@id": "https://www.pandacodegen.com/blog#webpage",
-        "url": "https://www.pandacodegen.com/blog",
-        "name": "PandaCodeGen Blog - Insights from the Engine Room",
-        "description": "Expert insights on Next.js development, WordPress migration, Shopify optimization, and enterprise web performance.",
-        "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
-        "breadcrumb": { "@id": "https://www.pandacodegen.com/blog#breadcrumb" },
-        "inLanguage": "en-US"
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://www.pandacodegen.com/blog#breadcrumb",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" }
-        ]
-      },
-      {
-        "@type": "Blog",
-        "@id": "https://www.pandacodegen.com/blog#blog",
-        "name": "PandaCodeGen Blog",
-        "description": "Technical insights on modern web development, WordPress alternatives, and performance optimization.",
-        "publisher": {
-          "@type": "Organization",
-          "@id": "https://www.pandacodegen.com/#organization",
-          "name": "PandaCodeGen",
-          "url": "https://www.pandacodegen.com"
-        },
-        "blogPost": articles.map((article) => {
-          const raw = article.lastModified || article.date;
-          const hasYear = /\d{4}/.test(raw);
-          const year = hasYear ? "" : raw.startsWith("Dec") ? ", 2025" : ", 2026";
-          const parsed = new Date(`${raw}${year}`);
-          const iso = isNaN(parsed.getTime()) ? "2026-01-01T00:00:00.000Z" : parsed.toISOString();
-          return {
-            "@type": "BlogPosting",
-            "headline": article.title,
-            "description": article.excerpt,
-            "url": `https://www.pandacodegen.com/blog/${article.id}`,
-            "datePublished": iso,
-            "author": {
-              "@type": "Person",
-              "name": article.author,
-              "url": "https://www.pandacodegen.com/about/hassan"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "@id": "https://www.pandacodegen.com/#organization",
-              "name": "PandaCodeGen",
-              "url": "https://www.pandacodegen.com"
-            }
-          };
-        })
-      }
-    ]
-  };
-
   return (
-    <main className="bg-paper min-h-screen overflow-x-hidden relative">
-      {/* Schema.org JSON-LD for SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
-      />
-
-      <Header />
-
-      <section className="pt-20 md:pt-40 pb-10 md:pb-16 px-6 text-center relative border-b border-stone-200">
-        <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-4">The Journal</p>
-        <h1 className="text-5xl md:text-7xl font-bold text-charcoal relative z-10">
-          Insights from the <span className="font-serif italic text-cognac">Engine Room.</span>
-        </h1>
-        <p className="mt-6 text-lg text-stone-600 max-w-xl mx-auto">
-          Technical guides on Next.js, WordPress migration, e-commerce performance, and web speed, written by the engineers who build it.
-        </p>
-      </section>
-
+    <>
       {/* Search & Filter Section */}
       <section className="container mx-auto px-6 pb-8">
         <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
@@ -344,15 +328,38 @@ function BlogPageInner() {
         </div>
       </section>
 
-      <Footer />
-    </main>
+    </>
   );
 }
 
 export default function BlogPageClient() {
   return (
-    <Suspense fallback={null}>
-      <BlogPageInner />
-    </Suspense>
+    <main className="bg-paper min-h-screen overflow-x-hidden relative">
+      {/* Schema.org JSON-LD for SEO — rendered server-side (not inside Suspense) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
+
+      <Header />
+
+      {/* Hero with h1 — rendered server-side so Bingbot and Googlebot see it in initial HTML */}
+      <section className="pt-20 md:pt-40 pb-10 md:pb-16 px-6 text-center relative border-b border-stone-200">
+        <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-4">The Journal</p>
+        <h1 className="text-5xl md:text-7xl font-bold text-charcoal relative z-10">
+          Insights from the <span className="font-serif italic text-cognac">Engine Room.</span>
+        </h1>
+        <p className="mt-6 text-lg text-stone-600 max-w-xl mx-auto">
+          Technical guides on Next.js, WordPress migration, e-commerce performance, and web speed, written by the engineers who build it.
+        </p>
+      </section>
+
+      {/* Interactive filter + article list is isolated in Suspense (uses useSearchParams) */}
+      <Suspense fallback={<div className="min-h-[400px]" />}>
+        <BlogArticlesSection />
+      </Suspense>
+
+      <Footer />
+    </main>
   );
 }
