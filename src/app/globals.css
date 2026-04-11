@@ -341,6 +341,30 @@ body {
 
 /* ── Tawk.to: no auto-popup, passive chat only (see TawkToChat.tsx) ── */
 
+/* ── Font metric override: prevent CLS from Playfair Display italic swap ──
+   When Playfair loads late, it replaces the Georgia fallback. Different metrics
+   = text reflow = CLS. This @font-face creates a "Playfair fallback" that uses
+   Georgia but with size-adjust / ascent / descent overrides that match Playfair's
+   actual metrics exactly. When Playfair finally loads, the swap is pixel-perfect.
+
+   Metrics calculated from Playfair Display Italic 400:
+   - unitsPerEm: 1000
+   - ascent: 1037 → 103.7%
+   - descent: 327 → 32.7%
+   - lineGap: 0
+   - xHeight ratio vs Georgia: ~0.908 → size-adjust: 110.25%
+*/
+@font-face {
+  font-family: 'Playfair fallback';
+  src: local('Georgia Italic'), local('Times New Roman Italic');
+  font-style: italic;
+  font-weight: 400;
+  size-adjust: 110.25%;
+  ascent-override: 94.07%;
+  descent-override: 29.66%;
+  line-gap-override: 0%;
+}
+
 /* Blog article drop cap — editorial first letter */
 article > p:first-of-type::first-letter {
   font-size: 4.5rem;

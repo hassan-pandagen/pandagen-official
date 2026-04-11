@@ -24,6 +24,10 @@ const playfair = Playfair_Display({
   weight: ['400'],
   style: ['italic'],
   variable: '--font-serif',
+  // Tell next/font NOT to auto-generate fallback metrics — we define them manually in globals.css
+  // for perfect metric matching with Georgia. Auto-calc is inaccurate for display serifs.
+  adjustFontFallback: false,
+  fallback: ['Playfair fallback', 'Georgia', 'Times New Roman', 'serif'],
 });
 
 export const metadata: Metadata = {

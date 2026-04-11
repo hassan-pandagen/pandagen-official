@@ -7,10 +7,7 @@ const proofPoints = [
 
 export default function TrustLogoBar() {
   return (
-    <section
-      className="border-y border-stone-200 bg-white"
-      style={{ contain: "layout", containIntrinsicSize: "0 96px" }}
-    >
+    <section className="border-y border-stone-200 bg-white">
       <div className="container mx-auto px-6">
         <div className="flex items-stretch divide-x divide-gray-200">
           {proofPoints.map((point) => (
