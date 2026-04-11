@@ -6,14 +6,19 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 
 export const metadata: Metadata = {
-    title: "Panda Patches: $38K/mo on $25/mo Tooling | PandaCodeGen",
-    description: "How we replaced WordPress + 3 paid tools with a custom Next.js storefront and Supabase ops platform. Real-time pricing across 9 patch types.",
+    title: "Panda Patches: WordPress to Next.js Migration, Zero SEO Drops",
+    description: "3-year-old WordPress store migrated to a headless Next.js + Sanity + Supabase + Stripe stack. 100% of Google rankings preserved. Now $38K/mo on $25/mo tooling.",
     openGraph: {
-        title: "Panda Patches Case Study, $38K/mo E-Commerce on $25/mo Tooling",
-        description: "Real-time pricing calculator. Custom ops portal. 7 tools replaced by 1. Full case study.",
+        title: "Panda Patches: WordPress to Next.js Migration (Zero SEO Drops)",
+        description: "3-year-old WordPress site migrated to a headless stack with zero Google ranking drops. $38K/mo revenue on $25/mo tooling.",
         type: "article",
         url: "https://www.pandacodegen.com/work/panda-patches",
         images: [{ url: "https://www.pandacodegen.com/work/panda-patches.png", width: 1200, height: 630 }],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Panda Patches: WordPress to Next.js Migration with Zero SEO Drops",
+        description: "3-year-old WordPress e-commerce site migrated to Next.js + Sanity + Supabase + Stripe. 100% rankings preserved. $38K/mo on $25/mo tooling.",
     },
     alternates: { canonical: "/work/panda-patches" },
 };
@@ -24,19 +29,22 @@ const caseStudySchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/work/panda-patches#article",
-            "headline": "Panda Patches: $38K/mo E-Commerce Built on $25/mo Tooling",
-            "description": "How we replaced WordPress + 3 paid tools + spreadsheets with a custom Next.js storefront and Supabase ops platform. Real-time pricing calculator across 9 patch types.",
+            "headline": "Panda Patches: WordPress to Next.js Migration with Zero SEO Drops",
+            "description": "A 3-year-old WordPress e-commerce site migrated to a headless stack (Next.js + Sanity + Supabase + Stripe) with 100% of Google rankings preserved. Includes a real-time pricing calculator handling 9 patch types. Now generates $38,000/month revenue on $25/month tooling costs.",
             "image": "https://www.pandacodegen.com/work/panda-patches.png",
             "datePublished": "2025-10-01T00:00:00Z",
-            "dateModified": "2026-02-01T00:00:00Z",
+            "dateModified": "2026-04-12T00:00:00Z",
             "articleSection": "Case Study",
             "inLanguage": "en-US",
-            "wordCount": 1800,
+            "wordCount": 2100,
             "about": [
-                { "@type": "Thing", "name": "Custom E-Commerce Development" },
+                { "@type": "Thing", "name": "WordPress to Next.js Migration" },
+                { "@type": "Thing", "name": "SEO Preservation During Migration" },
+                { "@type": "Thing", "name": "Headless Commerce Architecture" },
                 { "@type": "Thing", "name": "Real-Time Pricing Engine" },
-                { "@type": "Thing", "name": "WooCommerce Migration" },
-                { "@type": "Thing", "name": "Operations Platform" }
+                { "@type": "SoftwareApplication", "name": "Sanity CMS" },
+                { "@type": "SoftwareApplication", "name": "Supabase" },
+                { "@type": "SoftwareApplication", "name": "Stripe" }
             ],
             "author": {
                 "@type": "Person",
@@ -59,14 +67,16 @@ const caseStudySchema = {
                 "@id": "https://www.pandacodegen.com/work/panda-patches"
             },
             "keywords": [
-                "custom e-commerce development",
+                "wordpress to nextjs migration",
+                "seo preservation wordpress migration",
+                "zero google ranking drops migration",
+                "headless commerce case study",
+                "next.js sanity supabase stripe",
                 "real-time pricing calculator",
-                "shopify alternative",
-                "next.js e-commerce case study",
+                "custom e-commerce development",
+                "3 year old wordpress migration",
                 "custom ops platform",
-                "supabase crm",
-                "replace shopify",
-                "custom storefront next.js"
+                "replace wordpress with next.js"
             ]
         },
         {
@@ -95,12 +105,42 @@ const caseStudySchema = {
             "email": "info@pandacodegen.com",
             "foundingDate": "2026",
             "areaServed": "Worldwide",
-            "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158"]
+            "sameAs": [
+                "https://twitter.com/pandacodegen",
+                "https://www.linkedin.com/company/pandacodegen",
+                "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
+                "https://github.com/hassan-pandagen",
+                "https://clutch.co/profile/panda-code-gen",
+                "https://www.trustpilot.com/review/pandacodegen.com",
+                "https://www.google.com/maps?cid=16271659886069582158",
+                "https://www.goodfirms.co/company/pandacodegen",
+                "https://www.crunchbase.com/organization/pandacodegen",
+                "https://www.sanity.io/exchange/community/pandacodegen",
+                "https://www.behance.net/pandacodegen",
+                "https://dev.to/pandacodegen"
+            ]
+        },
+        {
+            "@type": "Product",
+            "@id": "https://pandapatches.com/#product",
+            "name": "Panda Patches E-Commerce Platform",
+            "description": "Custom embroidered patches e-commerce site built on Next.js, Sanity, Supabase, and Stripe. Flagship case study for PandaCodeGen.",
+            "url": "https://pandapatches.com",
+            "brand": {
+                "@type": "Brand",
+                "name": "Panda Patches"
+            },
+            "manufacturer": { "@id": "https://www.pandacodegen.com/#organization" }
         },
         {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/work/panda-patches#faq",
             "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Did the Panda Patches WordPress migration preserve Google search rankings?",
+                    "acceptedAnswer": { "@type": "Answer", "text": "Yes. We migrated the 3-year-old WordPress site to Next.js with 100 percent of Google rankings preserved and zero drops in Google Search Console. We exported every indexed URL before migration, built 301 redirects for each one in Next.js middleware, preserved existing meta titles and descriptions, upgraded schema markup without changing entity signals, and submitted a fresh sitemap to Google the day of launch. Rankings held position for 30 days post-launch and improved after 60 days because the new site loads in under 1 second, which Google rewards under its 2026 Core Web Vitals algorithm." }
+                },
                 {
                     "@type": "Question",
                     "name": "Can you replace Shopify with a custom coded e-commerce store?",
@@ -132,18 +172,20 @@ const caseStudySchema = {
 };
 
 const techStack = [
-    { name: "Next.js 14+", role: "Frontend & API routes", color: "bg-stone-900 text-white" },
+    { name: "Next.js 16", role: "Frontend + API routes", color: "bg-stone-900 text-white" },
+    { name: "React 19", role: "UI runtime", color: "bg-sky-600 text-white" },
     { name: "TypeScript", role: "Type safety", color: "bg-blue-600 text-white" },
-    { name: "Tailwind CSS", role: "Styling", color: "bg-sky-500 text-white" },
+    { name: "Tailwind CSS 3", role: "Styling", color: "bg-sky-500 text-white" },
     { name: "Sanity CMS", role: "Content management", color: "bg-red-500 text-white" },
     { name: "Supabase", role: "Ops database + auth", color: "bg-emerald-600 text-white" },
-    { name: "Upstash Redis", role: "Rate limiting + cache", color: "bg-red-600 text-white" },
-    { name: "Stripe", role: "Credit card payments", color: "bg-violet-600 text-white" },
+    { name: "Stripe", role: "Card payments + Klarna + Afterpay + Apple Pay", color: "bg-violet-600 text-white" },
     { name: "PayPal", role: "Alternative checkout", color: "bg-blue-700 text-white" },
-    { name: "Klarna", role: "Buy now, pay later", color: "bg-pink-500 text-white" },
-    { name: "Afterpay", role: "Installment payments", color: "bg-teal-600 text-white" },
-    { name: "Apple Pay", role: "1-tap mobile checkout", color: "bg-stone-800 text-white" },
-    { name: "Vercel", role: "Hosting + CDN", color: "bg-stone-700 text-white" },
+    { name: "Upstash Redis", role: "Rate limiting + cache", color: "bg-red-600 text-white" },
+    { name: "Zod", role: "Schema validation", color: "bg-indigo-600 text-white" },
+    { name: "React Hook Form", role: "Forms + pricing calculator", color: "bg-pink-600 text-white" },
+    { name: "Zeptomail", role: "Transactional email", color: "bg-amber-600 text-white" },
+    { name: "next-sitemap", role: "Automated SEO sitemap", color: "bg-emerald-700 text-white" },
+    { name: "Vercel", role: "Hosting + CDN + edge", color: "bg-stone-700 text-white" },
 ];
 
 const pricingDimensions = [
@@ -193,10 +235,13 @@ export default function PandaPatchesCaseStudy() {
                     <div className="mb-20">
                         <div className="flex flex-wrap items-center gap-3 mb-6">
                             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cognac/10 border border-cognac/20 text-cognac text-xs font-bold uppercase tracking-widest">
-                                In-House Brand
+                                WordPress Migration
+                            </span>
+                            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold uppercase tracking-widest">
+                                Zero SEO Drops
                             </span>
                             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-stone-100 border border-stone-200 text-stone-500 text-xs font-bold uppercase tracking-widest">
-                                E-Commerce + Operations Platform
+                                Headless Next.js + Sanity + Supabase + Stripe
                             </span>
                         </div>
 
@@ -206,16 +251,16 @@ export default function PandaPatchesCaseStudy() {
                         </h1>
 
                         <p className="text-xl text-stone-600 leading-relaxed max-w-3xl mb-10">
-                            WordPress couldn&apos;t handle a pricing matrix with thousands of combinations. Customers waited 24+ hours for a quote. We rebuilt the entire business: custom storefront with real-time pricing, plus a complete ops platform replacing CRM, spreadsheets, and attendance tracking.
+                            A 3-year-old WordPress e-commerce site with real search traffic, existing customers, and a pricing problem WordPress couldn&apos;t solve. We migrated it to a complete headless stack (Next.js + Sanity + Supabase + Stripe) with a real-time pricing calculator and a custom ops platform. 100% of the Google rankings were preserved. Zero drops in Google Search Console. Now generates $38K/month revenue on $25/month in total tooling costs.
                         </p>
 
                         {/* Key metrics */}
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                             {[
                                 { value: "$38K+", label: "Monthly Revenue", sub: "powered by $25/mo in tooling" },
-                                { value: "$0/mo", label: "Platform Fees", sub: "was $200+ across 3 tools" },
+                                { value: "100%", label: "Rankings Preserved", sub: "zero drops in Search Console" },
                                 { value: "7 → 1", label: "Tools Replaced", sub: "CRM · ops · store · tracking" },
-                                { value: "13+", label: "Product Types", sub: "each with dynamic pricing" },
+                                { value: "3 yr", label: "Legacy Site Migrated", sub: "full content + SEO equity" },
                             ].map((m) => (
                                 <div key={m.label} className="p-5 bg-white border border-stone-300 rounded-2xl shadow-xs">
                                     <div className="text-3xl font-black text-charcoal mb-1">{m.value}</div>
@@ -224,7 +269,65 @@ export default function PandaPatchesCaseStudy() {
                                 </div>
                             ))}
                         </div>
+
+                        {/* Live Site CTA — dofollow link to pandapatches.com for cross-site SEO */}
+                        <div className="mt-8 flex flex-wrap items-center gap-3">
+                            <a
+                                href="https://pandapatches.com"
+                                target="_blank"
+                                rel="noopener"
+                                className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-colors text-sm"
+                            >
+                                Visit the Live Site → pandapatches.com
+                            </a>
+                            <span className="text-xs text-stone-500">
+                                Real revenue-generating e-commerce site, not a mockup or portfolio screenshot.
+                            </span>
+                        </div>
                     </div>
+
+                    {/* SEO PRESERVATION */}
+                    <section className="mb-20">
+                        <div className="flex items-center gap-3 mb-8">
+                            <div className="h-px w-8 bg-cognac" />
+                            <span className="text-cognac text-sm font-bold uppercase tracking-widest">SEO Preservation</span>
+                        </div>
+                        <h2 className="text-3xl font-bold text-charcoal mb-3">3 years of SEO equity. Zero ranking drops.</h2>
+                        <p className="text-stone-600 mb-8 max-w-2xl">
+                            Migrating a 3-year-old WordPress site is the hardest part of any replatform. The site had existing Google rankings, backlinks, and organic traffic that the business depended on. A broken migration kills all of that overnight. Here is exactly what we did to preserve 100 percent of the search equity.
+                        </p>
+
+                        <div className="grid md:grid-cols-2 gap-4 mb-6">
+                            {[
+                                { title: "Full URL audit before migration", desc: "We exported every indexed URL from Google Search Console and mapped each one to its new equivalent on the Next.js site. Zero orphan pages." },
+                                { title: "301 redirects for every old URL", desc: "Every WordPress URL gets a server-side 301 redirect to the matching Next.js page. Old product URLs, old blog posts, old category pages, everything. Configured in Next.js middleware." },
+                                { title: "Meta titles and descriptions preserved", desc: "We carried over the exact meta titles and descriptions from the WordPress site where they were already ranking. No rewriting. No experiments during migration." },
+                                { title: "Schema markup upgraded, not replaced", desc: "The old site had basic schema. We replaced it with a complete @graph structure (Article, Product, BreadcrumbList, Organization, FAQPage) without changing the existing entity signals Google already trusted." },
+                                { title: "New XML sitemap submitted day one", desc: "A fresh sitemap.xml with all new URLs submitted to Google Search Console immediately after launch. Google started recrawling within hours." },
+                                { title: "Core Web Vitals improved, not regressed", desc: "Load time dropped from 4+ seconds on WordPress to under 1 second on Next.js. Google rewarded the improvement with better rankings, not worse." },
+                            ].map((item) => (
+                                <div key={item.title} className="p-5 bg-white border border-stone-300 rounded-xl shadow-xs">
+                                    <h3 className="font-bold text-charcoal mb-2 flex items-start gap-2">
+                                        <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                                        {item.title}
+                                    </h3>
+                                    <p className="text-stone-500 text-sm leading-relaxed">{item.desc}</p>
+                                </div>
+                            ))}
+                        </div>
+
+                        <div className="p-6 bg-emerald-50 border border-emerald-200 rounded-2xl">
+                            <div className="flex items-start gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" />
+                                <div>
+                                    <p className="font-bold text-emerald-900 mb-2">The result: zero ranking drops in Google Search Console</p>
+                                    <p className="text-emerald-800 text-sm leading-relaxed">
+                                        We watched Search Console daily for 30 days after launch. Every ranked keyword held position. No 404 spikes. No sudden impression drops. No manual actions. After 60 days, rankings actually improved because the new site loads in under 1 second, which Google rewards under its 2026 Core Web Vitals algorithm. This is exactly how a WordPress to Next.js migration should go.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
                     {/* THE PROBLEM */}
                     <section className="mb-20">
@@ -337,7 +440,7 @@ export default function PandaPatchesCaseStudy() {
                         </div>
                         <h2 className="text-3xl font-bold text-charcoal mb-3">Enterprise architecture. Startup cost.</h2>
                         <p className="text-stone-600 mb-8">
-                            Total monthly cost including all services, databases, and AI tools: under $25. Hosted on Vercel&apos;s free tier.
+                            Started free on Vercel. Scaled to $20/mo on Vercel Pro once the store hit $38K/mo in revenue. Supabase, Sanity, and Upstash still run on free tiers. Total tooling: around $25/mo.
                         </p>
                         <div className="flex flex-wrap gap-3">
                             {techStack.map((t) => (
@@ -358,12 +461,14 @@ export default function PandaPatchesCaseStudy() {
                         <h2 className="text-3xl font-bold text-white mb-10">What changed after launch.</h2>
                         <div className="grid md:grid-cols-2 gap-6">
                             {[
+                                { before: "3 years of WordPress SEO equity at risk", after: "100% of Google rankings preserved. Zero drops in Search Console." },
                                 { before: "Customers waited 24+ hours for a manual quote", after: "Customers see the price instantly. Self-serve checkout." },
                                 { before: "$200+/mo across 3 separate tools + hosting", after: "Under $25/mo total. CRM, ops, store, and hosting." },
                                 { before: "7 disconnected tools, constant WhatsApp updates", after: "1 platform. All 7 team members on the same real-time data." },
                                 { before: "WordPress pricing ceiling blocked growth", after: "$38K+/mo revenue. Pricing engine scales to any complexity." },
                                 { before: "Attendance tracked via WhatsApp messages", after: "Timestamped clock in/out with payroll export." },
                                 { before: "No visibility into sales agent performance", after: "Per-agent revenue, conversion rate, and response time tracked live." },
+                                { before: "Load time over 4 seconds on WordPress", after: "Under 1 second load time. Lighthouse 90+ on Core Web Vitals." },
                             ].map((r, i) => (
                                 <div key={i} className="flex gap-4">
                                     <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
@@ -412,7 +517,7 @@ export default function PandaPatchesCaseStudy() {
                                 "9 product category pages (embroidered, woven, PVC, chenille, leather, silicone, printed, sequin, 3D)",
                                 "4 additional product pages (lapel pins, challenge coins, keychains, PVC shoe charms)",
                                 "Real-time pricing calculator with all dimensions",
-                                "Stripe, PayPal, Cash App, Apple Pay, Klarna, Afterpay integrations",
+                                "Stripe + PayPal checkout (Apple Pay, Klarna, Afterpay via Stripe Payment Element)",
                                 "Sanity CMS, content editors manage everything without code",
                                 "Blog system with 50+ post capacity (dynamic + SEO-optimized)",
                                 "Order confirmation emails + customer order history",

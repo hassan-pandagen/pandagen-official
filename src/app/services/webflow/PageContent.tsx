@@ -14,7 +14,7 @@ const comparisonData = [
   { feature: "Page Load Speed", webflow: "2-4 seconds", custom: "Under 1 second", icon: Gauge },
   { feature: "Code Ownership", webflow: "Vendor lock-in (export is unusable)", custom: "100% yours forever", icon: Lock },
   { feature: "Google PageSpeed", webflow: "50-70 average (mobile)", custom: "90-100 guaranteed", icon: TrendingUp },
-  { feature: "Monthly Hosting", webflow: "$14-212/mo", custom: "$0 (Vercel free tier)", icon: DollarSign },
+  { feature: "Monthly Hosting", webflow: "$14-212/mo", custom: "Starts at $0, scales to $20", icon: DollarSign },
   { feature: "Server-Side Logic", webflow: "None (client-side only)", custom: "Full API routes, auth, databases", icon: Server },
   { feature: "CMS Limitations", webflow: "10,000 items max", custom: "Unlimited (any content management system with no limits)", icon: Database },
 ];
@@ -279,14 +279,14 @@ export default function WebflowPageContent() {
             Everything Webflow Does. And Everything It Can&apos;t.
           </h2>
           <p className="text-stone-600 text-lg leading-relaxed mb-8 md:mb-12 max-w-2xl mx-auto">
-            A custom coded website gives you what Webflow never will: full ownership, server-side power, unlimited CMS, and zero monthly hosting fees.
+            A custom coded website gives you what Webflow never will: full ownership, server-side power, unlimited CMS, and hosting that starts free and only costs more when your business grows.
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             {[
               { icon: Gauge, title: "Everything Webflow Does, But Better", desc: "Same visual polish, but with server-side rendering, unlimited CMS, real API routes, and load times under 1 second. No compromises." },
               { icon: Server, title: "Server-Side Power", desc: "User authentication, payment processing, database queries, API integrations. Everything Webflow can\u2019t do natively. Built into your codebase." },
-              { icon: DollarSign, title: "Zero Hosting Fees, Full Ownership", desc: "Deploy on Vercel\u2019s free tier. Own every line of code. No vendor lock-in. Scale to millions of pages without hitting CMS limits." },
+              { icon: DollarSign, title: "Start Free, Scale When You Grow", desc: "Deploy on Vercel starting at $0/mo. Only scale to $20/mo on Vercel Pro when your business grows. Own every line of code. No vendor lock-in. Scale to millions of pages without hitting CMS limits." },
             ].map((item, i) => (
               <div key={i} className="p-6 rounded-2xl bg-stone-50 border border-stone-200 hover:border-cognac/30 transition-colors group">
                 <div className="w-12 h-12 rounded-xl bg-stone-50 flex items-center justify-center mb-4 group-hover:bg-stone-100 transition-colors">
@@ -338,7 +338,7 @@ export default function WebflowPageContent() {
               <div className="text-cognac text-sm font-bold uppercase tracking-wider mb-4">Option B</div>
               <h3 className="text-2xl font-bold text-charcoal mb-4">Migrate to Custom Code</h3>
               <p className="text-stone-600 text-base mb-6 leading-relaxed">
-                Migrate from Webflow to a custom coded platform you own forever. Faster, full server-side logic, unlimited CMS, zero monthly hosting fees.
+                Migrate from Webflow to a custom coded platform you own forever. Faster, full server-side logic, unlimited CMS. Vercel hosting starts free and only scales to $20/mo when your business grows.
               </p>
               <ul className="space-y-3 mb-8">
                 {["Under a second load times", "Full server-side logic", "Unlimited CMS", "100% code ownership", "No monthly hosting fees", "30-day money-back guarantee"].map((item, i) => (

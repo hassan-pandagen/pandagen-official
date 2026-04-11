@@ -370,8 +370,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "nextjs-hosting-zero-cost",
-    title: "How We Host 5+ Client Sites for $0/Month on Vercel",
-    excerpt: "Most businesses pay $50 to $300/month for hosting that slows them down. We deploy every client site on Vercel's free tier with Cloudflare CDN. $0/month. Under a second load times. Here's exactly how.",
+    title: "Start Free, Scale to $20/mo: How We Host Client Sites on Vercel",
+    excerpt: "Most businesses pay $50 to $300/month for hosting that slows them down. We deploy every client site on Vercel starting free. You only scale to $20/month when your business grows. Under a second load times. Here's exactly how.",
     category: "Performance",
     readTime: "9 min",
     date: "Mar 13",
@@ -629,7 +629,7 @@ export const blogPosts: BlogPost[] = [
     faqs: [
       { question: "How much does WordPress really cost per year?", answer: "The true cost of WordPress is $3,000-$10,000/year when you factor in premium plugins ($500-$2,000), managed hosting ($300-$1,200), security monitoring ($200-$600), developer maintenance ($1,200-$4,800), and lost revenue from downtime. The $50/month hosting fee is just the beginning." },
       { question: "Is WordPress still worth it in 2026?", answer: "For simple blogs, WordPress still works. But for business websites that need speed, security, and reliability, WordPress is an expensive liability. Modern alternatives like Next.js give you better performance at a fraction of the ongoing cost with zero plugin dependencies." },
-      { question: "What is the best alternative to WordPress for business websites?", answer: "Next.js is the leading WordPress alternative for businesses. It delivers load times under 1 second, zero plugin vulnerabilities, free hosting on Vercel, and 95-100 PageSpeed scores. You own the code outright with no recurring platform fees." },
+      { question: "What is the best alternative to WordPress for business websites?", answer: "Next.js is the leading WordPress alternative for businesses. It delivers load times under 1 second, zero plugin vulnerabilities, Vercel hosting that starts free and only scales to $20/month when your business grows, and 95-100 PageSpeed scores. You own the code outright with no recurring platform fees." },
       { question: "Why do WordPress sites keep getting hacked?", answer: "98% of WordPress hacks come through outdated plugins. Each plugin is third-party code with its own vulnerabilities. With 30+ plugins, you have 30+ potential entry points for hackers. Custom coded sites have zero plugins and zero of these attack vectors." }
     ]
   },

@@ -372,7 +372,7 @@ export default function ShopifyVsCustomWebsitePage() {
                         </BlogText>
 
                         <BlogQuote>
-                            A Shopify store doing $1M/year on the Basic plan with 20 apps and a non-Shopify payment gateway spends roughly $30,000 to $50,000 over 3 years in fees alone. A custom build at $15,000 with $0/month hosting is cheaper by year 2.
+                            A Shopify store doing $1M/year on the Basic plan with 20 apps and a non-Shopify payment gateway spends roughly $30,000 to $50,000 over 3 years in fees alone. A custom build at $15,000 on Vercel (starts free, scales to $20/mo only when your business grows) is cheaper by year 2.
                         </BlogQuote>
 
                         {/* Mid-Article CTA */}
@@ -395,9 +395,9 @@ export default function ShopifyVsCustomWebsitePage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>$0/month hosting.</strong> We host every client store on Vercel&apos;s free tier. Five production e-commerce sites, all scoring 95+, all costing $0/month. That is not a promotional price. It is the standard. We explained exactly how in our{" "}
+                            <strong>Hosting that starts free and only scales when you grow.</strong> We host every client store on Vercel starting at $0/month. You only scale to Vercel Pro at $20/month when your business grows past free tier limits. Even at the top, that is 85 to 95 percent cheaper than Shopify platform fees. We explained exactly how in our{" "}
                             <Link href="/blog/nextjs-hosting-zero-cost" className="text-cognac hover:underline">
-                                guide to $0 hosting on Vercel
+                                guide to start-free, scale-smart Vercel hosting
                             </Link>.
                         </BlogText>
 
@@ -501,7 +501,7 @@ export default function ShopifyVsCustomWebsitePage() {
                             <li><strong>Shopify works for small stores</strong>: Under $200/month total spend, fewer than 5 apps, no checkout customization needed. Stay on Shopify.</li>
                             <li><strong>App bloat is the real killer</strong>: The average serious Shopify store spends $800 to $1,500/month on fees and apps. Over 3 years, that is $28,800 to $54,000 before you add transaction fees.</li>
                             <li><strong>Speed drives conversion</strong>: Shopify stores with 20+ apps load in 4+ seconds. Custom stores load in under 1 second. The conversion rate gap is 1.4% vs 3 to 5%.</li>
-                            <li><strong>Custom code costs more upfront but less over time</strong>: An $8,000 to $25,000 build with $0/month hosting is cheaper than Shopify by year 2 for most serious stores.</li>
+                            <li><strong>Custom code costs more upfront but less over time</strong>: An $8,000 to $25,000 build on Vercel (starts free, scales to $20/mo only when your business grows) is cheaper than Shopify by year 2 for most serious stores.</li>
                             <li><strong>Headless Shopify is the middle ground</strong>: Keep Shopify admin, replace the slow frontend. Get custom performance without migrating product data.</li>
                         </ol>
                     </section>

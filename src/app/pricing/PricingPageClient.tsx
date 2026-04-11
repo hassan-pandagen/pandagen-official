@@ -147,7 +147,7 @@ export default function PricingPageClient() {
             {[
               { icon: <Zap className="w-4 h-4" />, text: "100/100 PageSpeed. Guaranteed." },
               { icon: <Clock className="w-4 h-4" />, text: "Under 1s load time. Guaranteed." },
-              { icon: <DollarSign className="w-4 h-4" />, text: "$0/month hosting forever." },
+              { icon: <DollarSign className="w-4 h-4" />, text: "Hosting starts free on Vercel." },
               { icon: <RotateCcw className="w-4 h-4" />, text: "30-day money-back guarantee." },
             ].map((badge, i) => (
               <div key={i} className="flex items-center gap-2 px-4 py-2 bg-white border border-stone-300 rounded-full text-sm font-semibold text-charcoal shadow-xs">

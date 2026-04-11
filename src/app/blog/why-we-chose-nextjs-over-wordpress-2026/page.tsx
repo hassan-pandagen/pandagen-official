@@ -193,7 +193,7 @@ export default function WhyNextjsOverWordPressPage() {
                         <BlogList items={[
                             "In 2023, we built client sites in WordPress. By late 2024, every new project was Next.js. This is why.",
                             "The breaking point: A client showed us data proving their WordPress site (3.2s load) was outranked on every keyword by competitors loading in under 1 second.",
-                            "We now guarantee 95 to 100/100 PageSpeed, $0/month hosting, and zero plugin vulnerabilities on every build.",
+                            "We now guarantee 95 to 100/100 PageSpeed, Vercel hosting that starts free and only scales to $20/month when your business grows, and zero plugin vulnerabilities on every build.",
                             "When is WordPress still OK? Hobby blogs, small personal sites, and situations where the client will self-manage without developer help."
                         ]} />
                     </div>
@@ -281,11 +281,11 @@ export default function WhyNextjsOverWordPressPage() {
                         <BlogHeader>Reason 2: Hosting Cost Goes from $150/Month to $0</BlogHeader>
 
                         <BlogText>
-                            When we tell clients their new site will host for free, they don&apos;t believe us at first.
+                            When we tell clients their new site will host for free and only cost $20/month when their business grows, they don&apos;t believe us at first.
                         </BlogText>
 
                         <BlogText>
-                            Vercel&apos;s free tier handles most business websites with no problem. Pages load from 300+ global edge locations. Zero server maintenance. Auto-scaling. 99.99% uptime.
+                            Vercel&apos;s free tier handles most business websites from day one. You only scale to Vercel Pro at $20/month when your business grows past free tier limits. Pages load from 300+ global edge locations. Zero server maintenance. Auto-scaling. 99.99% uptime.
                         </BlogText>
 
                         <BlogText>
@@ -504,7 +504,7 @@ export default function WhyNextjsOverWordPressPage() {
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
                             <li><strong>The speed gap is structural, not fixable with plugins</strong>. WordPress loads in 3.8 seconds on average while Next.js loads in 0.9 seconds because they use fundamentally different architectures.</li>
-                            <li><strong>Hosting drops from $150-$400/month to $0</strong>. Vercel's free tier handles most business sites because pre-built static pages require no server computation per visit.</li>
+                            <li><strong>Hosting drops from $150-$400/month to $0, scaling to $20/month only when your business grows</strong>. Vercel&apos;s free tier handles most business sites from day one. Vercel Pro at $20/month is still 85 percent cheaper than managed WordPress.</li>
                             <li><strong>Zero plugins means zero security vulnerabilities</strong>. 43% of all website hacks target WordPress through its plugin ecosystem, an attack surface that does not exist in custom Next.js builds.</li>
                             <li><strong>You own the code, not a licence</strong>: Unlike WordPress where your site depends on third-party themes and plugins, a custom coded site is a portable asset any developer can maintain.</li>
                             <li><strong>WordPress is still right for hobby blogs and small personal sites</strong>, if speed, SEO, and revenue are not priorities, WordPress's convenience still makes sense.</li>

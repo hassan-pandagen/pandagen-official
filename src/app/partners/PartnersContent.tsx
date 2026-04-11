@@ -66,7 +66,7 @@ const steps = [
 const stats = [
   { value: "98/100", label: "Avg PageSpeed Score", icon: Zap },
   { value: "<1s", label: "Avg Load Time", icon: TrendingUp },
-  { value: "$0/mo", label: "Hosting Cost", icon: DollarSign },
+  { value: "Free", label: "Vercel Hosting", icon: DollarSign },
   { value: "100%", label: "Code Ownership", icon: ShieldCheck },
 ];
 

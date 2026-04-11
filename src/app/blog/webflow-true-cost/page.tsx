@@ -383,7 +383,7 @@ export default function WebflowTrueCostPage() {
                         ]} />
 
                         <BlogQuote>
-                            Over 5 years on Webflow at $200/month, you spend $12,000 just on hosting. A custom site costs $0/month. That $12,000 is gone with nothing to show for it.
+                            Over 5 years on Webflow at $200/month, you spend $12,000 just on hosting. A custom site on Vercel starts free and only scales to $20/month when your business grows. Even at the top, you save more than $10,000 over 5 years.
                         </BlogQuote>
 
                         <BlogText>

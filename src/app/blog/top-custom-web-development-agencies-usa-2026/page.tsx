@@ -318,7 +318,7 @@ export default function TopWebDevAgenciesPage() {
                         </div>
 
                         <BlogText>
-                            The one exception on this list: PandaCodeGen delivers a fixed price with no change order policy for reasonable scope iterations, no platform license fees (the site runs on Vercel at $0/month for most business sites), and source code you own outright. Post-launch support is available at a flat monthly rate published on the website.
+                            The one exception on this list: PandaCodeGen delivers a fixed price with no change order policy for reasonable scope iterations, no platform license fees (the site runs on Vercel starting free, scaling to $20/month only when your business grows), and source code you own outright. Post-launch support is available at a flat monthly rate published on the website.
                         </BlogText>
 
                         {/* How We Ranked */}
@@ -425,7 +425,7 @@ export default function TopWebDevAgenciesPage() {
                                     <li>Next.js exclusive: 95-100/100 PageSpeed guaranteed</li>
                                     <li>100% code ownership, no platform lock-in</li>
                                     <li>Direct access to the engineers building your site</li>
-                                    <li>$0/month Vercel hosting for most sites</li>
+                                    <li>Vercel hosting: free to start, $20/mo when you scale</li>
                                     <li>Handles WordPress, Webflow, Wix, Squarespace migrations</li>
                                 </ul>
                             </div>

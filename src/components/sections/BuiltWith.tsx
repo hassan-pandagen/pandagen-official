@@ -12,7 +12,7 @@ const techStack = [
   },
   {
     name: "Vercel",
-    category: "$0 Hosting",
+    category: "Free to Start",
     icon: Globe,
     color: "text-charcoal",
   },

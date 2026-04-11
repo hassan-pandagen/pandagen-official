@@ -105,7 +105,7 @@ export default function Footer({ onOpenQuote }: FooterProps) {
               <FeaturedLink
                 href="/work"
                 title="Case Studies"
-                desc="Real results. 100/100 scores. $0 hosting fees."
+                desc="Real results. 100/100 scores. Hosting starts free."
               />
               <FeaturedLink
                 href="/partners"

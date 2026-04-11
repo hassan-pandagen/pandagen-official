@@ -461,7 +461,7 @@ export default function ForAgenciesCustomDevPage() {
                         <BlogList items={[
                             "Custom coded site, not a template, not a WordPress theme",
                             "100/100 Google PageSpeed: the fastest possible loading experience",
-                            "$0/month hosting on Vercel, no recurring infrastructure costs",
+                            "Vercel hosting that starts free and only scales to $20/month when the business grows",
                             "They own the code, portable to any developer, not locked into a platform",
                             "Simple content editor: they can edit text and images without developer help",
                             "Zero plugin vulnerabilities, no security patches, no update management"

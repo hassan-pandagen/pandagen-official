@@ -65,7 +65,12 @@ Use these exact values in every blog post. Do not deviate.
     "https://github.com/hassan-pandagen",
     "https://clutch.co/profile/panda-code-gen",
     "https://www.trustpilot.com/review/pandacodegen.com",
-    "https://www.google.com/maps?cid=16271659886069582158"
+    "https://www.google.com/maps?cid=16271659886069582158",
+    "https://www.goodfirms.co/company/pandacodegen",
+    "https://www.crunchbase.com/organization/pandacodegen",
+    "https://www.sanity.io/exchange/community/pandacodegen",
+    "https://www.behance.net/pandacodegen",
+    "https://dev.to/pandacodegen"
   ]
 }
 ```

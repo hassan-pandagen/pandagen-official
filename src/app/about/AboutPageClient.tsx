@@ -244,7 +244,7 @@ export default function AboutPageClient() {
               <div className="grid grid-cols-2 gap-3">
                 <div className="p-4 rounded-xl bg-white border border-stone-200">
                   <h4 className="text-charcoal font-bold text-sm mb-1">Custom Coded Storefronts</h4>
-                  <p className="text-stone-500 text-xs">90+ PageSpeed. $0/month to run.</p>
+                  <p className="text-stone-500 text-xs">90+ PageSpeed. Vercel hosting starts free.</p>
                 </div>
                 <div className="p-4 rounded-xl bg-white border border-stone-200">
                   <h4 className="text-charcoal font-bold text-sm mb-1">Platform Migrations</h4>

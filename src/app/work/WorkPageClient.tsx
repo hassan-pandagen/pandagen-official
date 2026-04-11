@@ -46,7 +46,7 @@ const projects = [
             { label: "Tool Fees", value: "$0/mo", from: "was $200+" },
             { label: "Tools → One", value: "7 → 1", from: "CRM · ops · store" },
         ],
-        insight: "Stack: Next.js · Supabase · Sanity CMS · Stripe · PayPal · Zoho · Upstash Redis. Hosting: Vercel free tier. Total monthly cost including AI tools: under $25.",
+        insight: "Stack: Next.js · Supabase · Sanity CMS · Stripe · PayPal · Zoho · Upstash Redis. Started free on Vercel, scaled to Vercel Pro ($20/mo) once revenue hit $38K/mo. Total monthly tooling: under $25.",
         tags: ["Real-Time Pricing Calculator", "Stripe · PayPal · Cash App", "Apple Pay · Klarna · Afterpay", "Supabase CRM · Ops Portal"],
         image: "/work/panda-patches.png",
         liveUrl: "https://panda-patches-ecommerce.vercel.app",

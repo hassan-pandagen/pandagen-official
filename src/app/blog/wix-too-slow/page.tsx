@@ -471,7 +471,7 @@ export default function WixTooSlowPage() {
                         <Zap className="w-8 h-8 text-amber-400 mx-auto mb-4" />
                         <h2 className="text-2xl font-bold mb-3">Your Wix Site Can Score 95+ on Google (PageSpeed)</h2>
                         <p className="text-[var(--muted)] mb-6 max-w-lg mx-auto">
-                            We migrate Wix sites to custom Next.js. The result: 95 to 100 on Google&apos;s speed test (PageSpeed). Under 1-second load time. $0/month hosting. Founder&apos;s offer: $500 flat. If the score is not 95+, you do not pay the balance.
+                            We migrate Wix sites to custom Next.js. The result: 95 to 100 on Google&apos;s speed test (PageSpeed). Under 1-second load time. Vercel hosting that starts free and only scales to $20/month when your business grows. Founder&apos;s offer: $500 flat. If the score is not 95+, you do not pay the balance.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-semibold px-6 py-3 rounded-xl transition-colors">
                             Get Your Free Speed Audit
@@ -530,8 +530,8 @@ export default function WixTooSlowPage() {
                                 <tr className="border-b border-[var(--border)]">
                                     <td className="py-3 px-4 font-medium">Monthly Hosting Cost</td>
                                     <td data-label="Wix (Before)" className="py-3 px-4 text-center text-red-400">$17 to $49/mo</td>
-                                    <td data-label="Next.js (After)" className="py-3 px-4 text-center text-emerald-400">$0/mo (Vercel)</td>
-                                    <td data-label="Change" className="py-3 px-4 text-center text-emerald-400">100% savings</td>
+                                    <td data-label="Next.js (After)" className="py-3 px-4 text-center text-emerald-400">$0/mo, $20 when you scale</td>
+                                    <td data-label="Change" className="py-3 px-4 text-center text-emerald-400">60-100% savings</td>
                                 </tr>
                                 <tr className="border-b border-[var(--border)]">
                                     <td className="py-3 px-4 font-medium">Platform Lock-in</td>
@@ -553,7 +553,7 @@ export default function WixTooSlowPage() {
                         The JavaScript payload difference is the core of the speed story. Custom Next.js sites with static generation output 40 to 80KB of JavaScript per page. Wix sites carry 400 to 700KB. That is a 90% reduction. The browser has less to download, less to parse, and less to execute before the page becomes interactive.
                     </BlogText>
                     <BlogText>
-                        The hosting cost difference is also worth noting. Wix's Business and eCommerce plans run $17 to $49 per month. A custom site hosted on Vercel's free tier costs $0 per month. Over three years, that is $612 to $1,764 in platform fees alone, not counting the revenue lost from slower conversion rates during that period.
+                        The hosting cost difference is also worth noting. Wix&apos;s Business and eCommerce plans run $17 to $49 per month. A custom site on Vercel starts free and only scales to $20 per month when your business grows. Over three years, that is still hundreds to over a thousand dollars in platform fees saved, not counting the revenue lost from slower conversion rates during that period.
                     </BlogText>
 
                     {/* H2 7 — High buyer intent */}
@@ -633,7 +633,7 @@ export default function WixTooSlowPage() {
                     <div className="bg-gradient-to-br from-amber-500/10 to-orange-500/10 border border-amber-500/30 rounded-2xl p-8 my-10 text-center">
                         <h2 className="text-2xl font-bold mb-3">Stop Optimizing. Start Migrating.</h2>
                         <p className="text-[var(--muted)] mb-6 max-w-xl mx-auto text-sm">
-                            You have hit the Wix ceiling. No more optimization is going to get you to 95. The only path to a fast Wix site is a site that is not on Wix. We migrate you for $500, guarantee a 95+ Google score (PageSpeed), and host it for $0/month. Book a free 20-minute call to see exactly what the migration would involve for your site.
+                            You have hit the Wix ceiling. No more optimization is going to get you to 95. The only path to a fast Wix site is a site that is not on Wix. We migrate you for $500, guarantee a 95+ Google score (PageSpeed), and host it on Vercel starting free (you only scale to $20/month when your business grows). Book a free 20-minute call to see exactly what the migration would involve for your site.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-3 justify-center">
                             <CalModalButton className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-semibold px-6 py-3 rounded-xl transition-colors">

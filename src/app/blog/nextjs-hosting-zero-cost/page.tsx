@@ -16,15 +16,15 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "How to Host Client Sites for $0/Month on Vercel (2026 Guide)",
-    description: "Most businesses pay $50 to $300/month for hosting. We deploy every client site on Vercel's free tier. Faster, more secure, zero maintenance. Here is exactly how.",
+    title: "Start Free, Scale to $20/mo: How We Host Client Sites on Vercel (2026)",
+    description: "Most businesses pay $50 to $300/month for hosting. We deploy every client site on Vercel starting free. You only scale to $20/month when your business grows. Faster, more secure, zero maintenance. Here is exactly how.",
     alternates: {
         canonical: '/blog/nextjs-hosting-zero-cost',
     },
     keywords: ["free nextjs hosting", "vercel free tier", "free website hosting 2026", "nextjs hosting cost", "vercel vs wordpress hosting", "zero cost website hosting", "vercel free tier limits"],
     openGraph: {
-        title: "How to Host Client Sites for $0/Month on Vercel (2026 Guide)",
-        description: "Most businesses pay $50 to $300/month for hosting. We deploy every client site on Vercel's free tier. Faster, more secure, zero maintenance. Here is exactly how.",
+        title: "Start Free, Scale to $20/mo: How We Host Client Sites on Vercel (2026)",
+        description: "Most businesses pay $50 to $300/month for hosting. We deploy every client site on Vercel starting free. You only scale to $20/month when your business grows. Faster, more secure, zero maintenance. Here is exactly how.",
         type: "article",
         publishedTime: "2026-03-13",
         authors: ["Hassan"],
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "How to Host Client Sites for $0/Month on Vercel (2026 Guide)",
-        description: "Most businesses pay $50 to $300/month for hosting. We deploy every client site on Vercel's free tier. Faster, more secure, zero maintenance. Here is exactly how.",
+        title: "Start Free, Scale to $20/mo: How We Host Client Sites on Vercel (2026)",
+        description: "Most businesses pay $50 to $300/month for hosting. We deploy every client site on Vercel starting free. You only scale to $20/month when your business grows. Faster, more secure, zero maintenance. Here is exactly how.",
     },
 };
 
@@ -44,8 +44,8 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost#article",
-            "headline": "How to Host Client Sites for $0/Month on Vercel (2026 Guide)",
-            "description": "Most businesses pay $50 to $300/month for hosting. We deploy every client site on Vercel's free tier. Faster, more secure, zero maintenance. Here is exactly how.",
+            "headline": "Start Free, Scale to $20/mo: How We Host Client Sites on Vercel (2026)",
+            "description": "Most businesses pay $50 to $300/month for hosting. We deploy every client site on Vercel starting free. You only scale to $20/month when your business grows. Faster, more secure, zero maintenance. Here is exactly how.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-13T00:00:00-05:00",
             "dateModified": "2026-03-13T00:00:00-05:00",
@@ -99,15 +99,15 @@ const articleSchema = {
             "itemListElement": [
                 { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
                 { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "How We Host Client Websites for Free", "item": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost" }
+                { "@type": "ListItem", "position": 3, "name": "How We Host Client Websites Starting Free on Vercel", "item": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost" }
             ]
         },
         {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost#webpage",
             "url": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost",
-            "name": "How We Host Client Websites for Free ($0/Month) With Vercel",
-            "description": "Most businesses pay $50 to $300/month for hosting. We deploy every client site for $0/month on Vercel's free tier with zero maintenance.",
+            "name": "Start Free, Scale to $20/mo: How We Host Client Sites on Vercel",
+            "description": "Most businesses pay $50 to $300/month for hosting. We deploy every client site on Vercel starting free. You only scale to $20/month when your business grows.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-13T00:00:00-05:00",
@@ -165,7 +165,7 @@ export default function NextjsHostingZeroCostPage() {
                         items={[
                             { label: "Home", href: "/" },
                             { label: "Blog", href: "/blog" },
-                            { label: "How We Host Client Websites for Free", href: "/blog/nextjs-hosting-zero-cost" }
+                            { label: "How We Host Client Websites Starting Free on Vercel", href: "/blog/nextjs-hosting-zero-cost" }
                         ]}
                     />
 
@@ -178,11 +178,11 @@ export default function NextjsHostingZeroCostPage() {
                     {/* Title & Meta */}
                     <div className="mb-10">
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                            How We Host Client Websites for <span className="font-serif italic text-cognac">Free ($0/Month)</span> With Vercel
+                            How We Host Client Websites <span className="font-serif italic text-cognac">Starting Free</span> on Vercel
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            What if you could host your business website for $0/month and still get load times under 1 second? This guide walks you through exactly how we do it for every client.
+                            What if you could host your business website for $0/month and only pay when your business scales? This guide walks you through exactly how we do it for every client.
                         </p>
 
                         <BlogAuthor
@@ -203,7 +203,7 @@ export default function NextjsHostingZeroCostPage() {
                         <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
                         <BlogList items={[
                             "Most businesses pay $50 to $300/month for hosting that actually makes their site slower.",
-                            "We deploy every client site for $0/month on Vercel's free tier. Faster, more secure, zero maintenance.",
+                            "We deploy every client site on Vercel starting free. You only scale to $20/month when your business grows. Faster, more secure, zero maintenance.",
                             "Our client MyCustomPatches went from $150/mo hosting to $0/mo with faster load times and 100/100 PageSpeed.",
                             "Here's exactly how it works and whether it works for your business."
                         ]} />
@@ -271,7 +271,7 @@ export default function NextjsHostingZeroCostPage() {
                         </BlogText>
 
                         <BlogText>
-                            No server running means no server cost. That&apos;s why it&apos;s $0/month.
+                            No server running means no server cost. That&apos;s why hosting starts at $0/month. You only pay Vercel Pro at $20/month when your business grows past free tier limits.
                         </BlogText>
 
                         <BlogText>

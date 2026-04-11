@@ -74,7 +74,7 @@ const platformBadges = [
 const metrics = [
   { icon: Clock, before: "3.2s", after: "0.7s", label: "Load Time", desc: "Guaranteed under 1 second on every build." },
   { icon: Zap, before: "45", after: "100", label: "PageSpeed Score", desc: "Perfect 100/100 Lighthouse. Not 98. Not 99." },
-  { icon: DollarSign, before: "$150/mo", after: "$0/mo", label: "Hosting Cost", desc: "Zero monthly fees. Forever. You own the code." },
+  { icon: DollarSign, before: "$150/mo", after: "Free", label: "Hosting Cost", desc: "Starts free on Vercel. You only pay when your business scales." },
   { icon: ShieldOff, before: "25+", after: "0", label: "Plugins Killed", desc: "No plugins means no vulnerabilities, no bloat." },
 ];
 

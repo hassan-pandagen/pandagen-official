@@ -17,14 +17,14 @@ const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "WordPress vs Next.js: Real Speed, Cost, and SEO Comparison (2026)",
-    description: "WordPress scores 35 to 55 on PageSpeed. Next.js scores 95 to 100. One costs $3,000+/year to maintain. The other costs $0/month to host. Full comparison with real data.",
+    description: "WordPress scores 35 to 55 on PageSpeed. Next.js scores 95 to 100. One costs $3,000+/year to maintain. The other starts free on Vercel and only scales to $20/month when your business grows. Full comparison with real data.",
     alternates: {
         canonical: '/blog/wordpress-vs-nextjs',
     },
     keywords: ["wordpress vs next.js", "wordpress vs nextjs 2026", "wordpress alternative", "migrate wordpress to nextjs", "nextjs better than wordpress", "wordpress vs custom code", "nextjs seo vs wordpress"],
     openGraph: {
         title: "WordPress vs Next.js: Real Speed, Cost, and SEO Comparison (2026)",
-        description: "WordPress scores 35 to 55 on PageSpeed. Next.js scores 95 to 100. One costs $3,000+/year to maintain. The other costs $0/month to host. Full comparison with real data.",
+        description: "WordPress scores 35 to 55 on PageSpeed. Next.js scores 95 to 100. One costs $3,000+/year to maintain. The other starts free on Vercel and only scales to $20/month when your business grows. Full comparison with real data.",
         type: "article",
         publishedTime: "2026-03-11",
         authors: ["Hassan"],
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "WordPress vs Next.js: Real Speed, Cost, and SEO Comparison (2026)",
-        description: "WordPress scores 35 to 55 on PageSpeed. Next.js scores 95 to 100. One costs $3,000+/year to maintain. The other costs $0/month to host. Full comparison with real data.",
+        description: "WordPress scores 35 to 55 on PageSpeed. Next.js scores 95 to 100. One costs $3,000+/year to maintain. The other starts free on Vercel and only scales to $20/month when your business grows. Full comparison with real data.",
     },
 };
 
@@ -45,7 +45,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-vs-nextjs#article",
             "headline": "WordPress vs Next.js: Real Speed, Cost, and SEO Comparison (2026)",
-            "description": "WordPress scores 35 to 55 on PageSpeed. Next.js scores 95 to 100. One costs $3,000+/year to maintain. The other costs $0/month to host. Full comparison with real data.",
+            "description": "WordPress scores 35 to 55 on PageSpeed. Next.js scores 95 to 100. One costs $3,000+/year to maintain. The other starts free on Vercel and only scales to $20/month when your business grows. Full comparison with real data.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-11T00:00:00-05:00",
             "dateModified": "2026-03-11T00:00:00-05:00",
@@ -362,7 +362,7 @@ export default function WordPressVsNextJSPage() {
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">Hosting</td>
                                         <td data-label="WordPress (3 years)" className="px-4 py-3 text-stone-700">$1,800 to $6,000</td>
-                                        <td data-label="Next.js (3 years)" className="px-4 py-3 text-green-700 font-medium">$0 (Vercel free tier)</td>
+                                        <td data-label="Next.js (3 years)" className="px-4 py-3 text-green-700 font-medium">$0 to $720 (free, $20/mo when you scale)</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-stone-600">Plugin licences</td>

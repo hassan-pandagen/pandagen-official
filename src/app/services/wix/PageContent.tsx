@@ -149,7 +149,7 @@ export default function PageContent() {
                 </div>
                 <div className="flex justify-between items-center border-b border-stone-200 pb-3">
                   <span className="text-stone-600 text-sm">Hosting</span>
-                  <span className="text-cognac font-medium text-sm">$0/mo</span>
+                  <span className="text-cognac font-medium text-sm">Starts free</span>
                 </div>
                 <div className="flex justify-between items-center border-b border-stone-200 pb-3">
                   <span className="text-stone-600 text-sm">Domain</span>

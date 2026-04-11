@@ -179,7 +179,7 @@ export default function WebflowVsCustomWebsitePage() {
                         <BlogAuthor
                             date="Mar 27, 2026"
                             readTime="11 min read"
-                            bio="Hassan has migrated dozens of businesses from Webflow, WordPress, and Shopify to custom Next.js sites. Every build scores 95 to 100 on Google PageSpeed and costs $0/month to host."
+                            bio="Hassan has migrated dozens of businesses from Webflow, WordPress, and Shopify to custom Next.js sites. Every build scores 95 to 100 on Google PageSpeed and runs on Vercel starting free, only scaling to $20/month when the business grows."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -318,9 +318,9 @@ export default function WebflowVsCustomWebsitePage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>$0/month hosting.</strong> We host every client site on Vercel&apos;s free tier. Five production sites, all scoring 95+, all costing $0/month. That is not a promotional price. It is the standard. We explained exactly how this works in our{" "}
+                            <strong>Hosting that starts free and only scales when you grow.</strong> We host every client site on Vercel starting at $0/month. You only scale to Vercel Pro at $20/month when your business grows past free tier limits. Even at the top, that is 85 percent cheaper than Webflow&apos;s CMS and e-commerce plans. We explained exactly how this works in our{" "}
                             <Link href="/blog/nextjs-hosting-zero-cost" className="text-cognac hover:underline">
-                                guide to hosting websites for free on Vercel
+                                guide to start-free, scale-smart Vercel hosting
                             </Link>.
                         </BlogText>
 
@@ -497,7 +497,7 @@ export default function WebflowVsCustomWebsitePage() {
                             <li><strong>Webflow works for simple sites</strong>: If you have under 20 pages, spend under $100/month, and do not depend on organic search, stay on Webflow.</li>
                             <li><strong>Webflow has a hard PageSpeed ceiling of 55 to 75 on mobile</strong>: You cannot optimize past this from inside the platform. Custom sites score 95 to 100.</li>
                             <li><strong>The real Webflow cost is $1,500 to $5,000/year</strong>: Once you add CMS hosting, forms, localization, third-party integrations, and freelancer costs.</li>
-                            <li><strong>Custom code costs more upfront but less over 3 years</strong>: A $10,000 custom build with $0/month hosting is cheaper than 3 years of Webflow at $150/month ($5,400) plus $36,000 in lost organic revenue.</li>
+                            <li><strong>Custom code costs more upfront but less over 3 years</strong>: A $10,000 custom build on Vercel (starts free, scales to $20/mo only when your business grows) is cheaper than 3 years of Webflow at $150/month ($5,400) plus $36,000 in lost organic revenue.</li>
                             <li><strong>Every month on a slow Webflow site is lost traffic that does not come back</strong>: Your competitors are capturing those customers right now. Migration takes 4 to 6 weeks. The rankings improve within 90 days.</li>
                         </ol>
                     </section>

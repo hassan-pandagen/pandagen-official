@@ -485,7 +485,7 @@ export default function SquarespaceMinCostPage() {
                                     <tr className="hover:bg-stone-50">
                                         <td className="p-3 border border-stone-200">Platform / Hosting</td>
                                         <td data-label="Squarespace (per year)" className="p-3 border border-stone-200">$276</td>
-                                        <td data-label="Custom Next.js (per year)" className="p-3 border border-stone-200">$0 (Vercel free tier)</td>
+                                        <td data-label="Custom Next.js (per year)" className="p-3 border border-stone-200">$0 to $240 (free, $20/mo when you scale)</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
                                         <td className="p-3 border border-stone-200">Domain</td>

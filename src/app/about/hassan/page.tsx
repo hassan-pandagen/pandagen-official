@@ -97,7 +97,7 @@ const expertise = [
 ];
 
 const builds = [
-    { title: "Custom Coded Storefronts", desc: "Online stores that score 90+ on Google PageSpeed out of the box. $0/month to run." },
+    { title: "Custom Coded Storefronts", desc: "Online stores that score 90+ on Google PageSpeed out of the box. Vercel hosting starts free." },
     { title: "Shopify Plus & WordPress Migrations", desc: "Replace $3,200/month in platform fees with custom code. Same features. Zero app fees. PageSpeed from 31 to 92." },
     { title: "Admin Dashboards & SaaS", desc: "Admin dashboards that replace $500+/mo in SaaS apps. Built with enterprise level architecture and bank-level security." },
     { title: "Speed & Cost Audits", desc: "Free speed and cost audit for e-commerce stores paying $1,000+/month in platform fees and still loading in 3+ seconds." },
