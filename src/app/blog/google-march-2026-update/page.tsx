@@ -17,14 +17,14 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Google's March 2026 Update Rewards Fast Sites: What It Means for Your Business",
+    title: "Google's March 2026 Update: Fast Sites Win the Ranking Boost",
     description: "Google's March 2026 core update tightened speed requirements and dropped 47% of slow sites. Here's what changed and what your business should do now.",
     alternates: {
         canonical: '/blog/google-march-2026-update',
     },
     keywords: ["Google March 2026 core update", "Google algorithm update 2026", "Core Web Vitals ranking factor", "website speed SEO 2026", "LCP 2.0 threshold", "INP ranking signal", "slow website ranking drop"],
     openGraph: {
-        title: "Google's March 2026 Update Rewards Fast Sites: What It Means for Your Business",
+        title: "Google's March 2026 Update: Fast Sites Win the Ranking Boost",
         description: "Google's March 2026 core update tightened speed requirements and dropped 47% of slow sites. Here's what changed and what your business should do now.",
         type: "article",
         publishedTime: "2026-04-01",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Google's March 2026 Update Rewards Fast Sites: What It Means for Your Business",
+        title: "Google's March 2026 Update: Fast Sites Win the Ranking Boost",
         description: "Google's March 2026 core update tightened speed requirements and dropped 47% of slow sites. Here's what changed and what your business should do now.",
     },
 };
@@ -45,7 +45,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/google-march-2026-update#article",
-            "headline": "Google's March 2026 Update Rewards Fast Sites: What It Means for Your Business",
+            "headline": "Google's March 2026 Update: Fast Sites Win the Ranking Boost",
             "description": "Google's March 2026 core update tightened speed requirements and dropped 47% of slow sites. Here's what changed and what your business should do now.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-01T00:00:00-05:00",
@@ -103,7 +103,7 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/google-march-2026-update#webpage",
             "url": "https://www.pandacodegen.com/blog/google-march-2026-update",
-            "name": "Google's March 2026 Update Rewards Fast Sites: What It Means for Your Business",
+            "name": "Google's March 2026 Update: Fast Sites Win the Ranking Boost",
             "description": "Google's March 2026 core update tightened speed requirements and dropped 47% of slow sites. Here's what changed and what your business should do now.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },

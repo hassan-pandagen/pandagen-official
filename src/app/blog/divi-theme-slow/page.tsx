@@ -18,14 +18,14 @@ const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAni
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Divi Theme Slow in 2026? Real Scores, Real Costs, and the Only Fix That Works",
+    title: "Divi Theme Slow in 2026? Real Scores and the Only Fix That Works",
     description: "1.58 million businesses use Divi. 60% of WordPress sites fail Core Web Vitals. Slow sites cost businesses an average of $20,172 per year. Here is what your Divi site is actually scoring and what it is costing you.",
     alternates: {
         canonical: "https://www.pandacodegen.com/blog/divi-theme-slow",
     },
     keywords: ["divi theme slow", "divi pagespeed score 2026", "divi performance", "why is divi slow", "divi core web vitals failing", "divi wordpress slow 2026", "divi speed fix"],
     openGraph: {
-        title: "Divi Theme Slow in 2026? Real Scores, Real Costs, and the Only Fix That Works",
+        title: "Divi Theme Slow in 2026? Real Scores and the Only Fix That Works",
         description: "1.58 million businesses use Divi. 60% of WordPress sites fail Core Web Vitals. Slow sites cost businesses an average of $20,172 per year.",
         type: "article",
         publishedTime: "2026-04-08",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Divi Theme Slow in 2026? Real Scores, Real Costs, and the Only Fix That Works",
+        title: "Divi Theme Slow in 2026? Real Scores and the Only Fix That Works",
         description: "1.58 million businesses use Divi. 60% of WordPress sites fail Core Web Vitals. Here is what your Divi site is costing you.",
     },
 };
@@ -46,7 +46,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/divi-theme-slow#article",
-            "headline": "Divi Theme Slow in 2026? Real Scores, Real Costs, and the Only Fix That Works",
+            "headline": "Divi Theme Slow in 2026? Real Scores and the Only Fix That Works",
             "description": "1.58 million businesses use Divi. A 2025 survey of 206 businesses found slow websites cost an average of $20,172 per year in lost revenue. Here is what your Divi site is actually scoring and what that costs your business.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-08T00:00:00-05:00",
@@ -105,7 +105,7 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/divi-theme-slow#webpage",
             "url": "https://www.pandacodegen.com/blog/divi-theme-slow",
-            "name": "Divi Theme Slow in 2026? Real Scores, Real Costs, and the Only Fix That Works",
+            "name": "Divi Theme Slow in 2026? Real Scores and the Only Fix That Works",
             "description": "1.58 million businesses use Divi. 60% of WordPress sites fail Core Web Vitals. Here is what your Divi site is actually scoring and what that costs your business.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },

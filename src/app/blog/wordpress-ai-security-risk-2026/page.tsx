@@ -16,13 +16,13 @@ const SecurityShieldAnimation = dynamic(() => import("@/components/blog/Security
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: { absolute: "WordPress AI Plugins Exposed 100K+ Business Sites in 2026: Is Your Website at Risk?" },
+    title: { absolute: "WordPress AI Plugins Exposed 100K+ Sites in 2026: Are You at Risk?" },
     description: "AI plugins are the newest WordPress vulnerability. 100K+ sites exposed through AI plugin flaws. Here is what business owners need to know and how to protect your site.",
     alternates: {
         canonical: '/blog/wordpress-ai-security-risk-2026',
     },
     openGraph: {
-        title: "WordPress AI Plugins Exposed 100K+ Business Sites in 2026: Is Your Website at Risk?",
+        title: "WordPress AI Plugins Exposed 100K+ Sites in 2026: Are You at Risk?",
         description: "AI plugins are the newest WordPress vulnerability. 100K+ sites exposed through AI plugin flaws. Here is what business owners need to know and how to protect your site.",
         type: "article",
         publishedTime: "2026-02-19",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "WordPress AI Plugins Exposed 100K+ Business Sites in 2026: Is Your Website at Risk?",
+        title: "WordPress AI Plugins Exposed 100K+ Sites in 2026: Are You at Risk?",
         description: "AI plugins are the newest WordPress vulnerability. 100K+ sites exposed through AI plugin flaws. Here is what business owners need to know and how to protect your site.",
     },
     keywords: ["WordPress AI security risk", "is WordPress AI safe", "WordPress 6.9 security vulnerabilities", "AI Engine plugin security flaw", "WordPress site security 2026"],
@@ -45,7 +45,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-ai-security-risk-2026#article",
-            "headline": "WordPress AI Plugins Exposed 100K+ Business Sites in 2026: Is Your Website at Risk?",
+            "headline": "WordPress AI Plugins Exposed 100K+ Sites in 2026: Are You at Risk?",
             "description": "AI plugins are the newest WordPress vulnerability. 100K+ sites exposed through AI plugin flaws. Here is what business owners need to know and how to protect your site.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-19T00:00:00-05:00",
@@ -130,7 +130,7 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/wordpress-ai-security-risk-2026#webpage",
             "url": "https://www.pandacodegen.com/blog/wordpress-ai-security-risk-2026",
-            "name": "WordPress AI Plugins Exposed 100K+ Business Sites in 2026: Is Your Website at Risk?",
+            "name": "WordPress AI Plugins Exposed 100K+ Sites in 2026: Are You at Risk?",
             "description": "AI plugins are the newest WordPress vulnerability. 100K+ sites exposed through AI plugin flaws. Here is what business owners need to know and how to protect your site.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },

@@ -16,7 +16,7 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Squarespace Migration Cost 2026: Full Breakdown Before You Sign Anything",
+    title: "Squarespace Migration Cost 2026: Full Breakdown Before You Sign",
     description: "Squarespace costs $1,500 to $5,500 over 3 years when you count every fee. Here is the real migration cost by site size, plus the ROI calculation that shows when it pays for itself.",
     alternates: {
         canonical: "/blog/squarespace-migration-cost",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         "squarespace true cost 2026"
     ],
     openGraph: {
-        title: "Squarespace Migration Cost 2026: Full Breakdown Before You Sign Anything",
+        title: "Squarespace Migration Cost 2026: Full Breakdown Before You Sign",
         description: "Squarespace costs $1,500 to $5,500 over 3 years. Here is the real migration cost by site size and exactly when it pays for itself.",
         type: "article",
         publishedTime: "2026-04-09T00:00:00-05:00",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Squarespace Migration Cost 2026: Full Breakdown Before You Sign Anything",
+        title: "Squarespace Migration Cost 2026: Full Breakdown Before You Sign",
         description: "Squarespace costs $1,500 to $5,500 over 3 years. Here is the real migration cost and ROI breakdown.",
     },
 };
@@ -56,7 +56,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/squarespace-migration-cost#article",
-            "headline": "Squarespace Migration Cost 2026: Full Breakdown Before You Sign Anything",
+            "headline": "Squarespace Migration Cost 2026: Full Breakdown Before You Sign",
             "description": "Squarespace costs $1,500 to $5,500 over 3 years when you count every fee. Here is the real migration cost by site size, plus the ROI calculation that shows when it pays for itself.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-09T00:00:00-05:00",

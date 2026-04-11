@@ -16,14 +16,14 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Shopify vs Custom Website in 2026: 5 Signs You Have Outgrown Shopify and Need a Change",
+    title: "Shopify vs Custom Website 2026: 5 Signs You Have Outgrown It",
     description: "Shopify works until app fees hit $1,000/month and your store loads in 4+ seconds. 5 signs you have outgrown Shopify and what to do next.",
     alternates: {
         canonical: '/blog/shopify-vs-custom-website',
     },
     keywords: ["shopify vs custom website", "outgrown shopify", "shopify alternative", "shopify too expensive", "shopify slow", "custom ecommerce website", "shopify hidden costs", "shopify to custom migration", "headless shopify", "shopify app costs", "shopify plus price increase 2026", "shopify core web vitals failing", "shopify checkout restrictions", "leaving shopify", "shopify transaction fees", "shopify duplicate content seo", "shopify frozen funds"],
     openGraph: {
-        title: "Shopify vs Custom Website in 2026: 5 Signs You Have Outgrown Shopify and Need a Change",
+        title: "Shopify vs Custom Website 2026: 5 Signs You Have Outgrown It",
         description: "Shopify works until app fees hit $1,000/month and your store loads in 4+ seconds. Here are the 5 signs and what to do next.",
         type: "article",
         publishedTime: "2026-03-30",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Shopify vs Custom Website in 2026: 5 Signs You Have Outgrown Shopify and Need a Change",
+        title: "Shopify vs Custom Website 2026: 5 Signs You Have Outgrown It",
         description: "Shopify works until app fees hit $1,000/month and your store loads in 4+ seconds. Here are the 5 signs.",
     },
 };

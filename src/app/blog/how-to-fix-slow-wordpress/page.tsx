@@ -16,13 +16,13 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: { absolute: "How to Fix a Slow WordPress Site in 2026: 8 Methods Ranked by Speed Impact" },
+    title: { absolute: "How to Fix a Slow WordPress Site 2026: 8 Methods Ranked" },
     description: "WordPress loads in 4 seconds. Your competitor loads in 0.9 seconds. Here are 8 speed methods ranked by impact, plus the hard truth about WordPress's performance ceiling.",
     alternates: {
         canonical: '/blog/how-to-fix-slow-wordpress',
     },
     openGraph: {
-        title: "How to Fix a Slow WordPress Site in 2026: 8 Methods Ranked by Speed Impact",
+        title: "How to Fix a Slow WordPress Site 2026: 8 Methods Ranked",
         description: "WordPress loads in 4 seconds. Your competitor loads in 0.9 seconds. Here are 8 speed methods ranked by impact, plus the hard truth about WordPress's performance ceiling.",
         type: "article",
         publishedTime: "2026-02-17",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "How to Fix a Slow WordPress Site in 2026: 8 Methods Ranked by Speed Impact",
+        title: "How to Fix a Slow WordPress Site 2026: 8 Methods Ranked",
         description: "WordPress loads in 4 seconds. Your competitor loads in 0.9 seconds. Here are 8 speed methods ranked by impact, plus the hard truth about WordPress's performance ceiling.",
     },
     keywords: ["slow WordPress", "WordPress speed optimization", "fix slow WordPress", "WordPress performance", "WordPress vs Next.js", "Core Web Vitals"],
@@ -44,7 +44,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress#article",
-            "headline": "How to Fix a Slow WordPress Site in 2026: 8 Methods Ranked by Speed Impact",
+            "headline": "How to Fix a Slow WordPress Site 2026: 8 Methods Ranked",
             "description": "WordPress loads in 4 seconds. Your competitor loads in 0.9 seconds. Here are 8 speed methods ranked by impact, plus the hard truth about WordPress's performance ceiling.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-17T00:00:00-05:00",
@@ -106,7 +106,7 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress#webpage",
             "url": "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress",
-            "name": "How to Fix a Slow WordPress Site in 2026: 8 Methods Ranked by Speed Impact",
+            "name": "How to Fix a Slow WordPress Site 2026: 8 Methods Ranked",
             "description": "WordPress loads in 4 seconds. Your competitor loads in 0.9 seconds. Here are 8 speed methods ranked by impact, plus the hard truth about WordPress's performance ceiling.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },

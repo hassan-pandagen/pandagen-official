@@ -18,14 +18,14 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Leaving Webflow in 2026: Real Costs, Cart Failures, and What We Migrated To",
+    title: "Leaving Webflow 2026: Real Costs, Cart Failures, What We Migrated To",
     description: "Bandwidth cut 75%. Bills hit $170 overnight. Cart buttons disappeared on live sites. Memberships killed with 6 weeks notice. The real story of leaving Webflow and what we built instead.",
     alternates: {
         canonical: "/blog/leaving-webflow-2026",
     },
     keywords: ["leaving webflow 2026", "webflow too expensive 2026", "webflow alternative custom code", "migrate from webflow 2026", "webflow problems 2026", "webflow bandwidth limit", "webflow membership deprecated", "webflow cart not working"],
     openGraph: {
-        title: "Leaving Webflow in 2026: Real Costs, Cart Failures, and What We Migrated To",
+        title: "Leaving Webflow 2026: Real Costs, Cart Failures, What We Migrated To",
         description: "Bandwidth cut 75%. Bills hit $170 overnight. Cart buttons disappeared on live sites. Memberships killed with 6 weeks notice. The real story of leaving Webflow.",
         type: "article",
         publishedTime: "2026-04-06",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Leaving Webflow in 2026: Real Costs, Cart Failures, and What We Migrated To",
+        title: "Leaving Webflow 2026: Real Costs, Cart Failures, What We Migrated To",
         description: "Bandwidth cut 75%. Bills hit $170 overnight. Cart buttons disappeared on live sites. Memberships killed. The real story of leaving Webflow.",
     },
 };
@@ -46,7 +46,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/leaving-webflow-2026#article",
-            "headline": "Leaving Webflow in 2026: Real Costs, Cart Failures, and What We Migrated To",
+            "headline": "Leaving Webflow 2026: Real Costs, Cart Failures, What We Migrated To",
             "description": "Bandwidth cut 75%. Bills hit $170 overnight. Cart buttons disappeared on live sites. Memberships killed with 6 weeks notice. The real story of leaving Webflow and what we built instead.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-06T00:00:00-05:00",

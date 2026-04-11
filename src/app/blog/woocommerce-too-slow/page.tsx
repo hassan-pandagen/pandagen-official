@@ -16,7 +16,7 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: { absolute: "WooCommerce Too Slow in 2026? Stores Score 30 to 55 on Mobile PageSpeed" },
+    title: { absolute: "WooCommerce Too Slow 2026? Stores Score 30 to 55 on Mobile" },
     description: "WooCommerce stores score 30 to 55 on mobile PageSpeed. The cause is architectural, not plugins. Here is what actually breaks your speed and the only fix that works.",
     alternates: {
         canonical: "/blog/woocommerce-too-slow",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         "slow woocommerce store"
     ],
     openGraph: {
-        title: "WooCommerce Too Slow in 2026? Stores Score 30 to 55 on Mobile PageSpeed",
+        title: "WooCommerce Too Slow 2026? Stores Score 30 to 55 on Mobile",
         description: "WooCommerce stores score 30 to 55 on mobile PageSpeed. The cause is architectural, not plugins. Here is what actually breaks your speed and the only fix that works.",
         type: "article",
         publishedTime: "2026-03-25",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "WooCommerce Too Slow in 2026? Stores Score 30 to 55 on Mobile PageSpeed",
+        title: "WooCommerce Too Slow 2026? Stores Score 30 to 55 on Mobile",
         description: "WooCommerce stores score 30 to 55 on mobile PageSpeed. The cause is architectural, not plugins. Here is what actually breaks your speed and the only fix that works.",
     },
 };
@@ -56,7 +56,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/woocommerce-too-slow#article",
-            "headline": "WooCommerce Too Slow in 2026? Stores Score 30 to 55 on Mobile PageSpeed",
+            "headline": "WooCommerce Too Slow 2026? Stores Score 30 to 55 on Mobile",
             "description": "WooCommerce stores score 30 to 55 on mobile PageSpeed. The cause is architectural, not plugins. Here is what actually breaks your speed and the only fix that works.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-25T00:00:00-05:00",

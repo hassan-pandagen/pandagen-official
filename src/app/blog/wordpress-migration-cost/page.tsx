@@ -16,7 +16,7 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: { absolute: "WordPress to Next.js Migration Cost in 2026: From $2,000 for Small Sites to $25,000 for Complex" },
+    title: { absolute: "WordPress to Next.js Migration Cost 2026: $2K to $25K Breakdown" },
     description: "A simple WordPress site starts at $2,000 to migrate to Next.js. Complex sites with WooCommerce cost $10,000 to $25,000. Full pricing by project type and ROI calculation.",
     alternates: {
         canonical: "/blog/wordpress-migration-cost",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         "wordpress migration budget"
     ],
     openGraph: {
-        title: "WordPress to Next.js Migration Cost in 2026: From $2,000 for Small Sites to $25,000 for Complex",
+        title: "WordPress to Next.js Migration Cost 2026: $2K to $25K Breakdown",
         description: "A simple WordPress site starts at $2,000 to migrate to Next.js. Complex sites with WooCommerce cost $10,000 to $25,000. Full pricing by project type and ROI calculation.",
         type: "article",
         publishedTime: "2026-03-22",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "WordPress to Next.js Migration Cost in 2026: From $2,000 for Small Sites to $25,000 for Complex",
+        title: "WordPress to Next.js Migration Cost 2026: $2K to $25K Breakdown",
         description: "A simple WordPress site starts at $2,000 to migrate to Next.js. Complex sites with WooCommerce cost $10,000 to $25,000. Full pricing by project type and ROI calculation.",
     },
 };
@@ -56,7 +56,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-migration-cost#article",
-            "headline": "WordPress to Next.js Migration Cost in 2026: From $2,000 for Small Sites to $25,000 for Complex",
+            "headline": "WordPress to Next.js Migration Cost 2026: $2K to $25K Breakdown",
             "description": "A simple WordPress site starts at $2,000 to migrate to Next.js. Complex sites with WooCommerce cost $10,000 to $25,000. Full pricing by project type and ROI calculation.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-22T00:00:00-05:00",
@@ -124,7 +124,7 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/wordpress-migration-cost#webpage",
             "url": "https://www.pandacodegen.com/blog/wordpress-migration-cost",
-            "name": "WordPress to Next.js Migration Cost in 2026: From $2,000 for Small Sites to $25,000 for Complex",
+            "name": "WordPress to Next.js Migration Cost 2026: $2K to $25K Breakdown",
             "description": "A simple WordPress site starts at $2,000 to migrate to Next.js. Complex sites with WooCommerce cost $10,000 to $25,000. Full pricing by project type and ROI calculation.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-03-22T00:00:00-05:00",

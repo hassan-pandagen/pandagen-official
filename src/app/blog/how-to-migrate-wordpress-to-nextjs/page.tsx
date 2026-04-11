@@ -16,14 +16,14 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "WordPress to Next.js Migration in 2026: Full Site Migration for $500. Here Is the Process.",
+    title: "WordPress to Next.js Migration in 2026: The Full $500 Process",
     description: "301 redirects, full content transfer, zero downtime, SEO preserved. Complete migration guide in plain English. Founder's offer: $500 flat. 95+ PageSpeed guaranteed or you do not pay the balance.",
     alternates: {
         canonical: '/blog/how-to-migrate-wordpress-to-nextjs',
     },
     keywords: ["how to migrate wordpress to next.js", "wordpress to nextjs migration", "migrate wordpress nextjs seo", "wordpress nextjs migration guide", "wordpress to nextjs without losing seo", "wordpress migration checklist"],
     openGraph: {
-        title: "WordPress to Next.js Migration in 2026: Full Site Migration for $500. Here Is the Process.",
+        title: "WordPress to Next.js Migration in 2026: The Full $500 Process",
         description: "301 redirects, full content transfer, zero downtime, SEO preserved. Complete migration guide in plain English. Founder's offer: $500 flat. 95+ PageSpeed guaranteed.",
         type: "article",
         publishedTime: "2026-03-11",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "WordPress to Next.js Migration in 2026: Full Site Migration for $500. Here Is the Process.",
+        title: "WordPress to Next.js Migration in 2026: The Full $500 Process",
         description: "301 redirects, full content transfer, zero downtime, SEO preserved. Complete migration guide in plain English. Founder's offer: $500 flat. 95+ PageSpeed guaranteed.",
     },
 };

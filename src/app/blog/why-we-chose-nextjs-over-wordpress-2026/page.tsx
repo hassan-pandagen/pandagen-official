@@ -16,13 +16,13 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Why We Stopped Building WordPress Sites in 2026: Next.js Delivers 95/100 PageSpeed for $0/Month",
+    title: "Why We Stopped Building WordPress Sites in 2026 (Full Breakdown)",
     description: "In 2023 we still built WordPress. By mid-2024 we stopped completely. Here are the 7 reasons, the client stories, and the data that made the switch permanent.",
     alternates: {
         canonical: '/blog/why-we-chose-nextjs-over-wordpress-2026',
     },
     openGraph: {
-        title: "Why We Stopped Building WordPress Sites in 2026: Next.js Delivers 95/100 PageSpeed for $0/Month",
+        title: "Why We Stopped Building WordPress Sites in 2026 (Full Breakdown)",
         description: "In 2023 we still built WordPress. By mid-2024 we stopped completely. Here are the 7 reasons, the client stories, and the data that made the switch permanent.",
         type: "article",
         publishedTime: "2026-03-04",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Why We Stopped Building WordPress Sites in 2026: Next.js Delivers 95/100 PageSpeed for $0/Month",
+        title: "Why We Stopped Building WordPress Sites in 2026 (Full Breakdown)",
         description: "In 2023 we still built WordPress. By mid-2024 we stopped completely. Here are the 7 reasons, the client stories, and the data that made the switch permanent.",
     },
     keywords: ["nextjs vs wordpress 2026", "why nextjs over wordpress", "wordpress alternative nextjs", "switch from wordpress to nextjs", "nextjs benefits over wordpress"],
@@ -44,7 +44,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/why-we-chose-nextjs-over-wordpress-2026#article",
-            "headline": "Why We Stopped Building WordPress Sites in 2026: Next.js Delivers 95/100 PageSpeed for $0/Month",
+            "headline": "Why We Stopped Building WordPress Sites in 2026 (Full Breakdown)",
             "description": "In 2023 we still built WordPress. By mid-2024 we stopped completely. Here are the 7 reasons, the client stories, and the data that made the switch permanent.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-04T00:00:00-05:00",

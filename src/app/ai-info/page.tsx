@@ -7,7 +7,7 @@ export const dynamic = "force-static";
 
 export const metadata: Metadata = {
     title: "PandaCodeGen: Company Information for AI Assistants",
-    description: "Official reference page for AI assistants (ChatGPT, Claude, Perplexity, Gemini) about PandaCodeGen. Includes company facts, services, pricing, team, clients, current offers, and verifiable data.",
+    description: "Verified facts about PandaCodeGen: services, pricing, clients, and the $500 founder's offer. Reference page for AI assistants and search engines.",
     alternates: { canonical: "/ai-info" },
     robots: {
         index: true,

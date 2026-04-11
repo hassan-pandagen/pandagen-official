@@ -16,13 +16,13 @@ const SEORankingAnimation = dynamic(() => import("@/components/blog/SEORankingAn
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Why Your Competitor Outranks You in 2026: Website Speed Is 40% of Google Search Ranking Score",
+    title: "Why Your Competitor Outranks You in 2026: Speed Is 40% of SEO",
     description: "Your competitor gets 3x your traffic with a faster coded site. Google, ChatGPT, and Bing all prefer fast sites. Here is the exact reason and the fix.",
     alternates: {
         canonical: '/blog/why-competitor-outranks-you',
     },
     openGraph: {
-        title: "Why Your Competitor Outranks You in 2026: Website Speed Is 40% of Google Search Ranking Score",
+        title: "Why Your Competitor Outranks You in 2026: Speed Is 40% of SEO",
         description: "Your competitor gets 3x your traffic with a faster coded site. Google, ChatGPT, and Bing all prefer fast sites. Here is the exact reason and the fix.",
         type: "article",
         publishedTime: "2026-02-15",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Why Your Competitor Outranks You in 2026: Website Speed Is 40% of Google Search Ranking Score",
+        title: "Why Your Competitor Outranks You in 2026: Speed Is 40% of SEO",
         description: "Your competitor gets 3x your traffic with a faster coded site. Google, ChatGPT, and Bing all prefer fast sites. Here is the exact reason and the fix.",
     },
     keywords: ["Google rankings", "competitor analysis", "website speed SEO", "WordPress vs Next.js", "AI search optimization", "coded website benefits"],
@@ -44,7 +44,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/why-competitor-outranks-you#article",
-            "headline": "Why Your Competitor Outranks You in 2026: Website Speed Is 40% of Google Search Ranking Score",
+            "headline": "Why Your Competitor Outranks You in 2026: Speed Is 40% of SEO",
             "description": "Your competitor gets 3x your traffic with a faster coded site. Google, ChatGPT, and Bing all prefer fast sites. Here is the exact reason and the fix.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-15T00:00:00-05:00",

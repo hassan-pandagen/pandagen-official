@@ -16,12 +16,12 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Shopify Headless Commerce in 2026: Cut Load Time by 80% and Boost Conversion Rate",
+    title: "Shopify Headless in 2026: Cut Load Time 80%, Boost Conversions",
     description: "Most Shopify stores fail Core Web Vitals because Liquid templates are render-blocking. Here is the exact headless stack that took a store from 4 seconds to 0.8 seconds.",
     alternates: { canonical: "/blog/shopify-headless" },
     keywords: ["headless shopify", "shopify speed optimization", "shopify core web vitals", "shopify next.js", "shopify storefront api", "shopify liquid slow"],
     openGraph: {
-        title: "Shopify Headless Commerce in 2026: Cut Load Time by 80% and Boost Conversion Rate",
+        title: "Shopify Headless in 2026: Cut Load Time 80%, Boost Conversions",
         description: "Most Shopify stores fail Core Web Vitals because Liquid templates are render-blocking. Here is the exact headless stack that took a store from 4 seconds to 0.8 seconds.",
         type: "article",
         publishedTime: "2026-01-10",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Shopify Headless Commerce in 2026: Cut Load Time by 80% and Boost Conversion Rate",
+        title: "Shopify Headless in 2026: Cut Load Time 80%, Boost Conversions",
         description: "Most Shopify stores fail Core Web Vitals because Liquid templates are render-blocking. Here is the exact headless stack that took a store from 4 seconds to 0.8 seconds.",
     },
 };
@@ -42,7 +42,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/shopify-headless#article",
-            "headline": "Shopify Headless Commerce in 2026: Cut Load Time by 80% and Boost Conversion Rate",
+            "headline": "Shopify Headless in 2026: Cut Load Time 80%, Boost Conversions",
             "description": "Most Shopify stores fail Core Web Vitals because Liquid templates are render-blocking. Here is the exact headless stack that took a store from 4 seconds to 0.8 seconds.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-01-10T00:00:00-05:00",
