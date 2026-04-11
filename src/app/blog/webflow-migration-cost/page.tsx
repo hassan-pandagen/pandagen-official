@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     alternates: {
         canonical: '/blog/webflow-migration-cost',
     },
-    keywords: ["webflow migration cost", "webflow to next.js cost", "webflow migration pricing", "how much does webflow migration cost", "webflow to custom code", "webflow migration 50 page site", "webflow migration 100 page site"],
+    keywords: ["webflow migration cost", "webflow to next.js cost", "webflow migration pricing", "how much does webflow migration cost", "webflow to custom code", "webflow migration cost for 50-100 page website", "webflow enterprise pricing migration cost", "factors that increase cost of webflow migration project", "webflow ongoing costs after migration", "webflow migration cost 2026"],
     openGraph: {
         title: "Webflow Migration Cost 2026: Agencies Charge $30K. We Charge $500.",
         description: "Agencies quote $5,000 to $90,000 for Webflow migration. Our founder's offer: $500 flat. Real 2026 cost breakdown by page count and what drives the price up.",
@@ -48,7 +48,7 @@ const articleSchema = {
             "description": "Agencies quote $5,000 to $90,000 for Webflow migration. Our founder's offer: $500 flat. Real 2026 cost breakdown by page count, what drives the price up, and questions to ask before you sign anything.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-25T00:00:00-05:00",
-            "dateModified": "2026-03-25T00:00:00-05:00",
+            "dateModified": "2026-04-12T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -68,8 +68,8 @@ const articleSchema = {
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/webflow-migration-cost" },
             "articleSection": "Webflow",
             "keywords": ["webflow migration cost", "webflow to Next.js", "webflow migration pricing", "webflow custom code", "website migration cost 2026"],
-            "timeRequired": "PT10M",
-            "wordCount": 2600,
+            "timeRequired": "PT12M",
+            "wordCount": 3100,
             "about": [
                 { "@type": "Thing", "name": "Webflow Migration" },
                 { "@type": "Thing", "name": "Website Migration Cost" },
@@ -108,7 +108,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-25T00:00:00-05:00",
-            "dateModified": "2026-03-25T00:00:00-05:00",
+            "dateModified": "2026-04-12T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/webflow-migration-cost#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -271,7 +271,35 @@ export default function WebflowMigrationCostPage() {
                             These are ranges, not quotes. Two 60-page sites can cost very different amounts depending on what is in them. These costs have come down over the past two years thanks to AI-assisted development. Work that used to take a developer 3 days now takes half a day. The next section explains why the range is still wide.
                         </BlogText>
 
-                        <BlogHeader>What Actually Drives the Cost of a Webflow Migration</BlogHeader>
+                        <BlogHeader>Webflow Migration Cost for a 50-100 Page Website</BlogHeader>
+
+                        <BlogText>
+                            For a Webflow site between 50 and 100 pages, migration typically runs <BlogHighlight>$12,000 to $20,000</BlogHighlight>. This is the tier that covers most established businesses: a mature content library, multiple CMS collections, and specialized page templates. Timelines run 4 to 8 weeks.
+                        </BlogText>
+
+                        <BlogText>
+                            Where you land in that range depends on page uniqueness. If 80 of your 100 pages are blog posts using the same template, you land at the low end around $12,000 because the CMS handles most of the work once the template is built. If each page has custom design, custom sections, and unique layouts, you land near $20,000 because every page requires individual attention. Most 50-100 page sites we migrate sit in the middle at $14,000 to $17,000.
+                        </BlogText>
+
+                        <BlogText>
+                            The factors that push a 50-100 page migration toward the top of the range: multiple CMS collections with nested relationships, localization for multiple languages, custom form logic, e-commerce integration, and a large backlog of blog content with inline images and embedded media. The factors that keep it at the bottom: consistent templates, simple CMS structure, and static marketing pages.
+                        </BlogText>
+
+                        <BlogHeader>Enterprise Webflow Migration Pricing</BlogHeader>
+
+                        <BlogText>
+                            Enterprise Webflow migrations start at <BlogHighlight>$18,000 and can reach $35,000 or more</BlogHighlight> for 100+ page sites. At this scale, the migration is no longer just a rebuild: it becomes a multi-stakeholder project that includes complex CMS modeling, localization, third-party integrations, and coordinated QA with sign-off from marketing, engineering, and leadership.
+                        </BlogText>
+
+                        <BlogText>
+                            Enterprise pricing factors in work that smaller migrations do not need: staging environments with access controls, integration with CRM and marketing automation platforms (HubSpot, Salesforce, Marketo), SSO for internal editors, audit logging for compliance, and formal acceptance testing. URL mapping alone is a significant cost at this scale because every page needs a 301 redirect to preserve SEO rankings, and enterprise sites often have thousands of indexed URLs across legacy campaigns.
+                        </BlogText>
+
+                        <BlogText>
+                            Timelines for enterprise migrations run 6 to 12 weeks, sometimes longer if stakeholder reviews add delay. The upside: once the migration is complete, enterprise sites see the biggest cost savings because they were paying the most for Webflow Enterprise plans ($235 to $2,000+/month) plus all the associated apps and integrations. Payback on an enterprise migration is typically 8 to 14 months, faster than smaller sites.
+                        </BlogText>
+
+                        <BlogHeader>Factors That Increase the Cost of a Webflow Migration Project</BlogHeader>
 
                         <BlogText>
                             Page count sets the floor. These five factors determine where your project lands in the range or pushes above it:
@@ -342,7 +370,7 @@ export default function WebflowMigrationCostPage() {
                             If a quote does not specify these items in writing, the cost of fixing missing SEO elements post-launch often exceeds what was saved by going with a cheaper quote.
                         </BlogText>
 
-                        <BlogHeader>The Ongoing Savings: What You Stop Paying After Migration</BlogHeader>
+                        <BlogHeader>Webflow Ongoing Costs After Migration (and What You&apos;ll Save)</BlogHeader>
 
                         <BlogText>
                             Migration cost is a one-time number. What changes permanently is your monthly overhead. Here is what a typical Webflow business site costs versus the same site on custom code:

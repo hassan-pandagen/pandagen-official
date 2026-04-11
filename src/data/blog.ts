@@ -267,15 +267,15 @@ export const blogPosts: BlogPost[] = [
   {
     id: "webflow-migration-cost",
     title: "Webflow Migration Cost: From $2,000 for Small Sites (2026 Pricing)",
-    excerpt: "A small Webflow site starts at $2,000 to migrate. A 50 to 100 page site costs $12,000 to $20,000. Here is the full breakdown by site size, what drives the cost, and exactly when migration pays for itself.",
+    excerpt: "A small Webflow site starts at $2,000 to migrate. A 50 to 100 page site costs $12,000 to $20,000. Enterprise sites run $18,000 to $35,000+. Here is the full breakdown by site size, what drives the cost up, and ongoing costs after migration.",
     category: "Webflow",
-    readTime: "10 min",
+    readTime: "12 min",
     date: "Mar 25",
     author: "Hassan",
     role: "Lead Engineer",
     featured: true,
     illustrationType: 'migration',
-    lastModified: "2026-03-25",
+    lastModified: "2026-04-12",
     faqs: [
       { question: "How much does it cost to migrate a Webflow site to custom code?", answer: "A Webflow to Next.js migration costs $3,000 to $20,000 depending on site size. Small sites with 5 to 20 pages cost $3,000 to $7,000. Mid-size sites with 20 to 50 pages cost $7,000 to $14,000. Large sites with 50 to 100 pages cost $12,000 to $20,000. Enterprise sites with 100+ pages or complex CMS integrations start at $18,000. The cost range reflects real differences in scope: page count, custom animations, CMS collections, form complexity, and integration work." },
       { question: "How long does a Webflow to Next.js migration take for a 50-100 page site?", answer: "A 50 to 100 page Webflow migration takes 4 to 8 weeks. Week 1 is audit and planning: URL mapping, content inventory, redirect strategy. Weeks 2 to 5 are the build: converting pages, migrating CMS content, rebuilding animations and forms. Week 6 is QA and redirect verification. Weeks 7 to 8 are zero-downtime DNS cutover and post-launch monitoring. Timeline depends heavily on how many custom CMS collections you have and whether you need third-party API integrations rebuilt." },
