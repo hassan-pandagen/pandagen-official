@@ -322,9 +322,9 @@ export default function ShopifyVsCustomWebsitePage() {
                             Most people compare the monthly price and stop there. The real comparison is the 3-year total cost of ownership.
                         </BlogText>
 
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                         <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4">
-                            <table className="w-full border-collapse text-sm min-w-[560px]">
+                            <table className="w-full border-collapse text-sm min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-50">
                                         <th className="border border-stone-200 px-4 py-3 text-left font-bold">Cost Category</th>
@@ -335,33 +335,33 @@ export default function ShopifyVsCustomWebsitePage() {
                                 <tbody>
                                     <tr>
                                         <td className="border border-stone-200 px-4 py-3">Build cost</td>
-                                        <td className="border border-stone-200 px-4 py-3">$0 (DIY) to $5,000 (agency theme)</td>
-                                        <td className="border border-stone-200 px-4 py-3">$8,000 to $25,000</td>
+                                        <td data-label="Shopify (3 Years)" className="border border-stone-200 px-4 py-3">$0 (DIY) to $5,000 (agency theme)</td>
+                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-200 px-4 py-3">$8,000 to $25,000</td>
                                     </tr>
                                     <tr className="bg-stone-50">
                                         <td className="border border-stone-200 px-4 py-3">Platform fees</td>
-                                        <td className="border border-stone-200 px-4 py-3">$1,404 to $82,800</td>
-                                        <td className="border border-stone-200 px-4 py-3">$0 to $720</td>
+                                        <td data-label="Shopify (3 Years)" className="border border-stone-200 px-4 py-3">$1,404 to $82,800</td>
+                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-200 px-4 py-3">$0 to $720</td>
                                     </tr>
                                     <tr>
                                         <td className="border border-stone-200 px-4 py-3">App subscriptions</td>
-                                        <td className="border border-stone-200 px-4 py-3">$18,000 to $54,000</td>
-                                        <td className="border border-stone-200 px-4 py-3">$0 (built into code)</td>
+                                        <td data-label="Shopify (3 Years)" className="border border-stone-200 px-4 py-3">$18,000 to $54,000</td>
+                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-200 px-4 py-3">$0 (built into code)</td>
                                     </tr>
                                     <tr className="bg-stone-50">
                                         <td className="border border-stone-200 px-4 py-3">Transaction fees (non-Shopify Payments)</td>
-                                        <td className="border border-stone-200 px-4 py-3">$5,000 to $60,000</td>
-                                        <td className="border border-stone-200 px-4 py-3">$0</td>
+                                        <td data-label="Shopify (3 Years)" className="border border-stone-200 px-4 py-3">$5,000 to $60,000</td>
+                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-200 px-4 py-3">$0</td>
                                     </tr>
                                     <tr>
                                         <td className="border border-stone-200 px-4 py-3">Google PageSpeed Mobile</td>
-                                        <td className="border border-stone-200 px-4 py-3">25 to 50</td>
-                                        <td className="border border-stone-200 px-4 py-3">95 to 100</td>
+                                        <td data-label="Shopify (3 Years)" className="border border-stone-200 px-4 py-3">25 to 50</td>
+                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-200 px-4 py-3">95 to 100</td>
                                     </tr>
                                     <tr className="bg-stone-100 font-bold">
                                         <td className="border border-stone-200 px-4 py-3">3-Year Total</td>
-                                        <td className="border border-stone-200 px-4 py-3">$24,404 to $201,800</td>
-                                        <td className="border border-stone-200 px-4 py-3">$8,000 to $25,720</td>
+                                        <td data-label="Shopify (3 Years)" className="border border-stone-200 px-4 py-3">$24,404 to $201,800</td>
+                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-200 px-4 py-3">$8,000 to $25,720</td>
                                     </tr>
                                 </tbody>
                             </table>

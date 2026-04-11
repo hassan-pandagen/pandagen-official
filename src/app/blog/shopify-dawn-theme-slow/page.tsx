@@ -346,9 +346,9 @@ export default function ShopifyDawnThemeSlowPage() {
                             Here&apos;s the honest breakdown based on what we see auditing Shopify stores:
                         </BlogText>
 
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                         <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4">
-                            <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px]">
+                            <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-50">
                                         <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Store Configuration</th>
@@ -358,19 +358,19 @@ export default function ShopifyDawnThemeSlowPage() {
                                 <tbody className="divide-y divide-stone-100">
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">Clean Dawn, no apps, optimized images</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">65 to 80/100</td>
+                                        <td data-label="Mobile PageSpeed Score" className="px-4 py-3 text-green-700 font-medium">65 to 80/100</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-stone-600">Dawn with 3 to 5 typical apps (reviews, chat, upsell)</td>
-                                        <td className="px-4 py-3 text-orange-600 font-medium">40 to 60/100</td>
+                                        <td data-label="Mobile PageSpeed Score" className="px-4 py-3 text-orange-600 font-medium">40 to 60/100</td>
                                     </tr>
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">Dawn with 6+ apps + Klaviyo + Gorgias + loyalty program</td>
-                                        <td className="px-4 py-3 text-red-600 font-medium">25 to 45/100</td>
+                                        <td data-label="Mobile PageSpeed Score" className="px-4 py-3 text-red-600 font-medium">25 to 45/100</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-stone-600">Dawn on Shopify Plus with heavy customization</td>
-                                        <td className="px-4 py-3 text-red-600 font-medium">30 to 55/100</td>
+                                        <td data-label="Mobile PageSpeed Score" className="px-4 py-3 text-red-600 font-medium">30 to 55/100</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -394,9 +394,9 @@ export default function ShopifyDawnThemeSlowPage() {
                             Yes, with real limits. Here&apos;s what actually works and what the ceiling looks like:
                         </BlogText>
 
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                         <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4">
-                            <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px]">
+                            <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-50">
                                         <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Optimization</th>
@@ -407,48 +407,48 @@ export default function ShopifyDawnThemeSlowPage() {
                                 <tbody className="divide-y divide-stone-100">
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">Audit and remove unused apps</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">Yes</td>
-                                        <td className="px-4 py-3 text-stone-600">Each app removed saves 80 to 200ms</td>
+                                        <td data-label="Works?" className="px-4 py-3 text-green-700 font-medium">Yes</td>
+                                        <td data-label="Impact" className="px-4 py-3 text-stone-600">Each app removed saves 80 to 200ms</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-stone-600">Compress and resize hero images before uploading</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">Yes</td>
-                                        <td className="px-4 py-3 text-stone-600">Target under 150KB per image</td>
+                                        <td data-label="Works?" className="px-4 py-3 text-green-700 font-medium">Yes</td>
+                                        <td data-label="Impact" className="px-4 py-3 text-stone-600">Target under 150KB per image</td>
                                     </tr>
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">Enable native lazy loading for below-fold images</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">Yes</td>
-                                        <td className="px-4 py-3 text-stone-600">Reduces initial page weight and improves LCP</td>
+                                        <td data-label="Works?" className="px-4 py-3 text-green-700 font-medium">Yes</td>
+                                        <td data-label="Impact" className="px-4 py-3 text-stone-600">Reduces initial page weight and improves LCP</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-stone-600">Defer non-critical scripts via Script Tag API</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">Yes</td>
-                                        <td className="px-4 py-3 text-stone-600">Reduces blocking time where supported</td>
+                                        <td data-label="Works?" className="px-4 py-3 text-green-700 font-medium">Yes</td>
+                                        <td data-label="Impact" className="px-4 py-3 text-stone-600">Reduces blocking time where supported</td>
                                     </tr>
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">Remove redundant theme sections</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">Yes</td>
-                                        <td className="px-4 py-3 text-stone-600">Even hidden sections add rendering overhead</td>
+                                        <td data-label="Works?" className="px-4 py-3 text-green-700 font-medium">Yes</td>
+                                        <td data-label="Impact" className="px-4 py-3 text-stone-600">Even hidden sections add rendering overhead</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-stone-600">Switching to a &ldquo;faster&rdquo; paid theme</td>
-                                        <td className="px-4 py-3 text-red-600 font-medium">No</td>
-                                        <td className="px-4 py-3 text-stone-600">App bloat follows you to any theme</td>
+                                        <td data-label="Works?" className="px-4 py-3 text-red-600 font-medium">No</td>
+                                        <td data-label="Impact" className="px-4 py-3 text-stone-600">App bloat follows you to any theme</td>
                                     </tr>
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">Installing a speed optimization app</td>
-                                        <td className="px-4 py-3 text-red-600 font-medium">No</td>
-                                        <td className="px-4 py-3 text-stone-600">Adds another script to fix your scripts</td>
+                                        <td data-label="Works?" className="px-4 py-3 text-red-600 font-medium">No</td>
+                                        <td data-label="Impact" className="px-4 py-3 text-stone-600">Adds another script to fix your scripts</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-stone-600">Using a CDN</td>
-                                        <td className="px-4 py-3 text-red-600 font-medium">No</td>
-                                        <td className="px-4 py-3 text-stone-600">Shopify already uses a CDN, not the bottleneck</td>
+                                        <td data-label="Works?" className="px-4 py-3 text-red-600 font-medium">No</td>
+                                        <td data-label="Impact" className="px-4 py-3 text-stone-600">Shopify already uses a CDN, not the bottleneck</td>
                                     </tr>
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">Upgrading to Shopify Plus</td>
-                                        <td className="px-4 py-3 text-red-600 font-medium">No</td>
-                                        <td className="px-4 py-3 text-stone-600">Plus is faster at checkout, not storefront rendering</td>
+                                        <td data-label="Works?" className="px-4 py-3 text-red-600 font-medium">No</td>
+                                        <td data-label="Impact" className="px-4 py-3 text-stone-600">Plus is faster at checkout, not storefront rendering</td>
                                     </tr>
                                 </tbody>
                             </table>

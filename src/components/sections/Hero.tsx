@@ -4,8 +4,12 @@ import { HeroCTAs, HeroAuditWidget } from "./HeroClient";
 export default function Hero() {
   return (
     <section
-      className="relative flex flex-col justify-center pt-20 md:pt-36 pb-8 md:pb-24 overflow-hidden bg-paper"
-      style={{ backgroundColor: "#f5f5f4" }}
+      className="relative flex flex-col justify-center overflow-hidden bg-paper"
+      style={{
+        backgroundColor: "#f5f5f4",
+        paddingTop: "var(--space-section-xl)",
+        paddingBottom: "var(--space-section-sm)",
+      }}
     >
 
       {/* Noise texture overlay */}

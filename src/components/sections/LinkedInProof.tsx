@@ -6,7 +6,10 @@ import { linkedinPosts, linkedinConfig } from "@/data/linkedin";
 
 export default function LinkedInProof() {
   return (
-    <section className="py-12 md:py-20 px-6 bg-linear-to-b from-gray-50 via-white to-gray-50">
+    <section
+      className="px-6 bg-linear-to-b from-gray-50 via-white to-gray-50"
+      style={{ paddingTop: "var(--space-section)", paddingBottom: "var(--space-section)" }}
+    >
       <div className="container mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

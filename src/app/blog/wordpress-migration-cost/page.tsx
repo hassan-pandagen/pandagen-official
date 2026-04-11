@@ -243,9 +243,9 @@ export default function WordPressMigrationCostPage() {
                         Migration cost is driven by four variables: number of pages, custom functionality, data migration complexity, and SEO preservation work. Here is how those variables translate into price tiers.
                     </BlogText>
 
-                    <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                    <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                         <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
-                        <table className="w-full text-sm border-collapse min-w-[560px]">
+                        <table className="w-full text-sm border-collapse min-w-[560px] responsive-stack-table">
                             <thead>
                                 <tr className="bg-stone-50 border border-stone-200">
                                     <th className="text-left p-3 font-semibold text-stone-700">Tier</th>
@@ -264,9 +264,9 @@ export default function WordPressMigrationCostPage() {
                                 ].map(([tier, type, cost, time]) => (
                                     <tr key={tier} className="border border-stone-100 hover:bg-stone-50">
                                         <td className="p-3 text-charcoal font-bold">{tier}</td>
-                                        <td className="p-3 text-stone-600">{type}</td>
-                                        <td className="p-3 text-right text-cognac font-bold">{cost}</td>
-                                        <td className="p-3 text-right text-stone-500">{time}</td>
+                                        <td data-label="Site Type" className="p-3 text-stone-600">{type}</td>
+                                        <td data-label="Cost Range" className="p-3 text-right text-cognac font-bold">{cost}</td>
+                                        <td data-label="Timeline" className="p-3 text-right text-stone-500">{time}</td>
                                     </tr>
                                 ))}
                             </tbody>

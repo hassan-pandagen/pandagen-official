@@ -1,12 +1,17 @@
 "use client";
 
-import { ArrowRight, Search, Filter, X } from "lucide-react";
+import { ArrowRight, Filter } from "lucide-react";
 import Link from "next/link";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense } from "react";
 import { blogPosts, type IllustrationType } from "@/data/blog";
+
+// Pagefind-powered blog search: lazy-loaded, opens a Cmd+K modal with instant results.
+// ssr: false because pagefind loads /_pagefind/pagefind.js from the runtime assets.
+const BlogSearch = lazyLoad(() => import("@/components/ui/BlogSearch"), { ssr: false });
 
 // Light-mode editorial stat display — data report style (Stripe / McKinsey aesthetic)
 // bgTint = very light category color · statColor = deep category color · border = light border
@@ -41,14 +46,7 @@ const articles = blogPosts
 function BlogPageInner() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const searchQuery = searchParams.get("q") ?? "";
   const activeCategory = searchParams.get("cat") ?? "All";
-
-  function setSearchQuery(val: string) {
-    const params = new URLSearchParams(searchParams.toString());
-    if (val) params.set("q", val); else params.delete("q");
-    router.replace(`/blog?${params.toString()}`, { scroll: false });
-  }
 
   function setActiveCategory(val: string) {
     const params = new URLSearchParams(searchParams.toString());
@@ -59,15 +57,7 @@ function BlogPageInner() {
   const categories = ["All", ...Array.from(new Set(blogPosts.map(post => post.category)))];
 
   const filteredArticles = articles.filter(article => {
-    const matchesCategory = activeCategory === "All" || article.category === activeCategory;
-    if (searchQuery === "") return matchesCategory;
-    const searchWords = searchQuery.toLowerCase().split(/\s+/).filter(Boolean);
-    const faqText = article.faqs
-      ? article.faqs.map(f => `${f.question} ${f.answer}`).join(" ")
-      : "";
-    const searchable = `${article.title} ${article.excerpt} ${article.category} ${article.id.replace(/-/g, ' ')} ${article.illustrationType} ${faqText}`.toLowerCase();
-    const matchesSearch = searchWords.every(word => searchable.includes(word));
-    return matchesCategory && matchesSearch;
+    return activeCategory === "All" || article.category === activeCategory;
   });
 
   const featuredArticles = filteredArticles.filter(a => a.featured);
@@ -160,25 +150,8 @@ function BlogPageInner() {
       {/* Search & Filter Section */}
       <section className="container mx-auto px-6 pb-8">
         <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
-          {/* Search Bar */}
-          <div className="relative w-full md:w-96">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-stone-600" />
-            <input
-              type="text"
-              placeholder="Search articles..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-10 py-3 bg-white border border-stone-200 rounded-full text-charcoal placeholder-stone-400 focus:outline-hidden focus:border-stone-400 transition-colors"
-            />
-            {searchQuery && (
-              <button
-                onClick={() => setSearchQuery("")}
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-stone-600 hover:text-charcoal transition-colors"
-              >
-                <X className="w-4 h-4" />
-              </button>
-            )}
-          </div>
+          {/* Pagefind search: opens a Cmd+K modal with instant full-text results */}
+          <BlogSearch />
 
           {/* Category Filters: horizontal scroll on mobile, wrap on desktop */}
           <div className="w-full md:w-auto flex items-center gap-2 overflow-x-auto md:overflow-visible md:flex-wrap scrollbar-hide -mx-6 px-6 md:mx-0 md:px-0 snap-x snap-mandatory md:snap-none">
@@ -202,7 +175,6 @@ function BlogPageInner() {
         {/* Result Count */}
         <div className="mt-6 text-center text-stone-600 text-sm">
           Showing {filteredArticles.length} of {articles.length} article{articles.length !== 1 ? 's' : ''}
-          {searchQuery && ` for "${searchQuery}"`}
           {activeCategory !== "All" && ` in ${activeCategory}`}
         </div>
       </section>

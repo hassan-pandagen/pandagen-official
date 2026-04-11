@@ -389,9 +389,9 @@ export default function CloudflareEmdashPage() {
                             Numbers tell the story better than promises. Here is a direct comparison between a typical WordPress site and what we build for our clients.
                         </BlogText>
 
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                         <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
-                            <table className="w-full text-left border-collapse min-w-[560px]">
+                            <table className="w-full text-left border-collapse min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="border-b-2 border-stone-300">
                                         <th className="py-3 pr-4 text-charcoal font-bold">Metric</th>
@@ -402,33 +402,33 @@ export default function CloudflareEmdashPage() {
                                 <tbody className="text-stone-700">
                                     <tr className="border-b border-stone-200">
                                         <td className="py-3 pr-4 font-medium">Google PageSpeed (Mobile)</td>
-                                        <td className="py-3 px-4">38 to 58</td>
-                                        <td className="py-3 pl-4 font-bold text-charcoal">95 to 99</td>
+                                        <td data-label="WordPress" className="py-3 px-4">38 to 58</td>
+                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">95 to 99</td>
                                     </tr>
                                     <tr className="border-b border-stone-200">
                                         <td className="py-3 pr-4 font-medium">Load Time (Mobile)</td>
-                                        <td className="py-3 px-4">3.5 to 4.2 seconds</td>
-                                        <td className="py-3 pl-4 font-bold text-charcoal">0.6 to 0.8 seconds</td>
+                                        <td data-label="WordPress" className="py-3 px-4">3.5 to 4.2 seconds</td>
+                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">0.6 to 0.8 seconds</td>
                                     </tr>
                                     <tr className="border-b border-stone-200">
                                         <td className="py-3 pr-4 font-medium">Monthly Hosting Cost</td>
-                                        <td className="py-3 px-4">$50 to $150+</td>
-                                        <td className="py-3 pl-4 font-bold text-charcoal">$0</td>
+                                        <td data-label="WordPress" className="py-3 px-4">$50 to $150+</td>
+                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">$0</td>
                                     </tr>
                                     <tr className="border-b border-stone-200">
                                         <td className="py-3 pr-4 font-medium">Plugin Dependencies</td>
-                                        <td className="py-3 px-4">20 to 30</td>
-                                        <td className="py-3 pl-4 font-bold text-charcoal">0</td>
+                                        <td data-label="WordPress" className="py-3 px-4">20 to 30</td>
+                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">0</td>
                                     </tr>
                                     <tr className="border-b border-stone-200">
                                         <td className="py-3 pr-4 font-medium">Security Vulnerabilities</td>
-                                        <td className="py-3 px-4">96% from plugins</td>
-                                        <td className="py-3 pl-4 font-bold text-charcoal">No plugins, no attack surface</td>
+                                        <td data-label="WordPress" className="py-3 px-4">96% from plugins</td>
+                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">No plugins, no attack surface</td>
                                     </tr>
                                     <tr>
                                         <td className="py-3 pr-4 font-medium">Code Ownership</td>
-                                        <td className="py-3 px-4">Renting themes and plugins</td>
-                                        <td className="py-3 pl-4 font-bold text-charcoal">100% yours</td>
+                                        <td data-label="WordPress" className="py-3 px-4">Renting themes and plugins</td>
+                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">100% yours</td>
                                     </tr>
                                 </tbody>
                             </table>

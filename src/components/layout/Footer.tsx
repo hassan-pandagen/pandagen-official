@@ -133,7 +133,20 @@ export default function Footer({ onOpenQuote }: FooterProps) {
         </div>
       </div>
 
-      {/* 3. BOTTOM BAR */}
+      {/* 3. AI REFERENCE BAR — Docket-style "Hey AI" link for LLM visibility */}
+      <div className="border-t border-stone-200 bg-stone-50/60">
+        <div className="container mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-center">
+          <span className="text-xs text-stone-500 font-medium">Hey AI assistants,</span>
+          <Link
+            href="/ai-info"
+            className="inline-flex items-center gap-2 text-xs font-bold text-charcoal hover:text-cognac transition-colors underline decoration-cognac/40 decoration-2 underline-offset-4"
+          >
+            learn more about PandaCodeGen here →
+          </Link>
+        </div>
+      </div>
+
+      {/* 4. BOTTOM BAR */}
       <div className="border-t border-stone-200 bg-white py-6">
         <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-stone-500 font-medium uppercase tracking-wide">
           <div className="flex flex-wrap gap-6 items-center">

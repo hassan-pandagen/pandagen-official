@@ -250,9 +250,9 @@ export default function WhatIsHeadlessCommercePage() {
                             Here is a side-by-side comparison of what changes when you go headless:
                         </BlogText>
 
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                         <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4">
-                            <table className="w-full border-collapse text-sm min-w-[560px]">
+                            <table className="w-full border-collapse text-sm min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
                                         <th className="border border-stone-200 px-4 py-3 text-left font-bold text-charcoal">Feature</th>
@@ -263,33 +263,33 @@ export default function WhatIsHeadlessCommercePage() {
                                 <tbody>
                                     <tr>
                                         <td className="border border-stone-200 px-4 py-3 font-medium">Mobile load time</td>
-                                        <td className="border border-stone-200 px-4 py-3">3 to 5 seconds</td>
-                                        <td className="border border-stone-200 px-4 py-3">0.8 to 1.2 seconds</td>
+                                        <td data-label="Traditional (Shopify/WooCommerce)" className="border border-stone-200 px-4 py-3">3 to 5 seconds</td>
+                                        <td data-label="Headless (Next.js + Shopify API)" className="border border-stone-200 px-4 py-3">0.8 to 1.2 seconds</td>
                                     </tr>
                                     <tr className="bg-stone-50">
                                         <td className="border border-stone-200 px-4 py-3 font-medium">PageSpeed score (mobile)</td>
-                                        <td className="border border-stone-200 px-4 py-3">30 to 55</td>
-                                        <td className="border border-stone-200 px-4 py-3">95 to 100</td>
+                                        <td data-label="Traditional (Shopify/WooCommerce)" className="border border-stone-200 px-4 py-3">30 to 55</td>
+                                        <td data-label="Headless (Next.js + Shopify API)" className="border border-stone-200 px-4 py-3">95 to 100</td>
                                     </tr>
                                     <tr>
                                         <td className="border border-stone-200 px-4 py-3 font-medium">Design flexibility</td>
-                                        <td className="border border-stone-200 px-4 py-3">Limited to theme options</td>
-                                        <td className="border border-stone-200 px-4 py-3">Fully custom, pixel-perfect</td>
+                                        <td data-label="Traditional (Shopify/WooCommerce)" className="border border-stone-200 px-4 py-3">Limited to theme options</td>
+                                        <td data-label="Headless (Next.js + Shopify API)" className="border border-stone-200 px-4 py-3">Fully custom, pixel-perfect</td>
                                     </tr>
                                     <tr className="bg-stone-50">
                                         <td className="border border-stone-200 px-4 py-3 font-medium">Hosting cost</td>
-                                        <td className="border border-stone-200 px-4 py-3">$30 to $300/month</td>
-                                        <td className="border border-stone-200 px-4 py-3">$0 to $20/month</td>
+                                        <td data-label="Traditional (Shopify/WooCommerce)" className="border border-stone-200 px-4 py-3">$30 to $300/month</td>
+                                        <td data-label="Headless (Next.js + Shopify API)" className="border border-stone-200 px-4 py-3">$0 to $20/month</td>
                                     </tr>
                                     <tr>
                                         <td className="border border-stone-200 px-4 py-3 font-medium">Content updates</td>
-                                        <td className="border border-stone-200 px-4 py-3">Shopify admin panel</td>
-                                        <td className="border border-stone-200 px-4 py-3">Shopify admin (same as before)</td>
+                                        <td data-label="Traditional (Shopify/WooCommerce)" className="border border-stone-200 px-4 py-3">Shopify admin panel</td>
+                                        <td data-label="Headless (Next.js + Shopify API)" className="border border-stone-200 px-4 py-3">Shopify admin (same as before)</td>
                                     </tr>
                                     <tr className="bg-stone-50">
                                         <td className="border border-stone-200 px-4 py-3 font-medium">Third-party apps</td>
-                                        <td className="border border-stone-200 px-4 py-3">Each app adds 100 to 500ms</td>
-                                        <td className="border border-stone-200 px-4 py-3">Features built natively, zero bloat</td>
+                                        <td data-label="Traditional (Shopify/WooCommerce)" className="border border-stone-200 px-4 py-3">Each app adds 100 to 500ms</td>
+                                        <td data-label="Headless (Next.js + Shopify API)" className="border border-stone-200 px-4 py-3">Features built natively, zero bloat</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -346,9 +346,9 @@ export default function WhatIsHeadlessCommercePage() {
                             The speed improvements are not theoretical. Here is what published research and industry benchmarks show for stores that move to headless architecture:
                         </BlogText>
 
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                         <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4">
-                            <table className="w-full border-collapse text-sm min-w-[560px]">
+                            <table className="w-full border-collapse text-sm min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
                                         <th className="border border-stone-200 px-4 py-3 text-left font-bold text-charcoal">Metric</th>
@@ -360,27 +360,27 @@ export default function WhatIsHeadlessCommercePage() {
                                 <tbody>
                                     <tr>
                                         <td className="border border-stone-200 px-4 py-3 font-medium">Mobile load time</td>
-                                        <td className="border border-stone-200 px-4 py-3">3 to 5 seconds</td>
-                                        <td className="border border-stone-200 px-4 py-3">0.8 to 1.2 seconds</td>
-                                        <td className="border border-stone-200 px-4 py-3">Google Core Web Vitals data</td>
+                                        <td data-label="Traditional Shopify/WooCommerce" className="border border-stone-200 px-4 py-3">3 to 5 seconds</td>
+                                        <td data-label="Headless (Next.js)" className="border border-stone-200 px-4 py-3">0.8 to 1.2 seconds</td>
+                                        <td data-label="Source" className="border border-stone-200 px-4 py-3">Google Core Web Vitals data</td>
                                     </tr>
                                     <tr className="bg-stone-50">
                                         <td className="border border-stone-200 px-4 py-3 font-medium">Conversion lift from speed</td>
-                                        <td className="border border-stone-200 px-4 py-3">Baseline</td>
-                                        <td className="border border-stone-200 px-4 py-3">Up to 8% per 0.1s improvement</td>
-                                        <td className="border border-stone-200 px-4 py-3">Deloitte, &quot;Milliseconds Make Millions&quot;</td>
+                                        <td data-label="Traditional Shopify/WooCommerce" className="border border-stone-200 px-4 py-3">Baseline</td>
+                                        <td data-label="Headless (Next.js)" className="border border-stone-200 px-4 py-3">Up to 8% per 0.1s improvement</td>
+                                        <td data-label="Source" className="border border-stone-200 px-4 py-3">Deloitte, &quot;Milliseconds Make Millions&quot;</td>
                                     </tr>
                                     <tr>
                                         <td className="border border-stone-200 px-4 py-3 font-medium">Bounce rate (mobile)</td>
-                                        <td className="border border-stone-200 px-4 py-3">53% leave after 3s</td>
-                                        <td className="border border-stone-200 px-4 py-3">Significantly lower at under 1s</td>
-                                        <td className="border border-stone-200 px-4 py-3">Google/SOASTA research</td>
+                                        <td data-label="Traditional Shopify/WooCommerce" className="border border-stone-200 px-4 py-3">53% leave after 3s</td>
+                                        <td data-label="Headless (Next.js)" className="border border-stone-200 px-4 py-3">Significantly lower at under 1s</td>
+                                        <td data-label="Source" className="border border-stone-200 px-4 py-3">Google/SOASTA research</td>
                                     </tr>
                                     <tr className="bg-stone-50">
                                         <td className="border border-stone-200 px-4 py-3 font-medium">Hosting cost</td>
-                                        <td className="border border-stone-200 px-4 py-3">$30 to $300/mo</td>
-                                        <td className="border border-stone-200 px-4 py-3">$0 to $20/mo (Vercel)</td>
-                                        <td className="border border-stone-200 px-4 py-3">Vercel pricing</td>
+                                        <td data-label="Traditional Shopify/WooCommerce" className="border border-stone-200 px-4 py-3">$30 to $300/mo</td>
+                                        <td data-label="Headless (Next.js)" className="border border-stone-200 px-4 py-3">$0 to $20/mo (Vercel)</td>
+                                        <td data-label="Source" className="border border-stone-200 px-4 py-3">Vercel pricing</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -418,9 +418,9 @@ export default function WhatIsHeadlessCommercePage() {
                             Before you commit, here is a balanced look at what you gain and what you trade off:
                         </BlogText>
 
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                         <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4">
-                            <table className="w-full border-collapse text-sm min-w-[560px]">
+                            <table className="w-full border-collapse text-sm min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
                                         <th className="border border-stone-200 px-4 py-3 text-left font-bold text-emerald-700">Pros</th>
@@ -430,27 +430,27 @@ export default function WhatIsHeadlessCommercePage() {
                                 <tbody>
                                     <tr>
                                         <td className="border border-stone-200 px-4 py-3">3 to 5x faster mobile load times</td>
-                                        <td className="border border-stone-200 px-4 py-3">Higher upfront build cost ($5K to $25K vs $200 theme)</td>
+                                        <td data-label="Cons" className="border border-stone-200 px-4 py-3">Higher upfront build cost ($5K to $25K vs $200 theme)</td>
                                     </tr>
                                     <tr className="bg-stone-50">
                                         <td className="border border-stone-200 px-4 py-3">Full design control, pixel-perfect branding</td>
-                                        <td className="border border-stone-200 px-4 py-3">Requires a developer for structural changes (content updates use a CMS dashboard)</td>
+                                        <td data-label="Cons" className="border border-stone-200 px-4 py-3">Requires a developer for structural changes (content updates use a CMS dashboard)</td>
                                     </tr>
                                     <tr>
                                         <td className="border border-stone-200 px-4 py-3">Better SEO: faster sites rank higher on Google</td>
-                                        <td className="border border-stone-200 px-4 py-3">Build takes 2 to 4 weeks vs installing a theme in a day</td>
+                                        <td data-label="Cons" className="border border-stone-200 px-4 py-3">Build takes 2 to 4 weeks vs installing a theme in a day</td>
                                     </tr>
                                     <tr className="bg-stone-50">
                                         <td className="border border-stone-200 px-4 py-3">$0 to $20/mo hosting vs $30 to $300/mo</td>
-                                        <td className="border border-stone-200 px-4 py-3">Some Shopify apps need API replacements (most major ones have APIs)</td>
+                                        <td data-label="Cons" className="border border-stone-200 px-4 py-3">Some Shopify apps need API replacements (most major ones have APIs)</td>
                                     </tr>
                                     <tr>
                                         <td className="border border-stone-200 px-4 py-3">Works with Shopify, BigCommerce, WooCommerce, or any backend</td>
-                                        <td className="border border-stone-200 px-4 py-3">You need to choose a reliable development partner</td>
+                                        <td data-label="Cons" className="border border-stone-200 px-4 py-3">You need to choose a reliable development partner</td>
                                     </tr>
                                     <tr className="bg-stone-50">
                                         <td className="border border-stone-200 px-4 py-3">Sell on web, app, kiosks, and social from one backend</td>
-                                        <td className="border border-stone-200 px-4 py-3">Not worth it if your current setup already converts well</td>
+                                        <td data-label="Cons" className="border border-stone-200 px-4 py-3">Not worth it if your current setup already converts well</td>
                                     </tr>
                                 </tbody>
                             </table>

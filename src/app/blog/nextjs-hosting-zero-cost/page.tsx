@@ -286,9 +286,9 @@ export default function NextjsHostingZeroCostPage() {
                         </BlogText>
 
                         {/* Comparison Table */}
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                         <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
-                            <table className="w-full border-collapse text-sm min-w-[560px]">
+                            <table className="w-full border-collapse text-sm min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
                                         <th className="text-left p-4 font-bold text-charcoal border border-stone-200">Feature</th>
@@ -299,43 +299,43 @@ export default function NextjsHostingZeroCostPage() {
                                 <tbody>
                                     <tr>
                                         <td className="p-4 border border-stone-200 font-medium">Monthly Cost</td>
-                                        <td className="p-4 border border-stone-200 text-stone-600">$30-$300/mo</td>
-                                        <td className="p-4 border border-stone-200 text-stone-600 font-bold">$0/mo</td>
+                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-200 text-stone-600">$30-$300/mo</td>
+                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-200 text-stone-600 font-bold">$0/mo</td>
                                     </tr>
                                     <tr className="bg-stone-50">
                                         <td className="p-4 border border-stone-200 font-medium">3-Year Cost</td>
-                                        <td className="p-4 border border-stone-200 text-stone-600">$1,080-$10,800</td>
-                                        <td className="p-4 border border-stone-200 text-stone-600 font-bold">$0</td>
+                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-200 text-stone-600">$1,080-$10,800</td>
+                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-200 text-stone-600 font-bold">$0</td>
                                     </tr>
                                     <tr>
                                         <td className="p-4 border border-stone-200 font-medium">Load Time</td>
-                                        <td className="p-4 border border-stone-200 text-stone-600">2-5 seconds</td>
-                                        <td className="p-4 border border-stone-200 text-stone-600 font-bold">0.5-1.2 seconds</td>
+                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-200 text-stone-600">2-5 seconds</td>
+                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-200 text-stone-600 font-bold">0.5-1.2 seconds</td>
                                     </tr>
                                     <tr className="bg-stone-50">
                                         <td className="p-4 border border-stone-200 font-medium">PageSpeed Score</td>
-                                        <td className="p-4 border border-stone-200 text-stone-600">35-75/100</td>
-                                        <td className="p-4 border border-stone-200 text-stone-600 font-bold">95-100/100</td>
+                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-200 text-stone-600">35-75/100</td>
+                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-200 text-stone-600 font-bold">95-100/100</td>
                                     </tr>
                                     <tr>
                                         <td className="p-4 border border-stone-200 font-medium">Server Crashes</td>
-                                        <td className="p-4 border border-stone-200 text-stone-600">Yes (traffic spikes)</td>
-                                        <td className="p-4 border border-stone-200 text-stone-600 font-bold">No (CDN, no server)</td>
+                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-200 text-stone-600">Yes (traffic spikes)</td>
+                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-200 text-stone-600 font-bold">No (CDN, no server)</td>
                                     </tr>
                                     <tr className="bg-stone-50">
                                         <td className="p-4 border border-stone-200 font-medium">SSL Certificate</td>
-                                        <td className="p-4 border border-stone-200 text-stone-600">Extra cost on some hosts</td>
-                                        <td className="p-4 border border-stone-200 text-stone-600 font-bold">Free (automatic)</td>
+                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-200 text-stone-600">Extra cost on some hosts</td>
+                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-200 text-stone-600 font-bold">Free (automatic)</td>
                                     </tr>
                                     <tr>
                                         <td className="p-4 border border-stone-200 font-medium">CDN</td>
-                                        <td className="p-4 border border-stone-200 text-stone-600">Extra cost</td>
-                                        <td className="p-4 border border-stone-200 text-stone-600 font-bold">Built-in (80+ locations)</td>
+                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-200 text-stone-600">Extra cost</td>
+                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-200 text-stone-600 font-bold">Built-in (80+ locations)</td>
                                     </tr>
                                     <tr className="bg-stone-50">
                                         <td className="p-4 border border-stone-200 font-medium">Maintenance</td>
-                                        <td className="p-4 border border-stone-200 text-stone-600">Monthly updates</td>
-                                        <td className="p-4 border border-stone-200 text-stone-600 font-bold">Zero</td>
+                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-200 text-stone-600">Monthly updates</td>
+                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-200 text-stone-600 font-bold">Zero</td>
                                     </tr>
                                 </tbody>
                             </table>

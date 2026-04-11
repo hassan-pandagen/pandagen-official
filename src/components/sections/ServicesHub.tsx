@@ -6,10 +6,12 @@ import Link from "next/link";
 
 const platforms = [
   { name: "WordPress", href: "/services/wordpress-migration" },
+  { name: "Shopify", href: "/services/ecommerce" },
+  { name: "WooCommerce", href: "/services/woocommerce" },
   { name: "Wix", href: "/services/wix" },
   { name: "Squarespace", href: "/services/squarespace" },
-  { name: "Shopify", href: "/services/ecommerce" },
   { name: "Webflow", href: "/services/webflow" },
+  { name: "GoHighLevel", href: "/services/gohighlevel" },
 ];
 
 export default function ServicesHub() {

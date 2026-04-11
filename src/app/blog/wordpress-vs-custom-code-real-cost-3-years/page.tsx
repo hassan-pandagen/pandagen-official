@@ -219,9 +219,9 @@ export default function WordPressVsCustomCodeCostPage() {
                             Let&apos;s go line by line. This is the real cost for a typical business WordPress site, not a hobby blog, but a site that&apos;s actually doing work.
                         </BlogText>
 
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                         <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4">
-                            <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px]">
+                            <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-50">
                                         <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Cost Item</th>
@@ -234,45 +234,45 @@ export default function WordPressVsCustomCodeCostPage() {
                                 <tbody className="divide-y divide-stone-100">
                                     <tr>
                                         <td className="px-4 py-3 text-charcoal font-medium">Managed Hosting (WP Engine / Kinsta)</td>
-                                        <td className="px-4 py-3 text-center text-stone-500">$1,800</td>
-                                        <td className="px-4 py-3 text-center text-stone-500">$1,800</td>
-                                        <td className="px-4 py-3 text-center text-stone-500">$1,800</td>
-                                        <td className="px-4 py-3 text-center font-bold text-red-500">$5,400</td>
+                                        <td data-label="Year 1" className="px-4 py-3 text-center text-stone-500">$1,800</td>
+                                        <td data-label="Year 2" className="px-4 py-3 text-center text-stone-500">$1,800</td>
+                                        <td data-label="Year 3" className="px-4 py-3 text-center text-stone-500">$1,800</td>
+                                        <td data-label="3-Year Total" className="px-4 py-3 text-center font-bold text-red-500">$5,400</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-charcoal font-medium">Premium Plugins (SEO, security, forms, cache, backup)</td>
-                                        <td className="px-4 py-3 text-center text-stone-500">$800</td>
-                                        <td className="px-4 py-3 text-center text-stone-500">$800</td>
-                                        <td className="px-4 py-3 text-center text-stone-500">$800</td>
-                                        <td className="px-4 py-3 text-center font-bold text-red-500">$2,400</td>
+                                        <td data-label="Year 1" className="px-4 py-3 text-center text-stone-500">$800</td>
+                                        <td data-label="Year 2" className="px-4 py-3 text-center text-stone-500">$800</td>
+                                        <td data-label="Year 3" className="px-4 py-3 text-center text-stone-500">$800</td>
+                                        <td data-label="3-Year Total" className="px-4 py-3 text-center font-bold text-red-500">$2,400</td>
                                     </tr>
                                     <tr>
                                         <td className="px-4 py-3 text-charcoal font-medium">Developer Maintenance (updates, conflicts, fixes)</td>
-                                        <td className="px-4 py-3 text-center text-stone-500">$1,500</td>
-                                        <td className="px-4 py-3 text-center text-stone-500">$1,500</td>
-                                        <td className="px-4 py-3 text-center text-stone-500">$1,500</td>
-                                        <td className="px-4 py-3 text-center font-bold text-red-500">$4,500</td>
+                                        <td data-label="Year 1" className="px-4 py-3 text-center text-stone-500">$1,500</td>
+                                        <td data-label="Year 2" className="px-4 py-3 text-center text-stone-500">$1,500</td>
+                                        <td data-label="Year 3" className="px-4 py-3 text-center text-stone-500">$1,500</td>
+                                        <td data-label="3-Year Total" className="px-4 py-3 text-center font-bold text-red-500">$4,500</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-charcoal font-medium">Security Tools (Wordfence Premium, MalCare)</td>
-                                        <td className="px-4 py-3 text-center text-stone-500">$250</td>
-                                        <td className="px-4 py-3 text-center text-stone-500">$250</td>
-                                        <td className="px-4 py-3 text-center text-stone-500">$250</td>
-                                        <td className="px-4 py-3 text-center font-bold text-red-500">$750</td>
+                                        <td data-label="Year 1" className="px-4 py-3 text-center text-stone-500">$250</td>
+                                        <td data-label="Year 2" className="px-4 py-3 text-center text-stone-500">$250</td>
+                                        <td data-label="Year 3" className="px-4 py-3 text-center text-stone-500">$250</td>
+                                        <td data-label="3-Year Total" className="px-4 py-3 text-center font-bold text-red-500">$750</td>
                                     </tr>
                                     <tr>
                                         <td className="px-4 py-3 text-charcoal font-medium">Theme (premium theme or child theme)</td>
-                                        <td className="px-4 py-3 text-center text-stone-500">$200</td>
-                                        <td className="px-4 py-3 text-center text-stone-500">$0</td>
-                                        <td className="px-4 py-3 text-center text-stone-500">$0</td>
-                                        <td className="px-4 py-3 text-center font-bold text-red-500">$200</td>
+                                        <td data-label="Year 1" className="px-4 py-3 text-center text-stone-500">$200</td>
+                                        <td data-label="Year 2" className="px-4 py-3 text-center text-stone-500">$0</td>
+                                        <td data-label="Year 3" className="px-4 py-3 text-center text-stone-500">$0</td>
+                                        <td data-label="3-Year Total" className="px-4 py-3 text-center font-bold text-red-500">$200</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-charcoal font-medium">Emergency Developer Fixes (avg 1-2/year)</td>
-                                        <td className="px-4 py-3 text-center text-stone-500">$600</td>
-                                        <td className="px-4 py-3 text-center text-stone-500">$600</td>
-                                        <td className="px-4 py-3 text-center text-stone-500">$600</td>
-                                        <td className="px-4 py-3 text-center font-bold text-red-500">$1,800</td>
+                                        <td data-label="Year 1" className="px-4 py-3 text-center text-stone-500">$600</td>
+                                        <td data-label="Year 2" className="px-4 py-3 text-center text-stone-500">$600</td>
+                                        <td data-label="Year 3" className="px-4 py-3 text-center text-stone-500">$600</td>
+                                        <td data-label="3-Year Total" className="px-4 py-3 text-center font-bold text-red-500">$1,800</td>
                                     </tr>
                                 </tbody>
                                 <tfoot>
@@ -301,9 +301,9 @@ export default function WordPressVsCustomCodeCostPage() {
                             Now let&apos;s look at the other side. A custom-built Next.js site, professionally done. AI-assisted development has made custom code affordable for businesses that could not justify it three years ago. The build cost has dropped while the quality has gone up.
                         </BlogText>
 
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                         <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4">
-                            <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px]">
+                            <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-50">
                                         <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Cost Item</th>
@@ -316,45 +316,45 @@ export default function WordPressVsCustomCodeCostPage() {
                                 <tbody className="divide-y divide-stone-100">
                                     <tr>
                                         <td className="px-4 py-3 text-charcoal font-medium">Build Cost (one-time, your site)</td>
-                                        <td className="px-4 py-3 text-center text-stone-500">$10,000</td>
-                                        <td className="px-4 py-3 text-center text-stone-500">$0</td>
-                                        <td className="px-4 py-3 text-center text-stone-500">$0</td>
-                                        <td className="px-4 py-3 text-center font-bold text-charcoal">$10,000</td>
+                                        <td data-label="Year 1" className="px-4 py-3 text-center text-stone-500">$10,000</td>
+                                        <td data-label="Year 2" className="px-4 py-3 text-center text-stone-500">$0</td>
+                                        <td data-label="Year 3" className="px-4 py-3 text-center text-stone-500">$0</td>
+                                        <td data-label="3-Year Total" className="px-4 py-3 text-center font-bold text-charcoal">$10,000</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-charcoal font-medium">Hosting (Vercel: Free for most sites)</td>
-                                        <td className="px-4 py-3 text-center text-green-700">$0</td>
-                                        <td className="px-4 py-3 text-center text-green-700">$0</td>
-                                        <td className="px-4 py-3 text-center text-green-700">$0</td>
-                                        <td className="px-4 py-3 text-center font-bold text-green-700">$0</td>
+                                        <td data-label="Year 1" className="px-4 py-3 text-center text-green-700">$0</td>
+                                        <td data-label="Year 2" className="px-4 py-3 text-center text-green-700">$0</td>
+                                        <td data-label="Year 3" className="px-4 py-3 text-center text-green-700">$0</td>
+                                        <td data-label="3-Year Total" className="px-4 py-3 text-center font-bold text-green-700">$0</td>
                                     </tr>
                                     <tr>
                                         <td className="px-4 py-3 text-charcoal font-medium">CMS Subscription (Sanity free tier)</td>
-                                        <td className="px-4 py-3 text-center text-green-700">$0</td>
-                                        <td className="px-4 py-3 text-center text-green-700">$0</td>
-                                        <td className="px-4 py-3 text-center text-green-700">$0</td>
-                                        <td className="px-4 py-3 text-center font-bold text-green-700">$0</td>
+                                        <td data-label="Year 1" className="px-4 py-3 text-center text-green-700">$0</td>
+                                        <td data-label="Year 2" className="px-4 py-3 text-center text-green-700">$0</td>
+                                        <td data-label="Year 3" className="px-4 py-3 text-center text-green-700">$0</td>
+                                        <td data-label="3-Year Total" className="px-4 py-3 text-center font-bold text-green-700">$0</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-charcoal font-medium">Security (zero plugins = zero attack surface)</td>
-                                        <td className="px-4 py-3 text-center text-green-700">$0</td>
-                                        <td className="px-4 py-3 text-center text-green-700">$0</td>
-                                        <td className="px-4 py-3 text-center text-green-700">$0</td>
-                                        <td className="px-4 py-3 text-center font-bold text-green-700">$0</td>
+                                        <td data-label="Year 1" className="px-4 py-3 text-center text-green-700">$0</td>
+                                        <td data-label="Year 2" className="px-4 py-3 text-center text-green-700">$0</td>
+                                        <td data-label="Year 3" className="px-4 py-3 text-center text-green-700">$0</td>
+                                        <td data-label="3-Year Total" className="px-4 py-3 text-center font-bold text-green-700">$0</td>
                                     </tr>
                                     <tr>
                                         <td className="px-4 py-3 text-charcoal font-medium">Maintenance (no plugin updates needed)</td>
-                                        <td className="px-4 py-3 text-center text-green-700">$0</td>
-                                        <td className="px-4 py-3 text-center text-green-700">$0</td>
-                                        <td className="px-4 py-3 text-center text-green-700">$0</td>
-                                        <td className="px-4 py-3 text-center font-bold text-green-700">$0</td>
+                                        <td data-label="Year 1" className="px-4 py-3 text-center text-green-700">$0</td>
+                                        <td data-label="Year 2" className="px-4 py-3 text-center text-green-700">$0</td>
+                                        <td data-label="Year 3" className="px-4 py-3 text-center text-green-700">$0</td>
+                                        <td data-label="3-Year Total" className="px-4 py-3 text-center font-bold text-green-700">$0</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-charcoal font-medium">Content updates (edit yourself via CMS)</td>
-                                        <td className="px-4 py-3 text-center text-green-700">$0</td>
-                                        <td className="px-4 py-3 text-center text-green-700">$0</td>
-                                        <td className="px-4 py-3 text-center text-green-700">$0</td>
-                                        <td className="px-4 py-3 text-center font-bold text-green-700">$0</td>
+                                        <td data-label="Year 1" className="px-4 py-3 text-center text-green-700">$0</td>
+                                        <td data-label="Year 2" className="px-4 py-3 text-center text-green-700">$0</td>
+                                        <td data-label="Year 3" className="px-4 py-3 text-center text-green-700">$0</td>
+                                        <td data-label="3-Year Total" className="px-4 py-3 text-center font-bold text-green-700">$0</td>
                                     </tr>
                                 </tbody>
                                 <tfoot>

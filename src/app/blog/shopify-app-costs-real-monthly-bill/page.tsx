@@ -249,10 +249,10 @@ export default function ShopifyAppCostsPage() {
                     </BlogText>
 
                     {/* Default Stack Table */}
-                    <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                    <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                         <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
                         <p className="text-xs font-semibold text-stone-500 uppercase tracking-wide mb-3">Default Stack (what most stores are running)</p>
-                        <table className="w-full text-sm border-collapse min-w-[560px]">
+                        <table className="w-full text-sm border-collapse min-w-[560px] responsive-stack-table">
                             <thead>
                                 <tr className="bg-red-50 border border-red-200">
                                     <th className="text-left p-3 font-semibold text-stone-700">App</th>
@@ -273,23 +273,23 @@ export default function ShopifyAppCostsPage() {
                                 ].map(([app, cat, cost]) => (
                                     <tr key={app} className="border border-stone-100 hover:bg-stone-50">
                                         <td className="p-3 text-stone-700 font-medium">{app}</td>
-                                        <td className="p-3 text-stone-500">{cat}</td>
-                                        <td className="p-3 text-right text-red-700 font-bold">{cost}</td>
+                                        <td data-label="Category" className="p-3 text-stone-500">{cat}</td>
+                                        <td data-label="Cost/Month" className="p-3 text-right text-red-700 font-bold">{cost}</td>
                                     </tr>
                                 ))}
                                 <tr className="bg-red-50 border border-red-200">
                                     <td className="p-3 font-bold text-stone-800" colSpan={2}>Total</td>
-                                    <td className="p-3 text-right font-bold text-red-700 text-base">~$861/month</td>
+                                    <td data-label="Category" className="p-3 text-right font-bold text-red-700 text-base">~$861/month</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
 
                     {/* Optimized Stack Table */}
-                    <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                    <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                         <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
                         <p className="text-xs font-semibold text-stone-500 uppercase tracking-wide mb-3">Optimized Stack for a $20K to $50K/month store</p>
-                        <table className="w-full text-sm border-collapse min-w-[560px]">
+                        <table className="w-full text-sm border-collapse min-w-[560px] responsive-stack-table">
                             <thead>
                                 <tr className="bg-green-50 border border-green-200">
                                     <th className="text-left p-3 font-semibold text-stone-700">Swap To</th>
@@ -311,13 +311,13 @@ export default function ShopifyAppCostsPage() {
                                 ].map(([app, cat, cost]) => (
                                     <tr key={app} className="border border-stone-100 hover:bg-stone-50">
                                         <td className="p-3 text-stone-700 font-medium">{app}</td>
-                                        <td className="p-3 text-stone-500">{cat}</td>
-                                        <td className="p-3 text-right text-green-700 font-bold">{cost}</td>
+                                        <td data-label="Category" className="p-3 text-stone-500">{cat}</td>
+                                        <td data-label="Cost/Month" className="p-3 text-right text-green-700 font-bold">{cost}</td>
                                     </tr>
                                 ))}
                                 <tr className="bg-green-50 border border-green-200">
                                     <td className="p-3 font-bold text-stone-800" colSpan={2}>Total</td>
-                                    <td className="p-3 text-right font-bold text-green-700 text-base">~$146/month</td>
+                                    <td data-label="Category" className="p-3 text-right font-bold text-green-700 text-base">~$146/month</td>
                                 </tr>
                             </tbody>
                         </table>

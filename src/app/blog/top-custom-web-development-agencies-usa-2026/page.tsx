@@ -338,7 +338,7 @@ export default function TopWebDevAgenciesPage() {
 
                         <p className="md:hidden text-xs font-bold text-cognac mt-2 mb-2 flex items-center gap-1">← Swipe to see more →</p>
                         <div className="my-4 overflow-x-auto -mx-4 px-4">
-                            <table className="w-full text-sm border-collapse min-w-[720px]">
+                            <table className="w-full text-sm border-collapse min-w-[720px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
                                         <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Agency</th>
@@ -364,15 +364,15 @@ export default function TopWebDevAgenciesPage() {
                                     ].map((row, i) => (
                                         <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-stone-50"}>
                                             <td className="p-3 border border-stone-200 font-medium text-charcoal">{row.name}</td>
-                                            <td className="p-3 border border-stone-200">{row.min}</td>
-                                            <td className="p-3 border border-stone-200">{row.stack}</td>
-                                            <td className="p-3 border border-stone-200">{row.clutch}</td>
-                                            <td className="p-3 border border-stone-200">
+                                            <td data-label="Min. Budget" className="p-3 border border-stone-200">{row.min}</td>
+                                            <td data-label="Primary Stack" className="p-3 border border-stone-200">{row.stack}</td>
+                                            <td data-label="Clutch" className="p-3 border border-stone-200">{row.clutch}</td>
+                                            <td data-label="Price Published" className="p-3 border border-stone-200">
                                                 {row.published
                                                     ? <span className="flex items-center gap-1 text-green-700 font-medium"><CheckCircle2 className="w-4 h-4" /> Yes</span>
                                                     : <span className="flex items-center gap-1 text-stone-400"><XCircle className="w-4 h-4" /> No</span>}
                                             </td>
-                                            <td className="p-3 border border-stone-200">
+                                            <td data-label="Owns Code" className="p-3 border border-stone-200">
                                                 {row.owns
                                                     ? <span className="flex items-center gap-1 text-green-700 font-medium"><CheckCircle2 className="w-4 h-4" /> Yes</span>
                                                     : <span className="flex items-center gap-1 text-stone-400"><XCircle className="w-4 h-4" /> Platform</span>}

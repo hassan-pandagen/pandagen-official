@@ -221,9 +221,9 @@ export default function WebflowMigrationCostPage() {
                         </BlogText>
 
                         {/* Cost Tier Table */}
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 flex items-center gap-1">← Swipe to see more →</p>
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 flex items-center gap-1 swipe-hint">← Swipe to see more →</p>
                         <div className="my-4 overflow-x-auto -mx-4 px-4">
-                            <table className="w-full text-sm border-collapse min-w-[500px]">
+                            <table className="w-full text-sm border-collapse min-w-[500px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
                                         <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Site Size</th>
@@ -235,33 +235,33 @@ export default function WebflowMigrationCostPage() {
                                 <tbody>
                                     <tr className="hover:bg-stone-50">
                                         <td className="p-3 border border-stone-200 font-medium">Starter</td>
-                                        <td className="p-3 border border-stone-200">1 to 5 pages</td>
-                                        <td className="p-3 border border-stone-200 font-bold text-cognac">$2,000 to $3,500</td>
-                                        <td className="p-3 border border-stone-200">1 to 2 weeks</td>
+                                        <td data-label="Pages" className="p-3 border border-stone-200">1 to 5 pages</td>
+                                        <td data-label="Migration Cost" className="p-3 border border-stone-200 font-bold text-cognac">$2,000 to $3,500</td>
+                                        <td data-label="Timeline" className="p-3 border border-stone-200">1 to 2 weeks</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
                                         <td className="p-3 border border-stone-200 font-medium">Small Business</td>
-                                        <td className="p-3 border border-stone-200">5 to 20 pages</td>
-                                        <td className="p-3 border border-stone-200 font-bold text-cognac">$3,500 to $7,000</td>
-                                        <td className="p-3 border border-stone-200">2 to 3 weeks</td>
+                                        <td data-label="Pages" className="p-3 border border-stone-200">5 to 20 pages</td>
+                                        <td data-label="Migration Cost" className="p-3 border border-stone-200 font-bold text-cognac">$3,500 to $7,000</td>
+                                        <td data-label="Timeline" className="p-3 border border-stone-200">2 to 3 weeks</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
                                         <td className="p-3 border border-stone-200 font-medium">Mid-Size Site</td>
-                                        <td className="p-3 border border-stone-200">20 to 50 pages</td>
-                                        <td className="p-3 border border-stone-200 font-bold text-cognac">$7,000 to $14,000</td>
-                                        <td className="p-3 border border-stone-200">3 to 5 weeks</td>
+                                        <td data-label="Pages" className="p-3 border border-stone-200">20 to 50 pages</td>
+                                        <td data-label="Migration Cost" className="p-3 border border-stone-200 font-bold text-cognac">$7,000 to $14,000</td>
+                                        <td data-label="Timeline" className="p-3 border border-stone-200">3 to 5 weeks</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
                                         <td className="p-3 border border-stone-200 font-medium">Large Site</td>
-                                        <td className="p-3 border border-stone-200">50 to 100 pages</td>
-                                        <td className="p-3 border border-stone-200 font-bold text-cognac">$12,000 to $20,000</td>
-                                        <td className="p-3 border border-stone-200">4 to 8 weeks</td>
+                                        <td data-label="Pages" className="p-3 border border-stone-200">50 to 100 pages</td>
+                                        <td data-label="Migration Cost" className="p-3 border border-stone-200 font-bold text-cognac">$12,000 to $20,000</td>
+                                        <td data-label="Timeline" className="p-3 border border-stone-200">4 to 8 weeks</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
                                         <td className="p-3 border border-stone-200 font-medium">Enterprise</td>
-                                        <td className="p-3 border border-stone-200">100+ pages</td>
-                                        <td className="p-3 border border-stone-200 font-bold text-cognac">$18,000 to $35,000+</td>
-                                        <td className="p-3 border border-stone-200">6 to 12 weeks</td>
+                                        <td data-label="Pages" className="p-3 border border-stone-200">100+ pages</td>
+                                        <td data-label="Migration Cost" className="p-3 border border-stone-200 font-bold text-cognac">$18,000 to $35,000+</td>
+                                        <td data-label="Timeline" className="p-3 border border-stone-200">6 to 12 weeks</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -349,9 +349,9 @@ export default function WebflowMigrationCostPage() {
                         </BlogText>
 
                         {/* Cost Comparison Table */}
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                         <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
-                            <table className="w-full text-sm border-collapse min-w-[560px]">
+                            <table className="w-full text-sm border-collapse min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
                                         <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Cost Item</th>
@@ -362,28 +362,28 @@ export default function WebflowMigrationCostPage() {
                                 <tbody>
                                     <tr className="hover:bg-stone-50">
                                         <td className="p-3 border border-stone-200">Hosting</td>
-                                        <td className="p-3 border border-stone-200 text-red-600 font-medium">$348 to $588</td>
-                                        <td className="p-3 border border-stone-200 text-green-700 font-medium">$0 to $240</td>
+                                        <td data-label="Webflow (per year)" className="p-3 border border-stone-200 text-red-600 font-medium">$348 to $588</td>
+                                        <td data-label="Custom Next.js (per year)" className="p-3 border border-stone-200 text-green-700 font-medium">$0 to $240</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
                                         <td className="p-3 border border-stone-200">Form submissions</td>
-                                        <td className="p-3 border border-stone-200 text-red-600 font-medium">$228</td>
-                                        <td className="p-3 border border-stone-200 text-green-700 font-medium">$0</td>
+                                        <td data-label="Webflow (per year)" className="p-3 border border-stone-200 text-red-600 font-medium">$228</td>
+                                        <td data-label="Custom Next.js (per year)" className="p-3 border border-stone-200 text-green-700 font-medium">$0</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
                                         <td className="p-3 border border-stone-200">Third-party integrations</td>
-                                        <td className="p-3 border border-stone-200 text-red-600 font-medium">$360 to $1,200</td>
-                                        <td className="p-3 border border-stone-200 text-green-700 font-medium">$0 to $120</td>
+                                        <td data-label="Webflow (per year)" className="p-3 border border-stone-200 text-red-600 font-medium">$360 to $1,200</td>
+                                        <td data-label="Custom Next.js (per year)" className="p-3 border border-stone-200 text-green-700 font-medium">$0 to $120</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
                                         <td className="p-3 border border-stone-200">Domain</td>
-                                        <td className="p-3 border border-stone-200">$12</td>
-                                        <td className="p-3 border border-stone-200">$12</td>
+                                        <td data-label="Webflow (per year)" className="p-3 border border-stone-200">$12</td>
+                                        <td data-label="Custom Next.js (per year)" className="p-3 border border-stone-200">$12</td>
                                     </tr>
                                     <tr className="bg-stone-100 font-bold">
                                         <td className="p-3 border border-stone-200">Total per year</td>
-                                        <td className="p-3 border border-stone-200 text-red-600">$948 to $2,028</td>
-                                        <td className="p-3 border border-stone-200 text-green-700">$12 to $372</td>
+                                        <td data-label="Webflow (per year)" className="p-3 border border-stone-200 text-red-600">$948 to $2,028</td>
+                                        <td data-label="Custom Next.js (per year)" className="p-3 border border-stone-200 text-green-700">$12 to $372</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -407,10 +407,10 @@ export default function WebflowMigrationCostPage() {
                             We have tracked 14 Webflow to Next.js migrations. The average organic traffic improvement was 28% within 90 days of launch. For a business getting 5,000 organic visits per month, that is 1,400 additional visitors per month with no increase in ad spend.
                         </BlogText>
 
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
 
                         <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
-                            <table className="w-full text-sm border-collapse min-w-[560px]">
+                            <table className="w-full text-sm border-collapse min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
                                         <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Metric</th>
@@ -421,28 +421,28 @@ export default function WebflowMigrationCostPage() {
                                 <tbody>
                                     <tr className="hover:bg-stone-50">
                                         <td className="p-3 border border-stone-200">Mobile PageSpeed</td>
-                                        <td className="p-3 border border-stone-200 text-amber-700 font-medium">55 to 75</td>
-                                        <td className="p-3 border border-stone-200 text-green-700 font-medium">95 to 100</td>
+                                        <td data-label="Webflow" className="p-3 border border-stone-200 text-amber-700 font-medium">55 to 75</td>
+                                        <td data-label="Custom Next.js" className="p-3 border border-stone-200 text-green-700 font-medium">95 to 100</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
                                         <td className="p-3 border border-stone-200">Typical load time (mobile)</td>
-                                        <td className="p-3 border border-stone-200 text-amber-700 font-medium">2.8 to 4.5 seconds</td>
-                                        <td className="p-3 border border-stone-200 text-green-700 font-medium">0.6 to 1.2 seconds</td>
+                                        <td data-label="Webflow" className="p-3 border border-stone-200 text-amber-700 font-medium">2.8 to 4.5 seconds</td>
+                                        <td data-label="Custom Next.js" className="p-3 border border-stone-200 text-green-700 font-medium">0.6 to 1.2 seconds</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
                                         <td className="p-3 border border-stone-200">Core Web Vitals: LCP</td>
-                                        <td className="p-3 border border-stone-200 text-amber-700 font-medium">Needs Improvement</td>
-                                        <td className="p-3 border border-stone-200 text-green-700 font-medium">Good</td>
+                                        <td data-label="Webflow" className="p-3 border border-stone-200 text-amber-700 font-medium">Needs Improvement</td>
+                                        <td data-label="Custom Next.js" className="p-3 border border-stone-200 text-green-700 font-medium">Good</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
                                         <td className="p-3 border border-stone-200">You own the code</td>
-                                        <td className="p-3 border border-stone-200 text-red-600 font-medium">No</td>
-                                        <td className="p-3 border border-stone-200 text-green-700 font-medium">Yes, completely</td>
+                                        <td data-label="Webflow" className="p-3 border border-stone-200 text-red-600 font-medium">No</td>
+                                        <td data-label="Custom Next.js" className="p-3 border border-stone-200 text-green-700 font-medium">Yes, completely</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
                                         <td className="p-3 border border-stone-200">Hosting cost (annual)</td>
-                                        <td className="p-3 border border-stone-200 text-red-600 font-medium">$948 to $2,028</td>
-                                        <td className="p-3 border border-stone-200 text-green-700 font-medium">$12 to $372</td>
+                                        <td data-label="Webflow" className="p-3 border border-stone-200 text-red-600 font-medium">$948 to $2,028</td>
+                                        <td data-label="Custom Next.js" className="p-3 border border-stone-200 text-green-700 font-medium">$12 to $372</td>
                                     </tr>
                                 </tbody>
                             </table>

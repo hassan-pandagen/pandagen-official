@@ -256,9 +256,9 @@ export default function WixTooSlowPage() {
                         For comparison: the gold standard for web performance is 90 and above. Custom Next.js sites built with static generation consistently score 95 to 100. Not because of clever tricks. Because the underlying architecture generates minimal JavaScript and serves pre-rendered HTML.
                     </BlogText>
 
-                    <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                    <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                         <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4">
-                        <table className="w-full text-sm border-collapse min-w-[560px]">
+                        <table className="w-full text-sm border-collapse min-w-[560px] responsive-stack-table">
                             <thead>
                                 <tr className="border-b border-[var(--border)]">
                                     <th className="text-left py-3 px-4 font-semibold text-[var(--foreground)]">Platform</th>
@@ -270,33 +270,33 @@ export default function WixTooSlowPage() {
                             <tbody>
                                 <tr className="border-b border-[var(--border)] bg-emerald-500/5">
                                     <td className="py-3 px-4 font-medium text-emerald-400">Custom Next.js</td>
-                                    <td className="py-3 px-4 text-[var(--muted)]">95 to 100</td>
-                                    <td className="py-3 px-4 text-[var(--muted)]">0.6 to 1.1s</td>
-                                    <td className="py-3 px-4 text-emerald-400">99%+</td>
+                                    <td data-label="Google Score (Mobile)" className="py-3 px-4 text-[var(--muted)]">95 to 100</td>
+                                    <td data-label="LCP Average" className="py-3 px-4 text-[var(--muted)]">0.6 to 1.1s</td>
+                                    <td data-label="CWV Pass Rate" className="py-3 px-4 text-emerald-400">99%+</td>
                                 </tr>
                                 <tr className="border-b border-[var(--border)]">
                                     <td className="py-3 px-4 font-medium">Duda</td>
-                                    <td className="py-3 px-4 text-[var(--muted)]">75 to 85</td>
-                                    <td className="py-3 px-4 text-[var(--muted)]">2.1s</td>
-                                    <td className="py-3 px-4 text-emerald-400">71%</td>
+                                    <td data-label="Google Score (Mobile)" className="py-3 px-4 text-[var(--muted)]">75 to 85</td>
+                                    <td data-label="LCP Average" className="py-3 px-4 text-[var(--muted)]">2.1s</td>
+                                    <td data-label="CWV Pass Rate" className="py-3 px-4 text-emerald-400">71%</td>
                                 </tr>
                                 <tr className="border-b border-[var(--border)]">
                                     <td className="py-3 px-4 font-medium">Squarespace</td>
-                                    <td className="py-3 px-4 text-[var(--muted)]">65 to 78</td>
-                                    <td className="py-3 px-4 text-[var(--muted)]">2.8s</td>
-                                    <td className="py-3 px-4 text-amber-400">58%</td>
+                                    <td data-label="Google Score (Mobile)" className="py-3 px-4 text-[var(--muted)]">65 to 78</td>
+                                    <td data-label="LCP Average" className="py-3 px-4 text-[var(--muted)]">2.8s</td>
+                                    <td data-label="CWV Pass Rate" className="py-3 px-4 text-amber-400">58%</td>
                                 </tr>
                                 <tr className="border-b border-[var(--border)] bg-red-500/5">
                                     <td className="py-3 px-4 font-medium text-red-400">Wix (optimized)</td>
-                                    <td className="py-3 px-4 text-[var(--muted)]">50 to 83</td>
-                                    <td className="py-3 px-4 text-[var(--muted)]">3.2 to 6.8s</td>
-                                    <td className="py-3 px-4 text-red-400">52%</td>
+                                    <td data-label="Google Score (Mobile)" className="py-3 px-4 text-[var(--muted)]">50 to 83</td>
+                                    <td data-label="LCP Average" className="py-3 px-4 text-[var(--muted)]">3.2 to 6.8s</td>
+                                    <td data-label="CWV Pass Rate" className="py-3 px-4 text-red-400">52%</td>
                                 </tr>
                                 <tr className="border-b border-[var(--border)]">
                                     <td className="py-3 px-4 font-medium">WordPress</td>
-                                    <td className="py-3 px-4 text-[var(--muted)]">30 to 65</td>
-                                    <td className="py-3 px-4 text-[var(--muted)]">3.5s</td>
-                                    <td className="py-3 px-4 text-red-400">38%</td>
+                                    <td data-label="Google Score (Mobile)" className="py-3 px-4 text-[var(--muted)]">30 to 65</td>
+                                    <td data-label="LCP Average" className="py-3 px-4 text-[var(--muted)]">3.5s</td>
+                                    <td data-label="CWV Pass Rate" className="py-3 px-4 text-red-400">38%</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -409,9 +409,9 @@ export default function WixTooSlowPage() {
                             <p className="text-stone-700 text-sm leading-relaxed mb-3">
                                 Every app you install on Wix loads its JavaScript on every page of your site, even pages where the app does nothing. The more apps, the slower every single page. Here are the most common culprits:
                             </p>
-                            <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                            <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                                 <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
-                                <table className="w-full text-sm border-collapse min-w-[560px]">
+                                <table className="w-full text-sm border-collapse min-w-[560px] responsive-stack-table">
                                     <thead>
                                         <tr className="border-b-2 border-stone-200">
                                             <th className="text-left py-2 pr-4 font-semibold text-charcoal">App</th>
@@ -422,33 +422,33 @@ export default function WixTooSlowPage() {
                                     <tbody className="text-stone-700">
                                         <tr className="border-b border-stone-100">
                                             <td className="py-2 pr-4">Tidio Live Chat</td>
-                                            <td className="py-2 pr-4">$19 to $49/mo</td>
-                                            <td className="py-2">120 to 150KB of JavaScript, even when chat is closed</td>
+                                            <td data-label="Monthly Cost" className="py-2 pr-4">$19 to $49/mo</td>
+                                            <td data-label="What it adds to every page" className="py-2">120 to 150KB of JavaScript, even when chat is closed</td>
                                         </tr>
                                         <tr className="border-b border-stone-100">
                                             <td className="py-2 pr-4">Privy (pop-ups, email capture)</td>
-                                            <td className="py-2 pr-4">$30/mo+</td>
-                                            <td className="py-2">80 to 100KB, delays page interactivity by 0.5 to 1 second</td>
+                                            <td data-label="Monthly Cost" className="py-2 pr-4">$30/mo+</td>
+                                            <td data-label="What it adds to every page" className="py-2">80 to 100KB, delays page interactivity by 0.5 to 1 second</td>
                                         </tr>
                                         <tr className="border-b border-stone-100">
                                             <td className="py-2 pr-4">Wix Chat (free)</td>
-                                            <td className="py-2 pr-4">Free</td>
-                                            <td className="py-2">~80KB on every page, even product pages with no chat widget visible</td>
+                                            <td data-label="Monthly Cost" className="py-2 pr-4">Free</td>
+                                            <td data-label="What it adds to every page" className="py-2">~80KB on every page, even product pages with no chat widget visible</td>
                                         </tr>
                                         <tr className="border-b border-stone-100">
                                             <td className="py-2 pr-4">Social media feed widgets</td>
-                                            <td className="py-2 pr-4">$10 to $20/mo</td>
-                                            <td className="py-2">Loads Instagram/Facebook API on every page whether the feed is visible or not</td>
+                                            <td data-label="Monthly Cost" className="py-2 pr-4">$10 to $20/mo</td>
+                                            <td data-label="What it adds to every page" className="py-2">Loads Instagram/Facebook API on every page whether the feed is visible or not</td>
                                         </tr>
                                         <tr className="border-b border-stone-100">
                                             <td className="py-2 pr-4">Elfsight widgets (reviews, counters)</td>
-                                            <td className="py-2 pr-4">$5 to $25/mo per widget</td>
-                                            <td className="py-2">Each widget adds a separate external script request</td>
+                                            <td data-label="Monthly Cost" className="py-2 pr-4">$5 to $25/mo per widget</td>
+                                            <td data-label="What it adds to every page" className="py-2">Each widget adds a separate external script request</td>
                                         </tr>
                                         <tr>
                                             <td className="py-2 pr-4">Wix Bookings / Wix Events</td>
-                                            <td className="py-2 pr-4">Included in plan</td>
-                                            <td className="py-2">Loads scheduling code on all pages, not just the booking page</td>
+                                            <td data-label="Monthly Cost" className="py-2 pr-4">Included in plan</td>
+                                            <td data-label="What it adds to every page" className="py-2">Loads scheduling code on all pages, not just the booking page</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -485,9 +485,9 @@ export default function WixTooSlowPage() {
                         Here is what the performance difference looks like in practice. This comparison is based on migrating three Wix sites to custom Next.js over the past six months. The before numbers are from Google PageSpeed Insights on the live Wix sites before migration. The after numbers are from the same tool after the new sites went live.
                     </BlogText>
 
-                    <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                    <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                         <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4">
-                        <table className="w-full text-sm border-collapse min-w-[560px]">
+                        <table className="w-full text-sm border-collapse min-w-[560px] responsive-stack-table">
                             <thead>
                                 <tr className="border-b border-[var(--border)]">
                                     <th className="text-left py-3 px-4 font-semibold">Metric</th>
@@ -499,51 +499,51 @@ export default function WixTooSlowPage() {
                             <tbody>
                                 <tr className="border-b border-[var(--border)]">
                                     <td className="py-3 px-4 font-medium">Google Score (Mobile)</td>
-                                    <td className="py-3 px-4 text-center text-red-400">54 to 67</td>
-                                    <td className="py-3 px-4 text-center text-emerald-400">95 to 100</td>
-                                    <td className="py-3 px-4 text-center text-emerald-400">+40 pts avg</td>
+                                    <td data-label="Wix (Before)" className="py-3 px-4 text-center text-red-400">54 to 67</td>
+                                    <td data-label="Next.js (After)" className="py-3 px-4 text-center text-emerald-400">95 to 100</td>
+                                    <td data-label="Change" className="py-3 px-4 text-center text-emerald-400">+40 pts avg</td>
                                 </tr>
                                 <tr className="border-b border-[var(--border)]">
                                     <td className="py-3 px-4 font-medium">LCP (mobile)</td>
-                                    <td className="py-3 px-4 text-center text-red-400">4.8 to 7.2s</td>
-                                    <td className="py-3 px-4 text-center text-emerald-400">0.6 to 1.0s</td>
-                                    <td className="py-3 px-4 text-center text-emerald-400">6x faster</td>
+                                    <td data-label="Wix (Before)" className="py-3 px-4 text-center text-red-400">4.8 to 7.2s</td>
+                                    <td data-label="Next.js (After)" className="py-3 px-4 text-center text-emerald-400">0.6 to 1.0s</td>
+                                    <td data-label="Change" className="py-3 px-4 text-center text-emerald-400">6x faster</td>
                                 </tr>
                                 <tr className="border-b border-[var(--border)]">
                                     <td className="py-3 px-4 font-medium">FCP (mobile)</td>
-                                    <td className="py-3 px-4 text-center text-red-400">2.9 to 4.1s</td>
-                                    <td className="py-3 px-4 text-center text-emerald-400">0.4 to 0.7s</td>
-                                    <td className="py-3 px-4 text-center text-emerald-400">5x faster</td>
+                                    <td data-label="Wix (Before)" className="py-3 px-4 text-center text-red-400">2.9 to 4.1s</td>
+                                    <td data-label="Next.js (After)" className="py-3 px-4 text-center text-emerald-400">0.4 to 0.7s</td>
+                                    <td data-label="Change" className="py-3 px-4 text-center text-emerald-400">5x faster</td>
                                 </tr>
                                 <tr className="border-b border-[var(--border)]">
                                     <td className="py-3 px-4 font-medium">JavaScript Payload</td>
-                                    <td className="py-3 px-4 text-center text-red-400">400 to 700KB</td>
-                                    <td className="py-3 px-4 text-center text-emerald-400">40 to 80KB</td>
-                                    <td className="py-3 px-4 text-center text-emerald-400">90% less</td>
+                                    <td data-label="Wix (Before)" className="py-3 px-4 text-center text-red-400">400 to 700KB</td>
+                                    <td data-label="Next.js (After)" className="py-3 px-4 text-center text-emerald-400">40 to 80KB</td>
+                                    <td data-label="Change" className="py-3 px-4 text-center text-emerald-400">90% less</td>
                                 </tr>
                                 <tr className="border-b border-[var(--border)]">
                                     <td className="py-3 px-4 font-medium">Core Web Vitals</td>
-                                    <td className="py-3 px-4 text-center text-red-400">FAIL</td>
-                                    <td className="py-3 px-4 text-center text-emerald-400">PASS</td>
-                                    <td className="py-3 px-4 text-center text-emerald-400">All 3 pass</td>
+                                    <td data-label="Wix (Before)" className="py-3 px-4 text-center text-red-400">FAIL</td>
+                                    <td data-label="Next.js (After)" className="py-3 px-4 text-center text-emerald-400">PASS</td>
+                                    <td data-label="Change" className="py-3 px-4 text-center text-emerald-400">All 3 pass</td>
                                 </tr>
                                 <tr className="border-b border-[var(--border)]">
                                     <td className="py-3 px-4 font-medium">Monthly Hosting Cost</td>
-                                    <td className="py-3 px-4 text-center text-red-400">$17 to $49/mo</td>
-                                    <td className="py-3 px-4 text-center text-emerald-400">$0/mo (Vercel)</td>
-                                    <td className="py-3 px-4 text-center text-emerald-400">100% savings</td>
+                                    <td data-label="Wix (Before)" className="py-3 px-4 text-center text-red-400">$17 to $49/mo</td>
+                                    <td data-label="Next.js (After)" className="py-3 px-4 text-center text-emerald-400">$0/mo (Vercel)</td>
+                                    <td data-label="Change" className="py-3 px-4 text-center text-emerald-400">100% savings</td>
                                 </tr>
                                 <tr className="border-b border-[var(--border)]">
                                     <td className="py-3 px-4 font-medium">Platform Lock-in</td>
-                                    <td className="py-3 px-4 text-center text-red-400">Complete</td>
-                                    <td className="py-3 px-4 text-center text-emerald-400">None</td>
-                                    <td className="py-3 px-4 text-center text-emerald-400">Full ownership</td>
+                                    <td data-label="Wix (Before)" className="py-3 px-4 text-center text-red-400">Complete</td>
+                                    <td data-label="Next.js (After)" className="py-3 px-4 text-center text-emerald-400">None</td>
+                                    <td data-label="Change" className="py-3 px-4 text-center text-emerald-400">Full ownership</td>
                                 </tr>
                                 <tr className="border-b border-[var(--border)]">
                                     <td className="py-3 px-4 font-medium">Can You Export the Site?</td>
-                                    <td className="py-3 px-4 text-center text-red-400">No</td>
-                                    <td className="py-3 px-4 text-center text-emerald-400">Yes (you own it)</td>
-                                    <td className="py-3 px-4 text-center text-emerald-400">Full portability</td>
+                                    <td data-label="Wix (Before)" className="py-3 px-4 text-center text-red-400">No</td>
+                                    <td data-label="Next.js (After)" className="py-3 px-4 text-center text-emerald-400">Yes (you own it)</td>
+                                    <td data-label="Change" className="py-3 px-4 text-center text-emerald-400">Full portability</td>
                                 </tr>
                             </tbody>
                         </table>

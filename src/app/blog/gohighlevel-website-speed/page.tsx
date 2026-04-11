@@ -258,9 +258,9 @@ export default function GHLWebsiteSpeedPage() {
                         The mobile score is what matters. Google has used mobile-first indexing since 2019, meaning the mobile version of your page is what it crawls and ranks. A low mobile score means Google is seeing a slow page as your primary ranking signal, regardless of how good your desktop version looks.
                     </BlogText>
 
-                    <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                    <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                         <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
-                        <table className="w-full text-sm border-collapse min-w-[560px]">
+                        <table className="w-full text-sm border-collapse min-w-[560px] responsive-stack-table">
                             <thead>
                                 <tr className="bg-stone-50 border border-stone-200">
                                     <th className="text-left p-3 font-semibold text-stone-700">Platform</th>
@@ -278,9 +278,9 @@ export default function GHLWebsiteSpeedPage() {
                                 ].map(([platform, score, lcp, impact]) => (
                                     <tr key={platform} className="border border-stone-100 hover:bg-stone-50">
                                         <td className="p-3 text-stone-700 font-medium">{platform}</td>
-                                        <td className={`p-3 text-right font-bold ${platform === "Custom Next.js" ? "text-cognac" : "text-red-600"}`}>{score}</td>
-                                        <td className="p-3 text-right text-stone-600">{lcp}</td>
-                                        <td className={`p-3 text-right text-xs font-semibold ${platform === "Custom Next.js" ? "text-green-700" : "text-red-700"}`}>{impact}</td>
+                                        <td data-label="Mobile PageSpeed" className={`p-3 text-right font-bold ${platform === "Custom Next.js" ? "text-cognac" : "text-red-600"}`}>{score}</td>
+                                        <td data-label="LCP (typical)" className="p-3 text-right text-stone-600">{lcp}</td>
+                                        <td data-label="SEO Impact" className={`p-3 text-right text-xs font-semibold ${platform === "Custom Next.js" ? "text-green-700" : "text-red-700"}`}>{impact}</td>
                                     </tr>
                                 ))}
                             </tbody>

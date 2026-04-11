@@ -260,9 +260,9 @@ export default function DiviThemeSlowPage() {
                             Independent testing by WP Rocket in 2026, using a controlled environment with the same hosting and content across themes, found:
                         </BlogText>
 
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                         <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4">
-                            <table className="w-full text-sm border-collapse min-w-[560px]">
+                            <table className="w-full text-sm border-collapse min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
                                         <th className="text-left p-3 border border-stone-200 font-semibold">Platform</th>
@@ -275,38 +275,38 @@ export default function DiviThemeSlowPage() {
                                 <tbody>
                                     <tr>
                                         <td className="p-3 border border-stone-200 font-medium">GeneratePress</td>
-                                        <td className="p-3 border border-stone-200 text-green-600 font-medium">99/100</td>
-                                        <td className="p-3 border border-stone-200">0.9s</td>
-                                        <td className="p-3 border border-stone-200 text-green-600">0.000</td>
-                                        <td className="p-3 border border-stone-200">45KB</td>
+                                        <td data-label="Mobile Score" className="p-3 border border-stone-200 text-green-600 font-medium">99/100</td>
+                                        <td data-label="LCP" className="p-3 border border-stone-200">0.9s</td>
+                                        <td data-label="CLS" className="p-3 border border-stone-200 text-green-600">0.000</td>
+                                        <td data-label="Page Weight" className="p-3 border border-stone-200">45KB</td>
                                     </tr>
                                     <tr className="bg-stone-50">
                                         <td className="p-3 border border-stone-200 font-medium">Astra</td>
-                                        <td className="p-3 border border-stone-200 text-green-600 font-medium">96/100</td>
-                                        <td className="p-3 border border-stone-200">1.2s</td>
-                                        <td className="p-3 border border-stone-200 text-green-600">0.000</td>
-                                        <td className="p-3 border border-stone-200">68KB</td>
+                                        <td data-label="Mobile Score" className="p-3 border border-stone-200 text-green-600 font-medium">96/100</td>
+                                        <td data-label="LCP" className="p-3 border border-stone-200">1.2s</td>
+                                        <td data-label="CLS" className="p-3 border border-stone-200 text-green-600">0.000</td>
+                                        <td data-label="Page Weight" className="p-3 border border-stone-200">68KB</td>
                                     </tr>
                                     <tr>
                                         <td className="p-3 border border-stone-200 font-medium">Elementor</td>
-                                        <td className="p-3 border border-stone-200 text-amber-600 font-medium">75/100</td>
-                                        <td className="p-3 border border-stone-200">5.4s</td>
-                                        <td className="p-3 border border-stone-200 text-green-600">0.000</td>
-                                        <td className="p-3 border border-stone-200">220KB</td>
+                                        <td data-label="Mobile Score" className="p-3 border border-stone-200 text-amber-600 font-medium">75/100</td>
+                                        <td data-label="LCP" className="p-3 border border-stone-200">5.4s</td>
+                                        <td data-label="CLS" className="p-3 border border-stone-200 text-green-600">0.000</td>
+                                        <td data-label="Page Weight" className="p-3 border border-stone-200">220KB</td>
                                     </tr>
                                     <tr className="bg-stone-50">
                                         <td className="p-3 border border-stone-200 font-medium text-red-700">Divi (unoptimized)</td>
-                                        <td className="p-3 border border-stone-200 text-red-600 font-medium">64/100</td>
-                                        <td className="p-3 border border-stone-200 text-red-600">5.8s</td>
-                                        <td className="p-3 border border-stone-200 text-amber-600">0.196</td>
-                                        <td className="p-3 border border-stone-200">310KB</td>
+                                        <td data-label="Mobile Score" className="p-3 border border-stone-200 text-red-600 font-medium">64/100</td>
+                                        <td data-label="LCP" className="p-3 border border-stone-200 text-red-600">5.8s</td>
+                                        <td data-label="CLS" className="p-3 border border-stone-200 text-amber-600">0.196</td>
+                                        <td data-label="Page Weight" className="p-3 border border-stone-200">310KB</td>
                                     </tr>
                                     <tr>
                                         <td className="p-3 border border-stone-200 font-medium">Custom Next.js</td>
-                                        <td className="p-3 border border-stone-200 text-green-600 font-medium">98/100</td>
-                                        <td className="p-3 border border-stone-200">0.8s</td>
-                                        <td className="p-3 border border-stone-200 text-green-600">0.000</td>
-                                        <td className="p-3 border border-stone-200">18KB</td>
+                                        <td data-label="Mobile Score" className="p-3 border border-stone-200 text-green-600 font-medium">98/100</td>
+                                        <td data-label="LCP" className="p-3 border border-stone-200">0.8s</td>
+                                        <td data-label="CLS" className="p-3 border border-stone-200 text-green-600">0.000</td>
+                                        <td data-label="Page Weight" className="p-3 border border-stone-200">18KB</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -394,9 +394,9 @@ export default function DiviThemeSlowPage() {
                             Most businesses go through a predictable sequence before accepting that the problem is Divi itself:
                         </BlogText>
 
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                         <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4">
-                            <table className="w-full text-sm border-collapse min-w-[560px]">
+                            <table className="w-full text-sm border-collapse min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
                                         <th className="text-left p-3 border border-stone-200 font-semibold">What You Tried</th>
@@ -407,33 +407,33 @@ export default function DiviThemeSlowPage() {
                                 <tbody>
                                     <tr>
                                         <td className="p-3 border border-stone-200">WP Rocket or LiteSpeed Cache</td>
-                                        <td className="p-3 border border-stone-200">$49 to $199/year</td>
-                                        <td className="p-3 border border-stone-200 text-amber-600">+10 to 15 points</td>
+                                        <td data-label="Cost" className="p-3 border border-stone-200">$49 to $199/year</td>
+                                        <td data-label="Score After" className="p-3 border border-stone-200 text-amber-600">+10 to 15 points</td>
                                     </tr>
                                     <tr className="bg-stone-50">
                                         <td className="p-3 border border-stone-200">CDN (Cloudflare Pro, BunnyCDN)</td>
-                                        <td className="p-3 border border-stone-200">$20 to $200/month</td>
-                                        <td className="p-3 border border-stone-200 text-amber-600">+5 to 8 points</td>
+                                        <td data-label="Cost" className="p-3 border border-stone-200">$20 to $200/month</td>
+                                        <td data-label="Score After" className="p-3 border border-stone-200 text-amber-600">+5 to 8 points</td>
                                     </tr>
                                     <tr>
                                         <td className="p-3 border border-stone-200">Developer optimization work</td>
-                                        <td className="p-3 border border-stone-200">$500 to $2,000</td>
-                                        <td className="p-3 border border-stone-200 text-amber-600">+5 to 10 points</td>
+                                        <td data-label="Cost" className="p-3 border border-stone-200">$500 to $2,000</td>
+                                        <td data-label="Score After" className="p-3 border border-stone-200 text-amber-600">+5 to 10 points</td>
                                     </tr>
                                     <tr className="bg-stone-50">
                                         <td className="p-3 border border-stone-200">Faster hosting plan</td>
-                                        <td className="p-3 border border-stone-200">$50 to $300/month</td>
-                                        <td className="p-3 border border-stone-200 text-amber-600">+3 to 5 points</td>
+                                        <td data-label="Cost" className="p-3 border border-stone-200">$50 to $300/month</td>
+                                        <td data-label="Score After" className="p-3 border border-stone-200 text-amber-600">+3 to 5 points</td>
                                     </tr>
                                     <tr>
                                         <td className="p-3 border border-stone-200">Image optimization plugin</td>
-                                        <td className="p-3 border border-stone-200">$50 to $150/year</td>
-                                        <td className="p-3 border border-stone-200 text-amber-600">+3 to 7 points</td>
+                                        <td data-label="Cost" className="p-3 border border-stone-200">$50 to $150/year</td>
+                                        <td data-label="Score After" className="p-3 border border-stone-200 text-amber-600">+3 to 7 points</td>
                                     </tr>
                                     <tr className="bg-stone-50">
                                         <td className="p-3 border border-stone-200 font-semibold">Total spent</td>
-                                        <td className="p-3 border border-stone-200 font-semibold">$1,500 to $5,000+</td>
-                                        <td className="p-3 border border-stone-200 text-amber-600 font-semibold">Final score: 65 to 78</td>
+                                        <td data-label="Cost" className="p-3 border border-stone-200 font-semibold">$1,500 to $5,000+</td>
+                                        <td data-label="Score After" className="p-3 border border-stone-200 text-amber-600 font-semibold">Final score: 65 to 78</td>
                                     </tr>
                                 </tbody>
                             </table>

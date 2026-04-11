@@ -240,9 +240,9 @@ export default function WordPressVsNextJSPage() {
                             This is where the comparison becomes uncomfortable for WordPress advocates. The speed gap between WordPress and Next.js is not marginal. It is structural.
                         </BlogText>
 
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                         <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4">
-                            <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px]">
+                            <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-50">
                                         <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Metric</th>
@@ -253,28 +253,28 @@ export default function WordPressVsNextJSPage() {
                                 <tbody className="divide-y divide-stone-100">
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">Mobile load time</td>
-                                        <td className="px-4 py-3 text-red-600 font-medium">3.5 to 5.0s</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">0.6 to 1.2s</td>
+                                        <td data-label="WordPress (avg)" className="px-4 py-3 text-red-600 font-medium">3.5 to 5.0s</td>
+                                        <td data-label="Next.js (PandaCodeGen)" className="px-4 py-3 text-green-700 font-medium">0.6 to 1.2s</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-stone-600">PageSpeed Mobile (avg)</td>
-                                        <td className="px-4 py-3 text-red-600 font-medium">38 to 65/100</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">95 to 100/100</td>
+                                        <td data-label="WordPress (avg)" className="px-4 py-3 text-red-600 font-medium">38 to 65/100</td>
+                                        <td data-label="Next.js (PandaCodeGen)" className="px-4 py-3 text-green-700 font-medium">95 to 100/100</td>
                                     </tr>
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">PageSpeed ceiling (optimised)</td>
-                                        <td className="px-4 py-3 text-orange-600 font-medium">65 to 75/100</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">98 to 100/100</td>
+                                        <td data-label="WordPress (avg)" className="px-4 py-3 text-orange-600 font-medium">65 to 75/100</td>
+                                        <td data-label="Next.js (PandaCodeGen)" className="px-4 py-3 text-green-700 font-medium">98 to 100/100</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-stone-600">Core Web Vitals pass rate</td>
-                                        <td className="px-4 py-3 text-red-600 font-medium">44% (mobile)</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">97%+</td>
+                                        <td data-label="WordPress (avg)" className="px-4 py-3 text-red-600 font-medium">44% (mobile)</td>
+                                        <td data-label="Next.js (PandaCodeGen)" className="px-4 py-3 text-green-700 font-medium">97%+</td>
                                     </tr>
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">TTFB (Time to First Byte)</td>
-                                        <td className="px-4 py-3 text-orange-600 font-medium">600ms to 1.5s</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">50 to 120ms</td>
+                                        <td data-label="WordPress (avg)" className="px-4 py-3 text-orange-600 font-medium">600ms to 1.5s</td>
+                                        <td data-label="Next.js (PandaCodeGen)" className="px-4 py-3 text-green-700 font-medium">50 to 120ms</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -301,9 +301,9 @@ export default function WordPressVsNextJSPage() {
                         <BlogText>
                             Google made Core Web Vitals a direct ranking factor in 2021. Since then, page speed and responsiveness feed directly into where your pages rank. WordPress's structural speed ceiling of 65 to 75/100 means it is chronically underperforming on the signals Google measures. No amount of Yoast optimisation compensates for a 4-second LCP.
                         </BlogText>
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                         <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4">
-                            <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px]">
+                            <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-50">
                                         <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Feature</th>
@@ -314,18 +314,18 @@ export default function WordPressVsNextJSPage() {
                                 <tbody className="divide-y divide-stone-100">
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">Time to First Byte</td>
-                                        <td className="px-4 py-3 text-red-600 font-medium">600ms to 1.5s (dynamic PHP rendering delays Googlebot crawling)</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">50 to 120ms (pre-rendered static HTML, faster crawling, more pages indexed per crawl budget)</td>
+                                        <td data-label="WordPress" className="px-4 py-3 text-red-600 font-medium">600ms to 1.5s (dynamic PHP rendering delays Googlebot crawling)</td>
+                                        <td data-label="Next.js" className="px-4 py-3 text-green-700 font-medium">50 to 120ms (pre-rendered static HTML, faster crawling, more pages indexed per crawl budget)</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-stone-600">Core Web Vitals</td>
-                                        <td className="px-4 py-3 text-red-600 font-medium">56% fail on mobile: Directly suppressing Google rankings</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">97%+ pass: Qualifying for Google's page experience ranking bonus</td>
+                                        <td data-label="WordPress" className="px-4 py-3 text-red-600 font-medium">56% fail on mobile: Directly suppressing Google rankings</td>
+                                        <td data-label="Next.js" className="px-4 py-3 text-green-700 font-medium">97%+ pass: Qualifying for Google's page experience ranking bonus</td>
                                     </tr>
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">INP (Interaction Responsiveness)</td>
-                                        <td className="px-4 py-3 text-red-600 font-medium">Plugin JavaScript bloat increases INP failures</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">Server components ship zero client JS for static content: Perfect INP scores</td>
+                                        <td data-label="WordPress" className="px-4 py-3 text-red-600 font-medium">Plugin JavaScript bloat increases INP failures</td>
+                                        <td data-label="Next.js" className="px-4 py-3 text-green-700 font-medium">Server components ship zero client JS for static content: Perfect INP scores</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -348,9 +348,9 @@ export default function WordPressVsNextJSPage() {
                             But the long-term cost picture is very different. Here is the actual 3-year cost breakdown for a typical business WordPress site:
                         </BlogText>
 
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                         <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4">
-                            <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px]">
+                            <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-50">
                                         <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Cost Category</th>
@@ -361,33 +361,33 @@ export default function WordPressVsNextJSPage() {
                                 <tbody className="divide-y divide-stone-100">
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">Hosting</td>
-                                        <td className="px-4 py-3 text-stone-700">$1,800 to $6,000</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">$0 (Vercel free tier)</td>
+                                        <td data-label="WordPress (3 years)" className="px-4 py-3 text-stone-700">$1,800 to $6,000</td>
+                                        <td data-label="Next.js (3 years)" className="px-4 py-3 text-green-700 font-medium">$0 (Vercel free tier)</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-stone-600">Plugin licences</td>
-                                        <td className="px-4 py-3 text-stone-700">$3,000 to $9,000</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">$0</td>
+                                        <td data-label="WordPress (3 years)" className="px-4 py-3 text-stone-700">$3,000 to $9,000</td>
+                                        <td data-label="Next.js (3 years)" className="px-4 py-3 text-green-700 font-medium">$0</td>
                                     </tr>
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">Maintenance &amp; updates</td>
-                                        <td className="px-4 py-3 text-stone-700">$5,000 to $15,000</td>
-                                        <td className="px-4 py-3 text-stone-700">$1,000 to $3,000</td>
+                                        <td data-label="WordPress (3 years)" className="px-4 py-3 text-stone-700">$5,000 to $15,000</td>
+                                        <td data-label="Next.js (3 years)" className="px-4 py-3 text-stone-700">$1,000 to $3,000</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-stone-600">Security incidents</td>
-                                        <td className="px-4 py-3 text-stone-700">$2,000 to $10,000</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">Near zero</td>
+                                        <td data-label="WordPress (3 years)" className="px-4 py-3 text-stone-700">$2,000 to $10,000</td>
+                                        <td data-label="Next.js (3 years)" className="px-4 py-3 text-green-700 font-medium">Near zero</td>
                                     </tr>
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">Speed optimisation</td>
-                                        <td className="px-4 py-3 text-stone-700">$2,000 to $5,000</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">Included in build</td>
+                                        <td data-label="WordPress (3 years)" className="px-4 py-3 text-stone-700">$2,000 to $5,000</td>
+                                        <td data-label="Next.js (3 years)" className="px-4 py-3 text-green-700 font-medium">Included in build</td>
                                     </tr>
                                     <tr className="bg-stone-100">
                                         <td className="px-4 py-3 font-semibold text-stone-800">3-Year Total</td>
-                                        <td className="px-4 py-3 font-semibold text-red-600">$13,800 to $45,000</td>
-                                        <td className="px-4 py-3 font-semibold text-green-700">$1,000 to $3,000</td>
+                                        <td data-label="WordPress (3 years)" className="px-4 py-3 font-semibold text-red-600">$13,800 to $45,000</td>
+                                        <td data-label="Next.js (3 years)" className="px-4 py-3 font-semibold text-green-700">$1,000 to $3,000</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -423,9 +423,9 @@ export default function WordPressVsNextJSPage() {
                         <BlogText>
                             WordPress's 43% market share makes it the most targeted platform for hackers, by a wide margin. Sucuri's annual website threat report consistently shows WordPress accounting for over 90% of all hacked CMS websites they clean each year. The attack vectors are predictable: outdated plugins with known vulnerabilities, weak admin passwords, and insecure shared hosting environments.
                         </BlogText>
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                         <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4">
-                            <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px]">
+                            <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-50">
                                         <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Security Aspect</th>
@@ -436,23 +436,23 @@ export default function WordPressVsNextJSPage() {
                                 <tbody className="divide-y divide-stone-100">
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">Hack rate</td>
-                                        <td className="px-4 py-3 text-red-600 font-medium">Over 90% of hacked CMS sites (Sucuri)</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">Near zero: Static files have no attack surface</td>
+                                        <td data-label="WordPress" className="px-4 py-3 text-red-600 font-medium">Over 90% of hacked CMS sites (Sucuri)</td>
+                                        <td data-label="Next.js" className="px-4 py-3 text-green-700 font-medium">Near zero: Static files have no attack surface</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-stone-600">Incident cost</td>
-                                        <td className="px-4 py-3 text-red-600 font-medium">$2,000 to $10,000 per incident (recovery, lost revenue, reputation)</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">Near zero, no PHP backend, no writable directories</td>
+                                        <td data-label="WordPress" className="px-4 py-3 text-red-600 font-medium">$2,000 to $10,000 per incident (recovery, lost revenue, reputation)</td>
+                                        <td data-label="Next.js" className="px-4 py-3 text-green-700 font-medium">Near zero, no PHP backend, no writable directories</td>
                                     </tr>
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">Vulnerability source</td>
-                                        <td className="px-4 py-3 text-red-600 font-medium">98% from plugins: the same plugins needed for basic functionality</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">No plugin ecosystem, no third-party code on server</td>
+                                        <td data-label="WordPress" className="px-4 py-3 text-red-600 font-medium">98% from plugins: the same plugins needed for basic functionality</td>
+                                        <td data-label="Next.js" className="px-4 py-3 text-green-700 font-medium">No plugin ecosystem, no third-party code on server</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-stone-600">Update risk</td>
-                                        <td className="px-4 py-3 text-red-600 font-medium">Plugin updates introduce breaking changes; delayed updates leave vulnerabilities open</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">No plugin patching needed: Maintenance burden eliminated</td>
+                                        <td data-label="WordPress" className="px-4 py-3 text-red-600 font-medium">Plugin updates introduce breaking changes; delayed updates leave vulnerabilities open</td>
+                                        <td data-label="Next.js" className="px-4 py-3 text-green-700 font-medium">No plugin patching needed: Maintenance burden eliminated</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -471,9 +471,9 @@ export default function WordPressVsNextJSPage() {
                         <BlogText>
                             We build in Next.js. We think it is the right choice for almost every business website. But WordPress is still the right answer in specific situations, and we would rather give you an honest answer than a biased one.
                         </BlogText>
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                         <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4">
-                            <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px]">
+                            <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-50">
                                         <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Use Case</th>
@@ -483,43 +483,43 @@ export default function WordPressVsNextJSPage() {
                                 <tbody className="divide-y divide-stone-100">
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">Personal blog with no revenue implications and under 1,000 visits/month</td>
-                                        <td className="px-4 py-3 text-stone-700 font-medium">WordPress</td>
+                                        <td data-label="Recommendation" className="px-4 py-3 text-stone-700 font-medium">WordPress</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-stone-600">Need daily content updates without ongoing developer support</td>
-                                        <td className="px-4 py-3 text-stone-700 font-medium">WordPress</td>
+                                        <td data-label="Recommendation" className="px-4 py-3 text-stone-700 font-medium">WordPress</td>
                                     </tr>
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">Budget under $3,000 total and speed/SEO are not priorities</td>
-                                        <td className="px-4 py-3 text-stone-700 font-medium">WordPress</td>
+                                        <td data-label="Recommendation" className="px-4 py-3 text-stone-700 font-medium">WordPress</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-stone-600">Testing a business idea and need something live in 48 hours</td>
-                                        <td className="px-4 py-3 text-stone-700 font-medium">WordPress</td>
+                                        <td data-label="Recommendation" className="px-4 py-3 text-stone-700 font-medium">WordPress</td>
                                     </tr>
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">Website generates revenue. Leads, e-commerce sales, or booking conversions</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">Next.js</td>
+                                        <td data-label="Recommendation" className="px-4 py-3 text-green-700 font-medium">Next.js</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-stone-600">Want to rank higher on Google without paying more for ads</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">Next.js</td>
+                                        <td data-label="Recommendation" className="px-4 py-3 text-green-700 font-medium">Next.js</td>
                                     </tr>
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">Current WordPress site loads in more than 2 seconds on mobile</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">Next.js</td>
+                                        <td data-label="Recommendation" className="px-4 py-3 text-green-700 font-medium">Next.js</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-stone-600">Experienced a WordPress security incident or worried about one</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">Next.js</td>
+                                        <td data-label="Recommendation" className="px-4 py-3 text-green-700 font-medium">Next.js</td>
                                     </tr>
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">Paying more than $150/month in hosting plus plugin licences</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">Next.js</td>
+                                        <td data-label="Recommendation" className="px-4 py-3 text-green-700 font-medium">Next.js</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-stone-600">Want to own your code outright, with no vendor lock-in or platform dependencies</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">Next.js</td>
+                                        <td data-label="Recommendation" className="px-4 py-3 text-green-700 font-medium">Next.js</td>
                                     </tr>
                                 </tbody>
                             </table>

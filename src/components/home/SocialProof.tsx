@@ -100,7 +100,10 @@ export default function SocialProof() {
   };
 
   return (
-    <section className="py-10 md:py-16 bg-[#faf9f7] border-b border-stone-200/80">
+    <section
+      className="bg-[#faf9f7] border-b border-stone-200/80"
+      style={{ paddingTop: "var(--space-section-sm)", paddingBottom: "var(--space-section-sm)" }}
+    >
       <div className="container mx-auto px-6 max-w-6xl">
 
         {/* Platform Badges */}
@@ -220,7 +223,7 @@ export default function SocialProof() {
             href="https://www.trustpilot.com/review/pandacodegen.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 flex items-center justify-center gap-2 h-11 px-5 rounded-xl border border-stone-200 bg-white text-xs font-bold text-stone-700 hover:bg-[#00b67a] hover:text-white hover:border-[#00b67a] transition-all"
+            className="flex-1 inline-flex items-center justify-center gap-2 h-11 px-6 rounded-full border border-stone-200 bg-white text-xs font-bold text-stone-700 shadow-xs hover:bg-[#00b67a] hover:text-white hover:border-[#00b67a] transition-all"
           >
             Review us on Trustpilot
           </a>
@@ -228,7 +231,7 @@ export default function SocialProof() {
             href="https://g.page/r/CU6JJpd0jNDhEBM/review"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 flex items-center justify-center gap-2 h-11 px-5 rounded-xl border border-stone-200 bg-white text-xs font-bold text-stone-700 hover:bg-charcoal hover:text-white hover:border-charcoal transition-all"
+            className="flex-1 inline-flex items-center justify-center gap-2 h-11 px-6 rounded-full border border-stone-200 bg-white text-xs font-bold text-stone-700 shadow-xs hover:bg-charcoal hover:text-white hover:border-charcoal transition-all"
           >
             Review us on Google
           </a>

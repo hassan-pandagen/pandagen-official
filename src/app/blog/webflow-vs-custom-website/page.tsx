@@ -353,9 +353,9 @@ export default function WebflowVsCustomWebsitePage() {
                         </BlogText>
 
                         {/* Comparison Table */}
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                         <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4">
-                            <table className="w-full border-collapse text-sm min-w-[560px]">
+                            <table className="w-full border-collapse text-sm min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-50">
                                         <th className="border border-stone-200 px-4 py-3 text-left font-bold">Cost Category</th>
@@ -366,33 +366,33 @@ export default function WebflowVsCustomWebsitePage() {
                                 <tbody>
                                     <tr>
                                         <td className="border border-stone-200 px-4 py-3">Build cost</td>
-                                        <td className="border border-stone-200 px-4 py-3">$0 (DIY) to $5,000 (agency)</td>
-                                        <td className="border border-stone-200 px-4 py-3">$5,000 to $20,000</td>
+                                        <td data-label="Webflow (3 Years)" className="border border-stone-200 px-4 py-3">$0 (DIY) to $5,000 (agency)</td>
+                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-200 px-4 py-3">$5,000 to $20,000</td>
                                     </tr>
                                     <tr className="bg-stone-50">
                                         <td className="border border-stone-200 px-4 py-3">Hosting + platform fees</td>
-                                        <td className="border border-stone-200 px-4 py-3">$4,500 to $15,000</td>
-                                        <td className="border border-stone-200 px-4 py-3">$0 to $720</td>
+                                        <td data-label="Webflow (3 Years)" className="border border-stone-200 px-4 py-3">$4,500 to $15,000</td>
+                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-200 px-4 py-3">$0 to $720</td>
                                     </tr>
                                     <tr>
                                         <td className="border border-stone-200 px-4 py-3">Third-party tools</td>
-                                        <td className="border border-stone-200 px-4 py-3">$1,080 to $3,600</td>
-                                        <td className="border border-stone-200 px-4 py-3">$0 (built into code)</td>
+                                        <td data-label="Webflow (3 Years)" className="border border-stone-200 px-4 py-3">$1,080 to $3,600</td>
+                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-200 px-4 py-3">$0 (built into code)</td>
                                     </tr>
                                     <tr className="bg-stone-50">
                                         <td className="border border-stone-200 px-4 py-3">Google PageSpeed Mobile</td>
-                                        <td className="border border-stone-200 px-4 py-3">55 to 75</td>
-                                        <td className="border border-stone-200 px-4 py-3">95 to 100</td>
+                                        <td data-label="Webflow (3 Years)" className="border border-stone-200 px-4 py-3">55 to 75</td>
+                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-200 px-4 py-3">95 to 100</td>
                                     </tr>
                                     <tr>
                                         <td className="border border-stone-200 px-4 py-3">Lost organic revenue (20% traffic gap)</td>
-                                        <td className="border border-stone-200 px-4 py-3">$18,000 to $36,000</td>
-                                        <td className="border border-stone-200 px-4 py-3">$0</td>
+                                        <td data-label="Webflow (3 Years)" className="border border-stone-200 px-4 py-3">$18,000 to $36,000</td>
+                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-200 px-4 py-3">$0</td>
                                     </tr>
                                     <tr className="bg-stone-100 font-bold">
                                         <td className="border border-stone-200 px-4 py-3">3-Year Total</td>
-                                        <td className="border border-stone-200 px-4 py-3">$23,580 to $59,600</td>
-                                        <td className="border border-stone-200 px-4 py-3">$5,000 to $20,720</td>
+                                        <td data-label="Webflow (3 Years)" className="border border-stone-200 px-4 py-3">$23,580 to $59,600</td>
+                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-200 px-4 py-3">$5,000 to $20,720</td>
                                     </tr>
                                 </tbody>
                             </table>

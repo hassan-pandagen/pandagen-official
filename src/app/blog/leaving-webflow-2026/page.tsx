@@ -234,9 +234,9 @@ export default function LeavingWebflow2026Page() {
                             Here is what a mid-sized business running a Webflow site might be paying today, before they realize it:
                         </BlogText>
 
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                         <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
-                            <table className="w-full text-left border-collapse min-w-[560px]">
+                            <table className="w-full text-left border-collapse min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="border-b-2 border-stone-300">
                                         <th className="py-3 pr-4 text-charcoal font-bold">Item</th>
@@ -246,35 +246,35 @@ export default function LeavingWebflow2026Page() {
                                 <tbody className="text-stone-700">
                                     <tr className="border-b border-stone-200">
                                         <td className="py-3 pr-4">Business plan (after forced upgrade)</td>
-                                        <td className="py-3 pl-4">$39/month</td>
+                                        <td data-label="Monthly Cost" className="py-3 pl-4">$39/month</td>
                                     </tr>
                                     <tr className="border-b border-stone-200">
                                         <td className="py-3 pr-4">Workspace plan (pro)</td>
-                                        <td className="py-3 pl-4">$60/month</td>
+                                        <td data-label="Monthly Cost" className="py-3 pl-4">$60/month</td>
                                     </tr>
                                     <tr className="border-b border-stone-200">
                                         <td className="py-3 pr-4">Localization (2 languages, Advanced tier)</td>
-                                        <td className="py-3 pl-4">$58/month</td>
+                                        <td data-label="Monthly Cost" className="py-3 pl-4">$58/month</td>
                                     </tr>
                                     <tr className="border-b border-stone-200">
                                         <td className="py-3 pr-4">Editor seats for team (3 extra)</td>
-                                        <td className="py-3 pl-4">$54/month</td>
+                                        <td data-label="Monthly Cost" className="py-3 pl-4">$54/month</td>
                                     </tr>
                                     <tr className="border-b border-stone-200">
                                         <td className="py-3 pr-4">Third-party membership tool (Memberstack, replacing deprecated User Accounts)</td>
-                                        <td className="py-3 pl-4">$39/month</td>
+                                        <td data-label="Monthly Cost" className="py-3 pl-4">$39/month</td>
                                     </tr>
                                     <tr className="border-b border-stone-200">
                                         <td className="py-3 pr-4">Zapier (replacing deprecated Logic automations)</td>
-                                        <td className="py-3 pl-4">$49/month</td>
+                                        <td data-label="Monthly Cost" className="py-3 pl-4">$49/month</td>
                                     </tr>
                                     <tr className="border-b border-stone-200">
                                         <td className="py-3 pr-4">E-commerce 2% transaction fee ($20K/month revenue)</td>
-                                        <td className="py-3 pl-4">$400/month</td>
+                                        <td data-label="Monthly Cost" className="py-3 pl-4">$400/month</td>
                                     </tr>
                                     <tr className="font-bold border-t-2 border-stone-300">
                                         <td className="py-3 pr-4">Total</td>
-                                        <td className="py-3 pl-4 text-cognac">$699/month</td>
+                                        <td data-label="Monthly Cost" className="py-3 pl-4 text-cognac">$699/month</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -393,9 +393,9 @@ export default function LeavingWebflow2026Page() {
                             Here is what the data looks like when a real business completes a migration from a template-based platform to a custom Next.js site. These are not projections. These are numbers from sites we have built.
                         </BlogText>
 
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                         <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
-                            <table className="w-full text-left border-collapse min-w-[560px]">
+                            <table className="w-full text-left border-collapse min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="border-b-2 border-stone-300">
                                         <th className="py-3 pr-4 text-charcoal font-bold">Metric</th>
@@ -406,43 +406,43 @@ export default function LeavingWebflow2026Page() {
                                 <tbody className="text-stone-700">
                                     <tr className="border-b border-stone-200">
                                         <td className="py-3 pr-4 font-medium">Google PageSpeed (Mobile)</td>
-                                        <td className="py-3 px-4">45 to 62</td>
-                                        <td className="py-3 pl-4 font-bold text-charcoal">95 to 99</td>
+                                        <td data-label="Webflow" className="py-3 px-4">45 to 62</td>
+                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">95 to 99</td>
                                     </tr>
                                     <tr className="border-b border-stone-200">
                                         <td className="py-3 pr-4 font-medium">Page Load Time (Mobile)</td>
-                                        <td className="py-3 px-4">3.2 to 4.5 seconds</td>
-                                        <td className="py-3 pl-4 font-bold text-charcoal">0.6 to 0.8 seconds</td>
+                                        <td data-label="Webflow" className="py-3 px-4">3.2 to 4.5 seconds</td>
+                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">0.6 to 0.8 seconds</td>
                                     </tr>
                                     <tr className="border-b border-stone-200">
                                         <td className="py-3 pr-4 font-medium">Monthly Hosting Cost</td>
-                                        <td className="py-3 px-4">$150 to $700+</td>
-                                        <td className="py-3 pl-4 font-bold text-charcoal">$0</td>
+                                        <td data-label="Webflow" className="py-3 px-4">$150 to $700+</td>
+                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">$0</td>
                                     </tr>
                                     <tr className="border-b border-stone-200">
                                         <td className="py-3 pr-4 font-medium">Transaction Fee</td>
-                                        <td className="py-3 px-4">2% of every order</td>
-                                        <td className="py-3 pl-4 font-bold text-charcoal">0%</td>
+                                        <td data-label="Webflow" className="py-3 px-4">2% of every order</td>
+                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">0%</td>
                                     </tr>
                                     <tr className="border-b border-stone-200">
                                         <td className="py-3 pr-4 font-medium">CMS Item Limit</td>
-                                        <td className="py-3 px-4">2,000 to 10,000 (then pay more)</td>
-                                        <td className="py-3 pl-4 font-bold text-charcoal">Unlimited</td>
+                                        <td data-label="Webflow" className="py-3 px-4">2,000 to 10,000 (then pay more)</td>
+                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">Unlimited</td>
                                     </tr>
                                     <tr className="border-b border-stone-200">
                                         <td className="py-3 pr-4 font-medium">Bandwidth Limit</td>
-                                        <td className="py-3 px-4">10 to 100 GB/month</td>
-                                        <td className="py-3 pl-4 font-bold text-charcoal">Unlimited</td>
+                                        <td data-label="Webflow" className="py-3 px-4">10 to 100 GB/month</td>
+                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">Unlimited</td>
                                     </tr>
                                     <tr className="border-b border-stone-200">
                                         <td className="py-3 pr-4 font-medium">Features Deprecated</td>
-                                        <td className="py-3 px-4">Memberships, Logic, others pending</td>
-                                        <td className="py-3 pl-4 font-bold text-charcoal">You own the code. Nothing gets deprecated.</td>
+                                        <td data-label="Webflow" className="py-3 px-4">Memberships, Logic, others pending</td>
+                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">You own the code. Nothing gets deprecated.</td>
                                     </tr>
                                     <tr>
                                         <td className="py-3 pr-4 font-medium">Downtime Risk</td>
-                                        <td className="py-3 px-4">31+ hour outages, no compensation</td>
-                                        <td className="py-3 pl-4 font-bold text-charcoal">Vercel 99.99% uptime SLA</td>
+                                        <td data-label="Webflow" className="py-3 px-4">31+ hour outages, no compensation</td>
+                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">Vercel 99.99% uptime SLA</td>
                                     </tr>
                                 </tbody>
                             </table>

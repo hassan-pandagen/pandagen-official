@@ -236,9 +236,9 @@ export default function WooCommerceTooSlowPage() {
                             Let&apos;s start with what you are actually dealing with. According to data from Google&apos;s Core Web Vitals benchmarks and WooCommerce performance audits across hundreds of stores:
                         </BlogText>
 
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                             <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
-                            <table className="w-full border-collapse text-sm min-w-[560px]">
+                            <table className="w-full border-collapse text-sm min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
                                         <th className="border border-stone-200 px-4 py-3 text-left font-semibold text-charcoal">Metric</th>
@@ -249,28 +249,28 @@ export default function WooCommerceTooSlowPage() {
                                 <tbody>
                                     <tr>
                                         <td className="border border-stone-200 px-4 py-3 text-stone-700">Mobile PageSpeed Score</td>
-                                        <td className="border border-stone-200 px-4 py-3 text-red-600 font-medium">30 to 55</td>
-                                        <td className="border border-stone-200 px-4 py-3 text-green-600 font-medium">90+</td>
+                                        <td data-label="Typical WooCommerce" className="border border-stone-200 px-4 py-3 text-red-600 font-medium">30 to 55</td>
+                                        <td data-label="Google's &quot;Good&quot; Threshold" className="border border-stone-200 px-4 py-3 text-green-600 font-medium">90+</td>
                                     </tr>
                                     <tr className="bg-stone-50">
                                         <td className="border border-stone-200 px-4 py-3 text-stone-700">Largest Contentful Paint (LCP)</td>
-                                        <td className="border border-stone-200 px-4 py-3 text-red-600 font-medium">4.5 to 8 seconds</td>
-                                        <td className="border border-stone-200 px-4 py-3 text-green-600 font-medium">Under 2.5 seconds</td>
+                                        <td data-label="Typical WooCommerce" className="border border-stone-200 px-4 py-3 text-red-600 font-medium">4.5 to 8 seconds</td>
+                                        <td data-label="Google's &quot;Good&quot; Threshold" className="border border-stone-200 px-4 py-3 text-green-600 font-medium">Under 2.5 seconds</td>
                                     </tr>
                                     <tr>
                                         <td className="border border-stone-200 px-4 py-3 text-stone-700">Time to First Byte (TTFB)</td>
-                                        <td className="border border-stone-200 px-4 py-3 text-red-600 font-medium">800ms to 2.5 seconds</td>
-                                        <td className="border border-stone-200 px-4 py-3 text-green-600 font-medium">Under 600ms</td>
+                                        <td data-label="Typical WooCommerce" className="border border-stone-200 px-4 py-3 text-red-600 font-medium">800ms to 2.5 seconds</td>
+                                        <td data-label="Google's &quot;Good&quot; Threshold" className="border border-stone-200 px-4 py-3 text-green-600 font-medium">Under 600ms</td>
                                     </tr>
                                     <tr className="bg-stone-50">
                                         <td className="border border-stone-200 px-4 py-3 text-stone-700">Total Blocking Time (TBT)</td>
-                                        <td className="border border-stone-200 px-4 py-3 text-red-600 font-medium">1,500 to 4,000ms</td>
-                                        <td className="border border-stone-200 px-4 py-3 text-green-600 font-medium">Under 200ms</td>
+                                        <td data-label="Typical WooCommerce" className="border border-stone-200 px-4 py-3 text-red-600 font-medium">1,500 to 4,000ms</td>
+                                        <td data-label="Google's &quot;Good&quot; Threshold" className="border border-stone-200 px-4 py-3 text-green-600 font-medium">Under 200ms</td>
                                     </tr>
                                     <tr>
                                         <td className="border border-stone-200 px-4 py-3 text-stone-700">Database queries per page load</td>
-                                        <td className="border border-stone-200 px-4 py-3 text-red-600 font-medium">60 to 150 queries</td>
-                                        <td className="border border-stone-200 px-4 py-3 text-green-600 font-medium">0 (pre-rendered)</td>
+                                        <td data-label="Typical WooCommerce" className="border border-stone-200 px-4 py-3 text-red-600 font-medium">60 to 150 queries</td>
+                                        <td data-label="Google's &quot;Good&quot; Threshold" className="border border-stone-200 px-4 py-3 text-green-600 font-medium">0 (pre-rendered)</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -369,9 +369,9 @@ export default function WooCommerceTooSlowPage() {
                             Here is what that means for a typical WooCommerce store:
                         </BlogText>
 
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                             <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
-                            <table className="w-full border-collapse text-sm min-w-[560px]">
+                            <table className="w-full border-collapse text-sm min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
                                         <th className="border border-stone-200 px-4 py-3 text-left font-semibold text-charcoal">Annual Revenue</th>
@@ -382,18 +382,18 @@ export default function WooCommerceTooSlowPage() {
                                 <tbody>
                                     <tr>
                                         <td className="border border-stone-200 px-4 py-3 text-stone-700">$100,000</td>
-                                        <td className="border border-stone-200 px-4 py-3 text-stone-700">5 seconds</td>
-                                        <td className="border border-stone-200 px-4 py-3 text-red-600 font-medium">$15,000 to $25,000/year</td>
+                                        <td data-label="Current Load Time" className="border border-stone-200 px-4 py-3 text-stone-700">5 seconds</td>
+                                        <td data-label="Estimated Revenue Lost to Speed" className="border border-stone-200 px-4 py-3 text-red-600 font-medium">$15,000 to $25,000/year</td>
                                     </tr>
                                     <tr className="bg-stone-50">
                                         <td className="border border-stone-200 px-4 py-3 text-stone-700">$300,000</td>
-                                        <td className="border border-stone-200 px-4 py-3 text-stone-700">6 seconds</td>
-                                        <td className="border border-stone-200 px-4 py-3 text-red-600 font-medium">$45,000 to $75,000/year</td>
+                                        <td data-label="Current Load Time" className="border border-stone-200 px-4 py-3 text-stone-700">6 seconds</td>
+                                        <td data-label="Estimated Revenue Lost to Speed" className="border border-stone-200 px-4 py-3 text-red-600 font-medium">$45,000 to $75,000/year</td>
                                     </tr>
                                     <tr>
                                         <td className="border border-stone-200 px-4 py-3 text-stone-700">$1,000,000</td>
-                                        <td className="border border-stone-200 px-4 py-3 text-stone-700">5 to 7 seconds</td>
-                                        <td className="border border-stone-200 px-4 py-3 text-red-600 font-medium">$150,000 to $250,000/year</td>
+                                        <td data-label="Current Load Time" className="border border-stone-200 px-4 py-3 text-stone-700">5 to 7 seconds</td>
+                                        <td data-label="Estimated Revenue Lost to Speed" className="border border-stone-200 px-4 py-3 text-red-600 font-medium">$150,000 to $250,000/year</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -465,9 +465,9 @@ export default function WooCommerceTooSlowPage() {
                             Headless is not for every WooCommerce store. Here are the signals that make it a strong fit:
                         </BlogText>
 
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2">← Swipe to see more →</p>
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                             <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
-                            <table className="w-full border-collapse text-sm min-w-[560px]">
+                            <table className="w-full border-collapse text-sm min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
                                         <th className="border border-stone-200 px-4 py-3 text-left font-semibold text-charcoal">Strong fit for headless</th>
@@ -477,23 +477,23 @@ export default function WooCommerceTooSlowPage() {
                                 <tbody>
                                     <tr>
                                         <td className="border border-stone-200 px-4 py-3 text-stone-700">Mobile PageSpeed below 60</td>
-                                        <td className="border border-stone-200 px-4 py-3 text-stone-700">Store is brand new with under 20 products</td>
+                                        <td data-label="Probably not the right time" className="border border-stone-200 px-4 py-3 text-stone-700">Store is brand new with under 20 products</td>
                                     </tr>
                                     <tr className="bg-stone-50">
                                         <td className="border border-stone-200 px-4 py-3 text-stone-700">More than 30 active plugins</td>
-                                        <td className="border border-stone-200 px-4 py-3 text-stone-700">You rely on WooCommerce-specific plugins with no REST API equivalent</td>
+                                        <td data-label="Probably not the right time" className="border border-stone-200 px-4 py-3 text-stone-700">You rely on WooCommerce-specific plugins with no REST API equivalent</td>
                                     </tr>
                                     <tr>
                                         <td className="border border-stone-200 px-4 py-3 text-stone-700">Significant mobile traffic (50%+)</td>
-                                        <td className="border border-stone-200 px-4 py-3 text-stone-700">All revenue comes from paid ads only (speed matters less than offer)</td>
+                                        <td data-label="Probably not the right time" className="border border-stone-200 px-4 py-3 text-stone-700">All revenue comes from paid ads only (speed matters less than offer)</td>
                                     </tr>
                                     <tr className="bg-stone-50">
                                         <td className="border border-stone-200 px-4 py-3 text-stone-700">Speed is visibly hurting conversions in your analytics</td>
-                                        <td className="border border-stone-200 px-4 py-3 text-stone-700">You have zero technical support available post-launch</td>
+                                        <td data-label="Probably not the right time" className="border border-stone-200 px-4 py-3 text-stone-700">You have zero technical support available post-launch</td>
                                     </tr>
                                     <tr>
                                         <td className="border border-stone-200 px-4 py-3 text-stone-700">Organic SEO is a primary traffic channel</td>
-                                        <td className="border border-stone-200 px-4 py-3 text-stone-700">Not sure? Book a free call and we will tell you honestly</td>
+                                        <td data-label="Probably not the right time" className="border border-stone-200 px-4 py-3 text-stone-700">Not sure? Book a free call and we will tell you honestly</td>
                                     </tr>
                                 </tbody>
                             </table>
