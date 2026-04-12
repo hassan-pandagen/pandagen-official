@@ -16,15 +16,15 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Shopify Dawn Theme Slow in 2026? It Scores 60/100 and Here Is Why",
-    description: "Dawn is Shopify's fastest theme and it still scores 55 to 65 on mobile PageSpeed. The problem is not the theme. It is Shopify's infrastructure. Here is the only real fix, and why plugins cannot solve it.",
+    title: "Shopify Dawn Theme Slow? How We Fixed It From 55 to 100 (2026)",
+    description: "Dawn scores 55 to 65 on mobile PageSpeed even with zero apps. Here are the partial fixes that get you to 75, why that ceiling exists, and the one approach that breaks past 95.",
     alternates: {
         canonical: "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow",
     },
     keywords: ["shopify dawn theme slow", "shopify dawn theme speed", "shopify 2.0 performance", "why is shopify slow", "shopify pagespeed score", "shopify speed optimization", "shopify dawn pagespeed"],
     openGraph: {
-        title: "Shopify Dawn Theme Slow in 2026? It Scores 60/100 and Here Is Why",
-        description: "Dawn is Shopify's fastest theme and it still scores 55 to 65 on mobile PageSpeed. The problem is not the theme. It is Shopify's infrastructure. Here is the only real fix.",
+        title: "Shopify Dawn Theme Slow? How We Fixed It From 55 to 100 (2026)",
+        description: "Dawn scores 55 to 65 on mobile PageSpeed even with zero apps. Here are the partial fixes that get you to 75, why that ceiling exists, and the one approach that breaks past 95.",
         type: "article",
         publishedTime: "2026-03-07",
         authors: ["Hassan"],
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Shopify Dawn Theme Slow in 2026? It Scores 60/100 and Here Is Why",
-        description: "Dawn is Shopify's fastest theme and it still scores 55 to 65 on mobile PageSpeed. The problem is not the theme. It is Shopify's infrastructure. Here is the only real fix.",
+        title: "Shopify Dawn Theme Slow? How We Fixed It From 55 to 100 (2026)",
+        description: "Dawn scores 55 to 65 on mobile PageSpeed even with zero apps. Here are the partial fixes that get you to 75, why that ceiling exists, and the one approach that breaks past 95.",
     },
 };
 
@@ -44,11 +44,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow#article",
-            "headline": "Shopify Dawn Theme Slow? The Fix Shopify Won't Tell You",
-            "description": "Dawn is Shopify's fastest theme but your store still loads in 3+ seconds. The problem is not the theme. It is Shopify's architecture. Here is what actually fixes it.",
+            "headline": "Shopify Dawn Theme Slow? How We Fixed It From 55 to 100 (2026)",
+            "description": "Dawn scores 55 to 65 on mobile PageSpeed even with zero apps. Here are the partial fixes that get you to 75, why that ceiling exists, and the one approach that breaks past 95.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-07T00:00:00-05:00",
-            "dateModified": "2026-03-10T00:00:00-05:00",
+            "dateModified": "2026-04-13T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -111,7 +111,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-07T00:00:00-05:00",
-            "dateModified": "2026-03-10T00:00:00-05:00",
+            "dateModified": "2026-04-13T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -172,7 +172,7 @@ export default function ShopifyDawnThemeSlowPage() {
                     <div className="mb-10">
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
                             Shopify Dawn Theme Slow?{" "}
-                            <span className="font-serif italic text-cognac">Here&apos;s Exactly Why.</span>
+                            <span className="font-serif italic text-cognac">How We Fixed It to 100.</span>
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">

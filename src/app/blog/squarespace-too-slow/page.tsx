@@ -16,8 +16,8 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: { absolute: "Squarespace Too Slow? Sites Score 30/100 on Mobile PageSpeed in 2026" },
-    description: "Squarespace sites score 30 to 55 on Google PageSpeed Mobile. No setting or plugin fixes it. Here is why it is slow and what works.",
+    title: { absolute: "Squarespace Too Slow in 2026? Why Businesses Are Migrating Away" },
+    description: "Squarespace sites average 30 to 55 on Google PageSpeed Mobile. No plugin or setting fixes it. Here is why the platform itself is the bottleneck and what growing businesses are doing instead.",
     alternates: {
         canonical: "/blog/squarespace-too-slow",
     },
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
         "migrate squarespace to nextjs"
     ],
     openGraph: {
-        title: "Squarespace Too Slow? Sites Score 30/100 on Mobile PageSpeed in 2026",
-        description: "Squarespace sites score 30 to 55 on Google PageSpeed Mobile. No setting or plugin fixes it. Here is why it is slow and what works.",
+        title: "Squarespace Too Slow in 2026? Why Businesses Are Migrating Away",
+        description: "Squarespace sites average 30 to 55 on Google PageSpeed Mobile. No plugin or setting fixes it. Here is why the platform itself is the bottleneck and what growing businesses are doing instead.",
         type: "article",
         publishedTime: "2026-03-27T00:00:00-05:00",
         modifiedTime: "2026-03-27T00:00:00-05:00",
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Squarespace Too Slow? Sites Score 30/100 on Mobile PageSpeed in 2026",
-        description: "Squarespace sites score 30 to 55 on Google PageSpeed Mobile. No setting or plugin fixes it. Here is why it is slow and what works.",
+        title: "Squarespace Too Slow in 2026? Why Businesses Are Migrating Away",
+        description: "Squarespace sites average 30 to 55 on Google PageSpeed Mobile. No plugin or setting fixes it. Here is why the platform itself is the bottleneck and what growing businesses are doing instead.",
     },
 };
 
@@ -56,11 +56,11 @@ const schemaData = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/squarespace-too-slow#article",
-            "headline": "Squarespace Too Slow? Sites Score 30/100 on Mobile PageSpeed in 2026",
-            "description": "Squarespace sites score 30 to 55 on Google PageSpeed Mobile. No setting or plugin fixes it. Here is why it is slow and what works.",
+            "headline": "Squarespace Too Slow in 2026? Why Businesses Are Migrating Away",
+            "description": "Squarespace sites average 30 to 55 on Google PageSpeed Mobile. No plugin or setting fixes it. Here is why the platform itself is the bottleneck and what growing businesses are doing instead.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-27T00:00:00-05:00",
-            "dateModified": "2026-03-27T00:00:00-05:00",
+            "dateModified": "2026-04-13T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "name": "Hassan Jamal",
@@ -233,7 +233,7 @@ export default function SquarespaceToSlowPage() {
                     </div>
 
                     <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-4">
-                        Squarespace Too Slow? Here&apos;s Why <span className="font-serif italic text-cognac">It Can&apos;t Be Fixed</span>
+                        Squarespace Too Slow? Why Businesses Are <span className="font-serif italic text-cognac">Migrating Away</span> in 2026
                     </h1>
 
                     <p className="text-xl text-stone-600 mb-6 leading-relaxed">

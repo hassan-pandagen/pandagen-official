@@ -16,15 +16,15 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "WordPress to Next.js Migration in 2026: The Full $500 Process",
-    description: "301 redirects, full content transfer, zero downtime, SEO preserved. Complete migration guide in plain English. Founder's offer: $500 flat. 95+ PageSpeed guaranteed or you do not pay the balance.",
+    title: "WordPress to Next.js Migration: Step-by-Step Without Losing SEO (2026)",
+    description: "Step-by-step migration guide: content export, redirect mapping, SEO preservation, and zero downtime launch. What agencies charge $15K for, explained in plain English with real results.",
     alternates: {
         canonical: '/blog/how-to-migrate-wordpress-to-nextjs',
     },
     keywords: ["how to migrate wordpress to next.js", "wordpress to nextjs migration", "migrate wordpress nextjs seo", "wordpress nextjs migration guide", "wordpress to nextjs without losing seo", "wordpress migration checklist"],
     openGraph: {
-        title: "WordPress to Next.js Migration in 2026: The Full $500 Process",
-        description: "301 redirects, full content transfer, zero downtime, SEO preserved. Complete migration guide in plain English. Founder's offer: $500 flat. 95+ PageSpeed guaranteed.",
+        title: "WordPress to Next.js Migration: Step-by-Step Without Losing SEO (2026)",
+        description: "Step-by-step migration guide: content export, redirect mapping, SEO preservation, and zero downtime launch. What agencies charge $15K for, explained in plain English with real results.",
         type: "article",
         publishedTime: "2026-03-11",
         authors: ["Hassan"],
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "WordPress to Next.js Migration in 2026: The Full $500 Process",
-        description: "301 redirects, full content transfer, zero downtime, SEO preserved. Complete migration guide in plain English. Founder's offer: $500 flat. 95+ PageSpeed guaranteed.",
+        title: "WordPress to Next.js Migration: Step-by-Step Without Losing SEO (2026)",
+        description: "Step-by-step migration guide: content export, redirect mapping, SEO preservation, and zero downtime launch. What agencies charge $15K for, explained in plain English with real results.",
     },
 };
 
@@ -44,11 +44,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs#article",
-            "headline": "WordPress to Next.js Migration: Step-by-Step Without Losing SEO",
-            "description": "Complete WordPress to Next.js migration guide: content export, 301 redirects, SEO preservation, and zero-downtime launch. The full process in plain English.",
+            "headline": "WordPress to Next.js Migration: Step-by-Step Without Losing SEO (2026)",
+            "description": "Step-by-step migration guide: content export, redirect mapping, SEO preservation, and zero downtime launch. What agencies charge $15K for, explained in plain English with real results.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-11T00:00:00-05:00",
-            "dateModified": "2026-03-11T00:00:00-05:00",
+            "dateModified": "2026-04-13T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -111,7 +111,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-11T00:00:00-05:00",
-            "dateModified": "2026-03-11T00:00:00-05:00",
+            "dateModified": "2026-04-13T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs#breadcrumb" },
             "inLanguage": "en-US"
         },

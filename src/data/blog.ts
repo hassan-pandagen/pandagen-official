@@ -226,7 +226,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "squarespace-too-slow",
-    title: "Squarespace Too Slow? No Setting or Plugin Fixes This",
+    title: "Squarespace Too Slow in 2026? Why Businesses Are Migrating Away",
     excerpt: "Squarespace sites score 30 to 55 on Google PageSpeed Mobile and there is no plugin or setting that changes that. Here is the exact reason Squarespace is slow, what that costs you in rankings and leads, and what actually works.",
     category: "Squarespace",
     readTime: "10 min",
@@ -350,7 +350,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "webflow-true-cost",
-    title: "Webflow Costs More Than $29/Month: The Real Price in 2026",
+    title: "Webflow Pricing 2026: Every Hidden Fee Explained ($29 Is Just the Start)",
     excerpt: "Webflow looks affordable at $29/month. But add CMS hosting, form limits, bandwidth overages, and the SEO ceiling, and you are quietly bleeding $5,000 to $15,000 a year in lost revenue. Here is the real math.",
     category: "Comparison",
     readTime: "10 min",
@@ -390,7 +390,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "how-to-migrate-wordpress-to-nextjs",
-    title: "WordPress to Next.js Migration: Step-by-Step Without Losing SEO",
+    title: "WordPress to Next.js Migration: Step-by-Step Without Losing SEO (2026)",
     excerpt: "A step-by-step migration guide covering content export, redirect mapping, SEO preservation, and zero-downtime launch. What agencies charge $15K to do. explained in plain English.",
     category: "WordPress",
     readTime: "10 min",
@@ -450,7 +450,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "shopify-dawn-theme-slow",
-    title: "Shopify Dawn Theme Slow? The Fix Shopify Won't Tell You",
+    title: "Shopify Dawn Theme Slow? How We Fixed It From 55 to 100 (2026)",
     excerpt: "Dawn is Shopify's fastest theme. so why is your store still loading in 3+ seconds? Here's what's actually killing your speed and why theme-level fixes won't save you.",
     category: "Shopify",
     readTime: "9 min",

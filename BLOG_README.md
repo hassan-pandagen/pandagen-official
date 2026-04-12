@@ -1,7 +1,7 @@
 # PandaCodeGen Blog — Single Source of Truth
 
 > This is the only blog reference document. PRE_PUBLISH_CHECKLIST.md has been deleted. All rules live here.
-> Last updated: April 6, 2026 — 33 live posts
+> Last updated: April 13, 2026 — 39 live posts
 
 ---
 
@@ -577,7 +577,7 @@ Examples:
 | 18 | `why-we-chose-nextjs-over-wordpress-2026` | Why We Chose Next.js Over WordPress for Every New Client in 2026 | Comparison | Live |
 | 19 | `wordpress-vs-custom-code-real-cost-3-years` | WordPress vs Custom Code: The Real Cost Over 3 Years | Comparison | Live |
 | 20 | `how-to-migrate-wordpress-to-nextjs` | How to Migrate WordPress to Next.js Without Losing SEO | Tutorial | Live |
-| 21 | `nextjs-hosting-zero-cost` | How We Host Client Websites for Free ($0/Month) With Vercel | Performance | Live |
+| 21 | `nextjs-hosting-zero-cost` | Start Free, Scale to $20/mo: How We Host Client Sites on Vercel | Performance | Live |
 | 22 | `what-is-headless-commerce` | What Is Headless Commerce? A Plain-English Guide for Store Owners | E-Commerce | Live |
 | 23 | `shopify-vs-custom-website` | Shopify vs Custom Website: 5 Signs You Have Outgrown Shopify (2026) | Comparison | Live |
 | 24 | `webflow-vs-custom-website` | Webflow vs Custom Website: Real Numbers Behind the Comparison 2026 | Webflow | Live |
@@ -629,7 +629,7 @@ Top agencies analyzed: WebFX ($260M/yr), Coalition Technologies ($5.4M/yr), Sing
 - speakable + citations in Article schema (none)
 - Real before/after PageSpeed scores with proof (none)
 - Platform-specific pain-point targeting (none)
-- $0/month hosting angle (unique to us)
+- "Starts free, scales to $20/mo when you grow" hosting angle (unique to us)
 - Business-owner language, not developer jargon (Pagepro/FocusReactive write for devs)
 
 ---
