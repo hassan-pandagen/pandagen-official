@@ -16,14 +16,14 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Webflow vs Custom Website: When Webflow Stops Making Sense (2026)",
+    title: "Webflow vs Custom Website 2026: Real Cost, Speed, and SEO Comparison (2026)",
     description: "Webflow works until your PageSpeed drops below 70, your bill hits $100+/month, or you need features it cannot build. Here are the 5 signs and what to do next.",
     alternates: {
         canonical: '/blog/webflow-vs-custom-website',
     },
     keywords: ["webflow vs custom website", "webflow alternative", "webflow limitations", "webflow vs next.js", "custom website vs webflow", "should I leave webflow", "webflow hidden costs"],
     openGraph: {
-        title: "Webflow vs Custom Website: When Webflow Stops Making Sense",
+        title: "Webflow vs Custom Website 2026: Real Cost, Speed, and SEO Comparison",
         description: "Webflow works until your PageSpeed drops below 70, your bill hits $100+/month, or you need features it cannot build. Here are the 5 signs and what to do next.",
         type: "article",
         publishedTime: "2026-03-27",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Webflow vs Custom Website: When Webflow Stops Making Sense",
+        title: "Webflow vs Custom Website 2026: Real Cost, Speed, and SEO Comparison",
         description: "Webflow works until your PageSpeed drops below 70, your bill hits $100+/month, or you need features it cannot build. Here are the 5 signs.",
     },
 };
@@ -44,11 +44,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/webflow-vs-custom-website#article",
-            "headline": "Webflow vs Custom Website: When Webflow Stops Making Sense",
+            "headline": "Webflow vs Custom Website 2026: Real Cost, Speed, and SEO Comparison",
             "description": "Webflow works for brochure sites. But when your PageSpeed drops below 70, your bill exceeds $100/month, or you need custom functionality, custom code becomes the better investment.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-27T00:00:00-05:00",
-            "dateModified": "2026-03-27T00:00:00-05:00",
+            "dateModified": "2026-04-13T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -103,12 +103,12 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/webflow-vs-custom-website#webpage",
             "url": "https://www.pandacodegen.com/blog/webflow-vs-custom-website",
-            "name": "Webflow vs Custom Website: When Webflow Stops Making Sense",
+            "name": "Webflow vs Custom Website 2026: Real Cost, Speed, and SEO Comparison",
             "description": "A decision framework for business owners on Webflow who are wondering whether custom code is worth the investment.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-27T00:00:00-05:00",
-            "dateModified": "2026-03-27T00:00:00-05:00",
+            "dateModified": "2026-04-13T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/webflow-vs-custom-website#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -169,7 +169,8 @@ export default function WebflowVsCustomWebsitePage() {
                     <div className="mb-10">
                         <div className="inline-block px-3 py-1 text-xs font-medium bg-stone-100 text-stone-600 rounded-full mb-4">Webflow</div>
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                            Webflow vs Custom Website: <span className="font-serif italic text-cognac">When Webflow Stops</span> Making Sense
+                            Webflow vs Custom Website 2026:{" "}
+                            <span className="font-serif italic text-cognac">Real Cost, Speed, and SEO</span> Comparison
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">

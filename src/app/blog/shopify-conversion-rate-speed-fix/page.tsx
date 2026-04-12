@@ -16,13 +16,13 @@ const SalesImpactAnimation = dynamic(() => import("@/components/blog/SalesImpact
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Shopify Conversion Rate in 2026: A 1-Second Delay Costs 7% of Sales",
-    description: "The average Shopify store converts at 1.4%. Stores loading in under 2 seconds convert at 3 to 5%. Your conversion problem is a speed problem. Here is the fix.",
+    title: "Low Shopify Conversion Rate? How Speed Kills Your Sales (Fix Guide, 2026)",
+    description: "You installed Hotjar. Then a CRO app. Then a popup tool. Conversion rate still stuck at 1.4%. The problem is not your funnel. Stores loading in under 2 seconds convert at 3 to 5%. Here is why speed is the fix you keep skipping.",
     alternates: { canonical: "/blog/shopify-conversion-rate-speed-fix" },
     keywords: ["shopify conversion rate", "low shopify conversion rate", "shopify speed conversion", "improve shopify conversion rate", "shopify store slow", "shopify cro speed"],
     openGraph: {
-        title: "Shopify Conversion Rate in 2026: A 1-Second Delay Costs 7% of Sales",
-        description: "The average Shopify store converts at 1.4%. Stores loading in under 2 seconds convert at 3 to 5%. Your conversion problem is a speed problem. Here is the fix.",
+        title: "Low Shopify Conversion Rate? How Speed Kills Your Sales (Fix Guide, 2026)",
+        description: "You installed Hotjar. Then a CRO app. Then a popup tool. Conversion rate still stuck at 1.4%. The problem is not your funnel. Stores loading in under 2 seconds convert at 3 to 5%. Here is why speed is the fix you keep skipping.",
         type: "article",
         publishedTime: "2026-02-11",
         authors: ["Hassan"],
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Shopify Conversion Rate in 2026: A 1-Second Delay Costs 7% of Sales",
-        description: "The average Shopify store converts at 1.4%. Stores loading in under 2 seconds convert at 3 to 5%. Your conversion problem is a speed problem. Here is the fix.",
+        title: "Low Shopify Conversion Rate? How Speed Kills Your Sales (Fix Guide, 2026)",
+        description: "You installed Hotjar. Then a CRO app. Then a popup tool. Conversion rate still stuck at 1.4%. The problem is not your funnel. Stores loading in under 2 seconds convert at 3 to 5%. Here is why speed is the fix you keep skipping.",
     },
 };
 
@@ -42,8 +42,8 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/shopify-conversion-rate-speed-fix#article",
-            "headline": "Shopify Conversion Rate in 2026: A 1-Second Delay Costs 7% of Sales",
-            "description": "The average Shopify store converts at 1.4%. Stores loading in under 2 seconds convert at 3 to 5%. Your conversion problem is a speed problem. Here is the fix.",
+            "headline": "Low Shopify Conversion Rate? How Speed Kills Your Sales (Fix Guide, 2026)",
+            "description": "You installed Hotjar. Then a CRO app. Then a popup tool. Conversion rate still stuck at 1.4%. The problem is not your funnel. Stores loading in under 2 seconds convert at 3 to 5%. Here is why speed is the fix you keep skipping.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-11T00:00:00-05:00",
             "dateModified": "2026-03-15T00:00:00-05:00",
@@ -163,8 +163,8 @@ export default function ShopifyConversionRateSpeedFixPage() {
                         </div>
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight text-charcoal">
                             Low Shopify Conversion Rate?{" "}
-                            <span className="font-serif italic text-cognac">Speed Is Killing</span>{" "}
-                            Your Sales
+                            <span className="font-serif italic text-cognac">How Speed Kills Your Sales</span>{" "}
+                            (Fix Guide, 2026)
                         </h1>
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
                             The average Shopify store converts at 1.4%, but fast stores hit 3 to 5%. If you&apos;re looking to improve your conversion rate, speed is one of the most effective levers to pull.

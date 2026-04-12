@@ -16,12 +16,12 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "WordPress Plugins Destroy Speed: 61% Drop per 10 Plugins (2026)",
+    title: "WordPress Plugins Are Destroying Your Speed: 61% Slower per 10 Plugins (2026)",
     description: "Most WordPress sites with 30+ plugins score 35/100 on mobile PageSpeed. Here is exactly how much revenue you lose per month and how to actually fix the speed problem.",
     alternates: { canonical: "/blog/wordpress-plugins-destroy-speed" },
     keywords: ["wordpress plugins slow", "wordpress plugin performance", "too many wordpress plugins", "wordpress plugins killing speed", "fix slow wordpress plugins", "wordpress speed optimization"],
     openGraph: {
-        title: "WordPress Plugins Destroy Speed: 61% Drop per 10 Plugins (2026)",
+        title: "WordPress Plugins Are Destroying Your Speed: 61% Slower per 10 Plugins (2026)",
         description: "Most WordPress sites with 30+ plugins score 35/100 on mobile PageSpeed. Here is exactly how much revenue you lose per month and how to actually fix the speed problem.",
         type: "article",
         publishedTime: "2026-02-05",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "WordPress Plugins Destroy Speed: 61% Drop per 10 Plugins (2026)",
+        title: "WordPress Plugins Are Destroying Your Speed: 61% Slower per 10 Plugins (2026)",
         description: "Most WordPress sites with 30+ plugins score 35/100 on mobile PageSpeed. Here is exactly how much revenue you lose per month and how to actually fix the speed problem.",
     },
 };
@@ -42,7 +42,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-plugins-destroy-speed#article",
-            "headline": "WordPress Plugins Destroy Speed: 61% Drop per 10 Plugins (2026)",
+            "headline": "WordPress Plugins Are Destroying Your Speed: 61% Slower per 10 Plugins (2026)",
             "description": "Most WordPress sites with 30+ plugins score 35/100 on mobile PageSpeed. Here is exactly how much revenue you lose per month and how to actually fix the speed problem.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-05T00:00:00-05:00",
@@ -160,9 +160,9 @@ export default function WordPressPluginsSpeedPage() {
                             Performance · WordPress
                         </div>
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight text-charcoal">
-                            WordPress Slow?{" "}
-                            <span className="font-serif italic text-cognac">Your Plugins Are Killing Speed</span>{" "}
-                            (And Costing You Customers)
+                            WordPress Plugins Are{" "}
+                            <span className="font-serif italic text-cognac">Destroying Your Speed:</span>{" "}
+                            61% Slower per 10 Plugins
                         </h1>
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
                             Plugins add powerful features to WordPress, but each one comes with a performance cost. This guide helps you identify which ones matter and how to optimize.

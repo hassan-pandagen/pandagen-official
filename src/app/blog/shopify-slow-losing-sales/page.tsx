@@ -16,14 +16,14 @@ const SalesImpactAnimation = dynamic(() => import("@/components/blog/SalesImpact
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Slow Shopify Store 2026? You Are Losing $75,000/Year. Here Is Why.",
-    description: "Every second your Shopify store takes to load costs you customers. We calculated exactly how much revenue a slow store loses per month and how to fix it.",
+    title: "Slow Shopify Store? How Much Revenue You Are Losing in 2026 (With Math)",
+    description: "A Shopify store doing $500K/year at 4 seconds load time is losing $75,000 to speed alone. We built the calculator. Plug in your numbers and see what a 1-second store would earn you.",
     alternates: {
         canonical: '/blog/shopify-slow-losing-sales',
     },
     openGraph: {
-        title: "Slow Shopify Store 2026? You Are Losing $75,000/Year. Here Is Why.",
-        description: "Every second your Shopify store takes to load costs you customers. We calculated exactly how much revenue a slow store loses per month and how to fix it.",
+        title: "Slow Shopify Store? How Much Revenue You Are Losing in 2026 (With Math)",
+        description: "A Shopify store doing $500K/year at 4 seconds load time is losing $75,000 to speed alone. We built the calculator. Plug in your numbers and see what a 1-second store would earn you.",
         type: "article",
         publishedTime: "2026-02-10",
         authors: ["Hassan"],
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Slow Shopify Store 2026? You Are Losing $75,000/Year. Here Is Why.",
-        description: "Every second your Shopify store takes to load costs you customers. We calculated exactly how much revenue a slow store loses per month and how to fix it.",
+        title: "Slow Shopify Store? How Much Revenue You Are Losing in 2026 (With Math)",
+        description: "A Shopify store doing $500K/year at 4 seconds load time is losing $75,000 to speed alone. We built the calculator. Plug in your numbers and see what a 1-second store would earn you.",
     },
     keywords: ["Shopify speed optimization", "headless Shopify", "Shopify slow", "e-commerce performance", "Shopify lost sales", "custom storefront"],
 };
@@ -44,8 +44,8 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales#article",
-            "headline": "Slow Shopify Store 2026? You Are Losing $75,000/Year. Here Is Why.",
-            "description": "Every second your Shopify store takes to load costs you customers. We calculated exactly how much revenue a slow store loses per month and how to fix it.",
+            "headline": "Slow Shopify Store? How Much Revenue You Are Losing in 2026 (With Math)",
+            "description": "A Shopify store doing $500K/year at 4 seconds load time is losing $75,000 to speed alone. We built the calculator. Plug in your numbers and see what a 1-second store would earn you.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-10T00:00:00-05:00",
             "dateModified": "2026-03-15T00:00:00-05:00",
@@ -195,7 +195,8 @@ export default function ShopifySlowPage() {
                     {/* Title & Meta */}
                     <div className="mb-10">
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                            Your Shopify Store Is Costing You <span className="font-serif italic text-cognac">$75K/Year</span> in Lost Sales
+                            Slow Shopify Store? How Much{" "}
+                            <span className="font-serif italic text-cognac">Revenue You Are Losing</span> in 2026
                         </h1>
                         
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">

@@ -16,14 +16,14 @@ const SalesImpactAnimation = dynamic(() => import("@/components/blog/SalesImpact
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "WordPress vs Custom Code: $8,400 vs $2,100 Over 3 Years (2026 Data)",
-    description: "WordPress costs $9,000 to $30,000 over 3 years when you add hosting, plugins, maintenance, and lost revenue. Custom code costs $5,000 to $15,000 total. Full breakdown.",
+    title: "WordPress vs Custom Code: 3-Year Cost Comparison With Real Numbers (2026)",
+    description: "WordPress costs $9,000 to $30,000 over 3 years when you add hosting, plugins, maintenance, and lost revenue from slow speed. Custom code costs less by year 2. Full breakdown with real client data.",
     alternates: {
         canonical: '/blog/wordpress-vs-custom-code-real-cost-3-years',
     },
     openGraph: {
-        title: "WordPress vs Custom Code: $8,400 vs $2,100 Over 3 Years (2026 Data)",
-        description: "WordPress costs $9,000 to $30,000 over 3 years when you add hosting, plugins, maintenance, and lost revenue. Custom code costs $5,000 to $15,000 total. Full breakdown.",
+        title: "WordPress vs Custom Code: 3-Year Cost Comparison With Real Numbers (2026)",
+        description: "WordPress costs $9,000 to $30,000 over 3 years when you add hosting, plugins, maintenance, and lost revenue from slow speed. Custom code costs less by year 2. Full breakdown with real client data.",
         type: "article",
         publishedTime: "2026-02-20",
         authors: ["Hassan"],
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "WordPress vs Custom Code: $8,400 vs $2,100 Over 3 Years (2026 Data)",
-        description: "WordPress costs $9,000 to $30,000 over 3 years when you add hosting, plugins, maintenance, and lost revenue. Custom code costs $5,000 to $15,000 total. Full breakdown.",
+        title: "WordPress vs Custom Code: 3-Year Cost Comparison With Real Numbers (2026)",
+        description: "WordPress costs $9,000 to $30,000 over 3 years when you add hosting, plugins, maintenance, and lost revenue from slow speed. Custom code costs less by year 2. Full breakdown with real client data.",
     },
     keywords: ["wordpress vs custom code cost", "wordpress real cost", "custom website vs wordpress", "wordpress hidden costs", "website total cost of ownership"],
 };
@@ -44,11 +44,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-vs-custom-code-real-cost-3-years#article",
-            "headline": "WordPress vs Custom Code: $8,400 vs $2,100 Over 3 Years (2026 Data)",
-            "description": "WordPress costs $9,000 to $30,000 over 3 years when you add hosting, plugins, maintenance, and lost revenue. Custom code costs $5,000 to $15,000 total. Full breakdown.",
+            "headline": "WordPress vs Custom Code: 3-Year Cost Comparison With Real Numbers (2026)",
+            "description": "WordPress costs $9,000 to $30,000 over 3 years when you add hosting, plugins, maintenance, and lost revenue from slow speed. Custom code costs less by year 2. Full breakdown with real client data.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-20T00:00:00-05:00",
-            "dateModified": "2026-03-10T00:00:00-05:00",
+            "dateModified": "2026-04-13T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -104,11 +104,11 @@ const articleSchema = {
             "@id": "https://www.pandacodegen.com/blog/wordpress-vs-custom-code-real-cost-3-years#webpage",
             "url": "https://www.pandacodegen.com/blog/wordpress-vs-custom-code-real-cost-3-years",
             "name": "WordPress vs Custom Code: The Real 3-Year Cost (With Numbers)",
-            "description": "WordPress costs $9,000 to $30,000 over 3 years when you add hosting, plugins, maintenance, and lost revenue. Custom code costs $5,000 to $15,000 total. Full breakdown.",
+            "description": "WordPress costs $9,000 to $30,000 over 3 years when you add hosting, plugins, maintenance, and lost revenue from slow speed. Custom code costs less by year 2. Full breakdown with real client data.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-20T00:00:00-05:00",
-            "dateModified": "2026-03-10T00:00:00-05:00",
+            "dateModified": "2026-04-13T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/wordpress-vs-custom-code-real-cost-3-years#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -166,7 +166,8 @@ export default function WordPressVsCustomCodeCostPage() {
 
                     <div className="mb-10">
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                            WordPress vs Custom Code: The <span className="font-serif italic text-cognac">Real Cost</span> Over 3 Years
+                            WordPress vs Custom Code:{" "}
+                            <span className="font-serif italic text-cognac">3-Year Cost Comparison</span> With Real Numbers
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">

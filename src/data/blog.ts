@@ -186,7 +186,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "webflow-vs-custom-website",
-    title: "Webflow vs Custom Website: When Webflow Stops Making Sense",
+    title: "Webflow vs Custom Website 2026: Real Cost, Speed, and SEO Comparison",
     excerpt: "Webflow works until it does not. Here are the 5 signs you have outgrown Webflow, what a custom website actually gives you, and how to decide without overspending.",
     category: "Webflow",
     readTime: "11 min",
@@ -206,7 +206,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "shopify-vs-custom-website",
-    title: "Shopify vs Custom Website: When You Have Outgrown Shopify",
+    title: "Shopify vs Custom Website 2026: 5 Signs You Have Outgrown It",
     excerpt: "Shopify works until app fees hit $1,000/month, your store loads in 4+ seconds, and checkout conversion stalls at 1.4%. Here are the 5 signs and what to do next.",
     category: "Shopify",
     readTime: "11 min",
@@ -246,7 +246,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "woocommerce-too-slow",
-    title: "WooCommerce Too Slow? The Problem Is Not Your Plugins",
+    title: "WooCommerce Too Slow? How to Speed It Up in 2026 (and When to Migrate)",
     excerpt: "WooCommerce stores average 30 to 55 on Google PageSpeed Mobile. Here is exactly why WooCommerce is slow, what it costs you in lost sales every day, and why caching plugins only hide the problem without fixing it.",
     category: "WooCommerce",
     readTime: "11 min",
@@ -287,7 +287,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "wordpress-migration-cost",
-    title: "WordPress to Next.js Migration: From $2,000 (2026 Pricing)",
+    title: "WordPress Migration Cost 2026: Full Pricing by Site Size and Type",
     excerpt: "A simple WordPress site starts at $2,000. Complex WooCommerce stores go up to $25,000. This breakdown explains exactly what drives migration cost, what tier your site falls into, and how to calculate whether migration makes financial sense.",
     category: "WordPress",
     readTime: "9 min",
@@ -308,7 +308,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "gohighlevel-website-speed",
-    title: "GoHighLevel Sites Score 20 to 45 on PageSpeed (Here Is Why)",
+    title: "GoHighLevel Sites Score 20 to 45 on PageSpeed: How to Fix It (2026)",
     excerpt: "GoHighLevel sites score 20 to 45 on Google PageSpeed Mobile. Here is exactly why GHL is slow, what it costs you in SEO and conversions, and how agencies are solving it with custom Next.js frontends.",
     category: "Performance",
     readTime: "9 min",
@@ -329,7 +329,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "shopify-app-costs-real-monthly-bill",
-    title: "Your Real Shopify Bill Is $1,000/Month (Here Is the Breakdown)",
+    title: "Shopify App Costs 2026: Your Real Monthly Bill Is Higher Than You Think",
     excerpt: "You signed up for $39/month. Then came Klaviyo, Loop Returns, Okendo, ReCharge, Smile.io. Here is the full breakdown of what Shopify actually costs in apps and how to cut it by $864/month.",
     category: "Shopify",
     readTime: "10 min",
@@ -410,7 +410,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "wordpress-vs-nextjs",
-    title: "WordPress vs Next.js: Real Speed, Cost, and SEO Comparison (2026)",
+    title: "WordPress vs Next.js in 2026: Which Is Actually Better for Business?",
     excerpt: "WordPress powers 43% of the internet. Next.js powers the fastest 1%. Here's an honest comparison of speed, SEO, cost, and security. and exactly when each one makes sense for your business.",
     category: "Comparison",
     readTime: "11 min",
@@ -490,7 +490,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "why-we-chose-nextjs-over-wordpress-2026",
-    title: "Why We Stopped Building WordPress Sites in 2026",
+    title: "Why We Chose Next.js Over WordPress in 2026 (With Client Results)",
     excerpt: "In 2023 we still built in WordPress. By mid-2024 we stopped completely. Here's the data, the client stories, and the 7 technical reasons we made the switch permanent.",
     category: "Comparison",
     readTime: "11 min",
@@ -510,7 +510,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "wordpress-vs-custom-code-real-cost-3-years",
-    title: "WordPress vs Custom Code: The Real 3-Year Cost (With Numbers)",
+    title: "WordPress vs Custom Code: 3-Year Cost Comparison With Real Numbers (2026)",
     excerpt: "Everyone says WordPress is cheap. They're not counting hosting, plugins, maintenance, security, and lost revenue. We ran the numbers. The results will change how you think about your website.",
     category: "Cost Analysis",
     readTime: "12 min",
@@ -581,7 +581,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "wordpress-ai-security-risk-2026",
-    title: "WordPress AI Plugins Exposed 100K+ Sites in 2026",
+    title: "WordPress AI Security Risk 2026: 100K+ Sites Exposed Through Plugins",
     excerpt: "Is WordPress AI safe for business? WordPress 6.9 AI features exposed 100K+ sites through plugin security flaws. What you need to know to protect your site in 2026.",
     category: "Security",
     readTime: "9 min",
@@ -654,7 +654,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "elementor-kills-seo",
-    title: "Elementor Sites Average 38/100 PageSpeed (We Audited 500 Sites)",
+    title: "Elementor Kills Your SEO: We Audited 500 Sites (Average Score: 38/100)",
     excerpt: "The average Elementor site scores 38/100 on mobile PageSpeed. We audited 500 sites to find out exactly how much traffic and revenue page builders are costing business owners.",
     category: "Performance",
     readTime: "6 min",
@@ -673,7 +673,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "wordpress-plugins-destroy-speed",
-    title: "WordPress Plugins Are Costing You Customers (Speed Data Inside)",
+    title: "WordPress Plugins Are Destroying Your Speed: 61% Slower per 10 Plugins (2026)",
     excerpt: "Most WordPress sites with 30+ plugins score 35/100 on mobile PageSpeed. See how to calculate the exact revenue you're losing, and what to do about it.",
     category: "Performance",
     readTime: "10 min",
@@ -704,7 +704,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "shopify-plus-still-slow",
-    title: "Shopify Plus Still Slow? Why $2,300/Month Does Not Buy Speed",
+    title: "Shopify Plus Still Slow in 2026? Why $2,300/Month Does Not Fix Speed",
     excerpt: "53% of mobile visitors leave before your Shopify Plus store loads. We break down the Liquid template problem and the headless solution that actually works.",
     category: "E-Commerce",
     readTime: "9 min",
@@ -766,7 +766,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "shopify-slow-losing-sales",
-    title: "Slow Shopify Store? You Are Losing $75K/Year in Sales",
+    title: "Slow Shopify Store? How Much Revenue You Are Losing in 2026 (With Math)",
     excerpt: "Every second your store takes to load costs you customers. We calculated exactly how much.",
     category: "E-Commerce",
     readTime: "8 min",
@@ -785,7 +785,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "shopify-conversion-rate-speed-fix",
-    title: "Low Shopify Conversion Rate? Your Speed Is the Problem",
+    title: "Low Shopify Conversion Rate? How Speed Kills Your Sales (Fix Guide, 2026)",
     excerpt: "Your conversion rate is low because visitors leave before your page loads. The fix is simpler than you think.",
     category: "Conversion",
     readTime: "9 min",

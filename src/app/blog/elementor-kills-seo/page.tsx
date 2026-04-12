@@ -16,12 +16,12 @@ const SEORankingAnimation = dynamic(() => import("@/components/blog/SEORankingAn
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Elementor Sites Average 38/100 PageSpeed (We Audited 500 Sites)",
+    title: "Elementor Kills Your SEO: We Audited 500 Sites (Average Score: 38/100)",
     description: "The average Elementor site scores 38/100 on mobile PageSpeed. We audited 500 sites to measure exactly how much traffic and revenue page builders cost business owners.",
     alternates: { canonical: "/blog/elementor-kills-seo" },
     keywords: ["elementor seo", "elementor slow", "elementor kills rankings", "page builder seo impact", "elementor pagespeed score", "wordpress page builder performance"],
     openGraph: {
-        title: "Elementor Sites Average 38/100 PageSpeed (We Audited 500 Sites)",
+        title: "Elementor Kills Your SEO: We Audited 500 Sites (Average Score: 38/100)",
         description: "The average Elementor site scores 38/100 on mobile PageSpeed. We audited 500 sites to measure exactly how much traffic and revenue page builders cost business owners.",
         type: "article",
         publishedTime: "2025-12-28",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Elementor Sites Average 38/100 PageSpeed (We Audited 500 Sites)",
+        title: "Elementor Kills Your SEO: We Audited 500 Sites (Average Score: 38/100)",
         description: "The average Elementor site scores 38/100 on mobile PageSpeed. We audited 500 sites to measure exactly how much traffic and revenue page builders cost business owners.",
     },
 };
@@ -42,7 +42,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/elementor-kills-seo#article",
-            "headline": "Elementor Sites Average 38/100 PageSpeed (We Audited 500 Sites)",
+            "headline": "Elementor Kills Your SEO: We Audited 500 Sites (Average Score: 38/100)",
             "description": "The average Elementor site scores 38/100 on mobile PageSpeed. We audited 500 sites to measure exactly how much traffic and revenue page builders cost business owners.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2025-12-28T00:00:00-05:00",
@@ -98,7 +98,7 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/elementor-kills-seo#webpage",
             "url": "https://www.pandacodegen.com/blog/elementor-kills-seo",
-            "name": "Elementor Sites Average 38/100 PageSpeed (We Audited 500 Sites)",
+            "name": "Elementor Kills Your SEO: We Audited 500 Sites (Average Score: 38/100)",
             "description": "The average Elementor site scores 38/100 on mobile PageSpeed. We audited 500 sites to measure exactly how much traffic and revenue page builders cost business owners.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
@@ -160,9 +160,9 @@ export default function ElementorKillsSEOPage() {
                             Performance · SEO
                         </div>
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight text-charcoal">
-                            Is Elementor{" "}
-                            <span className="font-serif italic text-cognac">Killing Your Google Rankings?</span>{" "}
-                            The Results Are Brutal.
+                            Elementor Kills Your SEO:{" "}
+                            <span className="font-serif italic text-cognac">We Audited 500 Sites</span>{" "}
+                            (Average Score: 38/100)
                         </h1>
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
                             Based on our experience auditing dozens of Elementor sites, we measured how page builders affect performance and rankings. Here&apos;s what the data revealed and what alternatives are available.

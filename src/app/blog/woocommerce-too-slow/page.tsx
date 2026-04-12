@@ -16,8 +16,8 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: { absolute: "WooCommerce Too Slow 2026? Stores Score 30 to 55 on Mobile" },
-    description: "WooCommerce stores score 30 to 55 on mobile PageSpeed. The cause is architectural, not plugins. Here is what actually breaks your speed and the only fix that works.",
+    title: { absolute: "WooCommerce Too Slow? How to Speed It Up in 2026 (and When to Migrate)" },
+    description: "WooCommerce stores score 30 to 55 on mobile PageSpeed. Here are the optimizations that help, why the speed ceiling exists, and when a headless rebuild makes more sense than another plugin.",
     alternates: {
         canonical: "/blog/woocommerce-too-slow",
     },
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
         "slow woocommerce store"
     ],
     openGraph: {
-        title: "WooCommerce Too Slow 2026? Stores Score 30 to 55 on Mobile",
-        description: "WooCommerce stores score 30 to 55 on mobile PageSpeed. The cause is architectural, not plugins. Here is what actually breaks your speed and the only fix that works.",
+        title: "WooCommerce Too Slow? How to Speed It Up in 2026 (and When to Migrate)",
+        description: "WooCommerce stores score 30 to 55 on mobile PageSpeed. Here are the optimizations that help, why the speed ceiling exists, and when a headless rebuild makes more sense than another plugin.",
         type: "article",
         publishedTime: "2026-03-25",
         modifiedTime: "2026-03-25",
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "WooCommerce Too Slow 2026? Stores Score 30 to 55 on Mobile",
-        description: "WooCommerce stores score 30 to 55 on mobile PageSpeed. The cause is architectural, not plugins. Here is what actually breaks your speed and the only fix that works.",
+        title: "WooCommerce Too Slow? How to Speed It Up in 2026 (and When to Migrate)",
+        description: "WooCommerce stores score 30 to 55 on mobile PageSpeed. Here are the optimizations that help, why the speed ceiling exists, and when a headless rebuild makes more sense than another plugin.",
     },
 };
 
@@ -56,11 +56,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/woocommerce-too-slow#article",
-            "headline": "WooCommerce Too Slow 2026? Stores Score 30 to 55 on Mobile",
-            "description": "WooCommerce stores score 30 to 55 on mobile PageSpeed. The cause is architectural, not plugins. Here is what actually breaks your speed and the only fix that works.",
+            "headline": "WooCommerce Too Slow? How to Speed It Up in 2026 (and When to Migrate)",
+            "description": "WooCommerce stores score 30 to 55 on mobile PageSpeed. Here are the optimizations that help, why the speed ceiling exists, and when a headless rebuild makes more sense than another plugin.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-25T00:00:00-05:00",
-            "dateModified": "2026-03-25T00:00:00-05:00",
+            "dateModified": "2026-04-13T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -128,7 +128,7 @@ const articleSchema = {
             "description": "WooCommerce stores average 30 to 55 on Google PageSpeed Mobile. The root cause is architectural. Here is exactly what is breaking your store speed and what permanently fixes it.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-03-25T00:00:00-05:00",
-            "dateModified": "2026-03-25T00:00:00-05:00",
+            "dateModified": "2026-04-13T00:00:00-05:00",
             "inLanguage": "en-US"
         },
         {
@@ -174,9 +174,9 @@ export default function WooCommerceTooSlowPage() {
                             <ShoppingCart className="w-3 h-3" /> WooCommerce · Speed
                         </div>
                         <h1 className="text-4xl md:text-5xl font-bold text-charcoal leading-tight mb-4">
-                            WooCommerce{" "}
-                            <span className="font-serif italic text-cognac">Too Slow?</span>{" "}
-                            Here&apos;s What&apos;s Actually Breaking Your Store
+                            WooCommerce Too Slow?{" "}
+                            <span className="font-serif italic text-cognac">How to Speed It Up</span>{" "}
+                            in 2026 (and When to Migrate)
                         </h1>
                         <p className="text-lg text-stone-500 leading-relaxed mb-6">
                             The average WooCommerce store scores 30 to 55 on Google PageSpeed Mobile. Your theme is not the problem. Your images are not the problem. The architecture is.

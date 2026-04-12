@@ -16,13 +16,13 @@ const SalesImpactAnimation = dynamic(() => import("@/components/blog/SalesImpact
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Shopify Plus Still Slow? Why $2,300/Month Does Not Buy Speed",
-    description: "You pay $2,300/month for Shopify Plus but your store still fails Core Web Vitals. 53% of mobile visitors leave before it loads. Here is why and the fix that works.",
+    title: "Shopify Plus Still Slow in 2026? Why $2,300/Month Does Not Fix Speed",
+    description: "You upgraded to Shopify Plus for speed. Still scoring 50 on mobile. You hired a speed agency. Back to 50 after the next app install. Here is why the upgrade loop never ends and what actually breaks it.",
     alternates: { canonical: "/blog/shopify-plus-still-slow" },
     keywords: ["shopify plus slow", "shopify plus core web vitals", "shopify plus speed", "shopify plus performance", "shopify plus liquid template", "shopify plus headless"],
     openGraph: {
-        title: "Shopify Plus Still Slow? Why $2,300/Month Does Not Buy Speed",
-        description: "You pay $2,300/month for Shopify Plus but your store still fails Core Web Vitals. 53% of mobile visitors leave before it loads. Here is why and the fix that works.",
+        title: "Shopify Plus Still Slow in 2026? Why $2,300/Month Does Not Fix Speed",
+        description: "You upgraded to Shopify Plus for speed. Still scoring 50 on mobile. You hired a speed agency. Back to 50 after the next app install. Here is why the upgrade loop never ends and what actually breaks it.",
         type: "article",
         publishedTime: "2026-02-06",
         authors: ["Hassan"],
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Shopify Plus Still Slow? Why $2,300/Month Does Not Buy Speed",
-        description: "You pay $2,300/month for Shopify Plus but your store still fails Core Web Vitals. 53% of mobile visitors leave before it loads. Here is why and the fix that works.",
+        title: "Shopify Plus Still Slow in 2026? Why $2,300/Month Does Not Fix Speed",
+        description: "You upgraded to Shopify Plus for speed. Still scoring 50 on mobile. You hired a speed agency. Back to 50 after the next app install. Here is why the upgrade loop never ends and what actually breaks it.",
     },
 };
 
@@ -42,11 +42,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/shopify-plus-still-slow#article",
-            "headline": "Shopify Plus Still Slow? Why $2,300/Month Does Not Buy Speed",
-            "description": "You pay $2,300/month for Shopify Plus but your store still fails Core Web Vitals. 53% of mobile visitors leave before it loads. Here is why and the fix that works.",
+            "headline": "Shopify Plus Still Slow in 2026? Why $2,300/Month Does Not Fix Speed",
+            "description": "You upgraded to Shopify Plus for speed. Still scoring 50 on mobile. You hired a speed agency. Back to 50 after the next app install. Here is why the upgrade loop never ends and what actually breaks it.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-06T00:00:00-05:00",
-            "dateModified": "2026-03-10T00:00:00-05:00",
+            "dateModified": "2026-04-13T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -105,7 +105,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-06T00:00:00-05:00",
-            "dateModified": "2026-03-10T00:00:00-05:00",
+            "dateModified": "2026-04-13T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/shopify-plus-still-slow#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -162,9 +162,8 @@ export default function ShopifyPlusStillSlowPage() {
                             E-Commerce · Shopify Plus
                         </div>
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight text-charcoal">
-                            Shopify Plus Still Slow?{" "}
-                            <span className="font-serif italic text-cognac">Why $2,300/mo Doesn&apos;t Fix</span>{" "}
-                            Your Core Web Vitals
+                            Shopify Plus Still Slow in 2026?{" "}
+                            <span className="font-serif italic text-cognac">Why $2,300/Month Does Not Fix Speed</span>
                         </h1>
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
                             Shopify Plus gives you powerful backend features, but the speed ceiling is still there. This guide explains what causes it and how to break through it.

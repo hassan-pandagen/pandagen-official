@@ -17,14 +17,14 @@ const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "Shopify Dawn Theme Slow? How We Fixed It From 55 to 100 (2026)",
-    description: "Dawn scores 55 to 65 on mobile PageSpeed even with zero apps. Here are the partial fixes that get you to 75, why that ceiling exists, and the one approach that breaks past 95.",
+    description: "You optimize Dawn to 75. Then you add one app and it drops to 50 again. Here is why that loop never ends, the fixes that help, and the one approach that stays at 95+ no matter how many tools you add.",
     alternates: {
         canonical: "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow",
     },
     keywords: ["shopify dawn theme slow", "shopify dawn theme speed", "shopify 2.0 performance", "why is shopify slow", "shopify pagespeed score", "shopify speed optimization", "shopify dawn pagespeed"],
     openGraph: {
         title: "Shopify Dawn Theme Slow? How We Fixed It From 55 to 100 (2026)",
-        description: "Dawn scores 55 to 65 on mobile PageSpeed even with zero apps. Here are the partial fixes that get you to 75, why that ceiling exists, and the one approach that breaks past 95.",
+        description: "You optimize Dawn to 75. Then you add one app and it drops to 50 again. Here is why that loop never ends, the fixes that help, and the one approach that stays at 95+ no matter how many tools you add.",
         type: "article",
         publishedTime: "2026-03-07",
         authors: ["Hassan"],
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Shopify Dawn Theme Slow? How We Fixed It From 55 to 100 (2026)",
-        description: "Dawn scores 55 to 65 on mobile PageSpeed even with zero apps. Here are the partial fixes that get you to 75, why that ceiling exists, and the one approach that breaks past 95.",
+        description: "You optimize Dawn to 75. Then you add one app and it drops to 50 again. Here is why that loop never ends, the fixes that help, and the one approach that stays at 95+ no matter how many tools you add.",
     },
 };
 
@@ -45,7 +45,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow#article",
             "headline": "Shopify Dawn Theme Slow? How We Fixed It From 55 to 100 (2026)",
-            "description": "Dawn scores 55 to 65 on mobile PageSpeed even with zero apps. Here are the partial fixes that get you to 75, why that ceiling exists, and the one approach that breaks past 95.",
+            "description": "You optimize Dawn to 75. Then you add one app and it drops to 50 again. Here is why that loop never ends, the fixes that help, and the one approach that stays at 95+ no matter how many tools you add.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-07T00:00:00-05:00",
             "dateModified": "2026-04-13T00:00:00-05:00",

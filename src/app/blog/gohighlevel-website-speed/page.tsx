@@ -16,8 +16,8 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: { absolute: "GoHighLevel Website Speed 2026: Why Sites Score 20 to 45" },
-    description: "GoHighLevel sites score 20 to 45 on Google PageSpeed Mobile. Here is exactly why GHL is slow, what it costs you in SEO, and how agencies are fixing it.",
+    title: { absolute: "GoHighLevel Sites Score 20 to 45 on PageSpeed: How to Fix It (2026)" },
+    description: "GoHighLevel sites score 20 to 45 on Google PageSpeed Mobile. Here is why GHL is slow, what it costs you in leads, and how to fix it without leaving the platform.",
     alternates: {
         canonical: "/blog/gohighlevel-website-speed",
     },
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
         "ghl custom website"
     ],
     openGraph: {
-        title: "GoHighLevel Website Speed 2026: Why Sites Score 20 to 45",
-        description: "GoHighLevel sites score 20 to 45 on Google PageSpeed Mobile. Here is exactly why GHL is slow, what it costs you in SEO, and how agencies are fixing it.",
+        title: "GoHighLevel Sites Score 20 to 45 on PageSpeed: How to Fix It (2026)",
+        description: "GoHighLevel sites score 20 to 45 on Google PageSpeed Mobile. Here is why GHL is slow, what it costs you in leads, and how to fix it without leaving the platform.",
         type: "article",
         publishedTime: "2026-03-22",
         modifiedTime: "2026-03-22",
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "GoHighLevel Website Speed 2026: Why Sites Score 20 to 45",
-        description: "GoHighLevel sites score 20 to 45 on Google PageSpeed Mobile. Here is exactly why GHL is slow, what it costs you in SEO, and how agencies are fixing it.",
+        title: "GoHighLevel Sites Score 20 to 45 on PageSpeed: How to Fix It (2026)",
+        description: "GoHighLevel sites score 20 to 45 on Google PageSpeed Mobile. Here is why GHL is slow, what it costs you in leads, and how to fix it without leaving the platform.",
     },
 };
 
@@ -56,11 +56,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/gohighlevel-website-speed#article",
-            "headline": "GoHighLevel Website Speed 2026: Why Sites Score 20 to 45",
-            "description": "GoHighLevel sites score 20 to 45 on Google PageSpeed Mobile. Here is exactly why GHL is slow, what it costs you in SEO, and how agencies are fixing it.",
+            "headline": "GoHighLevel Sites Score 20 to 45 on PageSpeed: How to Fix It (2026)",
+            "description": "GoHighLevel sites score 20 to 45 on Google PageSpeed Mobile. Here is why GHL is slow, what it costs you in leads, and how to fix it without leaving the platform.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-22T00:00:00-05:00",
-            "dateModified": "2026-03-22T00:00:00-05:00",
+            "dateModified": "2026-04-13T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -129,7 +129,7 @@ const articleSchema = {
             "description": "GHL sites score 20 to 45 on PageSpeed Mobile. Why the platform is slow, what it costs in rankings and conversions, and how to fix it.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-03-22T00:00:00-05:00",
-            "dateModified": "2026-03-22T00:00:00-05:00",
+            "dateModified": "2026-04-13T00:00:00-05:00",
             "inLanguage": "en-US"
         },
         {
@@ -175,8 +175,8 @@ export default function GHLWebsiteSpeedPage() {
                             <Zap className="w-3 h-3" /> Performance
                         </div>
                         <h1 className="text-4xl md:text-5xl font-bold text-charcoal leading-tight mb-4">
-                            GoHighLevel Website Speed: Why GHL Sites Are{" "}
-                            <span className="font-serif italic text-cognac">Slow in 2026</span>
+                            GoHighLevel Sites Score 20 to 45:{" "}
+                            <span className="font-serif italic text-cognac">How to Fix It</span>
                         </h1>
                         <p className="text-lg text-stone-600 leading-relaxed mb-6" data-speakable="true">
                             GoHighLevel is an excellent CRM, automation, and sales funnel platform. Its website builder is a different story. Test any standard GHL site on Google PageSpeed Insights and the mobile score is typically well below what Google rewards in search rankings. This post explains why that happens, what it costs you in leads, and what the fix actually looks like.
