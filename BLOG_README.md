@@ -1,7 +1,7 @@
 # PandaCodeGen Blog — Single Source of Truth
 
 > This is the only blog reference document. PRE_PUBLISH_CHECKLIST.md has been deleted. All rules live here.
-> Last updated: April 13, 2026 — 39 live posts
+> Last updated: April 13, 2026 — 40 live posts
 
 ---
 
@@ -553,49 +553,50 @@ Examples:
 
 ---
 
-## Part 10 — Existing Blog Posts (39 total as of Apr 9, 2026)
+## Part 10 — Existing Blog Posts (40 total as of Apr 13, 2026)
 
 | # | Slug | Title | Category | Status |
 |---|------|-------|----------|--------|
-| 01 | `wordpress-vs-nextjs` | WordPress vs Next.js: Which Is Actually Better for Your Business? | Comparison | Live |
+| 01 | `wordpress-vs-nextjs` | WordPress vs Next.js in 2026: Which Is Actually Better for Business? | Comparison | Live |
 | 02 | `how-website-speed-affects-seo` | How Website Speed Affects SEO Rankings in 2026 (With Real Data) | SEO | Live |
-| 03 | `shopify-dawn-theme-slow` | Shopify Dawn Theme Slow? Here's Exactly Why (and the Real Fix) | Shopify | Live |
+| 03 | `shopify-dawn-theme-slow` | Shopify Dawn Theme Slow? How We Fixed It From 55 to 100 (2026) | Shopify | Live |
 | 04 | `wordpress-killer` | Why WordPress Is Dying (And What Smart Businesses Are Doing Instead) | WordPress | Live |
-| 05 | `shopify-headless` | Why Shopify Headless Is the Future of E-Commerce (And How to Get There) | Shopify | Live |
-| 06 | `wordpress-plugins-destroy-speed` | WordPress Plugins Are Destroying Your Site Speed (Here's the Proof) | WordPress | Live |
-| 07 | `elementor-kills-seo` | Elementor Is Killing Your SEO Score. Here's the Data | WordPress | Live |
-| 08 | `shopify-plus-still-slow` | Shopify Plus Is Still Slow. Here's Why $2,000/Month Doesn't Buy You Speed | Shopify | Live |
-| 09 | `shopify-conversion-rate-speed-fix` | How Site Speed Fixes Shopify Conversion Rates (Real Data) | Shopify | Live |
-| 10 | `wordpress-traffic-drop-speed` | Why Your WordPress Site Traffic Is Dropping (Speed Is Killing You) | WordPress | Live |
-| 11 | `wordpress-ai-security-risk-2026` | WordPress AI Security Risk 2026: Why Plugin Vulnerabilities Are Getting Worse | Security | Live |
-| 12 | `how-to-fix-slow-wordpress` | How to Fix a Slow WordPress Site (The Real Answer) | WordPress | Live |
-| 13 | `how-to-achieve-100-pagespeed` | How to Achieve 100/100 PageSpeed Score: Complete Next.js Guide | Performance | Live |
-| 14 | `shopify-slow-losing-sales` | Your Slow Shopify Store Is Losing You Sales Every Day | Shopify | Live |
-| 15 | `why-competitor-outranks-you` | Why Your Competitor Outranks You (It's Not Their Content) | SEO | Live |
-| 16 | `google-universal-commerce-protocol-what-it-means-for-your-store` | Google Universal Commerce Protocol: What It Means for Your Store | E-Commerce | Live |
-| 17 | `for-agencies-offer-custom-web-development` | For Agencies: How to Offer Custom Web Development Without Hiring a Dev Team | Agency | Live |
-| 18 | `why-we-chose-nextjs-over-wordpress-2026` | Why We Chose Next.js Over WordPress for Every New Client in 2026 | Comparison | Live |
-| 19 | `wordpress-vs-custom-code-real-cost-3-years` | WordPress vs Custom Code: The Real Cost Over 3 Years | Comparison | Live |
-| 20 | `how-to-migrate-wordpress-to-nextjs` | How to Migrate WordPress to Next.js Without Losing SEO | Tutorial | Live |
+| 05 | `shopify-headless` | Shopify Headless: We Cut Load Time From 4s to 0.8s | Shopify | Live |
+| 06 | `wordpress-plugins-destroy-speed` | WordPress Plugins Are Destroying Your Speed: 61% Slower per 10 Plugins (2026) | WordPress | Live |
+| 07 | `elementor-kills-seo` | Elementor Kills Your SEO: We Audited 500 Sites (Average Score: 38/100) | WordPress | Live |
+| 08 | `shopify-plus-still-slow` | Shopify Plus Still Slow in 2026? Why $2,300/Month Does Not Fix Speed | Shopify | Live |
+| 09 | `shopify-conversion-rate-speed-fix` | Low Shopify Conversion Rate? How Speed Kills Your Sales (Fix Guide, 2026) | Shopify | Live |
+| 10 | `wordpress-traffic-drop-speed` | WordPress Traffic Dropping? Speed Is Killing Your Rankings | WordPress | Live |
+| 11 | `wordpress-ai-security-risk-2026` | WordPress AI Security Risk 2026: 100K+ Sites Exposed Through Plugins | Security | Live |
+| 12 | `how-to-fix-slow-wordpress` | How to Fix a Slow WordPress Site (8 Methods Ranked by Impact) | WordPress | Live |
+| 13 | `how-to-achieve-100-pagespeed` | How to Hit 100/100 PageSpeed Score (Our Exact 8-Step Process) | Performance | Live |
+| 14 | `shopify-slow-losing-sales` | Slow Shopify Store? How Much Revenue You Are Losing in 2026 (With Math) | Shopify | Live |
+| 15 | `why-competitor-outranks-you` | Why Your Competitor Outranks You (It Is Not Their Content) | SEO | Live |
+| 16 | `google-universal-commerce-protocol-what-it-means-for-your-store` | Google UCP: Customers Can Now Buy Without Visiting Your Site | E-Commerce | Live |
+| 17 | `for-agencies-offer-custom-web-development` | White Label Web Development: Custom Builds Without a Dev Team | Agency | Live |
+| 18 | `why-we-chose-nextjs-over-wordpress-2026` | Why We Chose Next.js Over WordPress in 2026 (With Client Results) | Comparison | Live |
+| 19 | `wordpress-vs-custom-code-real-cost-3-years` | WordPress vs Custom Code: 3-Year Cost Comparison With Real Numbers (2026) | Comparison | Live |
+| 20 | `how-to-migrate-wordpress-to-nextjs` | WordPress to Next.js Migration: Step-by-Step Without Losing SEO (2026) | Tutorial | Live |
 | 21 | `nextjs-hosting-zero-cost` | Start Free, Scale to $20/mo: How We Host Client Sites on Vercel | Performance | Live |
-| 22 | `what-is-headless-commerce` | What Is Headless Commerce? A Plain-English Guide for Store Owners | E-Commerce | Live |
-| 23 | `shopify-vs-custom-website` | Shopify vs Custom Website: 5 Signs You Have Outgrown Shopify (2026) | Comparison | Live |
-| 24 | `webflow-vs-custom-website` | Webflow vs Custom Website: Real Numbers Behind the Comparison 2026 | Webflow | Live |
+| 22 | `what-is-headless-commerce` | What Is Headless Commerce? Plain-English Guide for Store Owners | E-Commerce | Live |
+| 23 | `shopify-vs-custom-website` | Shopify vs Custom Website 2026: 5 Signs You Have Outgrown It | Comparison | Live |
+| 24 | `webflow-vs-custom-website` | Webflow vs Custom Website 2026: Real Cost, Speed, and SEO Comparison | Webflow | Live |
 | 25 | `webflow-migration-cost` | Webflow Migration Cost 2026: Agencies Charge $30K. We Charge $500. | Webflow | Live |
-| 26 | `webflow-true-cost` | Webflow Costs More Than $29/Month: The Real Price in 2026 | Webflow | Live |
-| 27 | `woocommerce-too-slow` | WooCommerce Too Slow in 2026? Stores Score 30 to 55 on Mobile PageSpeed | Performance | Live |
-| 28 | `squarespace-too-slow` | Squarespace Too Slow? Sites Score 30/100 on Mobile PageSpeed in 2026 | Performance | Live |
+| 26 | `webflow-true-cost` | Webflow Pricing 2026: Every Hidden Fee Explained ($29 Is Just the Start) | Webflow | Live |
+| 27 | `woocommerce-too-slow` | WooCommerce Too Slow? How to Speed It Up in 2026 (and When to Migrate) | Performance | Live |
+| 28 | `squarespace-too-slow` | Squarespace Too Slow in 2026? Why Businesses Are Migrating Away | Performance | Live |
 | 29 | `google-march-2026-update` | Google's March 2026 Update Rewards Fast Sites: What It Means for Your Business | SEO | Live |
-| 30 | `gohighlevel-migration` | GoHighLevel Website Migration: How to Get a Fast Site Without Leaving GHL | Performance | Live |
+| 30 | `gohighlevel-migration` | GoHighLevel Website Migration: How to Get a Fast Site Without Leaving GHL (2026) | Performance | Live |
 | 31 | `cloudflare-emdash-wordpress-replacement` | Cloudflare Built a WordPress Replacement (2026) | Security | Live |
-| 32 | `leaving-webflow-2026` | Leaving Webflow in 2026: Real Costs, Cart Failures, and What We Migrated To | Webflow | Live |
+| 32 | `leaving-webflow-2026` | Leaving Webflow in 2026: What Actually Happened After We Migrated | Webflow | Live |
 | 33 | `wix-too-slow` | Wix Website Too Slow? 48% of Wix Sites Fail Core Web Vitals in 2026 | Performance | Live |
-| 34 | `gohighlevel-website-speed` | GoHighLevel Sites Score 20 to 45 on PageSpeed (Here Is Why) | Performance | Live |
-| 35 | `shopify-app-costs-real-monthly-bill` | Shopify App Costs: The Real Monthly Bill | Shopify | Live |
-| 36 | `wordpress-migration-cost` | WordPress Migration Cost 2026 | WordPress | Live |
-| 37 | `top-custom-web-development-agencies-usa-2026` | Top Custom Web Development Agencies USA 2026 | Agency | Live |
+| 34 | `gohighlevel-website-speed` | GoHighLevel Sites Score 20 to 45 on PageSpeed: How to Fix It (2026) | Performance | Live |
+| 35 | `shopify-app-costs-real-monthly-bill` | Shopify App Costs 2026: Your Real Monthly Bill Is Higher Than You Think | Shopify | Live |
+| 36 | `wordpress-migration-cost` | WordPress Migration Cost 2026: Full Pricing by Site Size and Type | WordPress | Live |
+| 37 | `top-custom-web-development-agencies-usa-2026` | Top 10 Custom Web Development Agencies in the USA: 2026 Honest Review | Agency | Live |
 | 38 | `divi-theme-slow` | Divi Theme Slow in 2026? Real Scores, Real Costs, and the Only Fix That Works | WordPress | Live |
-| 39 | `squarespace-migration-cost` | Squarespace Migration Cost 2026 | Squarespace | Live |
+| 39 | `squarespace-migration-cost` | Squarespace Migration Cost in 2026: What You Will Actually Pay | Squarespace | Live |
+| 40 | `wix-vs-custom-website` | Wix vs Custom Website 2026: When Wix Stops Working for Growing Businesses | Comparison | Live |
 
 ---
 
@@ -606,7 +607,7 @@ Examples:
 | Priority | Slug | Title | Notes |
 |----------|------|-------|-------|
 | ~~High~~ | ~~`shopify-app-costs-real-monthly-bill`~~ | ~~Shopify App Costs: The Real Monthly Bill~~ | DONE (post #35) |
-| High | `wix-vs-custom-website` | Wix vs Custom Website: When Wix Stops Working for You | 52 pain points researched. Completes Wix cluster. Sunday Apr 13. |
+| ~~High~~ | ~~`wix-vs-custom-website`~~ | ~~Wix vs Custom Website: When Wix Stops Working for You~~ | DONE (post #40) |
 | High | `core-web-vitals-explained` | Core Web Vitals Explained for Business Owners (Not Developers) | No overlap with Google March 2026 post (confirmed). Business-owner angle nobody else does. |
 | High | `squarespace-vs-custom-website` | Squarespace vs Custom Website 2026 | Focus on features/flexibility/scalability (speed+cost covered in other 2 posts). Completes Squarespace cluster. |
 

@@ -23,6 +23,27 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "wix-vs-custom-website",
+    title: "Wix vs Custom Website 2026: When Wix Stops Working for Growing Businesses",
+    excerpt: "You added a booking app. Then an SEO plugin. Then a form tool. Your Wix site still scores 35 on mobile and you cannot export your content. Here is when custom code makes sense and when Wix is still fine.",
+    category: "Comparison",
+    readTime: "12 min",
+    date: "Apr 13",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: true,
+    illustrationType: 'webflow',
+    lastModified: "2026-04-13",
+    faqs: [
+      { question: "Can I export my Wix website to another platform?", answer: "No. Wix does not offer a content export feature. Your pages, images, blog posts, and design are locked inside the Wix platform. If you want to leave, the content must be manually migrated or programmatically scraped and rebuilt on the new platform. This is the single biggest reason businesses feel trapped on Wix. A professional migration handles this extraction as part of the project." },
+      { question: "How much does it cost to migrate from Wix to a custom website?", answer: "A Wix to custom Next.js migration costs $3,500 to $8,000 for most business sites (5 to 30 pages). The cost depends on page count, whether you have a blog, booking integrations, or e-commerce. PandaCodeGen offers a founder's rate of $500 for qualifying sites under 50 pages. The migration includes full content transfer, 301 redirects, SEO preservation, and a guaranteed 95+ PageSpeed score." },
+      { question: "Will I lose my Google rankings if I leave Wix?", answer: "Not if the migration is handled correctly. The critical steps are mapping every URL with 301 redirects, preserving all title tags and meta descriptions, maintaining canonical URLs, and submitting a new sitemap to Google Search Console on launch day. When done properly, rankings hold steady within 30 days and typically improve within 60 to 90 days because the new site loads 3 to 5 times faster, which Google rewards through Core Web Vitals." },
+      { question: "Is Wix good enough for a small business website in 2026?", answer: "For a personal portfolio, hobby site, or very small business with under 1,000 monthly visitors and no dependency on Google search traffic, Wix is fine. The problems start when your business depends on organic search rankings, when you need booking or e-commerce features that work reliably, or when your monthly Wix bill (plan plus apps plus add-ons) exceeds $100. At that point, a custom coded site is cheaper over 3 years and performs dramatically better." },
+      { question: "Why is my Wix website so slow even after optimizing images?", answer: "Wix loads 200 to 400KB of platform JavaScript on every page regardless of your content or settings. This JavaScript powers the Wix editor, analytics, and platform features. You cannot remove it. Even with perfectly optimized images, this mandatory JavaScript bundle keeps your PageSpeed score between 35 and 55 on mobile. Third-party apps from the Wix App Market add even more JavaScript on top. The speed ceiling is architectural, not a configuration problem." },
+      { question: "What is the difference between a Wix site and a custom coded website?", answer: "A Wix site runs on Wix servers using Wix code that you cannot access or modify. A custom coded website is built with a framework like Next.js, hosted wherever you choose (Vercel, AWS, Cloudflare), and the source code belongs to you. Custom sites score 95 to 100 on PageSpeed versus 35 to 55 for Wix. Custom sites have no monthly platform fees, no app marketplace dependencies, and no content lock-in. The trade-off is higher upfront cost ($3,500 to $8,000 versus $200 to $500 for Wix setup) but lower total cost over 3 years." }
+    ]
+  },
+  {
     id: "squarespace-migration-cost",
     title: "Squarespace Migration Cost in 2026: What You Will Actually Pay",
     excerpt: "Squarespace looks affordable at $23 a month. Add domain renewal, email hosting, and extensions and the real 3-year cost is $1,500 to $5,500. Here is the full migration cost breakdown by site size and when it pays for itself.",
