@@ -18,8 +18,8 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Wix vs Custom Website 2026: When Wix Stops Working for Growing Businesses",
-    description: "You added a booking app. Then an SEO plugin. Then a form tool. Your Wix site still scores 35 on mobile and you cannot export your content. Here is when custom code makes sense and when Wix is still fine.",
+    title: "Wix vs Custom Website 2026: Which Is Better for Your Business?",
+    description: "Wix scores 35 to 55 on mobile PageSpeed. Custom sites score 95 to 100. But Wix is free to start and easy to use. Here is the real cost, speed, and SEO comparison with honest advice on when to stay and when to switch.",
     alternates: {
         canonical: "/blog/wix-vs-custom-website",
     },
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
         "wix pagespeed score"
     ],
     openGraph: {
-        title: "Wix vs Custom Website 2026: When Wix Stops Working for Growing Businesses",
+        title: "Wix vs Custom Website 2026: Which Is Better for Your Business?",
         description: "You added a booking app. Then an SEO plugin. Then a form tool. Your Wix site still scores 35 on mobile and you cannot export your content. Here is when custom code makes sense.",
         type: "article",
         publishedTime: "2026-04-13",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Wix vs Custom Website 2026: When Wix Stops Working for Growing Businesses",
+        title: "Wix vs Custom Website 2026: Which Is Better for Your Business?",
         description: "You added a booking app. Then an SEO plugin. Then a form tool. Your Wix site still scores 35 on mobile and you cannot export your content. Here is when custom code makes sense.",
     },
 };
@@ -57,8 +57,8 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wix-vs-custom-website#article",
-            "headline": "Wix vs Custom Website 2026: When Wix Stops Working for Growing Businesses",
-            "description": "You added a booking app. Then an SEO plugin. Then a form tool. Your Wix site still scores 35 on mobile and you cannot export your content. Here is when custom code makes sense and when Wix is still fine.",
+            "headline": "Wix vs Custom Website 2026: Which Is Better for Your Business?",
+            "description": "Wix scores 35 to 55 on mobile PageSpeed. Custom sites score 95 to 100. But Wix is free to start and easy to use. Here is the real cost, speed, and SEO comparison with honest advice on when to stay and when to switch.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-13T00:00:00-05:00",
             "dateModified": "2026-04-13T00:00:00-05:00",
@@ -115,7 +115,7 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/wix-vs-custom-website",
             "url": "https://www.pandacodegen.com/blog/wix-vs-custom-website",
-            "name": "Wix vs Custom Website 2026: When Wix Stops Working for Growing Businesses",
+            "name": "Wix vs Custom Website 2026: Which Is Better for Your Business?",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-04-13",
@@ -198,7 +198,7 @@ export default function WixVsCustomWebsitePage() {
                         <div className="inline-block px-3 py-1 text-xs font-medium bg-stone-100 text-stone-600 rounded-full mb-4">Comparison</div>
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
                             Wix vs Custom Website 2026:{" "}
-                            <span className="font-serif italic text-cognac">When Wix Stops Working</span> for Growing Businesses
+                            <span className="font-serif italic text-cognac">Which Is Better</span> for Your Business?
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">

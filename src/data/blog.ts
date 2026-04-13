@@ -23,9 +23,30 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "squarespace-vs-custom-website",
+    title: "Squarespace vs Custom Website 2026: Which Is Right for Your Business?",
+    excerpt: "Squarespace scores 30 to 55 on mobile PageSpeed. Custom sites score 95 to 100. But custom costs more upfront. Here is the real cost, speed, and SEO comparison with honest advice on when to stay and when to switch.",
+    category: "Comparison",
+    readTime: "12 min",
+    date: "Apr 14",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: true,
+    illustrationType: 'speed',
+    lastModified: "2026-04-14",
+    faqs: [
+      { question: "Can I export my Squarespace website to another platform?", answer: "Partially. Squarespace lets you export blog posts and basic pages as an XML file. But images, forms, custom CSS, product listings, and your design do not export. If you leave, the visual design must be rebuilt from scratch on the new platform. A professional migration handles the content extraction, image downloads, and URL redirect mapping as part of the project." },
+      { question: "How much does it cost to migrate from Squarespace to a custom website?", answer: "A Squarespace to custom Next.js migration costs $3,500 to $8,000 for most business sites (5 to 30 pages). The cost depends on page count, blog size, booking integrations, and e-commerce complexity. PandaCodeGen offers a founder's rate of $500 for qualifying sites under 50 pages. Every migration includes content transfer, 301 redirects, SEO preservation, and a guaranteed 95+ PageSpeed score." },
+      { question: "Will I lose my Google rankings if I leave Squarespace?", answer: "Not if the migration includes proper 301 redirect mapping for every URL, preservation of all title tags and meta descriptions, and sitemap resubmission to Google Search Console on launch day. Rankings typically hold within 30 days and improve within 60 to 90 days because the new site loads 3 to 5 times faster, which Google rewards through Core Web Vitals scoring." },
+      { question: "Is Squarespace good enough for a small business in 2026?", answer: "For a personal portfolio, hobby blog, or very small business with under 1,000 monthly visitors and no dependency on Google search traffic, Squarespace is fine. The problems start when your business depends on organic search rankings, when you need booking or e-commerce features without extra subscriptions, or when your monthly Squarespace bill exceeds $80. At that point, a custom site is cheaper over 3 years and performs dramatically better." },
+      { question: "Why is my Squarespace site so slow even with optimized images?", answer: "Squarespace loads a mandatory JavaScript bundle on every page that powers the editing interface, analytics, and platform features. This bundle is 200 to 400KB and cannot be removed. Even with perfectly compressed images, this platform JavaScript keeps your mobile PageSpeed score between 30 and 55. Third-party extensions add more JavaScript on top. The speed ceiling is structural, not a configuration problem." },
+      { question: "How does Squarespace compare to a custom website on PageSpeed?", answer: "Squarespace sites score 30 to 55 on Google PageSpeed Mobile. Custom Next.js sites score 95 to 100. The gap exists because Squarespace uses server-side rendering with a heavy JavaScript bundle on every page, while Next.js pre-builds pages at deploy time with minimal JavaScript. This 40 to 60 point gap directly affects Google rankings because Core Web Vitals are a confirmed ranking signal." }
+    ]
+  },
+  {
     id: "wix-vs-custom-website",
-    title: "Wix vs Custom Website 2026: When Wix Stops Working for Growing Businesses",
-    excerpt: "You added a booking app. Then an SEO plugin. Then a form tool. Your Wix site still scores 35 on mobile and you cannot export your content. Here is when custom code makes sense and when Wix is still fine.",
+    title: "Wix vs Custom Website 2026: Which Is Better for Your Business?",
+    excerpt: "Wix scores 35 to 55 on mobile PageSpeed. Custom sites score 95 to 100. But Wix is free to start and easy to use. Here is the real cost, speed, and SEO comparison with honest advice on when to stay and when to switch.",
     category: "Comparison",
     readTime: "12 min",
     date: "Apr 13",
