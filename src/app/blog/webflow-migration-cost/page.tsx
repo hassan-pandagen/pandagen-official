@@ -48,7 +48,7 @@ const articleSchema = {
             "description": "Agencies quote $5,000 to $90,000 for Webflow migration. Our founder's offer: $500 flat. Real 2026 cost breakdown by page count, what drives the price up, and questions to ask before you sign anything.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-25T00:00:00-05:00",
-            "dateModified": "2026-04-12T00:00:00-05:00",
+            "dateModified": "2026-04-15T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -87,7 +87,10 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Google PageSpeed Insights", "url": "https://pagespeed.web.dev/" },
                 { "@type": "CreativeWork", "name": "Next.js Documentation", "url": "https://nextjs.org/docs" },
                 { "@type": "CreativeWork", "name": "Google Search Central - Page Experience Update", "url": "https://developers.google.com/search/docs/appearance/page-experience" },
-                { "@type": "CreativeWork", "name": "Portent Research - Site Speed Impact on Conversion Rates", "url": "https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" }
+                { "@type": "CreativeWork", "name": "Portent Research - Site Speed Impact on Conversion Rates", "url": "https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" },
+                { "@type": "CreativeWork", "name": "Webflow Status Page: Official Incident History", "url": "https://status.webflow.com/history" },
+                { "@type": "CreativeWork", "name": "IsDown: Webflow Uptime Monitoring", "url": "https://isdown.app/status/webflow" },
+                { "@type": "CreativeWork", "name": "Medium: Webflow 31-Hour Outage Business Lessons", "url": "https://medium.com/@slimx/web-flow-outage-for-over-31-hours-a-lesson-many-business-owners-learnt-the-hardway-476ae9168a9a" }
             ]
         },
         {
@@ -108,7 +111,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-25T00:00:00-05:00",
-            "dateModified": "2026-04-12T00:00:00-05:00",
+            "dateModified": "2026-04-15T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/webflow-migration-cost#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -475,6 +478,20 @@ export default function WebflowMigrationCostPage() {
                                 </tbody>
                             </table>
                         </div>
+
+                        <BlogHeader>The Uptime Cost: Webflow Had 14 Outages in 90 Days (Update Apr 15, 2026)</BlogHeader>
+
+                        <BlogText>
+                            Added April 15, 2026. Webflow just had a major outage on April 14-15 that took down every hosted site for over 12 hours. 5xx errors, Dashboard down, Forms offline, Public API broken. <a href="https://status.webflow.com/history" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Webflow&apos;s status page</a> confirms the incident was caused by an upstream provider.
+                        </BlogText>
+
+                        <BlogText>
+                            <a href="https://isdown.app/status/webflow" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">IsDown&apos;s third-party monitoring</a> shows <BlogHighlight>14 incidents in the last 90 days</BlogHighlight> (4 major, 10 minor). March 2026 alone had a 5 hour 20 minute outage on March 2, a 3 hour 15 minute warning on March 16, and a 3 hour 30 minute warning on March 31. July 2025 had a catastrophic <a href="https://medium.com/@slimx/web-flow-outage-for-over-31-hours-a-lesson-many-business-owners-learnt-the-hardway-476ae9168a9a" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">31-hour outage</a>.
+                        </BlogText>
+
+                        <BlogText>
+                            This matters for migration cost calculations. A business doing $500K/year in online revenue loses approximately $1,600 per year from Webflow&apos;s historical outage pattern (28 hours of degraded service across 14 incidents). Over 3 years, that is $4,800 in lost revenue that never shows up in any comparison table. A custom Next.js site on Vercel runs with 99.99% SLA uptime. That uptime difference alone can pay for a significant portion of your migration cost over 3 years.
+                        </BlogText>
 
                         <BlogHeader>When Does a Webflow Migration Pay for Itself?</BlogHeader>
 

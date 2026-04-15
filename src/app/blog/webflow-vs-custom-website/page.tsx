@@ -48,7 +48,7 @@ const articleSchema = {
             "description": "Webflow works for brochure sites. But when your PageSpeed drops below 70, your bill exceeds $100/month, or you need custom functionality, custom code becomes the better investment.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-27T00:00:00-05:00",
-            "dateModified": "2026-04-13T00:00:00-05:00",
+            "dateModified": "2026-04-15T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -87,7 +87,13 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Deloitte: Milliseconds Make Millions", "url": "https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" },
                 { "@type": "CreativeWork", "name": "Webflow Pricing Plans", "url": "https://webflow.com/pricing" },
                 { "@type": "CreativeWork", "name": "Core Web Vitals. Google Web Dev", "url": "https://web.dev/vitals/" },
-                { "@type": "CreativeWork", "name": "Portent: Site Speed and Revenue Research", "url": "https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" }
+                { "@type": "CreativeWork", "name": "Portent: Site Speed and Revenue Research", "url": "https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" },
+                { "@type": "CreativeWork", "name": "Webflow Status Page: Official Incident History", "url": "https://status.webflow.com/history" },
+                { "@type": "CreativeWork", "name": "IsDown: Webflow Uptime Monitoring and Outage History", "url": "https://isdown.app/status/webflow" },
+                { "@type": "CreativeWork", "name": "Webflow Community: April 2026 Outage Update", "url": "https://community.webflow.com/community-news/post/webflow-outage-update-continuing-to-resolve-THlI5T5kvDNhm79" },
+                { "@type": "CreativeWork", "name": "Medium: Webflow Outage for over 31 Hours - Business Owners' Lessons", "url": "https://medium.com/@slimx/web-flow-outage-for-over-31-hours-a-lesson-many-business-owners-learnt-the-hardway-476ae9168a9a" },
+                { "@type": "CreativeWork", "name": "Hacker News: Webflow Down for >31 Hours Community Discussion", "url": "https://news.ycombinator.com/item?id=44728554" },
+                { "@type": "CreativeWork", "name": "UltimateWB: Webflow's Breaking Point - Downtime and Community Response", "url": "https://www.ultimatewb.com/blog/7182/webflows-breaking-point-downtime-bugs-and-a-community-fed-up/" }
             ]
         },
         {
@@ -108,7 +114,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-27T00:00:00-05:00",
-            "dateModified": "2026-04-13T00:00:00-05:00",
+            "dateModified": "2026-04-15T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/webflow-vs-custom-website#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -346,6 +352,36 @@ export default function WebflowVsCustomWebsitePage() {
                               <p className="text-sm text-stone-700 mt-1">$500 for a complete Webflow migration. Your Webflow bill right now is probably $50 to $200/month. Pay us $500 once and that monthly cost disappears forever. Limited spots this month.</p>
                             </div>
                         </div>
+
+                        <BlogHeader>The Outage Nobody Talks About: Real Businesses Lost Thousands in Webflow's Downtime</BlogHeader>
+
+                        <BlogText>
+                            This section was added April 15, 2026, after Webflow experienced a major outage spanning April 14 to 15. Every hosted Webflow site went dark. The Dashboard, Canvas, Webflow.com, Forms, and the Public API were all offline. According to <a href="https://status.webflow.com/history" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Webflow&apos;s official status page</a>, the incident produced intermittent errors for over 12 hours while Webflow worked with an upstream provider.
+                        </BlogText>
+
+                        <BlogText>
+                            <strong>Here is what that actually means for a business.</strong> If you run an e-commerce store doing $2,000/day in sales, a 12-hour outage is $1,000 in lost revenue. If you run a service business getting 20 leads per day from your site, a 12-hour outage is 10 leads gone forever. And if you were running a paid ad campaign during the outage, you paid for traffic that hit a broken site. <BlogHighlight>Webflow does not refund that.</BlogHighlight>
+                        </BlogText>
+
+                        <BlogText>
+                            This was not the first time. On July 28-29, 2025, Webflow had a catastrophic <a href="https://medium.com/@slimx/web-flow-outage-for-over-31-hours-a-lesson-many-business-owners-learnt-the-hardway-476ae9168a9a" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">31-hour outage</a> that took down every hosted site. The Hacker News thread ran for <a href="https://news.ycombinator.com/item?id=44728554" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">hundreds of comments</a> from business owners who described it as &ldquo;an entire work week lost for e-commerce stores, marketing sites, and client portals.&rdquo; One user wrote: &ldquo;We bet our business on this platform. Now we are reconsidering everything.&rdquo;
+                        </BlogText>
+
+                        <BlogText>
+                            And this is not isolated. <a href="https://isdown.app/status/webflow" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">IsDown&apos;s third-party uptime monitoring</a> shows Webflow had <BlogHighlight>14 incidents in the last 90 days</BlogHighlight> (4 major outages, 10 minor), with a median duration of 1 hour 59 minutes. March 2026 alone had a 5 hour 20 minute outage on March 2, a 3 hour 15 minute warning on March 16, and a 3 hour 30 minute warning on March 31.
+                        </BlogText>
+
+                        <BlogText>
+                            Every minute your Webflow site is down, your business loses money. Agencies reported losing clients. E-commerce stores lost Black Friday sales. Lead-generation sites went dark during paid ad campaigns. The community response, according to <a href="https://www.ultimatewb.com/blog/7182/webflows-breaking-point-downtime-bugs-and-a-community-fed-up/" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">UltimateWB&apos;s analysis</a>, included constant Designer crashes, lost work, and unreliable publishing even on normal days.
+                        </BlogText>
+
+                        <BlogText>
+                            When your site is hosted on a platform, every platform outage is your outage. A custom Next.js site deployed on Vercel runs on a global edge network with <BlogHighlight>99.99% SLA uptime</BlogHighlight>. Pages are pre-built and served from 300+ edge locations. Even if one region fails, others keep serving. There is no single point of failure because your site does not depend on a single company staying online.
+                        </BlogText>
+
+                        <BlogQuote>
+                            Every hour your Webflow site is down is an hour your competitors are still ranking, still converting, still selling. You do not control the uptime of a platform you rent.
+                        </BlogQuote>
 
                         <BlogHeader>The Real Cost Comparison: Webflow vs Custom Over 3 Years</BlogHeader>
 

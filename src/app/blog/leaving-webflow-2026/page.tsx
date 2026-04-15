@@ -50,7 +50,7 @@ const articleSchema = {
             "description": "Bandwidth cut 75%. Bills hit $170 overnight. Cart buttons disappeared on live sites. Memberships killed with 6 weeks notice. The real story of leaving Webflow and what we built instead.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-06T00:00:00-05:00",
-            "dateModified": "2026-04-06T00:00:00-05:00",
+            "dateModified": "2026-04-15T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -89,7 +89,11 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Hacker News: WTF Is Wrong with Webflow", "url": "https://news.ycombinator.com/item?id=41005904" },
                 { "@type": "CreativeWork", "name": "Webflow Updates: Deprecating Logic and User Accounts", "url": "https://webflow.com/updates/deprecating-logic-and-user-accounts" },
                 { "@type": "CreativeWork", "name": "UltimateWB: Webflow's Breaking Point", "url": "https://www.ultimatewb.com/blog/7182/webflows-breaking-point-downtime-bugs-and-a-community-fed-up/" },
-                { "@type": "CreativeWork", "name": "Webflow Forum: The High Cost of Webflow", "url": "https://discourse.webflow.com/t/the-high-cost-of-webflow-is-it-time-to-find-a-more-affordable-alternative/232093" }
+                { "@type": "CreativeWork", "name": "Webflow Forum: The High Cost of Webflow", "url": "https://discourse.webflow.com/t/the-high-cost-of-webflow-is-it-time-to-find-a-more-affordable-alternative/232093" },
+                { "@type": "CreativeWork", "name": "Webflow Status Page: Official Incident History", "url": "https://status.webflow.com/history" },
+                { "@type": "CreativeWork", "name": "IsDown: Webflow Uptime Monitoring and Outage History", "url": "https://isdown.app/status/webflow" },
+                { "@type": "CreativeWork", "name": "Medium: Webflow 31-Hour Outage Business Lessons", "url": "https://medium.com/@slimx/web-flow-outage-for-over-31-hours-a-lesson-many-business-owners-learnt-the-hardway-476ae9168a9a" },
+                { "@type": "CreativeWork", "name": "Hacker News: Webflow Down for >31 Hours Thread", "url": "https://news.ycombinator.com/item?id=44728554" }
             ]
         },
         {
@@ -110,7 +114,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-04-06T00:00:00-05:00",
-            "dateModified": "2026-04-06T00:00:00-05:00",
+            "dateModified": "2026-04-15T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/leaving-webflow-2026#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -287,6 +291,24 @@ export default function LeavingWebflow2026Page() {
                         <BlogText>
                             The frustration is not just the cost. It is that the cost keeps changing. You budget for one number, you get charged another. You plan around a feature, Webflow kills it. You build a workflow, Webflow deprecates the tool. Every few months, something you relied on disappears or gets more expensive.
                         </BlogText>
+
+                        <BlogHeader>The 14 Outages Nobody Warned Us About</BlogHeader>
+
+                        <BlogText>
+                            The real breaking point was uptime. According to <a href="https://isdown.app/status/webflow" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">IsDown&apos;s third-party monitoring</a>, Webflow had <BlogHighlight>14 incidents in the last 90 days</BlogHighlight> (4 major outages, 10 minor). The median outage lasted 1 hour 59 minutes. March 2026 alone included a 5 hour 20 minute incident on March 2, a 3 hour 15 minute warning on March 16, and a 3 hour 30 minute warning on March 31.
+                        </BlogText>
+
+                        <BlogText>
+                            Then April 14 to 15 happened. Every hosted Webflow site went dark for over 12 hours with 5xx errors, the Dashboard inaccessible, and the Forms API offline. <a href="https://status.webflow.com/history" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Webflow confirmed</a> the incident was caused by an upstream provider failure. Our store was down. Our lead forms were down. Our paid ads kept running and sent visitors to a broken page we could not fix.
+                        </BlogText>
+
+                        <BlogText>
+                            This was not even the worst one. In July 2025, Webflow had a <a href="https://medium.com/@slimx/web-flow-outage-for-over-31-hours-a-lesson-many-business-owners-learnt-the-hardway-476ae9168a9a" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">31-hour outage</a>. Entire work week lost for e-commerce stores. The <a href="https://news.ycombinator.com/item?id=44728554" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Hacker News thread</a> still reads like a eulogy for small businesses that trusted the platform. We read it during the 31-hour outage. We did not leave until we started losing money in smaller outages every few weeks.
+                        </BlogText>
+
+                        <BlogQuote>
+                            Every hour our Webflow site was down, our competitors kept selling. We did the math: over 12 months, Webflow outages cost us approximately $4,800 in lost revenue. More than the entire migration.
+                        </BlogQuote>
 
                         <BlogHeader>When the Cart Stopped Working and Webflow Could Not Fix It</BlogHeader>
 

@@ -149,7 +149,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "leaving-webflow-2026",
     title: "Leaving Webflow in 2026: What Actually Happened After We Migrated",
-    excerpt: "Bandwidth cut 75%. Bills jumped to $170 overnight. Cart buttons disappeared on live sites. Memberships killed with 6 weeks notice. Here is the real story of leaving Webflow and what we built instead.",
+    excerpt: "Bandwidth cut 75%. Bills jumped to $170 overnight. 14 outages in 90 days. Cart buttons disappeared on live sites. Here is the real story of leaving Webflow and what we built instead.",
     category: "Webflow",
     readTime: "11 min",
     date: "Apr 6",
@@ -157,7 +157,7 @@ export const blogPosts: BlogPost[] = [
     role: "Lead Engineer",
     featured: false,
     illustrationType: 'webflow',
-    lastModified: "2026-04-06",
+    lastModified: "2026-04-15",
     faqs: [
       { question: "Is Webflow worth it in 2026?", answer: "For small brochure sites with low traffic, Webflow can still work. But for any business that has grown past 50 GB of monthly bandwidth, needs e-commerce, uses localization, or relies on memberships, Webflow's pricing and reliability have become serious problems. The platform killed its own membership and automation tools in 2025 and 2026, raised prices 71%, and cut bandwidth limits by 75% without reducing costs." },
       { question: "How much does it cost to migrate from Webflow?", answer: "Our founder's offer is $500 for a complete Webflow migration to custom Next.js. That includes design, build, content transfer, 301 redirects, DNS cutover, and post-launch monitoring. 30% upfront, the rest after the site is live and tested. If it does not score 95 or higher on Google PageSpeed, you do not pay the balance." },
@@ -229,7 +229,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "webflow-vs-custom-website",
     title: "Webflow vs Custom Website 2026: Real Cost, Speed, and SEO Comparison",
-    excerpt: "Webflow works until it does not. Here are the 5 signs you have outgrown Webflow, what a custom website actually gives you, and how to decide without overspending.",
+    excerpt: "Webflow works until it does not. 14 outages in 90 days. Here are the 5 signs you have outgrown Webflow, what a custom website actually gives you, and how to decide without overspending.",
     category: "Webflow",
     readTime: "11 min",
     date: "Mar 27",
@@ -237,7 +237,7 @@ export const blogPosts: BlogPost[] = [
     role: "Lead Engineer",
     featured: false,
     illustrationType: 'webflow',
-    lastModified: "2026-03-27",
+    lastModified: "2026-04-15",
     faqs: [
       { question: "When should I switch from Webflow to a custom website?", answer: "Switch when any of these are true: your Google PageSpeed Mobile score is below 70 and you cannot improve it, your Webflow bill exceeds $100 per month including add-ons and third-party tools, you need custom functionality like a booking system or API integration that Webflow cannot handle natively, you have hit the 10,000 CMS item limit, or a competitor with a custom site is consistently outranking you for the same keywords despite similar content. If none of these apply, Webflow is still the right choice for your stage." },
       { question: "How much does a custom website cost compared to Webflow?", answer: "A custom Next.js website costs $5,000 to $20,000 to build depending on the number of pages and features. Hosting is $0 to $20 per month on Vercel. Webflow costs $0 to build if you do it yourself but $1,500 to $5,000 per year in platform fees once you add CMS hosting, forms, localization, and third-party integrations. Over 3 years, a custom site typically costs 30 to 60% less than Webflow when you include both build and ongoing costs." },
@@ -309,7 +309,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "webflow-migration-cost",
     title: "Webflow Migration Cost: From $2,000 for Small Sites (2026 Pricing)",
-    excerpt: "A small Webflow site starts at $2,000 to migrate. A 50 to 100 page site costs $12,000 to $20,000. Enterprise sites run $18,000 to $35,000+. Here is the full breakdown by site size, what drives the cost up, and ongoing costs after migration.",
+    excerpt: "Small Webflow site: $2,000 to migrate. 50-100 pages: $12,000 to $20,000. Enterprise: $18,000 to $35,000+. Plus uptime cost: Webflow had 14 outages in 90 days. Full breakdown with business impact.",
     category: "Webflow",
     readTime: "12 min",
     date: "Mar 25",
@@ -317,7 +317,7 @@ export const blogPosts: BlogPost[] = [
     role: "Lead Engineer",
     featured: true,
     illustrationType: 'migration',
-    lastModified: "2026-04-12",
+    lastModified: "2026-04-15",
     faqs: [
       { question: "How much does it cost to migrate a Webflow site to custom code?", answer: "A Webflow to Next.js migration costs $3,000 to $20,000 depending on site size. Small sites with 5 to 20 pages cost $3,000 to $7,000. Mid-size sites with 20 to 50 pages cost $7,000 to $14,000. Large sites with 50 to 100 pages cost $12,000 to $20,000. Enterprise sites with 100+ pages or complex CMS integrations start at $18,000. The cost range reflects real differences in scope: page count, custom animations, CMS collections, form complexity, and integration work." },
       { question: "How long does a Webflow to Next.js migration take for a 50-100 page site?", answer: "A 50 to 100 page Webflow migration takes 4 to 8 weeks. Week 1 is audit and planning: URL mapping, content inventory, redirect strategy. Weeks 2 to 5 are the build: converting pages, migrating CMS content, rebuilding animations and forms. Week 6 is QA and redirect verification. Weeks 7 to 8 are zero-downtime DNS cutover and post-launch monitoring. Timeline depends heavily on how many custom CMS collections you have and whether you need third-party API integrations rebuilt." },
@@ -393,15 +393,15 @@ export const blogPosts: BlogPost[] = [
   {
     id: "webflow-true-cost",
     title: "Webflow Pricing 2026: Every Hidden Fee Explained ($29 Is Just the Start)",
-    excerpt: "Webflow looks affordable at $29/month. But add CMS hosting, form limits, bandwidth overages, and the SEO ceiling, and you are quietly bleeding $5,000 to $15,000 a year in lost revenue. Here is the real math.",
+    excerpt: "Webflow looks affordable at $29/month. Add CMS hosting, form limits, bandwidth overages, the SEO ceiling, and 14 outages in 90 days, and you are quietly bleeding thousands per year. Here is the real math.",
     category: "Comparison",
-    readTime: "10 min",
+    readTime: "11 min",
     date: "Mar 18",
     author: "Hassan",
     role: "Lead Engineer",
     featured: false,
     illustrationType: 'webflow',
-    lastModified: "2026-03-18",
+    lastModified: "2026-04-15",
     faqs: [
       { question: "How much does Webflow actually cost per year?", answer: "A business Webflow site costs $948 to $4,188 per year in hosting alone ($29 to $49/month for CMS plan, plus $14 to $300/month for e-commerce). Add domain ($12/year), form submissions ($19/month after the free tier), localization ($9/locale/month), and third party integrations. Most businesses spend $1,500 to $5,000 per year. A custom Next.js site on Vercel costs $0 to $240 per year for hosting with better performance." },
       { question: "Is Webflow good for SEO?", answer: "Webflow is better than WordPress for SEO out of the box, but it has a hard ceiling. Webflow sites typically score 55 to 75 on Google PageSpeed Mobile because of render-blocking CSS, heavy JavaScript bundles, and no server-side rendering. Custom Next.js sites score 95 to 100. Since Google uses Core Web Vitals as a ranking factor, the 20 to 40 point gap means Webflow sites rank lower for competitive keywords." },

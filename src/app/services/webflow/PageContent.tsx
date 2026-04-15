@@ -207,6 +207,28 @@ export default function WebflowPageContent() {
         </div>
       </section>
 
+      {/* Webflow Uptime Warning (updated Apr 15, 2026) */}
+      <section id="uptime" className="py-10 md:py-20 px-6 bg-red-50 border-y border-red-200">
+        <div className="container mx-auto max-w-4xl">
+          <div className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest bg-red-600 text-white rounded-full mb-4">Update Apr 15, 2026</div>
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">The Outage Cost Nobody Talks About</h2>
+          <p className="text-stone-700 text-lg leading-relaxed mb-4">
+            On April 14-15, 2026, every hosted Webflow site went dark for over 12 hours. 5xx errors, Dashboard down, Forms broken, Public API offline. According to{" "}
+            <a href="https://status.webflow.com/history" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Webflow&apos;s official status page</a>, the incident was caused by an upstream provider and lasted for a full business day.
+          </p>
+          <p className="text-stone-700 text-lg leading-relaxed mb-4">
+            For a business doing $2,000/day in online sales, that is $1,000 in lost revenue. For a lead-generation site, 10+ leads gone. For anyone running paid ads during the outage, every click sent visitors to a broken page. Webflow does not refund that.
+          </p>
+          <p className="text-stone-700 text-lg leading-relaxed mb-4">
+            This is not isolated. <a href="https://isdown.app/status/webflow" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">IsDown&apos;s third-party monitoring</a> shows Webflow had <strong>14 incidents in the last 90 days</strong> (4 major, 10 minor). March 2026 alone included a 5 hour 20 minute outage on March 2, a 3 hour 15 minute warning on March 16, and a 3 hour 30 minute warning on March 31. In July 2025, Webflow had a{" "}
+            <a href="https://medium.com/@slimx/web-flow-outage-for-over-31-hours-a-lesson-many-business-owners-learnt-the-hardway-476ae9168a9a" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">31-hour outage</a> that was described on Hacker News as &ldquo;an entire work week lost for e-commerce stores.&rdquo;
+          </p>
+          <p className="text-stone-700 text-lg leading-relaxed">
+            A custom Next.js site deployed on Vercel runs with 99.99% uptime from 300+ global edge locations. Pages are pre-built and served from cache. When you own the code, you own the uptime.
+          </p>
+        </div>
+      </section>
+
       {/* 4. COMPARISON TABLE */}
       <section id="comparison" className="py-10 md:py-20 px-6 border-y border-stone-200 bg-stone-50">
         <div className="container mx-auto max-w-4xl">
