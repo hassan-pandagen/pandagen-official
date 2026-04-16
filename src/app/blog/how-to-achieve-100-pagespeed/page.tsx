@@ -687,7 +687,7 @@ export default function AchievePageSpeedPage() {
                                 slow WordPress site that needs migrating
                             </Link>{" "}
                             or a Shopify store going headless. See exactly what&apos;s included in our{" "}
-                            <Link href="/services/wordpress-migration" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                            <Link href="/services/wordpress-migration?ref=blog/how-to-achieve-100-pagespeed" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 WordPress to Next.js migration service
                             </Link>.
                         </BlogText>

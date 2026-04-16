@@ -466,7 +466,7 @@ export default function ShopifyAppCostsPage() {
                     </BlogText>
                     <BlogText>
                         If you are ready to move off Shopify entirely, our{" "}
-                        <Link href="/services/ecommerce" className="text-cognac hover:underline font-medium">Shopify to custom Next.js migration service</Link>{" "}
+                        <Link href="/services/ecommerce?ref=blog/shopify-app-costs-real-monthly-bill" className="text-cognac hover:underline font-medium">Shopify to custom Next.js migration service</Link>{" "}
                         covers the full process: what stays, what gets rebuilt, how long it takes, and what the ROI looks like at your revenue level.
                     </BlogText>
                     <BlogText>

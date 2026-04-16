@@ -609,11 +609,11 @@ export default function WordPressVsCustomCodeCostPage() {
                         </BlogText>
 
                         <BlogText>
-                            For most businesses doing over $150K/year, the custom site wins on direct costs alone within 2 years, and wins on total business impact (traffic + revenue + time) within the first year. See what a custom build includes and how we scope projects on our <Link href="/services/custom-engineering" className="text-charcoal font-bold underline hover:text-stone-600 transition-colors">custom engineering service page</Link>.
+                            For most businesses doing over $150K/year, the custom site wins on direct costs alone within 2 years, and wins on total business impact (traffic + revenue + time) within the first year. See what a custom build includes and how we scope projects on our <Link href="/services/custom-engineering?ref=blog/wordpress-vs-custom-code-real-cost-3-years" className="text-charcoal font-bold underline hover:text-stone-600 transition-colors">custom engineering service page</Link>.
                         </BlogText>
 
                         <BlogText>
-                            You can also read our <Link href="/services/wordpress-migration" className="text-charcoal font-bold underline hover:text-stone-600 transition-colors">WordPress Migration service page</Link> to see exactly how the transition works. What we migrate, how we protect your SEO, and what the timeline looks like.
+                            You can also read our <Link href="/services/wordpress-migration?ref=blog/wordpress-vs-custom-code-real-cost-3-years" className="text-charcoal font-bold underline hover:text-stone-600 transition-colors">WordPress Migration service page</Link> to see exactly how the transition works. What we migrate, how we protect your SEO, and what the timeline looks like.
                         </BlogText>
                     </div>
 

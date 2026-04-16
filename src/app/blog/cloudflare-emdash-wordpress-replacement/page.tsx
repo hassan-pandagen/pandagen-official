@@ -444,16 +444,16 @@ export default function CloudflareEmdashPage() {
 
                         <BlogText>
                             This is not just a WordPress problem either. Businesses on{" "}
-                            <Link href="/services/webflow" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                            <Link href="/services/webflow?ref=blog/cloudflare-emdash-wordpress-replacement" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 Webflow
                             </Link>,{" "}
-                            <Link href="/services/squarespace" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                            <Link href="/services/squarespace?ref=blog/cloudflare-emdash-wordpress-replacement" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 Squarespace
                             </Link>,{" "}
-                            <Link href="/services/wix" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                            <Link href="/services/wix?ref=blog/cloudflare-emdash-wordpress-replacement" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 Wix
                             </Link>, and{" "}
-                            <Link href="/services/gohighlevel" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                            <Link href="/services/gohighlevel?ref=blog/cloudflare-emdash-wordpress-replacement" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 GoHighLevel
                             </Link>{" "}
                             are hitting the same ceiling. Different platforms, same problem: you are renting someone else&apos;s infrastructure and paying the price in speed, security, and flexibility. The gap between template platforms and modern custom code is not closing. It is widening with every Google update.
@@ -465,11 +465,11 @@ export default function CloudflareEmdashPage() {
 
                         <BlogText>
                             Our{" "}
-                            <Link href="/services/wordpress-migration" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                            <Link href="/services/wordpress-migration?ref=blog/cloudflare-emdash-wordpress-replacement" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 WordPress migration service
                             </Link>{" "}
                             takes 4 to 6 weeks from start to launch. We handle the entire process: design, build, content transfer, redirects, DNS, and post-launch monitoring. Your existing SEO equity is preserved with proper 301 redirects. And every site we deliver scores{" "}
-                            <Link href="/services/custom-engineering" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                            <Link href="/services/custom-engineering?ref=blog/cloudflare-emdash-wordpress-replacement" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 95 to 100 on Google PageSpeed
                             </Link>, guaranteed.
                         </BlogText>

@@ -272,7 +272,7 @@ export default function WordPressPluginsSpeedPage() {
                             "Absolute best case WordPress: ~75/100 Mobile, still below Google's 90+ green zone"
                         ]} />
                         <BlogText>
-                            <BlogHighlight>You cannot reach 90+ on WordPress regardless of how many plugins you remove.</BlogHighlight> <a href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">The architecture itself is the limiting factor</a>. To consistently hit 95 to 100, you need <a href="/services/wordpress-migration" className="text-cognac hover:underline">Next.js</a>.
+                            <BlogHighlight>You cannot reach 90+ on WordPress regardless of how many plugins you remove.</BlogHighlight> <a href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">The architecture itself is the limiting factor</a>. To consistently hit 95 to 100, you need <a href="/services/wordpress-migration?ref=blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline">Next.js</a>.
                         </BlogText>
 
                         <BlogHeader>When Is It Time to Stop Optimizing and Migrate?</BlogHeader>

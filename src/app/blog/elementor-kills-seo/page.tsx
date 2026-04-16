@@ -276,7 +276,7 @@ export default function ElementorKillsSEOPage() {
                             "Elementor with all optimizations: Ceiling of 50 to 60/100, not competitive for modern SEO"
                         ]} />
                         <BlogText>
-                            Businesses we&apos;ve migrated off Elementor see <a href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">rankings recover within 30 to 60 days</a> and typically gain 2 to 3× organic traffic within 90 days of <a href="/services/wordpress-migration" className="text-cognac hover:underline">launching on Next.js</a>. The full platform comparison is covered in our <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress vs Next.js guide</Link>.
+                            Businesses we&apos;ve migrated off Elementor see <a href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">rankings recover within 30 to 60 days</a> and typically gain 2 to 3× organic traffic within 90 days of <a href="/services/wordpress-migration?ref=blog/elementor-kills-seo" className="text-cognac hover:underline">launching on Next.js</a>. The full platform comparison is covered in our <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress vs Next.js guide</Link>.
                         </BlogText>
                         <BlogText>
                             If Webflow is on your shortlist as a stepping stone, read our full <Link href="/blog/webflow-migration-cost" className="text-cognac hover:underline">Webflow migration cost breakdown</Link> before committing. Webflow scores better than Elementor, but it is still a rented platform with its own SEO ceiling.

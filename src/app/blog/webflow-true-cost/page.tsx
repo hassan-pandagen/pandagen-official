@@ -489,7 +489,7 @@ export default function WebflowTrueCostPage() {
 
                         <BlogText>
                             We handle the full process. See details on our{" "}
-                            <Link href="/services/webflow" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                            <Link href="/services/webflow?ref=blog/webflow-true-cost" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 Webflow migration service page
                             </Link>. For a detailed price breakdown by site size, read our guide on{" "}
                             <Link href="/blog/webflow-migration-cost" className="text-cognac hover:underline">

@@ -475,7 +475,7 @@ export default function ShopifyDawnThemeSlowPage() {
                         <BlogHeader>What Does the Real Fix Look Like?</BlogHeader>
 
                         <BlogText>
-                            The fix that actually gets you to 90 to 100/100 is headless Shopify. Keeping your Shopify backend (products, orders, inventory, payments) and replacing the Shopify storefront with a custom Next.js frontend. Our <Link href="/services/ecommerce" className="text-cognac hover:underline font-medium">headless Shopify development service</Link> covers the full transition.
+                            The fix that actually gets you to 90 to 100/100 is headless Shopify. Keeping your Shopify backend (products, orders, inventory, payments) and replacing the Shopify storefront with a custom Next.js frontend. Our <Link href="/services/ecommerce?ref=blog/shopify-dawn-theme-slow" className="text-cognac hover:underline font-medium">headless Shopify development service</Link> covers the full transition.
                         </BlogText>
 
                         <BlogText>

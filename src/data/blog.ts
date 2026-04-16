@@ -23,6 +23,27 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "core-web-vitals-explained",
+    title: "Core Web Vitals Explained for Business Owners 2026: What It Means for Your Revenue",
+    excerpt: "Your agency said your Core Web Vitals are failing. You have no idea what that means. Here is what the 3 metrics are, why Google ranks sites on them, and what each failing score actually costs your business in lost sales.",
+    category: "SEO",
+    readTime: "12 min",
+    date: "Apr 16",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: true,
+    illustrationType: 'speed',
+    lastModified: "2026-04-16",
+    faqs: [
+      { question: "What are Core Web Vitals in plain English?", answer: "Core Web Vitals are three scores Google uses to measure how your website performs for real visitors: how fast it loads, how quickly it responds when someone clicks, and how much content jumps around on the screen as it loads. Google uses these scores as a ranking signal. Good scores help your site rank higher in search results. Failing scores can drop your rankings, which means less traffic and fewer sales." },
+      { question: "Why do Core Web Vitals matter for my business?", answer: "Failing Core Web Vitals directly costs you money in three ways. First, Google ranks your site lower, so fewer people find you. Second, visitors leave faster from slow sites. 40 percent of users leave if a page takes more than 3 seconds to load. Third, slower sites convert worse. A 1-second delay in load time reduces conversions by 7 percent. For a $100K/month store, that is $7,000 per month in lost revenue." },
+      { question: "How do I check my Core Web Vitals scores?", answer: "Go to pagespeed.web.dev, paste your URL, and click Analyze. You will see your three Core Web Vitals scores (LCP, INP, CLS) along with an overall performance score. Test on mobile first because mobile is where most CWV failures happen and where Google weighs the scores most heavily. Alternatively, open Google Search Console and check the Core Web Vitals report under Experience." },
+      { question: "What are good Core Web Vitals scores?", answer: "Google's official thresholds: LCP under 2.5 seconds (good), INP under 200 milliseconds, CLS under 0.1. At least 75 percent of real visitors must hit these thresholds for your page to pass the Core Web Vitals assessment. Only 47 percent of sites pass all three metrics in 2026. The rest lose between 8 percent and 35 percent of potential conversions, traffic, and revenue." },
+      { question: "Why is my website failing Core Web Vitals even after optimization?", answer: "Most platform-based sites (Wix, Squarespace, WordPress, Shopify) have a structural Core Web Vitals ceiling because the platform itself loads 200 to 400KB of mandatory JavaScript on every page. You can compress images, remove unused sections, and follow every optimization guide, and your score will still plateau at 35 to 55 on mobile. This is the platform ceiling. The only way to break past it is to rebuild on a custom coded framework like Next.js that ships minimal JavaScript." },
+      { question: "How much can improving Core Web Vitals increase revenue?", answer: "Real case studies show meaningful impact. Cdiscount improved their three Core Web Vitals and saw a 6 percent revenue uplift during Black Friday. Vodafone Italy improved LCP by 31 percent and saw 8 percent more sales. Sites that pass all three Core Web Vitals thresholds show 24 percent lower bounce rates on average. For an e-commerce store doing $500K/year, improving Core Web Vitals from failing to passing typically generates $40K to $150K in additional annual revenue from better rankings and higher conversions combined." }
+    ]
+  },
+  {
     id: "squarespace-vs-custom-website",
     title: "Squarespace vs Custom Website 2026: Which Is Right for Your Business?",
     excerpt: "Squarespace scores 30 to 55 on mobile PageSpeed. Custom sites score 95 to 100. But custom costs more upfront. Here is the real cost, speed, and SEO comparison with honest advice on when to stay and when to switch.",

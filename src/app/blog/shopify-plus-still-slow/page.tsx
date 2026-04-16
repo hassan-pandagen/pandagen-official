@@ -256,7 +256,7 @@ export default function ShopifyPlusStillSlowPage() {
 
                         <BlogHeader>What Is the Solution for Shopify Plus Speed?</BlogHeader>
                         <BlogText>
-                            <a href="/blog/shopify-headless" className="text-cognac hover:underline">Headless Shopify Plus</a>: keep the backend (everything Shopify Plus is good at) and replace the slow Liquid frontend with a <a href="/services/ecommerce" className="text-cognac hover:underline">custom Next.js storefront</a>.
+                            <a href="/blog/shopify-headless" className="text-cognac hover:underline">Headless Shopify Plus</a>: keep the backend (everything Shopify Plus is good at) and replace the slow Liquid frontend with a <a href="/services/ecommerce?ref=blog/shopify-plus-still-slow" className="text-cognac hover:underline">custom Next.js storefront</a>.
                         </BlogText>
                         <BlogList items={[
                             "Backend: Shopify Plus handles inventory, orders, payments, checkout, fraud, unchanged",

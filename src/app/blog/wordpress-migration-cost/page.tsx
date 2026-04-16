@@ -422,7 +422,7 @@ export default function WordPressMigrationCostPage() {
                     <BlogHeader id="pandacodegen-migration">What Does a PandaCodeGen Migration Include?</BlogHeader>
                     <BlogText>
                         Our{" "}
-                        <Link href="/services/wordpress-migration" className="text-cognac hover:underline font-medium">WordPress migration service</Link>{" "}
+                        <Link href="/services/wordpress-migration?ref=blog/wordpress-migration-cost" className="text-cognac hover:underline font-medium">WordPress migration service</Link>{" "}
                         covers the full scope: audit, architecture, build, SEO preservation, launch, and 30-day monitoring. We guarantee your new site will score at least 90/100 on Google PageSpeed Mobile, or we continue working until it does.
                     </BlogText>
                     <BlogText>

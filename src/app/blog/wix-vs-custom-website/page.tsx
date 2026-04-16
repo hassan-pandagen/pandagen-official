@@ -538,7 +538,7 @@ export default function WixVsCustomWebsitePage() {
                         </BlogText>
 
                         <BlogText>
-                            For businesses where organic search drives revenue (service businesses, local businesses, e-commerce), the PageSpeed improvement alone can generate enough additional traffic and conversions to pay back the migration cost within 6 to 12 months. We detail the full ROI calculation in our <Link href="/blog/wix-too-slow" className="text-cognac hover:underline font-medium">Wix speed analysis</Link> and <Link href="/services/wix" className="text-cognac hover:underline font-medium">Wix migration service page</Link>.
+                            For businesses where organic search drives revenue (service businesses, local businesses, e-commerce), the PageSpeed improvement alone can generate enough additional traffic and conversions to pay back the migration cost within 6 to 12 months. We detail the full ROI calculation in our <Link href="/blog/wix-too-slow" className="text-cognac hover:underline font-medium">Wix speed analysis</Link> and <Link href="/services/wix?ref=blog/wix-vs-custom-website" className="text-cognac hover:underline font-medium">Wix migration service page</Link>.
                         </BlogText>
 
                         {/* === SECTION 10: What Migration Involves === */}

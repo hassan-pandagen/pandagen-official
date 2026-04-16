@@ -285,7 +285,7 @@ export default function ShopifyConversionRateSpeedFixPage() {
                             "Luxury Accessories: Load time 4.5s → 1.0s. Conversion rate 1.4% → 4.2%. Same ad spend, 3× ROAS"
                         ]} />
                         <BlogText>
-                            The pattern is consistent: a 3 to 4× improvement in load time produces a <a href="/services/ecommerce" className="text-cognac hover:underline">2 to 3× improvement in conversion rate</a>. Not because of better copy or better photos, because visitors are finally seeing the page before they leave.
+                            The pattern is consistent: a 3 to 4× improvement in load time produces a <a href="/services/ecommerce?ref=blog/shopify-conversion-rate-speed-fix" className="text-cognac hover:underline">2 to 3× improvement in conversion rate</a>. Not because of better copy or better photos, because visitors are finally seeing the page before they leave.
                         </BlogText>
 
                         <BlogHeader>How Long Does It Take to See Conversion Rate Improvements?</BlogHeader>

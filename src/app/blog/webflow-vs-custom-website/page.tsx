@@ -337,7 +337,7 @@ export default function WebflowVsCustomWebsitePage() {
 
                         <BlogText>
                             <strong>No platform limits.</strong> No CMS item caps. No form submission limits. No bandwidth overage charges. If you need a feature, it gets built. There is no &quot;Webflow cannot do that&quot; conversation. You can see exactly what a custom build includes on our{" "}
-                            <Link href="/services/custom-engineering" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">custom engineering service page</Link>.
+                            <Link href="/services/custom-engineering?ref=blog/webflow-vs-custom-website" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">custom engineering service page</Link>.
                         </BlogText>
 
                         {/* Mid-Article CTA */}
@@ -488,7 +488,7 @@ export default function WebflowVsCustomWebsitePage() {
 
                         <BlogText>
                             The full migration process is covered on our{" "}
-                            <Link href="/services/webflow" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                            <Link href="/services/webflow?ref=blog/webflow-vs-custom-website" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 Webflow migration service page
                             </Link>.
                         </BlogText>

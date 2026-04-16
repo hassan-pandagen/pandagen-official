@@ -627,7 +627,7 @@ export default function FixSlowWordPressPage() {
                         </BlogText>
 
                         <BlogText>
-                            Learn more about our <Link href="/services/wordpress-migration" className="text-cognac hover:underline">WordPress to Next.js migration service</Link>.
+                            Learn more about our <Link href="/services/wordpress-migration?ref=blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">WordPress to Next.js migration service</Link>.
                         </BlogText>
 
                         {/* Mid-Article CTA */}

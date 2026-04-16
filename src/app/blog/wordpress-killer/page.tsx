@@ -287,7 +287,7 @@ export default function WordPressKillerPage() {
 
                         <BlogHeader>What Is the Fastest Path Off WordPress?</BlogHeader>
                         <BlogText>
-                            <a href="/services/wordpress-migration" className="text-cognac hover:underline">Next.js with a headless CMS</a> (Sanity or Contentful) is the most cost-effective alternative for business websites in 2026:
+                            <a href="/services/wordpress-migration?ref=blog/wordpress-killer" className="text-cognac hover:underline">Next.js with a headless CMS</a> (Sanity or Contentful) is the most cost-effective alternative for business websites in 2026:
                         </BlogText>
                         <BlogList items={[
                             "Load time: 0.8 to 1.2 seconds (vs 3.5 to 4.5 for WordPress)",
@@ -297,7 +297,7 @@ export default function WordPressKillerPage() {
                             "Content editing: Cleaner CMS dashboard, simpler than WordPress admin"
                         ]} />
                         <BlogText>
-                            The migration pays for itself. Every year after, you save on hosting, plugins, and maintenance, and <a href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">gain back the traffic you were losing to faster competitors</a>. For a full platform comparison before you decide, read our <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress vs Next.js guide</Link>, or see what a custom build includes on our <Link href="/services/custom-engineering" className="text-cognac hover:underline">custom engineering service page</Link>.
+                            The migration pays for itself. Every year after, you save on hosting, plugins, and maintenance, and <a href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">gain back the traffic you were losing to faster competitors</a>. For a full platform comparison before you decide, read our <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress vs Next.js guide</Link>, or see what a custom build includes on our <Link href="/services/custom-engineering?ref=blog/wordpress-killer" className="text-cognac hover:underline">custom engineering service page</Link>.
                         </BlogText>
                     </div>
 

@@ -656,7 +656,7 @@ export default function SquarespaceMinCostPage() {
                         </BlogText>
 
                         <BlogText>
-                            You can see our full <Link href="/services/squarespace" className="text-charcoal underline decoration-cognac/40 hover:decoration-cognac transition-colors">Squarespace migration service page</Link> for details on what is included in each package, or compare us against other agencies in our <Link href="/blog/top-custom-web-development-agencies-usa-2026" className="text-charcoal underline decoration-cognac/40 hover:decoration-cognac transition-colors">2026 agency comparison</Link>.
+                            You can see our full <Link href="/services/squarespace?ref=blog/squarespace-migration-cost" className="text-charcoal underline decoration-cognac/40 hover:decoration-cognac transition-colors">Squarespace migration service page</Link> for details on what is included in each package, or compare us against other agencies in our <Link href="/blog/top-custom-web-development-agencies-usa-2026" className="text-charcoal underline decoration-cognac/40 hover:decoration-cognac transition-colors">2026 agency comparison</Link>.
                         </BlogText>
 
                         <BlogHeader>Questions to Ask Any Agency Before You Sign</BlogHeader>
@@ -690,7 +690,7 @@ export default function SquarespaceMinCostPage() {
                                 Get a Free Quote <ArrowRight className="w-4 h-4" />
                             </CalModalButton>
                             <Link
-                                href="/services/squarespace"
+                                href="/services/squarespace?ref=blog/squarespace-migration-cost"
                                 className="border border-stone-300 text-charcoal font-semibold px-8 py-3 rounded-full transition-colors inline-flex items-center gap-2 hover:bg-charcoal hover:text-white hover:border-charcoal"
                             >
                                 See Migration Service <ArrowRight className="w-4 h-4" />

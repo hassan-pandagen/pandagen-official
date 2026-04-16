@@ -578,7 +578,7 @@ export default function UCPBlogPage() {
                     ]} />
 
                     <BlogText>
-                        BCG estimates that by 2028, <strong>15 to 20% of all e-commerce transactions will be completed by AI agents on behalf of customers</strong>. <a href="/services/ecommerce" className="text-cognac hover:underline">The stores building for this now</a> are the ones that will own that traffic.
+                        BCG estimates that by 2028, <strong>15 to 20% of all e-commerce transactions will be completed by AI agents on behalf of customers</strong>. <a href="/services/ecommerce?ref=blog/google-universal-commerce-protocol-what-it-means-for-your-store" className="text-cognac hover:underline">The stores building for this now</a> are the ones that will own that traffic.
                     </BlogText>
 
                     {/* Bottom Line */}
@@ -696,7 +696,7 @@ export default function UCPBlogPage() {
                                 Get a Free AI Readiness Audit
                                 <ArrowRight className="w-5 h-5" />
                             </button>
-                            <Link href="/services/ecommerce" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white border border-stone-200 text-charcoal font-bold rounded-xl hover:bg-stone-50 transition-colors">
+                            <Link href="/services/ecommerce?ref=blog/google-universal-commerce-protocol-what-it-means-for-your-store" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white border border-stone-200 text-charcoal font-bold rounded-xl hover:bg-stone-50 transition-colors">
                                 See E-Commerce Services
                             </Link>
                         </div>

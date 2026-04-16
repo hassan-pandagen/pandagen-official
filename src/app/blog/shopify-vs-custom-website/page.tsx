@@ -411,7 +411,7 @@ export default function ShopifyVsCustomWebsitePage() {
 
                         <BlogText>
                             <strong>You own the code.</strong> If you decide to change agencies, switch hosting, or bring development in-house, you take everything with you. No vendor lock-in. No export restrictions. No rebuilding from scratch. See what a full custom e-commerce build includes on our{" "}
-                            <Link href="/services/ecommerce" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                            <Link href="/services/ecommerce?ref=blog/shopify-vs-custom-website" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 e-commerce service page
                             </Link>.
                         </BlogText>

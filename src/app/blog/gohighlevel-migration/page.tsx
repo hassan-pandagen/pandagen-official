@@ -330,7 +330,7 @@ export default function GoHighLevelMigrationPage() {
 
                         <BlogText>
                             This is the same approach agencies use when they want fast{" "}
-                            <Link href="/services/wordpress-migration" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                            <Link href="/services/wordpress-migration?ref=blog/gohighlevel-migration" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 WordPress migration
                             </Link>{" "}
                             results. You keep the tools that work and replace the piece that holds you back.
@@ -361,11 +361,11 @@ export default function GoHighLevelMigrationPage() {
 
                         <BlogText>
                             Our{" "}
-                            <Link href="/services/custom-engineering" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                            <Link href="/services/custom-engineering?ref=blog/gohighlevel-migration" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 custom engineering service
                             </Link>{" "}
                             covers exactly what goes into a performance-first build and the results businesses see after switching. For GHL-specific migrations, our{" "}
-                            <Link href="/services/gohighlevel" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                            <Link href="/services/gohighlevel?ref=blog/gohighlevel-migration" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 GoHighLevel service page
                             </Link>{" "}
                             walks through the full process.

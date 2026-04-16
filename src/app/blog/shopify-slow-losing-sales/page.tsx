@@ -413,7 +413,7 @@ export default function ShopifySlowPage() {
                         <BlogHeader>How Quickly Does a Custom Shopify Storefront Pay for Itself?</BlogHeader>
 
                         <BlogText>
-                            A <a href="/services/ecommerce" className="text-cognac hover:underline">custom fast storefront</a> costs <strong>$15,000-$35,000</strong> depending on complexity.
+                            A <a href="/services/ecommerce?ref=blog/shopify-slow-losing-sales" className="text-cognac hover:underline">custom fast storefront</a> costs <strong>$15,000-$35,000</strong> depending on complexity.
                         </BlogText>
 
                         <BlogText>

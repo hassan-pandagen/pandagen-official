@@ -508,7 +508,7 @@ export default function CompetitorRankingsPage() {
                         ]} />
 
                         <BlogText>
-                            <strong>Option 2: <a href="/services/custom-engineering" className="text-cognac hover:underline">Migrate to a Coded Website</a> (Next.js)</strong>
+                            <strong>Option 2: <a href="/services/custom-engineering?ref=blog/why-competitor-outranks-you" className="text-cognac hover:underline">Migrate to a Coded Website</a> (Next.js)</strong>
                         </BlogText>
 
                         <BlogList items={[

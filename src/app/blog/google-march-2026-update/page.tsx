@@ -378,14 +378,14 @@ export default function GoogleMarchUpdatePage() {
                             <Link href="/blog/webflow-migration-cost" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 Webflow
                             </Link>,{" "}
-                            <Link href="/services/wix" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                            <Link href="/services/wix?ref=blog/google-march-2026-update" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 Wix
                             </Link>, or any template-based platform. You need modern architecture.
                         </BlogText>
 
                         <BlogText>
                             <strong>Step 4: Consider a migration to a modern framework.</strong> Custom-coded sites built on Next.js consistently score 95 to 100 on PageSpeed with load times under 1 second. That is not a theoretical number. Every site we build hits that benchmark. Our{" "}
-                            <Link href="/services/wordpress-migration" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                            <Link href="/services/wordpress-migration?ref=blog/google-march-2026-update" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 WordPress migration service
                             </Link>{" "}
                             takes 4 to 6 weeks and preserves all your existing SEO equity with proper redirects.
@@ -397,7 +397,7 @@ export default function GoogleMarchUpdatePage() {
 
                         <BlogText>
                             For e-commerce businesses, the stakes are even higher. A slow online store does not just lose rankings. It loses sales at every step of the checkout process. Our{" "}
-                            <Link href="/services/ecommerce" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                            <Link href="/services/ecommerce?ref=blog/google-march-2026-update" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 e-commerce solutions
                             </Link>{" "}
                             are built specifically to pass Core Web Vitals while handling product catalogs, search, and checkout at speed.
@@ -409,7 +409,7 @@ export default function GoogleMarchUpdatePage() {
 
                         <BlogText>
                             If you are evaluating your options, our{" "}
-                            <Link href="/services/custom-engineering" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                            <Link href="/services/custom-engineering?ref=blog/google-march-2026-update" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 custom engineering service
                             </Link>{" "}
                             page explains exactly what a performance-first build includes and what results to expect.

@@ -281,7 +281,7 @@ export default function WordPressTrafficDropPage() {
                             If your Mobile PageSpeed is under 60, the honest answer is that <a href="/blog/wordpress-killer" className="text-cognac hover:underline">no amount of plugin configuration will recover your traffic</a>. The architectural ceiling of WordPress is around 2.5 seconds, and Google&apos;s preferred threshold is under 2 seconds.
                         </BlogText>
                         <BlogText>
-                            <a href="/services/wordpress-migration" className="text-cognac hover:underline">A custom Next.js site</a> built with performance as the foundation delivers:
+                            <a href="/services/wordpress-migration?ref=blog/wordpress-traffic-drop-speed" className="text-cognac hover:underline">A custom Next.js site</a> built with performance as the foundation delivers:
                         </BlogText>
                         <BlogList items={[
                             "Static generation: Pages pre-built at deploy time, served from CDN in milliseconds",

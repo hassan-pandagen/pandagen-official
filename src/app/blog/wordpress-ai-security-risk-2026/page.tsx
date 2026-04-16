@@ -587,7 +587,7 @@ export default function WordPressAISecurityPage() {
                     </BlogText>
 
                     <BlogText>
-                        If your business depends on security, uptime, and customer trust, ask yourself: is <a href="/services/wordpress-migration" className="text-cognac hover:underline">a platform built on third-party plugins</a> really the best foundation for AI features? The core architectural comparison is laid out in our <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress vs Next.js guide</Link>.
+                        If your business depends on security, uptime, and customer trust, ask yourself: is <a href="/services/wordpress-migration?ref=blog/wordpress-ai-security-risk-2026" className="text-cognac hover:underline">a platform built on third-party plugins</a> really the best foundation for AI features? The core architectural comparison is laid out in our <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress vs Next.js guide</Link>.
                     </BlogText>
 
                     {/* Sources Section */}

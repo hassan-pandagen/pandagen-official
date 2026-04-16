@@ -466,7 +466,7 @@ export default function SquarespaceToSlowPage() {
                             Timeline for a 5 to 20 page site: 1 to 2 weeks. Cost: $3,000 to $7,000 depending on design complexity and content volume. If you have an active blog with 20+ posts, budget toward the higher end of that range. For our full pricing breakdown see our{" "}
                             <Link href="/blog/webflow-migration-cost" className="text-cognac hover:underline">migration cost guide</Link>{" "}
                             (the pricing structure is similar across platforms). We handle the full migration process, from URL mapping to zero-downtime launch. See the details on our{" "}
-                            <Link href="/services/squarespace" className="text-cognac hover:underline">Squarespace migration service page</Link>.
+                            <Link href="/services/squarespace?ref=blog/squarespace-too-slow" className="text-cognac hover:underline">Squarespace migration service page</Link>.
                         </BlogText>
 
                         {/* Key Takeaways */}

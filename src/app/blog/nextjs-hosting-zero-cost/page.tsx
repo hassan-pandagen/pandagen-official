@@ -435,7 +435,7 @@ export default function NextjsHostingZeroCostPage() {
 
                         <BlogText>
                             For most business websites, service sites, portfolios, and even e-commerce storefronts, the free tier handles everything you need. If you&apos;re unsure whether your site qualifies, our{" "}
-                            <Link href="/services/wordpress-migration" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                            <Link href="/services/wordpress-migration?ref=blog/nextjs-hosting-zero-cost" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 WordPress migration service
                             </Link>{" "}
                             includes a free assessment.

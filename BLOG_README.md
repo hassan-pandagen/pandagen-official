@@ -553,7 +553,7 @@ Examples:
 
 ---
 
-## Part 10 — Existing Blog Posts (41 total as of Apr 14, 2026)
+## Part 10 — Existing Blog Posts (42 total as of Apr 16, 2026)
 
 | # | Slug | Title | Category | Status |
 |---|------|-------|----------|--------|
@@ -598,6 +598,7 @@ Examples:
 | 39 | `squarespace-migration-cost` | Squarespace Migration Cost in 2026: What You Will Actually Pay | Squarespace | Live |
 | 40 | `wix-vs-custom-website` | Wix vs Custom Website 2026: Which Is Better for Your Business? | Comparison | Live |
 | 41 | `squarespace-vs-custom-website` | Squarespace vs Custom Website 2026: Which Is Right for Your Business? | Comparison | Live |
+| 42 | `core-web-vitals-explained` | Core Web Vitals Explained for Business Owners 2026: What It Means for Your Revenue | SEO | Live |
 
 ---
 
@@ -609,7 +610,7 @@ Examples:
 |-----|------|-------|-----------|
 | ~~Sun Apr 13~~ | ~~`wix-vs-custom-website`~~ | ~~Wix vs Custom Website 2026: When Wix Stops Working for Growing Businesses~~ | DONE (post #40). Business journey style. Completes Wix cluster. |
 | ~~Mon Apr 14~~ | ~~`squarespace-vs-custom-website`~~ | ~~Squarespace vs Custom Website 2026: When Your Premium Site Is Costing You Clients~~ | DONE (post #41). Business journey style. Squarespace cluster COMPLETE (3/3). |
-| **Wed Apr 16** | `core-web-vitals-explained` | Core Web Vitals Explained for Business Owners (Not Developers) | New keyword category. Every platform post mentions CWV but nobody owns the business-owner explainer. Creates a hub page every other post can link to as "what are CWV?" |
+| ~~Wed Apr 16~~ | ~~`core-web-vitals-explained`~~ | ~~Core Web Vitals Explained for Business Owners 2026: What It Means for Your Revenue~~ | DONE (post #42). Hub explainer page. Links from every other blog post. |
 | **Fri Apr 18** | `website-rebuild-cost-2026` | How Much Does a Website Rebuild Cost in 2026? (Honest Pricing) | GSC: "website migration cost" at 36 impressions, position 69. Top-of-funnel post for buyers who haven't picked a platform yet. Links to every platform-specific cost post. |
 
 ### What We're NOT Writing This Week (and Why)
@@ -920,6 +921,7 @@ Submit via GSC URL Inspection. GSC allows ~10/day, spread across 2 days.
 | Apr 2026 | Behance | 90+ | Portfolio profile (ugc, not dofollow) | LIVE | behance.net/pandacodegen |
 | Apr 2026 | Dev.to | 70+ | Developer profile | LIVE | dev.to/pandacodegen |
 | Apr 2026 | Yelp | 90+ | Business profile (nofollow) | LIVE | |
+| Apr 15, 2026 | Agency Spotter | 60+ | Agency directory profile | LIVE | agencyspotter.com/pandacodegen |
 
 ---
 

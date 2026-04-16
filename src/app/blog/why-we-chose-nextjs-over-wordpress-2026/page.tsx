@@ -328,7 +328,7 @@ export default function WhyNextjsOverWordPressPage() {
                         <BlogHeader>Reason 4: 100/100 PageSpeed Is Achievable and Repeatable</BlogHeader>
 
                         <BlogText>
-                            We guarantee 95-100/100 PageSpeed Mobile on every client site. Not because we&apos;re magicians. Because Next.js makes it structurally achievable. You can see exactly what goes into each build on our <Link href="/services/custom-engineering" className="text-charcoal font-bold underline hover:text-stone-600 transition-colors">custom engineering service page</Link>.
+                            We guarantee 95-100/100 PageSpeed Mobile on every client site. Not because we&apos;re magicians. Because Next.js makes it structurally achievable. You can see exactly what goes into each build on our <Link href="/services/custom-engineering?ref=blog/why-we-chose-nextjs-over-wordpress-2026" className="text-charcoal font-bold underline hover:text-stone-600 transition-colors">custom engineering service page</Link>.
                         </BlogText>
 
                         <BlogText>
@@ -493,7 +493,7 @@ export default function WhyNextjsOverWordPressPage() {
 
                         <BlogText>
                             Ready to see what your site looks like on Next.js? We offer a free WordPress audit where we analyse your current setup, show you what a migration would involve, and give you the honest 3-year cost comparison. See our{" "}
-                            <Link href="/services/wordpress-migration" className="text-charcoal font-bold underline hover:text-stone-600 transition-colors">
+                            <Link href="/services/wordpress-migration?ref=blog/why-we-chose-nextjs-over-wordpress-2026" className="text-charcoal font-bold underline hover:text-stone-600 transition-colors">
                                 WordPress Migration service
                             </Link>{" "}
                             page for more detail.

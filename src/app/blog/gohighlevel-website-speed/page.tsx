@@ -329,7 +329,7 @@ export default function GHLWebsiteSpeedPage() {
                         What changes is your website. We build a custom Next.js site that handles everything the public sees: your homepage, service pages, landing pages, and blog. That site connects to your GoHighLevel account behind the scenes. Forms submit directly to your GHL pipeline. Every lead triggers your existing automations. Your team never touches a new dashboard.
                     </BlogText>
                     <BlogText>
-                        The result is a website that scores 95 to 100 on Google PageSpeed while running every GHL workflow you already have. See how our <Link href="/services/gohighlevel" className="text-cognac hover:underline font-medium">GoHighLevel speed fix service</Link> works, or book a free call below and we will audit your current GHL setup and show you exactly what a custom frontend would deliver.
+                        The result is a website that scores 95 to 100 on Google PageSpeed while running every GHL workflow you already have. See how our <Link href="/services/gohighlevel?ref=blog/gohighlevel-website-speed" className="text-cognac hover:underline font-medium">GoHighLevel speed fix service</Link> works, or book a free call below and we will audit your current GHL setup and show you exactly what a custom frontend would deliver.
                     </BlogText>
                     <div className="my-8 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-orange-600 transition-all">

@@ -539,7 +539,7 @@ export default function WordPressVsNextJSPage() {
                             The most common concern we hear is: "What happens to my SEO during a migration?" It is a valid concern. A badly handled migration can drop rankings significantly. A properly executed one preserves rankings and typically improves them within 60 days because the faster site starts outperforming its old Core Web Vitals scores.
                         </BlogText>
                         <BlogText>
-                            Here is what our <Link href="/services/wordpress-migration" className="text-cognac hover:underline font-medium">WordPress to Next.js migration service</Link> covers:
+                            Here is what our <Link href="/services/wordpress-migration?ref=blog/wordpress-vs-nextjs" className="text-cognac hover:underline font-medium">WordPress to Next.js migration service</Link> covers:
                         </BlogText>
 
                         <div className="space-y-4 my-6">
