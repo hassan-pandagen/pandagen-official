@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         description: "Google's Universal Commerce Protocol lets customers buy products directly from search results. Here is what every store owner needs to understand and how to prepare.",
         type: "article",
         publishedTime: "2026-02-21",
-        modifiedTime: "2026-02-21",
+        modifiedTime: "2026-04-16",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/google-universal-commerce-protocol-what-it-means-for-your-store",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -48,7 +48,7 @@ const articleSchema = {
             "description": "Google's Universal Commerce Protocol lets customers buy products directly from search results. Here is what every store owner needs to understand and how to prepare.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-21T00:00:00-05:00",
-            "dateModified": "2026-03-10T00:00:00-05:00",
+            "dateModified": "2026-04-16T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -86,7 +86,8 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Google's Universal Commerce Protocol: The End of E-Commerce As We Know It", "url": "https://blog.lengow.com/googles-universal-commerce-protocol-the-end-of-e-commerce-as-we-know-it/" },
                 { "@type": "CreativeWork", "name": "Google UCP: How AI Shopping Is Rewarding Data-Ready Sellers", "url": "https://www.efulfillmentservice.com/2026/01/google-ucp-how-ai-shopping-is-rewarding-data-ready-sellers-and-punishing-everyone-else/" },
                 { "@type": "CreativeWork", "name": "Deloitte: Milliseconds Make Millions", "url": "https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" },
-                { "@type": "CreativeWork", "name": "Google Think: Mobile Page Speed Benchmarks", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" }
+                { "@type": "CreativeWork", "name": "Google Think: Mobile Page Speed Benchmarks", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
+                { "@type": "CreativeWork", "name": "Universal Commerce Protocol updates improve AI shopping for retailers", "url": "https://blog.google/products-and-platforms/products/shopping/ucp-updates/" }
             ],
             "speakable": {
                 "@type": "SpeakableSpecification",
@@ -111,7 +112,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-21T00:00:00-05:00",
-            "dateModified": "2026-03-10T00:00:00-05:00",
+            "dateModified": "2026-04-16T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/google-universal-commerce-protocol-what-it-means-for-your-store#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -262,6 +263,26 @@ export default function UCPBlogPage() {
                     <BlogText>
                         Right now, most smart store owners are already switching away from Shopify and WordPress. Not because those platforms are bad, but because a custom-built store on <BlogHighlight>Next.js with a Headless CMS</BlogHighlight> (like Sanity, Contentful, or Hygraph) is the only stack that gives Google&apos;s AI full, instant access to your product data. That means faster pages, lower monthly costs, and your products showing up first when AI assistants are shopping for customers. The businesses that move now will own that advantage for years. The ones that wait will spend those years paying to catch up.
                     </BlogText>
+
+                    {/* April 2026 Update */}
+                    <div className="my-10 p-6 border border-cognac/30 bg-cognac/5 rounded-2xl">
+                        <div className="flex items-center gap-2 mb-3">
+                            <RefreshCw className="w-4 h-4 text-cognac" />
+                            <span className="text-cognac text-xs font-bold uppercase tracking-wider">April 2026 Update</span>
+                        </div>
+                        <p className="text-charcoal font-semibold mb-3 leading-snug">
+                            Google expanded UCP with three major new capabilities on March 19, 2026.
+                        </p>
+                        <ul className="space-y-2 text-stone-600 text-sm leading-relaxed">
+                            <li><strong className="text-charcoal">Cart Capability:</strong> AI agents can now add or save multiple items to a cart from a single store in one action, the same way a real shopper would browse and hold items before checkout.</li>
+                            <li><strong className="text-charcoal">Catalog Capability:</strong> Agents can now pull live product details, including variants, real-time inventory, and current pricing, directly from a retailer&apos;s catalog. This means AI recommendations stay accurate even when stock or prices change.</li>
+                            <li><strong className="text-charcoal">Identity Linking:</strong> Shoppers who are logged in now receive their loyalty pricing, member discounts, and free shipping thresholds inside Google&apos;s AI surfaces, the same benefits they would get on the retailer&apos;s own website.</li>
+                        </ul>
+                        <p className="text-stone-600 text-sm mt-3 leading-relaxed">
+                            Three major new platforms also confirmed UCP implementation: <strong className="text-charcoal">Salesforce Commerce Cloud, Stripe,</strong> and <strong className="text-charcoal">Commerce Inc</strong>. Google also launched a simplified UCP onboarding flow inside Google Merchant Center, opening the protocol to retailers of all sizes, not just enterprise brands.
+                        </p>
+                        <p className="text-stone-500 text-xs mt-3 italic">Source: <a href="https://blog.google/products-and-platforms/products/shopping/ucp-updates/" target="_blank" rel="noopener noreferrer" className="underline hover:text-cognac">Google Shopping Blog, March 19 2026</a></p>
+                    </div>
 
                     {/* What is UCP */}
                     <BlogHeader id="what-is-ucp">What Is Google&apos;s Universal Commerce Protocol?</BlogHeader>
@@ -566,15 +587,25 @@ export default function UCPBlogPage() {
                     <BlogHeader id="what-happens-next">What New Google UCP Features Are Confirmed for the Coming Months?</BlogHeader>
 
                     <BlogText>
-                        UCP is just getting started. Here&apos;s what&apos;s confirmed for the coming months:
+                        UCP has moved fast since launch. Here is what has already shipped and what is still on the confirmed roadmap.
                     </BlogText>
 
+                    <h3 className="text-lg font-bold text-charcoal mt-6 mb-3">Already live (as of April 2026):</h3>
                     <BlogList items={[
-                        "Shopify, Target, and Walmart connecting to Google AI Mode, bringing millions more products into AI-driven shopping",
+                        "Cart Capability: AI agents can add multiple items to a cart in a single action",
+                        "Catalog Capability: live inventory, variant, and pricing data fed directly to AI agents",
+                        "Identity Linking: loyalty pricing and member benefits now carry over inside Google AI surfaces",
+                        "Salesforce Commerce Cloud, Stripe, and Commerce Inc confirmed as new UCP partners",
+                        "Simplified onboarding through Google Merchant Center now open to retailers of all sizes"
+                    ]} />
+
+                    <h3 className="text-lg font-bold text-charcoal mt-6 mb-3">Still on the confirmed roadmap:</h3>
+                    <BlogList items={[
+                        "Shopify, Target, and Walmart connecting to Google AI Mode (confirmed, no public launch date)",
                         "Global expansion beyond the US (no confirmed dates yet)",
                         "AI handling returns, order tracking, and customer support, not just purchases",
-                        "More payment options: PayPal confirmed, Stripe and Apple Pay expected throughout 2026",
-                        "Stores with custom products (made-to-order, configurable items) getting their own UCP extensions"
+                        "Apple Pay and additional payment options expected throughout 2026",
+                        "Custom product extensions for made-to-order and configurable items"
                     ]} />
 
                     <BlogText>
@@ -653,6 +684,10 @@ export default function UCPBlogPage() {
                             <li className="flex items-start gap-2">
                                 <span className="text-charcoal mt-1">→</span>
                                 <a href="https://www.efulfillmentservice.com/2026/01/google-ucp-how-ai-shopping-is-rewarding-data-ready-sellers-and-punishing-everyone-else/" target="_blank" rel="noopener noreferrer" className="hover:text-cognac transition-colors">How AI Shopping Is Rewarding Data-Ready Sellers and Punishing Everyone Else, eFulfillment Service</a>
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <span className="text-charcoal mt-1">→</span>
+                                <a href="https://blog.google/products-and-platforms/products/shopping/ucp-updates/" target="_blank" rel="noopener noreferrer" className="hover:text-cognac transition-colors">Universal Commerce Protocol updates improve AI shopping for retailers, Google Blog (March 2026)</a>
                             </li>
                         </ul>
                     </div>
