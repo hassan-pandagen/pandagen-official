@@ -94,6 +94,15 @@ export default function Hero() {
             </div>
           </div>
 
+          {/* PageSpeed Guarantee — risk reversal */}
+          <div className="mt-6 inline-flex items-start gap-3 px-4 py-3 bg-white border border-cognac/30 rounded-xl shadow-xs max-w-lg">
+            <ShieldCheck className="w-5 h-5 text-cognac shrink-0 mt-0.5" />
+            <p className="text-sm text-charcoal leading-snug">
+              <span className="font-bold">Our guarantee:</span> if your new site doesn&apos;t score{" "}
+              <span className="font-bold text-cognac">90+ on Google PageSpeed</span>, we refund 100%. In writing.
+            </p>
+          </div>
+
         </div>
 
         {/* --- RIGHT: AUDIT WIDGET --- */}

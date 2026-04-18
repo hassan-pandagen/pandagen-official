@@ -44,7 +44,7 @@ export default function EcommercePage() {
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
         "serviceType": ["Shopify Headless", "E-Commerce Development", "Shopify Migration", "Custom Shopify Storefront"],
-        "priceRange": "$8,000 - $25,000",
+        "priceRange": "$500 - $25,000",
         "image": "https://www.pandacodegen.com/og-image.jpg",
         "telephone": "+13027738982",
         "address": {
@@ -83,9 +83,9 @@ export default function EcommercePage() {
         "mainEntity": [
           { "@type": "Question", "name": "What is custom Shopify?", "acceptedAnswer": { "@type": "Answer", "text": "Custom Shopify means you keep Shopify for everything it's great at (inventory, orders, payments, and customer management), but replace the slow Liquid theme with a custom coded storefront that loads in under 1 second. Same dashboard, 4x faster store." } },
           { "@type": "Question", "name": "Will my Shopify apps still work?", "acceptedAnswer": { "@type": "Answer", "text": "Your backend apps (inventory, email, shipping) work as before. Frontend apps (review widgets, upsell popups) get rebuilt as native features in your custom code, so they load instantly instead of injecting slow JavaScript. You stop paying monthly app fees for features we build once." } },
-          { "@type": "Question", "name": "How long does a custom storefront migration take?", "acceptedAnswer": { "@type": "Answer", "text": "Typically 6-8 weeks. Week 1-2: API architecture and design. Weeks 3-6: Build custom storefront (product pages, cart, checkout). Week 7: Testing with live Shopify data. Week 8: Launch with zero downtime." } },
+          { "@type": "Question", "name": "How long does a custom storefront migration take?", "acceptedAnswer": { "@type": "Answer", "text": "Three weeks for most stores. Days 1-3: API architecture and design. Days 4-14: Custom storefront build accelerated by AI-paired development with Claude and Cursor. Days 15-18: Testing with live Shopify data. Days 19-21: Launch with zero downtime. Agencies still quote 8-12 weeks because they bill hourly." } },
           { "@type": "Question", "name": "Will I lose sales during the migration?", "acceptedAnswer": { "@type": "Answer", "text": "No. Your existing Shopify store stays live throughout the entire build. We develop the new storefront in parallel. On launch day, we simply point your domain to the new site. Zero downtime, zero lost sales." } },
-          { "@type": "Question", "name": "How much does a custom Shopify storefront cost?", "acceptedAnswer": { "@type": "Answer", "text": "A custom storefront typically ranges from $10,000-$30,000 depending on complexity (number of products, custom checkout flows, subscription features). Most stores recover this investment within 4-6 months through eliminated app fees and increased conversion rates." } }
+          { "@type": "Question", "name": "How much does a custom Shopify storefront cost?", "acceptedAnswer": { "@type": "Answer", "text": "Typical agencies charge $30,000 to $60,000 and take 8 to 12 weeks. We meet you halfway. Foot-in-the-Door stores start at $500 (our founder's offer for small catalogs with public case study exchange). Growth builds start at $3,500 (30-100 products, custom features). Scale builds start at $12,000 (subscriptions, custom logic, large catalogs). Most clients recover the investment within 4 to 6 months through eliminated app fees and conversion lift." } }
         ]
       },
       {

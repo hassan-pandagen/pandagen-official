@@ -231,6 +231,10 @@ export default function WordPressKillerPage() {
                             One client had a WooCommerce store running 34 plugins. When WooCommerce updated, 4 plugins broke simultaneously. The site was down for 6 hours. Lost revenue: $4,200. Emergency fix: $800. Total damage from a single update: $5,000.
                         </BlogQuote>
 
+                        <BlogText>
+                            If your store runs on WooCommerce, this is a recurring risk built into the platform. Our <Link href="/services/woocommerce" className="text-cognac hover:underline">WooCommerce migration service</Link> moves your store to a custom Next.js build with no plugins to break and no updates that take your checkout down.
+                        </BlogText>
+
                         <BlogHeader>What Is the True 3-Year Cost of a WordPress Business Site?</BlogHeader>
                         <BlogList items={[
                             "Year 1: $3,000 to $6,000 (build + setup + first year running costs)",

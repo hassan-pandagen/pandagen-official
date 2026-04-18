@@ -468,7 +468,7 @@ export default function DiviThemeSlowPage() {
                         </BlogText>
 
                         <BlogText>
-                            A RannLab case study of a WooCommerce site migration found 357% year-over-year sales growth after moving off the slow platform. A luxury retail brand in Dallas that migrated to a custom Next.js frontend saw a 70% increase in mobile conversion rate and paid for the entire project in under 6 months.
+                            A RannLab case study of a <Link href="/services/woocommerce" className="text-cognac hover:underline">WooCommerce site migration</Link> found 357% year-over-year sales growth after moving off the slow platform. A luxury retail brand in Dallas that migrated to a custom Next.js frontend saw a 70% increase in mobile conversion rate and paid for the entire project in under 6 months.
                         </BlogText>
 
                         <BlogText>

@@ -48,18 +48,18 @@ const reviews = [
     url: "https://www.google.com/maps?cid=16271659886069582158",
   },
   {
-    platform: "Trustpilot",
-    platformColor: "#007a54",
-    starColor: "#00b67a",
+    platform: "Google",
+    platformColor: "#1a73e8",
+    starColor: "#fbbc04",
     title: "PandaCodeGen really understood what I needed",
     body: "I was on the fence about leaving Squarespace, but PandaCodeGen really understood what I needed. I talked to a few other agencies and PandaCodeGen's proposal aligned best with my vision. They migrated my site in 10 days and did exactly what they said they'd do. Super happy with the result! Would definitely recommend them.",
     name: "Richard Junior",
     initials: "RJ",
-    initialsColor: "#007a54",
+    initialsColor: "#1a73e8",
     detail: "",
     date: "Apr 2026",
     verified: true,
-    url: "https://www.trustpilot.com/review/pandacodegen.com",
+    url: "https://www.google.com/maps?cid=16271659886069582158",
   },
 ];
 

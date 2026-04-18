@@ -8,6 +8,9 @@ import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SocialProof from "@/components/home/SocialProof";
+import CaseStudyGrid from "@/components/services/CaseStudyGrid";
+import PricingTiers from "@/components/services/PricingTiers";
+import RelatedServicesGrid from "@/components/services/RelatedServicesGrid";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 import BuiltWith from "@/components/sections/BuiltWith";
 
@@ -189,6 +192,17 @@ export default function PageContent() {
         </div>
       </section>
 
+      {/* 2a. CASE STUDY GRID — Saforne featured (custom build from scratch) */}
+      <CaseStudyGrid
+        highlight="saforne"
+        label="Real Custom Builds"
+        heading="Custom Next.js, built from scratch"
+        subheading="Four custom applications we've built. Live URLs, verifiable performance scores, real clients shipping real products."
+      />
+
+      {/* 2b. SOCIAL PROOF — moved up for concentrated proof flow */}
+      <SocialProof />
+
       {/* 3. HOW WE BUILD - Process Timeline */}
       <section id="how-we-build" className="py-12 md:py-24 px-6 bg-white">
         <div className="container mx-auto max-w-6xl">
@@ -299,7 +313,64 @@ export default function PageContent() {
       {/* 6. TECH STACK */}
       <BuiltWith />
 
-      <SocialProof />
+      {/* PRICING TIERS — SaaS / custom application pricing */}
+      <PricingTiers
+        heading="Dev shops charge $50K to $200K."
+        headingAccent="We ship real software for less."
+        agencyComparison={{
+          agencyPrice: "$50K to $200K+",
+          agencyNote: "3-6 month timeline. Hourly billing. Agency overhead baked into every hour.",
+          ourPrice: "From $3,000",
+          ourNote: "2-8 week timeline. Fixed-scope pricing. You own 100% of the code + IP.",
+        }}
+        tiers={[
+          {
+            tier: "Foot in the Door",
+            price: "Starting from $3,000",
+            timeline: "1-2 weeks",
+            fit: "Marketing site, internal tool, or small portal. Clear scope.",
+            includes: [
+              "Custom Next.js + TypeScript build",
+              "Database (Supabase or Postgres)",
+              "Auth + role-based access",
+              "Responsive design, 90+ PageSpeed",
+              "Deployment to Vercel",
+              "Full code ownership on Day 1",
+            ],
+            cta: "Scope My Project",
+          },
+          {
+            tier: "Growth",
+            price: "Starting from $10,000",
+            timeline: "3-5 weeks",
+            fit: "SaaS MVP, client portal, or full dashboard. Custom business logic.",
+            includes: [
+              "Everything in Foot in the Door",
+              "Stripe payments + subscriptions",
+              "Admin dashboard with analytics",
+              "Custom business workflow logic",
+              "API integrations (up to 3)",
+              "60-day post-launch support",
+            ],
+            featured: true,
+          },
+          {
+            tier: "Scale",
+            price: "Starting from $25,000",
+            timeline: "6-12 weeks",
+            fit: "Multi-tenant SaaS, complex integrations, enterprise features.",
+            includes: [
+              "Everything in Growth",
+              "Multi-tenant architecture",
+              "Scales to 10,000+ users",
+              "Complex API integrations",
+              "Security audit + penetration testing",
+              "90-day post-launch support",
+            ],
+          },
+        ]}
+        footnote="All builds include: 100% code ownership + IP rights on Day 1, deployment to your own Vercel account, complete documentation, and our scales-to-10K-users guarantee."
+      />
 
       {/* 7. DUAL CTA */}
       <section className="py-10 md:py-20 px-6">
@@ -422,45 +493,8 @@ export default function PageContent() {
         </div>
       </section>
 
-      {/* Related Services - Internal Linking */}
-      <section className="py-10 md:py-16 px-6 bg-[#F8FAFC]">
-        <div className="container mx-auto max-w-5xl">
-          <h2 className="text-2xl font-bold text-charcoal text-center mb-3">Explore More Services</h2>
-          <p className="text-stone-400 text-center mb-10 text-sm">Every migration is different. Find the right path for your platform.</p>
-          <div className="grid md:grid-cols-3 gap-4">
-            <Link href="/services/ecommerce" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
-                <ShoppingBag className="w-5 h-5 text-cognac" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">E-Commerce Solutions</h3>
-                <p className="text-stone-400 text-xs mt-0.5">Headless Shopify storefronts that convert.</p>
-              </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
-            </Link>
-            <Link href="/services/wordpress-migration" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
-                <Wrench className="w-5 h-5 text-cognac" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">WordPress Migration</h3>
-                <p className="text-stone-400 text-xs mt-0.5">Escape plugin bloat. Get load times under 1 second with custom code.</p>
-              </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
-            </Link>
-            <Link href="/services/webflow" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
-                <Zap className="w-5 h-5 text-cognac" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">Webflow Migration</h3>
-                <p className="text-stone-400 text-xs mt-0.5">Outgrow Webflow&apos;s constraints with custom architecture.</p>
-              </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* Related Services — expanded to all platforms via reusable component */}
+      <RelatedServicesGrid currentHref="/services/custom-engineering" />
 
       {/* Author Attribution */}
       <section className="py-10 border-t border-stone-200 bg-white">

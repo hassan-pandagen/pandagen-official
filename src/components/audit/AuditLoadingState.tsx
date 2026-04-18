@@ -38,7 +38,7 @@ export default function AuditLoadingState({ url }: { url: string }) {
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
           className="text-sm text-cognac font-bold truncate"
         >
-          Scanning {url}
+          Auditing {url}
         </motion.div>
       </div>
 
@@ -104,8 +104,8 @@ export default function AuditLoadingState({ url }: { url: string }) {
         />
       </div>
 
-      <div className="text-[10px] text-stone-500 text-center">
-        Running 11 deep checks beyond PageSpeed...
+      <div className="text-[10px] text-stone-500 text-center italic">
+        Running 11 checks PageSpeed can&apos;t. Takes about 30 seconds.
       </div>
     </div>
   );

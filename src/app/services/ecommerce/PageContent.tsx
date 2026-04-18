@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: "How long does a custom storefront migration take?",
-    a: "Typically 6-8 weeks. Week 1-2: API architecture and design. Weeks 3-6: Build custom storefront (product pages, cart, checkout). Week 7: Testing with live Shopify data. Week 8: Launch with zero downtime."
+    a: "Three weeks for most stores. Days 1-3: API architecture and design. Days 4-14: Custom storefront build (product pages, cart, checkout) accelerated by AI-paired development with Claude and Cursor. Days 15-18: Testing with live Shopify data. Days 19-21: Launch with zero downtime. Agencies still quote 8-12 weeks because they bill hourly. AI tooling collapses that timeline without cutting corners."
   },
   {
     q: "Will I lose sales during the migration?",
@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     q: "How much does a custom Shopify storefront cost?",
-    a: "A custom storefront typically ranges from $10,000-$30,000 depending on complexity (number of products, custom checkout flows, subscription features). Most stores recover this investment within 4-6 months through eliminated app fees and increased conversion rates."
+    a: "Typical agencies charge $30,000 to $60,000 and take 8 to 12 weeks. We meet you halfway. Foot-in-the-Door stores start at $500 (our founder's offer for small catalogs with public case study exchange). Growth builds start at $3,500 (30-100 products, custom features). Scale builds start at $12,000 (subscriptions, custom logic, large catalogs). Most clients recover the investment within 4 to 6 months through eliminated app fees and conversion lift."
   },
 ];
 
@@ -108,103 +108,131 @@ export default function PageContent() {
       {/* 2. SHOPIFY KILLER - Comparison Card */}
       <ShopifyKiller />
 
-      {/* 3. OUR WORK - Portfolio Section */}
+      {/* 3. OUR WORK - Real Client Case Studies */}
       <section id="our-work" className="py-10 md:py-20 px-6 border-y border-stone-200 bg-white">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">Shopify Speed Optimization: Real Results</h2>
-          <p className="text-stone-600 text-center mb-8 md:mb-12 max-w-2xl mx-auto">We don&apos;t just talk about speed. We ship it.</p>
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-10 md:mb-14">
+            <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-cognac mb-3">Real Clients. Real Migrations.</p>
+            <h2 className="text-3xl md:text-5xl font-bold text-charcoal mb-4 tracking-tight leading-tight">
+              We ship what we <span className="font-serif italic text-cognac">promise.</span>
+            </h2>
+            <p className="text-stone-600 max-w-2xl mx-auto text-base md:text-lg">Four stores we built or migrated. Live URLs, verifiable PageSpeed scores, honest before/after numbers.</p>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="rounded-2xl bg-white border border-stone-200 shadow-card p-8"
-          >
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-50 border border-stone-200 text-xs text-cognac font-bold mb-4">
-                  <ShoppingBag className="w-3 h-3" /> E-Commerce
+          <div className="grid md:grid-cols-2 gap-5">
+            {[
+              {
+                name: "Panda Patches",
+                url: "pandapatches.com",
+                href: "https://pandapatches.com",
+                category: "Custom Patches E-Commerce",
+                platform: "WordPress → Custom",
+                pagespeed: 92,
+                loadTime: "< 1s",
+                saved: "$625/mo",
+                note: "Migrated from WordPress + WooCommerce. Cut monthly tool bill from $650 to $25. 1 Million+ patches delivered.",
+              },
+              {
+                name: "MyCustomPatches",
+                url: "mycustompatches.net",
+                href: "https://mycustompatches.net",
+                category: "Custom Patches (US Market)",
+                platform: "WordPress → Custom",
+                pagespeed: 95,
+                loadTime: "< 1s",
+                saved: "5-star Clutch",
+                note: "Featured client on Clutch. 5-star verified review. Custom Next.js + Sanity CMS build.",
+              },
+              {
+                name: "Saforne",
+                url: "saforne.com",
+                href: "https://saforne.com",
+                category: "Luxury Leather DTC",
+                platform: "Custom Next.js Build",
+                pagespeed: 96,
+                loadTime: "< 1s",
+                saved: "Premium UX",
+                note: "Handcrafted UK leather brand. Custom ecommerce with Stripe, Sanity, multi-currency support. Built in 2 weeks.",
+              },
+              {
+                name: "Obare Magazine",
+                url: "obare-magazine.vercel.app",
+                href: "https://obare-magazine.vercel.app",
+                category: "Editorial Magazine",
+                platform: "Wix → Custom",
+                pagespeed: 95,
+                loadTime: "< 1s",
+                saved: "225K IG",
+                note: "Editorial design magazine with 225K Instagram following. Migrated from Wix to custom Next.js.",
+              },
+            ].map((client, i) => (
+              <motion.a
+                key={i}
+                href={client.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className="group block p-6 md:p-7 rounded-2xl bg-white border border-stone-200 hover:border-cognac/40 shadow-card hover:shadow-elevated transition-all"
+              >
+                <div className="flex items-start justify-between gap-4 mb-4">
+                  <div className="min-w-0">
+                    <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-stone-500 mb-1">{client.category}</p>
+                    <h3 className="text-xl md:text-2xl font-bold text-charcoal group-hover:text-cognac transition-colors truncate">{client.name}</h3>
+                    <p className="text-sm text-stone-500 mt-1">{client.url}</p>
+                  </div>
+                  <ExternalLink className="w-4 h-4 text-stone-400 group-hover:text-cognac transition-colors shrink-0 mt-1" />
                 </div>
-                <h3 className="text-2xl font-bold text-charcoal mb-3">pandacodegen.com</h3>
-                <p className="text-stone-600 text-base leading-relaxed mb-6">
-                  Our own site is built with the same Next.js architecture we use for e-commerce clients. 98/100 PageSpeed. Under 1 second load time. Zero plugins.
-                </p>
-                <div className="grid grid-cols-3 gap-4 mb-6">
-                  <div className="text-center p-3 rounded-xl bg-white border border-stone-200 shadow-card">
-                    <p className="text-2xl font-black text-cognac">98</p>
-                    <p className="text-[10px] text-stone-500 uppercase tracking-wider">PageSpeed</p>
-                  </div>
-                  <div className="text-center p-3 rounded-xl bg-white border border-stone-200 shadow-card">
-                    <p className="text-2xl font-black text-green-600">0.8s</p>
-                    <p className="text-[10px] text-stone-500 uppercase tracking-wider">Load Time</p>
-                  </div>
-                  <div className="text-center p-3 rounded-xl bg-white border border-stone-200 shadow-card">
-                    <p className="text-2xl font-black text-emerald-600">$0</p>
-                    <p className="text-[10px] text-stone-500 uppercase tracking-wider">Hosting</p>
-                  </div>
+
+                <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-stone-50 border border-stone-200 text-[11px] font-bold text-cognac mb-4">
+                  <ArrowRightLeft className="w-3 h-3" /> {client.platform}
                 </div>
-                <a
-                  href="https://pagespeed.web.dev/analysis/https-www-pandacodegen-com/hx2nbmjk0x"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm text-cognac hover:underline"
-                >
-                  Verify on PageSpeed Insights <ExternalLink className="w-3.5 h-3.5" />
-                </a>
-              </div>
-              <div className="relative">
-                <div className="rounded-xl bg-stone-50 border border-stone-200 p-6 space-y-5">
-                  <h4 className="text-charcoal font-bold text-center mb-2">Shopify Theme vs Custom Code</h4>
-                  {/* Speed comparison */}
+
+                <p className="text-sm text-stone-600 leading-relaxed mb-5">{client.note}</p>
+
+                <div className="grid grid-cols-3 gap-3 pt-4 border-t border-stone-100">
                   <div>
-                    <div className="flex justify-between text-sm mb-2">
-                      <span className="text-stone-600">Shopify Theme</span>
-                      <span className="text-red-600 font-medium">3.8s</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-3">
-                      <div className="bg-red-500 h-3 rounded-full transition-all" style={{ width: '85%' }} />
-                    </div>
+                    <p className="text-2xl font-black text-emerald-600 leading-none tracking-tight">{client.pagespeed}</p>
+                    <p className="text-[10px] text-stone-500 uppercase tracking-wider mt-1 font-bold">PageSpeed</p>
                   </div>
                   <div>
-                    <div className="flex justify-between text-sm mb-2">
-                      <span className="text-stone-600">Custom Coded</span>
-                      <span className="text-green-600 font-bold">0.8s</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-3">
-                      <div className="bg-green-500 h-3 rounded-full transition-all" style={{ width: '20%' }} />
-                    </div>
+                    <p className="text-2xl font-black text-charcoal leading-none tracking-tight">{client.loadTime}</p>
+                    <p className="text-[10px] text-stone-500 uppercase tracking-wider mt-1 font-bold">Load Time</p>
                   </div>
-                  {/* Divider */}
-                  <div className="border-t border-stone-200 pt-4">
-                    <div className="grid grid-cols-2 gap-4 text-center">
-                      <div>
-                        <p className="text-red-600 text-2xl font-bold">38</p>
-                        <p className="text-[10px] text-stone-500 uppercase tracking-wider">Theme PageSpeed</p>
-                      </div>
-                      <div>
-                        <p className="text-green-600 text-2xl font-bold">98</p>
-                        <p className="text-[10px] text-stone-500 uppercase tracking-wider">Custom PageSpeed</p>
-                      </div>
-                    </div>
+                  <div>
+                    <p className="text-2xl font-black text-cognac leading-none tracking-tight">{client.saved}</p>
+                    <p className="text-[10px] text-stone-500 uppercase tracking-wider mt-1 font-bold">Outcome</p>
                   </div>
                 </div>
-              </div>
-            </div>
-          </motion.div>
+              </motion.a>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link href="/work" className="inline-flex items-center gap-2 text-cognac font-semibold hover:underline">
+              View all case studies <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </section>
+
+      {/* 3b. SOCIAL PROOF — moved up to stack with Our Work for concentrated proof flow */}
+      <SocialProof />
 
       {/* 4. HOW IT WORKS - Headless Process */}
       <section className="py-10 md:py-20 px-6 border-y border-stone-200 bg-white">
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How We Go Headless</h2>
-          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">Your existing Shopify store stays live. We build in parallel. Zero downtime.</p>
+          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">Your existing Shopify store stays live. We build in parallel with AI-paired development. <span className="font-semibold text-charcoal">Three weeks to launch</span>, not three months. Zero downtime.</p>
 
           <div className="space-y-8">
             {[
-              { step: "01", title: "Store Audit & API Architecture", desc: "We audit your apps, theme speed, and conversion data. Then we map out how every feature connects through Shopify's Storefront API: products, cart, checkout, and customer accounts.", duration: "Weeks 1-2" },
-              { step: "02", title: "Custom Storefront Build", desc: "We build your new storefront in Next.js: product pages that load instantly, a cart that never lags, and search that actually works. Every app feature gets rebuilt natively. No more third-party JavaScript.", duration: "Weeks 3-6" },
-              { step: "03", title: "Live Data Testing", desc: "We connect to your real Shopify data. Test every product, every variant, every checkout flow. Your team reviews and approves before anything goes live.", duration: "Week 7" },
-              { step: "04", title: "Launch & Optimize", desc: "We point your domain to the new storefront. Your Shopify dashboard stays exactly the same. Then we A/B test, monitor Core Web Vitals, and optimize conversion rates.", duration: "Week 8" },
+              { step: "01", title: "Store Audit & API Architecture", desc: "We audit your apps, theme speed, and conversion data. Then we map how every feature connects through Shopify's Storefront API: products, cart, checkout, customer accounts. AI tooling compresses discovery from days to hours.", duration: "Days 1-3" },
+              { step: "02", title: "Custom Storefront Build", desc: "We build your new storefront in Next.js with AI-paired development: product pages that load instantly, a cart that never lags, and search that actually works. Every app feature gets rebuilt natively. Claude and Cursor handle scaffolding so we ship in weeks, not months.", duration: "Days 4-14" },
+              { step: "03", title: "Live Data Testing", desc: "We connect to your real Shopify data. Test every product, every variant, every checkout flow. Your team reviews and approves before anything goes live.", duration: "Days 15-18" },
+              { step: "04", title: "Launch & Optimize", desc: "We point your domain to the new storefront. Your Shopify dashboard stays exactly the same. Then we A/B test, monitor Core Web Vitals, and optimize conversion rates.", duration: "Days 19-21" },
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -303,7 +331,121 @@ export default function PageContent() {
         </div>
       </section>
 
-      <SocialProof />
+      {/* PRICING TIERS — foot-in-the-door with agency comparison */}
+      <section className="py-12 md:py-20 px-6 bg-paper">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-10 md:mb-14">
+            <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-cognac mb-3">Honest Pricing</p>
+            <h2 className="text-3xl md:text-5xl font-bold text-charcoal mb-4 tracking-tight leading-tight">
+              Agencies charge $30K plus. <br/><span className="font-serif italic text-cognac">We meet you halfway.</span>
+            </h2>
+            <p className="text-stone-600 max-w-2xl mx-auto text-base md:text-lg">Fixed-scope pricing. No hourly traps. Start small, scale when ready.</p>
+          </div>
+
+          {/* Agency comparison strip */}
+          <div className="max-w-3xl mx-auto mb-10 grid grid-cols-2 gap-4 md:gap-6">
+            <div className="p-5 md:p-6 rounded-2xl bg-white border border-red-200 text-center">
+              <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-red-500 mb-2">Typical Agency</p>
+              <p className="text-2xl md:text-3xl font-black text-red-500 tracking-tight leading-none">$30K to $60K+</p>
+              <p className="text-xs text-stone-500 mt-2 leading-relaxed">8-12 week timeline. Hourly billing. You don&apos;t own the code.</p>
+            </div>
+            <div className="p-5 md:p-6 rounded-2xl bg-white border border-emerald-300 text-center shadow-card">
+              <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-emerald-600 mb-2">PandaCodeGen</p>
+              <p className="text-2xl md:text-3xl font-black text-emerald-600 tracking-tight leading-none">From $500</p>
+              <p className="text-xs text-stone-500 mt-2 leading-relaxed">3 week timeline. Fixed price. You own 100% of the code.</p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-5">
+            {[
+              {
+                tier: "Foot in the Door",
+                price: "Starting from $500",
+                timeline: "1 week",
+                fit: "Small catalog, simple migration. Our founder's offer to prove the relationship.",
+                includes: [
+                  "Custom Next.js storefront up to 20 products",
+                  "Shopify Storefront API integration",
+                  "Mobile-first responsive design",
+                  "90+ PageSpeed guaranteed",
+                  "Sanity CMS for content",
+                  "Case study in exchange for public review",
+                ],
+                featured: false,
+                cta: "Claim Founder Rate",
+              },
+              {
+                tier: "Growth",
+                price: "Starting from $3,500",
+                timeline: "2-3 weeks",
+                fit: "30-100 products. Custom features. Serious scaling.",
+                includes: [
+                  "Everything in Foot in the Door",
+                  "Custom product filtering & search",
+                  "Advanced checkout flow",
+                  "Upsell and personalization logic",
+                  "Custom review system (no Yotpo)",
+                  "60-day post-launch support",
+                ],
+                featured: true,
+                cta: "Get Scoped Quote",
+              },
+              {
+                tier: "Scale",
+                price: "Starting from $12,000",
+                timeline: "3-4 weeks",
+                fit: "Subscriptions, custom logic, large catalogs, headless APIs.",
+                includes: [
+                  "Everything in Growth",
+                  "Stripe Subscriptions (replaces Recharge)",
+                  "Custom admin dashboard",
+                  "Multi-currency + localization",
+                  "Custom loyalty/rewards logic",
+                  "90-day post-launch support",
+                ],
+                featured: false,
+                cta: "Get Scoped Quote",
+              },
+            ].map((tier, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className={`relative rounded-2xl p-6 md:p-8 border ${tier.featured ? 'bg-charcoal text-white border-cognac shadow-elevated' : 'bg-white text-charcoal border-stone-200 shadow-card'}`}
+              >
+                {tier.featured && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-cognac text-white text-[10px] font-bold uppercase tracking-[0.2em]">
+                    Most Common
+                  </div>
+                )}
+                <p className={`text-[11px] uppercase tracking-[0.22em] font-bold mb-2 ${tier.featured ? 'text-cognac' : 'text-stone-500'}`}>{tier.tier}</p>
+                <p className={`text-2xl md:text-3xl font-black leading-tight tracking-tight mb-1 ${tier.featured ? 'text-white' : 'text-charcoal'}`}>{tier.price}</p>
+                <p className={`text-sm mb-4 ${tier.featured ? 'text-stone-300' : 'text-stone-500'}`}>Ships in {tier.timeline}</p>
+                <p className={`text-sm italic mb-5 leading-relaxed ${tier.featured ? 'text-stone-300' : 'text-stone-600'}`}>{tier.fit}</p>
+                <ul className="space-y-2.5 mb-6">
+                  {tier.includes.map((item, j) => (
+                    <li key={j} className={`flex items-start gap-2 text-sm ${tier.featured ? 'text-stone-200' : 'text-stone-600'}`}>
+                      <CheckCircle2 className={`w-4 h-4 shrink-0 mt-0.5 ${tier.featured ? 'text-cognac' : 'text-cognac'}`} />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <button
+                  data-cal-namespace="discovery"
+                  data-cal-link="pandagen/discovery"
+                  data-cal-config='{"layout":"month_view"}'
+                  className={`w-full px-6 py-3 font-bold rounded-full transition-all ${tier.featured ? 'bg-white text-charcoal hover:bg-stone-100' : 'bg-charcoal text-white hover:bg-cognac'}`}
+                >
+                  {tier.cta}
+                </button>
+              </motion.div>
+            ))}
+          </div>
+          <p className="text-center text-sm text-stone-500 mt-8 max-w-2xl mx-auto">All builds include: zero downtime migration, 301 redirect mapping, SEO preservation, your domain stays yours, you own 100% of the code.</p>
+        </div>
+      </section>
 
       {/* 7. DUAL CTA */}
       <section className="py-10 md:py-20 px-6 border-y border-stone-200 bg-white">
@@ -398,16 +540,18 @@ export default function PageContent() {
         </div>
       </section>
 
-      {/* 9. GUARANTEE */}
+      {/* 9. GUARANTEE — unified with hero 90+ PageSpeed promise */}
       <section className="py-10 md:py-20 px-6">
-        <div className="container mx-auto max-w-4xl bg-green-50 border border-green-200 rounded-[3rem] p-12 relative overflow-hidden">
+        <div className="container mx-auto max-w-4xl bg-green-50 border border-green-200 rounded-[3rem] p-10 md:p-14 relative overflow-hidden">
           <div className="relative z-10 text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-700 text-xs font-bold uppercase tracking-wider mb-6">
-              <ShieldCheck className="w-4 h-4" /> 30-Day Money-Back Guarantee (from delivery)
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-700 text-xs font-bold uppercase tracking-[0.22em] mb-6">
+              <ShieldCheck className="w-4 h-4" /> Risk Reversal Guarantee
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">2x Speed Increase. Guaranteed.</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-charcoal mb-6 tracking-tight leading-tight">
+              90+ PageSpeed <span className="font-serif italic text-cognac">or full refund.</span>
+            </h2>
             <p className="text-stone-600 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-              We guarantee a 2x Speed Increase post-migration. If your Core Web Vitals don&apos;t turn green, we refund the final payment. Stop losing sales to slow loading.
+              Every PandaCodeGen build ships at 90+ on Google PageSpeed. If your new storefront does not hit that score on launch day, we refund 100% of your payment. Guaranteed, in writing.
             </p>
             <button
               data-cal-namespace="discovery"
@@ -445,42 +589,32 @@ export default function PageContent() {
         </div>
       </section>
 
-      {/* Related Services - Internal Linking */}
+      {/* Related Services - Full Internal Linking */}
       <section className="py-10 md:py-16 px-6 bg-[#F8FAFC]">
-        <div className="container mx-auto max-w-5xl">
+        <div className="container mx-auto max-w-6xl">
           <h2 className="text-2xl font-bold text-charcoal text-center mb-3">Explore More Services</h2>
-          <p className="text-stone-400 text-center mb-10 text-sm">Every migration is different. Find the right path for your platform.</p>
-          <div className="grid md:grid-cols-3 gap-4">
-            <Link href="/services/wordpress-migration" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
-                <Code2 className="w-5 h-5 text-cognac" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">WordPress Migration</h3>
-                <p className="text-stone-400 text-xs mt-0.5">Escape plugin bloat. Get load times under 1 second with custom code.</p>
-              </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
-            </Link>
-            <Link href="/services/custom-engineering" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
-                <Zap className="w-5 h-5 text-cognac" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">Custom Engineering</h3>
-                <p className="text-stone-400 text-xs mt-0.5">SaaS platforms, dashboards, and APIs built from scratch.</p>
-              </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
-            </Link>
-            <Link href="/services/wix" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
-                <Globe className="w-5 h-5 text-cognac" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">Wix Migration</h3>
-                <p className="text-stone-400 text-xs mt-0.5">Break free from Wix limitations. Own your code.</p>
-              </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
-            </Link>
+          <p className="text-stone-500 text-center mb-10 text-sm">Every platform migrates differently. Here is the right path for each.</p>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {[
+              { href: "/services/wordpress-migration", icon: Code2, title: "WordPress Migration", desc: "Escape plugin bloat. Load under 1 second." },
+              { href: "/services/woocommerce", icon: ShoppingBag, title: "WooCommerce Migration", desc: "Cut $500/mo in plugins. Own your store." },
+              { href: "/services/wix", icon: Globe, title: "Wix Migration", desc: "Break free from Wix limitations. Own your code." },
+              { href: "/services/squarespace", icon: Globe, title: "Squarespace Migration", desc: "Outgrow templates. Build something bespoke." },
+              { href: "/services/webflow", icon: Globe, title: "Webflow Migration", desc: "Performance ceiling hit? Move to Next.js." },
+              { href: "/services/gohighlevel", icon: Zap, title: "GoHighLevel", desc: "GHL site slow? Custom frontend, same CRM." },
+              { href: "/services/custom-engineering", icon: Zap, title: "Custom Engineering", desc: "SaaS, dashboards, APIs built from scratch." },
+              { href: "/partners", icon: ArrowRightLeft, title: "For Agencies", desc: "White-label dev partnership. You sell, we build." },
+            ].map((s) => (
+              <Link key={s.href} href={s.href} className="group flex items-start gap-3 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
+                <div className="w-10 h-10 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
+                  <s.icon className="w-5 h-5 text-cognac" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">{s.title}</h3>
+                  <p className="text-stone-500 text-xs mt-1 leading-relaxed">{s.desc}</p>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

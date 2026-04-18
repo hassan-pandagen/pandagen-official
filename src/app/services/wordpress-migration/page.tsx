@@ -44,7 +44,7 @@ export default function MigrationPage() {
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
         "serviceType": ["WordPress Migration", "WordPress to Custom Code", "WordPress Alternative"],
-        "priceRange": "$2,000 - $25,000",
+        "priceRange": "$500 - $25,000",
         "telephone": "+13027738982",
         "address": {
           "@type": "PostalAddress",
@@ -64,6 +64,8 @@ export default function MigrationPage() {
         "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
         "about": { "@id": "https://www.pandacodegen.com/services/wordpress-migration#service" },
         "inLanguage": "en-US",
+        "datePublished": "2026-02-10T00:00:00-05:00",
+        "dateModified": "2026-04-18T00:00:00-05:00",
         "speakable": {
           "@type": "SpeakableSpecification",
           "cssSelector": ["h1", "h2", "[data-speakable='true']"]
@@ -94,9 +96,9 @@ export default function MigrationPage() {
         "@id": "https://www.pandacodegen.com/services/wordpress-migration#faq",
         "mainEntity": [
           { "@type": "Question", "name": "Will I lose my Google rankings during migration?", "acceptedAnswer": { "@type": "Answer", "text": "No. We map every single URL from your old WordPress site to your new site with 301 redirects. Google treats it as the same page at a new address. Most clients see rankings recover within 2-4 weeks and improve within 60 days because the new site is faster." } },
-          { "@type": "Question", "name": "How long does a WordPress migration take?", "acceptedAnswer": { "@type": "Answer", "text": "A typical migration takes 4-6 weeks from start to launch. Week 1: Full audit and planning. Weeks 2-4: Build your new site. Week 5: Testing, content migration, URL mapping. Week 6: Launch with zero downtime." } },
+          { "@type": "Question", "name": "How long does a WordPress migration take?", "acceptedAnswer": { "@type": "Answer", "text": "Three weeks for most sites. Days 1-3: full audit and architecture. Days 4-14: custom Next.js build with AI-paired development using Claude and Cursor. Days 15-18: testing, content migration, URL mapping. Days 19-21: launch with zero downtime. Agencies still quote 8-12 weeks because they bill hourly. AI tooling collapses that timeline without cutting corners." } },
           { "@type": "Question", "name": "What happens to my blog posts and content?", "acceptedAnswer": { "@type": "Answer", "text": "Everything migrates. Blog posts, pages, images, metadata, categories. We extract it all from your WordPress database and move it to a modern content editor where you can still edit content without touching code." } },
-          { "@type": "Question", "name": "How much does a WordPress to Next.js migration cost?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on the size and complexity of your site. A standard business site (10-30 pages) typically ranges from $5,000-$15,000. The ROI usually pays for itself within 3-6 months through reduced hosting costs, lower ad spend, and increased conversions." } },
+          { "@type": "Question", "name": "How much does a WordPress to Next.js migration cost?", "acceptedAnswer": { "@type": "Answer", "text": "Typical agencies charge $15,000 to $40,000 and take 8-12 weeks. We meet you halfway. Three tiers: Foot-in-the-Door starts at $500 (simple sites, founder's offer with public case study exchange). Growth starts at $3,500 (15-50 pages, custom features). Scale starts at $12,000 (complex sites, WooCommerce, integrations). Most clients recover the investment within 3 to 6 months through eliminated hosting, plugin licenses, and maintenance fees." } },
           { "@type": "Question", "name": "Can I still edit my website after migration?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We set up a content editor with a user-friendly dashboard. You can edit text, images, blog posts, and pages without any coding knowledge. It's simpler than WordPress: no plugins to update, no themes to manage." } }
         ]
       },

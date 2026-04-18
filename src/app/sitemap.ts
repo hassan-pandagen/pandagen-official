@@ -44,6 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/about/imran', lastModified: '2026-03-01', changeFrequency: 'yearly', priority: 0.6 },
     { path: '/blog', lastModified: '2026-03-22', changeFrequency: 'weekly', priority: 0.8 },
     { path: '/ai-info', lastModified: '2026-04-11', changeFrequency: 'monthly', priority: 0.7 },
+    { path: '/manifesto', lastModified: '2026-04-19', changeFrequency: 'monthly', priority: 0.8 },
 
     // 5. Legal Pages
     { path: '/privacy', lastModified: '2026-01-15', changeFrequency: 'yearly', priority: 0.3 },

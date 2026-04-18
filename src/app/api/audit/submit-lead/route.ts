@@ -20,106 +20,38 @@ const DISPOSABLE_DOMAINS = new Set([
   'guerrillamail.org', 'mailforspam.com', 'safetymail.info', 'filzmail.com', 'mailexpire.com',
 ]);
 
-// Business-friendly check names
-const businessName: Record<string, string> = {
-  'visual-hierarchy': 'Page Layout & Design',
-  'mobile-first-ux': 'Mobile Experience',
-  'cta-placement': 'Call-to-Action Effectiveness',
-  'heading-structure': 'Content Organization',
-  'structured-data': 'Google Rich Results Eligibility',
-  'crawl-budget': 'Search Engine Visibility',
-  'indexing-speed': 'How Fast Google Finds You',
-  'trust-signals': 'Trust & Credibility Signals',
-  'security-headers': 'Website Security',
-  'mobile-checkout': 'Checkout & Conversion Flow',
-  'ai-readiness': 'AI Search Visibility (ChatGPT, Perplexity)',
-};
-
-function buildUserReportText(url: string, d: PageSpeedResult): string {
+function buildUserConfirmationText(url: string, d: PageSpeedResult): string {
   const hasDeep = d.deepChecks && d.deepChecks.checks.length > 0;
   const failCount = hasDeep ? d.deepChecks!.checks.filter(c => c.status === 'fail').length : d.criticalIssues;
   const warnCount = hasDeep ? d.deepChecks!.checks.filter(c => c.status === 'warn').length : d.warnings;
   const issueCount = failCount + warnCount;
-
-  // Use performance score as the primary score (matches what the widget shows)
   const perfScore = d.performanceScore;
-  const isHealthy = perfScore >= 80 && failCount === 0;
 
-  let text = `Your website audit is ready.\n\n`;
+  let text = `Thanks for requesting an optimization report.\n\n`;
+  text += `Hassan is personally putting together your full report right now. This is not automated. You will get:\n\n`;
+  text += `  - A custom PDF with the full 11-point optimization breakdown of your site\n`;
+  text += `  - A personal video walkthrough showing exactly what is slowing your site down and how to fix it\n`;
+  text += `  - Specific fixes ranked by revenue impact\n\n`;
+
+  text += `Expected delivery: within 24 business hours.\n\n`;
+
+  text += `Quick preview from the initial scan:\n`;
   text += `Site: ${url}\n`;
-  text += `Performance Score: ${perfScore}/100\n`;
+  text += `Performance: ${perfScore}/100\n`;
   text += `Load Time: ${d.loadTime}s\n`;
   if (d.platformDetected !== 'Custom / Unknown') {
-    text += `Platform Detected: ${d.platformDetected}\n`;
+    text += `Platform: ${d.platformDetected}\n`;
+  }
+  if (issueCount > 0) {
+    text += `Issues found: ${issueCount}\n`;
   }
   text += `\n`;
 
-  text += `---\n\n`;
+  text += `No sales call. No sign-up. Just your report.\n\n`;
 
-  // Google scores
-  text += `GOOGLE SCORES\n`;
-  text += `Performance: ${d.performanceScore}/100\n`;
-  text += `SEO: ${d.seoScore}/100\n`;
-  text += `Accessibility: ${d.accessibilityScore}/100\n`;
-  text += `Best Practices: ${d.bestPracticesScore}/100\n\n`;
+  text += `If you have any questions before the report arrives, feel free to reply to this email.\n\n`;
 
-  // 11-Point Inspection
-  if (hasDeep) {
-    text += `---\n\n`;
-    text += `YOUR 11-POINT INSPECTION\n\n`;
-
-    for (const check of d.deepChecks!.checks) {
-      const name = businessName[check.id] || check.name;
-      const icon = check.status === 'pass' ? 'PASS' : check.status === 'warn' ? 'WARN' : 'FAIL';
-      text += `[${icon}] ${name} (${check.score}/100)\n`;
-    }
-
-    text += `\n`;
-  }
-
-  // Platform specific note (only for known platforms with issues)
-  if (d.platformDetected !== 'Custom / Unknown' && perfScore < 80) {
-    const platformNotes: Record<string, string> = {
-      'WordPress': 'WordPress sites commonly suffer from plugin bloat, slow shared hosting, and security vulnerabilities.',
-      'Shopify': 'Shopify themes often struggle with render-blocking scripts and limited control over page speed.',
-      'Wix': 'Wix sites have inherent speed limitations due to heavy JavaScript bundles and restricted hosting control.',
-      'Squarespace': 'Squarespace sites often load slowly due to bloated templates and limited optimization options.',
-      'Webflow': 'Webflow sites can face performance issues from complex animations and limited server-side optimization.',
-    };
-    const note = platformNotes[d.platformDetected];
-    if (note) {
-      text += `Note: ${note}\n\n`;
-    }
-  }
-
-  // CTA: different message based on whether this is a real lead or a healthy site
-  text += `---\n\n`;
-
-  if (isHealthy) {
-    // Healthy site: acknowledge it, suggest improvements, soft CTA
-    text += `YOUR SITE IS IN GOOD SHAPE\n\n`;
-    if (warnCount > 0) {
-      text += `We found ${warnCount} area${warnCount !== 1 ? 's' : ''} that could be improved, but nothing critical. The warnings above are worth addressing if you want to squeeze more speed and conversions out of your site.\n\n`;
-    } else {
-      text += `No major issues found. Your site is performing well across all 11 checks.\n\n`;
-    }
-    text += `If you're looking to improve conversions, explore a new build, or want to discuss anything else, feel free to reply to this email or book a call.\n\n`;
-    text += `https://cal.com/pandagen/discovery\n\n`;
-  } else {
-    // Real lead: revenue impact + urgency
-    if (d.loadTime > 1) {
-      const loss = Math.round((d.loadTime - 1) * 7);
-      text += `YOUR SITE IS LOSING CUSTOMERS\n\n`;
-      text += `Your site takes ${d.loadTime}s to load. Research shows every second of delay reduces conversions by up to 7%. That means you could be losing up to ${loss}% of potential customers before they even see your page.\n\n`;
-    } else {
-      text += `WHAT'S NEXT?\n\n`;
-    }
-    text += `We found ${issueCount} issue${issueCount !== 1 ? 's' : ''} that ${issueCount === 1 ? 'is' : 'are'} directly impacting your revenue and search rankings. On a free 30-minute strategy call, we'll walk you through exactly how to fix each one, what it costs, and how fast your site can be.\n\n`;
-    text += `Book your free call here:\n`;
-    text += `https://cal.com/pandagen/discovery\n\n`;
-    text += `Or just reply to this email with any questions.\n\n`;
-  }
-
+  text += `Hassan Jamal\n`;
   text += `PandaCodeGen\n`;
   text += `https://www.pandacodegen.com\n`;
 
@@ -251,21 +183,19 @@ export async function POST(request: NextRequest) {
     const warnCount = hasDeep ? auditData.deepChecks!.checks.filter(c => c.status === 'warn').length : auditData.warnings;
     const issueCount = failCount + warnCount;
 
-    // 1. Send plain text audit report to the user
+    // 1. Send confirmation email to the user (NOT the full report — Hassan sends that manually within 24h)
     await resend.emails.send({
       from: fromEmail,
       to: email,
-      subject: issueCount > 0
-        ? `Your site scored ${perfScore}/100 (${issueCount} issue${issueCount !== 1 ? 's' : ''} found)`
-        : `Your site scored ${perfScore}/100. Looking good.`,
-      text: buildUserReportText(url, auditData),
+      subject: `Your optimization report is being prepared. Expect it within 24 business hours.`,
+      text: buildUserConfirmationText(url, auditData),
     });
 
-    // 2. Send plain text lead notification to business owner (full technical details + geo)
+    // 2. Send lead notification to business owner (full technical details + geo) — Hassan uses this to prepare the Gamma PDF + Loom
     await resend.emails.send({
       from: fromEmail,
       to: fromEmail,
-      subject: `Lead: ${perfScore}/100 | ${auditData.platformDetected} | ${geo.country} | ${email}`,
+      subject: `NEW AUDIT LEAD — prepare report within 24h: ${perfScore}/100 | ${auditData.platformDetected} | ${geo.country} | ${email}`,
       text: buildOwnerNotification(email, url, auditData, geo),
     }).catch((err) => console.error('Owner notification failed:', err));
 

@@ -8,6 +8,11 @@ import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SocialProof from "@/components/home/SocialProof";
+import CaseStudyGrid from "@/components/services/CaseStudyGrid";
+import PricingTiers from "@/components/services/PricingTiers";
+import RelatedServicesGrid from "@/components/services/RelatedServicesGrid";
+import PlatformKillerChart from "@/components/services/PlatformKillerChart";
+import { Eye } from "lucide-react";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 
 const comparisonData = [
@@ -98,7 +103,35 @@ export default function PageContent() {
         </div>
       </section>
 
-      {/* 2. 3-YEAR COST BREAKDOWN */}
+      {/* 2. PLATFORM KILLER CHART — Wix comparison */}
+      <PlatformKillerChart
+        badge="What Your Wix Consultant Won't Tell You"
+        headline="You're paying to be"
+        headlineAccent="trapped."
+        description="You're paying $29 to $159/mo for Wix. You can never export your site. You're paying for Wix apps that replace basic features (bookings, store, SEO). Custom code has all of it built in. You hit PageSpeed 35 on mobile and no one tells you why. Because Wix's architecture caps it there."
+        descriptionSecondary="Nobody tells you this because Wix's entire business depends on you staying. Not Wix. Not the Wix Partner Program consultants. Not the app companies inside Wix. We're the ones who show you the way out. No pitch. Just receipts."
+        comparisonTitle="Wix vs Custom"
+        themLabel="Wix"
+        metrics={[
+          { metric: "Load Speed",    themLabel: "2-4s",       usLabel: "< 1s",       themPct: 40, usPct: 98, icon: Gauge },
+          { metric: "Monthly Cost",  themLabel: "$29-$159",   usLabel: "$22",        themPct: 80, usPct: 10, icon: DollarSign },
+          { metric: "SEO Limits",    themLabel: "Hard",       usLabel: "None",       themPct: 75, usPct: 100, icon: FileSearch },
+          { metric: "Export",        themLabel: "Impossible", usLabel: "Full rights",themPct: 15, usPct: 100, icon: Lock },
+          { metric: "Design",        themLabel: "Template",   usLabel: "Fully Custom",themPct: 35, usPct: 100, icon: Palette },
+          { metric: "AI Search",     themLabel: "Invisible",  usLabel: "Optimized",  themPct: 20, usPct: 98, icon: Eye },
+        ]}
+        savingsLines={[
+          { label: "Wix Business VIP plan",           amount: "$348" },
+          { label: "Wix apps (booking, stores, etc.)", amount: "$720" },
+          { label: "3rd-party dev hacks",              amount: "$1,800" },
+          { label: "Migration delay cost (compound)",  amount: "$3,600" },
+          { label: "Lost leads (SEO + speed)",         amount: "$6,000" },
+          { label: "Brand / design compromises",       amount: "$1,200" },
+        ]}
+        totalPerYear="$13,668"
+      />
+
+      {/* 2a. 3-YEAR COST BREAKDOWN */}
       <section id="cost-breakdown" className="py-10 md:py-20 px-6 border-y border-stone-200 bg-stone-50/50">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">The Real Cost of Wix Over 3 Years</h2>
@@ -176,6 +209,17 @@ export default function PageContent() {
           </motion.div>
         </div>
       </section>
+
+      {/* 2a. CASE STUDY GRID — Obare was a Wix migration (225K IG followers) */}
+      <CaseStudyGrid
+        highlight="obare"
+        label="Real Wix Migrations"
+        heading="Wix to custom, done"
+        subheading="Obare Magazine migrated from Wix to a custom Next.js site with 225K Instagram followers watching. Here is their build plus three others."
+      />
+
+      {/* 2b. SOCIAL PROOF — moved up for concentrated proof flow */}
+      <SocialProof />
 
       {/* 3. HOW WE MIGRATE - Process Timeline */}
       <section id="how-it-works" className="py-10 md:py-20 px-6">
@@ -325,7 +369,63 @@ export default function PageContent() {
         </div>
       </section>
 
-      <SocialProof />
+      {/* PRICING TIERS */}
+      <PricingTiers
+        heading="Agencies charge $10K to $25K."
+        headingAccent="We meet you halfway."
+        agencyComparison={{
+          agencyPrice: "$10K to $25K+",
+          agencyNote: "6-10 week timeline. Hourly billing. Wix monthly fees continue.",
+          ourPrice: "From $500",
+          ourNote: "2-3 week timeline. Fixed price. No platform fees. You own the code.",
+        }}
+        tiers={[
+          {
+            tier: "Foot in the Door",
+            price: "Starting from $500",
+            timeline: "1 week",
+            fit: "Simple Wix site. 5-15 pages, portfolio or brochure. Founder's offer.",
+            includes: [
+              "Full Wix content export + migration",
+              "Custom Next.js build matching your design",
+              "Sanity CMS for content editing",
+              "90+ PageSpeed guaranteed",
+              "301 redirect mapping",
+              "Case study in exchange for public review",
+            ],
+            cta: "Claim Founder Rate",
+          },
+          {
+            tier: "Growth",
+            price: "Starting from $3,000",
+            timeline: "2-3 weeks",
+            fit: "Business site. 15-50 pages. Forms, blog, custom interactions.",
+            includes: [
+              "Everything in Foot in the Door",
+              "Custom animations and interactions",
+              "Forms with custom API routes",
+              "Full SEO migration with schema",
+              "Analytics setup (GA4, Clarity)",
+              "60-day post-launch support",
+            ],
+            featured: true,
+          },
+          {
+            tier: "Scale",
+            price: "Starting from $10,000",
+            timeline: "3-4 weeks",
+            fit: "Wix Ecommerce or 50+ pages. Custom features, integrations, booking.",
+            includes: [
+              "Everything in Growth",
+              "Wix Stores → custom ecommerce",
+              "Wix Bookings → custom booking system",
+              "Multi-language / localization",
+              "Custom admin dashboard",
+              "90-day post-launch support",
+            ],
+          },
+        ]}
+      />
 
       {/* 7. DUAL CTA */}
       <section className="py-12 md:py-24 px-6 bg-[#F8FAFC]">
@@ -428,9 +528,9 @@ export default function PageContent() {
               </div>
             </div>
             <div className="flex-1">
-              <h3 className="text-2xl font-bold text-green-900 mb-3">2x Faster or Your Money Back.</h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-green-900 mb-3 tracking-tight">90+ PageSpeed <span className="font-serif italic">or full refund.</span></h3>
               <p className="text-green-800 leading-relaxed mb-6">
-                We are so confident in our migration process that if your new site isn&apos;t at least 2x faster than your Wix site, we will refund 100% of your payment. No questions asked.
+                Every PandaCodeGen Wix migration ships at 90+ on Google PageSpeed. If your new site doesn&apos;t hit that score on launch day, we refund 100% of your payment. Guaranteed, in writing.
               </p>
               <div className="flex flex-wrap gap-4 justify-center md:justify-start text-xs font-bold text-green-700 uppercase tracking-wider mb-6">
                 <span>• Legal Contract</span>
@@ -450,45 +550,8 @@ export default function PageContent() {
         </div>
       </section>
 
-      {/* Related Services - Internal Linking */}
-      <section className="py-10 md:py-16 px-6 bg-[#F8FAFC]">
-        <div className="container mx-auto max-w-5xl">
-          <h2 className="text-2xl font-bold text-charcoal text-center mb-3">Explore More Services</h2>
-          <p className="text-stone-400 text-center mb-10 text-sm">Every migration is different. Find the right path for your platform.</p>
-          <div className="grid md:grid-cols-3 gap-4">
-            <Link href="/services/wordpress-migration" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
-                <Wrench className="w-5 h-5 text-cognac" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">WordPress Migration</h3>
-                <p className="text-stone-400 text-xs mt-0.5">Escape plugin bloat. Get load times under 1 second with custom code.</p>
-              </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
-            </Link>
-            <Link href="/services/squarespace" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
-                <Gauge className="w-5 h-5 text-cognac" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">Squarespace Migration</h3>
-                <p className="text-stone-400 text-xs mt-0.5">Leave Squarespace behind. Get a site you actually own.</p>
-              </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
-            </Link>
-            <Link href="/services/webflow" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
-                <Code2 className="w-5 h-5 text-cognac" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">Webflow Migration</h3>
-                <p className="text-stone-400 text-xs mt-0.5">Outgrow Webflow&apos;s constraints with custom architecture.</p>
-              </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* Related Services — expanded to all platforms via reusable component */}
+      <RelatedServicesGrid currentHref="/services/wix" />
 
       {/* Author Attribution */}
       <section className="py-10 border-t border-stone-200 bg-white">

@@ -286,6 +286,10 @@ export default function WordPressMigrationCostPage() {
                         "Design work: If you are rebuilding the visual design (not just porting existing design), add 20 to 60 hours of UI design and component building.",
                     ]} />
 
+                    <BlogText>
+                        Running a WooCommerce store specifically? The migration scope is different from a standard WordPress site. See our <Link href="/services/woocommerce" className="text-cognac hover:underline">WooCommerce migration service</Link> for a full breakdown of what the process looks like, what gets rebuilt, and what the typical cost range is.
+                    </BlogText>
+
                     <BlogHeader id="what-is-included">What Should Be Included in Any Migration Quote?</BlogHeader>
                     <BlogText>
                         Before you accept a quote, verify these items are explicitly included. Agencies that exclude them will charge separately for each. For each item below, the "If skipped" line tells you what it actually costs your business.

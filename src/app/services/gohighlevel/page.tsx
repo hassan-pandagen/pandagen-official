@@ -44,7 +44,7 @@ export default function GoHighLevelServicePage() {
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
         "serviceType": ["GoHighLevel Development", "GHL Funnel Building", "GoHighLevel Migration", "GoHighLevel Alternative"],
-        "priceRange": "$5,000 - $35,000",
+        "priceRange": "$500 - $15,000",
         "telephone": "+13027738982",
         "address": {
           "@type": "PostalAddress",
@@ -64,6 +64,8 @@ export default function GoHighLevelServicePage() {
         "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
         "about": { "@id": "https://www.pandacodegen.com/services/gohighlevel#service" },
         "inLanguage": "en-US",
+        "datePublished": "2026-02-10T00:00:00-05:00",
+        "dateModified": "2026-04-18T00:00:00-05:00",
         "speakable": {
           "@type": "SpeakableSpecification",
           "cssSelector": ["h1", "h2", "[data-speakable='true']"]
@@ -95,7 +97,7 @@ export default function GoHighLevelServicePage() {
         "mainEntity": [
           { "@type": "Question", "name": "Will my GHL automations break during migration?", "acceptedAnswer": { "@type": "Answer", "text": "No. We build the new site in parallel while your GHL funnels stay live. When we launch, all forms and triggers connect to your existing GHL pipelines through the API. Everything keeps working." } },
           { "@type": "Question", "name": "Do I need to cancel GHL?", "acceptedAnswer": { "@type": "Answer", "text": "Not if you don't want to. Option B keeps GHL for CRM while upgrading your website. Option C replaces GHL entirely with a custom CRM. Most clients choose Option B because GHL's automation engine is solid." } },
-          { "@type": "Question", "name": "How much does a custom site with GHL integration cost?", "acceptedAnswer": { "@type": "Answer", "text": "A custom website with GHL API integration typically ranges from $5,000-$15,000. If you want a fully custom CRM to replace GHL, that's $15,000-$35,000. Both options eliminate your slow funnel pages and give you real SEO." } },
+          { "@type": "Question", "name": "How much does a custom site with GHL integration cost?", "acceptedAnswer": { "@type": "Answer", "text": "Typical agencies charge $8,000 to $25,000 and take 6-10 weeks. We meet you halfway. Three tiers: Foot-in-the-Door starts at $500 (simple funnel or landing page site, founder's offer with public case study exchange). Growth starts at $3,000 (multi-page marketing site with full GHL API integration). Scale starts at $8,000 (agency white-label, member portals, complex GHL workflows). Your GHL CRM and automations stay fully intact." } },
           { "@type": "Question", "name": "Can you build custom landing pages that work with GHL?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We build custom landing pages that load in under 1 second and push leads directly into your GHL CRM via API. Higher Quality Scores on Google Ads means lower cost per lead." } },
           { "@type": "Question", "name": "What if I want to leave GHL later?", "acceptedAnswer": { "@type": "Answer", "text": "If you chose Option B, your custom website already works independently. We can replace the GHL API connections with a custom backend whenever you're ready. No vendor lock-in, no rebuilding from scratch." } }
         ]

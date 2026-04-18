@@ -16,25 +16,26 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Webflow Migration Cost 2026: Agencies Charge $30K. We Charge $500.",
-    description: "Agencies quote $5,000 to $90,000 for Webflow migration. Our founder's offer: $500 flat. Real 2026 cost breakdown by page count, what drives the price up, and questions to ask before you sign anything.",
+    title: "How Much Does Webflow Migration Cost in 2026? Honest Pricing From $500 to $60K",
+    description: "Webflow migration costs $500 to $60,000+ depending on site size, CMS complexity, and integrations. Full 2026 breakdown by page count (10, 50, 100+), the hidden fees agencies never quote, and honest pricing you can verify.",
     alternates: {
         canonical: '/blog/webflow-migration-cost',
     },
     keywords: ["webflow migration cost", "webflow to next.js cost", "webflow migration pricing", "how much does webflow migration cost", "webflow to custom code", "webflow migration cost for 50-100 page website", "webflow enterprise pricing migration cost", "factors that increase cost of webflow migration project", "webflow ongoing costs after migration", "webflow migration cost 2026"],
     openGraph: {
-        title: "Webflow Migration Cost 2026: Agencies Charge $30K. We Charge $500.",
-        description: "Agencies quote $5,000 to $90,000 for Webflow migration. Our founder's offer: $500 flat. Real 2026 cost breakdown by page count and what drives the price up.",
+        title: "How Much Does Webflow Migration Cost in 2026? Honest Pricing From $500 to $60K",
+        description: "Webflow migration costs $500 to $60,000+ depending on site size, CMS complexity, and integrations. Full 2026 breakdown by page count, hidden fees agencies never quote, and honest pricing you can verify.",
         type: "article",
         publishedTime: "2026-03-25",
+        modifiedTime: "2026-04-18",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/webflow-migration-cost",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Webflow Migration Cost 2026: Agencies Charge $30K. We Charge $500.",
-        description: "Agencies quote $5,000 to $90,000 for Webflow migration. Our founder's offer: $500 flat. Real 2026 breakdown by page count.",
+        title: "How Much Does Webflow Migration Cost in 2026? Honest Pricing From $500 to $60K",
+        description: "Webflow migration costs $500 to $60K+ depending on size. Full 2026 breakdown by page count, hidden fees, honest pricing.",
     },
 };
 
@@ -44,11 +45,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/webflow-migration-cost#article",
-            "headline": "Webflow Migration Cost 2026: Agencies Charge $30K. We Charge $500.",
-            "description": "Agencies quote $5,000 to $90,000 for Webflow migration. Our founder's offer: $500 flat. Real 2026 cost breakdown by page count, what drives the price up, and questions to ask before you sign anything.",
+            "headline": "How Much Does Webflow Migration Cost in 2026? Honest Pricing From $500 to $60K",
+            "description": "Webflow migration costs $500 to $60,000+ depending on site size, CMS complexity, and integrations. Full 2026 breakdown by page count (10, 50, 100+), the hidden fees agencies never quote, and honest pricing you can verify.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-25T00:00:00-05:00",
-            "dateModified": "2026-04-15T00:00:00-05:00",
+            "dateModified": "2026-04-18T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -111,7 +112,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-25T00:00:00-05:00",
-            "dateModified": "2026-04-15T00:00:00-05:00",
+            "dateModified": "2026-04-18T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/webflow-migration-cost#breadcrumb" },
             "inLanguage": "en-US"
         },

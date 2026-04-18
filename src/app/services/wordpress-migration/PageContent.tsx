@@ -9,7 +9,11 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SocialProof from "@/components/home/SocialProof";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
-import WordPressKiller from "@/components/sections/WordPressKiller";
+import CaseStudyGrid from "@/components/services/CaseStudyGrid";
+import PricingTiers from "@/components/services/PricingTiers";
+import RelatedServicesGrid from "@/components/services/RelatedServicesGrid";
+import PlatformKillerChart from "@/components/services/PlatformKillerChart";
+import { Gauge, Shield, RefreshCcw, Eye } from "lucide-react";
 
 const faqs = [
   {
@@ -18,7 +22,7 @@ const faqs = [
   },
   {
     q: "How long does a WordPress migration take?",
-    a: "A typical migration takes 4-6 weeks from start to launch. Week 1: Full audit and planning. Weeks 2-4: Build your new site. Week 5: Testing, content migration, URL mapping. Week 6: Launch with zero downtime."
+    a: "Three weeks for most sites. Days 1-3: full audit and architecture. Days 4-14: custom Next.js build with AI-paired development using Claude and Cursor. Days 15-18: testing, content migration, URL mapping. Days 19-21: launch with zero downtime. Agencies still quote 8-12 weeks because they bill hourly. AI tooling collapses that timeline without cutting corners."
   },
   {
     q: "What happens to my blog posts and content?",
@@ -26,7 +30,7 @@ const faqs = [
   },
   {
     q: "How much does a WordPress to Next.js migration cost?",
-    a: "It depends on the size and complexity of your site. A standard business site (10-30 pages) typically ranges from $5,000-$15,000. The ROI usually pays for itself within 3-6 months through reduced hosting costs, lower ad spend, and increased conversions."
+    a: "Typical agencies charge $15,000 to $40,000 and take 8-12 weeks. We meet you halfway. Three tiers: Foot-in-the-Door starts at $500 (simple sites, founder's offer with public case study exchange). Growth starts at $3,500 (15-50 pages, custom features). Scale starts at $12,000 (complex sites, WooCommerce, integrations). Most clients recover the investment within 3 to 6 months through eliminated hosting, plugin licenses, and maintenance fees."
   },
   {
     q: "Can I still edit my website after migration?",
@@ -106,9 +110,34 @@ export default function PageContent() {
         </div>
       </section>
 
-      {/* 2. WORDPRESS KILLER - Comparison Card (tight spacing) */}
+      {/* 2. PLATFORM KILLER CHART — modernized WordPress comparison */}
       <div className="-mt-4">
-        <WordPressKiller />
+        <PlatformKillerChart
+          badge="What Your WordPress Dev Won't Tell You"
+          headline="You're paying $200/mo to"
+          headlineAccent="keep a broken thing alive."
+          description="You're paying $100/mo for premium hosting. There's $0/mo Vercel hosting that's faster. You're paying $80/mo for plugin licenses that keep breaking. A custom build has zero plugins. You're paying $200/mo for a dev retainer because WordPress updates keep breaking your site. Custom Next.js doesn't need a retainer."
+          descriptionSecondary="Nobody tells you this because WordPress is a $1B industry built on patches and retainers. Not the hosts. Not the plugin companies. Not the agencies who bill to fix the breaks. We're the agency that replaces it honestly. No pitch. Just receipts."
+          comparisonTitle="WordPress vs Custom"
+          themLabel="WordPress"
+          metrics={[
+            { metric: "Load Speed",   themLabel: "2-5s",         usLabel: "< 1s",         themPct: 30, usPct: 98, icon: Gauge },
+            { metric: "Monthly Cost", themLabel: "$150+",        usLabel: "$0",           themPct: 95, usPct: 2,  icon: DollarSign },
+            { metric: "Security",     themLabel: "Vulnerable",   usLabel: "Bank Level",   themPct: 40, usPct: 100, icon: Shield },
+            { metric: "Maintenance",  themLabel: "Daily",        usLabel: "Zero",         themPct: 90, usPct: 5,  icon: RefreshCcw },
+            { metric: "Ownership",    themLabel: "Rented",       usLabel: "100% Yours",   themPct: 30, usPct: 100, icon: Lock },
+            { metric: "AI Search",    themLabel: "Invisible",    usLabel: "Optimized",    themPct: 15, usPct: 98, icon: Eye },
+          ]}
+          savingsLines={[
+            { label: "Premium hosting (WP Engine etc.)", amount: "$1,200" },
+            { label: "Plugin licenses & renewals",       amount: "$960" },
+            { label: "Security & backup tools",          amount: "$600" },
+            { label: "Monthly maintenance retainer",     amount: "$2,400" },
+            { label: "Dev fixes & downtime incidents",   amount: "$2,400" },
+            { label: "Lost conversions (slow speed)",    amount: "$5,040" },
+          ]}
+          totalPerYear="$12,600"
+        />
       </div>
 
       {/* 3. BEFORE / AFTER RESULTS */}
@@ -146,6 +175,17 @@ export default function PageContent() {
           <p className="text-center text-xs text-stone-600 font-medium mt-6">Based on average results across WordPress to Next.js migrations</p>
         </div>
       </section>
+
+      {/* 3a. CASE STUDY GRID — real WordPress migrations */}
+      <CaseStudyGrid
+        highlight="myCustomPatches"
+        label="Real WordPress Migrations"
+        heading="WordPress to Next.js, done"
+        subheading="Four sites we built or migrated. Live URLs, verifiable PageSpeed scores, honest before/after numbers."
+      />
+
+      {/* 3b. SOCIAL PROOF — moved up to stack with Results for concentrated proof flow */}
+      <SocialProof />
 
       {/* 4. HOW IT WORKS - Horizontal Grid (process clarity first for buyers) */}
       <section id="how-it-works" className="py-12 md:py-20 px-6 bg-[#F8FAFC]">
@@ -262,7 +302,63 @@ export default function PageContent() {
         </div>
       </section>
 
-      <SocialProof />
+      {/* PRICING TIERS — foot-in-the-door with agency comparison */}
+      <PricingTiers
+        heading="Agencies charge $15K to $40K."
+        headingAccent="We meet you halfway."
+        agencyComparison={{
+          agencyPrice: "$15K to $40K+",
+          agencyNote: "8-12 week timeline. Hourly billing. Plugin bloat carries over.",
+          ourPrice: "From $500",
+          ourNote: "3 week timeline. Fixed price. You own 100% of the code.",
+        }}
+        tiers={[
+          {
+            tier: "Foot in the Door",
+            price: "Starting from $500",
+            timeline: "1 week",
+            fit: "Simple WordPress site. Brochure, small blog. Our founder's offer.",
+            includes: [
+              "Full WordPress content export + cleanup",
+              "Custom Next.js build up to 15 pages",
+              "Sanity CMS so your team can edit",
+              "90+ PageSpeed guaranteed",
+              "301 redirect mapping (no SEO loss)",
+              "Case study in exchange for public review",
+            ],
+            cta: "Claim Founder Rate",
+          },
+          {
+            tier: "Growth",
+            price: "Starting from $3,500",
+            timeline: "2-3 weeks",
+            fit: "Business WordPress site. 15-50 pages. Blog, forms, integrations.",
+            includes: [
+              "Everything in Foot in the Door",
+              "Custom post types and taxonomies",
+              "Forms with custom API routes",
+              "Full SEO migration with schema",
+              "Analytics setup (GA4, Clarity)",
+              "60-day post-launch support",
+            ],
+            featured: true,
+          },
+          {
+            tier: "Scale",
+            price: "Starting from $12,000",
+            timeline: "3-5 weeks",
+            fit: "Complex WordPress or WooCommerce. 50+ pages, custom plugins, integrations.",
+            includes: [
+              "Everything in Growth",
+              "WooCommerce → custom ecommerce",
+              "Complex plugin replacements",
+              "Custom admin dashboard",
+              "Multi-author / multi-site support",
+              "90-day post-launch support",
+            ],
+          },
+        ]}
+      />
 
       {/* 7. DUAL CTA */}
       <section className="py-10 md:py-20 px-6 border-y border-stone-200 bg-white">
@@ -357,16 +453,18 @@ export default function PageContent() {
         </div>
       </section>
 
-      {/* 9. GUARANTEE */}
+      {/* 9. GUARANTEE — unified 90+ PageSpeed promise */}
       <section className="py-10 md:py-20 px-6">
-        <div className="container mx-auto max-w-4xl bg-green-50 border border-green-200 rounded-[3rem] p-12 relative overflow-hidden">
+        <div className="container mx-auto max-w-4xl bg-green-50 border border-green-200 rounded-[3rem] p-10 md:p-14 relative overflow-hidden">
           <div className="relative z-10 text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-700 text-xs font-bold uppercase tracking-wider mb-6">
-              <ShieldCheck className="w-4 h-4" /> 30-Day Money-Back Guarantee (from delivery)
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-700 text-xs font-bold uppercase tracking-[0.22em] mb-6">
+              <ShieldCheck className="w-4 h-4" /> Risk Reversal Guarantee
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">2x Faster or Your Money Back.</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-charcoal mb-6 tracking-tight leading-tight">
+              90+ PageSpeed <span className="font-serif italic text-cognac">or full refund.</span>
+            </h2>
             <p className="text-stone-600 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-              We are so confident in our migration process that if your new site isn&apos;t at least 2x faster than your old one, we will refund your final payment. No questions asked.
+              Every PandaCodeGen migration ships at 90+ on Google PageSpeed. If your new site doesn&apos;t hit that score on launch day, we refund 100% of your payment. Guaranteed, in writing.
             </p>
             <button
               data-cal-namespace="discovery"
@@ -406,45 +504,8 @@ export default function PageContent() {
         </div>
       </section>
 
-      {/* Related Services - Internal Linking */}
-      <section className="py-10 md:py-16 px-6 bg-[#F8FAFC]">
-        <div className="container mx-auto max-w-5xl">
-          <h2 className="text-2xl font-bold text-charcoal text-center mb-3">Explore More Services</h2>
-          <p className="text-stone-400 text-center mb-10 text-sm">Every migration is different. Find the right path for your platform.</p>
-          <div className="grid md:grid-cols-3 gap-4">
-            <Link href="/services/ecommerce" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
-                <ShoppingBag className="w-5 h-5 text-cognac" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">E-Commerce Solutions</h3>
-                <p className="text-stone-400 text-xs mt-0.5">Headless Shopify storefronts that convert.</p>
-              </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
-            </Link>
-            <Link href="/services/custom-engineering" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
-                <Code2 className="w-5 h-5 text-cognac" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">Custom Engineering</h3>
-                <p className="text-stone-400 text-xs mt-0.5">SaaS platforms, dashboards, and APIs built from scratch.</p>
-              </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
-            </Link>
-            <Link href="/services/wix" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
-                <Zap className="w-5 h-5 text-cognac" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">Wix Migration</h3>
-                <p className="text-stone-400 text-xs mt-0.5">Break free from Wix limitations. Own your code.</p>
-              </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* Related Services — expanded to all 8 platforms via reusable component */}
+      <RelatedServicesGrid currentHref="/services/wordpress-migration" />
 
       {/* Author Attribution */}
       <section className="py-10 border-t border-stone-200 bg-white">

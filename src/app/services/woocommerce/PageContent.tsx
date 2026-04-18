@@ -8,7 +8,12 @@ import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SocialProof from "@/components/home/SocialProof";
+import CaseStudyGrid from "@/components/services/CaseStudyGrid";
+import PricingTiers from "@/components/services/PricingTiers";
+import RelatedServicesGrid from "@/components/services/RelatedServicesGrid";
+import PlatformKillerChart from "@/components/services/PlatformKillerChart";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
+import { Gauge } from "lucide-react";
 
 const faqs = [
   {
@@ -104,7 +109,35 @@ export default function PageContent() {
         </div>
       </section>
 
-      {/* 2. BEFORE / AFTER RESULTS */}
+      {/* 2. PLATFORM KILLER CHART — WooCommerce comparison */}
+      <PlatformKillerChart
+        badge="What Your Plugin Vendor Won't Tell You"
+        headline="You're paying for plugins that"
+        headlineAccent="don't integrate."
+        description="You're paying $49/mo for a plugin to sync Stripe. There's a native API that does it for free. You're paying $99/mo for WooCommerce Subscriptions. Stripe handles subscriptions natively with zero markup. You're paying $60/mo to stop spam from your contact form. A 10-line reCAPTCHA does it."
+        descriptionSecondary="Nobody tells you this because every WooCommerce plugin vendor depends on the monthly recurring. Not the plugin companies. Not the agencies who install them. We're the agency that builds what replaces them. No pitch. Just receipts."
+        comparisonTitle="WooCommerce vs Custom"
+        themLabel="WooCommerce"
+        metrics={[
+          { metric: "Load Speed",    themLabel: "3-6s",      usLabel: "< 1s",       themPct: 35, usPct: 98, icon: Gauge },
+          { metric: "Monthly Cost",  themLabel: "$500+",     usLabel: "$22",        themPct: 95, usPct: 5,  icon: DollarSign },
+          { metric: "Checkout",      themLabel: "Slow cart", usLabel: "Custom flow",themPct: 40, usPct: 100, icon: CreditCard },
+          { metric: "Security",      themLabel: "Vulnerable",usLabel: "Bank Level", themPct: 35, usPct: 100, icon: ShieldCheck },
+          { metric: "Maintenance",   themLabel: "Weekly",    usLabel: "Zero",       themPct: 85, usPct: 5,  icon: Wrench },
+          { metric: "Ownership",     themLabel: "Rented",    usLabel: "100% Yours", themPct: 30, usPct: 100, icon: Lock },
+        ]}
+        savingsLines={[
+          { label: "WooCommerce Pro extensions",      amount: "$1,200" },
+          { label: "Stripe + PayPal sync plugins",    amount: "$480" },
+          { label: "WP hosting + PHP workers",        amount: "$1,440" },
+          { label: "Security + backup (Jetpack etc.)", amount: "$600" },
+          { label: "Dev retainer + plugin fixes",     amount: "$3,600" },
+          { label: "Lost checkouts (slow cart)",      amount: "$7,200" },
+        ]}
+        totalPerYear="$14,520"
+      />
+
+      {/* 2a. BEFORE / AFTER RESULTS */}
       <section className="py-10 md:py-20 px-6 border-y border-stone-200 bg-white">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">WooCommerce Speed Optimization: What You Get</h2>
@@ -139,6 +172,17 @@ export default function PageContent() {
           <p className="text-center text-xs text-stone-600 font-medium mt-6">Based on average results across WooCommerce to Next.js migrations</p>
         </div>
       </section>
+
+      {/* 2a. CASE STUDY GRID — Panda Patches was WooCommerce migration */}
+      <CaseStudyGrid
+        highlight="pandaPatches"
+        label="Real WooCommerce Migrations"
+        heading="WooCommerce to custom, done"
+        subheading="Four stores we built or migrated. Live URLs, verifiable PageSpeed scores, honest before/after numbers."
+      />
+
+      {/* 2b. SOCIAL PROOF — moved up for concentrated proof flow */}
+      <SocialProof />
 
       {/* 3. HOW IT WORKS */}
       <section id="how-it-works" className="py-12 md:py-24 px-6 bg-[#F8FAFC]">
@@ -262,7 +306,63 @@ export default function PageContent() {
         </div>
       </section>
 
-      <SocialProof />
+      {/* PRICING TIERS */}
+      <PricingTiers
+        heading="Agencies charge $15K to $40K."
+        headingAccent="We meet you halfway."
+        agencyComparison={{
+          agencyPrice: "$15K to $40K+",
+          agencyNote: "8-12 week timeline. Hourly billing. Plugin fees carry over.",
+          ourPrice: "From $500",
+          ourNote: "3 week timeline. Fixed price. No plugin taxes. You own the code.",
+        }}
+        tiers={[
+          {
+            tier: "Foot in the Door",
+            price: "Starting from $500",
+            timeline: "1 week",
+            fit: "Simple WooCommerce store. 10-30 products, basic catalog. Founder's offer.",
+            includes: [
+              "Full WooCommerce product + order export",
+              "Custom Next.js storefront",
+              "Stripe checkout integration",
+              "90+ PageSpeed guaranteed",
+              "301 redirect mapping",
+              "Case study in exchange for public review",
+            ],
+            cta: "Claim Founder Rate",
+          },
+          {
+            tier: "Growth",
+            price: "Starting from $3,500",
+            timeline: "2-3 weeks",
+            fit: "30-150 products. Custom cart logic, reviews, email capture.",
+            includes: [
+              "Everything in Foot in the Door",
+              "Custom filtering & search",
+              "Upsell / cross-sell logic",
+              "Native review system (no plugins)",
+              "Analytics setup (GA4, Clarity)",
+              "60-day post-launch support",
+            ],
+            featured: true,
+          },
+          {
+            tier: "Scale",
+            price: "Starting from $12,000",
+            timeline: "3-5 weeks",
+            fit: "150+ products, subscriptions, B2B pricing, wholesale, custom logic.",
+            includes: [
+              "Everything in Growth",
+              "Stripe Subscriptions",
+              "Multi-currency / localization",
+              "Custom admin dashboard",
+              "B2B / wholesale pricing logic",
+              "90-day post-launch support",
+            ],
+          },
+        ]}
+      />
 
       {/* 6. DUAL CTA */}
       <section className="py-10 md:py-20 px-6 border-y border-stone-200 bg-white">
@@ -361,12 +461,14 @@ export default function PageContent() {
       <section className="py-10 md:py-20 px-6">
         <div className="container mx-auto max-w-4xl bg-green-50 border border-green-200 rounded-[3rem] p-12 relative overflow-hidden">
           <div className="relative z-10 text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-700 text-xs font-bold uppercase tracking-wider mb-6">
-              <ShieldCheck className="w-4 h-4" /> 30-Day Money-Back Guarantee
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-700 text-xs font-bold uppercase tracking-[0.22em] mb-6">
+              <ShieldCheck className="w-4 h-4" /> Risk Reversal Guarantee
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">2x Faster Checkout. Or Your Deposit Back.</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-charcoal mb-6 tracking-tight leading-tight">
+              90+ PageSpeed <span className="font-serif italic text-cognac">or full refund.</span>
+            </h2>
             <p className="text-stone-600 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-              We only take a deposit to start. You don&apos;t pay the balance until the project is delivered and you&apos;re satisfied. If your new store&apos;s checkout isn&apos;t at least 2x faster than your WooCommerce store within 30 days of launch, we refund your deposit. No questions asked.
+              Every PandaCodeGen WooCommerce migration ships at 90+ on Google PageSpeed. If your new store doesn&apos;t hit that score on launch day, we refund 100% of your payment. Guaranteed, in writing.
             </p>
             <button
               data-cal-namespace="discovery"
@@ -380,45 +482,8 @@ export default function PageContent() {
         </div>
       </section>
 
-      {/* Related Services */}
-      <section className="py-10 md:py-16 px-6 bg-[#F8FAFC]">
-        <div className="container mx-auto max-w-5xl">
-          <h2 className="text-2xl font-bold text-charcoal text-center mb-3">Explore More Services</h2>
-          <p className="text-stone-400 text-center mb-10 text-sm">Every migration is different. Find the right path for your platform.</p>
-          <div className="grid md:grid-cols-3 gap-4">
-            <Link href="/services/ecommerce" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
-                <ShoppingBag className="w-5 h-5 text-cognac" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">E-Commerce Solutions</h3>
-                <p className="text-stone-400 text-xs mt-0.5">Custom storefronts with any payment stack.</p>
-              </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
-            </Link>
-            <Link href="/services/wordpress-migration" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
-                <Wrench className="w-5 h-5 text-cognac" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">WordPress Migration</h3>
-                <p className="text-stone-400 text-xs mt-0.5">Escape plugin bloat for good.</p>
-              </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
-            </Link>
-            <Link href="/services/custom-engineering" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
-                <Code2 className="w-5 h-5 text-cognac" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">Custom Engineering</h3>
-                <p className="text-stone-400 text-xs mt-0.5">Build software that scales to millions.</p>
-              </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* Related Services — expanded to all platforms via reusable component */}
+      <RelatedServicesGrid currentHref="/services/woocommerce" />
 
       {/* Author Attribution */}
       <section className="py-10 border-t border-stone-200 bg-white">

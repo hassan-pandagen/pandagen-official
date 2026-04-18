@@ -9,6 +9,10 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SocialProof from "@/components/home/SocialProof";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
+import CaseStudyGrid from "@/components/services/CaseStudyGrid";
+import PricingTiers from "@/components/services/PricingTiers";
+import RelatedServicesGrid from "@/components/services/RelatedServicesGrid";
+import PlatformKillerChart from "@/components/services/PlatformKillerChart";
 
 const comparisonData = [
   { feature: "Page Load Speed", webflow: "2-4 seconds", custom: "Under 1 second", icon: Gauge },
@@ -34,7 +38,7 @@ const faqData = [
   },
   {
     q: "How much does it cost to migrate from Webflow?",
-    a: "Standard business sites: $6,000-$15,000. Complex sites with custom CMS, e-commerce, or web app features: $15,000-$40,000. The savings on Webflow hosting ($500-2,500/year) partially offset the cost.",
+    a: "Typical agencies charge $20,000 to $60,000 and take 10-16 weeks. We meet you halfway. Three tiers: Foot-in-the-Door starts at $500 (simple Webflow sites, founder's offer with public case study exchange). Growth starts at $3,500 (business sites with custom interactions and CMS). Scale starts at $12,000 (complex builds, Webflow Ecommerce, localization). You also stop paying $39 to $235/month in Webflow fees forever.",
   },
   {
     q: "What if Webflow adds the features I need later?",
@@ -98,7 +102,35 @@ export default function WebflowPageContent() {
         </div>
       </section>
 
-      {/* 2. WEBFLOW STRENGTHS & WEAKNESSES */}
+      {/* 2. PLATFORM KILLER CHART — Webflow comparison */}
+      <PlatformKillerChart
+        badge="What Your Webflow Agency Won't Tell You"
+        headline="You're paying for a ceiling"
+        headlineAccent="you can't break."
+        description="You're paying $235/mo for Webflow's CMS Business plan because you hit the 10,000 item cap. Custom code has no cap. You're paying $2,820/yr for localization add-ons. Custom builds ship localization natively. You're paying a designer retainer because Webflow's editor can't handle your logic. Custom code has no editor limits."
+        descriptionSecondary="Nobody tells you this because Webflow and its partner agencies both bill monthly. Webflow charges you. The agency charges to work around Webflow's limits. We're the ones who tell you when to graduate. No pitch. Just receipts."
+        comparisonTitle="Webflow vs Custom"
+        themLabel="Webflow"
+        metrics={[
+          { metric: "Load Speed",    themLabel: "2-4s",      usLabel: "< 1s",        themPct: 40, usPct: 98, icon: Gauge },
+          { metric: "Monthly Cost",  themLabel: "$39-$235",  usLabel: "$22",         themPct: 85, usPct: 10, icon: DollarSign },
+          { metric: "CMS Items",     themLabel: "10K cap",   usLabel: "Unlimited",   themPct: 50, usPct: 100, icon: Database },
+          { metric: "Localization",  themLabel: "$2K/mo",    usLabel: "Built in",    themPct: 90, usPct: 5,  icon: Globe },
+          { metric: "Ownership",     themLabel: "Hosted",    usLabel: "100% Yours",  themPct: 35, usPct: 100, icon: Lock },
+          { metric: "AI Search",     themLabel: "Partial",   usLabel: "Optimized",   themPct: 45, usPct: 98, icon: FileSearch },
+        ]}
+        savingsLines={[
+          { label: "Webflow CMS Plan (Business tier)",   amount: "$1,020" },
+          { label: "Localization add-on",                 amount: "$2,820" },
+          { label: "Workspace seats (team plan)",         amount: "$540" },
+          { label: "3rd-party Webflow plugins / apps",    amount: "$720" },
+          { label: "Developer retainer for custom code",  amount: "$3,600" },
+          { label: "Lost conversions (CLS + speed)",      amount: "$4,800" },
+        ]}
+        totalPerYear="$13,500"
+      />
+
+      {/* 2a. WEBFLOW STRENGTHS & WEAKNESSES */}
       <section className="py-10 md:py-20 px-6 border-y border-stone-200 bg-stone-50">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6 text-center">Webflow Is Powerful. But It Has Limits.</h2>
@@ -166,6 +198,17 @@ export default function WebflowPageContent() {
           </div>
         </div>
       </section>
+
+      {/* 2a. CASE STUDY GRID — Obare featured (design-forward Webflow-competitor migration) */}
+      <CaseStudyGrid
+        highlight="obare"
+        label="Real Design-First Migrations"
+        heading="Webflow-quality design, done"
+        subheading="Design matters. Here are four sites where we matched or exceeded Webflow's visual fidelity without the performance cap."
+      />
+
+      {/* 2b. SOCIAL PROOF — moved up for concentrated proof flow */}
+      <SocialProof />
 
       {/* 3. WHEN TO MIGRATE */}
       <section id="when-to-migrate" className="py-12 md:py-24 px-6 bg-[#0F172A]">
@@ -322,7 +365,63 @@ export default function WebflowPageContent() {
         </div>
       </section>
 
-      <SocialProof />
+      {/* PRICING TIERS — foot-in-the-door with agency comparison */}
+      <PricingTiers
+        heading="Agencies charge $20K to $60K."
+        headingAccent="We meet you halfway."
+        agencyComparison={{
+          agencyPrice: "$20K to $60K+",
+          agencyNote: "10-16 week timeline. Hourly billing. Plus $235/mo Webflow fees forever.",
+          ourPrice: "From $500",
+          ourNote: "3 week timeline. Fixed price. You own the code. No platform fees.",
+        }}
+        tiers={[
+          {
+            tier: "Foot in the Door",
+            price: "Starting from $500",
+            timeline: "1 week",
+            fit: "Simple Webflow site. 5-15 pages. Our founder's offer.",
+            includes: [
+              "Full Webflow content export + migration",
+              "Custom Next.js build matching your design",
+              "Sanity CMS for content editing",
+              "90+ PageSpeed guaranteed",
+              "301 redirect mapping",
+              "Case study in exchange for public review",
+            ],
+            cta: "Claim Founder Rate",
+          },
+          {
+            tier: "Growth",
+            price: "Starting from $3,500",
+            timeline: "2-3 weeks",
+            fit: "Business Webflow site. 15-50 pages. Custom interactions, CMS collections.",
+            includes: [
+              "Everything in Foot in the Door",
+              "Custom Webflow interactions recreated in code",
+              "Complex CMS collections migrated",
+              "Full SEO migration with schema",
+              "Analytics setup (GA4, Clarity)",
+              "60-day post-launch support",
+            ],
+            featured: true,
+          },
+          {
+            tier: "Scale",
+            price: "Starting from $12,000",
+            timeline: "3-5 weeks",
+            fit: "Complex Webflow. 50+ pages, localization, ecommerce, custom logic.",
+            includes: [
+              "Everything in Growth",
+              "Webflow Ecommerce → custom storefront",
+              "Multi-language / localization",
+              "Custom admin dashboard",
+              "Performance monitoring",
+              "90-day post-launch support",
+            ],
+          },
+        ]}
+      />
 
       {/* 7. DUAL CTA */}
       <section className="py-10 md:py-20 px-6">
@@ -416,12 +515,14 @@ export default function WebflowPageContent() {
         <div className="container mx-auto max-w-4xl bg-linear-to-br from-green-50 to-white border border-green-500/30 rounded-[3rem] p-12 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-green-500/10 blur-[80px] pointer-events-none" />
           <div className="relative z-10 text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-600 text-xs font-bold uppercase tracking-wider mb-6">
-              <ShieldCheck className="w-4 h-4" /> Performance Guarantee
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-700 text-xs font-bold uppercase tracking-[0.22em] mb-6">
+              <ShieldCheck className="w-4 h-4" /> Risk Reversal Guarantee
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">2x Faster or Your Money Back</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-charcoal mb-6 tracking-tight leading-tight">
+              90+ PageSpeed <span className="font-serif italic text-cognac">or full refund.</span>
+            </h2>
             <p className="text-stone-600 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-              If your new custom coded site isn&apos;t at least 2x faster than your Webflow site, doesn&apos;t rank better, and doesn&apos;t look better, we&apos;ll refund you. No questions asked.
+              Every PandaCodeGen Webflow migration ships at 90+ on Google PageSpeed. If your new site doesn&apos;t hit that score on launch day, we refund 100% of your payment. Guaranteed, in writing.
             </p>
             <button
               data-cal-namespace="discovery"
@@ -435,45 +536,8 @@ export default function WebflowPageContent() {
         </div>
       </section>
 
-      {/* Related Services - Internal Linking */}
-      <section className="py-10 md:py-16 px-6 bg-[#F8FAFC]">
-        <div className="container mx-auto max-w-5xl">
-          <h2 className="text-2xl font-bold text-charcoal text-center mb-3">Explore More Services</h2>
-          <p className="text-stone-400 text-center mb-10 text-sm">Every migration is different. Find the right path for your platform.</p>
-          <div className="grid md:grid-cols-3 gap-4">
-            <Link href="/services/squarespace" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
-                <Globe className="w-5 h-5 text-cognac" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">Squarespace Migration</h3>
-                <p className="text-stone-400 text-xs mt-0.5">Leave Squarespace behind. Get a site you actually own.</p>
-              </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
-            </Link>
-            <Link href="/services/wix" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
-                <Zap className="w-5 h-5 text-cognac" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">Wix Migration</h3>
-                <p className="text-stone-400 text-xs mt-0.5">Break free from Wix limitations. Own your code.</p>
-              </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
-            </Link>
-            <Link href="/services/custom-engineering" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
-                <Code2 className="w-5 h-5 text-cognac" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">Custom Engineering</h3>
-                <p className="text-stone-400 text-xs mt-0.5">SaaS platforms, dashboards, and APIs built from scratch.</p>
-              </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* Related Services — expanded to all platforms via reusable component */}
+      <RelatedServicesGrid currentHref="/services/webflow" />
 
       {/* Author Attribution */}
       <section className="py-10 border-t border-stone-200 bg-white">

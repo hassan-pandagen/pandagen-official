@@ -8,6 +8,11 @@ import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SocialProof from "@/components/home/SocialProof";
+import CaseStudyGrid from "@/components/services/CaseStudyGrid";
+import PricingTiers from "@/components/services/PricingTiers";
+import RelatedServicesGrid from "@/components/services/RelatedServicesGrid";
+import PlatformKillerChart from "@/components/services/PlatformKillerChart";
+import { Eye } from "lucide-react";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 
 const comparisonData = [
@@ -98,7 +103,35 @@ export default function PageContent() {
         </div>
       </section>
 
-      {/* 2. GHL IS GREAT FOR CRM */}
+      {/* 2. PLATFORM KILLER CHART — GoHighLevel comparison */}
+      <PlatformKillerChart
+        badge="What Your GHL Consultant Won't Tell You"
+        headline="You're paying $297/mo for a"
+        headlineAccent="slow site."
+        description="You're paying $297/mo because GHL's CRM and automations are genuinely useful. But the site it ships with scores 20 to 45 on mobile PageSpeed. You're paying $2,000/mo in Meta ads to send traffic to a page Google won't rank and users won't wait for. You're paying a designer to work around GHL's page builder limits."
+        descriptionSecondary="Nobody tells you this because GHL's Partner Program pays commissions on every account. Not GHL. Not the GHL consultants. Not the course sellers teaching you to stay inside it. We keep your CRM. We replace the frontend. No pitch. Just receipts."
+        comparisonTitle="GHL Site vs Custom"
+        themLabel="GHL Site"
+        metrics={[
+          { metric: "PageSpeed",     themLabel: "20-45",     usLabel: "95+",         themPct: 35, usPct: 98, icon: Gauge },
+          { metric: "Load Speed",    themLabel: "3-6s",      usLabel: "< 1s",        themPct: 30, usPct: 98, icon: Gauge },
+          { metric: "SEO Control",   themLabel: "Limited",   usLabel: "Full",        themPct: 30, usPct: 100, icon: FileSearch },
+          { metric: "GHL CRM",       themLabel: "Stays",     usLabel: "Stays",       themPct: 100, usPct: 100, icon: Users },
+          { metric: "Custom Design", themLabel: "Templates", usLabel: "Fully Custom",themPct: 35, usPct: 100, icon: Palette },
+          { metric: "AI Search",     themLabel: "Invisible", usLabel: "Optimized",   themPct: 15, usPct: 98, icon: Eye },
+        ]}
+        savingsLines={[
+          { label: "GHL Agency plan (stays)",             amount: "(kept)" },
+          { label: "Ad spend wasted on slow landing",     amount: "$6,000" },
+          { label: "Lost leads (slow page drop-offs)",    amount: "$9,600" },
+          { label: "SEO rankings never earned",           amount: "$4,800" },
+          { label: "Developer hacks to speed up GHL",     amount: "$1,200" },
+          { label: "Brand design compromises",            amount: "$2,400" },
+        ]}
+        totalPerYear="$24,000"
+      />
+
+      {/* 2a. GHL IS GREAT FOR CRM */}
       <section className="py-10 md:py-20 px-6 border-y border-stone-200 bg-stone-50">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6 text-center">GHL Is Great for CRM. Not for Websites.</h2>
@@ -131,6 +164,17 @@ export default function PageContent() {
           </div>
         </div>
       </section>
+
+      {/* 2a. CASE STUDY GRID — real migrations with integrations preserved */}
+      <CaseStudyGrid
+        highlight="myCustomPatches"
+        label="Real Custom Builds"
+        heading="Custom frontend, CRM intact, done"
+        subheading="Four sites where we built fast custom frontends while keeping the business systems clients rely on."
+      />
+
+      {/* 2b. SOCIAL PROOF — moved up for concentrated proof flow */}
+      <SocialProof />
 
       {/* 3. HOW IT WORKS - Process Timeline */}
       <section id="how-it-works" className="py-12 md:py-24 px-6 bg-white">
@@ -272,7 +316,64 @@ export default function PageContent() {
         </div>
       </section>
 
-      <SocialProof />
+      {/* PRICING TIERS — GoHighLevel site overlay pricing */}
+      <PricingTiers
+        heading="Agencies charge $8K to $25K."
+        headingAccent="We meet you halfway."
+        agencyComparison={{
+          agencyPrice: "$8K to $25K+",
+          agencyNote: "6-10 week timeline. Hourly billing. Your $297/mo GHL fee continues forever.",
+          ourPrice: "From $500",
+          ourNote: "2-3 week timeline. Fixed price. Keep your GHL CRM intact. Own the frontend.",
+        }}
+        tiers={[
+          {
+            tier: "Foot in the Door",
+            price: "Starting from $500",
+            timeline: "1 week",
+            fit: "Simple funnel or landing page site. 5-10 pages. Our founder's offer.",
+            includes: [
+              "Custom Next.js site with your design",
+              "GHL form + webhook integration",
+              "Sanity CMS for content editing",
+              "90+ PageSpeed guaranteed",
+              "Your GHL automations stay intact",
+              "Case study in exchange for public review",
+            ],
+            cta: "Claim Founder Rate",
+          },
+          {
+            tier: "Growth",
+            price: "Starting from $3,000",
+            timeline: "2-3 weeks",
+            fit: "Multi-page marketing site. 15-40 pages. Blog, forms, GHL integrations.",
+            includes: [
+              "Everything in Foot in the Door",
+              "Full GHL API + webhook integration",
+              "Custom lead capture flows",
+              "Full SEO with schema markup",
+              "Analytics (GA4, Clarity, GHL tracking)",
+              "60-day post-launch support",
+            ],
+            featured: true,
+          },
+          {
+            tier: "Scale",
+            price: "Starting from $8,000",
+            timeline: "3-5 weeks",
+            fit: "Agency white-label sites, membership portals, complex GHL integrations.",
+            includes: [
+              "Everything in Growth",
+              "Multi-site / agency white-label",
+              "Custom member portal with GHL auth",
+              "Calendar integration (GHL or Cal.com)",
+              "Multi-step funnel with GHL triggers",
+              "90-day post-launch support",
+            ],
+          },
+        ]}
+        footnote="Every build keeps your GHL CRM, automations, and integrations fully intact. We replace only the slow frontend."
+      />
 
       {/* 7. TRIPLE CTA */}
       <section className="py-10 md:py-20 px-6">
@@ -418,45 +519,8 @@ export default function PageContent() {
         </div>
       </section>
 
-      {/* Related Services - Internal Linking */}
-      <section className="py-10 md:py-16 px-6 bg-[#F8FAFC]">
-        <div className="container mx-auto max-w-5xl">
-          <h2 className="text-2xl font-bold text-charcoal text-center mb-3">Explore More Services</h2>
-          <p className="text-stone-400 text-center mb-10 text-sm">Every migration is different. Find the right path for your platform.</p>
-          <div className="grid md:grid-cols-3 gap-4">
-            <Link href="/services/custom-engineering" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
-                <Code2 className="w-5 h-5 text-cognac" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">Custom Engineering</h3>
-                <p className="text-stone-400 text-xs mt-0.5">SaaS platforms, dashboards, and APIs built from scratch.</p>
-              </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
-            </Link>
-            <Link href="/services/wordpress-migration" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
-                <Wrench className="w-5 h-5 text-cognac" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">WordPress Migration</h3>
-                <p className="text-stone-400 text-xs mt-0.5">Escape plugin bloat. Get load times under 1 second with custom code.</p>
-              </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
-            </Link>
-            <Link href="/services/wix" className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
-              <div className="w-11 h-11 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
-                <Zap className="w-5 h-5 text-cognac" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">Wix Migration</h3>
-                <p className="text-stone-400 text-xs mt-0.5">Break free from Wix limitations. Own your code.</p>
-              </div>
-              <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-cognac group-hover:translate-x-1 transition-all shrink-0" />
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* Related Services — expanded to all platforms via reusable component */}
+      <RelatedServicesGrid currentHref="/services/gohighlevel" />
 
       {/* Author Attribution */}
       <section className="py-10 border-t border-stone-200 bg-white">

@@ -123,6 +123,11 @@ export default function Footer({ onOpenQuote }: FooterProps) {
                 desc="Deep dives into Next.js, SEO, and performance."
               />
               <FeaturedLink
+                href="/manifesto"
+                title="Our Manifesto"
+                desc="Why we refuse hourly billing. Why we publish our prices."
+              />
+              <FeaturedLink
                 href="/contact"
                 title="Contact Us"
                 desc="Get a free quote or book a strategy call."

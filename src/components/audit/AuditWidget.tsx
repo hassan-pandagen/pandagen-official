@@ -7,6 +7,7 @@ import AuditLoadingState from "./AuditLoadingState";
 import AuditEmailGate from "./AuditEmailGate";
 import { getScoreTextClass, getScoreBorderClass } from "@/lib/audit/scoring";
 import type { PageSpeedResult } from "@/lib/audit/pagespeed";
+import { trackGAEvent } from "@/components/GoogleAnalytics";
 
 type WidgetState = "input" | "loading" | "results";
 
@@ -25,8 +26,21 @@ export default function AuditWidget() {
   const [isEmailGateOpen, setIsEmailGateOpen] = useState(false);
 
   const handleAnalyze = async () => {
-    if (!url.trim()) {
+    const trimmed = url.trim();
+    if (!trimmed) {
       setError("Please enter a URL");
+      return;
+    }
+
+    // Catch common mistake: pasting an email instead of a URL
+    if (trimmed.includes("@") && !trimmed.startsWith("http")) {
+      setError("That looks like an email. Please paste your website URL (e.g. yourwebsite.com)");
+      return;
+    }
+
+    // Basic URL shape check — must have a dot, no spaces
+    if (!trimmed.includes(".") || /\s/.test(trimmed)) {
+      setError("Please enter a valid website URL (e.g. yourwebsite.com)");
       return;
     }
 
@@ -37,17 +51,30 @@ export default function AuditWidget() {
       const response = await fetch("/api/audit/analyze", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ url: url.trim() }),
+        body: JSON.stringify({ url: trimmed }),
       });
+
+      // Handle non-JSON error responses (e.g. HTML error pages from 500s)
+      const contentType = response.headers.get("content-type") || "";
+      if (!contentType.includes("application/json")) {
+        throw new Error("We couldn't analyze that URL. Double-check the website address and try again.");
+      }
 
       const result = await response.json();
 
       if (!response.ok) {
-        throw new Error(result.error || "Analysis failed");
+        throw new Error(result.error || "Analysis failed. Check the URL and try again.");
       }
 
       setAuditData(result.data);
       setState("results");
+
+      // Fire GA4 conversion event for audit URL submission (top of funnel)
+      trackGAEvent("audit_url_submit", {
+        url: trimmed,
+        performance_score: result.data?.performanceScore,
+        platform_detected: result.data?.platformDetected,
+      });
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong. Try again.");
       setState("input");
@@ -113,10 +140,10 @@ export default function AuditWidget() {
                 >
                   <div>
                     <h2 className="text-xl font-bold text-charcoal leading-tight mb-1">
-                      Get Your Free Website Audit
+                      Free Optimization Report. No Call Required.
                     </h2>
                     <p className="text-sm text-stone-600">
-                      Our AI runs 11 deep checks that PageSpeed can&apos;t. Speed, SEO, security, conversions, and more.
+                      Paste your URL. See exactly what&apos;s slowing your site down in 30 seconds. Full written report with a personal video walkthrough delivered within <span className="font-semibold text-charcoal">24 business hours</span>. No sign-up, no sales pitch.
                     </p>
                   </div>
 
@@ -141,7 +168,7 @@ export default function AuditWidget() {
                       onClick={handleAnalyze}
                       className="w-full py-4 bg-charcoal hover:bg-stone-800 text-white font-bold text-base rounded-xl transition-all flex items-center justify-center gap-2 hover:scale-[1.01] group"
                     >
-                      Run AI Audit
+                      Get My Report
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </button>
                   </div>
@@ -245,7 +272,7 @@ export default function AuditWidget() {
                     onClick={() => setIsEmailGateOpen(true)}
                     className="w-full py-4 bg-charcoal text-white font-bold rounded-xl hover:bg-stone-800 transition-all flex items-center justify-center gap-2 hover:scale-[1.01] group"
                   >
-                    Unlock Full 11-Point Report
+                    Ready to Stop the Bleeding?
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </button>
 
@@ -288,8 +315,8 @@ export default function AuditWidget() {
               {state === "input" && (
                 <motion.div key="m-input" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="space-y-4">
                   <div>
-                    <h2 className="text-lg font-bold text-charcoal mb-1">Get Your Free Website Audit</h2>
-                    <p className="text-xs text-stone-600">11 deep checks by our AI. Speed, SEO, security, and more.</p>
+                    <h2 className="text-lg font-bold text-charcoal mb-1">Free Optimization Report. No Call Required.</h2>
+                    <p className="text-xs text-stone-600">Instant preview + full written report with video walkthrough in <span className="font-semibold text-charcoal">24 business hours</span>. No sign-up, no sales pitch.</p>
                   </div>
                   <div className="relative">
                     <Globe className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
@@ -308,7 +335,7 @@ export default function AuditWidget() {
                     onClick={handleAnalyze}
                     className="w-full py-3 bg-charcoal hover:bg-stone-800 text-white font-bold rounded-xl transition-all flex items-center justify-center gap-2 group"
                   >
-                    Run AI Audit <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    Get My Report <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </motion.div>
               )}
@@ -370,7 +397,7 @@ export default function AuditWidget() {
                     onClick={() => setIsEmailGateOpen(true)}
                     className="w-full py-3 bg-charcoal text-white font-bold rounded-xl hover:bg-stone-800 transition-all flex items-center justify-center gap-2 group"
                   >
-                    Unlock Full Report <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    Stop the Bleeding <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </button>
                   <button onClick={handleReset} className="w-full text-center text-xs text-gray-500 hover:text-cognac transition-colors">
                     Scan another site

@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, CheckCircle2, Mail, ArrowRight, Search } from "lucide-react";
 import { useState, useEffect } from "react";
 import { trackFBEvent } from "@/components/FacebookPixel";
+import { trackGAEvent } from "@/components/GoogleAnalytics";
 import type { PageSpeedResult } from "@/lib/audit/pagespeed";
 
 interface AuditEmailGateProps {
@@ -61,8 +62,13 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData }: Audi
       });
 
       if (!response.ok) {
-        const data = await response.json();
-        throw new Error(data.error || "Failed to submit");
+        // Safely parse error — fall back to generic message if response isn't JSON
+        const contentType = response.headers.get("content-type") || "";
+        if (contentType.includes("application/json")) {
+          const data = await response.json();
+          throw new Error(data.error || "Failed to submit. Try again.");
+        }
+        throw new Error("Server error. Please try again in a moment.");
       }
 
       trackFBEvent("Lead", {
@@ -70,6 +76,14 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData }: Audi
         content_category: "Audit Tool",
         value: 0,
         currency: "USD",
+      });
+
+      // Fire GA4 conversion event for the actual lead capture (bottom of funnel)
+      trackGAEvent("audit_lead_submit", {
+        url: url,
+        performance_score: auditData?.performanceScore,
+        platform_detected: auditData?.platformDetected,
+        email_domain: email.split("@")[1],
       });
 
       setIsSubmitted(true);
@@ -116,9 +130,12 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData }: Audi
                   >
                     <CheckCircle2 className="w-10 h-10" />
                   </motion.div>
-                  <h3 className="text-2xl font-bold text-charcoal mb-2">Check Your Inbox</h3>
-                  <p className="text-stone-600">
-                    Your full 11-point audit report is on the way.
+                  <h3 className="text-2xl font-bold text-charcoal mb-2">Hassan Is On It</h3>
+                  <p className="text-stone-600 mb-2">
+                    Your full optimization report plus a personal video walkthrough will be in your inbox within <span className="font-semibold text-charcoal">24 business hours</span>.
+                  </p>
+                  <p className="text-stone-500 text-sm">
+                    No sales call, no sign-up, just your report.
                   </p>
                 </div>
               ) : (
@@ -137,7 +154,7 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData }: Audi
                     </div>
 
                     <h2 className="text-xl font-bold text-white mb-1">
-                      Your Audit is Ready
+                      Want the Full Optimization Report?
                     </h2>
                     <p className="text-stone-400 text-sm font-mono truncate">
                       {url}
@@ -156,12 +173,15 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData }: Audi
 
                   {/* Form body */}
                   <div className="p-8">
+                    <p className="text-sm text-stone-600 mb-4 leading-relaxed">
+                      I personally audit every site. You will get a custom PDF with specific optimization steps, plus a short video walkthrough showing exactly what&apos;s slowing your site down and how to fix it.
+                    </p>
                     <div className="space-y-2 mb-6">
                       {[
-                        "Full 11-point inspection results",
-                        "Google performance scores",
-                        "Issues ranked by business impact",
-                        "Personalized next steps",
+                        "Custom PDF with 11-point optimization breakdown",
+                        "Personal Loom video walkthrough by Hassan",
+                        "Specific fixes ranked by revenue impact",
+                        "Delivered within 24 business hours",
                       ].map((item) => (
                         <div key={item} className="flex items-center gap-2 text-sm text-stone-600">
                           <CheckCircle2 className="w-4 h-4 text-cognac shrink-0" />
@@ -173,7 +193,7 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData }: Audi
                     <form onSubmit={handleSubmit} className="space-y-4">
                       <div>
                         <label htmlFor="audit-email" className="block text-xs font-bold text-charcoal uppercase tracking-wide mb-2">
-                          Where should we send the report?
+                          Where should Hassan send your report?
                         </label>
                         <div className="relative">
                           <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-stone-500" />
@@ -209,11 +229,11 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData }: Audi
                         {isLoading ? (
                           <>
                             <div className="w-5 h-5 border-2 border-white/20 border-t-white rounded-full animate-spin" />
-                            Sending Report...
+                            Submitting...
                           </>
                         ) : (
                           <>
-                            Get Full Report
+                            Send My Report in 24 Hours
                             <ArrowRight className="w-4 h-4" />
                           </>
                         )}
@@ -221,7 +241,7 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData }: Audi
                     </form>
 
                     <p className="text-xs text-stone-400 text-center mt-4">
-                      No spam. Just your audit results.
+                      No spam. No sales call. Just your report.
                     </p>
                   </div>
                 </div>

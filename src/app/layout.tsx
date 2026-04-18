@@ -8,6 +8,7 @@ import { Analytics } from "@vercel/analytics/react";
 import TawkToChat from "@/components/TawkToChat";
 import FacebookPixel from "@/components/FacebookPixel";
 import MicrosoftClarity from "@/components/MicrosoftClarity";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import ReferrerBanner from "@/components/ui/ReferrerBanner";
 
 const inter = Inter({
@@ -140,6 +141,7 @@ export default function RootLayout({
         <TawkToChat />
         <FacebookPixel />
         <MicrosoftClarity />
+        <GoogleAnalytics />
         <ReferrerBanner />
         <SmoothScroll>
           {children}
