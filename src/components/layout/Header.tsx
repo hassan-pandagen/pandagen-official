@@ -48,6 +48,7 @@ const workLinks = [
 
 const aboutLinks = [
   { name: "About PandaCodeGen", href: "/about" },
+  { name: "Our Manifesto", href: "/manifesto" },
   { name: "Hassan Jamal", href: "/about/hassan" },
   { name: "Imran", href: "/about/imran" },
 ];
