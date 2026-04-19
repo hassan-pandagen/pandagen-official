@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     alternates: {
         canonical: '/blog/why-we-chose-nextjs-over-wordpress-2026',
     },
+    robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
         title: "Why We Chose Next.js Over WordPress in 2026 (With Client Results)",
         description: "We built WordPress for years. Then client data made it impossible to justify. Here are the speed, cost, and SEO numbers that made us switch every new project to Next.js.",
@@ -180,7 +181,7 @@ export default function WhyNextjsOverWordPressPage() {
                         <BlogAuthor
                             date="Mar 4, 2026"
                             readTime="11 min read"
-                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
+                            bio="I am Hassan. I spent years building WordPress before one client&apos;s data made me stop. Every site I ship now loads under a second, hosts for $0 to $20 a month, and ships with zero plugins. Based in Austin."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -202,21 +203,13 @@ export default function WhyNextjsOverWordPressPage() {
                     <div className="space-y-8">
 
                         <BlogText>
-                            We need to say something upfront: we spent years building in WordPress. Some of those sites are still running today.
+                            I built in WordPress for six years before launching PandaCodeGen. Then a client walked in with a spreadsheet that made WordPress indefensible.
                         </BlogText>
 
-                        <BlogText>
-                            We&apos;re not here to trash WordPress. It built an industry. It gave millions of people a website when they couldn&apos;t afford custom development. That&apos;s real value.
-                        </BlogText>
+                        <BlogHeader>The Client Data That Made Me Quit WordPress For Good</BlogHeader>
 
                         <BlogText>
-                            But for business clients in 2026: businesses that depend on their website for leads, sales, and Google traffic. <BlogHighlight>we can no longer in good conscience recommend WordPress.</BlogHighlight> Here&apos;s exactly why.
-                        </BlogText>
-
-                        <BlogHeader>What Finally Changed Our Mind (The Client Who Showed Us the Data)</BlogHeader>
-
-                        <BlogText>
-                            In mid-2024, we had a client: an e-commerce store on WordPress/WooCommerce, come to us frustrated. Their competitor, who had launched 18 months earlier, was outranking them on almost every keyword.
+                            An e-commerce client came in frustrated. Their competitor, eighteen months younger, was outranking them on twenty-two keywords. Their Kinsta invoice was $340 a month. PageSpeed: 42 on mobile. Their competitor, on the same test, scored 97. That was the day I stopped taking WordPress projects.
                         </BlogText>
 
                         <BlogText>
@@ -239,7 +232,7 @@ export default function WhyNextjsOverWordPressPage() {
                             <BlogHighlight>That&apos;s when we knew WordPress wasn&apos;t a cost-saving tool anymore. It was a competitive disadvantage.</BlogHighlight>
                         </BlogText>
 
-                        <BlogHeader>Reason 1: The Speed Difference Is Not Marginal. It&apos;s Structural</BlogHeader>
+                        <BlogHeader>WordPress Cannot Load In Under A Second. The Architecture Will Not Let It.</BlogHeader>
 
                         <BlogText>
                             This is the core issue. WordPress and Next.js don&apos;t have a performance gap. They have a performance canyon.
@@ -279,7 +272,7 @@ export default function WhyNextjsOverWordPressPage() {
                             You can&apos;t caching-plugin your way to 0.9 second load times on WordPress. The architecture doesn&apos;t allow it.
                         </BlogQuote>
 
-                        <BlogHeader>Reason 2: Hosting Cost Goes from $150/Month to $0</BlogHeader>
+                        <BlogHeader>We Moved A Client From $340/mo Kinsta To $0/mo Vercel</BlogHeader>
 
                         <BlogText>
                             When we tell clients their new site will host for free and only cost $20/month when their business grows, they don&apos;t believe us at first.
@@ -304,7 +297,7 @@ export default function WhyNextjsOverWordPressPage() {
                             The savings over 3 years: <BlogHighlight>$1,800 to $14,400 in hosting costs alone.</BlogHighlight> On top of the build investment, which pays for itself faster every month Vercel is free.
                         </BlogText>
 
-                        <BlogHeader>Reason 3: Zero Security Vulnerabilities (No Plugins = No Attack Surface)</BlogHeader>
+                        <BlogHeader>Every WordPress Site Is 20 Strangers&apos; Code. Ours Is Zero.</BlogHeader>
 
                         <BlogText>
                             43% of all website hacks in 2024 targeted WordPress. Not because WordPress itself is insecure, but because of how WordPress is used.
@@ -325,7 +318,7 @@ export default function WhyNextjsOverWordPressPage() {
                             Custom Next.js sites have <BlogHighlight>zero plugins</BlogHighlight>. We build every feature from scratch using stable npm packages. No attack surface. No plugin conflicts. No emergency patches.
                         </BlogText>
 
-                        <BlogHeader>Reason 4: 100/100 PageSpeed Is Achievable and Repeatable</BlogHeader>
+                        <BlogHeader>Why We Guarantee 100/100 And WordPress Caps At 70</BlogHeader>
 
                         <BlogText>
                             We guarantee 95-100/100 PageSpeed Mobile on every client site. Not because we&apos;re magicians. Because Next.js makes it structurally achievable. You can see exactly what goes into each build on our <Link href="/services/custom-engineering?ref=blog/why-we-chose-nextjs-over-wordpress-2026" className="text-charcoal font-bold underline hover:text-stone-600 transition-colors">custom engineering service page</Link>.
@@ -352,7 +345,7 @@ export default function WhyNextjsOverWordPressPage() {
                             Our recent clients: MyCustomPatches. <a href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">100/100</a>. Our own agency site (this one). 100/100. Every project. Consistent.
                         </BlogText>
 
-                        <BlogHeader>Reason 5: The Content Editor Is Better Than WordPress Admin</BlogHeader>
+                        <BlogHeader>Your Team Will Stop Missing WordPress In Week Two</BlogHeader>
 
                         <BlogText>
                             &quot;But my team knows WordPress. What do they use to edit the site?&quot;
@@ -386,7 +379,7 @@ export default function WhyNextjsOverWordPressPage() {
                                 </CalModalButton>
                         </div>
 
-                        <BlogHeader>Reason 6: You Own the Code Completely</BlogHeader>
+                        <BlogHeader>You Own An Asset, Not A Licence</BlogHeader>
 
                         <BlogText>
                             With WordPress, you own a configuration of someone else&apos;s software. The theme is built by a third party. The plugins are built by third parties. Your website&apos;s functionality depends on other people&apos;s code staying maintained.
@@ -412,7 +405,7 @@ export default function WhyNextjsOverWordPressPage() {
                             <BlogHighlight>You own an asset, not a license.</BlogHighlight> That distinction matters when you&apos;re selling your business or onboarding a new developer.
                         </BlogText>
 
-                        <BlogHeader>Reason 7: It Scales Without Extra Cost</BlogHeader>
+                        <BlogHeader>Vercel Serves 10 Million Visitors For The Same Price As 100</BlogHeader>
 
                         <BlogText>
                             WordPress hosting costs increase with traffic. Go viral on a Tuesday morning and your shared/VPS hosting buckles. You upgrade. Costs more. Then traffic normalizes and you&apos;re overpaying.

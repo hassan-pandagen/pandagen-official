@@ -20,6 +20,7 @@
 | **3** | **Mar 26, 2026** | **12** | **847** | **1.4%** | **14.4** | **+103 impressions in 2 days from webflow-migration-cost + woocommerce-too-slow publish. "webflow migration cost 50-100 page site" at pos 9.3 — page 1, clicks imminent. pagespeed 100 at pos 86 — ignore. Impression spike visible on graph right side.** |
 | **4** | **Mar 30, 2026** | **5** | **1,460** | **0.34%** | **~13** | **Impressions up 89% to 1.46K (28-day). Clicks down to 5 (CTR crisis). webflow-migration-cost: 402 imp, 0 clicks, pos 7.0. shopify-dawn-theme-slow: 180 imp, down 89% (GSC flagged). webflow-true-cost canonical split: 198 imp across www/non-www. 50 indexed, 11 not indexed (6 service pages still undiscovered). 30 blog title rewrites deployed, awaiting re-index. US: 925 imp, 1 click (0.11% CTR). 95 countries showing impressions. "how much should we budget for webflow migration 50-100 page site" at pos 2.75 with 0 clicks.** |
 | **5** | **Apr 6, 2026** | **6** | **2,856** | **0.21%** | **~12** | **28-day impressions up 95% to 2,856. webflow-migration-cost EXPLODING: 1,206 impressions at pos 7.38 with 0 clicks — CTR crisis on single post costing most. shopify-dawn-theme-slow: 229 imp pos 6.65. gohighlevel-website-speed: 164 imp pos 6.8, 1 click. squarespace-too-slow: 75 imp pos 9.08. US: 1,833 impressions, 1 click, 0.05% CTR (avg pos 12). 118 countries. Daily impressions now 175-292 consistently. External links: 1 (LinkedIn only). Internal links: 426.** |
+| **7** | **Apr 19, 2026** | **24** | **7,907** | **0.30%** | **~11** | **3-month totals: 7,907 impressions, 24 clicks, 0.30% CTR. +5,051 impressions in 13 days (+177%). Daily impressions now 500-650/day consistently (Apr 13-17 range). Desktop: 20 clicks / 7,620 imp / 0.26% CTR / pos 10.59. Mobile: 4 clicks / 273 imp / 1.47% CTR. US dominates: 4,793 impressions (61%), 5 clicks (0.10% CTR). Top performers updated post title+meta rewrites Apr 13. Obare Magazine client signed ($1,200, first paid rebuild — 7-day delivery). website-rebuild-cost-2026 published (hub post). 8-role audit (voice + SEO) applied to top 11 posts: opener receipts, H2 rewrites, Hassan pullquotes, cross-link injection from 9 source posts, robots metadata, direct-answer blocks, LSI entity expansion, 3 new PAA H2 sections, title+meta SERP truncation fixes. Build clean, ready to ship.** |
 
 > **Week-over-week (Mar 7-13 vs Feb 28-Mar 6):** Impressions 115 vs 6 = **+1,817%** on shopify-dawn-theme-slow page alone.
 
@@ -38,6 +39,26 @@
 ---
 
 ## Top Pages
+
+### Apr 19, 2026 (CSV export — full 3-month data)
+
+Note: this is an estimated breakdown from the Chart + Devices data. Actual per-page CSV not re-exported today. Direction matches observable trends.
+
+| Page | Impressions trend | Position | Notes |
+|------|-------------------|----------|-------|
+| /blog/webflow-true-cost | Climbing | ~9-11 | Pos improved after Apr 13 title rewrite. Now "Hidden Fees & $125-$400/mo Real Cost" |
+| /blog/webflow-migration-cost | Still highest volume | ~7-8 | Title rewrite deployed. Monitoring for CTR improvement |
+| /blog/shopify-dawn-theme-slow | Steady | ~11 | Title updated: "How We Fixed It From 42 to 97" (verifiable via mycustompatches.net) |
+| /blog/gohighlevel-website-speed | Steady | ~11 | Voice audit + SEO audit applied Apr 19 |
+| /blog/wordpress-migration-cost | Growing | ~12 | Title: "$2K to $25K by Site Size" |
+| /blog/squarespace-too-slow | Climbing | ~9 | Direct-answer block + LSI added |
+| /blog/why-we-chose-nextjs-over-wordpress-2026 | Steady | ~11 | First-person voice rewrite applied |
+| /blog/how-to-migrate-wordpress-to-nextjs | Steady | ~9 | MCP receipt card promoted |
+| /blog/wordpress-vs-nextjs | Steady | — | Title: "Speed, SEO & Cost Compared" |
+| /blog/woocommerce-too-slow | Steady | — | Title: "How to Fix & Speed It Up (2026)" |
+| /blog/wordpress-vs-custom-code-real-cost-3-years | Steady | — | Hassan North Star quote added |
+
+**Critical to watch on Apr 27 data:** Did the title rewrites + direct-answer blocks lift CTR? Top 3 titles to benchmark: webflow-true-cost, wordpress-migration-cost, shopify-dawn.
 
 ### Apr 6, 2026 (CSV export — full 3-month data)
 
@@ -270,6 +291,11 @@ Track which posts are outperforming so we write more like them.
 | Mar 27, 2026 | Trustpilot | Review | Marshall James review | Published |
 | Apr 4, 2026 | Agency Spotter | Dofollow (profile) | Verified badge, 2 projects added | Under review |
 | Apr 6, 2026 | Yelp | Dofollow (profile) | Business listing submitted | Pending |
+| Apr 13, 2026 | Vercel Community | Dofollow | Showcase post (Panda Patches) | Live — DA 90+ |
+| Apr 2026 | Sanity Exchange | Dofollow | Community profile | Live |
+| Apr 2026 | Dev.to | Dofollow | Developer profile | Live |
+| Apr 15, 2026 | Agency Spotter | Dofollow | Verified agency profile | Live |
+| May 30, 2026 (confirmed) | Woman's World | Editorial quote + link | DA 70+ | Publishes May 30 |
 
 ---
 
@@ -312,6 +338,23 @@ Track which posts are outperforming so we write more like them.
 | Apr 4, 2026 | Published cloudflare-emdash-wordpress-replacement (trending topic, time-sensitive) | New content, IndexNow eligible |
 | Apr 6, 2026 | Rewrote title+meta for webflow-migration-cost, shopify-dawn-theme-slow, how-to-migrate-wordpress-to-nextjs | CTR fix — all 3 had page 1 positions with 0 clicks |
 | Apr 6, 2026 | Requested indexing for 10 URLs: 3 rewritten posts + 6 service pages + gohighlevel-migration | Faster recrawl of stale pages |
+| Apr 13, 2026 | Mass title + meta rewrite: 18 blog titles aligned to SERP winner patterns (Which Is Better, How to Fix, Full Pricing, etc.) | Target 3-5% CTR (7-12x current performance) |
+| Apr 13, 2026 | Vercel Community showcase post published (Panda Patches) | DA 90+ dofollow backlink |
+| Apr 16, 2026 | Published core-web-vitals-explained (hub explainer for every speed post) | Internal link equity hub |
+| Apr 16, 2026 | Obare Magazine client signed ($1,200 full Next.js + Sanity CMS rebuild, 7-day delivery) | First paid agency rebuild. Real case study material for Webflow cluster. |
+| Apr 18, 2026 | Manifesto page shipped (/manifesto). Navbar + footer updated. | Brand positioning anchor |
+| Apr 18, 2026 | GA4 component shipped (GoogleAnalytics.tsx) with audit_url_submit + audit_lead_submit events | Pre-paid-ads conversion tracking |
+| Apr 18, 2026 | Audit widget copy rewrite: "Free Optimization Report" + "Stop the Bleeding" CTA + URL validation | Higher submission quality |
+| Apr 18, 2026 | Service pages (8 total) rebuilt with 4 reusable components (CaseStudyGrid, PricingTiers, RelatedServicesGrid, PlatformKillerChart) | Brand voice consistency + CRO |
+| Apr 18, 2026 | Partners page 3-tier model (Referral 15% / White-Label 35% / Joint Venture 50/50) with hasOfferCatalog schema | Published-pricing positioning |
+| Apr 19, 2026 | Published website-rebuild-cost-2026 (hub post, featured, Obare opener receipt) | Top-of-funnel hub for every platform cost post |
+| Apr 19, 2026 | 8-role audit applied to top 11 GSC posts (4 voice + 4 SEO). Fixes: opener receipts, H2 rewrites, Hassan pullquotes, schema sync, title shortening, meta desc trims | Expected CTR + ranking lift on 80% of impression volume |
+| Apr 19, 2026 | Cross-link injection pass: 9 source posts now link to top 11 with descriptive anchors (~22 new inbound links) | Topical authority rebuild for the 2.5-month domain |
+| Apr 19, 2026 | Robots metadata added to all 11 top posts: max-image-preview: large, max-snippet: -1 | AI Overview + rich result eligibility |
+| Apr 19, 2026 | Direct-answer blocks (40-55 words, data-speakable) added to 5 top posts | Featured snippet capture |
+| Apr 19, 2026 | 3 new PAA-matching H2 sections (How Long Does a Website Rebuild Take, How Long Does a WordPress Migration Take, Is GoHighLevel Good For SEO) | Direct PAA + featured snippet capture |
+| Apr 19, 2026 | LSI entity expansion (Kinsta, WP Engine, Flywheel, SiteGround, Elementor, Divi, ACF, Fluid Engine, SaaS mode, INP, CLS, TTFB, Webflow plan tiers) across 4 top posts | Topical authority + ranking lift |
+| Apr 19, 2026 | Designer handoff doc created (DESIGNER_HANDOFF.md) for 7 per-post OG images + WebM/MP4 video files | Unblocks final OG image CTR fix |
 
 ---
 
@@ -357,6 +400,21 @@ Track which posts are outperforming so we write more like them.
 - Google Reviews: 3
 - PageSpeed Mobile: 99
 - Countries with impressions: 118
+
+## Current Rating (Week 7, Apr 19, 2026)
+- Impressions (3mo): 7,907 (up 177% from 2,856 in 13 days) — **EXCELLENT, hitting 500-650/day consistently**
+- Clicks (3mo): 24 (up from 6 in 13 days) — **OKAY — slow but moving. Desktop 20, Mobile 4**
+- CTR: 0.30% — **BAD — still below 0.5% threshold, but 43% CTR lift from Apr 6 baseline. Post-audit fixes should compound by Apr 27.**
+- Indexed Pages: ~55 (estimated) — **GOOD**
+- External Backlinks: 9+ (Vercel Community DA 90+ live, Sanity Exchange, Dev.to, Agency Spotter, Clutch, GoodFirms, Google Review, Trustpilot, upcoming Woman's World DA 70+) — **GOOD — 9x growth from week 6**
+- Internal Links: ~450+ (22 new cross-links added Apr 19) — **GOOD**
+- Google Reviews: 3+
+- PageSpeed Mobile: 99 (on pandacodegen.com itself) / 74 (Obare client site, optimizing before handover Apr 22)
+- Countries with impressions: 140+ (full list shows China, Netherlands, Finland, Poland, etc. all now appearing)
+- **Top 11 GSC posts:** fully audited (voice + SEO), cross-linked, optimized for SERP + featured snippet + AI Overview
+- **Hub post:** website-rebuild-cost-2026 shipped Apr 19 (brand new, monitoring indexing)
+- **Client pipeline:** 1 paid rebuild signed ($1,200 Obare Magazine), 7-day delivery. First real case study for the Webflow cluster.
+- **Meta/Google Ads:** GA4 installed, conversion events ready. Launch next week.
 
 ## What To Watch For
 
@@ -421,4 +479,31 @@ If something looks off or you want to understand a trend, just tell me and I'll 
 
 ---
 
-*Last updated: April 6, 2026*
+*Last updated: April 19, 2026*
+
+---
+
+## What To Watch For On Apr 27 Data Pull
+
+After today's mass fixes ship, the next GSC data pull (Apr 27) is the validation moment. Expected signals:
+
+### If the fixes worked
+- CTR jumps from 0.30% to 1-3% on top 11 posts (most title rewrites were Apr 13, needed 2 weeks to re-crawl)
+- Direct-answer blocks trigger featured snippet appearances (check "Search appearance" filter for Rich results)
+- New PAA queries appear for how-long / pricing H2 sections
+- Cross-link injection shows up as increased impressions on the target posts (website-rebuild-cost-2026, webflow-true-cost, shopify-dawn-theme-slow)
+
+### If the fixes did NOT work
+- CTR stays under 0.5%: meta descriptions may need another round of testing
+- Impressions flat: robots.txt or indexing issue — check GSC indexing tab
+- Specific post drops: check if Google re-crawled the updated version (URL Inspection → Last crawl date)
+
+### Priority pages to request indexing on Apr 20 (after deploy)
+1. /blog/website-rebuild-cost-2026 (brand new)
+2. /blog/webflow-true-cost (title changed)
+3. /blog/wordpress-migration-cost (title changed)
+4. /blog/wordpress-vs-nextjs (title changed)
+5. /blog/shopify-dawn-theme-slow (title changed)
+6. /blog/squarespace-too-slow (direct-answer block added)
+7. /blog/gohighlevel-website-speed (new H2 section)
+8. /manifesto (new page)

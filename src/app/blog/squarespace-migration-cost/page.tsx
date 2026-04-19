@@ -711,6 +711,11 @@ export default function SquarespaceMinCostPage() {
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                     />
 
+                    <section className="mb-10 mt-10">
+                        <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
+                        <p className="text-stone-700 leading-relaxed">For the speed diagnosis behind why Squarespace stays under 65 PageSpeed, read <Link href="/blog/squarespace-too-slow" className="text-cognac hover:underline font-medium">why Squarespace is slow by design</Link>. For rebuild pricing across every platform, see the <Link href="/blog/website-rebuild-cost-2026" className="text-cognac hover:underline font-medium">2026 website rebuild cost guide</Link>.</p>
+                    </section>
+
                     <RelatedPosts currentPostId="squarespace-migration-cost" />
 
                 </article>

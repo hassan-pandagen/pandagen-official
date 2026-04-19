@@ -16,8 +16,8 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: { absolute: "WooCommerce Too Slow? How to Speed It Up in 2026 (and When to Migrate)" },
-    description: "WooCommerce stores score 30 to 55 on mobile PageSpeed. Here are the optimizations that help, why the speed ceiling exists, and when a headless rebuild makes more sense than another plugin.",
+    title: { absolute: "WooCommerce Too Slow? How to Fix & Speed It Up (2026)" },
+    description: "WooCommerce stores score 30-55 on mobile PageSpeed. Learn which fixes work, which don't, and when a headless rebuild beats another caching plugin.",
     alternates: {
         canonical: "/blog/woocommerce-too-slow",
     },
@@ -33,9 +33,10 @@ export const metadata: Metadata = {
         "woocommerce vs nextjs speed",
         "slow woocommerce store"
     ],
+    robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
-        title: "WooCommerce Too Slow? How to Speed It Up in 2026 (and When to Migrate)",
-        description: "WooCommerce stores score 30 to 55 on mobile PageSpeed. Here are the optimizations that help, why the speed ceiling exists, and when a headless rebuild makes more sense than another plugin.",
+        title: "WooCommerce Too Slow? How to Fix & Speed It Up (2026)",
+        description: "WooCommerce stores score 30-55 on mobile PageSpeed. Learn which fixes work, which don't, and when a headless rebuild beats another caching plugin.",
         type: "article",
         publishedTime: "2026-03-25",
         modifiedTime: "2026-03-25",
@@ -45,8 +46,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "WooCommerce Too Slow? How to Speed It Up in 2026 (and When to Migrate)",
-        description: "WooCommerce stores score 30 to 55 on mobile PageSpeed. Here are the optimizations that help, why the speed ceiling exists, and when a headless rebuild makes more sense than another plugin.",
+        title: "WooCommerce Too Slow? How to Fix & Speed It Up (2026)",
+        description: "WooCommerce stores score 30-55 on mobile PageSpeed. Learn which fixes work, which don't, and when a headless rebuild beats another caching plugin.",
     },
 };
 
@@ -56,8 +57,8 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/woocommerce-too-slow#article",
-            "headline": "WooCommerce Too Slow? How to Speed It Up in 2026 (and When to Migrate)",
-            "description": "WooCommerce stores score 30 to 55 on mobile PageSpeed. Here are the optimizations that help, why the speed ceiling exists, and when a headless rebuild makes more sense than another plugin.",
+            "headline": "WooCommerce Too Slow? How to Fix & Speed It Up (2026)",
+            "description": "WooCommerce stores score 30-55 on mobile PageSpeed. Learn which fixes work, which don't, and when a headless rebuild beats another caching plugin.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-25T00:00:00-05:00",
             "dateModified": "2026-04-13T00:00:00-05:00",
@@ -227,13 +228,17 @@ export default function WooCommerceTooSlowPage() {
                         </BlogText>
 
                         <BlogText>
-                            That is not a coincidence. It is by design. WooCommerce was built on WordPress, and WordPress was built for blogs. It was never designed to serve product catalogs to thousands of concurrent shoppers on mobile connections. The speed problem is not a configuration problem. It is an architecture problem. Understanding that distinction is the difference between wasting another six months on plugins and actually solving it.
+                            That is not a coincidence. It is by design. WooCommerce was built on WordPress, and WordPress was built for blogs. It was never designed to serve product catalogs to thousands of concurrent shoppers on mobile connections. The speed problem is not a configuration problem. It is an architecture problem.
                         </BlogText>
 
-                        <BlogHeader>The WooCommerce Speed Problem in Real Numbers</BlogHeader>
+                        <BlogText>
+                            I rebuilt a WooCommerce store last quarter. 3.2 seconds to 0.7 seconds. No WP Rocket. No caching plugins. We deleted WooCommerce&apos;s frontend entirely and kept the backend running for checkout. That is the playbook this post is about.
+                        </BlogText>
+
+                        <BlogHeader>What Your WooCommerce Store Actually Scores (And Why It Is Not 90)</BlogHeader>
 
                         <BlogText>
-                            Let&apos;s start with what you are actually dealing with. According to data from Google&apos;s Core Web Vitals benchmarks and WooCommerce performance audits across hundreds of stores:
+                            According to data from Google&apos;s Core Web Vitals benchmarks and WooCommerce performance audits across hundreds of stores:
                         </BlogText>
 
                         <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
@@ -359,7 +364,7 @@ export default function WooCommerceTooSlowPage() {
                             </div>
                         </div>
 
-                        <BlogHeader>What a Slow WooCommerce Store Costs You Right Now</BlogHeader>
+                        <BlogHeader>The Monthly Revenue You Are Losing While Reading This</BlogHeader>
 
                         <BlogText>
                             The speed problem is measurable in dollars. This is not speculation. Deloitte published research showing that every 100ms improvement in load time increases conversion rates by 8.4% for retail e-commerce sites. Google&apos;s own data shows 53% of mobile users abandon sites that take longer than 3 seconds to load.
@@ -407,7 +412,7 @@ export default function WooCommerceTooSlowPage() {
                             There is also a compounding SEO cost. Google has used Core Web Vitals as a ranking signal since June 2021. A WooCommerce store at 35 PageSpeed Mobile is actively being penalized in search rankings, meaning your organic traffic is lower than it would be if your site met the 90+ threshold. Lower traffic with lower conversion rates equals a double penalty.
                         </BlogText>
 
-                        <BlogHeader>Why Caching Plugins Do Not Fix It</BlogHeader>
+                        <BlogHeader>Why WP Rocket Stopped Working After 6 Months</BlogHeader>
 
                         <BlogText>
                             WP Rocket, W3 Total Cache, LiteSpeed Cache: these plugins are legitimate tools and they do reduce load time on static pages. If you have a basic WordPress blog, they work well. But WooCommerce is not a static site. Here is exactly where they break down:
@@ -429,7 +434,7 @@ export default function WooCommerceTooSlowPage() {
                             This pattern is common. Optimization plugins are maintenance, not a fix. Each new plugin, each WooCommerce update, each theme update can invalidate prior optimizations. You are on a treadmill that never ends.
                         </BlogText>
 
-                        <BlogHeader>The Permanent Fix: Headless WooCommerce</BlogHeader>
+                        <BlogHeader>How We Got MyCustomPatches to 0.7 Seconds</BlogHeader>
 
                         <BlogText>
                             The root cause of WooCommerce&apos;s speed problem is that the PHP template engine that renders pages is coupled to the same server that handles your store logic. Every product view, every category browse, every search query requires your server to run PHP and query the database.
@@ -459,7 +464,7 @@ export default function WooCommerceTooSlowPage() {
                             This is not a configuration change or a plugin swap. It is a rebuild of the customer-facing layer of your store. It takes 3 to 6 weeks depending on store complexity. But unlike plugin optimization, it does not degrade over time. The performance is structural, not maintained. You can see the full process and what is included on our <Link href="/services/woocommerce?ref=blog/woocommerce-too-slow" className="text-cognac underline underline-offset-2 hover:text-amber-700">WooCommerce migration service page</Link>.
                         </BlogText>
 
-                        <BlogHeader>Is Headless WooCommerce Right for Your Store?</BlogHeader>
+                        <BlogHeader>When Headless Is Wrong for Your Store</BlogHeader>
 
                         <BlogText>
                             Headless is not for every WooCommerce store. Here are the signals that make it a strong fit:

@@ -745,6 +745,11 @@ export default function FixSlowWordPressPage() {
                     {/* FAQ Section */}
                     {slowWordPressFAQs.length > 0 && <FAQAccordion faqs={slowWordPressFAQs} />}
 
+                    <section className="mb-10 mt-10">
+                        <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
+                        <p className="text-stone-700 leading-relaxed">If optimisation caps your score at 70 and the real fix is migration, read the <Link href="/blog/how-to-migrate-wordpress-to-nextjs" className="text-cognac hover:underline font-medium">step-by-step WordPress to Next.js migration guide</Link>, <Link href="/blog/wordpress-migration-cost" className="text-cognac hover:underline font-medium">what a WordPress migration actually costs by site size</Link>, or for e-commerce <Link href="/blog/woocommerce-too-slow" className="text-cognac hover:underline font-medium">why WooCommerce is too slow and how to fix it</Link>.</p>
+                    </section>
+
                     {/* Related Posts */}
                     <RelatedPosts currentPostId="how-to-fix-slow-wordpress" category="Performance" />
 

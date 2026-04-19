@@ -546,6 +546,11 @@ export default function LeavingWebflow2026Page() {
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
 
+                    <section className="mb-10 mt-10">
+                        <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
+                        <p className="text-stone-700 leading-relaxed">For every hidden Webflow fee and the PageSpeed ceiling, read <Link href="/blog/webflow-true-cost" className="text-cognac hover:underline font-medium">the full Webflow pricing breakdown for 2026</Link>. For pricing across any platform, see the <Link href="/blog/website-rebuild-cost-2026" className="text-cognac hover:underline font-medium">2026 website rebuild cost guide</Link>.</p>
+                    </section>
+
                     <RelatedPosts currentPostId="leaving-webflow-2026" category="Webflow" />
 
                 </article>

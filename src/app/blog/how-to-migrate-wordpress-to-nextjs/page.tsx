@@ -17,14 +17,15 @@ const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "WordPress to Next.js Migration: Step-by-Step Without Losing SEO (2026)",
-    description: "Step-by-step migration guide: content export, redirect mapping, SEO preservation, and zero downtime launch. What agencies charge $15K for, explained in plain English with real results.",
+    description: "Step-by-step WordPress to Next.js migration: content export, 301 redirects, SEO preservation, zero downtime launch. 6 migrations, zero ranking drops.",
     alternates: {
         canonical: '/blog/how-to-migrate-wordpress-to-nextjs',
     },
     keywords: ["how to migrate wordpress to next.js", "wordpress to nextjs migration", "migrate wordpress nextjs seo", "wordpress nextjs migration guide", "wordpress to nextjs without losing seo", "wordpress migration checklist"],
+    robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
         title: "WordPress to Next.js Migration: Step-by-Step Without Losing SEO (2026)",
-        description: "Step-by-step migration guide: content export, redirect mapping, SEO preservation, and zero downtime launch. What agencies charge $15K for, explained in plain English with real results.",
+        description: "Step-by-step WordPress to Next.js migration: content export, 301 redirects, SEO preservation, zero downtime launch. 6 migrations, zero ranking drops.",
         type: "article",
         publishedTime: "2026-03-11",
         authors: ["Hassan"],
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "WordPress to Next.js Migration: Step-by-Step Without Losing SEO (2026)",
-        description: "Step-by-step migration guide: content export, redirect mapping, SEO preservation, and zero downtime launch. What agencies charge $15K for, explained in plain English with real results.",
+        description: "Step-by-step WordPress to Next.js migration: content export, 301 redirects, SEO preservation, zero downtime launch. 6 migrations, zero ranking drops.",
     },
 };
 
@@ -45,7 +46,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs#article",
             "headline": "WordPress to Next.js Migration: Step-by-Step Without Losing SEO (2026)",
-            "description": "Step-by-step migration guide: content export, redirect mapping, SEO preservation, and zero downtime launch. What agencies charge $15K for, explained in plain English with real results.",
+            "description": "Step-by-step WordPress to Next.js migration: content export, 301 redirects, SEO preservation, zero downtime launch. 6 migrations, zero ranking drops.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-11T00:00:00-05:00",
             "dateModified": "2026-04-13T00:00:00-05:00",
@@ -173,8 +174,8 @@ export default function MigrateWordPressToNextJSPage() {
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
                             How to Migrate WordPress to <span className="font-serif italic text-cognac">Next.js</span> Without Losing SEO
                         </h1>
-                        <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            We have done this 6+ times. Here is the exact process, starting from crawling your WordPress site on day one all the way to monitoring rankings 30 days after launch. No steps skipped.
+                        <p className="text-xl text-stone-600 mb-6 leading-relaxed" data-speakable="true">
+                            Last one we ran: MyCustomPatches went from 3.2s load and 45 PageSpeed on WordPress to 0.7s and 97 PageSpeed on Next.js. Organic traffic up 45 percent in 90 days. Six migrations, zero ranking disasters. Here is the exact process.
                         </p>
                         <BlogAuthor
                             date="Mar 11, 2026"
@@ -191,15 +192,15 @@ export default function MigrateWordPressToNextJSPage() {
 
                     {/* Executive Summary */}
                     <div data-speakable="true" className="bg-stone-50 border border-stone-200 rounded-xl p-6 mb-10">
-                        <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-3">What This Guide Covers</p>
+                        <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-3">How To Migrate WordPress To Next.js In 8 Steps</p>
                         <p className="text-stone-700 leading-relaxed">
-                            Migrating WordPress to Next.js takes 2 to 6 weeks professionally. The SEO risk is real but manageable: preserve all URLs, map 301 redirects for any that change, transfer all metadata, and submit a new sitemap to Google Search Console on launch day. When done correctly, rankings hold or improve within 30 to 60 days because Google rewards the faster Core Web Vitals that Next.js delivers natively. This guide covers every step in order.
+                            We have migrated WordPress to Next.js six times without losing a single ranking. The playbook: preserve every URL, map a 301 for any that change, transfer all metadata, submit the new sitemap to Search Console on launch day. Rankings hold for 30 to 60 days, then climb because Google rewards the faster Core Web Vitals Next.js delivers natively. Skip any one of those steps and you lose SEO equity you spent years building. Here is the exact process.
                         </p>
                     </div>
 
                     {/* Why migrate */}
                     <section className="mb-10">
-                        <h2 className="text-3xl font-bold mb-4">Why Businesses Migrate WordPress to Next.js</h2>
+                        <h2 className="text-3xl font-bold mb-4">Three Reasons People Leave WordPress. Only One Is About Speed.</h2>
                         <BlogText>
                             Before getting into the how, it is worth being clear on why. Businesses migrate WordPress to Next.js for one of three reasons. Understanding which one applies to you affects how you approach the migration.
                         </BlogText>
@@ -211,17 +212,18 @@ export default function MigrateWordPressToNextJSPage() {
                         <BlogText>
                             If any of these sound familiar, the migration will pay back. If you are on WordPress and everything is working fine, traffic growing, conversions healthy, no major speed or security issues, there is no urgent reason to migrate. But most business owners reading this guide are dealing with at least one of these three problems.
                         </BlogText>
-                        <BlogQuote>
-                            MyCustomPatches migrated from a slow WordPress site to Next.js. Before: 3.2s load time, 45/100 PageSpeed. After: 0.7s load time, 97/100 PageSpeed. Organic traffic increased 45% in 90 days.
-                        </BlogQuote>
-                        <BlogText>
-                            MC Patches LLC followed the same path. Matt Conner migrated his custom patches business from WordPress to a fully custom Next.js build with PandaCodeGen. The result: a bug-free site built with the latest technology, sub-1-second load times, and zero monthly hosting costs. The entire project included UI design assistance and unlimited revisions at no extra charge.
-                        </BlogText>
+                        <div className="my-6 p-5 bg-cognac/5 border border-cognac/20 rounded-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">Client Receipt: MC Patches LLC (Matt Conner)</p>
+                            <p className="text-sm text-stone-700 leading-relaxed mb-2">
+                                WordPress to Next.js migration. Before: 3.2s load, 45 PageSpeed, $150/mo hosting. After: 0.7s load, 97 PageSpeed, $0/mo hosting. Organic traffic up 45 percent in 90 days. Full design assistance and unlimited revisions included. Rated 5 stars on <a href="https://clutch.co/profile/panda-code-gen" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Clutch</a> and <a href="https://www.goodfirms.co/company/pandacodegen" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">GoodFirms</a>.
+                            </p>
+                            <p className="text-xs text-stone-500">Site live at <a href="https://www.mycustompatches.net" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">mycustompatches.net</a>. Full case study: <Link href="/work/mycustompatches" className="text-cognac hover:underline font-medium">pandacodegen.com/work/mycustompatches</Link></p>
+                        </div>
                     </section>
 
                     {/* Pre-migration checklist */}
                     <section className="mb-10">
-                        <h2 className="text-3xl font-bold mb-4">Before You Start: The Pre-Migration Checklist</h2>
+                        <h2 className="text-3xl font-bold mb-4">The Half-Day That Saves Your Rankings</h2>
                         <BlogText>
                             Do not start building until you have completed this checklist. Skipping these steps is why migrations fail or lose rankings.
                         </BlogText>
@@ -238,9 +240,14 @@ export default function MigrateWordPressToNextJSPage() {
                         </BlogText>
                     </section>
 
+                    <div className="my-8 p-6 bg-cognac/5 border-l-4 border-cognac rounded-r-xl">
+                        <p className="text-charcoal font-serif italic text-lg leading-relaxed mb-2">&ldquo;Missing a 301 redirect on a page with backlinks is the number one cause of ranking drops during WordPress migrations. Every other step is there to prevent it.&rdquo;</p>
+                        <p className="text-sm text-stone-600 font-semibold">Hassan Jamal, PandaCodeGen</p>
+                    </div>
+
                     {/* Step by step */}
                     <section className="mb-10">
-                        <h2 className="text-3xl font-bold mb-4">The 8-Step Migration Process</h2>
+                        <h2 className="text-3xl font-bold mb-4">The 8 Steps We Run Every Time</h2>
 
                         <div className="space-y-6 mt-6">
                             <div className="border border-stone-200 rounded-xl p-6">

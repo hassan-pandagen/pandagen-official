@@ -581,6 +581,11 @@ export default function WebflowMigrationCostPage() {
 
                     <FAQAccordion faqs={webflowMigrationFAQs} />
 
+                    <section className="mb-10 mt-10">
+                        <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
+                        <p className="text-stone-700 leading-relaxed">For every Webflow fee and the PageSpeed ceiling, read <Link href="/blog/webflow-true-cost" className="text-cognac hover:underline font-medium">the full Webflow pricing breakdown</Link>. For pricing across all platforms, see the <Link href="/blog/website-rebuild-cost-2026" className="text-cognac hover:underline font-medium">2026 website rebuild cost guide</Link>.</p>
+                    </section>
+
                     <div className="mt-16 pt-8 border-t border-stone-100">
                         <RelatedPosts currentPostId="webflow-migration-cost" category="Webflow" />
                     </div>

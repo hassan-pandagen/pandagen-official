@@ -431,6 +431,11 @@ export default function GoHighLevelMigrationPage() {
                     {/* FAQ Section */}
                     {ghlMigrationFAQs.length > 0 && <FAQAccordion faqs={ghlMigrationFAQs} />}
 
+                    <section className="mb-10 mt-10">
+                        <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
+                        <p className="text-stone-700 leading-relaxed">For the full data on why GHL sites score so low, read <Link href="/blog/gohighlevel-website-speed" className="text-cognac hover:underline font-medium">why GoHighLevel sites score 20 to 45 on PageSpeed</Link>. For the broader benchmark, see <Link href="/blog/core-web-vitals-explained" className="text-cognac hover:underline font-medium">Core Web Vitals explained for business owners</Link>.</p>
+                    </section>
+
                     {/* Related Posts */}
                     <RelatedPosts currentPostId="gohighlevel-migration" category="Performance" />
 

@@ -63,6 +63,7 @@ const urls = [
   `${BASE}/blog/cloudflare-emdash-wordpress-replacement`,
   `${BASE}/blog/leaving-webflow-2026`,
   `${BASE}/blog/wix-too-slow`,
+  `${BASE}/blog/website-rebuild-cost-2026`,
 
   // Legal
   `${BASE}/privacy`,

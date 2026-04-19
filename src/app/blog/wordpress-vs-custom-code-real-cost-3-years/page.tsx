@@ -17,13 +17,14 @@ const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "WordPress vs Custom Code: 3-Year Cost Comparison With Real Numbers (2026)",
-    description: "WordPress costs $9,000 to $30,000 over 3 years when you add hosting, plugins, maintenance, and lost revenue from slow speed. Custom code costs less by year 2. Full breakdown with real client data.",
+    description: "WordPress costs $15,000+ over 3 years. A custom Next.js site costs $10K once, then $0/year. Full TCO breakdown: hosting, plugins, maintenance, lost revenue.",
     alternates: {
         canonical: '/blog/wordpress-vs-custom-code-real-cost-3-years',
     },
+    robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
         title: "WordPress vs Custom Code: 3-Year Cost Comparison With Real Numbers (2026)",
-        description: "WordPress costs $9,000 to $30,000 over 3 years when you add hosting, plugins, maintenance, and lost revenue from slow speed. Custom code costs less by year 2. Full breakdown with real client data.",
+        description: "WordPress costs $15,000+ over 3 years. A custom Next.js site costs $10K once, then $0/year. Full TCO breakdown: hosting, plugins, maintenance, lost revenue.",
         type: "article",
         publishedTime: "2026-02-20",
         authors: ["Hassan"],
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "WordPress vs Custom Code: 3-Year Cost Comparison With Real Numbers (2026)",
-        description: "WordPress costs $9,000 to $30,000 over 3 years when you add hosting, plugins, maintenance, and lost revenue from slow speed. Custom code costs less by year 2. Full breakdown with real client data.",
+        description: "WordPress costs $15,000+ over 3 years. A custom Next.js site costs $10K once, then $0/year. Full TCO breakdown: hosting, plugins, maintenance, lost revenue.",
     },
     keywords: ["wordpress vs custom code cost", "wordpress real cost", "custom website vs wordpress", "wordpress hidden costs", "website total cost of ownership"],
 };
@@ -45,7 +46,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-vs-custom-code-real-cost-3-years#article",
             "headline": "WordPress vs Custom Code: 3-Year Cost Comparison With Real Numbers (2026)",
-            "description": "WordPress costs $9,000 to $30,000 over 3 years when you add hosting, plugins, maintenance, and lost revenue from slow speed. Custom code costs less by year 2. Full breakdown with real client data.",
+            "description": "WordPress costs $15,000+ over 3 years. A custom Next.js site costs $10K once, then $0/year. Full TCO breakdown: hosting, plugins, maintenance, lost revenue.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-20T00:00:00-05:00",
             "dateModified": "2026-04-13T00:00:00-05:00",
@@ -104,7 +105,7 @@ const articleSchema = {
             "@id": "https://www.pandacodegen.com/blog/wordpress-vs-custom-code-real-cost-3-years#webpage",
             "url": "https://www.pandacodegen.com/blog/wordpress-vs-custom-code-real-cost-3-years",
             "name": "WordPress vs Custom Code: The Real 3-Year Cost (With Numbers)",
-            "description": "WordPress costs $9,000 to $30,000 over 3 years when you add hosting, plugins, maintenance, and lost revenue from slow speed. Custom code costs less by year 2. Full breakdown with real client data.",
+            "description": "WordPress costs $15,000+ over 3 years. A custom Next.js site costs $10K once, then $0/year. Full TCO breakdown: hosting, plugins, maintenance, lost revenue.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-20T00:00:00-05:00",
@@ -214,7 +215,7 @@ export default function WordPressVsCustomCodeCostPage() {
                             This post is the full, honest breakdown. No marketing fluff. Just numbers.
                         </BlogText>
 
-                        <BlogHeader>What Does WordPress Actually Cost Over 3 Years? (The Complete Breakdown)</BlogHeader>
+                        <BlogHeader>WordPress Hides $15,000 In Six Invoices. Here Are All Six.</BlogHeader>
 
                         <BlogText>
                             Let&apos;s go line by line. This is the real cost for a typical business WordPress site, not a hobby blog, but a site that&apos;s actually doing work.
@@ -296,7 +297,7 @@ export default function WordPressVsCustomCodeCostPage() {
                             Add one security incident and you&apos;re looking at $18,000 to $25,000.
                         </BlogText>
 
-                        <BlogHeader>What Does a Custom Next.js Site Cost Over 3 Years?</BlogHeader>
+                        <BlogHeader>Custom Next.js: $10K Once, Then Nothing. Here Is Why Nothing.</BlogHeader>
 
                         <BlogText>
                             Now let&apos;s look at the other side. A custom-built Next.js site, professionally done. AI-assisted development has made custom code affordable for businesses that could not justify it three years ago. The build cost has dropped while the quality has gone up.
@@ -382,7 +383,7 @@ export default function WordPressVsCustomCodeCostPage() {
                             By Year 5, the cost gap is $25,000+. The custom site paid for itself in Year 1 and has been running free ever since.
                         </BlogQuote>
 
-                        <BlogHeader>Why Is WordPress Hosting So Expensive Compared to Custom Sites?</BlogHeader>
+                        <BlogHeader>Why WordPress Hosting Costs $300/Month (And Static Sites Cost $0)</BlogHeader>
 
                         <BlogText>
                             This is the question everyone asks. If WordPress is &quot;free software,&quot; why does it cost $150-$400/month to host?
@@ -415,7 +416,7 @@ export default function WordPressVsCustomCodeCostPage() {
                             Vercel can serve millions of page views for free because it&apos;s not running server logic on each request. <BlogHighlight>That&apos;s why it&apos;s free.</BlogHighlight>
                         </BlogText>
 
-                        <BlogHeader>What Are the Hidden WordPress Costs Nobody Talks About?</BlogHeader>
+                        <BlogHeader>The Three Costs That Never Show Up On Your WP Engine Invoice</BlogHeader>
 
                         <BlogText>
                             The table above is the visible cost. Here are the hidden ones that don&apos;t show up in monthly invoices.
@@ -474,7 +475,7 @@ export default function WordPressVsCustomCodeCostPage() {
                             </div>
                         </div>
 
-                        <BlogHeader>When Does the Custom Site Break Even vs WordPress?</BlogHeader>
+                        <BlogHeader>The Break-Even Point: Month 5, Not Year 2</BlogHeader>
 
                         <BlogText>
                             This is the question that decides everything. If the custom site costs $10,000 upfront and WordPress costs $5,000/year in recurring costs, when does the math flip?
@@ -507,7 +508,7 @@ export default function WordPressVsCustomCodeCostPage() {
                             Once you include the revenue difference, the custom site pays for itself in <strong>4-5 months</strong>.
                         </BlogText>
 
-                        <BlogHeader>What About Sites Doing Less Than $100K/Year? Is It Still Worth It?</BlogHeader>
+                        <BlogHeader>Under $150K/Year? Here Is The Honest Math.</BlogHeader>
 
                         <BlogText>
                             This is the honest answer: for very small businesses doing under $50K/year, the numbers are closer.
@@ -562,7 +563,7 @@ export default function WordPressVsCustomCodeCostPage() {
                             </Link>.
                         </BlogText>
 
-                        <BlogHeader>What Does WordPress Give You That Justifies the Extra Cost?</BlogHeader>
+                        <BlogHeader>The Fair Case For WordPress (There Is One)</BlogHeader>
 
                         <BlogText>
                             This is the fair question. What does WordPress actually give you for $15,000 over 3 years?
@@ -587,7 +588,7 @@ export default function WordPressVsCustomCodeCostPage() {
                             But if your website is the main driver of leads, revenue, or brand credibility for a real business? <BlogHighlight>WordPress&apos;s true cost is 3-5× higher than custom code over 3 years, and that&apos;s before you count the revenue difference.</BlogHighlight>
                         </BlogText>
 
-                        <BlogHeader>What Should You Do With This Information?</BlogHeader>
+                        <BlogHeader>Three Things To Do Before Your Next WP Engine Renewal</BlogHeader>
 
                         <BlogText>
                             Step 1: Calculate your actual current WordPress costs.

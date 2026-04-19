@@ -329,6 +329,11 @@ export default function WordPressKillerPage() {
                         </ol>
                     </section>
 
+                    <section className="mb-10">
+                        <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
+                        <p className="text-stone-700 leading-relaxed">If you are ready to see the exact numbers, read <Link href="/blog/wordpress-migration-cost" className="text-cognac hover:underline font-medium">what a WordPress migration actually costs by site size</Link>, the honest <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline font-medium">WordPress vs Next.js comparison</Link>, or <Link href="/blog/how-to-migrate-wordpress-to-nextjs" className="text-cognac hover:underline font-medium">the step-by-step WordPress to Next.js migration guide</Link>.</p>
+                    </section>
+
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
                     <RelatedPosts currentPostId="wordpress-killer" category="Cost Analysis" />
 

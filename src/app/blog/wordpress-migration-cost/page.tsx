@@ -16,8 +16,8 @@ const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: { absolute: "WordPress Migration Cost 2026: Full Pricing by Site Size and Type" },
-    description: "WordPress migration costs $2,000 to $25,000 depending on site size and complexity. Full breakdown by page count, WooCommerce vs simple sites, what drives the price up, and when migration pays for itself.",
+    title: { absolute: "WordPress Migration Cost 2026: $2K to $25K by Site Size" },
+    description: "WordPress migration costs $2,000 to $25,000 by site size. Full breakdown: WooCommerce vs brochure, what drives price, and when it pays for itself.",
     alternates: {
         canonical: "/blog/wordpress-migration-cost",
     },
@@ -33,9 +33,10 @@ export const metadata: Metadata = {
         "replace wordpress with nextjs",
         "wordpress migration budget"
     ],
+    robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
-        title: "WordPress Migration Cost 2026: Full Pricing by Site Size and Type",
-        description: "WordPress migration costs $2,000 to $25,000 depending on site size and complexity. Full breakdown by page count, WooCommerce vs simple sites, what drives the price up, and when migration pays for itself.",
+        title: "WordPress Migration Cost 2026: $2K to $25K by Site Size",
+        description: "WordPress migration costs $2,000 to $25,000 by site size. Full breakdown: WooCommerce vs brochure, what drives price, and when it pays for itself.",
         type: "article",
         publishedTime: "2026-03-22",
         modifiedTime: "2026-03-22",
@@ -45,8 +46,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "WordPress Migration Cost 2026: Full Pricing by Site Size and Type",
-        description: "WordPress migration costs $2,000 to $25,000 depending on site size and complexity. Full breakdown by page count, WooCommerce vs simple sites, what drives the price up, and when migration pays for itself.",
+        title: "WordPress Migration Cost 2026: $2K to $25K by Site Size",
+        description: "WordPress migration costs $2,000 to $25,000 by site size. Full breakdown: WooCommerce vs brochure, what drives price, and when it pays for itself.",
     },
 };
 
@@ -56,8 +57,8 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-migration-cost#article",
-            "headline": "WordPress Migration Cost 2026: Full Pricing by Site Size and Type",
-            "description": "WordPress migration costs $2,000 to $25,000 depending on site size and complexity. Full breakdown by page count, WooCommerce vs simple sites, what drives the price up, and when migration pays for itself.",
+            "headline": "WordPress Migration Cost 2026: $2K to $25K by Site Size",
+            "description": "WordPress migration costs $2,000 to $25,000 by site size. Full breakdown: WooCommerce vs brochure, what drives price, and when it pays for itself.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-22T00:00:00-05:00",
             "dateModified": "2026-04-13T00:00:00-05:00",
@@ -124,8 +125,8 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/wordpress-migration-cost#webpage",
             "url": "https://www.pandacodegen.com/blog/wordpress-migration-cost",
-            "name": "WordPress Migration Cost 2026: Full Pricing by Site Size and Type",
-            "description": "WordPress migration costs $2,000 to $25,000 depending on site size and complexity. Full breakdown by page count, WooCommerce vs simple sites, what drives the price up, and when migration pays for itself.",
+            "name": "WordPress Migration Cost 2026: $2K to $25K by Site Size",
+            "description": "WordPress migration costs $2,000 to $25,000 by site size. Full breakdown: WooCommerce vs brochure, what drives price, and when it pays for itself.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-03-22T00:00:00-05:00",
             "dateModified": "2026-04-13T00:00:00-05:00",
@@ -199,6 +200,10 @@ export default function WordPressMigrationCostPage() {
             <section className="px-6 pb-20">
                 <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
 
+                    <div className="bg-cognac/5 border-l-4 border-cognac p-5 mb-6 rounded-r-lg" data-speakable="true">
+                        <p className="text-sm text-charcoal leading-relaxed"><strong>Short answer:</strong> A WordPress migration costs $2,000 to $25,000 in 2026 depending on site size and complexity. Simple brochure sites $2K-$3.5K. Mid-size with blog and integrations $8K-$15K. Full WooCommerce with custom checkout $15K-$25K+. Most businesses recover the migration cost within 12 to 18 months from lower hosting and plugin costs alone.</p>
+                    </div>
+
                     {/* Executive Summary */}
                     <div className="mb-10 p-6 bg-orange-50 border border-orange-200 rounded-2xl" data-speakable="true">
                         <p className="font-bold text-charcoal mb-3 text-sm uppercase tracking-wide">Cost Summary</p>
@@ -211,16 +216,21 @@ export default function WordPressMigrationCostPage() {
                     </div>
 
                     <BlogText>
-                        You are paying $200 to $500 per month to keep your WordPress site running. Hosting, plugins, security scanning, developer retainers for updates that break things. The PageSpeed score is 45 on mobile. Organic traffic has been flat for 18 months.
+                        Last month I quoted a WooCommerce migration at $12,000. The client had three other quotes on the same 38-page site: $4,500 from a freelancer, $18,000 from a boutique agency, and $47,000 from a full-service firm. Same site. Same scope. Four very different numbers.
                     </BlogText>
                     <BlogText>
-                        The question is not whether to migrate. The question is what it costs and when you get the money back.
-                    </BlogText>
-                    <BlogText>
-                        Here is every cost factor, broken down by project type, with real numbers.
+                        That spread is real, not a negotiation tactic. The line items below explain exactly which number matches which project. Here is every cost factor, broken down by project type, with real numbers.
                     </BlogText>
 
-                    <BlogHeader id="why-migrate">Why Are Businesses Migrating Off WordPress?</BlogHeader>
+                    <div className="my-6 p-5 bg-cognac/5 border border-cognac/20 rounded-xl">
+                        <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">Real Receipt: MyCustomPatches (WooCommerce Migration)</p>
+                        <p className="text-sm text-stone-700 leading-relaxed mb-2">
+                            MC Patches migrated from WordPress + WooCommerce + heavy plugin stack to custom Next.js. PageSpeed mobile: 45 to 100. Load time: 3.2s to 0.7s. Monthly hosting: $150 to $0. Fixed price, no hourly billing, unlimited revisions. Matt Conner rated the project 5 stars on both <a href="https://clutch.co/profile/panda-code-gen" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Clutch</a> and <a href="https://www.goodfirms.co/company/pandacodegen" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">GoodFirms</a>.
+                        </p>
+                        <p className="text-xs text-stone-500">Full case study: <Link href="/work/mycustompatches" className="text-cognac hover:underline font-medium">pandacodegen.com/work/mycustompatches</Link></p>
+                    </div>
+
+                    <BlogHeader id="why-migrate">Why Your WordPress Site Is Costing You More Than You Think</BlogHeader>
                     <BlogText>
                         WordPress powers{" "}
                         <a href="https://w3techs.com/technologies/details/cm-wordpress" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">43% of all websites</a>.
@@ -238,7 +248,7 @@ export default function WordPressMigrationCostPage() {
                         tracks over 50,000 documented vulnerabilities across WordPress core, themes, and plugins. Next.js has no plugin attack surface because it has no plugin system.
                     </BlogText>
 
-                    <BlogHeader id="cost-tiers">What Are the Three Cost Tiers for WordPress Migration?</BlogHeader>
+                    <BlogHeader id="cost-tiers">The 5 Price Tiers, From $2K Brochure to $25K Store</BlogHeader>
                     <BlogText>
                         Migration cost is driven by four variables: number of pages, custom functionality, data migration complexity, and SEO preservation work. Here is how those variables translate into price tiers.
                     </BlogText>
@@ -273,12 +283,12 @@ export default function WordPressMigrationCostPage() {
                         </table>
                     </div>
 
-                    <BlogHeader id="what-drives-cost">What Drives Migration Cost Up?</BlogHeader>
+                    <BlogHeader id="what-drives-cost">The 6 Line Items That Turn a $5K Quote Into $20K</BlogHeader>
                     <BlogText>
                         The line items that separate a $5,000 migration from a $20,000 one are predictable. Every quote you receive should be justifiable against these factors. AI-assisted development has brought migration timelines down significantly. The AI handles code scaffolding and boilerplate, so developers can focus on the SEO-critical and custom elements.
                     </BlogText>
                     <BlogList items={[
-                        "Custom post types and taxonomies: WordPress custom post types (portfolio, team members, testimonials, events) need to be rebuilt as typed data structures in Next.js. Each custom post type adds 4 to 12 hours of build time.",
+                        "Custom post types and taxonomies: WordPress custom post types built with Advanced Custom Fields (ACF), Pods, or Toolset get rebuilt as typed data structures in Next.js using Sanity or Contentful as the headless CMS. Each custom post type adds 4 to 12 hours of build time.",
                         "WooCommerce: A full WooCommerce migration is effectively a separate e-commerce project. Product catalog, checkout flow, order management, and payment gateway integrations all need to be rebuilt or replaced with a headless solution like Shopify or Stripe. Adds $5,000 to $15,000 to the base cost.",
                         "Number of pages: Migrating content is not just copy-paste. Every page needs SEO metadata, canonical URL mapping, schema markup, and redirect verification. A 200-page blog migration adds 20 to 40 hours of content migration work.",
                         "Third-party integrations: CRM connections (HubSpot, Salesforce), email marketing (Mailchimp, ActiveCampaign), booking systems, and payment processors all need to be rebuilt as API integrations. Each integration adds 4 to 16 hours.",
@@ -290,7 +300,7 @@ export default function WordPressMigrationCostPage() {
                         Running a WooCommerce store specifically? The migration scope is different from a standard WordPress site. See our <Link href="/services/woocommerce" className="text-cognac hover:underline">WooCommerce migration service</Link> for a full breakdown of what the process looks like, what gets rebuilt, and what the typical cost range is.
                     </BlogText>
 
-                    <BlogHeader id="what-is-included">What Should Be Included in Any Migration Quote?</BlogHeader>
+                    <BlogHeader id="what-is-included">The 8 Things Cheap Quotes Leave Out (And What Skipping Each Costs You)</BlogHeader>
                     <BlogText>
                         Before you accept a quote, verify these items are explicitly included. Agencies that exclude them will charge separately for each. For each item below, the "If skipped" line tells you what it actually costs your business.
                     </BlogText>
@@ -365,7 +375,15 @@ export default function WordPressMigrationCostPage() {
                         </div>
                     </div>
 
-                    <BlogHeader id="agency-vs-freelance">Agency vs Freelancer vs Boutique Studio: Which Is Right?</BlogHeader>
+                    <BlogHeader id="timeline">How Long Does a WordPress Migration Take?</BlogHeader>
+                    <BlogText>
+                        A WordPress migration takes 1 to 2 weeks for a small brochure site (1 to 5 pages), 2 to 3 weeks for a standard business site (5 to 15 pages), 3 to 5 weeks for a mid-complexity site with custom post types and integrations, and 5 to 8 weeks for a WooCommerce or 50+ page site with API integrations. Enterprise migrations with 500+ pages and multiple third-party systems run 8 to 16 weeks.
+                    </BlogText>
+                    <BlogText>
+                        The timeline is driven more by content complexity and integration count than by raw page count. A 30-page site with 8 integrations takes longer than a 100-page blog with none. Client response time is also a major factor: projects with a single decision-maker and 48-hour feedback cycles finish 30 to 50 percent faster than projects with committee review. AI-assisted development has compressed modern timelines significantly compared to 2024 benchmarks.
+                    </BlogText>
+
+                    <BlogHeader id="agency-vs-freelance">Freelancer at $5K, Agency at $40K, Same Migration. Here Is Why.</BlogHeader>
                     <BlogText>
                         The same migration can cost $5,000 with a freelancer, $15,000 with a boutique studio, or $40,000 with a full-service agency. The difference is not always quality. It is overhead, risk management, and what happens when something goes wrong.
                     </BlogText>
@@ -375,7 +393,7 @@ export default function WordPressMigrationCostPage() {
                         "Full-service agency ($20,000 to $80,000+): Highest cost, most process, most overhead. Appropriate for enterprise projects with compliance requirements, multiple stakeholder approvals, and dedicated project management. Often slower than boutique studios due to internal layers.",
                     ]} />
                     <BlogQuote>
-                        The right choice is not the cheapest. It is the team whose previous work most closely matches your project type and whose process explicitly addresses SEO preservation.
+                        I have seen $40,000 migrations that broke SEO and $4,000 migrations that tripled organic traffic. Price is not the variable that matters. Process is.
                     </BlogQuote>
 
                     <BlogHeader id="roi-calculation">How Do You Calculate Migration ROI?</BlogHeader>
@@ -383,7 +401,7 @@ export default function WordPressMigrationCostPage() {
                         Migration ROI comes from three sources: reduced ongoing costs, higher organic traffic from better PageSpeed scores, and increased conversion rates from faster load times.
                     </BlogText>
                     <BlogText>
-                        On cost savings: a typical WordPress business site costs $200 to $600/month in hosting, plugin licenses, security scanning, and maintenance retainers. A Next.js site on Vercel costs $0 to $20/month. Annual saving: $2,400 to $7,200 per year.
+                        On cost savings: a typical WordPress business site on Kinsta, WP Engine, Flywheel, or SiteGround costs $200 to $600/month in hosting, plus plugin licenses (ACF Pro $249/yr, Elementor Pro $59/yr, Divi $89/yr, WP Rocket $59/yr, Yoast Premium $99/yr, RankMath PRO $59/yr), security scanning, and maintenance retainers. A Next.js site on Vercel costs $0 to $20/month. Annual saving: $2,400 to $7,200 per year.
                     </BlogText>
                     <BlogText>
                         On traffic: improving PageSpeed Mobile from 45 to 95 typically corresponds to a 15 to 40% improvement in organic search visibility over 3 to 6 months, based on observed results across client migrations. Google directly rewards Core Web Vitals improvement in its ranking algorithm as confirmed in their{" "}
@@ -398,7 +416,7 @@ export default function WordPressMigrationCostPage() {
                         Quick ROI model: take your current annual WordPress operating cost, add 20% of your current annual organic revenue (conservative estimate of traffic and conversion improvement), and compare the sum to migration cost. Most business sites with $5,000 or more in annual operating costs recover a $10,000 migration within 18 months. To see what those PageSpeed gains look like in practice, read our guide on <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">achieving 100/100 PageSpeed scores</Link>.
                     </BlogText>
 
-                    <BlogHeader id="hidden-costs">What Hidden Costs Should You Watch For?</BlogHeader>
+                    <BlogHeader id="hidden-costs">4 Line Items That Get Bolted On After You Sign</BlogHeader>
                     <BlogText>
                         Quotes that look low often exclude these items. Ask about each one explicitly before signing.
                     </BlogText>
@@ -409,7 +427,7 @@ export default function WordPressMigrationCostPage() {
                         "Ongoing maintenance contract: unlike WordPress where plugins need constant updates and security patches, Next.js sites need minimal maintenance. But make sure you know what post-launch support looks like and what it costs.",
                     ]} />
 
-                    <BlogHeader id="when-not-to-migrate">When Does a Migration NOT Make Sense?</BlogHeader>
+                    <BlogHeader id="when-not-to-migrate">When You Should Stay on WordPress (Honestly)</BlogHeader>
                     <BlogText>
                         Migration is not always the right answer. There are cases where staying on WordPress makes more sense.
                     </BlogText>

@@ -346,6 +346,12 @@ export default function ShopifyHeadlessPage() {
                     </section>
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
+
+                    <section className="mb-10 mt-10">
+                        <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
+                        <p className="text-stone-700 leading-relaxed">Before going headless, check why <Link href="/blog/shopify-dawn-theme-slow" className="text-cognac hover:underline font-medium">Dawn theme still caps at 75 PageSpeed</Link>. Running WooCommerce instead? Same architectural ceiling applies. Read <Link href="/blog/woocommerce-too-slow" className="text-cognac hover:underline font-medium">why WooCommerce is too slow and how to fix it</Link>.</p>
+                    </section>
+
                     <RelatedPosts currentPostId="shopify-headless" category="E-Commerce" />
 
                 </article>

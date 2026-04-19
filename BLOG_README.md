@@ -432,6 +432,99 @@ AEO = Answer Engine Optimization (Google AI Overviews, voice, featured snippets)
 [ ] Topic is something someone would ask an AI assistant in 2026
 ```
 
+### STEP 7.5 — Post-Draft Audit Layer (Added Apr 19, 2026)
+
+**The 4-role audit lifted `website-rebuild-cost-2026` from 70 percent PandaCodeGen voice to 95 percent in one pass. Apply it at the level the post deserves — not to every post, not to zero posts.**
+
+**Three tiers. Match the audit to the post.**
+
+```
+TIER A — FULL 4-ROLE AUDIT (High-stakes hub posts only)
+  When: hub posts that every other post links into. Examples:
+    - website-rebuild-cost-2026 (hub for every cost post)
+    - core-web-vitals-explained (hub for every speed post)
+    - wordpress-vs-nextjs (hub for every platform vs custom post)
+    - any new cornerstone post targeting a 1,000+ impression keyword
+
+  Roles to audit (run as parallel agent tasks):
+    1. Senior Brand Strategist — voice consistency, manifesto feel, brand moves
+    2. Conversion Copywriter — H2 strength, buried leads, CTA earned placement
+    3. UX Researcher / Content Designer — 60-sec mobile scan, info hierarchy, overload
+    4. Data Storyteller (Animalz/Shleyner) — narrative spine, North Star quote, shareable insight
+
+  Output: prioritized fix list (top 5), exact line references, specific rewrites.
+  Cost: ~1 agent call with 4 roles bundled. Apply top 5 fixes. Skip the rest.
+
+TIER B — 2-ROLE AUDIT (Cluster posts, after the first post in a cluster sets voice)
+  When: platform-specific cost/speed/migration posts. Examples:
+    - shopify-app-costs-real-monthly-bill (cluster: Shopify cost)
+    - squarespace-migration-cost (cluster: Squarespace cost)
+    - wix-vs-custom-website (cluster: Wix comparison)
+
+  Roles to audit:
+    1. Conversion Copywriter — H2s, buried leads, flat sentences
+    2. Data Storyteller — narrative spine, shareable insight
+
+  Skip Brand Strategist and UX Researcher — the first post in the cluster
+  already locked voice and hierarchy. Reapplying them is diminishing returns.
+
+TIER C — SELF-REVIEW CHECKLIST (Quick-hit news/reaction posts)
+  When: news reactions, Google updates, platform announcements,
+  timely posts under 2,500 words where speed-to-publish matters.
+
+  Self-check:
+    [ ] Does the opener hook with a specific receipt or a flat intro?
+    [ ] Do the 2 strongest H2s come in the first half?
+    [ ] Is there one screenshot-worthy sentence (the North Star)?
+    [ ] Does the bottom CTA match the reader's exact next step?
+    [ ] No flat sentences within the first 400 words.
+```
+
+**Rule: one audit per day maximum.** Each audit costs tokens and attention.
+Running 4 audits in one session burns focus. Space them.
+
+**For retroactive audits of already-published posts:** prioritize by GSC
+impression volume. Fix the top 10 posts by impression before touching the
+long tail. Pareto does the rest.
+
+**What to audit for (across all 4 roles):**
+
+```
+Brand Strategist flags:
+  - Generic SEO voice creeping in
+  - Missing receipts (specific client numbers, real project scope)
+  - Manifesto tone absent (the "we build X not Y" edge)
+  - One-off brand moves that would make the post unmistakably ours
+
+Conversion Copywriter flags:
+  - Weak H2s (propose exact rewrite)
+  - Buried leads (the best sentence 3 paragraphs deep)
+  - Generic openers ("Your site is slow" vs "Last week a client...")
+  - CTAs that feel inserted rather than earned
+  - Flat sentences in the first 400 words
+
+UX Researcher flags:
+  - Info order matches SEO logic instead of buyer's mental order
+  - 60-second scan fails (reader can't extract answer on mobile)
+  - Speakable div too long for Google's 20-30 second spec
+  - Tables missing min-w-[560px] or swipe-hint for mobile
+  - Cognitive overload (4+ dense blocks back-to-back)
+
+Data Storyteller flags:
+  - Reference-doc energy, no narrative spine
+  - Opening scene abandoned (teaser not resolved)
+  - No "we spent $X and learned Y" moment
+  - No screenshot-worthy stat or quote
+  - Hook doesn't carry through the post
+```
+
+**Publishing loop:**
+```
+Draft → Tier A/B/C audit → Apply top 5 fixes → Final Pre-Publish QA → Ship
+```
+
+---
+
 ### STEP 8 — Final Pre-Publish QA
 
 ```

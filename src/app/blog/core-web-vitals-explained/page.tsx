@@ -661,6 +661,11 @@ export default function CoreWebVitalsExplainedPage() {
                     {/* FAQ */}
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
 
+                    <section className="mb-10 mt-10">
+                        <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading by Platform</h2>
+                        <p className="text-stone-700 leading-relaxed">See Core Web Vitals in practice: <Link href="/blog/shopify-dawn-theme-slow" className="text-cognac hover:underline font-medium">Shopify Dawn theme LCP issues</Link>, <Link href="/blog/squarespace-too-slow" className="text-cognac hover:underline font-medium">Squarespace CWV ceiling at 55-65</Link>, and <Link href="/blog/gohighlevel-website-speed" className="text-cognac hover:underline font-medium">why GoHighLevel sites score 20-45 on PageSpeed</Link>. For rebuild cost benchmarks, see the <Link href="/blog/website-rebuild-cost-2026" className="text-cognac hover:underline font-medium">2026 website rebuild pricing guide</Link>.</p>
+                    </section>
+
                     {/* Related Posts */}
                     <RelatedPosts currentPostId="core-web-vitals-explained" />
 
