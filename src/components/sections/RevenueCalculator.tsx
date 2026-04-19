@@ -31,7 +31,7 @@ export default function RevenueCalculator() {
               The Cost of Inaction
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-charcoal mb-6 leading-tight">
-              How much is &ldquo;Slow&rdquo; costing you?
+              How much is <span className="font-serif italic text-cognac">&ldquo;Slow&rdquo;</span> costing you?
             </h2>
             <p className="text-lg text-stone-500 mb-8 leading-relaxed">
               Amazon found that every 100ms of latency costs 1% in sales. If your site loads in 3+ seconds, you are bleeding revenue every single day.

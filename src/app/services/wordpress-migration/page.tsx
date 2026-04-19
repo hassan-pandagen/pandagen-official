@@ -3,7 +3,7 @@ import PageContent from './PageContent';
 
 export const metadata: Metadata = {
   title: 'WordPress to Next.js Migration Service | PandaCodeGen',
-  description: 'WordPress sites average 40 to 60 on Google PageSpeed Mobile. We migrate to custom Next.js in 2 to 4 weeks. 95+ PageSpeed guaranteed, zero SEO loss, 301 redirects included. From $5,900.',
+  description: 'WordPress sites average 40 to 60 on Google PageSpeed Mobile. We migrate to custom Next.js in 2 to 4 weeks. 95+ PageSpeed guaranteed, zero SEO loss, 301 redirects included. Tiers from $500 to $25,000.',
   alternates: { canonical: '/services/wordpress-migration' },
   keywords: [
     'wordpress to nextjs migration',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'WordPress to Next.js Migration Service | PandaCodeGen',
-    description: 'WordPress sites average 40 to 60 on Google PageSpeed. We migrate to custom Next.js in 2 to 4 weeks. 95+ PageSpeed guaranteed, zero SEO loss. From $5,900.',
+    description: 'WordPress sites average 40 to 60 on Google PageSpeed. We migrate to custom Next.js in 2 to 4 weeks. 95+ PageSpeed guaranteed, zero SEO loss. Tiers from $500 to $25,000.',
     url: 'https://www.pandacodegen.com/services/wordpress-migration',
     siteName: 'PandaCodeGen',
     type: 'website',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'WordPress to Next.js Migration Service | PandaCodeGen',
-    description: 'WordPress averaging 40 to 60 on PageSpeed Mobile. We migrate to custom Next.js. 95+ PageSpeed guaranteed, zero SEO loss. From $5,900.',
+    description: 'WordPress averaging 40 to 60 on PageSpeed Mobile. We migrate to custom Next.js. 95+ PageSpeed guaranteed, zero SEO loss. Tiers from $500 to $25,000.',
   },
 };
 
@@ -54,7 +54,16 @@ export default function MigrationPage() {
           "addressRegion": "TX",
           "addressCountry": "US"
         },
-        "image": "https://www.pandacodegen.com/og-image.jpg"
+        "image": "https://www.pandacodegen.com/og-image.jpg",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "WordPress Migration Tiers",
+          "itemListElement": [
+            { "@type": "Offer", "name": "Foot in the Door", "price": "500", "priceCurrency": "USD", "description": "Small WordPress site migration, 1 to 10 pages" },
+            { "@type": "Offer", "name": "Growth", "price": "3500", "priceCurrency": "USD", "description": "15 to 50 pages with blog, forms, integrations" },
+            { "@type": "Offer", "name": "Scale", "price": "12000", "priceCurrency": "USD", "description": "Large WordPress migrations, WooCommerce, 50+ pages" }
+          ]
+        }
       },
       {
         "@type": "WebPage",

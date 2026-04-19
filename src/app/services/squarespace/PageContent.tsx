@@ -70,9 +70,9 @@ export default function SquarespacePageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-4 leading-tight"
           >
-            Outgrown Squarespace? <br />
+            Stuck at 30-55 PageSpeed? <br />
             <span className="font-serif italic text-cognac">
-              Own Your Platform.
+              Squarespace Migration, Done Right.
             </span>
           </motion.h1>
 
@@ -131,7 +131,7 @@ export default function SquarespacePageContent() {
       />
 
       {/* 2a. SQUARESPACE PIVOT - Split Card */}
-      <section className="py-12 md:py-24 px-6 bg-[#F8FAFC]">
+      <section className="py-12 md:py-20 px-6 bg-[#F8FAFC]">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-8 md:mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
@@ -213,7 +213,7 @@ export default function SquarespacePageContent() {
       <SocialProof />
 
       {/* 3. HOW WE MIGRATE - Process Timeline */}
-      <section id="how-it-works" className="py-10 md:py-20 px-6">
+      <section id="how-it-works" className="py-10 md:py-14 px-6">
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How We Migrate Your Squarespace Site</h2>
           <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A proven 4-step process. Your Squarespace site stays live the entire time.</p>
@@ -253,7 +253,7 @@ export default function SquarespacePageContent() {
       </section>
 
       {/* 4. COMPARISON, Squarespace Killer Card */}
-      <section id="comparison" className="py-12 md:py-24 relative overflow-hidden">
+      <section id="comparison" className="py-12 md:py-20 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[800px] bg-red-100/30 blur-[180px] rounded-full pointer-events-none" />
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-stone-100/20 blur-[150px] rounded-full pointer-events-none" />
 
@@ -384,7 +384,7 @@ export default function SquarespacePageContent() {
       </section>
 
       {/* 5. THE HIDDEN COST OF SQUARESPACE */}
-      <section className="py-12 md:py-24 px-6 bg-[#0F172A]">
+      <section className="py-12 md:py-20 px-6 bg-[#0F172A]">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-8 md:mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 text-red-400 border border-red-500/20 text-sm font-bold uppercase tracking-widest mb-6">
@@ -428,7 +428,7 @@ export default function SquarespacePageContent() {
       </section>
 
       {/* 6. THE SOLUTION - WHAT YOU GET */}
-      <section className="py-12 md:py-24 px-6 bg-[#0F172A]">
+      <section className="py-12 md:py-20 px-6 bg-[#0F172A]">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-8 md:mb-16">
             <span className="text-stone-500 font-bold tracking-widest uppercase text-sm">The Smarter Path</span>
@@ -462,6 +462,31 @@ export default function SquarespacePageContent() {
         </div>
       </section>
 
+      {/* FOUNDER RECEIPT - Hassan Fluid Engine block */}
+      <section className="py-10 md:py-16 px-6 bg-paper">
+        <div className="container mx-auto max-w-3xl">
+          <div className="p-6 md:p-10 rounded-2xl bg-white border border-stone-200 shadow-xs flex gap-5 items-start">
+            <div className="w-14 h-14 rounded-full bg-cognac/10 border border-cognac/20 flex items-center justify-center text-cognac font-bold text-xl shrink-0">H</div>
+            <div>
+              <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-cognac mb-3">Founder, on the record</p>
+              <p className="text-lg md:text-xl text-charcoal leading-relaxed font-medium italic mb-3">
+                &ldquo;I migrate Squarespace sites myself. No account manager, no offshore handoff. You book the call, I answer. I show you your Fluid Engine pages rebuilt in Tailwind grid before you wire a dollar. Your Commerce plan products, Acuity Scheduling, and Member Areas all carry over. The 600KB JavaScript bundle does not.&rdquo;
+              </p>
+              <p className="text-sm text-stone-500">Hassan Jamal. Austin, TX. Squarespace 7.1 and Fluid Engine migrations.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* LSI entity paragraph for Squarespace-specific topical authority */}
+      <section className="py-8 md:py-12 px-6 bg-white border-t border-stone-200">
+        <div className="container mx-auto max-w-3xl">
+          <p className="text-sm text-stone-600 leading-relaxed">
+            We handle the full Squarespace 7.1 stack: Fluid Engine layouts rebuilt in Tailwind grid, Commerce plan products migrated with Stripe reconnected, Acuity and Squarespace Scheduling ported to a custom booking engine, Member Areas converted to gated Next.js routes, and the 600KB+ JavaScript bundle replaced with static HTML on every page. Total Blocking Time drops from 2+ seconds to under 200 milliseconds. INP (Interaction to Next Paint) stops failing. Your domain, DNS, and every blog post URL carry over with 301 redirects.
+          </p>
+        </div>
+      </section>
+
       {/* PRICING TIERS */}
       <PricingTiers
         heading="Agencies charge $10K to $30K."
@@ -482,7 +507,7 @@ export default function SquarespacePageContent() {
               "Full Squarespace content export + migration",
               "Custom Next.js build matching your design",
               "Sanity CMS for content editing",
-              "90+ PageSpeed guaranteed",
+              "95+ PageSpeed guaranteed",
               "301 redirect mapping",
               "Case study in exchange for public review",
             ],
@@ -521,7 +546,7 @@ export default function SquarespacePageContent() {
       />
 
       {/* 7. DUAL CTA */}
-      <section className="py-12 md:py-24 px-6 bg-[#F8FAFC]">
+      <section className="py-12 md:py-20 px-6 bg-[#F8FAFC]">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-3xl font-bold text-center mb-8 md:mb-16 text-slate-900">Choose Your Future</h2>
 
@@ -575,7 +600,7 @@ export default function SquarespacePageContent() {
       </section>
 
       {/* 8. FAQ */}
-      <section className="py-10 md:py-20 px-6 border-y border-stone-200 bg-stone-50">
+      <section className="py-10 md:py-14 px-6 border-y border-stone-200 bg-stone-50">
         <div className="container mx-auto max-w-3xl">
           <div className="flex items-center gap-3 justify-center mb-4">
             <HelpCircle className="w-6 h-6 text-cognac" />
@@ -612,7 +637,7 @@ export default function SquarespacePageContent() {
       </section>
 
       {/* 9. GUARANTEE */}
-      <section className="py-10 md:py-20 px-6 bg-white border-t border-slate-100">
+      <section className="py-10 md:py-14 px-6 bg-white border-t border-slate-100">
         <div className="container mx-auto max-w-4xl">
           <div className="bg-[#F0FDF4] border border-green-200 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
             <div className="shrink-0">
@@ -621,7 +646,7 @@ export default function SquarespacePageContent() {
               </div>
             </div>
             <div className="flex-1">
-              <h3 className="text-2xl md:text-3xl font-bold text-green-900 mb-3 tracking-tight">90+ PageSpeed <span className="font-serif italic">or full refund.</span></h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-green-900 mb-3 tracking-tight">95+ PageSpeed <span className="font-serif italic">or full refund.</span></h3>
               <p className="text-green-800 leading-relaxed mb-6">
                 Every PandaCodeGen Squarespace migration ships at 90+ on Google PageSpeed. If your new site doesn&apos;t hit that score on launch day, we refund 100% of your payment. Guaranteed, in writing.
               </p>

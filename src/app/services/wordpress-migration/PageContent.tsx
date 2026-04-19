@@ -59,9 +59,9 @@ export default function PageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-4 leading-tight"
           >
-            Migrate WordPress. <br />
+            Migrate WordPress to Next.js. <br />
             <span className="font-serif italic text-cognac">
-              Scale with Custom Code.
+              From $500. 3 weeks. 95+ PageSpeed.
             </span>
           </motion.h1>
 
@@ -141,7 +141,7 @@ export default function PageContent() {
       </div>
 
       {/* 3. BEFORE / AFTER RESULTS */}
-      <section className="py-10 md:py-20 px-6 border-y border-stone-200 bg-white">
+      <section className="py-10 md:py-14 px-6 border-y border-stone-200 bg-white">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">Real Results. Not Promises.</h2>
           <p className="text-stone-600 text-center mb-12 max-w-2xl mx-auto">Here&apos;s what happens when you migrate from WordPress to custom code.</p>
@@ -272,7 +272,7 @@ export default function PageContent() {
       </section>
 
       {/* 6. THE UPGRADE PATH */}
-      <section className="py-10 md:py-20 px-6">
+      <section className="py-10 md:py-14 px-6">
         <div className="container mx-auto max-w-4xl text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-200 text-sm text-cognac mb-6">
             <Code2 className="w-4 h-4" /> The Smarter Investment
@@ -298,6 +298,52 @@ export default function PageContent() {
                 <p className="text-stone-600 text-base leading-relaxed">{item.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PLUGIN EXTINCTION LIST — WordPress-specific brand move */}
+      <section className="py-10 md:py-14 px-6 bg-white border-y border-stone-200">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-8 md:mb-10">
+            <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-3">Plugin Extinction List</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">The 7 WordPress Plugins We Replace With Zero Code</h2>
+            <p className="text-stone-600 text-base max-w-2xl mx-auto">Every WordPress site we migrate drops this plugin bill permanently. Next.js native replacements cost $0/year and load faster.</p>
+          </div>
+
+          <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
+          <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
+            <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px]">
+              <thead>
+                <tr className="bg-stone-50">
+                  <th className="text-left p-3 font-semibold text-stone-700">WordPress Plugin</th>
+                  <th className="text-left p-3 font-semibold text-stone-700">Replaced By</th>
+                  <th className="text-right p-3 font-semibold text-cognac">Yearly Savings</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-stone-100">
+                {[
+                  ["Yoast Premium / RankMath PRO", "Next.js native metadata API", "$99 to $199"],
+                  ["WP Rocket / LiteSpeed Cache / W3 Total Cache", "Static generation + Vercel Edge", "$59 to $180"],
+                  ["Advanced Custom Fields (ACF) Pro", "Sanity schema + TypeScript types", "$249"],
+                  ["Elementor Pro / Divi Builder", "Custom React components", "$59 to $199"],
+                  ["Gravity Forms / WPForms", "API routes + Resend", "$259"],
+                  ["WooCommerce Subscriptions", "Stripe Billing (native)", "$199"],
+                  ["WPML / TranslatePress", "next-intl + Sanity i18n", "$99 to $199"],
+                ].map(([plugin, replacement, savings]) => (
+                  <tr key={plugin} className="border border-stone-100 hover:bg-stone-50">
+                    <td className="p-3 text-charcoal font-medium">{plugin}</td>
+                    <td data-label="Replaced By" className="p-3 text-stone-600">{replacement}</td>
+                    <td data-label="Savings" className="p-3 text-right text-cognac font-bold">{savings}/yr</td>
+                  </tr>
+                ))}
+                <tr className="bg-cognac/5 border-t-2 border-cognac/20">
+                  <td className="p-3 text-charcoal font-bold">Total annual plugin bill eliminated</td>
+                  <td data-label="" className="p-3 text-stone-500 text-xs italic">replaced with native code you own</td>
+                  <td data-label="Total" className="p-3 text-right text-cognac font-black">$1,023 to $1,483/yr</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
@@ -361,7 +407,7 @@ export default function PageContent() {
       />
 
       {/* 7. DUAL CTA */}
-      <section className="py-10 md:py-20 px-6 border-y border-stone-200 bg-white">
+      <section className="py-10 md:py-14 px-6 border-y border-stone-200 bg-white">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold text-charcoal text-center mb-8 md:mb-12">Choose What&apos;s Right for Your Business</h2>
 
@@ -417,7 +463,7 @@ export default function PageContent() {
       </section>
 
       {/* 8. FAQ */}
-      <section className="py-10 md:py-20 px-6">
+      <section className="py-10 md:py-14 px-6">
         <div className="container mx-auto max-w-3xl">
           <div className="flex items-center gap-3 justify-center mb-4">
             <HelpCircle className="w-6 h-6 text-cognac" />
@@ -454,7 +500,7 @@ export default function PageContent() {
       </section>
 
       {/* 9. GUARANTEE — unified 90+ PageSpeed promise */}
-      <section className="py-10 md:py-20 px-6">
+      <section className="py-10 md:py-14 px-6">
         <div className="container mx-auto max-w-4xl bg-green-50 border border-green-200 rounded-[3rem] p-10 md:p-14 relative overflow-hidden">
           <div className="relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-700 text-xs font-bold uppercase tracking-[0.22em] mb-6">

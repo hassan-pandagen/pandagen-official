@@ -40,6 +40,18 @@ const faqs = [
     q: "My WooCommerce store has subscriptions / bookings / B2B pricing. Can you handle that?",
     a: "Yes. Subscriptions, recurring billing, tiered B2B pricing, volume discounts, booking calendars: these are all custom logic we build natively. You won't need a $300/mo plugin to handle what we can build into the core of your store."
   },
+  {
+    q: "What about WooCommerce Subscriptions and my existing recurring billing?",
+    a: "We migrate every active subscription to Stripe Billing (native, no markup). Your subscribers keep their saved cards and billing date. Zero payment interruption, zero customer re-auth. Stripe handles the dunning, the webhooks, the failed-card retries. You stop paying $199/month for WooCommerce Subscriptions."
+  },
+  {
+    q: "Do I keep my Stripe account and saved customer cards?",
+    a: "Yes. We connect to your existing Stripe account using your live keys. All Customer IDs, saved payment methods, subscription IDs, and Stripe Customer Portal history carry over untouched. Your buyers never re-enter a card."
+  },
+  {
+    q: "How do you handle tax (Avalara, TaxJar, WooCommerce Tax)?",
+    a: "We integrate Stripe Tax or TaxJar directly at checkout. Live nexus calculation across all US states plus VAT for UK/EU. No more $99/month WooCommerce Tax plugin, no more Avalara reconciliation. Stripe Tax handles filings in 30+ jurisdictions."
+  },
 ];
 
 const comparisonRows = [
@@ -72,9 +84,9 @@ export default function PageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-4 leading-tight"
           >
-            WooCommerce Too Slow? <br />
+            WooCommerce Migration. <br />
             <span className="font-serif italic text-cognac">
-              Own Your Store.
+              From $500. 3 weeks. 95+ PageSpeed.
             </span>
           </motion.h1>
 
@@ -82,9 +94,10 @@ export default function PageContent() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1 }}
+            data-speakable="true"
             className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto"
           >
-            WooCommerce is WordPress with a shopping cart bolted on. We rebuild your store as a custom coded Next.js storefront with faster checkout and zero plugin fees, giving you complete code ownership. <span className="text-charcoal font-medium">No plugin conflicts. No surprise hosting bills.</span>
+            Last year I rebuilt MyCustomPatches for Matt Conner. WooCommerce plugin treadmill to a custom Next.js storefront. 42 to 97 PageSpeed. 3.2s to 0.7s checkout. $480 per month plugin bill dropped to $0. Matt rated it 5 stars on Clutch and GoodFirms. We do the same for your store. You keep Stripe, PayPal, your orders, and your rankings. You drop the plugin bill.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -115,7 +128,7 @@ export default function PageContent() {
         headline="You're paying for plugins that"
         headlineAccent="don't integrate."
         description="You're paying $49/mo for a plugin to sync Stripe. There's a native API that does it for free. You're paying $99/mo for WooCommerce Subscriptions. Stripe handles subscriptions natively with zero markup. You're paying $60/mo to stop spam from your contact form. A 10-line reCAPTCHA does it."
-        descriptionSecondary="Nobody tells you this because every WooCommerce plugin vendor depends on the monthly recurring. Not the plugin companies. Not the agencies who install them. We're the agency that builds what replaces them. No pitch. Just receipts."
+        descriptionSecondary="We replace your ACF fields, Yoast meta, WP Rocket caching, Perfmatters tweaks, and LiteSpeed cache layer with native Next.js equivalents. No plugin stack. No Kinsta bill. Every piece lives in your codebase. Nobody tells you this because every WooCommerce plugin vendor depends on the monthly recurring. We're the agency that builds what replaces them. No pitch. Just receipts."
         comparisonTitle="WooCommerce vs Custom"
         themLabel="WooCommerce"
         metrics={[
@@ -138,7 +151,7 @@ export default function PageContent() {
       />
 
       {/* 2a. BEFORE / AFTER RESULTS */}
-      <section className="py-10 md:py-20 px-6 border-y border-stone-200 bg-white">
+      <section className="py-10 md:py-14 px-6 border-y border-stone-200 bg-white">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">WooCommerce Speed Optimization: What You Get</h2>
           <p className="text-stone-600 text-center mb-12 max-w-2xl mx-auto">Real numbers from WooCommerce stores we&apos;ve migrated.</p>
@@ -185,7 +198,7 @@ export default function PageContent() {
       <SocialProof />
 
       {/* 3. HOW IT WORKS */}
-      <section id="how-it-works" className="py-12 md:py-24 px-6 bg-[#F8FAFC]">
+      <section id="how-it-works" className="py-12 md:py-20 px-6 bg-[#F8FAFC]">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How We Migrate Your WooCommerce Store</h2>
           <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A proven 5-step process. Zero downtime. Zero lost orders.</p>
@@ -219,7 +232,7 @@ export default function PageContent() {
       </section>
 
       {/* 4. COMPARISON TABLE */}
-      <section className="py-10 md:py-20 px-6 bg-white border-y border-stone-200">
+      <section className="py-10 md:py-14 px-6 bg-white border-y border-stone-200">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">WooCommerce vs Custom Code</h2>
           <p className="text-stone-600 text-center mb-10">The numbers speak for themselves.</p>
@@ -260,7 +273,7 @@ export default function PageContent() {
       </section>
 
       {/* 5. PAIN POINTS, Dark Navy */}
-      <section className="py-12 md:py-24 px-6 bg-[#0F172A]">
+      <section className="py-12 md:py-20 px-6 bg-[#0F172A]">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 text-red-400 border border-red-500/20 text-sm font-bold uppercase tracking-widest mb-6">
@@ -365,7 +378,7 @@ export default function PageContent() {
       />
 
       {/* 6. DUAL CTA */}
-      <section className="py-10 md:py-20 px-6 border-y border-stone-200 bg-white">
+      <section className="py-10 md:py-14 px-6 border-y border-stone-200 bg-white">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold text-charcoal text-center mb-8 md:mb-12">Two Ways to Start</h2>
 
@@ -421,7 +434,7 @@ export default function PageContent() {
       </section>
 
       {/* 7. FAQ */}
-      <section className="py-10 md:py-20 px-6">
+      <section className="py-10 md:py-14 px-6">
         <div className="container mx-auto max-w-3xl">
           <div className="flex items-center gap-3 justify-center mb-4">
             <HelpCircle className="w-6 h-6 text-cognac" />
@@ -458,7 +471,7 @@ export default function PageContent() {
       </section>
 
       {/* 8. GUARANTEE */}
-      <section className="py-10 md:py-20 px-6">
+      <section className="py-10 md:py-14 px-6">
         <div className="container mx-auto max-w-4xl bg-green-50 border border-green-200 rounded-[3rem] p-12 relative overflow-hidden">
           <div className="relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-700 text-xs font-bold uppercase tracking-[0.22em] mb-6">

@@ -7,20 +7,21 @@ import { ArrowLeft, ArrowRight, BarChart3, Target } from "lucide-react";
 import { blogPosts } from "@/data/blog";
 
 export const metadata: Metadata = {
-    title: "Imran - Lead Solutions Architect at PandaCodeGen",
-    description: "Imran is Lead Solutions Architect at PandaCodeGen, specializing in enterprise architecture and strategic migrations. 8+ years experience, 50+ successful projects.",
+    title: "Imran Raza Ladhani - Architecture Collaborator at PandaCodeGen",
+    description: "Imran Raza Ladhani is the architecture collaborator at PandaCodeGen, working with founder Hassan Jamal on scalable custom Next.js builds.",
     openGraph: {
-        title: "Imran - Lead Solutions Architect at PandaCodeGen",
-        description: "Specializing in enterprise architecture, strategic planning, and ROI-driven migrations. Lead Solutions Architect @ PandaCodeGen.",
+        title: "Imran Raza Ladhani - Architecture Collaborator at PandaCodeGen",
+        description: "Architecture collaborator at PandaCodeGen. Custom Next.js builds, platform migrations, system design.",
         type: "profile",
         url: "https://www.pandacodegen.com/about/imran",
         images: [{ url: "https://www.pandacodegen.com/team/imran.png", width: 400, height: 400 }],
     },
     twitter: {
         card: "summary",
-        title: "Imran - Lead Solutions Architect at PandaCodeGen",
-        description: "Enterprise architecture & strategic planning for e-commerce migrations. 8+ years experience.",
+        title: "Imran Raza Ladhani - Architecture Collaborator at PandaCodeGen",
+        description: "Architecture collaborator at PandaCodeGen. Custom Next.js builds and platform migrations.",
     },
+    robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
     alternates: { canonical: "/about/imran" },
 };
 
@@ -30,10 +31,11 @@ const personSchema = {
         {
             "@type": "Person",
             "@id": "https://www.pandacodegen.com/#/schema/person/imran",
-            "name": "Imran",
+            "name": "Imran Raza Ladhani",
             "givenName": "Imran",
-            "jobTitle": "Lead Solutions Architect",
-            "description": "Lead Solutions Architect at PandaCodeGen. Specializing in enterprise architecture, strategic planning, and ensuring client investments deliver measurable ROI.",
+            "familyName": "Raza Ladhani",
+            "jobTitle": "Architecture Collaborator",
+            "description": "Architecture collaborator at PandaCodeGen. Works with founder Hassan Jamal on scalable custom Next.js builds, platform migrations, and system design.",
             "url": "https://www.pandacodegen.com/about/imran",
             "image": "https://www.pandacodegen.com/team/imran.png",
             "worksFor": {
@@ -41,18 +43,21 @@ const personSchema = {
                 "@id": "https://www.pandacodegen.com/#organization",
                 "name": "PandaCodeGen",
             },
+            "sameAs": [
+                "https://www.linkedin.com/in/imran-raza-ladhani/",
+            ],
             "knowsAbout": [
-                "Enterprise Architecture", "Solutions Architecture", "Strategic Planning",
-                "Business Strategy", "Platform Migrations", "ROI Optimization",
-                "System Design", "Technical Leadership", "E-commerce Strategy", "Performance Optimization",
+                "Next.js Architecture", "Platform Migrations", "System Design",
+                "Headless Commerce", "WordPress Migration", "Shopify Headless",
+                "Performance Optimization", "Technical Planning",
             ],
         },
         {
             "@type": "ProfilePage",
             "@id": "https://www.pandacodegen.com/about/imran#webpage",
             "url": "https://www.pandacodegen.com/about/imran",
-            "name": "Imran - Lead Solutions Architect at PandaCodeGen",
-            "description": "Learn about Imran, Lead Solutions Architect at PandaCodeGen. 8+ years of experience in enterprise architecture and strategic planning.",
+            "name": "Imran Raza Ladhani - Architecture Collaborator at PandaCodeGen",
+            "description": "Learn about Imran Raza Ladhani, architecture collaborator at PandaCodeGen. Works with founder Hassan Jamal on custom Next.js builds and platform migrations.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "mainEntity": { "@id": "https://www.pandacodegen.com/#/schema/person/imran" },
             "inLanguage": "en-US",
@@ -70,23 +75,23 @@ const personSchema = {
 };
 
 const expertise = [
-    "Enterprise Architecture",
-    "Solutions Design",
-    "Strategic Planning",
+    "Next.js Architecture",
     "Platform Migrations",
-    "ROI Optimization",
-    "Technical Leadership",
-    "Business Strategy",
-    "System Integration",
-    "Performance Auditing",
-    "E-commerce Strategy",
+    "System Design",
+    "Headless Commerce",
+    "WordPress Migration",
+    "Shopify Headless",
+    "Performance Optimization",
+    "Database Modeling",
+    "API Design",
+    "Sanity CMS",
 ];
 
 const builds = [
-    { title: "Enterprise Architecture Design", desc: "Scalable architectures that eliminate platform fees, reduce hosting costs by 60-90%, and improve performance by 3-4×. Every decision is ROI-driven." },
-    { title: "Strategic Migration Planning", desc: "WordPress, Shopify, and legacy platform migrations with zero downtime. Minimize disruption while maximizing performance gains and cost savings." },
-    { title: "ROI & Cost Analysis", desc: "Calculate exact ROI before writing a single line of code. Monthly savings, performance improvements, and payback timeline, upfront. No surprises." },
-    { title: "Technical Leadership", desc: "Lead implementation teams, ensure quality standards, and guarantee projects deliver on promised metrics. 8+ years leading enterprise migrations." },
+    { title: "Migration Feasibility Reviews", desc: "Before any quote goes out, I review the source platform, content structure, integrations, and SEO risk. The call is: feasible in 3 weeks, feasible in 8, or not feasible at all." },
+    { title: "System Design & Data Modeling", desc: "Sanity schema, Supabase tables, Stripe connect architecture, webhook flow. The stuff Hassan does not want to re-think three weeks into a build." },
+    { title: "Zero-Downtime Migration Planning", desc: "WordPress and Shopify cutovers without losing a ranking, a subscription, or a customer card. DNS sequencing, 301 maps, staging-to-prod handoffs." },
+    { title: "Technical Quality Review", desc: "Before launch, I stress-test the architecture: can it scale past 10,000 users, hold up under a Shop Pay spike, survive a hosting vendor switch. If it cannot, we fix before launch." },
 ];
 
 export default function ImranAuthorPage() {
@@ -122,21 +127,29 @@ export default function ImranAuthorPage() {
 
                         <div className="flex-1 pt-2">
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-stone-200 text-xs font-bold uppercase tracking-widest text-charcoal mb-6">
-                                Lead Solutions Architect
+                                Architecture Collaborator
                             </div>
-                            <h1 className="text-5xl md:text-6xl font-serif text-charcoal mb-3">Imran.</h1>
-                            <p className="text-lg font-mono text-cognac mb-6">Enterprise Architect &middot; 8+ years &middot; 50+ projects</p>
+                            <h1 className="text-5xl md:text-6xl font-serif text-charcoal mb-3">Imran Raza Ladhani.</h1>
+                            <p className="text-lg font-mono text-cognac mb-6">Architecture Collaborator &middot; PandaCodeGen</p>
                             <p className="text-xl text-stone-600 leading-relaxed max-w-xl mb-8">
-                                My job is to ensure your investment turns into measurable ROI. I design enterprise architectures that eliminate technical debt, reduce hosting costs, and deliver performance improvements that directly impact your bottom line. Every migration I architect is built around your business goals, not just technical specs.
+                                I work with Hassan on the hard architecture calls. Which migrations are actually feasible without breaking SEO. How to keep a WooCommerce checkout live during a headless rebuild. Where Next.js App Router ends and Sanity or Supabase takes over. Hassan writes the code. I help decide what that code needs to do.
                             </p>
                             <div className="flex flex-wrap gap-3">
+                                <a
+                                    href="https://www.linkedin.com/in/imran-raza-ladhani/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-stone-200 text-charcoal rounded-full text-sm font-bold hover:border-cognac/40 hover:text-cognac transition-all"
+                                >
+                                    LinkedIn &rarr;
+                                </a>
                                 <button
                                     data-cal-namespace="discovery"
                                     data-cal-link="pandagen/discovery"
                                     data-cal-config='{"layout":"month_view"}'
                                     className="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-stone-200 text-charcoal rounded-full text-sm font-bold hover:border-cognac/40 hover:text-cognac transition-all"
                                 >
-                                    Book Strategy Call
+                                    Book Architecture Call
                                 </button>
                             </div>
                         </div>
@@ -147,7 +160,7 @@ export default function ImranAuthorPage() {
                         <div className="p-8 bg-white border border-stone-300 rounded-2xl shadow-xs">
                             <div className="flex items-center gap-3 mb-6">
                                 <BarChart3 className="w-5 h-5 text-cognac" />
-                                <h3 className="text-xl font-serif text-charcoal">Strategic Expertise</h3>
+                                <h3 className="text-xl font-serif text-charcoal">Technical Expertise</h3>
                             </div>
                             <div className="flex flex-wrap gap-2">
                                 {expertise.map((skill) => (
@@ -178,7 +191,7 @@ export default function ImranAuthorPage() {
                     {imranPosts.length > 0 && (
                         <section className="border-t border-stone-200 pt-10 md:pt-16 mb-10 md:mb-16">
                             <h2 className="text-2xl font-serif text-charcoal mb-2">Articles by Imran</h2>
-                            <p className="text-stone-500 mb-8">Strategic insights on enterprise migrations and ROI optimization.</p>
+                            <p className="text-stone-500 mb-8">Architecture notes on custom migrations and system design.</p>
                             <div className="grid gap-3">
                                 {imranPosts.map((post) => (
                                     <Link
@@ -205,8 +218,8 @@ export default function ImranAuthorPage() {
 
                     {/* CTA */}
                     <section className="text-center py-10 md:py-16 bg-white border border-stone-300 rounded-3xl px-6 md:px-8">
-                        <h2 className="text-2xl font-serif text-charcoal mb-4">Work With Me</h2>
-                        <p className="text-stone-500 mb-8 max-w-md mx-auto">Get a strategic architecture review and ROI analysis before committing to any platform migration.</p>
+                        <h2 className="text-2xl font-serif text-charcoal mb-4">Architecture Review Before You Commit</h2>
+                        <p className="text-stone-500 mb-8 max-w-md mx-auto">Book a 30-minute architecture call. We review your current stack, flag the migration risks, and scope feasibility before you commit a dollar.</p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <button
                                 data-cal-namespace="discovery"
@@ -214,13 +227,13 @@ export default function ImranAuthorPage() {
                                 data-cal-config='{"layout":"month_view"}'
                                 className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 hover:scale-105 transition-all"
                             >
-                                Book Strategy Call
+                                Book Architecture Call
                             </button>
                             <Link
-                                href="/about"
+                                href="/about/hassan"
                                 className="px-8 py-4 bg-white border border-stone-200 text-charcoal font-bold rounded-full hover:bg-cognac hover:text-white hover:border-cognac transition-all"
                             >
-                                Meet the Full Team
+                                Meet the Founder
                             </Link>
                         </div>
                     </section>

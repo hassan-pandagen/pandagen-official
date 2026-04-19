@@ -70,11 +70,19 @@ export default function WebflowPageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-4 leading-tight"
           >
-            Webflow Got You Started. <br />
+            The Webflow Migration Service <br />
             <span className="font-serif italic text-cognac">
-              Custom Code Takes You Further.
+              That Looks Like Webflow. Loads Like Vercel.
             </span>
           </motion.h1>
+
+          <p className="text-sm text-cognac font-bold mb-4">
+            New receipt launching this week: Obare Magazine rebuilt in 7 days for $1,200.
+          </p>
+
+          <p className="text-xs text-red-600 font-semibold mb-4">
+            Webflow was down 12+ hours on April 14-15, 2026. Read the incident below.
+          </p>
 
           <motion.p
             initial={{ opacity: 0 }}
@@ -130,75 +138,6 @@ export default function WebflowPageContent() {
         totalPerYear="$13,500"
       />
 
-      {/* 2a. WEBFLOW STRENGTHS & WEAKNESSES */}
-      <section className="py-10 md:py-20 px-6 border-y border-stone-200 bg-stone-50">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6 text-center">Webflow Is Powerful. But It Has Limits.</h2>
-          <p className="text-stone-600 text-center mb-8 md:mb-12 max-w-2xl mx-auto">Every tool has trade-offs. Here&apos;s an honest look at what Webflow does well and where it falls short:</p>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Strengths */}
-            <div>
-              <h3 className="text-lg font-bold text-green-400 mb-4 flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5" /> What Webflow Does Well
-              </h3>
-              <div className="space-y-3">
-                {[
-                  "Visual design flexibility",
-                  "Clean code output (relative to others)",
-                  "CMS collections",
-                  "Built-in animations",
-                  "Designer-friendly workflow",
-                ].map((item, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: i * 0.1 }}
-                    className="p-4 rounded-xl bg-green-500/5 border border-green-500/10 hover:border-green-500/20 transition-colors"
-                  >
-                    <div className="flex items-center gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-cognac shrink-0" />
-                      <p className="text-charcoal font-medium">{item}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-
-            {/* Weaknesses */}
-            <div>
-              <h3 className="text-lg font-bold text-red-400 mb-4 flex items-center gap-2">
-                <XCircle className="w-5 h-5" /> Where Webflow Falls Short
-              </h3>
-              <div className="space-y-3">
-                {[
-                  "Hosting costs $39-212/month",
-                  "CMS limited to 10,000 items",
-                  "No server-side logic or API routes",
-                  "Limited SEO control (no SSR, basic schema)",
-                  "Complex interactions require workarounds",
-                  "You don\u2019t own the exported code",
-                ].map((item, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: i * 0.1 }}
-                    className="p-4 rounded-xl bg-red-500/5 border border-red-500/10 hover:border-red-500/20 transition-colors"
-                  >
-                    <div className="flex items-center gap-3">
-                      <XCircle className="w-5 h-5 text-red-400 shrink-0" />
-                      <p className="text-charcoal font-medium">{item}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* 2a. CASE STUDY GRID — Obare featured (design-forward Webflow-competitor migration) */}
       <CaseStudyGrid
         highlight="obare"
@@ -211,7 +150,7 @@ export default function WebflowPageContent() {
       <SocialProof />
 
       {/* 3. WHEN TO MIGRATE */}
-      <section id="when-to-migrate" className="py-12 md:py-24 px-6 bg-[#0F172A]">
+      <section id="when-to-migrate" className="py-12 md:py-20 px-6 bg-[#0F172A]">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-8 md:mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 text-orange-400 border border-orange-500/20 text-sm font-bold uppercase tracking-widest mb-6">
@@ -251,7 +190,7 @@ export default function WebflowPageContent() {
       </section>
 
       {/* Webflow Uptime Warning (updated Apr 15, 2026) */}
-      <section id="uptime" className="py-10 md:py-20 px-6 bg-red-50 border-y border-red-200">
+      <section id="uptime" className="py-10 md:py-14 px-6 bg-red-50 border-y border-red-200">
         <div className="container mx-auto max-w-4xl">
           <div className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest bg-red-600 text-white rounded-full mb-4">Update Apr 15, 2026</div>
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">The Outage Cost Nobody Talks About</h2>
@@ -273,7 +212,7 @@ export default function WebflowPageContent() {
       </section>
 
       {/* 4. COMPARISON TABLE */}
-      <section id="comparison" className="py-10 md:py-20 px-6 border-y border-stone-200 bg-stone-50">
+      <section id="comparison" className="py-10 md:py-14 px-6 border-y border-stone-200 bg-stone-50">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">Webflow vs Custom Coded</h2>
           <p className="text-stone-600 text-center mb-12">See exactly what you&apos;re missing and what you could have.</p>
@@ -302,7 +241,7 @@ export default function WebflowPageContent() {
       </section>
 
       {/* 5. HOW WE MIGRATE */}
-      <section className="py-12 md:py-24 px-6 bg-white">
+      <section className="py-12 md:py-20 px-6 bg-white">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-4">How We Migrate Your Webflow Site</h2>
           <p className="text-slate-500 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A proven 4-step process. Every interaction rebuilt. Every CMS item migrated.</p>
@@ -335,7 +274,7 @@ export default function WebflowPageContent() {
       </section>
 
       {/* 6. WHAT YOU GET */}
-      <section className="py-10 md:py-20 px-6 border-y border-stone-200 bg-stone-50">
+      <section className="py-10 md:py-14 px-6 border-y border-stone-200 bg-stone-50">
         <div className="container mx-auto max-w-4xl text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-cognac/20 text-sm text-cognac mb-6">
             <Code2 className="w-4 h-4" /> What You Get
@@ -424,7 +363,7 @@ export default function WebflowPageContent() {
       />
 
       {/* 7. DUAL CTA */}
-      <section className="py-10 md:py-20 px-6">
+      <section className="py-10 md:py-14 px-6">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold text-charcoal text-center mb-8 md:mb-12">Ready to Level Up?</h2>
 
@@ -482,7 +421,7 @@ export default function WebflowPageContent() {
       </section>
 
       {/* 8. FAQ */}
-      <section className="py-10 md:py-20 px-6 border-y border-stone-200 bg-stone-50">
+      <section className="py-10 md:py-14 px-6 border-y border-stone-200 bg-stone-50">
         <div className="container mx-auto max-w-3xl">
           <div className="text-center mb-14">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-500/10 border border-charcoal/20 text-sm text-stone-500 mb-6">
@@ -511,7 +450,7 @@ export default function WebflowPageContent() {
       </section>
 
       {/* 9. GUARANTEE */}
-      <section className="py-10 md:py-20 px-6">
+      <section className="py-10 md:py-14 px-6">
         <div className="container mx-auto max-w-4xl bg-linear-to-br from-green-50 to-white border border-green-500/30 rounded-[3rem] p-12 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-green-500/10 blur-[80px] pointer-events-none" />
           <div className="relative z-10 text-center">
@@ -533,6 +472,19 @@ export default function WebflowPageContent() {
               Book Free Discovery Call
             </button>
           </div>
+        </div>
+      </section>
+
+      {/* Further Reading — blog cluster links */}
+      <section className="py-10 px-6 bg-white border-t border-stone-200">
+        <div className="container mx-auto max-w-4xl">
+          <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-4">Further reading</p>
+          <ul className="space-y-2 text-stone-700">
+            <li>&rarr; <Link href="/blog/webflow-migration-cost" className="text-charcoal hover:text-cognac underline underline-offset-2">What a Webflow migration actually costs in 2026</Link></li>
+            <li>&rarr; <Link href="/blog/webflow-true-cost" className="text-charcoal hover:text-cognac underline underline-offset-2">The true cost of staying on Webflow: $125 to $400 per month</Link></li>
+            <li>&rarr; <Link href="/blog/leaving-webflow-2026" className="text-charcoal hover:text-cognac underline underline-offset-2">Leaving Webflow in 2026: what actually happened</Link></li>
+            <li>&rarr; <Link href="/blog/webflow-vs-custom-website" className="text-charcoal hover:text-cognac underline underline-offset-2">Webflow vs custom website 2026 comparison</Link></li>
+          </ul>
         </div>
       </section>
 

@@ -432,95 +432,229 @@ AEO = Answer Engine Optimization (Google AI Overviews, voice, featured snippets)
 [ ] Topic is something someone would ask an AI assistant in 2026
 ```
 
-### STEP 7.5 — Post-Draft Audit Layer (Added Apr 19, 2026)
+### STEP 7.5 — Post-Draft Audit Layer (Added Apr 19, 2026, Expanded Apr 19)
 
-**The 4-role audit lifted `website-rebuild-cost-2026` from 70 percent PandaCodeGen voice to 95 percent in one pass. Apply it at the level the post deserves — not to every post, not to zero posts.**
+**The 8-role audit system was validated on the top 11 GSC posts on Apr 19, 2026. Across all 11 posts, the framework identified the same universal patterns: buried leads, generic SEO voice, missing inbound links, schema mismatches, and meta truncation. Apply it at the level the post deserves.**
 
-**Three tiers. Match the audit to the post.**
+**Two frameworks. Eight roles total. Run both for hub posts. Voice-only for cluster posts. SEO-only for retroactive ranking work.**
 
-```
-TIER A — FULL 4-ROLE AUDIT (High-stakes hub posts only)
-  When: hub posts that every other post links into. Examples:
-    - website-rebuild-cost-2026 (hub for every cost post)
-    - core-web-vitals-explained (hub for every speed post)
-    - wordpress-vs-nextjs (hub for every platform vs custom post)
-    - any new cornerstone post targeting a 1,000+ impression keyword
+---
 
-  Roles to audit (run as parallel agent tasks):
-    1. Senior Brand Strategist — voice consistency, manifesto feel, brand moves
-    2. Conversion Copywriter — H2 strength, buried leads, CTA earned placement
-    3. UX Researcher / Content Designer — 60-sec mobile scan, info hierarchy, overload
-    4. Data Storyteller (Animalz/Shleyner) — narrative spine, North Star quote, shareable insight
+#### Framework 1: VOICE AUDIT (4 roles)
 
-  Output: prioritized fix list (top 5), exact line references, specific rewrites.
-  Cost: ~1 agent call with 4 roles bundled. Apply top 5 fixes. Skip the rest.
-
-TIER B — 2-ROLE AUDIT (Cluster posts, after the first post in a cluster sets voice)
-  When: platform-specific cost/speed/migration posts. Examples:
-    - shopify-app-costs-real-monthly-bill (cluster: Shopify cost)
-    - squarespace-migration-cost (cluster: Squarespace cost)
-    - wix-vs-custom-website (cluster: Wix comparison)
-
-  Roles to audit:
-    1. Conversion Copywriter — H2s, buried leads, flat sentences
-    2. Data Storyteller — narrative spine, shareable insight
-
-  Skip Brand Strategist and UX Researcher — the first post in the cluster
-  already locked voice and hierarchy. Reapplying them is diminishing returns.
-
-TIER C — SELF-REVIEW CHECKLIST (Quick-hit news/reaction posts)
-  When: news reactions, Google updates, platform announcements,
-  timely posts under 2,500 words where speed-to-publish matters.
-
-  Self-check:
-    [ ] Does the opener hook with a specific receipt or a flat intro?
-    [ ] Do the 2 strongest H2s come in the first half?
-    [ ] Is there one screenshot-worthy sentence (the North Star)?
-    [ ] Does the bottom CTA match the reader's exact next step?
-    [ ] No flat sentences within the first 400 words.
-```
-
-**Rule: one audit per day maximum.** Each audit costs tokens and attention.
-Running 4 audits in one session burns focus. Space them.
-
-**For retroactive audits of already-published posts:** prioritize by GSC
-impression volume. Fix the top 10 posts by impression before touching the
-long tail. Pareto does the rest.
-
-**What to audit for (across all 4 roles):**
+**Lens:** Does this post sound like PandaCodeGen? Does it hook readers once they arrive?
+**Best for:** Posts that already get impressions but aren't converting the clicks.
+**Output:** Content rewrites, H2 swaps, pullquotes, named client receipts.
 
 ```
-Brand Strategist flags:
-  - Generic SEO voice creeping in
-  - Missing receipts (specific client numbers, real project scope)
-  - Manifesto tone absent (the "we build X not Y" edge)
-  - One-off brand moves that would make the post unmistakably ours
+ROLE 1 — Senior Brand Strategist
+  Flags:
+    - Generic SEO voice creeping in
+    - Missing receipts (specific client numbers, real project scope)
+    - Manifesto tone absent (the "we build X not Y" edge)
+    - Hassan not present in first person ("I", "we", "last month I")
+    - Third-person bio contradicting founder-direct voice
+  Delivers:
+    - ONE brand move that makes the post unmistakably PandaCodeGen
+    - Specific receipt rewrites (anonymous "a client" → "MC Patches ($150 → $0 hosting)")
 
-Conversion Copywriter flags:
-  - Weak H2s (propose exact rewrite)
-  - Buried leads (the best sentence 3 paragraphs deep)
-  - Generic openers ("Your site is slow" vs "Last week a client...")
-  - CTAs that feel inserted rather than earned
-  - Flat sentences in the first 400 words
+ROLE 2 — Conversion Copywriter
+  Flags:
+    - Weak H2s with exact rewrites proposed
+    - Buried leads (the best sentence 3 paragraphs deep)
+    - Generic openers ("Your site is slow" vs "Last week a client walked in with...")
+    - CTAs that feel inserted rather than earned
+    - Flat sentences in the first 400 words
+    - Duplicate copy blocks (e.g., identical Founder's Offer boxes in mid and bottom CTAs)
+  Delivers:
+    - Top 5 H2 rewrites with exact new copy
+    - Buried lead promoted to BlogQuote or data-speakable block
 
-UX Researcher flags:
-  - Info order matches SEO logic instead of buyer's mental order
-  - 60-second scan fails (reader can't extract answer on mobile)
-  - Speakable div too long for Google's 20-30 second spec
-  - Tables missing min-w-[560px] or swipe-hint for mobile
-  - Cognitive overload (4+ dense blocks back-to-back)
+ROLE 3 — UX Researcher / Content Designer
+  Flags:
+    - Info order matches SEO logic instead of buyer's mental order (definitions before prices)
+    - 60-second mobile scan fails (reader can't extract answer on mobile)
+    - Speakable div too long for Google's 20-30 second spec
+    - Tables missing min-w-[560px] or swipe-hint for mobile
+    - Cognitive overload (4+ dense blocks back-to-back)
+    - Duplicate violet/color boxes creating false hierarchy
+  Delivers:
+    - Info hierarchy reorder plan
+    - Specific table/CTA de-dupe instructions
 
-Data Storyteller flags:
-  - Reference-doc energy, no narrative spine
-  - Opening scene abandoned (teaser not resolved)
-  - No "we spent $X and learned Y" moment
-  - No screenshot-worthy stat or quote
-  - Hook doesn't carry through the post
+ROLE 4 — Data Storyteller (Animalz / Eddie Shleyner style)
+  Flags:
+    - Reference-doc energy, no narrative spine
+    - Opening scene abandoned (teaser never resolved)
+    - No "we spent $X and learned Y" moment
+    - No screenshot-worthy stat or quote (North Star)
+    - Hook doesn't carry through the post
+  Delivers:
+    - North Star quote candidate (often already in body, just needs promotion)
+    - Narrative spine: receipt → pain → fix → payoff
 ```
+
+---
+
+#### Framework 2: SEO AUDIT (4 roles)
+
+**Lens:** Why isn't this post ranking, and what technical/strategic changes would make Google surface it?
+**Best for:** Posts Google isn't showing yet — the visibility/authority layer.
+**Output:** Schema fixes, title/meta rewrites for SERP match, keyword retargeting, internal link injections, cannibalization resolutions.
+
+```
+ROLE 5 — Technical SEO Specialist
+  Checks:
+    - Schema 5-node @graph complete (Article, FAQPage, BreadcrumbList, WebPage, Organization)
+    - speakable selector coverage + data-speakable="true" tagged correctly
+    - Canonical correctness (relative path, matches folder)
+    - Image alt audit (all images have descriptive alt)
+    - meta robots present: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 }
+    - Title/headline schema mismatches (metadata.title vs Article.headline vs WebPage.name)
+    - dateModified consistency across OG modifiedTime + Article + WebPage
+    - Core Web Vitals flags (inline JSON schema size, render-blocking resources)
+    - Broken imports, unused components, stale dynamic() calls
+  Do NOT flag: `import dynamic from "next/dynamic"` — that's project convention for blog posts. Only src/app/page.tsx uses lazyLoad.
+
+ROLE 6 — SEO Content Strategist
+  Checks:
+    - Primary keyword intent match (does title match "how much does X cost" SERP intent?)
+    - LSI entities missing — list 6-10 semantic entities that should appear but don't
+      (e.g., Kinsta, WP Engine, Flywheel, SiteGround, Elementor, Divi, ACF, Yoast, RankMath for WordPress posts)
+      (e.g., Starter/Basic/CMS/Business/Enterprise plan names, Optimize, Logic, Memberstack for Webflow)
+      (e.g., Fluid Engine, Squarespace 7.1, Commerce plan for Squarespace)
+      (e.g., SaaS mode, Snapshots, sub-accounts, white-label, Locations for GHL)
+    - Thin content flags (sections under 100 words that should be deeper)
+    - Topical authority gaps
+    - Keyword cannibalization with sibling posts — how does this differentiate?
+    - FAQ match to actual People Also Ask (PAA) queries from Google
+  Delivers:
+    - Specific LSI insertion points with paragraph rewrites
+    - Cannibalization resolution (which post owns which intent)
+
+ROLE 7 — Conversion Copywriter + SERP Specialist
+  Checks:
+    - Title tag char count (under 60 for SERP truncation)
+    - Title matches winning SERP patterns for target query (screenshot top 3 competitors)
+    - Meta description under 160 chars + CTR-focused
+    - Featured snippet formatting (40-55 word direct-answer paragraph right after H1 or under a question H2)
+    - H2s mapped to PAA queries (literal question format beats clever H2s for snippet capture)
+    - Click-through wording (specific numbers beat vague promises)
+  Delivers:
+    - Title rewrite with exact char count
+    - Meta desc rewrite under 160
+    - Direct-answer block copy for featured snippet capture
+
+ROLE 8 — SEO Consultant + Link Auditor
+  Checks:
+    - Internal links IN: list 6+ sibling posts that SHOULD link to this page with exact anchor text suggestions
+    - Internal links OUT: are existing outlinks optimal? Any natural fits missing?
+    - Anchor text variety (mix descriptive anchors, not just platform names)
+    - Broken link check
+    - External citation quality (Google, Deloitte, Vercel docs > random blogs)
+    - Link equity distribution (is the post getting enough juice from high-authority siblings?)
+  Delivers:
+    - Cross-link injection map: source post → anchor text → target line
+    - Outbound link additions with natural insertion points
+```
+
+---
+
+#### Three Tiers. Match The Audit To The Post.
+
+```
+TIER A — FULL 8-ROLE AUDIT (Hub posts + retroactive ranking work on top performers)
+  When:
+    - NEW hub posts that every other post links into
+    - EXISTING top-10 GSC-impression posts that need ranking lift
+    - Any post competing for a 1,000+ impression keyword
+
+  Run both Framework 1 (Voice) + Framework 2 (SEO) in one pass per post.
+  Output: top 8 prioritized fixes combining voice + ranking levers.
+
+TIER B — VOICE-ONLY OR SEO-ONLY (Cluster posts, targeted work)
+  When you already ran voice audit but need ranking work:
+    - Run only SEO 4 roles (ROLE 5-8)
+  When you need voice lift but the post already ranks well:
+    - Run only Voice 4 roles (ROLE 1-4)
+
+  Examples: cluster sibling posts that already follow the first post's voice.
+
+TIER C — SELF-REVIEW CHECKLIST (Quick-hit posts under 2,500 words)
+  Self-check before publish:
+    Voice:
+    [ ] Opener hooks with a specific receipt, not a flat intro
+    [ ] The 2 strongest H2s come in the first half
+    [ ] One screenshot-worthy sentence (the North Star)
+    [ ] Bottom CTA matches the reader's exact next step
+    [ ] No flat sentences within the first 400 words
+    SEO:
+    [ ] Title under 60 chars, matches SERP winner pattern
+    [ ] Meta desc under 160 chars
+    [ ] robots metadata set
+    [ ] Schema title + headline + WebPage.name all match
+    [ ] At least 2 PAA question H2s in the post
+    [ ] Direct-answer paragraph with data-speakable="true"
+    [ ] 3+ internal outbound links to siblings
+    [ ] At least 1 external authority citation in body
+```
+
+---
+
+#### Rules
+
+**Rule 1: Run audits in parallel agent calls, NOT sequential chat.** Each audit is one agent call bundling all 4-8 roles. Don't run 8 separate agents per post.
+
+**Rule 2: Apply the PRIORITIZED TOP 5-8 fixes, skip the rest.** The audit always proposes more than is worth doing. Cherry-pick.
+
+**Rule 3: For retroactive audits, prioritize by GSC impression volume.** Top 10 posts by impression drive 80% of traffic. Fix them first.
+
+**Rule 4: Cross-link injection is THE highest-ROI SEO lever for a young domain.** Every SEO audit on Apr 19 flagged this. Build a link map before touching anything else.
+
+**Rule 5: One audit per day maximum in active writing weeks.** Running 4+ audits in one session burns focus and context budget.
+
+---
+
+#### False Positives To Ignore
+
+```
+- "import dynamic from 'next/dynamic' violates project standard"
+  Reality: Only src/app/page.tsx uses lazyLoad because it has `export const dynamic`.
+  Blog posts can and should use `dynamic`.
+
+- "October 2024 client receipt" suggestions from the Brand Strategist
+  Reality: PandaCodeGen founded Feb 2026. Pre-agency WordPress experience is fine to cite
+  ("I built in WordPress for six years before launching PandaCodeGen"), but agency history
+  receipts must be post-Feb 2026.
+
+- Generic advice like "add more first-person voice" without specific line refs
+  Reality: Demand the agent propose EXACT rewrites with line numbers.
+```
+
+---
+
+#### The Apr 19 Validation Run
+
+8-role audit applied to 11 top-impression posts in one session. Universal findings across all 11:
+
+1. **Missing inbound internal links** (flagged by 11/11 audits) — THE biggest ranking lever
+2. **Meta descriptions over 160 chars** (8/11)
+3. **Schema title/headline mismatches** (5/11)
+4. **Missing PAA-matching H2s** (9/11)
+5. **Direct-answer featured snippet paragraphs absent** (9/11)
+6. **Title truncation at 60+ chars** (6/11)
+
+Applied fixes resulted in:
+- 22 new inbound internal links distributed across the top 11 targets
+- Titles shortened on 5 posts
+- Direct-answer blocks added to 5 posts
+- 3 new PAA H2 sections (150-word answers)
+- LSI entity expansion on 4 posts (Kinsta, WP Engine, Fluid Engine, Webflow plan tiers, INP, CLS, TTFB, SaaS mode)
+- Robots metadata added to all 11
 
 **Publishing loop:**
 ```
-Draft → Tier A/B/C audit → Apply top 5 fixes → Final Pre-Publish QA → Ship
+Draft → Tier A/B/C audit → Apply top 5-8 fixes → Final Pre-Publish QA → Ship → Monitor GSC for 2 weeks → Iterate
 ```
 
 ---

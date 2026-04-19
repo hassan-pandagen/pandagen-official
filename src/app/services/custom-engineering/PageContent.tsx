@@ -70,10 +70,8 @@ export default function PageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-4 leading-tight"
           >
-            Custom Next.js Development: <br />
-            <span className="font-serif italic text-cognac">
-              That You Own.
-            </span>
+            Custom software, <span className="font-serif italic text-cognac">shipped in weeks.</span> <br />
+            Not filed in a dev-shop backlog.
           </motion.h1>
 
           <motion.p
@@ -103,7 +101,7 @@ export default function PageContent() {
       </section>
 
       {/* 2. WHAT WE BUILD */}
-      <section id="what-we-build" className="py-10 md:py-20 px-6 border-y border-stone-200 bg-[#F8FAFC]">
+      <section id="what-we-build" className="py-10 md:py-14 px-6 border-y border-stone-200 bg-[#F8FAFC]">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-14">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-100 text-sm text-stone-600 font-bold uppercase tracking-widest mb-6">
@@ -204,7 +202,7 @@ export default function PageContent() {
       <SocialProof />
 
       {/* 3. HOW WE BUILD - Process Timeline */}
-      <section id="how-we-build" className="py-12 md:py-24 px-6 bg-white">
+      <section id="how-we-build" className="py-12 md:py-20 px-6 bg-white">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-8 md:mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-100 text-sm text-stone-600 font-bold uppercase tracking-widest mb-6">
@@ -219,7 +217,7 @@ export default function PageContent() {
             {[
               { step: "01", title: "Discovery Sprint", duration: "Week 1", desc: "We map your requirements, user flows, and technical architecture. You get a detailed spec doc and timeline before a single line of code is written." },
               { step: "02", title: "Prototype & Validate", duration: "Weeks 2-3", desc: "We build a working prototype with real functionality, not mockups. You test it, your users test it, we iterate until it's right." },
-              { step: "03", title: "Full Development", duration: "Weeks 4-8", desc: "Sprint-based development with weekly demos. Auth, payments, real-time features, AI integration. Everything gets built and reviewed." },
+              { step: "03", title: "Full Development", duration: "Weeks 4-8", desc: "Sprint-based build on Next.js App Router with React Server Components, Tailwind CSS, Turbopack, and Sanity or Supabase for content and data. Auth, Stripe payments, real-time features, Claude and OpenAI integration. Weekly demos. Never surprises." },
               { step: "04", title: "Launch & Scale", duration: "Week 9+", desc: "We deploy to production, set up monitoring, and hand over the codebase. You own 100% of the code and IP. We stay on for support." },
             ].map((item, i) => (
               <motion.div
@@ -242,7 +240,7 @@ export default function PageContent() {
       </section>
 
       {/* 4. PAIN POINTS */}
-      <section className="py-12 md:py-24 px-6 bg-[#0F172A]">
+      <section className="py-12 md:py-20 px-6 bg-[#0F172A]">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-8 md:mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 text-sm font-bold uppercase tracking-widest mb-6">
@@ -256,12 +254,12 @@ export default function PageContent() {
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { icon: DollarSign, pain: "Your Platform Bill Doubles Every 6 Months", detail: "Bubble started at $25/month. Now it's $200+ just to stay live. Hit 1,000 users and the bill doubles again. You're paying SaaS margins to run your own product. Custom code has no usage ceiling." },
-              { icon: XCircle, pain: "You're Blocked on Every Feature That Matters", detail: "Role-based permissions, real-time data sync, custom API workflows, B2B pricing logic. No-code platforms have hard ceilings. When your dev says 'we can't do that in Bubble,' the only answer is custom code." },
-              { icon: Zap, pain: "One Codebase. Every Device. Half the Build Cost.", detail: "Building separate iOS and Android apps costs 2-3x more in time and budget. A custom Progressive Web App works on every device from a single codebase. Ship faster, spend less, own the result." },
-              { icon: Lock, pain: "Your Product Disappears If the Platform Shuts Down", detail: "Bubble has had outages and pricing hikes. If they shut down or price you out, your entire product disappears with them. Custom code lives on GitHub. You own it from Day 1. No vendor controls your business." },
-              { icon: TrendingUp, pain: "Investors Pass Because of Your Tech Stack", detail: "Due diligence audits your architecture. A Bubble app signals 'prototype,' not 'scalable business.' Custom code signals 'investable technology' and lets you pass technical DD without rebuilding anything." },
-              { icon: Cpu, pain: "Competitors Are Shipping AI Features You Can't Match", detail: "Claude, OpenAI, and AI search integrations require native API architecture. No-code can't wire AI into your product's core logic. Competitors on custom code ship AI features in days. You wait for Bubble to add a plugin." },
+              { icon: DollarSign, pain: "The $180K Quote That Ships 9 Months Late", detail: "Dev shops pad estimates with project managers, QA, account managers, and a billable discovery phase. Half your budget goes to people who never open a code editor. Founder-built means zero handoff tax, zero coordination meetings, zero Slack threads about what was supposed to be in the spec." },
+              { icon: XCircle, pain: "The Offshore Black Hole", detail: "You ship specs to Manila at 9pm and wake up to code that technically works but architecturally cannot scale past 500 users. Rewrites in year two cost more than the original build. Custom architecture decisions need to be made by people who will maintain them." },
+              { icon: Zap, pain: "Hourly Billing Rewards Slow Work", detail: "Every unexpected complication is revenue for the shop and a line item for you. Fixed-price forces the agency to design for speed and correctness on day one. We price the outcome, not the hours. If it takes longer than quoted, that is our problem, not yours." },
+              { icon: Lock, pain: "Your Product Disappears If the Platform Shuts Down", detail: "Bubble, Glide, and Softr have had outages and pricing hikes. If they shut down or price you out, your entire product disappears with them. Custom code lives on GitHub. You own it from Day 1. No vendor controls your business." },
+              { icon: TrendingUp, pain: "Investors Pass Because of Your Tech Stack", detail: "Due diligence audits your architecture. A no-code app signals prototype, not scalable business. Custom code signals investable technology and lets you pass technical DD without rebuilding anything." },
+              { icon: Cpu, pain: "Competitors Are Shipping AI Features You Cannot Match", detail: "Claude, OpenAI, and AI search integrations require native API architecture. No-code and off-the-shelf platforms cannot wire AI into your product core logic. Competitors on custom code ship AI features in days. You wait for a plugin." },
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -282,13 +280,14 @@ export default function PageContent() {
       </section>
 
       {/* 5. COMPARISON TABLE */}
-      <section id="comparison" className="py-10 md:py-20 px-6 border-y border-stone-200 bg-stone-50/50">
+      <section id="comparison" className="py-10 md:py-14 px-6 border-y border-stone-200 bg-stone-50/50">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">No-Code vs Custom Coded</h2>
           <p className="text-stone-600 text-center mb-8 md:mb-12">Build to last. Build to scale. Build to own.</p>
 
-          <div className="overflow-x-auto rounded-2xl border border-stone-200">
-            <div className="min-w-[500px]">
+          <p className="md:hidden text-xs text-stone-500 text-center mb-2">&larr; Swipe to compare &rarr;</p>
+          <div className="overflow-x-auto rounded-2xl border border-stone-300">
+            <div className="min-w-[560px]">
             <div className="grid grid-cols-3 bg-stone-50 p-4 border-b border-stone-200">
               <div className="text-stone-600 font-medium text-sm">Feature</div>
               <div className="text-stone-500 font-bold text-sm text-center">No-Code / Templates</div>
@@ -312,6 +311,27 @@ export default function PageContent() {
 
       {/* 6. TECH STACK */}
       <BuiltWith />
+
+      {/* FOUNDER CREDIBILITY BLOCK */}
+      <section className="py-12 md:py-20 px-6 bg-stone-50">
+        <div className="container mx-auto max-w-4xl">
+          <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
+            <div className="w-40 h-40 rounded-2xl border border-stone-200 shadow-xs bg-cognac/10 flex items-center justify-center text-cognac font-bold text-6xl shrink-0">
+              H
+            </div>
+            <div>
+              <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-2">Who writes your code</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">Founder-built. Not farmed out.</h2>
+              <p className="text-stone-600 text-lg leading-relaxed mb-4">
+                I am Hassan. I spent six years shipping WordPress sites for founders before I watched too many of them hit the platform ceiling. Now I build custom Next.js from Austin, Texas, with Imran on architecture. When you hire PandaCodeGen, I write your code. Not a junior. Not an offshore team. Not a project manager forwarding Slack messages.
+              </p>
+              <p className="text-stone-600 text-base">
+                Every quote I give on a discovery call is a quote I can personally deliver on. That is why the pricing below looks the way it does.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* PRICING TIERS — SaaS / custom application pricing */}
       <PricingTiers
@@ -373,7 +393,7 @@ export default function PageContent() {
       />
 
       {/* 7. DUAL CTA */}
-      <section className="py-10 md:py-20 px-6">
+      <section className="py-10 md:py-14 px-6">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold text-charcoal text-center mb-8 md:mb-12">Ready to Build Something Real?</h2>
 
@@ -431,7 +451,7 @@ export default function PageContent() {
       </section>
 
       {/* 8. FAQ */}
-      <section className="py-10 md:py-20 px-6">
+      <section className="py-10 md:py-14 px-6">
         <div className="container mx-auto max-w-3xl">
           <div className="text-center mb-14">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-100 border border-stone-200 text-sm text-stone-500 mb-6">
@@ -470,7 +490,7 @@ export default function PageContent() {
       </section>
 
       {/* 9. GUARANTEE */}
-      <section className="py-10 md:py-20 px-6">
+      <section className="py-10 md:py-14 px-6">
         <div className="container mx-auto max-w-4xl bg-linear-to-br from-green-50 to-white border border-green-200 rounded-[3rem] p-12 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-green-500/10 blur-[80px] pointer-events-none" />
           <div className="relative z-10 text-center">
@@ -478,9 +498,10 @@ export default function PageContent() {
               <ShieldCheck className="w-4 h-4" /> 30-Day Money-Back Guarantee (from delivery)
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">Scales to 10,000 Users. Or We Fix It Free.</h2>
-            <p className="text-stone-600 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
+            <p className="text-stone-600 text-lg leading-relaxed mb-2 max-w-2xl mx-auto">
               If our architecture doesn&apos;t scale to your first 10,000 users without crashing, we will fix it for free. You receive 100% Code Ownership and IP Rights on Day 1.
             </p>
+            <p className="text-sm text-stone-500 mb-8">Built in Austin, Texas. Shipped for founders worldwide.</p>
             <button
               data-cal-namespace="discovery"
               data-cal-link="pandagen/discovery"

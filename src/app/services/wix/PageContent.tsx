@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     q: "How long does it take to migrate from Wix?",
-    a: "4-6 weeks for a standard business site. Week 1: content export. Weeks 2-4: design and build. Week 5: SEO migration. Week 6: launch."
+    a: "7 days to 3 weeks depending on site size. Foot-in-the-door migrations ship in 7 days (Obare Magazine did). Growth sites in 2 to 3 weeks. Scale sites with Wix Stores or Bookings in 3 to 4 weeks."
   },
   {
     q: "What about my Wix forms and contact pages?",
@@ -71,9 +71,9 @@ export default function PageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-4 leading-tight"
           >
-            Outgrown Wix? <br />
+            Trapped on Wix? <br />
             <span className="font-serif italic text-cognac">
-              We&apos;ll Get You Unstuck.
+              We got Obare Magazine out in 7 days.
             </span>
           </motion.h1>
 
@@ -100,6 +100,16 @@ export default function PageContent() {
             </Link>
           </motion.div>
           <p className="text-sm text-stone-500 mt-4 text-center max-w-xl mx-auto leading-relaxed">30-min call. Drop your Wix URL when you book. We run your PageSpeed live and <span className="text-charcoal font-medium">give you a fixed migration quote before we hang up.</span></p>
+
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-6 text-xs font-bold uppercase tracking-widest text-stone-500">
+            <span>From $500</span>
+            <span>&bull;</span>
+            <span>7 days</span>
+            <span>&bull;</span>
+            <span>90+ PageSpeed or refund</span>
+            <span>&bull;</span>
+            <span>Austin, TX</span>
+          </div>
         </div>
       </section>
 
@@ -131,85 +141,6 @@ export default function PageContent() {
         totalPerYear="$13,668"
       />
 
-      {/* 2a. 3-YEAR COST BREAKDOWN */}
-      <section id="cost-breakdown" className="py-10 md:py-20 px-6 border-y border-stone-200 bg-stone-50/50">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">The Real Cost of Wix Over 3 Years</h2>
-          <p className="text-stone-600 text-center mb-8 md:mb-12 max-w-2xl mx-auto">The subscription model looks cheap at first. Here&apos;s what you actually pay over 3 years.</p>
-
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
-            {/* Wix Column */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="p-8 rounded-2xl bg-red-500/5 border border-red-500/20"
-            >
-              <div className="text-red-400 text-sm font-bold uppercase tracking-wider mb-2">Current Platform</div>
-              <h3 className="text-2xl font-bold text-charcoal mb-6">Wix Business Plan</h3>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center border-b border-stone-200 pb-3">
-                  <span className="text-stone-600 text-sm">Monthly subscription</span>
-                  <span className="text-red-400 font-medium text-sm">$39/mo &times; 36 = $1,404</span>
-                </div>
-                <div className="flex justify-between items-center border-b border-stone-200 pb-3">
-                  <span className="text-stone-600 text-sm">Domain</span>
-                  <span className="text-red-400 font-medium text-sm">$15/yr &times; 3 = $45</span>
-                </div>
-                <div className="flex justify-between items-center border-b border-stone-200 pb-3">
-                  <span className="text-stone-600 text-sm">Premium apps</span>
-                  <span className="text-red-400 font-medium text-sm">$20/mo &times; 36 = $720</span>
-                </div>
-                <div className="flex justify-between items-center pt-2">
-                  <span className="text-charcoal font-bold">3-Year Total</span>
-                  <span className="text-red-400 font-bold text-xl">$2,169+</span>
-                </div>
-              </div>
-              <p className="text-red-400/60 text-xs mt-4 text-center">...and you still own nothing. Cancel and it all disappears.</p>
-            </motion.div>
-
-            {/* Custom Column */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="p-8 rounded-2xl bg-stone-50 border border-cognac/20"
-            >
-              <div className="text-cognac text-sm font-bold uppercase tracking-wider mb-2">The Alternative</div>
-              <h3 className="text-2xl font-bold text-charcoal mb-6">Custom Coded</h3>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center border-b border-stone-200 pb-3">
-                  <span className="text-stone-600 text-sm">One-time build</span>
-                  <span className="text-cognac font-medium text-sm">$3,500-$8,000</span>
-                </div>
-                <div className="flex justify-between items-center border-b border-stone-200 pb-3">
-                  <span className="text-stone-600 text-sm">Hosting</span>
-                  <span className="text-cognac font-medium text-sm">Starts free</span>
-                </div>
-                <div className="flex justify-between items-center border-b border-stone-200 pb-3">
-                  <span className="text-stone-600 text-sm">Domain</span>
-                  <span className="text-cognac font-medium text-sm">$12/yr &times; 3 = $36</span>
-                </div>
-                <div className="flex justify-between items-center pt-2">
-                  <span className="text-charcoal font-bold">3-Year Total</span>
-                  <span className="text-cognac font-bold text-xl">$3,536-$8,036</span>
-                </div>
-              </div>
-              <p className="text-cognac/60 text-xs mt-4 text-center">You own everything. Cancel nothing. It&apos;s yours forever.</p>
-            </motion.div>
-          </div>
-
-          {/* Bottom Note */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="p-5 rounded-xl bg-stone-50 border border-stone-200 text-center"
-          >
-            <p className="text-stone-600 text-sm leading-relaxed">
-              Yes, custom code costs a little more upfront. But you <span className="text-charcoal font-bold">OWN</span> a fast, SEO-optimized site that saves <span className="text-cognac font-medium">$720/year</span> in subscriptions, ranks higher on Google, and never has a monthly bill again. With Wix, you&apos;re renting forever and own nothing.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
       {/* 2a. CASE STUDY GRID — Obare was a Wix migration (225K IG followers) */}
       <CaseStudyGrid
         highlight="obare"
@@ -222,17 +153,17 @@ export default function PageContent() {
       <SocialProof />
 
       {/* 3. HOW WE MIGRATE - Process Timeline */}
-      <section id="how-it-works" className="py-10 md:py-20 px-6">
+      <section id="how-it-works" className="py-10 md:py-14 px-6">
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How We Migrate Your Wix Site</h2>
           <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A proven 4-step process. Your current Wix site stays live the entire time.</p>
 
           <div className="space-y-8">
             {[
-              { step: "01", title: "Content Export", desc: "We extract every page, image, blog post, and form from your Wix site. Nothing gets left behind.", icon: FileSearch, duration: "Week 1" },
-              { step: "02", title: "Custom Design & Build", desc: "Your new site gets designed and coded from scratch. No templates. Pixel-perfect, unique design that reflects your brand.", icon: Wrench, duration: "Weeks 2-4" },
-              { step: "03", title: "SEO Migration", desc: "We map every old URL, set up 301 redirects, and transfer all your SEO metadata. Google sees a faster version of the same site.", icon: Search, duration: "Week 5" },
-              { step: "04", title: "Launch & Handover", desc: "We deploy, set up analytics, and hand over the keys. You get a built-in content editor for easy content editing. No coding needed.", icon: Rocket, duration: "Week 6" },
+              { step: "01", title: "Content Export", desc: "We extract every page, image, blog post, and form from your Wix site. Nothing gets left behind.", icon: FileSearch, duration: "Day 1-2" },
+              { step: "02", title: "Custom Design & Build", desc: "Your new site gets designed and coded from scratch. No templates. Pixel-perfect, unique design that reflects your brand.", icon: Wrench, duration: "Day 3-10" },
+              { step: "03", title: "SEO Migration", desc: "We map every old URL, set up 301 redirects, and transfer all your SEO metadata. Google sees a faster version of the same site.", icon: Search, duration: "Day 11-13" },
+              { step: "04", title: "Launch & Handover", desc: "We deploy, set up analytics, and hand over the keys. You get a built-in content editor for easy content editing. No coding needed.", icon: Rocket, duration: "Day 14" },
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -262,7 +193,7 @@ export default function PageContent() {
       </section>
 
       {/* 4. COMPARISON TABLE */}
-      <section id="comparison" className="py-10 md:py-20 px-6 border-y border-stone-200 bg-stone-50/50">
+      <section id="comparison" className="py-10 md:py-14 px-6 border-y border-stone-200 bg-stone-50/50">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">Wix vs Next.js: Speed and SEO Compared</h2>
           <p className="text-stone-600 text-center mb-12">See exactly what you&apos;re missing and what you could have.</p>
@@ -291,15 +222,15 @@ export default function PageContent() {
       </section>
 
       {/* 5. PAIN POINTS */}
-      <section className="py-12 md:py-24 px-6 bg-[#0F172A]">
+      <section className="py-12 md:py-20 px-6 bg-[#0F172A]">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-8 md:mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 text-red-400 border border-red-500/20 text-sm font-bold uppercase tracking-widest mb-6">
               <AlertTriangle className="w-4 h-4" /> The Hard Truth
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Why Wix Is Holding You Back</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Why Wix Studio, Editor X, and Velo All Hit the Same Ceiling</h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
-              These are the exact problems growing businesses hit when they try to scale on Wix:
+              Wix Studio, Editor X, Velo, and Wix ADI all run on the same architecture. The Corvid runtime injects render-blocking JavaScript on every page, and the Wix App Market plugins (SEO Wiz, Site Booster, Wix Stores, Wix Bookings) add layers on top. The speed ceiling is the same no matter which editor you use. These are the exact problems growing businesses hit when they try to scale on Wix.
             </p>
           </div>
 
@@ -335,7 +266,7 @@ export default function PageContent() {
       </section>
 
       {/* 6. UPGRADE PATH */}
-      <section className="py-12 md:py-24 px-6 bg-[#0F172A]">
+      <section className="py-12 md:py-20 px-6 bg-[#0F172A]">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-8 md:mb-16">
             <span className="text-stone-500 font-bold tracking-widest uppercase text-sm">The Smarter Path</span>
@@ -428,7 +359,7 @@ export default function PageContent() {
       />
 
       {/* 7. DUAL CTA */}
-      <section className="py-12 md:py-24 px-6 bg-[#F8FAFC]">
+      <section className="py-12 md:py-20 px-6 bg-[#F8FAFC]">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-3xl font-bold text-center mb-8 md:mb-16 text-slate-900">Choose Your Future</h2>
 
@@ -482,7 +413,7 @@ export default function PageContent() {
       </section>
 
       {/* 8. FAQ */}
-      <section className="py-10 md:py-20 px-6 border-y border-stone-200 bg-stone-50/50">
+      <section className="py-10 md:py-14 px-6 border-y border-stone-200 bg-stone-50/50">
         <div className="container mx-auto max-w-3xl">
           <div className="flex items-center gap-3 justify-center mb-4">
             <HelpCircle className="w-6 h-6 text-cognac" />
@@ -519,7 +450,7 @@ export default function PageContent() {
       </section>
 
       {/* 9. GUARANTEE */}
-      <section className="py-10 md:py-20 px-6 bg-white border-t border-slate-100">
+      <section className="py-10 md:py-14 px-6 bg-white border-t border-slate-100">
         <div className="container mx-auto max-w-4xl">
           <div className="bg-[#F0FDF4] border border-green-200 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
             <div className="shrink-0">

@@ -33,12 +33,12 @@ export default function Hero() {
         {/* --- LEFT: EDITORIAL COPY --- */}
         <div className="max-w-2xl">
 
-          {/* Status pill: pure server HTML, zero CLS */}
+          {/* Founder trust pill: replaces generic "Accepting Q2 Clients" with Hassan signature */}
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-stone-200 text-xs font-bold uppercase tracking-widest text-stone-500 mb-8 shadow-xs">
             <span className="relative flex h-2 w-2">
               <span className="relative inline-flex rounded-full h-2 w-2 bg-cognac" />
             </span>
-            Accepting Q2 Clients
+            Built by Hassan Jamal &middot; Austin, TX &middot; 267 Public Commits
           </div>
 
           {/* Headline: LCP element, pure server HTML, no JS needed to render */}
@@ -61,18 +61,45 @@ export default function Hero() {
             className="text-lg md:text-xl text-stone-600 mb-6 md:mb-10 leading-relaxed max-w-lg font-medium"
             style={{ color: "#57534e", fontSize: "1.125rem", lineHeight: 1.75, maxWidth: "32rem", fontWeight: 500, display: "block", visibility: "visible" }}
           >
-            We replace slow WordPress, Shopify, Wix, Squarespace, and drag and drop sites with{" "}
+            We replace slow WordPress, Shopify, Wix, Squarespace, and drag-and-drop sites with{" "}
             <span
               className="text-charcoal font-bold underline decoration-cognac/40 decoration-2 underline-offset-2"
               style={{ color: "#1C1917", fontWeight: 700 }}
             >
-              custom built websites that actually perform
+              custom built websites that load under a second
             </span>
-            . Under 1 second. No monthly fees. No plugin updates. No vendor lock-in.
+            .{" "}
+            <span className="text-charcoal font-bold" style={{ color: "#1C1917", fontWeight: 700 }}>
+              Fixed pricing from $500.
+            </span>{" "}
+            No monthly fees. No plugin updates. No vendor lock-in.
           </p>
 
           {/* CTAs, animated client component */}
           <HeroCTAs />
+
+          {/* Platform review badges: above-the-fold trust proof */}
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mt-6 text-xs font-bold text-stone-600">
+            <span className="flex items-center gap-1.5">
+              <span className="text-yellow-500">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span>5.0 Clutch</span>
+            </span>
+            <span className="text-stone-300">&middot;</span>
+            <span className="flex items-center gap-1.5">
+              <span className="text-[#00b67a]">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span>5.0 Trustpilot</span>
+            </span>
+            <span className="text-stone-300">&middot;</span>
+            <span className="flex items-center gap-1.5">
+              <span className="text-yellow-500">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span>5.0 Google</span>
+            </span>
+            <span className="text-stone-300">&middot;</span>
+            <span className="flex items-center gap-1.5">
+              <span className="text-cognac">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span>5.0 GoodFirms</span>
+            </span>
+          </div>
 
           {/* Trust signals: pure server HTML, zero CLS */}
           <div className="flex flex-wrap items-center gap-x-8 gap-y-3 mt-10 text-sm text-stone-500 font-medium">

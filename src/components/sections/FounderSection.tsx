@@ -8,8 +8,8 @@ import { Github, ArrowUpRight, Linkedin } from "lucide-react";
 const founders = [
   {
     name: "Hassan Jamal",
-    title: "Co-Founder & Lead Engineer",
-    bio: "Builds the architectures. Writes the code. 267 GitHub contributions this year across live client projects. Every commit is visible.",
+    title: "Founder",
+    bio: "Builds the architectures. Writes the code. 267 GitHub contributions this year across live client projects. Every commit is visible. Based in Austin, TX.",
     image: "/team/hassan.png",
     github: "https://github.com/hassan-pandagen",
     linkedin: "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
@@ -17,14 +17,14 @@ const founders = [
     tags: ["WordPress Migrations", "E-Commerce Builds", "Speed Optimization", "Custom Platforms"],
   },
   {
-    name: "Imran",
-    title: "Co-Founder & Solutions Architect",
-    bio: "Plans the migrations. Owns the ROI. Turns business requirements into technical blueprints before a single line of production code is written.",
+    name: "Imran Raza Ladhani",
+    title: "Architecture Collaborator",
+    bio: "Works with Hassan on migration feasibility, system design, and zero-downtime cutovers. Hassan writes the code. Imran helps decide what the code needs to do.",
     image: "/team/imran.png",
     github: null,
     linkedin: "https://www.linkedin.com/in/imran-raza-ladhani/",
     about: "/about/imran",
-    tags: ["Project Architecture", "Revenue Strategy", "SEO", "Migration Planning"],
+    tags: ["Next.js Architecture", "Platform Migrations", "System Design", "Headless Commerce"],
   },
 ];
 
@@ -42,12 +42,12 @@ export default function FounderSection() {
         >
           <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-3">The Team</p>
           <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">
-            Built by engineers,{" "}
-            <span className="font-serif italic text-cognac">not account managers.</span>
+            Founder-built,{" "}
+            <span className="font-serif italic text-cognac">not farmed out.</span>
           </h2>
           <p className="text-lg text-gray-400 max-w-xl">
-            When you book a call, you're talking to the people who will actually build your site.
-            No handoffs. No middlemen.
+            When you book a call, Hassan answers. He writes every line of code.
+            Imran helps on architecture. No account managers, no offshore handoffs.
           </p>
         </motion.div>
 

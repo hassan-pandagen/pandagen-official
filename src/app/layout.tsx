@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     default: "PandaCodeGen | WordPress & Shopify Migration, Under 1s Load Time",
     template: "%s | PandaCodeGen",
   },
-  description: "Get a free AI audit of your slow WordPress or Shopify site. We migrate to custom coded websites with load times under 1 second, zero bloat, and bank level security.",
+  description: "Free AI audit for slow WordPress or Shopify sites. We migrate to custom coded sites under 1 second. Zero bloat. Bank level security.",
   alternates: {
     canonical: '/',
   },
@@ -99,7 +99,7 @@ export const metadata: Metadata = {
     url: "https://www.pandacodegen.com",
     siteName: "PandaCodeGen",
     title: "PandaCodeGen | WordPress & Shopify Migration, Under 1s Load Time",
-    description: "Get a free AI audit of your slow WordPress or Shopify site. We migrate to custom coded websites with load times under 1 second, zero bloat, and bank level security.",
+    description: "Free AI audit for slow WordPress or Shopify sites. We migrate to custom coded sites under 1 second. Zero bloat. Bank level security.",
     images: [
       {
         url: "/og-image.jpg",
@@ -112,7 +112,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "PandaCodeGen | WordPress & Shopify Migration, Under 1s Load Time",
-    description: "Get a free AI audit of your slow WordPress or Shopify site. We migrate to custom coded websites with load times under 1 second, zero bloat, and bank level security.",
+    description: "Free AI audit for slow WordPress or Shopify sites. We migrate to custom coded sites under 1 second. Zero bloat. Bank level security.",
     creator: "@pandacodegen",
     images: ["/og-image.jpg"],
   },

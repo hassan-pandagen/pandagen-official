@@ -54,7 +54,16 @@ export default function GoHighLevelServicePage() {
           "addressRegion": "TX",
           "addressCountry": "US"
         },
-        "image": "https://www.pandacodegen.com/og-image.jpg"
+        "image": "https://www.pandacodegen.com/og-image.jpg",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "GoHighLevel Development Tiers",
+          "itemListElement": [
+            { "@type": "Offer", "name": "Foot in the Door", "price": "500", "priceCurrency": "USD", "description": "Simple funnel or 5 to 10 page landing site with full GHL API integration" },
+            { "@type": "Offer", "name": "Growth", "price": "3000", "priceCurrency": "USD", "description": "15 to 40 page marketing site with GHL Workflows and Pipelines intact" },
+            { "@type": "Offer", "name": "Scale", "price": "8000", "priceCurrency": "USD", "description": "Agency white-label, SaaS mode sub-accounts, member portals, complex Workflows" }
+          ]
+        }
       },
       {
         "@type": "WebPage",

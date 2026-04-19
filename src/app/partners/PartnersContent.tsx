@@ -38,7 +38,7 @@ const processSteps = [
 const partnerFaqs = [
   {
     q: "Do you sign NDAs before we share client details?",
-    a: "Yes. Mutual NDA signed before you send us a single client detail. We have a standard template ready (takes 5 minutes to sign). We have never disclosed a partner relationship to any client. Ever.",
+    a: "Yes. Mutual NDA signed before you send us a single client detail. We have a standard template ready (takes 5 minutes to sign). Your client relationship stays yours, end to end. We communicate only with you.",
   },
   {
     q: "Will our clients know PandaCodeGen is building the site?",
@@ -159,9 +159,9 @@ export default function PartnersContent() {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { value: "3", label: "Agency partners", sub: "active NDAs" },
-              { value: "12+", label: "White-label sites shipped", sub: "under partner brands" },
-              { value: "$38K+", label: "Partner white-label revenue", sub: "generated this year" },
+              { value: "3", label: "Founding agency partners", sub: "mutual NDAs signed" },
+              { value: "First 3", label: "White-label builds shipped", sub: "under partner brands" },
+              { value: "Founding-rate", label: "Partner pricing available", sub: "for early partners" },
               { value: "3 weeks", label: "Avg build time", sub: "vs 8-12 typical" },
             ].map((stat, i) => (
               <motion.div

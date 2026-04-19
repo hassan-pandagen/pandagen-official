@@ -82,7 +82,7 @@ export default function ManifestoPage() {
                   1. The web industry runs on patches.
                 </h2>
                 <p className="text-base md:text-lg text-stone-700 leading-[1.75] mb-4">
-                  WordPress is a $1 billion industry where every line of code produces three more lines of &quot;maintenance.&quot; Shopify charges $399 a month for a platform that forces you into another $650 a month of apps. Webflow caps you at 10,000 CMS items and then raises prices. Wix locks you in and throws away the key.
+                  WordPress is a maintenance tax economy where every line of code produces three more lines of &quot;maintenance.&quot; Shopify charges $399 a month for a platform that forces you into another $650 a month of apps. Webflow caps you at 10,000 CMS items and then raises prices. Wix locks you in and throws away the key.
                 </p>
                 <p className="text-base md:text-lg text-stone-700 leading-[1.75]">
                   None of this is accidental. Every platform extracts a monthly tax. Every agency bills for hours. Every plugin vendor lives on the recurring charge. The entire industry is designed to make your website fragile enough to keep feeding it.
@@ -98,7 +98,7 @@ export default function ManifestoPage() {
                   Hourly billing is a conflict of interest. The slower we work, the more we earn. The buggier our code, the more maintenance we bill. The vaguer our scope, the more change orders we send. An entire agency economy is built on that incentive and pretends it isn&apos;t.
                 </p>
                 <p className="text-base md:text-lg text-stone-700 leading-[1.75]">
-                  We quote fixed scope. You know the price before the first line of code. If we finish in 10 hours instead of 40, good — we&apos;re fast, you still pay the quote. If we underestimate and it takes 80 hours, that&apos;s our problem to solve, not yours to absorb.
+                  We quote fixed scope. You know the price before the first line of code. If we finish in 10 hours instead of 40, good, we&apos;re fast, you still pay the quote. If we underestimate and it takes 80 hours, that&apos;s our problem to solve, not yours to absorb.
                 </p>
               </section>
 
@@ -173,14 +173,14 @@ export default function ManifestoPage() {
                   What we refuse to do.
                 </h2>
                 <ul className="space-y-3 text-base md:text-lg text-stone-700 leading-[1.75]">
-                  <li className="flex gap-3"><span className="text-cognac font-bold shrink-0">—</span> Bill hourly.</li>
-                  <li className="flex gap-3"><span className="text-cognac font-bold shrink-0">—</span> Hide prices.</li>
-                  <li className="flex gap-3"><span className="text-cognac font-bold shrink-0">—</span> Build on WordPress, Wix, Squarespace, or any platform that takes a monthly tax.</li>
-                  <li className="flex gap-3"><span className="text-cognac font-bold shrink-0">—</span> Hold your code hostage.</li>
-                  <li className="flex gap-3"><span className="text-cognac font-bold shrink-0">—</span> Send you an account manager.</li>
-                  <li className="flex gap-3"><span className="text-cognac font-bold shrink-0">—</span> Subcontract your project to a stranger.</li>
-                  <li className="flex gap-3"><span className="text-cognac font-bold shrink-0">—</span> Pad estimates with work AI already automated.</li>
-                  <li className="flex gap-3"><span className="text-cognac font-bold shrink-0">—</span> Pitch you anything you didn&apos;t ask for.</li>
+                  <li className="flex gap-3"><span className="text-cognac font-bold shrink-0">&bull;</span> Bill hourly.</li>
+                  <li className="flex gap-3"><span className="text-cognac font-bold shrink-0">&bull;</span> Hide prices.</li>
+                  <li className="flex gap-3"><span className="text-cognac font-bold shrink-0">&bull;</span> Build on WordPress, Wix, Squarespace, or any platform that takes a monthly tax.</li>
+                  <li className="flex gap-3"><span className="text-cognac font-bold shrink-0">&bull;</span> Hold your code hostage.</li>
+                  <li className="flex gap-3"><span className="text-cognac font-bold shrink-0">&bull;</span> Send you an account manager.</li>
+                  <li className="flex gap-3"><span className="text-cognac font-bold shrink-0">&bull;</span> Subcontract your project to a stranger.</li>
+                  <li className="flex gap-3"><span className="text-cognac font-bold shrink-0">&bull;</span> Pad estimates with work AI already automated.</li>
+                  <li className="flex gap-3"><span className="text-cognac font-bold shrink-0">&bull;</span> Pitch you anything you didn&apos;t ask for.</li>
                 </ul>
               </section>
 
@@ -190,7 +190,7 @@ export default function ManifestoPage() {
                   If any of this sounds obvious, it&apos;s because it should be. The fact that most agencies don&apos;t work this way is the real problem.
                 </p>
                 <p className="text-base md:text-lg text-stone-600 font-medium">
-                  — Hassan Jamal
+                  Hassan Jamal
                   <br />
                   <span className="text-sm text-stone-500">Founder, PandaCodeGen</span>
                 </p>

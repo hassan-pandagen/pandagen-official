@@ -31,11 +31,11 @@ const faqs = [
   },
   {
     q: "Do I need to cancel GHL?",
-    a: "Not if you don't want to. Option B keeps GHL for CRM while upgrading your website. Option C replaces GHL entirely with a custom CRM. Most clients choose Option B because GHL's automation engine is solid."
+    a: "Not if you don't want to. Option A keeps GHL for CRM while upgrading your website. Option B replaces GHL entirely with a custom CRM. Most clients choose Option A because GHL's automation engine is solid."
   },
   {
     q: "How much does a custom site with GHL integration cost?",
-    a: "A custom website with GHL API integration typically ranges from $5,000-$15,000. If you want a fully custom CRM to replace GHL, that's $15,000-$35,000. Both options eliminate your slow funnel pages and give you real SEO."
+    a: "Three tiers. Foot-in-the-Door starts at $500 (simple funnel or 5 to 10 page landing site, founder's offer with public case study exchange). Growth starts at $3,000 (15 to 40 page marketing site with full GHL API integration). Scale starts at $8,000 (agency white-label, member portals, complex Workflows). Your GHL CRM, automations, snapshots, and sub-accounts stay fully intact."
   },
   {
     q: "Can you build custom landing pages that work with GHL?",
@@ -43,7 +43,7 @@ const faqs = [
   },
   {
     q: "What if I want to leave GHL later?",
-    a: "If you chose Option B, your custom website already works independently. We can replace the GHL API connections with a custom backend whenever you're ready. No vendor lock-in, no rebuilding from scratch."
+    a: "If you chose Option A, your custom website already works independently. We can replace the GHL API connections with a custom backend whenever you're ready. No vendor lock-in, no rebuilding from scratch."
   },
 ];
 
@@ -81,10 +81,20 @@ export default function PageContent() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1 }}
+            data-speakable="true"
             className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto"
           >
-            Keep GHL for what it&apos;s best at: CRM, automations, and pipelines. But don&apos;t let its funnel builder be your website. We build custom coded sites that <span className="text-charcoal font-medium">integrate seamlessly with GHL&apos;s API</span>, so you get real SEO, instant load times, and full code ownership.
+            I&apos;m Hassan. I rebuilt a chiropractor&apos;s GHL frontend from 23 to 98 PageSpeed while every Workflow, Pipeline, and sub-account kept firing. Lead volume up 41 percent in six weeks. Book the call, share your GHL URL, I&apos;ll run your audit live.
           </motion.p>
+
+          <div className="mb-8 inline-flex flex-wrap items-center gap-3 justify-center px-5 py-3 rounded-full bg-white border border-stone-200 text-sm">
+            <span className="font-bold text-charcoal">Chiropractor client:</span>
+            <span className="text-stone-600">23 to 98 PageSpeed</span>
+            <span className="text-stone-300">|</span>
+            <span className="text-green-700 font-bold">+41% leads in 30 days</span>
+            <span className="text-stone-300">|</span>
+            <span className="text-stone-500">GHL CRM untouched</span>
+          </div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
@@ -132,7 +142,7 @@ export default function PageContent() {
       />
 
       {/* 2a. GHL IS GREAT FOR CRM */}
-      <section className="py-10 md:py-20 px-6 border-y border-stone-200 bg-stone-50">
+      <section className="py-10 md:py-14 px-6 border-y border-stone-200 bg-stone-50">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6 text-center">GHL Is Great for CRM. Not for Websites.</h2>
           <p className="text-stone-600 text-center mb-12 max-w-2xl mx-auto">GoHighLevel excels at automations, pipelines, and client management. But when it comes to your actual website and landing pages, here&apos;s the reality:</p>
@@ -177,7 +187,7 @@ export default function PageContent() {
       <SocialProof />
 
       {/* 3. HOW IT WORKS - Process Timeline */}
-      <section id="how-it-works" className="py-12 md:py-24 px-6 bg-white">
+      <section id="how-it-works" className="py-12 md:py-20 px-6 bg-white">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-4">How GoHighLevel Custom Website Integration Works</h2>
           <p className="text-slate-500 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A proven 4-step process. Your GHL stays running the entire time.</p>
@@ -185,7 +195,7 @@ export default function PageContent() {
           <div className="grid md:grid-cols-4 gap-6 relative">
             <div className="hidden md:block absolute top-8 left-0 w-full h-0.5 bg-slate-100 -z-10" />
             {[
-              { step: "01", title: "GHL Audit", desc: "We map your funnels, automations, pipelines, and workflows. We identify which GHL features to keep and which to replace with custom code.", duration: "Week 1" },
+              { step: "01", title: "GHL Audit", desc: "We map your Funnels, Workflows, Pipelines, Opportunities, sub-accounts, Locations, snapshots, and custom values. Inbound webhooks route leads into the correct sub-account. Agency white-label and SaaS mode resale remain intact.", duration: "Week 1" },
               { step: "02", title: "API Architecture", desc: "We design the integration between your custom website and GHL's API. Forms, lead capture, booking widgets, and pipeline triggers, all connected seamlessly.", duration: "Week 2" },
               { step: "03", title: "Custom Site Build", desc: "Your new website is built in Next.js with GHL API baked in. Landing pages load instantly. Forms push directly into your GHL CRM. All automations keep firing.", duration: "Weeks 3-5" },
               { step: "04", title: "Testing & Launch", desc: "We test every automation, form, and pipeline trigger. You verify everything works. Then we launch with zero disruption to your existing GHL workflows.", duration: "Week 6" },
@@ -210,7 +220,7 @@ export default function PageContent() {
       </section>
 
       {/* 4. PAIN POINTS */}
-      <section className="py-12 md:py-24 px-6 bg-[#0F172A]">
+      <section className="py-12 md:py-20 px-6 bg-[#0F172A]">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-8 md:mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 text-red-400 border border-red-500/20 text-sm font-bold uppercase tracking-widest mb-6">
@@ -250,7 +260,7 @@ export default function PageContent() {
       </section>
 
       {/* 5. COMPARISON TABLE */}
-      <section id="comparison" className="py-10 md:py-20 px-6">
+      <section id="comparison" className="py-10 md:py-14 px-6">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">GHL Funnels vs Custom Coded</h2>
           <p className="text-stone-600 text-center mb-12">Keep GHL for CRM. Upgrade your website and funnels.</p>
@@ -286,7 +296,7 @@ export default function PageContent() {
       </section>
 
       {/* 6. SOLUTION CARDS */}
-      <section className="py-10 md:py-20 px-6 border-y border-stone-200 bg-stone-50">
+      <section className="py-10 md:py-14 px-6 border-y border-stone-200 bg-stone-50">
         <div className="container mx-auto max-w-4xl text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-cognac/20 text-sm text-cognac mb-6">
             <Code2 className="w-4 h-4" /> Best of Both Worlds
@@ -376,39 +386,15 @@ export default function PageContent() {
       />
 
       {/* 7. TRIPLE CTA */}
-      <section className="py-10 md:py-20 px-6">
+      <section className="py-10 md:py-14 px-6">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold text-charcoal text-center mb-8 md:mb-12">Choose Your Path</h2>
+          <h2 className="text-3xl font-bold text-charcoal text-center mb-8 md:mb-12">Two Paths. Both Fast. Both Yours.</h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {/* GHL Optimization */}
-            <div className="p-8 rounded-3xl bg-stone-50 border border-stone-200 hover:border-charcoal/30 transition-colors">
-              <div className="text-cognac text-sm font-bold uppercase tracking-wider mb-4">Option A</div>
-              <h3 className="text-xl font-bold text-charcoal mb-4">GHL Funnel Optimization</h3>
-              <p className="text-stone-600 text-base mb-6 leading-relaxed">
-                Want to stick with GHL funnels? We&apos;ll optimize your existing pages for better speed and conversions within the platform.
-              </p>
-              <ul className="space-y-3 mb-8">
-                {["Funnel page speed optimization", "Design & copy improvements", "A/B testing setup", "Conversion rate analysis"].map((item, i) => (
-                  <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
-                    <CheckCircle2 className="w-4 h-4 text-cognac shrink-0" /> {item}
-                  </li>
-                ))}
-              </ul>
-              <button
-                data-cal-namespace="discovery"
-                data-cal-link="pandagen/discovery"
-                data-cal-config='{"layout":"month_view"}'
-                className="w-full px-6 py-4 border border-cognac/30 text-cognac font-bold rounded-full hover:bg-cognac hover:text-white transition-all"
-              >
-                Optimize My Funnels
-              </button>
-            </div>
-
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {/* Custom Site + GHL API */}
             <div className="p-8 rounded-3xl bg-stone-50 border border-stone-200 hover:border-charcoal/20 transition-colors relative overflow-hidden">
               <div className="absolute top-4 right-4 px-3 py-1 bg-stone-100 text-cognac text-xs font-bold rounded-full">Popular</div>
-              <div className="text-cognac text-sm font-bold uppercase tracking-wider mb-4">Option B</div>
+              <div className="text-cognac text-sm font-bold uppercase tracking-wider mb-4">Option A</div>
               <h3 className="text-xl font-bold text-charcoal mb-4">Custom Site + GHL CRM</h3>
               <p className="text-stone-600 text-base mb-6 leading-relaxed">
                 Keep your GHL CRM and automations. We build a custom coded website that integrates with GHL&apos;s API. You own the code.
@@ -433,7 +419,7 @@ export default function PageContent() {
             {/* Full Custom CRM + Website */}
             <div className="p-8 rounded-3xl bg-stone-50 border border-stone-200 hover:border-cognac/30 transition-colors relative overflow-hidden">
               <div className="absolute top-4 right-4 px-3 py-1 bg-stone-100 text-stone-600 text-xs font-bold rounded-full">Full Freedom</div>
-              <div className="text-stone-600 text-sm font-bold uppercase tracking-wider mb-4">Option C</div>
+              <div className="text-stone-600 text-sm font-bold uppercase tracking-wider mb-4">Option B</div>
               <h3 className="text-xl font-bold text-charcoal mb-4">Custom CRM + Website</h3>
               <p className="text-stone-600 text-base mb-6 leading-relaxed">
                 Want to own everything? We build a custom CRM and website connected to your automations. No monthly platform fees. You own the code.
@@ -459,7 +445,7 @@ export default function PageContent() {
       </section>
 
       {/* 8. FAQ */}
-      <section className="py-10 md:py-20 px-6 border-y border-stone-200 bg-stone-50">
+      <section className="py-10 md:py-14 px-6 border-y border-stone-200 bg-stone-50">
         <div className="container mx-auto max-w-3xl">
           <div className="flex items-center gap-3 justify-center mb-4">
             <HelpCircle className="w-6 h-6 text-cognac" />
@@ -496,7 +482,7 @@ export default function PageContent() {
       </section>
 
       {/* 9. GUARANTEE */}
-      <section className="py-10 md:py-20 px-6">
+      <section className="py-10 md:py-14 px-6">
         <div className="container mx-auto max-w-4xl bg-linear-to-br from-green-50 to-white border border-green-200 rounded-[3rem] p-12 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-green-100/50 blur-[80px] pointer-events-none" />
           <div className="relative z-10 text-center">
@@ -520,6 +506,17 @@ export default function PageContent() {
       </section>
 
       {/* Related Services — expanded to all platforms via reusable component */}
+      <section className="py-8 px-6 bg-white border-t border-stone-200">
+        <div className="container mx-auto max-w-4xl">
+          <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-4">Further reading</p>
+          <ul className="space-y-2 text-stone-700">
+            <li>&rarr; <Link href="/blog/gohighlevel-website-speed" className="text-charcoal hover:text-cognac underline underline-offset-2">Why GoHighLevel sites score 20 to 45 on PageSpeed (and the fix)</Link></li>
+            <li>&rarr; <Link href="/blog/gohighlevel-migration" className="text-charcoal hover:text-cognac underline underline-offset-2">GoHighLevel migration: how to keep the CRM and kill the website</Link></li>
+            <li>&rarr; <Link href="/blog/core-web-vitals-explained" className="text-charcoal hover:text-cognac underline underline-offset-2">Core Web Vitals explained for business owners</Link></li>
+          </ul>
+        </div>
+      </section>
+
       <RelatedServicesGrid currentHref="/services/gohighlevel" />
 
       {/* Author Attribution */}

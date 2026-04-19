@@ -52,10 +52,7 @@ const aboutSchema = {
         "postalCode": "78702",
         "addressCountry": "US"
       },
-      "founder": [
-        { "@type": "Person", "name": "Imran", "jobTitle": "Lead Solutions Architect" },
-        { "@type": "Person", "@id": "https://www.pandacodegen.com/#/schema/person/hassan", "name": "Hassan Jamal", "jobTitle": "Lead Full-Stack Engineer", "url": "https://www.pandacodegen.com/about/hassan", "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"] }
-      ],
+      "founder": { "@type": "Person", "@id": "https://www.pandacodegen.com/#/schema/person/hassan", "name": "Hassan Jamal", "jobTitle": "Founder", "url": "https://www.pandacodegen.com/about/hassan", "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"] },
       "numberOfEmployees": { "@type": "QuantitativeValue", "value": 2 },
       "sameAs": [
         "https://twitter.com/pandacodegen",
@@ -102,9 +99,10 @@ export default function AboutPageClient() {
             <span className="font-serif italic text-cognac">We build assets.</span>
           </h1>
 
-          <p className="text-xl text-stone-600 leading-relaxed mb-8 md:mb-12">
-            Most agencies sell you a template and disappear. We are engineers who grew up breaking WordPress sites and fixing them. PandaCodeGen was born from a simple truth: <strong className="text-charcoal">The web is too slow, and business owners are paying the price.</strong>
+          <p className="text-xl text-stone-600 leading-relaxed mb-6">
+            Most agencies sell you a template and disappear. I spent six years building WordPress sites before I launched PandaCodeGen to do it differently. We were born from a simple truth: <strong className="text-charcoal">The web is too slow, and business owners are paying the price.</strong>
           </p>
+          <p className="text-sm text-stone-500 font-mono mb-8 md:mb-12">Founded February 2026 &middot; Austin, TX &middot; Solo-founder led</p>
         </div>
 
         {/* DNA STRIP */}
@@ -144,7 +142,7 @@ export default function AboutPageClient() {
       <section className="bg-[#0C0A09] py-12 md:py-20 px-6">
          <div className="container mx-auto">
          <div className="text-center mb-8 md:mb-16">
-            <h2 className="text-3xl font-bold text-white">Meet the Engineers</h2>
+            <h2 className="text-3xl font-bold text-white">The Founder + Architecture Partner</h2>
             <p className="text-stone-500">No account managers. You talk directly to the architects.</p>
          </div>
 
@@ -153,18 +151,18 @@ export default function AboutPageClient() {
             <div className="group relative bg-stone-900 border border-stone-800 rounded-3xl overflow-hidden hover:border-stone-700 transition-colors duration-500">
                <div className="absolute inset-0 bg-linear-to-b from-transparent to-stone-950/95 z-10" />
                <div className="h-96 w-full relative">
-                  <Image src="/team/imran.png" fill sizes="(max-width: 768px) 100vw, 50vw" alt="Imran - Lead Solutions Architect at PandaCodeGen" className="object-cover object-top" />
+                  <Image src="/team/imran.png" fill sizes="(max-width: 768px) 100vw, 50vw" alt="Imran Raza Ladhani - Architecture Collaborator at PandaCodeGen" className="object-cover object-top" />
                </div>
                <div className="absolute bottom-0 left-0 w-full p-8 z-20">
-                  <div className="px-3 py-1 bg-white/10 text-stone-300 text-[10px] font-bold uppercase tracking-wider rounded-sm w-fit mb-2">Strategy</div>
-                  <h3 className="text-3xl font-bold text-white mb-1">Imran</h3>
-                  <p className="text-stone-400 font-mono text-sm mb-2">Lead Solutions Architect</p>
+                  <div className="px-3 py-1 bg-white/10 text-stone-300 text-[10px] font-bold uppercase tracking-wider rounded-sm w-fit mb-2">Architecture</div>
+                  <h3 className="text-3xl font-bold text-white mb-1">Imran Raza Ladhani</h3>
+                  <p className="text-stone-400 font-mono text-sm mb-2">Architecture Collaborator</p>
                   <div className="flex gap-3 mb-3 text-xs text-stone-500">
-                     <span>8+ years</span>
+                     <span>Next.js</span>
                      <span>•</span>
-                     <span>50+ projects</span>
+                     <span>System Design</span>
                   </div>
-                  <p className="text-stone-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">&ldquo;My job is to ensure your investment turns into measurable ROI.&rdquo;</p>
+                  <p className="text-stone-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">&ldquo;Hassan writes the code. I help decide what that code needs to do.&rdquo;</p>
                </div>
             </div>
 

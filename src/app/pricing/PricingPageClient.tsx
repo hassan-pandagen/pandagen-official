@@ -133,7 +133,7 @@ export default function PricingPageClient() {
               </div>
             </div>
             <span className="text-sm font-bold text-stone-600 uppercase tracking-widest">
-              12 Sites Migrated · Avg PageSpeed: 98/100 · Avg Load Time: 0.8s
+              Avg PageSpeed: 98/100 · Avg Load Time: 0.8s · Founded Feb 2026, Austin TX
             </span>
           </motion.div>
 
@@ -214,7 +214,7 @@ export default function PricingPageClient() {
             className="relative p-8 rounded-[2.5rem] bg-[#0C0A09] text-white shadow-2xl shadow-stone-900/30 lg:scale-105 lg:z-10 flex flex-col"
           >
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-cognac text-white px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg whitespace-nowrap">
-              Most Popular
+              Recommended
             </div>
 
             <div className="mb-6 min-h-[64px]">
@@ -319,6 +319,30 @@ export default function PricingPageClient() {
               Book a call to discuss.
             </button>
           </p>
+        </motion.div>
+
+        {/* Foot-in-the-Door tier callout */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-6 max-w-3xl mx-auto"
+        >
+          <div className="p-5 md:p-6 rounded-2xl border-2 border-cognac/30 bg-cognac/5 flex flex-col md:flex-row items-start md:items-center gap-4 md:justify-between">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-2">Founder&apos;s Offer</p>
+              <h3 className="text-lg md:text-xl font-bold text-charcoal mb-1">Foot-in-the-Door Tier: $500</h3>
+              <p className="text-sm text-stone-600">For small sites in exchange for a public case study. Limited monthly capacity. Apply on the call.</p>
+            </div>
+            <button
+              data-cal-namespace="discovery"
+              data-cal-link="pandagen/discovery"
+              data-cal-config='{"layout":"month_view"}'
+              className="shrink-0 px-5 py-2.5 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-cognac transition-all"
+            >
+              Apply on the Call
+            </button>
+          </div>
         </motion.div>
 
         {/* Hourly / Retainer Option */}
@@ -495,8 +519,8 @@ export default function PricingPageClient() {
           <div className="flex items-center justify-center gap-3">
             <div className="h-px w-8 bg-stone-300" />
             <div>
-              <div className="text-sm font-bold text-charcoal">MyCustomPatches</div>
-              <div className="text-xs text-stone-500">Patch Manufacturing · WordPress Migration</div>
+              <div className="text-sm font-bold text-charcoal">Matt Conner</div>
+              <div className="text-xs text-stone-500">Owner, MyCustomPatches · WordPress Migration</div>
             </div>
             <div className="h-px w-8 bg-stone-300" />
           </div>

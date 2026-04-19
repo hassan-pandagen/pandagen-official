@@ -54,15 +54,7 @@ export default function WebflowServicePage() {
           "addressRegion": "TX",
           "addressCountry": "US"
         },
-        "image": "https://www.pandacodegen.com/og-image.jpg",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5",
-          "bestRating": "5",
-          "worstRating": "1",
-          "ratingCount": "11",
-          "reviewCount": "11"
-        }
+        "image": "https://www.pandacodegen.com/og-image.jpg"
       },
       {
         "@type": "WebPage",

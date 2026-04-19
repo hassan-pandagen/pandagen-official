@@ -66,7 +66,7 @@ const personSchema = {
             "@id": "https://www.pandacodegen.com/about/hassan#webpage",
             "url": "https://www.pandacodegen.com/about/hassan",
             "name": "Hassan Jamal - Lead Full-Stack Engineer at PandaCodeGen",
-            "description": "Learn about Hassan Jamal, Lead Full-Stack Engineer at PandaCodeGen. 7+ years of experience in web performance, Next.js, and enterprise architecture.",
+            "description": "Learn about Hassan Jamal, founder of PandaCodeGen. Six years building WordPress sites before launching a custom Next.js studio in Austin, TX in February 2026.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "mainEntity": { "@id": "https://www.pandacodegen.com/#/schema/person/hassan" },
             "inLanguage": "en-US",
@@ -141,7 +141,7 @@ export default function HassanAuthorPage() {
                             <h1 className="text-5xl md:text-6xl font-serif text-charcoal mb-3">Hassan Jamal.</h1>
                             <p className="text-lg font-mono text-cognac mb-6">Full-Stack Architect &middot; Austin, TX</p>
                             <p className="text-xl text-stone-600 leading-relaxed max-w-xl mb-8">
-                                I help e-commerce brands ditch Shopify fees and WordPress bloat with high performance custom code. One client was paying $3,200/month on Shopify Plus. Their storefront scored 31 on Google PageSpeed. We migrated them to a custom build. Same features. Zero app fees. PageSpeed went from 31 to 92.
+                                I built WordPress sites for six years before I got tired of watching clients pay $3,000 a month in plugin fees for sites that loaded in four seconds. I launched PandaCodeGen in February 2026 to do it differently. One recent client was paying $3,200/month on Shopify Plus with a PageSpeed score of 31. We migrated them to custom code. Same features. Zero app fees. PageSpeed jumped from 31 to 92.
                             </p>
                             <div className="flex flex-wrap gap-3">
                                 <a

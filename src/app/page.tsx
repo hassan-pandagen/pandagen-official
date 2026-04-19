@@ -83,7 +83,6 @@ export default function Home() {
           "addressCountry": "US"
         },
         "sameAs": [
-          "https://twitter.com/pandacodegen",
           "https://www.linkedin.com/company/pandacodegen",
           "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
           "https://github.com/hassan-pandagen",
@@ -92,6 +91,9 @@ export default function Home() {
           "https://www.google.com/maps?cid=16271659886069582158",
           "https://www.goodfirms.co/company/pandacodegen",
           "https://www.crunchbase.com/organization/pandacodegen",
+          "https://www.designrush.com/agency/profile/pandacodegen",
+          "https://www.sortlist.com/agency/pandacodegen",
+          "https://www.f6s.com/pandacodegen",
           "https://www.sanity.io/exchange/community/pandacodegen",
           "https://www.behance.net/pandacodegen",
           "https://dev.to/pandacodegen"
@@ -99,7 +101,7 @@ export default function Home() {
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "5.0",
-          "reviewCount": "11",
+          "reviewCount": "4",
           "bestRating": "5",
           "worstRating": "1"
         },
@@ -152,7 +154,7 @@ export default function Home() {
         },
         "inLanguage": "en-US",
         "datePublished": "2026-02-10",
-        "dateModified": "2026-03-22",
+        "dateModified": "2026-04-20",
         "speakable": {
           "@type": "SpeakableSpecification",
           "cssSelector": ["h1", "h2", "[data-speakable='true']"]
@@ -160,21 +162,25 @@ export default function Home() {
       },
       {
         "@type": "Review",
-        "@id": "https://www.pandacodegen.com/#review-clutch",
+        "@id": "https://www.pandacodegen.com/#review-matt-conner",
         "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
-        "author": { "@type": "Person", "name": "Executive, MC Patches LLC" },
-        "reviewBody": "Panda Code Gen successfully delivered a speedy, bug free website using the latest coding language. The team was punctual, responsive, helpful, and communicative via email. They assisted with UI design and did not charge for revisions. Overall, their expertise and support were commendable.",
-        "datePublished": "2025-11-01",
-        "itemReviewed": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization" }
+        "author": { "@type": "Person", "name": "Matt Conner" },
+        "publisher": { "@type": "Organization", "name": "Clutch", "url": "https://clutch.co" },
+        "reviewBody": "Hassan was available to me at any time, and his response time was always less than an hour. Panda Code Gen successfully delivered a speedy, bug-free website using the latest coding language. The team was punctual, responsive, helpful, and communicative via email. They assisted with UI design and did not charge for revisions. Overall, their expertise and support were commendable.",
+        "datePublished": "2026-03-08",
+        "url": "https://clutch.co/profile/panda-code-gen",
+        "itemReviewed": { "@id": "https://www.pandacodegen.com/#organization" }
       },
       {
         "@type": "Review",
-        "@id": "https://www.pandacodegen.com/#review-trustpilot",
+        "@id": "https://www.pandacodegen.com/#review-marshall-james",
         "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
         "author": { "@type": "Person", "name": "Marshall James" },
-        "reviewBody": "I recently worked with PandaCodeGen and had a great experience. Hassan was super helpful and communicative throughout the process. Even though I am not tech-savvy, he broke things down in a way that made sense to me. The service was excellent overall.",
-        "datePublished": "2026-03-01",
-        "itemReviewed": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization" }
+        "publisher": { "@type": "Organization", "name": "Trustpilot", "url": "https://www.trustpilot.com" },
+        "reviewBody": "I recently worked with PandaCodeGen and had a great experience. Hassan was super helpful and communicative throughout the process. Even though I am not tech-savvy, he broke things down in a way that made sense to me. The service was pretty good overall.",
+        "datePublished": "2026-03-10",
+        "url": "https://www.trustpilot.com/review/pandacodegen.com",
+        "itemReviewed": { "@id": "https://www.pandacodegen.com/#organization" }
       },
       {
         "@type": "ProfessionalService",
@@ -229,49 +235,25 @@ export default function Home() {
       },
       {
         "@type": "Review",
-        "@id": "https://www.pandacodegen.com/#review-clutch-mcpatches",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5",
-          "worstRating": "1"
-        },
-        "author": {
-          "@type": "Person",
-          "name": "Executive, MC Patches LLC"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Clutch",
-          "url": "https://clutch.co"
-        },
+        "@id": "https://www.pandacodegen.com/#review-james-peace",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+        "author": { "@type": "Person", "name": "James Peace" },
+        "publisher": { "@type": "Organization", "name": "Google", "url": "https://www.google.com/maps" },
         "itemReviewed": { "@id": "https://www.pandacodegen.com/#organization" },
-        "reviewBody": "Hassan was available to me at any time, and his response time was always less than an hour. Panda Code Gen successfully delivered a speedy, bug-free website using the latest coding language. The team was punctual, responsive, helpful, and communicative via email. They assisted with UI design and didn't charge for revisions. Overall, their expertise and support were commendable.",
-        "datePublished": "2026-03-08",
-        "url": "https://clutch.co/profile/panda-code-gen#reviews"
+        "reviewBody": "I was not sure at first. Can a custom website really be built for $300 with no costs? PandaCodeGen. Hassan showed me it can be done. They gave me a quote at first. They worked with me to make a website I could afford. They made sure there are no costs or extra fees. PandaCodeGen and Hassan are good at what they do. They care about their customers.",
+        "datePublished": "2026-03-18",
+        "url": "https://www.google.com/maps?cid=16271659886069582158"
       },
       {
         "@type": "Review",
-        "@id": "https://www.pandacodegen.com/#review-trustpilot-marshall",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5",
-          "worstRating": "1"
-        },
-        "author": {
-          "@type": "Person",
-          "name": "Marshall James"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Trustpilot",
-          "url": "https://www.trustpilot.com"
-        },
+        "@id": "https://www.pandacodegen.com/#review-richard-junior",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+        "author": { "@type": "Person", "name": "Richard Junior" },
+        "publisher": { "@type": "Organization", "name": "Google", "url": "https://www.google.com/maps" },
         "itemReviewed": { "@id": "https://www.pandacodegen.com/#organization" },
-        "reviewBody": "I recently worked with PandaCodeGen and had a great experience. Hassan was super helpful and communicative throughout the process. Even though I'm not tech-savvy, he broke things down in a way that made sense to me. The service was pretty good overall.",
-        "datePublished": "2026-03-10",
-        "url": "https://www.trustpilot.com/review/pandacodegen.com"
+        "reviewBody": "I was on the fence about leaving Squarespace, but PandaCodeGen really understood what I needed. I talked to a few other agencies and PandaCodeGen's proposal aligned best with my vision. They migrated my site in 10 days and did exactly what they said they'd do. Super happy with the result. Would definitely recommend them.",
+        "datePublished": "2026-04-02",
+        "url": "https://www.google.com/maps?cid=16271659886069582158"
       },
       {
         "@type": "FAQPage",

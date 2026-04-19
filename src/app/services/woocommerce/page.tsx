@@ -57,13 +57,14 @@ export default function WooCommerceServicePage() {
           "addressCountry": "US"
         },
         "image": "https://www.pandacodegen.com/og-image.jpg",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5",
-          "bestRating": "5",
-          "worstRating": "1",
-          "ratingCount": "11",
-          "reviewCount": "11"
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "WooCommerce Migration Tiers",
+          "itemListElement": [
+            { "@type": "Offer", "name": "Foot in the Door", "price": "500", "priceCurrency": "USD", "description": "Simple WooCommerce migration, 10 to 30 products" },
+            { "@type": "Offer", "name": "Growth", "price": "3500", "priceCurrency": "USD", "description": "30 to 150 products with custom cart logic" },
+            { "@type": "Offer", "name": "Scale", "price": "12000", "priceCurrency": "USD", "description": "Subscriptions, B2B pricing, wholesale" }
+          ]
         }
       },
       {

@@ -55,13 +55,14 @@ export default function EngineeringPage() {
           "addressCountry": "US"
         },
         "image": "https://www.pandacodegen.com/og-image.jpg",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5",
-          "bestRating": "5",
-          "worstRating": "1",
-          "ratingCount": "11",
-          "reviewCount": "11"
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Custom Development Tiers",
+          "itemListElement": [
+            { "@type": "Offer", "name": "Foot in the Door", "price": "3000", "priceCurrency": "USD", "description": "Marketing site, internal tool, or small portal. 1 to 2 weeks." },
+            { "@type": "Offer", "name": "Growth", "price": "10000", "priceCurrency": "USD", "description": "SaaS MVP, client portal, or full dashboard. 3 to 5 weeks." },
+            { "@type": "Offer", "name": "Scale", "price": "25000", "priceCurrency": "USD", "description": "Multi-tenant SaaS, complex integrations. 6 to 12 weeks." }
+          ]
         }
       },
       {

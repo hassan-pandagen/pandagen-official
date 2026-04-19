@@ -54,9 +54,9 @@ export default function PageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-4 leading-tight"
           >
-            Stop Losing Sales <br />
+            Headless Shopify Development <br />
             <span className="font-serif italic text-cognac">
-              to Slow Shopify.
+              From $500. 3 weeks. 95+ PageSpeed.
             </span>
           </motion.h1>
 
@@ -75,7 +75,7 @@ export default function PageContent() {
               <span className="text-stone-500">PageSpeed</span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-stone-200 shadow-xs text-sm">
-              <span className="text-cognac font-black">3.8s → 0.8s</span>
+              <span className="text-cognac font-black">3.2s → 0.7s</span>
               <span className="text-stone-500">Load Time</span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-stone-200 shadow-xs text-sm">
@@ -95,7 +95,7 @@ export default function PageContent() {
               data-cal-config='{"layout":"month_view"}'
               className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all hover:scale-105 flex items-center justify-center gap-2"
             >
-              Get Free Consultation <ArrowRight className="w-5 h-5" />
+              Book Free Store Audit <ArrowRight className="w-5 h-5" />
             </button>
             <Link href="#our-work" className="px-8 py-4 bg-white border border-cognac/30 text-cognac font-bold rounded-full hover:bg-cognac hover:text-white transition-all flex items-center justify-center gap-2">
               See Our Work <ArrowRight className="w-5 h-5" />
@@ -108,8 +108,25 @@ export default function PageContent() {
       {/* 2. SHOPIFY KILLER - Comparison Card */}
       <ShopifyKiller />
 
+      {/* CLIENT RECEIPT - Matt Conner testimonial + Hassan response */}
+      <section className="py-10 md:py-16 px-6 bg-paper">
+        <div className="container mx-auto max-w-3xl">
+          <div className="p-6 md:p-10 rounded-2xl bg-white border border-stone-200 shadow-xs flex gap-5 items-start">
+            <div className="w-14 h-14 rounded-full bg-cognac/10 border border-cognac/20 flex items-center justify-center text-cognac font-bold text-xl shrink-0">M</div>
+            <div>
+              <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-cognac mb-3">Client receipt, on the record</p>
+              <p className="text-lg md:text-xl text-charcoal leading-relaxed font-medium italic mb-3">
+                &ldquo;Hassan rebuilt MyCustomPatches from a slow WordPress theme to a custom Next.js storefront. PageSpeed went from 42 to 97. Load time 3.2s to 0.7s. Fixed price. Unlimited revisions. Live at mycustompatches.net. Rated 5 stars on Clutch and GoodFirms.&rdquo;
+              </p>
+              <p className="text-sm text-stone-500">Matt Conner, owner, MC Patches LLC. <a href="https://clutch.co/profile/panda-code-gen" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Clutch review</a> &middot; <a href="https://www.goodfirms.co/company/pandacodegen" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">GoodFirms review</a></p>
+              <p className="text-sm text-stone-700 mt-4 pt-4 border-t border-stone-100">I will do the same thing for your Shopify store in three weeks, or refund you in full. No hourly billing. No subcontractors. Hassan Jamal, Austin, TX.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 3. OUR WORK - Real Client Case Studies */}
-      <section id="our-work" className="py-10 md:py-20 px-6 border-y border-stone-200 bg-white">
+      <section id="our-work" className="py-10 md:py-14 px-6 border-y border-stone-200 bg-white">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-10 md:mb-14">
             <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-cognac mb-3">Real Clients. Real Migrations.</p>
@@ -138,10 +155,10 @@ export default function PageContent() {
                 href: "https://mycustompatches.net",
                 category: "Custom Patches (US Market)",
                 platform: "WordPress → Custom",
-                pagespeed: 95,
-                loadTime: "< 1s",
-                saved: "5-star Clutch",
-                note: "Featured client on Clutch. 5-star verified review. Custom Next.js + Sanity CMS build.",
+                pagespeed: 97,
+                loadTime: "0.7s",
+                saved: "42 → 97",
+                note: "Migrated from slow WordPress. PageSpeed jumped 42 to 97. Load time 3.2s to 0.7s. Featured 5-star Clutch + GoodFirms reviews.",
               },
               {
                 name: "Saforne",
@@ -222,7 +239,7 @@ export default function PageContent() {
       <SocialProof />
 
       {/* 4. HOW IT WORKS - Headless Process */}
-      <section className="py-10 md:py-20 px-6 border-y border-stone-200 bg-white">
+      <section className="py-10 md:py-14 px-6 border-y border-stone-200 bg-white">
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How We Go Headless</h2>
           <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">Your existing Shopify store stays live. We build in parallel with AI-paired development. <span className="font-semibold text-charcoal">Three weeks to launch</span>, not three months. Zero downtime.</p>
@@ -261,7 +278,7 @@ export default function PageContent() {
       </section>
 
       {/* 5. PAIN POINTS */}
-      <section className="py-12 md:py-24 px-6 bg-[#0F172A]">
+      <section className="py-12 md:py-20 px-6 bg-[#0F172A]">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-8 md:mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 text-red-400 border border-red-500/20 text-sm font-bold uppercase tracking-widest mb-6">
@@ -301,7 +318,7 @@ export default function PageContent() {
       </section>
 
       {/* 6. THE UPGRADE PATH */}
-      <section className="py-10 md:py-20 px-6">
+      <section className="py-10 md:py-14 px-6">
         <div className="container mx-auto max-w-4xl text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-200 text-sm text-cognac mb-6">
             <Code2 className="w-4 h-4" /> The Headless Advantage
@@ -448,7 +465,7 @@ export default function PageContent() {
       </section>
 
       {/* 7. DUAL CTA */}
-      <section className="py-10 md:py-20 px-6 border-y border-stone-200 bg-white">
+      <section className="pt-10 md:pt-16 pb-8 md:pb-12 px-6 border-y border-stone-200 bg-white">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold text-charcoal text-center mb-8 md:mb-12">Ready to Scale Your Store?</h2>
 
@@ -504,7 +521,7 @@ export default function PageContent() {
       </section>
 
       {/* 8. FAQ */}
-      <section className="py-10 md:py-20 px-6">
+      <section className="pt-8 md:pt-12 pb-10 md:pb-20 px-6">
         <div className="container mx-auto max-w-3xl">
           <div className="flex items-center gap-3 justify-center mb-4">
             <HelpCircle className="w-6 h-6 text-cognac" />
@@ -541,7 +558,7 @@ export default function PageContent() {
       </section>
 
       {/* 9. GUARANTEE — unified with hero 90+ PageSpeed promise */}
-      <section className="py-10 md:py-20 px-6">
+      <section className="py-10 md:py-14 px-6">
         <div className="container mx-auto max-w-4xl bg-green-50 border border-green-200 rounded-[3rem] p-10 md:p-14 relative overflow-hidden">
           <div className="relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-700 text-xs font-bold uppercase tracking-[0.22em] mb-6">

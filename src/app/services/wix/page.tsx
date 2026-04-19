@@ -55,13 +55,14 @@ export default function WixServicePage() {
           "addressRegion": "TX",
           "addressCountry": "US"
         },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5",
-          "bestRating": "5",
-          "worstRating": "1",
-          "ratingCount": "11",
-          "reviewCount": "11"
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Wix Migration Tiers",
+          "itemListElement": [
+            { "@type": "Offer", "name": "Foot in the Door", "price": "500", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Growth", "price": "3000", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Scale", "price": "10000", "priceCurrency": "USD" }
+          ]
         }
       },
       {

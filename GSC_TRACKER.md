@@ -483,6 +483,86 @@ If something looks off or you want to understand a trend, just tell me and I'll 
 
 ---
 
+## Apr 19, 2026 — Full Audit Work Completed (Detailed Breakdown)
+
+### 8-Role Audit System (New Methodology)
+
+Validated on top 11 GSC posts. Full framework now documented in BLOG_README Step 7.5. Two frameworks, eight roles:
+
+**Framework 1 — VOICE AUDIT (4 roles):**
+1. Senior Brand Strategist
+2. Conversion Copywriter
+3. UX Researcher / Content Designer
+4. Data Storyteller (Animalz/Shleyner style)
+
+**Framework 2 — SEO AUDIT (4 roles):**
+5. Technical SEO Specialist
+6. SEO Content Strategist
+7. Conversion Copywriter + SERP Specialist
+8. SEO Consultant + Link Auditor
+
+Tier A posts get both. Tier B gets one or the other. Tier C gets a self-review checklist.
+
+---
+
+### Posts Fully Audited (Top 11) — Per-Post Fix Summary
+
+| Post | GSC Impressions (3mo) | Voice Fixes Applied | SEO Fixes Applied | Status |
+|------|----------------------|---------------------|-------------------|--------|
+| **website-rebuild-cost-2026** | 0 (new) | Opener receipt (Obare $35K vs $1.2K), 7 H2 rewrites, North Star BlogQuote promoted after tier table | Schema headline sync, wordCount update, direct-answer block, "How Long Does a Website Rebuild Take?" PAA H2 added, robots metadata, 5-node @graph verified | SHIPPED |
+| **webflow-true-cost** | 670 | Subhead with $1,476 receipt, 5 H2 rewrites, receipts block (3 anonymized migrations), 3-Year TCO moved to position 2, opening prospect closure ("they migrated in March") | Title shortened to 55 chars ("Hidden Fees & $125-$400/mo Real Cost"), meta desc trimmed, direct-answer block with plan names, LSI expansion (Starter/Basic/CMS/Business/Enterprise/Ecommerce Standard/Plus/Advanced/Optimize/Logic/Memberstack/Workspace seats), robots metadata | SHIPPED |
+| **shopify-dawn-theme-slow** | 269 | Opener rewrite with MyCustomPatches 42→97 receipt, Dawn history block cut to 2 sentences, 4 H2 rewrites, Hassan pullquote replacing duplicate Founder's Offer | Title 55→42/97 synced across all 5 schema/metadata locations, direct-answer block, robots metadata, WebPage.name aligned | SHIPPED |
+| **gohighlevel-website-speed** | 223 | Opener rewrite (14 GHL sites audit, 1,300ms main-thread block, $297/mo receipt), 5 H2 rewrites, chiropractor case study card added, weak BlogQuote replaced with Hassan quote, duplicate Founder's Offer at bottom removed | "Is GoHighLevel Good For SEO?" PAA H2 section added (150 words), LSI expansion (LCP/INP/CLS/TTFB/SaaS mode/sub-accounts/snapshots/white-label/locations), "Key Facts" → "What The PageSpeed Data Actually Says", robots metadata | SHIPPED |
+| **wordpress-migration-cost** | 160 | Opener rewrite (3-quote spread story: $4.5K/$12K/$18K/$47K same site), MC Patches receipt block with Clutch + GoodFirms links, 6 H2 rewrites, Hassan North Star quote replacing generic one | Title shortened to "$2K to $25K by Site Size", meta desc trimmed, direct-answer block, "How Long Does a WordPress Migration Take?" PAA H2 (2 paragraphs), LSI expansion (Kinsta/WP Engine/Flywheel/SiteGround/ACF Pro $249/Elementor Pro $59/Divi $89/WP Rocket/Yoast/RankMath with real license prices), robots metadata | SHIPPED |
+| **squarespace-too-slow** | 100 | Hassan receipt opener ("11 Squarespace sites audited"), 7 H2 rewrites, Hassan North Star pullquote ("best Squarespace site in the world loses the tiebreaker to an average Next.js site"), named photographer receipt ($8K/mo → $11.2K/mo post-migration), violet-box de-dupe to Decision Checklist | Meta desc trimmed, direct-answer block (300-600KB JS bundle answer), LSI expansion (Squarespace 7.1/Fluid Engine/TBT/INP), robots metadata | SHIPPED |
+| **why-we-chose-nextjs-over-wordpress-2026** | 98 | First-person bio rewrite ("I built in WordPress for six years before launching PandaCodeGen"), dated opener rewrite ("The Client Data That Made Me Quit WordPress For Good"), 7 numbered "Reason N" H2s killed and replaced with punchy verb-led H2s | Robots metadata | SHIPPED |
+| **how-to-migrate-wordpress-to-nextjs** | 75 | MCP receipt opener (3.2s→0.7s, 45→97 PageSpeed, +45% traffic), founder-voice exec summary rewrite, MC Patches named case-study card with Clutch + GoodFirms links, North Star pullquote promoted above 8-step section, 3 H2 rewrites | Meta desc trimmed, PAA eyebrow ("How To Migrate WordPress To Next.js In 8 Steps"), robots metadata | SHIPPED |
+| **wordpress-vs-nextjs** | 75 | MCP receipt opener (0.7s rebuild, +45% conversions), 6 weak H2s rewritten ("Yoast Cannot Outrun a 4-Second Load Time", "Next.js Is Not a Website Builder. It Is a Speed Weapon.") | Title shortened to "Speed, SEO & Cost Compared" (54 chars), meta desc with Core Web Vitals LSI, direct-answer block "Is Next.js Better Than WordPress in 2026?" (45-word answer), robots metadata | SHIPPED |
+| **woocommerce-too-slow** | 74 | Hassan quote added ("rebuilt a WooCommerce store... 3.2s to 0.7s. No WP Rocket. We deleted WooCommerce's frontend entirely"), 5 H2 rewrites ("How We Got MyCustomPatches to 0.7 Seconds", "When Headless Is Wrong for Your Store") | Title shortened to "How to Fix & Speed It Up (2026)" (53 chars), meta desc trimmed, robots metadata | SHIPPED |
+| **wordpress-vs-custom-code-real-cost-3-years** | 62 | 8 H2s rewritten ("WordPress Hides $15,000 In Six Invoices", "The Break-Even Point: Month 5, Not Year 2", "The Fair Case For WordPress") | Meta desc trimmed, robots metadata | SHIPPED |
+
+### Cross-Link Injection Pass (22 new inbound links)
+
+9 source posts now link inbound to the top 11 with descriptive anchor text. Every SEO audit flagged this as the #1 highest-ROI ranking move for a 2.5-month-old domain.
+
+| Source post | Target posts (anchor count) |
+|-------------|----------------------------|
+| wordpress-killer | wordpress-migration-cost, wordpress-vs-nextjs, how-to-migrate-wordpress-to-nextjs (3 anchors) |
+| wordpress-plugins-destroy-speed | wordpress-vs-nextjs, wordpress-migration-cost, woocommerce-too-slow (3) |
+| how-to-fix-slow-wordpress | how-to-migrate-wordpress-to-nextjs, wordpress-migration-cost, woocommerce-too-slow (3) |
+| webflow-migration-cost | webflow-true-cost, website-rebuild-cost-2026 (2) |
+| leaving-webflow-2026 | webflow-true-cost, website-rebuild-cost-2026 (2) |
+| shopify-headless | shopify-dawn-theme-slow, woocommerce-too-slow (2) |
+| core-web-vitals-explained | shopify-dawn-theme-slow, squarespace-too-slow, gohighlevel-website-speed, website-rebuild-cost-2026 (4) |
+| gohighlevel-migration | gohighlevel-website-speed, core-web-vitals-explained (2) |
+| squarespace-migration-cost | squarespace-too-slow, website-rebuild-cost-2026 (2) |
+
+### Key Deliverables Today
+
+- **1 new hub post published:** website-rebuild-cost-2026 (featured: true, 3,400 words, 8 FAQs)
+- **11 top GSC posts fully audited** (voice + SEO both layers)
+- **22 new inbound internal links** injected from 9 source posts
+- **3 new PAA-matching H2 sections** with 150-word answers
+- **5 direct-answer featured snippet blocks** (data-speakable="true")
+- **Robots metadata** added to all 11 top posts
+- **LSI entity expansion** on 4 posts (named hosting brands, plan tiers, Core Web Vital metric names)
+- **Title + meta SERP optimization** on 6 posts
+- **Schema 5-node @graph sync** across all 11 posts
+- **Designer handoff doc** (DESIGNER_HANDOFF.md) for tomorrow's OG image + video prep
+
+### Pending (Designer, Apr 20)
+
+- 7 OG still-frame exports from PageSpeed counter video (42, 58, 65, 75, 88, 97, 100 scores) → `public/og/`
+- 2 video formats for hero embeds (WebM + MP4) + poster → `public/video/`
+- Logo dimension confirmation (655 × 113)
+
+After delivery (5-30 min Hassan work):
+- Swap per-post OG images across 11 blog posts (schema + openGraph)
+- Video hero embed on how-to-achieve-100-pagespeed, work/mycustompatches, services/custom-engineering
+- VideoObject schema for video rich results in SERP
+
+---
+
 ## What To Watch For On Apr 27 Data Pull
 
 After today's mass fixes ship, the next GSC data pull (Apr 27) is the validation moment. Expected signals:

@@ -87,7 +87,7 @@ const articleSchema = {
             "about": [
                 { "@type": "Thing", "name": "Website Rebuild Cost" },
                 { "@type": "Thing", "name": "Website Redesign" },
-                { "@type": "SoftwareApplication", "name": "Next.js" },
+                { "@type": "Thing", "name": "Next.js Framework" },
                 { "@type": "Thing", "name": "Custom Web Development Pricing" }
             ],
             "speakable": {
