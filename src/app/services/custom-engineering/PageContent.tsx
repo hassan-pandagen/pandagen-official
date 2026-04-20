@@ -70,8 +70,8 @@ export default function PageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-4 leading-tight"
           >
-            Custom software, <span className="font-serif italic text-cognac">shipped in weeks.</span> <br />
-            Not filed in a dev-shop backlog.
+            SaaS founders: stop waiting 6 months for a dev shop. <br />
+            <span className="font-serif italic text-cognac">We ship your custom app in 3 weeks.</span>
           </motion.h1>
 
           <motion.p

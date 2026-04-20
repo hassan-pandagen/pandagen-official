@@ -70,9 +70,9 @@ export default function SquarespacePageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-4 leading-tight"
           >
-            Stuck at 30-55 PageSpeed? <br />
+            Stuck at 30-55 PageSpeed on Squarespace? <br />
             <span className="font-serif italic text-cognac">
-              Squarespace Migration, Done Right.
+              We rebuild you at 95+ in 3 weeks.
             </span>
           </motion.h1>
 

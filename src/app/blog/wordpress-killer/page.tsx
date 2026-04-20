@@ -1,6 +1,6 @@
 import { ArrowLeft, Calendar, Clock, ArrowRight, DollarSign, RefreshCw } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,9 +11,9 @@ import type { Metadata } from "next";
 
 const postFAQs = blogPosts.find(p => p.id === "wordpress-killer")?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
-const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "WordPress Costs 3 to 5x More Than You Think: 2026 Hidden Fees",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         description: "The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3 to 5x. Here are the real numbers.",
         type: "article",
         publishedTime: "2026-01-15",
-        authors: ["Hassan"],
+        authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/wordpress-killer",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
@@ -46,12 +46,12 @@ const articleSchema = {
             "description": "The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3 to 5x. Here are the real numbers.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-01-15T00:00:00-05:00",
-            "dateModified": "2026-03-10T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -67,7 +67,7 @@ const articleSchema = {
             "articleSection": "Cost Analysis",
             "keywords": ["wordpress cost 2026", "true cost of wordpress", "wordpress vs custom code", "wordpress waste of money", "next.js alternative"],
             "timeRequired": "PT8M",
-            "wordCount": 2500,
+            "wordCount": 900,
             "about": [
                 { "@type": "Thing", "name": "WordPress Total Cost of Ownership" },
                 { "@type": "Thing", "name": "WordPress" },
@@ -103,7 +103,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-01-15T00:00:00-05:00",
-            "dateModified": "2026-03-10T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/wordpress-killer#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -179,19 +179,19 @@ export default function WordPressKillerPage() {
                     <div className="mb-12"><PageSpeedAnimation /></div>
 
                     {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
-                        <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
+                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
                             "The average WordPress business site costs $8,000 to $15,000 over 3 years, not the $50/month most owners think.",
                             "Premium plugins, security tools, developer maintenance, and downtime are the hidden expenses nobody counts.",
                             "Custom Next.js sites cost more upfront but pay for themselves within 18 to 24 months and save money every year after.",
-                            "The real cost isn't just money. It's the 20 to 30% organic traffic you lose to Google penalising your slow site."
+                            "The real cost isn't just money. It's the 20 to 30% organic traffic you lose to Google penalizing your slow site."
                         ]} />
                     </div>
 
                     <div className="space-y-8">
                         <BlogText>
-                            A business owner came to us last year after paying $620/month for WordPress. Hosting, plugins, security monitoring, developer retainer. He thought he was running an efficient setup.
+                            A business owner came to me after paying $620/month for WordPress. Hosting, plugins, security monitoring, developer retainer. He thought he was running an efficient setup.
                         </BlogText>
                         <BlogText>
                             We ran the numbers. Over three years, his WordPress site had cost him <BlogHighlight>$22,400 in direct costs</BlogHighlight>, and an estimated $85,000 in lost revenue from a PageSpeed score of 41/100.
@@ -209,7 +209,7 @@ export default function WordPressKillerPage() {
                             "Premium plugins (SEO, forms, security, backups, cache): $500 to $2,000/year",
                             "Developer maintenance (updates, conflict fixes, crash recovery): $1,200 to $4,800/year",
                             "Security tools (Wordfence Premium, Sucuri): $200 to $600/year",
-                            "Theme licenses (Avada, Divi, Elementor Pro): $89 to $299/year",
+                            "Theme licenses (Avada, Divi, Elementor Pro: the builders that cap PageSpeed at 50 to 60): $89 to $299/year",
                             "Total: $2,300 to $8,900/year"
                         ]} />
                         <BlogText>
@@ -218,7 +218,7 @@ export default function WordPressKillerPage() {
 
                         <BlogHeader>Why Are WordPress Plugins the Biggest Hidden Cost?</BlogHeader>
                         <BlogText>
-                            The average WordPress business site runs 22 active plugins. Here&apos;s what nobody tells you about each one:
+                            The average WordPress business site runs <Link href="/blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline">22 active plugins that destroy speed</Link>. Here&apos;s what nobody tells you about each one:
                         </BlogText>
                         <BlogList items={[
                             "Every plugin adds 2 to 15 HTTP requests per page load",
@@ -243,17 +243,17 @@ export default function WordPressKillerPage() {
                             "3-Year Total: $8,100 to $18,300"
                         ]} />
                         <BlogText>
-                            Meanwhile, a custom Next.js site built for $15,000 to $25,000 costs $0 to $500/year to run after launch. By Year 2 the gap closes. <a href="/blog/wordpress-vs-custom-code-real-cost-3-years" className="text-cognac hover:underline">By Year 3, the custom site is cheaper</a>. Every year after.
+                            Meanwhile, a custom Next.js site from $1,500+ Starter, $3,500+ Growth, or $5,000 to $10,000+ Scale costs $0 to $500/year to run after launch. By Year 2 the gap closes. <Link href="/blog/wordpress-migration-cost" className="text-cognac hover:underline">By Year 3, the custom site is cheaper</Link>. Every year after. For the page-builder-specific SEO damage, see <Link href="/blog/elementor-kills-seo" className="text-cognac hover:underline">how Elementor kills SEO</Link> and <Link href="/blog/divi-theme-slow" className="text-cognac hover:underline">why Divi themes run slow</Link>.
                         </BlogText>
 
                         {/* Mid-Article CTA */}
-                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Is WordPress holding your business back right now?</p>
                             <p className="text-stone-600 mb-4 text-sm">Drop your URL when you book. We run your PageSpeed live on the call, compare it against what custom Next.js delivers, and give you a fixed migration quote on the spot.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free WordPress Cost Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
                             <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                              <p className="text-sm text-stone-700 mt-1">$500 for a complete WordPress migration. Fixed price. Done in weeks. 30% upfront, the rest after the site is live and you&apos;ve tested everything. No monthly costs after that. Ever.</p>
+                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                              <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                             </div>
                         </div>
 
@@ -306,15 +306,15 @@ export default function WordPressKillerPage() {
                     </div>
 
                     {/* Bottom CTA */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">See the Real Cost of Your WordPress Site</h3>
                         <p className="text-stone-600 mb-6">
                             Free audit: We calculate your direct WordPress costs plus revenue you&apos;re losing from slow speed, no obligation.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Book Free Cost Audit <ArrowRight className="w-5 h-5" /></CalModalButton>
                         <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                          <p className="text-sm text-stone-700 mt-1">$500 for a complete WordPress migration. Fixed price. Done in weeks. 30% upfront, the rest after the site is live and you&apos;ve tested everything. No monthly costs after that. Ever.</p>
+                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                          <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                         </div>
                     </div>
 
@@ -322,10 +322,10 @@ export default function WordPressKillerPage() {
                     <section className="mb-10">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>WordPress costs 3-5x more than most owners think</strong>, when you add hosting, plugins, maintenance, security tools, and developer emergencies, the real annual cost is $2,300-$8,900.</li>
+                            <li><strong>WordPress costs 3 to 5x more than most owners think</strong>, when you add hosting, plugins, maintenance, security tools, and developer emergencies, the real annual cost is $2,300 to $8,900.</li>
                             <li><strong>Plugin conflicts and security incidents erase years of savings</strong>: A single WooCommerce update breaking 4 plugins cost one client $5,000 in downtime and emergency fixes.</li>
-                            <li><strong>The biggest hidden cost is lost revenue from slow speed</strong>: A PageSpeed score of 41/100 means you are losing 20-30% of organic traffic to faster competitors every single month.</li>
-                            <li><strong>A custom Next.js site pays for itself by Year 2-3</strong>: The one-time build cost is higher, but $0/year hosting and zero maintenance means the total 3-year cost is lower than WordPress.</li>
+                            <li><strong>The biggest hidden cost is lost revenue from slow speed</strong>: A PageSpeed score of 41/100 means you are losing 20 to 30% of organic traffic to faster competitors every single month.</li>
+                            <li><strong>A custom Next.js site pays for itself by Year 2 or 3</strong>: The one-time build cost is higher, but $0/year hosting and zero maintenance means the total 3-year cost is lower than WordPress.</li>
                         </ol>
                     </section>
 

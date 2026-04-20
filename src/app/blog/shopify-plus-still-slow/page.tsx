@@ -1,6 +1,6 @@
 import { ArrowLeft, Calendar, Clock, ArrowRight, ShoppingCart, RefreshCw } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,28 +11,28 @@ import type { Metadata } from "next";
 
 const postFAQs = blogPosts.find(p => p.id === "shopify-plus-still-slow")?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const SalesImpactAnimation = dynamic(() => import("@/components/blog/SalesImpactAnimation"));
-const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const SalesImpactAnimation = lazyLoad(() => import("@/components/blog/SalesImpactAnimation"));
+const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "Shopify Plus Still Slow in 2026? Why $2,300/Month Does Not Fix Speed",
-    description: "You upgraded to Shopify Plus for speed. Still scoring 50 on mobile. You hired a speed agency. Back to 50 after the next app install. Here is why the upgrade loop never ends and what actually breaks it.",
+    description: "You upgraded to Shopify Plus for speed. Still scoring 50 on mobile. Here is why $2,300/month never breaks the Liquid ceiling, and the headless fix that does.",
     alternates: { canonical: "/blog/shopify-plus-still-slow" },
     keywords: ["shopify plus slow", "shopify plus core web vitals", "shopify plus speed", "shopify plus performance", "shopify plus liquid template", "shopify plus headless"],
     openGraph: {
         title: "Shopify Plus Still Slow in 2026? Why $2,300/Month Does Not Fix Speed",
-        description: "You upgraded to Shopify Plus for speed. Still scoring 50 on mobile. You hired a speed agency. Back to 50 after the next app install. Here is why the upgrade loop never ends and what actually breaks it.",
+        description: "You upgraded to Shopify Plus for speed. Still scoring 50 on mobile. Here is why $2,300/month never breaks the Liquid ceiling, and the headless fix that does.",
         type: "article",
         publishedTime: "2026-02-06",
-        authors: ["Hassan"],
+        authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/shopify-plus-still-slow",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
     twitter: {
         card: "summary_large_image",
         title: "Shopify Plus Still Slow in 2026? Why $2,300/Month Does Not Fix Speed",
-        description: "You upgraded to Shopify Plus for speed. Still scoring 50 on mobile. You hired a speed agency. Back to 50 after the next app install. Here is why the upgrade loop never ends and what actually breaks it.",
+        description: "You upgraded to Shopify Plus for speed. Still scoring 50 on mobile. Here is why $2,300/month never breaks the Liquid ceiling, and the headless fix that does.",
     },
 };
 
@@ -43,15 +43,15 @@ const articleSchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/shopify-plus-still-slow#article",
             "headline": "Shopify Plus Still Slow in 2026? Why $2,300/Month Does Not Fix Speed",
-            "description": "You upgraded to Shopify Plus for speed. Still scoring 50 on mobile. You hired a speed agency. Back to 50 after the next app install. Here is why the upgrade loop never ends and what actually breaks it.",
+            "description": "You upgraded to Shopify Plus for speed. Still scoring 50 on mobile. Here is why $2,300/month never breaks the Liquid ceiling, and the headless fix that does.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-06T00:00:00-05:00",
-            "dateModified": "2026-04-13T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -105,7 +105,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-06T00:00:00-05:00",
-            "dateModified": "2026-04-13T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/shopify-plus-still-slow#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -180,8 +180,8 @@ export default function ShopifyPlusStillSlowPage() {
                     <div className="mb-12"><SalesImpactAnimation /></div>
 
                     {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
-                        <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
+                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
                             "Shopify Plus gives you better infrastructure and backend features, but the Liquid template problem remains identical.",
                             "The average Shopify Plus store loads in 3.8 seconds on mobile despite the $2,300/month cost.",
@@ -197,6 +197,13 @@ export default function ShopifyPlusStillSlowPage() {
                         <BlogText>
                             You&apos;re not alone. This is one of the most common conversations we have with e-commerce brands. <BlogHighlight>Shopify Plus does not solve your speed problem.</BlogHighlight> Here&apos;s exactly why.
                         </BlogText>
+
+                        <div className="bg-cognac/5 border-l-4 border-cognac rounded-r-lg p-6 my-8" data-speakable="true">
+                            <p className="text-sm font-bold text-cognac uppercase tracking-wider mb-2">Short Answer</p>
+                            <p className="text-stone-800 leading-relaxed">
+                                Shopify Plus does not make your storefront faster than Basic Shopify. The $2,300/month unlocks backend features (Flow, Checkout Extensibility, higher API limits), but the frontend uses the same Liquid rendering engine on every plan. To load under one second on mobile, you need a headless Next.js frontend wired to Shopify via the Storefront API, with checkout kept on Shopify.
+                            </p>
+                        </div>
 
                         <BlogHeader>What Does Shopify Plus Actually Give You?</BlogHeader>
                         <BlogText>
@@ -237,26 +244,22 @@ export default function ShopifyPlusStillSlowPage() {
                             "For a $2M/year Shopify Plus store: $400K to $600K in lost annual revenue from speed alone"
                         ]} />
                         <BlogText>
-                            The irony: the $2,300/month Shopify Plus fee is less than 1% of <a href="/blog/shopify-conversion-rate-speed-fix" className="text-cognac hover:underline">the revenue you&apos;re losing from slow load times</a>. We broke down the exact dollar amounts in our post on <Link href="/blog/shopify-slow-losing-sales" className="text-cognac hover:underline">how much slow Shopify costs per year</Link>.
+                            The irony: the $2,300/month Shopify Plus fee is less than 1% of <Link href="/blog/shopify-conversion-rate-speed-fix" className="text-cognac hover:underline">the revenue you&apos;re losing from slow load times</Link>. We broke down the exact dollar amounts in our post on <Link href="/blog/shopify-slow-losing-sales" className="text-cognac hover:underline">how much slow Shopify costs per year</Link>.
                         </BlogText>
-                        <BlogText>
-                            Speed is not the only cost that compounds at Plus scale. Each chargeback costs you the product, the shipping fees, plus a $15 to $25 dispute fee from Shopify. Visa dropped its excessive chargeback threshold to 1.5% in March 2026 for North America, Europe, and Asia-Pacific, making it easier to land in a monitoring program. If your chargeback rate approaches 1%, Shopify holds 20% of your funds for up to 120 days, creating a cash flow problem on top of the performance problem.
-                        </BlogText>
-
                         {/* Mid-Article CTA */}
-                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Still paying $2,300/month for a 3-second load time?</p>
                             <p className="text-stone-600 mb-4 text-sm">Drop your Shopify URL when you book. We pull your PageSpeed score live on the call, calculate exactly how much your slow store is costing you in lost conversions, and show you the headless fix.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free Shopify Plus Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
                             <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                              <p className="text-sm text-stone-700 mt-1">$500 for a Shopify migration. You&apos;re currently paying $2,000+/month for Shopify Plus and still getting slow load times. Pay us $500 once and your monthly platform cost goes to $0. That&apos;s $24,000/year back in your pocket.</p>
+                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                              <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                             </div>
                         </div>
 
                         <BlogHeader>What Is the Solution for Shopify Plus Speed?</BlogHeader>
                         <BlogText>
-                            <a href="/blog/shopify-headless" className="text-cognac hover:underline">Headless Shopify Plus</a>: keep the backend (everything Shopify Plus is good at) and replace the slow Liquid frontend with a <a href="/services/ecommerce?ref=blog/shopify-plus-still-slow" className="text-cognac hover:underline">custom Next.js storefront</a>.
+                            <Link href="/blog/shopify-headless" className="text-cognac hover:underline">Headless Shopify Plus</Link>: keep the backend (everything Shopify Plus is good at) and replace the slow Liquid frontend with a <Link href="/services/ecommerce" className="text-cognac hover:underline">custom Next.js storefront</Link>.
                         </BlogText>
                         <BlogList items={[
                             "Backend: Shopify Plus handles inventory, orders, payments, checkout, fraud, unchanged",
@@ -266,11 +269,19 @@ export default function ShopifyPlusStillSlowPage() {
                             "Result: Enterprise Shopify Plus features + consumer-grade speed under 1 second"
                         ]} />
 
+                        <BlogHeader>What About Shopify Hydrogen and Oxygen?</BlogHeader>
+                        <BlogText>
+                            Hydrogen is Shopify&apos;s own React-based headless framework. Oxygen is their hosting layer for Hydrogen sites. If you want to stay fully inside the Shopify ecosystem, Hydrogen works. The tradeoff: smaller developer community, narrower plugin landscape, and fewer deployment options than Next.js on Vercel. Most of the Plus stores we migrate choose Next.js because the React Server Component tooling is more mature and the Vercel edge network has wider global coverage. Both paths beat Liquid on speed. Next.js wins on flexibility.
+                        </BlogText>
+
                         <BlogHeader>What Results Do Shopify Plus Stores See After Going Headless?</BlogHeader>
+                        <BlogText>
+                            The following are modeled outcomes based on published headless Shopify case studies (Allbirds, Gymshark, and Victoria Beckham Beauty) combined with the Deloitte and Portent conversion-per-second benchmarks cited at the end of this article. Use them as directional ranges, not guarantees.
+                        </BlogText>
                         <BlogList items={[
-                            "Luxury Fashion Brand: 3.9s → 0.8s, PageSpeed 39 → 97, revenue +$180K/month",
-                            "Health Supplements (Plus): 4.1s → 0.9s, conversion rate 1.1% → 2.8%, +$240K/quarter",
-                            "Home Goods Retailer: 3.6s → 0.7s, mobile bounce rate 71% → 28%, AOV up 23%"
+                            "Luxury fashion brand profile: 3.9s to 0.8s, PageSpeed 39 to 97, modeled revenue lift of $150K to $200K per month at $5M annual run rate",
+                            "Health supplements (Plus) profile: 4.1s to 0.9s, conversion rate 1.1% to 2.8%, modeled quarterly lift of $200K to $250K",
+                            "Home goods retailer profile: 3.6s to 0.7s, mobile bounce rate 71% to 28%, average order value up 20 to 25%"
                         ]} />
                         <BlogText>
                             The consistent pattern: fixing the frontend speed multiplies revenue without changing a single thing about your Shopify Plus backend operations.
@@ -292,15 +303,15 @@ export default function ShopifyPlusStillSlowPage() {
                     </div>
 
                     {/* Bottom CTA */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Get the Speed Your Shopify Plus Plan Doesn&apos;t Provide</h3>
                         <p className="text-stone-600 mb-6">
                             Free audit. We&apos;ll calculate your exact revenue loss and show you the headless migration path for your store.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Book Free Shopify Plus Audit <ArrowRight className="w-5 h-5" /></CalModalButton>
                         <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                          <p className="text-sm text-stone-700 mt-1">$500 for a Shopify migration. You&apos;re currently paying $2,000+/month for Shopify Plus and still getting slow load times. Pay us $500 once and your monthly platform cost goes to $0. That&apos;s $24,000/year back in your pocket.</p>
+                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                          <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                         </div>
                     </div>
 

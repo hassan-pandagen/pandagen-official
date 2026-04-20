@@ -1,6 +1,6 @@
 import { ArrowLeft, ArrowRight, CheckCircle2, AlertTriangle, DollarSign, TrendingUp, XCircle, Scale } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,9 +11,9 @@ import type { Metadata } from "next";
 
 const rebuildCostFAQs = blogPosts.find(p => p.id === "website-rebuild-cost-2026")?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
-const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: { absolute: "Website Rebuild Cost 2026: Honest Pricing From $2,000 to $250,000" },
@@ -66,7 +66,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -236,7 +236,7 @@ export default function WebsiteRebuildCost2026Page() {
                     <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
                         <table className="w-full text-sm border-collapse min-w-[560px] responsive-stack-table">
                             <thead>
-                                <tr className="bg-stone-50 border border-stone-200">
+                                <tr className="bg-stone-50 border border-stone-300">
                                     <th className="text-left p-3 font-semibold text-stone-700">Who builds it</th>
                                     <th className="text-left p-3 font-semibold text-stone-700">Typical scope</th>
                                     <th className="text-right p-3 font-semibold text-cognac">Cost range</th>
@@ -284,7 +284,7 @@ export default function WebsiteRebuildCost2026Page() {
                     <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
                         <table className="w-full text-sm border-collapse min-w-[560px] responsive-stack-table">
                             <thead>
-                                <tr className="bg-stone-50 border border-stone-200">
+                                <tr className="bg-stone-50 border border-stone-300">
                                     <th className="text-left p-3 font-semibold text-stone-700">You need a...</th>
                                     <th className="text-left p-3 font-semibold text-stone-700">If this is true</th>
                                     <th className="text-right p-3 font-semibold text-cognac">Cost range</th>
@@ -388,7 +388,7 @@ export default function WebsiteRebuildCost2026Page() {
                     <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
                         <table className="w-full text-sm border-collapse min-w-[560px] responsive-stack-table">
                             <thead>
-                                <tr className="bg-stone-50 border border-stone-200">
+                                <tr className="bg-stone-50 border border-stone-300">
                                     <th className="text-left p-3 font-semibold text-stone-700">Migrating from</th>
                                     <th className="text-right p-3 font-semibold text-cognac">Typical cost</th>
                                     <th className="text-left p-3 font-semibold text-stone-700">Why</th>
@@ -411,7 +411,7 @@ export default function WebsiteRebuildCost2026Page() {
                     </BlogText>
 
                     {/* Mid-Article CTA */}
-                    <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                    <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                         <p className="font-bold text-charcoal mb-2">Want a fixed-price rebuild quote on your site in 24 hours?</p>
                         <p className="text-stone-600 mb-4 text-sm">Drop your URL when you book. I review your current site, scope the rebuild live on the call, and give you a fixed-price quote with full line-item breakdown before we hang up. No hourly billing, no discovery phase invoice.</p>
                         <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-cognac transition-all">
@@ -564,7 +564,7 @@ export default function WebsiteRebuildCost2026Page() {
                     </BlogText>
 
                     {/* Bottom CTA */}
-                    <div className="my-10 p-8 bg-charcoal text-white rounded-2xl text-center">
+                    <div className="my-6 md:my-10 p-8 bg-charcoal text-white rounded-2xl text-center">
                         <TrendingUp className="w-8 h-8 text-cognac mx-auto mb-3" />
                         <p className="font-bold text-xl mb-2">Get a Fixed-Price Rebuild Quote</p>
                         <p className="text-stone-300 mb-5 text-sm max-w-md mx-auto">Book a 30-minute call. I audit your current site, scope the rebuild live, and hand you a fixed-price quote with full line-item breakdown before we hang up. Free, no discovery invoice, 24-hour turnaround if I need more info.</p>

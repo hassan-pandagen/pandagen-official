@@ -84,9 +84,9 @@ export default function PageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-4 leading-tight"
           >
-            WooCommerce Migration. <br />
+            MyCustomPatches ran on WooCommerce. <br />
             <span className="font-serif italic text-cognac">
-              From $500. 3 weeks. 95+ PageSpeed.
+              We took their PageSpeed from 42 to 97. Yours is next.
             </span>
           </motion.h1>
 

@@ -54,7 +54,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -70,7 +70,7 @@ const articleSchema = {
             "articleSection": "Performance",
             "keywords": ["gohighlevel migration", "ghl website migration", "gohighlevel slow website", "ghl custom website", "gohighlevel pagespeed"],
             "timeRequired": "PT10M",
-            "wordCount": 2200,
+            "wordCount": 1850,
             "about": [
                 { "@type": "Thing", "name": "GoHighLevel", "description": "An all-in-one marketing platform for agencies with CRM, automation, and website builder features" },
                 { "@type": "Thing", "name": "Website Performance Optimization", "description": "Technical improvements to reduce page load time and improve Core Web Vitals scores" },
@@ -128,13 +128,7 @@ const articleSchema = {
         {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/blog/gohighlevel-migration#faq",
-            "mainEntity": [
-                { "@type": "Question", "name": "Can I keep using GoHighLevel if I get a custom website?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. GHL stays as your CRM, automation, and pipeline tool. The custom site replaces only the front end that your visitors and Google see." } },
-                { "@type": "Question", "name": "How much does it cost to migrate from GoHighLevel?", "acceptedAnswer": { "@type": "Answer", "text": "Our founder's offer is $500 for a complete front end rebuild. 30% upfront, the rest after the site is live and tested. No hourly billing, no surprise fees." } },
-                { "@type": "Question", "name": "Will I lose my GHL automations and workflows?", "acceptedAnswer": { "@type": "Answer", "text": "No. Your automations, email sequences, pipelines, and contacts stay exactly where they are. We only replace the website layer." } },
-                { "@type": "Question", "name": "How long does a GHL website migration take?", "acceptedAnswer": { "@type": "Answer", "text": "3 to 4 weeks from kickoff to launch. We handle the build, testing, DNS transfer, and redirect mapping." } },
-                { "@type": "Question", "name": "What PageSpeed score will my new site get?", "acceptedAnswer": { "@type": "Answer", "text": "We guarantee 95 to 100 on Google PageSpeed. Every site we build hits that benchmark. If it doesn't score 95+, you don't pay." } }
-            ]
+            "mainEntity": ghlMigrationFAQs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
         }
     ]
 };
@@ -183,13 +177,13 @@ export default function GoHighLevelMigrationPage() {
                         <BlogAuthor
                             date="Apr 3, 2026"
                             readTime="10 min read"
-                            bio="Hassan has migrated dozens of businesses off slow website builders onto custom-coded sites that score 95 to 100 on PageSpeed. Every build comes with a speed guarantee."
+                            bio="Hassan builds custom Next.js front ends that score 95 to 100 on PageSpeed. Recent receipt: a chiropractor client went from PageSpeed 23 to 98 and saw a 41% lift in leads. Every build comes with a speed guarantee."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
 
                     {/* Short hook */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12">
                         <p className="text-stone-700 leading-relaxed">
                             GoHighLevel is a powerful CRM. But its website builder is costing you leads, ad spend, and search rankings. This post breaks down exactly why, what it costs you in real dollars, and how to fix it without leaving GHL. Key takeaways at the bottom.
                         </p>
@@ -298,15 +292,15 @@ export default function GoHighLevelMigrationPage() {
                         </BlogText>
 
                         {/* Mid-Article CTA */}
-                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Want to see what your GHL site actually scores?</p>
                             <p className="text-stone-600 mb-4 text-sm">Book a free 15-minute speed audit. We will run your PageSpeed score live, show you exactly where the bottlenecks are, and map out what a fast front end would look like for your business.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                 Schedule Free Speed Audit <ArrowRight className="w-4 h-4" />
                             </CalModalButton>
                             <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                                <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                                <p className="text-sm text-stone-700 mt-1">$500 for a complete GHL front end rebuild. You pay once. No $297/month platform fee for the website. No usage charges. No monthly bills ever again. We build it, you own it, you keep it.</p>
+                                <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                                <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                             </div>
                         </div>
 
@@ -352,7 +346,7 @@ export default function GoHighLevelMigrationPage() {
                             "Google Ads Quality Score of 7 to 10 instead of 2 to 4. Lower cost per click, better ad positions, more leads for the same budget.",
                             "Forms that submit directly into your GoHighLevel CRM. Same automations, same pipelines, same workflows. Zero disruption.",
                             "Full control over your design. No template limitations. No GHL editor restrictions. Your site looks exactly the way you want it to look.",
-                            "Your own hosting. No shared infrastructure. No slowdowns when USA wakes up. Your site performs the same at 3 AM and 3 PM."
+                            "Your own hosting. No shared infrastructure. No slowdowns when US traffic peaks. Your site performs the same at 3 AM and 3 PM."
                         ]} />
 
                         <BlogText>
@@ -401,7 +395,7 @@ export default function GoHighLevelMigrationPage() {
                         </BlogText>
 
                         {/* Key Takeaways */}
-                        <section className="my-10" data-speakable="true">
+                        <section className="my-6 md:my-10" data-speakable="true">
                             <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                             <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
                                 <li><strong>GHL websites score 35 to 47 on mobile PageSpeed</strong>: A blank page scores 80. The platform uses shared infrastructure, injects unused fonts, and has no staging environment. No optimization setting fixes this.</li>
@@ -414,7 +408,7 @@ export default function GoHighLevelMigrationPage() {
                     </div>
 
                     {/* Bottom CTA */}
-                    <div className="bg-charcoal rounded-lg p-8 mt-16 text-center">
+                    <div className="bg-charcoal rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4 text-white">Ready to Fix Your GHL Website Speed?</h3>
                         <p className="text-stone-300 mb-6">
                             Get a free speed audit. We will run your GHL site through PageSpeed, show you the exact bottlenecks, and map out what a 95+ scoring front end looks like for your business. Keep GHL for everything it does well. Just replace the slow website.
@@ -423,15 +417,15 @@ export default function GoHighLevelMigrationPage() {
                             Schedule Free Audit <ArrowRight className="w-5 h-5" />
                         </CalModalButton>
                         <div className="mt-4 p-4 bg-white/10 border border-white/20 rounded-xl">
-                            <p className="text-sm font-bold text-white">FOUNDER&apos;S OFFER: $500 Migration</p>
-                            <p className="text-sm text-stone-300 mt-1">$500 for a complete GHL front end rebuild. You pay once. No $297/month platform fee for the website. No usage charges. No monthly bills ever again. We build it, you own it, you keep it.</p>
+                            <p className="text-sm font-bold text-white">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                            <p className="text-sm text-stone-300 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                         </div>
                     </div>
 
                     {/* FAQ Section */}
                     {ghlMigrationFAQs.length > 0 && <FAQAccordion faqs={ghlMigrationFAQs} />}
 
-                    <section className="mb-10 mt-10">
+                    <section className="mb-10 mt-6 md:mt-10">
                         <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
                         <p className="text-stone-700 leading-relaxed">For the full data on why GHL sites score so low, read <Link href="/blog/gohighlevel-website-speed" className="text-cognac hover:underline font-medium">why GoHighLevel sites score 20 to 45 on PageSpeed</Link>. For the broader benchmark, see <Link href="/blog/core-web-vitals-explained" className="text-cognac hover:underline font-medium">Core Web Vitals explained for business owners</Link>.</p>
                     </section>

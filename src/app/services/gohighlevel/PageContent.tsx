@@ -71,9 +71,9 @@ export default function PageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-4 leading-tight"
           >
-            Keep GHL. Upgrade <br />
+            Keep GHL. Upgrade your website. <br />
             <span className="font-serif italic text-cognac">
-              Your Website.
+              We took one chiropractor from PageSpeed 23 to 98. +41% leads.
             </span>
           </motion.h1>
 

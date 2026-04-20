@@ -66,8 +66,8 @@ export default function ManifestoPage() {
             <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-cognac mb-4">The PandaCodeGen Manifesto</p>
 
             <h1 className="text-[2.5rem] md:text-[4.5rem] font-bold text-charcoal leading-[1.05] tracking-[-0.025em] mb-6">
-              We don&apos;t build websites. <br />
-              <span className="font-serif italic text-cognac">We build receipts.</span>
+              Speed is a contract. <br />
+              <span className="font-serif italic text-cognac">Not a marketing claim.</span>
             </h1>
 
             <p className="text-lg md:text-xl text-stone-600 mb-12 leading-[1.7] font-medium" data-speakable="true">

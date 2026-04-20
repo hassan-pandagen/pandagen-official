@@ -1,6 +1,6 @@
 import { ArrowLeft, Calendar, Clock, ArrowRight, RefreshCw } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,13 +11,13 @@ import type { Metadata } from "next";
 
 const dawnFAQs = blogPosts.find(p => p.id === 'shopify-dawn-theme-slow')?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
-const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "Shopify Dawn Theme Slow? How We Fixed It From 42 to 97 (2026)",
-    description: "You optimize Dawn to 75. Then you add one app and it drops to 50 again. Here is why that loop never ends, the fixes that help, and the one approach that stays at 95+ no matter how many tools you add.",
+    description: "You optimize Dawn to 75. Add one app and it drops to 50. Why the loop never ends and the one approach that stays at 95+.",
     alternates: {
         canonical: "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow",
     },
@@ -25,17 +25,17 @@ export const metadata: Metadata = {
     robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
         title: "Shopify Dawn Theme Slow? How We Fixed It From 42 to 97 (2026)",
-        description: "You optimize Dawn to 75. Then you add one app and it drops to 50 again. Here is why that loop never ends, the fixes that help, and the one approach that stays at 95+ no matter how many tools you add.",
+        description: "You optimize Dawn to 75. Add one app and it drops to 50. Why the loop never ends and the one approach that stays at 95+.",
         type: "article",
         publishedTime: "2026-03-07",
-        authors: ["Hassan"],
+        authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
     twitter: {
         card: "summary_large_image",
         title: "Shopify Dawn Theme Slow? How We Fixed It From 42 to 97 (2026)",
-        description: "You optimize Dawn to 75. Then you add one app and it drops to 50 again. Here is why that loop never ends, the fixes that help, and the one approach that stays at 95+ no matter how many tools you add.",
+        description: "You optimize Dawn to 75. Add one app and it drops to 50. Why the loop never ends and the one approach that stays at 95+.",
     },
 };
 
@@ -46,7 +46,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow#article",
             "headline": "Shopify Dawn Theme Slow? How We Fixed It From 42 to 97 (2026)",
-            "description": "You optimize Dawn to 75. Then you add one app and it drops to 50 again. Here is why that loop never ends, the fixes that help, and the one approach that stays at 95+ no matter how many tools you add.",
+            "description": "You optimize Dawn to 75. Add one app and it drops to 50. Why the loop never ends and the one approach that stays at 95+.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-07T00:00:00-05:00",
             "dateModified": "2026-04-13T00:00:00-05:00",
@@ -54,7 +54,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -132,13 +132,7 @@ const articleSchema = {
         {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow#faq",
-            "mainEntity": [
-                { "@type": "Question", "name": "Why is my Shopify Dawn theme slow?", "acceptedAnswer": { "@type": "Answer", "text": "Dawn is Shopify's fastest default theme, but it still loads in 2.5 to 4 seconds on most stores because of third-party apps injecting scripts, Liquid template rendering on every request, large unoptimized hero images, and Shopify's own checkout scripts. The theme isn't the bottleneck. Shopify's architecture is." } },
-                { "@type": "Question", "name": "What PageSpeed score does Shopify Dawn get?", "acceptedAnswer": { "@type": "Answer", "text": "A basic Dawn store with no apps typically scores 65 to 80/100 on mobile. Add 3 to 5 apps and that drops to 35 to 55/100. No amount of theme optimization fixes app script bloat, those scripts load regardless of which theme you use." } },
-                { "@type": "Question", "name": "How can I speed up my Shopify Dawn theme?", "acceptedAnswer": { "@type": "Answer", "text": "You can compress images, remove unused apps, disable non-critical scripts, and use a Shopify speed optimization app. This typically improves your score by 10 to 20 points but you'll hit a ceiling at 70 to 75/100 because Shopify's Liquid rendering and checkout scripts can't be removed." } },
-                { "@type": "Question", "name": "Is Shopify Dawn better than other Shopify themes for speed?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, Dawn is the fastest Shopify theme by default. But even Dawn scores 25 to 40 points lower than a custom Next.js storefront. If you need 90 to 100/100 PageSpeed, you need to move beyond Shopify's theme system entirely." } },
-                { "@type": "Question", "name": "Should I switch from Shopify Dawn to a custom headless build?", "acceptedAnswer": { "@type": "Answer", "text": "If your store does $30K+/month and your PageSpeed mobile score is below 60, the ROI on going headless is significant. A 1-second improvement increases conversions 7 to 12%. For a $30K/month store, that's $2,100 to $3,600/month recovered. Most headless builds pay for themselves in 6 to 9 months." } }
-            ]
+            "mainEntity": dawnFAQs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
         }
     ]
 };
@@ -197,8 +191,8 @@ export default function ShopifyDawnThemeSlowPage() {
                     </div>
 
                     {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
-                        <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
+                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
                             "Dawn is Shopify's fastest theme, but 'fastest Shopify theme' and 'fast website' are not the same thing.",
                             "A clean Dawn store scores 65 to 80/100 on mobile. Add 5 apps and you're at 35 to 55/100.",
@@ -309,7 +303,7 @@ export default function ShopifyDawnThemeSlowPage() {
                         </BlogText>
 
                         {/* Mid CTA */}
-                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Is Dawn the fastest your store will ever get?</p>
                             <p className="text-stone-600 mb-4 text-sm">Drop your store URL when you book. We run your real PageSpeed ceiling live on the call and quote a custom storefront that actually breaks past 90/100. Takes 30 minutes.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
@@ -333,8 +327,8 @@ export default function ShopifyDawnThemeSlowPage() {
                             <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-50">
-                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Store Configuration</th>
-                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Mobile PageSpeed Score</th>
+                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">Store Configuration</th>
+                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">Mobile PageSpeed Score</th>
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-stone-100">
@@ -381,9 +375,9 @@ export default function ShopifyDawnThemeSlowPage() {
                             <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-50">
-                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Optimization</th>
-                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Works?</th>
-                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Impact</th>
+                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">Optimization</th>
+                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">Works?</th>
+                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">Impact</th>
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-stone-100">
@@ -533,7 +527,7 @@ export default function ShopifyDawnThemeSlowPage() {
                     </div>
 
                     {/* Bottom CTA */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Find out what your store is actually losing</h3>
                         <p className="text-stone-600 mb-4">
                             Every week your store runs at 45/100 PageSpeed is another week faster competitors are taking conversions that should be yours.
@@ -545,8 +539,8 @@ export default function ShopifyDawnThemeSlowPage() {
                                 Book Free Store Audit <ArrowRight className="w-5 h-5" />
                             </CalModalButton>
                         <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                          <p className="text-sm text-stone-700 mt-1">$500 for a complete Shopify migration. No more paying $100 to $500/month in app subscriptions. No more transaction fees on top of transaction fees. You pay once, your store loads in under 1 second, and your monthly platform cost drops to $0.</p>
+                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                          <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                         </div>
                     </div>
 

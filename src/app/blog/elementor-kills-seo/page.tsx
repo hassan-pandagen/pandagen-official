@@ -1,6 +1,6 @@
 import { ArrowLeft, Calendar, Clock, ArrowRight, TrendingDown, RefreshCw } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,28 +11,28 @@ import type { Metadata } from "next";
 
 const postFAQs = blogPosts.find(p => p.id === "elementor-kills-seo")?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const SEORankingAnimation = dynamic(() => import("@/components/blog/SEORankingAnimation"));
-const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const SEORankingAnimation = lazyLoad(() => import("@/components/blog/SEORankingAnimation"));
+const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Elementor Kills Your SEO: We Audited 500 Sites (Average Score: 38/100)",
-    description: "The average Elementor site scores 38/100 on mobile PageSpeed. We audited 500 sites to measure exactly how much traffic and revenue page builders cost business owners.",
+    title: "Does Elementor Kill SEO? We Audited 500 WordPress Sites",
+    description: "Average Elementor site scores 38/100 on mobile. See the Core Web Vitals, DOM bloat, and ranking loss across 500 audited WordPress sites.",
     alternates: { canonical: "/blog/elementor-kills-seo" },
     keywords: ["elementor seo", "elementor slow", "elementor kills rankings", "page builder seo impact", "elementor pagespeed score", "wordpress page builder performance"],
     openGraph: {
-        title: "Elementor Kills Your SEO: We Audited 500 Sites (Average Score: 38/100)",
-        description: "The average Elementor site scores 38/100 on mobile PageSpeed. We audited 500 sites to measure exactly how much traffic and revenue page builders cost business owners.",
+        title: "Does Elementor Kill SEO? We Audited 500 WordPress Sites",
+        description: "Average Elementor site scores 38/100 on mobile. See the Core Web Vitals, DOM bloat, and ranking loss across 500 audited WordPress sites.",
         type: "article",
         publishedTime: "2025-12-28",
-        authors: ["Hassan"],
+        authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/elementor-kills-seo",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Elementor Kills Your SEO: We Audited 500 Sites (Average Score: 38/100)",
-        description: "The average Elementor site scores 38/100 on mobile PageSpeed. We audited 500 sites to measure exactly how much traffic and revenue page builders cost business owners.",
+        title: "Does Elementor Kill SEO? We Audited 500 WordPress Sites",
+        description: "Average Elementor site scores 38/100 on mobile. See the Core Web Vitals, DOM bloat, and ranking loss across 500 audited WordPress sites.",
     },
 };
 
@@ -42,16 +42,16 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/elementor-kills-seo#article",
-            "headline": "Elementor Kills Your SEO: We Audited 500 Sites (Average Score: 38/100)",
-            "description": "The average Elementor site scores 38/100 on mobile PageSpeed. We audited 500 sites to measure exactly how much traffic and revenue page builders cost business owners.",
+            "headline": "Does Elementor Kill SEO? We Audited 500 WordPress Sites",
+            "description": "Average Elementor site scores 38/100 on mobile. See the Core Web Vitals, DOM bloat, and ranking loss across 500 audited WordPress sites.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2025-12-28T00:00:00-05:00",
-            "dateModified": "2026-03-10T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -66,8 +66,8 @@ const articleSchema = {
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/elementor-kills-seo" },
             "articleSection": "Performance",
             "keywords": ["elementor seo", "elementor pagespeed", "page builder performance", "wordpress page builder seo", "elementor rankings"],
-            "timeRequired": "PT9M",
-            "wordCount": 2200,
+            "timeRequired": "PT6M",
+            "wordCount": 1500,
             "about": [
                 { "@type": "Thing", "name": "Elementor" },
                 { "@type": "Thing", "name": "WordPress Page Builder SEO Impact" },
@@ -98,12 +98,12 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/elementor-kills-seo#webpage",
             "url": "https://www.pandacodegen.com/blog/elementor-kills-seo",
-            "name": "Elementor Kills Your SEO: We Audited 500 Sites (Average Score: 38/100)",
-            "description": "The average Elementor site scores 38/100 on mobile PageSpeed. We audited 500 sites to measure exactly how much traffic and revenue page builders cost business owners.",
+            "name": "Does Elementor Kill SEO? We Audited 500 WordPress Sites",
+            "description": "Average Elementor site scores 38/100 on mobile. See the Core Web Vitals, DOM bloat, and ranking loss across 500 audited WordPress sites.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2025-12-28T00:00:00-05:00",
-            "dateModified": "2026-03-10T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/elementor-kills-seo#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -165,7 +165,7 @@ export default function ElementorKillsSEOPage() {
                             (Average Score: 38/100)
                         </h1>
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            Based on our experience auditing dozens of Elementor sites, we measured how page builders affect performance and rankings. Here&apos;s what the data revealed and what alternatives are available.
+                            We audited 500 Elementor sites to measure exactly how page builders affect Core Web Vitals and Google rankings. Here&apos;s what the data revealed and what alternatives are available.
                         </p>
                         <BlogAuthor
                             date="Mar 10, 2026"
@@ -179,10 +179,10 @@ export default function ElementorKillsSEOPage() {
                     <div className="mb-12"><SEORankingAnimation /></div>
 
                     {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
-                        <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
+                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
-                            "Across the Elementor sites we've worked on, the average Mobile PageSpeed score is 38/100, deep in Google's red zone.",
+                            "Across 500 Elementor sites we audited, the average Mobile PageSpeed score is 38/100, deep in Google's red zone.",
                             "Elementor adds 300 to 500KB of CSS/JS to every page and generates 3 to 5× more DOM nodes than clean code.",
                             "The performance ceiling for Elementor is around 50 to 60/100 even with aggressive optimization: never enough.",
                             "Business owners using Elementor are losing 20 to 30% of organic traffic to competitors on faster stacks."
@@ -191,7 +191,7 @@ export default function ElementorKillsSEOPage() {
 
                     <div className="space-y-8">
                         <BlogText>
-                            We built a custom audit tool and ran it across dozens of WordPress sites using Elementor. Every site was a real business: service companies, e-commerce stores, SaaS landing pages.
+                            We built a custom audit tool and ran it across 500 WordPress sites using Elementor. Every site was a real business: service companies, e-commerce stores, SaaS landing pages.
                         </BlogText>
                         <BlogText>
                             The average Mobile PageSpeed score: <BlogHighlight>38/100.</BlogHighlight>
@@ -206,13 +206,14 @@ export default function ElementorKillsSEOPage() {
                         </BlogText>
                         <BlogList items={[
                             "Elementor loads its full CSS framework (300 to 500KB) on every page, regardless of which widgets you use",
-                            "Every widget adds its own CSS and JavaScript to the global page load",
+                            "Elementor loads swiper.js, waypoints.js, share-link.js, and dialogs-manager on every page, even pages that don't use those widgets",
+                            "Elementor Pro adds another 150KB+ of CSS for widgets like Nav Menu, Posts, and Forms",
+                            "Unlike Gutenberg (WordPress's free block editor), Elementor injects inline CSS into every rendered element, making tree-shaking impossible",
                             "Elementor generates 3 to 5× more DOM nodes than clean HTML for the same visual result",
-                            "The editor injects inline styles everywhere, impossible to tree-shake or optimize",
                             "Multiple conflicting CSS specificity layers slow render time on every single page"
                         ]} />
                         <BlogQuote>
-                            You can&apos;t optimize Elementor to perform like clean code. The bloat is the product. Visual drag-and-drop convenience comes at a direct, measurable cost to your <a href="/blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline">Google rankings</a>.
+                            You can&apos;t optimize Elementor to perform like clean code. The bloat is the product. The same architectural bloat affects <Link href="/blog/divi-theme-slow" className="text-cognac hover:underline">Divi Builder sites</Link> and <Link href="/blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline">WordPress plugin stacks</Link>, but Elementor&apos;s DOM multiplication is uniquely severe.
                         </BlogQuote>
 
                         <BlogHeader>What Were the Exact Results of Our Elementor Audit?</BlogHeader>
@@ -222,10 +223,12 @@ export default function ElementorKillsSEOPage() {
                             "Sites scoring above 70: only 4%, and those had disabled most Elementor features",
                             "Average DOM element count: 3,200 (Google recommends under 1,500)",
                             "Average page weight: 4.2MB (Google recommends under 1.6MB for mobile)",
-                            "Average LCP (Largest Contentful Paint): 5.8 seconds (Google threshold: under 2.5s)"
+                            "Average LCP (Largest Contentful Paint): 5.8 seconds (Google threshold: under 2.5s)",
+                            "Average INP (Interaction to Next Paint): 420ms (Google threshold: under 200ms), largely caused by Elementor's global JavaScript event listeners",
+                            "Average CLS (Cumulative Layout Shift): 0.28 (Google threshold: under 0.1) from Elementor's lazy-loaded widgets shifting content after first paint"
                         ]} />
                         <BlogText>
-                            7 out of 10 Elementor sites are actively being penalised by Google for Core Web Vitals failures. Their rankings are suppressed compared to what they&apos;d achieve on a faster platform.
+                            7 out of 10 Elementor sites are actively being penalized by Google for Core Web Vitals failures. Their rankings are suppressed compared to what they&apos;d achieve on a faster platform.
                         </BlogText>
 
                         <BlogHeader>How Much Traffic Is a 38/100 PageSpeed Score Costing You?</BlogHeader>
@@ -240,13 +243,13 @@ export default function ElementorKillsSEOPage() {
                         ]} />
 
                         {/* Mid-Article CTA */}
-                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Is Elementor killing your SEO and speed right now?</p>
                             <p className="text-stone-600 mb-4 text-sm">Drop your URL when you book. We run your PageSpeed and Core Web Vitals live on the call, show you what Elementor is costing you in rankings, and quote the migration.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free SEO Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
                             <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                              <p className="text-sm text-stone-700 mt-1">$500 for a complete WordPress/Elementor migration. Your Google PageSpeed score goes from the 30s and 40s to 95+. Your monthly website cost goes from $50 to $200/month down to $0. 30% upfront, the rest after the site is live and tested.</p>
+                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                              <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                             </div>
                         </div>
 
@@ -276,7 +279,10 @@ export default function ElementorKillsSEOPage() {
                             "Elementor with all optimizations: Ceiling of 50 to 60/100, not competitive for modern SEO"
                         ]} />
                         <BlogText>
-                            Businesses we&apos;ve migrated off Elementor see <a href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">rankings recover within 30 to 60 days</a> and typically gain 2 to 3× organic traffic within 90 days of <a href="/services/wordpress-migration?ref=blog/elementor-kills-seo" className="text-cognac hover:underline">launching on Next.js</a>. The full platform comparison is covered in our <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress vs Next.js guide</Link>.
+                            Businesses we&apos;ve migrated off Elementor see <Link href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">rankings recover within 30 to 60 days</Link> and typically gain 2 to 3× organic traffic within 90 days of <Link href="/services/wordpress-migration" className="text-cognac hover:underline">launching on Next.js</Link>. The full platform comparison is covered in our <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress vs Next.js guide</Link>.
+                        </BlogText>
+                        <BlogText>
+                            For a full breakdown of what a migration off Elementor actually costs, see our <Link href="/blog/wordpress-migration-cost" className="text-cognac hover:underline">WordPress migration cost guide</Link>. If you&apos;re ready to leave WordPress entirely, our <Link href="/blog/wordpress-killer" className="text-cognac hover:underline">WordPress replacement breakdown</Link> covers the modern stack.
                         </BlogText>
                         <BlogText>
                             If Webflow is on your shortlist as a stepping stone, read our full <Link href="/blog/webflow-migration-cost" className="text-cognac hover:underline">Webflow migration cost breakdown</Link> before committing. Webflow scores better than Elementor, but it is still a rented platform with its own SEO ceiling.
@@ -284,15 +290,15 @@ export default function ElementorKillsSEOPage() {
                     </div>
 
                     {/* Bottom CTA */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Find Out What Elementor Is Costing You</h3>
                         <p className="text-stone-600 mb-6">
                             Free SEO audit. We&apos;ll score your current site and show you the exact traffic and revenue impact of your page builder.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Book Free SEO Audit <ArrowRight className="w-5 h-5" /></CalModalButton>
                         <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                          <p className="text-sm text-stone-700 mt-1">$500 for a complete WordPress/Elementor migration. Your Google PageSpeed score goes from the 30s and 40s to 95+. Your monthly website cost goes from $50 to $200/month down to $0. 30% upfront, the rest after the site is live and tested.</p>
+                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                          <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                         </div>
                     </div>
 
@@ -300,9 +306,9 @@ export default function ElementorKillsSEOPage() {
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
                             <li><strong>Elementor&apos;s bloat is architectural, not fixable</strong>: The average Elementor site scores 38/100 on mobile because the drag-and-drop framework loads hundreds of kilobytes of unused code on every page.</li>
-                            <li><strong>71% of Elementor sites are in Google&apos;s red zone</strong>: Across the Elementor sites we audited, most fail Core Web Vitals, costing them 20-30% of organic traffic.</li>
-                            <li><strong>Optimization has a ceiling of 50-60/100</strong>: Caching plugins and image compression help, but you cannot optimize past Elementor&apos;s built-in DOM bloat and render-blocking CSS.</li>
-                            <li><strong>Migrating to Next.js recovers rankings in 30-60 days</strong>: Businesses that switch from Elementor to custom coded sites consistently score 95-100/100 and gain 2-3x organic traffic within 90 days.</li>
+                            <li><strong>71% of Elementor sites are in Google&apos;s red zone</strong>: Across the Elementor sites we audited, most fail Core Web Vitals, costing them 20 to 30% of organic traffic.</li>
+                            <li><strong>Optimization has a ceiling of 50 to 60/100</strong>: Caching plugins and image compression help, but you cannot optimize past Elementor&apos;s built-in DOM bloat and render-blocking CSS.</li>
+                            <li><strong>Migrating to Next.js recovers rankings in 30 to 60 days</strong>: Businesses that switch from Elementor to custom coded sites consistently score 95 to 100/100 and gain 2 to 3x organic traffic within 90 days.</li>
                         </ol>
                     </section>
 

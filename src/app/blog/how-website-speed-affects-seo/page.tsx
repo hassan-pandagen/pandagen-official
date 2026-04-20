@@ -1,6 +1,6 @@
 import { ArrowLeft, ArrowRight, RefreshCw } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,29 +11,29 @@ import type { Metadata } from "next";
 
 const speedSEOFAQs = blogPosts.find(p => p.id === 'how-website-speed-affects-seo')?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const SEORankingAnimation = dynamic(() => import("@/components/blog/SEORankingAnimation"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const SEORankingAnimation = lazyLoad(() => import("@/components/blog/SEORankingAnimation"));
 
 export const metadata: Metadata = {
     title: "How Website Speed Affects SEO in 2026: Every 100ms Costs 1% in Revenue",
-    description: "A site loading in 1 second converts 3x better than one at 5 seconds. Google confirmed page speed is a ranking factor. Here is exactly how speed affects your revenue.",
+    description: "A site loading in 1 second converts 3x better than one at 5 seconds. Here is exactly how page speed affects your rankings and revenue.",
     alternates: {
         canonical: '/blog/how-website-speed-affects-seo',
     },
     keywords: ["how does website speed affect seo", "website speed seo ranking factor", "core web vitals seo", "page speed google ranking", "slow website seo impact", "website speed conversion rate", "core web vitals ranking 2026"],
     openGraph: {
         title: "How Website Speed Affects SEO in 2026: Every 100ms Costs 1% in Revenue",
-        description: "A site loading in 1 second converts 3x better than one at 5 seconds. Google confirmed page speed is a ranking factor. Here is exactly how speed affects your revenue.",
+        description: "A site loading in 1 second converts 3x better than one at 5 seconds. Here is exactly how page speed affects your rankings and revenue.",
         type: "article",
         publishedTime: "2026-03-09",
-        authors: ["Hassan"],
+        authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/how-website-speed-affects-seo",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
     twitter: {
         card: "summary_large_image",
         title: "How Website Speed Affects SEO in 2026: Every 100ms Costs 1% in Revenue",
-        description: "A site loading in 1 second converts 3x better than one at 5 seconds. Google confirmed page speed is a ranking factor. Here is exactly how speed affects your revenue.",
+        description: "A site loading in 1 second converts 3x better than one at 5 seconds. Here is exactly how page speed affects your rankings and revenue.",
     },
 };
 
@@ -44,15 +44,15 @@ const articleSchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/how-website-speed-affects-seo#article",
             "headline": "How Website Speed Affects SEO in 2026: Every 100ms Costs 1% in Revenue",
-            "description": "A site loading in 1 second converts 3x better than one at 5 seconds. Google confirmed page speed is a ranking factor. Here is exactly how speed affects your revenue.",
+            "description": "A site loading in 1 second converts 3x better than one at 5 seconds. Here is exactly how page speed affects your rankings and revenue.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-09T00:00:00-05:00",
-            "dateModified": "2026-03-10T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -68,7 +68,7 @@ const articleSchema = {
             "articleSection": "SEO",
             "keywords": ["website speed SEO", "Core Web Vitals ranking", "page speed ranking factor", "LCP SEO", "slow website Google ranking", "website speed conversion rate"],
             "timeRequired": "PT10M",
-            "wordCount": 3200,
+            "wordCount": 2400,
             "about": [
                 { "@type": "Thing", "name": "Website Speed" },
                 { "@type": "Thing", "name": "Search Engine Optimization" },
@@ -103,11 +103,11 @@ const articleSchema = {
             "@id": "https://www.pandacodegen.com/blog/how-website-speed-affects-seo#webpage",
             "url": "https://www.pandacodegen.com/blog/how-website-speed-affects-seo",
             "name": "How Website Speed Affects SEO: Real Data on Rankings and Revenue",
-            "description": "A site loading in 1 second converts 3x better than one at 5 seconds. Google confirmed page speed is a ranking factor. Here is exactly how speed affects your revenue.",
+            "description": "A site loading in 1 second converts 3x better than one at 5 seconds. Here is exactly how page speed affects your rankings and revenue.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-09T00:00:00-05:00",
-            "dateModified": "2026-03-10T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/how-website-speed-affects-seo#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -354,7 +354,7 @@ export default function WebsiteSpeedSEOPage() {
                             <Link href="/blog/shopify-dawn-theme-slow" className="text-stone-700 underline underline-offset-2 hover:text-black">why even Shopify's fastest theme still loads slowly</Link>.
                         </BlogHighlight>
                         <BlogText>
-                            The sites scoring 95 to 100/100 on mobile: the ones ranking above you on Google. Are almost always built on modern frameworks: Next.js, Astro, or similar. These frameworks pre-render pages at build time, serve them from edge CDN nodes with no server computation, and ship zero unnecessary JavaScript to the browser. There's no ceiling to optimise around because the architecture itself is fast.
+                            The sites scoring 95 to 100/100 on mobile, the ones ranking above you on Google, are almost always built on modern frameworks: Next.js, Astro, or similar. These frameworks pre-render pages at build time, serve them from edge CDN nodes with no server computation, and ship zero unnecessary JavaScript to the browser. There's no ceiling to optimise around because the architecture itself is fast.
                         </BlogText>
                     </section>
 

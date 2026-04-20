@@ -1,6 +1,6 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,19 +11,19 @@ import type { Metadata } from "next";
 
 const shopifyVsCustomFAQs = blogPosts.find(p => p.id === 'shopify-vs-custom-website')?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
-const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Shopify vs Custom Website 2026: 5 Signs You Have Outgrown It",
+    title: "Shopify vs Custom Website 2026: 5 Signs Your Store Has Outgrown Shopify",
     description: "Shopify works until app fees hit $1,000/month and your store loads in 4+ seconds. 5 signs you have outgrown Shopify and what to do next.",
     alternates: {
         canonical: '/blog/shopify-vs-custom-website',
     },
     keywords: ["shopify vs custom website", "outgrown shopify", "shopify alternative", "shopify too expensive", "shopify slow", "custom ecommerce website", "shopify hidden costs", "shopify to custom migration", "headless shopify", "shopify app costs", "shopify plus price increase 2026", "shopify core web vitals failing", "shopify checkout restrictions", "leaving shopify", "shopify transaction fees", "shopify duplicate content seo", "shopify frozen funds"],
     openGraph: {
-        title: "Shopify vs Custom Website 2026: 5 Signs You Have Outgrown It",
+        title: "Shopify vs Custom Website 2026: 5 Signs Your Store Has Outgrown Shopify",
         description: "Shopify works until app fees hit $1,000/month and your store loads in 4+ seconds. Here are the 5 signs and what to do next.",
         type: "article",
         publishedTime: "2026-03-30",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Shopify vs Custom Website 2026: 5 Signs You Have Outgrown It",
+        title: "Shopify vs Custom Website 2026: 5 Signs Your Store Has Outgrown Shopify",
         description: "Shopify works until app fees hit $1,000/month and your store loads in 4+ seconds. Here are the 5 signs.",
     },
 };
@@ -48,12 +48,12 @@ const articleSchema = {
             "description": "Shopify works for small stores. But when app fees exceed $500/month, your store loads in 4+ seconds, and conversion stalls below 2%, custom code becomes the better investment.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-30T00:00:00-05:00",
-            "dateModified": "2026-03-30T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder & Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -108,7 +108,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-30T00:00:00-05:00",
-            "dateModified": "2026-03-30T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/shopify-vs-custom-website#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -128,13 +128,7 @@ const articleSchema = {
         {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/blog/shopify-vs-custom-website#faq",
-            "mainEntity": [
-                { "@type": "Question", "name": "When should I switch from Shopify to a custom website?", "acceptedAnswer": { "@type": "Answer", "text": "Switch when your monthly Shopify bill exceeds $500 including apps, your store loads in 4+ seconds on mobile, your conversion rate is stuck below 2% despite good traffic, you need custom checkout logic that Shopify restricts, or you are paying transaction fees on a non-Shopify payment gateway." } },
-                { "@type": "Question", "name": "How much does a custom e-commerce website cost compared to Shopify?", "acceptedAnswer": { "@type": "Answer", "text": "A custom headless e-commerce site costs $8,000 to $25,000 to build with $0 to $20/month hosting. Shopify costs $39 to $2,300/month in platform fees plus $500 to $1,000/month in apps. Over 3 years, custom typically costs 40 to 60% less." } },
-                { "@type": "Question", "name": "Will I lose sales during a Shopify migration?", "acceptedAnswer": { "@type": "Answer", "text": "Not if done correctly. The new site is built while your old store keeps running. 301 redirects preserve all URLs. DNS cutover happens with zero downtime. Most stores see conversion improve within 60 days." } },
-                { "@type": "Question", "name": "Can a custom website do everything Shopify does?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, and more. Custom code handles products, cart, checkout, payments, inventory, orders, emails, discounts, and subscriptions with no app limits, no transaction fees, no variant caps, and no checkout restrictions." } },
-                { "@type": "Question", "name": "What is headless Shopify and is it worth it?", "acceptedAnswer": { "@type": "Answer", "text": "Headless Shopify keeps Shopify as your backend while replacing the slow Liquid frontend with a custom Next.js storefront. Load times drop from 4+ seconds to under 1 second. Worth it if you want Shopify's admin with custom performance. Cost: $8,000 to $20,000." } }
-            ]
+            "mainEntity": shopifyVsCustomFAQs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
         }
     ]
 };
@@ -179,7 +173,7 @@ export default function ShopifyVsCustomWebsitePage() {
                         <BlogAuthor
                             date="Mar 30, 2026"
                             readTime="11 min read"
-                            bio="Hassan has migrated Shopify stores doing $50K to $5M/year to custom headless builds. Every store scores 95 to 100 on Google PageSpeed and loads in under 1 second."
+                            bio="Hassan rebuilt MyCustomPatches for Matt Conner from a slow WooCommerce store (42 PageSpeed) to a custom Next.js build scoring 97. He now builds custom Shopify replacements for DTC brands. Every build scores 95 to 100 on Google PageSpeed."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -189,20 +183,20 @@ export default function ShopifyVsCustomWebsitePage() {
                     </div>
 
                     {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
-                        <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
+                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
                             "Shopify works for stores under $500/month in total platform costs. Beyond that, the math favors custom code.",
                             "The average Shopify store with 20+ apps loads in 4.2 seconds on mobile. Custom Next.js stores load in under 1 second. Google ranks the faster store higher.",
                             "Shopify's real cost is $800 to $2,300/month when you add apps, transaction fees, and premium themes. Custom sites cost $0 to $20/month to host after the initial build.",
-                            "A custom headless e-commerce site costs $8,000 to $25,000 to build and pays for itself within 12 to 18 months through eliminated fees and better conversion rates.",
+                            "A custom headless e-commerce site costs $3,000 Growth to $12,000 Scale to build and pays for itself within 12 to 18 months through eliminated fees and better conversion rates.",
                             "Headless Shopify is the middle ground: keep Shopify's admin, replace the slow frontend with custom code."
                         ]} />
                     </div>
 
                     <div className="space-y-8">
                         <BlogText>
-                            A store owner reached out last month. &quot;We are doing $2M a year on Shopify. Our app bill is $1,100/month. The site loads in 4.3 seconds on mobile. Our conversion rate has been stuck at 1.4% for six months. We have tried everything.&quot;
+                            A pattern we see repeatedly: a store doing $1M to $3M per year, app bill pushing past $1,000 per month, mobile load at 4+ seconds, conversion pinned near 1.4% for six months despite trying every CRO app on the market.
                         </BlogText>
 
                         <BlogText>
@@ -302,7 +296,7 @@ export default function ShopifyVsCustomWebsitePage() {
 
                         <BlogList items={[
                             "Shopify Plus increased pricing 25% to $2,300/month (3-year lock-in) or $2,500/month (1-year). Transaction fees also went up from 0.15% to 0.2%.",
-                            "A 2026 benchmark study of 1,000 Shopify stores found only 48% pass all three Core Web Vitals on mobile. The median LCP is 2.26 seconds, right at Google's threshold.",
+                            "A 2026 benchmark study of 1,000 Shopify stores found only 48% pass all three Core Web Vitals on mobile. The median LCP is 2.26 seconds, pushing against Google's 2.5-second Good threshold. One slow image flips the store into Needs Improvement.",
                             "Each new Shopify app adds 50KB to 150KB of JavaScript to every page load. A store at the LCP threshold can fail Core Web Vitals from a single app install.",
                             "79% of Shopify traffic comes from mobile devices in 2026, but most Shopify themes fail mobile Core Web Vitals. Mobile is where the speed penalty hits hardest.",
                             "Shopify's admin dashboard speed score is misleading. It uses a simplified Lighthouse test, not real Core Web Vitals field data from actual visitors. Your real-world performance is almost always worse than what the admin shows.",
@@ -327,41 +321,41 @@ export default function ShopifyVsCustomWebsitePage() {
                             <table className="w-full border-collapse text-sm min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-50">
-                                        <th className="border border-stone-200 px-4 py-3 text-left font-bold">Cost Category</th>
-                                        <th className="border border-stone-200 px-4 py-3 text-left font-bold">Shopify (3 Years)</th>
-                                        <th className="border border-stone-200 px-4 py-3 text-left font-bold">Custom Next.js (3 Years)</th>
+                                        <th className="border border-stone-300 px-4 py-3 text-left font-bold">Cost Category</th>
+                                        <th className="border border-stone-300 px-4 py-3 text-left font-bold">Shopify (3 Years)</th>
+                                        <th className="border border-stone-300 px-4 py-3 text-left font-bold">Custom Next.js (3 Years)</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td className="border border-stone-200 px-4 py-3">Build cost</td>
-                                        <td data-label="Shopify (3 Years)" className="border border-stone-200 px-4 py-3">$0 (DIY) to $5,000 (agency theme)</td>
-                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-200 px-4 py-3">$8,000 to $25,000</td>
+                                        <td className="border border-stone-300 px-4 py-3">Build cost</td>
+                                        <td data-label="Shopify (3 Years)" className="border border-stone-300 px-4 py-3">$0 (DIY) to $5,000 (agency theme)</td>
+                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-300 px-4 py-3">$3,000 Growth to $12,000 Scale</td>
                                     </tr>
                                     <tr className="bg-stone-50">
-                                        <td className="border border-stone-200 px-4 py-3">Platform fees</td>
-                                        <td data-label="Shopify (3 Years)" className="border border-stone-200 px-4 py-3">$1,404 to $82,800</td>
-                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-200 px-4 py-3">$0 to $720</td>
+                                        <td className="border border-stone-300 px-4 py-3">Platform fees</td>
+                                        <td data-label="Shopify (3 Years)" className="border border-stone-300 px-4 py-3">$1,404 to $82,800</td>
+                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-300 px-4 py-3">$0 to $720</td>
                                     </tr>
                                     <tr>
-                                        <td className="border border-stone-200 px-4 py-3">App subscriptions</td>
-                                        <td data-label="Shopify (3 Years)" className="border border-stone-200 px-4 py-3">$18,000 to $54,000</td>
-                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-200 px-4 py-3">$0 (built into code)</td>
+                                        <td className="border border-stone-300 px-4 py-3">App subscriptions</td>
+                                        <td data-label="Shopify (3 Years)" className="border border-stone-300 px-4 py-3">$18,000 to $54,000</td>
+                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-300 px-4 py-3">$0 (built into code)</td>
                                     </tr>
                                     <tr className="bg-stone-50">
-                                        <td className="border border-stone-200 px-4 py-3">Transaction fees (non-Shopify Payments)</td>
-                                        <td data-label="Shopify (3 Years)" className="border border-stone-200 px-4 py-3">$5,000 to $60,000</td>
-                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-200 px-4 py-3">$0</td>
+                                        <td className="border border-stone-300 px-4 py-3">Transaction fees (non-Shopify Payments)</td>
+                                        <td data-label="Shopify (3 Years)" className="border border-stone-300 px-4 py-3">$5,000 to $60,000</td>
+                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-300 px-4 py-3">$0</td>
                                     </tr>
                                     <tr>
-                                        <td className="border border-stone-200 px-4 py-3">Google PageSpeed Mobile</td>
-                                        <td data-label="Shopify (3 Years)" className="border border-stone-200 px-4 py-3">25 to 50</td>
-                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-200 px-4 py-3">95 to 100</td>
+                                        <td className="border border-stone-300 px-4 py-3">Google PageSpeed Mobile</td>
+                                        <td data-label="Shopify (3 Years)" className="border border-stone-300 px-4 py-3">25 to 50</td>
+                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-300 px-4 py-3">95 to 100</td>
                                     </tr>
                                     <tr className="bg-stone-100 font-bold">
-                                        <td className="border border-stone-200 px-4 py-3">3-Year Total</td>
-                                        <td data-label="Shopify (3 Years)" className="border border-stone-200 px-4 py-3">$24,404 to $201,800</td>
-                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-200 px-4 py-3">$8,000 to $25,720</td>
+                                        <td className="border border-stone-300 px-4 py-3">3-Year Total</td>
+                                        <td data-label="Shopify (3 Years)" className="border border-stone-300 px-4 py-3">$24,404 to $201,800</td>
+                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-300 px-4 py-3">$8,000 to $25,720</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -372,19 +366,19 @@ export default function ShopifyVsCustomWebsitePage() {
                         </BlogText>
 
                         <BlogQuote>
-                            A Shopify store doing $1M/year on the Basic plan with 20 apps and a non-Shopify payment gateway spends roughly $30,000 to $50,000 over 3 years in fees alone. A custom build at $15,000 on Vercel (starts free, scales to $20/mo only when your business grows) is cheaper by year 2.
+                            A Shopify store doing $1M/year on the Basic plan with 20 apps and a non-Shopify payment gateway spends roughly $30,000 to $50,000 over 3 years in fees alone. A custom Scale-tier build ($5,000 to $10,000+) on Vercel (starts free, scales to $20/mo only when your business grows) is cheaper by year 2.
                         </BlogQuote>
 
                         {/* Mid-Article CTA */}
-                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Want the numbers for your specific store?</p>
                             <p className="text-stone-600 mb-4 text-sm">Share your Shopify URL when you book. We run PageSpeed live, calculate your real 3-year Shopify cost, and show you the custom alternative. No pressure.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                     Schedule Free Store Audit <ArrowRight className="w-4 h-4" />
                                 </CalModalButton>
                             <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                              <p className="text-sm text-stone-700 mt-1">$500 for a complete Shopify migration. Add up what you pay Shopify every month: platform fee, apps, transaction fees, theme updates. That total is probably more than $500. Pay us once and those monthly bills disappear.</p>
+                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                              <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                             </div>
                         </div>
 
@@ -435,7 +429,11 @@ export default function ShopifyVsCustomWebsitePage() {
                             We covered the full headless Shopify approach in our{" "}
                             <Link href="/blog/shopify-headless" className="text-cognac hover:underline">
                                 guide to headless Shopify
-                            </Link>. Build cost is $8,000 to $20,000 depending on store complexity.
+                            </Link>. Build cost is $3,500+ Growth for smaller catalogs and $5,000 to $10,000+ Scale for full headless rebuilds. For the revenue-loss math, see <Link href="/blog/shopify-slow-losing-sales" className="text-cognac hover:underline">how much slow Shopify costs per year</Link>.
+                        </BlogText>
+
+                        <BlogText>
+                            Comparing other platforms too? See <Link href="/blog/wix-vs-custom-website" className="text-cognac hover:underline">Wix vs Custom</Link>, <Link href="/blog/webflow-vs-custom-website" className="text-cognac hover:underline">Webflow vs Custom</Link>, and <Link href="/blog/squarespace-vs-custom-website" className="text-cognac hover:underline">Squarespace vs Custom</Link>.
                         </BlogText>
 
                         <BlogHeader>When Shopify Is Still the Right Choice</BlogHeader>
@@ -468,7 +466,7 @@ export default function ShopifyVsCustomWebsitePage() {
                         </BlogText>
 
                         <BlogText>
-                            For a store doing $500,000/year, the difference between a 1.4% conversion rate and a 3.5% conversion rate is $750,000 in additional annual revenue. That is not a hypothetical number. That is what speed does for e-commerce.
+                            For a store doing $500,000/year, the difference between a 1.4% conversion rate and a 3.5% conversion rate is roughly $10,500 in additional monthly revenue, or about $126,000 per year, at the same traffic volume. That is not a hypothetical number. That is what speed does for e-commerce.
                         </BlogText>
 
                         <BlogText>
@@ -480,7 +478,7 @@ export default function ShopifyVsCustomWebsitePage() {
                     </div>
 
                     {/* Bottom CTA */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Find Out if Custom Code Is Right for Your Store</h3>
                         <p className="text-stone-600 mb-6">
                             Share your Shopify URL. We run PageSpeed live, calculate your real 3-year cost comparison, and tell you honestly whether migration makes financial sense. No pressure. No sales pitch. Just numbers.
@@ -489,19 +487,19 @@ export default function ShopifyVsCustomWebsitePage() {
                                 Schedule Free Store Audit <ArrowRight className="w-5 h-5" />
                             </CalModalButton>
                         <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                          <p className="text-sm text-stone-700 mt-1">$500 for a complete Shopify migration. Add up what you pay Shopify every month: platform fee, apps, transaction fees, theme updates. That total is probably more than $500. Pay us once and those monthly bills disappear.</p>
+                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                          <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                         </div>
                     </div>
 
                     {/* Key Takeaways */}
-                    <section className="mb-10 mt-16">
+                    <section className="mb-10 mt-6 md:mt-10 md:mt-16">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
                             <li><strong>Shopify works for small stores</strong>: Under $200/month total spend, fewer than 5 apps, no checkout customization needed. Stay on Shopify.</li>
                             <li><strong>App bloat is the real killer</strong>: The average serious Shopify store spends $800 to $1,500/month on fees and apps. Over 3 years, that is $28,800 to $54,000 before you add transaction fees.</li>
                             <li><strong>Speed drives conversion</strong>: Shopify stores with 20+ apps load in 4+ seconds. Custom stores load in under 1 second. The conversion rate gap is 1.4% vs 3 to 5%.</li>
-                            <li><strong>Custom code costs more upfront but less over time</strong>: An $8,000 to $25,000 build on Vercel (starts free, scales to $20/mo only when your business grows) is cheaper than Shopify by year 2 for most serious stores.</li>
+                            <li><strong>Custom code costs more upfront but less over time</strong>: An $3,000 Growth to $12,000 Scale build on Vercel (starts free, scales to $20/mo only when your business grows) is cheaper than Shopify by year 2 for most serious stores.</li>
                             <li><strong>Headless Shopify is the middle ground</strong>: Keep Shopify admin, replace the slow frontend. Get custom performance without migrating product data.</li>
                         </ol>
                     </section>

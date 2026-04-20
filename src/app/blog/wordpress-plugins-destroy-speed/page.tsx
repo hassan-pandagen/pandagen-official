@@ -1,6 +1,6 @@
 import { ArrowLeft, Calendar, Clock, ArrowRight, Zap, RefreshCw } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,28 +11,29 @@ import type { Metadata } from "next";
 
 const postFAQs = blogPosts.find(p => p.id === "wordpress-plugins-destroy-speed")?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
-const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "WordPress Plugins Are Destroying Your Speed: 61% Slower per 10 Plugins (2026)",
-    description: "Most WordPress sites with 30+ plugins score 35/100 on mobile PageSpeed. Here is exactly how much revenue you lose per month and how to actually fix the speed problem.",
+    title: "WordPress Plugins Killing Speed: The Real Cost of 30+ Plugins (2026)",
+    description: "Most WordPress sites with 30+ plugins score 35/100 on mobile. How much revenue you lose per month and how to actually fix it.",
     alternates: { canonical: "/blog/wordpress-plugins-destroy-speed" },
     keywords: ["wordpress plugins slow", "wordpress plugin performance", "too many wordpress plugins", "wordpress plugins killing speed", "fix slow wordpress plugins", "wordpress speed optimization"],
     openGraph: {
-        title: "WordPress Plugins Are Destroying Your Speed: 61% Slower per 10 Plugins (2026)",
-        description: "Most WordPress sites with 30+ plugins score 35/100 on mobile PageSpeed. Here is exactly how much revenue you lose per month and how to actually fix the speed problem.",
+        title: "WordPress Plugins Killing Speed: The Real Cost of 30+ Plugins (2026)",
+        description: "Most WordPress sites with 30+ plugins score 35/100 on mobile. How much revenue you lose per month and how to actually fix it.",
         type: "article",
-        publishedTime: "2026-02-05",
-        authors: ["Hassan"],
+        publishedTime: "2026-02-05T00:00:00-05:00",
+        modifiedTime: "2026-03-10T00:00:00-05:00",
+        authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/wordpress-plugins-destroy-speed",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
     twitter: {
         card: "summary_large_image",
-        title: "WordPress Plugins Are Destroying Your Speed: 61% Slower per 10 Plugins (2026)",
-        description: "Most WordPress sites with 30+ plugins score 35/100 on mobile PageSpeed. Here is exactly how much revenue you lose per month and how to actually fix the speed problem.",
+        title: "WordPress Plugins Killing Speed: The Real Cost of 30+ Plugins (2026)",
+        description: "Most WordPress sites with 30+ plugins score 35/100 on mobile. How much revenue you lose per month and how to actually fix it.",
     },
 };
 
@@ -42,16 +43,16 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-plugins-destroy-speed#article",
-            "headline": "WordPress Plugins Are Destroying Your Speed: 61% Slower per 10 Plugins (2026)",
-            "description": "Most WordPress sites with 30+ plugins score 35/100 on mobile PageSpeed. Here is exactly how much revenue you lose per month and how to actually fix the speed problem.",
+            "headline": "WordPress Plugins Killing Speed: The Real Cost of 30+ Plugins (2026)",
+            "description": "Most WordPress sites with 30+ plugins score 35/100 on mobile. How much revenue you lose per month and how to actually fix it.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-05T00:00:00-05:00",
-            "dateModified": "2026-03-10T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -67,7 +68,7 @@ const articleSchema = {
             "articleSection": "Performance",
             "keywords": ["wordpress plugins slow", "wordpress plugin performance", "wordpress speed", "too many plugins", "wordpress optimization"],
             "timeRequired": "PT11M",
-            "wordCount": 2800,
+            "wordCount": 1150,
             "about": [
                 { "@type": "Thing", "name": "WordPress Plugin Performance" },
                 { "@type": "Thing", "name": "WordPress" },
@@ -103,7 +104,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-05T00:00:00-05:00",
-            "dateModified": "2026-03-10T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/wordpress-plugins-destroy-speed#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -162,7 +163,7 @@ export default function WordPressPluginsSpeedPage() {
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight text-charcoal">
                             WordPress Plugins Are{" "}
                             <span className="font-serif italic text-cognac">Destroying Your Speed:</span>{" "}
-                            61% Slower per 10 Plugins
+                            The Real Cost of 30+ Plugins
                         </h1>
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
                             Plugins add powerful features to WordPress, but each one comes with a performance cost. This guide helps you identify which ones matter and how to optimize.
@@ -179,8 +180,8 @@ export default function WordPressPluginsSpeedPage() {
                     <div className="mb-12"><PageSpeedAnimation /></div>
 
                     {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
-                        <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
+                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
                             "Every WordPress plugin adds 2 to 15 HTTP requests, CSS files, and JavaScript to every single page load.",
                             "Sites with 30+ plugins average 35/100 Mobile PageSpeed. Google's red zone for organic rankings.",
@@ -239,27 +240,32 @@ export default function WordPressPluginsSpeedPage() {
                         ]} />
 
                         {/* Mid-Article CTA */}
-                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">How many plugins are killing your speed right now?</p>
                             <p className="text-stone-600 mb-4 text-sm">Drop your URL when you book. We audit your plugin stack live on the call, show you your real speed ceiling, and quote the migration that permanently fixes it.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free Speed Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
                             <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                              <p className="text-sm text-stone-700 mt-1">$500 for a complete WordPress migration. No more paying for 20+ tools just to keep your site running. No more surprise security bills. No more monthly hosting fees. You pay once, we build it, you own it forever.</p>
+                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                              <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                             </div>
                         </div>
 
                         <BlogHeader>Which WordPress Plugins Are the Worst for Speed?</BlogHeader>
                         <BlogText>
-                            Based on hundreds of audits, these categories consistently cause the most damage:
+                            Based on recurring patterns from six years of WordPress work, these categories consistently cause the most damage:
                         </BlogText>
                         <BlogList items={[
                             "Jetpack: Adds 800KB+ for features you likely don't use. Replace with individual lightweight alternatives",
-                            "Revolution Slider / WP Bakery: Heavy JavaScript that blocks rendering by 1 to 2 seconds",
+                            "Revolution Slider / WP Bakery / Elementor / Divi: Heavy JavaScript that blocks rendering by 1 to 2 seconds. Elementor alone caps PageSpeed in the 50s (detail in our Elementor SEO breakdown).",
+                            "WooCommerce: Adds 500KB+ of cart, checkout, and storefront JavaScript on every page, even non-shop pages",
+                            "W3 Total Cache misconfiguration: Caching plugins that are not tuned can increase TTFB instead of lowering it",
                             "Social media plugins: Often load external iframes and scripts on every page",
                             "Backup plugins running on page load: Should only run in the background via scheduled cron",
                             "Multiple SEO plugins running simultaneously: Pick one. Either Rank Math or Yoast, never both"
                         ]} />
+                        <BlogText>
+                            For the Elementor and Divi deep dives, see <Link href="/blog/elementor-kills-seo" className="text-cognac hover:underline">Elementor kills SEO</Link> and <Link href="/blog/divi-theme-slow" className="text-cognac hover:underline">why Divi themes run slow</Link>.
+                        </BlogText>
 
                         <BlogHeader>What Is the Maximum Speed You Can Reach by Fixing WordPress Plugins?</BlogHeader>
                         <BlogText>
@@ -292,15 +298,15 @@ export default function WordPressPluginsSpeedPage() {
                     </div>
 
                     {/* Bottom CTA */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Find Out Which Plugins Are Costing You the Most</h3>
                         <p className="text-stone-600 mb-6">
                             Free WordPress speed audit: we identify your worst plugins, calculate revenue loss, and show your path to 95+ PageSpeed.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Book Free Speed Audit <ArrowRight className="w-5 h-5" /></CalModalButton>
                         <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                          <p className="text-sm text-stone-700 mt-1">$500 for a complete WordPress migration. No more paying for 20+ tools just to keep your site running. No more surprise security bills. No more monthly hosting fees. You pay once, we build it, you own it forever.</p>
+                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                          <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                         </div>
                     </div>
 

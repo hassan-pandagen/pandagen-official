@@ -1,6 +1,6 @@
 import { ArrowLeft, Calendar, Clock, ArrowRight, RefreshCw } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,30 +11,30 @@ import type { Metadata } from "next";
 
 const pagespeedFAQs = blogPosts.find(p => p.id === 'how-to-achieve-100-pagespeed')?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
-const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "How to Hit 100/100 PageSpeed Score (Our Exact 8-Step Process)",
-    description: "Most websites score 35 to 55 on Google PageSpeed. We hit 98 to 100 on every client site. Here is the exact 8-step process we use, with real before/after data.",
+    description: "Most sites score 35 to 55 on PageSpeed. We hit 98 to 100 every build. The exact 8-step process, with real before/after data.",
     alternates: {
         canonical: '/blog/how-to-achieve-100-pagespeed',
     },
     keywords: ["100 PageSpeed score", "Core Web Vitals optimization", "Next.js PageSpeed 100", "website speed optimization 2026", "how to improve PageSpeed score", "Google PageSpeed Insights guide", "fix slow website"],
     openGraph: {
         title: "How to Hit 100/100 PageSpeed Score (Our Exact 8-Step Process)",
-        description: "Most websites score 35 to 55 on Google PageSpeed. We hit 98 to 100 on every client site. Here is the exact 8-step process we use, with real before/after data.",
+        description: "Most sites score 35 to 55 on PageSpeed. We hit 98 to 100 every build. The exact 8-step process, with real before/after data.",
         type: "article",
-        publishedTime: "2026-02-17",
-        authors: ["Hassan"],
+        publishedTime: "2026-02-17T00:00:00-05:00",
+        authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
     twitter: {
         card: "summary_large_image",
         title: "How to Hit 100/100 PageSpeed Score (Our Exact 8-Step Process)",
-        description: "Most websites score 35 to 55 on Google PageSpeed. We hit 98 to 100 on every client site. Here is the exact 8-step process we use, with real before/after data.",
+        description: "Most sites score 35 to 55 on PageSpeed. We hit 98 to 100 every build. The exact 8-step process, with real before/after data.",
     },
 };
 
@@ -45,15 +45,15 @@ const articleSchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed#article",
             "headline": "How to Hit 100/100 PageSpeed Score (Our Exact 8-Step Process)",
-            "description": "Most websites score 35 to 55 on Google PageSpeed. We hit 98 to 100 on every client site. Here is the exact 8-step process we use, with real before/after data.",
+            "description": "Most sites score 35 to 55 on PageSpeed. We hit 98 to 100 every build. The exact 8-step process, with real before/after data.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-17T00:00:00-05:00",
-            "dateModified": "2026-03-10T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -107,11 +107,11 @@ const articleSchema = {
             "@id": "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed#webpage",
             "url": "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed",
             "name": "How to Hit 100/100 PageSpeed Score (Our Exact 8-Step Process)",
-            "description": "Most websites score 35 to 55 on Google PageSpeed. We hit 98 to 100 on every client site. Here is the exact 8-step process we use, with real before/after data.",
+            "description": "Most sites score 35 to 55 on PageSpeed. We hit 98 to 100 every build. The exact 8-step process, with real before/after data.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-17T00:00:00-05:00",
-            "dateModified": "2026-03-10T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -131,13 +131,7 @@ const articleSchema = {
         {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed#faq",
-            "mainEntity": [
-                { "@type": "Question", "name": "What is a good PageSpeed score?", "acceptedAnswer": { "@type": "Answer", "text": "A good PageSpeed score is 90-100 (green). Scores of 50-89 (orange) mean you're losing 10-15% of traffic to faster competitors. Scores of 0-49 (red) mean you're losing 20-30% of organic traffic and ranking lower on Google." } },
-                { "@type": "Question", "name": "How do I check my PageSpeed score?", "acceptedAnswer": { "@type": "Answer", "text": "Go to pagespeed.web.dev, enter your URL, and click Analyze. Check your Mobile score (this is what matters for SEO). If it's below 70, you're losing traffic and rankings to faster competitors." } },
-                { "@type": "Question", "name": "Can WordPress get 100/100 PageSpeed score?", "acceptedAnswer": { "@type": "Answer", "text": "No. WordPress can reach 60-75 at best, even when fully optimized. The architecture is too old. To hit 95-100, you need modern frameworks like Next.js with built-in optimization, code splitting, and server components." } },
-                { "@type": "Question", "name": "How long does it take to improve PageSpeed score?", "acceptedAnswer": { "@type": "Answer", "text": "On WordPress: 2-4 weeks to go from 40 to 70, but you'll hit a ceiling. Migrating to Next.js: 4-6 weeks from start to 95-100 score. Once optimized, rankings improve within 30-90 days as Google re-crawls your faster pages." } },
-                { "@type": "Question", "name": "Does PageSpeed score affect SEO?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, directly. Google made Core Web Vitals (what PageSpeed measures) a ranking factor in 2021. Fast sites (90-100 score) rank 20-30 positions higher than slow sites (0-49 score) with identical content. PageSpeed = rankings = traffic." } }
-            ]
+            "mainEntity": pagespeedFAQs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
         }
     ]
 };
@@ -182,7 +176,7 @@ export default function AchievePageSpeedPage() {
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            We achieve 98-100/100 PageSpeed scores on every client site. Here's the exact optimization process we use, step by step.
+                            Eight engineering steps. Every client build lands 98 to 100 on Mobile. No plugins, no guesswork, no templates.
                         </p>
 
                         <BlogAuthor
@@ -199,8 +193,8 @@ export default function AchievePageSpeedPage() {
                     </div>
 
                     {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
-                        <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
+                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
                             "Google PageSpeed score directly affects your rankings. Sites below 70 lose 20-30% of organic traffic.",
                             "WordPress can reach 60-75 max. To hit 95-100, you need modern architecture (Next.js, React).",
@@ -259,7 +253,7 @@ export default function AchievePageSpeedPage() {
                         ]} />
 
                         <BlogText>
-                            Translation: <BlogHighlight>If your competitor has 95/100 and you have 48/100, they're getting 3× your traffic for identical content.</BlogHighlight>
+                            Translation: <BlogHighlight>If your competitor scores 95 on Mobile and you score 48, the search gap compounds. Google rewards the faster site with higher positions, more clicks, and lower bounce.</BlogHighlight>
                         </BlogText>
 
                         <BlogHeader>The Hard Truth: WordPress Can't Get You to 100/100</BlogHeader>
@@ -313,14 +307,17 @@ export default function AchievePageSpeedPage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>MyCustomPatches (Shopify → Next.js Headless):</strong>
+                            <strong>MyCustomPatches (WooCommerce to Next.js headless, rebuilt for Matt Conner):</strong>
                         </BlogText>
 
                         <BlogList items={[
                             "Before: 42/100 Mobile, 3.8s load time, 54% bounce rate",
                             "After: 97/100 Mobile, 0.9s load time, 24% bounce rate",
-                            "Result: 55% increase in conversions, $67K more monthly revenue"
+                            "Result: Measurable conversion lift and sub-one-second first paint on mobile"
                         ]} />
+                        <BlogText>
+                            Matt Conner, the owner of MyCustomPatches, described the end result as a speedy, bug-free website built with the latest technology. Response time during the rebuild was always under an hour.
+                        </BlogText>
 
                         <BlogText>
                             <strong>SaaS Client (WordPress → Next.js):</strong>
@@ -333,36 +330,29 @@ export default function AchievePageSpeedPage() {
                         ]} />
 
                         <BlogText>
-                            <strong>Service Business (WordPress → Next.js):</strong>
+                            <strong>Service Business (WordPress to Next.js):</strong>
                         </BlogText>
 
                         <BlogList items={[
-                            "Before: 51/100 Mobile, 3.5s load time, 2,500 monthly visitors",
-                            "After: 100/100 Mobile, 0.8s load time, 8,200 monthly visitors",
-                            "Result: 228% more traffic, 15 qualified leads/month vs 3 before"
+                            "Before: 51/100 Mobile, 3.5s load time",
+                            "After: 100/100 Mobile, 0.8s load time",
+                            "Result: More than doubled qualified leads per month within 90 days"
                         ]} />
-
-                        <BlogText>
-                            <strong>MC Patches LLC (WordPress → Next.js):</strong>
-                        </BlogText>
-                        <BlogText>
-                            MC Patches LLC achieved near-perfect PageSpeed scores after migrating from WordPress to a custom Next.js build, with load times consistently under 1 second. Matt Conner, the owner, described the end result as a speedy, bug-free website built with the latest technology. Response time from the team was always under an hour.
-                        </BlogText>
 
                         <BlogQuote>
                             The pattern is consistent: Move from WordPress/Shopify to Next.js with these 8 optimizations → 95-100 PageSpeed score → 2-4× more traffic within 90 days.
                         </BlogQuote>
 
                         {/* Mid-Article CTA */}
-                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Want to see what 100/100 actually looks like for your site?</p>
                             <p className="text-stone-600 mb-4 text-sm">Drop your URL when you book. We run your PageSpeed live on the call, show you your exact gaps, and quote what it takes to get you to 90-100/100.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                     Schedule Free Audit <ArrowRight className="w-4 h-4" />
                                 </CalModalButton>
                             <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                              <p className="text-sm text-stone-700 mt-1">$500 for a complete migration to a site that scores 95 to 100 on Google PageSpeed. 30% upfront, the rest after the site is live. No monthly fees. No annual contracts. If your site doesn&apos;t score 95+, you don&apos;t pay the balance.</p>
+                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                              <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                             </div>
                         </div>
 
@@ -538,7 +528,7 @@ export default function AchievePageSpeedPage() {
                         </BlogText>
 
                         <BlogHeader>
-                            Optimization #8: Server Components (Next.js 16 Only)
+                            Optimization #8: Server Components (Our Next.js 16 Standard)
                         </BlogHeader>
 
                         <BlogText>
@@ -573,7 +563,7 @@ export default function AchievePageSpeedPage() {
 
                         <BlogList items={[
                             "Optimization #1-7 require Next.js knowledge. If you're on WordPress, you can't use them.",
-                            "Optimization #8 (Server Components) requires Next.js 16. Most developers are still on Next.js 13.",
+                            "Optimization #8 (Server Components) runs best on Next.js 14 or 16. Most agencies still ship client-heavy builds that waste the architecture.",
                             "Getting from 90 to 100 requires finding and fixing tiny issues. One unused CSS file can drop you to 88.",
                             "Testing and debugging takes 40-60 hours if you're learning as you go."
                         ]} />
@@ -605,7 +595,7 @@ export default function AchievePageSpeedPage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>Investment:</strong> $15,000-$35,000 depending on site complexity
+                            <strong>Investment:</strong> $500 Founder Portfolio migration, $3,500+ Growth, $5,000 to $10,000+ Scale. Full tier breakdown on the <a href="/pricing" className="text-cognac hover:underline">pricing page</a>.
                         </BlogText>
 
                         <BlogText>
@@ -674,7 +664,7 @@ export default function AchievePageSpeedPage() {
                         ]} />
 
                         <BlogText>
-                            Most business owners choose Option 2. Why? <BlogHighlight>Because 4-9 months of learning and building costs you more than $15K-$35K in lost revenue from slow speed.</BlogHighlight>
+                            Most business owners choose Option 2. Why? <BlogHighlight>Because 4 to 9 months of learning and building costs you more in lost revenue from slow speed than the actual build. Our Scale tier runs $5,000 to $10,000+. Growth starts at $3,500. Founder migration is $500.</BlogHighlight>
                         </BlogText>
 
                         <BlogText>
@@ -694,7 +684,7 @@ export default function AchievePageSpeedPage() {
                     </div>
 
                     {/* CTA Section */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Ready for 100/100 PageSpeed?</h3>
                         <p className="text-stone-600 mb-6">
                             Get a free speed audit. We'll analyze your site and show you exactly how much traffic you're losing.
@@ -703,8 +693,8 @@ export default function AchievePageSpeedPage() {
                                 Schedule Free Audit <ArrowRight className="w-5 h-5" />
                             </CalModalButton>
                         <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                          <p className="text-sm text-stone-700 mt-1">$500 for a complete migration to a site that scores 95 to 100 on Google PageSpeed. 30% upfront, the rest after the site is live. No monthly fees. No annual contracts. If your site doesn&apos;t score 95+, you don&apos;t pay the balance.</p>
+                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                          <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                         </div>
                     </div>
 
@@ -719,6 +709,12 @@ export default function AchievePageSpeedPage() {
                             <li><strong>Every 0.1 second of improvement increases conversions by 8%</strong>: Speed is not an IT concern, it is a revenue line item that compounds month over month.</li>
                         </ol>
                     </section>
+
+                    <div className="my-8">
+                        <BlogText>
+                            Related performance reads: <Link href="/blog/core-web-vitals-explained" className="text-charcoal underline underline-offset-2 hover:text-stone-600">Core Web Vitals explained</Link>, <Link href="/blog/wordpress-plugins-destroy-speed" className="text-charcoal underline underline-offset-2 hover:text-stone-600">how WordPress plugins destroy speed</Link>, <Link href="/blog/shopify-dawn-theme-slow" className="text-charcoal underline underline-offset-2 hover:text-stone-600">why Shopify Dawn theme runs slow</Link>, and <Link href="/blog/webflow-true-cost" className="text-charcoal underline underline-offset-2 hover:text-stone-600">the true cost of Webflow</Link>.
+                        </BlogText>
+                    </div>
 
                     {/* FAQ Section */}
                     {pagespeedFAQs.length > 0 && <FAQAccordion faqs={pagespeedFAQs} />}

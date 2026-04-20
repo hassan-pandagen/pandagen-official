@@ -18,8 +18,8 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Squarespace vs Custom Website 2026: Which Is Right for Your Business?",
-    description: "Squarespace scores 30 to 55 on mobile PageSpeed. Custom sites score 95 to 100. But custom costs more upfront. Here is the real cost, speed, and SEO comparison with honest advice on when to stay and when to switch.",
+    title: "Squarespace vs Custom Website 2026: The 55/100 PageSpeed Ceiling That Kills Rankings",
+    description: "Squarespace caps at 30 to 55 on mobile PageSpeed. Custom Next.js hits 95 to 100. Honest cost, speed, and SEO comparison for 2026.",
     alternates: {
         canonical: "/blog/squarespace-vs-custom-website",
     },
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
         "squarespace pagespeed score"
     ],
     openGraph: {
-        title: "Squarespace vs Custom Website 2026: Which Is Right for Your Business?",
+        title: "Squarespace vs Custom Website 2026: The 55/100 PageSpeed Ceiling That Kills Rankings",
         description: "You picked Squarespace for the design. Now your site scores 35 on mobile, booking needs a separate subscription, and you cannot change templates without rebuilding.",
         type: "article",
         publishedTime: "2026-04-14",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Squarespace vs Custom Website 2026: Which Is Right for Your Business?",
+        title: "Squarespace vs Custom Website 2026: The 55/100 PageSpeed Ceiling That Kills Rankings",
         description: "You picked Squarespace for the design. Now your site scores 35 on mobile, booking needs a separate subscription, and you cannot change templates without rebuilding.",
     },
 };
@@ -57,16 +57,16 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/squarespace-vs-custom-website#article",
-            "headline": "Squarespace vs Custom Website 2026: Which Is Right for Your Business?",
+            "headline": "Squarespace vs Custom Website 2026: The 55/100 PageSpeed Ceiling That Kills Rankings",
             "description": "You picked Squarespace for the design. Now your site scores 35 on mobile, booking needs a separate subscription, and you cannot change templates without rebuilding. Here is when custom code makes sense and when Squarespace is still the right call.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-14T00:00:00-05:00",
-            "dateModified": "2026-04-14T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -115,7 +115,7 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/squarespace-vs-custom-website",
             "url": "https://www.pandacodegen.com/blog/squarespace-vs-custom-website",
-            "name": "Squarespace vs Custom Website 2026: Which Is Right for Your Business?",
+            "name": "Squarespace vs Custom Website 2026: The 55/100 PageSpeed Ceiling That Kills Rankings",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-04-14",
@@ -202,13 +202,13 @@ export default function SquarespaceVsCustomWebsitePage() {
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            Squarespace sites average 30 to 55 on Google PageSpeed Mobile. 53% of mobile visitors leave before a slow site finishes loading. If your &ldquo;premium&rdquo; Squarespace site is slower than your competitor&apos;s custom site, you are paying for beautiful design that nobody waits around to see.
+                            Squarespace sites average 30 to 55 on Google PageSpeed Mobile. Google's mobile research shows 53% of visitors abandon a page that takes longer than 3 seconds to load. If your &ldquo;premium&rdquo; Squarespace site is slower than your competitor&apos;s custom site, you are paying for beautiful design that nobody waits around to see.
                         </p>
 
                         <BlogAuthor
                             date="Apr 14, 2026"
                             readTime="12 min read"
-                            bio="Hassan has migrated businesses from Squarespace, Wix, WordPress, and Webflow to custom Next.js sites. Every build scores 95 to 100 on Google PageSpeed. No templates. No page builders. No recurring platform fees."
+                            bio="Hassan is the founder of PandaCodeGen, a custom Next.js studio building sites that score 95 to 100 on Google PageSpeed. Recent rebuild: Obare Magazine, Wix to Next.js and Sanity, 7 days. No templates. No page builders. No recurring platform fees."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -218,8 +218,8 @@ export default function SquarespaceVsCustomWebsitePage() {
                     </div>
 
                     {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
-                        <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
+                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
                             "Squarespace is built for creative professionals who value design. The problem starts when that beautiful design loads in 5 to 7 seconds on mobile and your competitors load in under 1 second.",
                             "Every extension you add (scheduling, email marketing, e-commerce) is a separate SaaS subscription that injects JavaScript and slows your site further. Your $29/month plan quietly becomes $80 to $150/month.",
@@ -261,41 +261,41 @@ export default function SquarespaceVsCustomWebsitePage() {
                             <table className="w-full text-sm border-collapse border border-stone-300 min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">What You Added</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Why You Needed It</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Extra Monthly Cost</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">What You Added</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Why You Needed It</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Extra Monthly Cost</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-medium">Acuity Scheduling</td>
-                                        <td data-label="Why You Needed It" className="p-3 border border-stone-200">Clients need to book sessions online</td>
-                                        <td data-label="Extra Monthly Cost" className="p-3 border border-stone-200 text-red-600">$16 to $46/mo (separate from Squarespace)</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Acuity Scheduling</td>
+                                        <td data-label="Why You Needed It" className="p-3 border border-stone-300">Clients need to book sessions online</td>
+                                        <td data-label="Extra Monthly Cost" className="p-3 border border-stone-300 text-red-600">$16 to $46/mo (separate from Squarespace)</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200 font-medium">Squarespace Email Campaigns</td>
-                                        <td data-label="Why You Needed It" className="p-3 border border-stone-200">Newsletter to past clients and leads</td>
-                                        <td data-label="Extra Monthly Cost" className="p-3 border border-stone-200 text-red-600">$7 to $68/mo depending on list size</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Squarespace Email Campaigns</td>
+                                        <td data-label="Why You Needed It" className="p-3 border border-stone-300">Newsletter to past clients and leads</td>
+                                        <td data-label="Extra Monthly Cost" className="p-3 border border-stone-300 text-red-600">$7 to $68/mo depending on list size</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-medium">E-commerce (upgrade to Business)</td>
-                                        <td data-label="Why You Needed It" className="p-3 border border-stone-200">Sell prints, presets, courses, or services</td>
-                                        <td data-label="Extra Monthly Cost" className="p-3 border border-stone-200 text-red-600">3% transaction fee + plan upgrade to $33/mo</td>
+                                        <td className="p-3 border border-stone-300 font-medium">E-commerce (upgrade to Business)</td>
+                                        <td data-label="Why You Needed It" className="p-3 border border-stone-300">Sell prints, presets, courses, or services</td>
+                                        <td data-label="Extra Monthly Cost" className="p-3 border border-stone-300 text-red-600">3% transaction fee + plan upgrade to $33/mo</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200 font-medium">Third-party review widget</td>
-                                        <td data-label="Why You Needed It" className="p-3 border border-stone-200">Social proof from Google or Trustpilot reviews</td>
-                                        <td data-label="Extra Monthly Cost" className="p-3 border border-stone-200 text-red-600">$10 to $30/mo + iframe JavaScript</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Third-party review widget</td>
+                                        <td data-label="Why You Needed It" className="p-3 border border-stone-300">Social proof from Google or Trustpilot reviews</td>
+                                        <td data-label="Extra Monthly Cost" className="p-3 border border-stone-300 text-red-600">$10 to $30/mo + iframe JavaScript</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-medium">Chat widget</td>
-                                        <td data-label="Why You Needed It" className="p-3 border border-stone-200">Clients expect instant communication</td>
-                                        <td data-label="Extra Monthly Cost" className="p-3 border border-stone-200 text-red-600">$0 to $20/mo + external script load</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Chat widget</td>
+                                        <td data-label="Why You Needed It" className="p-3 border border-stone-300">Clients expect instant communication</td>
+                                        <td data-label="Extra Monthly Cost" className="p-3 border border-stone-300 text-red-600">$0 to $20/mo + external script load</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200 font-bold">Your real monthly bill</td>
-                                        <td data-label="Why You Needed It" className="p-3 border border-stone-200"></td>
-                                        <td data-label="Extra Monthly Cost" className="p-3 border border-stone-200 text-red-600 font-bold">$80 to $200/mo (was $29/mo)</td>
+                                        <td className="p-3 border border-stone-300 font-bold">Your real monthly bill</td>
+                                        <td data-label="Why You Needed It" className="p-3 border border-stone-300"></td>
+                                        <td data-label="Extra Monthly Cost" className="p-3 border border-stone-300 text-red-600 font-bold">$80 to $200/mo (was $29/mo)</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -336,6 +336,10 @@ export default function SquarespaceVsCustomWebsitePage() {
                         <BlogHeader>The Design Trap: You Cannot Change Templates Without Starting Over</BlogHeader>
 
                         <BlogText>
+                            Squarespace 7.1 (the current version, which locks every user into Fluid Engine as the only editor) removed template switching entirely. Fluid Engine&apos;s drag grid gives design flexibility, but every block ships additional JavaScript. Upgrading to the Commerce plan unlocks product variants and abandoned cart recovery but locks you into Squarespace&apos;s checkout. Member Areas, their gated content feature, costs an additional $10 to $40/month on top of your plan. Acuity Scheduling is another $16 to $61/month for bookings.
+                        </BlogText>
+
+                        <BlogText>
                             This is the one that surprises most Squarespace users. <BlogHighlight>Once your site is live, you cannot switch to a different template.</BlogHighlight> If you want a new layout, a different grid system, or a fresh visual direction, you rebuild every page manually. Squarespace&apos;s own help documentation confirms this.
                         </BlogText>
 
@@ -367,7 +371,7 @@ export default function SquarespaceVsCustomWebsitePage() {
                         </BlogText>
 
                         {/* === MID CTA === */}
-                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Want to see your real Squarespace speed score?</p>
                             <p className="text-stone-600 mb-4 text-sm">Share your URL on the call. We run PageSpeed live, show you the bottleneck, and give you an honest recommendation. No obligation.</p>
                             <CalModalButton className="inline-flex items-center gap-2 bg-cognac hover:bg-amber-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors">
@@ -392,7 +396,7 @@ export default function SquarespaceVsCustomWebsitePage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>The real cost:</strong> A Squarespace to custom Next.js migration costs $3,500 to $8,000 for most business sites (5 to 30 pages). Compare that to what you are already spending: if your Squarespace bill is $100/month (plan + scheduling + email + extensions), that is $1,200/year or $3,600 over 3 years. A custom site on Vercel starts free and only scales to $20/month when your business grows. The migration pays for itself in platform fee savings within 18 to 30 months. Add the revenue from better Google rankings and faster load times, and payback is often under 12 months. See our full cost breakdown: <Link href="/blog/squarespace-migration-cost" className="text-cognac hover:underline font-medium">Squarespace Migration Cost 2026</Link>.
+                            <strong>The real cost:</strong> A Squarespace to custom Next.js migration starts at $500 Founder Portfolio Pick for a core page rebuild, lands at $3,500+ Growth for most 5 to 30 page sites, and runs $5,000 to $10,000+ Scale for larger e-commerce or booking workflows. Compare that to what you are already spending: if your Squarespace bill is $100/month (plan + scheduling + email + extensions), that is $1,200/year or $3,600 over 3 years. A custom site on Vercel starts free and only scales to $20/month when your business grows. The migration pays for itself in platform fee savings within 18 to 30 months. Add the revenue from better Google rankings and faster load times, and payback is often under 12 months. See our full cost breakdown: <Link href="/blog/squarespace-migration-cost" className="text-cognac hover:underline font-medium">Squarespace Migration Cost 2026</Link>. Comparing other builders? See <Link href="/blog/wix-vs-custom-website" className="text-cognac hover:underline font-medium">Wix vs Custom Website</Link> and <Link href="/blog/webflow-vs-custom-website" className="text-cognac hover:underline font-medium">Webflow vs Custom Website</Link>.
                         </BlogText>
 
                         {/* === SECTION 7: What Custom Gives You === */}
@@ -422,7 +426,7 @@ export default function SquarespaceVsCustomWebsitePage() {
                         </div>
 
                         <BlogText>
-                            For a real example, see how we built a complete e-commerce platform that generates $38,000/month in revenue on roughly $25/month in total tooling costs: <Link href="/work/panda-patches" className="text-cognac hover:underline font-medium">Panda Patches case study</Link>.
+                            For a real example of what custom code enables at scale, look at MyCustomPatches, the WooCommerce e-commerce store we rebuilt for Matt Conner into a headless Next.js platform. It now runs on roughly $25/month in total tooling, down from a four-figure monthly WordPress + plugin stack. And we recently rebuilt Obare Magazine off Wix into a Next.js and Sanity stack in a 7-day turnaround, proving the same methodology travels across every template-based platform.
                         </BlogText>
 
                         {/* === SECTION 8: When to STAY === */}
@@ -455,7 +459,7 @@ export default function SquarespaceVsCustomWebsitePage() {
                                 { num: "4", title: "You need e-commerce without the 3% transaction fee", desc: "Squarespace charges 3% on every sale on the Business plan, on top of Stripe's 2.9% + $0.30. If you sell $5,000/month in prints or courses, that is $150/month in Squarespace fees alone. A custom Stripe integration costs $0 in platform fees." },
                                 { num: "5", title: "You want to redesign but cannot change templates", desc: "Your brand has evolved. Your current template does not reflect your work anymore. But Squarespace requires manual page-by-page rebuilding to change designs. A custom site redesigns in days, not weeks." },
                             ].map((signal) => (
-                                <div key={signal.num} className="flex gap-4 p-4 border border-stone-200 rounded-xl hover:border-cognac/30 transition-colors">
+                                <div key={signal.num} className="flex gap-4 p-4 border border-stone-300 rounded-xl hover:border-cognac/30 transition-colors">
                                     <div className="w-8 h-8 rounded-lg bg-cognac/10 flex items-center justify-center shrink-0">
                                         <span className="text-cognac font-bold text-sm">{signal.num}</span>
                                     </div>
@@ -479,56 +483,56 @@ export default function SquarespaceVsCustomWebsitePage() {
                             <table className="w-full text-sm border-collapse border border-stone-300 min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Cost Item</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Squarespace (3 years)</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Custom Next.js (3 years)</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Cost Item</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Squarespace (3 years)</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Custom Next.js (3 years)</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-medium">Platform/Hosting</td>
-                                        <td data-label="Squarespace (3 years)" className="p-3 border border-stone-200">$576 to $1,188 ($16 to $33/mo)</td>
-                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-200 text-green-700">$0 to $720 (free, $20/mo when you scale)</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Platform/Hosting</td>
+                                        <td data-label="Squarespace (3 years)" className="p-3 border border-stone-300">$576 to $1,188 ($16 to $33/mo)</td>
+                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-300 text-green-700">$0 to $720 (free, $20/mo when you scale)</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200 font-medium">Scheduling (Acuity)</td>
-                                        <td data-label="Squarespace (3 years)" className="p-3 border border-stone-200">$576 to $1,656 ($16 to $46/mo)</td>
-                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-200 text-green-700">$0 (built into code)</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Scheduling (Acuity)</td>
+                                        <td data-label="Squarespace (3 years)" className="p-3 border border-stone-300">$576 to $1,656 ($16 to $46/mo)</td>
+                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-300 text-green-700">$0 (built into code)</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-medium">Email campaigns</td>
-                                        <td data-label="Squarespace (3 years)" className="p-3 border border-stone-200">$252 to $2,448 ($7 to $68/mo)</td>
-                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-200 text-green-700">$0 to $240 (free tier email services)</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Email campaigns</td>
+                                        <td data-label="Squarespace (3 years)" className="p-3 border border-stone-300">$252 to $2,448 ($7 to $68/mo)</td>
+                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-300 text-green-700">$0 to $240 (free tier email services)</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200 font-medium">Transaction fees (on $3K/mo sales)</td>
-                                        <td data-label="Squarespace (3 years)" className="p-3 border border-stone-200">$3,240 (3% on Business plan)</td>
-                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-200 text-green-700">$0 (Stripe only, no platform fee)</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Transaction fees (on $3K/mo sales)</td>
+                                        <td data-label="Squarespace (3 years)" className="p-3 border border-stone-300">$3,240 (3% on Business plan)</td>
+                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-300 text-green-700">$0 (Stripe only, no platform fee)</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-medium">Domain</td>
-                                        <td data-label="Squarespace (3 years)" className="p-3 border border-stone-200">$60 to $210 (free year 1, then renewal)</td>
-                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-200">$36 to $60 (Cloudflare Registrar)</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Domain</td>
+                                        <td data-label="Squarespace (3 years)" className="p-3 border border-stone-300">$60 to $210 (free year 1, then renewal)</td>
+                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-300">$36 to $60 (Cloudflare Registrar)</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200 font-medium">Build cost</td>
-                                        <td data-label="Squarespace (3 years)" className="p-3 border border-stone-200">$0 (DIY) or $2,500 to $3,500 (designer)</td>
-                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-200">$3,500 to $8,000 (one-time)</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Build cost</td>
+                                        <td data-label="Squarespace (3 years)" className="p-3 border border-stone-300">$0 (DIY) or $2,500 to $3,500 (designer)</td>
+                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-300">$3,500 to $8,000 (one-time)</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-bold">3-Year Total</td>
-                                        <td data-label="Squarespace (3 years)" className="p-3 border border-stone-200 font-bold text-red-600">$4,704 to $12,242</td>
-                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-200 font-bold text-green-700">$3,536 to $9,020</td>
+                                        <td className="p-3 border border-stone-300 font-bold">3-Year Total</td>
+                                        <td data-label="Squarespace (3 years)" className="p-3 border border-stone-300 font-bold text-red-600">$4,704 to $12,242</td>
+                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-300 font-bold text-green-700">$3,536 to $9,020</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200 font-bold">PageSpeed Score</td>
-                                        <td data-label="Squarespace (3 years)" className="p-3 border border-stone-200 font-bold text-red-600">30 to 55 (mobile)</td>
-                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-200 font-bold text-green-700">95 to 100 (mobile)</td>
+                                        <td className="p-3 border border-stone-300 font-bold">PageSpeed Score</td>
+                                        <td data-label="Squarespace (3 years)" className="p-3 border border-stone-300 font-bold text-red-600">30 to 55 (mobile)</td>
+                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-300 font-bold text-green-700">95 to 100 (mobile)</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-bold">Code Ownership</td>
-                                        <td data-label="Squarespace (3 years)" className="p-3 border border-stone-200 font-bold text-red-600">No (limited XML export only)</td>
-                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-200 font-bold text-green-700">Yes (GitHub, yours forever)</td>
+                                        <td className="p-3 border border-stone-300 font-bold">Code Ownership</td>
+                                        <td data-label="Squarespace (3 years)" className="p-3 border border-stone-300 font-bold text-red-600">No (limited XML export only)</td>
+                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-300 font-bold text-green-700">Yes (GitHub, yours forever)</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -555,7 +559,7 @@ export default function SquarespaceVsCustomWebsitePage() {
                     </div>
 
                     {/* Key Takeaways */}
-                    <section className="mb-10 mt-16">
+                    <section className="mb-10 mt-6 md:mt-10 md:mt-16">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
                             <li><strong>Squarespace excels at design.</strong> If your site is a digital business card and you do not depend on Google search traffic, it is a solid choice. Stay.</li>
@@ -567,7 +571,7 @@ export default function SquarespaceVsCustomWebsitePage() {
                     </section>
 
                     {/* Bottom CTA */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Ready to See What a Faster Site Would Do for Your Business?</h3>
                         <p className="text-stone-600 mb-6 max-w-xl mx-auto text-sm">
                             Share your Squarespace URL on the call. We run PageSpeed live, show you exactly where the bottleneck is, and give you an honest recommendation. 20 minutes. No pressure.

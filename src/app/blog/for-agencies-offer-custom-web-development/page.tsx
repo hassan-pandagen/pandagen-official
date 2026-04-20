@@ -1,6 +1,6 @@
 import { ArrowLeft, Calendar, Clock, ArrowRight, RefreshCw } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,28 +11,28 @@ import type { Metadata } from "next";
 
 const agencyFAQs = blogPosts.find(p => p.id === 'for-agencies-offer-custom-web-development')?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
 
 export const metadata: Metadata = {
-    title: "White Label Web Development for Agencies: 100% Margin in 2026",
-    description: "Your client wants a custom site but you have no dev team. Here is how 40+ agencies deliver premium custom builds under their own brand without writing code.",
+    title: "White Label Web Development for Agencies: 25 to 50% Margin in 2026",
+    description: "Your client wants a custom site but you have no dev team. Here is how agency partners deliver premium custom builds under their own brand without writing code.",
     alternates: {
         canonical: '/blog/for-agencies-offer-custom-web-development',
     },
     openGraph: {
-        title: "White Label Web Development for Agencies: 100% Margin in 2026",
-        description: "Your client wants a custom site but you have no dev team. Here is how 40+ agencies deliver premium custom builds under their own brand without writing code.",
+        title: "White Label Web Development for Agencies: 25 to 50% Margin in 2026",
+        description: "Your client wants a custom site but you have no dev team. Here is how agency partners deliver premium custom builds under their own brand without writing code.",
         type: "article",
         publishedTime: "2026-03-06",
-        authors: ["Hassan"],
+        authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/for-agencies-offer-custom-web-development",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
     twitter: {
         card: "summary_large_image",
-        title: "White Label Web Development for Agencies: 100% Margin in 2026",
-        description: "Your client wants a custom site but you have no dev team. Here is how 40+ agencies deliver premium custom builds under their own brand without writing code.",
+        title: "White Label Web Development for Agencies: 25 to 50% Margin in 2026",
+        description: "Your client wants a custom site but you have no dev team. Here is how agency partners deliver premium custom builds under their own brand without writing code.",
     },
     keywords: ["white label web development", "outsource web development for agencies", "offer custom web development without dev team", "white label nextjs", "agency web development partner"],
 };
@@ -43,16 +43,16 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/for-agencies-offer-custom-web-development#article",
-            "headline": "White Label Web Development for Agencies: 100% Margin in 2026",
-            "description": "Your client wants a custom site but you have no dev team. Here is how 40+ agencies deliver premium custom builds under their own brand without writing code.",
+            "headline": "White Label Web Development for Agencies: 25 to 50% Margin in 2026",
+            "description": "Your client wants a custom site but you have no dev team. Here is how agency partners deliver premium custom builds under their own brand without writing code.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-06T00:00:00-05:00",
-            "dateModified": "2026-03-10T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -106,11 +106,11 @@ const articleSchema = {
             "@id": "https://www.pandacodegen.com/blog/for-agencies-offer-custom-web-development#webpage",
             "url": "https://www.pandacodegen.com/blog/for-agencies-offer-custom-web-development",
             "name": "For Agencies: How to Offer Custom Web Development Without Hiring a Dev Team",
-            "description": "Your client wants a custom-built website. You don't have a dev team. Here's how 40+ agencies deliver premium custom builds under their own brand.",
+            "description": "Your client wants a custom-built website. You don't have a dev team. Here's how agency partners deliver premium custom builds under their own brand.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-06T00:00:00-05:00",
-            "dateModified": "2026-03-10T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/for-agencies-offer-custom-web-development#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -172,7 +172,7 @@ export default function ForAgenciesCustomDevPage() {
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            Your client wants a custom-built website. You don&apos;t have a dev team. Here&apos;s how 40+ agencies deliver premium custom builds under their own brand, without touching a line of code.
+                            Your client wants a custom-built website. You don&apos;t have a dev team. Here&apos;s how agency partners deliver premium custom builds under their own brand, without touching a line of code.
                         </p>
 
                         <BlogAuthor
@@ -187,10 +187,10 @@ export default function ForAgenciesCustomDevPage() {
                         <PageSpeedAnimation />
                     </div>
 
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
-                        <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
+                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
-                            "The white-label model: You sell, we build, your client never knows we exist. NDA-first.",
+                            "The white-label model: You sell, we build, your brand stays on every deliverable. NDA-first.",
                             "You keep the client relationship, the ongoing retainer, and 25 to 50% margin on every project.",
                             "What you can offer: WordPress migrations, custom Next.js sites, e-commerce builds, custom dashboards, GoHighLevel implementations.",
                             "What to look for in a dev partner: Fixed-price quotes, proven case studies, NDA workflow, and a team that meets your deadlines, not theirs."
@@ -219,7 +219,7 @@ export default function ForAgenciesCustomDevPage() {
                         ]} />
 
                         <BlogText>
-                            <BlogHighlight>Option 4 is how 40+ agencies we work with have expanded their service offering without hiring a single developer.</BlogHighlight>
+                            <BlogHighlight>Option 4 is how agency partners we work with have expanded their service offering without hiring a single developer.</BlogHighlight>
                         </BlogText>
 
                         <BlogHeader>What Is White-Label Web Development?</BlogHeader>
@@ -243,7 +243,7 @@ export default function ForAgenciesCustomDevPage() {
                         <BlogHeader>The Agency Dilemma: Why Most Agencies Turn Down Custom Dev Work</BlogHeader>
 
                         <BlogText>
-                            We&apos;ve spoken to hundreds of agency owners. The same concern comes up repeatedly:
+                            Speak to any agency owner who has tried outsourcing development and the same concern comes up:
                         </BlogText>
 
                         <BlogQuote>
@@ -327,7 +327,7 @@ export default function ForAgenciesCustomDevPage() {
                         ]} />
 
                         {/* Mid-Article CTA */}
-                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Agency owner? Let&apos;s talk about your next project.</p>
                             <p className="text-stone-600 mb-4 text-sm">NDA first. Fixed price. We build under your brand.</p>
                             <Link
@@ -464,7 +464,7 @@ export default function ForAgenciesCustomDevPage() {
                             "Vercel hosting that starts free and only scales to $20/month when the business grows",
                             "They own the code, portable to any developer, not locked into a platform",
                             "Simple content editor: they can edit text and images without developer help",
-                            "Zero plugin vulnerabilities, no security patches, no update management"
+                            "No WordPress plugin stack, so no weekly plugin patching or update cycles to manage"
                         ]} />
 
                         <BlogText>
@@ -514,7 +514,7 @@ export default function ForAgenciesCustomDevPage() {
                     {agencyFAQs.length > 0 && <FAQAccordion faqs={agencyFAQs} />}
 
                     {/* CTA Section */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Bring Us Your Next Client Brief</h3>
                         <p className="text-stone-600 mb-6">
                             NDA-first. Fixed-price quote within 48 hours. We build under your brand. You keep the client and the margin.

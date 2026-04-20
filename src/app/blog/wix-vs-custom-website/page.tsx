@@ -18,8 +18,8 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Wix vs Custom Website 2026: Which Is Better for Your Business?",
-    description: "Wix scores 35 to 55 on mobile PageSpeed. Custom sites score 95 to 100. But Wix is free to start and easy to use. Here is the real cost, speed, and SEO comparison with honest advice on when to stay and when to switch.",
+    title: "Wix vs Custom Website 2026: 5 Moments Wix Becomes a Business Liability",
+    description: "Wix caps at 35 to 55 on mobile PageSpeed. Custom Next.js hits 95 to 100. Real 3-year cost, SEO ceiling, and when to stay or switch. Honest breakdown.",
     alternates: {
         canonical: "/blog/wix-vs-custom-website",
     },
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
         "wix pagespeed score"
     ],
     openGraph: {
-        title: "Wix vs Custom Website 2026: Which Is Better for Your Business?",
+        title: "Wix vs Custom Website 2026: 5 Moments Wix Becomes a Business Liability",
         description: "You added a booking app. Then an SEO plugin. Then a form tool. Your Wix site still scores 35 on mobile and you cannot export your content. Here is when custom code makes sense.",
         type: "article",
         publishedTime: "2026-04-13",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Wix vs Custom Website 2026: Which Is Better for Your Business?",
+        title: "Wix vs Custom Website 2026: 5 Moments Wix Becomes a Business Liability",
         description: "You added a booking app. Then an SEO plugin. Then a form tool. Your Wix site still scores 35 on mobile and you cannot export your content. Here is when custom code makes sense.",
     },
 };
@@ -57,16 +57,16 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wix-vs-custom-website#article",
-            "headline": "Wix vs Custom Website 2026: Which Is Better for Your Business?",
+            "headline": "Wix vs Custom Website 2026: 5 Moments Wix Becomes a Business Liability",
             "description": "Wix scores 35 to 55 on mobile PageSpeed. Custom sites score 95 to 100. But Wix is free to start and easy to use. Here is the real cost, speed, and SEO comparison with honest advice on when to stay and when to switch.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-13T00:00:00-05:00",
-            "dateModified": "2026-04-13T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -80,7 +80,7 @@ const articleSchema = {
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/wix-vs-custom-website" },
             "articleSection": "Comparison",
-            "wordCount": 3100,
+            "wordCount": 2400,
             "timeRequired": "PT12M",
             "inLanguage": "en-US",
             "keywords": ["wix vs custom website", "wix alternative", "wix limitations", "wix migration cost", "custom website cost 2026", "wix pagespeed"],
@@ -115,7 +115,7 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/wix-vs-custom-website",
             "url": "https://www.pandacodegen.com/blog/wix-vs-custom-website",
-            "name": "Wix vs Custom Website 2026: Which Is Better for Your Business?",
+            "name": "Wix vs Custom Website 2026: 5 Moments Wix Becomes a Business Liability",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-04-13",
@@ -208,7 +208,7 @@ export default function WixVsCustomWebsitePage() {
                         <BlogAuthor
                             date="Apr 13, 2026"
                             readTime="12 min read"
-                            bio="Hassan has migrated businesses from Wix, WordPress, Squarespace, and Webflow to custom Next.js sites. Every build scores 95 to 100 on Google PageSpeed. No templates. No page builders. No recurring platform fees."
+                            bio="Hassan is the founder of PandaCodeGen. Recent work: Obare Magazine rebuilt off Wix into Next.js and Sanity in 7 days. Every build scores 95 to 100 on Google PageSpeed. No templates. No page builders. No recurring platform fees."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -218,8 +218,8 @@ export default function WixVsCustomWebsitePage() {
                     </div>
 
                     {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
-                        <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
+                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
                             "Wix works for personal sites and small portfolios. The problems start when your business depends on Google rankings, booking systems, or e-commerce that actually converts.",
                             "Every third-party app you add from the Wix App Market injects JavaScript that slows your site. You cannot remove the platform JavaScript. The speed ceiling is 35 to 55 on mobile PageSpeed.",
@@ -253,6 +253,14 @@ export default function WixVsCustomWebsitePage() {
                             Wix is a great starter home. The problem is when your business grows and you realize you cannot renovate, you cannot add a second floor, and you cannot move the furniture to a new house.
                         </BlogQuote>
 
+                        <BlogText>
+                            A recent receipt: we rebuilt <strong>Obare Magazine</strong> off Wix into a custom Next.js and Sanity stack in a 7-day turnaround. Their editors kept the Wix habit of &ldquo;drop content and publish.&rdquo; What changed: mobile PageSpeed jumped into the 90s, image URLs became descriptive instead of Wix hash strings, and every article ships with schema the Wix editor could not output.
+                        </BlogText>
+
+                        <BlogText>
+                            Comparing other builders? See <Link href="/blog/webflow-vs-custom-website" className="text-cognac hover:underline font-medium">Webflow vs Custom Website</Link>, <Link href="/blog/squarespace-vs-custom-website" className="text-cognac hover:underline font-medium">Squarespace vs Custom Website</Link>, and <Link href="/blog/leaving-webflow-2026" className="text-cognac hover:underline font-medium">Leaving Webflow in 2026</Link>.
+                        </BlogText>
+
                         {/* === SECTION 2: The App Trap === */}
                         <BlogHeader>The App Trap: Every Feature You Add Makes Your Site Slower</BlogHeader>
 
@@ -273,41 +281,41 @@ export default function WixVsCustomWebsitePage() {
                             <table className="w-full text-sm border-collapse border border-stone-300 min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">What You Added</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Why You Needed It</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Speed Impact</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">What You Added</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Why You Needed It</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Speed Impact</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-medium">Wix Bookings</td>
-                                        <td data-label="Why You Needed It" className="p-3 border border-stone-200">Clients need to schedule appointments</td>
-                                        <td data-label="Speed Impact" className="p-3 border border-stone-200 text-red-600">+150ms, fixed session durations only</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Wix Bookings</td>
+                                        <td data-label="Why You Needed It" className="p-3 border border-stone-300">Clients need to schedule appointments</td>
+                                        <td data-label="Speed Impact" className="p-3 border border-stone-300 text-red-600">+150ms, fixed session durations only</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200 font-medium">Third-party form app</td>
-                                        <td data-label="Why You Needed It" className="p-3 border border-stone-200">Wix free plan limits to 4 forms/month</td>
-                                        <td data-label="Speed Impact" className="p-3 border border-stone-200 text-red-600">+200ms iframe load</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Third-party form app</td>
+                                        <td data-label="Why You Needed It" className="p-3 border border-stone-300">Wix free plan limits to 4 forms/month</td>
+                                        <td data-label="Speed Impact" className="p-3 border border-stone-300 text-red-600">+200ms iframe load</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-medium">SEO app</td>
-                                        <td data-label="Why You Needed It" className="p-3 border border-stone-200">Wix auto-generates cryptic image filenames</td>
-                                        <td data-label="Speed Impact" className="p-3 border border-stone-200 text-red-600">+120ms JavaScript</td>
+                                        <td className="p-3 border border-stone-300 font-medium">SEO app</td>
+                                        <td data-label="Why You Needed It" className="p-3 border border-stone-300">Wix auto-generates cryptic image filenames</td>
+                                        <td data-label="Speed Impact" className="p-3 border border-stone-300 text-red-600">+120ms JavaScript</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200 font-medium">Chat widget</td>
-                                        <td data-label="Why You Needed It" className="p-3 border border-stone-200">Clients expect instant communication</td>
-                                        <td data-label="Speed Impact" className="p-3 border border-stone-200 text-red-600">+180ms external script</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Chat widget</td>
+                                        <td data-label="Why You Needed It" className="p-3 border border-stone-300">Clients expect instant communication</td>
+                                        <td data-label="Speed Impact" className="p-3 border border-stone-300 text-red-600">+180ms external script</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-medium">Review display</td>
-                                        <td data-label="Why You Needed It" className="p-3 border border-stone-200">Social proof increases conversions</td>
-                                        <td data-label="Speed Impact" className="p-3 border border-stone-200 text-red-600">+150ms API call + render</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Review display</td>
+                                        <td data-label="Why You Needed It" className="p-3 border border-stone-300">Social proof increases conversions</td>
+                                        <td data-label="Speed Impact" className="p-3 border border-stone-300 text-red-600">+150ms API call + render</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200 font-bold">Total added load time</td>
-                                        <td data-label="Why You Needed It" className="p-3 border border-stone-200"></td>
-                                        <td data-label="Speed Impact" className="p-3 border border-stone-200 text-red-600 font-bold">+800ms on top of Wix baseline</td>
+                                        <td className="p-3 border border-stone-300 font-bold">Total added load time</td>
+                                        <td data-label="Why You Needed It" className="p-3 border border-stone-300"></td>
+                                        <td data-label="Speed Impact" className="p-3 border border-stone-300 text-red-600 font-bold">+800ms on top of Wix baseline</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -364,7 +372,7 @@ export default function WixVsCustomWebsitePage() {
                         </BlogText>
 
                         {/* === MID CTA === */}
-                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Want to see your real Wix speed score?</p>
                             <p className="text-stone-600 mb-4 text-sm">Share your URL on the call. We run PageSpeed live, show you the bottleneck, and give you an honest recommendation. No obligation.</p>
                             <CalModalButton className="inline-flex items-center gap-2 bg-cognac hover:bg-amber-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors">
@@ -393,7 +401,7 @@ export default function WixVsCustomWebsitePage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>The real cost:</strong> A Wix to custom Next.js migration costs $3,500 to $8,000 for most business sites (5 to 30 pages). That sounds expensive until you compare it to what you are already paying. If your Wix bill (plan + apps + add-ons) is $100/month, that is $1,200/year or $3,600 over 3 years. A custom site hosted on Vercel starts free and only scales to $20/month when your business grows. The migration pays for itself in hosting savings alone within 18 to 24 months. Add the revenue gained from better PageSpeed scores and higher Google rankings, and payback is often under 12 months.
+                            <strong>The real cost:</strong> A Wix to custom Next.js migration starts at $500 Founder Portfolio Pick for a landing page rebuild, lands at $3,500+ Growth for most 5 to 30 page business sites, and runs $5,000 to $10,000+ Scale for larger catalogs or booking/e-commerce workflows. That sounds expensive until you compare it to what you are already paying. If your Wix bill (plan + apps + add-ons) is $100/month, that is $1,200/year or $3,600 over 3 years. A custom site hosted on Vercel starts free and only scales to $20/month when your business grows. The migration pays for itself in hosting savings alone within 18 to 24 months. Add the revenue gained from better PageSpeed scores and higher Google rankings, and payback is often under 12 months.
                         </BlogText>
 
                         {/* === SECTION 6: What Custom Gives You === */}
@@ -423,7 +431,7 @@ export default function WixVsCustomWebsitePage() {
                         </div>
 
                         <BlogText>
-                            For a real example of what this looks like in production, see how we rebuilt a 3-year-old WordPress e-commerce site into a complete headless platform: <Link href="/work/panda-patches" className="text-cognac hover:underline font-medium">Panda Patches case study</Link>. The site now generates $38,000/month in revenue on roughly $25/month in total tooling costs.
+                            For a real example of what this looks like in production, see MyCustomPatches, the WooCommerce e-commerce store we rebuilt for Matt Conner into a headless Next.js platform that now runs on roughly $25/month in total tooling costs, down from a four-figure monthly WordPress + plugin stack.
                         </BlogText>
 
                         {/* === SECTION 7: When to STAY === */}
@@ -460,7 +468,7 @@ export default function WixVsCustomWebsitePage() {
                                 { num: "4", title: "You need booking, e-commerce, or forms that actually work", desc: "Wix Bookings cannot handle 45-minute sessions (only fixed durations). Forms are capped at 4/month on the free plan. E-commerce transaction fees add 2% on top of Stripe fees. These limitations cost you money every day." },
                                 { num: "5", title: "You have tried to leave and discovered there is no export", desc: "If you have already looked into migrating and hit the 'no export' wall, you already know the problem. Every month you wait, you add more content that will need to be manually extracted later." },
                             ].map((signal) => (
-                                <div key={signal.num} className="flex gap-4 p-4 border border-stone-200 rounded-xl hover:border-cognac/30 transition-colors">
+                                <div key={signal.num} className="flex gap-4 p-4 border border-stone-300 rounded-xl hover:border-cognac/30 transition-colors">
                                     <div className="w-8 h-8 rounded-lg bg-cognac/10 flex items-center justify-center shrink-0">
                                         <span className="text-cognac font-bold text-sm">{signal.num}</span>
                                     </div>
@@ -488,46 +496,46 @@ export default function WixVsCustomWebsitePage() {
                             <table className="w-full text-sm border-collapse border border-stone-300 min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Cost Item</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Wix (3 years)</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Custom Next.js (3 years)</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Cost Item</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Wix (3 years)</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Custom Next.js (3 years)</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-medium">Platform/Hosting</td>
-                                        <td data-label="Wix (3 years)" className="p-3 border border-stone-200">$612 to $1,764 ($17 to $49/mo)</td>
-                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-200 text-green-700">$0 to $720 (free, $20/mo when you scale)</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Platform/Hosting</td>
+                                        <td data-label="Wix (3 years)" className="p-3 border border-stone-300">$612 to $1,764 ($17 to $49/mo)</td>
+                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-300 text-green-700">$0 to $720 (free, $20/mo when you scale)</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200 font-medium">Apps and add-ons</td>
-                                        <td data-label="Wix (3 years)" className="p-3 border border-stone-200">$1,080 to $3,600 ($30 to $100/mo avg)</td>
-                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-200 text-green-700">$0 (built into code)</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Apps and add-ons</td>
+                                        <td data-label="Wix (3 years)" className="p-3 border border-stone-300">$1,080 to $3,600 ($30 to $100/mo avg)</td>
+                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-300 text-green-700">$0 (built into code)</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-medium">Domain</td>
-                                        <td data-label="Wix (3 years)" className="p-3 border border-stone-200">$42 to $150</td>
-                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-200">$36 to $60 (Cloudflare Registrar)</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Domain</td>
+                                        <td data-label="Wix (3 years)" className="p-3 border border-stone-300">$42 to $150</td>
+                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-300">$36 to $60 (Cloudflare Registrar)</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200 font-medium">Build cost</td>
-                                        <td data-label="Wix (3 years)" className="p-3 border border-stone-200">$0 (DIY) or $500 to $2,000 (designer)</td>
-                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-200">$3,500 to $8,000 (one-time)</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Build cost</td>
+                                        <td data-label="Wix (3 years)" className="p-3 border border-stone-300">$0 (DIY) or $500 to $2,000 (designer)</td>
+                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-300">$500 (FITD) to $12,000 (Scale), one-time</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-bold">3-Year Total</td>
-                                        <td data-label="Wix (3 years)" className="p-3 border border-stone-200 font-bold text-red-600">$1,734 to $7,514</td>
-                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-200 font-bold text-green-700">$3,536 to $8,780</td>
+                                        <td className="p-3 border border-stone-300 font-bold">3-Year Total</td>
+                                        <td data-label="Wix (3 years)" className="p-3 border border-stone-300 font-bold text-red-600">$1,734 to $7,514</td>
+                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-300 font-bold text-green-700">$3,536 to $8,780</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200 font-bold">PageSpeed Score</td>
-                                        <td data-label="Wix (3 years)" className="p-3 border border-stone-200 font-bold text-red-600">35 to 55 (mobile)</td>
-                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-200 font-bold text-green-700">95 to 100 (mobile)</td>
+                                        <td className="p-3 border border-stone-300 font-bold">PageSpeed Score</td>
+                                        <td data-label="Wix (3 years)" className="p-3 border border-stone-300 font-bold text-red-600">35 to 55 (mobile)</td>
+                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-300 font-bold text-green-700">95 to 100 (mobile)</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-bold">Code Ownership</td>
-                                        <td data-label="Wix (3 years)" className="p-3 border border-stone-200 font-bold text-red-600">No (no export)</td>
-                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-200 font-bold text-green-700">Yes (GitHub, yours forever)</td>
+                                        <td className="p-3 border border-stone-300 font-bold">Code Ownership</td>
+                                        <td data-label="Wix (3 years)" className="p-3 border border-stone-300 font-bold text-red-600">No (no export)</td>
+                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-300 font-bold text-green-700">Yes (GitHub, yours forever)</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -562,19 +570,19 @@ export default function WixVsCustomWebsitePage() {
                     </div>
 
                     {/* Key Takeaways */}
-                    <section className="mb-10 mt-16">
+                    <section className="mb-10 mt-6 md:mt-10 md:mt-16">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
                             <li><strong>Wix works for starter sites.</strong> If your business is small, search rankings do not matter to your revenue, and your monthly spend is under $50, Wix is fine. Stay.</li>
                             <li><strong>Every app you add makes your site slower.</strong> Third-party Wix apps inject JavaScript that adds 50 to 200ms per app. 5 apps = 800ms+ of added load time on top of the platform baseline.</li>
                             <li><strong>The PageSpeed ceiling is 35 to 55 on mobile.</strong> This is architectural, not fixable with optimization. Wix loads 200 to 400KB of platform JavaScript that you cannot remove.</li>
                             <li><strong>Wix has no content export.</strong> Your pages, blog posts, and images are locked inside the platform. Leaving requires manual extraction or professional migration.</li>
-                            <li><strong>Custom code costs more upfront but less over 3 years.</strong> A $3,500 to $8,000 custom build with hosting that starts free is cheaper than 3 years of Wix at $100+/month. And the site is 3x faster.</li>
+                            <li><strong>Custom code costs more upfront but less over 3 years.</strong> A $3,000 to $12,000 custom build with hosting that starts free is cheaper than 3 years of Wix at $100+/month. And the site is 3x faster.</li>
                         </ol>
                     </section>
 
                     {/* Bottom CTA */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Ready to See What a Faster Site Would Do for Your Business?</h3>
                         <p className="text-stone-600 mb-6 max-w-xl mx-auto text-sm">
                             Share your Wix URL on the call. We run PageSpeed live, show you exactly where the bottleneck is, and give you an honest recommendation: fix it, stay on Wix, or migrate. No pressure. 20 minutes.

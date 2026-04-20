@@ -59,9 +59,9 @@ export default function PageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-4 leading-tight"
           >
-            Migrate WordPress to Next.js. <br />
+            Your WordPress site is 3x slower than your competitor. <br />
             <span className="font-serif italic text-cognac">
-              From $500. 3 weeks. 95+ PageSpeed.
+              We rebuild it on Next.js in 3 weeks.
             </span>
           </motion.h1>
 

@@ -1,6 +1,6 @@
 import { ArrowLeft, ArrowRight, DollarSign, Clock, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,19 +11,19 @@ import type { Metadata } from "next";
 
 const webflowMigrationFAQs = blogPosts.find(p => p.id === 'webflow-migration-cost')?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
-const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "How Much Does Webflow Migration Cost in 2026? Honest Pricing From $500 to $60K",
-    description: "Webflow migration costs $500 to $60,000+ depending on site size, CMS complexity, and integrations. Full 2026 breakdown by page count (10, 50, 100+), the hidden fees agencies never quote, and honest pricing you can verify.",
+    title: "How Much Does Webflow Migration Cost in 2026? Honest Pricing From $500",
+    description: "Webflow migration: $1,500+ Starter, $3,500+ Growth, $5K-$10K+ Scale. Full 2026 breakdown by page count and hidden fees.",
     alternates: {
         canonical: '/blog/webflow-migration-cost',
     },
     keywords: ["webflow migration cost", "webflow to next.js cost", "webflow migration pricing", "how much does webflow migration cost", "webflow to custom code", "webflow migration cost for 50-100 page website", "webflow enterprise pricing migration cost", "factors that increase cost of webflow migration project", "webflow ongoing costs after migration", "webflow migration cost 2026"],
     openGraph: {
-        title: "How Much Does Webflow Migration Cost in 2026? Honest Pricing From $500 to $60K",
+        title: "How Much Does Webflow Migration Cost in 2026? Honest Pricing From $500",
         description: "Webflow migration costs $500 to $60,000+ depending on site size, CMS complexity, and integrations. Full 2026 breakdown by page count, hidden fees agencies never quote, and honest pricing you can verify.",
         type: "article",
         publishedTime: "2026-03-25",
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "How Much Does Webflow Migration Cost in 2026? Honest Pricing From $500 to $60K",
-        description: "Webflow migration costs $500 to $60K+ depending on size. Full 2026 breakdown by page count, hidden fees, honest pricing.",
+        title: "How Much Does Webflow Migration Cost in 2026? Honest Pricing From $500",
+        description: "Webflow migration from $500 Founder Portfolio or $3,000 to $12,000 full rebuild. Breakdown by page count, hidden fees, honest pricing.",
     },
 };
 
@@ -45,16 +45,16 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/webflow-migration-cost#article",
-            "headline": "How Much Does Webflow Migration Cost in 2026? Honest Pricing From $500 to $60K",
-            "description": "Webflow migration costs $500 to $60,000+ depending on site size, CMS complexity, and integrations. Full 2026 breakdown by page count (10, 50, 100+), the hidden fees agencies never quote, and honest pricing you can verify.",
+            "headline": "How Much Does Webflow Migration Cost in 2026? Honest Pricing From $500",
+            "description": "Webflow migration: $1,500+ Starter, $3,500+ Growth, $5K-$10K+ Scale. Full 2026 breakdown by page count and hidden fees.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-25T00:00:00-05:00",
-            "dateModified": "2026-04-18T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder & Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -112,7 +112,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-25T00:00:00-05:00",
-            "dateModified": "2026-04-18T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/webflow-migration-cost#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -132,14 +132,7 @@ const articleSchema = {
         {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/blog/webflow-migration-cost#faq",
-            "mainEntity": [
-                { "@type": "Question", "name": "How much does it cost to migrate a Webflow site to custom code?", "acceptedAnswer": { "@type": "Answer", "text": "A Webflow to Next.js migration costs $3,000 to $20,000 depending on site size. Small sites with 5 to 20 pages cost $3,000 to $7,000. Mid-size sites with 20 to 50 pages cost $7,000 to $14,000. Large sites with 50 to 100 pages cost $12,000 to $20,000. Enterprise sites with 100+ pages start at $18,000. The cost range reflects real differences in scope: page count, custom animations, CMS collections, form complexity, and integration work." } },
-                { "@type": "Question", "name": "How long does a Webflow to Next.js migration take for a 50-100 page site?", "acceptedAnswer": { "@type": "Answer", "text": "A 50 to 100 page Webflow migration takes 4 to 8 weeks. Week 1 is audit and planning: URL mapping, content inventory, redirect strategy. Weeks 2 to 5 are the build: converting pages, migrating CMS content, rebuilding animations and forms. Week 6 is QA and redirect verification. Weeks 7 to 8 are zero-downtime DNS cutover and post-launch monitoring." } },
-                { "@type": "Question", "name": "Will I lose my Google rankings when migrating from Webflow to Next.js?", "acceptedAnswer": { "@type": "Answer", "text": "Not if the migration is done correctly. The critical steps are: map every URL with 301 redirects, preserve all title tags and meta descriptions, maintain canonical URLs, implement equivalent schema markup, and submit a new sitemap to Google Search Console immediately after launch. Rankings hold steady within 30 days and typically improve within 60 to 90 days because Google rewards the faster Core Web Vitals scores that Next.js delivers." } },
-                { "@type": "Question", "name": "What is included in a professional Webflow migration?", "acceptedAnswer": { "@type": "Answer", "text": "A complete migration includes: full URL audit and 301 redirect mapping, migration of all metadata (title tags, meta descriptions, canonical URLs, Open Graph tags), content migration from Webflow CMS, image optimisation to WebP format, schema markup implementation for all page types, Google Search Console setup and sitemap submission, Core Web Vitals verification (target 90+ on all three), zero-downtime DNS cutover, and 30-day post-launch monitoring." } },
-                { "@type": "Question", "name": "Is migrating from Webflow to Next.js worth the investment?", "acceptedAnswer": { "@type": "Answer", "text": "For most businesses spending $100+/month on Webflow with a PageSpeed Mobile score below 70, migration pays for itself within 12 to 18 months. Hosting savings of $1,200 to $4,700/year, a 15 to 35% organic traffic increase from better Core Web Vitals, and improved conversion rates from faster load times all compound over time." } },
-                { "@type": "Question", "name": "How much can I save per year by leaving Webflow?", "acceptedAnswer": { "@type": "Answer", "text": "Moving from Webflow to a custom Next.js site on Vercel saves $1,200 to $4,700 per year in hosting. A typical business on Webflow CMS ($39/month) with form submissions ($19/month) and integrations ($50/month) pays $1,296 to $2,400/year. A custom Next.js site on Vercel costs $0 to $240/year. Over 3 years, the difference is $3,600 to $14,100 in hosting savings alone." } }
-            ]
+            "mainEntity": webflowMigrationFAQs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
         }
     ]
 };
@@ -184,7 +177,7 @@ export default function WebflowMigrationCostPage() {
                         <BlogAuthor
                             date="Mar 25, 2026"
                             readTime="10 min read"
-                            bio="Hassan has migrated dozens of businesses off Webflow, WordPress, and Shopify to custom Next.js sites that score 95 to 100 on Google PageSpeed. He specialises in migrations that preserve SEO rankings and improve them."
+                            bio="Hassan founded PandaCodeGen in Feb 2026 after six years of WordPress work. Recent migration: Obare Magazine, Wix to Next.js and Sanity, 7-day rebuild to 98 Mobile PageSpeed. Every build scores 95 to 100 on Google PageSpeed."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -194,7 +187,7 @@ export default function WebflowMigrationCostPage() {
                     </div>
 
                     {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
                         <h3 className="font-bold text-charcoal mb-4">Key Takeaways</h3>
                         <BlogList items={[
                             "A small Webflow site starts at $2,000 to migrate to custom Next.js. A 5 to 20 page site costs $3,000 to $7,000.",
@@ -230,42 +223,42 @@ export default function WebflowMigrationCostPage() {
                             <table className="w-full text-sm border-collapse min-w-[500px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Site Size</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Pages</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Migration Cost</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Timeline</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Site Size</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Pages</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Migration Cost</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Timeline</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-medium">Starter</td>
-                                        <td data-label="Pages" className="p-3 border border-stone-200">1 to 5 pages</td>
-                                        <td data-label="Migration Cost" className="p-3 border border-stone-200 font-bold text-cognac">$2,000 to $3,500</td>
-                                        <td data-label="Timeline" className="p-3 border border-stone-200">1 to 2 weeks</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Starter</td>
+                                        <td data-label="Pages" className="p-3 border border-stone-300">1 to 5 pages</td>
+                                        <td data-label="Migration Cost" className="p-3 border border-stone-300 font-bold text-cognac">$2,000 to $3,500</td>
+                                        <td data-label="Timeline" className="p-3 border border-stone-300">1 to 2 weeks</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200 font-medium">Small Business</td>
-                                        <td data-label="Pages" className="p-3 border border-stone-200">5 to 20 pages</td>
-                                        <td data-label="Migration Cost" className="p-3 border border-stone-200 font-bold text-cognac">$3,500 to $7,000</td>
-                                        <td data-label="Timeline" className="p-3 border border-stone-200">2 to 3 weeks</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Small Business</td>
+                                        <td data-label="Pages" className="p-3 border border-stone-300">5 to 20 pages</td>
+                                        <td data-label="Migration Cost" className="p-3 border border-stone-300 font-bold text-cognac">$3,500 to $7,000</td>
+                                        <td data-label="Timeline" className="p-3 border border-stone-300">2 to 3 weeks</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200 font-medium">Mid-Size Site</td>
-                                        <td data-label="Pages" className="p-3 border border-stone-200">20 to 50 pages</td>
-                                        <td data-label="Migration Cost" className="p-3 border border-stone-200 font-bold text-cognac">$7,000 to $14,000</td>
-                                        <td data-label="Timeline" className="p-3 border border-stone-200">3 to 5 weeks</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Mid-Size Site</td>
+                                        <td data-label="Pages" className="p-3 border border-stone-300">20 to 50 pages</td>
+                                        <td data-label="Migration Cost" className="p-3 border border-stone-300 font-bold text-cognac">$7,000 to $14,000</td>
+                                        <td data-label="Timeline" className="p-3 border border-stone-300">3 to 5 weeks</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-medium">Large Site</td>
-                                        <td data-label="Pages" className="p-3 border border-stone-200">50 to 100 pages</td>
-                                        <td data-label="Migration Cost" className="p-3 border border-stone-200 font-bold text-cognac">$12,000 to $20,000</td>
-                                        <td data-label="Timeline" className="p-3 border border-stone-200">4 to 8 weeks</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Large Site</td>
+                                        <td data-label="Pages" className="p-3 border border-stone-300">50 to 100 pages</td>
+                                        <td data-label="Migration Cost" className="p-3 border border-stone-300 font-bold text-cognac">$12,000 to $20,000</td>
+                                        <td data-label="Timeline" className="p-3 border border-stone-300">4 to 8 weeks</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200 font-medium">Enterprise</td>
-                                        <td data-label="Pages" className="p-3 border border-stone-200">100+ pages</td>
-                                        <td data-label="Migration Cost" className="p-3 border border-stone-200 font-bold text-cognac">$18,000 to $35,000+</td>
-                                        <td data-label="Timeline" className="p-3 border border-stone-200">6 to 12 weeks</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Enterprise</td>
+                                        <td data-label="Pages" className="p-3 border border-stone-300">100+ pages</td>
+                                        <td data-label="Migration Cost" className="p-3 border border-stone-300 font-bold text-cognac">$5,000 to $10,000+ (Scale tier)</td>
+                                        <td data-label="Timeline" className="p-3 border border-stone-300">6 to 12 weeks</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -292,7 +285,7 @@ export default function WebflowMigrationCostPage() {
                         <BlogHeader>Enterprise Webflow Migration Pricing</BlogHeader>
 
                         <BlogText>
-                            Enterprise Webflow migrations start at <BlogHighlight>$18,000 and can reach $35,000 or more</BlogHighlight> for 100+ page sites. At this scale, the migration is no longer just a rebuild: it becomes a multi-stakeholder project that includes complex CMS modeling, localization, third-party integrations, and coordinated QA with sign-off from marketing, engineering, and leadership.
+                            Large Webflow migrations in our Scale tier run <BlogHighlight>$5,000 to $10,000+</BlogHighlight> for 100+ page sites. At this scale, the migration is no longer just a rebuild: it becomes a multi-stakeholder project that includes complex CMS modeling, localization, third-party integrations, and coordinated QA with sign-off from marketing, engineering, and leadership. Enterprise scopes beyond that are custom-quoted.
                         </BlogText>
 
                         <BlogText>
@@ -386,36 +379,36 @@ export default function WebflowMigrationCostPage() {
                             <table className="w-full text-sm border-collapse min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Cost Item</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Webflow (per year)</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Custom Next.js (per year)</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Cost Item</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Webflow (per year)</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Custom Next.js (per year)</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200">Hosting</td>
-                                        <td data-label="Webflow (per year)" className="p-3 border border-stone-200 text-red-600 font-medium">$348 to $588</td>
-                                        <td data-label="Custom Next.js (per year)" className="p-3 border border-stone-200 text-green-700 font-medium">$0 to $240</td>
+                                        <td className="p-3 border border-stone-300">Hosting</td>
+                                        <td data-label="Webflow (per year)" className="p-3 border border-stone-300 text-red-600 font-medium">$348 to $588</td>
+                                        <td data-label="Custom Next.js (per year)" className="p-3 border border-stone-300 text-green-700 font-medium">$0 to $240</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200">Form submissions</td>
-                                        <td data-label="Webflow (per year)" className="p-3 border border-stone-200 text-red-600 font-medium">$228</td>
-                                        <td data-label="Custom Next.js (per year)" className="p-3 border border-stone-200 text-green-700 font-medium">$0</td>
+                                        <td className="p-3 border border-stone-300">Form submissions</td>
+                                        <td data-label="Webflow (per year)" className="p-3 border border-stone-300 text-red-600 font-medium">$228</td>
+                                        <td data-label="Custom Next.js (per year)" className="p-3 border border-stone-300 text-green-700 font-medium">$0</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200">Third-party integrations</td>
-                                        <td data-label="Webflow (per year)" className="p-3 border border-stone-200 text-red-600 font-medium">$360 to $1,200</td>
-                                        <td data-label="Custom Next.js (per year)" className="p-3 border border-stone-200 text-green-700 font-medium">$0 to $120</td>
+                                        <td className="p-3 border border-stone-300">Third-party integrations</td>
+                                        <td data-label="Webflow (per year)" className="p-3 border border-stone-300 text-red-600 font-medium">$360 to $1,200</td>
+                                        <td data-label="Custom Next.js (per year)" className="p-3 border border-stone-300 text-green-700 font-medium">$0 to $120</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200">Domain</td>
-                                        <td data-label="Webflow (per year)" className="p-3 border border-stone-200">$12</td>
-                                        <td data-label="Custom Next.js (per year)" className="p-3 border border-stone-200">$12</td>
+                                        <td className="p-3 border border-stone-300">Domain</td>
+                                        <td data-label="Webflow (per year)" className="p-3 border border-stone-300">$12</td>
+                                        <td data-label="Custom Next.js (per year)" className="p-3 border border-stone-300">$12</td>
                                     </tr>
                                     <tr className="bg-stone-100 font-bold">
-                                        <td className="p-3 border border-stone-200">Total per year</td>
-                                        <td data-label="Webflow (per year)" className="p-3 border border-stone-200 text-red-600">$948 to $2,028</td>
-                                        <td data-label="Custom Next.js (per year)" className="p-3 border border-stone-200 text-green-700">$12 to $372</td>
+                                        <td className="p-3 border border-stone-300">Total per year</td>
+                                        <td data-label="Webflow (per year)" className="p-3 border border-stone-300 text-red-600">$948 to $2,028</td>
+                                        <td data-label="Custom Next.js (per year)" className="p-3 border border-stone-300 text-green-700">$12 to $372</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -436,7 +429,7 @@ export default function WebflowMigrationCostPage() {
                         </BlogText>
 
                         <BlogText>
-                            We have tracked 14 Webflow to Next.js migrations. The average organic traffic improvement was 28% within 90 days of launch. For a business getting 5,000 organic visits per month, that is 1,400 additional visitors per month with no increase in ad spend.
+                            In our recent Wix to Next.js rebuild for Obare Magazine, mobile PageSpeed jumped from the 40s to 98 in a 7-day turnaround. The same performance ceiling applies when leaving Webflow: the platform caps what Core Web Vitals you can hit, and the uplift typically shows up in organic traffic within 90 days of launch.
                         </BlogText>
 
                         <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
@@ -445,36 +438,36 @@ export default function WebflowMigrationCostPage() {
                             <table className="w-full text-sm border-collapse min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Metric</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Webflow</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Custom Next.js</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Metric</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Webflow</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Custom Next.js</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200">Mobile PageSpeed</td>
-                                        <td data-label="Webflow" className="p-3 border border-stone-200 text-amber-700 font-medium">55 to 75</td>
-                                        <td data-label="Custom Next.js" className="p-3 border border-stone-200 text-green-700 font-medium">95 to 100</td>
+                                        <td className="p-3 border border-stone-300">Mobile PageSpeed</td>
+                                        <td data-label="Webflow" className="p-3 border border-stone-300 text-amber-700 font-medium">55 to 75</td>
+                                        <td data-label="Custom Next.js" className="p-3 border border-stone-300 text-green-700 font-medium">95 to 100</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200">Typical load time (mobile)</td>
-                                        <td data-label="Webflow" className="p-3 border border-stone-200 text-amber-700 font-medium">2.8 to 4.5 seconds</td>
-                                        <td data-label="Custom Next.js" className="p-3 border border-stone-200 text-green-700 font-medium">0.6 to 1.2 seconds</td>
+                                        <td className="p-3 border border-stone-300">Typical load time (mobile)</td>
+                                        <td data-label="Webflow" className="p-3 border border-stone-300 text-amber-700 font-medium">2.8 to 4.5 seconds</td>
+                                        <td data-label="Custom Next.js" className="p-3 border border-stone-300 text-green-700 font-medium">0.6 to 1.2 seconds</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200">Core Web Vitals: LCP</td>
-                                        <td data-label="Webflow" className="p-3 border border-stone-200 text-amber-700 font-medium">Needs Improvement</td>
-                                        <td data-label="Custom Next.js" className="p-3 border border-stone-200 text-green-700 font-medium">Good</td>
+                                        <td className="p-3 border border-stone-300">Core Web Vitals: LCP</td>
+                                        <td data-label="Webflow" className="p-3 border border-stone-300 text-amber-700 font-medium">Needs Improvement</td>
+                                        <td data-label="Custom Next.js" className="p-3 border border-stone-300 text-green-700 font-medium">Good</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200">You own the code</td>
-                                        <td data-label="Webflow" className="p-3 border border-stone-200 text-red-600 font-medium">No</td>
-                                        <td data-label="Custom Next.js" className="p-3 border border-stone-200 text-green-700 font-medium">Yes, completely</td>
+                                        <td className="p-3 border border-stone-300">You own the code</td>
+                                        <td data-label="Webflow" className="p-3 border border-stone-300 text-red-600 font-medium">No</td>
+                                        <td data-label="Custom Next.js" className="p-3 border border-stone-300 text-green-700 font-medium">Yes, completely</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200">Hosting cost (annual)</td>
-                                        <td data-label="Webflow" className="p-3 border border-stone-200 text-red-600 font-medium">$948 to $2,028</td>
-                                        <td data-label="Custom Next.js" className="p-3 border border-stone-200 text-green-700 font-medium">$12 to $372</td>
+                                        <td className="p-3 border border-stone-300">Hosting cost (annual)</td>
+                                        <td data-label="Webflow" className="p-3 border border-stone-300 text-red-600 font-medium">$948 to $2,028</td>
+                                        <td data-label="Custom Next.js" className="p-3 border border-stone-300 text-green-700 font-medium">$12 to $372</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -520,15 +513,15 @@ export default function WebflowMigrationCostPage() {
                         </BlogText>
 
                         {/* Mid CTA */}
-                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="text-lg font-bold text-charcoal mb-2">Ready to know the exact cost of your Webflow migration?</p>
                             <p className="text-stone-600 text-sm mb-6">Drop your Webflow URL when you book. We scope your migration live by page count and complexity, give you a fixed-price quote, and show you your break-even date before we hang up.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                 Get Your Migration Quote <ArrowRight className="w-4 h-4" />
                             </CalModalButton>
                             <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                              <p className="text-sm text-stone-700 mt-1">$500 flat for qualifying Webflow migrations. Most agencies quote $7,000 to $15,000 for the same work. 30% upfront, the rest after the site is live and working. No hourly billing. No surprises.</p>
+                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                              <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                             </div>
                         </div>
 
@@ -556,7 +549,7 @@ export default function WebflowMigrationCostPage() {
                         </BlogText>
 
                         {/* Related Service CTA */}
-                        <div className="my-10 p-8 bg-charcoal text-white rounded-2xl text-center">
+                        <div className="my-6 md:my-10 p-8 bg-charcoal text-white rounded-2xl text-center">
                             <p className="text-xl font-bold mb-2">We migrate Webflow sites to custom Next.js.</p>
                             <p className="text-stone-400 text-sm mb-6">Fixed price. Zero-downtime launch. 95+ PageSpeed guaranteed. We have done this before.</p>
                             <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -564,8 +557,8 @@ export default function WebflowMigrationCostPage() {
                                     Book a Migration Audit <ArrowRight className="w-4 h-4" />
                                 </CalModalButton>
                                 <div className="mt-4 p-4 bg-white/10 border border-white/20 rounded-xl">
-                                  <p className="text-sm font-bold text-white">FOUNDER&apos;S OFFER: $500 Migration</p>
-                                  <p className="text-sm text-stone-300 mt-1">$500 flat for qualifying Webflow migrations. Most agencies quote $7,000 to $15,000 for the same work. 30% upfront, the rest after the site is live and working. No hourly billing. No surprises.</p>
+                                  <p className="text-sm font-bold text-white">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                                  <p className="text-sm text-stone-300 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                                 </div>
                                 <Link
                                     href="/services/webflow?ref=blog/webflow-migration-cost"
@@ -581,12 +574,12 @@ export default function WebflowMigrationCostPage() {
 
                     <FAQAccordion faqs={webflowMigrationFAQs} />
 
-                    <section className="mb-10 mt-10">
+                    <section className="mb-10 mt-6 md:mt-10">
                         <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
                         <p className="text-stone-700 leading-relaxed">For every Webflow fee and the PageSpeed ceiling, read <Link href="/blog/webflow-true-cost" className="text-cognac hover:underline font-medium">the full Webflow pricing breakdown</Link>. For pricing across all platforms, see the <Link href="/blog/website-rebuild-cost-2026" className="text-cognac hover:underline font-medium">2026 website rebuild cost guide</Link>.</p>
                     </section>
 
-                    <div className="mt-16 pt-8 border-t border-stone-100">
+                    <div className="mt-6 md:mt-10 md:mt-16 pt-8 border-t border-stone-100">
                         <RelatedPosts currentPostId="webflow-migration-cost" category="Webflow" />
                     </div>
 

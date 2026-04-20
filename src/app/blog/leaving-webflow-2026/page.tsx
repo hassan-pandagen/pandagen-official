@@ -18,24 +18,24 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Leaving Webflow 2026: Real Costs, Cart Failures, What We Migrated To",
-    description: "Bandwidth cut 75%. Bills hit $170 overnight. Cart buttons disappeared on live sites. Memberships killed with 6 weeks notice. The real story of leaving Webflow and what we built instead.",
+    title: "Leaving Webflow in 2026: The 31-Hour Outage, Hidden Fees, and Where Businesses Are Going",
+    description: "Bandwidth cut 75%. Bills hit $170 overnight. Carts broke. Memberships killed. The real story of leaving Webflow and what comes next.",
     alternates: {
         canonical: "/blog/leaving-webflow-2026",
     },
     keywords: ["leaving webflow 2026", "webflow too expensive 2026", "webflow alternative custom code", "migrate from webflow 2026", "webflow problems 2026", "webflow bandwidth limit", "webflow membership deprecated", "webflow cart not working"],
     openGraph: {
-        title: "Leaving Webflow 2026: Real Costs, Cart Failures, What We Migrated To",
+        title: "Leaving Webflow in 2026: The 31-Hour Outage, Hidden Fees, and Where Businesses Are Going",
         description: "Bandwidth cut 75%. Bills hit $170 overnight. Cart buttons disappeared on live sites. Memberships killed with 6 weeks notice. The real story of leaving Webflow.",
         type: "article",
         publishedTime: "2026-04-06",
-        authors: ["Hassan"],
+        authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/leaving-webflow-2026",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Leaving Webflow 2026: Real Costs, Cart Failures, What We Migrated To",
+        title: "Leaving Webflow in 2026: The 31-Hour Outage, Hidden Fees, and Where Businesses Are Going",
         description: "Bandwidth cut 75%. Bills hit $170 overnight. Cart buttons disappeared on live sites. Memberships killed. The real story of leaving Webflow.",
     },
 };
@@ -46,16 +46,16 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/leaving-webflow-2026#article",
-            "headline": "Leaving Webflow 2026: Real Costs, Cart Failures, What We Migrated To",
-            "description": "Bandwidth cut 75%. Bills hit $170 overnight. Cart buttons disappeared on live sites. Memberships killed with 6 weeks notice. The real story of leaving Webflow and what we built instead.",
+            "headline": "Leaving Webflow in 2026: The 31-Hour Outage, Hidden Fees, and Where Businesses Are Going",
+            "description": "Bandwidth cut 75%. Bills hit $170 overnight. Carts broke. Memberships killed. The real story of leaving Webflow and what comes next.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-06T00:00:00-05:00",
-            "dateModified": "2026-04-15T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -109,12 +109,12 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/leaving-webflow-2026#webpage",
             "url": "https://www.pandacodegen.com/blog/leaving-webflow-2026",
-            "name": "Leaving Webflow in 2026: What Actually Happened After We Migrated",
+            "name": "Leaving Webflow in 2026: The 31-Hour Outage, Hidden Fees, and Where Businesses Are Going",
             "description": "Bandwidth cut 75%. Bills hit $170 overnight. Cart buttons disappeared on live sites. Memberships killed. The real story of leaving Webflow and what we built instead.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-04-06T00:00:00-05:00",
-            "dateModified": "2026-04-15T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/leaving-webflow-2026#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -197,7 +197,7 @@ export default function LeavingWebflow2026Page() {
                         <PageSpeedAnimation />
                     </div>
 
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
                         <p className="font-semibold text-charcoal mb-3">What you will learn in this post:</p>
                         <ul className="space-y-2 text-stone-700">
                             <li>The exact Webflow pricing changes that blindsided thousands of businesses in 2025 and 2026</li>
@@ -248,31 +248,31 @@ export default function LeavingWebflow2026Page() {
                                     </tr>
                                 </thead>
                                 <tbody className="text-stone-700">
-                                    <tr className="border-b border-stone-200">
+                                    <tr className="border-b border-stone-300">
                                         <td className="py-3 pr-4">Business plan (after forced upgrade)</td>
                                         <td data-label="Monthly Cost" className="py-3 pl-4">$39/month</td>
                                     </tr>
-                                    <tr className="border-b border-stone-200">
+                                    <tr className="border-b border-stone-300">
                                         <td className="py-3 pr-4">Workspace plan (pro)</td>
                                         <td data-label="Monthly Cost" className="py-3 pl-4">$60/month</td>
                                     </tr>
-                                    <tr className="border-b border-stone-200">
+                                    <tr className="border-b border-stone-300">
                                         <td className="py-3 pr-4">Localization (2 languages, Advanced tier)</td>
                                         <td data-label="Monthly Cost" className="py-3 pl-4">$58/month</td>
                                     </tr>
-                                    <tr className="border-b border-stone-200">
+                                    <tr className="border-b border-stone-300">
                                         <td className="py-3 pr-4">Editor seats for team (3 extra)</td>
                                         <td data-label="Monthly Cost" className="py-3 pl-4">$54/month</td>
                                     </tr>
-                                    <tr className="border-b border-stone-200">
+                                    <tr className="border-b border-stone-300">
                                         <td className="py-3 pr-4">Third-party membership tool (Memberstack, replacing deprecated User Accounts)</td>
                                         <td data-label="Monthly Cost" className="py-3 pl-4">$39/month</td>
                                     </tr>
-                                    <tr className="border-b border-stone-200">
+                                    <tr className="border-b border-stone-300">
                                         <td className="py-3 pr-4">Zapier (replacing deprecated Logic automations)</td>
                                         <td data-label="Monthly Cost" className="py-3 pl-4">$49/month</td>
                                     </tr>
-                                    <tr className="border-b border-stone-200">
+                                    <tr className="border-b border-stone-300">
                                         <td className="py-3 pr-4">E-commerce 2% transaction fee ($20K/month revenue)</td>
                                         <td data-label="Monthly Cost" className="py-3 pl-4">$400/month</td>
                                     </tr>
@@ -299,7 +299,7 @@ export default function LeavingWebflow2026Page() {
                         </BlogText>
 
                         <BlogText>
-                            Then April 14 to 15 happened. Every hosted Webflow site went dark for over 12 hours with 5xx errors, the Dashboard inaccessible, and the Forms API offline. <a href="https://status.webflow.com/history" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Webflow confirmed</a> the incident was caused by an upstream provider failure. Our store was down. Our lead forms were down. Our paid ads kept running and sent visitors to a broken page we could not fix.
+                            Then April 14 to 15 happened. Every hosted Webflow site went dark for over 12 hours with 5xx errors, the Dashboard inaccessible, and the Forms API offline. <a href="https://status.webflow.com/history" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Webflow confirmed</a> the incident was caused by an upstream provider failure. Stores went down. Lead forms went down. Paid ads kept running and sent visitors to broken pages their owners could not fix.
                         </BlogText>
 
                         <BlogText>
@@ -307,7 +307,7 @@ export default function LeavingWebflow2026Page() {
                         </BlogText>
 
                         <BlogQuote>
-                            Every hour our Webflow site was down, our competitors kept selling. We did the math: over 12 months, Webflow outages cost us approximately $4,800 in lost revenue. More than the entire migration.
+                            Every hour a Webflow store is down, competitors keep selling. One e-commerce client we audited before migration calculated outages cost them roughly $4,800 over twelve months. More than the entire migration.
                         </BlogQuote>
 
                         <BlogHeader>When the Cart Stopped Working and Webflow Could Not Fix It</BlogHeader>
@@ -359,7 +359,7 @@ export default function LeavingWebflow2026Page() {
                         </BlogText>
 
                         <BlogQuote>
-                            For creators who chose Webflow specifically because of its built-in membership system, this news landed hard. It revealed that Webflow is explicitly deprioritizing independent creators in favour of enterprise clients.
+                            For creators who chose Webflow specifically because of its built-in membership system, this news landed hard. It revealed that Webflow is explicitly deprioritizing independent creators in favor of enterprise clients.
                         </BlogQuote>
 
                         <BlogText>
@@ -371,22 +371,22 @@ export default function LeavingWebflow2026Page() {
                         </BlogText>
 
                         {/* Mid CTA */}
-                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Ready to leave Webflow but not sure where to start?</p>
                             <p className="text-stone-600 mb-4 text-sm">Book a free 15-minute call. We will walk through your current Webflow setup, show you exactly what a migration looks like, and give you a real timeline and cost. No sales pitch, no obligation.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                 Book Free Migration Call <ArrowRight className="w-4 h-4" />
                             </CalModalButton>
                             <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                                <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Complete Webflow Migration</p>
-                                <p className="text-sm text-stone-700 mt-1">Full migration from Webflow to custom Next.js. Design, build, content transfer, 301 redirects, DNS cutover, and post-launch monitoring. 30% upfront, rest after the site is live. 95+ PageSpeed guaranteed or you do not pay the balance.</p>
+                                <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                                <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                             </div>
                         </div>
 
                         <BlogHeader>What a Real 50-Page Migration Actually Looked Like</BlogHeader>
 
                         <BlogText>
-                            We have done this process multiple times now. Here is what a real migration looks like from the inside, with no glossing over the hard parts.
+                            We ran this exact process on our Obare Magazine rebuild (Wix to Next.js and Sanity, 7 days). The playbook travels to Webflow cleanly. Here is what a real migration looks like from the inside, with no glossing over the hard parts.
                         </BlogText>
 
                         <BlogText>
@@ -426,37 +426,37 @@ export default function LeavingWebflow2026Page() {
                                     </tr>
                                 </thead>
                                 <tbody className="text-stone-700">
-                                    <tr className="border-b border-stone-200">
+                                    <tr className="border-b border-stone-300">
                                         <td className="py-3 pr-4 font-medium">Google PageSpeed (Mobile)</td>
                                         <td data-label="Webflow" className="py-3 px-4">45 to 62</td>
                                         <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">95 to 99</td>
                                     </tr>
-                                    <tr className="border-b border-stone-200">
+                                    <tr className="border-b border-stone-300">
                                         <td className="py-3 pr-4 font-medium">Page Load Time (Mobile)</td>
                                         <td data-label="Webflow" className="py-3 px-4">3.2 to 4.5 seconds</td>
                                         <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">0.6 to 0.8 seconds</td>
                                     </tr>
-                                    <tr className="border-b border-stone-200">
+                                    <tr className="border-b border-stone-300">
                                         <td className="py-3 pr-4 font-medium">Monthly Hosting Cost</td>
                                         <td data-label="Webflow" className="py-3 px-4">$150 to $700+</td>
                                         <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">$0</td>
                                     </tr>
-                                    <tr className="border-b border-stone-200">
+                                    <tr className="border-b border-stone-300">
                                         <td className="py-3 pr-4 font-medium">Transaction Fee</td>
                                         <td data-label="Webflow" className="py-3 px-4">2% of every order</td>
                                         <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">0%</td>
                                     </tr>
-                                    <tr className="border-b border-stone-200">
+                                    <tr className="border-b border-stone-300">
                                         <td className="py-3 pr-4 font-medium">CMS Item Limit</td>
                                         <td data-label="Webflow" className="py-3 px-4">2,000 to 10,000 (then pay more)</td>
                                         <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">Unlimited</td>
                                     </tr>
-                                    <tr className="border-b border-stone-200">
+                                    <tr className="border-b border-stone-300">
                                         <td className="py-3 pr-4 font-medium">Bandwidth Limit</td>
                                         <td data-label="Webflow" className="py-3 px-4">10 to 100 GB/month</td>
                                         <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">Unlimited</td>
                                     </tr>
-                                    <tr className="border-b border-stone-200">
+                                    <tr className="border-b border-stone-300">
                                         <td className="py-3 pr-4 font-medium">Features Deprecated</td>
                                         <td data-label="Webflow" className="py-3 px-4">Memberships, Logic, others pending</td>
                                         <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">You own the code. Nothing gets deprecated.</td>
@@ -508,7 +508,7 @@ export default function LeavingWebflow2026Page() {
                         </BlogText>
 
                         <BlogText>
-                            If you are still on Webflow today and recognise any of what we have described here, the next step is a 15-minute call. No deck, no demo, no pressure. You tell us what your site does, we tell you what a migration looks like for your specific situation. You leave with a real plan and real numbers. Or you decide it is not the right time. Either way, you know where you stand.
+                            If you are still on Webflow today and recognize any of what we have described here, the next step is a 15-minute call. No deck, no demo, no pressure. You tell us what your site does, we tell you what a migration looks like for your specific situation. You leave with a real plan and real numbers. Or you decide it is not the right time. Either way, you know where you stand.
                         </BlogText>
 
                         <BlogText>
@@ -518,7 +518,7 @@ export default function LeavingWebflow2026Page() {
                     </div>
 
                     {/* Key Takeaways */}
-                    <section className="mt-16 mb-10" data-speakable="true">
+                    <section className="mt-6 md:mt-10 md:mt-16 mb-10" data-speakable="true">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
                             <li><strong>Webflow cut bandwidth 75 to 80% in 2024 without a price reduction</strong>: Bills jumped from $25 to $170 overnight for businesses that crossed the new limits two months in a row. No warning, no refund.</li>
@@ -530,7 +530,7 @@ export default function LeavingWebflow2026Page() {
                     </section>
 
                     {/* Bottom CTA */}
-                    <div className="bg-charcoal rounded-2xl p-8 mt-10 mb-16 text-center">
+                    <div className="bg-charcoal rounded-2xl p-8 mt-6 md:mt-10 mb-16 text-center">
                         <h3 className="text-2xl font-bold mb-4 text-white">Done With Webflow? Let&apos;s Talk.</h3>
                         <p className="text-stone-300 mb-6">
                             15-minute call. We look at your current Webflow setup, walk you through what a migration looks like for your specific site, and give you a real cost and timeline. No agency deck, no upsell. Just a straight answer.
@@ -539,14 +539,14 @@ export default function LeavingWebflow2026Page() {
                             Book Free Migration Call <ArrowRight className="w-5 h-5" />
                         </CalModalButton>
                         <div className="mt-4 p-4 bg-white/10 border border-white/20 rounded-xl">
-                            <p className="text-sm font-bold text-white">FOUNDER&apos;S OFFER: $500 Complete Webflow Migration</p>
-                            <p className="text-sm text-stone-300 mt-1">Design, build, content transfer, 301 redirects, DNS cutover, post-launch monitoring. 30% upfront, rest after the site is live and tested. 95+ PageSpeed guaranteed or you do not pay the balance.</p>
+                            <p className="text-sm font-bold text-white">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                            <p className="text-sm text-stone-300 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                         </div>
                     </div>
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
 
-                    <section className="mb-10 mt-10">
+                    <section className="mb-10 mt-6 md:mt-10">
                         <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
                         <p className="text-stone-700 leading-relaxed">For every hidden Webflow fee and the PageSpeed ceiling, read <Link href="/blog/webflow-true-cost" className="text-cognac hover:underline font-medium">the full Webflow pricing breakdown for 2026</Link>. For pricing across any platform, see the <Link href="/blog/website-rebuild-cost-2026" className="text-cognac hover:underline font-medium">2026 website rebuild cost guide</Link>.</p>
                     </section>

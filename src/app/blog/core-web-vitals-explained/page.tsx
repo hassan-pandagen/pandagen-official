@@ -19,7 +19,7 @@ export const dynamic = "force-static";
 
 export const metadata: Metadata = {
     title: "Core Web Vitals Explained for Business Owners 2026: What It Means for Your Revenue",
-    description: "Your agency said your Core Web Vitals are failing. You have no idea what that means. Here is what the 3 metrics are, why Google ranks sites on them, and what each failing score actually costs your business in lost sales.",
+    description: "Your agency said your Core Web Vitals are failing and you have no idea what that means. Here is what the 3 metrics cost your business in lost sales.",
     alternates: {
         canonical: "/blog/core-web-vitals-explained",
     },
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: "Core Web Vitals Explained for Business Owners 2026: What It Means for Your Revenue",
-        description: "Your agency said your Core Web Vitals are failing. You have no idea what that means. Here is what the 3 metrics are, why Google ranks sites on them, and what each failing score actually costs your business in lost sales.",
+        description: "Your agency said your Core Web Vitals are failing and you have no idea what that means. Here is what the 3 metrics cost your business in lost sales.",
         type: "article",
         publishedTime: "2026-04-16",
         authors: ["Hassan Jamal"],
@@ -58,15 +58,15 @@ const articleSchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/core-web-vitals-explained#article",
             "headline": "Core Web Vitals Explained for Business Owners 2026: What It Means for Your Revenue",
-            "description": "Your agency said your Core Web Vitals are failing. You have no idea what that means. Here is what the 3 metrics are, why Google ranks sites on them, and what each failing score actually costs your business in lost sales.",
+            "description": "Your agency said your Core Web Vitals are failing and you have no idea what that means. Here is what the 3 metrics cost your business in lost sales.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-16T00:00:00-05:00",
-            "dateModified": "2026-04-16T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -208,7 +208,7 @@ export default function CoreWebVitalsExplainedPage() {
                         <BlogAuthor
                             date="Apr 16, 2026"
                             readTime="12 min read"
-                            bio="Hassan builds custom Next.js sites that pass all three Core Web Vitals on every build. Before PandaCodeGen, he spent 6 years migrating businesses off platforms where Core Web Vitals could not be fixed."
+                            bio="Hassan builds custom Next.js sites that pass all three Core Web Vitals on every build. He spent 6 years inside WordPress before founding PandaCodeGen in Feb 2026. Every page builder hits the same Core Web Vitals ceiling."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -218,8 +218,8 @@ export default function CoreWebVitalsExplainedPage() {
                     </div>
 
                     {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
-                        <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
+                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
                             "Core Web Vitals are three scores Google uses to measure how your website feels to a real visitor. Google ranks sites partly based on these scores.",
                             "Only 47% of websites pass all three Core Web Vitals in 2026. The other 53% lose 8 to 35 percent of conversions, traffic, and revenue from this one problem.",
@@ -312,6 +312,10 @@ export default function CoreWebVitalsExplainedPage() {
                             According to <a href="https://web.dev/explore/learn-core-web-vitals" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">web.dev&apos;s official learning resource</a>, at least <BlogHighlight>75 percent of your real visitors</BlogHighlight> must hit the &ldquo;good&rdquo; threshold for you to pass each metric. Not 50 percent. Not the average. 75 percent. This is a high bar and most platform-based websites cannot reach it without structural changes.
                         </BlogText>
 
+                        <BlogText>
+                            A quick note on related metrics that show up in PageSpeed reports but are not official Core Web Vitals: <strong>FCP</strong> (First Contentful Paint) measures when any content first appears, <strong>TBT</strong> (Total Blocking Time) is the lab-measured equivalent of INP and shows up in Lighthouse, and <strong>TTFB</strong> (Time to First Byte) measures how fast your server responds. INP replaced FID (First Input Delay) as the official Core Web Vital in March 2024. Your scores come from the <strong>CrUX</strong> (Chrome User Experience Report), which is real-world field data from actual Chrome visitors, not a one-time lab test.
+                        </BlogText>
+
                         {/* SECTION 3: Why Google Uses CWV */}
                         <BlogHeader>Why Does Google Rank Sites on Core Web Vitals?</BlogHeader>
 
@@ -320,7 +324,7 @@ export default function CoreWebVitalsExplainedPage() {
                         </BlogText>
 
                         <BlogText>
-                            This is not theoretical. Google publishes <a href="https://web.dev/case-studies/vitals-business-impact" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">official case studies</a> showing real businesses that saw ranking and revenue improvements specifically from Core Web Vitals work. <BlogHighlight>Vodafone Italy improved their LCP by 31 percent and saw 8 percent more sales.</BlogHighlight> Cdiscount improved all three metrics and saw 6 percent revenue uplift during Black Friday. These are not small wins. On a $5M/year business, 8 percent more sales is $400,000 per year.
+                            This is not theoretical. Google publishes <a href="https://web.dev/case-studies/vitals-business-impact" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">official case studies</a> showing real businesses that saw ranking and revenue improvements specifically from Core Web Vitals work. <BlogHighlight>Vodafone improved their LCP by 31 percent and saw 8 percent more sales.</BlogHighlight> Cdiscount improved Core Web Vitals across product pages and saw a 5.2 percent revenue uplift directly attributed to speed. These are not small wins. On a $5M/year business, 8 percent more sales is $400,000 per year.
                         </BlogText>
 
                         <BlogText>
@@ -339,36 +343,36 @@ export default function CoreWebVitalsExplainedPage() {
                             <table className="w-full text-sm border-collapse border border-stone-300 min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Monthly Revenue</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Lost to 1-sec Delay (7%)</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Lost to 3-sec Delay (21%)</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Annual Impact</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Monthly Revenue</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Lost to 1-sec Delay (7%)</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Lost to 3-sec Delay (21%)</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Annual Impact</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-medium">$10,000/mo</td>
-                                        <td data-label="Lost to 1-sec Delay" className="p-3 border border-stone-200">$700</td>
-                                        <td data-label="Lost to 3-sec Delay" className="p-3 border border-stone-200 text-red-600">$2,100</td>
-                                        <td data-label="Annual Impact" className="p-3 border border-stone-200 text-red-600 font-bold">$8,400 to $25,200</td>
+                                        <td className="p-3 border border-stone-300 font-medium">$10,000/mo</td>
+                                        <td data-label="Lost to 1-sec Delay" className="p-3 border border-stone-300">$700</td>
+                                        <td data-label="Lost to 3-sec Delay" className="p-3 border border-stone-300 text-red-600">$2,100</td>
+                                        <td data-label="Annual Impact" className="p-3 border border-stone-300 text-red-600 font-bold">$8,400 to $25,200</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200 font-medium">$50,000/mo</td>
-                                        <td data-label="Lost to 1-sec Delay" className="p-3 border border-stone-200">$3,500</td>
-                                        <td data-label="Lost to 3-sec Delay" className="p-3 border border-stone-200 text-red-600">$10,500</td>
-                                        <td data-label="Annual Impact" className="p-3 border border-stone-200 text-red-600 font-bold">$42,000 to $126,000</td>
+                                        <td className="p-3 border border-stone-300 font-medium">$50,000/mo</td>
+                                        <td data-label="Lost to 1-sec Delay" className="p-3 border border-stone-300">$3,500</td>
+                                        <td data-label="Lost to 3-sec Delay" className="p-3 border border-stone-300 text-red-600">$10,500</td>
+                                        <td data-label="Annual Impact" className="p-3 border border-stone-300 text-red-600 font-bold">$42,000 to $126,000</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-medium">$100,000/mo</td>
-                                        <td data-label="Lost to 1-sec Delay" className="p-3 border border-stone-200">$7,000</td>
-                                        <td data-label="Lost to 3-sec Delay" className="p-3 border border-stone-200 text-red-600">$21,000</td>
-                                        <td data-label="Annual Impact" className="p-3 border border-stone-200 text-red-600 font-bold">$84,000 to $252,000</td>
+                                        <td className="p-3 border border-stone-300 font-medium">$100,000/mo</td>
+                                        <td data-label="Lost to 1-sec Delay" className="p-3 border border-stone-300">$7,000</td>
+                                        <td data-label="Lost to 3-sec Delay" className="p-3 border border-stone-300 text-red-600">$21,000</td>
+                                        <td data-label="Annual Impact" className="p-3 border border-stone-300 text-red-600 font-bold">$84,000 to $252,000</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200 font-medium">$500,000/mo</td>
-                                        <td data-label="Lost to 1-sec Delay" className="p-3 border border-stone-200">$35,000</td>
-                                        <td data-label="Lost to 3-sec Delay" className="p-3 border border-stone-200 text-red-600">$105,000</td>
-                                        <td data-label="Annual Impact" className="p-3 border border-stone-200 text-red-600 font-bold">$420,000 to $1.26M</td>
+                                        <td className="p-3 border border-stone-300 font-medium">$500,000/mo</td>
+                                        <td data-label="Lost to 1-sec Delay" className="p-3 border border-stone-300">$35,000</td>
+                                        <td data-label="Lost to 3-sec Delay" className="p-3 border border-stone-300 text-red-600">$105,000</td>
+                                        <td data-label="Annual Impact" className="p-3 border border-stone-300 text-red-600 font-bold">$420,000 to $1.26M</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -383,7 +387,7 @@ export default function CoreWebVitalsExplainedPage() {
                         </BlogText>
 
                         {/* MID CTA */}
-                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Want to see your real Core Web Vitals scores?</p>
                             <p className="text-stone-600 mb-4 text-sm">Share your URL on a 20-min call. We run PageSpeed live, decode what each score means for your business, and show you what fixing it would look like. No pressure.</p>
                             <CalModalButton className="inline-flex items-center gap-2 bg-cognac hover:bg-amber-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors">
@@ -432,46 +436,46 @@ export default function CoreWebVitalsExplainedPage() {
                             <table className="w-full text-sm border-collapse border border-stone-300 min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Platform</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Typical Mobile PageSpeed</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Can You Pass CWV?</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Platform</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Typical Mobile PageSpeed</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Can You Pass CWV?</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-medium">Wix</td>
-                                        <td data-label="Typical Mobile" className="p-3 border border-stone-200">35 to 55</td>
-                                        <td data-label="Can You Pass CWV?" className="p-3 border border-stone-200 text-red-600 font-medium">Rarely</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Wix</td>
+                                        <td data-label="Typical Mobile" className="p-3 border border-stone-300">35 to 55</td>
+                                        <td data-label="Can You Pass CWV?" className="p-3 border border-stone-300 text-red-600 font-medium">Rarely</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200 font-medium">Squarespace</td>
-                                        <td data-label="Typical Mobile" className="p-3 border border-stone-200">30 to 55</td>
-                                        <td data-label="Can You Pass CWV?" className="p-3 border border-stone-200 text-red-600 font-medium">Rarely</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Squarespace</td>
+                                        <td data-label="Typical Mobile" className="p-3 border border-stone-300">30 to 55</td>
+                                        <td data-label="Can You Pass CWV?" className="p-3 border border-stone-300 text-red-600 font-medium">Rarely</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-medium">WordPress (with page builder)</td>
-                                        <td data-label="Typical Mobile" className="p-3 border border-stone-200">35 to 65</td>
-                                        <td data-label="Can You Pass CWV?" className="p-3 border border-stone-200 text-red-600 font-medium">Rarely</td>
+                                        <td className="p-3 border border-stone-300 font-medium">WordPress (with page builder)</td>
+                                        <td data-label="Typical Mobile" className="p-3 border border-stone-300">35 to 65</td>
+                                        <td data-label="Can You Pass CWV?" className="p-3 border border-stone-300 text-red-600 font-medium">Rarely</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200 font-medium">Shopify (typical store)</td>
-                                        <td data-label="Typical Mobile" className="p-3 border border-stone-200">40 to 65</td>
-                                        <td data-label="Can You Pass CWV?" className="p-3 border border-stone-200 text-orange-600 font-medium">Sometimes</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Shopify (typical store)</td>
+                                        <td data-label="Typical Mobile" className="p-3 border border-stone-300">40 to 65</td>
+                                        <td data-label="Can You Pass CWV?" className="p-3 border border-stone-300 text-orange-600 font-medium">Sometimes</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-medium">GoHighLevel</td>
-                                        <td data-label="Typical Mobile" className="p-3 border border-stone-200">20 to 45</td>
-                                        <td data-label="Can You Pass CWV?" className="p-3 border border-stone-200 text-red-600 font-medium">Almost never</td>
+                                        <td className="p-3 border border-stone-300 font-medium">GoHighLevel</td>
+                                        <td data-label="Typical Mobile" className="p-3 border border-stone-300">20 to 45</td>
+                                        <td data-label="Can You Pass CWV?" className="p-3 border border-stone-300 text-red-600 font-medium">Almost never</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200 font-medium">Webflow</td>
-                                        <td data-label="Typical Mobile" className="p-3 border border-stone-200">55 to 75</td>
-                                        <td data-label="Can You Pass CWV?" className="p-3 border border-stone-200 text-orange-600 font-medium">Sometimes</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Webflow</td>
+                                        <td data-label="Typical Mobile" className="p-3 border border-stone-300">55 to 75</td>
+                                        <td data-label="Can You Pass CWV?" className="p-3 border border-stone-300 text-orange-600 font-medium">Sometimes</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-medium">Custom Next.js (what we build)</td>
-                                        <td data-label="Typical Mobile" className="p-3 border border-stone-200 text-green-700">95 to 100</td>
-                                        <td data-label="Can You Pass CWV?" className="p-3 border border-stone-200 text-green-700 font-medium">Always</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Custom Next.js (what we build)</td>
+                                        <td data-label="Typical Mobile" className="p-3 border border-stone-300 text-green-700">95 to 100</td>
+                                        <td data-label="Can You Pass CWV?" className="p-3 border border-stone-300 text-green-700 font-medium">Always</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -493,56 +497,56 @@ export default function CoreWebVitalsExplainedPage() {
                             <table className="w-full text-sm border-collapse border border-stone-300 min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Fix</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Works?</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Typical Improvement</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Fix</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Works?</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Typical Improvement</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200">Compress images to WebP</td>
-                                        <td data-label="Works?" className="p-3 border border-stone-200 text-green-700 font-medium">Yes</td>
-                                        <td data-label="Typical Improvement" className="p-3 border border-stone-200">+5 to +15 points</td>
+                                        <td className="p-3 border border-stone-300">Compress images to WebP</td>
+                                        <td data-label="Works?" className="p-3 border border-stone-300 text-green-700 font-medium">Yes</td>
+                                        <td data-label="Typical Improvement" className="p-3 border border-stone-300">+5 to +15 points</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200">Lazy load below-fold images</td>
-                                        <td data-label="Works?" className="p-3 border border-stone-200 text-green-700 font-medium">Yes</td>
-                                        <td data-label="Typical Improvement" className="p-3 border border-stone-200">+3 to +8 points</td>
+                                        <td className="p-3 border border-stone-300">Lazy load below-fold images</td>
+                                        <td data-label="Works?" className="p-3 border border-stone-300 text-green-700 font-medium">Yes</td>
+                                        <td data-label="Typical Improvement" className="p-3 border border-stone-300">+3 to +8 points</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200">Remove unused third-party apps</td>
-                                        <td data-label="Works?" className="p-3 border border-stone-200 text-green-700 font-medium">Yes</td>
-                                        <td data-label="Typical Improvement" className="p-3 border border-stone-200">+5 to +20 points</td>
+                                        <td className="p-3 border border-stone-300">Remove unused third-party apps</td>
+                                        <td data-label="Works?" className="p-3 border border-stone-300 text-green-700 font-medium">Yes</td>
+                                        <td data-label="Typical Improvement" className="p-3 border border-stone-300">+5 to +20 points</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200">Minify CSS and JavaScript</td>
-                                        <td data-label="Works?" className="p-3 border border-stone-200 text-green-700 font-medium">Yes</td>
-                                        <td data-label="Typical Improvement" className="p-3 border border-stone-200">+2 to +5 points</td>
+                                        <td className="p-3 border border-stone-300">Minify CSS and JavaScript</td>
+                                        <td data-label="Works?" className="p-3 border border-stone-300 text-green-700 font-medium">Yes</td>
+                                        <td data-label="Typical Improvement" className="p-3 border border-stone-300">+2 to +5 points</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200">Install a caching plugin (WP Rocket, etc)</td>
-                                        <td data-label="Works?" className="p-3 border border-stone-200 text-orange-600 font-medium">Marginal</td>
-                                        <td data-label="Typical Improvement" className="p-3 border border-stone-200">+3 to +8 points</td>
+                                        <td className="p-3 border border-stone-300">Install a caching plugin (WP Rocket, etc)</td>
+                                        <td data-label="Works?" className="p-3 border border-stone-300 text-orange-600 font-medium">Marginal</td>
+                                        <td data-label="Typical Improvement" className="p-3 border border-stone-300">+3 to +8 points</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200">Switch to a &ldquo;faster&rdquo; theme</td>
-                                        <td data-label="Works?" className="p-3 border border-stone-200 text-red-600 font-medium">No</td>
-                                        <td data-label="Typical Improvement" className="p-3 border border-stone-200">Platform JS stays the same</td>
+                                        <td className="p-3 border border-stone-300">Switch to a &ldquo;faster&rdquo; theme</td>
+                                        <td data-label="Works?" className="p-3 border border-stone-300 text-red-600 font-medium">No</td>
+                                        <td data-label="Typical Improvement" className="p-3 border border-stone-300">Platform JS stays the same</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200">Install a &ldquo;speed optimization&rdquo; app</td>
-                                        <td data-label="Works?" className="p-3 border border-stone-200 text-red-600 font-medium">No</td>
-                                        <td data-label="Typical Improvement" className="p-3 border border-stone-200">Adds another script to fix scripts</td>
+                                        <td className="p-3 border border-stone-300">Install a &ldquo;speed optimization&rdquo; app</td>
+                                        <td data-label="Works?" className="p-3 border border-stone-300 text-red-600 font-medium">No</td>
+                                        <td data-label="Typical Improvement" className="p-3 border border-stone-300">Adds another script to fix scripts</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200">Upgrade your hosting plan</td>
-                                        <td data-label="Works?" className="p-3 border border-stone-200 text-red-600 font-medium">No</td>
-                                        <td data-label="Typical Improvement" className="p-3 border border-stone-200">Hosting is not the bottleneck</td>
+                                        <td className="p-3 border border-stone-300">Upgrade your hosting plan</td>
+                                        <td data-label="Works?" className="p-3 border border-stone-300 text-red-600 font-medium">No</td>
+                                        <td data-label="Typical Improvement" className="p-3 border border-stone-300">Hosting is not the bottleneck</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-bold">Rebuild on custom Next.js</td>
-                                        <td data-label="Works?" className="p-3 border border-stone-200 text-green-700 font-medium font-bold">Yes, definitively</td>
-                                        <td data-label="Typical Improvement" className="p-3 border border-stone-200 font-bold">30 to 50 points, always passes CWV</td>
+                                        <td className="p-3 border border-stone-300 font-bold">Rebuild on custom Next.js</td>
+                                        <td data-label="Works?" className="p-3 border border-stone-300 text-green-700 font-medium font-bold">Yes, definitively</td>
+                                        <td data-label="Typical Improvement" className="p-3 border border-stone-300 font-bold">30 to 50 points, always passes CWV</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -560,10 +564,10 @@ export default function CoreWebVitalsExplainedPage() {
                         </BlogText>
 
                         <BlogList items={[
-                            "Vodafone Italy improved LCP by 31 percent on their main landing page and saw 8 percent more sales, according to Google's official case study.",
-                            "Cdiscount improved all three Core Web Vitals metrics across their product pages and saw a 6 percent revenue uplift during Black Friday.",
+                            "Vodafone improved LCP by 31 percent on their main landing page and saw 8 percent more sales, according to Google's official case study.",
+                            "Cdiscount improved Core Web Vitals across product pages and saw a 5.2 percent revenue uplift directly attributed to speed.",
                             "Our client MyCustomPatches migrated from WordPress to custom Next.js. Their PageSpeed score went from 42 to 97. Bounce rate dropped 34 percent. Conversions went up.",
-                            "Agencies that passed Core Web Vitals showed, on average, 24 percent lower bounce rates compared to failing sites in 2026 industry data."
+                            "Google research shows bounce probability increases 32 percent when page load time goes from 1 to 3 seconds."
                         ]} />
 
                         <BlogText>
@@ -582,7 +586,7 @@ export default function CoreWebVitalsExplainedPage() {
                                 {
                                     num: "1",
                                     title: "If you are on Wix, Squarespace, or Webflow and scoring below 55",
-                                    action: "Do the basic optimizations (images, apps, third-party scripts) first. If you still score below 70, your platform is the ceiling. A migration to custom code is the only way past it. Budget: $3,500 to $8,000 for a typical business site."
+                                    action: "Do the basic optimizations (images, apps, third-party scripts) first. If you still score below 70, your platform is the ceiling. A migration to custom code is the only way past it. Budget: $1,500+ Starter, $3,500+ Growth for most business sites, $5,000 to $10,000+ Scale for larger e-commerce."
                                 },
                                 {
                                     num: "2",
@@ -605,7 +609,7 @@ export default function CoreWebVitalsExplainedPage() {
                                     action: "Your developer did not optimize properly. Fix the specific issues PageSpeed Insights reports. Focus on LCP (usually the hero image), INP (usually heavy JavaScript), and CLS (usually images without dimensions). You do not need to rebuild. Just fix what is flagged."
                                 }
                             ].map((step) => (
-                                <div key={step.num} className="flex gap-4 p-4 border border-stone-200 rounded-xl hover:border-cognac/30 transition-colors">
+                                <div key={step.num} className="flex gap-4 p-4 border border-stone-300 rounded-xl hover:border-cognac/30 transition-colors">
                                     <div className="w-8 h-8 rounded-lg bg-cognac/10 flex items-center justify-center shrink-0">
                                         <span className="text-cognac font-bold text-sm">{step.num}</span>
                                     </div>
@@ -635,7 +639,7 @@ export default function CoreWebVitalsExplainedPage() {
                     </div>
 
                     {/* Key Takeaways */}
-                    <section className="mb-10 mt-16">
+                    <section className="mb-10 mt-6 md:mt-10 md:mt-16">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
                             <li><strong>Core Web Vitals are three scores</strong> (LCP, INP, CLS) that measure loading speed, click responsiveness, and visual stability. Google uses them as a ranking signal.</li>
@@ -647,7 +651,7 @@ export default function CoreWebVitalsExplainedPage() {
                     </section>
 
                     {/* Bottom CTA */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Want Someone to Explain Your Scores on a 20-Min Call?</h3>
                         <p className="text-stone-600 mb-6 max-w-xl mx-auto text-sm">
                             Share your URL on the call. We run PageSpeed live, walk you through what each score means for your business specifically, and give you an honest recommendation. No sales pitch. Just answers.
@@ -661,9 +665,9 @@ export default function CoreWebVitalsExplainedPage() {
                     {/* FAQ */}
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
 
-                    <section className="mb-10 mt-10">
+                    <section className="mb-10 mt-6 md:mt-10">
                         <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading by Platform</h2>
-                        <p className="text-stone-700 leading-relaxed">See Core Web Vitals in practice: <Link href="/blog/shopify-dawn-theme-slow" className="text-cognac hover:underline font-medium">Shopify Dawn theme LCP issues</Link>, <Link href="/blog/squarespace-too-slow" className="text-cognac hover:underline font-medium">Squarespace CWV ceiling at 55-65</Link>, and <Link href="/blog/gohighlevel-website-speed" className="text-cognac hover:underline font-medium">why GoHighLevel sites score 20-45 on PageSpeed</Link>. For rebuild cost benchmarks, see the <Link href="/blog/website-rebuild-cost-2026" className="text-cognac hover:underline font-medium">2026 website rebuild pricing guide</Link>.</p>
+                        <p className="text-stone-700 leading-relaxed">See Core Web Vitals in practice: <Link href="/blog/shopify-dawn-theme-slow" className="text-cognac hover:underline font-medium">Shopify Dawn theme LCP issues</Link>, <Link href="/blog/squarespace-too-slow" className="text-cognac hover:underline font-medium">Squarespace CWV ceiling</Link>, <Link href="/blog/wix-too-slow" className="text-cognac hover:underline font-medium">why Wix sites stay slow</Link>, and <Link href="/blog/gohighlevel-website-speed" className="text-cognac hover:underline font-medium">GoHighLevel site speed</Link>. For the full speed playbook: our <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline font-medium">100 PageSpeed guide</Link>, <Link href="/blog/how-website-speed-affects-seo" className="text-cognac hover:underline font-medium">how website speed affects SEO</Link>, and <Link href="/blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline font-medium">why WordPress plugins destroy speed</Link>. For rebuild cost benchmarks, see the <Link href="/blog/website-rebuild-cost-2026" className="text-cognac hover:underline font-medium">2026 website rebuild pricing guide</Link>.</p>
                     </section>
 
                     {/* Related Posts */}

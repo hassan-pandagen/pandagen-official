@@ -189,7 +189,7 @@ const blogPosts: Record<
                 </BlogText>
 
                 {/* Mid-Article CTA */}
-                <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                     <p className="font-bold text-charcoal mb-2">How much is WordPress actually costing your business?</p>
                     <p className="text-stone-600 mb-4 text-sm">Free cost audit. We calculate your exact WordPress tax and show the migration ROI.</p>
                     <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
@@ -306,7 +306,7 @@ const blogPosts: Record<
                 </BlogText>
 
                 {/* Mid-Article CTA */}
-                <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                     <p className="font-bold text-charcoal mb-2">Is your Shopify store hitting The Wall?</p>
                     <p className="text-stone-600 mb-4 text-sm">Free headless audit. We show you what your store would look like at under 1 second load times.</p>
                     <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
@@ -472,7 +472,7 @@ const blogPosts: Record<
                 <ComparisonTable />
 
                 {/* Mid-Article CTA */}
-                <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                     <p className="font-bold text-charcoal mb-2">How many plugins is your site running right now?</p>
                     <p className="text-stone-600 mb-4 text-sm">Free plugin audit. We identify exactly which plugins are costing you speed, money, and traffic.</p>
                     <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
@@ -604,7 +604,7 @@ const blogPosts: Record<
                 </BlogText>
 
                 {/* Mid-Article CTA */}
-                <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                     <p className="font-bold text-charcoal mb-2">Is Elementor killing your Google rankings?</p>
                     <p className="text-stone-600 mb-4 text-sm">Free DOM audit. We analyze your site and show you exactly how much traffic you&apos;re losing to page builder bloat.</p>
                     <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
@@ -877,7 +877,7 @@ const blogPosts: Record<
                 </BlogQuote>
 
                 {/* Mid-Article CTA */}
-                <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                     <p className="font-bold text-charcoal mb-2">Still paying $27,600/year for a slow Shopify Plus store?</p>
                     <p className="text-stone-600 mb-4 text-sm">Free performance audit. We calculate your exact revenue loss and show you the headless solution.</p>
                     <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
@@ -1035,7 +1035,7 @@ const blogPosts: Record<
                 </BlogText>
 
                 {/* Mid-Article CTA */}
-                <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                     <p className="font-bold text-charcoal mb-2">Is slow speed killing your Google traffic?</p>
                     <p className="text-stone-600 mb-4 text-sm">Free traffic recovery audit. We show you exactly why Google is hiding your site and how to fix it.</p>
                     <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
@@ -1194,7 +1194,7 @@ const blogPosts: Record<
                 </BlogText>
 
                 {/* Mid-Article CTA */}
-                <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                     <p className="font-bold text-charcoal mb-2">How many customers are you losing at each funnel stage?</p>
                     <p className="text-stone-600 mb-4 text-sm">Free conversion audit. We trace your exact funnel drop-off and calculate the revenue fix.</p>
                     <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
@@ -1390,7 +1390,7 @@ const blogPosts: Record<
 // --- GUARANTEE CTA COMPONENT ---
 function GuaranteeCTA() {
     return (
-        <div className="mt-20 p-10 bg-stone-50 border border-stone-200 rounded-[2.5rem] text-center relative overflow-hidden group">
+        <div className="mt-8 md:mt-12 md:mt-20 p-10 bg-stone-50 border border-stone-200 rounded-[2.5rem] text-center relative overflow-hidden group">
             <div className="relative z-10">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-success/10 text-success text-xs font-bold uppercase tracking-wider mb-6">
                     <ShieldCheck className="w-4 h-4" /> 30-Day Money-Back Guarantee (from delivery)
@@ -1678,7 +1678,7 @@ export default async function BlogPost(props: PageProps) {
                     </div>
 
                     {/* Author Block - Links to author page for E-E-A-T */}
-                    <Link href="/about/hassan" className="flex items-center justify-center gap-4 mt-12 pt-10 border-t border-stone-200 opacity-70 hover:opacity-100 transition-opacity group">
+                    <Link href="/about/hassan" className="flex items-center justify-center gap-4 mt-8 md:mt-12 pt-10 border-t border-stone-200 opacity-70 hover:opacity-100 transition-opacity group">
                         <div className="w-12 h-12 rounded-full overflow-hidden border border-stone-200 group-hover:border-stone-400 transition-colors">
                             <Image src="/team/hassan.png" alt={`${post.author} - ${post.role} at PandaCodeGen`} width={48} height={48} className="w-full h-full object-cover" />
                         </div>

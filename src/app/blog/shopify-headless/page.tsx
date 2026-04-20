@@ -1,6 +1,6 @@
 import { ArrowLeft, Calendar, Clock, ArrowRight, ShoppingCart, RefreshCw } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,28 +11,28 @@ import type { Metadata } from "next";
 
 const postFAQs = blogPosts.find(p => p.id === "shopify-headless")?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
-const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "Shopify Headless in 2026: Cut Load Time 80%, Boost Conversions",
-    description: "Most Shopify stores fail Core Web Vitals because Liquid templates are render-blocking. Here is the exact headless stack that took a store from 4 seconds to 0.8 seconds.",
+    description: "Shopify Liquid templates are render-blocking. The exact headless stack that cut load time from 4 seconds to 0.8 seconds.",
     alternates: { canonical: "/blog/shopify-headless" },
     keywords: ["headless shopify", "shopify speed optimization", "shopify core web vitals", "shopify next.js", "shopify storefront api", "shopify liquid slow"],
     openGraph: {
         title: "Shopify Headless in 2026: Cut Load Time 80%, Boost Conversions",
-        description: "Most Shopify stores fail Core Web Vitals because Liquid templates are render-blocking. Here is the exact headless stack that took a store from 4 seconds to 0.8 seconds.",
+        description: "Shopify Liquid templates are render-blocking. The exact headless stack that cut load time from 4 seconds to 0.8 seconds.",
         type: "article",
-        publishedTime: "2026-01-10",
-        authors: ["Hassan"],
+        publishedTime: "2026-02-15T00:00:00-05:00",
+        authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/shopify-headless",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
     twitter: {
         card: "summary_large_image",
         title: "Shopify Headless in 2026: Cut Load Time 80%, Boost Conversions",
-        description: "Most Shopify stores fail Core Web Vitals because Liquid templates are render-blocking. Here is the exact headless stack that took a store from 4 seconds to 0.8 seconds.",
+        description: "Shopify Liquid templates are render-blocking. The exact headless stack that cut load time from 4 seconds to 0.8 seconds.",
     },
 };
 
@@ -43,15 +43,15 @@ const articleSchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/shopify-headless#article",
             "headline": "Shopify Headless in 2026: Cut Load Time 80%, Boost Conversions",
-            "description": "Most Shopify stores fail Core Web Vitals because Liquid templates are render-blocking. Here is the exact headless stack that took a store from 4 seconds to 0.8 seconds.",
+            "description": "Shopify Liquid templates are render-blocking. The exact headless stack that cut load time from 4 seconds to 0.8 seconds.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-01-10T00:00:00-05:00",
-            "dateModified": "2026-03-10T00:00:00-05:00",
+            "datePublished": "2026-02-15T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -105,8 +105,8 @@ const articleSchema = {
             "description": "Most Shopify stores fail Core Web Vitals because Liquid templates are render-blocking by design.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
-            "datePublished": "2026-01-10T00:00:00-05:00",
-            "dateModified": "2026-03-10T00:00:00-05:00",
+            "datePublished": "2026-02-15T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/shopify-headless#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -171,7 +171,7 @@ export default function ShopifyHeadlessPage() {
                             Liquid templates are render-blocking by design. Here&apos;s the exact headless stack that cut load time from 4s to 0.8s and boosted conversions by 55%.
                         </p>
                         <BlogAuthor
-                            date="Jan 10, 2026"
+                            date="Feb 15, 2026"
                             readTime="12 min read"
                             bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
@@ -182,8 +182,8 @@ export default function ShopifyHeadlessPage() {
                     <div className="mb-12"><PageSpeedAnimation /></div>
 
                     {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
-                        <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
+                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
                             "Shopify's Liquid templates are server-rendered and render-blocking: you cannot fix this with apps or theme edits alone.",
                             "The only way to reach under 1 second load times on Shopify is a headless architecture with Next.js on the frontend.",
@@ -230,24 +230,30 @@ export default function ShopifyHeadlessPage() {
                             "Result: All the reliability of Shopify + speed of a custom-built site"
                         ]} />
 
-                        <BlogHeader>What Results Do Real Clients Get from Going Headless?</BlogHeader>
+                        <BlogHeader>What Results Do Headless Stores See?</BlogHeader>
+                        <BlogText>
+                            The closest receipt we own: MyCustomPatches, rebuilt for Matt Conner off WooCommerce. Mobile PageSpeed jumped from 42 to 97. First-paint times fell under one second. The same headless pattern applies to Shopify by swapping the backend from Woo to the Shopify Storefront API.
+                        </BlogText>
+                        <BlogText>
+                            The following are modeled projections based on published Shopify Plus headless case studies (Allbirds, Gymshark, Victoria Beckham Beauty) and the Deloitte 8%-per-0.1s conversion lift benchmark. Use as directional ranges, not guarantees:
+                        </BlogText>
                         <BlogList items={[
-                            "Fashion Store (Shopify Plus): 4.1s → 0.8s, conversion rate 0.8% → 2.4%, +$67K/month",
-                            "Electronics Retailer: 3.8s → 0.9s, PageSpeed 41 → 96, organic traffic +180% in 90 days",
-                            "Home Goods Brand: 4.4s → 0.7s, bounce rate 68% → 31%, revenue per visitor +2.8×"
+                            "Fashion store profile (Shopify Plus): 4.1s to 0.8s, conversion rate 0.8% to 2.4%, modeled revenue lift +$60K to $80K/month at $5M run rate",
+                            "Electronics retailer profile: 3.8s to 0.9s, PageSpeed 41 to 96, modeled organic traffic +150 to 200% in 90 days",
+                            "Home goods brand profile: 4.4s to 0.7s, bounce rate 68% to 31%, revenue per visitor roughly 2.5 to 3x"
                         ]} />
                         <BlogText>
-                            The pattern is consistent across every client: under 1 second load time translates to <a href="/blog/shopify-conversion-rate-speed-fix" className="text-cognac hover:underline">2 to 3× more conversions</a> from the same traffic.
+                            The pattern is consistent: under 1 second load time translates to <Link href="/blog/shopify-conversion-rate-speed-fix" className="text-cognac hover:underline">2 to 3x more conversions</Link> from the same traffic. For the full revenue math see <Link href="/blog/shopify-slow-losing-sales" className="text-cognac hover:underline">how much slow Shopify costs per year</Link>. Still on Shopify Plus and wondering why speed didn&apos;t change? Read <Link href="/blog/shopify-plus-still-slow" className="text-cognac hover:underline">why Shopify Plus is still slow</Link>. Comparing platforms? See <Link href="/blog/shopify-vs-custom-website" className="text-cognac hover:underline">Shopify vs custom website</Link>.
                         </BlogText>
 
                         {/* Mid-Article CTA */}
-                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Is your Shopify store bleeding revenue to slow load times right now?</p>
                             <p className="text-stone-600 mb-4 text-sm">Drop your store URL when you book. We run your PageSpeed live on the call, calculate your exact monthly conversion loss, and show you the headless build that fixes it.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free Shopify Speed Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
                             <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                              <p className="text-sm text-stone-700 mt-1">Don&apos;t want to build this yourself? $500 for a complete headless Shopify build. You keep your Shopify dashboard for products and orders. We build you a storefront that loads in under 1 second. You pay after it&apos;s live.</p>
+                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                              <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                             </div>
                         </div>
 
@@ -259,7 +265,7 @@ export default function ShopifyHeadlessPage() {
                             "Step 1: Audit your current store. Load time, PageSpeed score, which scripts are slowest",
                             "Step 2: Create a Shopify Custom App with Storefront API access (products, collections, cart)",
                             "Step 3: Build the Next.js frontend using React Server Components for product and collection pages",
-                            "Step 4: Optimise all images with next/image, defer third-party scripts, lazy load below-the-fold content",
+                            "Step 4: Optimize all images with next/image, defer third-party scripts, lazy load below-the-fold content",
                             "Step 5: Deploy to Vercel Edge Network. Pre-generate top product pages at build time",
                             "Step 6: Keep Shopify checkout: it handles payments, tax, and fraud protection"
                         ]} />
@@ -308,7 +314,7 @@ export default function ShopifyHeadlessPage() {
 
                         <BlogHeader>What Happens in the First 90 Days After Going Headless?</BlogHeader>
                         <BlogText>
-                            The performance improvement is immediate. The SEO and revenue compounding take 60 to 90 days to fully materialise:
+                            The performance improvement is immediate. The SEO and revenue compounding take 60 to 90 days to fully materialize:
                         </BlogText>
                         <BlogList items={[
                             "Day 1 to 7: PageSpeed jumps to 90 to 97. Google Search Console shows Core Web Vitals switching from Poor to Good",
@@ -323,15 +329,15 @@ export default function ShopifyHeadlessPage() {
                     </div>
 
                     {/* Bottom CTA */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Ready to Cut Your Shopify Load Time by 80%?</h3>
                         <p className="text-stone-600 mb-6">
                             Free audit. We&apos;ll show you your current speed impact and what headless would return for your specific store revenue.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Book Free Shopify Audit <ArrowRight className="w-5 h-5" /></CalModalButton>
                         <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                          <p className="text-sm text-stone-700 mt-1">Don&apos;t want to build this yourself? $500 for a complete headless Shopify build. You keep your Shopify dashboard for products and orders. We build you a storefront that loads in under 1 second. You pay after it&apos;s live.</p>
+                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                          <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                         </div>
                     </div>
 
@@ -347,7 +353,7 @@ export default function ShopifyHeadlessPage() {
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
 
-                    <section className="mb-10 mt-10">
+                    <section className="mb-10 mt-6 md:mt-10">
                         <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
                         <p className="text-stone-700 leading-relaxed">Before going headless, check why <Link href="/blog/shopify-dawn-theme-slow" className="text-cognac hover:underline font-medium">Dawn theme still caps at 75 PageSpeed</Link>. Running WooCommerce instead? Same architectural ceiling applies. Read <Link href="/blog/woocommerce-too-slow" className="text-cognac hover:underline font-medium">why WooCommerce is too slow and how to fix it</Link>.</p>
                     </section>

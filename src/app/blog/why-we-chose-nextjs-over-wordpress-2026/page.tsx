@@ -1,6 +1,6 @@
 import { ArrowLeft, Calendar, Clock, ArrowRight, RefreshCw } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,30 +11,30 @@ import type { Metadata } from "next";
 
 const nextjsFAQs = blogPosts.find(p => p.id === 'why-we-chose-nextjs-over-wordpress-2026')?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
-const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "Why We Chose Next.js Over WordPress in 2026 (With Client Results)",
-    description: "We built WordPress for years. Then client data made it impossible to justify. Here are the speed, cost, and SEO numbers that made us switch every new project to Next.js.",
+    description: "We built WordPress for years. Client data made it impossible to justify. The speed, cost, and SEO numbers that made us switch.",
     alternates: {
         canonical: '/blog/why-we-chose-nextjs-over-wordpress-2026',
     },
     robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
         title: "Why We Chose Next.js Over WordPress in 2026 (With Client Results)",
-        description: "We built WordPress for years. Then client data made it impossible to justify. Here are the speed, cost, and SEO numbers that made us switch every new project to Next.js.",
+        description: "We built WordPress for years. Client data made it impossible to justify. The speed, cost, and SEO numbers that made us switch.",
         type: "article",
         publishedTime: "2026-03-04",
-        authors: ["Hassan"],
+        authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/why-we-chose-nextjs-over-wordpress-2026",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
     twitter: {
         card: "summary_large_image",
         title: "Why We Chose Next.js Over WordPress in 2026 (With Client Results)",
-        description: "We built WordPress for years. Then client data made it impossible to justify. Here are the speed, cost, and SEO numbers that made us switch every new project to Next.js.",
+        description: "We built WordPress for years. Client data made it impossible to justify. The speed, cost, and SEO numbers that made us switch.",
     },
     keywords: ["nextjs vs wordpress 2026", "why nextjs over wordpress", "wordpress alternative nextjs", "switch from wordpress to nextjs", "nextjs benefits over wordpress"],
 };
@@ -46,7 +46,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/why-we-chose-nextjs-over-wordpress-2026#article",
             "headline": "Why We Chose Next.js Over WordPress in 2026 (With Client Results)",
-            "description": "We built WordPress for years. Then client data made it impossible to justify. Here are the speed, cost, and SEO numbers that made us switch every new project to Next.js.",
+            "description": "We built WordPress for years. Client data made it impossible to justify. The speed, cost, and SEO numbers that made us switch.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-04T00:00:00-05:00",
             "dateModified": "2026-04-13T00:00:00-05:00",
@@ -54,7 +54,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -190,8 +190,8 @@ export default function WhyNextjsOverWordPressPage() {
                         <PageSpeedAnimation />
                     </div>
 
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
-                        <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
+                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
                             "In 2023, we built client sites in WordPress. By late 2024, every new project was Next.js. This is why.",
                             "The breaking point: A client showed us data proving their WordPress site (3.2s load) was outranked on every keyword by competitors loading in under 1 second.",
@@ -238,7 +238,7 @@ export default function WhyNextjsOverWordPressPage() {
                             This is the core issue. WordPress and Next.js don&apos;t have a performance gap. They have a performance canyon.
                         </BlogText>
 
-                        <div className="my-10 border border-stone-200 rounded-2xl overflow-hidden shadow-xs">
+                        <div className="my-6 md:my-10 border border-stone-200 rounded-2xl overflow-hidden shadow-xs">
                             <div className="grid grid-cols-3 bg-stone-50 px-5 py-3 border-b border-stone-200 text-xs font-black text-stone-400 uppercase tracking-widest">
                                 <div>Metric</div>
                                 <div className="text-center text-red-400">WordPress</div>
@@ -371,7 +371,7 @@ export default function WhyNextjsOverWordPressPage() {
                         </BlogText>
 
                         {/* Mid-Article CTA */}
-                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Still on WordPress?</p>
                             <p className="text-stone-600 mb-4 text-sm">Drop your URL when you book. We test your speed live on the call and show you the exact performance gap between your WordPress site and a custom Next.js build. Takes 30 minutes.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
@@ -509,7 +509,7 @@ export default function WhyNextjsOverWordPressPage() {
                     {nextjsFAQs.length > 0 && <FAQAccordion faqs={nextjsFAQs} />}
 
                     {/* CTA Section */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Ready to Make the Switch to Next.js?</h3>
                         <p className="text-stone-600 mb-6">
                             Free audit. We&apos;ll show you what your site looks like on Next.js, what the migration would cost, and what rankings and revenue to expect within 90 days.

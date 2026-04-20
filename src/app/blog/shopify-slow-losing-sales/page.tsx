@@ -1,6 +1,6 @@
 import { ArrowLeft, Calendar, Clock, ArrowRight, RefreshCw } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,29 +11,29 @@ import type { Metadata } from "next";
 
 const shopifyLostSalesFAQs = blogPosts.find(p => p.id === 'shopify-slow-losing-sales')?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const SalesImpactAnimation = dynamic(() => import("@/components/blog/SalesImpactAnimation"));
-const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const SalesImpactAnimation = lazyLoad(() => import("@/components/blog/SalesImpactAnimation"));
+const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "Slow Shopify Store? How Much Revenue You Are Losing in 2026 (With Math)",
-    description: "A Shopify store doing $500K/year at 4 seconds load time is losing $75,000 to speed alone. We built the calculator. Plug in your numbers and see what a 1-second store would earn you.",
+    description: "A $500K/year Shopify store at 4s load time loses $75K to speed. Plug in your numbers and see what a 1-second store would earn.",
     alternates: {
         canonical: '/blog/shopify-slow-losing-sales',
     },
     openGraph: {
         title: "Slow Shopify Store? How Much Revenue You Are Losing in 2026 (With Math)",
-        description: "A Shopify store doing $500K/year at 4 seconds load time is losing $75,000 to speed alone. We built the calculator. Plug in your numbers and see what a 1-second store would earn you.",
+        description: "A $500K/year Shopify store at 4s load time loses $75K to speed. Plug in your numbers and see what a 1-second store would earn.",
         type: "article",
-        publishedTime: "2026-02-10",
-        authors: ["Hassan"],
+        publishedTime: "2026-02-10T00:00:00-05:00",
+        authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/shopify-slow-losing-sales",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
     twitter: {
         card: "summary_large_image",
         title: "Slow Shopify Store? How Much Revenue You Are Losing in 2026 (With Math)",
-        description: "A Shopify store doing $500K/year at 4 seconds load time is losing $75,000 to speed alone. We built the calculator. Plug in your numbers and see what a 1-second store would earn you.",
+        description: "A $500K/year Shopify store at 4s load time loses $75K to speed. Plug in your numbers and see what a 1-second store would earn.",
     },
     keywords: ["Shopify speed optimization", "headless Shopify", "Shopify slow", "e-commerce performance", "Shopify lost sales", "custom storefront"],
 };
@@ -45,15 +45,15 @@ const articleSchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales#article",
             "headline": "Slow Shopify Store? How Much Revenue You Are Losing in 2026 (With Math)",
-            "description": "A Shopify store doing $500K/year at 4 seconds load time is losing $75,000 to speed alone. We built the calculator. Plug in your numbers and see what a 1-second store would earn you.",
+            "description": "A $500K/year Shopify store at 4s load time loses $75K to speed. Plug in your numbers and see what a 1-second store would earn.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-10T00:00:00-05:00",
-            "dateModified": "2026-03-15T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -110,7 +110,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-10T00:00:00-05:00",
-            "dateModified": "2026-03-15T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -130,32 +130,7 @@ const articleSchema = {
         {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales#faq",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "How much money am I losing from a slow Shopify store?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "A $500K/year Shopify store with 3+ second load times loses $75K-$150K annually. Research shows every 0.1 second delay reduces conversions by 8%. If your store is 3 seconds slower than competitors, you're losing 60-70% of potential conversions. This translates to $6,000-$12,000 in lost monthly revenue."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Why is my Shopify store so slow on mobile?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Shopify themes are built on Liquid templates which process everything server-side, creating unavoidable delays. Mobile devices have slower processors and network speeds, making this worse. App bloat, unoptimized images, and theme overhead compound the problem. 53% of mobile users leave if a page takes more than 3 seconds to load."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How do I speed up my Shopify store?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Theme optimization (image compression, removing apps, faster themes) provides minimal improvement because all Shopify themes share the same slow foundation. The real solution is a headless custom storefront using Next.js connected to your Shopify backend. This separates the fast frontend from the backend, keeping Shopify's excellent inventory/payment systems while replacing the slow customer-facing interface. Typical results: 3.8s → 0.9s load time, 38 → 97 mobile score."
-                    }
-                }
-            ]
+            "mainEntity": shopifyLostSalesFAQs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
         }
     ]
 };
@@ -217,12 +192,12 @@ export default function ShopifySlowPage() {
                     </div>
 
                     {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
-                        <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
+                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
                             "Average Shopify store doing $500K/year loses $75K-$150K annually due to slow load times",
-                            "Every 0.1 second delay = 1% revenue loss. A 3-second delay = losing 30% of revenue.",
-                            "A fast custom storefront costs $15K-$35K and pays for itself in 30-90 days through increased conversions",
+                            "Every 0.1 second delay costs roughly 8% of conversions (Deloitte). A 1-second gap compounds to a material revenue hit.",
+                            "A fast custom storefront runs $3,500+ Growth or $5,000 to $10,000+ Scale, with a $500 Founder Portfolio entry point. It pays for itself in 30 to 90 days through increased conversions.",
                             "Fix your speed now, not later. You're bleeding money every single day."
                         ]} />
                     </div>
@@ -271,8 +246,8 @@ export default function ShopifySlowPage() {
                             "Current load time: 3.8 seconds (typical Shopify store)",
                             "Competitor load time: 0.9 seconds (headless custom storefront)",
                             "Speed difference: 2.9 seconds = 29 × 0.1 seconds",
-                            "Conversion loss: 29 × 8% = 232% fewer conversions",
-                            "Translation: You're converting at 1/3 the rate of faster competitors"
+                            "Compounded conversion loss: at 8% per 0.1s (Deloitte), a 2.9s gap leaves you converting at roughly 1/3 the rate of faster competitors",
+                            "Speed losses compound multiplicatively, not linearly, so the ceiling is total drop-off, not past 100%"
                         ]} />
 
                         <BlogQuote>
@@ -310,7 +285,7 @@ export default function ShopifySlowPage() {
                         </BlogText>
 
                         {/* PAA Answer Block */}
-                        <div className="my-10 p-6 bg-amber-50 border border-amber-200 rounded-2xl">
+                        <div className="my-6 md:my-10 p-6 bg-amber-50 border border-amber-200 rounded-2xl">
                             <h3 className="font-bold text-charcoal mb-3 text-lg">Why is my Shopify store so slow?</h3>
                             <p className="text-stone-700 text-sm leading-relaxed mb-3">
                                 Your Shopify store is slow because of three structural issues no theme or app can fix: <strong>Liquid template rendering</strong> (every page request hits Shopify&apos;s servers before the browser sees anything), <strong>third-party app script bloat</strong> (the average store runs 12 to 18 apps, each adding 50 to 200ms of blocking JavaScript), and <strong>unoptimized images</strong> served as 2 to 4MB JPEGs instead of sub-100KB WebP.
@@ -331,7 +306,7 @@ export default function ShopifySlowPage() {
                             "Removing apps and plugins",
                             "Switching to a \"faster\" theme",
                             "Enabling lazy loading",
-                            "Maybe even upgrading to Shopify Plus ($2,300/month)"
+                            "Maybe even upgrading to Shopify Plus at $2,300 per month, which does not change the Liquid frontend (full breakdown in our Shopify Plus still slow post)"
                         ]} />
 
                         <BlogText>
@@ -394,58 +369,58 @@ export default function ShopifySlowPage() {
                         ]} />
 
                         <BlogQuote>
-                            One client went from $420K/year to $890K/year after we fixed their storefront. Same products. Same ads. Same traffic. Just a website that didn't lose half the visitors to slow load times.
+                            I rebuilt MyCustomPatches for Matt Conner and took his WooCommerce storefront from 42 to 97 on mobile PageSpeed. Same products. Same ads. A storefront that stopped leaking visitors on the first paint. The Shopify version of this is a headless Storefront API rebuild on the same backend.
                         </BlogQuote>
 
                         {/* Mid-Article CTA */}
-                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">How much is your Shopify store bleeding per month?</p>
                             <p className="text-stone-600 mb-4 text-sm">Drop your store URL in the booking form. We run your PageSpeed live on the call, calculate your exact monthly revenue loss to the dollar, and give you a fixed quote before we hang up.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                     Get Free Revenue Audit <ArrowRight className="w-4 h-4" />
                                 </CalModalButton>
                             <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                              <p className="text-sm text-stone-700 mt-1">$500 for a complete Shopify migration. Every second your site takes to load, you lose 7% of your sales. A faster site pays for itself in the first week. You pay after the new site is live.</p>
+                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                              <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                             </div>
                         </div>
 
                         <BlogHeader>How Quickly Does a Custom Shopify Storefront Pay for Itself?</BlogHeader>
 
                         <BlogText>
-                            A <a href="/services/ecommerce?ref=blog/shopify-slow-losing-sales" className="text-cognac hover:underline">custom fast storefront</a> costs <strong>$15,000-$35,000</strong> depending on complexity.
+                            A <Link href="/services/ecommerce" className="text-cognac hover:underline">custom fast storefront</Link> starts at $500 Founder Portfolio, lands in the <Link href="/pricing" className="text-cognac hover:underline">$3,500 Growth tier</Link> for most mid-sized stores, and scales to $5,000 to $10,000+ for larger catalogs.
                         </BlogText>
 
                         <BlogText>
-                            Let's use the lower end ($15,000 baseline) to show you the payback time:
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Investment: $15,000 (one-time)",
-                            "Monthly revenue gain (conservative): $3,000-$5,000",
-                            "Payback period: 3-5 months",
-                            "Year 1 net profit: $36,000-$60,000 (after deducting initial cost)",
-                            "Year 2+ net profit: $36,000-$60,000 per year (no additional cost)"
-                        ]} />
-
-                        <BlogText>
-                            In other words: <BlogHighlight>You spend $15K once and make back $45K+ in the first year. Then $50K+ every year after that. Forever.</BlogHighlight>
-                        </BlogText>
-
-                        <BlogText>
-                            Or at the higher end ($35,000 investment) for more complex stores:
+                            Payback math on the Growth tier ($3,500 baseline) for a $500K/year store:
                         </BlogText>
 
                         <BlogList items={[
-                            "Investment: $35,000 (one-time)",
-                            "Monthly revenue gain (conservative): $5,000-$8,000",
-                            "Payback period: 5-7 months",
-                            "Year 1 net profit: $25,000-$60,000 (after deducting initial cost)",
-                            "Year 2+ net profit: $60,000-$96,000 per year (no additional cost)"
+                            "Investment: $3,500 (one-time)",
+                            "Monthly revenue gain (conservative): $3,000 to $5,000",
+                            "Payback period: 1 to 2 months",
+                            "Year 1 net profit: $32,500 to $56,500 after deducting initial cost",
+                            "Year 2+ net profit: $36,000 to $60,000 per year with no additional cost"
                         ]} />
 
                         <BlogText>
-                            <BlogHighlight>You spend $35K once and make back $95K+ in the first year alone.</BlogHighlight>
+                            <BlogHighlight>You spend $3,500 once and most stores make that back inside 60 days.</BlogHighlight>
+                        </BlogText>
+
+                        <BlogText>
+                            At the Scale tier ($10,000 baseline) for larger or multi-region stores:
+                        </BlogText>
+
+                        <BlogList items={[
+                            "Investment: $10,000 (one-time)",
+                            "Monthly revenue gain (conservative): $5,000 to $8,000",
+                            "Payback period: 2 to 3 months",
+                            "Year 1 net profit: $50,000 to $86,000 after deducting initial cost",
+                            "Year 2+ net profit: $60,000 to $96,000 per year with no additional cost"
+                        ]} />
+
+                        <BlogText>
+                            <BlogHighlight>You spend $10K once and make back $60K+ in the first year alone.</BlogHighlight>
                         </BlogText>
 
                         <BlogHeader>What Does a Real Headless Shopify Storefront Actually Look Like?</BlogHeader>
@@ -471,13 +446,13 @@ export default function ShopifySlowPage() {
                         </BlogText>
 
                         <BlogQuote>
-                            A client's product page went from 4.1 seconds to 0.7 seconds after we rebuilt the frontend. Their mobile conversion rate went from 1.1% to 2.9% in the first 30 days. Same products. Same prices. Different website.
+                            When I rebuilt MyCustomPatches&apos; product templates for Matt Conner, the mobile PageSpeed jumped from 42 to 97 and first-paint times fell under one second. Same catalog. Different engine. The Shopify version of this is the same architecture: Storefront API into a Next.js frontend, checkout stays on Shopify.
                         </BlogQuote>
 
                         <BlogHeader>What Are the Most Common Shopify Speed Mistakes Business Owners Make?</BlogHeader>
 
                         <BlogText>
-                            After auditing 200+ Shopify stores, we see the same 5 mistakes repeatedly:
+                            After reviewing dozens of Shopify stores and six years building on WordPress and e-commerce stacks before launching PandaCodeGen, the same five mistakes repeat:
                         </BlogText>
 
                         <BlogList items={[
@@ -584,7 +559,7 @@ export default function ShopifySlowPage() {
                     {shopifyLostSalesFAQs.length > 0 && <FAQAccordion faqs={shopifyLostSalesFAQs} />}
 
                     {/* CTA Section */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Ready to Stop Losing Money?</h3>
                         <p className="text-stone-600 mb-6">
                             Get a free revenue audit. See exactly how much your store is losing to slow speed.
@@ -593,8 +568,8 @@ export default function ShopifySlowPage() {
                                 Schedule Free Audit <ArrowRight className="w-5 h-5" />
                             </CalModalButton>
                         <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                          <p className="text-sm text-stone-700 mt-1">$500 for a complete Shopify migration. Every second your site takes to load, you lose 7% of your sales. A faster site pays for itself in the first week. You pay after the new site is live.</p>
+                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                          <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                         </div>
                     </div>
 

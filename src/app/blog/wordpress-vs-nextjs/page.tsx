@@ -1,6 +1,6 @@
 import { ArrowLeft, ArrowRight, RefreshCw } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,12 +11,12 @@ import type { Metadata } from "next";
 
 const wpVsNextFAQs = blogPosts.find(p => p.id === 'wordpress-vs-nextjs')?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
-const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "WordPress vs Next.js 2026: Speed, SEO & Cost Compared",
+    title: "WordPress vs Next.js 2026: The 4x Speed Gap and 3-Year Cost Comparison",
     description: "WordPress vs Next.js 2026: speed, SEO, cost, security compared with real data. Next.js scores 95-100, WordPress 35-65. Full breakdown inside.",
     alternates: {
         canonical: '/blog/wordpress-vs-nextjs',
@@ -24,17 +24,17 @@ export const metadata: Metadata = {
     keywords: ["wordpress vs next.js", "wordpress vs nextjs 2026", "wordpress alternative", "migrate wordpress to nextjs", "nextjs better than wordpress", "wordpress vs custom code", "nextjs seo vs wordpress"],
     robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
-        title: "WordPress vs Next.js 2026: Speed, SEO & Cost Compared",
+        title: "WordPress vs Next.js 2026: The 4x Speed Gap and 3-Year Cost Comparison",
         description: "WordPress vs Next.js 2026: speed, SEO, cost, security compared with real data. Next.js scores 95-100, WordPress 35-65. Full breakdown inside.",
         type: "article",
         publishedTime: "2026-03-11",
-        authors: ["Hassan"],
+        authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/wordpress-vs-nextjs",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
     twitter: {
         card: "summary_large_image",
-        title: "WordPress vs Next.js 2026: Speed, SEO & Cost Compared",
+        title: "WordPress vs Next.js 2026: The 4x Speed Gap and 3-Year Cost Comparison",
         description: "WordPress vs Next.js 2026: speed, SEO, cost, security compared with real data. Next.js scores 95-100, WordPress 35-65. Full breakdown inside.",
     },
 };
@@ -45,7 +45,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-vs-nextjs#article",
-            "headline": "WordPress vs Next.js 2026: Speed, SEO & Cost Compared",
+            "headline": "WordPress vs Next.js 2026: The 4x Speed Gap and 3-Year Cost Comparison",
             "description": "WordPress vs Next.js 2026: speed, SEO, cost, security compared with real data. Next.js scores 95-100, WordPress 35-65. Full breakdown inside.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-11T00:00:00-05:00",
@@ -54,7 +54,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -250,9 +250,9 @@ export default function WordPressVsNextJSPage() {
                             <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-50">
-                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Metric</th>
-                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">WordPress (avg)</th>
-                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Next.js (PandaCodeGen)</th>
+                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">Metric</th>
+                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">WordPress (avg)</th>
+                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">Next.js (PandaCodeGen)</th>
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-stone-100">
@@ -311,9 +311,9 @@ export default function WordPressVsNextJSPage() {
                             <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-50">
-                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Feature</th>
-                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">WordPress</th>
-                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Next.js</th>
+                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">Feature</th>
+                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">WordPress</th>
+                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">Next.js</th>
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-stone-100">
@@ -358,9 +358,9 @@ export default function WordPressVsNextJSPage() {
                             <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-50">
-                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Cost Category</th>
-                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">WordPress (3 years)</th>
-                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Next.js (3 years)</th>
+                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">Cost Category</th>
+                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">WordPress (3 years)</th>
+                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">Next.js (3 years)</th>
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-stone-100">
@@ -417,7 +417,7 @@ export default function WordPressVsNextJSPage() {
                                 Book Free Discovery Call <ArrowRight className="w-4 h-4" />
                             </CalModalButton>
                         <div className="mt-4 p-4 bg-cognac/20 border border-cognac/50 rounded-xl">
-                          <p className="text-sm font-bold text-cognac">FOUNDER&apos;S OFFER: $500 Migration</p>
+                          <p className="text-sm font-bold text-cognac">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
                           <p className="text-sm text-white mt-1">$500 for a complete custom built migration. Most agencies charge $5,000 to $15,000 for the same work. You pay after your new site is live. No monthly hosting bills. No annual renewal fees. We are building our portfolio and passing the savings to you.</p>
                         </div>
                     </div>
@@ -433,9 +433,9 @@ export default function WordPressVsNextJSPage() {
                             <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-50">
-                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Security Aspect</th>
-                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">WordPress</th>
-                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Next.js</th>
+                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">Security Aspect</th>
+                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">WordPress</th>
+                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">Next.js</th>
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-stone-100">
@@ -481,8 +481,8 @@ export default function WordPressVsNextJSPage() {
                             <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-50">
-                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Use Case</th>
-                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Recommendation</th>
+                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">Use Case</th>
+                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">Recommendation</th>
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-stone-100">
@@ -555,7 +555,7 @@ export default function WordPressVsNextJSPage() {
                                 { step: "04", title: "QA & Launch", desc: "We test every redirect, verify all metadata transferred correctly, confirm Core Web Vitals pass, and execute a zero-downtime launch. Your old site remains live until the new one is fully verified." },
                                 { step: "05", title: "Post-Launch SEO Monitoring", desc: "We submit your new sitemap to Google Search Console, monitor ranking changes for 30 days, and fix any crawl issues that emerge. Rankings typically recover within 30 to 60 days and then improve." },
                             ].map(({ step, title, desc }) => (
-                                <div key={step} className="flex gap-4 border border-stone-200 rounded-xl p-5">
+                                <div key={step} className="flex gap-4 border border-stone-300 rounded-xl p-5">
                                     <span className="text-2xl font-bold text-stone-200 shrink-0">{step}</span>
                                     <div>
                                         <p className="font-bold text-charcoal mb-1">{title}</p>
@@ -611,8 +611,8 @@ export default function WordPressVsNextJSPage() {
                                     Book Free Migration Assessment <ArrowRight className="w-4 h-4" />
                                 </CalModalButton>
                             <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                              <p className="text-sm text-stone-700 mt-1">$500 for a complete WordPress to Next.js migration. Most agencies charge $5,000 to $15,000 for the same work. You pay after your new site is live. No monthly hosting bills. No annual renewal fees. We&apos;re building our portfolio and passing the savings to you.</p>
+                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                              <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                             </div>
                             <Link
                                 href="/blog/wordpress-vs-custom-code-real-cost-3-years"

@@ -1,6 +1,6 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,19 +11,19 @@ import type { Metadata } from "next";
 
 const webflowVsCustomFAQs = blogPosts.find(p => p.id === 'webflow-vs-custom-website')?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
-const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Webflow vs Custom Website 2026: Real Cost, Speed, and SEO Comparison (2026)",
+    title: "Webflow vs Custom Website 2026: When $150/mo Outcosts a Custom Build",
     description: "Webflow works until your PageSpeed drops below 70, your bill hits $100+/month, or you need features it cannot build. Here are the 5 signs and what to do next.",
     alternates: {
         canonical: '/blog/webflow-vs-custom-website',
     },
     keywords: ["webflow vs custom website", "webflow alternative", "webflow limitations", "webflow vs next.js", "custom website vs webflow", "should I leave webflow", "webflow hidden costs"],
     openGraph: {
-        title: "Webflow vs Custom Website 2026: Real Cost, Speed, and SEO Comparison",
+        title: "Webflow vs Custom Website 2026: When $150/mo Outcosts a Custom Build",
         description: "Webflow works until your PageSpeed drops below 70, your bill hits $100+/month, or you need features it cannot build. Here are the 5 signs and what to do next.",
         type: "article",
         publishedTime: "2026-03-27",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Webflow vs Custom Website 2026: Real Cost, Speed, and SEO Comparison",
+        title: "Webflow vs Custom Website 2026: When $150/mo Outcosts a Custom Build",
         description: "Webflow works until your PageSpeed drops below 70, your bill hits $100+/month, or you need features it cannot build. Here are the 5 signs.",
     },
 };
@@ -44,16 +44,16 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/webflow-vs-custom-website#article",
-            "headline": "Webflow vs Custom Website 2026: Real Cost, Speed, and SEO Comparison",
+            "headline": "Webflow vs Custom Website 2026: When $150/mo Outcosts a Custom Build",
             "description": "Webflow works for brochure sites. But when your PageSpeed drops below 70, your bill exceeds $100/month, or you need custom functionality, custom code becomes the better investment.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-27T00:00:00-05:00",
-            "dateModified": "2026-04-15T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder & Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -109,12 +109,12 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/webflow-vs-custom-website#webpage",
             "url": "https://www.pandacodegen.com/blog/webflow-vs-custom-website",
-            "name": "Webflow vs Custom Website 2026: Real Cost, Speed, and SEO Comparison",
+            "name": "Webflow vs Custom Website 2026: When $150/mo Outcosts a Custom Build",
             "description": "A decision framework for business owners on Webflow who are wondering whether custom code is worth the investment.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-27T00:00:00-05:00",
-            "dateModified": "2026-04-15T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/webflow-vs-custom-website#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -134,13 +134,7 @@ const articleSchema = {
         {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/blog/webflow-vs-custom-website#faq",
-            "mainEntity": [
-                { "@type": "Question", "name": "When should I switch from Webflow to a custom website?", "acceptedAnswer": { "@type": "Answer", "text": "Switch when any of these are true: your Google PageSpeed Mobile score is below 70 and you cannot improve it, your Webflow bill exceeds $100 per month including add-ons and third-party tools, you need custom functionality like a booking system or API integration that Webflow cannot handle natively, you have hit the 10,000 CMS item limit, or a competitor with a custom site is consistently outranking you for the same keywords despite similar content." } },
-                { "@type": "Question", "name": "How much does a custom website cost compared to Webflow?", "acceptedAnswer": { "@type": "Answer", "text": "A custom Next.js website costs $5,000 to $20,000 to build depending on the number of pages and features. Hosting is $0 to $20 per month on Vercel. Webflow costs $1,500 to $5,000 per year in platform fees. Over 3 years, a custom site typically costs 30 to 60% less than Webflow." } },
-                { "@type": "Question", "name": "Will I lose my Google rankings if I migrate from Webflow?", "acceptedAnswer": { "@type": "Answer", "text": "Not if the migration is done correctly with 301 redirects for every URL, preserved metadata, and a new sitemap submitted to Google Search Console. Rankings typically improve within 30 to 90 days because the faster custom site earns better Core Web Vitals scores." } },
-                { "@type": "Question", "name": "Can Webflow sites rank well on Google?", "acceptedAnswer": { "@type": "Answer", "text": "Webflow sites can rank for low-competition keywords. The limitation is performance: Webflow sites score 55 to 75 on Google PageSpeed Mobile. For competitive keywords, Google uses Core Web Vitals as a tiebreaker, and a custom site scoring 95 to 100 will consistently outrank a Webflow site scoring 60 to 70." } },
-                { "@type": "Question", "name": "What can a custom website do that Webflow cannot?", "acceptedAnswer": { "@type": "Answer", "text": "Custom websites provide server-side rendering, API integrations, custom databases, unlimited CMS items, real-time features, full performance control, and the ability to move to any hosting provider. Webflow caps CMS at 10,000 items and cannot handle backend logic or data processing natively." } }
-            ]
+            "mainEntity": webflowVsCustomFAQs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
         }
     ]
 };
@@ -186,7 +180,7 @@ export default function WebflowVsCustomWebsitePage() {
                         <BlogAuthor
                             date="Mar 27, 2026"
                             readTime="11 min read"
-                            bio="Hassan has migrated dozens of businesses from Webflow, WordPress, and Shopify to custom Next.js sites. Every build scores 95 to 100 on Google PageSpeed and runs on Vercel starting free, only scaling to $20/month when the business grows."
+                            bio="Hassan is the founder of PandaCodeGen. Recent work: Obare Magazine rebuilt from Wix to Next.js and Sanity in 7 days. Every build scores 95 to 100 on Google PageSpeed and runs on Vercel starting free, scaling to $20/month only when the business grows."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -196,13 +190,13 @@ export default function WebflowVsCustomWebsitePage() {
                     </div>
 
                     {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
-                        <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
+                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
                             "Webflow works well for brochure sites under 20 pages where SEO is not the primary growth channel. Beyond that, you hit platform limits.",
                             "Webflow sites score 55 to 75 on Google PageSpeed Mobile. Custom Next.js sites score 95 to 100. That 20 to 40 point gap costs you rankings and customers.",
                             "The real Webflow cost is $1,500 to $5,000/year once you add CMS hosting, forms, integrations, and third-party tools. Custom sites cost $12 to $252/year to host.",
-                            "A custom website costs $5,000 to $20,000 to build but pays for itself within 6 to 12 months through lower hosting and better organic traffic.",
+                            "A custom website starts at $1,500+ Starter, $3,500+ Growth, or $5,000 to $10,000+ Scale, and typically pays for itself within 6 to 12 months through lower hosting and better organic traffic.",
                             "If your Webflow PageSpeed is below 70, your bill exceeds $100/month, or you need features Webflow cannot build, it is time to switch."
                         ]} />
                     </div>
@@ -317,7 +311,7 @@ export default function WebflowVsCustomWebsitePage() {
                         <BlogHeader>What a Custom Website Actually Gives You</BlogHeader>
 
                         <BlogText>
-                            &quot;Custom website&quot; sounds expensive and complicated. Five years ago it cost $25,000+ and took 4 to 6 months. AI-assisted development has changed that. Today a custom site costs $5,000 to $20,000 and takes 4 to 8 weeks. Here is what it actually means in practice:
+                            &quot;Custom website&quot; sounds expensive and complicated. Five years ago it cost $25,000+ and took 4 to 6 months. AI-assisted development has changed that. Today a custom site starts at $500 Founder Portfolio, lands at $3,500 for Growth-tier builds, and runs $5,000 to $10,000+ for Scale, with most projects shipping in 4 to 8 weeks. Here is what it actually means in practice:
                         </BlogText>
 
                         <BlogText>
@@ -341,15 +335,15 @@ export default function WebflowVsCustomWebsitePage() {
                         </BlogText>
 
                         {/* Mid-Article CTA */}
-                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Want to see the numbers for your specific site?</p>
                             <p className="text-stone-600 mb-4 text-sm">Drop your Webflow URL when you book. We run your PageSpeed score live on the call and calculate your 3-year cost comparison: Webflow vs custom.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                     Schedule Free Assessment <ArrowRight className="w-4 h-4" />
                                 </CalModalButton>
                             <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                              <p className="text-sm text-stone-700 mt-1">$500 for a complete Webflow migration. Your Webflow bill right now is probably $50 to $200/month. Pay us $500 once and that monthly cost disappears forever. Limited spots this month.</p>
+                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                              <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                             </div>
                         </div>
 
@@ -395,41 +389,41 @@ export default function WebflowVsCustomWebsitePage() {
                             <table className="w-full border-collapse text-sm min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-50">
-                                        <th className="border border-stone-200 px-4 py-3 text-left font-bold">Cost Category</th>
-                                        <th className="border border-stone-200 px-4 py-3 text-left font-bold">Webflow (3 Years)</th>
-                                        <th className="border border-stone-200 px-4 py-3 text-left font-bold">Custom Next.js (3 Years)</th>
+                                        <th className="border border-stone-300 px-4 py-3 text-left font-bold">Cost Category</th>
+                                        <th className="border border-stone-300 px-4 py-3 text-left font-bold">Webflow (3 Years)</th>
+                                        <th className="border border-stone-300 px-4 py-3 text-left font-bold">Custom Next.js (3 Years)</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td className="border border-stone-200 px-4 py-3">Build cost</td>
-                                        <td data-label="Webflow (3 Years)" className="border border-stone-200 px-4 py-3">$0 (DIY) to $5,000 (agency)</td>
-                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-200 px-4 py-3">$5,000 to $20,000</td>
+                                        <td className="border border-stone-300 px-4 py-3">Build cost</td>
+                                        <td data-label="Webflow (3 Years)" className="border border-stone-300 px-4 py-3">$0 (DIY) to $5,000 (agency)</td>
+                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-300 px-4 py-3">$5,000 to $20,000</td>
                                     </tr>
                                     <tr className="bg-stone-50">
-                                        <td className="border border-stone-200 px-4 py-3">Hosting + platform fees</td>
-                                        <td data-label="Webflow (3 Years)" className="border border-stone-200 px-4 py-3">$4,500 to $15,000</td>
-                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-200 px-4 py-3">$0 to $720</td>
+                                        <td className="border border-stone-300 px-4 py-3">Hosting + platform fees</td>
+                                        <td data-label="Webflow (3 Years)" className="border border-stone-300 px-4 py-3">$4,500 to $15,000</td>
+                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-300 px-4 py-3">$0 to $720</td>
                                     </tr>
                                     <tr>
-                                        <td className="border border-stone-200 px-4 py-3">Third-party tools</td>
-                                        <td data-label="Webflow (3 Years)" className="border border-stone-200 px-4 py-3">$1,080 to $3,600</td>
-                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-200 px-4 py-3">$0 (built into code)</td>
+                                        <td className="border border-stone-300 px-4 py-3">Third-party tools</td>
+                                        <td data-label="Webflow (3 Years)" className="border border-stone-300 px-4 py-3">$1,080 to $3,600</td>
+                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-300 px-4 py-3">$0 (built into code)</td>
                                     </tr>
                                     <tr className="bg-stone-50">
-                                        <td className="border border-stone-200 px-4 py-3">Google PageSpeed Mobile</td>
-                                        <td data-label="Webflow (3 Years)" className="border border-stone-200 px-4 py-3">55 to 75</td>
-                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-200 px-4 py-3">95 to 100</td>
+                                        <td className="border border-stone-300 px-4 py-3">Google PageSpeed Mobile</td>
+                                        <td data-label="Webflow (3 Years)" className="border border-stone-300 px-4 py-3">55 to 75</td>
+                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-300 px-4 py-3">95 to 100</td>
                                     </tr>
                                     <tr>
-                                        <td className="border border-stone-200 px-4 py-3">Lost organic revenue (20% traffic gap)</td>
-                                        <td data-label="Webflow (3 Years)" className="border border-stone-200 px-4 py-3">$18,000 to $36,000</td>
-                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-200 px-4 py-3">$0</td>
+                                        <td className="border border-stone-300 px-4 py-3">Lost organic revenue (20% traffic gap)</td>
+                                        <td data-label="Webflow (3 Years)" className="border border-stone-300 px-4 py-3">$18,000 to $36,000</td>
+                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-300 px-4 py-3">$0</td>
                                     </tr>
                                     <tr className="bg-stone-100 font-bold">
-                                        <td className="border border-stone-200 px-4 py-3">3-Year Total</td>
-                                        <td data-label="Webflow (3 Years)" className="border border-stone-200 px-4 py-3">$23,580 to $59,600</td>
-                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-200 px-4 py-3">$5,000 to $20,720</td>
+                                        <td className="border border-stone-300 px-4 py-3">3-Year Total</td>
+                                        <td data-label="Webflow (3 Years)" className="border border-stone-300 px-4 py-3">$23,580 to $59,600</td>
+                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-300 px-4 py-3">$5,000 to $20,720</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -483,7 +477,7 @@ export default function WebflowVsCustomWebsitePage() {
                         ]} />
 
                         <BlogText>
-                            Rankings typically improve within 30 to 90 days as Google recrawls your faster pages and rewards the better Core Web Vitals scores. We have never seen a client lose rankings after a properly executed migration.
+                            Rankings typically improve within 30 to 90 days as Google recrawls your faster pages and rewards the better Core Web Vitals scores. Properly executed migrations with 301 redirects and preserved metadata typically recover rankings within 90 days. Obare Magazine retained organic traffic through its Wix to Next.js move.
                         </BlogText>
 
                         <BlogText>
@@ -513,7 +507,7 @@ export default function WebflowVsCustomWebsitePage() {
                     </div>
 
                     {/* Bottom CTA */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Find Out if Custom Code Is Right for Your Business</h3>
                         <p className="text-stone-600 mb-6">
                             Share your Webflow URL. We run PageSpeed live, calculate your 3-year cost comparison, and tell you honestly whether migration makes sense for your specific situation. No pressure. No sales pitch. Just numbers.
@@ -522,13 +516,13 @@ export default function WebflowVsCustomWebsitePage() {
                                 Schedule Free Assessment <ArrowRight className="w-5 h-5" />
                             </CalModalButton>
                         <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                          <p className="text-sm text-stone-700 mt-1">$500 for a complete Webflow migration. Your Webflow bill right now is probably $50 to $200/month. Pay us $500 once and that monthly cost disappears forever. Limited spots this month.</p>
+                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                          <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                         </div>
                     </div>
 
                     {/* Key Takeaways */}
-                    <section className="mb-10 mt-16">
+                    <section className="mb-10 mt-6 md:mt-10 md:mt-16">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
                             <li><strong>Webflow works for simple sites</strong>: If you have under 20 pages, spend under $100/month, and do not depend on organic search, stay on Webflow.</li>

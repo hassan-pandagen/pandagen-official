@@ -1,6 +1,6 @@
 import { ArrowLeft, Calendar, Clock, ArrowRight, TrendingUp, RefreshCw } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,28 +11,28 @@ import type { Metadata } from "next";
 
 const postFAQs = blogPosts.find(p => p.id === "shopify-conversion-rate-speed-fix")?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const SalesImpactAnimation = dynamic(() => import("@/components/blog/SalesImpactAnimation"));
-const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const SalesImpactAnimation = lazyLoad(() => import("@/components/blog/SalesImpactAnimation"));
+const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "Low Shopify Conversion Rate? How Speed Kills Your Sales (Fix Guide, 2026)",
-    description: "You installed Hotjar. Then a CRO app. Then a popup tool. Conversion rate still stuck at 1.4%. The problem is not your funnel. Stores loading in under 2 seconds convert at 3 to 5%. Here is why speed is the fix you keep skipping.",
+    description: "Your Shopify conversion rate is stuck at 1.4% because your store loads in 4 seconds. Stores under 2 seconds convert at 3 to 5%. Here is the fix.",
     alternates: { canonical: "/blog/shopify-conversion-rate-speed-fix" },
     keywords: ["shopify conversion rate", "low shopify conversion rate", "shopify speed conversion", "improve shopify conversion rate", "shopify store slow", "shopify cro speed"],
     openGraph: {
         title: "Low Shopify Conversion Rate? How Speed Kills Your Sales (Fix Guide, 2026)",
-        description: "You installed Hotjar. Then a CRO app. Then a popup tool. Conversion rate still stuck at 1.4%. The problem is not your funnel. Stores loading in under 2 seconds convert at 3 to 5%. Here is why speed is the fix you keep skipping.",
+        description: "Your Shopify conversion rate is stuck at 1.4% because your store loads in 4 seconds. Stores under 2 seconds convert at 3 to 5%. Here is the fix.",
         type: "article",
-        publishedTime: "2026-02-11",
-        authors: ["Hassan"],
+        publishedTime: "2026-02-11T00:00:00-05:00",
+        authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/shopify-conversion-rate-speed-fix",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
     twitter: {
         card: "summary_large_image",
         title: "Low Shopify Conversion Rate? How Speed Kills Your Sales (Fix Guide, 2026)",
-        description: "You installed Hotjar. Then a CRO app. Then a popup tool. Conversion rate still stuck at 1.4%. The problem is not your funnel. Stores loading in under 2 seconds convert at 3 to 5%. Here is why speed is the fix you keep skipping.",
+        description: "Your Shopify conversion rate is stuck at 1.4% because your store loads in 4 seconds. Stores under 2 seconds convert at 3 to 5%. Here is the fix.",
     },
 };
 
@@ -43,15 +43,15 @@ const articleSchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/shopify-conversion-rate-speed-fix#article",
             "headline": "Low Shopify Conversion Rate? How Speed Kills Your Sales (Fix Guide, 2026)",
-            "description": "You installed Hotjar. Then a CRO app. Then a popup tool. Conversion rate still stuck at 1.4%. The problem is not your funnel. Stores loading in under 2 seconds convert at 3 to 5%. Here is why speed is the fix you keep skipping.",
+            "description": "Your Shopify conversion rate is stuck at 1.4% because your store loads in 4 seconds. Stores under 2 seconds convert at 3 to 5%. Here is the fix.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-11T00:00:00-05:00",
-            "dateModified": "2026-03-15T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Full-Stack Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -67,7 +67,7 @@ const articleSchema = {
             "articleSection": "Conversion",
             "keywords": ["shopify conversion rate", "low shopify conversion rate", "shopify speed conversion", "improve shopify conversion rate", "shopify cro speed"],
             "timeRequired": "PT10M",
-            "wordCount": 2600,
+            "wordCount": 1250,
             "about": [
                 { "@type": "Thing", "name": "Shopify Conversion Rate Optimisation" },
                 { "@type": "Thing", "name": "Shopify" },
@@ -105,7 +105,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-11T00:00:00-05:00",
-            "dateModified": "2026-03-15T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/shopify-conversion-rate-speed-fix#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -181,8 +181,8 @@ export default function ShopifyConversionRateSpeedFixPage() {
                     <div className="mb-12"><SalesImpactAnimation /></div>
 
                     {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
-                        <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
+                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
                             "Every additional second of load time reduces Shopify conversions by 7%, compounding losses at scale.",
                             "A store loading in 1 second converts at 3.05%. The same store at 5 seconds converts at 0.99%.",
@@ -253,13 +253,13 @@ export default function ShopifyConversionRateSpeedFixPage() {
                         ]} />
 
                         {/* Mid-Article CTA */}
-                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Is your Shopify conversion rate suffering from slow load times right now?</p>
                             <p className="text-stone-600 mb-4 text-sm">Drop your store URL when you book. We test your load time live on the call, calculate your exact conversion loss per month, and show you what a custom storefront returns in Year 1.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free Conversion Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
                             <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                              <p className="text-sm text-stone-700 mt-1">$500 for a complete Shopify migration. A faster checkout means more completed purchases from the same traffic you already have. You pay after the new store is live and tested.</p>
+                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                              <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                             </div>
                         </div>
 
@@ -278,14 +278,17 @@ export default function ShopifyConversionRateSpeedFixPage() {
                             "JavaScript: Only loaded when needed, no theme bloat, no unused app scripts on every page"
                         ]} />
 
-                        <BlogHeader>Real Conversion Rate Results After Going Headless</BlogHeader>
+                        <BlogHeader>Modeled Conversion Rate Results After Going Headless</BlogHeader>
+                        <BlogText>
+                            The following are modeled outcomes based on published Shopify Plus case studies (Allbirds, Gymshark, Victoria Beckham Beauty) combined with the Deloitte 8%-per-0.1s conversion lift. Use as directional ranges, not guarantees.
+                        </BlogText>
                         <BlogList items={[
-                            "Skincare Brand: Load time 4.2s → 0.9s. Conversion rate 0.8% → 2.4%. Revenue +$180K/month",
-                            "Fitness Equipment: Load time 3.8s → 0.8s. Conversion rate 1.1% → 3.1%. Mobile sales tripled",
-                            "Luxury Accessories: Load time 4.5s → 1.0s. Conversion rate 1.4% → 4.2%. Same ad spend, 3× ROAS"
+                            "Skincare brand profile: Load time 4.2s to 0.9s. Conversion rate 0.8% to 2.4%. Modeled revenue lift +$150K to $200K/month at a $5M annual run rate",
+                            "Fitness equipment profile: Load time 3.8s to 0.8s. Conversion rate 1.1% to 3.1%. Mobile sales roughly tripled",
+                            "Luxury accessories profile: Load time 4.5s to 1.0s. Conversion rate 1.4% to 4.2%. Same ad spend, 3× ROAS"
                         ]} />
                         <BlogText>
-                            The pattern is consistent: a 3 to 4× improvement in load time produces a <a href="/services/ecommerce?ref=blog/shopify-conversion-rate-speed-fix" className="text-cognac hover:underline">2 to 3× improvement in conversion rate</a>. Not because of better copy or better photos, because visitors are finally seeing the page before they leave.
+                            The pattern is consistent: a 3 to 4x improvement in load time produces a <Link href="/services/ecommerce" className="text-cognac hover:underline">2 to 3x improvement in conversion rate</Link>. Not because of better copy or better photos, because visitors are finally seeing the page before they leave.
                         </BlogText>
 
                         <BlogHeader>How Long Does It Take to See Conversion Rate Improvements?</BlogHeader>
@@ -305,15 +308,15 @@ export default function ShopifyConversionRateSpeedFixPage() {
                     </div>
 
                     {/* Bottom CTA */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Double Your Shopify Conversion Rate with Speed</h3>
                         <p className="text-stone-600 mb-6">
                             Free audit. We&apos;ll analyse your store speed, calculate your exact conversion rate loss, and show you the headless migration path that recovers it.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Book Free Conversion Audit <ArrowRight className="w-5 h-5" /></CalModalButton>
                         <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                          <p className="text-sm text-stone-700 mt-1">$500 for a complete Shopify migration. A faster checkout means more completed purchases from the same traffic you already have. You pay after the new store is live and tested.</p>
+                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                          <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                         </div>
                     </div>
 

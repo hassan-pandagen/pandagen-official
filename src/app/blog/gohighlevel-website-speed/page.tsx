@@ -1,6 +1,6 @@
 import { ArrowLeft, ArrowRight, CheckCircle2, AlertTriangle, Zap, TrendingDown } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,9 +11,9 @@ import type { Metadata } from "next";
 
 const ghlSpeedFAQs = blogPosts.find(p => p.id === "gohighlevel-website-speed")?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
-const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: { absolute: "GoHighLevel Sites Score 20 to 45 on PageSpeed: How to Fix It (2026)" },
@@ -66,7 +66,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -256,7 +256,7 @@ export default function GHLWebsiteSpeedPage() {
                         <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
                         <table className="w-full text-sm border-collapse min-w-[560px] responsive-stack-table">
                             <thead>
-                                <tr className="bg-stone-50 border border-stone-200">
+                                <tr className="bg-stone-50 border border-stone-300">
                                     <th className="text-left p-3 font-semibold text-stone-700">Platform</th>
                                     <th className="text-right p-3 font-semibold text-stone-700">Mobile PageSpeed</th>
                                     <th className="text-right p-3 font-semibold text-stone-700">LCP (typical)</th>
@@ -334,8 +334,8 @@ export default function GHLWebsiteSpeedPage() {
                             Book a Free Audit Call <ArrowRight className="w-4 h-4" />
                         </CalModalButton>
                         <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                          <p className="text-sm text-stone-700 mt-1">$500 for a complete migration off GoHighLevel. You pay once. No $297/month platform fee. No usage charges. No monthly bills ever again. We build it, you own it, you keep it.</p>
+                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                          <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                         </div>
                     </div>
 
@@ -406,7 +406,7 @@ export default function GHLWebsiteSpeedPage() {
                     </BlogText>
 
                     {/* Bottom CTA */}
-                    <div className="my-10 p-8 bg-charcoal text-white rounded-2xl text-center">
+                    <div className="my-6 md:my-10 p-8 bg-charcoal text-white rounded-2xl text-center">
                         <TrendingDown className="w-8 h-8 text-cognac mx-auto mb-3" />
                         <p className="font-bold text-xl mb-2">Stop Letting GHL Kill Your Rankings</p>
                         <p className="text-stone-300 mb-5 text-sm max-w-md mx-auto">We build a custom Next.js frontend that scores 95 to 100 on PageSpeed while keeping every GHL automation intact. Free discovery call to see exactly what is possible.</p>

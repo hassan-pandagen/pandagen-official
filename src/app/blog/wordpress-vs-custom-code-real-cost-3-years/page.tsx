@@ -1,6 +1,6 @@
 import { ArrowLeft, Calendar, Clock, ArrowRight, RefreshCw } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,29 +11,29 @@ import type { Metadata } from "next";
 
 const costFAQs = blogPosts.find(p => p.id === 'wordpress-vs-custom-code-real-cost-3-years')?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const SalesImpactAnimation = dynamic(() => import("@/components/blog/SalesImpactAnimation"));
-const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const SalesImpactAnimation = lazyLoad(() => import("@/components/blog/SalesImpactAnimation"));
+const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "WordPress vs Custom Code: 3-Year Cost Comparison With Real Numbers (2026)",
+    title: "WordPress vs Custom Code: 3-Year Cost Breakdown (Custom Wins by Year 2)",
     description: "WordPress costs $15,000+ over 3 years. A custom Next.js site costs $10K once, then $0/year. Full TCO breakdown: hosting, plugins, maintenance, lost revenue.",
     alternates: {
         canonical: '/blog/wordpress-vs-custom-code-real-cost-3-years',
     },
     robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
-        title: "WordPress vs Custom Code: 3-Year Cost Comparison With Real Numbers (2026)",
+        title: "WordPress vs Custom Code: 3-Year Cost Breakdown (Custom Wins by Year 2)",
         description: "WordPress costs $15,000+ over 3 years. A custom Next.js site costs $10K once, then $0/year. Full TCO breakdown: hosting, plugins, maintenance, lost revenue.",
         type: "article",
         publishedTime: "2026-02-20",
-        authors: ["Hassan"],
+        authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/wordpress-vs-custom-code-real-cost-3-years",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
     twitter: {
         card: "summary_large_image",
-        title: "WordPress vs Custom Code: 3-Year Cost Comparison With Real Numbers (2026)",
+        title: "WordPress vs Custom Code: 3-Year Cost Breakdown (Custom Wins by Year 2)",
         description: "WordPress costs $15,000+ over 3 years. A custom Next.js site costs $10K once, then $0/year. Full TCO breakdown: hosting, plugins, maintenance, lost revenue.",
     },
     keywords: ["wordpress vs custom code cost", "wordpress real cost", "custom website vs wordpress", "wordpress hidden costs", "website total cost of ownership"],
@@ -45,7 +45,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-vs-custom-code-real-cost-3-years#article",
-            "headline": "WordPress vs Custom Code: 3-Year Cost Comparison With Real Numbers (2026)",
+            "headline": "WordPress vs Custom Code: 3-Year Cost Breakdown (Custom Wins by Year 2)",
             "description": "WordPress costs $15,000+ over 3 years. A custom Next.js site costs $10K once, then $0/year. Full TCO breakdown: hosting, plugins, maintenance, lost revenue.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-20T00:00:00-05:00",
@@ -54,7 +54,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -187,8 +187,8 @@ export default function WordPressVsCustomCodeCostPage() {
                         <SalesImpactAnimation />
                     </div>
 
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
-                        <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
+                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
                             "WordPress looks cheap at $50/month but costs $8,000 to $15,000 over 3 years when you count hosting, plugins, maintenance, and security.",
                             "A custom Next.js site costs $8,000 to $15,000 to build once, then $0 to $240/year to run. It pays for itself in 18 to 24 months.",
@@ -226,11 +226,11 @@ export default function WordPressVsCustomCodeCostPage() {
                             <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-50">
-                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Cost Item</th>
-                                        <th className="text-center px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Year 1</th>
-                                        <th className="text-center px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Year 2</th>
-                                        <th className="text-center px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Year 3</th>
-                                        <th className="text-center px-4 py-3 font-semibold text-red-500 border-b border-stone-200">3-Year Total</th>
+                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">Cost Item</th>
+                                        <th className="text-center px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">Year 1</th>
+                                        <th className="text-center px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">Year 2</th>
+                                        <th className="text-center px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">Year 3</th>
+                                        <th className="text-center px-4 py-3 font-semibold text-red-500 border-b border-stone-300">3-Year Total</th>
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-stone-100">
@@ -308,11 +308,11 @@ export default function WordPressVsCustomCodeCostPage() {
                             <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-50">
-                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Cost Item</th>
-                                        <th className="text-center px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Year 1</th>
-                                        <th className="text-center px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Year 2</th>
-                                        <th className="text-center px-4 py-3 font-semibold text-stone-700 border-b border-stone-200">Year 3</th>
-                                        <th className="text-center px-4 py-3 font-semibold text-charcoal border-b border-stone-200">3-Year Total</th>
+                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">Cost Item</th>
+                                        <th className="text-center px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">Year 1</th>
+                                        <th className="text-center px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">Year 2</th>
+                                        <th className="text-center px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">Year 3</th>
+                                        <th className="text-center px-4 py-3 font-semibold text-charcoal border-b border-stone-300">3-Year Total</th>
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-stone-100">
@@ -463,15 +463,15 @@ export default function WordPressVsCustomCodeCostPage() {
                         </BlogQuote>
 
                         {/* Mid-Article CTA */}
-                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">How much is WordPress actually costing you over 3 years?</p>
                             <p className="text-stone-600 mb-4 text-sm">Drop your URL when you book. We calculate your real 3-year cost (hosting, plugins, maintenance, lost conversions) live on the call and show you the custom build ROI.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                     Get Free Cost Audit <ArrowRight className="w-4 h-4" />
                                 </CalModalButton>
                             <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                              <p className="text-sm text-stone-700 mt-1">$500 for a complete WordPress migration. Compare that to the $3,000 to $10,000 you&apos;ll spend on WordPress hosting, tools, and emergency fixes over the next 3 years. $500 once vs thousands every year. The math is simple.</p>
+                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                              <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                             </div>
                         </div>
 
@@ -633,7 +633,7 @@ export default function WordPressVsCustomCodeCostPage() {
                     {costFAQs.length > 0 && <FAQAccordion faqs={costFAQs} />}
 
                     {/* CTA Section */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Ready to See Your Real 3-Year Cost?</h3>
                         <p className="text-stone-600 mb-6">
                             We&apos;ll audit your current WordPress costs, add up what you&apos;re actually paying, and show you the honest comparison. Free, no sales pitch.
@@ -642,8 +642,8 @@ export default function WordPressVsCustomCodeCostPage() {
                                 Schedule Free Cost Audit <ArrowRight className="w-5 h-5" />
                             </CalModalButton>
                         <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                          <p className="text-sm text-stone-700 mt-1">$500 for a complete WordPress migration. Compare that to the $3,000 to $10,000 you&apos;ll spend on WordPress hosting, tools, and emergency fixes over the next 3 years. $500 once vs thousands every year. The math is simple.</p>
+                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                          <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                         </div>
                     </div>
 

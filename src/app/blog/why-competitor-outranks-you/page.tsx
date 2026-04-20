@@ -1,6 +1,6 @@
 import { ArrowLeft, Calendar, Clock, ArrowRight, RefreshCw } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,28 +11,28 @@ import type { Metadata } from "next";
 
 const competitorFAQs = blogPosts.find(p => p.id === 'why-competitor-outranks-you')?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const SEORankingAnimation = dynamic(() => import("@/components/blog/SEORankingAnimation"));
-const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const SEORankingAnimation = lazyLoad(() => import("@/components/blog/SEORankingAnimation"));
+const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Why Your Competitor Outranks You in 2026: Speed Is 40% of SEO",
+    title: "Why Your Competitor Outranks You in 2026: Core Web Vitals and SERP Gaps",
     description: "Your competitor gets 3x your traffic with a faster coded site. Google, ChatGPT, and Bing all prefer fast sites. Here is the exact reason and the fix.",
     alternates: {
         canonical: '/blog/why-competitor-outranks-you',
     },
     openGraph: {
-        title: "Why Your Competitor Outranks You in 2026: Speed Is 40% of SEO",
+        title: "Why Your Competitor Outranks You in 2026: Core Web Vitals and SERP Gaps",
         description: "Your competitor gets 3x your traffic with a faster coded site. Google, ChatGPT, and Bing all prefer fast sites. Here is the exact reason and the fix.",
         type: "article",
         publishedTime: "2026-02-15",
-        authors: ["Hassan"],
+        authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/why-competitor-outranks-you",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Why Your Competitor Outranks You in 2026: Speed Is 40% of SEO",
+        title: "Why Your Competitor Outranks You in 2026: Core Web Vitals and SERP Gaps",
         description: "Your competitor gets 3x your traffic with a faster coded site. Google, ChatGPT, and Bing all prefer fast sites. Here is the exact reason and the fix.",
     },
     keywords: ["Google rankings", "competitor analysis", "website speed SEO", "WordPress vs Next.js", "AI search optimization", "coded website benefits"],
@@ -44,16 +44,16 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/why-competitor-outranks-you#article",
-            "headline": "Why Your Competitor Outranks You in 2026: Speed Is 40% of SEO",
+            "headline": "Why Your Competitor Outranks You in 2026: Core Web Vitals and SERP Gaps",
             "description": "Your competitor gets 3x your traffic with a faster coded site. Google, ChatGPT, and Bing all prefer fast sites. Here is the exact reason and the fix.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-15T00:00:00-05:00",
-            "dateModified": "2026-03-10T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -69,7 +69,7 @@ const articleSchema = {
             "articleSection": "Traffic Growth",
             "keywords": ["Google rankings", "competitor analysis", "website speed SEO", "WordPress vs Next.js", "AI search optimization", "coded website benefits"],
             "timeRequired": "PT11M",
-            "wordCount": 2700,
+            "wordCount": 2200,
             "about": [
                 {"@type": "Thing", "name": "Google SEO Rankings"},
                 {"@type": "Thing", "name": "Website Speed SEO"},
@@ -111,7 +111,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-15T00:00:00-05:00",
-            "dateModified": "2026-03-10T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/why-competitor-outranks-you#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -131,48 +131,7 @@ const articleSchema = {
         {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/blog/why-competitor-outranks-you#faq",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "Why does my competitor rank higher on Google than me?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Your competitor likely ranks higher because their website loads faster. In 2021, Google made speed a direct ranking factor. When two sites have similar content, Google ranks the faster one higher. If your WordPress/Shopify site loads in 3.8 seconds and your competitor's coded site (Next.js) loads in 1.2 seconds, Google shows their site first. This can result in 20-30 position differences in search rankings."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Does website speed really affect Google rankings?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes. Google made Core Web Vitals (speed metrics) a direct ranking factor in 2021. Fast sites moved up 20-30 positions while slow sites dropped. Modern search engines including Google, Bing, ChatGPT, and Perplexity all prioritize fast sites with clean code. A 3× speed difference can mean the difference between page 1 (#3 ranking) and page 2 (#14 ranking), which translates to 3× more traffic for the faster site."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Can I optimize my WordPress site to rank better on Google?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "WordPress optimization has a ceiling. You can compress images, remove plugins, and enable caching, but the best-optimized WordPress site still loads in 2.0-2.5 seconds. A basic coded website (Next.js) loads in 0.8-1.2 seconds with zero optimization. WordPress is built on 21-year-old technology that requires plugins for basic features. You can make WordPress faster, but you can't make it fast enough to compete with modern coded websites."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How much does a coded website cost compared to WordPress hosting?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "A coded Next.js website costs $8,000-$25,000 one-time to build, but hosting costs only $0-$20/month on Vercel. WordPress requires expensive hosting (WP Engine, Kinsta) at $100-$400/month. Over 12 months, WordPress hosting costs $1,200-$4,800 while Next.js hosting costs $0-$240. The coded website saves $960-$4,560 annually in hosting costs while delivering 3× more traffic and better Google rankings."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How long does it take to see SEO improvements after switching to a faster website?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "You can expect to see Google ranking improvements within 60-90 days after migrating to a coded website. The migration itself takes 4-8 weeks for most sites. After launch, Google needs 2-3 months to re-crawl and re-index your site at the new speed. Most businesses see their rankings jump 15-30 positions within this timeframe, resulting in 2-4× more organic traffic. The investment typically pays for itself in 2-6 months through hosting savings and increased conversions."
-                    }
-                }
-            ]
+            "mainEntity": competitorFAQs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
         }
     ]
 };
@@ -234,8 +193,8 @@ export default function CompetitorRankingsPage() {
                     </div>
 
                     {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
-                        <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
+                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
                             "Your competitor ranks 20-30 positions higher because their coded website loads in 1.2 seconds vs your 3.8-second WordPress/Shopify site",
                             "Google, Bing, ChatGPT, and Perplexity all prioritize fast sites with clean code. Modern search engines reward speed.",
@@ -272,7 +231,7 @@ export default function CompetitorRankingsPage() {
                             Let's compare what happens over 12 months. Same product, same keywords, same content, only the website technology is different.
                         </BlogText>
 
-                        <div className="my-12 border border-stone-200 rounded-2xl overflow-hidden shadow-2xl">
+                        <div className="my-8 md:my-12 border border-stone-200 rounded-2xl overflow-hidden shadow-2xl">
                             <div className="grid grid-cols-3 bg-stone-50 p-5 border-b border-stone-200 font-bold text-charcoal text-sm md:text-base uppercase tracking-wider">
                                 <div>Metric</div>
                                 <div className="text-red-400">Your Site (WP)</div>
@@ -323,7 +282,7 @@ export default function CompetitorRankingsPage() {
                         </BlogQuote>
 
                         {/* Mid-Article CTA */}
-                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Are your competitors outranking you because of site speed?</p>
                             <p className="text-stone-600 mb-4 text-sm">Drop your URL and one competitor URL when you book. We run both speed scores live on the call, show you the exact gap, and quote what it takes to overtake them.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
@@ -512,7 +471,7 @@ export default function CompetitorRankingsPage() {
                         </BlogText>
 
                         <BlogList items={[
-                            "One-time cost: $8,000-$25,000 (depending on site complexity)",
+                            "One-time cost: $500 Founder Portfolio, $3,500+ Growth, or $5,000 to $10,000+ Scale depending on scope",
                             "Hosting: $0-$20/month (saves $1,200-$4,800/year)",
                             "Load time: 0.8-1.5 seconds (3× faster than WordPress)",
                             "Google rankings: Jump 15-30 positions within 60-90 days",
@@ -604,7 +563,7 @@ export default function CompetitorRankingsPage() {
                     {competitorFAQs.length > 0 && <FAQAccordion faqs={competitorFAQs} />}
 
                     {/* CTA Section */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Ready to Outrank Your Competitors?</h3>
                         <p className="text-stone-600 mb-6">
                             Get a free SEO audit. See exactly how much traffic you're losing to faster sites.

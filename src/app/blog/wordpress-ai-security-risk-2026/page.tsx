@@ -1,6 +1,6 @@
 import { ArrowLeft, Calendar, Clock, ArrowRight, Shield, AlertTriangle, CheckCircle2, ExternalLink, Lock, Code2, RefreshCw } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,9 +11,9 @@ import type { Metadata } from "next";
 
 const aiSecurityFAQs = blogPosts.find(p => p.id === 'wordpress-ai-security-risk-2026')?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const SecurityShieldAnimation = dynamic(() => import("@/components/blog/SecurityShieldAnimation"));
-const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const SecurityShieldAnimation = lazyLoad(() => import("@/components/blog/SecurityShieldAnimation"));
+const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: { absolute: "WordPress AI Security Risk 2026: 100K+ Sites Exposed Through Plugins" },
@@ -25,8 +25,8 @@ export const metadata: Metadata = {
         title: "WordPress AI Security Risk 2026: 100K+ Sites Exposed Through Plugins",
         description: "AI plugins are the newest WordPress vulnerability. 100K+ sites exposed through AI plugin flaws. Here is what business owners need to know and how to protect your site.",
         type: "article",
-        publishedTime: "2026-02-19",
-        modifiedTime: "2026-02-20",
+        publishedTime: "2026-02-19T00:00:00-05:00",
+        modifiedTime: "2026-04-20T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/wordpress-ai-security-risk-2026",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -49,12 +49,12 @@ const articleSchema = {
             "description": "AI plugins are the newest WordPress vulnerability. 100K+ sites exposed through AI plugin flaws. Here is what business owners need to know and how to protect your site.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-19T00:00:00-05:00",
-            "dateModified": "2026-03-10T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -109,8 +109,8 @@ const articleSchema = {
                     "name": "OWASP Top 10 Security Risks",
                     "url": "https://owasp.org/www-project-top-ten/"
                 },
-                { "@type": "CreativeWork", "name": "Google Think: Mobile Page Speed Benchmarks", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
-                { "@type": "CreativeWork", "name": "Deloitte: Milliseconds Make Millions", "url": "https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" }
+                { "@type": "CreativeWork", "name": "Patchstack 2026 State of WordPress Security", "url": "https://patchstack.com/whitepaper/" },
+                { "@type": "CreativeWork", "name": "Sucuri Hacked Website Report", "url": "https://sucuri.net/reports/" }
             ],
             "speakable": {
                 "@type": "SpeakableSpecification",
@@ -135,55 +135,14 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-19T00:00:00-05:00",
-            "dateModified": "2026-03-10T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/wordpress-ai-security-risk-2026#breadcrumb" },
             "inLanguage": "en-US"
         },
         {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/blog/wordpress-ai-security-risk-2026#faq",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "What is WordPress 6.9 Abilities API?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "WordPress 6.9's Abilities API is a new system that lets AI agents (like Claude, ChatGPT, and Cursor) interact with your WordPress site through plugins. Every plugin can now register abilities that AI tools can call to create posts, manage users, pull reports, and run commands. It uses the Model Context Protocol (MCP) to expose plugin functionality to external AI applications."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Is WordPress AI safe to use?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "WordPress AI features in version 6.9 introduce significant security risks if not properly configured. The AI Engine plugin vulnerability (CVE-2025-11749) exposed 100K+ sites to complete admin takeover through leaked MCP bearer tokens. To use WordPress AI safely, you need to understand JWT token management, OAuth 2.1 authentication, REST API security, and per-plugin permission scoping."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "What was the WordPress AI Engine plugin vulnerability?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "CVE-2025-11749 affected AI Engine plugin versions up to 3.1.3. When the No-Auth URL feature was enabled, the plugin exposed MCP bearer tokens through the /wp-json/ REST API endpoint. Attackers could harvest these tokens and use them to run privileged commands like wp_update_user, escalating their access to full administrator level and compromising the entire site."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How many plugins can become AI endpoints in WordPress?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Every WordPress plugin can now register abilities and become an AI endpoint. The average WordPress site runs 20-30 plugins, meaning you potentially have 20-30 AI entry points. Each plugin that registers an ability becomes a potential security vulnerability if the permission callbacks, authentication flows, or endpoint exposure aren't properly configured."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Should I use WordPress for sites that handle sensitive data?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "If your site processes payments, stores customer data, or drives real business revenue, WordPress's new AI features add unnecessary security complexity. Custom-built sites let you explicitly define every AI integration point with intentional security controls, while WordPress bolts AI features onto an existing plugin architecture with 20-30+ potential entry points."
-                    }
-                }
-            ]
+            "mainEntity": aiSecurityFAQs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
         },
         {
             "@type": "Organization",
@@ -259,8 +218,8 @@ export default function WordPressAISecurityPage() {
                     </div>
 
                     {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
-                        <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
+                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
                             "WordPress 6.9 turned every plugin into an AI endpoint: your 20-30 plugins are now 20-30 potential hacker entry points.",
                             "The AI Engine plugin (100K+ sites) accidentally published admin credentials publicly. One checkbox = complete site takeover.",
@@ -528,7 +487,7 @@ export default function WordPressAISecurityPage() {
                     </BlogText>
 
                     <div className="my-8 space-y-4">
-                        <div className="p-4 border border-stone-200 bg-stone-50 rounded-xl">
+                        <div className="p-4 border border-stone-300 bg-stone-50 rounded-xl">
                             <div className="flex items-start gap-3">
                                 <Code2 className="w-5 h-5 text-charcoal mt-1 shrink-0" />
                                 <div>
@@ -538,7 +497,7 @@ export default function WordPressAISecurityPage() {
                             </div>
                         </div>
 
-                        <div className="p-4 border border-stone-200 bg-stone-50 rounded-xl">
+                        <div className="p-4 border border-stone-300 bg-stone-50 rounded-xl">
                             <div className="flex items-start gap-3">
                                 <Lock className="w-5 h-5 text-charcoal mt-1 shrink-0" />
                                 <div>
@@ -548,7 +507,7 @@ export default function WordPressAISecurityPage() {
                             </div>
                         </div>
 
-                        <div className="p-4 border border-stone-200 bg-stone-50 rounded-xl">
+                        <div className="p-4 border border-stone-300 bg-stone-50 rounded-xl">
                             <div className="flex items-start gap-3">
                                 <Shield className="w-5 h-5 text-cognac mt-1 shrink-0" />
                                 <div>
@@ -591,7 +550,7 @@ export default function WordPressAISecurityPage() {
                     </BlogText>
 
                     {/* Sources Section */}
-                    <div className="my-12 p-8 border border-stone-200 bg-stone-50 rounded-2xl">
+                    <div className="my-8 md:my-12 p-8 border border-stone-200 bg-stone-50 rounded-2xl">
                         <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
                             <ExternalLink className="w-6 h-6 text-charcoal" />
                             Sources & Further Reading
@@ -637,7 +596,7 @@ export default function WordPressAISecurityPage() {
                     </div>
 
                     {/* CTA */}
-                    <div className="my-12 p-8 bg-stone-50 border border-stone-200 rounded-2xl">
+                    <div className="my-8 md:my-12 p-8 bg-stone-50 border border-stone-200 rounded-2xl">
                         <h3 className="text-2xl font-bold mb-4">Want a Website Built for Security?</h3>
                         <p className="text-stone-600 mb-6 leading-relaxed">
                             Custom coded sites give you explicit control over every AI integration point. Zero plugin dependencies. Zero third-party vulnerabilities. Just clean, secure code you own outright.

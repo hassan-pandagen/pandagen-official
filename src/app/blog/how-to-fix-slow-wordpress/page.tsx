@@ -1,6 +1,6 @@
 import { ArrowLeft, Calendar, Clock, ArrowRight, RefreshCw } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,9 +11,9 @@ import type { Metadata } from "next";
 
 const slowWordPressFAQs = blogPosts.find(p => p.id === 'how-to-fix-slow-wordpress')?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
-const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: { absolute: "How to Fix a Slow WordPress Site 2026: 8 Methods Ranked" },
@@ -25,8 +25,8 @@ export const metadata: Metadata = {
         title: "How to Fix a Slow WordPress Site 2026: 8 Methods Ranked",
         description: "WordPress loads in 4 seconds. Your competitor loads in 0.9 seconds. Here are 8 speed methods ranked by impact, plus the hard truth about WordPress's performance ceiling.",
         type: "article",
-        publishedTime: "2026-02-17",
-        authors: ["Hassan"],
+        publishedTime: "2026-02-17T00:00:00-05:00",
+        authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
@@ -48,12 +48,12 @@ const articleSchema = {
             "description": "WordPress loads in 4 seconds. Your competitor loads in 0.9 seconds. Here are 8 speed methods ranked by impact, plus the hard truth about WordPress's performance ceiling.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-17T00:00:00-05:00",
-            "dateModified": "2026-03-10T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -111,7 +111,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-17T00:00:00-05:00",
-            "dateModified": "2026-03-10T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -131,48 +131,7 @@ const articleSchema = {
         {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress#faq",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "Why is my WordPress site so slow?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "WordPress sites are slow because of plugin bloat, unoptimized images, theme overhead, and old PHP architecture. Each plugin adds 2-15 HTTP requests. With 30+ plugins, you're loading 200+ files before visitors see anything. The average WordPress site takes 3.8 seconds to load."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How many plugins are too many?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "More than 10-15 plugins will slow your site noticeably. Each plugin adds code, CSS, JavaScript, and database queries. Even 'lightweight' plugins add 50-150KB. Security plugins alone can add 0.5-1 second to load time."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Can I make WordPress load in under 1 second?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "No. Even with perfect optimization, WordPress struggles to break 1.5 seconds. The architecture is from 2003 and wasn't designed for modern performance standards. To get under 1 second load times, you need to migrate to a modern framework like Next.js."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "What's the fastest way to speed up WordPress?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "The fastest improvement: Remove unused plugins (can save 1-2 seconds). Then optimize images with WebP format and lazy loading (saves 1-2 seconds). Add caching (saves 0.5-1 second). But you'll hit a ceiling around 2-2.5 seconds no matter what you do."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Should I migrate from WordPress to something else?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "If your business depends on speed and SEO rankings, yes. WordPress optimization has diminishing returns. Migrating to Next.js gets you 0.8-1.2 second load times, 95-100 PageSpeed scores, and 2-3× more organic traffic within 90 days. ROI typically pays for migration within 3-6 months."
-                    }
-                }
-            ]
+            "mainEntity": slowWordPressFAQs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
         }
     ]
 };
@@ -221,7 +180,7 @@ export default function FixSlowWordPressPage() {
                         </p>
 
                         <BlogAuthor
-                            date="Feb 19, 2026"
+                            date="Feb 17, 2026"
                             readTime="10 min read"
                             bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
@@ -234,8 +193,8 @@ export default function FixSlowWordPressPage() {
                     </div>
 
                     {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
-                        <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
+                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
                             "Every 1 second of slowness costs you 7% in conversions. At 4 seconds load time, you're losing 28% of sales.",
                             "8 proven methods to speed up WordPress: Remove plugins, optimize images, enable caching, use global servers, compress files, clean database, better hosting, remove page builders.",
@@ -259,7 +218,7 @@ export default function FixSlowWordPressPage() {
                         </BlogText>
 
                         <BlogText>
-                            The business owner was losing $75,000/year in revenue to slow speed. Every visitor who left before the page loaded was money walking out the door.
+                            The business owner was losing an estimated five figures annually in revenue to slow speed. Every visitor who left before the page loaded was money walking out the door.
                         </BlogText>
 
                         <BlogText>
@@ -619,11 +578,11 @@ export default function FixSlowWordPressPage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>Investment:</strong> $15,000-$35,000 depending on site complexity
+                            <strong>Investment:</strong> $1,500+ Starter. $3,500+ Growth migration. $5,000 to $10,000+ Scale for larger e-commerce rebuilds.
                         </BlogText>
 
                         <BlogText>
-                            <strong>ROI:</strong> Typical clients see 2-3× organic traffic within 90 days. If you're losing $75,000/year to slow speed (like our client), migration pays for itself in 3-6 months.
+                            <strong>ROI:</strong> Typical migrations see a 2 to 3× organic traffic lift within 90 days. If you are losing five figures annually to slow speed, migration pays for itself in 3 to 6 months.
                         </BlogText>
 
                         <BlogText>
@@ -631,7 +590,7 @@ export default function FixSlowWordPressPage() {
                         </BlogText>
 
                         {/* Mid-Article CTA */}
-                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Is your WordPress site still loading in 3+ seconds right now?</p>
                             <p className="text-stone-600 mb-4 text-sm">Drop your URL when you book. We run your PageSpeed live on the call, find the exact bottlenecks killing your speed, and show you what custom code changes.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
@@ -692,7 +651,7 @@ export default function FixSlowWordPressPage() {
                         <BlogList items={[
                             "We handle everything (4-6 weeks, zero downtime)",
                             "Guaranteed result: 0.8-1.2s load time, 95-100 PageSpeed score",
-                            "Investment: $15K-$35K (one-time)",
+                            "Investment: $3,500 Growth tier, or $5,000 to $10,000+ Scale tier",
                             "Save $3K-$5K/year on WordPress hosting + plugin costs",
                             "2-3× traffic increase within 90 days from SEO improvements",
                             "ROI: Typically pays for itself in 3-6 months",
@@ -701,7 +660,7 @@ export default function FixSlowWordPressPage() {
 
                         <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 my-6">
                             <BlogText>
-                                <strong>💰 The Real Math:</strong> If slow WordPress costs you $75,000/year in lost revenue, spending 20 hours optimizing saves $50K/year (you're still losing $25K). <BlogHighlight>OR you spend $20K once on migration, save $75K every year after, PLUS never deal with WordPress slowdowns, plugin conflicts, or security patches again.</BlogHighlight>
+                                <strong>💰 The Real Math:</strong> If slow WordPress is costing a business five figures annually in lost revenue, spending 20 hours optimizing recovers only part of it. <BlogHighlight>OR you spend $3,000 to $12,000 once on a full Next.js rebuild, save that lost revenue every year after, and never deal with plugin conflicts or security patches again.</BlogHighlight>
                             </BlogText>
                             <BlogText>
                                 One client said: "I spent 2 years fighting WordPress. Should've migrated on day one. This is what my site should have been from the start."
@@ -714,7 +673,7 @@ export default function FixSlowWordPressPage() {
                     </div>
 
                     {/* CTA Section */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-10 mt-16 text-center">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-10 mt-6 md:mt-10 md:mt-16 text-center">
                         <h3 className="text-3xl font-bold mb-4">Done Fighting WordPress?</h3>
                         <p className="text-stone-600 text-lg mb-2">
                             We'll show you exactly how much faster your site could be.
@@ -745,7 +704,7 @@ export default function FixSlowWordPressPage() {
                     {/* FAQ Section */}
                     {slowWordPressFAQs.length > 0 && <FAQAccordion faqs={slowWordPressFAQs} />}
 
-                    <section className="mb-10 mt-10">
+                    <section className="mb-10 mt-6 md:mt-10">
                         <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
                         <p className="text-stone-700 leading-relaxed">If optimisation caps your score at 70 and the real fix is migration, read the <Link href="/blog/how-to-migrate-wordpress-to-nextjs" className="text-cognac hover:underline font-medium">step-by-step WordPress to Next.js migration guide</Link>, <Link href="/blog/wordpress-migration-cost" className="text-cognac hover:underline font-medium">what a WordPress migration actually costs by site size</Link>, or for e-commerce <Link href="/blog/woocommerce-too-slow" className="text-cognac hover:underline font-medium">why WooCommerce is too slow and how to fix it</Link>.</p>
                     </section>

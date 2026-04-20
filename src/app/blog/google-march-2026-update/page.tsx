@@ -27,8 +27,9 @@ export const metadata: Metadata = {
         title: "Google's March 2026 Update: Fast Sites Win the Ranking Boost",
         description: "Google's March 2026 core update tightened speed requirements and dropped 47% of slow sites. Here's what changed and what your business should do now.",
         type: "article",
-        publishedTime: "2026-04-01",
-        authors: ["Hassan"],
+        publishedTime: "2026-04-01T00:00:00-05:00",
+        modifiedTime: "2026-04-20T00:00:00-05:00",
+        authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/google-march-2026-update",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
@@ -49,12 +50,12 @@ const articleSchema = {
             "description": "Google's March 2026 core update tightened speed requirements and dropped 47% of slow sites. Here's what changed and what your business should do now.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-01T00:00:00-05:00",
-            "dateModified": "2026-04-01T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -108,7 +109,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-04-01T00:00:00-05:00",
-            "dateModified": "2026-04-01T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/google-march-2026-update#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -128,13 +129,7 @@ const articleSchema = {
         {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/blog/google-march-2026-update#faq",
-            "mainEntity": [
-                { "@type": "Question", "name": "Did Google penalize slow websites in March 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. 47% of sites with slow performance saw rank drops. The update tightened the LCP threshold from 2.5 seconds to 2.0 seconds and made INP (Interaction to Next Paint) a primary ranking signal. Sites that failed both metrics were hit hardest." } },
-                { "@type": "Question", "name": "How long does it take to recover from the March 2026 update?", "acceptedAnswer": { "@type": "Answer", "text": "3 to 6 months minimum. There is no quick fix. Google has stated that changes may not fully reflect until the next core update rolls out. Recovery requires fixing both technical speed issues and content quality signals." } },
-                { "@type": "Question", "name": "Is WordPress too slow for the March 2026 update?", "acceptedAnswer": { "@type": "Answer", "text": "Only 44% of WordPress sites pass Core Web Vitals on mobile. Sites built with Elementor average 3.8 to 5.2 seconds LCP, more than double the new 2.0 second threshold. Most WordPress sites need a full rebuild on a modern framework to meet the new requirements." } },
-                { "@type": "Question", "name": "Does the March 2026 update affect e-commerce sites?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. 52% of e-commerce sites were affected by the update. Sites with optimized Core Web Vitals see 25% higher conversions compared to slow competitors. Product pages with heavy images and scripts were hit especially hard." } },
-                { "@type": "Question", "name": "What is the fastest way to fix my website speed for Google?", "acceptedAnswer": { "@type": "Answer", "text": "Rebuild on a modern framework like Next.js. Custom-coded sites consistently score 95 to 100 on PageSpeed with load times under 1 second. Plugin-based optimization on WordPress or Shopify can help, but it rarely brings LCP below 2.0 seconds on mobile." } }
-            ]
+            "mainEntity": marchUpdateFAQs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
         }
     ]
 };
@@ -183,14 +178,14 @@ export default function GoogleMarchUpdatePage() {
                         <BlogAuthor
                             date="Apr 1, 2026"
                             readTime="10 min read"
-                            bio="Hassan has helped businesses recover from every Google core update since 2024 by building custom-coded websites that load under 1 second and score 95 to 100 on PageSpeed. No templates, no bloat, no plugins."
+                            bio="Hassan founded PandaCodeGen in Feb 2026 to build custom-coded websites that load under 1 second and score 95 to 100 on PageSpeed. Six years of WordPress experience before going fully custom. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
 
                     {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
-                        <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
+                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
                             "Google's March 2026 core update tightened LCP from 2.5s to 2.0s and made INP a primary ranking signal. 55% of sites saw ranking changes within two weeks.",
                             "47% of sites with slow Core Web Vitals lost rankings. Small businesses lose an average of $20,172 per year from slow websites.",
@@ -231,7 +226,7 @@ export default function GoogleMarchUpdatePage() {
                         </BlogQuote>
 
                         <BlogText>
-                            The update finished rolling out on April 3, but most of the impact was visible within the first week. If you have not checked your rankings since late March, now is the time.
+                            The update finished rolling out on April 3. Three weeks later, the dust has settled and the rankings picture is clear. If you have not checked your positions since the rollout, start there.
                         </BlogText>
 
                         <BlogHeader>The New Speed Requirements: 2.0 Seconds to Load, 200ms to Respond</BlogHeader>
@@ -324,7 +319,7 @@ export default function GoogleMarchUpdatePage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>EEAT signals matter more than ever.</strong> EEAT stands for Experience, Expertise, Authoritativeness, and Trustworthiness. Google uses these signals to decide whether your content deserves to rank. After this update, <BlogHighlight>72% of top-ranking pages show detailed author credentials</BlogHighlight>, including real names, job titles, and professional backgrounds.
+                            <strong>E-E-A-T signals matter more than ever.</strong> E-E-A-T stands for Experience, Expertise, Authoritativeness, and Trustworthiness. Google uses these signals to decide whether your content deserves to rank. After this update, <BlogHighlight>72% of top-ranking pages show detailed author credentials</BlogHighlight>, including real names, job titles, and professional backgrounds.
                         </BlogText>
 
                         <BlogText>
@@ -335,7 +330,7 @@ export default function GoogleMarchUpdatePage() {
                             "Pages with detailed author bios and credentials rank significantly higher than anonymous content",
                             "Sites publishing original data and case studies gained roughly 22% visibility",
                             "Thin, recycled content was hit hard, especially in competitive niches",
-                            "Fast sites with strong EEAT signals saw the biggest gains"
+                            "Fast sites with strong E-E-A-T signals saw the biggest gains"
                         ]} />
 
                         <BlogText>
@@ -343,15 +338,15 @@ export default function GoogleMarchUpdatePage() {
                         </BlogText>
 
                         {/* Mid-Article CTA */}
-                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Not sure if the March 2026 update affected your site?</p>
                             <p className="text-stone-600 mb-4 text-sm">Book a free 15-minute audit. We will run your PageSpeed score live, check your Core Web Vitals, and show you exactly where you stand after the update.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                 Schedule Free Speed Audit <ArrowRight className="w-4 h-4" />
                             </CalModalButton>
                             <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                              <p className="text-sm text-stone-700 mt-1">$500 to migrate your website to a platform that meets Google&apos;s new speed requirements. 30% upfront, the rest after the site is live and scores 95+ on PageSpeed. No monthly fees after that. Limited spots this month.</p>
+                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                              <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                             </div>
                         </div>
 
@@ -417,7 +412,7 @@ export default function GoogleMarchUpdatePage() {
                     </div>
 
                     {/* Bottom CTA */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Ready to Future-Proof Your Rankings?</h3>
                         <p className="text-stone-600 mb-6">
                             Get a free speed audit. We will show you your Core Web Vitals, identify what is slowing you down, and map out the fastest path to a site that scores 95 to 100 on PageSpeed.
@@ -426,8 +421,8 @@ export default function GoogleMarchUpdatePage() {
                             Schedule Free Audit <ArrowRight className="w-5 h-5" />
                         </CalModalButton>
                         <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                          <p className="text-sm text-stone-700 mt-1">$500 to migrate your website to a platform that meets Google&apos;s new speed requirements. 30% upfront, the rest after the site is live and scores 95+ on PageSpeed. No monthly fees after that. Limited spots this month.</p>
+                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                          <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                         </div>
                     </div>
 

@@ -1,6 +1,6 @@
 import { ArrowLeft, ArrowRight, DollarSign, Clock, CheckCircle2, AlertTriangle, TrendingUp } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,13 +11,13 @@ import type { Metadata } from "next";
 
 const squarespaceMinCostFAQs = blogPosts.find(p => p.id === "squarespace-migration-cost")?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
-const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "Squarespace Migration Cost 2026: Full Breakdown Before You Sign",
-    description: "Squarespace costs $1,500 to $5,500 over 3 years when you count every fee. Here is the real migration cost by site size, plus the ROI calculation that shows when it pays for itself.",
+    description: "Squarespace costs $1,500 to $5,500 over 3 years with every fee counted. Real migration cost by site size plus the ROI payback math.",
     alternates: {
         canonical: "/blog/squarespace-migration-cost",
     },
@@ -57,7 +57,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/squarespace-migration-cost#article",
             "headline": "Squarespace Migration Cost 2026: Full Breakdown Before You Sign",
-            "description": "Squarespace costs $1,500 to $5,500 over 3 years when you count every fee. Here is the real migration cost by site size, plus the ROI calculation that shows when it pays for itself.",
+            "description": "Squarespace costs $1,500 to $5,500 over 3 years with every fee counted. Real migration cost by site size plus the ROI payback math.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-09T00:00:00-05:00",
             "dateModified": "2026-04-09T00:00:00-05:00",
@@ -65,7 +65,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder & Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -142,14 +142,7 @@ const articleSchema = {
         {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/blog/squarespace-migration-cost#faq",
-            "mainEntity": [
-                { "@type": "Question", "name": "How much does it cost to migrate from Squarespace?", "acceptedAnswer": { "@type": "Answer", "text": "A Squarespace to custom Next.js migration costs $3,500 to $30,000 depending on site size and complexity. A small portfolio or service site with 5 to 10 pages costs $3,500 to $6,000. A small business site with 10 to 20 pages costs $6,000 to $10,000. A mid-size site with 20 to 50 pages costs $10,000 to $18,000. E-commerce migrations add 20 to 30% to any tier due to product data, checkout flows, and payment integration work." } },
-                { "@type": "Question", "name": "What does Squarespace actually cost per year?", "acceptedAnswer": { "@type": "Answer", "text": "Squarespace's real annual cost is $552 to $1,992 for a standard business site. The Core plan ($23/month billed annually) costs $276/year. Add domain renewal ($20 to $70/year after year one), Google Workspace email ($84/user/year), and any premium extensions ($5 to $50/month each). E-commerce businesses on the Basic plan also pay a 2% transaction fee on every sale, which adds $600 to $2,400/year for businesses doing $30,000 to $120,000 in annual revenue." } },
-                { "@type": "Question", "name": "How long does a Squarespace migration take?", "acceptedAnswer": { "@type": "Answer", "text": "A Squarespace migration takes 1 to 8 weeks depending on site size. Small sites (5 to 10 pages) take 1 to 2 weeks. Medium sites (10 to 30 pages) take 2 to 4 weeks. Large sites (30 to 60 pages) take 4 to 8 weeks. E-commerce migrations with significant product catalogues add 1 to 3 weeks to any tier. The timeline includes URL mapping, redirect setup, content migration, and post-launch Search Console verification." } },
-                { "@type": "Question", "name": "Will I lose my Google rankings when I migrate from Squarespace?", "acceptedAnswer": { "@type": "Answer", "text": "Not if the migration includes proper 301 redirects and SEO preservation. Every URL must be mapped to its new equivalent, all meta titles and descriptions must be preserved, canonicals must be correct, and a new sitemap must be submitted to Google Search Console on launch day. Rankings typically stabilise within 30 days and improve within 60 to 90 days because Google rewards the faster Core Web Vitals that a custom Next.js site delivers." } },
-                { "@type": "Question", "name": "Is migrating from Squarespace worth the cost?", "acceptedAnswer": { "@type": "Answer", "text": "For most businesses, yes. A business on Squarespace Core ($276/year) plus email ($84/year) plus extensions ($360/year) spends $720 to $1,200/year to maintain a site that scores 30 to 55 on Google PageSpeed Mobile. A custom Next.js site on Vercel costs $0 to $240/year and scores 95 to 100. The hosting savings alone recover a $6,000 migration cost in 5 to 8 years. Add the SEO improvement from faster Core Web Vitals and the payback period drops to 2 to 4 years for most businesses." } },
-                { "@type": "Question", "name": "What is Squarespace's mobile PageSpeed score?", "acceptedAnswer": { "@type": "Answer", "text": "Squarespace sites score 30 to 55 on Google PageSpeed Mobile in 2026. The average Largest Contentful Paint (LCP) for Squarespace sites is 8.79 seconds on mobile, which is more than three times over Google's 2.5-second threshold. No setting, plugin, or image optimisation fix removes this ceiling because it is built into the platform's template rendering system. Custom Next.js sites consistently score 95 to 100 with LCP under 1.5 seconds." } }
-            ]
+            "mainEntity": squarespaceMinCostFAQs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
         }
     ]
 };
@@ -194,7 +187,7 @@ export default function SquarespaceMinCostPage() {
                         <BlogAuthor
                             date="Apr 9, 2026"
                             readTime="11 min read"
-                            bio="Hassan has migrated dozens of businesses off Squarespace, WordPress, Webflow, and Shopify to custom Next.js sites that score 95 to 100 on Google PageSpeed. He specialises in migrations that preserve SEO rankings and improve them within 60 days."
+                            bio="Hassan founded PandaCodeGen in Feb 2026 and builds custom Next.js sites that score 95 to 100 on Google PageSpeed. Recent rebuild: Obare Magazine migrated from Wix to Next.js and Sanity in 7 days. Six years of WordPress experience prior to going fully custom."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -204,20 +197,20 @@ export default function SquarespaceMinCostPage() {
                     </div>
 
                     {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
                         <h3 className="font-bold text-charcoal mb-4">Key Takeaways</h3>
                         <BlogList items={[
                             "Squarespace's real annual cost is $552 to $1,992 depending on plan, email, and extensions. Most businesses undercount by 40 to 60%.",
                             "E-commerce businesses on the Basic plan also pay a 2% transaction fee on every sale, on top of Stripe's 2.9% + 30 cents.",
                             "Squarespace sites average 8.79 seconds LCP on mobile. Google's passing threshold is 2.5 seconds. That gap costs rankings.",
-                            "A Squarespace migration to custom Next.js costs $3,500 to $30,000 depending on site size. Small business sites (10 to 20 pages) land at $6,000 to $10,000.",
+                            "A Squarespace migration to custom Next.js runs $500 Founder Portfolio Pick for a core page rebuild, $3,500+ Growth for most 10 to 20 page sites, or $5,000 to $10,000+ Scale for larger e-commerce or booking workflows.",
                             "Most businesses recover migration costs in 2 to 4 years through hosting savings and improved organic traffic."
                         ]} />
                     </div>
 
                     <div className="space-y-8">
                         <BlogText>
-                            A photographer came to us in March with a 12-page Squarespace portfolio. She thought she was paying $23 a month. When we added up her plan, domain renewal, Google Workspace email, and the scheduling extension she used for bookings, her real monthly cost was $62.
+                            Consider a typical 12-page Squarespace portfolio paying $23 a month. Add plan renewal, domain renewal, Google Workspace email, and a scheduling extension for bookings, and the real monthly cost lands closer to $62.
                         </BlogText>
 
                         <BlogText>
@@ -244,48 +237,48 @@ export default function SquarespaceMinCostPage() {
                             <table className="w-full text-sm border-collapse min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Cost Item</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Annual</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">3-Year Total</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Notes</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Cost Item</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Annual</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">3-Year Total</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Notes</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-medium">Core Plan</td>
-                                        <td data-label="Annual" className="p-3 border border-stone-200">$276</td>
-                                        <td data-label="3-Year Total" className="p-3 border border-stone-200 font-bold">$828</td>
-                                        <td data-label="Notes" className="p-3 border border-stone-200 text-stone-500">$23/mo billed annually</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Core Plan</td>
+                                        <td data-label="Annual" className="p-3 border border-stone-300">$276</td>
+                                        <td data-label="3-Year Total" className="p-3 border border-stone-300 font-bold">$828</td>
+                                        <td data-label="Notes" className="p-3 border border-stone-300 text-stone-500">$23/mo billed annually</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200 font-medium">Domain Renewal</td>
-                                        <td data-label="Annual" className="p-3 border border-stone-200">$20 to $70</td>
-                                        <td data-label="3-Year Total" className="p-3 border border-stone-200 font-bold">$40 to $210</td>
-                                        <td data-label="Notes" className="p-3 border border-stone-200 text-stone-500">Free year 1 only</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Domain Renewal</td>
+                                        <td data-label="Annual" className="p-3 border border-stone-300">$20 to $70</td>
+                                        <td data-label="3-Year Total" className="p-3 border border-stone-300 font-bold">$40 to $210</td>
+                                        <td data-label="Notes" className="p-3 border border-stone-300 text-stone-500">Free year 1 only</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-medium">Google Workspace Email</td>
-                                        <td data-label="Annual" className="p-3 border border-stone-200">$84</td>
-                                        <td data-label="3-Year Total" className="p-3 border border-stone-200 font-bold">$252</td>
-                                        <td data-label="Notes" className="p-3 border border-stone-200 text-stone-500">$7/user/mo, 1 user</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Google Workspace Email</td>
+                                        <td data-label="Annual" className="p-3 border border-stone-300">$84</td>
+                                        <td data-label="3-Year Total" className="p-3 border border-stone-300 font-bold">$252</td>
+                                        <td data-label="Notes" className="p-3 border border-stone-300 text-stone-500">$7/user/mo, 1 user</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200 font-medium">Premium Extensions</td>
-                                        <td data-label="Annual" className="p-3 border border-stone-200">$60 to $600</td>
-                                        <td data-label="3-Year Total" className="p-3 border border-stone-200 font-bold">$180 to $1,800</td>
-                                        <td data-label="Notes" className="p-3 border border-stone-200 text-stone-500">Scheduling, forms, SEO tools</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Premium Extensions</td>
+                                        <td data-label="Annual" className="p-3 border border-stone-300">$60 to $600</td>
+                                        <td data-label="3-Year Total" className="p-3 border border-stone-300 font-bold">$180 to $1,800</td>
+                                        <td data-label="Notes" className="p-3 border border-stone-300 text-stone-500">Scheduling, forms, SEO tools</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-medium">Email Marketing</td>
-                                        <td data-label="Annual" className="p-3 border border-stone-200">$84 to $816</td>
-                                        <td data-label="3-Year Total" className="p-3 border border-stone-200 font-bold">$252 to $2,448</td>
-                                        <td data-label="Notes" className="p-3 border border-stone-200 text-stone-500">$7 to $68/mo depending on list size</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Email Marketing</td>
+                                        <td data-label="Annual" className="p-3 border border-stone-300">$84 to $816</td>
+                                        <td data-label="3-Year Total" className="p-3 border border-stone-300 font-bold">$252 to $2,448</td>
+                                        <td data-label="Notes" className="p-3 border border-stone-300 text-stone-500">$7 to $68/mo depending on list size</td>
                                     </tr>
                                     <tr className="bg-stone-100">
-                                        <td className="p-3 border border-stone-200 font-bold text-charcoal">Typical Total</td>
-                                        <td data-label="Annual" className="p-3 border border-stone-200 font-bold">$524 to $1,846</td>
-                                        <td data-label="3-Year Total" className="p-3 border border-stone-200 font-bold text-cognac">$1,572 to $5,538</td>
-                                        <td data-label="Notes" className="p-3 border border-stone-200 text-stone-500">Before transaction fees</td>
+                                        <td className="p-3 border border-stone-300 font-bold text-charcoal">Typical Total</td>
+                                        <td data-label="Annual" className="p-3 border border-stone-300 font-bold">$524 to $1,846</td>
+                                        <td data-label="3-Year Total" className="p-3 border border-stone-300 font-bold text-cognac">$1,572 to $5,538</td>
+                                        <td data-label="Notes" className="p-3 border border-stone-300 text-stone-500">Before transaction fees</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -360,42 +353,42 @@ export default function SquarespaceMinCostPage() {
                             <table className="w-full text-sm border-collapse min-w-[520px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Site Type</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Pages</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Migration Cost</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Timeline</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Site Type</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Pages</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Migration Cost</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Timeline</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-medium">Portfolio / Freelancer</td>
-                                        <td data-label="Pages" className="p-3 border border-stone-200">3 to 8 pages</td>
-                                        <td data-label="Migration Cost" className="p-3 border border-stone-200 font-bold text-cognac">$3,500 to $5,500</td>
-                                        <td data-label="Timeline" className="p-3 border border-stone-200">1 to 2 weeks</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Portfolio / Freelancer</td>
+                                        <td data-label="Pages" className="p-3 border border-stone-300">3 to 8 pages</td>
+                                        <td data-label="Migration Cost" className="p-3 border border-stone-300 font-bold text-cognac">$3,500 to $5,500</td>
+                                        <td data-label="Timeline" className="p-3 border border-stone-300">1 to 2 weeks</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200 font-medium">Small Business Site</td>
-                                        <td data-label="Pages" className="p-3 border border-stone-200">8 to 20 pages</td>
-                                        <td data-label="Migration Cost" className="p-3 border border-stone-200 font-bold text-cognac">$5,500 to $10,000</td>
-                                        <td data-label="Timeline" className="p-3 border border-stone-200">2 to 3 weeks</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Small Business Site</td>
+                                        <td data-label="Pages" className="p-3 border border-stone-300">8 to 20 pages</td>
+                                        <td data-label="Migration Cost" className="p-3 border border-stone-300 font-bold text-cognac">$5,500 to $10,000</td>
+                                        <td data-label="Timeline" className="p-3 border border-stone-300">2 to 3 weeks</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-medium">Service Business</td>
-                                        <td data-label="Pages" className="p-3 border border-stone-200">20 to 50 pages</td>
-                                        <td data-label="Migration Cost" className="p-3 border border-stone-200 font-bold text-cognac">$10,000 to $18,000</td>
-                                        <td data-label="Timeline" className="p-3 border border-stone-200">3 to 6 weeks</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Service Business</td>
+                                        <td data-label="Pages" className="p-3 border border-stone-300">20 to 50 pages</td>
+                                        <td data-label="Migration Cost" className="p-3 border border-stone-300 font-bold text-cognac">$10,000 to $18,000</td>
+                                        <td data-label="Timeline" className="p-3 border border-stone-300">3 to 6 weeks</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200 font-medium">E-Commerce Store</td>
-                                        <td data-label="Pages" className="p-3 border border-stone-200">Any size</td>
-                                        <td data-label="Migration Cost" className="p-3 border border-stone-200 font-bold text-cognac">Add 20 to 30%</td>
-                                        <td data-label="Timeline" className="p-3 border border-stone-200">Add 1 to 3 weeks</td>
+                                        <td className="p-3 border border-stone-300 font-medium">E-Commerce Store</td>
+                                        <td data-label="Pages" className="p-3 border border-stone-300">Any size</td>
+                                        <td data-label="Migration Cost" className="p-3 border border-stone-300 font-bold text-cognac">Add 20 to 30%</td>
+                                        <td data-label="Timeline" className="p-3 border border-stone-300">Add 1 to 3 weeks</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-medium">Large Site</td>
-                                        <td data-label="Pages" className="p-3 border border-stone-200">50+ pages</td>
-                                        <td data-label="Migration Cost" className="p-3 border border-stone-200 font-bold text-cognac">$16,000 to $30,000+</td>
-                                        <td data-label="Timeline" className="p-3 border border-stone-200">5 to 10 weeks</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Large Site</td>
+                                        <td data-label="Pages" className="p-3 border border-stone-300">50+ pages</td>
+                                        <td data-label="Migration Cost" className="p-3 border border-stone-300 font-bold text-cognac">$5,000 to $10,000+ (Scale tier)</td>
+                                        <td data-label="Timeline" className="p-3 border border-stone-300">5 to 10 weeks</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -476,40 +469,40 @@ export default function SquarespaceMinCostPage() {
                             <table className="w-full text-sm border-collapse min-w-[480px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Item</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Squarespace (per year)</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Custom Next.js (per year)</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Item</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Squarespace (per year)</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Custom Next.js (per year)</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200">Platform / Hosting</td>
-                                        <td data-label="Squarespace (per year)" className="p-3 border border-stone-200">$276</td>
-                                        <td data-label="Custom Next.js (per year)" className="p-3 border border-stone-200">$0 to $240 (free, $20/mo when you scale)</td>
+                                        <td className="p-3 border border-stone-300">Platform / Hosting</td>
+                                        <td data-label="Squarespace (per year)" className="p-3 border border-stone-300">$276</td>
+                                        <td data-label="Custom Next.js (per year)" className="p-3 border border-stone-300">$0 to $240 (free, $20/mo when you scale)</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200">Domain</td>
-                                        <td data-label="Squarespace (per year)" className="p-3 border border-stone-200">$20 to $70</td>
-                                        <td data-label="Custom Next.js (per year)" className="p-3 border border-stone-200">$12 to $20 (Cloudflare Registrar)</td>
+                                        <td className="p-3 border border-stone-300">Domain</td>
+                                        <td data-label="Squarespace (per year)" className="p-3 border border-stone-300">$20 to $70</td>
+                                        <td data-label="Custom Next.js (per year)" className="p-3 border border-stone-300">$12 to $20 (Cloudflare Registrar)</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200">Email Hosting</td>
-                                        <td data-label="Squarespace (per year)" className="p-3 border border-stone-200">$84</td>
-                                        <td data-label="Custom Next.js (per year)" className="p-3 border border-stone-200">$84 (same Google Workspace)</td>
+                                        <td className="p-3 border border-stone-300">Email Hosting</td>
+                                        <td data-label="Squarespace (per year)" className="p-3 border border-stone-300">$84</td>
+                                        <td data-label="Custom Next.js (per year)" className="p-3 border border-stone-300">$84 (same Google Workspace)</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200">Premium Extensions</td>
-                                        <td data-label="Squarespace (per year)" className="p-3 border border-stone-200">$120 to $600</td>
-                                        <td data-label="Custom Next.js (per year)" className="p-3 border border-stone-200">$0 to $120 (native or open source)</td>
+                                        <td className="p-3 border border-stone-300">Premium Extensions</td>
+                                        <td data-label="Squarespace (per year)" className="p-3 border border-stone-300">$120 to $600</td>
+                                        <td data-label="Custom Next.js (per year)" className="p-3 border border-stone-300">$0 to $120 (native or open source)</td>
                                     </tr>
                                     <tr className="bg-stone-100">
-                                        <td className="p-3 border border-stone-200 font-bold">Annual Total</td>
-                                        <td data-label="Squarespace (per year)" className="p-3 border border-stone-200 font-bold">$500 to $1,030</td>
-                                        <td data-label="Custom Next.js (per year)" className="p-3 border border-stone-200 font-bold text-cognac">$96 to $224</td>
+                                        <td className="p-3 border border-stone-300 font-bold">Annual Total</td>
+                                        <td data-label="Squarespace (per year)" className="p-3 border border-stone-300 font-bold">$500 to $1,030</td>
+                                        <td data-label="Custom Next.js (per year)" className="p-3 border border-stone-300 font-bold text-cognac">$96 to $224</td>
                                     </tr>
                                     <tr className="bg-stone-100">
-                                        <td className="p-3 border border-stone-200 font-bold">Annual Savings</td>
-                                        <td data-label="Squarespace (per year)" colSpan={2} className="p-3 border border-stone-200 font-bold text-cognac text-center">$276 to $806/year</td>
+                                        <td className="p-3 border border-stone-300 font-bold">Annual Savings</td>
+                                        <td data-label="Squarespace (per year)" colSpan={2} className="p-3 border border-stone-300 font-bold text-cognac text-center">$276 to $806/year</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -594,7 +587,7 @@ export default function SquarespaceMinCostPage() {
                         </BlogText>
 
                         {/* Mid CTA */}
-                        <div className="bg-charcoal rounded-2xl p-8 md:p-10 my-12 text-center">
+                        <div className="bg-charcoal rounded-2xl p-8 md:p-10 my-8 md:my-12 text-center">
                             <h3 className="text-white text-2xl font-bold mb-3">Get a Free Migration Cost Estimate</h3>
                             <p className="text-stone-300 mb-6 max-w-lg mx-auto">
                                 Tell us your site size and we will give you a fixed-price quote within 24 hours. No discovery call required to get a number.
@@ -616,36 +609,36 @@ export default function SquarespaceMinCostPage() {
                             <table className="w-full text-sm border-collapse min-w-[460px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Package</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Site Size</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Price</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Includes</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Package</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Site Size</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Price</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Includes</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-medium">Starter</td>
-                                        <td data-label="Site Size" className="p-3 border border-stone-200">Up to 10 pages</td>
-                                        <td data-label="Price" className="p-3 border border-stone-200 font-bold text-cognac">From $3,500</td>
-                                        <td data-label="Includes" className="p-3 border border-stone-200 text-stone-500">Full migration + redirects + SEO</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Starter</td>
+                                        <td data-label="Site Size" className="p-3 border border-stone-300">Up to 10 pages</td>
+                                        <td data-label="Price" className="p-3 border border-stone-300 font-bold text-cognac">From $3,500</td>
+                                        <td data-label="Includes" className="p-3 border border-stone-300 text-stone-500">Full migration + redirects + SEO</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200 font-medium">Business</td>
-                                        <td data-label="Site Size" className="p-3 border border-stone-200">10 to 30 pages</td>
-                                        <td data-label="Price" className="p-3 border border-stone-200 font-bold text-cognac">From $6,500</td>
-                                        <td data-label="Includes" className="p-3 border border-stone-200 text-stone-500">Everything in Starter + blog migration</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Business</td>
+                                        <td data-label="Site Size" className="p-3 border border-stone-300">10 to 30 pages</td>
+                                        <td data-label="Price" className="p-3 border border-stone-300 font-bold text-cognac">From $6,500</td>
+                                        <td data-label="Includes" className="p-3 border border-stone-300 text-stone-500">Everything in Starter + blog migration</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-medium">Growth</td>
-                                        <td data-label="Site Size" className="p-3 border border-stone-200">30 to 60 pages</td>
-                                        <td data-label="Price" className="p-3 border border-stone-200 font-bold text-cognac">From $12,000</td>
-                                        <td data-label="Includes" className="p-3 border border-stone-200 text-stone-500">Everything in Business + custom CMS</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Growth</td>
+                                        <td data-label="Site Size" className="p-3 border border-stone-300">30 to 60 pages</td>
+                                        <td data-label="Price" className="p-3 border border-stone-300 font-bold text-cognac">From $12,000</td>
+                                        <td data-label="Includes" className="p-3 border border-stone-300 text-stone-500">Everything in Business + custom CMS</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-200 font-medium">E-Commerce</td>
-                                        <td data-label="Site Size" className="p-3 border border-stone-200">Any size</td>
-                                        <td data-label="Price" className="p-3 border border-stone-200 font-bold text-cognac">Custom quote</td>
-                                        <td data-label="Includes" className="p-3 border border-stone-200 text-stone-500">Product migration + checkout + Stripe</td>
+                                        <td className="p-3 border border-stone-300 font-medium">E-Commerce</td>
+                                        <td data-label="Site Size" className="p-3 border border-stone-300">Any size</td>
+                                        <td data-label="Price" className="p-3 border border-stone-300 font-bold text-cognac">Custom quote</td>
+                                        <td data-label="Includes" className="p-3 border border-stone-300 text-stone-500">Product migration + checkout + Stripe</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -677,7 +670,7 @@ export default function SquarespaceMinCostPage() {
                     </div>
 
                     {/* Bottom CTA */}
-                    <div className="mt-16 border-t border-stone-200 pt-12 text-center">
+                    <div className="mt-6 md:mt-10 md:mt-16 border-t border-stone-200 pt-12 text-center">
                         <p className="text-stone-500 text-sm font-medium mb-2 tracking-wide uppercase">Ready to Move?</p>
                         <h3 className="text-3xl font-bold text-charcoal mb-4">
                             Get a fixed price for your <span className="font-serif italic text-cognac">Squarespace migration</span>
@@ -699,7 +692,7 @@ export default function SquarespaceMinCostPage() {
                     </div>
 
                     {/* FAQ */}
-                    <div className="mt-16">
+                    <div className="mt-6 md:mt-10 md:mt-16">
                         <h2 className="text-2xl font-bold text-charcoal mb-8">Frequently Asked Questions</h2>
                         <FAQAccordion faqs={squarespaceMinCostFAQs} />
                     </div>
@@ -707,11 +700,11 @@ export default function SquarespaceMinCostPage() {
                     <BlogAuthor
                         date="Apr 9, 2026"
                         readTime="11 min read"
-                        bio="Hassan has migrated dozens of businesses off Squarespace, WordPress, Webflow, and Shopify to custom Next.js sites that score 95 to 100 on Google PageSpeed. He specialises in migrations that preserve SEO rankings and improve them within 60 days."
+                        bio="Hassan founded PandaCodeGen in Feb 2026 and builds custom Next.js sites that score 95 to 100 on Google PageSpeed. Recent rebuild: Obare Magazine migrated from Wix to Next.js and Sanity in 7 days. Six years of WordPress experience prior to going fully custom."
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                     />
 
-                    <section className="mb-10 mt-10">
+                    <section className="mb-10 mt-6 md:mt-10">
                         <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
                         <p className="text-stone-700 leading-relaxed">For the speed diagnosis behind why Squarespace stays under 65 PageSpeed, read <Link href="/blog/squarespace-too-slow" className="text-cognac hover:underline font-medium">why Squarespace is slow by design</Link>. For rebuild pricing across every platform, see the <Link href="/blog/website-rebuild-cost-2026" className="text-cognac hover:underline font-medium">2026 website rebuild cost guide</Link>.</p>
                     </section>

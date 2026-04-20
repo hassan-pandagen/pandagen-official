@@ -1,6 +1,6 @@
 import { ArrowLeft, Calendar, Clock, ArrowRight, DollarSign, AlertTriangle, CheckCircle2, TrendingDown } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,13 +11,13 @@ import type { Metadata } from "next";
 
 const shopifyAppFAQs = blogPosts.find(p => p.id === "shopify-app-costs-real-monthly-bill")?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const SalesImpactAnimation = dynamic(() => import("@/components/blog/SalesImpactAnimation"));
-const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const SalesImpactAnimation = lazyLoad(() => import("@/components/blog/SalesImpactAnimation"));
+const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "Shopify App Costs 2026: Your Real Monthly Bill Is Higher Than You Think",
-    description: "You cut 3 apps to save money. Then Black Friday hits and you need email, reviews, and upsells back. Bill is $1,000 again. Here is the full app cost breakdown and the only way to actually stop paying.",
+    description: "You cut 3 apps to save money. Black Friday hits and the bill is $1,000 again. Full app cost breakdown and how to actually stop paying.",
     alternates: {
         canonical: "/blog/shopify-app-costs-real-monthly-bill",
     },
@@ -39,10 +39,10 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: "Shopify App Costs 2026: Your Real Monthly Bill Is Higher Than You Think",
-        description: "You cut 3 apps to save money. Then Black Friday hits and you need email, reviews, and upsells back. Bill is $1,000 again. Here is the full app cost breakdown and the only way to actually stop paying.",
+        description: "You cut 3 apps to save money. Black Friday hits and the bill is $1,000 again. Full app cost breakdown and how to actually stop paying.",
         type: "article",
-        publishedTime: "2026-03-19",
-        modifiedTime: "2026-03-19",
+        publishedTime: "2026-03-19T00:00:00-05:00",
+        modifiedTime: "2026-04-20T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/shopify-app-costs-real-monthly-bill",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Shopify App Costs 2026: Your Real Monthly Bill Is Higher Than You Think",
-        description: "You cut 3 apps to save money. Then Black Friday hits and you need email, reviews, and upsells back. Bill is $1,000 again. Here is the full app cost breakdown and the only way to actually stop paying.",
+        description: "You cut 3 apps to save money. Black Friday hits and the bill is $1,000 again. Full app cost breakdown and how to actually stop paying.",
     },
 };
 
@@ -61,15 +61,15 @@ const articleSchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/shopify-app-costs-real-monthly-bill#article",
             "headline": "Shopify App Costs 2026: Your Real Monthly Bill Is Higher Than You Think",
-            "description": "You cut 3 apps to save money. Then Black Friday hits and you need email, reviews, and upsells back. Bill is $1,000 again. Here is the full app cost breakdown and the only way to actually stop paying.",
+            "description": "You cut 3 apps to save money. Black Friday hits and the bill is $1,000 again. Full app cost breakdown and how to actually stop paying.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-19T00:00:00-05:00",
-            "dateModified": "2026-03-19T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -130,11 +130,11 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/shopify-app-costs-real-monthly-bill#webpage",
             "url": "https://www.pandacodegen.com/blog/shopify-app-costs-real-monthly-bill",
-            "name": "Your Shopify Bill Is $1,000/Month and You Don't Know It",
+            "name": "Shopify App Costs 2026: Your Real Monthly Bill Is Higher Than You Think",
             "description": "The full Shopify app cost breakdown. Default stack costs $1,000/month. Optimized stack costs $136/month. Here is every swap, named and priced.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-03-19T00:00:00-05:00",
-            "dateModified": "2026-03-19T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "inLanguage": "en-US"
         },
         {
@@ -211,7 +211,7 @@ export default function ShopifyAppCostsPage() {
                         <p className="font-bold text-charcoal mb-3 text-sm uppercase tracking-wide">Key Findings</p>
                         <ul className="space-y-2 text-sm text-stone-700">
                             <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" /> 87% of Shopify merchants use at least one paid app. The average serious store runs 8 to 15 apps.</li>
-                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" /> The default app stack for a $20K to $100K/month store costs approximately $1,000/month on top of plan fees.</li>
+                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" /> The default app stack for a $20K to $100K/month store costs approximately $861/month on top of plan fees, and climbs past $1,000 once Black Friday usage spikes and transaction fees hit.</li>
                             <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" /> Swapping to cheaper alternatives doing the same job cuts the bill to $146/month. Saving: $715/month, $8,580/year for a $20K to $50K/month store.</li>
                             <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" /> Uninstalling a Shopify app does not cancel the subscription. You must cancel inside the app dashboard.</li>
                         </ul>
@@ -224,7 +224,7 @@ export default function ShopifyAppCostsPage() {
                         Then the other charges hit. Klaviyo for email marketing. Okendo for reviews. Loop Returns for returns. ReCharge for subscriptions. Smile.io for loyalty. Boost Commerce for search. ReConvert for upsells. A handful of smaller tools for automation, badges, and stock alerts.
                     </BlogText>
                     <BlogText>
-                        You added it up. Your Shopify bill is over $1,000 this month. Nobody warned you about this when you signed up.
+                        You added it up. Your Shopify bill is past $861 this month, and closer to $1,000 once transaction fees and Black Friday usage spikes land. Nobody warned you about this when you signed up.
                     </BlogText>
 
                     <BlogHeader id="what-is-app-creep">What Is Shopify App Creep and Why Does It Cost So Much?</BlogHeader>
@@ -398,15 +398,15 @@ export default function ShopifyAppCostsPage() {
                     </BlogText>
 
                     {/* Mid-Article CTA */}
-                    <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                    <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                         <p className="font-bold text-charcoal mb-2">How much are your Shopify apps actually costing you every month?</p>
                         <p className="text-stone-600 mb-4 text-sm">Drop your store URL when you book. We audit your app stack live on the call, add up your exact monthly bleed, and show you what a custom build eliminates permanently.</p>
                         <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                             Book a Free Cost Audit <ArrowRight className="w-4 h-4" />
                         </CalModalButton>
                         <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                          <p className="text-sm text-stone-700 mt-1">$500 for a complete Shopify migration. Add up your monthly Shopify bill right now: platform fee, every app, every transaction fee. That number is probably $200 to $1,000/month. Pay us $500 once and all of those monthly charges go away.</p>
+                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                          <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                         </div>
                     </div>
 
@@ -488,7 +488,7 @@ export default function ShopifyAppCostsPage() {
                     </BlogText>
 
                     {/* Bottom CTA */}
-                    <div className="my-10 p-8 bg-charcoal text-white rounded-2xl text-center">
+                    <div className="my-6 md:my-10 p-8 bg-charcoal text-white rounded-2xl text-center">
                         <TrendingDown className="w-8 h-8 text-amber-400 mx-auto mb-3" />
                         <p className="font-bold text-xl mb-2">Calculate Your Real Shopify Cost</p>
                         <p className="text-stone-300 mb-5 text-sm max-w-md mx-auto">We audit your current platform costs, app stack, and performance metrics, then show you the exact ROI of switching to a custom build. Most stores recoup the migration cost within 6 months.</p>
@@ -496,8 +496,8 @@ export default function ShopifyAppCostsPage() {
                             Book Free Cost Audit Call <ArrowRight className="w-4 h-4" />
                         </CalModalButton>
                         <div className="mt-4 p-4 bg-white/10 border border-white/20 rounded-xl">
-                          <p className="text-sm font-bold text-white">FOUNDER&apos;S OFFER: $500 Migration</p>
-                          <p className="text-sm text-stone-300 mt-1">$500 for a complete Shopify migration. Add up your monthly Shopify bill right now: platform fee, every app, every transaction fee. That number is probably $200 to $1,000/month. Pay us $500 once and all of those monthly charges go away.</p>
+                          <p className="text-sm font-bold text-white">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                          <p className="text-sm text-stone-300 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                         </div>
                     </div>
 

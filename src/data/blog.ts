@@ -35,7 +35,7 @@ export const blogPosts: BlogPost[] = [
     illustrationType: 'cost',
     lastModified: "2026-04-19",
     faqs: [
-      { question: "How much does a website rebuild cost in 2026?", answer: "A website rebuild costs $2,000 to $250,000 in 2026 depending on who builds it and what is being rebuilt. Freelancers charge $2,000 to $12,000 for small business sites. Boutique studios charge $8,000 to $30,000 for mid-sized business sites. Full-service agencies charge $30,000 to $120,000. Enterprise firms like Huge and Work & Co charge $250,000 to $2 million. Most small-to-mid businesses overpay because they ask agencies instead of specialists. PandaCodeGen's published range is $500 to $25,000 for fixed-scope rebuilds." },
+      { question: "How much does a website rebuild cost in 2026?", answer: "A website rebuild costs $2,000 to $250,000 in 2026 depending on who builds it and what is being rebuilt. Freelancers charge $2,000 to $12,000 for small business sites. Boutique studios charge $8,000 to $30,000 for mid-sized business sites. Full-service agencies charge $30,000 to $120,000. Enterprise firms like Huge and Work & Co charge $250,000 to $2 million. Most small-to-mid businesses overpay because they ask agencies instead of specialists. PandaCodeGen's published range is $1,500+ Starter, $3,500+ Growth, or $5,000 to $10,000+ Scale for fixed-scope rebuilds." },
       { question: "What's the difference between a website rebuild and a redesign?", answer: "A redesign changes how the site looks. A rebuild changes how the site works. A redesign reuses the existing platform, code, and structure and updates colours, typography, imagery, and layout. A rebuild replaces the underlying technology: new framework, new content structure, new hosting. If your site is slow, insecure, or you are locked into a platform you want to leave, you need a rebuild. If the site works well but looks dated, you need a redesign. Redesigns cost 30 to 60 percent less than rebuilds but do not fix performance, security, or platform lock-in." },
       { question: "How long does a website rebuild take?", answer: "A typical small business website rebuild takes 2 to 6 weeks. A mid-sized business site takes 6 to 12 weeks. Enterprise rebuilds with compliance reviews and multi-stakeholder approval take 4 to 9 months. Freelancers and boutique studios using AI-paired development often finish in half the timeline of a full-service agency because there are fewer meetings, fewer approval layers, and the same person handles design and development. The biggest delays are almost always client-side: late content, late feedback, late sign-offs." },
       { question: "Will I lose my Google rankings when I rebuild my website?", answer: "Not if the rebuild includes proper SEO preservation. Every URL must be mapped to a 301 redirect, every title tag and meta description must carry over, all schema markup must be ported, and a new sitemap must be submitted to Google Search Console on launch day. When done correctly, rankings hold steady within 30 days and typically improve within 60 to 90 days because Google rewards the faster Core Web Vitals that a modern rebuild delivers. Most ranking losses after a rebuild are caused by missing redirects on high-traffic URLs, not by the rebuild itself." },
@@ -48,7 +48,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "core-web-vitals-explained",
     title: "Core Web Vitals Explained for Business Owners 2026: What It Means for Your Revenue",
-    excerpt: "Your agency said your Core Web Vitals are failing. You have no idea what that means. Here is what the 3 metrics are, why Google ranks sites on them, and what each failing score actually costs your business in lost sales.",
+    excerpt: "Your agency said your Core Web Vitals are failing and you have no idea what that means. Here is what the 3 metrics cost your business in lost sales.",
     category: "SEO",
     readTime: "12 min",
     date: "Apr 16",
@@ -68,7 +68,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "squarespace-vs-custom-website",
-    title: "Squarespace vs Custom Website 2026: Which Is Right for Your Business?",
+    title: "Squarespace vs Custom Website 2026: The 55/100 PageSpeed Ceiling That Kills Rankings",
     excerpt: "Squarespace scores 30 to 55 on mobile PageSpeed. Custom sites score 95 to 100. But custom costs more upfront. Here is the real cost, speed, and SEO comparison with honest advice on when to stay and when to switch.",
     category: "Comparison",
     readTime: "12 min",
@@ -89,7 +89,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "wix-vs-custom-website",
-    title: "Wix vs Custom Website 2026: Which Is Better for Your Business?",
+    title: "Wix vs Custom Website 2026: 5 Moments Wix Becomes a Business Liability",
     excerpt: "Wix scores 35 to 55 on mobile PageSpeed. Custom sites score 95 to 100. But Wix is free to start and easy to use. Here is the real cost, speed, and SEO comparison with honest advice on when to stay and when to switch.",
     category: "Comparison",
     readTime: "12 min",
@@ -121,7 +121,7 @@ export const blogPosts: BlogPost[] = [
     illustrationType: 'cost',
     lastModified: "2026-04-09",
     faqs: [
-      { question: "How much does it cost to migrate from Squarespace?", answer: "A Squarespace to custom Next.js migration costs $3,500 to $30,000 depending on site size and complexity. A small portfolio or service site with 5 to 10 pages costs $3,500 to $6,000. A small business site with 10 to 20 pages costs $6,000 to $10,000. A mid-size site with 20 to 50 pages costs $10,000 to $18,000. E-commerce migrations add 20 to 30% to any tier due to product data, checkout flows, and payment integration work." },
+      { question: "How much does it cost to migrate from Squarespace?", answer: "A Squarespace to custom Next.js migration starts at $1,500 Starter. A small portfolio or service site with 5 to 20 pages lands in our $3,500+ Growth tier. Mid-size sites with 20 to 50 pages and e-commerce or booking integrations run $5,000 to $10,000 in our Scale tier. The tier you land in depends on scope: page count, custom features, and integration work." },
       { question: "What does Squarespace actually cost per year?", answer: "Squarespace's real annual cost is $552 to $1,992 for a standard business site. The Core plan ($23/month billed annually) costs $276/year. Add domain renewal ($20 to $70/year after year one), Google Workspace email ($84/user/year), and any premium extensions ($5 to $50/month each). E-commerce businesses on the Basic plan also pay a 2% transaction fee on every sale, which adds $600 to $2,400/year for businesses doing $30,000 to $120,000 in annual revenue." },
       { question: "How long does a Squarespace migration take?", answer: "A Squarespace migration takes 1 to 8 weeks depending on site size. Small sites (5 to 10 pages) take 1 to 2 weeks. Medium sites (10 to 30 pages) take 2 to 4 weeks. Large sites (30 to 60 pages) take 4 to 8 weeks. E-commerce migrations with significant product catalogues add 1 to 3 weeks to any tier. The timeline includes URL mapping, redirect setup, content migration, and post-launch Search Console verification." },
       { question: "Will I lose my Google rankings when I migrate from Squarespace?", answer: "Not if the migration includes proper 301 redirects and SEO preservation. Every URL must be mapped to its new equivalent, all meta titles and descriptions must be preserved, canonicals must be correct, and a new sitemap must be submitted to Google Search Console on launch day. Rankings typically stabilise within 30 days and improve within 60 to 90 days because Google rewards the faster Core Web Vitals that a custom Next.js site delivers." },
@@ -143,7 +143,7 @@ export const blogPosts: BlogPost[] = [
     lastModified: "2026-04-08",
     faqs: [
       { question: "Who is the best custom web development agency in the USA for 2026?", answer: "Based on pricing transparency, tech stack, and verified client reviews, PandaCodeGen ranks first. They are the only agency on this list that publishes pricing upfront, builds exclusively on Next.js, and guarantees 95 to 100/100 Google PageSpeed on every project. For enterprise budgets over $75,000, 10up and Baunfire have stronger track records with large-scale WordPress and B2B projects respectively." },
-      { question: "How much does a custom web development agency in the USA charge?", answer: "US custom web development agencies typically charge $25,000 to $100,000+ per project. Hourly rates range from $100 to $300 per hour depending on the agency's size and location. PandaCodeGen is the only agency on this list with published fixed pricing starting at $8,000 for a complete custom Next.js build. Most agencies require a discovery call before quoting, which makes comparison shopping very difficult." },
+      { question: "How much does a custom web development agency in the USA charge?", answer: "US custom web development agencies typically charge $25,000 to $100,000+ per project. Hourly rates range from $100 to $300 per hour depending on the agency's size and location. PandaCodeGen is the only agency on this list with published fixed pricing, starting at $1,500 for Starter, $3,500 for Growth builds, and $5,000 to $10,000 for Scale projects. Most agencies require a discovery call before quoting, which makes comparison shopping very difficult." },
       { question: "What is the best tech stack for a custom website in 2026?", answer: "Next.js deployed on Vercel is the leading stack for custom websites in 2026. It delivers static generation for sub-second load times, built-in image and font optimization, and 99 to 100/100 Google PageSpeed scores consistently. WordPress, Drupal, and Webflow are platform-dependent stacks that impose performance ceilings of 55 to 80 on mobile PageSpeed regardless of optimization." },
       { question: "How do I choose a web development agency in the USA?", answer: "The five most important things to verify before hiring a US web development agency: published pricing or transparent quotes, verified third-party reviews on Clutch or Google (not just testimonials on their own site), real PageSpeed scores for sites they have built, ownership of your source code after delivery, and whether they build on modern frameworks like Next.js or legacy CMS platforms like WordPress." },
       { question: "Do US web development agencies build on Next.js?", answer: "Most US web development agencies still build primarily on WordPress, Drupal, or Webflow. Of the 10 agencies reviewed here, only PandaCodeGen uses Next.js as its primary and exclusive framework. 10up has a headless WordPress plus Next.js offering called HeadstartWP but WordPress remains their core identity. The other eight agencies use legacy CMS stacks with no Next.js capability." },
@@ -192,7 +192,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "leaving-webflow-2026",
-    title: "Leaving Webflow in 2026: What Actually Happened After We Migrated",
+    title: "Leaving Webflow in 2026: The 31-Hour Outage, Hidden Fees, and Where Businesses Are Going",
     excerpt: "Bandwidth cut 75%. Bills jumped to $170 overnight. 14 outages in 90 days. Cart buttons disappeared on live sites. Here is the real story of leaving Webflow and what we built instead.",
     category: "Webflow",
     readTime: "11 min",
@@ -272,7 +272,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "webflow-vs-custom-website",
-    title: "Webflow vs Custom Website 2026: Real Cost, Speed, and SEO Comparison",
+    title: "Webflow vs Custom Website 2026: When $150/mo Outcosts a Custom Build",
     excerpt: "Webflow works until it does not. 14 outages in 90 days. Here are the 5 signs you have outgrown Webflow, what a custom website actually gives you, and how to decide without overspending.",
     category: "Webflow",
     readTime: "11 min",
@@ -284,7 +284,7 @@ export const blogPosts: BlogPost[] = [
     lastModified: "2026-04-15",
     faqs: [
       { question: "When should I switch from Webflow to a custom website?", answer: "Switch when any of these are true: your Google PageSpeed Mobile score is below 70 and you cannot improve it, your Webflow bill exceeds $100 per month including add-ons and third-party tools, you need custom functionality like a booking system or API integration that Webflow cannot handle natively, you have hit the 10,000 CMS item limit, or a competitor with a custom site is consistently outranking you for the same keywords despite similar content. If none of these apply, Webflow is still the right choice for your stage." },
-      { question: "How much does a custom website cost compared to Webflow?", answer: "A custom Next.js website costs $5,000 to $20,000 to build depending on the number of pages and features. Hosting is $0 to $20 per month on Vercel. Webflow costs $0 to build if you do it yourself but $1,500 to $5,000 per year in platform fees once you add CMS hosting, forms, localization, and third-party integrations. Over 3 years, a custom site typically costs 30 to 60% less than Webflow when you include both build and ongoing costs." },
+      { question: "How much does a custom website cost compared to Webflow?", answer: "A custom Next.js website starts at $1,500 in our Starter tier, lands at $3,500+ Growth for most sites, and runs $5,000 to $10,000+ Scale for larger builds. Hosting is $0 to $20 per month on Vercel. Webflow costs $0 to build if you do it yourself but $1,500 to $5,000 per year in platform fees once you add CMS hosting, forms, localization, and third-party integrations. Over 3 years, a custom site typically costs 30 to 60% less than Webflow when you include both build and ongoing costs." },
       { question: "Will I lose my Google rankings if I migrate from Webflow?", answer: "Not if the migration is done correctly. A proper Webflow to custom code migration includes 301 redirects from every old Webflow URL to the new URL, preserving all metadata and content structure, submitting a new sitemap to Google Search Console, and verifying that no pages return 404 errors. When done right, rankings typically improve within 30 to 90 days because the faster custom site earns better Core Web Vitals scores. We have never seen a client lose rankings after a properly executed migration." },
       { question: "Can Webflow sites rank well on Google?", answer: "Webflow sites can rank for low-competition keywords. Webflow generates clean HTML and handles basic SEO well. The limitation is performance: Webflow sites score 55 to 75 on Google PageSpeed Mobile due to the platform's CSS framework and JavaScript runtime. For competitive keywords where multiple sites have similar content quality, Google uses Core Web Vitals as a tiebreaker. A custom site scoring 95 to 100 will consistently outrank a Webflow site scoring 60 to 70 for the same keyword. If organic search is your primary growth channel, this gap matters." },
       { question: "What can a custom website do that Webflow cannot?", answer: "Custom websites have no platform limits. Specific capabilities that Webflow cannot provide: server-side rendering for dynamic content, API integrations with any external service, custom databases and user authentication, unlimited CMS items (Webflow caps at 10,000), real-time features like live pricing or availability, full control over page load performance, and the ability to move your site to any hosting provider at any time. Webflow's visual editor is powerful for static design, but any feature that requires backend logic or data processing is either impossible or requires expensive third-party workarounds." },
@@ -292,7 +292,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "shopify-vs-custom-website",
-    title: "Shopify vs Custom Website 2026: 5 Signs You Have Outgrown It",
+    title: "Shopify vs Custom Website 2026: 5 Signs Your Store Has Outgrown Shopify",
     excerpt: "Shopify works until app fees hit $1,000/month, your store loads in 4+ seconds, and checkout conversion stalls at 1.4%. Here are the 5 signs and what to do next.",
     category: "Shopify",
     readTime: "11 min",
@@ -304,10 +304,10 @@ export const blogPosts: BlogPost[] = [
     lastModified: "2026-03-30",
     faqs: [
       { question: "When should I switch from Shopify to a custom website?", answer: "Switch when your monthly Shopify bill exceeds $500 including apps, your store loads in 4+ seconds on mobile, your conversion rate is stuck below 2% despite good traffic, you need custom checkout logic that Shopify restricts, or you are paying transaction fees on a non-Shopify payment gateway. If none of these apply, Shopify is still the right tool for your stage." },
-      { question: "How much does a custom e-commerce website cost compared to Shopify?", answer: "A custom headless e-commerce site costs $8,000 to $25,000 to build. Hosting is $0 to $20 per month. Shopify costs $39 to $2,300 per month in platform fees plus $500 to $1,000 per month in app subscriptions for a serious store. Over 3 years, a custom site typically costs 40 to 60% less than Shopify when you include platform fees, app costs, and transaction fees." },
+      { question: "How much does a custom e-commerce website cost compared to Shopify?", answer: "A custom headless e-commerce site starts at $1,500 in our Starter tier, $3,500+ Growth for most stores, or $5,000 to $10,000+ Scale for larger catalogs. Hosting is $0 to $20 per month. Shopify costs $39 to $2,300 per month in platform fees plus $500 to $1,000 per month in app subscriptions for a serious store. Over 3 years, a custom site typically costs 40 to 60% less than Shopify when you include platform fees, app costs, and transaction fees." },
       { question: "Will I lose sales during a Shopify migration?", answer: "Not if the migration is planned correctly. A proper Shopify to custom migration includes a parallel build phase where the new site is built while the old store keeps running, 301 redirects for every product and collection URL, a zero-downtime DNS cutover, and post-launch monitoring for 30 days. Revenue should continue uninterrupted. Most stores see conversion rates improve within 60 days because the custom site loads 3 to 4 times faster." },
       { question: "Can a custom website do everything Shopify does?", answer: "Yes, and more. A custom site handles product catalogs, cart, checkout, payments via Stripe or any processor, inventory management, order tracking, email notifications, discount codes, and subscription billing. The difference is that custom code has no app limits, no transaction fees beyond the payment processor, no variant caps, and no checkout restrictions. Anything you can describe can be built." },
-      { question: "What is headless Shopify and is it worth it?", answer: "Headless Shopify means keeping Shopify as your backend for product and order management while replacing the slow Liquid frontend with a custom Next.js storefront. This gives you Shopify's admin panel with custom code performance. Load times drop from 4+ seconds to under 1 second. It is worth it if you want to keep your Shopify product catalog and order history but need significantly better speed and conversion rates. Build cost is $8,000 to $20,000 depending on store complexity." },
+      { question: "What is headless Shopify and is it worth it?", answer: "Headless Shopify means keeping Shopify as your backend for product and order management while replacing the slow Liquid frontend with a custom Next.js storefront. This gives you Shopify's admin panel with custom code performance. Load times drop from 4+ seconds to under 1 second. It is worth it if you want to keep your Shopify product catalog and order history but need significantly better speed and conversion rates. Build cost is $3,500+ Growth for smaller catalogs and $5,000 to $10,000+ Scale for larger stores." },
     ]
   },
   {
@@ -352,8 +352,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "webflow-migration-cost",
-    title: "Webflow Migration Cost: From $2,000 for Small Sites (2026 Pricing)",
-    excerpt: "Small Webflow site: $2,000 to migrate. 50-100 pages: $12,000 to $20,000. Enterprise: $18,000 to $35,000+. Plus uptime cost: Webflow had 14 outages in 90 days. Full breakdown with business impact.",
+    title: "Webflow Migration Cost: From $1,500 Starter (2026 Pricing)",
+    excerpt: "Webflow migration starts at $1,500 in our Starter tier. Growth tier at $3,500 for most sites. Scale tier at $5,000 to $10,000 for 50+ pages. Plus uptime cost: Webflow had 14 outages in 90 days. Full breakdown with business impact.",
     category: "Webflow",
     readTime: "12 min",
     date: "Mar 25",
@@ -363,18 +363,18 @@ export const blogPosts: BlogPost[] = [
     illustrationType: 'migration',
     lastModified: "2026-04-15",
     faqs: [
-      { question: "How much does it cost to migrate a Webflow site to custom code?", answer: "A Webflow to Next.js migration costs $3,000 to $20,000 depending on site size. Small sites with 5 to 20 pages cost $3,000 to $7,000. Mid-size sites with 20 to 50 pages cost $7,000 to $14,000. Large sites with 50 to 100 pages cost $12,000 to $20,000. Enterprise sites with 100+ pages or complex CMS integrations start at $18,000. The cost range reflects real differences in scope: page count, custom animations, CMS collections, form complexity, and integration work." },
+      { question: "How much does it cost to migrate a Webflow site to custom code?", answer: "A Webflow to Next.js migration starts at $1,500 Starter. Small to mid-size sites (5 to 30 pages) land in our $3,500+ Growth tier. Larger sites (50 to 100+ pages or complex CMS integrations) run $5,000 to $10,000 in our Scale tier. The tier reflects real differences in scope: page count, custom animations, CMS collections, form complexity, and integration work." },
       { question: "How long does a Webflow to Next.js migration take for a 50-100 page site?", answer: "A 50 to 100 page Webflow migration takes 4 to 8 weeks. Week 1 is audit and planning: URL mapping, content inventory, redirect strategy. Weeks 2 to 5 are the build: converting pages, migrating CMS content, rebuilding animations and forms. Week 6 is QA and redirect verification. Weeks 7 to 8 are zero-downtime DNS cutover and post-launch monitoring. Timeline depends heavily on how many custom CMS collections you have and whether you need third-party API integrations rebuilt." },
       { question: "Will I lose my Google rankings when migrating from Webflow to Next.js?", answer: "Not if the migration is done correctly. The critical steps are: map every URL with 301 redirects, preserve all title tags and meta descriptions, maintain canonical URLs, implement equivalent schema markup on the new site, and submit a new sitemap to Google Search Console immediately after launch. When executed properly, rankings hold steady within 30 days and typically improve within 60 to 90 days because Google rewards the faster Core Web Vitals scores that Next.js delivers. Webflow sites score 55 to 75 on mobile. Next.js sites score 95 to 100." },
       { question: "What is included in a professional Webflow migration?", answer: "A complete Webflow migration should include: full URL audit and 301 redirect mapping, migration of all metadata (title tags, meta descriptions, canonical URLs, Open Graph tags), content migration from Webflow CMS to static or headless CMS, image optimisation to WebP format with correct sizing, schema markup implementation for all page types, Google Search Console setup and sitemap submission, Core Web Vitals baseline verification (target 90+ on all three), zero-downtime DNS cutover, and 30-day post-launch monitoring. Get any quote in writing that specifies each item." },
-      { question: "Is migrating from Webflow to Next.js worth the investment?", answer: "For most businesses spending $100+/month on Webflow with a PageSpeed Mobile score below 70, migration pays for itself within 12 to 18 months. The ROI calculation has three components: hosting savings ($1,200 to $4,700/year), traffic improvement from better Core Web Vitals (15 to 35% organic traffic increase over 90 days), and conversion improvement from faster load times. A business with $500K/year in revenue that improves conversion rate by 10% from speed alone generates $50,000 in additional revenue, dwarfing a $12,000 to $20,000 migration cost." },
+      { question: "Is migrating from Webflow to Next.js worth the investment?", answer: "For most businesses spending $100+/month on Webflow with a PageSpeed Mobile score below 70, migration pays for itself within 6 to 12 months. The ROI calculation has three components: hosting savings ($1,200 to $4,700/year), traffic improvement from better Core Web Vitals (15 to 35% organic traffic increase over 90 days), and conversion improvement from faster load times. A business with $500K/year in revenue that improves conversion rate by 10% from speed alone generates $50,000 in additional revenue, dwarfing a $3,000 to $12,000 migration cost." },
       { question: "How much can I save per year by leaving Webflow?", answer: "Moving from Webflow to a custom Next.js site on Vercel saves $1,200 to $4,700 per year in hosting alone. A typical business on Webflow's CMS plan ($39/month) with form submissions ($19/month) and third-party integrations ($50/month) pays $1,296 to $2,400/year. A custom Next.js site on Vercel costs $0 to $240/year. Over 3 years, the hosting difference alone is $3,600 to $14,100. Add the revenue from improved SEO rankings and the savings compound significantly." },
     ]
   },
   {
     id: "wordpress-migration-cost",
-    title: "WordPress Migration Cost 2026: Full Pricing by Site Size and Type",
-    excerpt: "A simple WordPress site starts at $2,000. Complex WooCommerce stores go up to $25,000. This breakdown explains exactly what drives migration cost, what tier your site falls into, and how to calculate whether migration makes financial sense.",
+    title: "WordPress Migration Cost 2026: Full Pricing by Site Size (From $1,500 Starter)",
+    excerpt: "A WordPress to Next.js migration starts at $1,500 in our Starter tier. Growth tier at $3,500 for most business sites. Scale tier at $5,000 to $10,000 for complex WooCommerce stores. This breakdown explains what drives migration cost by tier and how to calculate ROI.",
     category: "WordPress",
     readTime: "9 min",
     date: "Mar 22",
@@ -384,7 +384,7 @@ export const blogPosts: BlogPost[] = [
     illustrationType: 'migration',
     lastModified: "2026-03-22",
     faqs: [
-      { question: "How much does it cost to migrate a WordPress site to Next.js?", answer: "A WordPress to Next.js migration starts at $2,000 for simple sites and goes up to $25,000 depending on site complexity. Basic business sites with 5 to 15 pages cost $3,000 to $8,000. Mid-complexity sites with custom post types, blog, forms, and integrations cost $8,000 to $15,000. Complex WooCommerce or large content sites with 50+ pages cost $15,000 to $25,000. Enterprise sites with 500+ pages and multiple custom integrations start at $25,000. The range reflects real scope differences, not arbitrary agency pricing." },
+      { question: "How much does it cost to migrate a WordPress site to Next.js?", answer: "A WordPress to Next.js migration starts at $1,500 in our Starter tier for simple 5 to 7 page sites. Basic business sites with 5 to 15 pages land in our $3,500+ Growth tier. Complex sites with custom post types, WooCommerce, or 50+ pages run $5,000 to $10,000 in our Scale tier. Enterprise sites with 500+ pages and multiple custom integrations are custom-quoted beyond Scale. The range reflects real scope differences, not arbitrary agency pricing." },
       { question: "How long does a WordPress to Next.js migration take?", answer: "A basic 5 to 15 page site migrates in 2 to 3 weeks. A mid-complexity site with custom post types, blog migration, and integrations takes 3 to 5 weeks. A complex WooCommerce or large content site takes 5 to 8 weeks. Enterprise projects with 500+ pages and multiple integrations take 8 to 16 weeks. Timeline depends on scope clarity, content readiness, and how many third-party integrations need to be rebuilt as API connections." },
       { question: "Will I lose my Google rankings when I migrate from WordPress to Next.js?", answer: "Not if the migration is done correctly. The critical steps are: map every URL with 301 redirects, preserve all title tags and meta descriptions, maintain canonical URLs, implement equivalent schema markup on the new site, submit a new sitemap to Google Search Console immediately after launch, and monitor for crawl errors for 30 days post-launch. When executed properly, rankings hold steady or improve within 30 to 60 days because Google rewards the faster Core Web Vitals scores that Next.js delivers." },
       { question: "Is migrating from WordPress to Next.js worth it financially?", answer: "For most business sites, yes. The ROI calculation has three components. First, cost savings: WordPress hosting, plugins, and maintenance typically cost $3,000 to $12,000 per year. A Next.js site on Vercel costs $0 to $240 per year, saving $2,500 to $11,000 annually. Second, traffic improvement: moving PageSpeed Mobile from 45 to 95 typically produces a 15 to 40% organic traffic improvement over 3 to 6 months. Third, conversion improvement: faster load times directly increase conversion rates. Most sites with $200+ per month in operating costs recover a $10,000 migration within 18 months." },
@@ -410,7 +410,7 @@ export const blogPosts: BlogPost[] = [
       { question: "Can you improve GoHighLevel page speed without leaving the platform?", answer: "You can partially improve GHL speed through image optimization, reducing tracking scripts, and simplifying page layouts. This typically moves scores from 20 to 30 range into the 35 to 50 range. However, you cannot overcome the fundamental architecture constraints of client-side rendering and the lack of edge caching while staying on GHL's hosting infrastructure. A complete fix requires moving the public website to a server-side rendered platform like Next.js while keeping GHL for CRM and automation functions." },
       { question: "Does GoHighLevel website speed affect SEO?", answer: "Yes, directly. Google has used Core Web Vitals as a ranking signal since the 2021 Page Experience update. Largest Contentful Paint, Interaction to Next Paint, and Cumulative Layout Shift all score poorly on GHL sites. Google ranks slower sites lower than faster sites with equivalent content when competing for the same keyword. For local businesses using GHL, where organic search often drives the majority of inbound leads, the speed penalty can mean ranking 3 to 5 positions lower than competitors with faster custom-coded sites." },
       { question: "Do you need to leave GoHighLevel to fix the speed problem?", answer: "You do not need to leave GoHighLevel entirely. The recommended solution is a decoupled architecture: build a custom Next.js website for all public-facing pages (homepage, service pages, landing pages, blog), and keep GoHighLevel for CRM, automation, email sequences, pipeline management, and appointment scheduling. Forms on the custom website submit to GHL via webhook or API so all leads flow into your existing pipeline. This preserves every GHL workflow while eliminating the speed penalty on the pages Google indexes." },
-      { question: "How much does a custom Next.js frontend for GoHighLevel cost?", answer: "A custom Next.js website that replaces GHL's public-facing pages while maintaining GHL backend integration costs $5,000 to $15,000 depending on the number of pages and complexity of custom features. This is a one-time cost compared to the ongoing conversion rate penalty from slow load times. For a business spending $3,000 per month on paid advertising into a GHL funnel, even a 10% conversion rate improvement from faster load times generates $3,600 additional revenue per year from the same ad spend." },
+      { question: "How much does a custom Next.js frontend for GoHighLevel cost?", answer: "A custom Next.js website that replaces GHL's public-facing pages while maintaining GHL backend integration starts at $1,500 Starter, lands at $3,500+ Growth for a full funnel, and runs $5,000 to $10,000+ Scale for multi-funnel builds with complex custom features. This is a one-time cost compared to the ongoing conversion rate penalty from slow load times. For a business spending $3,000 per month on paid advertising into a GHL funnel, even a 10% conversion rate improvement from faster load times generates $3,600 additional revenue per year from the same ad spend." },
     ]
   },
   {
@@ -491,12 +491,12 @@ export const blogPosts: BlogPost[] = [
       { question: "Will I lose my Google rankings when migrating from WordPress to Next.js?", answer: "Not if the migration is done correctly. The critical steps are: preserve all existing URLs where possible, implement 301 redirects for any changed URLs, transfer all metadata (title tags, meta descriptions, canonical URLs), submit your new sitemap to Google Search Console, and monitor for crawl errors in the 30 days after launch. When done correctly, rankings hold steady or improve within 30 to 60 days because Google rewards the faster Core Web Vitals scores that Next.js delivers natively." },
       { question: "Do I need to rebuild my content when migrating to Next.js?", answer: "Yes, but it's less work than it sounds. You export your WordPress content as XML and import it into a headless CMS (like Sanity or Contentful) or hardcode static pages. Most business sites have 10 to 30 pages of core content that takes 2 to 4 hours to migrate. Blog posts can be batch-converted from WordPress XML to Markdown files. Images need re-optimisation (WebP format, correct sizing). Next.js handles this automatically via the next/image component once images are imported." },
       { question: "What happens to my WordPress plugins after migration?", answer: "WordPress plugins don't carry over. Next.js doesn't have a plugin system. Each plugin's function needs to be replaced with a native solution or a lightweight alternative. Contact forms become API routes or services like Resend. SEO tools (Yoast) become metadata exports and schema JSON-LD. Analytics (Google Analytics) becomes a deferred script or server-side tracking. Most plugin functions can be replicated in under 4 hours of development time. and the result is faster than any plugin ever was." },
-      { question: "How much does it cost to hire someone to migrate WordPress to Next.js?", answer: "A professional WordPress to Next.js migration costs $8,000 to $35,000 depending on site complexity. Basic 10 to 15 page business sites: $8,000 to $15,000. Complex sites with WooCommerce, custom integrations, or large content libraries: $20,000 to $35,000. Ongoing Next.js maintenance costs $1,000 to $3,000/year. compared to $10,000 to $20,000/year for WordPress hosting, plugins, and maintenance. Most clients recover the migration cost within 12 to 18 months through lower operating costs and higher organic traffic from improved PageSpeed scores." },
+      { question: "How much does it cost to hire someone to migrate WordPress to Next.js?", answer: "A professional WordPress to Next.js migration starts at $1,500 in our Starter tier, $3,500+ Growth for most 10 to 15 page business sites, or $5,000 to $10,000+ Scale for complex sites with WooCommerce, custom integrations, or large content libraries. Ongoing Next.js maintenance costs $1,000 to $3,000/year compared to $10,000 to $20,000/year for WordPress hosting, plugins, and maintenance. Most clients recover the migration cost within 6 to 12 months through lower operating costs and higher organic traffic from improved PageSpeed scores." },
     ]
   },
   {
     id: "wordpress-vs-nextjs",
-    title: "WordPress vs Next.js in 2026: Which Is Actually Better for Business?",
+    title: "WordPress vs Next.js 2026: The 4x Speed Gap and 3-Year Cost Comparison",
     excerpt: "WordPress powers 43% of the internet. Next.js powers the fastest 1%. Here's an honest comparison of speed, SEO, cost, and security. and exactly when each one makes sense for your business.",
     category: "Comparison",
     readTime: "11 min",
@@ -511,7 +511,7 @@ export const blogPosts: BlogPost[] = [
       { question: "How much faster is Next.js than WordPress?", answer: "Typically 4 to 8x faster on mobile load time. The average WordPress site loads in 3.5 to 5 seconds on mobile. A Next.js site built on our stack loads in 0.6 to 1.2 seconds. Next.js pre-builds pages at deploy time and serves them from a global edge CDN with zero server computation per request. WordPress generates each page on demand from a PHP server and database, adding 800ms to 2+ seconds of overhead before a byte reaches the browser." },
       { question: "Can I migrate from WordPress to Next.js without losing SEO?", answer: "Yes, with a proper migration plan. Key steps: preserve all existing URLs (or set up 301 redirects), migrate metadata and Open Graph tags, maintain all internal links, and submit the new sitemap to Google Search Console after launch. When done correctly, rankings hold or improve within 30 to 60 days because the faster site earns better Core Web Vitals scores. We handle this process on every client migration." },
       { question: "Is Next.js harder to use than WordPress?", answer: "For non-developers: yes, initially. WordPress has a visual admin panel and page builder plugins. Next.js requires a developer to build and maintain. However, content management can be handled through a headless CMS (Sanity, Contentful) that gives you a WordPress-like editing experience. For business owners who don't touch code, Next.js is easier long-term. no plugin conflicts, no update failures, no security patches to manage." },
-      { question: "How much does it cost to migrate WordPress to Next.js?", answer: "A professional migration typically costs $8,000 to $35,000 depending on complexity. A basic 10 to 15 page site is $8,000 to $15,000. Complex sites with custom integrations are $20,000 to $35,000. Compare this to the ongoing cost of WordPress: $150 to $500/month hosting, $1,000 to $3,000/year in plugin licences, $5,000 to $15,000/year in maintenance. totalling $10,000 to $20,000 over 3 years. Most clients break even within 12 to 18 months, then save $5,000 to $15,000 every year after." },
+      { question: "How much does it cost to migrate WordPress to Next.js?", answer: "A professional migration starts at $1,500 in our Starter tier, $3,500+ Growth for most 10 to 15 page business sites, or $5,000 to $10,000+ Scale for complex sites with custom integrations. Compare this to the ongoing cost of WordPress: $150 to $500/month hosting, $1,000 to $3,000/year in plugin licences, $5,000 to $15,000/year in maintenance, totalling $10,000 to $20,000 over 3 years. Most clients break even within 6 to 12 months, then save $5,000 to $15,000 every year after." },
     ]
   },
   {
@@ -596,7 +596,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "wordpress-vs-custom-code-real-cost-3-years",
-    title: "WordPress vs Custom Code: 3-Year Cost Comparison With Real Numbers (2026)",
+    title: "WordPress vs Custom Code: 3-Year Cost Breakdown (Custom Wins by Year 2)",
     excerpt: "Everyone says WordPress is cheap. They're not counting hosting, plugins, maintenance, security, and lost revenue. We ran the numbers. The results will change how you think about your website.",
     category: "Cost Analysis",
     readTime: "12 min",
@@ -607,8 +607,8 @@ export const blogPosts: BlogPost[] = [
     illustrationType: 'cost',
     lastModified: "2026-02-20",
     faqs: [
-      { question: "What is the total cost of WordPress over 3 years?", answer: "The average WordPress business site costs $8,000-$15,000 over 3 years when you add hosting ($1,800-$4,800/yr), premium plugins ($500-$1,000/yr), developer maintenance ($1,200-$2,400/yr), and security tools ($200-$400/yr). Most business owners only count the $50/month hosting and ignore everything else." },
-      { question: "Is a custom website cheaper than WordPress long-term?", answer: "Yes, typically after 18-24 months. A custom Next.js site costs $8,000-$15,000 to build but only $0-$240/year to host. Compared to WordPress at $3,600-$8,400/year in recurring costs, the custom site pays for itself within 2 years and saves money every year after." },
+      { question: "What is the total cost of WordPress over 3 years?", answer: "The average WordPress business site costs $8,100 to $18,300 over 3 years when you add hosting ($1,800 to $4,800/yr), premium plugins ($500 to $1,000/yr), developer maintenance ($1,200 to $2,400/yr), and security tools ($200 to $400/yr). Most business owners only count the $50/month hosting and ignore everything else." },
+      { question: "Is a custom website cheaper than WordPress long-term?", answer: "Yes, typically after 12 to 18 months. A custom Next.js site runs $3,500+ Growth or $5,000 to $10,000+ Scale, with a $500 Founder Portfolio entry point. Hosting is $0 to $240/year. Compared to WordPress at $3,600 to $8,400/year in recurring costs, the custom site pays for itself quickly and saves money every year after." },
       { question: "What are the hidden costs of WordPress?", answer: "The hidden costs of WordPress include: premium plugins ($500-$2,000/year), developer maintenance for updates and conflicts ($100-$200/month), security incidents ($1,500-$5,000 per hack), downtime losses, and performance optimization tools. Most business owners underestimate total WordPress cost by 3-5x." },
       { question: "Does WordPress cost more than Squarespace or Wix?", answer: "WordPress costs more than Squarespace and Wix for most businesses because of hosting, plugins, and maintenance. However, all three have hidden ongoing costs. Custom coded sites have the highest upfront cost but the lowest total cost of ownership over 3+ years." },
       { question: "What happens to my WordPress site costs if it gets hacked?", answer: "The average cost of a WordPress hack is $3,000-$10,000 including cleanup, data recovery, potential downtime, and reputation damage. Sites with premium security plugins reduce but don't eliminate this risk. Coded sites have no database to hack and no plugins to exploit." },
@@ -759,7 +759,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "wordpress-plugins-destroy-speed",
-    title: "WordPress Plugins Are Destroying Your Speed: 61% Slower per 10 Plugins (2026)",
+    title: "WordPress Plugins Killing Speed: The Real Cost of 30+ Plugins (2026)",
     excerpt: "Most WordPress sites with 30+ plugins score 35/100 on mobile PageSpeed. See how to calculate the exact revenue you're losing, and what to do about it.",
     category: "Performance",
     readTime: "10 min",
@@ -866,7 +866,7 @@ export const blogPosts: BlogPost[] = [
       { question: "How much money am I losing from a slow Shopify store?", answer: "For every second of load time over 2 seconds, you lose approximately 7% of conversions. A Shopify store making $500K/year with a 4-second load time is losing $75K-$150K annually to visitors who bounce before the page loads." },
       { question: "Why is my Shopify store so slow on mobile?", answer: "Shopify themes load 800KB-1.5MB of theme code plus 400KB-800KB of app scripts on every page. Combined with unoptimized images, the average Shopify store takes 3.5-5 seconds to load on mobile, well above the 2-second threshold where customers start leaving." },
       { question: "How do I speed up my Shopify store?", answer: "Quick wins: remove unused apps, compress images, and minimize custom code in theme.liquid. But these only get you to 2.5-3 seconds. To reach under 1 second load times, you need a custom headless storefront that replaces the slow Liquid theme entirely." },
-      { question: "What is the ROI of fixing Shopify speed?", answer: "For a store doing $500K/year at a 4-second load time, fixing speed to under 1 second can recover $75K-$150K in annual revenue. A headless storefront typically costs $15,000-$30,000 and pays for itself within 3-6 months through recovered conversions and reduced app fees." }
+      { question: "What is the ROI of fixing Shopify speed?", answer: "For a store doing $500K/year at a 4-second load time, fixing speed to under 1 second can recover $75K to $150K in annual revenue. A headless storefront runs $3,500+ Growth or $5,000 to $10,000+ Scale, with a $500 Founder Portfolio entry point. It pays for itself within 1 to 3 months through recovered conversions and reduced app fees." }
     ]
   },
   {
@@ -995,7 +995,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "what-is-headless-commerce",
-    title: "What Is Headless Commerce? Plain-English Guide for Store Owners",
+    title: "What Is Headless Commerce? How Stores Cut Load Times From 4s to 0.8s (2026 Guide)",
     excerpt: "Headless commerce lets you keep your Shopify backend while replacing the slow theme with a custom, lightning-fast frontend. Best of both worlds. Here's what it means, what it costs, and whether your store actually needs it.",
     category: "E-Commerce",
     readTime: "12 min",
@@ -1012,7 +1012,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: "How much does a headless commerce build cost?",
-        answer: "A headless storefront typically costs $5,000 to $25,000 for a professional build, depending on the number of pages, custom features, and integrations. AI assisted development has brought costs down significantly. Ongoing hosting is $0 to $20 per month on Vercel versus $30 to $300 per month for traditional e-commerce hosting. Most stores recoup the investment quickly through higher conversion rates and lower operating costs."
+        answer: "A headless storefront starts at $1,500 in our Starter tier, lands at $3,500 in our Growth tier for most stores, and runs $5,000 to $10,000 in our Scale tier for larger catalogs and custom integrations. Ongoing hosting is $0 to $20 per month on Vercel versus $30 to $300 per month for traditional e-commerce hosting. Most stores recoup the investment quickly through higher conversion rates and lower operating costs."
       },
       {
         question: "Do I need headless commerce for my store?",
@@ -1028,11 +1028,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: "What are some headless commerce examples?",
-        answer: "Major brands running headless storefronts include Allbirds (Next.js + Shopify Storefront API), Nike (custom headless frontend for nike.com), and Gymshark (headless architecture for handling flash sale traffic). Shopify Hydrogen is Shopify's own headless framework built on React. Smaller brands like Kotn, FIGS, and Pangaia also run headless. You do not need to be a billion-dollar brand to benefit."
+        answer: "Major brands running headless storefronts include Allbirds (Next.js + Shopify Storefront API) and Nike (custom headless frontend for nike.com). Shopify Hydrogen is Shopify's own headless framework built on React and React Router. Smaller brands prove the same model at their scale: we rebuilt MyCustomPatches for Matt Conner from WooCommerce to a custom Next.js frontend scoring 97 on mobile PageSpeed. You do not need to be a billion-dollar brand to benefit."
       },
       {
         question: "What are the pros and cons of headless commerce?",
-        answer: "Pros: 3 to 5x faster mobile load times, full design control, better SEO rankings, $0 to $20/month hosting, works with any backend (Shopify, WooCommerce, BigCommerce), and multi-channel selling from one backend. Cons: higher upfront build cost ($5,000 to $25,000), requires a developer for structural changes, takes 2 to 4 weeks to build, and some Shopify apps need API replacements. Content updates still use a visual CMS dashboard."
+        answer: "Pros: 3 to 5x faster mobile load times, full design control, better SEO rankings, $0 to $20/month hosting, works with any backend (Shopify, WooCommerce, BigCommerce), and multi-channel selling from one backend. Cons: higher upfront build cost ($1,500+ Starter, $3,500+ Growth, or $5,000 to $10,000+ Scale), requires a developer for structural changes, takes 2 to 4 weeks to build, and some Shopify apps need API replacements. Content updates still use a visual CMS dashboard."
       }
     ]
   },

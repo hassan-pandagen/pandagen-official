@@ -19,7 +19,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "Divi Theme Slow in 2026? Real Scores and the Only Fix That Works",
-    description: "1.58 million businesses use Divi. 60% of WordPress sites fail Core Web Vitals. Slow sites cost businesses an average of $20,172 per year. Here is what your Divi site is actually scoring and what it is costing you.",
+    description: "1.58 million sites run Divi. 60% fail Core Web Vitals and cost owners $20,172/year in lost revenue. Real Divi PageSpeed scores and the only fix that works.",
     alternates: {
         canonical: "https://www.pandacodegen.com/blog/divi-theme-slow",
     },
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
         description: "1.58 million businesses use Divi. 60% of WordPress sites fail Core Web Vitals. Slow sites cost businesses an average of $20,172 per year.",
         type: "article",
         publishedTime: "2026-04-08",
-        authors: ["Hassan"],
+        authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/divi-theme-slow",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
@@ -55,7 +55,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -71,7 +71,7 @@ const articleSchema = {
             "articleSection": "WordPress",
             "keywords": ["Divi theme slow", "Divi PageSpeed 2026", "Divi Core Web Vitals", "Divi business cost", "WordPress speed optimization"],
             "timeRequired": "PT11M",
-            "wordCount": 2600,
+            "wordCount": 1800,
             "about": [
                 { "@type": "Thing", "name": "Divi Theme", "description": "A WordPress page builder theme by Elegant Themes used on over 1.5 million active websites" },
                 { "@type": "Thing", "name": "Core Web Vitals", "description": "Google performance metrics used as search ranking signals: LCP, INP, and CLS" },
@@ -141,13 +141,7 @@ const articleSchema = {
         {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/blog/divi-theme-slow#faq",
-            "mainEntity": [
-                { "@type": "Question", "name": "Why is my Divi website so slow?", "acceptedAnswer": { "@type": "Answer", "text": "Divi loads up to 860KB of CSS on every page including styles for modules not used on that page, plus render-blocking JavaScript from the page builder. A typical unoptimized Divi site scores 64 to 68 on mobile PageSpeed with an LCP of 5.8 seconds. Caching plugins can raise that by 10 to 15 points but cannot remove the builder overhead baked into the platform. The ceiling for a fully optimized Divi site is around 70 on mobile." } },
-                { "@type": "Question", "name": "What PageSpeed score does a Divi site get in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Independent testing by WP Rocket found Divi scores 64 to 68 on mobile PageSpeed unoptimized, with an LCP of 5.8 seconds and a CLS of 0.196, both failing Google's thresholds. A fully optimized Divi site with WP Rocket, a CDN, and image compression reaches 70 to 80 on mobile. Custom Next.js sites built without Divi consistently score 95 to 100." } },
-                { "@type": "Question", "name": "How much revenue is my slow Divi site costing me?", "acceptedAnswer": { "@type": "Answer", "text": "A 2025 Liquid Web survey of 206 businesses found that 67% are actively losing revenue to slow websites, with an average loss of $20,172 per year. Deloitte tracked 37 brands and found a 0.1-second improvement in load speed increased retail conversions by 8.4% and average order values by 9.2%. Portent research found a site loading in 1 second converts 3 times higher than one loading in 5 seconds for B2B businesses." } },
-                { "@type": "Question", "name": "Will Divi 5 fix the speed problems?", "acceptedAnswer": { "@type": "Answer", "text": "Divi 5, released February 26, 2026, reduced the builder JavaScript from 276KB to 45KB, a real improvement on clean demo sites. However, most real-world Divi sites run third-party Divi plugins that have not yet adapted to Divi 5. Elegant Themes themselves advised site owners to wait before migrating production sites. Real-world Divi 5 scores on sites with plugins and content are still well below the 95 to 100 range that custom-coded sites achieve." } },
-                { "@type": "Question", "name": "How much does it cost to migrate from Divi to a faster site?", "acceptedAnswer": { "@type": "Answer", "text": "Our standard Divi migration to custom Next.js starts at $3,000. That includes full design, build, content migration, 301 redirects for every URL, DNS cutover, and post-launch monitoring. The new site scores 95 to 100 on Google PageSpeed and loads in under 1 second. No monthly fees. You own the code. A RannLab case study of a WordPress migration showed 357% year-over-year sales growth after moving away from a slow setup." } }
-            ]
+            "mainEntity": diviFAQs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
         }
     ]
 };
@@ -202,7 +196,7 @@ export default function DiviThemeSlowPage() {
                     </div>
 
                     {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
                         <h3 className="font-bold text-charcoal mb-4">Key Takeaways</h3>
                         <BlogList items={[
                             "Divi scores 64 to 68 on mobile PageSpeed unoptimized, with a load time of 5.8 seconds. That is in Google's red zone.",
@@ -217,7 +211,7 @@ export default function DiviThemeSlowPage() {
                     <div className="space-y-8">
 
                         <BlogText>
-                            A business owner reached out to us in February. Her Divi site had been live for three years. She had paid for WP Rocket, a CDN, an image optimization plugin, and a developer who spent two days &ldquo;fixing the speed.&rdquo; Total cost: just under $3,000. Her mobile PageSpeed score after all of that: 52.
+                            A business owner reached out to us in February. Her Divi site had been live for three years. She had paid for WP Rocket, a CDN, an image optimization plugin, and a developer who spent two days &ldquo;fixing the speed.&rdquo; Total cost: just under $2,800. Her mobile PageSpeed score after all of that: 52.
                         </BlogText>
 
                         <BlogText>
@@ -265,48 +259,48 @@ export default function DiviThemeSlowPage() {
                             <table className="w-full text-sm border-collapse min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
-                                        <th className="text-left p-3 border border-stone-200 font-semibold">Platform</th>
-                                        <th className="text-left p-3 border border-stone-200 font-semibold">Mobile Score</th>
-                                        <th className="text-left p-3 border border-stone-200 font-semibold">LCP</th>
-                                        <th className="text-left p-3 border border-stone-200 font-semibold">CLS</th>
-                                        <th className="text-left p-3 border border-stone-200 font-semibold">Page Weight</th>
+                                        <th className="text-left p-3 border border-stone-300 font-semibold">Platform</th>
+                                        <th className="text-left p-3 border border-stone-300 font-semibold">Mobile Score</th>
+                                        <th className="text-left p-3 border border-stone-300 font-semibold">LCP</th>
+                                        <th className="text-left p-3 border border-stone-300 font-semibold">CLS</th>
+                                        <th className="text-left p-3 border border-stone-300 font-semibold">Page Weight</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td className="p-3 border border-stone-200 font-medium">GeneratePress</td>
-                                        <td data-label="Mobile Score" className="p-3 border border-stone-200 text-green-600 font-medium">99/100</td>
-                                        <td data-label="LCP" className="p-3 border border-stone-200">0.9s</td>
-                                        <td data-label="CLS" className="p-3 border border-stone-200 text-green-600">0.000</td>
-                                        <td data-label="Page Weight" className="p-3 border border-stone-200">45KB</td>
+                                        <td className="p-3 border border-stone-300 font-medium">GeneratePress</td>
+                                        <td data-label="Mobile Score" className="p-3 border border-stone-300 text-green-600 font-medium">99/100</td>
+                                        <td data-label="LCP" className="p-3 border border-stone-300">0.9s</td>
+                                        <td data-label="CLS" className="p-3 border border-stone-300 text-green-600">0.000</td>
+                                        <td data-label="Page Weight" className="p-3 border border-stone-300">45KB</td>
                                     </tr>
                                     <tr className="bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-medium">Astra</td>
-                                        <td data-label="Mobile Score" className="p-3 border border-stone-200 text-green-600 font-medium">96/100</td>
-                                        <td data-label="LCP" className="p-3 border border-stone-200">1.2s</td>
-                                        <td data-label="CLS" className="p-3 border border-stone-200 text-green-600">0.000</td>
-                                        <td data-label="Page Weight" className="p-3 border border-stone-200">68KB</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Astra</td>
+                                        <td data-label="Mobile Score" className="p-3 border border-stone-300 text-green-600 font-medium">96/100</td>
+                                        <td data-label="LCP" className="p-3 border border-stone-300">1.2s</td>
+                                        <td data-label="CLS" className="p-3 border border-stone-300 text-green-600">0.000</td>
+                                        <td data-label="Page Weight" className="p-3 border border-stone-300">68KB</td>
                                     </tr>
                                     <tr>
-                                        <td className="p-3 border border-stone-200 font-medium">Elementor</td>
-                                        <td data-label="Mobile Score" className="p-3 border border-stone-200 text-amber-600 font-medium">75/100</td>
-                                        <td data-label="LCP" className="p-3 border border-stone-200">5.4s</td>
-                                        <td data-label="CLS" className="p-3 border border-stone-200 text-green-600">0.000</td>
-                                        <td data-label="Page Weight" className="p-3 border border-stone-200">220KB</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Elementor</td>
+                                        <td data-label="Mobile Score" className="p-3 border border-stone-300 text-amber-600 font-medium">75/100</td>
+                                        <td data-label="LCP" className="p-3 border border-stone-300">5.4s</td>
+                                        <td data-label="CLS" className="p-3 border border-stone-300 text-green-600">0.000</td>
+                                        <td data-label="Page Weight" className="p-3 border border-stone-300">220KB</td>
                                     </tr>
                                     <tr className="bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-medium text-red-700">Divi (unoptimized)</td>
-                                        <td data-label="Mobile Score" className="p-3 border border-stone-200 text-red-600 font-medium">64/100</td>
-                                        <td data-label="LCP" className="p-3 border border-stone-200 text-red-600">5.8s</td>
-                                        <td data-label="CLS" className="p-3 border border-stone-200 text-amber-600">0.196</td>
-                                        <td data-label="Page Weight" className="p-3 border border-stone-200">310KB</td>
+                                        <td className="p-3 border border-stone-300 font-medium text-red-700">Divi (unoptimized)</td>
+                                        <td data-label="Mobile Score" className="p-3 border border-stone-300 text-red-600 font-medium">64/100</td>
+                                        <td data-label="LCP" className="p-3 border border-stone-300 text-red-600">5.8s</td>
+                                        <td data-label="CLS" className="p-3 border border-stone-300 text-amber-600">0.196</td>
+                                        <td data-label="Page Weight" className="p-3 border border-stone-300">310KB</td>
                                     </tr>
                                     <tr>
-                                        <td className="p-3 border border-stone-200 font-medium">Custom Next.js</td>
-                                        <td data-label="Mobile Score" className="p-3 border border-stone-200 text-green-600 font-medium">98/100</td>
-                                        <td data-label="LCP" className="p-3 border border-stone-200">0.8s</td>
-                                        <td data-label="CLS" className="p-3 border border-stone-200 text-green-600">0.000</td>
-                                        <td data-label="Page Weight" className="p-3 border border-stone-200">18KB</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Custom Next.js</td>
+                                        <td data-label="Mobile Score" className="p-3 border border-stone-300 text-green-600 font-medium">98/100</td>
+                                        <td data-label="LCP" className="p-3 border border-stone-300">0.8s</td>
+                                        <td data-label="CLS" className="p-3 border border-stone-300 text-green-600">0.000</td>
+                                        <td data-label="Page Weight" className="p-3 border border-stone-300">18KB</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -399,41 +393,41 @@ export default function DiviThemeSlowPage() {
                             <table className="w-full text-sm border-collapse min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
-                                        <th className="text-left p-3 border border-stone-200 font-semibold">What You Tried</th>
-                                        <th className="text-left p-3 border border-stone-200 font-semibold">Cost</th>
-                                        <th className="text-left p-3 border border-stone-200 font-semibold">Score After</th>
+                                        <th className="text-left p-3 border border-stone-300 font-semibold">What You Tried</th>
+                                        <th className="text-left p-3 border border-stone-300 font-semibold">Cost</th>
+                                        <th className="text-left p-3 border border-stone-300 font-semibold">Score After</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td className="p-3 border border-stone-200">WP Rocket or LiteSpeed Cache</td>
-                                        <td data-label="Cost" className="p-3 border border-stone-200">$49 to $199/year</td>
-                                        <td data-label="Score After" className="p-3 border border-stone-200 text-amber-600">+10 to 15 points</td>
+                                        <td className="p-3 border border-stone-300">WP Rocket or LiteSpeed Cache</td>
+                                        <td data-label="Cost" className="p-3 border border-stone-300">$49 to $199/year</td>
+                                        <td data-label="Score After" className="p-3 border border-stone-300 text-amber-600">+10 to 15 points</td>
                                     </tr>
                                     <tr className="bg-stone-50">
-                                        <td className="p-3 border border-stone-200">CDN (Cloudflare Pro, BunnyCDN)</td>
-                                        <td data-label="Cost" className="p-3 border border-stone-200">$20 to $200/month</td>
-                                        <td data-label="Score After" className="p-3 border border-stone-200 text-amber-600">+5 to 8 points</td>
+                                        <td className="p-3 border border-stone-300">CDN (Cloudflare Pro, BunnyCDN)</td>
+                                        <td data-label="Cost" className="p-3 border border-stone-300">$20 to $200/month</td>
+                                        <td data-label="Score After" className="p-3 border border-stone-300 text-amber-600">+5 to 8 points</td>
                                     </tr>
                                     <tr>
-                                        <td className="p-3 border border-stone-200">Developer optimization work</td>
-                                        <td data-label="Cost" className="p-3 border border-stone-200">$500 to $2,000</td>
-                                        <td data-label="Score After" className="p-3 border border-stone-200 text-amber-600">+5 to 10 points</td>
+                                        <td className="p-3 border border-stone-300">Developer optimization work</td>
+                                        <td data-label="Cost" className="p-3 border border-stone-300">$500 to $2,000</td>
+                                        <td data-label="Score After" className="p-3 border border-stone-300 text-amber-600">+5 to 10 points</td>
                                     </tr>
                                     <tr className="bg-stone-50">
-                                        <td className="p-3 border border-stone-200">Faster hosting plan</td>
-                                        <td data-label="Cost" className="p-3 border border-stone-200">$50 to $300/month</td>
-                                        <td data-label="Score After" className="p-3 border border-stone-200 text-amber-600">+3 to 5 points</td>
+                                        <td className="p-3 border border-stone-300">Faster hosting plan</td>
+                                        <td data-label="Cost" className="p-3 border border-stone-300">$50 to $300/month</td>
+                                        <td data-label="Score After" className="p-3 border border-stone-300 text-amber-600">+3 to 5 points</td>
                                     </tr>
                                     <tr>
-                                        <td className="p-3 border border-stone-200">Image optimization plugin</td>
-                                        <td data-label="Cost" className="p-3 border border-stone-200">$50 to $150/year</td>
-                                        <td data-label="Score After" className="p-3 border border-stone-200 text-amber-600">+3 to 7 points</td>
+                                        <td className="p-3 border border-stone-300">Image optimization plugin</td>
+                                        <td data-label="Cost" className="p-3 border border-stone-300">$50 to $150/year</td>
+                                        <td data-label="Score After" className="p-3 border border-stone-300 text-amber-600">+3 to 7 points</td>
                                     </tr>
                                     <tr className="bg-stone-50">
-                                        <td className="p-3 border border-stone-200 font-semibold">Total spent</td>
-                                        <td data-label="Cost" className="p-3 border border-stone-200 font-semibold">$1,500 to $5,000+</td>
-                                        <td data-label="Score After" className="p-3 border border-stone-200 text-amber-600 font-semibold">Final score: 65 to 78</td>
+                                        <td className="p-3 border border-stone-300 font-semibold">Total spent</td>
+                                        <td data-label="Cost" className="p-3 border border-stone-300 font-semibold">$1,500 to $5,000+</td>
+                                        <td data-label="Score After" className="p-3 border border-stone-300 text-amber-600 font-semibold">Final score: 65 to 78</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -450,7 +444,7 @@ export default function DiviThemeSlowPage() {
                     </div>
 
                     {/* Mid CTA */}
-                    <div className="my-12 bg-charcoal rounded-xl p-8 text-white text-center">
+                    <div className="my-8 md:my-12 bg-charcoal rounded-xl p-8 text-white text-center">
                         <p className="text-sm font-semibold uppercase tracking-widest text-stone-400 mb-3">Free Audit</p>
                         <h3 className="text-2xl font-bold mb-3">Find Out Exactly What Your Divi Site Is Costing You</h3>
                         <p className="text-stone-300 mb-6 max-w-lg mx-auto">We run your site through 11 checks: PageSpeed, Core Web Vitals, INP, security, mobile performance, and more. You get the actual numbers and what they mean for your revenue.</p>
@@ -468,7 +462,7 @@ export default function DiviThemeSlowPage() {
                         </BlogText>
 
                         <BlogText>
-                            A RannLab case study of a <Link href="/services/woocommerce" className="text-cognac hover:underline">WooCommerce site migration</Link> found 357% year-over-year sales growth after moving off the slow platform. A luxury retail brand in Dallas that migrated to a custom Next.js frontend saw a 70% increase in mobile conversion rate and paid for the entire project in under 6 months.
+                            A RannLab case study of a <Link href="/services/woocommerce" className="text-cognac hover:underline">WooCommerce site migration</Link> found 357% year-over-year sales growth after moving off the slow platform. At Deloitte's measured rate of 8% conversion lift per 100ms, moving a Divi site from 5.8s to 1.0s represents a realistic 40%+ conversion improvement. For the Elementor parallel, see <Link href="/blog/elementor-kills-seo" className="text-cognac hover:underline">how Elementor kills SEO</Link>, and for the full plugin story <Link href="/blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline">why WordPress plugins destroy speed</Link>. If you are considering leaving WordPress entirely, see <Link href="/blog/wordpress-killer" className="text-cognac hover:underline">our WordPress replacement breakdown</Link> and the <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress vs Next.js comparison</Link>.
                         </BlogText>
 
                         <BlogText>
@@ -495,7 +489,7 @@ export default function DiviThemeSlowPage() {
                     </div>
 
                     {/* Bottom CTA */}
-                    <div className="my-12 border border-stone-200 rounded-xl p-8 text-center">
+                    <div className="my-8 md:my-12 border border-stone-200 rounded-xl p-8 text-center">
                         <p className="text-sm font-semibold uppercase tracking-widest text-cognac mb-3">Done With Divi</p>
                         <h3 className="text-2xl font-bold text-charcoal mb-3">We Migrate Divi Sites to Custom Next.js</h3>
                         <p className="text-stone-600 mb-6 max-w-lg mx-auto">Your content, your domain, your URLs, all preserved. The new site scores 95 to 100 on PageSpeed and loads in under 1 second. No monthly fees, no plugins, no Divi.</p>

@@ -1,6 +1,6 @@
 import { ArrowLeft, Calendar, Clock, ArrowRight, ExternalLink, Globe, ShoppingCart, CheckCircle2, AlertTriangle, Zap, TrendingUp, RefreshCw } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,8 +11,8 @@ import type { Metadata } from "next";
 
 const ucpFAQs = blogPosts.find(p => p.id === 'google-universal-commerce-protocol-what-it-means-for-your-store')?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const UCPFlowAnimation = dynamic(() => import("@/components/blog/UCPFlowAnimation"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const UCPFlowAnimation = lazyLoad(() => import("@/components/blog/UCPFlowAnimation"));
 
 export const metadata: Metadata = {
     title: { absolute: "Google Universal Commerce Protocol 2026: Buy Without Visiting" },
@@ -48,12 +48,12 @@ const articleSchema = {
             "description": "Google's Universal Commerce Protocol lets customers buy products directly from search results. Here is what every store owner needs to understand and how to prepare.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-21T00:00:00-05:00",
-            "dateModified": "2026-04-16T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder & Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -112,60 +112,14 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-21T00:00:00-05:00",
-            "dateModified": "2026-04-16T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/google-universal-commerce-protocol-what-it-means-for-your-store#breadcrumb" },
             "inLanguage": "en-US"
         },
         {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/blog/google-universal-commerce-protocol-what-it-means-for-your-store#faq",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "What is Google's Universal Commerce Protocol (UCP)?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "UCP is a new agreement between Google, AI assistants like ChatGPT, and major retailers that lets AI buy products on behalf of customers without them ever visiting your website. Think of it as giving AI a key to your store so it can walk in, check what's available, grab the right product, and complete the purchase, all while the customer stays inside Google or their AI app. Google built this with Shopify, Etsy, Wayfair, Target, and Walmart." }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Can customers really buy from my store without visiting my website?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Yes. As of February 2026, US shoppers can already buy from Etsy and Wayfair directly inside Google's AI Mode without ever clicking to those websites. The customer types a question, the AI finds the right product with price and availability, and checkout happens through Google Pay or PayPal, all inside Google. Your store gets the sale. Your website never gets the visit." }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Which e-commerce platforms are ready for Google UCP?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Shopify is the most ready. They co-built UCP with Google, so the connection is mostly a settings flip. WordPress/WooCommerce requires a developer to manually build and maintain the connection. Wix and Squarespace have no UCP support announced at all, which means stores on those platforms may become invisible to AI shopping. Custom-built stores (like the ones we build at PandaCodeGen) are the most flexible. We connect them directly using the Model Context Protocol (MCP), a universal translator that lets AI assistants from Google, ChatGPT, and Bing all read your store simultaneously." }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Will I lose sales if customers buy without visiting my website?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "You won't lose the sale. You'll still receive the order and payment. What changes is the buying journey. You lose the chance to show that customer other products or capture their email. But the upside: customers who buy through AI have already made up their mind. They convert at higher rates and abandon carts less. The stores that win will be visible to AI (picking up AI-driven sales) while also maintaining a great website for customers who visit directly." }
-                },
-                {
-                    "@type": "Question",
-                    "name": "When should I start preparing for Google UCP?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Now, and this isn't a marketing line. UCP won't be mainstream for most stores for another 12-18 months. That gap is your advantage. The businesses that invested in Google SEO in 2010 dominated their markets by 2014 while late movers were paying thousands per month in ads just to keep up. UCP is that same curve. The stores preparing now will be the ones Google's AI recommends by default when mass adoption hits." }
-                },
-                {
-                    "@type": "Question",
-                    "name": "What is a Headless CMS and why does it matter for Google UCP?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "A Headless CMS (like Sanity, Contentful, or Hygraph) is a content system where your product information lives separately from your website design. Think of it as a warehouse: your product data, descriptions, pricing, and availability all sit in one central place and get delivered to wherever they're needed: your website, Google's AI, ChatGPT, Bing Copilot, all at once. Traditional platforms like WordPress or Shopify bundle your content with your website, which makes it harder for AI agents to read your data cleanly. A Headless CMS gives Google's UCP a direct, clean feed of your products, and that's what gets you recommended first." }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How is Google UCP different from Google Shopping?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Google Shopping shows your products as ads or listings in search results, and the customer still has to click through to your website and check out themselves. UCP goes further: the AI assistant handles the entire buying decision and completes the transaction inside Google, without the customer ever leaving. Google Shopping is passive visibility. UCP is active selling. Your store doesn't just show up in results, it participates in the sale." }
-                },
-                {
-                    "@type": "Question",
-                    "name": "What happens to my website traffic when customers buy through Google AI?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Direct website traffic will drop over time as more purchases happen through AI channels. That's the honest answer. But you gain a new sales channel that converts at higher rates. AI-driven buyers have already made their decision before they hit checkout, so they abandon carts less and return items less often. The move isn't to protect your website traffic at all costs. It's to make sure your store is visible in both places: your website for customers who browse, and Google's AI for customers who are ready to buy right now." }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How much does it cost to make my store UCP-ready?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "It depends on where you're starting. On Shopify, the base UCP connection is built in. The main cost is optimizing your product data so AI picks you over competitors. On WordPress, you'll need a developer to build and maintain the integration manually, and it gets expensive as UCP evolves. On Wix or Squarespace, there's no UCP path yet. The most cost-effective long-term option is a custom Next.js store with a Headless CMS like Sanity: lower monthly costs than Shopify or WooCommerce, and built from the ground up to give AI everything it needs to recommend your products." }
-                }
-            ]
+            "mainEntity": ucpFAQs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
         },
         {
             "@type": "Organization",
@@ -265,7 +219,7 @@ export default function UCPBlogPage() {
                     </BlogText>
 
                     {/* April 2026 Update */}
-                    <div className="my-10 p-6 border border-cognac/30 bg-cognac/5 rounded-2xl">
+                    <div className="my-6 md:my-10 p-6 border border-cognac/30 bg-cognac/5 rounded-2xl">
                         <div className="flex items-center gap-2 mb-3">
                             <RefreshCw className="w-4 h-4 text-cognac" />
                             <span className="text-cognac text-xs font-bold uppercase tracking-wider">April 2026 Update</span>
@@ -351,7 +305,7 @@ export default function UCPBlogPage() {
                         If you&apos;re thinking &quot;this sounds like a problem for big retailers, not me&quot;, that&apos;s exactly what small store owners thought about Google SEO in 2008. The businesses that ignored it lost a decade of free traffic to competitors who didn&apos;t.
                     </BlogText>
 
-                    <h3 className="text-xl font-bold text-charcoal mt-10 mb-4">1. Your Product Information Is Your New Sales Rep</h3>
+                    <h3 className="text-xl font-bold text-charcoal mt-6 md:mt-10 mb-4">1. Your Product Information Is Your New Sales Rep</h3>
 
                     <BlogText>
                         When an AI is deciding which product to recommend, it doesn&apos;t look at your website design, your brand colors, or your clever copy. It reads your product data. The raw information behind your listings.
@@ -378,7 +332,7 @@ export default function UCPBlogPage() {
                         If your product data is thin or outdated, AI agents skip your store entirely. It&apos;s not a penalty. It&apos;s more like you simply don&apos;t exist in their search results.
                     </BlogText>
 
-                    <h3 className="text-xl font-bold text-charcoal mt-10 mb-4">2. Your Platform Decides Whether You&apos;re Visible or Invisible</h3>
+                    <h3 className="text-xl font-bold text-charcoal mt-6 md:mt-10 mb-4">2. Your Platform Decides Whether You&apos;re Visible or Invisible</h3>
 
                     <BlogText>
                         Not every store can connect to UCP. Whether yours can, and how easily it does, depends almost entirely on what platform you&apos;re built on.
@@ -428,14 +382,14 @@ export default function UCPBlogPage() {
                         </div>
                     </div>
 
-                    <h3 className="text-xl font-bold text-charcoal mt-10 mb-4">3. The Zero-Click Reality. Is It the End of Your Website?</h3>
+                    <h3 className="text-xl font-bold text-charcoal mt-6 md:mt-10 mb-4">3. The Zero-Click Reality. Is It the End of Your Website?</h3>
 
                     <BlogText>
                         The honest concern is this: if a customer buys through AI without visiting your site, you miss the chance to show them other products, capture their email, and build a relationship.
                     </BlogText>
 
                     <BlogText>
-                        That&apos;s real. But here&apos;s the other side: those AI-driven customers are the most qualified buyers in the market. They already know exactly what they want. They&apos;re not browsing. They&apos;re buying. <strong>Conversion rates on AI-driven purchases are significantly higher than standard website traffic.</strong>
+                        That&apos;s real. But here&apos;s the other side: those AI-driven customers are the most qualified buyers in the market. They already know exactly what they want. They&apos;re not browsing. They&apos;re buying. <strong>Early reports suggest AI-driven buyers convert at higher rates because they arrive with purchase intent already formed.</strong>
                     </BlogText>
 
                     <BlogText>
@@ -567,7 +521,7 @@ export default function UCPBlogPage() {
                                 <div className="w-8 h-8 rounded-full bg-stone-100 text-charcoal font-bold text-sm flex items-center justify-center shrink-0 mt-0.5">4</div>
                                 <div>
                                     <h3 className="text-lg font-bold text-charcoal mb-2">Make Your Site Fast</h3>
-                                    <p className="text-stone-600 text-sm leading-relaxed">AI agents don&apos;t just read your product data. They also check your site speed before recommending you. A slow site signals unreliable infrastructure. Stores that score 90+ on Google PageSpeed are prioritized. Check yours at <strong className="text-charcoal">pagespeed.web.dev</strong>. If you&apos;re below 70 on mobile, that&apos;s hurting you now and will hurt you more as UCP scales. Our guide on <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">achieving 100/100 PageSpeed</Link> covers the exact steps.</p>
+                                    <p className="text-stone-600 text-sm leading-relaxed">AI agents don&apos;t just read your product data. They also check your site speed before recommending you. A slow site signals unreliable infrastructure. Fast sites reduce abandonment and signal reliable infrastructure, both of which matter when AI agents choose which store to recommend. Check yours at <strong className="text-charcoal">pagespeed.web.dev</strong>. If you&apos;re below 70 on mobile, that&apos;s hurting you now and will hurt you more as UCP scales. Our guide on <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">achieving 100/100 PageSpeed</Link> covers the exact steps.</p>
                                 </div>
                             </div>
                         </div>
@@ -651,7 +605,7 @@ export default function UCPBlogPage() {
                     </BlogText>
 
                     {/* Sources */}
-                    <div className="my-12 p-8 border border-stone-200 bg-white rounded-2xl shadow-card">
+                    <div className="my-8 md:my-12 p-8 border border-stone-200 bg-white rounded-2xl shadow-card">
                         <h3 className="text-2xl font-bold text-charcoal mb-6 flex items-center gap-2">
                             <ExternalLink className="w-6 h-6 text-charcoal" />
                             Sources &amp; Further Reading
@@ -712,7 +666,7 @@ export default function UCPBlogPage() {
                     </div>
 
                     {/* CTA */}
-                    <div className="my-12 p-8 bg-stone-50 border border-stone-200 rounded-2xl">
+                    <div className="my-8 md:my-12 p-8 bg-stone-50 border border-stone-200 rounded-2xl">
                         <h3 className="text-2xl font-bold text-charcoal mb-2">We&apos;re Already Building This for Clients</h3>
                         <p className="text-charcoal text-sm font-medium mb-4">No other agency is doing this yet</p>
                         <p className="text-stone-600 mb-6 leading-relaxed">
@@ -722,17 +676,9 @@ export default function UCPBlogPage() {
                             Written by Hassan Jamal, Founder of PandaCodeGen, a development agency helping e-commerce brands migrate to custom-built, AI-ready storefronts built for where online shopping is going, not where it&apos;s been.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <button
-                                data-cal-namespace="discovery"
-                                data-cal-link="pandagen/discovery"
-                                data-cal-config='{"layout":"month_view"}'
-                                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-xl hover:bg-stone-800 transition-all"
-                            >
-                                Get a Free AI Readiness Audit
-                                <ArrowRight className="w-5 h-5" />
-                            </button>
-                            <Link href="/services/ecommerce?ref=blog/google-universal-commerce-protocol-what-it-means-for-your-store" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white border border-stone-200 text-charcoal font-bold rounded-xl hover:bg-stone-50 transition-colors">
+                            <Link href="/services/ecommerce?ref=blog/google-universal-commerce-protocol-what-it-means-for-your-store" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-xl hover:bg-stone-800 transition-all">
                                 See E-Commerce Services
+                                <ArrowRight className="w-5 h-5" />
                             </Link>
                         </div>
                     </div>

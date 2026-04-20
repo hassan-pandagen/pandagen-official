@@ -1,6 +1,6 @@
 import { ArrowLeft, ArrowRight, AlertTriangle, TrendingDown, Zap, ShoppingCart } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,9 +11,9 @@ import type { Metadata } from "next";
 
 const postFAQs = blogPosts.find(p => p.id === "woocommerce-too-slow")?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
-const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: { absolute: "WooCommerce Too Slow? How to Fix & Speed It Up (2026)" },
@@ -66,7 +66,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -196,7 +196,7 @@ export default function WooCommerceTooSlowPage() {
 
                     {/* Executive Summary */}
                     <div
-                        className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12"
+                        className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12"
                         data-speakable="true"
                     >
                         <p className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-4">Key Facts</p>
@@ -246,36 +246,36 @@ export default function WooCommerceTooSlowPage() {
                             <table className="w-full border-collapse text-sm min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
-                                        <th className="border border-stone-200 px-4 py-3 text-left font-semibold text-charcoal">Metric</th>
-                                        <th className="border border-stone-200 px-4 py-3 text-left font-semibold text-charcoal">Typical WooCommerce</th>
-                                        <th className="border border-stone-200 px-4 py-3 text-left font-semibold text-charcoal">Google&apos;s &quot;Good&quot; Threshold</th>
+                                        <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">Metric</th>
+                                        <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">Typical WooCommerce</th>
+                                        <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">Google&apos;s &quot;Good&quot; Threshold</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td className="border border-stone-200 px-4 py-3 text-stone-700">Mobile PageSpeed Score</td>
-                                        <td data-label="Typical WooCommerce" className="border border-stone-200 px-4 py-3 text-red-600 font-medium">30 to 55</td>
-                                        <td data-label="Google's &quot;Good&quot; Threshold" className="border border-stone-200 px-4 py-3 text-green-600 font-medium">90+</td>
+                                        <td className="border border-stone-300 px-4 py-3 text-stone-700">Mobile PageSpeed Score</td>
+                                        <td data-label="Typical WooCommerce" className="border border-stone-300 px-4 py-3 text-red-600 font-medium">30 to 55</td>
+                                        <td data-label="Google's &quot;Good&quot; Threshold" className="border border-stone-300 px-4 py-3 text-green-600 font-medium">90+</td>
                                     </tr>
                                     <tr className="bg-stone-50">
-                                        <td className="border border-stone-200 px-4 py-3 text-stone-700">Largest Contentful Paint (LCP)</td>
-                                        <td data-label="Typical WooCommerce" className="border border-stone-200 px-4 py-3 text-red-600 font-medium">4.5 to 8 seconds</td>
-                                        <td data-label="Google's &quot;Good&quot; Threshold" className="border border-stone-200 px-4 py-3 text-green-600 font-medium">Under 2.5 seconds</td>
+                                        <td className="border border-stone-300 px-4 py-3 text-stone-700">Largest Contentful Paint (LCP)</td>
+                                        <td data-label="Typical WooCommerce" className="border border-stone-300 px-4 py-3 text-red-600 font-medium">4.5 to 8 seconds</td>
+                                        <td data-label="Google's &quot;Good&quot; Threshold" className="border border-stone-300 px-4 py-3 text-green-600 font-medium">Under 2.5 seconds</td>
                                     </tr>
                                     <tr>
-                                        <td className="border border-stone-200 px-4 py-3 text-stone-700">Time to First Byte (TTFB)</td>
-                                        <td data-label="Typical WooCommerce" className="border border-stone-200 px-4 py-3 text-red-600 font-medium">800ms to 2.5 seconds</td>
-                                        <td data-label="Google's &quot;Good&quot; Threshold" className="border border-stone-200 px-4 py-3 text-green-600 font-medium">Under 600ms</td>
+                                        <td className="border border-stone-300 px-4 py-3 text-stone-700">Time to First Byte (TTFB)</td>
+                                        <td data-label="Typical WooCommerce" className="border border-stone-300 px-4 py-3 text-red-600 font-medium">800ms to 2.5 seconds</td>
+                                        <td data-label="Google's &quot;Good&quot; Threshold" className="border border-stone-300 px-4 py-3 text-green-600 font-medium">Under 600ms</td>
                                     </tr>
                                     <tr className="bg-stone-50">
-                                        <td className="border border-stone-200 px-4 py-3 text-stone-700">Total Blocking Time (TBT)</td>
-                                        <td data-label="Typical WooCommerce" className="border border-stone-200 px-4 py-3 text-red-600 font-medium">1,500 to 4,000ms</td>
-                                        <td data-label="Google's &quot;Good&quot; Threshold" className="border border-stone-200 px-4 py-3 text-green-600 font-medium">Under 200ms</td>
+                                        <td className="border border-stone-300 px-4 py-3 text-stone-700">Total Blocking Time (TBT)</td>
+                                        <td data-label="Typical WooCommerce" className="border border-stone-300 px-4 py-3 text-red-600 font-medium">1,500 to 4,000ms</td>
+                                        <td data-label="Google's &quot;Good&quot; Threshold" className="border border-stone-300 px-4 py-3 text-green-600 font-medium">Under 200ms</td>
                                     </tr>
                                     <tr>
-                                        <td className="border border-stone-200 px-4 py-3 text-stone-700">Database queries per page load</td>
-                                        <td data-label="Typical WooCommerce" className="border border-stone-200 px-4 py-3 text-red-600 font-medium">60 to 150 queries</td>
-                                        <td data-label="Google's &quot;Good&quot; Threshold" className="border border-stone-200 px-4 py-3 text-green-600 font-medium">0 (pre-rendered)</td>
+                                        <td className="border border-stone-300 px-4 py-3 text-stone-700">Database queries per page load</td>
+                                        <td data-label="Typical WooCommerce" className="border border-stone-300 px-4 py-3 text-red-600 font-medium">60 to 150 queries</td>
+                                        <td data-label="Google's &quot;Good&quot; Threshold" className="border border-stone-300 px-4 py-3 text-green-600 font-medium">0 (pre-rendered)</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -350,7 +350,7 @@ export default function WooCommerceTooSlowPage() {
                         </BlogText>
 
                         {/* Mid CTA */}
-                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-lg">
+                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-lg">
                             <p className="text-sm font-bold text-charcoal mb-2">Is your WooCommerce store bleeding revenue to slow checkout right now?</p>
                             <p className="text-sm text-stone-500 mb-4">
                                 Drop your store URL when you book. We run your checkout speed live on the call, calculate your monthly conversion loss to the dollar, and give you a fixed migration quote on the spot.
@@ -359,8 +359,8 @@ export default function WooCommerceTooSlowPage() {
                                 Get Free WooCommerce Audit <ArrowRight className="w-4 h-4" />
                             </CalModalButton>
                             <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                              <p className="text-sm text-stone-700 mt-1">$500 for a complete WooCommerce migration. No more $50 to $200/month in hosting bills. No more paying for 15 different tools just to keep your store running. One price, one time, and your monthly website cost drops to $0.</p>
+                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                              <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                             </div>
                         </div>
 
@@ -379,26 +379,26 @@ export default function WooCommerceTooSlowPage() {
                             <table className="w-full border-collapse text-sm min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
-                                        <th className="border border-stone-200 px-4 py-3 text-left font-semibold text-charcoal">Annual Revenue</th>
-                                        <th className="border border-stone-200 px-4 py-3 text-left font-semibold text-charcoal">Current Load Time</th>
-                                        <th className="border border-stone-200 px-4 py-3 text-left font-semibold text-charcoal">Estimated Revenue Lost to Speed</th>
+                                        <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">Annual Revenue</th>
+                                        <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">Current Load Time</th>
+                                        <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">Estimated Revenue Lost to Speed</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td className="border border-stone-200 px-4 py-3 text-stone-700">$100,000</td>
-                                        <td data-label="Current Load Time" className="border border-stone-200 px-4 py-3 text-stone-700">5 seconds</td>
-                                        <td data-label="Estimated Revenue Lost to Speed" className="border border-stone-200 px-4 py-3 text-red-600 font-medium">$15,000 to $25,000/year</td>
+                                        <td className="border border-stone-300 px-4 py-3 text-stone-700">$100,000</td>
+                                        <td data-label="Current Load Time" className="border border-stone-300 px-4 py-3 text-stone-700">5 seconds</td>
+                                        <td data-label="Estimated Revenue Lost to Speed" className="border border-stone-300 px-4 py-3 text-red-600 font-medium">$15,000 to $25,000/year</td>
                                     </tr>
                                     <tr className="bg-stone-50">
-                                        <td className="border border-stone-200 px-4 py-3 text-stone-700">$300,000</td>
-                                        <td data-label="Current Load Time" className="border border-stone-200 px-4 py-3 text-stone-700">6 seconds</td>
-                                        <td data-label="Estimated Revenue Lost to Speed" className="border border-stone-200 px-4 py-3 text-red-600 font-medium">$45,000 to $75,000/year</td>
+                                        <td className="border border-stone-300 px-4 py-3 text-stone-700">$300,000</td>
+                                        <td data-label="Current Load Time" className="border border-stone-300 px-4 py-3 text-stone-700">6 seconds</td>
+                                        <td data-label="Estimated Revenue Lost to Speed" className="border border-stone-300 px-4 py-3 text-red-600 font-medium">$45,000 to $75,000/year</td>
                                     </tr>
                                     <tr>
-                                        <td className="border border-stone-200 px-4 py-3 text-stone-700">$1,000,000</td>
-                                        <td data-label="Current Load Time" className="border border-stone-200 px-4 py-3 text-stone-700">5 to 7 seconds</td>
-                                        <td data-label="Estimated Revenue Lost to Speed" className="border border-stone-200 px-4 py-3 text-red-600 font-medium">$150,000 to $250,000/year</td>
+                                        <td className="border border-stone-300 px-4 py-3 text-stone-700">$1,000,000</td>
+                                        <td data-label="Current Load Time" className="border border-stone-300 px-4 py-3 text-stone-700">5 to 7 seconds</td>
+                                        <td data-label="Estimated Revenue Lost to Speed" className="border border-stone-300 px-4 py-3 text-red-600 font-medium">$150,000 to $250,000/year</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -475,30 +475,30 @@ export default function WooCommerceTooSlowPage() {
                             <table className="w-full border-collapse text-sm min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
-                                        <th className="border border-stone-200 px-4 py-3 text-left font-semibold text-charcoal">Strong fit for headless</th>
-                                        <th className="border border-stone-200 px-4 py-3 text-left font-semibold text-charcoal">Probably not the right time</th>
+                                        <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">Strong fit for headless</th>
+                                        <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">Probably not the right time</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td className="border border-stone-200 px-4 py-3 text-stone-700">Mobile PageSpeed below 60</td>
-                                        <td data-label="Probably not the right time" className="border border-stone-200 px-4 py-3 text-stone-700">Store is brand new with under 20 products</td>
+                                        <td className="border border-stone-300 px-4 py-3 text-stone-700">Mobile PageSpeed below 60</td>
+                                        <td data-label="Probably not the right time" className="border border-stone-300 px-4 py-3 text-stone-700">Store is brand new with under 20 products</td>
                                     </tr>
                                     <tr className="bg-stone-50">
-                                        <td className="border border-stone-200 px-4 py-3 text-stone-700">More than 30 active plugins</td>
-                                        <td data-label="Probably not the right time" className="border border-stone-200 px-4 py-3 text-stone-700">You rely on WooCommerce-specific plugins with no REST API equivalent</td>
+                                        <td className="border border-stone-300 px-4 py-3 text-stone-700">More than 30 active plugins</td>
+                                        <td data-label="Probably not the right time" className="border border-stone-300 px-4 py-3 text-stone-700">You rely on WooCommerce-specific plugins with no REST API equivalent</td>
                                     </tr>
                                     <tr>
-                                        <td className="border border-stone-200 px-4 py-3 text-stone-700">Significant mobile traffic (50%+)</td>
-                                        <td data-label="Probably not the right time" className="border border-stone-200 px-4 py-3 text-stone-700">All revenue comes from paid ads only (speed matters less than offer)</td>
+                                        <td className="border border-stone-300 px-4 py-3 text-stone-700">Significant mobile traffic (50%+)</td>
+                                        <td data-label="Probably not the right time" className="border border-stone-300 px-4 py-3 text-stone-700">All revenue comes from paid ads only (speed matters less than offer)</td>
                                     </tr>
                                     <tr className="bg-stone-50">
-                                        <td className="border border-stone-200 px-4 py-3 text-stone-700">Speed is visibly hurting conversions in your analytics</td>
-                                        <td data-label="Probably not the right time" className="border border-stone-200 px-4 py-3 text-stone-700">You have zero technical support available post-launch</td>
+                                        <td className="border border-stone-300 px-4 py-3 text-stone-700">Speed is visibly hurting conversions in your analytics</td>
+                                        <td data-label="Probably not the right time" className="border border-stone-300 px-4 py-3 text-stone-700">You have zero technical support available post-launch</td>
                                     </tr>
                                     <tr>
-                                        <td className="border border-stone-200 px-4 py-3 text-stone-700">Organic SEO is a primary traffic channel</td>
-                                        <td data-label="Probably not the right time" className="border border-stone-200 px-4 py-3 text-stone-700">Not sure? Book a free call and we will tell you honestly</td>
+                                        <td className="border border-stone-300 px-4 py-3 text-stone-700">Organic SEO is a primary traffic channel</td>
+                                        <td data-label="Probably not the right time" className="border border-stone-300 px-4 py-3 text-stone-700">Not sure? Book a free call and we will tell you honestly</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -534,7 +534,7 @@ export default function WooCommerceTooSlowPage() {
                     </div>
 
                     {/* Bottom CTA */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
                         <h3 className="text-xl font-bold text-charcoal mb-2">Find Out Exactly What Is Slowing Your Store</h3>
                         <p className="text-stone-500 text-sm mb-6">
                             Free WooCommerce speed audit. We will show you your PageSpeed score, which Core Web Vitals you are failing, what each issue costs in monthly revenue, and the exact steps to fix it permanently.
@@ -543,8 +543,8 @@ export default function WooCommerceTooSlowPage() {
                             Get My Free Store Audit <ArrowRight className="w-4 h-4" />
                         </CalModalButton>
                         <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                          <p className="text-sm text-stone-700 mt-1">$500 for a complete WooCommerce migration. No more $50 to $200/month in hosting bills. No more paying for 15 different tools just to keep your store running. One price, one time, and your monthly website cost drops to $0.</p>
+                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                          <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                         </div>
                     </div>
 

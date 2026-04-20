@@ -1,6 +1,6 @@
 import { ArrowLeft, CheckCircle2, XCircle, AlertTriangle } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,12 +11,12 @@ import type { Metadata } from "next";
 
 const agencyFAQs = blogPosts.find(p => p.id === "top-custom-web-development-agencies-usa-2026")?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "Top 10 Custom Web Development Agencies in the USA [2026 Review]",
-    description: "The 10 best custom web development agencies in the USA ranked for 2026. Pricing, tech stack, Clutch scores, hidden costs, and verified reviews compared side by side.",
+    description: "The 10 best US custom web development agencies for 2026. Pricing, tech stack, Clutch scores, and hidden costs compared side by side.",
     alternates: {
         canonical: "/blog/top-custom-web-development-agencies-usa-2026",
     },
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: "Top 10 Custom Web Development Agencies in the USA [2026 Review]",
-        description: "The 10 best custom web development agencies in the USA ranked for 2026. Pricing, tech stack, Clutch scores, hidden costs, and verified reviews compared side by side.",
+        description: "The 10 best US custom web development agencies for 2026. Pricing, tech stack, Clutch scores, and hidden costs compared side by side.",
         type: "article",
         publishedTime: "2026-04-08",
         authors: ["Hassan Jamal"],
@@ -61,7 +61,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder & Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -153,38 +153,7 @@ const articleSchema = {
         {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/blog/top-custom-web-development-agencies-usa-2026#faq",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "Who is the best custom web development agency in the USA for 2026?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Based on pricing transparency, tech stack, and verified client reviews, PandaCodeGen ranks first. They are the only agency on this list that publishes pricing upfront, builds exclusively on Next.js, and guarantees 95 to 100/100 Google PageSpeed on every project. For enterprise budgets over $75,000, 10up and Baunfire have stronger track records with large-scale WordPress and B2B projects respectively." }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How much does a custom web development agency in the USA charge?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "US custom web development agencies typically charge $25,000 to $100,000+ per project. Hourly rates range from $100 to $300 per hour. PandaCodeGen is the only agency on this list with published fixed pricing starting at $8,000 for a complete custom Next.js build. Most agencies require a discovery call before quoting. Watch for change orders that add 15 to 30 percent to the final invoice, post-launch support billed at $150 to $200 per hour, and platform license fees that continue after project delivery." }
-                },
-                {
-                    "@type": "Question",
-                    "name": "What is the best tech stack for a custom website in 2026?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Next.js deployed on Vercel is the leading stack for custom websites in 2026. It delivers static generation for sub-second load times, built-in image and font optimization, and 99 to 100/100 Google PageSpeed scores consistently. WordPress, Drupal, and Webflow are platform-dependent stacks that impose performance ceilings of 55 to 80 on mobile PageSpeed regardless of optimization. The performance gap between a WordPress site and a Next.js site has a direct impact on SEO rankings and conversion rates." }
-                },
-                {
-                    "@type": "Question",
-                    "name": "What hidden costs should I watch for when hiring a web development agency?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "The five most common hidden costs in web development agency contracts: change orders billed at $150 to $200/hr for any scope adjustment after kickoff, post-launch bug fixes billed separately from the project, platform license fees for WordPress plugins ($500 to $2,000/yr) or Webflow CMS ($300 to $500/yr), training costs for learning the agency's CMS, and rebuild costs if you switch agencies since platform-dependent code cannot be migrated without starting over." }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How do I choose a web development agency in the USA?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Ask these five questions before signing with any US web agency: What framework will you build on and what PageSpeed Mobile score will it achieve? Do I own 100% of the source code at project end? What is your change order policy? What does post-launch support cost per hour? Can you share PageSpeed scores for three sites you delivered in the last 12 months? Agencies that cannot answer these directly before a proposal are agencies you should approach with caution." }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Which US web agency has the most verified client reviews?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Among the agencies reviewed here, Huemor has the most verified Clutch reviews with 72 at a 4.8 rating. Lounge Lizard has 43 reviews at 4.8. Baunfire has 32 reviews at 4.9. Barrel and Upstatement have zero verified Clutch reviews despite operating since 2006 and 2008 respectively. Always check Clutch.co rather than testimonials on an agency's own website." }
-                }
-            ]
+            "mainEntity": agencyFAQs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
         }
     ]
 };
@@ -235,12 +204,12 @@ export default function TopWebDevAgenciesPage() {
                     </div>
 
                     {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
                         <h3 className="font-bold text-charcoal mb-4">Key Takeaways</h3>
                         <BlogList items={[
                             "Only 1 of the 10 agencies on this list publishes pricing upfront. The other 9 require a discovery call before quoting, making side-by-side comparison nearly impossible before you invest hours of your time.",
                             "Only 1 agency builds exclusively on Next.js. The other 9 use WordPress, Drupal, Webflow, or Shopify as their primary stack. The performance ceiling for those platforms is 55 to 80 on mobile PageSpeed regardless of optimization.",
-                            "Minimum project budgets range from $8,000 to $100,000+. Four agencies on this list require $75,000 or more just to start a conversation.",
+                            "Minimum project budgets on this list range from $500 to $100,000+. Four agencies require $75,000 or more just to start a conversation.",
                             "Two agencies with 15+ years of operation and Fortune 500 portfolios have zero verified Clutch reviews.",
                             "Change orders, post-launch support fees, and platform license costs regularly add 20 to 40 percent to the final invoice. These are almost never mentioned in initial quotes.",
                             "Disclosure: PandaCodeGen is ranked first. This review is written by Hassan Jamal, founder of PandaCodeGen. All data is independently verifiable on Clutch, Google PageSpeed Insights, and each agency's public website."
@@ -341,17 +310,17 @@ export default function TopWebDevAgenciesPage() {
                             <table className="w-full text-sm border-collapse min-w-[720px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Agency</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Min. Budget</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Primary Stack</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Clutch</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Price Published</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-200">Owns Code</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Agency</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Min. Budget</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Primary Stack</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Clutch</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Price Published</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Owns Code</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {[
-                                        { name: "PandaCodeGen", min: "$8,000", stack: "Next.js (exclusive)", clutch: "5.0 Google · 4.8 Trustpilot", published: true, owns: true },
+                                        { name: "PandaCodeGen", min: "$500", stack: "Next.js (exclusive)", clutch: "5.0 Google · 4.8 Trustpilot", published: true, owns: true },
                                         { name: "10up", min: "$75,000+", stack: "WordPress / Next.js", clutch: "5.0 (1 review)", published: false, owns: false },
                                         { name: "Huemor", min: "$25,000+", stack: "WordPress / Webflow", clutch: "4.8 (72)", published: false, owns: false },
                                         { name: "Baunfire", min: "$75,000+", stack: "Drupal / WordPress", clutch: "4.9 (32)", published: false, owns: false },
@@ -363,16 +332,16 @@ export default function TopWebDevAgenciesPage() {
                                         { name: "Codeable", min: "Any", stack: "WordPress only", clutch: "No profile", published: false, owns: false },
                                     ].map((row, i) => (
                                         <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-stone-50"}>
-                                            <td className="p-3 border border-stone-200 font-medium text-charcoal">{row.name}</td>
-                                            <td data-label="Min. Budget" className="p-3 border border-stone-200">{row.min}</td>
-                                            <td data-label="Primary Stack" className="p-3 border border-stone-200">{row.stack}</td>
-                                            <td data-label="Clutch" className="p-3 border border-stone-200">{row.clutch}</td>
-                                            <td data-label="Price Published" className="p-3 border border-stone-200">
+                                            <td className="p-3 border border-stone-300 font-medium text-charcoal">{row.name}</td>
+                                            <td data-label="Min. Budget" className="p-3 border border-stone-300">{row.min}</td>
+                                            <td data-label="Primary Stack" className="p-3 border border-stone-300">{row.stack}</td>
+                                            <td data-label="Clutch" className="p-3 border border-stone-300">{row.clutch}</td>
+                                            <td data-label="Price Published" className="p-3 border border-stone-300">
                                                 {row.published
                                                     ? <span className="flex items-center gap-1 text-green-700 font-medium"><CheckCircle2 className="w-4 h-4" /> Yes</span>
                                                     : <span className="flex items-center gap-1 text-stone-400"><XCircle className="w-4 h-4" /> No</span>}
                                             </td>
-                                            <td data-label="Owns Code" className="p-3 border border-stone-200">
+                                            <td data-label="Owns Code" className="p-3 border border-stone-300">
                                                 {row.owns
                                                     ? <span className="flex items-center gap-1 text-green-700 font-medium"><CheckCircle2 className="w-4 h-4" /> Yes</span>
                                                     : <span className="flex items-center gap-1 text-stone-400"><XCircle className="w-4 h-4" /> Platform</span>}
@@ -403,7 +372,7 @@ export default function TopWebDevAgenciesPage() {
                             <BlogList items={[
                                 "WordPress to Next.js migration: from $3,000 for a 5 to 20 page site. Full breakdown at our WordPress migration cost guide.",
                                 "Webflow to Next.js migration: from $2,000. Full breakdown at our Webflow migration cost guide.",
-                                "Custom website build: $8,000 to $25,000 depending on page count and functionality",
+                                "Founder site: $500. Growth build: $3,500. Scale build: $5,000 to $10,000+.",
                                 "Shopify headless storefront: custom scope based on product catalog and integrations",
                                 "All pricing is fixed. No hourly billing. No change orders for standard scope. No platform license fees after delivery."
                             ]} />
@@ -622,7 +591,7 @@ export default function TopWebDevAgenciesPage() {
                         </BlogText>
 
                         <BlogText>
-                            Two important due diligence flags: their Yelp listing showed a possible closure notation as of early 2026. Verify directly that their New York office is operational before investing time in a discovery process. Their tech stack is also centered on WordPress, Drupal, and Shopify with no documented Next.js or headless capability.
+                            One due diligence flag: confirm their current office footprint and team status directly before investing time in a discovery process, as their operating footprint has shifted over the past two years. Their tech stack is also centered on WordPress, Drupal, and Shopify with no documented Next.js or headless capability.
                         </BlogText>
 
                         <BlogText>
@@ -795,7 +764,7 @@ export default function TopWebDevAgenciesPage() {
                         </div>
 
                         {/* Mid CTA */}
-                        <div className="bg-stone-900 text-white rounded-xl p-8 my-10">
+                        <div className="bg-stone-900 text-white rounded-xl p-8 my-6 md:my-10">
                             <h3 className="text-2xl font-bold mb-3">See published pricing before you talk to anyone</h3>
                             <p className="text-stone-300 mb-6 max-w-lg">
                                 PandaCodeGen is the only agency on this list with pricing on the website. Get a full written project scope within 24 hours. No discovery call required.
@@ -926,14 +895,14 @@ export default function TopWebDevAgenciesPage() {
 
                     {/* FAQ */}
                     {agencyFAQs.length > 0 && (
-                        <div className="mt-12">
+                        <div className="mt-8 md:mt-12">
                             <h2 className="text-3xl font-bold text-charcoal mb-6">Frequently Asked Questions</h2>
                             <FAQAccordion faqs={agencyFAQs} />
                         </div>
                     )}
 
                     {/* Bottom CTA */}
-                    <div className="mt-12 bg-stone-50 border border-stone-200 rounded-xl p-8 text-center">
+                    <div className="mt-8 md:mt-12 bg-stone-50 border border-stone-200 rounded-xl p-8 text-center">
                         <h3 className="text-2xl font-bold text-charcoal mb-3">The only US agency that shows you the price before the call</h3>
                         <p className="text-stone-600 mb-6 max-w-lg mx-auto">
                             Fixed pricing, 95 to 100/100 PageSpeed guaranteed, and 100% code ownership on every project. See your full project scope in writing within 24 hours.

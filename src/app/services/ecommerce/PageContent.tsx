@@ -54,9 +54,9 @@ export default function PageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-4 leading-tight"
           >
-            Headless Shopify Development <br />
+            Your Shopify store loads in 4 seconds. <br />
             <span className="font-serif italic text-cognac">
-              From $500. 3 weeks. 95+ PageSpeed.
+              Ours load in 0.8. Here is how we move you over.
             </span>
           </motion.h1>
 

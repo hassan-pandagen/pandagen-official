@@ -1,6 +1,6 @@
 import { ArrowLeft, Calendar, Clock, ArrowRight, TrendingDown, RefreshCw } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,28 +11,28 @@ import type { Metadata } from "next";
 
 const postFAQs = blogPosts.find(p => p.id === "wordpress-traffic-drop-speed")?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const SEORankingAnimation = dynamic(() => import("@/components/blog/SEORankingAnimation"));
-const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const SEORankingAnimation = lazyLoad(() => import("@/components/blog/SEORankingAnimation"));
+const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "WordPress Traffic Dropping 2026? Speed Drives 47% of Ranking Loss",
-    description: "Slow WordPress sites lose 20% of organic traffic for every 1 second of delay. Here is the math behind why your traffic is dropping and how to reverse it.",
+    title: "WordPress Traffic Dropping in 2026? The Speed Tax Killing Your Rankings",
+    description: "Slow WordPress sites with Mobile PageSpeed below 50 lose 20 to 30% of organic traffic to faster competitors. Here is why and how to reverse it.",
     alternates: { canonical: "/blog/wordpress-traffic-drop-speed" },
     keywords: ["wordpress losing traffic", "wordpress traffic drop", "wordpress speed seo", "core web vitals wordpress", "wordpress traffic decrease", "wordpress google ranking drop"],
     openGraph: {
-        title: "WordPress Traffic Dropping 2026? Speed Drives 47% of Ranking Loss",
-        description: "Slow WordPress sites lose 20% of organic traffic for every 1 second of delay. Here is the math behind why your traffic is dropping and how to reverse it.",
+        title: "WordPress Traffic Dropping in 2026? The Speed Tax Killing Your Rankings",
+        description: "Slow WordPress sites with Mobile PageSpeed below 50 lose 20 to 30% of organic traffic to faster competitors. Here is why and how to reverse it.",
         type: "article",
         publishedTime: "2026-02-07",
-        authors: ["Hassan"],
+        authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
     twitter: {
         card: "summary_large_image",
-        title: "WordPress Traffic Dropping 2026? Speed Drives 47% of Ranking Loss",
-        description: "Slow WordPress sites lose 20% of organic traffic for every 1 second of delay. Here is the math behind why your traffic is dropping and how to reverse it.",
+        title: "WordPress Traffic Dropping in 2026? The Speed Tax Killing Your Rankings",
+        description: "Slow WordPress sites with Mobile PageSpeed below 50 lose 20 to 30% of organic traffic to faster competitors. Here is why and how to reverse it.",
     },
 };
 
@@ -42,16 +42,16 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed#article",
-            "headline": "WordPress Traffic Dropping 2026? Speed Drives 47% of Ranking Loss",
-            "description": "Slow WordPress sites lose 20% of organic traffic for every 1 second of delay. Here is the math behind why your traffic is dropping and how to reverse it.",
+            "headline": "WordPress Traffic Dropping in 2026? The Speed Tax Killing Your Rankings",
+            "description": "Slow WordPress sites with Mobile PageSpeed below 50 lose 20 to 30% of organic traffic to faster competitors. Here is why and how to reverse it.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-07T00:00:00-05:00",
-            "dateModified": "2026-03-10T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -66,8 +66,8 @@ const articleSchema = {
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed" },
             "articleSection": "Traffic Growth",
             "keywords": ["wordpress losing traffic", "wordpress traffic drop", "wordpress speed seo", "core web vitals wordpress", "wordpress google ranking drop"],
-            "timeRequired": "PT9M",
-            "wordCount": 2200,
+            "timeRequired": "PT7M",
+            "wordCount": 1550,
             "about": [
                 { "@type": "Thing", "name": "WordPress Traffic Loss" },
                 { "@type": "Thing", "name": "Google Core Web Vitals SEO" },
@@ -99,11 +99,11 @@ const articleSchema = {
             "@id": "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed#webpage",
             "url": "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed",
             "name": "WordPress Traffic Dropping? Speed Is Killing Your Rankings",
-            "description": "Slow WordPress sites lose 20% of organic traffic for every 1 second of delay. Here is the math behind why your traffic is dropping and how to reverse it.",
+            "description": "Slow WordPress sites with Mobile PageSpeed below 50 lose 20 to 30% of organic traffic to faster competitors. Here is why and how to reverse it.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-07T00:00:00-05:00",
-            "dateModified": "2026-03-10T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -179,8 +179,8 @@ export default function WordPressTrafficDropPage() {
                     <div className="mb-12"><SEORankingAnimation /></div>
 
                     {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
-                        <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
+                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
                             "Google's Core Web Vitals update made site speed a direct ranking factor. Slow sites get demoted.",
                             "WordPress sites averaging 4 to 6 seconds load time lose 20 to 30% of organic traffic to faster competitors.",
@@ -203,7 +203,7 @@ export default function WordPressTrafficDropPage() {
                         </BlogText>
                         <BlogList items={[
                             "LCP (Largest Contentful Paint): How fast the main content loads. Target: under 2.5 seconds.",
-                            "FID / INP (Interaction to Next Paint): How fast the page responds to clicks. Target: under 200ms.",
+                            "INP (Interaction to Next Paint): How fast the page responds to clicks. Replaced FID in March 2024. Target: 200ms or less.",
                             "CLS (Cumulative Layout Shift): How much the page jumps around during load. Target: under 0.1."
                         ]} />
                         <BlogText>
@@ -240,7 +240,7 @@ export default function WordPressTrafficDropPage() {
                         </BlogText>
 
                         {/* Mid-Article CTA */}
-                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Has your WordPress traffic been dropping?</p>
                             <p className="text-stone-600 mb-4 text-sm">Drop your URL when you book. We test your Core Web Vitals live on the call, show you what Google is penalizing, and give you the fix with a fixed-price quote.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free Traffic Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
@@ -273,7 +273,7 @@ export default function WordPressTrafficDropPage() {
                             "Month 3+: Traffic exceeds previous peak by 15 to 25% as improved rankings compound"
                         ]} />
                         <BlogText>
-                            Real client example: A UK professional services firm lost 31% of organic traffic over 8 months as their WordPress site aged. After migrating to Next.js (<a href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">PageSpeed 27 → 98</a>), traffic recovered fully in 6 weeks and grew 22% above their previous peak within 90 days.
+                            In practice: sites that move from PageSpeed scores in the 20s to 98+ (see <a href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">how we hit 100/100 PageSpeed</a>) typically see Core Web Vitals flip from Poor to Good within 30 days in Search Console, with ranking recovery following in weeks 6 to 12.
                         </BlogText>
 
                         <BlogHeader>The Real Fix: Replace WordPress, Don&apos;t Patch It</BlogHeader>
@@ -314,12 +314,12 @@ export default function WordPressTrafficDropPage() {
                             The longer a slow site stays live, the more ground it loses. Google's ranking signals are cumulative: a site that has been slow for 12 months takes longer to recover than one that just turned slow. If your traffic has been declining for more than 3 months and your Mobile PageSpeed is below 60, every additional month of delay makes the recovery harder and longer.
                         </BlogText>
                         <BlogText>
-                            The calculation is simple. If your site generates $10,000 per month in revenue and you are losing 25% of potential traffic to speed, that is $2,500 per month in missed revenue. A migration that takes 6 weeks and costs $8,000 to $15,000 pays for itself within the first quarter and then compounds every month after.
+                            The calculation is simple. If your site generates $10,000 per month in revenue and you are losing 25% of potential traffic to speed, that is $2,500 per month in missed revenue. A migration that takes 6 weeks and runs $3,500+ Growth or $5,000 to $10,000+ Scale pays for itself within the first quarter and then compounds every month after.
                         </BlogText>
                     </div>
 
                     {/* Bottom CTA */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Stop Paying the WordPress Speed Tax</h3>
                         <p className="text-stone-600 mb-6">
                             Free audit. We&apos;ll analyse your PageSpeed scores, Core Web Vitals, and show you the exact traffic you&apos;ve lost to slow speed and how to get it back.

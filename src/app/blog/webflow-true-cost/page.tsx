@@ -1,6 +1,6 @@
 import { ArrowLeft, Calendar, Clock, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,9 +11,9 @@ import type { Metadata } from "next";
 
 const webflowFAQs = blogPosts.find(p => p.id === 'webflow-true-cost')?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
-const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "Webflow Pricing 2026: Hidden Fees & $125-$400/mo Real Cost",
@@ -54,7 +54,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder & Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -139,13 +139,7 @@ const articleSchema = {
         {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/blog/webflow-true-cost#faq",
-            "mainEntity": [
-                { "@type": "Question", "name": "How much does Webflow actually cost per year?", "acceptedAnswer": { "@type": "Answer", "text": "A business Webflow site costs $948 to $4,188 per year in hosting alone ($29 to $49/month for CMS plan, plus $14 to $300/month for e-commerce). Add domain ($12/year), form submissions ($19/month after the free tier), localization ($9/locale/month), and third party integrations. Most businesses spend $1,500 to $5,000 per year. A custom Next.js site on Vercel costs $0 to $240 per year for hosting with better performance." } },
-                { "@type": "Question", "name": "Is Webflow good for SEO?", "acceptedAnswer": { "@type": "Answer", "text": "Webflow is better than WordPress for SEO out of the box, but it has a hard ceiling. Webflow sites typically score 55 to 75 on Google PageSpeed Mobile because of render-blocking CSS, heavy JavaScript bundles, and no server-side rendering. Custom Next.js sites score 95 to 100. Since Google uses Core Web Vitals as a ranking factor, the 20 to 40 point gap means Webflow sites rank lower for competitive keywords." } },
-                { "@type": "Question", "name": "Can I migrate from Webflow to Next.js without losing SEO?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The migration process involves exporting your content, mapping all URLs with 301 redirects, transferring metadata and Open Graph tags, and submitting a new sitemap to Google Search Console. When done correctly, rankings hold steady or improve within 30 to 60 days because the new site loads 3 to 5 times faster." } },
-                { "@type": "Question", "name": "What are the limitations of Webflow?", "acceptedAnswer": { "@type": "Answer", "text": "Webflow has five main limitations that businesses hit as they grow. First, performance: sites score 55 to 75 on PageSpeed Mobile versus 95 to 100 for custom code. Second, pricing scales aggressively with CMS items, form submissions, and bandwidth. Third, no server-side logic means no custom APIs, no database queries, no real-time features. Fourth, you do not own your code, so you cannot leave without rebuilding. Fifth, the 10,000 CMS item limit blocks content-heavy sites." } },
-                { "@type": "Question", "name": "When should I leave Webflow for custom code?", "acceptedAnswer": { "@type": "Answer", "text": "Consider migrating when you hit any of these: your PageSpeed Mobile score is below 70 and hurting SEO, you are paying more than $100/month in Webflow fees, you need custom functionality Webflow cannot do (real-time pricing, custom checkout, API integrations), you have hit the 10,000 CMS item limit, or your conversion rate has plateaued despite good traffic. If two or more apply, custom code will pay for itself within 6 to 12 months." } }
-            ]
+            "mainEntity": webflowFAQs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
         }
     ]
 };
@@ -204,8 +198,8 @@ export default function WebflowTrueCostPage() {
                     </div>
 
                     {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
-                        <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
+                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
                             "Webflow's $29/month price tag hides $1,500 to $5,000 in real annual costs when you add CMS plans, forms, bandwidth, and integrations.",
                             "Webflow sites score 55 to 75 on Google PageSpeed Mobile. Custom Next.js sites score 95 to 100. That gap costs you 20 to 30% of organic traffic.",
@@ -416,15 +410,15 @@ export default function WebflowTrueCostPage() {
                         </BlogQuote>
 
                         {/* Mid-Article CTA */}
-                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Is Webflow&apos;s real cost starting to add up?</p>
                             <p className="text-stone-600 mb-4 text-sm">Drop your Webflow URL when you book. We calculate your actual 3-year Webflow cost live on the call and show you exactly what migration saves you.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                     Schedule Free Audit <ArrowRight className="w-4 h-4" />
                                 </CalModalButton>
                             <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                              <p className="text-sm text-stone-700 mt-1">$500 for a complete Webflow migration. No more surprise overage charges. No more paying per team member. No more forced plan upgrades when your site gets traffic. You pay us once and your monthly website bill goes to $0.</p>
+                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                              <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                             </div>
                         </div>
 
@@ -571,7 +565,7 @@ export default function WebflowTrueCostPage() {
                     </div>
 
                     {/* CTA Section */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Ready to Own Your Website?</h3>
                         <p className="text-stone-600 mb-6">
                             Get a free migration assessment. We will show you the real cost of Webflow versus custom code for your specific site.
@@ -580,13 +574,13 @@ export default function WebflowTrueCostPage() {
                                 Schedule Free Assessment <ArrowRight className="w-5 h-5" />
                             </CalModalButton>
                         <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                          <p className="text-sm text-stone-700 mt-1">$500 for a complete Webflow migration. No more surprise overage charges. No more paying per team member. No more forced plan upgrades when your site gets traffic. You pay us once and your monthly website bill goes to $0.</p>
+                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                          <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                         </div>
                     </div>
 
                     {/* Key Takeaways */}
-                    <section className="mb-10 mt-16">
+                    <section className="mb-10 mt-6 md:mt-10 md:mt-16">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
                             <li><strong>Webflow's real cost is $1,500 to $5,000/year</strong>: The $29/month starting price does not include CMS plans, form limits, localization, or the third-party tools you need to run a real business site.</li>

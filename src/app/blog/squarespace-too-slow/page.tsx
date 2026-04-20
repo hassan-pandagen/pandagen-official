@@ -1,6 +1,6 @@
 import { ArrowRight, CheckCircle2, XCircle, AlertTriangle, TrendingDown, Clock, Zap } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,9 +11,9 @@ import type { Metadata } from "next";
 
 const squarespaceSlowFAQs = blogPosts.find(p => p.id === "squarespace-too-slow")?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
-const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: { absolute: "Squarespace Too Slow in 2026? Why Businesses Are Migrating Away" },
@@ -166,48 +166,7 @@ const schemaData = {
         {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/blog/squarespace-too-slow#faq",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "Why is my Squarespace site so slow?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Squarespace loads a large proprietary JavaScript bundle on every page regardless of what that page needs. The bundle includes the full Squarespace editor framework, animations, fonts, and commerce code even on a simple blog post. On mobile, this produces load times of 4 to 8 seconds and PageSpeed scores of 30 to 55. You cannot remove the bundle, swap it for a lighter library, or opt out of it. It is baked into the platform."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Can I fix Squarespace speed without leaving the platform?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "You can make marginal improvements. Compressing images before upload, reducing the number of fonts, disabling animations, and removing unused sections can recover 5 to 10 PageSpeed points. But the JavaScript bundle that drives most of the slowness loads regardless. The ceiling for an optimized Squarespace site is roughly 55 to 65 on mobile. Reaching 90+ requires a platform change."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Does Squarespace hurt my Google rankings?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes, indirectly. Google uses Core Web Vitals as ranking signals. Squarespace sites typically have an LCP of 4 to 8 seconds on mobile. Google's threshold for a good LCP is 2.5 seconds. Sites with poor Core Web Vitals are ranked below comparable sites with better performance when other factors are equal."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "What is the best alternative to Squarespace for a fast site?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Custom Next.js is the gold standard. Next.js pre-renders every page at build time, serving static HTML with no server-side processing on each request. The result is PageSpeed scores of 95 to 100 on mobile and LCP under 1.2 seconds."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How much does it cost to migrate from Squarespace to a custom site?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "A Squarespace to Next.js migration for a 5 to 20 page business site typically costs $3,000 to $7,000 and takes 1 to 2 weeks. This includes rebuilding all pages in Next.js, setting up 301 redirects from every old Squarespace URL, migrating your blog content, and connecting your domain with zero downtime."
-                    }
-                }
-            ]
+            "mainEntity": squarespaceSlowFAQs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
         }
     ]
 };
@@ -274,7 +233,7 @@ export default function SquarespaceToSlowPage() {
                     {/* Animation */}
                     <PageSpeedAnimation />
 
-                    <article className="prose-custom mt-10">
+                    <article className="prose-custom mt-6 md:mt-10">
 
                         <BlogHeader>Squarespace Is Slow By Design, Not By Accident</BlogHeader>
                         <BlogText>
@@ -426,7 +385,7 @@ export default function SquarespaceToSlowPage() {
                         </BlogText>
 
                         {/* Mid CTA */}
-                        <div className="bg-stone-50 border border-stone-200 rounded-xl p-6 my-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                        <div className="bg-stone-50 border border-stone-200 rounded-xl p-6 my-6 md:my-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
                             <div className="flex-1">
                                 <p className="font-bold text-charcoal mb-1">What score is your Squarespace site getting right now?</p>
                                 <p className="text-stone-600 text-sm">Run your URL at pagespeed.web.dev and check your mobile score. Then book a free audit and we will show you exactly what the gap is costing you.</p>
@@ -435,8 +394,8 @@ export default function SquarespaceToSlowPage() {
                                 Get Free Audit <ArrowRight className="w-4 h-4" />
                             </CalModalButton>
                             <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                              <p className="text-sm text-stone-700 mt-1">$500 for a complete Squarespace migration. You pay once after the site is live. No more annual renewal surprises. No more price increases you can&apos;t control. Your website, your code, zero monthly cost.</p>
+                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                              <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                             </div>
                         </div>
 
@@ -492,7 +451,7 @@ export default function SquarespaceToSlowPage() {
                         </BlogText>
 
                         {/* Decision Checklist */}
-                        <div className="bg-stone-50 border-2 border-cognac/30 rounded-xl p-6 my-10">
+                        <div className="bg-stone-50 border-2 border-cognac/30 rounded-xl p-6 my-6 md:my-10">
                             <p className="text-sm font-bold text-cognac uppercase tracking-wide mb-4">Should You Migrate? Decision Checklist</p>
                             <p className="text-sm text-stone-600 mb-4">If you check three or more, migrating off Squarespace will pay for itself within 12 months.</p>
                             <div className="space-y-3">
@@ -513,7 +472,7 @@ export default function SquarespaceToSlowPage() {
                         </div>
 
                         {/* Bottom CTA */}
-                        <div className="bg-stone-900 rounded-2xl p-8 mt-16 text-center">
+                        <div className="bg-stone-900 rounded-2xl p-8 mt-6 md:mt-10 md:mt-16 text-center">
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-white/70 text-xs font-semibold uppercase tracking-wide mb-4">
                                 <Zap className="w-3 h-3" /> Free PageSpeed Audit
                             </div>
@@ -525,8 +484,8 @@ export default function SquarespaceToSlowPage() {
                                 Book a Free Audit <ArrowRight className="w-4 h-4" />
                             </CalModalButton>
                             <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                              <p className="text-sm text-stone-700 mt-1">$500 for a complete Squarespace migration. You pay once after the site is live. No more annual renewal surprises. No more price increases you can&apos;t control. Your website, your code, zero monthly cost.</p>
+                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                              <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                             </div>
                         </div>
 

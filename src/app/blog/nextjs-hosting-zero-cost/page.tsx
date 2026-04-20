@@ -1,6 +1,6 @@
 import { ArrowLeft, Calendar, Clock, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,30 +11,30 @@ import type { Metadata } from "next";
 
 const hostingFAQs = blogPosts.find(p => p.id === 'nextjs-hosting-zero-cost')?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
-const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "Start Free, Scale to $20/mo: How We Host Client Sites on Vercel (2026)",
-    description: "Most businesses pay $50 to $300/month for hosting. We deploy every client site on Vercel starting free. You only scale to $20/month when your business grows. Faster, more secure, zero maintenance. Here is exactly how.",
+    description: "Most businesses pay $50 to $300/mo for hosting. We deploy every client on Vercel starting free, scaling to $20/mo only when you grow.",
     alternates: {
         canonical: '/blog/nextjs-hosting-zero-cost',
     },
     keywords: ["free nextjs hosting", "vercel free tier", "free website hosting 2026", "nextjs hosting cost", "vercel vs wordpress hosting", "zero cost website hosting", "vercel free tier limits"],
     openGraph: {
         title: "Start Free, Scale to $20/mo: How We Host Client Sites on Vercel (2026)",
-        description: "Most businesses pay $50 to $300/month for hosting. We deploy every client site on Vercel starting free. You only scale to $20/month when your business grows. Faster, more secure, zero maintenance. Here is exactly how.",
+        description: "Most businesses pay $50 to $300/mo for hosting. We deploy every client on Vercel starting free, scaling to $20/mo only when you grow.",
         type: "article",
         publishedTime: "2026-03-13",
-        authors: ["Hassan"],
+        authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
     twitter: {
         card: "summary_large_image",
         title: "Start Free, Scale to $20/mo: How We Host Client Sites on Vercel (2026)",
-        description: "Most businesses pay $50 to $300/month for hosting. We deploy every client site on Vercel starting free. You only scale to $20/month when your business grows. Faster, more secure, zero maintenance. Here is exactly how.",
+        description: "Most businesses pay $50 to $300/mo for hosting. We deploy every client on Vercel starting free, scaling to $20/mo only when you grow.",
     },
 };
 
@@ -45,15 +45,15 @@ const articleSchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost#article",
             "headline": "Start Free, Scale to $20/mo: How We Host Client Sites on Vercel (2026)",
-            "description": "Most businesses pay $50 to $300/month for hosting. We deploy every client site on Vercel starting free. You only scale to $20/month when your business grows. Faster, more secure, zero maintenance. Here is exactly how.",
+            "description": "Most businesses pay $50 to $300/mo for hosting. We deploy every client on Vercel starting free, scaling to $20/mo only when you grow.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-13T00:00:00-05:00",
-            "dateModified": "2026-03-13T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -111,7 +111,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-13T00:00:00-05:00",
-            "dateModified": "2026-03-13T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -131,13 +131,7 @@ const articleSchema = {
         {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost#faq",
-            "mainEntity": [
-                { "@type": "Question", "name": "Is Vercel free hosting reliable for business websites?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Vercel's free tier runs on the same global edge network as their enterprise plans used by companies like Nike, Hulu, and The Washington Post. Your site is served from 80+ data centres worldwide. There is no speed difference between free and paid tiers for static sites. The free tier includes 100 GB bandwidth per month, which handles roughly 50,000 to 100,000 monthly visitors before you would need to upgrade." } },
-                { "@type": "Question", "name": "What is the catch with free Vercel hosting?", "acceptedAnswer": { "@type": "Answer", "text": "The free tier has three limits: 100 GB bandwidth per month, 100 hours of serverless function execution, and no team collaboration features. For a typical business website with 10,000 to 50,000 monthly visitors, you will never hit these limits. If you do grow past them, Vercel Pro costs $20/month, still 80 to 90% cheaper than traditional hosting. The real limitation is that free tier is for personal and hobby use per Vercel's terms, but the Pro tier at $20/month is still dramatically cheaper than WordPress hosting." } },
-                { "@type": "Question", "name": "How much does WordPress hosting actually cost per year?", "acceptedAnswer": { "@type": "Answer", "text": "WordPress hosting costs $600 to $3,600 per year for a business site. Shared hosting ($10 to $30/month) is slow and insecure. Managed WordPress hosting like WP Engine or Kinsta costs $30 to $300/month. Add premium plugins ($200 to $800/year), security scanning ($100 to $300/year), and SSL certificates on some hosts. Over 3 years, a typical WordPress site costs $5,000 to $15,000 in hosting and maintenance alone. A Next.js site on Vercel costs $0 to $240/year." } },
-                { "@type": "Question", "name": "Can I host an e-commerce site for free on Vercel?", "acceptedAnswer": { "@type": "Answer", "text": "A headless e-commerce storefront (the customer-facing part) can absolutely run on Vercel for free. The product data and checkout are handled by Shopify, Snipcart, or Stripe, and those have their own costs. But the actual website hosting, the part that affects your PageSpeed score and SEO rankings, costs $0. Our client MyCustomPatches runs their entire storefront on Vercel free tier with 100/100 PageSpeed." } },
-                { "@type": "Question", "name": "What happens if my site gets a traffic spike on free Vercel hosting?", "acceptedAnswer": { "@type": "Answer", "text": "Vercel handles traffic spikes automatically. There is no server to crash because static pages are served from a global CDN. If you exceed 100 GB bandwidth in a month, Vercel will ask you to upgrade to Pro ($20/month) rather than taking your site down. Compare this to shared WordPress hosting where a traffic spike can crash your server and take your site offline for hours." } }
-            ]
+            "mainEntity": hostingFAQs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
         }
     ]
 };
@@ -199,8 +193,8 @@ export default function NextjsHostingZeroCostPage() {
                     </div>
 
                     {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-12" data-speakable="true">
-                        <h3 className="font-bold text-charcoal mb-4">Executive Summary</h3>
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
+                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
                             "Most businesses pay $50 to $300/month for hosting that actually makes their site slower.",
                             "We deploy every client site on Vercel starting free. You only scale to $20/month when your business grows. Faster, more secure, zero maintenance.",
@@ -291,58 +285,58 @@ export default function NextjsHostingZeroCostPage() {
                             <table className="w-full border-collapse text-sm min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
-                                        <th className="text-left p-4 font-bold text-charcoal border border-stone-200">Feature</th>
-                                        <th className="text-left p-4 font-bold text-charcoal border border-stone-200">WordPress Hosting</th>
-                                        <th className="text-left p-4 font-bold text-charcoal border border-stone-200">Next.js + Vercel</th>
+                                        <th className="text-left p-4 font-bold text-charcoal border border-stone-300">Feature</th>
+                                        <th className="text-left p-4 font-bold text-charcoal border border-stone-300">WordPress Hosting</th>
+                                        <th className="text-left p-4 font-bold text-charcoal border border-stone-300">Next.js + Vercel</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td className="p-4 border border-stone-200 font-medium">Monthly Cost</td>
-                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-200 text-stone-600">$30-$300/mo</td>
-                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-200 text-stone-600 font-bold">$0/mo</td>
+                                        <td className="p-4 border border-stone-300 font-medium">Monthly Cost</td>
+                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-300 text-stone-600">$30-$300/mo</td>
+                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-300 text-stone-600 font-bold">$0/mo</td>
                                     </tr>
                                     <tr className="bg-stone-50">
-                                        <td className="p-4 border border-stone-200 font-medium">3-Year Cost</td>
-                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-200 text-stone-600">$1,080-$10,800</td>
-                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-200 text-stone-600 font-bold">$0</td>
+                                        <td className="p-4 border border-stone-300 font-medium">3-Year Cost</td>
+                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-300 text-stone-600">$1,080-$10,800</td>
+                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-300 text-stone-600 font-bold">$0</td>
                                     </tr>
                                     <tr>
-                                        <td className="p-4 border border-stone-200 font-medium">Load Time</td>
-                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-200 text-stone-600">2-5 seconds</td>
-                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-200 text-stone-600 font-bold">0.5-1.2 seconds</td>
+                                        <td className="p-4 border border-stone-300 font-medium">Load Time</td>
+                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-300 text-stone-600">2-5 seconds</td>
+                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-300 text-stone-600 font-bold">0.5-1.2 seconds</td>
                                     </tr>
                                     <tr className="bg-stone-50">
-                                        <td className="p-4 border border-stone-200 font-medium">PageSpeed Score</td>
-                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-200 text-stone-600">35-75/100</td>
-                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-200 text-stone-600 font-bold">95-100/100</td>
+                                        <td className="p-4 border border-stone-300 font-medium">PageSpeed Score</td>
+                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-300 text-stone-600">35-75/100</td>
+                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-300 text-stone-600 font-bold">95-100/100</td>
                                     </tr>
                                     <tr>
-                                        <td className="p-4 border border-stone-200 font-medium">Server Crashes</td>
-                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-200 text-stone-600">Yes (traffic spikes)</td>
-                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-200 text-stone-600 font-bold">No (CDN, no server)</td>
+                                        <td className="p-4 border border-stone-300 font-medium">Server Crashes</td>
+                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-300 text-stone-600">Yes (traffic spikes)</td>
+                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-300 text-stone-600 font-bold">No (CDN, no server)</td>
                                     </tr>
                                     <tr className="bg-stone-50">
-                                        <td className="p-4 border border-stone-200 font-medium">SSL Certificate</td>
-                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-200 text-stone-600">Extra cost on some hosts</td>
-                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-200 text-stone-600 font-bold">Free (automatic)</td>
+                                        <td className="p-4 border border-stone-300 font-medium">SSL Certificate</td>
+                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-300 text-stone-600">Extra cost on some hosts</td>
+                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-300 text-stone-600 font-bold">Free (automatic)</td>
                                     </tr>
                                     <tr>
-                                        <td className="p-4 border border-stone-200 font-medium">CDN</td>
-                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-200 text-stone-600">Extra cost</td>
-                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-200 text-stone-600 font-bold">Built-in (80+ locations)</td>
+                                        <td className="p-4 border border-stone-300 font-medium">CDN</td>
+                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-300 text-stone-600">Extra cost</td>
+                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-300 text-stone-600 font-bold">Built-in (80+ locations)</td>
                                     </tr>
                                     <tr className="bg-stone-50">
-                                        <td className="p-4 border border-stone-200 font-medium">Maintenance</td>
-                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-200 text-stone-600">Monthly updates</td>
-                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-200 text-stone-600 font-bold">Zero</td>
+                                        <td className="p-4 border border-stone-300 font-medium">Maintenance</td>
+                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-300 text-stone-600">Monthly updates</td>
+                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-300 text-stone-600 font-bold">Zero</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
 
                         {/* Mid-Article CTA */}
-                        <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Are you still paying for hosting you don&apos;t need to?</p>
                             <p className="text-stone-600 mb-4 text-sm">Drop your current site URL when you book. We audit your hosting costs and performance live on the call and show you the zero-cost Next.js path.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
@@ -370,7 +364,7 @@ export default function NextjsHostingZeroCostPage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>What happens when you outgrow the free tier?</strong> Vercel Pro costs $20/month. That&apos;s it. Even at the Pro level, you&apos;re paying <BlogHighlight>85% less than the cheapest managed WordPress hosting.</BlogHighlight> For a full breakdown of long-term costs, see our{" "}
+                            <strong>What happens when you outgrow the free tier?</strong> Vercel Pro costs $20/month. That&apos;s it. Even at the Pro level, you are paying <BlogHighlight>up to 93% less than high-end managed WordPress hosting.</BlogHighlight> For a full breakdown of long-term costs, see our{" "}
                             <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 3-year cost comparison of WordPress vs custom code
                             </Link>.
@@ -460,7 +454,7 @@ export default function NextjsHostingZeroCostPage() {
                     </section>
 
                     {/* CTA Section */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Ready to Stop Paying for Hosting?</h3>
                         <p className="text-stone-600 mb-6">
                             Book a free discovery call. We&apos;ll analyze your current hosting costs and show you exactly how much you&apos;ll save with a Next.js migration.
@@ -472,7 +466,7 @@ export default function NextjsHostingZeroCostPage() {
 
                     <blockquote className="border-l-4 border-cognac/30 pl-6 my-8 py-2">
                         <p className="text-stone-600 italic text-lg leading-relaxed">&quot;They worked with me to make a website that I could afford. They made sure there are no costs or extra fees.&quot;</p>
-                        <cite className="text-sm text-stone-500 not-italic block mt-2">James Peace (Google)</cite>
+                        <cite className="text-sm text-stone-500 not-italic block mt-2">James Peace, via Google Business review</cite>
                     </blockquote>
 
                     {/* FAQ Section */}

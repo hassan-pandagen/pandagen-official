@@ -1,6 +1,6 @@
 import { ArrowLeft, ArrowRight, RefreshCw } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -11,9 +11,9 @@ import type { Metadata } from "next";
 
 const migrateFAQs = blogPosts.find(p => p.id === 'how-to-migrate-wordpress-to-nextjs')?.faqs ?? [];
 
-const RelatedPosts = dynamic(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = dynamic(() => import("@/components/blog/PageSpeedAnimation"));
-const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "WordPress to Next.js Migration: Step-by-Step Without Losing SEO (2026)",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         description: "Step-by-step WordPress to Next.js migration: content export, 301 redirects, SEO preservation, zero downtime launch. 6 migrations, zero ranking drops.",
         type: "article",
         publishedTime: "2026-03-11",
-        authors: ["Hassan"],
+        authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
@@ -54,7 +54,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -404,7 +404,7 @@ export default function MigrateWordPressToNextJSPage() {
                                 Book Free Migration Assessment <ArrowRight className="w-4 h-4" />
                             </CalModalButton>
                         <div className="mt-4 p-4 bg-cognac/20 border border-cognac/50 rounded-xl">
-                          <p className="text-sm font-bold text-cognac">FOUNDER&apos;S OFFER: $500 Migration</p>
+                          <p className="text-sm font-bold text-cognac">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
                           <p className="text-sm text-white mt-1">Don&apos;t want to handle this yourself? $500 for a complete custom built migration done by our team. 30% upfront, the rest after the site is live. Every URL redirected. Every page tested. Zero downtime.</p>
                         </div>
                     </div>
@@ -424,7 +424,7 @@ export default function MigrateWordPressToNextJSPage() {
                                 { period: "Month 2 to 3", title: "Ranking Recovery and Growth", desc: "Rankings stabilise at their new baseline, typically equal to or better than pre-migration. Pages that were borderline on Core Web Vitals see the biggest position improvements. Organic traffic increases as better rankings compound." },
                                 { period: "Month 3 to 6", title: "Compounding Advantage", desc: "The full impact becomes visible. Clients typically see 20 to 40% organic traffic increases from the combined effect of better Core Web Vitals, lower bounce rates, and the authority signals that come from faster, more engaging pages." },
                             ].map(({ period, title, desc }) => (
-                                <div key={period} className="flex gap-4 border border-stone-200 rounded-xl p-5">
+                                <div key={period} className="flex gap-4 border border-stone-300 rounded-xl p-5">
                                     <div className="shrink-0 w-24 text-xs font-semibold text-cognac uppercase tracking-wider pt-0.5">{period}</div>
                                     <div>
                                         <p className="font-bold text-charcoal mb-1">{title}</p>
@@ -500,8 +500,8 @@ export default function MigrateWordPressToNextJSPage() {
                                     Book Free Migration Assessment <ArrowRight className="w-4 h-4" />
                                 </CalModalButton>
                             <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Migration</p>
-                              <p className="text-sm text-stone-700 mt-1">Don&apos;t want to handle this yourself? $500 for a complete WordPress to Next.js migration done by our team. 30% upfront, the rest after the site is live. Every URL redirected. Every page tested. Zero downtime.</p>
+                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                              <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
                             </div>
                             <Link
                                 href="/services/wordpress-migration?ref=blog/how-to-migrate-wordpress-to-nextjs"

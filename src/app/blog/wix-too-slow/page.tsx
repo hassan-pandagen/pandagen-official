@@ -18,8 +18,8 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Wix Website Too Slow? 48% of Wix Sites Fail Core Web Vitals in 2026",
-    description: "Wix sites average 6.8-second LCP on mobile. The cause is 200-400KB of platform JavaScript that cannot be removed. No app or plugin fixes this. Real 2026 data and the only fix that actually works.",
+    title: "Wix Too Slow? 48% Fail Core Web Vitals (2026 Data)",
+    description: "Wix sites average 6.8-second LCP on mobile from 200-400KB of unkillable platform JavaScript. Real 2026 data and the only fix that works.",
     alternates: {
         canonical: "/blog/wix-too-slow",
     },
@@ -38,17 +38,17 @@ export const metadata: Metadata = {
         "why is my wix site slow"
     ],
     openGraph: {
-        title: "Wix Website Too Slow? 48% of Wix Sites Fail Core Web Vitals in 2026",
+        title: "Wix Too Slow? 48% Fail Core Web Vitals (2026 Data)",
         description: "Wix sites average 6.8-second LCP on mobile. The cause is 200-400KB of platform JavaScript that cannot be removed. No app fixes this. Real 2026 data inside.",
         type: "article",
-        publishedTime: "2026-04-06",
-        authors: ["Hassan"],
+        publishedTime: "2026-04-06T00:00:00-05:00",
+        authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/wix-too-slow",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Wix Website Too Slow? 48% of Wix Sites Fail Core Web Vitals in 2026",
+        title: "Wix Too Slow? 48% Fail Core Web Vitals (2026 Data)",
         description: "Wix sites average 6.8-second LCP on mobile. The cause is 200-400KB of platform JavaScript that cannot be removed. Real 2026 data and the only real fix.",
     },
 };
@@ -59,16 +59,16 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wix-too-slow#article",
-            "headline": "Wix Website Too Slow? 48% of Wix Sites Fail Core Web Vitals in 2026",
-            "description": "Wix sites average 6.8-second LCP on mobile. The cause is 200-400KB of platform JavaScript that cannot be removed. No app or plugin fixes this. Real 2026 data and the only fix that actually works.",
+            "headline": "Wix Too Slow? 48% Fail Core Web Vitals (2026 Data)",
+            "description": "Wix sites average 6.8-second LCP on mobile from 200-400KB of unkillable platform JavaScript. Real 2026 data and the only fix that works.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-06T00:00:00-05:00",
-            "dateModified": "2026-04-06T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Lead Full-Stack Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
@@ -117,11 +117,11 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/wix-too-slow",
             "url": "https://www.pandacodegen.com/blog/wix-too-slow",
-            "name": "Wix Website Too Slow? 48% of Wix Sites Fail Core Web Vitals in 2026",
+            "name": "Wix Too Slow? 48% Fail Core Web Vitals (2026 Data)",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
-            "datePublished": "2026-04-06",
-            "dateModified": "2026-04-06"
+            "datePublished": "2026-04-06T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00"
         },
         {
             "@type": "Organization",
@@ -198,7 +198,7 @@ export default function WixTooSlowPage() {
                         role="Lead Full-Stack Engineer"
                         date="April 6, 2026"
                         readTime="12 min read"
-                        bio="Hassan has migrated dozens of businesses off Wix, WordPress, and Webflow to custom Next.js sites that score 95 to 100 on Google PageSpeed. He specialises in migrations that preserve SEO rankings and improve them."
+                        bio="Hassan migrates businesses off Wix, WordPress, and Webflow onto custom Next.js sites that score 95 to 100 on Google PageSpeed. Recent rebuild: Obare Magazine off Wix onto Next.js and Sanity. Six years of WordPress experience before launching PandaCodeGen."
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                     />
                     </div>
@@ -269,16 +269,16 @@ export default function WixTooSlowPage() {
                             </thead>
                             <tbody>
                                 <tr className="border-b border-[var(--border)] bg-emerald-500/5">
-                                    <td className="py-3 px-4 font-medium text-emerald-400">Custom Next.js</td>
+                                    <td className="py-3 px-4 font-medium text-emerald-600">Custom Next.js</td>
                                     <td data-label="Google Score (Mobile)" className="py-3 px-4 text-[var(--muted)]">95 to 100</td>
                                     <td data-label="LCP Average" className="py-3 px-4 text-[var(--muted)]">0.6 to 1.1s</td>
-                                    <td data-label="CWV Pass Rate" className="py-3 px-4 text-emerald-400">99%+</td>
+                                    <td data-label="CWV Pass Rate" className="py-3 px-4 text-emerald-600">99%+</td>
                                 </tr>
                                 <tr className="border-b border-[var(--border)]">
                                     <td className="py-3 px-4 font-medium">Duda</td>
                                     <td data-label="Google Score (Mobile)" className="py-3 px-4 text-[var(--muted)]">75 to 85</td>
                                     <td data-label="LCP Average" className="py-3 px-4 text-[var(--muted)]">2.1s</td>
-                                    <td data-label="CWV Pass Rate" className="py-3 px-4 text-emerald-400">71%</td>
+                                    <td data-label="CWV Pass Rate" className="py-3 px-4 text-emerald-600">71%</td>
                                 </tr>
                                 <tr className="border-b border-[var(--border)]">
                                     <td className="py-3 px-4 font-medium">Squarespace</td>
@@ -287,16 +287,16 @@ export default function WixTooSlowPage() {
                                     <td data-label="CWV Pass Rate" className="py-3 px-4 text-amber-400">58%</td>
                                 </tr>
                                 <tr className="border-b border-[var(--border)] bg-red-500/5">
-                                    <td className="py-3 px-4 font-medium text-red-400">Wix (optimized)</td>
+                                    <td className="py-3 px-4 font-medium text-red-600">Wix (optimized)</td>
                                     <td data-label="Google Score (Mobile)" className="py-3 px-4 text-[var(--muted)]">50 to 83</td>
                                     <td data-label="LCP Average" className="py-3 px-4 text-[var(--muted)]">3.2 to 6.8s</td>
-                                    <td data-label="CWV Pass Rate" className="py-3 px-4 text-red-400">52%</td>
+                                    <td data-label="CWV Pass Rate" className="py-3 px-4 text-red-600">52%</td>
                                 </tr>
                                 <tr className="border-b border-[var(--border)]">
                                     <td className="py-3 px-4 font-medium">WordPress</td>
                                     <td data-label="Google Score (Mobile)" className="py-3 px-4 text-[var(--muted)]">30 to 65</td>
                                     <td data-label="LCP Average" className="py-3 px-4 text-[var(--muted)]">3.5s</td>
-                                    <td data-label="CWV Pass Rate" className="py-3 px-4 text-red-400">38%</td>
+                                    <td data-label="CWV Pass Rate" className="py-3 px-4 text-red-600">38%</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -351,8 +351,8 @@ export default function WixTooSlowPage() {
                     <div className="grid sm:grid-cols-2 gap-6 my-8">
                         <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-5">
                             <div className="flex items-center gap-2 mb-4">
-                                <CheckCircle2 className="w-5 h-5 text-emerald-400" />
-                                <h3 className="font-semibold text-emerald-400">What You Can Optimize</h3>
+                                <CheckCircle2 className="w-5 h-5 text-emerald-600" />
+                                <h3 className="font-semibold text-emerald-600">What You Can Optimize</h3>
                             </div>
                             <ul className="space-y-2 text-sm text-[var(--muted)]">
                                 <li>Compress images before uploading (WebP format preferred)</li>
@@ -366,8 +366,8 @@ export default function WixTooSlowPage() {
                         </div>
                         <div className="bg-red-500/10 border border-red-500/30 rounded-xl p-5">
                             <div className="flex items-center gap-2 mb-4">
-                                <XCircle className="w-5 h-5 text-red-400" />
-                                <h3 className="font-semibold text-red-400">What You Cannot Change</h3>
+                                <XCircle className="w-5 h-5 text-red-600" />
+                                <h3 className="font-semibold text-red-600">What You Cannot Change</h3>
                             </div>
                             <ul className="space-y-2 text-sm text-[var(--muted)]">
                                 <li>Wix's own platform code (200 to 400KB, loads on every page, always)</li>
@@ -413,7 +413,7 @@ export default function WixTooSlowPage() {
                                 <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
                                 <table className="w-full text-sm border-collapse min-w-[560px] responsive-stack-table">
                                     <thead>
-                                        <tr className="border-b-2 border-stone-200">
+                                        <tr className="border-b-2 border-stone-300">
                                             <th className="text-left py-2 pr-4 font-semibold text-charcoal">App</th>
                                             <th className="text-left py-2 pr-4 font-semibold text-charcoal">Monthly Cost</th>
                                             <th className="text-left py-2 font-semibold text-charcoal">What it adds to every page</th>
@@ -467,11 +467,11 @@ export default function WixTooSlowPage() {
                     </div>
 
                     {/* Mid CTA */}
-                    <div className="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-8 my-12 text-center">
+                    <div className="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-8 my-8 md:my-12 text-center">
                         <Zap className="w-8 h-8 text-amber-400 mx-auto mb-4" />
                         <h2 className="text-2xl font-bold mb-3">Your Wix Site Can Score 95+ on Google (PageSpeed)</h2>
                         <p className="text-[var(--muted)] mb-6 max-w-lg mx-auto">
-                            We migrate Wix sites to custom Next.js. The result: 95 to 100 on Google&apos;s speed test (PageSpeed). Under 1-second load time. Vercel hosting that starts free and only scales to $20/month when your business grows. Founder&apos;s offer: $500 flat. If the score is not 95+, you do not pay the balance.
+                            We migrate Wix sites to custom Next.js. The result: 95 to 100 on Google&apos;s speed test (PageSpeed). Under 1-second load time. Vercel hosting that starts free and only scales to $20/month when your business grows. Founder engagements start at $500. Most 10 to 30 page migrations land in our $3,500 Growth tier. If the new site does not score 95 or higher, you do not pay the balance.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-semibold px-6 py-3 rounded-xl transition-colors">
                             Get Your Free Speed Audit
@@ -482,7 +482,7 @@ export default function WixTooSlowPage() {
                     {/* H2 6 */}
                     <BlogHeader>Wix vs Custom Next.js: Real Performance Comparison</BlogHeader>
                     <BlogText>
-                        Here is what the performance difference looks like in practice. This comparison is based on migrating three Wix sites to custom Next.js over the past six months. The before numbers are from Google PageSpeed Insights on the live Wix sites before migration. The after numbers are from the same tool after the new sites went live.
+                        Here is what the performance difference looks like in practice. This comparison is based on recent Wix to Next.js migrations, including Obare Magazine, a publication we rebuilt off Wix into a Next.js frontend with Sanity as the editor CMS in a 7-day turnaround. The before numbers are from Google PageSpeed Insights on the live Wix site before migration. The after numbers are from the same tool after the new site went live on Vercel.
                     </BlogText>
 
                     <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
@@ -491,59 +491,59 @@ export default function WixTooSlowPage() {
                             <thead>
                                 <tr className="border-b border-[var(--border)]">
                                     <th className="text-left py-3 px-4 font-semibold">Metric</th>
-                                    <th className="text-center py-3 px-4 font-semibold text-red-400">Wix (Before)</th>
-                                    <th className="text-center py-3 px-4 font-semibold text-emerald-400">Next.js (After)</th>
+                                    <th className="text-center py-3 px-4 font-semibold text-red-600">Wix (Before)</th>
+                                    <th className="text-center py-3 px-4 font-semibold text-emerald-600">Next.js (After)</th>
                                     <th className="text-center py-3 px-4 font-semibold">Change</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr className="border-b border-[var(--border)]">
                                     <td className="py-3 px-4 font-medium">Google Score (Mobile)</td>
-                                    <td data-label="Wix (Before)" className="py-3 px-4 text-center text-red-400">54 to 67</td>
-                                    <td data-label="Next.js (After)" className="py-3 px-4 text-center text-emerald-400">95 to 100</td>
-                                    <td data-label="Change" className="py-3 px-4 text-center text-emerald-400">+40 pts avg</td>
+                                    <td data-label="Wix (Before)" className="py-3 px-4 text-center text-red-600">54 to 67</td>
+                                    <td data-label="Next.js (After)" className="py-3 px-4 text-center text-emerald-600">95 to 100</td>
+                                    <td data-label="Change" className="py-3 px-4 text-center text-emerald-600">+40 pts avg</td>
                                 </tr>
                                 <tr className="border-b border-[var(--border)]">
                                     <td className="py-3 px-4 font-medium">LCP (mobile)</td>
-                                    <td data-label="Wix (Before)" className="py-3 px-4 text-center text-red-400">4.8 to 7.2s</td>
-                                    <td data-label="Next.js (After)" className="py-3 px-4 text-center text-emerald-400">0.6 to 1.0s</td>
-                                    <td data-label="Change" className="py-3 px-4 text-center text-emerald-400">6x faster</td>
+                                    <td data-label="Wix (Before)" className="py-3 px-4 text-center text-red-600">4.8 to 7.2s</td>
+                                    <td data-label="Next.js (After)" className="py-3 px-4 text-center text-emerald-600">0.6 to 1.0s</td>
+                                    <td data-label="Change" className="py-3 px-4 text-center text-emerald-600">6x faster</td>
                                 </tr>
                                 <tr className="border-b border-[var(--border)]">
                                     <td className="py-3 px-4 font-medium">FCP (mobile)</td>
-                                    <td data-label="Wix (Before)" className="py-3 px-4 text-center text-red-400">2.9 to 4.1s</td>
-                                    <td data-label="Next.js (After)" className="py-3 px-4 text-center text-emerald-400">0.4 to 0.7s</td>
-                                    <td data-label="Change" className="py-3 px-4 text-center text-emerald-400">5x faster</td>
+                                    <td data-label="Wix (Before)" className="py-3 px-4 text-center text-red-600">2.9 to 4.1s</td>
+                                    <td data-label="Next.js (After)" className="py-3 px-4 text-center text-emerald-600">0.4 to 0.7s</td>
+                                    <td data-label="Change" className="py-3 px-4 text-center text-emerald-600">5x faster</td>
                                 </tr>
                                 <tr className="border-b border-[var(--border)]">
                                     <td className="py-3 px-4 font-medium">JavaScript Payload</td>
-                                    <td data-label="Wix (Before)" className="py-3 px-4 text-center text-red-400">400 to 700KB</td>
-                                    <td data-label="Next.js (After)" className="py-3 px-4 text-center text-emerald-400">40 to 80KB</td>
-                                    <td data-label="Change" className="py-3 px-4 text-center text-emerald-400">90% less</td>
+                                    <td data-label="Wix (Before)" className="py-3 px-4 text-center text-red-600">400 to 700KB</td>
+                                    <td data-label="Next.js (After)" className="py-3 px-4 text-center text-emerald-600">40 to 80KB</td>
+                                    <td data-label="Change" className="py-3 px-4 text-center text-emerald-600">90% less</td>
                                 </tr>
                                 <tr className="border-b border-[var(--border)]">
                                     <td className="py-3 px-4 font-medium">Core Web Vitals</td>
-                                    <td data-label="Wix (Before)" className="py-3 px-4 text-center text-red-400">FAIL</td>
-                                    <td data-label="Next.js (After)" className="py-3 px-4 text-center text-emerald-400">PASS</td>
-                                    <td data-label="Change" className="py-3 px-4 text-center text-emerald-400">All 3 pass</td>
+                                    <td data-label="Wix (Before)" className="py-3 px-4 text-center text-red-600">FAIL</td>
+                                    <td data-label="Next.js (After)" className="py-3 px-4 text-center text-emerald-600">PASS</td>
+                                    <td data-label="Change" className="py-3 px-4 text-center text-emerald-600">All 3 pass</td>
                                 </tr>
                                 <tr className="border-b border-[var(--border)]">
                                     <td className="py-3 px-4 font-medium">Monthly Hosting Cost</td>
-                                    <td data-label="Wix (Before)" className="py-3 px-4 text-center text-red-400">$17 to $49/mo</td>
-                                    <td data-label="Next.js (After)" className="py-3 px-4 text-center text-emerald-400">$0/mo, $20 when you scale</td>
-                                    <td data-label="Change" className="py-3 px-4 text-center text-emerald-400">60-100% savings</td>
+                                    <td data-label="Wix (Before)" className="py-3 px-4 text-center text-red-600">$17 to $49/mo</td>
+                                    <td data-label="Next.js (After)" className="py-3 px-4 text-center text-emerald-600">$0/mo, $20 when you scale</td>
+                                    <td data-label="Change" className="py-3 px-4 text-center text-emerald-600">60-100% savings</td>
                                 </tr>
                                 <tr className="border-b border-[var(--border)]">
                                     <td className="py-3 px-4 font-medium">Platform Lock-in</td>
-                                    <td data-label="Wix (Before)" className="py-3 px-4 text-center text-red-400">Complete</td>
-                                    <td data-label="Next.js (After)" className="py-3 px-4 text-center text-emerald-400">None</td>
-                                    <td data-label="Change" className="py-3 px-4 text-center text-emerald-400">Full ownership</td>
+                                    <td data-label="Wix (Before)" className="py-3 px-4 text-center text-red-600">Complete</td>
+                                    <td data-label="Next.js (After)" className="py-3 px-4 text-center text-emerald-600">None</td>
+                                    <td data-label="Change" className="py-3 px-4 text-center text-emerald-600">Full ownership</td>
                                 </tr>
                                 <tr className="border-b border-[var(--border)]">
                                     <td className="py-3 px-4 font-medium">Can You Export the Site?</td>
-                                    <td data-label="Wix (Before)" className="py-3 px-4 text-center text-red-400">No</td>
-                                    <td data-label="Next.js (After)" className="py-3 px-4 text-center text-emerald-400">Yes (you own it)</td>
-                                    <td data-label="Change" className="py-3 px-4 text-center text-emerald-400">Full portability</td>
+                                    <td data-label="Wix (Before)" className="py-3 px-4 text-center text-red-600">No</td>
+                                    <td data-label="Next.js (After)" className="py-3 px-4 text-center text-emerald-600">Yes (you own it)</td>
+                                    <td data-label="Change" className="py-3 px-4 text-center text-emerald-600">Full portability</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -575,11 +575,11 @@ export default function WixTooSlowPage() {
                         <div className="bg-amber-50 border border-amber-200 rounded-xl p-6">
                             <h3 className="font-bold text-charcoal mb-4">Move on from Wix if:</h3>
                             <ul className="space-y-3 text-sm text-stone-700">
-                                <li className="flex items-start gap-2"><XCircle className="w-4 h-4 text-red-400 mt-0.5 shrink-0" /><span>Your Google score (PageSpeed) is under 70 on mobile and you have already tried the optimizations in this post</span></li>
-                                <li className="flex items-start gap-2"><XCircle className="w-4 h-4 text-red-400 mt-0.5 shrink-0" /><span>You sell products or services online and your cart abandonment or booking drop-off feels high</span></li>
-                                <li className="flex items-start gap-2"><XCircle className="w-4 h-4 text-red-400 mt-0.5 shrink-0" /><span>You rely on Google for traffic and your rankings have been flat or declining despite publishing regularly</span></li>
-                                <li className="flex items-start gap-2"><XCircle className="w-4 h-4 text-red-400 mt-0.5 shrink-0" /><span>You are spending $30 to $150/month on Wix apps and still not getting the features or speed you need</span></li>
-                                <li className="flex items-start gap-2"><XCircle className="w-4 h-4 text-red-400 mt-0.5 shrink-0" /><span>You have outgrown the design constraints and need custom functionality Wix cannot provide</span></li>
+                                <li className="flex items-start gap-2"><XCircle className="w-4 h-4 text-red-600 mt-0.5 shrink-0" /><span>Your Google score (PageSpeed) is under 70 on mobile and you have already tried the optimizations in this post</span></li>
+                                <li className="flex items-start gap-2"><XCircle className="w-4 h-4 text-red-600 mt-0.5 shrink-0" /><span>You sell products or services online and your cart abandonment or booking drop-off feels high</span></li>
+                                <li className="flex items-start gap-2"><XCircle className="w-4 h-4 text-red-600 mt-0.5 shrink-0" /><span>You rely on Google for traffic and your rankings have been flat or declining despite publishing regularly</span></li>
+                                <li className="flex items-start gap-2"><XCircle className="w-4 h-4 text-red-600 mt-0.5 shrink-0" /><span>You are spending $30 to $150/month on Wix apps and still not getting the features or speed you need</span></li>
+                                <li className="flex items-start gap-2"><XCircle className="w-4 h-4 text-red-600 mt-0.5 shrink-0" /><span>You have outgrown the design constraints and need custom functionality Wix cannot provide</span></li>
                             </ul>
                         </div>
                     </div>
@@ -589,9 +589,9 @@ export default function WixTooSlowPage() {
                     </BlogText>
 
                     {/* H2 8 */}
-                    <BlogHeader>How We Migrate Wix Sites to Next.js for $500</BlogHeader>
+                    <BlogHeader>How We Migrate Wix Sites to Next.js (Starting at $500)</BlogHeader>
                     <BlogText>
-                        The main thing that stops business owners from leaving Wix is the migration process. Wix does not have an export button. There is no plugin that moves your design to another platform. Every page needs to be rebuilt. We do this, start to finish, for $500.
+                        The main thing that stops business owners from leaving Wix is the migration process. Wix does not have an export button. There is no plugin that moves your design to another platform. Every page needs to be rebuilt. Engagements start at $500 for a Founder scope. Most 10 to 30 page Wix migrations land in our $3,500 Growth tier.
                     </BlogText>
                     <BlogText>
                         Here is exactly what that includes.
@@ -615,7 +615,7 @@ export default function WixTooSlowPage() {
                     </BlogText>
 
                     {/* Key Takeaways */}
-                    <div className="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-8 my-10" data-speakable="true">
+                    <div className="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-8 my-6 md:my-10" data-speakable="true">
                         <h2 className="text-xl font-bold mb-5 flex items-center gap-2">
                             <TrendingDown className="w-5 h-5 text-amber-400" />
                             Key Takeaways
@@ -630,7 +630,7 @@ export default function WixTooSlowPage() {
                     </div>
 
                     {/* Bottom CTA */}
-                    <div className="bg-gradient-to-br from-amber-500/10 to-orange-500/10 border border-amber-500/30 rounded-2xl p-8 my-10 text-center">
+                    <div className="bg-gradient-to-br from-amber-500/10 to-orange-500/10 border border-amber-500/30 rounded-2xl p-8 my-6 md:my-10 text-center">
                         <h2 className="text-2xl font-bold mb-3">Stop Optimizing. Start Migrating.</h2>
                         <p className="text-[var(--muted)] mb-6 max-w-xl mx-auto text-sm">
                             You have hit the Wix ceiling. No more optimization is going to get you to 95. The only path to a fast Wix site is a site that is not on Wix. We migrate you for $500, guarantee a 95+ Google score (PageSpeed), and host it on Vercel starting free (you only scale to $20/month when your business grows). Book a free 20-minute call to see exactly what the migration would involve for your site.
@@ -651,7 +651,9 @@ export default function WixTooSlowPage() {
                     <div className="border-t border-[var(--border)] pt-8 mt-8 mb-6">
                         <p className="text-sm text-[var(--muted)] mb-4">Related reading:</p>
                         <div className="flex flex-wrap gap-3">
+                            <Link href="/blog/wix-vs-custom-website" className="text-sm text-amber-400 hover:text-amber-300 underline underline-offset-4">Wix vs custom website</Link>
                             <Link href="/blog/squarespace-too-slow" className="text-sm text-amber-400 hover:text-amber-300 underline underline-offset-4">Squarespace speed problems</Link>
+                            <Link href="/blog/core-web-vitals-explained" className="text-sm text-amber-400 hover:text-amber-300 underline underline-offset-4">Core Web Vitals explained</Link>
                             <Link href="/blog/wordpress-vs-nextjs" className="text-sm text-amber-400 hover:text-amber-300 underline underline-offset-4">WordPress vs Next.js comparison</Link>
                             <Link href="/blog/how-to-achieve-100-pagespeed" className="text-sm text-amber-400 hover:text-amber-300 underline underline-offset-4">How to achieve 100/100 PageSpeed</Link>
                             <Link href="/blog/why-competitor-outranks-you" className="text-sm text-amber-400 hover:text-amber-300 underline underline-offset-4">Why your competitor outranks you</Link>
