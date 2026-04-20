@@ -9,25 +9,29 @@ export default function TrustLogoBar() {
   return (
     <section
       className="border-y border-stone-200 bg-white"
-      style={{ minHeight: "72px", contain: "layout style" }}
+      style={{ contain: "layout style" }}
     >
-      <div className="container mx-auto px-6">
-        <div className="flex items-stretch divide-x divide-gray-200">
-          {proofPoints.map((point) => (
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid grid-cols-2 md:grid-cols-4">
+          {proofPoints.map((point, i) => (
             <div
               key={point.label}
-              className="flex-1 flex flex-col items-center justify-center py-5 px-4 text-center"
+              className={`flex flex-col items-center justify-center py-4 md:py-5 px-2 md:px-4 text-center ${
+                i > 0 ? "md:border-l border-gray-200" : ""
+              } ${i === 1 ? "border-l border-gray-200" : ""} ${
+                i >= 2 ? "border-t md:border-t-0 border-gray-200" : ""
+              }`}
               style={{ minHeight: "72px" }}
             >
               <div
-                className="text-2xl md:text-3xl font-black text-charcoal tracking-tight leading-none mb-1"
-                style={{ fontSize: "clamp(1.5rem, 2.5vw, 1.875rem)", lineHeight: 1, fontWeight: 900, letterSpacing: "-0.025em" }}
+                className="font-black text-charcoal tracking-tight leading-none mb-1"
+                style={{ fontSize: "clamp(1.25rem, 5vw, 1.875rem)", lineHeight: 1, fontWeight: 900, letterSpacing: "-0.025em" }}
               >
                 {point.value}
               </div>
               <div
-                className="text-[10px] uppercase tracking-widest text-stone-500 font-semibold"
-                style={{ fontSize: "10px", lineHeight: 1.2, letterSpacing: "0.1em", fontWeight: 600 }}
+                className="uppercase tracking-widest text-stone-500 font-semibold whitespace-nowrap"
+                style={{ fontSize: "clamp(9px, 2.4vw, 10px)", lineHeight: 1.2, letterSpacing: "0.08em", fontWeight: 600 }}
               >
                 {point.label}
               </div>

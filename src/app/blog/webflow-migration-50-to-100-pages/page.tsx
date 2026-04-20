@@ -1,0 +1,397 @@
+import { ArrowLeft, Calendar, Clock, ArrowRight, DollarSign, RefreshCw } from "lucide-react";
+import Link from "next/link";
+import lazyLoad from "next/dynamic";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import Breadcrumb from "@/components/ui/Breadcrumb";
+import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
+import { FAQAccordion } from "@/components/ui/FAQAccordion";
+import { blogPosts } from "@/data/blog";
+import type { Metadata } from "next";
+
+const postFAQs = blogPosts.find(p => p.id === "webflow-migration-50-to-100-pages")?.faqs ?? [];
+
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
+
+export const metadata: Metadata = {
+    title: "50 to 100 Page Webflow Migration: $5K to $10K in 3 Weeks (2026)",
+    description: "Agencies quote $15K to $25K for 50 to 100 page Webflow migrations. Real scope, hour estimates per phase, and honest Scale-tier pricing for 2026.",
+    alternates: { canonical: "/blog/webflow-migration-50-to-100-pages" },
+    keywords: ["webflow migration cost 50-100 pages", "webflow migration cost 50 pages", "webflow migration 60 pages", "webflow migration 100 pages", "webflow agency pricing site migration", "webflow enterprise migration", "webflow to nextjs 50 pages"],
+    openGraph: {
+        title: "50 to 100 Page Webflow Migration: $5K to $10K in 3 Weeks (2026)",
+        description: "Agencies quote $15K to $25K for 50 to 100 page Webflow migrations. Real scope, hour estimates per phase, and honest Scale-tier pricing for 2026.",
+        type: "article",
+        publishedTime: "2026-04-22T00:00:00-05:00",
+        modifiedTime: "2026-04-22T00:00:00-05:00",
+        authors: ["Hassan Jamal"],
+        url: "https://www.pandacodegen.com/blog/webflow-migration-50-to-100-pages",
+        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "50 to 100 Page Webflow Migration: $5K to $10K in 3 Weeks (2026)",
+        description: "Agencies quote $15K to $25K for 50 to 100 page Webflow migrations. Real scope, hour estimates per phase, and honest Scale-tier pricing for 2026.",
+    },
+};
+
+const articleSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Article",
+            "@id": "https://www.pandacodegen.com/blog/webflow-migration-50-to-100-pages#article",
+            "headline": "50 to 100 Page Webflow Migration: $5K to $10K in 3 Weeks (2026)",
+            "description": "Agencies quote $15K to $25K for 50 to 100 page Webflow migrations. Real scope, hour estimates per phase, and honest Scale-tier pricing for 2026.",
+            "image": "https://www.pandacodegen.com/og-image.jpg",
+            "datePublished": "2026-04-22T00:00:00-05:00",
+            "dateModified": "2026-04-22T00:00:00-05:00",
+            "author": {
+                "@type": "Person",
+                "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
+                "name": "Hassan Jamal",
+                "jobTitle": "Founder and Lead Engineer",
+                "url": "https://www.pandacodegen.com/about/hassan",
+                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
+                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
+            },
+            "publisher": {
+                "@type": "Organization",
+                "@id": "https://www.pandacodegen.com/#organization",
+                "name": "PandaCodeGen",
+                "url": "https://www.pandacodegen.com",
+                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
+            },
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/webflow-migration-50-to-100-pages" },
+            "articleSection": "Webflow",
+            "keywords": ["webflow migration cost 50 pages", "webflow migration 100 pages", "webflow to nextjs migration", "webflow enterprise pricing", "webflow agency pricing"],
+            "timeRequired": "PT9M",
+            "wordCount": 1800,
+            "about": [
+                { "@type": "Thing", "name": "Webflow Migration" },
+                { "@type": "Thing", "name": "Website Migration Cost" },
+                { "@type": "Thing", "name": "Next.js" },
+                { "@type": "Thing", "name": "Content Management System Migration" }
+            ],
+            "inLanguage": "en-US",
+            "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2", "[data-speakable='true']"] },
+            "citation": [
+                { "@type": "CreativeWork", "name": "Webflow CMS Collection Migration Docs", "url": "https://help.webflow.com/hc/en-us/articles/33961342531859-Migrate-CMS-Collection-content-to-another-project" },
+                { "@type": "CreativeWork", "name": "Webflow Redirect Manager Documentation", "url": "https://help.webflow.com/hc/en-us/articles/33961294898835-How-do-I-set-up-redirects-in-Webflow" },
+                { "@type": "CreativeWork", "name": "Webflow Website Cost in 2026", "url": "https://www.webflow.jobs/resources/how-much-does-a-webflow-website-cost-2026" },
+                { "@type": "CreativeWork", "name": "Iron Horse Studio Webflow Services", "url": "https://ironhorse.io/webflow-services" },
+                { "@type": "CreativeWork", "name": "Google Core Web Vitals", "url": "https://web.dev/vitals/" },
+                { "@type": "CreativeWork", "name": "Google PageSpeed Insights", "url": "https://pagespeed.web.dev/" }
+            ]
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/webflow-migration-50-to-100-pages#breadcrumb",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
+                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", "position": 3, "name": "Webflow Migration Cost 50 to 100 Pages", "item": "https://www.pandacodegen.com/blog/webflow-migration-50-to-100-pages" }
+            ]
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/webflow-migration-50-to-100-pages#webpage",
+            "url": "https://www.pandacodegen.com/blog/webflow-migration-50-to-100-pages",
+            "name": "50 to 100 Page Webflow Migration: $5K to $10K in 3 Weeks (2026)",
+            "description": "Agencies quote $15K to $25K for 50 to 100 page Webflow migrations. Real scope, hour estimates per phase, and honest Scale-tier pricing for 2026.",
+            "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
+            "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
+            "datePublished": "2026-04-22T00:00:00-05:00",
+            "dateModified": "2026-04-22T00:00:00-05:00",
+            "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/webflow-migration-50-to-100-pages#breadcrumb" },
+            "inLanguage": "en-US"
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://www.pandacodegen.com/#organization",
+            "name": "PandaCodeGen",
+            "alternateName": "Panda Code Gen",
+            "url": "https://www.pandacodegen.com",
+            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
+            "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158"],
+            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
+            "description": "PandaCodeGen builds custom Next.js websites for businesses migrating from Webflow, WordPress, Wix, Squarespace, and Shopify. All sites score 95 to 100 on Google PageSpeed or you do not pay.",
+            "areaServed": "Worldwide",
+            "foundingDate": "2026"
+        },
+        {
+            "@type": "FAQPage",
+            "@id": "https://www.pandacodegen.com/blog/webflow-migration-50-to-100-pages#faq",
+            "mainEntity": postFAQs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
+        }
+    ]
+};
+
+export default function WebflowMigration50To100PagesPage() {
+    return (
+        <>
+            <Header />
+            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-16 md:pt-32 pb-10 md:pb-20">
+                <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
+                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
+
+                    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+
+                    <Breadcrumb items={[
+                        { label: "Home", href: "/" },
+                        { label: "Blog", href: "/blog" },
+                        { label: "Webflow Migration Cost 50 to 100 Pages", href: "/blog/webflow-migration-50-to-100-pages" }
+                    ]} />
+
+                    <Link href="/blog" className="inline-flex items-center gap-2 text-charcoal hover:text-stone-700 mb-8 transition-colors">
+                        <ArrowLeft className="w-4 h-4" />
+                        Back to Blog
+                    </Link>
+
+                    {/* Title & Meta */}
+                    <div className="mb-10">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 bg-stone-100 border border-stone-200 rounded-full text-charcoal text-xs font-bold uppercase tracking-wider mb-6">
+                            <DollarSign className="w-3 h-3" />
+                            Webflow · Migration Cost
+                        </div>
+                        <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight text-charcoal">
+                            You were quoted $18,000.{" "}
+                            <span className="font-serif italic text-cognac">Here is what a 50 to 100 page Webflow migration actually costs.</span>
+                        </h1>
+                        <p className="text-xl text-stone-600 mb-6 leading-relaxed">
+                            Enterprise Webflow agencies quote $15,000 to $25,000 for migrating 50-100 page sites to Next.js. Most of that is agency overhead. Here is the real engineering scope, real hour estimates per phase, and honest Scale-tier pricing.
+                        </p>
+                        <BlogAuthor
+                            date="Apr 22, 2026"
+                            readTime="9 min read"
+                            bio="Hassan founded PandaCodeGen in Feb 2026 after six years inside WordPress. Recent rebuild: Obare Magazine off Wix into Next.js and Sanity, 7 days, 98 Mobile PageSpeed. Every build scores 95 to 100 on Google PageSpeed or you do not pay the balance."
+                            linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
+                        />
+                    </div>
+
+                    {/* Animation */}
+                    <div className="mb-12"><PageSpeedAnimation /></div>
+
+                    {/* Executive Summary */}
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
+                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
+                        <BlogList items={[
+                            "Enterprise Webflow agencies (Iron Horse, Flow Ninja, Edgar Allan) quote $15,000 to $25,000 for 50 to 100 page migrations and do not publish pricing.",
+                            "Real engineering scope is 80 to 125 hours. At market hourly rate ($100 to $150), that is $8,000 to $18,750 in labor before agency markup.",
+                            "Our Scale tier covers this exact scope at $5,000 to $10,000, delivered in 3 weeks instead of 8 to 12.",
+                            "The 301 redirect strategy and CMS collection migration are the two places where cheaper agencies lose SEO. We document both step by step."
+                        ]} />
+                    </div>
+
+                    <div className="space-y-8">
+                        <div className="bg-cognac/5 border-l-4 border-cognac rounded-r-lg p-6 my-6 md:my-8" data-speakable="true">
+                            <p className="text-sm font-bold text-cognac uppercase tracking-wider mb-2">Short Answer</p>
+                            <p className="text-stone-800 leading-relaxed">
+                                A 50 to 100 page Webflow to Next.js migration is 80 to 125 engineering hours spread across 3 weeks. Our Scale tier is $5,000 to $10,000 depending on page count and CMS complexity. Enterprise agencies charge 2 to 3 times that for the same scope and take 8 to 12 weeks. If you were quoted $15,000 to $25,000, you are paying 40 to 60 percent in agency overhead.
+                            </p>
+                        </div>
+
+                        <BlogHeader>Why 50 to 100 Pages Is a Distinct Pricing Tier</BlogHeader>
+                        <BlogText>
+                            Page count alone does not decide migration cost. CMS collection count, integration surface, and redirect complexity do. At 50 to 100 pages you typically have 3 to 8 CMS collections (blog posts, case studies, team, pricing, locations, resources, integrations, careers). Each collection is a separate schema in the new CMS, a separate import script, and a separate set of URL patterns to redirect.
+                        </BlogText>
+                        <BlogText>
+                            This is why our <Link href="/pricing" className="text-cognac hover:underline">Growth tier at $3,500</Link> covers up to 30 pages but stops there. Beyond 30 pages, the redirect map alone becomes a multi-hour project, and the CMS schema design needs real thought, not a template. That is when Scale tier starts.
+                        </BlogText>
+
+                        <BlogHeader>Real Hour Estimates Per Migration Phase</BlogHeader>
+                        <BlogText>
+                            Here is what a 50 to 100 page Webflow to Next.js migration actually takes to ship. These are the numbers from real rebuilds, not agency proposal inflation.
+                        </BlogText>
+
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 flex items-center gap-1">&larr; Swipe to see more &rarr;</p>
+                        <div className="my-4 overflow-x-auto -mx-4 px-4">
+                            <table className="w-full text-sm border-collapse border border-stone-300 min-w-[560px] responsive-stack-table">
+                                <thead>
+                                    <tr className="bg-stone-100">
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Phase</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Hours</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">What happens</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-label="Phase" className="p-3 border border-stone-300 font-medium">1. Audit + architecture</td>
+                                        <td data-label="Hours" className="p-3 border border-stone-300">8 to 12</td>
+                                        <td data-label="What happens" className="p-3 border border-stone-300">Export every CMS collection to CSV. Screaming Frog crawl to inventory every URL. Pull top pages from Google Search Console. Map new component structure.</td>
+                                    </tr>
+                                    <tr className="bg-stone-50">
+                                        <td data-label="Phase" className="p-3 border border-stone-300 font-medium">2. Component development</td>
+                                        <td data-label="Hours" className="p-3 border border-stone-300">40 to 60</td>
+                                        <td data-label="What happens" className="p-3 border border-stone-300">Build every Webflow section as a React component. Typography, spacing, animations all hand-written. No auto-conversion tools (they produce fragile code).</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Phase" className="p-3 border border-stone-300 font-medium">3. CMS schema + integration</td>
+                                        <td data-label="Hours" className="p-3 border border-stone-300">15 to 25</td>
+                                        <td data-label="What happens" className="p-3 border border-stone-300">Design Sanity or Contentful schemas for each collection. Wire them into Next.js App Router. Write typed queries for each content type.</td>
+                                    </tr>
+                                    <tr className="bg-stone-50">
+                                        <td data-label="Phase" className="p-3 border border-stone-300 font-medium">4. Content migration + 301 map</td>
+                                        <td data-label="Hours" className="p-3 border border-stone-300">10 to 15</td>
+                                        <td data-label="What happens" className="p-3 border border-stone-300">CSV imports of 100 items take 15 to 30 minutes of runtime but validation and manual cleanup takes 8 to 10 hours. Build the URL-by-URL redirect map.</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Phase" className="p-3 border border-stone-300 font-medium">5. QA + deployment</td>
+                                        <td data-label="Hours" className="p-3 border border-stone-300">8 to 12</td>
+                                        <td data-label="What happens" className="p-3 border border-stone-300">Cross-browser testing, Core Web Vitals verification, mobile QA, production deploy to Vercel, DNS cutover, new sitemap submission to Google Search Console.</td>
+                                    </tr>
+                                    <tr className="bg-charcoal text-white">
+                                        <td data-label="Phase" className="p-3 border border-stone-300 font-bold">Total</td>
+                                        <td data-label="Hours" className="p-3 border border-stone-300 font-bold">81 to 124 hours</td>
+                                        <td data-label="What happens" className="p-3 border border-stone-300 font-bold">Roughly 3 weeks of focused work.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <BlogText>
+                            At market engineering rates of $100 to $150 per hour, that is $8,100 to $18,600 in pure labor. Agency pricing at $15,000 to $25,000 bakes in project management, account executives, and margin on top of that base.
+                        </BlogText>
+
+                        <BlogHeader>Why Enterprise Agencies Charge 2 to 3 Times What a Solo Shop Charges</BlogHeader>
+                        <BlogText>
+                            The honest answer is overhead, not engineering quality. Enterprise Webflow agencies like <a href="https://ironhorse.io/webflow-services" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Iron Horse Studio</a> have project managers, account executives, QA leads, designers, and developers on every engagement. Their public timeline for a simple Webflow migration is 8 to 12 weeks. Complex migrations go 4 to 6 months.
+                        </BlogText>
+                        <BlogText>
+                            Those layers exist for enterprise clients who need procurement sign-off, multiple stakeholder reviews, and a single point of contact across departments. If you are a 50 to 100 person company with a marketing site, most of that layering is cost you do not need. You need the engineering, not the PMO.
+                        </BlogText>
+                        <BlogQuote>
+                            Every dollar you pay above $18,000 for a 50 to 100 page Webflow migration is funding agency overhead, not engineering quality. Solo shops and boutique teams ship the same output in 3 weeks for half the price because there is no project manager layer to feed.
+                        </BlogQuote>
+
+                        <BlogHeader>Our Scale Tier Pricing for 50 to 100 Page Migrations</BlogHeader>
+                        <BlogText>
+                            Here is what a 50 to 100 page Webflow to Next.js migration costs in our Scale tier. Fixed price, 3-week delivery, 95+ PageSpeed guaranteed or you do not pay the balance.
+                        </BlogText>
+
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 flex items-center gap-1">&larr; Swipe to see more &rarr;</p>
+                        <div className="my-4 overflow-x-auto -mx-4 px-4">
+                            <table className="w-full text-sm border-collapse border border-stone-300 min-w-[560px] responsive-stack-table">
+                                <thead>
+                                    <tr className="bg-stone-100">
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Scope</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Our Scale Tier</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Agency Quote</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-label="Scope" className="p-3 border border-stone-300 font-medium">50 pages, 2 to 3 CMS collections, standard animations</td>
+                                        <td data-label="Our Scale Tier" className="p-3 border border-stone-300 font-bold text-cognac">$5,000 to $7,000</td>
+                                        <td data-label="Agency Quote" className="p-3 border border-stone-300 text-stone-600">$12,000 to $18,000</td>
+                                    </tr>
+                                    <tr className="bg-stone-50">
+                                        <td data-label="Scope" className="p-3 border border-stone-300 font-medium">70 pages, 4 to 6 CMS collections, custom interactions</td>
+                                        <td data-label="Our Scale Tier" className="p-3 border border-stone-300 font-bold text-cognac">$7,000 to $8,500</td>
+                                        <td data-label="Agency Quote" className="p-3 border border-stone-300 text-stone-600">$15,000 to $22,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Scope" className="p-3 border border-stone-300 font-medium">100 pages, 6 to 8 CMS collections, integrations (HubSpot, Stripe, Analytics)</td>
+                                        <td data-label="Our Scale Tier" className="p-3 border border-stone-300 font-bold text-cognac">$8,500 to $10,000</td>
+                                        <td data-label="Agency Quote" className="p-3 border border-stone-300 text-stone-600">$18,000 to $25,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <BlogText>
+                            Beyond 100 pages, 8+ CMS collections, multi-region localization, or SSO and compliance requirements, we quote case-by-case in our Scale+ tier. That is an honest custom quote after a scoping call, not a hidden-ceiling surprise on invoice.
+                        </BlogText>
+
+                        {/* Mid-Article CTA */}
+                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                            <p className="font-bold text-charcoal mb-2">Got a quote from an enterprise Webflow agency?</p>
+                            <p className="text-stone-600 mb-4 text-sm">Bring it to the discovery call. We will match the scope line by line and show you what each line actually costs in engineering hours. If our Scale tier does not save you at least 30 percent, we will tell you directly.</p>
+                            <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Compare Your Quote <ArrowRight className="w-4 h-4" /></CalModalButton>
+                            <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
+                                <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                                <p className="text-sm text-stone-700 mt-1">If our Scale tier is out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
+                            </div>
+                        </div>
+
+                        <BlogHeader>The 3-Week Delivery Timeline</BlogHeader>
+                        <BlogText>
+                            A 50 to 100 page Webflow to Next.js migration ships in 3 weeks in our Scale tier. Enterprise agencies quote 8 to 12 weeks on the same scope because they batch engineer time around meetings and approval cycles. Solo and boutique teams compress that by cutting the ceremony.
+                        </BlogText>
+                        <BlogList items={[
+                            "Week 1: CMS data export, Screaming Frog URL crawl, architecture decisions, Sanity or Contentful schema design. You approve the content model before we write a component.",
+                            "Week 2: Component build in Next.js App Router. CMS integration wired. All pages rendering with imported content by end of week. Staging URL shared.",
+                            "Week 3: 301 redirect map finalized from Google Search Console top-pages data. QA across devices. PageSpeed optimization until we hit 95+. Production deploy to Vercel, DNS cutover, sitemap submission to Google Search Console."
+                        ]} />
+
+                        <BlogHeader>The 301 Redirect Strategy for 50 to 100 Pages</BlogHeader>
+                        <BlogText>
+                            This is where most migrations leak SEO. Every URL on your old Webflow site either needs a matching page on the new site, or a 301 redirect to the closest equivalent. Skip this step and Google drops you from the rankings you built for years.
+                        </BlogText>
+                        <BlogText>
+                            Webflow&apos;s built-in Redirect Manager has a hard limit of 1,000 redirects. At 50 to 100 pages plus historical URLs from CMS items that moved, you can approach that limit faster than expected. On Next.js deployed to Vercel, we handle unlimited redirects through the config file, which removes the ceiling entirely.
+                        </BlogText>
+                        <BlogText>
+                            Our redirect strategy in order:
+                        </BlogText>
+                        <BlogList items={[
+                            "Pull your top 500 pages from Google Search Console by impressions over the last 12 months. These are the ones that must have perfect 1-to-1 redirects.",
+                            "Crawl the live Webflow site with Screaming Frog to capture every indexed URL, including CMS item slugs.",
+                            "Map each URL to the new equivalent in a CSV. Wildcard patterns only for blog categories or tag archives where individual 1-to-1 mapping is not needed.",
+                            "Deploy the redirect map in Next.js config before DNS cutover. Test every top-10 page before going live.",
+                            "After launch, submit the new sitemap to Google Search Console and monitor crawl errors daily for 14 days."
+                        ]} />
+
+                        <BlogHeader>What Is Not Included in Scale Tier</BlogHeader>
+                        <BlogText>
+                            Scale tier is migration, not rebranding. If you also want new visual design, new copy, or new brand identity, that adds separate scope. Be honest about what you are buying so the price makes sense.
+                        </BlogText>
+                        <BlogList items={[
+                            "New visual design or brand identity work. We migrate your existing design faithfully. Design refresh is a separate engagement.",
+                            "E-commerce checkout flows. That is Scale+ scope because it touches Stripe webhooks, inventory sync, order logic.",
+                            "Custom authentication or member areas. Scale+ scope. Touches session management, database design, email verification flows.",
+                            "Multi-region localization or translation. Scale+ scope.",
+                            "SOC 2 compliance, SSO, enterprise audit trails. Scale+ custom quote only."
+                        ]} />
+
+                        <BlogHeader>When Scale Tier Is Not the Right Fit</BlogHeader>
+                        <BlogText>
+                            Honest: not every Webflow site needs Scale tier. If you have fewer than 30 pages, you want our <Link href="/blog/webflow-migration-cost" className="text-cognac hover:underline">Growth tier at $3,500</Link>. If you have over 100 pages with complex integrations, or you need enterprise compliance, you want Scale+ and a custom quote. If you are leaving Webflow for specific platform reasons like the <Link href="/blog/leaving-webflow-2026" className="text-cognac hover:underline">April 2026 outages or the User Accounts sunset</Link>, read those posts first to understand the full decision.
+                        </BlogText>
+
+                        {/* Bottom CTA */}
+                        <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-10 md:mt-16 text-center">
+                            <h2 className="text-2xl font-bold mb-4">Ready to see the real quote?</h2>
+                            <p className="text-stone-600 mb-6">
+                                Book a discovery call. Bring your existing agency quote if you have one. We will scope your specific 50 to 100 page site and quote Scale tier pricing in writing on the call.
+                            </p>
+                            <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Book Scoping Call <ArrowRight className="w-5 h-5" /></CalModalButton>
+                            <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
+                                <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
+                                <p className="text-sm text-stone-700 mt-1">If our Scale tier is out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <section className="mb-10 mt-10 md:mt-16">
+                        <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
+                        <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
+                            <li><strong>Enterprise agencies charge 2 to 3 times what solo shops charge for the same scope.</strong> Iron Horse and similar Webflow Enterprise partners quote $15,000 to $25,000 for 50 to 100 page migrations. Our Scale tier covers the exact same scope at $5,000 to $10,000.</li>
+                            <li><strong>Real engineering scope is 80 to 125 hours, not 200 plus.</strong> That is 3 weeks of focused work from a boutique team, not 8 to 12 weeks of agency scheduling.</li>
+                            <li><strong>CMS collection count matters more than page count.</strong> 50 pages with 2 collections is a different project from 70 pages with 6 collections. Our pricing reflects that.</li>
+                            <li><strong>301 redirect strategy makes or breaks post-migration SEO.</strong> Webflow caps at 1,000 redirects. Next.js on Vercel has no cap. Top pages need 1-to-1 mapping, not wildcards.</li>
+                            <li><strong>If Scale is out of budget, the $500 Founder Migration is a separate qualification-gated offer.</strong> It is not a downgrade of Scale. It is a different scope with explicit requirements.</li>
+                        </ol>
+                    </section>
+
+                    {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
+                    <RelatedPosts currentPostId="webflow-migration-50-to-100-pages" category="Webflow" />
+
+                </article>
+            </main>
+            <Footer />
+        </>
+    );
+}

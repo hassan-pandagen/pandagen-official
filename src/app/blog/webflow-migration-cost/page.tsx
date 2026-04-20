@@ -285,7 +285,7 @@ export default function WebflowMigrationCostPage() {
                         <BlogHeader>Enterprise Webflow Migration Pricing</BlogHeader>
 
                         <BlogText>
-                            Large Webflow migrations in our Scale tier run <BlogHighlight>$5,000 to $10,000+</BlogHighlight> for 100+ page sites. At this scale, the migration is no longer just a rebuild: it becomes a multi-stakeholder project that includes complex CMS modeling, localization, third-party integrations, and coordinated QA with sign-off from marketing, engineering, and leadership. Enterprise scopes beyond that are custom-quoted.
+                            Large Webflow migrations in our Scale tier run <BlogHighlight>$5,000 to $10,000+</BlogHighlight> for 50 to 100 page sites. At this scale the migration is no longer just a rebuild: complex CMS modeling, third-party integrations, and 301 redirect strategy become the bulk of the engineering hours. We broke down the exact hour-per-phase estimates and compared our pricing against Iron Horse and other enterprise agencies in our <Link href="/blog/webflow-migration-50-to-100-pages" className="text-cognac hover:underline">50 to 100 page Webflow migration pricing breakdown</Link>. Enterprise scopes beyond 100 pages are custom-quoted in Scale+.
                         </BlogText>
 
                         <BlogText>

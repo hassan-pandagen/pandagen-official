@@ -829,9 +829,87 @@ Examples:
 
 ---
 
-## Part 11 — Blog Plan: Week of Apr 13-20, 2026
+## Part 11 — Blog Plan: Week of Apr 21-27, 2026
 
-### This Week's Schedule (GSC data-driven, Apr 13)
+### This Week's Schedule (GSC data-driven, Apr 20)
+
+**Strategic context:** 28-day GSC pull on Apr 20 shows the unexpected hero cluster is **Webflow migration pricing**. `webflow-migration-cost` alone has **3,147 impressions at position 6.3** with 0% CTR. Combined with `webflow-true-cost` (991 imp), `leaving-webflow-2026` (531 imp), and 12 striking-distance queries at positions 5-11, the Webflow pricing cluster is the dominant traffic asset. This week's 4 posts are all Webflow-focused, internal-linked to the hub pages, targeting striking-distance queries that already have impressions but no page specifically built for them.
+
+| Day | Slug | Title | Targets (GSC) |
+|-----|------|-------|---------------|
+| Tue Apr 22 | `webflow-migration-50-to-100-pages` | Webflow Migration for 50 to 100 Page Sites: Scope, Timeline, and 2026 Pricing | "webflow migration cost for 50-100 page website" (136 imp, pos 7.4), "webflow migration cost for 50-100 page website 2025 2026" (45 imp, pos 5.7), "webflow agency pricing for site migration 50-100 pages" (13 imp, pos 2.8), "how much should we budget for a webflow migration for a 50-100 page site?" (27 imp, pos 2.2). Combined ~234 imp strike zone. |
+| Thu Apr 24 | `webflow-enterprise-migration-cost` | Webflow Enterprise Migration: Real Costs, Hidden Fees, and When Custom Wins (2026) | "webflow enterprise migration cost" (42 imp, pos 6.4), "cost of migrating enterprise website to webflow" (41 imp, pos 10.2), "what's the cost of migrating to webflow for an enterprise site?" (18 imp, pos 8.3). Combined ~145 imp. |
+| Sat Apr 26 | `webflow-user-accounts-sunset-2026` | Webflow Is Killing User Accounts in 2026: Migration Paths for Membership Sites | "webflow user accounts sunset date 2026" (31 imp, pos 6.3). News-reactive, HARO/Qwoted pitch-worthy for backlinks. |
+| Mon Apr 28 | `iron-horse-studio-vs-pandacodegen-webflow` | Iron Horse Studio vs PandaCodeGen: Honest Webflow Migration Comparison (2026) | "iron horse studio webflow migration cost" (206 imp, pos 11.2), "how much does a webflow migration with iron horse studio cost?" (27 imp, pos 5.1). Defamation safety: factual-only comparison, public pricing cited. |
+
+### Content freeze context
+
+All 43 existing posts are under **CTR FREEZE from Apr 20 to May 20** (see [CTR_FREEZE_APR_20.md](CTR_FREEZE_APR_20.md)). Do NOT edit existing post titles, meta descriptions, H1s, or pricing canon during this window. New posts are allowed. Let Google recrawl and measure CTR on the Apr 20 changes before any further edits.
+
+### Gold Standard Updates (Apr 20, 2026)
+
+The following lessons from the Apr 19-20 sitewide audit are now canon. Apply to every new blog post.
+
+**1. Neil Patel Test for every H1 / title**
+Every title must pass 3 criteria before publishing:
+- Would someone click this as a Google ad?
+- Is it specific (numbers, timelines, named proof)?
+- Is it about what we DO for the buyer (not a category description)?
+
+Failing examples: "What Is Headless Commerce? Plain-English Guide for Store Owners" (category dictionary). "Headless Shopify Development. From $500. 3 weeks. 95+ PageSpeed." (commodity listing, no pain).
+Passing examples: "Your Shopify store loads in 4 seconds. Ours load in 0.8." (specific pain + proof). "Trapped on Wix? We got Obare Magazine out in 7 days." (pain + receipt).
+
+**2. Pricing Canon (STRICT — never deviate)**
+- Starter: $1,500+ — 5-7 page site
+- Growth: $3,500+ — 10-20 pages, CMS, blog migration [MOST POPULAR anchor]
+- Scale: $5,000 to $10,000+ — headless e-commerce, 30+ pages
+- Scale+: custom quote — enterprise scope
+- Founder's Offer: $500 — qualification-gated (WordPress/Webflow/Wix/Squarespace/GHL, under 15 pages, no e-commerce, verified review after launch, fast feedback during build). 3 spots/month. NOT the migration headline. Framed as "if out of budget" alternative.
+
+**3. "Foot-in-the-Door" naming is BANNED**
+The phrase "Foot-in-the-Door" is the literal name of a 1966 psychology compliance manipulation tactic (Freedman & Fraser). Never use it as a customer-facing tier name. Internal pricing notes fine. Customer-facing: "Founder's Offer" or "Starter" only.
+
+**4. Never lead a service page H1 or service cluster blog with "From $500"**
+$500 is the qualification-gated Founder Offer, not the migration entry price. Leading with "From $500" triggers bait-and-switch perception when readers discover Starter is actually $1,500+. Lead with pain or outcome.
+
+**5. Founder Offer CTAs use "budget alternative" framing**
+Standard block body: "If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining."
+
+Lead with Growth/Starter first. Founder Offer is the fallback, not the hook.
+
+**6. Fabrication check before every publish**
+- No "dozens of clients" claims (PandaCodeGen founded Feb 2026, solo founder; "dozens" is not credible)
+- No unsourced stats ("61% slower per 10 plugins", "47% of ranking loss") — if you can't link a source, drop the stat
+- No unnamed case studies with specific dollar figures ("A client went from $420K to $890K") — use MyCustomPatches (Matt Conner) or Obare Magazine with real receipts, or label as modeled projection
+- No first-person claims about platforms we don't run (we never ran Webflow — don't say "our Webflow store was down")
+
+**7. Single source of truth for FAQs**
+FAQPage `mainEntity` in schema must `.map()` over the same `blogPosts.find(p => p.id === "slug")?.faqs` that feeds the rendered FAQAccordion. Never hardcode FAQs in schema — drift between UI and structured data triggers Google warnings.
+
+**8. Mobile standards (tables + spacing + stat strips)**
+- Table cell borders: `border-stone-300` (not `stone-200`) per Blog Table Mobile Standard
+- Static desktop spacing (`mt-10`, `my-12`, `mt-16`) must be responsive: `mt-6 md:mt-10`, `my-8 md:my-12`, `mt-10 md:mt-16`
+- Stat strips / any 4-cell row: use `grid grid-cols-2 md:grid-cols-4`, not horizontal flex (4 cells on 375px screens clip "Code Ownership"-length labels)
+
+**9. Modal/popup standards**
+- Floating close button fixed to viewport (not the card) — always accessible even when modal scrolls
+- Container `overflow-y-auto` + `overscroll-contain` + `WebkitOverflowScrolling: touch` — Safari mobile compatibility
+- Copy: one clear value prop sentence, not 3+ paragraphs. Founder Offer modal went from ~120 words → 35 words after clutter review.
+
+**10. Meta description max 160 chars**
+Hard limit. SERP truncates at 155-160 depending on device. 15 of 43 blogs audited on Apr 20 had overflowing descriptions (one was 220). All trimmed. Every new post: confirm length before publishing.
+
+**11. About/Manifesto H1 rule: specific > abstract**
+Killed "We don't build websites. We build assets/receipts." — fortune-cookie language. Replaced with:
+- About: "I rebuild slow platform sites. 95+ PageSpeed. Always."
+- Manifesto: "Speed is a contract. Not a marketing claim."
+Same rule applies if ever rewriting hub pages: state what you do concretely, make a guarantee, avoid metaphor without proof.
+
+---
+
+## Part 11 Archive — Week of Apr 13-20, 2026
+
+### Previous Schedule (GSC data-driven, Apr 13)
 
 | Day | Slug | Title | Reasoning |
 |-----|------|-------|-----------|

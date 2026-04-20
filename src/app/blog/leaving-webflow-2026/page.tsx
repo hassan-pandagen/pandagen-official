@@ -386,7 +386,7 @@ export default function LeavingWebflow2026Page() {
                         <BlogHeader>What a Real 50-Page Migration Actually Looked Like</BlogHeader>
 
                         <BlogText>
-                            We ran this exact process on our Obare Magazine rebuild (Wix to Next.js and Sanity, 7 days). The playbook travels to Webflow cleanly. Here is what a real migration looks like from the inside, with no glossing over the hard parts.
+                            We ran this exact process on our Obare Magazine rebuild (Wix to Next.js and Sanity, 7 days). The playbook travels to Webflow cleanly. Here is what a real migration looks like from the inside, with no glossing over the hard parts. For the full scope breakdown and hour-per-phase estimates specifically for 50 to 100 page Webflow sites, see our <Link href="/blog/webflow-migration-50-to-100-pages" className="text-cognac hover:underline">Scale-tier pricing breakdown</Link>.
                         </BlogText>
 
                         <BlogText>

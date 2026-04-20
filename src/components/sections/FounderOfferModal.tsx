@@ -65,52 +65,53 @@ export default function FounderOfferModal() {
   if (!visible) return null;
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center px-4">
+    <div className="fixed inset-0 z-[9999] overflow-y-auto overscroll-contain" style={{ WebkitOverflowScrolling: "touch" }}>
       {/* Blurred backdrop */}
       <div
-        className="absolute inset-0 bg-black/50 backdrop-blur-md"
+        className="fixed inset-0 bg-black/60 backdrop-blur-sm"
         onClick={dismiss}
       />
 
-      {/* Modal card */}
-      <div className="relative w-full max-w-md rounded-2xl overflow-hidden shadow-2xl">
+      {/* Scroll container - ensures modal is always reachable even on short viewports */}
+      <div className="relative min-h-full flex items-start md:items-center justify-center p-4 pt-8 pb-16 md:py-8">
 
-        {/* Top accent strip */}
-        <div className="h-1 w-full bg-gradient-to-r from-cognac via-amber-500 to-cognac" />
+        {/* Floating close button - always visible, always tappable */}
+        <button
+          onClick={dismiss}
+          className="fixed top-4 right-4 z-[10000] w-10 h-10 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 transition-all active:scale-95"
+          aria-label="Close"
+        >
+          <X className="w-5 h-5" />
+        </button>
 
-        {/* Card body */}
-        <div className="bg-[#151210] border border-white/8 rounded-b-2xl">
+        {/* Modal card */}
+        <div className="relative w-full max-w-md rounded-2xl overflow-hidden shadow-2xl">
 
-          {/* Close button */}
-          <button
-            onClick={dismiss}
-            className="absolute top-4 right-4 text-stone-500 hover:text-stone-300 transition-colors z-10 bg-white/5 rounded-full p-1.5"
-            aria-label="Close"
-          >
-            <X className="w-4 h-4" />
-          </button>
+          {/* Top accent strip */}
+          <div className="h-1 w-full bg-gradient-to-r from-cognac via-amber-500 to-cognac" />
 
-          <div className="px-7 pt-6 pb-5">
+          {/* Card body */}
+          <div className="bg-[#151210] border border-white/10 rounded-b-2xl px-6 py-6">
 
             {submitted ? (
-              <div className="py-8 text-center">
+              <div className="py-4 text-center">
                 <div className="w-12 h-12 rounded-full bg-cognac/15 flex items-center justify-center mx-auto mb-4">
                   <CheckCircle2 className="w-6 h-6 text-cognac" />
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">Application received.</h3>
                 <p className="text-white/80 text-sm leading-relaxed">
-                  We will review your site and get back to you within a few hours to let you know if it is a fit.
+                  We will review your site and reply within a few hours.
                 </p>
               </div>
             ) : (
               <>
-                {/* Badge */}
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cognac/30 bg-cognac/10 text-xs font-bold uppercase tracking-widest text-cognac mb-5">
+                {/* Scarcity badge */}
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cognac/30 bg-cognac/10 text-[11px] font-bold uppercase tracking-widest text-cognac mb-4">
                   <span className="relative flex h-1.5 w-1.5">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cognac opacity-75" />
                     <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-cognac" />
                   </span>
-                  Limited. 2 Spots Left This Month
+                  2 Spots Left · April
                 </div>
 
                 {/* Price */}
@@ -118,35 +119,14 @@ export default function FounderOfferModal() {
                   <span className="text-5xl font-black text-white leading-none">$500</span>
                   <div className="pb-1">
                     <div className="text-white/40 line-through text-sm">$5,000+</div>
-                    <div className="text-cognac text-xs font-semibold">Full migration</div>
+                    <div className="text-cognac text-xs font-semibold">Full Next.js migration</div>
                   </div>
                 </div>
 
-                {/* Copy */}
-                <p className="text-white text-sm leading-relaxed mb-1">
-                  We select 3 businesses each month for a discounted Next.js migration. 1 spot is already taken, 2 remaining.
+                {/* Single clear value prop */}
+                <p className="text-white text-sm leading-relaxed mb-5">
+                  3 businesses a month get their site rebuilt for <span className="font-bold">$500 in exchange for an honest review</span>. Custom Next.js, 95+ PageSpeed, 1-week delivery. You own the code.
                 </p>
-                <p className="text-white/80 text-sm leading-relaxed mb-1">
-                  This is not a discount for everyone. We review each site and only take projects that make a strong case study. Custom build, 95+ PageSpeed guaranteed, 1 week delivery. You own the code.
-                </p>
-                <p className="text-white/80 text-sm leading-relaxed mb-5">
-                  The deal: you get the site, we document the results, you leave an honest review after launch.
-                </p>
-
-                {/* Includes */}
-                <div className="grid grid-cols-2 gap-2 mb-5">
-                  {[
-                    "Custom build, not a template",
-                    "95+ PageSpeed guaranteed",
-                    "Zero downtime launch",
-                    "You own the code",
-                  ].map((item) => (
-                    <div key={item} className="flex items-center gap-2 bg-white/4 rounded-lg px-3 py-2">
-                      <CheckCircle2 className="w-3 h-3 text-cognac shrink-0" />
-                      <span className="text-white text-xs">{item}</span>
-                    </div>
-                  ))}
-                </div>
 
                 {/* Form */}
                 <form onSubmit={handleSubmit} className="space-y-2.5">
@@ -156,7 +136,7 @@ export default function FounderOfferModal() {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     required
-                    className="w-full bg-white/6 border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder-stone-600 focus:outline-none focus:border-cognac/60 transition-colors"
+                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder-stone-500 focus:outline-none focus:border-cognac/60 transition-colors"
                   />
                   <input
                     type="email"
@@ -164,7 +144,7 @@ export default function FounderOfferModal() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="w-full bg-white/6 border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder-stone-600 focus:outline-none focus:border-cognac/60 transition-colors"
+                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder-stone-500 focus:outline-none focus:border-cognac/60 transition-colors"
                   />
                   <input
                     type="url"
@@ -172,7 +152,7 @@ export default function FounderOfferModal() {
                     value={website}
                     onChange={(e) => setWebsite(e.target.value)}
                     required
-                    className="w-full bg-white/6 border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder-stone-600 focus:outline-none focus:border-cognac/60 transition-colors"
+                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder-stone-500 focus:outline-none focus:border-cognac/60 transition-colors"
                   />
 
                   {error && <p className="text-red-400 text-xs">{error}</p>}
@@ -180,7 +160,7 @@ export default function FounderOfferModal() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full flex items-center justify-center gap-2 py-3.5 bg-cognac text-white font-bold rounded-xl text-sm hover:bg-amber-700 transition-all disabled:opacity-60 mt-1"
+                    className="w-full flex items-center justify-center gap-2 py-3.5 bg-cognac text-white font-bold rounded-xl text-sm hover:bg-amber-700 transition-all disabled:opacity-60 mt-1 active:scale-[0.99]"
                   >
                     {loading ? (
                       <><Loader2 className="w-4 h-4 animate-spin" /> Submitting...</>
@@ -189,13 +169,13 @@ export default function FounderOfferModal() {
                     )}
                   </button>
                 </form>
+
+                <p className="text-center text-white/40 text-[11px] mt-3">
+                  Reply within a few hours. Not a fit? We will tell you straight.
+                </p>
               </>
             )}
           </div>
-
-          <p className="text-center text-white/40 text-xs pb-4">
-            We will review your site and reply within a few hours.
-          </p>
         </div>
       </div>
     </div>
