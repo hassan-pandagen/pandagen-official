@@ -67,8 +67,8 @@ const articleSchema = {
             "mainEntityOfPage": { "@id": "https://www.pandacodegen.com/blog/webflow-migration-50-to-100-pages#webpage" },
             "articleSection": "Webflow",
             "keywords": ["webflow migration cost 50 pages", "webflow migration 100 pages", "webflow to nextjs migration", "webflow enterprise pricing", "webflow agency pricing"],
-            "timeRequired": "PT9M",
-            "wordCount": 1800,
+            "timeRequired": "PT12M",
+            "wordCount": 2500,
             "about": [
                 { "@type": "Thing", "name": "Webflow Migration" },
                 { "@type": "Thing", "name": "Website Migration Cost" },
@@ -165,7 +165,7 @@ export default function WebflowMigration50To100PagesPage() {
                         </p>
                         <BlogAuthor
                             date="Apr 20, 2026"
-                            readTime="9 min read"
+                            readTime="12 min read"
                             bio="Hassan founded PandaCodeGen in Feb 2026 after six years inside WordPress. Recent rebuild: Obare Magazine off Wix into Next.js and Sanity, 7 days, 98 Mobile PageSpeed. Every build scores 95 to 100 on Google PageSpeed or you do not pay the balance."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
@@ -266,6 +266,61 @@ export default function WebflowMigration50To100PagesPage() {
                             Every dollar you pay above $18,000 for a 50 to 100 page Webflow migration is funding agency overhead, not engineering quality. Solo shops and boutique teams ship the same output in 3 weeks for half the price because there is no project manager layer to feed.
                         </BlogQuote>
 
+                        <BlogHeader>Webflow vs Next.js: What You Are Actually Buying</BlogHeader>
+                        <BlogText>
+                            Before you compare prices, compare platforms. The reason a Next.js rebuild is worth the migration cost in the first place is that your monthly spend drops, your load time drops, and your ceiling on custom features disappears. Here is the head-to-head for a 50 to 100 page marketing site.
+                        </BlogText>
+
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 flex items-center gap-1">&larr; Swipe to see more &rarr;</p>
+                        <div className="my-4 overflow-x-auto -mx-4 px-4">
+                            <table className="w-full text-sm border-collapse border border-stone-300 min-w-[560px] responsive-stack-table">
+                                <thead>
+                                    <tr className="bg-stone-100">
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Dimension</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Webflow (50 to 100 pages)</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Next.js on Vercel</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-label="Dimension" className="p-3 border border-stone-300 font-medium">Monthly platform cost</td>
+                                        <td data-label="Webflow" className="p-3 border border-stone-300">$16 to $84 per month for Site plan, plus workspace seats</td>
+                                        <td data-label="Next.js" className="p-3 border border-stone-300 font-bold text-cognac">$0 to $20 per month on Vercel at this traffic range</td>
+                                    </tr>
+                                    <tr className="bg-stone-50">
+                                        <td data-label="Dimension" className="p-3 border border-stone-300 font-medium">Typical Lighthouse (mobile)</td>
+                                        <td data-label="Webflow" className="p-3 border border-stone-300">60 to 75</td>
+                                        <td data-label="Next.js" className="p-3 border border-stone-300 font-bold text-cognac">95 to 100, guaranteed in contract</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Dimension" className="p-3 border border-stone-300 font-medium">CMS item ceiling</td>
+                                        <td data-label="Webflow" className="p-3 border border-stone-300">10,000 items per site (Business plan)</td>
+                                        <td data-label="Next.js" className="p-3 border border-stone-300 font-bold text-cognac">Unlimited via Sanity or Contentful</td>
+                                    </tr>
+                                    <tr className="bg-stone-50">
+                                        <td data-label="Dimension" className="p-3 border border-stone-300 font-medium">Redirect ceiling</td>
+                                        <td data-label="Webflow" className="p-3 border border-stone-300">1,000 hard cap in Redirect Manager</td>
+                                        <td data-label="Next.js" className="p-3 border border-stone-300 font-bold text-cognac">Unlimited in next.config.js</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Dimension" className="p-3 border border-stone-300 font-medium">Custom backend logic</td>
+                                        <td data-label="Webflow" className="p-3 border border-stone-300">Logic add-on required, limited scope</td>
+                                        <td data-label="Next.js" className="p-3 border border-stone-300 font-bold text-cognac">Full API routes, serverless functions, any integration</td>
+                                    </tr>
+                                    <tr className="bg-stone-50">
+                                        <td data-label="Dimension" className="p-3 border border-stone-300 font-medium">Image optimization</td>
+                                        <td data-label="Webflow" className="p-3 border border-stone-300">Automatic but opaque, limited control</td>
+                                        <td data-label="Next.js" className="p-3 border border-stone-300 font-bold text-cognac">next/image with AVIF, WebP, per-breakpoint sizing</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Dimension" className="p-3 border border-stone-300 font-medium">Code ownership</td>
+                                        <td data-label="Webflow" className="p-3 border border-stone-300">Locked to Webflow hosting, partial export only</td>
+                                        <td data-label="Next.js" className="p-3 border border-stone-300 font-bold text-cognac">100 percent yours, deploy anywhere</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
                         <BlogHeader>Our Scale Tier Pricing for 50 to 100 Page Migrations</BlogHeader>
                         <BlogText>
                             Here is what a 50 to 100 page Webflow to Next.js migration costs in our Scale tier. Fixed price, 3-week delivery, 95+ PageSpeed guaranteed or you do not pay the balance.
@@ -343,6 +398,78 @@ export default function WebflowMigration50To100PagesPage() {
                             "Deploy the redirect map in Next.js config before DNS cutover. Test every top-10 page before going live.",
                             "After launch, submit the new sitemap to Google Search Console and monitor crawl errors daily for 14 days."
                         ]} />
+
+                        <BlogHeader>Hidden Costs Enterprise Agencies Do Not Put in the Proposal</BlogHeader>
+                        <BlogText>
+                            Agency quotes look clean on page 1. The real total shows up after signature in change orders and retainers. Before you compare their proposal to our fixed price, add these line items mentally.
+                        </BlogText>
+                        <BlogList items={[
+                            "Change orders on scope creep. Standard agency contracts charge $150 to $250 per hour for anything outside the signed statement of work. One extra CMS collection mid-build is typically a $3,000 to $6,000 change order.",
+                            "Mandatory annual retainer. Most enterprise Webflow agencies require a post-launch retainer of $1,500 to $3,500 per month for the first year. That is $18,000 to $42,000 on top of the build.",
+                            "Stock photography and asset licensing. Not included in development quote. Expect $500 to $2,000 for a 50 to 100 page site if you do not have existing brand assets.",
+                            "SEO consulting as a separate line item. 301 redirect mapping and post-launch monitoring are often quoted as a $2,000 to $5,000 add-on, not included in migration scope.",
+                            "CMS training for your team. Typically quoted at $1,500 to $3,000 for team onboarding sessions after launch.",
+                            "Webflow hosting fees you keep paying. If the migration is to a new Webflow instance, the Business plan runs $39 to $49 per month per site, billed annually. Multi-year commitment to stay on the platform."
+                        ]} />
+                        <BlogText>
+                            Our Scale tier bakes 301 redirect mapping, CMS training session, and 60 days of post-launch support into the fixed price. There are no change orders inside the signed scope. If something truly outside scope comes up, we tell you before we start and quote it separately before any work begins.
+                        </BlogText>
+
+                        <BlogHeader>Real ROI: When a 50 to 100 Page Migration Pays For Itself</BlogHeader>
+                        <BlogText>
+                            A migration is an asset purchase, not a cost center. For a 50 to 100 page site at $5,000 to $10,000 in our Scale tier, the payback comes from three compounding savings:
+                        </BlogText>
+                        <BlogList items={[
+                            "Hosting savings: Webflow Business plan at $39 to $49 per month becomes $0 to $20 per month on Vercel. That is $230 to $580 per year saved per site.",
+                            "Conversion lift from PageSpeed: a move from 60 to 75 Lighthouse on mobile to 95 plus typically adds 8 to 15 percent to conversion on a marketing site. On $500K annual revenue from organic, that is $40,000 to $75,000 per year in recovered revenue.",
+                            "No plugin or agency retainer bills: most Webflow clients pay $1,500 to $3,500 per month in agency retainer for minor edits. Next.js plus Sanity means your team edits content directly. That is $18,000 to $42,000 per year back."
+                        ]} />
+                        <BlogText>
+                            Conservatively, a Scale tier migration pays for itself in 2 to 6 months. We have written the full math in <Link href="/blog/how-website-speed-affects-seo" className="text-cognac hover:underline">how website speed affects SEO and conversion</Link> if you want the citations behind the conversion lift numbers.
+                        </BlogText>
+
+                        <BlogHeader>DIY vs Freelancer vs Boutique vs Enterprise Agency: Which Fits 50 to 100 Pages</BlogHeader>
+                        <BlogText>
+                            At this page count, DIY and pure freelance are out. Here is the honest trade-off across the remaining three options.
+                        </BlogText>
+
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 flex items-center gap-1">&larr; Swipe to see more &rarr;</p>
+                        <div className="my-4 overflow-x-auto -mx-4 px-4">
+                            <table className="w-full text-sm border-collapse border border-stone-300 min-w-[560px] responsive-stack-table">
+                                <thead>
+                                    <tr className="bg-stone-100">
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Option</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Price</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Timeline</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Best for</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-label="Option" className="p-3 border border-stone-300 font-medium">Freelancer from Upwork or Fiverr</td>
+                                        <td data-label="Price" className="p-3 border border-stone-300">$3,000 to $6,000</td>
+                                        <td data-label="Timeline" className="p-3 border border-stone-300">6 to 10 weeks, high variance</td>
+                                        <td data-label="Best for" className="p-3 border border-stone-300">Not 50 to 100 pages. SEO and redirect handling usually breaks.</td>
+                                    </tr>
+                                    <tr className="bg-stone-50">
+                                        <td data-label="Option" className="p-3 border border-stone-300 font-medium">Boutique shop (us)</td>
+                                        <td data-label="Price" className="p-3 border border-stone-300 font-bold text-cognac">$5,000 to $10,000 fixed</td>
+                                        <td data-label="Timeline" className="p-3 border border-stone-300 font-bold text-cognac">3 weeks</td>
+                                        <td data-label="Best for" className="p-3 border border-stone-300">Direct founder contact, no PM layer, 95+ PageSpeed guarantee in writing.</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Option" className="p-3 border border-stone-300 font-medium">Enterprise Webflow agency</td>
+                                        <td data-label="Price" className="p-3 border border-stone-300">$15,000 to $25,000 plus retainer</td>
+                                        <td data-label="Timeline" className="p-3 border border-stone-300">8 to 12 weeks</td>
+                                        <td data-label="Best for" className="p-3 border border-stone-300">Fortune 1000 with procurement, legal sign-off, and a PMO requirement.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <BlogText>
+                            For 95 percent of businesses with 50 to 100 page marketing sites, the boutique option is the right call. You are paying for engineering, not the PM layer you do not need.
+                        </BlogText>
 
                         <BlogHeader>What Is Not Included in Scale Tier</BlogHeader>
                         <BlogText>

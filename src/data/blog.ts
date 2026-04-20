@@ -376,7 +376,7 @@ export const blogPosts: BlogPost[] = [
     title: "Webflow Migration Cost for 50 to 100 Page Sites (2026): Real Pricing Breakdown",
     excerpt: "Agencies quote $15K to $25K for 50-100 page Webflow migrations. Real engineering scope is 80 to 125 hours. Our Scale tier covers the same scope at $5,000 to $10,000 in 3 weeks.",
     category: "Webflow",
-    readTime: "9 min",
+    readTime: "12 min",
     date: "Apr 20",
     author: "Hassan",
     role: "Lead Engineer",
