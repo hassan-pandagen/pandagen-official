@@ -196,21 +196,34 @@ function ProjectCard({ project, index }: any) {
                 <div className="grid lg:grid-cols-12 items-stretch rounded-4xl overflow-hidden border border-stone-200 shadow-2xl shadow-stone-900/10 hover:shadow-stone-900/15 transition-shadow duration-500">
 
                     {/* LEFT, Dark image panel */}
-                    <div className="lg:col-span-7 relative bg-[#0C0A09] h-[300px] lg:h-auto min-h-[520px] overflow-hidden">
+                    <div className="lg:col-span-7 relative bg-[#0C0A09] h-[380px] sm:h-[440px] lg:h-auto min-h-[380px] sm:min-h-[440px] lg:min-h-[520px] overflow-hidden">
 
-                        {/* Subtle radial glow behind screenshot */}
-                        <div className="absolute inset-0 bg-radial-gradient pointer-events-none opacity-40"
-                            style={{ background: "radial-gradient(ellipse at 50% 60%, rgba(120,80,40,0.15) 0%, transparent 70%)" }}
+                        {/* Dot grid pattern */}
+                        <div className="absolute inset-0 opacity-[0.08] pointer-events-none"
+                            style={{ backgroundImage: "radial-gradient(circle, #ffffff 1px, transparent 1px)", backgroundSize: "24px 24px" }}
+                        />
+
+                        {/* Cognac ambient glow, stronger on mobile for wow factor */}
+                        <div className="absolute -top-20 -left-20 w-[280px] h-[280px] rounded-full pointer-events-none blur-[80px]"
+                            style={{ background: "radial-gradient(circle, rgba(176,108,51,0.45) 0%, transparent 70%)" }}
+                        />
+                        <div className="absolute -bottom-20 -right-20 w-[300px] h-[300px] rounded-full pointer-events-none blur-[90px]"
+                            style={{ background: "radial-gradient(circle, rgba(176,108,51,0.35) 0%, transparent 70%)" }}
+                        />
+
+                        {/* Center radial spotlight */}
+                        <div className="absolute inset-0 pointer-events-none"
+                            style={{ background: "radial-gradient(ellipse at 50% 55%, rgba(255,220,180,0.12) 0%, transparent 65%)" }}
                         />
 
                         {/* Screenshot */}
                         {project.image && (
-                            <div className="absolute inset-6 lg:inset-10 transform group-hover:scale-[1.02] transition-transform duration-700">
+                            <div className="absolute inset-4 sm:inset-6 lg:inset-10 transform group-hover:scale-[1.02] transition-transform duration-700">
                                 <Image
                                     src={project.image}
                                     alt={`${project.client} - ${project.category}`}
                                     fill
-                                    className="object-contain object-center drop-shadow-2xl"
+                                    className="object-contain object-center drop-shadow-[0_30px_60px_rgba(0,0,0,0.8)]"
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 50vw"
                                     priority={project.image === "/work/mycustompatches.png"}
                                     loading={project.image === "/work/mycustompatches.png" ? "eager" : "lazy"}
@@ -218,6 +231,13 @@ function ProjectCard({ project, index }: any) {
                                 />
                             </div>
                         )}
+
+                        {/* Bottom gradient fade */}
+                        <div className="absolute inset-x-0 bottom-0 h-32 pointer-events-none bg-linear-to-t from-[#0C0A09] to-transparent" />
+
+                        {/* Corner accent brackets */}
+                        <div className="absolute top-3 right-3 w-6 h-6 border-t-2 border-r-2 border-cognac/40 pointer-events-none" />
+                        <div className="absolute bottom-3 left-3 w-6 h-6 border-b-2 border-l-2 border-cognac/40 pointer-events-none" />
 
                         {/* Badge */}
                         <div className={`absolute top-5 left-5 z-20 px-4 py-2 bg-white/10 backdrop-blur-xs border ${
@@ -242,7 +262,7 @@ function ProjectCard({ project, index }: any) {
                     </div>
 
                     {/* RIGHT, White content panel */}
-                    <div className="lg:col-span-5 bg-white flex flex-col p-8 lg:p-10">
+                    <div className="lg:col-span-5 bg-white flex flex-col p-5 md:p-8 lg:p-10 min-w-0">
 
                         {/* Category + ID */}
                         <div className="flex items-center gap-3 mb-5">

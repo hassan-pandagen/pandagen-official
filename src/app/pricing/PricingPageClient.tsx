@@ -130,9 +130,9 @@ export default function PricingPageClient() {
           <motion.h1
             initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6"
+            className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-6 leading-[1.08] md:leading-tight break-words"
           >
-            Production-grade engineering. <br />
+            Production-grade engineering. <br className="hidden md:inline" />{" "}
             <span className="font-serif italic text-cognac">Fixed-price transparency.</span>
           </motion.h1>
 
@@ -192,7 +192,7 @@ export default function PricingPageClient() {
 
       {/* 2. PRICING GRID */}
       <section className="container mx-auto px-6 pb-12 md:pb-24 max-w-6xl">
-        <div className="grid lg:grid-cols-3 gap-8 items-stretch">
+        <div className="grid lg:grid-cols-3 gap-10 md:gap-8 items-stretch max-w-md lg:max-w-none mx-auto">
 
           {/* CARD 1: Starter */}
           <motion.div

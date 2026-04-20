@@ -68,7 +68,7 @@ export default function SquarespacePageContent() {
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-4 leading-tight"
+            className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.08] md:leading-tight break-words"
           >
             Stuck at 30-55 PageSpeed on Squarespace? <br />
             <span className="font-serif italic text-cognac">

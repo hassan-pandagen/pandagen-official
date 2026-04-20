@@ -532,20 +532,20 @@ export default function EnterpriseOpsCaseStudy() {
                     </section>
 
                     {/* DEV RATING CALLOUT */}
-                    <section className="mb-20 p-8 bg-linear-to-br from-blue-50 to-stone-50 border border-blue-100 rounded-3xl">
+                    <section className="mb-12 md:mb-20 p-5 md:p-8 bg-linear-to-br from-blue-50 to-stone-50 border border-blue-100 rounded-3xl">
                         <div className="flex items-center gap-3 mb-6">
                             <div className="h-px w-8 bg-blue-400" />
                             <span className="text-blue-500 text-sm font-bold uppercase tracking-widest">Independent Review</span>
                         </div>
                         <h2 className="text-2xl font-bold text-charcoal mb-6">Rated 10/10 by a senior developer.</h2>
-                        <div className="grid grid-cols-3 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                             {[
                                 { category: "Code Quality", score: "9.4/10", notes: "Type safety, separation of concerns, zero implicit any" },
                                 { category: "Architecture", score: "9.3/10", notes: "RLS policies, audit trail, RBAC design, DB schema" },
                                 { category: "UX / Design", score: "10/10", notes: "Framer Motion transitions, dark/light, accessibility" },
                             ].map((r) => (
-                                <div key={r.category} className="p-5 bg-white border border-stone-300 rounded-2xl shadow-xs text-center">
-                                    <div className="text-3xl font-black text-charcoal mb-1">{r.score}</div>
+                                <div key={r.category} className="p-4 md:p-5 bg-white border border-stone-300 rounded-2xl shadow-xs text-center min-w-0">
+                                    <div className="text-2xl md:text-3xl font-black text-charcoal mb-1">{r.score}</div>
                                     <div className="text-xs font-bold text-stone-600 uppercase tracking-wider mb-2">{r.category}</div>
                                     <div className="text-xs text-stone-400 leading-snug">{r.notes}</div>
                                 </div>

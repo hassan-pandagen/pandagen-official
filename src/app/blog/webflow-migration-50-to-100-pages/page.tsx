@@ -24,8 +24,8 @@ export const metadata: Metadata = {
         title: "50 to 100 Page Webflow Migration: $5K to $10K in 3 Weeks (2026)",
         description: "Agencies quote $15K to $25K for 50 to 100 page Webflow migrations. Real scope, hour estimates per phase, and honest Scale-tier pricing for 2026.",
         type: "article",
-        publishedTime: "2026-04-22T00:00:00-05:00",
-        modifiedTime: "2026-04-22T00:00:00-05:00",
+        publishedTime: "2026-04-20T00:00:00-05:00",
+        modifiedTime: "2026-04-20T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/webflow-migration-50-to-100-pages",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -46,8 +46,8 @@ const articleSchema = {
             "headline": "50 to 100 Page Webflow Migration: $5K to $10K in 3 Weeks (2026)",
             "description": "Agencies quote $15K to $25K for 50 to 100 page Webflow migrations. Real scope, hour estimates per phase, and honest Scale-tier pricing for 2026.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-04-22T00:00:00-05:00",
-            "dateModified": "2026-04-22T00:00:00-05:00",
+            "datePublished": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -64,7 +64,7 @@ const articleSchema = {
                 "url": "https://www.pandacodegen.com",
                 "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
-            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/webflow-migration-50-to-100-pages" },
+            "mainEntityOfPage": { "@id": "https://www.pandacodegen.com/blog/webflow-migration-50-to-100-pages#webpage" },
             "articleSection": "Webflow",
             "keywords": ["webflow migration cost 50 pages", "webflow migration 100 pages", "webflow to nextjs migration", "webflow enterprise pricing", "webflow agency pricing"],
             "timeRequired": "PT9M",
@@ -103,8 +103,8 @@ const articleSchema = {
             "description": "Agencies quote $15K to $25K for 50 to 100 page Webflow migrations. Real scope, hour estimates per phase, and honest Scale-tier pricing for 2026.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
-            "datePublished": "2026-04-22T00:00:00-05:00",
-            "dateModified": "2026-04-22T00:00:00-05:00",
+            "datePublished": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/webflow-migration-50-to-100-pages#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -151,7 +151,7 @@ export default function WebflowMigration50To100PagesPage() {
                     </Link>
 
                     {/* Title & Meta */}
-                    <div className="mb-10">
+                    <div className="mb-6 md:mb-10">
                         <div className="inline-flex items-center gap-2 px-3 py-1 bg-stone-100 border border-stone-200 rounded-full text-charcoal text-xs font-bold uppercase tracking-wider mb-6">
                             <DollarSign className="w-3 h-3" />
                             Webflow · Migration Cost
@@ -164,7 +164,7 @@ export default function WebflowMigration50To100PagesPage() {
                             Enterprise Webflow agencies quote $15,000 to $25,000 for migrating 50-100 page sites to Next.js. Most of that is agency overhead. Here is the real engineering scope, real hour estimates per phase, and honest Scale-tier pricing.
                         </p>
                         <BlogAuthor
-                            date="Apr 22, 2026"
+                            date="Apr 20, 2026"
                             readTime="9 min read"
                             bio="Hassan founded PandaCodeGen in Feb 2026 after six years inside WordPress. Recent rebuild: Obare Magazine off Wix into Next.js and Sanity, 7 days, 98 Mobile PageSpeed. Every build scores 95 to 100 on Google PageSpeed or you do not pay the balance."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
@@ -172,13 +172,13 @@ export default function WebflowMigration50To100PagesPage() {
                     </div>
 
                     {/* Animation */}
-                    <div className="mb-12"><PageSpeedAnimation /></div>
+                    <div className="mb-8 md:mb-12"><PageSpeedAnimation /></div>
 
                     {/* Executive Summary */}
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
                         <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
-                            "Enterprise Webflow agencies (Iron Horse, Flow Ninja, Edgar Allan) quote $15,000 to $25,000 for 50 to 100 page migrations and do not publish pricing.",
+                            "Enterprise Webflow agencies like Iron Horse Studio commonly quote $15,000 to $25,000 for 50 to 100 page migrations and do not publish pricing upfront.",
                             "Real engineering scope is 80 to 125 hours. At market hourly rate ($100 to $150), that is $8,000 to $18,750 in labor before agency markup.",
                             "Our Scale tier covers this exact scope at $5,000 to $10,000, delivered in 3 weeks instead of 8 to 12.",
                             "The 301 redirect strategy and CMS collection migration are the two places where cheaper agencies lose SEO. We document both step by step."
@@ -252,7 +252,7 @@ export default function WebflowMigration50To100PagesPage() {
                         </div>
 
                         <BlogText>
-                            At market engineering rates of $100 to $150 per hour, that is $8,100 to $18,600 in pure labor. Agency pricing at $15,000 to $25,000 bakes in project management, account executives, and margin on top of that base.
+                            At market engineering rates of $100 to $150 per hour, that is $8,000 to $18,750 in pure labor. Agency pricing at $15,000 to $25,000 bakes in project management, account executives, and margin on top of that base.
                         </BlogText>
 
                         <BlogHeader>Why Enterprise Agencies Charge 2 to 3 Times What a Solo Shop Charges</BlogHeader>
@@ -362,7 +362,7 @@ export default function WebflowMigration50To100PagesPage() {
                         </BlogText>
 
                         {/* Bottom CTA */}
-                        <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-10 md:mt-16 text-center">
+                        <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 md:p-8 mt-8 md:mt-16 text-center">
                             <h2 className="text-2xl font-bold mb-4">Ready to see the real quote?</h2>
                             <p className="text-stone-600 mb-6">
                                 Book a discovery call. Bring your existing agency quote if you have one. We will scope your specific 50 to 100 page site and quote Scale tier pricing in writing on the call.
@@ -375,7 +375,7 @@ export default function WebflowMigration50To100PagesPage() {
                         </div>
                     </div>
 
-                    <section className="mb-10 mt-10 md:mt-16">
+                    <section className="mb-8 md:mb-10 mt-8 md:mt-16">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
                             <li><strong>Enterprise agencies charge 2 to 3 times what solo shops charge for the same scope.</strong> Iron Horse and similar Webflow Enterprise partners quote $15,000 to $25,000 for 50 to 100 page migrations. Our Scale tier covers the exact same scope at $5,000 to $10,000.</li>

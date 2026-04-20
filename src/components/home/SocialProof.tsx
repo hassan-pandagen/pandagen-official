@@ -136,6 +136,7 @@ export default function SocialProof() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-2">What Our Clients Say</h2>
           <p className="text-stone-500 text-sm">Real projects. Real results. Real people.</p>
+          <p className="md:hidden text-xs font-bold text-cognac mt-3 flex items-center justify-center gap-1">&larr; Swipe to read more reviews &rarr;</p>
         </motion.div>
 
         {/* Reviews Carousel */}
@@ -160,7 +161,13 @@ export default function SocialProof() {
           <div
             ref={scrollRef}
             className="flex md:grid md:grid-cols-4 gap-5 overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none scrollbar-hide pb-4 md:pb-0"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            style={{
+              scrollbarWidth: "none",
+              msOverflowStyle: "none",
+              WebkitOverflowScrolling: "touch",
+              touchAction: "pan-x pan-y",
+              overscrollBehaviorX: "contain",
+            }}
           >
             {reviews.map((r, i) => (
               <a
@@ -168,7 +175,9 @@ export default function SocialProof() {
                 href={r.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex-shrink-0 w-[280px] sm:w-[300px] md:w-auto snap-start bg-white border border-stone-200 rounded-2xl p-5 hover:shadow-lg hover:border-stone-300 transition-all duration-200 flex flex-col"
+                draggable={false}
+                className="group flex-shrink-0 w-[280px] sm:w-[300px] md:w-auto snap-start bg-white border border-stone-200 rounded-2xl p-5 hover:shadow-lg hover:border-stone-300 transition-all duration-200 flex flex-col select-none md:select-auto"
+                style={{ touchAction: "pan-x pan-y" }}
               >
                 {/* Stars */}
                 <Stars color={r.starColor} />
