@@ -52,6 +52,14 @@ PandaCodeGen_*.docx
 ad-creative.md
 improvements-plan.md
 
+# Client briefs and brand assets (not for repo)
+*.pdf
+*.indd
+*.ai
+*.psd
+*.sketch
+*.fig
+
 # Rendered video files (Remotion output / Swishy exports)
 renders/
 public/videos/
