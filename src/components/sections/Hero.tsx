@@ -41,11 +41,10 @@ export default function Hero() {
             Built by Hassan Jamal &middot; Austin, TX &middot; 267 Public Commits
           </div>
 
-          {/* Headline: LCP element, pure server HTML, no JS needed to render */}
-          {/* LCP element: inline styles ensure paint before CSS loads */}
+          {/* Headline: LCP candidate, pure server HTML, inline fontFamily forces instant paint */}
           <h1
             className="text-[2rem] md:text-[3.5rem] font-sans font-bold text-charcoal tracking-tight mb-6 leading-[1.1]"
-            style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", fontWeight: 700, color: "#1C1917", letterSpacing: "-0.025em", lineHeight: 1.1, marginBottom: "1.5rem" }}
+            style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", fontWeight: 700, color: "#1C1917", letterSpacing: "-0.025em", lineHeight: 1.1, marginBottom: "1.5rem", fontFamily: "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" }}
           >
             Your slow website is <br />
             <span
@@ -56,10 +55,11 @@ export default function Hero() {
             </span>
           </h1>
 
-          {/* Subtitle: LCP element — inline styles force paint before CSS loads */}
+          {/* Subtitle: LCP element. Inline fontFamily forces system-font paint instantly,
+              custom font swaps in when ready (zero CLS via size-adjust in globals.css). */}
           <p
             className="text-lg md:text-xl text-stone-600 mb-6 md:mb-10 leading-relaxed max-w-lg font-medium"
-            style={{ color: "#57534e", fontSize: "1.125rem", lineHeight: 1.75, maxWidth: "32rem", fontWeight: 500, display: "block", visibility: "visible" }}
+            style={{ color: "#57534e", fontSize: "1.125rem", lineHeight: 1.75, maxWidth: "32rem", fontWeight: 500, display: "block", visibility: "visible", fontFamily: "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" }}
           >
             We replace slow WordPress, Shopify, Wix, Squarespace, and drag-and-drop sites with{" "}
             <span
@@ -126,7 +126,7 @@ export default function Hero() {
             <ShieldCheck className="w-5 h-5 text-cognac shrink-0 mt-0.5" />
             <p className="text-sm text-charcoal leading-snug">
               <span className="font-bold">Our guarantee:</span> if your new site doesn&apos;t score{" "}
-              <span className="font-bold text-cognac">90+ on Google PageSpeed</span>, we refund 100%. In writing.
+              <span className="font-bold text-orange-800">90+ on Google PageSpeed</span>, we refund 100%. In writing.
             </p>
           </div>
 

@@ -1,11 +1,18 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { Menu, X, ChevronDown, Linkedin, Twitter, Mail, Phone } from "lucide-react";
 import Image from "next/image";
-import QuoteModal from "@/components/ui/QuoteModal";
+
+// Lazy load: QuoteModal pulls in framer-motion (~80kb).
+// Only load when user actually opens the modal.
+const QuoteModal = dynamic(() => import("@/components/ui/QuoteModal"), {
+  ssr: false,
+  loading: () => null,
+});
 
 interface HeaderProps {
   onOpenQuote?: () => void;
@@ -273,8 +280,8 @@ export default function Header({ onOpenQuote }: HeaderProps) {
         </div>
       </div>
 
-      {/* Internal QuoteModal, only rendered when no external handler is provided */}
-      {!onOpenQuote && (
+      {/* Internal QuoteModal, only mounted when actually opened (lazy loads framer-motion) */}
+      {!onOpenQuote && internalQuoteOpen && (
         <QuoteModal isOpen={internalQuoteOpen} onClose={() => setInternalQuoteOpen(false)} />
       )}
     </>
