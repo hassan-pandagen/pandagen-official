@@ -14,7 +14,10 @@ import ReferrerBanner from "@/components/ui/ReferrerBanner";
 const inter = Inter({
   subsets: ["latin"],
   display: 'swap',
-  preload: true,
+  // preload disabled: the 22 KiB WOFF2 was holding LCP hostage on slow mobile connections.
+  // Hero LCP elements use inline fontFamily: system-ui for instant paint,
+  // Inter swaps in silently once downloaded (zero CLS via adjustFontFallback).
+  preload: false,
   adjustFontFallback: true,
   variable: '--font-sans',
 });
