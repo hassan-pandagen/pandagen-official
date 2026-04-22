@@ -19,11 +19,43 @@ export interface BlogPost {
   illustrationType: IllustrationType;
   lastModified?: string; // For sitemap
   faqs?: FAQ[]; // For FAQ Schema (helps win featured snippets)
+  // Optional per-post overrides for the blog card illustration. If omitted, falls back to
+  // the illustrationType default in BlogPageClient's cardDisplay map. Use these when
+  // multiple posts share an illustrationType and need a unique hook in the card visual.
+  cardStat?: string;
+  cardStatLabel?: string;
 }
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "webflow-user-accounts-sunset-date-2026",
+    title: "Webflow User Accounts Sunset Date 2026: What Broke and What To Do",
+    excerpt: "Webflow User Accounts were sunset on January 29, 2026. Sites that did not migrate lost member data, gated pages went static, and logins broke. Here is exactly what happened, why Memberstack and Outseta are not the long-term fix, and how to rebuild on a stack that will not deprecate on you.",
+    category: "Webflow",
+    readTime: "13 min",
+    date: "Apr 22",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: false,
+    illustrationType: 'webflow',
+    lastModified: "2026-04-22",
+    cardStat: "Jan 29",
+    cardStatLabel: "Webflow User Accounts sunset",
+    faqs: [
+      { question: "What is the Webflow User Accounts sunset date?", answer: "Webflow User Accounts were sunset on January 29, 2026. On that date, all User Accounts functionality was disabled across every Webflow site, and all dedicated User Accounts APIs and webhooks were deprecated. Sites that had not migrated lost access to user data, and User Accounts pages were converted into regular static pages. Webflow stopped allowing new sites to enable User Accounts a full year earlier on January 31, 2025." },
+      { question: "What happened to sites that did not migrate before January 29, 2026?", answer: "Three things broke at once. First, user login stopped working. Existing members could no longer sign in or access gated content. Second, all User Accounts data was lost. Webflow did not migrate member records to the CMS, so any site that did not export its CSV before the sunset date has no member data left to recover. Third, gated pages were converted to regular static pages, which means previously member-only content became publicly visible, or the design broke where member-state logic once drove page behaviour." },
+      { question: "Can I still export Webflow User Accounts data after the sunset?", answer: "No. The export window closed on January 29, 2026 when the APIs were deprecated. Sites that still need their member list are limited to whatever was exported before the sunset date. If a business forgot to export, its member list only survives in third-party places where that data may have been copied, such as Stripe customer records for paid subscribers, Mailchimp or Klaviyo if email sync was active, or any CRM that received data through webhooks before the cut-off." },
+      { question: "Should I migrate to Memberstack or Outseta instead of custom code?", answer: "Memberstack and Outseta are reasonable short-term fixes if your site must stay on Webflow. They do what Webflow User Accounts used to do, and both offered Webflow users migration discounts (Outseta: 50 percent off 12 months plus free VIP migration, Memberstack: 50 percent off 6 months plus unlimited free trial). The long-term risk is the same risk that broke Webflow User Accounts: you are renting auth and membership from a SaaS that can change pricing, deprecate features, or sunset the product. For any site where auth and membership are core to the business, custom Next.js auth on Clerk, NextAuth, or Supabase is the permanent fix. You own the code, and nothing gets deprecated unless you deprecate it." },
+      { question: "What does it cost to rebuild a Webflow membership site on custom Next.js?", answer: "Our Starter tier is $1,500 for simple 5 to 7 page sites without heavy auth needs. Growth tier is $3,500 for 10 to 20 pages with full authentication (Clerk or Supabase), gated content, and a Sanity CMS. Scale tier is $5,000 to $10,000 for larger membership sites with custom subscription logic, role-based access control, and Stripe billing. Timeline is 3 to 6 weeks depending on scope. Our Founder's Offer is $500 for a full migration for qualifying businesses with fewer than 15 pages, in exchange for a verified review after launch." },
+      { question: "Why did Webflow sunset User Accounts and Logic?", answer: "Webflow stated they made the strategic decision to deprecate native Logic and User Accounts in favour of their ecosystem of vetted app partners. The company pivoted toward being a Website Experience Platform focused on design, CMS, and analytics, and handed off authentication, membership, and automation to specialists like Memberstack, Outseta, Zapier, and Make. User Accounts was sunset on January 29, 2026. Logic, Webflow's native automation tool, was sunset earlier on June 27, 2025." },
+      { question: "Will my Stripe subscriptions still charge after the sunset?", answer: "Yes. Webflow confirmed that existing Stripe subscriptions for Webflow Ecommerce customers continue to charge. The payment side does not break because Stripe sits outside Webflow. What does break is the customer experience on your site. Members still being charged cannot log in, cannot access gated content, and have no way to manage their subscription through your Webflow site. You either migrate to a new membership platform, build a custom auth layer, or face refund requests and chargebacks from paying customers who cannot use what they are paying for." },
+      { question: "How long does a Webflow to custom Next.js membership site migration take?", answer: "3 to 6 weeks depending on scope. Week 1 is audit and content export: pulling every URL, exporting any surviving member data, mapping the old auth flows. Week 2 is the custom build on Next.js with Clerk or Supabase for auth and Sanity for CMS. Weeks 3 to 5 cover gated page rebuild, subscription tier logic, Stripe integration, and QA. Week 6 is DNS cutover and post-launch monitoring. For sites that have been broken since January 29, 2026, we can usually bring a basic member login flow back online in 2 weeks and iterate from there." },
+    ]
+  },
+  {
     id: "website-rebuild-cost-2026",
+    cardStat: "$2K-$250K",
+    cardStatLabel: "Rebuild pricing range",
     title: "How Much Does a Website Rebuild Cost in 2026? Honest Pricing From $2,000 to $250,000",
     excerpt: "Website rebuild costs range from $2,000 with a freelancer to $250,000 with an enterprise agency in 2026. Here is the honest breakdown by platform, what drives the price up or down, how to spot a padded quote, and when a rebuild actually pays for itself.",
     category: "Pricing",
@@ -47,6 +79,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "core-web-vitals-explained",
+    cardStat: "3",
+    cardStatLabel: "Core Web Vitals that rank",
     title: "Core Web Vitals Explained for Business Owners 2026: What It Means for Your Revenue",
     excerpt: "Your agency said your Core Web Vitals are failing and you have no idea what that means. Here is what the 3 metrics cost your business in lost sales.",
     category: "SEO",
@@ -68,6 +102,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "squarespace-vs-custom-website",
+    cardStat: "55/100",
+    cardStatLabel: "Squarespace PageSpeed ceiling",
     title: "Squarespace vs Custom Website 2026: The 55/100 PageSpeed Ceiling That Kills Rankings",
     excerpt: "Squarespace scores 30 to 55 on mobile PageSpeed. Custom sites score 95 to 100. But custom costs more upfront. Here is the real cost, speed, and SEO comparison with honest advice on when to stay and when to switch.",
     category: "Comparison",
@@ -89,6 +125,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "wix-vs-custom-website",
+    cardStat: "5",
+    cardStatLabel: "Moments Wix becomes a liability",
     title: "Wix vs Custom Website 2026: 5 Moments Wix Becomes a Business Liability",
     excerpt: "Wix scores 35 to 55 on mobile PageSpeed. Custom sites score 95 to 100. But Wix is free to start and easy to use. Here is the real cost, speed, and SEO comparison with honest advice on when to stay and when to switch.",
     category: "Comparison",
@@ -110,6 +148,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "squarespace-migration-cost",
+    cardStat: "$2,900",
+    cardStatLabel: "Squarespace migration median",
     title: "Squarespace Migration Cost in 2026: What You Will Actually Pay",
     excerpt: "Squarespace looks affordable at $23 a month. Add domain renewal, email hosting, and extensions and the real 3-year cost is $1,500 to $5,500. Here is the full migration cost breakdown by site size and when it pays for itself.",
     category: "Squarespace",
@@ -131,6 +171,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "top-custom-web-development-agencies-usa-2026",
+    cardStat: "10",
+    cardStatLabel: "Agencies reviewed",
     title: "Top 10 Custom Web Development Agencies in the USA: 2026 Honest Review",
     excerpt: "We ranked the 10 best US custom web development agencies by pricing transparency, tech stack, verified reviews, and real PageSpeed scores. Most agencies hide pricing and build on WordPress. Here is the full comparison.",
     category: "Web Development",
@@ -152,6 +194,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "divi-theme-slow",
+    cardStat: "38/100",
+    cardStatLabel: "Average Divi theme score",
     title: "Divi Theme Slow in 2026? Real Scores, Real Costs, and the Only Fix That Works",
     excerpt: "Divi scores 64 to 68 out of 100 on mobile. That ceiling is built into its architecture. Caching plugins raise your score 10 to 15 points but cannot remove the render-blocking builder JavaScript that fires on every page load. Here is what that costs your business.",
     category: "WordPress",
@@ -172,6 +216,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "wix-too-slow",
+    cardStat: "48%",
+    cardStatLabel: "Wix sites fail Core Web Vitals",
     title: "Wix Website Too Slow? 48% of Wix Sites Fail Core Web Vitals in 2026",
     excerpt: "Wix sites average 6.8-second LCP. The cause is 200-400KB of platform JavaScript that cannot be removed. No app or setting fixes this. Here is the real data and the only fix that works.",
     category: "Wix",
@@ -192,6 +238,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "leaving-webflow-2026",
+    cardStat: "31 hrs",
+    cardStatLabel: "July 2025 Webflow outage",
     title: "Leaving Webflow in 2026: The 31-Hour Outage, Hidden Fees, and Where Businesses Are Going",
     excerpt: "Bandwidth cut 75%. Bills jumped to $170 overnight. 14 outages in 90 days. Cart buttons disappeared on live sites. Here is the real story of leaving Webflow and what we built instead.",
     category: "Webflow",
@@ -212,6 +260,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "cloudflare-emdash-wordpress-replacement",
+    cardStat: "96%",
+    cardStatLabel: "WP issues from plugins",
     title: "Cloudflare Built a WordPress Replacement (2026)",
     excerpt: "Cloudflare launched EmDash, calling it WordPress's spiritual successor. 96% of WordPress security issues come from plugins. Here is what this means for you.",
     category: "Security",
@@ -232,6 +282,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "gohighlevel-migration",
+    cardStat: "$500",
+    cardStatLabel: "Founder GHL migration",
     title: "GoHighLevel Website Migration: How to Get a Fast Site Without Leaving GHL (2026)",
     excerpt: "GHL sites score 35 to 47 on mobile PageSpeed. Your ads cost more and your leads cost more. Here is how to fix it without losing your CRM.",
     category: "Performance",
@@ -252,6 +304,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "google-march-2026-update",
+    cardStat: "47%",
+    cardStatLabel: "Slow sites hit by update",
     title: "Google's March 2026 Update Rewards Fast Sites: What It Means for Your Business",
     excerpt: "Google's March 2026 core update tightened speed requirements and dropped 47% of slow sites. Here is what changed and what your business should do now.",
     category: "SEO",
@@ -272,6 +326,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "webflow-vs-custom-website",
+    cardStat: "$150/mo",
+    cardStatLabel: "When Webflow outcosts custom",
     title: "Webflow vs Custom Website 2026: When $150/mo Outcosts a Custom Build",
     excerpt: "Webflow works until it does not. 14 outages in 90 days. Here are the 5 signs you have outgrown Webflow, what a custom website actually gives you, and how to decide without overspending.",
     category: "Webflow",
@@ -292,6 +348,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "shopify-vs-custom-website",
+    cardStat: "5 signs",
+    cardStatLabel: "You outgrew Shopify",
     title: "Shopify vs Custom Website 2026: 5 Signs Your Store Has Outgrown Shopify",
     excerpt: "Shopify works until app fees hit $1,000/month, your store loads in 4+ seconds, and checkout conversion stalls at 1.4%. Here are the 5 signs and what to do next.",
     category: "Shopify",
@@ -312,6 +370,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "squarespace-too-slow",
+    cardStat: "30-55",
+    cardStatLabel: "Squarespace mobile score range",
     title: "Squarespace Too Slow in 2026? Why Businesses Are Migrating Away",
     excerpt: "Squarespace sites score 30 to 55 on Google PageSpeed Mobile and there is no plugin or setting that changes that. Here is the exact reason Squarespace is slow, what that costs you in rankings and leads, and what actually works.",
     category: "Squarespace",
@@ -332,6 +392,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "woocommerce-too-slow",
+    cardStat: "60-150",
+    cardStatLabel: "DB queries per WooCommerce page",
     title: "WooCommerce Too Slow? How to Speed It Up in 2026 (and When to Migrate)",
     excerpt: "WooCommerce stores average 30 to 55 on Google PageSpeed Mobile. Here is exactly why WooCommerce is slow, what it costs you in lost sales every day, and why caching plugins only hide the problem without fixing it.",
     category: "WooCommerce",
@@ -352,6 +414,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "webflow-migration-cost",
+    cardStat: "$1,500",
+    cardStatLabel: "Webflow Starter tier",
     title: "Webflow Migration Cost: From $1,500 Starter (2026 Pricing)",
     excerpt: "Webflow migration starts at $1,500 in our Starter tier. Growth tier at $3,500 for most sites. Scale tier at $5,000 to $10,000 for 50+ pages. Plus uptime cost: Webflow had 14 outages in 90 days. Full breakdown with business impact.",
     category: "Webflow",
@@ -373,6 +437,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "webflow-migration-50-to-100-pages",
+    cardStat: "$15K-$25K",
+    cardStatLabel: "Enterprise agency quote",
     title: "Webflow Migration Cost for 50 to 100 Page Sites (2026): Real Pricing Breakdown",
     excerpt: "Agencies quote $15K to $25K for 50-100 page Webflow migrations. Real engineering scope is 80 to 125 hours. Our Scale tier covers the same scope at $5,000 to $10,000 in 3 weeks.",
     category: "Webflow",
@@ -394,6 +460,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "wordpress-migration-cost",
+    cardStat: "2-6 wks",
+    cardStatLabel: "WordPress migration timeline",
     title: "WordPress Migration Cost 2026: Full Pricing by Site Size (From $1,500 Starter)",
     excerpt: "A WordPress to Next.js migration starts at $1,500 in our Starter tier. Growth tier at $3,500 for most business sites. Scale tier at $5,000 to $10,000 for complex WooCommerce stores. This breakdown explains what drives migration cost by tier and how to calculate ROI.",
     category: "WordPress",
@@ -415,6 +483,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "gohighlevel-website-speed",
+    cardStat: "20-45",
+    cardStatLabel: "GHL mobile PageSpeed",
     title: "GoHighLevel Sites Score 20 to 45 on PageSpeed: How to Fix It (2026)",
     excerpt: "GoHighLevel sites score 20 to 45 on Google PageSpeed Mobile. Here is exactly why GHL is slow, what it costs you in SEO and conversions, and how agencies are solving it with custom Next.js frontends.",
     category: "Performance",
@@ -457,6 +527,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "webflow-true-cost",
+    cardStat: "$29",
+    cardStatLabel: "Is just the start",
     title: "Webflow Pricing 2026: Every Hidden Fee Explained ($29 Is Just the Start)",
     excerpt: "Webflow looks affordable at $29/month. Add CMS hosting, form limits, bandwidth overages, the SEO ceiling, and 14 outages in 90 days, and you are quietly bleeding thousands per year. Here is the real math.",
     category: "Comparison",
@@ -497,6 +569,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "how-to-migrate-wordpress-to-nextjs",
+    cardStat: "0.6s",
+    cardStatLabel: "Next.js load after migration",
     title: "WordPress to Next.js Migration: Step-by-Step Without Losing SEO (2026)",
     excerpt: "A step-by-step migration guide covering content export, redirect mapping, SEO preservation, and zero-downtime launch. What agencies charge $15K to do. explained in plain English.",
     category: "WordPress",
@@ -517,6 +591,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "wordpress-vs-nextjs",
+    cardStat: "44%",
+    cardStatLabel: "WP sites passing CWV",
     title: "WordPress vs Next.js 2026: The 4x Speed Gap and 3-Year Cost Comparison",
     excerpt: "WordPress powers 43% of the internet. Next.js powers the fastest 1%. Here's an honest comparison of speed, SEO, cost, and security. and exactly when each one makes sense for your business.",
     category: "Comparison",
@@ -557,6 +633,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "shopify-dawn-theme-slow",
+    cardStat: "55 to 100",
+    cardStatLabel: "Dawn to custom PageSpeed",
     title: "Shopify Dawn Theme Slow? How We Fixed It From 55 to 100 (2026)",
     excerpt: "Dawn is Shopify's fastest theme. so why is your store still loading in 3+ seconds? Here's what's actually killing your speed and why theme-level fixes won't save you.",
     category: "Shopify",
@@ -617,6 +695,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "wordpress-vs-custom-code-real-cost-3-years",
+    cardStat: "3 yrs",
+    cardStatLabel: "WordPress vs custom math",
     title: "WordPress vs Custom Code: 3-Year Cost Breakdown (Custom Wins by Year 2)",
     excerpt: "Everyone says WordPress is cheap. They're not counting hosting, plugins, maintenance, security, and lost revenue. We ran the numbers. The results will change how you think about your website.",
     category: "Cost Analysis",
@@ -742,6 +822,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "shopify-headless",
+    cardStat: "4s to 0.8s",
+    cardStatLabel: "Dawn to headless speedup",
     title: "Shopify Headless: We Cut Load Time From 4s to 0.8s",
     excerpt: "Most Shopify stores fail Core Web Vitals because Liquid templates are render-blocking by design. Here's the exact stack we used to cut load time from 4 seconds to 0.8.",
     category: "E-Commerce",
@@ -761,6 +843,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "elementor-kills-seo",
+    cardStat: "38/100",
+    cardStatLabel: "Average Elementor score",
     title: "Elementor Kills Your SEO: We Audited 500 Sites (Average Score: 38/100)",
     excerpt: "The average Elementor site scores 38/100 on mobile PageSpeed. We audited 500 sites to find out exactly how much traffic and revenue page builders are costing business owners.",
     category: "Performance",
@@ -811,6 +895,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "shopify-plus-still-slow",
+    cardStat: "$2K/mo",
+    cardStatLabel: "Shopify Plus still slow",
     title: "Shopify Plus Still Slow in 2026? Why $2,300/Month Does Not Fix Speed",
     excerpt: "53% of mobile visitors leave before your Shopify Plus store loads. We break down the Liquid template problem and the headless solution that actually works.",
     category: "E-Commerce",
@@ -911,6 +997,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "why-competitor-outranks-you",
+    cardStat: "7",
+    cardStatLabel: "Reasons competitors outrank",
     title: "Why Your Competitor Outranks You (It Is Not Their Content)",
     excerpt: "They're getting 3× your traffic with a coded website. Google, ChatGPT, and Bing all prefer fast sites. Here's why.",
     category: "Traffic Growth",
@@ -946,6 +1034,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "how-to-achieve-100-pagespeed",
+    cardStat: "100/100",
+    cardStatLabel: "Our 8-step process",
     title: "How to Hit 100/100 PageSpeed Score (Our Exact 8-Step Process)",
     excerpt: "Most websites score 35-55/100 on Google PageSpeed, and they're losing customers because of it. Here's the exact 8-step process we use to hit 98-100/100 on every client site.",
     category: "Performance",
@@ -1016,6 +1106,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "what-is-headless-commerce",
+    cardStat: "4s to 0.8s",
+    cardStatLabel: "Headless commerce speedup",
     title: "What Is Headless Commerce? How Stores Cut Load Times From 4s to 0.8s (2026 Guide)",
     excerpt: "Headless commerce lets you keep your Shopify backend while replacing the slow theme with a custom, lightning-fast frontend. Best of both worlds. Here's what it means, what it costs, and whether your store actually needs it.",
     category: "E-Commerce",

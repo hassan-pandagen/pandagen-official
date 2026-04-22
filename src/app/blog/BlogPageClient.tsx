@@ -7,7 +7,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense } from "react";
-import { blogPosts, type IllustrationType } from "@/data/blog";
+import { blogPosts, type IllustrationType, type BlogPost } from "@/data/blog";
 
 // Pagefind-powered blog search: lazy-loaded, opens a Cmd+K modal with instant results.
 // ssr: false because pagefind loads /_pagefind/pagefind.js from the runtime assets.
@@ -33,6 +33,20 @@ const cardDisplay: Record<IllustrationType, { stat: string; label: string; bgTin
   code:        { stat: "5×",           label: "Faster than WordPress",       bgTint: "#ecfdf5", statColor: "#065f46", border: "#a7f3d0" },
   webflow:     { stat: "$4,700",       label: "Saved yearly vs Webflow",     bgTint: "#fffbeb", statColor: "#92400e", border: "#fde68a" },
 };
+
+// Resolve the card visual for a given post. Per-post cardStat/cardStatLabel win over the
+// illustrationType default, so multiple posts sharing a type can carry unique hooks while
+// keeping the same color scheme (bgTint, statColor, border).
+function getCardDisplay(article: BlogPost) {
+  const base = cardDisplay[article.illustrationType];
+  return {
+    stat: article.cardStat ?? base.stat,
+    label: article.cardStatLabel ?? base.label,
+    bgTint: base.bgTint,
+    statColor: base.statColor,
+    border: base.border,
+  };
+}
 
 // Combine blog data and sort by newest first
 const articles = blogPosts
@@ -127,7 +141,7 @@ function BlogArticlesSection() {
   const [heroArticle, ...allSecondary] = featuredArticles;
   const secondaryArticles = allSecondary.slice(0, 2);
   const overflowFeatured = allSecondary.slice(2);
-  const heroDisplay = heroArticle ? cardDisplay[heroArticle.illustrationType] : null;
+  const heroDisplay = heroArticle ? getCardDisplay(heroArticle) : null;
 
   return (
     <>
@@ -216,7 +230,7 @@ function BlogArticlesSection() {
             {secondaryArticles.length > 0 && (
               <div className="grid md:grid-cols-2 gap-5">
                 {secondaryArticles.map((article) => {
-                  const sd = cardDisplay[article.illustrationType];
+                  const sd = getCardDisplay(article);
                   return (
                     <Link key={article.id} href={`/blog/${article.id}`} className="group block h-full">
                       <div className="relative rounded-4xl overflow-hidden border border-stone-200 bg-white grid grid-cols-[180px_1fr] hover:border-stone-300 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 h-full">
@@ -264,7 +278,7 @@ function BlogArticlesSection() {
       <section className="container mx-auto px-6 pb-16 md:pb-32">
         <div className="grid md:grid-cols-3 gap-6">
           {[...overflowFeatured, ...filteredArticles.filter(a => !a.featured)].map((article) => {
-            const display = cardDisplay[article.illustrationType];
+            const display = getCardDisplay(article);
             return (
               <Link
                 key={article.id}
