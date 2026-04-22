@@ -29,7 +29,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: "webflow-user-accounts-sunset-date-2026",
-    title: "Webflow User Accounts Sunset Date 2026: What Broke and What To Do",
+    title: "Webflow User Accounts Sunset Date 2026: What To Do",
     excerpt: "Webflow User Accounts were sunset on January 29, 2026. Sites that did not migrate lost member data, gated pages went static, and logins broke. Here is exactly what happened, why Memberstack and Outseta are not the long-term fix, and how to rebuild on a stack that will not deprecate on you.",
     category: "Webflow",
     readTime: "13 min",

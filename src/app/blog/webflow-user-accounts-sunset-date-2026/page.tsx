@@ -18,14 +18,14 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Webflow User Accounts Sunset Date 2026: What Broke and What To Do",
+    title: "Webflow User Accounts Sunset Date 2026: What To Do",
     description: "Webflow User Accounts were sunset January 29, 2026. Sites that did not migrate lost member data, gated pages went static, logins broke. Here is the fix.",
     alternates: {
         canonical: "/blog/webflow-user-accounts-sunset-date-2026",
     },
     keywords: ["webflow user accounts sunset date 2026", "webflow user accounts sunset", "webflow memberships deprecated", "webflow user accounts alternative", "memberstack webflow migration", "outseta webflow migration", "webflow user accounts replacement", "custom nextjs auth for webflow", "webflow login broken 2026", "webflow gated content alternative"],
     openGraph: {
-        title: "Webflow User Accounts Sunset Date 2026: What Broke and What To Do",
+        title: "Webflow User Accounts Sunset Date 2026: What To Do",
         description: "Webflow User Accounts were sunset January 29, 2026. Logins broke. Member data lost. Gated pages went static. Here is why Memberstack and Outseta are short-term fixes, and what the permanent answer looks like.",
         type: "article",
         publishedTime: "2026-04-22",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Webflow User Accounts Sunset Date 2026: What Broke and What To Do",
+        title: "Webflow User Accounts Sunset Date 2026: What To Do",
         description: "Webflow User Accounts were sunset January 29, 2026. Logins broke. Member data lost. Here is the permanent fix most agencies are not talking about.",
     },
 };
@@ -47,7 +47,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/webflow-user-accounts-sunset-date-2026#article",
-            "headline": "Webflow User Accounts Sunset Date 2026: What Broke and What To Do",
+            "headline": "Webflow User Accounts Sunset Date 2026: What To Do",
             "description": "Webflow User Accounts were sunset on January 29, 2026. Sites that did not migrate lost member data, gated pages went static, and logins broke. Here is what happened, why Memberstack and Outseta are not the long-term fix, and how to rebuild on a stack that will not deprecate on you.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-22T00:00:00-05:00",
@@ -110,7 +110,7 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/webflow-user-accounts-sunset-date-2026#webpage",
             "url": "https://www.pandacodegen.com/blog/webflow-user-accounts-sunset-date-2026",
-            "name": "Webflow User Accounts Sunset Date 2026: What Broke and What To Do",
+            "name": "Webflow User Accounts Sunset Date 2026: What To Do",
             "description": "Webflow User Accounts were sunset on January 29, 2026. Sites that did not migrate lost member data, gated pages went static, and logins broke. Here is what happened and the permanent fix.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
@@ -179,7 +179,7 @@ export default function WebflowUserAccountsSunset2026Page() {
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
                             Webflow User Accounts{" "}
                             <span className="font-serif italic text-cognac">Sunset</span>{" "}
-                            Date 2026: What Broke and What To Do
+                            Date 2026: What To Do
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
