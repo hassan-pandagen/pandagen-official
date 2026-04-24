@@ -19,14 +19,14 @@ export const dynamic = "force-static";
 
 export const metadata: Metadata = {
     title: "Shopify Stocky Sunset Date 2026: What To Do Now",
-    description: "Shopify is sunsetting Stocky on August 31, 2026. Stores lose purchase orders, supplier data, landed costs. Here is the permanent fix most agencies are not talking about.",
+    description: "Shopify is sunsetting Stocky on August 31, 2026. Stores lose purchase orders, supplier data, and landed costs. Here is the permanent fix.",
     alternates: {
         canonical: "/blog/shopify-stocky-sunset-date-2026",
     },
     keywords: ["shopify stocky sunset", "shopify stocky discontinued 2026", "stocky shutdown august 2026", "stocky alternatives shopify", "stocky migration shopify", "shopify inventory management replacement", "headless shopify inventory custom", "shopify stocky deprecation date", "stocky to shopify native migration", "shopify stocky 2026 alternatives"],
     openGraph: {
         title: "Shopify Stocky Sunset Date 2026: What To Do Now",
-        description: "Shopify is sunsetting Stocky on August 31, 2026. Purchase orders, supplier data, landed costs, and forecasting all gone. Here is why moving to another inventory SaaS is a short-term fix and what the permanent answer looks like.",
+        description: "Shopify is sunsetting Stocky on August 31, 2026. Stores lose purchase orders, supplier data, and landed costs. Here is the permanent fix.",
         type: "article",
         publishedTime: "2026-04-25",
         modifiedTime: "2026-04-25",
