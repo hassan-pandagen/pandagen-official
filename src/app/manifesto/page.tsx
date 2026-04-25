@@ -111,7 +111,7 @@ export default function ManifestoPage() {
                   Every agency page that says &quot;contact for quote&quot; is protecting a pricing strategy that can&apos;t survive public scrutiny. They change the number based on what they think you can pay. We refuse to play that game.
                 </p>
                 <p className="text-base md:text-lg text-stone-700 leading-[1.75]">
-                  Our pricing is on every service page. Starter. Growth. Scale. Foot-in-the-Door. You know what we charge before you ever book a call. If someone tells you &quot;it depends&quot; as a pricing answer, they&apos;re deciding how much they can extract from you specifically.
+                  Our pricing is on every service page. Starter. Growth. Scale. Founder&apos;s Offer. You know what we charge before you ever book a call. If someone tells you &quot;it depends&quot; as a pricing answer, they&apos;re deciding how much they can extract from you specifically.
                 </p>
               </section>
 
@@ -150,7 +150,7 @@ export default function ManifestoPage() {
                   Agencies quote $30K. Offshore shops quote $5K and ghost you mid-project. Neither of those is a real option for most business owners. So we built something in between: fixed-scope pricing from $500 to $25,000, transparent tiers, same-day quotes, NDAs before anything else.
                 </p>
                 <p className="text-base md:text-lg text-stone-700 leading-[1.75]">
-                  If that&apos;s still too much, we offer a Foot-in-the-Door tier at $500 in exchange for a public case study. You get the proof you need. We get the credibility we need. Both sides win.
+                  If that&apos;s still too much, we offer a Founder&apos;s Offer tier at $500 in exchange for a public case study. You get the proof you need. We get the credibility we need. Both sides win.
                 </p>
               </section>
 

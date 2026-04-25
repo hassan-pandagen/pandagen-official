@@ -237,7 +237,8 @@ export default function PrivacyPage() {
               </p>
               <div className="mt-4 p-4 bg-stone-50 border border-stone-200 rounded-lg">
                 <p className="text-charcoal font-semibold">PandaCodeGen LLC</p>
-                <p>Missouri, USA</p>
+                <p>701 Tillery St Ste 12</p>
+                <p>Austin, TX 78702, USA</p>
                 <p>Email: <a href="mailto:info@pandacodegen.com" className="text-cognac hover:underline">info@pandacodegen.com</a></p>
                 <p>Response Time: Within 48 hours during business days</p>
               </div>

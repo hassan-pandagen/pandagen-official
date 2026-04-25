@@ -38,7 +38,7 @@ const faqData = [
   },
   {
     q: "How much does it cost to migrate from Webflow?",
-    a: "Typical agencies charge $20,000 to $60,000 and take 10-16 weeks. We meet you halfway. Three tiers: Foot-in-the-Door starts at $500 (simple Webflow sites, founder's offer with public case study exchange). Growth starts at $3,500 (business sites with custom interactions and CMS). Scale starts at $12,000 (complex builds, Webflow Ecommerce, localization). You also stop paying $39 to $235/month in Webflow fees forever.",
+    a: "Typical agencies charge $20,000 to $60,000 and take 10-16 weeks. We meet you halfway. Three tiers: Founder&apos;s Offer starts at $500 (simple Webflow sites, founder's offer with public case study exchange). Growth starts at $3,500 (business sites with custom interactions and CMS). Scale starts at $12,000 (complex builds, Webflow Ecommerce, localization). You also stop paying $39 to $235/month in Webflow fees forever.",
   },
   {
     q: "What if Webflow adds the features I need later?",
@@ -316,7 +316,7 @@ export default function WebflowPageContent() {
         }}
         tiers={[
           {
-            tier: "Foot in the Door",
+            tier: "Founder&apos;s Offer",
             price: "Starting from $500",
             timeline: "1 week",
             fit: "Simple Webflow site. 5-15 pages. Our founder's offer.",
@@ -336,7 +336,7 @@ export default function WebflowPageContent() {
             timeline: "2-3 weeks",
             fit: "Business Webflow site. 15-50 pages. Custom interactions, CMS collections.",
             includes: [
-              "Everything in Foot in the Door",
+              "Everything in Founder&apos;s Offer",
               "Custom Webflow interactions recreated in code",
               "Complex CMS collections migrated",
               "Full SEO migration with schema",

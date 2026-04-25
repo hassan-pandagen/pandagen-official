@@ -345,7 +345,7 @@ export default function PageContent() {
         }}
         tiers={[
           {
-            tier: "Foot in the Door",
+            tier: "Founder&apos;s Offer",
             price: "Starting from $3,000",
             timeline: "1-2 weeks",
             fit: "Marketing site, internal tool, or small portal. Clear scope.",
@@ -365,7 +365,7 @@ export default function PageContent() {
             timeline: "3-5 weeks",
             fit: "SaaS MVP, client portal, or full dashboard. Custom business logic.",
             includes: [
-              "Everything in Foot in the Door",
+              "Everything in Founder&apos;s Offer",
               "Stripe payments + subscriptions",
               "Admin dashboard with analytics",
               "Custom business workflow logic",

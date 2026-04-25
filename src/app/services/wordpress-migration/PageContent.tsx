@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     q: "How much does a WordPress to Next.js migration cost?",
-    a: "Typical agencies charge $15,000 to $40,000 and take 8-12 weeks. We meet you halfway. Three tiers: Foot-in-the-Door starts at $500 (simple sites, founder's offer with public case study exchange). Growth starts at $3,500 (15-50 pages, custom features). Scale starts at $12,000 (complex sites, WooCommerce, integrations). Most clients recover the investment within 3 to 6 months through eliminated hosting, plugin licenses, and maintenance fees."
+    a: "Typical agencies charge $15,000 to $40,000 and take 8-12 weeks. We meet you halfway. Three tiers: Founder&apos;s Offer starts at $500 (simple sites, founder's offer with public case study exchange). Growth starts at $3,500 (15-50 pages, custom features). Scale starts at $12,000 (complex sites, WooCommerce, integrations). Most clients recover the investment within 3 to 6 months through eliminated hosting, plugin licenses, and maintenance fees."
   },
   {
     q: "Can I still edit my website after migration?",
@@ -360,7 +360,7 @@ export default function PageContent() {
         }}
         tiers={[
           {
-            tier: "Foot in the Door",
+            tier: "Founder&apos;s Offer",
             price: "Starting from $500",
             timeline: "1 week",
             fit: "Simple WordPress site. Brochure, small blog. Our founder's offer.",
@@ -380,7 +380,7 @@ export default function PageContent() {
             timeline: "2-3 weeks",
             fit: "Business WordPress site. 15-50 pages. Blog, forms, integrations.",
             includes: [
-              "Everything in Foot in the Door",
+              "Everything in Founder&apos;s Offer",
               "Custom post types and taxonomies",
               "Forms with custom API routes",
               "Full SEO migration with schema",

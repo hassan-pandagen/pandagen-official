@@ -331,7 +331,7 @@ export default function PageContent() {
         }}
         tiers={[
           {
-            tier: "Foot in the Door",
+            tier: "Founder&apos;s Offer",
             price: "Starting from $500",
             timeline: "1 week",
             fit: "Simple WooCommerce store. 10-30 products, basic catalog. Founder's offer.",
@@ -351,7 +351,7 @@ export default function PageContent() {
             timeline: "2-3 weeks",
             fit: "30-150 products. Custom cart logic, reviews, email capture.",
             includes: [
-              "Everything in Foot in the Door",
+              "Everything in Founder&apos;s Offer",
               "Custom filtering & search",
               "Upsell / cross-sell logic",
               "Native review system (no plugins)",

@@ -59,7 +59,7 @@ export default function EcommercePage() {
           "@type": "OfferCatalog",
           "name": "Headless Shopify Development Tiers",
           "itemListElement": [
-            { "@type": "Offer", "name": "Foot in the Door", "price": "500", "priceCurrency": "USD", "description": "Custom Next.js storefront up to 20 products with Shopify Storefront API integration" },
+            { "@type": "Offer", "name": "Founder's Offer", "price": "500", "priceCurrency": "USD", "description": "Custom Next.js storefront up to 20 products with Shopify Storefront API integration" },
             { "@type": "Offer", "name": "Growth", "price": "3500", "priceCurrency": "USD", "description": "30 to 100 products, custom checkout, upsell logic, custom review system" },
             { "@type": "Offer", "name": "Scale", "price": "12000", "priceCurrency": "USD", "description": "Subscriptions, multi-currency, custom loyalty logic, large catalogs" }
           ]
@@ -94,7 +94,7 @@ export default function EcommercePage() {
           { "@type": "Question", "name": "Will my Shopify apps still work?", "acceptedAnswer": { "@type": "Answer", "text": "Your backend apps (inventory, email, shipping) work as before. Frontend apps (review widgets, upsell popups) get rebuilt as native features in your custom code, so they load instantly instead of injecting slow JavaScript. You stop paying monthly app fees for features we build once." } },
           { "@type": "Question", "name": "How long does a custom storefront migration take?", "acceptedAnswer": { "@type": "Answer", "text": "Three weeks for most stores. Days 1-3: API architecture and design. Days 4-14: Custom storefront build accelerated by AI-paired development with Claude and Cursor. Days 15-18: Testing with live Shopify data. Days 19-21: Launch with zero downtime. Agencies still quote 8-12 weeks because they bill hourly." } },
           { "@type": "Question", "name": "Will I lose sales during the migration?", "acceptedAnswer": { "@type": "Answer", "text": "No. Your existing Shopify store stays live throughout the entire build. We develop the new storefront in parallel. On launch day, we simply point your domain to the new site. Zero downtime, zero lost sales." } },
-          { "@type": "Question", "name": "How much does a custom Shopify storefront cost?", "acceptedAnswer": { "@type": "Answer", "text": "Typical agencies charge $30,000 to $60,000 and take 8 to 12 weeks. We meet you halfway. Foot-in-the-Door stores start at $500 (our founder's offer for small catalogs with public case study exchange). Growth builds start at $3,500 (30-100 products, custom features). Scale builds start at $12,000 (subscriptions, custom logic, large catalogs). Most clients recover the investment within 4 to 6 months through eliminated app fees and conversion lift." } }
+          { "@type": "Question", "name": "How much does a custom Shopify storefront cost?", "acceptedAnswer": { "@type": "Answer", "text": "Typical agencies charge $30,000 to $60,000 and take 8 to 12 weeks. We meet you halfway. Founder's Offer stores start at $500 (our founder's offer for small catalogs with public case study exchange). Growth builds start at $3,500 (30-100 products, custom features). Scale builds start at $12,000 (subscriptions, custom logic, large catalogs). Most clients recover the investment within 4 to 6 months through eliminated app fees and conversion lift." } }
         ]
       },
       {

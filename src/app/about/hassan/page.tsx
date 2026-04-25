@@ -7,19 +7,19 @@ import { ArrowLeft, ArrowRight, Code2, Target } from "lucide-react";
 import { blogPosts } from "@/data/blog";
 
 export const metadata: Metadata = {
-    title: "Hassan Jamal - Founder & Lead Engineer at PandaCodeGen",
-    description: "Hassan Jamal builds high performance custom coded websites for e-commerce brands. Founder at PandaCodeGen. Based in Austin, TX.",
+    title: "Hassan Jamal - Co-founder & Lead Engineer at PandaCodeGen",
+    description: "Hassan Jamal is co-founder and Lead Engineer at PandaCodeGen, an Austin-headquartered custom Next.js studio with engineering from Karachi. 7+ years full-stack experience, 267+ public GitHub commits.",
     openGraph: {
-        title: "Hassan Jamal - Founder & Lead Engineer at PandaCodeGen",
-        description: "Helping e-commerce brands ditch Shopify fees & WordPress bloat with high performance custom code. Founder @ PandaCodeGen.",
+        title: "Hassan Jamal - Co-founder & Lead Engineer at PandaCodeGen",
+        description: "Co-founder of PandaCodeGen. Austin LLC, global engineering from Karachi. Helping e-commerce brands ditch Shopify fees and WordPress bloat with high-performance custom code.",
         type: "profile",
         url: "https://www.pandacodegen.com/about/hassan",
         images: [{ url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 }],
     },
     twitter: {
         card: "summary",
-        title: "Hassan Jamal - Founder & Lead Engineer at PandaCodeGen",
-        description: "Helping e-commerce brands ditch Shopify fees & WordPress bloat with custom coded storefronts.",
+        title: "Hassan Jamal - Co-founder & Lead Engineer at PandaCodeGen",
+        description: "Co-founder of PandaCodeGen. Austin LLC, global engineering from Karachi. Custom Next.js builds.",
     },
     alternates: { canonical: "/about/hassan" },
 };
@@ -33,8 +33,8 @@ const personSchema = {
             "name": "Hassan Jamal",
             "givenName": "Hassan",
             "familyName": "Jamal",
-            "jobTitle": "Founder & Lead Full-Stack Engineer",
-            "description": "Helping e-commerce brands ditch Shopify fees and WordPress bloat with high performance custom code. Founder at PandaCodeGen.",
+            "jobTitle": "Co-founder and Lead Engineer",
+            "description": "Co-founder and Lead Engineer at PandaCodeGen, an Austin-headquartered custom Next.js studio with engineering operations from Karachi. 7+ years of full-stack experience, 267+ public GitHub commits. Helps e-commerce brands ditch Shopify fees and WordPress bloat with high-performance custom code.",
             "url": "https://www.pandacodegen.com/about/hassan",
             "image": "https://www.pandacodegen.com/team/hassan.png",
             "worksFor": {
@@ -65,8 +65,8 @@ const personSchema = {
             "@type": "ProfilePage",
             "@id": "https://www.pandacodegen.com/about/hassan#webpage",
             "url": "https://www.pandacodegen.com/about/hassan",
-            "name": "Hassan Jamal - Lead Full-Stack Engineer at PandaCodeGen",
-            "description": "Learn about Hassan Jamal, founder of PandaCodeGen. Six years building WordPress sites before launching a custom Next.js studio in Austin, TX in February 2026.",
+            "name": "Hassan Jamal - Co-founder & Lead Engineer at PandaCodeGen",
+            "description": "Learn about Hassan Jamal, co-founder of PandaCodeGen. Six years building WordPress sites in Karachi before launching a custom Next.js studio in February 2026 with co-founder Imran Raza Ladhani. Austin LLC, global engineering from Karachi.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "mainEntity": { "@id": "https://www.pandacodegen.com/#/schema/person/hassan" },
             "inLanguage": "en-US",
@@ -136,12 +136,12 @@ export default function HassanAuthorPage() {
 
                         <div className="flex-1 pt-2">
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-stone-200 text-xs font-bold uppercase tracking-widest text-charcoal mb-6">
-                                Founder &amp; Lead Engineer
+                                Co-founder &amp; Lead Engineer
                             </div>
                             <h1 className="text-5xl md:text-6xl font-serif text-charcoal mb-3">Hassan Jamal.</h1>
-                            <p className="text-lg font-mono text-cognac mb-6">Full-Stack Architect &middot; Austin, TX</p>
+                            <p className="text-lg font-mono text-cognac mb-6">Full-Stack Architect &middot; Austin LLC &middot; Engineering from Karachi</p>
                             <p className="text-xl text-stone-600 leading-relaxed max-w-xl mb-8">
-                                I built WordPress sites for six years before I got tired of watching clients pay $3,000 a month in plugin fees for sites that loaded in four seconds. I launched PandaCodeGen in February 2026 to do it differently. One recent client was paying $3,200/month on Shopify Plus with a PageSpeed score of 31. We migrated them to custom code. Same features. Zero app fees. PageSpeed jumped from 31 to 92.
+                                I built WordPress sites for six years before I got tired of watching clients pay $3,000 a month in plugin fees for sites that loaded in four seconds. I co-founded PandaCodeGen in February 2026 with Imran Raza Ladhani to do it differently. We run an Austin LLC with engineering from Karachi. One recent client was paying $3,200/month on Shopify Plus with a PageSpeed score of 31. We migrated them to custom code. Same features. Zero app fees. PageSpeed jumped from 31 to 92.
                             </p>
                             <div className="flex flex-wrap gap-3">
                                 <a

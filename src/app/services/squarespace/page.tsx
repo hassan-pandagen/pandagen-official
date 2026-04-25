@@ -59,7 +59,7 @@ export default function SquarespaceServicePage() {
           "@type": "OfferCatalog",
           "name": "Squarespace Migration Tiers",
           "itemListElement": [
-            { "@type": "Offer", "name": "Foot in the Door", "price": "500", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Founder's Offer", "price": "500", "priceCurrency": "USD" },
             { "@type": "Offer", "name": "Growth", "price": "3000", "priceCurrency": "USD" },
             { "@type": "Offer", "name": "Scale", "price": "10000", "priceCurrency": "USD" }
           ]
@@ -121,7 +121,7 @@ export default function SquarespaceServicePage() {
         "mainEntity": [
           { "@type": "Question", "name": "Will my Squarespace site design transfer to custom code?", "acceptedAnswer": { "@type": "Answer", "text": "We don't copy-paste templates. We redesign your brand with custom code that's uniquely yours. We match your brand colors, fonts, and style, but make it faster, more professional, and fully customizable." } },
           { "@type": "Question", "name": "Can I still use Squarespace for my online store?", "acceptedAnswer": { "@type": "Answer", "text": "We recommend migrating fully. But if you have a small store, we can integrate Shopify's Buy Button or Stripe checkout into your custom site so you keep selling without Squarespace's monthly fees." } },
-          { "@type": "Question", "name": "How much does a Squarespace migration cost?", "acceptedAnswer": { "@type": "Answer", "text": "Typical agencies charge $10,000 to $30,000 and take 6-10 weeks. We meet you halfway. Three tiers: Foot-in-the-Door starts at $500 (simple Squarespace sites, founder's offer with public case study exchange). Growth starts at $3,000 (15-50 pages with forms and blog). Scale starts at $10,000 (Squarespace Commerce, Scheduling, member areas). You also stop paying $23 to $65/month forever." } },
+          { "@type": "Question", "name": "How much does a Squarespace migration cost?", "acceptedAnswer": { "@type": "Answer", "text": "Typical agencies charge $10,000 to $30,000 and take 6-10 weeks. We meet you halfway. Three tiers: Founder's Offer starts at $500 (simple Squarespace sites, founder's offer with public case study exchange). Growth starts at $3,000 (15-50 pages with forms and blog). Scale starts at $10,000 (Squarespace Commerce, Scheduling, member areas). You also stop paying $23 to $65/month forever." } },
           { "@type": "Question", "name": "What if I have a blog on Squarespace?", "acceptedAnswer": { "@type": "Answer", "text": "All blog posts migrate with their content, images, dates, and URLs. We set up a content editor so you can write and publish new posts the same way, but your blog loads 4-5x faster." } },
           { "@type": "Question", "name": "Is the migration disruptive to my business?", "acceptedAnswer": { "@type": "Answer", "text": "No. Your Squarespace site stays live during the entire build. We develop the new site in parallel. On launch day, we point your domain to the new site. Zero downtime." } }
         ]

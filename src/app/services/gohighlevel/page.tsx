@@ -59,7 +59,7 @@ export default function GoHighLevelServicePage() {
           "@type": "OfferCatalog",
           "name": "GoHighLevel Development Tiers",
           "itemListElement": [
-            { "@type": "Offer", "name": "Foot in the Door", "price": "500", "priceCurrency": "USD", "description": "Simple funnel or 5 to 10 page landing site with full GHL API integration" },
+            { "@type": "Offer", "name": "Founder's Offer", "price": "500", "priceCurrency": "USD", "description": "Simple funnel or 5 to 10 page landing site with full GHL API integration" },
             { "@type": "Offer", "name": "Growth", "price": "3000", "priceCurrency": "USD", "description": "15 to 40 page marketing site with GHL Workflows and Pipelines intact" },
             { "@type": "Offer", "name": "Scale", "price": "8000", "priceCurrency": "USD", "description": "Agency white-label, SaaS mode sub-accounts, member portals, complex Workflows" }
           ]
@@ -106,7 +106,7 @@ export default function GoHighLevelServicePage() {
         "mainEntity": [
           { "@type": "Question", "name": "Will my GHL automations break during migration?", "acceptedAnswer": { "@type": "Answer", "text": "No. We build the new site in parallel while your GHL funnels stay live. When we launch, all forms and triggers connect to your existing GHL pipelines through the API. Everything keeps working." } },
           { "@type": "Question", "name": "Do I need to cancel GHL?", "acceptedAnswer": { "@type": "Answer", "text": "Not if you don't want to. Option B keeps GHL for CRM while upgrading your website. Option C replaces GHL entirely with a custom CRM. Most clients choose Option B because GHL's automation engine is solid." } },
-          { "@type": "Question", "name": "How much does a custom site with GHL integration cost?", "acceptedAnswer": { "@type": "Answer", "text": "Typical agencies charge $8,000 to $25,000 and take 6-10 weeks. We meet you halfway. Three tiers: Foot-in-the-Door starts at $500 (simple funnel or landing page site, founder's offer with public case study exchange). Growth starts at $3,000 (multi-page marketing site with full GHL API integration). Scale starts at $8,000 (agency white-label, member portals, complex GHL workflows). Your GHL CRM and automations stay fully intact." } },
+          { "@type": "Question", "name": "How much does a custom site with GHL integration cost?", "acceptedAnswer": { "@type": "Answer", "text": "Typical agencies charge $8,000 to $25,000 and take 6-10 weeks. We meet you halfway. Three tiers: Founder's Offer starts at $500 (simple funnel or landing page site, founder's offer with public case study exchange). Growth starts at $3,000 (multi-page marketing site with full GHL API integration). Scale starts at $8,000 (agency white-label, member portals, complex GHL workflows). Your GHL CRM and automations stay fully intact." } },
           { "@type": "Question", "name": "Can you build custom landing pages that work with GHL?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We build custom landing pages that load in under 1 second and push leads directly into your GHL CRM via API. Higher Quality Scores on Google Ads means lower cost per lead." } },
           { "@type": "Question", "name": "What if I want to leave GHL later?", "acceptedAnswer": { "@type": "Answer", "text": "If you chose Option B, your custom website already works independently. We can replace the GHL API connections with a custom backend whenever you're ready. No vendor lock-in, no rebuilding from scratch." } }
         ]

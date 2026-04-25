@@ -7,19 +7,19 @@ import { ArrowLeft, ArrowRight, BarChart3, Target } from "lucide-react";
 import { blogPosts } from "@/data/blog";
 
 export const metadata: Metadata = {
-    title: "Imran Raza Ladhani - Architecture Collaborator at PandaCodeGen",
-    description: "Imran Raza Ladhani is the architecture collaborator at PandaCodeGen, working with founder Hassan Jamal on scalable custom Next.js builds.",
+    title: "Imran Raza Ladhani - Co-founder & Lead Architect at PandaCodeGen",
+    description: "Imran Raza Ladhani is co-founder and Lead Architect at PandaCodeGen, working with co-founder Hassan Jamal on scalable custom Next.js builds, platform migrations, and headless commerce architecture.",
     openGraph: {
-        title: "Imran Raza Ladhani - Architecture Collaborator at PandaCodeGen",
-        description: "Architecture collaborator at PandaCodeGen. Custom Next.js builds, platform migrations, system design.",
+        title: "Imran Raza Ladhani - Co-founder & Lead Architect at PandaCodeGen",
+        description: "Co-founder and Lead Architect at PandaCodeGen. Custom Next.js builds, platform migrations, system design, headless commerce.",
         type: "profile",
         url: "https://www.pandacodegen.com/about/imran",
         images: [{ url: "https://www.pandacodegen.com/team/imran.png", width: 400, height: 400 }],
     },
     twitter: {
         card: "summary",
-        title: "Imran Raza Ladhani - Architecture Collaborator at PandaCodeGen",
-        description: "Architecture collaborator at PandaCodeGen. Custom Next.js builds and platform migrations.",
+        title: "Imran Raza Ladhani - Co-founder & Lead Architect at PandaCodeGen",
+        description: "Co-founder and Lead Architect at PandaCodeGen. Custom Next.js builds and platform migrations.",
     },
     robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
     alternates: { canonical: "/about/imran" },
@@ -34,8 +34,8 @@ const personSchema = {
             "name": "Imran Raza Ladhani",
             "givenName": "Imran",
             "familyName": "Raza Ladhani",
-            "jobTitle": "Architecture Collaborator",
-            "description": "Architecture collaborator at PandaCodeGen. Works with founder Hassan Jamal on scalable custom Next.js builds, platform migrations, and system design.",
+            "jobTitle": "Co-founder and Lead Architect",
+            "description": "Co-founder and Lead Architect at PandaCodeGen. Works alongside co-founder Hassan Jamal on scalable custom Next.js builds, platform migrations, headless commerce architecture, and system design.",
             "url": "https://www.pandacodegen.com/about/imran",
             "image": "https://www.pandacodegen.com/team/imran.png",
             "worksFor": {
@@ -56,8 +56,8 @@ const personSchema = {
             "@type": "ProfilePage",
             "@id": "https://www.pandacodegen.com/about/imran#webpage",
             "url": "https://www.pandacodegen.com/about/imran",
-            "name": "Imran Raza Ladhani - Architecture Collaborator at PandaCodeGen",
-            "description": "Learn about Imran Raza Ladhani, architecture collaborator at PandaCodeGen. Works with founder Hassan Jamal on custom Next.js builds and platform migrations.",
+            "name": "Imran Raza Ladhani - Co-founder & Lead Architect at PandaCodeGen",
+            "description": "Learn about Imran Raza Ladhani, co-founder and Lead Architect at PandaCodeGen. Works alongside co-founder Hassan Jamal on custom Next.js builds and platform migrations.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "mainEntity": { "@id": "https://www.pandacodegen.com/#/schema/person/imran" },
             "inLanguage": "en-US",
@@ -127,12 +127,12 @@ export default function ImranAuthorPage() {
 
                         <div className="flex-1 pt-2">
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-stone-200 text-xs font-bold uppercase tracking-widest text-charcoal mb-6">
-                                Architecture Collaborator
+                                Co-founder & Lead Architect
                             </div>
                             <h1 className="text-5xl md:text-6xl font-serif text-charcoal mb-3">Imran Raza Ladhani.</h1>
-                            <p className="text-lg font-mono text-cognac mb-6">Architecture Collaborator &middot; PandaCodeGen</p>
+                            <p className="text-lg font-mono text-cognac mb-6">Co-founder & Lead Architect &middot; PandaCodeGen</p>
                             <p className="text-xl text-stone-600 leading-relaxed max-w-xl mb-8">
-                                I work with Hassan on the hard architecture calls. Which migrations are actually feasible without breaking SEO. How to keep a WooCommerce checkout live during a headless rebuild. Where Next.js App Router ends and Sanity or Supabase takes over. Hassan writes the code. I help decide what that code needs to do.
+                                I co-founded PandaCodeGen with Hassan and lead the architecture work. Which migrations are actually feasible without breaking SEO. How to keep a WooCommerce checkout live during a headless rebuild. Where Next.js App Router ends and Sanity or Supabase takes over. Hassan writes the code. I make sure it does what it needs to do at scale.
                             </p>
                             <div className="flex flex-wrap gap-3">
                                 <a

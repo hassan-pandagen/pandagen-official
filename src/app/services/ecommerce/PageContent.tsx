@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     q: "How much does a custom Shopify storefront cost?",
-    a: "Typical agencies charge $30,000 to $60,000 and take 8 to 12 weeks. We meet you halfway. Foot-in-the-Door stores start at $500 (our founder's offer for small catalogs with public case study exchange). Growth builds start at $3,500 (30-100 products, custom features). Scale builds start at $12,000 (subscriptions, custom logic, large catalogs). Most clients recover the investment within 4 to 6 months through eliminated app fees and conversion lift."
+    a: "Typical agencies charge $30,000 to $60,000 and take 8 to 12 weeks. We meet you halfway. Founder&apos;s Offer stores start at $500 (our founder's offer for small catalogs with public case study exchange). Growth builds start at $3,500 (30-100 products, custom features). Scale builds start at $12,000 (subscriptions, custom logic, large catalogs). Most clients recover the investment within 4 to 6 months through eliminated app fees and conversion lift."
   },
 ];
 
@@ -376,7 +376,7 @@ export default function PageContent() {
           <div className="grid md:grid-cols-3 gap-5">
             {[
               {
-                tier: "Foot in the Door",
+                tier: "Founder&apos;s Offer",
                 price: "Starting from $500",
                 timeline: "1 week",
                 fit: "Small catalog, simple migration. Our founder's offer to prove the relationship.",
@@ -397,7 +397,7 @@ export default function PageContent() {
                 timeline: "2-3 weeks",
                 fit: "30-100 products. Custom features. Serious scaling.",
                 includes: [
-                  "Everything in Foot in the Door",
+                  "Everything in Founder&apos;s Offer",
                   "Custom product filtering & search",
                   "Advanced checkout flow",
                   "Upsell and personalization logic",

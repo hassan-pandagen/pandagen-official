@@ -65,7 +65,7 @@ const reviews = [
 
 const platformBadges = [
   { name: "Clutch", rating: "5.0", count: "1", color: "#e8222f", url: "https://clutch.co/profile/panda-code-gen" },
-  { name: "Trustpilot", rating: "5.0", count: "3", color: "#00b67a", url: "https://www.trustpilot.com/review/pandacodegen.com" },
+  { name: "Trustpilot", rating: "5.0", count: "2", color: "#00b67a", url: "https://www.trustpilot.com/review/pandacodegen.com" },
   { name: "Google", rating: "5.0", count: "4", color: "#1a73e8", url: "https://www.google.com/maps?cid=16271659886069582158" },
   { name: "GoodFirms", rating: "5.0", count: "1", color: "#b8860b", url: "https://www.goodfirms.co/company/pandacodegen" },
   { name: "Sortlist", rating: "5.0", count: "2", color: "#0f172a", url: "https://www.sortlist.com/agency/pandacodegen" },

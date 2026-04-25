@@ -282,7 +282,7 @@ export default function TermsPage() {
             >
               <h2 className="text-2xl font-bold text-charcoal mb-4">12. Dispute Resolution</h2>
               <p>
-                Any disputes arising from these Terms or our services shall be governed by the laws of the State of Missouri, USA. Both parties agree to attempt informal resolution before pursuing legal action.
+                Any disputes arising from these Terms or our services shall be governed by the laws of the State of Texas, USA. Both parties agree to attempt informal resolution before pursuing legal action.
               </p>
               <p className="mt-4">
                 If disputes cannot be resolved informally, binding arbitration shall be pursued under American Arbitration Association (AAA) rules.
@@ -315,7 +315,8 @@ export default function TermsPage() {
               </p>
               <div className="mt-4 p-4 bg-stone-50 border border-stone-200 rounded-lg">
                 <p className="text-charcoal font-semibold">PandaCodeGen LLC</p>
-                <p>Missouri, USA</p>
+                <p>701 Tillery St Ste 12</p>
+                <p>Austin, TX 78702, USA</p>
                 <p>Email: <a href="mailto:info@pandacodegen.com" className="text-cognac hover:underline">info@pandacodegen.com</a></p>
               </div>
             </motion.section>

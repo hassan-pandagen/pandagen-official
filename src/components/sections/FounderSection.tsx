@@ -8,8 +8,8 @@ import { Github, ArrowUpRight, Linkedin } from "lucide-react";
 const founders = [
   {
     name: "Hassan Jamal",
-    title: "Founder",
-    bio: "Builds the architectures. Writes the code. 267 GitHub contributions this year across live client projects. Every commit is visible. Based in Austin, TX.",
+    title: "Co-founder & Lead Engineer",
+    bio: "Builds the architectures. Writes the code. 267 GitHub contributions this year across live client projects. Every commit is visible. Austin LLC, engineering from Karachi.",
     image: "/team/hassan.png",
     github: "https://github.com/hassan-pandagen",
     linkedin: "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
@@ -18,8 +18,8 @@ const founders = [
   },
   {
     name: "Imran Raza Ladhani",
-    title: "Architecture Collaborator",
-    bio: "Works with Hassan on migration feasibility, system design, and zero-downtime cutovers. Hassan writes the code. Imran helps decide what the code needs to do.",
+    title: "Co-founder & Lead Architect",
+    bio: "Co-founded PandaCodeGen with Hassan and leads architecture: migration feasibility, system design, and zero-downtime cutovers. Hassan writes the code. Imran makes sure it scales.",
     image: "/team/imran.png",
     github: null,
     linkedin: "https://www.linkedin.com/in/imran-raza-ladhani/",
@@ -47,7 +47,7 @@ export default function FounderSection() {
           </h2>
           <p className="text-lg text-gray-400 max-w-xl">
             When you book a call, Hassan answers. He writes every line of code.
-            Imran helps on architecture. No account managers, no offshore handoffs.
+            Imran leads the architecture. Austin LLC, engineering from Karachi. No account managers, no white-label outsourcing.
           </p>
         </motion.div>
 

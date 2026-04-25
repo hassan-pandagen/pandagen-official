@@ -499,7 +499,7 @@ export default function SquarespacePageContent() {
         }}
         tiers={[
           {
-            tier: "Foot in the Door",
+            tier: "Founder&apos;s Offer",
             price: "Starting from $500",
             timeline: "1 week",
             fit: "Simple Squarespace site. 5-15 pages, portfolio or brochure. Founder's offer.",
@@ -519,7 +519,7 @@ export default function SquarespacePageContent() {
             timeline: "2-3 weeks",
             fit: "Business Squarespace site. 15-50 pages. Blog, forms, Commerce Lite.",
             includes: [
-              "Everything in Foot in the Door",
+              "Everything in Founder&apos;s Offer",
               "Custom animations and transitions",
               "Forms with custom API routes",
               "Full SEO migration with schema",

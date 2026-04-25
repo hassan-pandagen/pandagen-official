@@ -119,7 +119,7 @@ npm start
 We help founders and enterprises migrate from legacy monoliths (WordPress/Shopify Themes) to high-performance Headless Architectures.
 
 **Locations:**
-- **HQ:** Missouri, USA 🇺🇸
+- **HQ:** Austin, Texas, USA 🇺🇸
 - **Engineering Lab:** Karachi, Pakistan 🇵🇰
 
 **Ready to build?**

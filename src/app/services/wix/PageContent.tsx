@@ -312,7 +312,7 @@ export default function PageContent() {
         }}
         tiers={[
           {
-            tier: "Foot in the Door",
+            tier: "Founder&apos;s Offer",
             price: "Starting from $500",
             timeline: "1 week",
             fit: "Simple Wix site. 5-15 pages, portfolio or brochure. Founder's offer.",
@@ -332,7 +332,7 @@ export default function PageContent() {
             timeline: "2-3 weeks",
             fit: "Business site. 15-50 pages. Forms, blog, custom interactions.",
             includes: [
-              "Everything in Foot in the Door",
+              "Everything in Founder&apos;s Offer",
               "Custom animations and interactions",
               "Forms with custom API routes",
               "Full SEO migration with schema",

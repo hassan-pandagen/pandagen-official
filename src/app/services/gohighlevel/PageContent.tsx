@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     q: "How much does a custom site with GHL integration cost?",
-    a: "Three tiers. Foot-in-the-Door starts at $500 (simple funnel or 5 to 10 page landing site, founder's offer with public case study exchange). Growth starts at $3,000 (15 to 40 page marketing site with full GHL API integration). Scale starts at $8,000 (agency white-label, member portals, complex Workflows). Your GHL CRM, automations, snapshots, and sub-accounts stay fully intact."
+    a: "Three tiers. Founder&apos;s Offer starts at $500 (simple funnel or 5 to 10 page landing site, founder's offer with public case study exchange). Growth starts at $3,000 (15 to 40 page marketing site with full GHL API integration). Scale starts at $8,000 (agency white-label, member portals, complex Workflows). Your GHL CRM, automations, snapshots, and sub-accounts stay fully intact."
   },
   {
     q: "Can you build custom landing pages that work with GHL?",
@@ -338,7 +338,7 @@ export default function PageContent() {
         }}
         tiers={[
           {
-            tier: "Foot in the Door",
+            tier: "Founder&apos;s Offer",
             price: "Starting from $500",
             timeline: "1 week",
             fit: "Simple funnel or landing page site. 5-10 pages. Our founder's offer.",
@@ -358,7 +358,7 @@ export default function PageContent() {
             timeline: "2-3 weeks",
             fit: "Multi-page marketing site. 15-40 pages. Blog, forms, GHL integrations.",
             includes: [
-              "Everything in Foot in the Door",
+              "Everything in Founder&apos;s Offer",
               "Full GHL API + webhook integration",
               "Custom lead capture flows",
               "Full SEO with schema markup",

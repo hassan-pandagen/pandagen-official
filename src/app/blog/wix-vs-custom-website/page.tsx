@@ -520,7 +520,7 @@ export default function WixVsCustomWebsitePage() {
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
                                         <td className="p-3 border border-stone-300 font-medium">Build cost</td>
                                         <td data-label="Wix (3 years)" className="p-3 border border-stone-300">$0 (DIY) or $500 to $2,000 (designer)</td>
-                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-300">$500 (FITD) to $12,000 (Scale), one-time</td>
+                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-300">$500 (Founder&apos;s Offer) to $10,000 (Scale), one-time</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
                                         <td className="p-3 border border-stone-300 font-bold">3-Year Total</td>
