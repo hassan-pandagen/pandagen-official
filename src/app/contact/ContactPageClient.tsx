@@ -58,6 +58,11 @@ export default function ContactPageClient() {
           "postalCode": "78702",
           "addressCountry": "US"
         },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 30.2603295,
+          "longitude": -97.7042901
+        },
         "sameAs": [
           "https://twitter.com/pandacodegen",
           "https://www.linkedin.com/company/pandacodegen",

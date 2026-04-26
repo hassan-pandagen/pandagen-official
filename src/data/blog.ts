@@ -1,4 +1,10 @@
 // Centralized blog data - Add new posts here and they'll automatically appear in sitemap
+//
+// SERVER-ONLY: This module ships ~50KB of FAQ content per post when bundled to client.
+// Importing 'server-only' enforces that this file never reaches the browser bundle.
+// Client components must receive blog data via props from a server-component parent.
+import 'server-only';
+
 export type IllustrationType = 'wordpress' | 'speed' | 'code' | 'saas' | 'plugins' | 'traffic' | 'sales' | 'conversion' | 'ranking' | 'cost' | 'performance' | 'security' | 'aicommerce' | 'hosting' | 'webflow' | 'migration';
 
 export interface FAQ {

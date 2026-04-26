@@ -1,5 +1,5 @@
-"use client";
-
+// Server component (no client hooks needed). Importing blogPosts here is safe because
+// this file does not declare "use client" — blog.ts (server-only) won't reach the browser.
 import Link from "next/link";
 import { ArrowRight, Clock } from "lucide-react";
 import { blogPosts } from "@/data/blog";

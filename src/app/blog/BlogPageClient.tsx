@@ -7,7 +7,11 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense } from "react";
-import { blogPosts, type IllustrationType, type BlogPost } from "@/data/blog";
+import type { IllustrationType, BlogPost } from "@/data/blog";
+
+// Client-safe metadata: full BlogPost minus the heavy faqs[] field that we never render
+// in the listing UI. Keeping faqs server-only saves ~20-40KB gzipped on the client bundle.
+type BlogPostMeta = Omit<BlogPost, "faqs">;
 
 // Pagefind-powered blog search: lazy-loaded, opens a Cmd+K modal with instant results.
 // ssr: false because pagefind loads /_pagefind/pagefind.js from the runtime assets.
@@ -37,7 +41,7 @@ const cardDisplay: Record<IllustrationType, { stat: string; label: string; bgTin
 // Resolve the card visual for a given post. Per-post cardStat/cardStatLabel win over the
 // illustrationType default, so multiple posts sharing a type can carry unique hooks while
 // keeping the same color scheme (bgTint, statColor, border).
-function getCardDisplay(article: BlogPost) {
+function getCardDisplay(article: BlogPostMeta) {
   const base = cardDisplay[article.illustrationType];
   return {
     stat: article.cardStat ?? base.stat,
@@ -48,79 +52,8 @@ function getCardDisplay(article: BlogPost) {
   };
 }
 
-// Combine blog data and sort by newest first
-const articles = blogPosts
-  .map(post => ({ ...post }))
-  .sort((a, b) => {
-    const dateA = new Date(a.lastModified || a.date);
-    const dateB = new Date(b.lastModified || b.date);
-    return dateB.getTime() - dateA.getTime();
-  });
-
-// Hoist schema to module scope so it renders server-side (no client state dependency)
-const blogSchema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "CollectionPage",
-      "@id": "https://www.pandacodegen.com/blog#webpage",
-      "url": "https://www.pandacodegen.com/blog",
-      "name": "PandaCodeGen Blog - Insights from the Engine Room",
-      "description": "Expert insights on Next.js development, WordPress migration, Shopify optimization, and enterprise web performance.",
-      "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
-      "breadcrumb": { "@id": "https://www.pandacodegen.com/blog#breadcrumb" },
-      "inLanguage": "en-US"
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://www.pandacodegen.com/blog#breadcrumb",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" }
-      ]
-    },
-    {
-      "@type": "Blog",
-      "@id": "https://www.pandacodegen.com/blog#blog",
-      "name": "PandaCodeGen Blog",
-      "description": "Technical insights on modern web development, WordPress alternatives, and performance optimization.",
-      "publisher": {
-        "@type": "Organization",
-        "@id": "https://www.pandacodegen.com/#organization",
-        "name": "PandaCodeGen",
-        "url": "https://www.pandacodegen.com"
-      },
-      "blogPost": articles.map((article) => {
-        const raw = article.lastModified || article.date;
-        const hasYear = /\d{4}/.test(raw);
-        const year = hasYear ? "" : raw.startsWith("Dec") ? ", 2025" : ", 2026";
-        const parsed = new Date(`${raw}${year}`);
-        const iso = isNaN(parsed.getTime()) ? "2026-01-01T00:00:00.000Z" : parsed.toISOString();
-        return {
-          "@type": "BlogPosting",
-          "headline": article.title,
-          "description": article.excerpt,
-          "url": `https://www.pandacodegen.com/blog/${article.id}`,
-          "datePublished": iso,
-          "author": {
-            "@type": "Person",
-            "name": article.author,
-            "url": "https://www.pandacodegen.com/about/hassan"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "@id": "https://www.pandacodegen.com/#organization",
-            "name": "PandaCodeGen",
-            "url": "https://www.pandacodegen.com"
-          }
-        };
-      })
-    }
-  ]
-};
-
 // Interactive filter + article list — wrapped in Suspense because it calls useSearchParams()
-function BlogArticlesSection() {
+function BlogArticlesSection({ articles }: { articles: BlogPostMeta[] }) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const activeCategory = searchParams.get("cat") ?? "All";
@@ -131,7 +64,7 @@ function BlogArticlesSection() {
     router.replace(`/blog?${params.toString()}`, { scroll: false });
   }
 
-  const categories = ["All", ...Array.from(new Set(blogPosts.map(post => post.category)))];
+  const categories = ["All", ...Array.from(new Set(articles.map(post => post.category)))];
 
   const filteredArticles = articles.filter(article => {
     return activeCategory === "All" || article.category === activeCategory;
@@ -346,7 +279,7 @@ function BlogArticlesSection() {
   );
 }
 
-export default function BlogPageClient() {
+export default function BlogPageClient({ articles, blogSchema }: { articles: BlogPostMeta[]; blogSchema: object }) {
   return (
     <main className="bg-paper min-h-screen overflow-x-hidden relative">
       {/* Schema.org JSON-LD for SEO — rendered server-side (not inside Suspense) */}
@@ -370,7 +303,7 @@ export default function BlogPageClient() {
 
       {/* Interactive filter + article list is isolated in Suspense (uses useSearchParams) */}
       <Suspense fallback={<div className="min-h-[400px]" />}>
-        <BlogArticlesSection />
+        <BlogArticlesSection articles={articles} />
       </Suspense>
 
       <Footer />

@@ -507,6 +507,11 @@ const aiInfoSchema = {
                 "postalCode": "78702",
                 "addressCountry": "US",
             },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 30.2603295,
+                "longitude": -97.7042901,
+            },
             "areaServed": "Worldwide",
             "priceRange": "$500 to $10,000+ (Scale+ enterprise scope custom-quoted)",
             "founder": [

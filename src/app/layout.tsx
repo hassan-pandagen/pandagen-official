@@ -10,6 +10,7 @@ import FacebookPixel from "@/components/FacebookPixel";
 import MicrosoftClarity from "@/components/MicrosoftClarity";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import ReferrerBanner from "@/components/ui/ReferrerBanner";
+import { blogPosts } from "@/data/blog";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -133,9 +134,24 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Build a lean slug → title map server-side and pass to ReferrerBanner as a prop.
+  // This keeps the heavy server-only blog.ts (with all 248 FAQ entries) out of the
+  // client bundle that ships on every page via the layout.
+  const referrerMap: Record<string, string> = Object.fromEntries(
+    blogPosts.map((p) => [p.id, p.title])
+  );
+
   return (
     <html lang="en">
       <body className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-background text-charcoal`} suppressHydrationWarning>
+
+        {/* Skip-navigation for keyboard + screen reader users (WCAG 2.4.1) */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:bg-charcoal focus:text-white focus:px-4 focus:py-2 focus:rounded-md focus:font-bold focus:no-underline focus:outline-2 focus:outline-cognac"
+        >
+          Skip to main content
+        </a>
 
         {/* Preconnect to external resources for better performance */}
         <PreconnectLinks />
@@ -145,9 +161,11 @@ export default function RootLayout({
         <FacebookPixel />
         <MicrosoftClarity />
         <GoogleAnalytics />
-        <ReferrerBanner />
+        <ReferrerBanner referrerMap={referrerMap} />
         <SmoothScroll>
-          {children}
+          <div id="main-content" tabIndex={-1}>
+            {children}
+          </div>
         </SmoothScroll>
         <Analytics />
       </body>

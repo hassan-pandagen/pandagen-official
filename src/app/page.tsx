@@ -82,6 +82,11 @@ export default function Home() {
           "postalCode": "78702",
           "addressCountry": "US"
         },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 30.2603295,
+          "longitude": -97.7042901
+        },
         "sameAs": [
           "https://www.linkedin.com/company/pandacodegen",
           "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
@@ -98,13 +103,6 @@ export default function Home() {
           "https://www.behance.net/pandacodegen",
           "https://dev.to/pandacodegen"
         ],
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5.0",
-          "reviewCount": "4",
-          "bestRating": "5",
-          "worstRating": "1"
-        },
         "contactPoint": {
           "@type": "ContactPoint",
           "email": "info@pandacodegen.com",

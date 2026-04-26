@@ -1,3 +1,10 @@
+// Bundle analyzer is only loaded when ANALYZE=true (run via `npm run analyze`).
+// This way `npm run dev` and `npm run build` work without the package installed.
+// .trim() handles Windows CMD quirk where `set X=true && cmd` includes trailing space.
+const withBundleAnalyzer = process.env.ANALYZE?.trim() === 'true'
+  ? require('@next/bundle-analyzer')({ enabled: true })
+  : (config) => config;
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Non-www → www redirect handled by Vercel domain config (edge-level, no function overhead)
@@ -60,4 +67,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+module.exports = withBundleAnalyzer(nextConfig);
