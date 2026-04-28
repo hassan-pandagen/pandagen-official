@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "@/components/ui/motion";
 import { ArrowRight } from "lucide-react";
 
 /* ── Step-specific mini diagrams ── */

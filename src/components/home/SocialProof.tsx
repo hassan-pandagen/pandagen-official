@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "@/components/ui/motion";
 import { Zap, Clock, DollarSign, ShieldOff, ChevronLeft, ChevronRight } from "lucide-react";
 import { useRef } from "react";
 

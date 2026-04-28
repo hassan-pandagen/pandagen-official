@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "@/components/ui/motion";
 import { ShieldCheck, Globe, Rocket, Terminal, Code2, Cpu, Linkedin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,8 +8,12 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 import { useState } from "react";
-import QuoteModal from "@/components/ui/QuoteModal";
+import dynamic from "next/dynamic";
 import LinkedInProof from "@/components/sections/LinkedInProof";
+
+// Lazy load: QuoteModal pulls in framer-motion (~37KB gzipped). Keeping it out of
+// AboutPage's static bundle until the user actually opens the modal.
+const QuoteModal = dynamic(() => import("@/components/ui/QuoteModal"), { ssr: false });
 
 const aboutSchema = {
   "@context": "https://schema.org",

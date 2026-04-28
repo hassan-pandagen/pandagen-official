@@ -34,6 +34,34 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "website-migration-cost-2026",
+    cardStat: "$500-$10K",
+    cardStatLabel: "Migration cost across 7 platforms",
+    title: "Website Migration Cost 2026: $1,500 to $10,000 (7 Platforms)",
+    excerpt: "Website migration costs in 2026 range from $500 to $10,000+ across WordPress, WooCommerce, Webflow, Wix, Squarespace, Shopify, and GoHighLevel. Real client receipts, agency comparisons, and the math on why the migration pays for itself in months.",
+    category: "Pricing",
+    readTime: "16 min",
+    date: "Apr 29",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: true,
+    illustrationType: 'migration',
+    lastModified: "2026-04-29",
+    faqs: [
+      { question: "How much does a website migration cost in 2026?", answer: "For most small to mid-sized businesses, a full website migration to a custom-coded Next.js site costs between $1,500 and $3,500. Enterprise migrations including e-commerce headless, multi-language, and B2B portals range from $5,000 to $10,000+. PandaCodeGen pricing is published on /pricing and applies to all 7 source platforms (WordPress, WooCommerce, Webflow, Wix, Squarespace, Shopify, GoHighLevel)." },
+      { question: "Why is my agency quoting $25,000 for a Webflow migration?", answer: "Webflow agency markup. Iron Horse Studio, Finsweet, and Edgar Allan price Webflow rebuilds at $15,000 to $40,000 because they are positioned as enterprise design partners and bill on a discovery + design + development breakdown. PandaCodeGen ships the same custom-coded Next.js site for $1,500 to $5,000 because we run a leaner team and our process is built around fixed-price migrations rather than hourly billing." },
+      { question: "Will I lose my Google rankings during migration?", answer: "No, if the migration is done correctly. Every old URL maps to a new URL with a 301 redirect, all metadata transfers (title tags, meta descriptions, schema markup, Open Graph), and the sitemap rebuild matches the old structure. We validate the redirect map against Google Search Console before launch. On the Panda Patches WordPress migration we held all rankings across the cutover. On Obare Magazine we held rankings through the Wix to Next.js move." },
+      { question: "How long does a website migration take?", answer: "Founder's Offer: 7 days. Starter: 1 to 2 weeks. Growth: 2 to 3 weeks. Scale: 3 to 4 weeks. Scale+: 4 to 6 weeks. The current site stays live the entire time. We point the domain to the new site only on launch day, after final QA. Customer-facing impact during the migration is zero." },
+      { question: "What does the migration price include?", answer: "The full custom rebuild on Next.js, all content migrated, every old URL redirected with a 301, a content management system the owner can edit without a developer, 90+ PageSpeed score guaranteed on launch, and one free month of post-launch support. Hosting starts at $0 a month on Vercel free tier, scaling to roughly 100,000 visits per month before any cost. Compare to the $150 to $400 a month most clients pay their current platform." },
+      { question: "Can I migrate without losing customers or sales?", answer: "Yes. We do parallel builds: the existing site stays live serving customers while we build the new site on a staging URL. On launch day we point the domain to the new site, the old site goes offline, and the new site takes over with no downtime. Customer-facing impact is zero. Search rankings hold steady because every URL maps with a 301 redirect." },
+      { question: "What happens to my Webflow CMS data during migration?", answer: "We export the Webflow CMS structure, map each collection to a Sanity schema, and migrate all content programmatically. The Sanity content management system replaces Webflow Editor for the owner's ongoing editing. After migration, you own the content database, can export it anytime, and pay $0 to $99 a year for Sanity hosting compared to $300+ a month for Webflow Enterprise CMS plans." },
+      { question: "Do I need to keep paying for Shopify apps after migration?", answer: "No. The headless migration replaces the entire Shopify app stack. Apps that should be platform-native (advanced analytics, custom checkout logic, post-purchase upsells, B2B pricing) get rebuilt as custom code, then run for $0 a month. A typical headless Shopify migration eliminates 8 to 15 app subscriptions on launch day, saving $1,000 to $5,000 a month at $1M+ revenue stores." },
+      { question: "What is the cheapest way to migrate from Wix?", answer: "The PandaCodeGen Founder's Offer at $500. Qualification-gated: site must be under 15 pages, no e-commerce, you must commit to a verified review after launch. 3 spots per month. Obare Magazine, a culture publication with 225,000 Instagram followers, migrated from Wix to Next.js in 7 days for $1,200 at the Founder's rate." },
+      { question: "What is the typical Shopify to headless cost?", answer: "$5,000 to $10,000 depending on store complexity. The Panda Patches store, an in-house brand running $38,000+ a month in revenue, runs on a custom Next.js + Supabase + Stripe stack at $25 a month total tooling cost. The migration to headless removes the Shopify subscription, every paid app subscription, and the Liquid theme constraints. The math means a typical store breaks even on the migration in 2 to 6 months from app fee savings alone." },
+      { question: "Is migrating a website worth it in 2026?", answer: "Yes for any business losing revenue to slow page load, paying $150+ a month in platform fees, or hitting feature ceilings on their current platform. The math: a typical $40,000 a month e-commerce site loses $2,800 a month for every 1 second of page load delay. A PandaCodeGen Growth migration at $3,500 pays for itself in 18 days of recovered revenue at that opportunity cost. Year 2 onward is pure recovered profit, every month, every year." }
+    ]
+  },
+  {
     id: "shopify-stocky-sunset-date-2026",
     title: "Shopify Stocky Sunset Date 2026: What To Do Now",
     excerpt: "Shopify is sunsetting Stocky on August 31, 2026. Stores that do not migrate will lose all purchase order history, supplier records, landed cost calculations, and min-max forecasting. Here is exactly what breaks, why moving to another inventory SaaS is a short-term fix, and how to rebuild headless Shopify with custom inventory you own forever.",

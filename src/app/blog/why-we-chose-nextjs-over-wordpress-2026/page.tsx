@@ -238,8 +238,9 @@ export default function WhyNextjsOverWordPressPage() {
                             This is the core issue. WordPress and Next.js don&apos;t have a performance gap. They have a performance canyon.
                         </BlogText>
 
-                        <div className="my-6 md:my-10 border border-stone-200 rounded-2xl overflow-hidden shadow-xs">
-                            <div className="grid grid-cols-3 bg-stone-50 px-5 py-3 border-b border-stone-200 text-xs font-black text-stone-400 uppercase tracking-widest">
+                        <div className="my-6 md:my-10 border border-stone-200 rounded-2xl overflow-hidden shadow-xs bg-white">
+                            {/* Header — desktop only. On mobile each row gets inline labels. */}
+                            <div className="hidden md:grid md:grid-cols-3 bg-stone-50 px-5 py-3 border-b border-stone-200 text-xs font-black text-stone-400 uppercase tracking-widest">
                                 <div>Metric</div>
                                 <div className="text-center text-red-400">WordPress</div>
                                 <div className="text-center text-charcoal">Next.js</div>
@@ -252,10 +253,16 @@ export default function WhyNextjsOverWordPressPage() {
                                 { metric: "Plugin Vulnerabilities", wp: "20 to 30+ surfaces", nxt: "Zero" },
                                 { metric: "Maintenance Required", wp: "4 to 8 hrs/month", nxt: "Near zero" },
                             ].map((row, i) => (
-                                <div key={i} className="grid grid-cols-3 px-5 py-3 border-b border-stone-100 last:border-0 text-sm hover:bg-stone-50/50 transition-colors">
-                                    <div className="text-charcoal font-medium">{row.metric}</div>
-                                    <div className="text-center text-stone-400">{row.wp}</div>
-                                    <div className="text-center font-bold text-charcoal">{row.nxt}</div>
+                                <div key={i} className="px-5 py-3 border-b border-stone-100 last:border-0 text-sm hover:bg-stone-50/50 transition-colors md:grid md:grid-cols-3">
+                                    <div className="text-charcoal font-bold mb-2 md:mb-0 md:font-medium">{row.metric}</div>
+                                    <div className="flex items-center justify-between gap-3 mb-1 md:mb-0 md:justify-center md:text-center">
+                                        <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-red-400">WordPress</span>
+                                        <span className="text-stone-400">{row.wp}</span>
+                                    </div>
+                                    <div className="flex items-center justify-between gap-3 md:justify-center md:text-center">
+                                        <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-charcoal">Next.js</span>
+                                        <span className="font-bold text-charcoal">{row.nxt}</span>
+                                    </div>
                                 </div>
                             ))}
                         </div>

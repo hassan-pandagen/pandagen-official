@@ -1,38 +1,24 @@
-"use client";
-
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { motion } from "framer-motion";
+import FadeIn from "@/components/ui/FadeIn";
 
 export default function PrivacyPage() {
   return (
     <main className="bg-paper min-h-screen">
       <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]" />
       <Header />
-      
+
       <div className="pt-20 md:pt-32 pb-20 px-6">
         <div className="container mx-auto max-w-4xl">
-          
-          {/* Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="mb-16"
-          >
+
+          <div className="mb-16 animate-fade-in-up">
             <h1 className="text-5xl font-bold text-charcoal mb-4">Privacy Policy</h1>
             <p className="text-stone-600">Last updated: March 4, 2026</p>
-          </motion.div>
+          </div>
 
-          {/* Content */}
           <div className="space-y-8 text-stone-600 leading-relaxed">
-            
-            {/* Section 1 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">1. Introduction</h2>
               <p>
                 PandaCodeGen LLC ("we," "us," "our," or "Company") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website (the "Site"), use our services, and interact with us.
@@ -40,17 +26,11 @@ export default function PrivacyPage() {
               <p className="mt-4">
                 Please read this Privacy Policy carefully. If you do not agree with our policies and practices, please do not use our Site or Services. By accessing and using PandaCodeGen, you acknowledge that you have read, understood, and agree to be bound by all the terms of this Privacy Policy.
               </p>
-            </motion.section>
+            </FadeIn>
 
-            {/* Section 2 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">2. Information We Collect</h2>
-              
+
               <h3 className="text-lg font-semibold text-charcoal mb-3 mt-6">2.1 Information You Provide Directly</h3>
               <ul className="list-disc list-inside space-y-2 text-stone-600">
                 <li><strong>Contact Information:</strong> Name, email address, phone number, company name, website URL, and business details when you fill out forms or contact us.</li>
@@ -65,15 +45,9 @@ export default function PrivacyPage() {
                 <li><strong>Device Information:</strong> Device type, operating system, IP address, and browser type.</li>
                 <li><strong>Cookies and Tracking:</strong> We use cookies to improve your experience and understand site performance.</li>
               </ul>
-            </motion.section>
+            </FadeIn>
 
-            {/* Section 3 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">3. How We Use Your Information</h2>
               <ul className="list-disc list-inside space-y-2 text-stone-600">
                 <li>To respond to your inquiries and provide customer support.</li>
@@ -84,15 +58,9 @@ export default function PrivacyPage() {
                 <li>To comply with legal obligations and protect our legal rights.</li>
                 <li>To detect and prevent fraud or security breaches.</li>
               </ul>
-            </motion.section>
+            </FadeIn>
 
-            {/* Section 4 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">4. How We Share Your Information</h2>
               <p>
                 We do not sell, trade, or rent your personal information. We may share information in the following circumstances:
@@ -103,28 +71,16 @@ export default function PrivacyPage() {
                 <li><strong>Business Transfers:</strong> In case of merger, acquisition, or sale of assets.</li>
                 <li><strong>With Your Consent:</strong> We will share information only with your explicit permission.</li>
               </ul>
-            </motion.section>
+            </FadeIn>
 
-            {/* Section 5 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">5. Data Security</h2>
               <p>
                 We implement industry-standard security measures to protect your data, including SSL encryption, firewalls, and secure password policies. However, no method of transmission over the internet is 100% secure. We cannot guarantee absolute security, but we maintain reasonable safeguards to protect against unauthorized access.
               </p>
-            </motion.section>
+            </FadeIn>
 
-            {/* Section 6 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">6. Your Rights and Choices</h2>
               <ul className="list-disc list-inside space-y-2 text-stone-600">
                 <li><strong>Access:</strong> You can request a copy of your personal data.</li>
@@ -136,15 +92,9 @@ export default function PrivacyPage() {
               <p className="mt-4">
                 To exercise these rights, contact us at <a href="mailto:info@pandacodegen.com" className="text-cognac hover:underline">info@pandacodegen.com</a>.
               </p>
-            </motion.section>
+            </FadeIn>
 
-            {/* Section 7 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">7. Cookies and Tracking Technologies</h2>
               <p>
                 Our website uses cookies and similar tracking technologies to enhance your experience. You can control cookie preferences through your browser settings. Disabling cookies may affect site functionality.
@@ -157,80 +107,44 @@ export default function PrivacyPage() {
                 <li><strong>Persistent Cookies:</strong> Cookies that remain on your device for improved user experience.</li>
                 <li><strong>Analytics Tools:</strong> Google Analytics to understand site traffic and user behavior.</li>
               </ul>
-            </motion.section>
+            </FadeIn>
 
-            {/* Section 8 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">8. Third-Party Links</h2>
               <p>
                 Our website may contain links to third-party websites. We are not responsible for the privacy practices of external sites. We encourage you to review their privacy policies before providing personal information.
               </p>
-            </motion.section>
+            </FadeIn>
 
-            {/* Section 9 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">9. Data Retention</h2>
               <p>
                 We retain your personal information for as long as necessary to provide services and fulfill the purposes outlined in this policy. You can request deletion of your data at any time, subject to legal and contractual obligations.
               </p>
-            </motion.section>
+            </FadeIn>
 
-            {/* Section 10 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">10. International Data Transfers</h2>
               <p>
                 PandaCodeGen operates globally. Your information may be transferred to, stored, and processed in countries other than your country of residence. These countries may have different data protection laws. By providing information, you consent to such transfers.
               </p>
-            </motion.section>
+            </FadeIn>
 
-            {/* Section 11 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">11. Children's Privacy</h2>
               <p>
                 Our services are not directed to individuals under 18 years of age. We do not knowingly collect personal information from children. If we become aware of such collection, we will delete the information promptly.
               </p>
-            </motion.section>
+            </FadeIn>
 
-            {/* Section 12 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">12. Changes to This Policy</h2>
               <p>
                 We may update this Privacy Policy to reflect changes in our practices or legal requirements. We will notify you of material changes via email or by posting the updated policy on our website. Your continued use of our services constitutes acceptance of the revised policy.
               </p>
-            </motion.section>
+            </FadeIn>
 
-            {/* Section 13 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">13. Contact Us</h2>
               <p>
                 If you have questions about this Privacy Policy or our privacy practices, please contact us:
@@ -242,15 +156,9 @@ export default function PrivacyPage() {
                 <p>Email: <a href="mailto:info@pandacodegen.com" className="text-cognac hover:underline">info@pandacodegen.com</a></p>
                 <p>Response Time: Within 48 hours during business days</p>
               </div>
-            </motion.section>
+            </FadeIn>
 
-            {/* Section 14 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">14. GDPR Rights (EU/UK Users)</h2>
               <p>
                 If you are located in the European Economic Area (EEA) or United Kingdom, your personal data is processed under the General Data Protection Regulation (GDPR). Our lawful basis for processing includes:
@@ -274,15 +182,9 @@ export default function PrivacyPage() {
               <p className="mt-4">
                 To exercise these rights, contact us at <a href="mailto:info@pandacodegen.com" className="text-cognac hover:underline">info@pandacodegen.com</a>. You also have the right to lodge a complaint with your local Data Protection Authority. UK residents may contact the Information Commissioner's Office (ICO) at <a href="https://ico.org.uk" className="text-cognac hover:underline" target="_blank" rel="noopener noreferrer">ico.org.uk</a>.
               </p>
-            </motion.section>
+            </FadeIn>
 
-            {/* Section 15 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6 mb-16"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6 mb-16">
               <h2 className="text-2xl font-bold text-charcoal mb-4">15. CCPA Rights (California Residents)</h2>
               <p>
                 If you are a California resident, the California Consumer Privacy Act (CCPA) grants you the following rights:
@@ -298,7 +200,7 @@ export default function PrivacyPage() {
               <p className="mt-4">
                 To submit a CCPA request, contact us at <a href="mailto:info@pandacodegen.com" className="text-cognac hover:underline">info@pandacodegen.com</a> or call <a href="tel:+13027738982" className="text-cognac hover:underline">+1 (302) 773-8982</a>. We will respond to verified requests within 45 days. You may designate an authorized agent to make requests on your behalf.
               </p>
-            </motion.section>
+            </FadeIn>
 
           </div>
         </div>

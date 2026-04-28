@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "@/components/ui/motion";
 import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Lock, Database, Server, FileSearch, Wrench, Rocket, HelpCircle, ShoppingBag } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
@@ -311,9 +311,8 @@ export default function PageContent() {
             <p className="text-stone-600 text-base max-w-2xl mx-auto">Every WordPress site we migrate drops this plugin bill permanently. Next.js native replacements cost $0/year and load faster.</p>
           </div>
 
-          <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
-          <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
-            <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px]">
+          <div className="responsive-stack-wrap md:overflow-visible">
+            <table className="responsive-stack-table w-full text-sm border border-stone-300 rounded-xl overflow-hidden md:min-w-[560px]">
               <thead>
                 <tr className="bg-stone-50">
                   <th className="text-left p-3 font-semibold text-stone-700">WordPress Plugin</th>

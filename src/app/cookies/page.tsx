@@ -1,8 +1,6 @@
-"use client";
-
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { motion } from "framer-motion";
+import FadeIn from "@/components/ui/FadeIn";
 
 export default function CookiesPage() {
   return (
@@ -13,26 +11,16 @@ export default function CookiesPage() {
       <div className="pt-20 md:pt-32 pb-20 px-6">
         <div className="container mx-auto max-w-4xl">
           
-          {/* Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="mb-16"
-          >
+          <div className="mb-16 animate-fade-in-up">
             <h1 className="text-5xl font-bold text-charcoal mb-4">Cookie Policy</h1>
             <p className="text-stone-600">Last updated: January 26, 2026</p>
-          </motion.div>
+          </div>
 
           {/* Content */}
           <div className="space-y-8 text-stone-600 leading-relaxed">
             
             {/* Section 1 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">1. What Are Cookies?</h2>
               <p>
                 Cookies are small text files stored on your device (computer, tablet, or smartphone) when you visit our website. They help us remember your preferences, understand how you use our site, and improve your browsing experience.
@@ -40,15 +28,10 @@ export default function CookiesPage() {
               <p className="mt-4">
                 Cookies contain information that can uniquely identify your browser or device, but they do not store personal information like passwords or payment details.
               </p>
-            </motion.section>
+            </FadeIn>
 
             {/* Section 2 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">2. Types of Cookies We Use</h2>
               
               <h3 className="text-lg font-semibold text-charcoal mb-3 mt-6">2.1 Session Cookies</h3>
@@ -80,15 +63,10 @@ export default function CookiesPage() {
                 <strong>Duration:</strong> Session or persistent<br/>
                 <strong>Purpose:</strong> Enable advanced features like live chat, contact forms, and calendar scheduling. Essential for providing core functionality.
               </p>
-            </motion.section>
+            </FadeIn>
 
             {/* Section 3 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">3. Third-Party Cookies</h2>
               <p>
                 Our website includes content from third-party services that may set their own cookies:
@@ -113,15 +91,10 @@ export default function CookiesPage() {
               <p>
                 Stripe and other payment providers set cookies for secure transactions. We do not control these; review their cookie policies for details.
               </p>
-            </motion.section>
+            </FadeIn>
 
             {/* Section 4 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">4. How We Use Cookie Information</h2>
               <ul className="list-disc list-inside space-y-2 text-stone-600">
                 <li>Improve website performance and load times.</li>
@@ -132,15 +105,10 @@ export default function CookiesPage() {
                 <li>Maintain your login session and form progress.</li>
                 <li>Enable advanced features like chat and scheduling.</li>
               </ul>
-            </motion.section>
+            </FadeIn>
 
             {/* Section 5 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">5. Cookie Consent and Control</h2>
               
               <h3 className="text-lg font-semibold text-charcoal mb-3 mt-6">5.1 Your Consent</h3>
@@ -171,15 +139,10 @@ export default function CookiesPage() {
                 <li><strong>Marketing Cookies:</strong> Visit youradchoices.com or networkadvertising.org</li>
                 <li><strong>Email Marketing:</strong> Click "Unsubscribe" in any marketing email</li>
               </ul>
-            </motion.section>
+            </FadeIn>
 
             {/* Section 6 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">6. Cookie List</h2>
               <p className="mb-4">
                 Here is a detailed list of cookies used on our website:
@@ -235,28 +198,18 @@ export default function CookiesPage() {
                   </tbody>
                 </table>
               </div>
-            </motion.section>
+            </FadeIn>
 
             {/* Section 7 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">7. Do Not Track</h2>
               <p>
                 Some browsers include a "Do Not Track" feature. Currently, there is no industry standard for recognizing DNT signals, so we do not respond to DNT browser headers. However, you can disable cookies through your browser settings.
               </p>
-            </motion.section>
+            </FadeIn>
 
             {/* Section 8 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">8. Privacy and Data Security</h2>
               <p>
                 We use cookies in compliance with applicable privacy laws, including GDPR and CCPA. Your data is processed securely, and we do not sell cookie data to third parties.
@@ -264,15 +217,10 @@ export default function CookiesPage() {
               <p className="mt-4">
                 For more information about how we handle your data, please review our <a href="/privacy" className="text-cognac hover:underline">Privacy Policy</a>.
               </p>
-            </motion.section>
+            </FadeIn>
 
             {/* Section 9 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">9. International Users</h2>
               <p>
                 If you are located in the European Union, UK, or other jurisdictions with strict cookie laws:
@@ -282,28 +230,18 @@ export default function CookiesPage() {
                 <li>You can withdraw consent at any time through cookie settings.</li>
                 <li>We comply with GDPR and similar regulations.</li>
               </ul>
-            </motion.section>
+            </FadeIn>
 
             {/* Section 10 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">10. Changes to This Policy</h2>
               <p>
                 We may update this Cookie Policy to reflect changes in technology, legal requirements, or our cookie practices. Updates will be posted on this page with a new "Last updated" date. Your continued use of the website signifies acceptance of changes.
               </p>
-            </motion.section>
+            </FadeIn>
 
             {/* Section 11 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6 mb-16"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6 mb-16">
               <h2 className="text-2xl font-bold text-charcoal mb-4">11. Contact Us</h2>
               <p>
                 If you have questions about our cookie practices or need to update your preferences, please contact us:
@@ -317,7 +255,7 @@ export default function CookiesPage() {
                   <strong>Cookie Preference Center:</strong> Use the cookie settings on our website to manage your preferences at any time.
                 </p>
               </div>
-            </motion.section>
+            </FadeIn>
 
           </div>
         </div>

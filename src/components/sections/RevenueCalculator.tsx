@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion } from "@/components/ui/motion";
 import { DollarSign, TrendingUp, AlertCircle, ArrowRight } from "lucide-react";
 
 export default function RevenueCalculator() {

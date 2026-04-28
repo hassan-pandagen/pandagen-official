@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "@/components/ui/motion";
 import { Check, ShieldCheck, ArrowRight, X, Minus, Zap, Clock, DollarSign, RotateCcw } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -555,46 +555,61 @@ export default function PricingPageClient() {
             Why Standard Agencies{" "}
             <span className="font-serif italic text-cognac">Cost You More.</span>
           </h2>
-          <p className="md:hidden text-xs font-bold text-cognac mt-4 flex items-center justify-center gap-1">← Swipe to see more →</p>
         </motion.div>
 
-        <div className="overflow-x-auto -mx-6 px-6">
-          <div className="min-w-[640px] rounded-3xl border border-stone-200 overflow-hidden shadow-xs">
-            <div className="grid grid-cols-[1fr_1.4fr_1.4fr]">
-              <div className="h-1 bg-stone-50" />
-              <div className="h-1 bg-stone-50" />
-              <div className="h-1 bg-cognac" />
-            </div>
-            <div className="grid grid-cols-[1fr_1.4fr_1.4fr] bg-stone-50 border-b border-stone-200">
-              <div className="px-5 py-4 text-xs font-black text-stone-500 uppercase tracking-widest">Feature</div>
-              <div className="px-5 py-4 text-sm font-bold text-stone-600 border-l border-stone-200">Standard Agency</div>
-              <div className="px-5 py-4 text-sm font-bold text-cognac border-l border-stone-200 bg-paper">PandaCodeGen</div>
-            </div>
-            {comparisonRows.map((row, i) => (
-              <div key={i} className="grid grid-cols-[1fr_1.4fr_1.4fr] border-b border-stone-200 text-sm">
-                <div className="px-5 py-4 text-charcoal font-bold flex items-center">{row.label}</div>
-                <div className={`px-5 py-4 border-l border-stone-200 flex items-center gap-2.5 font-medium ${row.isPain ? "text-red-600 bg-red-50/40" : "text-stone-500"}`}>
+        <div className="rounded-3xl border border-stone-200 overflow-hidden shadow-xs bg-white">
+          {/* Accent bar — desktop only */}
+          <div className="hidden md:grid md:grid-cols-[1fr_1.4fr_1.4fr]">
+            <div className="h-1 bg-stone-50" />
+            <div className="h-1 bg-stone-50" />
+            <div className="h-1 bg-cognac" />
+          </div>
+          {/* Header — desktop only. On mobile each row gets inline labels. */}
+          <div className="hidden md:grid md:grid-cols-[1fr_1.4fr_1.4fr] bg-stone-50 border-b border-stone-200">
+            <div className="px-5 py-4 text-xs font-black text-stone-500 uppercase tracking-widest">Feature</div>
+            <div className="px-5 py-4 text-sm font-bold text-stone-600 border-l border-stone-200">Standard Agency</div>
+            <div className="px-5 py-4 text-sm font-bold text-cognac border-l border-stone-200 bg-paper">PandaCodeGen</div>
+          </div>
+          {comparisonRows.map((row, i) => (
+            <div
+              key={i}
+              className="p-4 border-b border-stone-200 text-sm md:p-0 md:grid md:grid-cols-[1fr_1.4fr_1.4fr]"
+            >
+              <div className="text-charcoal font-bold mb-3 md:mb-0 md:px-5 md:py-4 md:flex md:items-center">{row.label}</div>
+              <div className={`flex items-center justify-between gap-3 mb-2 md:mb-0 md:justify-start md:gap-2.5 md:px-5 md:py-4 md:border-l md:border-stone-200 font-medium ${row.isPain ? "text-red-600 md:bg-red-50/40" : "text-stone-500"}`}>
+                <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-stone-500 not-italic">Standard Agency</span>
+                <span className="flex items-center gap-2.5">
                   {row.isPain ? <X className="w-4 h-4 text-red-500 shrink-0" /> : <Minus className="w-4 h-4 text-stone-400 shrink-0" />}
                   {row.agency}
-                </div>
-                <div className="px-5 py-4 border-l border-stone-200 bg-paper flex items-center gap-2.5 font-black text-charcoal">
-                  <div className="w-5 h-5 rounded-full bg-cognac flex items-center justify-center shrink-0">
-                    <Check className="w-3 h-3 text-white" />
-                  </div>
-                  {row.pandagen}
-                </div>
+                </span>
               </div>
-            ))}
-            <div className="grid grid-cols-[1fr_1.4fr_1.4fr] bg-charcoal">
-              <div className="px-5 py-6 text-xs font-black uppercase tracking-widest text-white flex items-center">Net Result</div>
-              <div className="px-5 py-6 border-l border-white/10 text-stone-300 font-medium text-sm flex items-center gap-2.5">
+              <div className="flex items-center justify-between gap-3 md:justify-start md:gap-2.5 md:px-5 md:py-4 md:border-l md:border-stone-200 md:bg-paper font-black text-charcoal">
+                <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-cognac not-italic">PandaCodeGen</span>
+                <span className="flex items-center gap-2.5">
+                  <span className="w-5 h-5 rounded-full bg-cognac flex items-center justify-center shrink-0">
+                    <Check className="w-3 h-3 text-white" />
+                  </span>
+                  {row.pandagen}
+                </span>
+              </div>
+            </div>
+          ))}
+          {/* Net Result footer */}
+          <div className="p-4 bg-charcoal text-sm md:p-0 md:grid md:grid-cols-[1fr_1.4fr_1.4fr]">
+            <div className="text-xs font-black uppercase tracking-widest text-white mb-3 md:mb-0 md:px-5 md:py-6 md:flex md:items-center">Net Result</div>
+            <div className="flex items-center justify-between gap-3 mb-2 md:mb-0 md:justify-start md:gap-2.5 md:px-5 md:py-6 md:border-l md:border-white/10 text-stone-300 font-medium">
+              <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-red-400 not-italic">Standard Agency</span>
+              <span className="flex items-center gap-2.5">
                 <X className="w-4 h-4 text-red-400 shrink-0" />
                 Endless maintenance &amp; fees
-              </div>
-              <div className="px-5 py-6 border-l border-white/10 bg-cognac text-white font-black text-base flex items-center gap-2.5">
+              </span>
+            </div>
+            <div className="flex items-center justify-between gap-3 md:justify-start md:gap-2.5 md:px-5 md:py-6 md:border-l md:border-white/10 md:bg-cognac text-white font-black text-base">
+              <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-cognac not-italic">PandaCodeGen</span>
+              <span className="flex items-center gap-2.5">
                 <ArrowRight className="w-4 h-4 shrink-0" />
                 An asset that compounds in value
-              </div>
+              </span>
             </div>
           </div>
         </div>

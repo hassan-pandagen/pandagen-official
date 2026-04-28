@@ -231,41 +231,43 @@ export default function CompetitorRankingsPage() {
                             Let's compare what happens over 12 months. Same product, same keywords, same content, only the website technology is different.
                         </BlogText>
 
-                        <div className="my-8 md:my-12 border border-stone-200 rounded-2xl overflow-hidden shadow-2xl">
-                            <div className="grid grid-cols-3 bg-stone-50 p-5 border-b border-stone-200 font-bold text-charcoal text-sm md:text-base uppercase tracking-wider">
+                        <div className="my-8 md:my-12 border border-stone-200 rounded-2xl overflow-hidden shadow-2xl bg-white">
+                            {/* Header — desktop only. On mobile each row gets inline labels. */}
+                            <div className="hidden md:grid md:grid-cols-3 bg-stone-50 p-5 border-b border-stone-200 font-bold text-charcoal text-sm md:text-base uppercase tracking-wider">
                                 <div>Metric</div>
                                 <div className="text-red-400">Your Site (WP)</div>
                                 <div className="text-charcoal">Competitor (Next.js)</div>
                             </div>
-                            <div className="grid grid-cols-3 p-5 border-b border-stone-200 text-sm md:text-lg hover:bg-stone-50/50 transition-colors">
-                                <div className="text-charcoal font-medium">Load Time</div>
-                                <div className="text-stone-400">3.8 seconds</div>
-                                <div className="text-charcoal font-bold">1.2 seconds</div>
-                            </div>
-                            <div className="grid grid-cols-3 p-5 border-b border-stone-200 text-sm md:text-lg hover:bg-stone-50/50 transition-colors">
-                                <div className="text-charcoal font-medium">Google Mobile Score</div>
-                                <div className="text-stone-400">38/100 (Red)</div>
-                                <div className="text-charcoal font-bold">95/100 (Green)</div>
-                            </div>
-                            <div className="grid grid-cols-3 p-5 border-b border-stone-200 text-sm md:text-lg hover:bg-stone-50/50 transition-colors">
-                                <div className="text-charcoal font-medium">Google Ranking</div>
-                                <div className="text-stone-400">Page 2 (#14)</div>
-                                <div className="text-charcoal font-bold">Page 1 (#3)</div>
-                            </div>
-                            <div className="grid grid-cols-3 p-5 border-b border-stone-200 text-sm md:text-lg hover:bg-stone-50/50 transition-colors">
-                                <div className="text-charcoal font-medium">Monthly Traffic</div>
-                                <div className="text-stone-400">2,500 visitors</div>
-                                <div className="text-charcoal font-bold">8,200 visitors</div>
-                            </div>
-                            <div className="grid grid-cols-3 p-5 border-b border-stone-200 text-sm md:text-lg hover:bg-stone-50/50 transition-colors">
-                                <div className="text-charcoal font-medium">Hosting Cost</div>
-                                <div className="text-stone-400">$150/month (Kinsta)</div>
-                                <div className="text-charcoal font-bold">$20/month (Vercel)</div>
-                            </div>
-                            <div className="grid grid-cols-3 p-5 bg-stone-50 text-charcoal font-bold border-t border-stone-200">
-                                <div>Year 1 Results</div>
-                                <div className="text-red-400">30K visits, -$1,800 hosting</div>
-                                <div className="text-charcoal">98K visits, -$240 hosting</div>
+                            {[
+                                { metric: "Load Time", wp: "3.8 seconds", nextjs: "1.2 seconds" },
+                                { metric: "Google Mobile Score", wp: "38/100 (Red)", nextjs: "95/100 (Green)" },
+                                { metric: "Google Ranking", wp: "Page 2 (#14)", nextjs: "Page 1 (#3)" },
+                                { metric: "Monthly Traffic", wp: "2,500 visitors", nextjs: "8,200 visitors" },
+                                { metric: "Hosting Cost", wp: "$150/month (Kinsta)", nextjs: "$20/month (Vercel)" },
+                            ].map((row, i) => (
+                                <div key={i} className="p-5 border-b border-stone-200 text-sm md:text-lg hover:bg-stone-50/50 transition-colors md:grid md:grid-cols-3">
+                                    <div className="text-charcoal font-bold mb-3 md:mb-0 md:font-medium">{row.metric}</div>
+                                    <div className="flex items-center justify-between gap-3 mb-2 md:mb-0 md:block">
+                                        <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-red-400">WP</span>
+                                        <span className="text-stone-400">{row.wp}</span>
+                                    </div>
+                                    <div className="flex items-center justify-between gap-3 md:block">
+                                        <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-charcoal">Next.js</span>
+                                        <span className="text-charcoal font-bold">{row.nextjs}</span>
+                                    </div>
+                                </div>
+                            ))}
+                            {/* Year 1 results footer */}
+                            <div className="p-5 bg-stone-50 text-charcoal font-bold border-t border-stone-200 text-sm md:text-base md:grid md:grid-cols-3">
+                                <div className="mb-3 md:mb-0">Year 1 Results</div>
+                                <div className="flex items-center justify-between gap-3 mb-2 md:mb-0 md:block">
+                                    <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-red-400">WP</span>
+                                    <span className="text-red-400">30K visits, -$1,800 hosting</span>
+                                </div>
+                                <div className="flex items-center justify-between gap-3 md:block">
+                                    <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-charcoal">Next.js</span>
+                                    <span className="text-charcoal">98K visits, -$240 hosting</span>
+                                </div>
                             </div>
                         </div>
 

@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
-import { ExternalLink, Code2, BarChart3, ArrowUpRight } from "lucide-react";
+import { motion } from "@/components/ui/motion";
+import FadeIn from "@/components/ui/FadeIn";
+import { Code2, BarChart3, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -180,19 +180,10 @@ export default function WorkPageClient() {
 }
 
 // --- PROJECT CARD ---
-function ProjectCard({ project, index }: any) {
-    const ref = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["start end", "center center"],
-    });
-
-    const y = useTransform(scrollYProgress, [0, 1], [80, 0]);
-    const opacity = useTransform(scrollYProgress, [0, 0.4], [0, 1]);
-
+function ProjectCard({ project }: any) {
     return (
-        <section ref={ref} className="container mx-auto px-6">
-            <motion.div style={{ opacity, y }} className="group">
+        <section className="container mx-auto px-6">
+            <FadeIn className="group">
                 <div className="grid lg:grid-cols-12 items-stretch rounded-4xl overflow-hidden border border-stone-200 shadow-2xl shadow-stone-900/10 hover:shadow-stone-900/15 transition-shadow duration-500">
 
                     {/* LEFT, Dark image panel */}
@@ -373,7 +364,7 @@ function ProjectCard({ project, index }: any) {
                     </div>
 
                 </div>
-            </motion.div>
+            </FadeIn>
         </section>
     );
 }

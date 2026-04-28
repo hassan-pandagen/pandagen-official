@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "@/components/ui/motion";
 import { Code2, Database, CreditCard, Globe, Lock, Zap } from "lucide-react";
 
 const techStack = [

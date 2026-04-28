@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState, useEffect, type ElementType } from "react";
-import { motion } from "framer-motion";
+import { motion } from "@/components/ui/motion";
 import { Search, PenTool, Code2, Rocket } from "lucide-react";
 
 const steps = [

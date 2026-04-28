@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "@/components/ui/motion";
 import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Globe, CreditCard, ArrowRightLeft, ExternalLink, ShoppingBag, HelpCircle } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";

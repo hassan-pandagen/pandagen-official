@@ -1,8 +1,6 @@
-"use client";
-
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { motion } from "framer-motion";
+import FadeIn from "@/components/ui/FadeIn";
 
 export default function TermsPage() {
   return (
@@ -13,39 +11,24 @@ export default function TermsPage() {
       <div className="pt-20 md:pt-32 pb-20 px-6">
         <div className="container mx-auto max-w-4xl">
           
-          {/* Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="mb-16"
-          >
+          <div className="mb-16 animate-fade-in-up">
             <h1 className="text-5xl font-bold text-charcoal mb-4">Terms of Service</h1>
             <p className="text-stone-600">Last updated: January 26, 2026</p>
-          </motion.div>
+          </div>
 
           {/* Content */}
           <div className="space-y-8 text-stone-600 leading-relaxed">
             
             {/* Section 1 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">1. Agreement to Terms</h2>
               <p>
                 These Terms of Service ("Terms") constitute a legally binding agreement between you ("Client," "you," or "your") and PandaCodeGen LLC ("Company," "we," "us," or "our"). By accessing our website and engaging with our services, you agree to be bound by these Terms. If you do not agree, do not use our services.
               </p>
-            </motion.section>
+            </FadeIn>
 
             {/* Section 2 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">2. Services Description</h2>
               <p>
                 PandaCodeGen provides web development services, including but not limited to:
@@ -61,15 +44,10 @@ export default function TermsPage() {
               <p className="mt-4">
                 Services are provided on a project basis with fixed pricing, timelines, and deliverables as outlined in signed project agreements or proposals.
               </p>
-            </motion.section>
+            </FadeIn>
 
             {/* Section 3 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">3. Payment Terms and Satisfaction Guarantee</h2>
               
               <h3 className="text-lg font-semibold text-charcoal mb-3 mt-6">3.1 Pricing and Quotes</h3>
@@ -109,15 +87,10 @@ export default function TermsPage() {
                   Our 30-day satisfaction guarantee combined with free 1-month support means you have zero risk. Get full code ownership, expert support, and if it's not right, get your final payment back.
                 </p>
               </div>
-            </motion.section>
+            </FadeIn>
 
             {/* Section 4 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">4. Intellectual Property Rights</h2>
               
               <h3 className="text-lg font-semibold text-charcoal mb-3 mt-6">4.1 Code Ownership</h3>
@@ -134,15 +107,10 @@ export default function TermsPage() {
               <p>
                 Projects may utilize open-source libraries and third-party services. Your use of these components is governed by their respective licenses. We comply with all open-source license requirements.
               </p>
-            </motion.section>
+            </FadeIn>
 
             {/* Section 5 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">5. Client Responsibilities</h2>
               <ul className="list-disc list-inside space-y-2 text-stone-600">
                 <li>Provide clear, detailed project requirements and feedback in a timely manner.</li>
@@ -152,15 +120,10 @@ export default function TermsPage() {
                 <li>Pay invoices on time according to the agreed schedule.</li>
                 <li>Communicate project changes as soon as possible to avoid delays.</li>
               </ul>
-            </motion.section>
+            </FadeIn>
 
             {/* Section 6 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">6. Timeline and Delivery</h2>
               
               <h3 className="text-lg font-semibold text-charcoal mb-3 mt-6">6.1 Project Timeline</h3>
@@ -177,15 +140,10 @@ export default function TermsPage() {
               <p>
                 Post-delivery support (bug fixes, updates, maintenance) is available at our standard hourly rate ($100-200/hour depending on complexity) or via paid support packages. Warranty covers critical bugs for 30 days post-launch.
               </p>
-            </motion.section>
+            </FadeIn>
 
             {/* Section 7 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">7. Confidentiality</h2>
               <p>
                 Both parties agree to maintain confidentiality regarding proprietary information, business strategies, and project details disclosed during the engagement. This obligation survives project completion for 2 years.
@@ -193,15 +151,10 @@ export default function TermsPage() {
               <p className="mt-4">
                 Exceptions include: information legally required to be disclosed, information already public, or information we can use as a case study with your written permission.
               </p>
-            </motion.section>
+            </FadeIn>
 
             {/* Section 8 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">8. Limitation of Liability</h2>
               <p>
                 To the maximum extent permitted by law, PandaCodeGen is not liable for:
@@ -214,15 +167,10 @@ export default function TermsPage() {
               <p className="mt-4">
                 We are not responsible for third-party service failures (hosting providers, payment processors, CDNs) unless directly caused by our negligence.
               </p>
-            </motion.section>
+            </FadeIn>
 
             {/* Section 9 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">9. Warranty Disclaimer</h2>
               <p>
                 Our services are provided "as is" without warranties of any kind, express or implied. We do not guarantee:
@@ -235,15 +183,10 @@ export default function TermsPage() {
               <p className="mt-4">
                 We warrant that deliverables will be substantially free from defects for 30 days post-delivery.
               </p>
-            </motion.section>
+            </FadeIn>
 
             {/* Section 10 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">10. Termination</h2>
               <p>
                 Either party may terminate a project with 14 days written notice. Upon termination:
@@ -253,15 +196,10 @@ export default function TermsPage() {
                 <li>We will deliver all completed code and assets.</li>
                 <li>Any prepaid amounts may be credited toward completed work or forfeited.</li>
               </ul>
-            </motion.section>
+            </FadeIn>
 
             {/* Section 11 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">11. Indemnification</h2>
               <p>
                 You agree to indemnify and hold harmless PandaCodeGen from any claims arising from:
@@ -271,15 +209,10 @@ export default function TermsPage() {
                 <li>Your use of the deliverables in ways not approved by us.</li>
                 <li>Modifications to our work made by parties other than PandaCodeGen.</li>
               </ul>
-            </motion.section>
+            </FadeIn>
 
             {/* Section 12 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">12. Dispute Resolution</h2>
               <p>
                 Any disputes arising from these Terms or our services shall be governed by the laws of the State of Texas, USA. Both parties agree to attempt informal resolution before pursuing legal action.
@@ -287,28 +220,18 @@ export default function TermsPage() {
               <p className="mt-4">
                 If disputes cannot be resolved informally, binding arbitration shall be pursued under American Arbitration Association (AAA) rules.
               </p>
-            </motion.section>
+            </FadeIn>
 
             {/* Section 13 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">13. Changes to Terms</h2>
               <p>
                 We may update these Terms to reflect changes in our services or legal requirements. We will notify you of material changes via email or website notice. Your continued use of our services constitutes acceptance.
               </p>
-            </motion.section>
+            </FadeIn>
 
             {/* Section 14 */}
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="border-l-2 border-stone-300 pl-6 mb-16"
-            >
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6 mb-16">
               <h2 className="text-2xl font-bold text-charcoal mb-4">14. Contact Information</h2>
               <p>
                 For questions about these Terms or to report violations, please contact us:
@@ -319,7 +242,7 @@ export default function TermsPage() {
                 <p>Austin, TX 78702, USA</p>
                 <p>Email: <a href="mailto:info@pandacodegen.com" className="text-cognac hover:underline">info@pandacodegen.com</a></p>
               </div>
-            </motion.section>
+            </FadeIn>
 
           </div>
         </div>

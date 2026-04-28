@@ -1,7 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import FadeIn from "@/components/ui/FadeIn";
 import { CheckCircle2, Database, Code2, ShoppingCart } from "lucide-react";
 
 interface ServiceSectionProps {
@@ -36,20 +35,11 @@ export default function ServiceSection({
     children,
 }: ServiceSectionProps) {
     const Icon = iconMap[icon];
-    const ref = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["start end", "center center"],
-    });
-    const y = useTransform(scrollYProgress, [0, 1], [100, 0]);
-    const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
     return (
-        <section ref={ref} className="container mx-auto px-6">
-            <motion.div
-                style={{ y, opacity }}
-                className={`flex flex-col lg:flex-row items-stretch gap-12 lg:gap-20 ${align === "right" ? "lg:flex-row-reverse" : ""
-                    }`}
+        <section className="container mx-auto px-6">
+            <FadeIn
+                className={`flex flex-col lg:flex-row items-stretch gap-12 lg:gap-20 ${align === "right" ? "lg:flex-row-reverse" : ""}`}
             >
                 {/* TEXT SIDE */}
                 <div className="flex-1 flex flex-col justify-center">
@@ -103,7 +93,7 @@ export default function ServiceSection({
                         {children}
                     </div>
                 </div>
-            </motion.div>
+            </FadeIn>
         </section>
     );
 }

@@ -1,12 +1,16 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "@/components/ui/motion";
 import { ArrowRight, ShieldCheck, Users, Code2, CheckCircle2, Lock, Zap, FileSearch, Wrench, Rocket, HelpCircle } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import QuoteModal from "@/components/ui/QuoteModal";
 import PricingTiers from "@/components/services/PricingTiers";
 import { useState } from "react";
+import dynamic from "next/dynamic";
+
+// Lazy load: QuoteModal pulls in framer-motion (~37KB gzipped). Stays out of the
+// Partners page static bundle until a partner clicks "Send brief" / opens the modal.
+const QuoteModal = dynamic(() => import("@/components/ui/QuoteModal"), { ssr: false });
 
 const processSteps = [
   {

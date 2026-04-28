@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "@/components/ui/motion";
 import { ArrowRight, DollarSign, Gauge, ShoppingCart, CreditCard, Globe, Smartphone } from "lucide-react";
 
 interface ShopifyKillerProps {
@@ -225,15 +225,12 @@ export default function ShopifyKiller({ onOpenQuote }: ShopifyKillerProps) {
                             <row.icon className="w-4 h-4 text-cognac" strokeWidth={2} />
                             <span className="text-xs md:text-sm text-charcoal font-semibold tracking-tight">{row.metric}</span>
                           </div>
-                          {/* Shopify bar */}
+                          {/* Shopify bar — static width, motion shim does not handle width animation */}
                           <div className="flex items-center gap-3">
                             <div className="flex-1 h-2 bg-stone-100 rounded-full overflow-hidden">
-                              <motion.div
-                                initial={{ width: 0 }}
-                                whileInView={{ width: `${row.shopifyPct}%` }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.2 + i * 0.06, duration: 0.6, ease: "easeOut" }}
+                              <div
                                 className="h-full bg-linear-to-r from-red-300 to-red-400 rounded-full"
+                                style={{ width: `${row.shopifyPct}%` }}
                               />
                             </div>
                             <span className="text-xs md:text-sm text-red-500 font-bold w-[80px] md:w-[100px] text-right shrink-0 tracking-tight">{row.shopifyLabel}</span>
@@ -241,12 +238,9 @@ export default function ShopifyKiller({ onOpenQuote }: ShopifyKillerProps) {
                           {/* Custom bar */}
                           <div className="flex items-center gap-3">
                             <div className="flex-1 h-2 bg-stone-100 rounded-full overflow-hidden">
-                              <motion.div
-                                initial={{ width: 0 }}
-                                whileInView={{ width: `${row.customPct}%` }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.3 + i * 0.06, duration: 0.6, ease: "easeOut" }}
+                              <div
                                 className="h-full bg-linear-to-r from-emerald-400 to-green-500 rounded-full"
+                                style={{ width: `${row.customPct}%` }}
                               />
                             </div>
                             <span className="text-xs md:text-sm text-emerald-600 font-bold w-[80px] md:w-[100px] text-right shrink-0 tracking-tight">{row.customLabel}</span>

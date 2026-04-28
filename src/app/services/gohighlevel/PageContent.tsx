@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "@/components/ui/motion";
 import { useState } from "react";
 import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Gauge, Lock, Palette, Users, BarChart3, HelpCircle, FileSearch, Wrench, Rocket, Cable } from "lucide-react";
 import Image from "next/image";
@@ -265,25 +265,33 @@ export default function PageContent() {
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">GHL Funnels vs Custom Coded</h2>
           <p className="text-stone-600 text-center mb-12">Keep GHL for CRM. Upgrade your website and funnels.</p>
 
-          <div className="overflow-x-auto rounded-2xl border border-stone-200">
-            <div className="min-w-[500px]">
-            <div className="grid grid-cols-3 bg-stone-50 p-4 border-b border-stone-200">
+          <div className="rounded-2xl border border-stone-200 overflow-hidden bg-white">
+            {/* Header — desktop only. On mobile, each row gets inline labels. */}
+            <div className="hidden md:grid md:grid-cols-3 bg-stone-50 p-4 border-b border-stone-200">
               <div className="text-stone-600 font-medium text-sm">Feature</div>
               <div className="text-cognac font-bold text-sm text-center">GHL Funnels</div>
               <div className="text-cognac font-bold text-sm text-center">Custom Coded</div>
             </div>
 
             {comparisonData.map((row, i) => (
-              <div key={i} className={`grid grid-cols-3 p-4 items-center ${i % 2 === 0 ? 'bg-stone-50/50' : ''} border-b border-stone-200 last:border-b-0`}>
-                <div className="flex items-center gap-2 text-charcoal text-sm font-medium">
+              <div
+                key={i}
+                className={`p-4 ${i % 2 === 0 ? 'bg-white' : 'bg-stone-50/50'} ${i < comparisonData.length - 1 ? 'border-b border-stone-200' : ''} md:grid md:grid-cols-3 md:items-center`}
+              >
+                <div className="flex items-center gap-2 text-charcoal text-sm font-bold mb-3 md:mb-0 md:font-medium">
                   <row.icon className="w-4 h-4 text-stone-400 shrink-0" />
                   {row.feature}
                 </div>
-                <div className="text-red-600 text-sm text-center">{row.ghl}</div>
-                <div className="text-green-600 text-sm text-center font-medium">{row.custom}</div>
+                <div className="flex items-center justify-between gap-3 mb-2 md:mb-0 md:justify-center md:text-center">
+                  <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-stone-500">GHL</span>
+                  <span className="text-red-600 text-sm md:text-center">{row.ghl}</span>
+                </div>
+                <div className="flex items-center justify-between gap-3 md:justify-center md:text-center">
+                  <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-cognac">Custom</span>
+                  <span className="text-green-600 text-sm font-medium md:text-center">{row.custom}</span>
+                </div>
               </div>
             ))}
-            </div>
           </div>
 
           {/* Important Note */}

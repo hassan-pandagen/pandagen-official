@@ -21,6 +21,7 @@
 | **4** | **Mar 30, 2026** | **5** | **1,460** | **0.34%** | **~13** | **Impressions up 89% to 1.46K (28-day). Clicks down to 5 (CTR crisis). webflow-migration-cost: 402 imp, 0 clicks, pos 7.0. shopify-dawn-theme-slow: 180 imp, down 89% (GSC flagged). webflow-true-cost canonical split: 198 imp across www/non-www. 50 indexed, 11 not indexed (6 service pages still undiscovered). 30 blog title rewrites deployed, awaiting re-index. US: 925 imp, 1 click (0.11% CTR). 95 countries showing impressions. "how much should we budget for webflow migration 50-100 page site" at pos 2.75 with 0 clicks.** |
 | **5** | **Apr 6, 2026** | **6** | **2,856** | **0.21%** | **~12** | **28-day impressions up 95% to 2,856. webflow-migration-cost EXPLODING: 1,206 impressions at pos 7.38 with 0 clicks — CTR crisis on single post costing most. shopify-dawn-theme-slow: 229 imp pos 6.65. gohighlevel-website-speed: 164 imp pos 6.8, 1 click. squarespace-too-slow: 75 imp pos 9.08. US: 1,833 impressions, 1 click, 0.05% CTR (avg pos 12). 118 countries. Daily impressions now 175-292 consistently. External links: 1 (LinkedIn only). Internal links: 426.** |
 | **7** | **Apr 19, 2026** | **24** | **7,907** | **0.30%** | **~11** | **3-month totals: 7,907 impressions, 24 clicks, 0.30% CTR. +5,051 impressions in 13 days (+177%). Daily impressions now 500-650/day consistently (Apr 13-17 range). Desktop: 20 clicks / 7,620 imp / 0.26% CTR / pos 10.59. Mobile: 4 clicks / 273 imp / 1.47% CTR. US dominates: 4,793 impressions (61%), 5 clicks (0.10% CTR). Top performers updated post title+meta rewrites Apr 13. Obare Magazine client signed ($1,200, first paid rebuild — 7-day delivery). website-rebuild-cost-2026 published (hub post). 8-role audit (voice + SEO) applied to top 11 posts: opener receipts, H2 rewrites, Hassan pullquotes, cross-link injection from 9 source posts, robots metadata, direct-answer blocks, LSI entity expansion, 3 new PAA H2 sections, title+meta SERP truncation fixes. Build clean, ready to ship.** |
+| **8** | **Apr 28, 2026** | **29** | **14,019** | **0.21%** | **~10.5** | **3-month totals: 14,019 impressions, 29 clicks, 0.21% CTR, pos 10.47 desktop. +6,112 impressions in 9 days (+77% from Apr 19). Daily volume now 484-898 imp/day, hit 898 on Apr 25, 830 on Apr 20. Desktop: 24 clicks / 13,608 imp / 0.18% CTR / pos 10.47. Mobile: 5 clicks / 396 imp / 1.26% CTR / pos 22.72. Tablet: 0/15. US: 8,861 imp / 5 clicks / 0.06% CTR — CTR collapsed from 0.10% as impressions doubled. Pakistan: 6 clicks / 77 imp / 7.79% (branded). Australia: 4/139/2.88%, India: 3/243/1.23%. webflow-migration-cost is the volume engine: 4,698 imp / 0 clicks / pos 6.08 (vs 1,206 imp 22 days ago = +290%). gohighlevel-website-speed: 6 clicks / 565 imp / 1.06% / pos 6.72 — best-converting blog. divi-theme-slow: 2/311/0.64%/pos 7.9 (new entrant on top). NEW SIGNAL: 27+ queries are clearly AI-generated personas (e.g. "i am a 35-44, 45-54 year old vice president... what factors increase the cost of a webflow migration project?") at positions 2-5 with 0 clicks — Perplexity/ChatGPT/Bing AI are crawling Hassan's content for buyer-persona training data. CTR freeze (Apr 20–May 20) blocks title rewrites. Mobile table fixes shipped today (6 service pages + 2 blog posts + pricing page). framer-motion bundle isolated to lazy chunk via motion shim.** |
 
 > **Week-over-week (Mar 7-13 vs Feb 28-Mar 6):** Impressions 115 vs 6 = **+1,817%** on shopify-dawn-theme-slow page alone.
 
@@ -39,6 +40,40 @@
 ---
 
 ## Top Pages
+
+### Apr 28, 2026 (CSV export — full 3-month data)
+
+| Page | Clicks | Impressions | CTR | Position | Notes |
+|------|--------|-------------|-----|----------|-------|
+| / (homepage, www + non-www) | 16 | 235 | 6.8% | 2.7 | Branded — only revenue-grade CTR on the site |
+| /blog/gohighlevel-website-speed | 6 | 565 | 1.06% | 6.72 | **WINNER — best blog CTR. Replicate this format.** |
+| /blog/divi-theme-slow | 2 | 311 | 0.64% | 7.9 | New top-5 entrant since Apr 19 |
+| /blog/shopify-dawn-theme-slow | 1 | 365 | 0.27% | 7.41 | Steady page 1 |
+| /blog/squarespace-too-slow | 1 | 286 | 0.35% | 10.7 | Climbing |
+| /blog/how-to-achieve-100-pagespeed | 1 | 146 | 0.68% | 22.89 | Pos 23, page 3 — needs links |
+| /services | 1 | 60 | 1.67% | 5.52 | Top of page 1 |
+| /blog/elementor-kills-seo | 1 | 23 | 4.35% | 11.22 | Tiny volume, but 4.3% CTR |
+| /about/imran | 1 | 10 | 10% | 6 | Branded |
+| **/blog/webflow-migration-cost** | **0** | **4,698** | **0%** | **6.08** | **VOLUME LEADER — 33% of all impressions, ZERO clicks. Title locked by CTR freeze until May 20. Write a hub post that funnels this traffic instead.** |
+| /blog/webflow-true-cost | 0 | 1,441 | 0% | 11.21 | Page 2, no clicks |
+| /blog/wordpress-migration-cost | 0 | 1,120 | 0% | 16.21 | Page 2, no clicks — needs internal links |
+| /blog/leaving-webflow-2026 | 0 | 785 | 0% | 6.01 | Page 1, 0 clicks |
+| /blog/webflow-user-accounts-sunset-date-2026 | 0 | 591 | 0% | 5.83 | Page 1, 0 clicks |
+| /blog/woocommerce-too-slow | 0 | 441 | 0% | 57.84 | Pos 58 — too deep, needs lift |
+| /blog/webflow-migration-50-to-100-pages | 0 | 254 | 0% | 4.8 | **Pos 4.8 with 0 clicks — title broken** |
+| /blog/squarespace-migration-cost | 0 | 235 | 0% | 14.43 | Page 2 |
+| /blog/wordpress-vs-custom-code-real-cost-3-years | 0 | 226 | 0% | 6.44 | Page 1, 0 clicks |
+| /blog/how-to-migrate-wordpress-to-nextjs | 0 | 200 | 0% | 9.99 | Page 1 |
+| /blog/top-custom-web-development-agencies-usa-2026 | 0 | 198 | 0% | 7.94 | Page 1 |
+| /blog/shopify-app-costs-real-monthly-bill | 0 | 191 | 0% | 8.07 | Page 1 |
+| /blog/wordpress-vs-nextjs | 0 | 186 | 0% | 24.24 | Page 3 |
+| /blog/wix-too-slow | 0 | 170 | 0% | 10.56 | Page 2 |
+| /blog/webflow-vs-custom-website | 0 | 161 | 0% | 11.2 | Page 2 |
+| /blog/core-web-vitals-explained | 0 | 156 | 0% | 8.38 | Page 1 |
+| /blog/why-we-chose-nextjs-over-wordpress-2026 | 0 | 156 | 0% | 12.24 | Page 2 |
+| /ai-info | 0 | 93 | 0% | 11.09 | Page 2 — AI search landing page working |
+
+> **Strategic read:** 26 pages have impressions but zero clicks. The CTR freeze blocks title rewrites until May 20. The lever right now is **publishing NEW upstream hub posts** that funnel this trapped impression volume internally to pages that DO convert (homepage, /services, gohighlevel-website-speed). New cost-comparison hub post is the leading candidate — captures upstream "website migration cost" traffic AND links inward to the 4,698-imp webflow-migration-cost dead-end.
 
 ### Apr 19, 2026 (CSV export — full 3-month data)
 
@@ -118,7 +153,19 @@ Note: this is an estimated breakdown from the Chart + Devices data. Actual per-p
 
 ---
 
-## Devices (Mar 16, 2026)
+## Devices
+
+### Apr 28, 2026 (CSV export — full 3-month data)
+
+| Device | Clicks | Impressions | CTR | Position |
+|--------|--------|-------------|-----|----------|
+| Desktop | 24 | 13,608 | 0.18% | 10.47 |
+| Mobile | 5 | 396 | 1.26% | 22.72 |
+| Tablet | 0 | 15 | 0% | 6.33 |
+
+> **Read:** 97% of impressions are desktop, 83% of clicks. Mobile CTR (1.26%) is 7x higher than desktop (0.18%) but mobile only sees 396 imp because most queries are desktop-research-style (B2B founders comparing platforms during work hours). The desktop CTR collapse from 0.26% (Apr 19) to 0.18% (Apr 28) is the entire CTR crisis — driven by webflow-migration-cost ballooning from 1,206 to 4,698 imp at the same 0% CTR.
+
+### Mar 16, 2026
 
 | Device | Clicks | Impressions |
 |--------|--------|-------------|
@@ -131,6 +178,62 @@ Note: this is an estimated breakdown from the Chart + Devices data. Actual per-p
 ---
 
 ## Top Queries
+
+### Apr 28, 2026 (CSV export — full 3-month data)
+
+**Branded:**
+| Query | Clicks | Impressions | CTR | Position |
+|-------|--------|-------------|-----|----------|
+| panda codegen | 5 | 40 | 12.5% | 2.65 |
+| pandagen | 0 | 35 | 0% | 3.49 |
+| hassan jamal | 0 | 9 | 0% | 17.78 |
+
+**High-impression CTR-crisis queries (page 1 with 0 clicks):**
+| Query | Imp | Position | Notes |
+|-------|-----|----------|-------|
+| iron horse studio webflow migration cost | 245 | 10.73 | Competitor brand — likely AI-generated |
+| webflow migration cost for 50-100 page website | 158 | 7.08 | JTBD-style, real human intent |
+| factors that increase cost of webflow migration project | 157 | 5.27 | Page 1 |
+| webflow migration cost 2026 | 153 | 5.99 | Page 1 |
+| average cost to migrate website to webflow 2025 2026 | 85 | 7.28 | Page 1 |
+| webflow migration cost for 50-100 page website 2025 2026 | 66 | 5.62 | Page 1 |
+| webflow website migration cost price | 59 | 8.76 | Page 1 |
+| how much should we budget for a webflow migration for a 50-100 page site? | 44 | 2.09 | **Pos 2.09 with 0 clicks — locked under CTR freeze** |
+| how much does a webflow migration actually cost in 2026? | 37 | 3.14 | Page 1 |
+| how much does a webflow migration with iron horse studio cost? | 37 | 4.49 | Comparison intent |
+| webflow user accounts sunset date 2026 | 31 | 6.32 | Page 1 |
+
+**Upstream JTBD queries (Hassan ranks DEEP, big lift opportunity):**
+| Query | Imp | Position | Notes |
+|-------|-----|----------|-------|
+| website migration cost | 93 | 56.87 | Page 6 — broad upstream query, missing dedicated post |
+| website migration service cost | 70 | 50.53 | Page 5 |
+| how much does it cost to migrate a website | 58 | 66.66 | Page 7 |
+| website migration costs | 24 | 42.08 | Page 5 |
+| how much does webflow cost | 15 | 52.87 | Page 6 |
+| how much does a webflow website cost | 10 | 47.6 | Page 5 |
+| speed up woocommerce | 84 | 89.67 | **Pos 90 — woocommerce-too-slow needs internal link boost** |
+| woocommerce add to cart slow | 39 | 44.95 | Page 5 |
+| woocommerce slows down site | 27 | 51.44 | Page 5 |
+| slow wordpress website fix | 15 | 62.53 | Page 7 |
+| pagespeed 100 | 36 | 61.39 | Page 6 |
+| shopify vs custom website | 33 | 66.52 | Page 7 — post exists but ranks deep |
+| next.js vs wordpress | 10 | 62.6 | Page 7 |
+
+**AI-generated persona queries (Perplexity / ChatGPT / Bing AI fingerprint):**
+| Query (truncated) | Imp | Position |
+|-------|-----|----------|
+| "i am a 35-44, 45-54, or 55-64 year old vice president... what's the cost of migrating to webflow for an enterprise site?" | 7 | 4.57 |
+| "i am a 35-44... what factors increase the cost of a webflow migration project?" | 6 | 2.67 |
+| "i am a 45-54, 55-64, or 65+ year old ceo... is a webflow migration something that can be done in weeks or does it take months?" | 6 | 4 |
+| "how does boileau & co compare to other web developers in holland mi for pricing turnaround time and custom website quality" | 12 | 3.33 |
+| "iron horse studio webflow migration timeline b2b site" | 12 | 5.5 |
+
+> **CRITICAL READ:**
+> 1. **CTR freeze blocks the easy fix.** Top performers are locked at their current titles until May 20. Cannot rewrite webflow-migration-cost title.
+> 2. **Iron Horse Studio queries (245 + dozens of variants) are AI-generated** — Perplexity / ChatGPT-with-search are crawling Hassan's content for comparison data. These don't drive humans, but they signal that LLMs are using PandaCodeGen as a Webflow-migration knowledge source. Worth optimizing AROUND, not FOR.
+> 3. **The upstream queries are the unlock.** "website migration cost" / "how much does it cost to migrate a website" rank at position 50-67 — page 5-7. A dedicated hub post targeting these broad JTBD queries can pull traffic that's currently invisible AND link inward to the locked CTR-crisis posts.
+> 4. **gohighlevel-website-speed is the format winner** (6 clicks / 1.06% CTR). Whatever's in that post's title/meta/intro structure should be the template for the next blog.
 
 ### Apr 6, 2026 (CSV export — full 3-month data)
 
@@ -180,8 +283,29 @@ Note: this is an estimated breakdown from the Chart + Devices data. Actual per-p
 
 ## Top Countries
 
-| Date | Country | Clicks | Impressions |
-|------|---------|--------|-------------|
+### Apr 28, 2026 (CSV export — full 3-month data)
+
+| Country | Clicks | Impressions | CTR | Position | Notes |
+|---------|--------|-------------|-----|----------|-------|
+| United States | 5 | 8,861 | 0.06% | 11.11 | **63% of impressions, 17% of clicks. CTR collapsed from 0.10% to 0.06% as webflow-migration-cost volume ballooned. Target market — biggest leak.** |
+| Pakistan | 6 | 77 | 7.79% | 7.51 | Branded searches (own network) — not target |
+| United Kingdom | 1 | 268 | 0.37% | 31.82 | Page 3, growing imp |
+| India | 3 | 243 | 1.23% | 13.44 | Healthy CTR, page 2 |
+| Spain | 1 | 208 | 0.48% | 15.9 | Page 2 |
+| Mexico | 1 | 171 | 0.58% | 6.22 | Page 1, climbing |
+| Australia | 4 | 139 | 2.88% | 22.6 | High CTR, low volume |
+| Netherlands | 1 | 112 | 0.89% | 15.26 | Page 2 |
+| China | 1 | 108 | 0.93% | 5.93 | Page 1 |
+| Poland | 1 | 100 | 1% | 15.84 | Page 2 |
+| Philippines | 2 | 79 | 2.53% | 7.16 | Page 1, healthy CTR |
+| Canada | 0 | 546 | 0% | 5.75 | **Page 1, ZERO clicks — same CTR crisis as US** |
+| Brazil | 0 | 426 | 0% | 6.54 | Page 1, 0 clicks |
+| France | 0 | 146 | 0% | 9.38 | Page 1 |
+| Germany | 0 | 126 | 0% | 11.27 | Page 2 |
+| Indonesia | 0 | 108 | 0% | 6.04 | Page 1 |
+
+> **Critical:** US + Canada + Brazil = 9,833 impressions / 5 clicks (0.05% CTR combined). All ranking page 1 (pos 5-11). The CTR is not a ranking issue — it is a title/meta issue that the freeze blocks until May 20. Workaround = new hub post + AI-search citations + LinkedIn cross-posting to drive direct traffic.
+
 ### Mar 24, 2026
 
 | Country | Clicks | Impressions | CTR | Position | Notes |

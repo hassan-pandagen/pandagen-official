@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "@/components/ui/motion";
 import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Lock, Database, Server, FileSearch, Wrench, Rocket, HelpCircle, ShoppingBag, CreditCard, Package } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
@@ -237,37 +237,47 @@ export default function PageContent() {
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">WooCommerce vs Custom Code</h2>
           <p className="text-stone-600 text-center mb-10">The numbers speak for themselves.</p>
 
-          <div className="overflow-x-auto">
-            <div className="min-w-[560px] rounded-2xl border border-stone-200 overflow-hidden shadow-xs">
-              {/* Accent bar */}
-              <div className="grid grid-cols-3">
-                <div className="h-1 bg-stone-50" />
-                <div className="h-1 bg-stone-50" />
-                <div className="h-1 bg-cognac" />
-              </div>
-              {/* Header */}
-              <div className="grid grid-cols-3 bg-stone-50 border-b border-stone-200">
-                <div className="px-5 py-4 text-xs font-black text-stone-400 uppercase tracking-widest">Feature</div>
-                <div className="px-5 py-4 text-sm font-bold text-stone-600 border-l border-stone-200">WooCommerce</div>
-                <div className="px-5 py-4 text-sm font-bold text-cognac border-l border-stone-200 bg-paper">Custom Code</div>
-              </div>
-              {/* Rows */}
-              {comparisonRows.map((row, i) => (
-                <div key={i} className="grid grid-cols-3 border-b border-stone-200 text-sm last:border-b-0">
-                  <div className="px-5 py-4 text-charcoal font-bold flex items-center">{row.label}</div>
-                  <div className={`px-5 py-4 border-l border-stone-200 flex items-center gap-2 font-medium ${row.isPain ? "text-red-600 bg-red-50/40" : "text-stone-500"}`}>
+          <div className="rounded-2xl border border-stone-200 overflow-hidden shadow-xs bg-white">
+            {/* Accent bar — desktop only */}
+            <div className="hidden md:grid md:grid-cols-3">
+              <div className="h-1 bg-stone-50" />
+              <div className="h-1 bg-stone-50" />
+              <div className="h-1 bg-cognac" />
+            </div>
+            {/* Header — desktop only. On mobile, each row gets inline labels. */}
+            <div className="hidden md:grid md:grid-cols-3 bg-stone-50 border-b border-stone-200">
+              <div className="px-5 py-4 text-xs font-black text-stone-400 uppercase tracking-widest">Feature</div>
+              <div className="px-5 py-4 text-sm font-bold text-stone-600 border-l border-stone-200">WooCommerce</div>
+              <div className="px-5 py-4 text-sm font-bold text-cognac border-l border-stone-200 bg-paper">Custom Code</div>
+            </div>
+            {/* Rows */}
+            {comparisonRows.map((row, i) => (
+              <div
+                key={i}
+                className={`p-4 ${i < comparisonRows.length - 1 ? 'border-b border-stone-200' : ''} text-sm md:p-0 md:grid md:grid-cols-3`}
+              >
+                {/* Feature label */}
+                <div className="text-charcoal font-bold mb-3 md:mb-0 md:px-5 md:py-4 md:flex md:items-center">{row.label}</div>
+                {/* WooCommerce value */}
+                <div className={`flex items-center justify-between gap-3 mb-2 md:mb-0 md:justify-start md:gap-2 md:px-5 md:py-4 md:border-l md:border-stone-200 font-medium ${row.isPain ? "text-red-600 md:bg-red-50/40" : "text-stone-500"}`}>
+                  <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-stone-500 not-italic">WooCommerce</span>
+                  <span className="flex items-center gap-2">
                     {row.isPain ? <XCircle className="w-4 h-4 text-red-400 shrink-0" /> : null}
                     {row.woo}
-                  </div>
-                  <div className="px-5 py-4 border-l border-stone-200 bg-paper flex items-center gap-2 font-black text-charcoal">
-                    <div className="w-5 h-5 rounded-full bg-cognac flex items-center justify-center shrink-0">
-                      <CheckCircle2 className="w-3 h-3 text-white" />
-                    </div>
-                    {row.custom}
-                  </div>
+                  </span>
                 </div>
-              ))}
-            </div>
+                {/* Custom Code value */}
+                <div className="flex items-center justify-between gap-3 md:justify-start md:gap-2 md:px-5 md:py-4 md:border-l md:border-stone-200 md:bg-paper font-black text-charcoal">
+                  <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-cognac not-italic">Custom</span>
+                  <span className="flex items-center gap-2">
+                    <span className="w-5 h-5 rounded-full bg-cognac flex items-center justify-center shrink-0">
+                      <CheckCircle2 className="w-3 h-3 text-white" />
+                    </span>
+                    {row.custom}
+                  </span>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "@/components/ui/motion";
 import { ArrowRight, type LucideIcon } from "lucide-react";
 
 export type ComparisonMetric = {
@@ -199,15 +199,14 @@ export default function PlatformKillerChart({
                           <row.icon className="w-4 h-4 text-cognac" strokeWidth={2} />
                           <span className="text-xs md:text-sm text-charcoal font-semibold tracking-tight">{row.metric}</span>
                         </div>
-                        {/* Them bar */}
+                        {/* Them bar — pure CSS bar grow on scroll-into-view via the parent's data-reveal toggle.
+                            We can't animate width through the motion shim (it only handles opacity/transform),
+                            so the bar uses `transition: width 0.6s` and the parent FadeIn flips a class. */}
                         <div className="flex items-center gap-3">
                           <div className="flex-1 h-2 bg-stone-100 rounded-full overflow-hidden">
-                            <motion.div
-                              initial={{ width: 0 }}
-                              whileInView={{ width: `${row.themPct}%` }}
-                              viewport={{ once: true }}
-                              transition={{ delay: 0.2 + i * 0.06, duration: 0.6, ease: "easeOut" }}
-                              className="h-full bg-linear-to-r from-red-300 to-red-400 rounded-full"
+                            <div
+                              className="h-full bg-linear-to-r from-red-300 to-red-400 rounded-full transition-[width] duration-600 ease-out"
+                              style={{ width: `${row.themPct}%`, transitionDelay: `${200 + i * 60}ms` }}
                             />
                           </div>
                           <span className="text-[11px] md:text-xs text-red-500 font-bold w-[72px] md:w-[96px] text-right shrink-0 tracking-tight truncate">{row.themLabel}</span>
@@ -215,12 +214,9 @@ export default function PlatformKillerChart({
                         {/* Us bar */}
                         <div className="flex items-center gap-3">
                           <div className="flex-1 h-2 bg-stone-100 rounded-full overflow-hidden">
-                            <motion.div
-                              initial={{ width: 0 }}
-                              whileInView={{ width: `${row.usPct}%` }}
-                              viewport={{ once: true }}
-                              transition={{ delay: 0.3 + i * 0.06, duration: 0.6, ease: "easeOut" }}
-                              className="h-full bg-linear-to-r from-emerald-400 to-green-500 rounded-full"
+                            <div
+                              className="h-full bg-linear-to-r from-emerald-400 to-green-500 rounded-full transition-[width] duration-600 ease-out"
+                              style={{ width: `${row.usPct}%`, transitionDelay: `${300 + i * 60}ms` }}
                             />
                           </div>
                           <span className="text-[11px] md:text-xs text-emerald-600 font-bold w-[72px] md:w-[96px] text-right shrink-0 tracking-tight truncate">{row.usLabel}</span>

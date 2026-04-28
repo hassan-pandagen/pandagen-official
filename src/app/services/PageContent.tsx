@@ -1,8 +1,8 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
-import { Database, Code2, ShoppingCart, CheckCircle2, Server, Layers, ArrowRight, Zap, Shield, BarChart3, Globe, Lock, Gauge } from "lucide-react";
+import { motion } from "@/components/ui/motion";
+import FadeIn from "@/components/ui/FadeIn";
+import { Database, Code2, ShoppingCart, CheckCircle2, Layers, ArrowRight, Zap, Shield, BarChart3, Gauge } from "lucide-react";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -124,18 +124,13 @@ export default function PageContent() {
 }
 
 // --- SERVICE SECTION ---
-function ServiceSection({ id, title, subtitle, description, tags, features, align, icon: Icon, gradient, accentColor, children, href }: any) {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "center center"] });
-  const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
-  const x = useTransform(scrollYProgress, [0, 0.3], [align === 'left' ? -50 : 50, 0]);
-
+function ServiceSection({ id, title, subtitle, description, tags, features, align, icon: Icon, gradient, children, href }: any) {
   return (
-    <section ref={ref} className="container mx-auto px-6">
+    <section className="container mx-auto px-6">
       <div className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-20 ${align === 'right' ? 'lg:flex-row-reverse' : ''}`}>
 
         {/* TEXT SIDE */}
-        <motion.div style={{ opacity, x }} className="flex-1">
+        <FadeIn className="flex-1">
            <div className="flex items-center gap-4 mb-8">
               <span className="text-7xl font-bold text-stone-100 font-mono">{id}</span>
               <div className={`p-4 rounded-2xl bg-linear-to-br ${gradient} border border-stone-200 shadow-lg`}>
@@ -168,7 +163,7 @@ function ServiceSection({ id, title, subtitle, description, tags, features, alig
               Explore {title} <ArrowRight className="w-5 h-5" />
            </Link>
 
-        </motion.div>
+        </FadeIn>
 
         {/* VISUAL SIDE */}
         <div className="flex-1 w-full h-[450px] lg:h-[520px]">
@@ -316,12 +311,10 @@ function DashboardDecoration() {
                             <div className="text-[10px] font-bold text-stone-400 uppercase mb-2">Revenue</div>
                             <div className="flex items-end gap-1.5 h-16">
                                 {[40, 55, 45, 70, 60, 85, 75, 95, 88, 100].map((h, i) => (
-                                    <motion.div
+                                    <div
                                         key={i}
-                                        initial={{ height: 0 }}
-                                        animate={{ height: `${h}%` }}
-                                        transition={{ duration: 0.5, delay: i * 0.05 }}
                                         className="flex-1 bg-linear-to-t from-charcoal to-stone-600 rounded-t opacity-80"
+                                        style={{ height: `${h}%` }}
                                     />
                                 ))}
                             </div>

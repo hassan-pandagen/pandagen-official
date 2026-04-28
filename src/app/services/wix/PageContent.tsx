@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import FadeIn from "@/components/ui/FadeIn";
 import { useState } from "react";
 import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Gauge, Lock, Palette, HelpCircle, FileSearch, Wrench, Rocket, Search } from "lucide-react";
 import Link from "next/link";
@@ -62,31 +62,22 @@ export default function PageContent() {
         <div className="absolute top-1/3 right-[10%] w-[500px] h-[500px] bg-stone-200/50 blur-[140px] rounded-full pointer-events-none" />
 
         <div className="container mx-auto text-center relative z-10 max-w-4xl">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-200 text-sm text-cognac mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-200 text-sm text-cognac mb-6 animate-fade-in-up">
             <Zap className="w-4 h-4" /> Wix Migration Service
-          </motion.div>
+          </div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.08] md:leading-tight break-words"
-          >
+          <h1 className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.08] md:leading-tight break-words animate-fade-in-up">
             Trapped on Wix? <br />
             <span className="font-serif italic text-cognac">
               We got Obare Magazine out in 7 days.
             </span>
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.1 }}
-            className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto"
-          >
+          <p className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto animate-fade-in-up-2">
             Wix got your business online fast. But now it&apos;s holding you back with slow loading, limited SEO, and a monthly subscription that never ends. We help businesses <span className="text-charcoal font-medium">break free and own their platform</span>.
-          </motion.p>
+          </p>
 
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up-4">
             <button
               data-cal-namespace="discovery"
               data-cal-link="pandagen/discovery"
@@ -98,7 +89,7 @@ export default function PageContent() {
             <Link href="#cost-breakdown" className="px-8 py-4 bg-white border border-cognac/30 text-cognac font-bold rounded-full hover:bg-cognac hover:text-white transition-all flex items-center justify-center gap-2">
               See the Cost Breakdown <ArrowRight className="w-5 h-5" />
             </Link>
-          </motion.div>
+          </div>
           <p className="text-sm text-stone-500 mt-4 text-center max-w-xl mx-auto leading-relaxed">30-min call. Drop your Wix URL when you book. We run your PageSpeed live and <span className="text-charcoal font-medium">give you a fixed migration quote before we hang up.</span></p>
 
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-6 text-xs font-bold uppercase tracking-widest text-stone-500">
@@ -165,12 +156,10 @@ export default function PageContent() {
               { step: "03", title: "SEO Migration", desc: "We map every old URL, set up 301 redirects, and transfer all your SEO metadata. Google sees a faster version of the same site.", icon: Search, duration: "Day 11-13" },
               { step: "04", title: "Launch & Handover", desc: "We deploy, set up analytics, and hand over the keys. You get a built-in content editor for easy content editing. No coding needed.", icon: Rocket, duration: "Day 14" },
             ].map((item, i) => (
-              <motion.div
+              <FadeIn
                 key={i}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.08 }}
                 className="flex gap-6 items-start"
+                style={{ transitionDelay: `${i * 80}ms` }}
               >
                 <div className="flex flex-col items-center shrink-0">
                   <div className="w-12 h-12 rounded-xl bg-stone-50 border border-cognac/20 flex items-center justify-center">
@@ -186,7 +175,7 @@ export default function PageContent() {
                   </div>
                   <p className="text-stone-600 text-base leading-relaxed">{item.desc}</p>
                 </div>
-              </motion.div>
+              </FadeIn>
             ))}
           </div>
         </div>
@@ -198,25 +187,36 @@ export default function PageContent() {
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">Wix vs Next.js: Speed and SEO Compared</h2>
           <p className="text-stone-600 text-center mb-12">See exactly what you&apos;re missing and what you could have.</p>
 
-          <div className="overflow-x-auto rounded-2xl border border-stone-200">
-            <div className="min-w-[500px]">
-            <div className="grid grid-cols-3 bg-stone-50 p-4 border-b border-stone-200">
+          <div className="rounded-2xl border border-stone-200 overflow-hidden bg-white">
+            {/* Header — desktop only. On mobile, each row gets inline labels. */}
+            <div className="hidden md:grid md:grid-cols-3 bg-stone-50 p-4 border-b border-stone-200">
               <div className="text-stone-600 font-medium text-sm">Feature</div>
               <div className="text-stone-600 font-bold text-sm text-center">Wix</div>
               <div className="text-cognac font-bold text-sm text-center">Custom Coded</div>
             </div>
 
             {comparisonData.map((row, i) => (
-              <div key={i} className={`grid grid-cols-3 p-4 items-center ${i % 2 === 0 ? 'bg-white border border-stone-100' : ''} border-b border-stone-200 last:border-b-0`}>
-                <div className="flex items-center gap-2 text-charcoal text-sm font-medium">
+              <div
+                key={i}
+                className={`p-4 ${i % 2 === 0 ? 'bg-white' : 'bg-stone-50/50'} ${i < comparisonData.length - 1 ? 'border-b border-stone-200' : ''} md:grid md:grid-cols-3 md:items-center`}
+              >
+                {/* Feature */}
+                <div className="flex items-center gap-2 text-charcoal text-sm font-bold mb-3 md:mb-0 md:font-medium">
                   <row.icon className="w-4 h-4 text-stone-400 shrink-0" />
                   {row.feature}
                 </div>
-                <div className="text-red-400/80 text-sm text-center">{row.wix}</div>
-                <div className="text-green-600 text-sm text-center font-medium">{row.custom}</div>
+                {/* Wix value */}
+                <div className="flex items-center justify-between gap-3 mb-2 md:mb-0 md:justify-center md:text-center">
+                  <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-stone-500">Wix</span>
+                  <span className="text-red-400/90 text-sm md:text-center">{row.wix}</span>
+                </div>
+                {/* Custom value */}
+                <div className="flex items-center justify-between gap-3 md:justify-center md:text-center">
+                  <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-cognac">Custom</span>
+                  <span className="text-green-600 text-sm font-medium md:text-center">{row.custom}</span>
+                </div>
               </div>
             ))}
-            </div>
           </div>
         </div>
       </section>
@@ -243,12 +243,10 @@ export default function PageContent() {
               { icon: Palette, pain: "Wix's Branding Shows on Your Professional Website", detail: "Lower Wix plans show 'Made with Wix' on your business site. Enterprise clients notice. Upgrade to remove it and you're paying even more for a site you still don't own." },
               { icon: TrendingUp, pain: "AI Search Can't Index Your Wix Site Properly", detail: "ChatGPT, Perplexity, and AI Overviews now cite specific brands when answering buying questions. They prioritize fast, structured code. Wix's JavaScript-heavy pages make you invisible to the AI search layer your competitors are already winning." },
             ].map((item, i) => (
-              <motion.div
+              <FadeIn
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.08 }}
                 className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-red-500/40 transition-colors group"
+                style={{ transitionDelay: `${i * 80}ms` }}
               >
                 <div className="flex items-start gap-4">
                   <div className="p-3 rounded-xl bg-red-500/15 text-red-400 shrink-0 group-hover:bg-red-500/25 transition-colors">
@@ -259,7 +257,7 @@ export default function PageContent() {
                     <p className="text-slate-400 leading-relaxed text-sm">{item.detail}</p>
                   </div>
                 </div>
-              </motion.div>
+              </FadeIn>
             ))}
           </div>
         </div>
@@ -282,19 +280,17 @@ export default function PageContent() {
               { icon: Lock, title: "You Own Everything", desc: "Cancel anytime and take your site with you. Your code. Your design. Your data. It\u2019s yours forever \u2014 no platform can take it away." },
               { icon: DollarSign, title: "No More Subscriptions", desc: "Stop paying Wix $17-159/month forever. Host your custom site for $0 to start. You only pay when you scale massively." },
             ].map((item, i) => (
-              <motion.div
+              <FadeIn
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
                 className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
+                style={{ transitionDelay: `${i * 100}ms` }}
               >
                 <div className="w-12 h-12 rounded-xl bg-white/10 text-stone-300 flex items-center justify-center mb-6">
                   <item.icon className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
                 <p className="text-slate-400 leading-relaxed">{item.desc}</p>
-              </motion.div>
+              </FadeIn>
             ))}
           </div>
         </div>
@@ -423,11 +419,9 @@ export default function PageContent() {
 
           <div className="space-y-3">
             {faqs.map((faq, i) => (
-              <motion.div
+              <FadeIn
                 key={i}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.05 }}
+                style={{ transitionDelay: `${i * 50}ms` }}
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
@@ -443,7 +437,7 @@ export default function PageContent() {
                     <p className="text-stone-600 text-sm leading-relaxed mt-4 border-t border-stone-200 pt-4">{faq.a}</p>
                   )}
                 </button>
-              </motion.div>
+              </FadeIn>
             ))}
           </div>
         </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion } from "@/components/ui/motion";
 import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Gauge, Lock, Server, Database, Globe, FileSearch, Wrench, Rocket, HelpCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -217,25 +217,33 @@ export default function WebflowPageContent() {
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">Webflow vs Custom Coded</h2>
           <p className="text-stone-600 text-center mb-12">See exactly what you&apos;re missing and what you could have.</p>
 
-          <div className="overflow-x-auto rounded-2xl border border-stone-200">
-            <div className="min-w-[500px]">
-            <div className="grid grid-cols-3 bg-stone-50 p-4 border-b border-stone-200">
+          <div className="rounded-2xl border border-stone-200 overflow-hidden bg-white">
+            {/* Header — desktop only. On mobile, each row gets inline labels. */}
+            <div className="hidden md:grid md:grid-cols-3 bg-stone-50 p-4 border-b border-stone-200">
               <div className="text-stone-600 font-medium text-sm">Feature</div>
               <div className="text-stone-500 font-bold text-sm text-center">Webflow</div>
               <div className="text-cognac font-bold text-sm text-center">Custom Coded</div>
             </div>
 
             {comparisonData.map((row, i) => (
-              <div key={i} className={`grid grid-cols-3 p-4 items-center ${i % 2 === 0 ? 'bg-stone-50/50' : ''} border-b border-stone-200 last:border-b-0`}>
-                <div className="flex items-center gap-2 text-charcoal text-sm font-medium">
+              <div
+                key={i}
+                className={`p-4 ${i % 2 === 0 ? 'bg-white' : 'bg-stone-50/50'} ${i < comparisonData.length - 1 ? 'border-b border-stone-200' : ''} md:grid md:grid-cols-3 md:items-center`}
+              >
+                <div className="flex items-center gap-2 text-charcoal text-sm font-bold mb-3 md:mb-0 md:font-medium">
                   <row.icon className="w-4 h-4 text-stone-400 shrink-0" />
                   {row.feature}
                 </div>
-                <div className="text-red-400/80 text-sm text-center">{row.webflow}</div>
-                <div className="text-green-400 text-sm text-center font-medium">{row.custom}</div>
+                <div className="flex items-center justify-between gap-3 mb-2 md:mb-0 md:justify-center md:text-center">
+                  <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-stone-500">Webflow</span>
+                  <span className="text-red-400/90 text-sm md:text-center">{row.webflow}</span>
+                </div>
+                <div className="flex items-center justify-between gap-3 md:justify-center md:text-center">
+                  <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-cognac">Custom</span>
+                  <span className="text-green-500 text-sm font-medium md:text-center">{row.custom}</span>
+                </div>
               </div>
             ))}
-            </div>
           </div>
         </div>
       </section>

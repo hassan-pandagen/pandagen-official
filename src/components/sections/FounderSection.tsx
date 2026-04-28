@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "@/components/ui/motion";
 import Image from "next/image";
 import Link from "next/link";
 import { Github, ArrowUpRight, Linkedin } from "lucide-react";
