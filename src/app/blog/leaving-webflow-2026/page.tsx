@@ -212,6 +212,11 @@ export default function LeavingWebflow2026Page() {
 
                         <BlogHeader>The Moment Webflow Stopped Feeling Like a Good Deal</BlogHeader>
 
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">In July 2024, Webflow cut bandwidth limits by 75 to 80% across all plans without a price reduction. Sites that exceeded the new limits were auto-upgraded to a higher plan with no warning. That is when most businesses we work with started seriously reconsidering the platform.</p>
+                        </div>
+
                         <BlogText>
                             There was a time when Webflow made sense. Visual editor, clean code output, no plugins to maintain. For a certain type of business at a certain size, it was a genuinely good choice. That time has passed for most of the businesses we talk to.
                         </BlogText>
@@ -229,6 +234,11 @@ export default function LeavingWebflow2026Page() {
                         </BlogText>
 
                         <BlogHeader>The Subscription Stack That Got Out of Control</BlogHeader>
+
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">A mid-sized Webflow business site typically costs $948 to $2,028 per year once you add hosting, form submissions, bandwidth overages, and third-party integrations. Most owners discover this number only after it auto-bills. The same site on custom Next.js costs $12 to $372 per year on Vercel.</p>
+                        </div>
 
                         <BlogText>
                             The base plan price is not the real cost of running a Webflow site in 2026. The real cost is the stack you build on top of it, because Webflow has been systematically separating features that used to be included into paid add-ons.
@@ -294,6 +304,11 @@ export default function LeavingWebflow2026Page() {
 
                         <BlogHeader>The 14 Outages Nobody Warned Us About</BlogHeader>
 
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Webflow had 14 incidents in 90 days (4 major, 10 minor) per IsDown third-party monitoring. April 14-15, 2026 saw a 12-hour outage taking down every hosted Webflow site. July 2025 had a 31-hour outage. Custom Next.js on Vercel runs with a 99.99% SLA.</p>
+                        </div>
+
                         <BlogText>
                             The real breaking point was uptime. According to <a href="https://isdown.app/status/webflow" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">IsDown&apos;s third-party monitoring</a>, Webflow had <BlogHighlight>14 incidents in the last 90 days</BlogHighlight> (4 major outages, 10 minor). The median outage lasted 1 hour 59 minutes. March 2026 alone included a 5 hour 20 minute incident on March 2, a 3 hour 15 minute warning on March 16, and a 3 hour 30 minute warning on March 31.
                         </BlogText>
@@ -311,6 +326,11 @@ export default function LeavingWebflow2026Page() {
                         </BlogQuote>
 
                         <BlogHeader>When the Cart Stopped Working and Webflow Could Not Fix It</BlogHeader>
+
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Webflow e-commerce has a 50-variant cap per product, a 2% transaction fee on every sale, no native subscription billing, and a checkout button that disappears on live sites — a known bug with no native fix. Most serious e-commerce stores outgrow these limits before they hit $20K/month.</p>
+                        </div>
 
                         <BlogText>
                             If you run an e-commerce store on Webflow, you have probably experienced this. You are in the Designer, everything looks correct. You publish. A customer visits the live site. The checkout button is gone. Or the add-to-cart does not respond on mobile. Or the checkout popup never appears.
@@ -345,6 +365,11 @@ export default function LeavingWebflow2026Page() {
                         </BlogText>
 
                         <BlogHeader>The Features Webflow Killed Without Warning</BlogHeader>
+
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">In 2025-2026, Webflow sunset Logic (automation, June 27, 2025) and deprecated User Accounts (membership, January 29, 2026) — two native features businesses had built workflows around. Replacements cost more per month than the Webflow hosting itself. No migration tooling was provided for either.</p>
+                        </div>
 
                         <BlogText>
                             The pricing changes were frustrating. The crashes were infuriating. But for many businesses, the tipping point was not the money. It was trust. Specifically, watching Webflow kill features that real businesses had built their operations around.
@@ -385,6 +410,11 @@ export default function LeavingWebflow2026Page() {
 
                         <BlogHeader>What a Real 50-Page Migration Actually Looked Like</BlogHeader>
 
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">A 50-page Webflow migration takes 4 weeks: week 1 URL audit and redirect map, week 2 custom Next.js build, week 3 content transfer and QA across 6 screen sizes, week 4 301 redirect setup and zero-downtime DNS cutover. Your Webflow site stays live the entire time until the moment the new site goes live.</p>
+                        </div>
+
                         <BlogText>
                             We ran this exact process on our Obare Magazine rebuild (Wix to Next.js and Sanity, 7 days). The playbook travels to Webflow cleanly. Here is what a real migration looks like from the inside, with no glossing over the hard parts. For the full scope breakdown and hour-per-phase estimates specifically for 50 to 100 page Webflow sites, see our <Link href="/blog/webflow-migration-50-to-100-pages" className="text-cognac hover:underline">Scale-tier pricing breakdown</Link>.
                         </BlogText>
@@ -410,6 +440,11 @@ export default function LeavingWebflow2026Page() {
                         </BlogText>
 
                         <BlogHeader>The Numbers After Migration: Before vs After</BlogHeader>
+
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Post-migration results from real client sites: PageSpeed 45-62 → 95-99, load time 3.2-4.5s → 0.6-0.8s, monthly hosting $150-$700 → $0, transaction fee 2% → 0%, CMS item limit removed, bandwidth limit removed, and Vercel 99.99% uptime replacing Webflow's outage history.</p>
+                        </div>
 
                         <BlogText>
                             Here is what the data looks like when a real business completes a migration from a template-based platform to a custom Next.js site. These are not projections. These are numbers from sites we have built.
@@ -482,6 +517,11 @@ export default function LeavingWebflow2026Page() {
                         </BlogText>
 
                         <BlogHeader>What You Actually Own When You Leave Webflow</BlogHeader>
+
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">When you migrate from Webflow to custom Next.js, you receive the full source code on day one. You can host it anywhere, hire any developer to maintain it, and change anything without platform permission. The code is an asset you own outright — not a monthly rental that can be repriced or deprecated.</p>
+                        </div>
 
                         <BlogText>
                             This is the part that most migration conversations miss. When you leave Webflow, you do not just get a faster site and a lower bill. You get ownership.

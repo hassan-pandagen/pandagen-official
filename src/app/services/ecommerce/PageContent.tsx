@@ -9,6 +9,7 @@ import Footer from "@/components/layout/Footer";
 import SocialProof from "@/components/home/SocialProof";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 import ShopifyKiller from "@/components/sections/ShopifyKiller";
+import PartnerPromise from "@/components/services/PartnerPromise";
 
 const faqs = [
   {
@@ -519,6 +520,9 @@ export default function PageContent() {
           </div>
         </div>
       </section>
+
+      {/* PARTNER PROMISE — locked brand voice, 3 guarantees */}
+      <PartnerPromise />
 
       {/* 8. FAQ */}
       <section className="pt-8 md:pt-12 pb-10 md:pb-20 px-6">

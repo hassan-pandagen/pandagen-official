@@ -214,6 +214,11 @@ export default function WebflowUserAccountsSunset2026Page() {
 
                         <BlogHeader>What Actually Happened on January 29, 2026</BlogHeader>
 
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Webflow User Accounts were fully sunset on January 29, 2026. New sites could not enable the feature after January 31, 2025. All APIs and webhooks were deprecated on sunset day. Gated pages became public static pages. Member data was not migrated by Webflow — businesses had to export it themselves before the deadline or lose it.</p>
+                        </div>
+
                         <BlogText>
                             Webflow first announced the sunset in December 2024. The company said it was making a strategic decision to deprecate its native Logic and User Accounts in favour of its ecosystem of vetted app partners. The official framing was that Webflow was becoming a Website Experience Platform focused on design, CMS, and analytics, and handing off authentication and automation to specialists like Memberstack, Outseta, Zapier, and Make.
                         </BlogText>
@@ -237,6 +242,11 @@ export default function WebflowUserAccountsSunset2026Page() {
                         </BlogText>
 
                         <BlogHeader>What Broke on Sites That Did Not Migrate</BlogHeader>
+
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Sites that missed the migration have three simultaneous failures: login stopped working for all members, member data was lost if not exported before January 29, and gated pages became public. Stripe subscriptions kept charging even though members could not log in to access what they paid for.</p>
+                        </div>
 
                         <BlogText>
                             Today is April 22, 2026. Three months have passed since the sunset. Sites that missed the deadline are running in one of three failure modes, usually all three at once.
@@ -268,6 +278,11 @@ export default function WebflowUserAccountsSunset2026Page() {
 
                         <BlogHeader>Why Memberstack and Outseta Are Not the Long-Term Answer</BlogHeader>
 
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Memberstack and Outseta work as short-term fixes if you must stay on Webflow this week. The long-term risk is the same: both are SaaS tools that can change pricing, deprecate features, or sunset. Webflow User Accounts itself lasted only four years before sunset. If membership is your business, not just a feature, you need to own the auth layer.</p>
+                        </div>
+
                         <BlogText>
                             Webflow&apos;s official recommendation is to swap to one of two partners: Memberstack or Outseta. Both are legitimate products. Both work. Both offered Webflow users migration incentives. <a href="https://www.outseta.com/webflow" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Outseta</a> provides 50% off 12 months plus free VIP migration. <a href="https://www.memberstack.com/migrate-from-webflow-user-accounts" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Memberstack</a> provides an unlimited free trial plus 50% off 6 months.
                         </BlogText>
@@ -296,6 +311,11 @@ export default function WebflowUserAccountsSunset2026Page() {
                         </BlogText>
 
                         <BlogHeader>The Real 3-Year Cost: Memberstack vs Outseta vs Custom Next.js</BlogHeader>
+
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">For a 500-member site over 3 years: Memberstack costs $4,968 to $6,968 total. Outseta costs $4,248 to $6,248. Custom Next.js (Growth tier) costs $3,500 to $4,400 total including build, with $0/month in ongoing platform fees. Custom is cheaper by year 2 and substantially cheaper by year 3.</p>
+                        </div>
 
                         <BlogText>
                             SaaS fees are the part most founders underestimate. A $49 per month subscription does not look like a decision you need to think about carefully. Three years in, it is a $1,764 line item that never shrinks. Here is what the real math looks like for a 500-member site over three years.
@@ -369,6 +389,11 @@ export default function WebflowUserAccountsSunset2026Page() {
 
                         <BlogHeader>What Custom Next.js Auth Actually Looks Like</BlogHeader>
 
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Three proven auth options for post-Webflow migrations: (1) Clerk — fastest to launch, free up to 10,000 monthly active users; (2) NextAuth/Auth.js — open source, self-hosted, no monthly fee at any scale; (3) Supabase Auth — best when you also need a Postgres database, HIPAA-ready, free up to 50,000 monthly active users. All three integrate directly with Stripe for paid subscriptions.</p>
+                        </div>
+
                         <BlogText>
                             &quot;Custom auth&quot; sounds complicated until you see what the modern stack looks like. There are three proven paths, and every one of them is faster to stand up than most founders expect.
                         </BlogText>
@@ -408,6 +433,11 @@ export default function WebflowUserAccountsSunset2026Page() {
 
                         <BlogHeader>The 14-Day Recovery Playbook (If Your Site Has Been Broken Since January)</BlogHeader>
 
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">14-day recovery sequence: days 1-2 data recovery audit (Stripe records, email exports, CRM history), days 3-5 emergency landing page so members have somewhere to land, days 6-10 custom auth build on Clerk or Supabase with Stripe subscription mapping, days 11-14 content migration and zero-downtime DNS cutover from Webflow to Vercel.</p>
+                        </div>
+
                         <BlogText>
                             If your Webflow site has been running on broken auth for three months, you do not need a 4-week project to get back online. You need a triage plan. Here is the one we run for sites that come to us post-sunset.
                         </BlogText>
@@ -438,6 +468,11 @@ export default function WebflowUserAccountsSunset2026Page() {
 
                         <BlogHeader>How Much It Costs to Rebuild the Right Way</BlogHeader>
 
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Post-Webflow membership rebuilds typically land in the Growth tier ($3,500): 10 to 20 pages, full auth, member dashboard, Stripe subscription management, gated content, and Sanity CMS. Starter ($1,500) covers simple gating with no custom dashboard. Scale ($5,000+) covers 30+ pages with complex billing tiers or B2B organization accounts. Enterprise agencies charge $15,000 to $30,000 for the same scope.</p>
+                        </div>
+
                         <BlogText>
                             Here is the pricing, plainly. For a Webflow membership site moving to custom Next.js with proper auth, the scope maps to one of three tiers.
                         </BlogText>
@@ -461,6 +496,11 @@ export default function WebflowUserAccountsSunset2026Page() {
                         </BlogText>
 
                         <BlogHeader>The Pattern Here Is Bigger Than Webflow User Accounts</BlogHeader>
+
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Webflow has deprecated two core features in 18 months: Logic (June 2025) and User Accounts (January 2026). The pattern is established. The permanent hedge is owning the code — when your site runs on custom Next.js, the source lives in your Git repo, the data in your database, and no vendor can send you a sunset email.</p>
+                        </div>
 
                         <BlogText>
                             This is the second time in eighteen months Webflow has deprecated a feature that businesses built on. Logic went first in June 2025. User Accounts followed in January 2026. There will be a third deprecation. We do not know what it is yet, but the pattern is established. Webflow is pivoting upmarket toward design and CMS, and it is shedding the pieces that do not fit that pivot.

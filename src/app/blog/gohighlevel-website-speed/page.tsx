@@ -224,12 +224,18 @@ export default function GHLWebsiteSpeedPage() {
                         GoHighLevel was built to help you create pages quickly. That is genuinely useful. The problem is that building pages quickly and loading pages quickly are two different things, and GHL optimized for the first one.
                     </BlogText>
                     <BlogText>
-                        Here is what actually happens when someone on their phone clicks a link to your GHL website. The phone requests the page. The server sends back a large package of code. The phone has to run all of that code before anything appears on screen. While that code is running, your visitor sees a blank or partially loaded page. Then your images load, usually at full size because GHL does not resize them automatically. Then your tracking tools (Facebook Pixel, Google Tag Manager) each add their own delay. By the time the page is fully visible, several seconds have passed on mobile.
+                        Here is what actually happens when someone on their phone clicks a link to your GHL website. The phone requests the page. The server sends back a large package of code. The phone has to run all of that code before anything appears on screen.
+                    </BlogText>
+                    <BlogText>
+                        While that code is running, your visitor sees a blank or partially loaded page. Then your images load, usually at full size because GHL does not resize them automatically. Then your tracking tools (Facebook Pixel, Google Tag Manager) each add their own delay. By the time the page is fully visible, several seconds have passed on mobile.
                     </BlogText>
                     <BlogText>
                         GHL's own community forum documents one user finding that{" "}
                         <a href="https://ideas.gohighlevel.com/website/p/website-page-load-speed" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">GHL's own JavaScript assets alone blocked the main thread for 1,300 milliseconds</a>{" "}
-                        on a page with minimal content, failing Google&apos;s LCP (Largest Contentful Paint) threshold of 2.5 seconds, tanking INP (Interaction to Next Paint), and triggering CLS (Cumulative Layout Shift) when late-loading GHL fonts reflow the page. Another user found mandatory Google Fonts loaded by GHL add a full second of TTFB (Time to First Byte) delay. Agencies running SaaS mode with multiple sub-accounts and snapshots inherit the same builder bloat on every white-label location.
+                        on a page with minimal content, failing Google&apos;s LCP threshold of 2.5 seconds, tanking INP, and triggering CLS when late-loading GHL fonts reflow the page.
+                    </BlogText>
+                    <BlogText>
+                        Another user found mandatory Google Fonts loaded by GHL add a full second of TTFB delay. Agencies running SaaS mode with multiple sub-accounts inherit the same builder bloat on every white-label location.
                     </BlogText>
                     <BlogText>
                         This is not unique to GHL. Independent research by{" "}

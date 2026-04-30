@@ -11,6 +11,7 @@ import SocialProof from "@/components/home/SocialProof";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 import CaseStudyGrid from "@/components/services/CaseStudyGrid";
 import PricingTiers from "@/components/services/PricingTiers";
+import PartnerPromise from "@/components/services/PartnerPromise";
 import RelatedServicesGrid from "@/components/services/RelatedServicesGrid";
 import PlatformKillerChart from "@/components/services/PlatformKillerChart";
 import { Gauge, Shield, RefreshCcw, Eye } from "lucide-react";
@@ -346,6 +347,9 @@ export default function PageContent() {
           </div>
         </div>
       </section>
+
+      {/* PARTNER PROMISE — locked brand voice, 3 guarantees */}
+      <PartnerPromise />
 
       {/* PRICING TIERS — foot-in-the-door with agency comparison */}
       <PricingTiers

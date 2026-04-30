@@ -29,20 +29,39 @@ const caseStudySchema = {
             "image": "https://www.pandacodegen.com/work/mycustompatches.png",
             "datePublished": "2025-10-01T00:00:00Z",
             "dateModified": "2026-02-01T00:00:00Z",
+            "articleSection": "Case Study",
+            "inLanguage": "en-US",
+            "wordCount": 1800,
+            "timeRequired": "PT8M",
+            "about": [
+                { "@type": "Thing", "name": "WordPress to Next.js Migration" },
+                { "@type": "Thing", "name": "E-Commerce Speed Optimization" },
+                { "@type": "Thing", "name": "WordPress Hosting Cost Reduction" },
+                { "@type": "Thing", "name": "Zero Downtime Migration" }
+            ],
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "url": "https://www.pandacodegen.com/about/hassan"
+                "jobTitle": "Lead Full-Stack Engineer",
+                "url": "https://www.pandacodegen.com/about/hassan",
+                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
+                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
             },
             "publisher": {
                 "@type": "Organization",
                 "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaCodeGen"
+                "name": "PandaCodeGen",
+                "url": "https://www.pandacodegen.com",
+                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
             "mainEntityOfPage": {
                 "@type": "WebPage",
                 "@id": "https://www.pandacodegen.com/work/mycustompatches"
+            },
+            "speakable": {
+                "@type": "SpeakableSpecification",
+                "cssSelector": ["[data-speakable='true']"]
             },
             "keywords": [
                 "wordpress migration case study",
@@ -69,6 +88,26 @@ const caseStudySchema = {
                 { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
                 { "@type": "ListItem", "position": 2, "name": "Our Work", "item": "https://www.pandacodegen.com/work" },
                 { "@type": "ListItem", "position": 3, "name": "MyCustomPatches", "item": "https://www.pandacodegen.com/work/mycustompatches" }
+            ]
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://www.pandacodegen.com/#organization",
+            "name": "PandaCodeGen",
+            "alternateName": "Panda Code Gen",
+            "url": "https://www.pandacodegen.com",
+            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
+            "email": "info@pandacodegen.com",
+            "foundingDate": "2026",
+            "areaServed": "Worldwide",
+            "sameAs": [
+                "https://twitter.com/pandacodegen",
+                "https://www.linkedin.com/company/pandacodegen",
+                "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
+                "https://github.com/hassan-pandagen",
+                "https://clutch.co/profile/panda-code-gen",
+                "https://www.trustpilot.com/review/pandacodegen.com",
+                "https://www.google.com/maps?cid=16271659886069582158"
             ]
         },
         {

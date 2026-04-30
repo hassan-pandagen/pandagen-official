@@ -10,6 +10,7 @@ import Footer from "@/components/layout/Footer";
 import SocialProof from "@/components/home/SocialProof";
 import CaseStudyGrid from "@/components/services/CaseStudyGrid";
 import PricingTiers from "@/components/services/PricingTiers";
+import PartnerPromise from "@/components/services/PartnerPromise";
 import RelatedServicesGrid from "@/components/services/RelatedServicesGrid";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 import BuiltWith from "@/components/sections/BuiltWith";
@@ -339,6 +340,9 @@ export default function PageContent() {
           </div>
         </div>
       </section>
+
+      {/* PARTNER PROMISE — locked brand voice, 3 guarantees */}
+      <PartnerPromise />
 
       {/* PRICING TIERS — SaaS / custom application pricing */}
       <PricingTiers

@@ -202,7 +202,10 @@ export default function ElementorKillsSEOPage() {
 
                         <BlogHeader>Why Does Elementor Score So Badly on PageSpeed?</BlogHeader>
                         <BlogText>
-                            Elementor&apos;s performance problems aren&apos;t bugs. They&apos;re architectural decisions baked into how the builder works:
+                            Elementor&apos;s performance problems aren&apos;t bugs. They&apos;re architectural decisions baked into how the builder works.
+                        </BlogText>
+                        <BlogText>
+                            Every page loads the full Elementor framework regardless of which widgets you actually use. Here is what that means in practice:
                         </BlogText>
                         <BlogList items={[
                             "Elementor loads its full CSS framework (300 to 500KB) on every page, regardless of which widgets you use",

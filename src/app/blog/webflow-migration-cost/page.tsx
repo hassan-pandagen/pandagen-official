@@ -213,6 +213,11 @@ export default function WebflowMigrationCostPage() {
 
                         <BlogHeader>The 4 Cost Tiers for Webflow Migration in 2026</BlogHeader>
 
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Webflow migration costs $2,000 to $3,500 for small sites (1 to 5 pages) and $12,000 to $20,000 for large sites (50 to 100 pages). Page count sets the floor; CMS complexity, custom animations, and integrations determine where in the range you land.</p>
+                        </div>
+
                         <BlogText>
                             Page count is the starting point. Here is how pricing typically breaks down:
                         </BlogText>
@@ -270,6 +275,11 @@ export default function WebflowMigrationCostPage() {
 
                         <BlogHeader>Webflow Migration Cost for a 50-100 Page Website</BlogHeader>
 
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">A 50 to 100 page Webflow site costs $12,000 to $20,000 to migrate. Sites with mostly blog posts using one template land near $12,000; sites with unique layouts on every page land near $20,000. Most sites in this range settle at $14,000 to $17,000.</p>
+                        </div>
+
                         <BlogText>
                             For a Webflow site between 50 and 100 pages, migration typically runs <BlogHighlight>$12,000 to $20,000</BlogHighlight>. This is the tier that covers most established businesses: a mature content library, multiple CMS collections, and specialized page templates. Timelines run 4 to 8 weeks.
                         </BlogText>
@@ -284,6 +294,11 @@ export default function WebflowMigrationCostPage() {
 
                         <BlogHeader>Enterprise Webflow Migration Pricing</BlogHeader>
 
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Enterprise Webflow migrations (100+ pages) are custom-quoted starting at $10,000+. At this scale, URL mapping, CMS data modeling, and third-party integrations (HubSpot, Salesforce, SSO) make up the majority of engineering hours, not the page count.</p>
+                        </div>
+
                         <BlogText>
                             Large Webflow migrations in our Scale tier run <BlogHighlight>$5,000 to $10,000+</BlogHighlight> for 50 to 100 page sites. At this scale the migration is no longer just a rebuild: complex CMS modeling, third-party integrations, and 301 redirect strategy become the bulk of the engineering hours. We broke down the exact hour-per-phase estimates and compared our pricing against Iron Horse and other enterprise agencies in our <Link href="/blog/webflow-migration-50-to-100-pages" className="text-cognac hover:underline">50 to 100 page Webflow migration pricing breakdown</Link>. Enterprise scopes beyond 100 pages are custom-quoted in Scale+.
                         </BlogText>
@@ -297,6 +312,11 @@ export default function WebflowMigrationCostPage() {
                         </BlogText>
 
                         <BlogHeader>Factors That Increase the Cost of a Webflow Migration Project</BlogHeader>
+
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Five factors push Webflow migration cost above the page-count baseline: CMS collection complexity (+$2,000 to $5,000 per collection), custom animations (+$1,500 to $4,000), third-party integrations (+$500 to $3,000 each), multi-step forms (+$1,000 to $2,500 each), and e-commerce (+$5,000 to $10,000 on top of the base migration).</p>
+                        </div>
 
                         <BlogText>
                             Page count sets the floor. These five factors determine where your project lands in the range or pushes above it:
@@ -339,6 +359,11 @@ export default function WebflowMigrationCostPage() {
 
                         <BlogHeader>What a Professional Webflow Migration Should Include</BlogHeader>
 
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Every Webflow migration quote should explicitly include: full URL audit with 301 redirect map, meta tags and schema migrated, images converted to WebP, Google Search Console setup, Core Web Vitals verified at 90+, and zero-downtime DNS cutover. If it is not in writing, assume it is not included.</p>
+                        </div>
+
                         <BlogText>
                             Not all migration quotes are equal. Before signing anything, verify your quote explicitly covers these items:
                         </BlogText>
@@ -368,6 +393,11 @@ export default function WebflowMigrationCostPage() {
                         </BlogText>
 
                         <BlogHeader>Webflow Ongoing Costs After Migration (and What You&apos;ll Save)</BlogHeader>
+
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Webflow costs $948 to $2,028 per year in hosting, form submission fees, and integrations. A custom Next.js site on Vercel costs $12 to $372 per year for the same traffic. Over 3 years, that difference alone saves $2,800 to $5,900 before counting any revenue lift from better rankings.</p>
+                        </div>
 
                         <BlogText>
                             Migration cost is a one-time number. What changes permanently is your monthly overhead. Here is what a typical Webflow business site costs versus the same site on custom code:
@@ -419,6 +449,11 @@ export default function WebflowMigrationCostPage() {
                         </BlogQuote>
 
                         <BlogHeader>The Speed Gap: Why Webflow Migration Pays for Itself in Rankings</BlogHeader>
+
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Webflow sites score 55 to 75 on Google PageSpeed Mobile. Custom Next.js sites score 95 to 100. That 20 to 40 point gap is a direct ranking factor. Google uses Core Web Vitals in its algorithm, and sites with faster scores consistently outrank slower competitors on the same keywords.</p>
+                        </div>
 
                         <BlogText>
                             The financial case for migration is not just about cutting hosting costs. It is about what slower sites cost you in organic traffic every month.
@@ -475,6 +510,11 @@ export default function WebflowMigrationCostPage() {
 
                         <BlogHeader>The Uptime Cost: Webflow Had 14 Outages in 90 Days (Update Apr 15, 2026)</BlogHeader>
 
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Webflow had 14 incidents in 90 days (4 major, 10 minor) as tracked by IsDown third-party monitoring. A business doing $500K/year loses approximately $1,600 annually from Webflow's historical outage pattern. Custom Next.js on Vercel runs with 99.99% SLA uptime.</p>
+                        </div>
+
                         <BlogText>
                             Added April 15, 2026. Webflow just had a major outage on April 14-15 that took down every hosted site for over 12 hours. 5xx errors, Dashboard down, Forms offline, Public API broken. <a href="https://status.webflow.com/history" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Webflow&apos;s status page</a> confirms the incident was caused by an upstream provider.
                         </BlogText>
@@ -488,6 +528,11 @@ export default function WebflowMigrationCostPage() {
                         </BlogText>
 
                         <BlogHeader>When Does a Webflow Migration Pay for Itself?</BlogHeader>
+
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Most Webflow migrations pay for themselves in 12 to 18 months through combined hosting savings and organic traffic improvement. A $15,000 migration on a site saving $1,800/year on Webflow fees and gaining $12,000/year from better rankings breaks even in about 13 months.</p>
+                        </div>
 
                         <BlogText>
                             The break-even calculation is straightforward. Take your current Webflow annual cost, add the estimated annual revenue improvement from better rankings, and divide the migration cost by the combined annual benefit.
@@ -526,6 +571,11 @@ export default function WebflowMigrationCostPage() {
                         </div>
 
                         <BlogHeader>How to Get an Accurate Quote for Your Webflow Migration</BlogHeader>
+
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Before calling any agency: count your total pages in Webflow's Pages panel, list every CMS Collection and its custom fields, note every third-party integration, screenshot your mobile PageSpeed score, and list any e-commerce products. With this data, a competent agency can give you a fixed-price quote in one call.</p>
+                        </div>
 
                         <BlogText>
                             Before speaking to any agency, do this 10-minute audit of your own site. It will make your conversations faster and quotes more accurate:

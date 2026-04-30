@@ -712,6 +712,15 @@ Draft → Tier A/B/C audit → Apply top 5-8 fixes → Final Pre-Publish QA → 
    Under 2,500 = cannot compete for most keywords.
    3,000 words with real data outranks 2,000 words with fluff every time.
 
+5.5 PARAGRAPH CHUNK SIZE (AEO / LLM RETRIEVAL RULE)
+   Max 150 words per <BlogText> block. Target 80 to 120 words.
+   Reason: RAG systems chunk pages before feeding to an LLM. Paragraphs over
+   200 words get cut at arbitrary points — the citation loses context.
+   Rule: One idea per <BlogText>. Lead with the answer, follow with evidence.
+   No "as we mentioned above" — every chunk must stand alone as a cited answer.
+   If a paragraph runs past 150 words, split it at a natural sentence break.
+   Audit tool: count words in any <BlogText> block. Flag anything over 150.
+
 6. FRESHNESS
    Include "2026" in the title and in the first 100 words.
    Update dateModified when adding new sections.

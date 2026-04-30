@@ -306,7 +306,7 @@ export default function CloudflareEmdashPage() {
                             The reasons are piling up. Google&apos;s{" "}
                             <Link href="/blog/google-march-2026-update" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 March 2026 core update penalized slow sites harder than any previous update
-                            </Link>. 47% of slow sites lost rankings. Only 44% of WordPress sites pass Core Web Vitals on mobile. The math is simple: if Google rewards speed and your platform is slow, your platform is costing you money.
+                            </Link>. 47% of slow sites lost rankings. Only 44% of WordPress sites pass Core Web Vitals on mobile.
                         </BlogText>
 
                         <BlogText>
@@ -314,7 +314,7 @@ export default function CloudflareEmdashPage() {
                         </BlogText>
 
                         <BlogText>
-                            Cloudflare building a WordPress replacement is not an isolated event. It is part of a pattern. Vercel, Netlify, Deno, and now Cloudflare. The biggest infrastructure companies in the world are all building tools that make WordPress unnecessary. They are not doing this for fun. They are doing it because they see the market shifting.
+                            Cloudflare building a WordPress replacement is not an isolated event. It is part of a pattern. Vercel, Netlify, Deno, and now Cloudflare are all building tools that make WordPress unnecessary. They are not doing this for fun. They are doing it because they see the market shifting.
                         </BlogText>
 
                         <BlogText>
@@ -328,7 +328,10 @@ export default function CloudflareEmdashPage() {
                         </BlogText>
 
                         <BlogText>
-                            His points: Emdash&apos;s plugin security only works on Cloudflare&apos;s runtime. Host it anywhere else and you lose the main selling point. The plugin sandboxing restricts what plugins can do, which breaks compatibility with 60,000 existing WordPress plugins. And the whole thing ties you to Cloudflare&apos;s ecosystem, which is the opposite of WordPress&apos;s open web mission.
+                            His points: Emdash&apos;s plugin security only works on Cloudflare&apos;s runtime. Host it anywhere else and you lose the main selling point.
+                        </BlogText>
+                        <BlogText>
+                            The plugin sandboxing also restricts what plugins can do, breaking compatibility with 60,000 existing WordPress plugins. And the whole thing ties you to Cloudflare&apos;s ecosystem — the opposite of WordPress&apos;s open web mission.
                         </BlogText>
 
                         <BlogText>

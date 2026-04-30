@@ -329,7 +329,10 @@ export default function DiviThemeSlowPage() {
                         <BlogHeader>Cause 1: Your Site Is Carrying 860KB of Dead Weight on Every Page</BlogHeader>
 
                         <BlogText>
-                            Divi stores your design choices in a database and generates CSS for all of them on every single page load. On a site with 20 to 30 page templates, Divi generates CSS for every module you have ever used, even on pages where those modules do not appear.
+                            Divi stores your design choices in a database and generates CSS for all of them on every single page load.
+                        </BlogText>
+                        <BlogText>
+                            On a site with 20 to 30 page templates, Divi generates CSS for every module you have ever used, even on pages where those modules do not appear.
                         </BlogText>
 
                         <BlogText>

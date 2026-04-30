@@ -10,6 +10,7 @@ import Footer from "@/components/layout/Footer";
 import SocialProof from "@/components/home/SocialProof";
 import CaseStudyGrid from "@/components/services/CaseStudyGrid";
 import PricingTiers from "@/components/services/PricingTiers";
+import PartnerPromise from "@/components/services/PartnerPromise";
 import RelatedServicesGrid from "@/components/services/RelatedServicesGrid";
 import PlatformKillerChart from "@/components/services/PlatformKillerChart";
 import { Eye } from "lucide-react";
@@ -457,6 +458,9 @@ export default function SquarespacePageContent() {
           </p>
         </div>
       </section>
+
+      {/* PARTNER PROMISE — locked brand voice, 3 guarantees */}
+      <PartnerPromise />
 
       {/* PRICING TIERS */}
       <PricingTiers
