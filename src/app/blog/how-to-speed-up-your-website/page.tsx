@@ -18,7 +18,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "How to Speed Up Your Website in 2026 (12 Tactics That Actually Work)",
+    title: "How to Speed Up Your Website in 2026",
     description: "12 proven tactics to speed up your website, the platform ceilings that block real progress, and when patching stops being worth a rebuild.",
     alternates: {
         canonical: '/blog/how-to-speed-up-your-website',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         "speed up shopify",
     ],
     openGraph: {
-        title: "How to Speed Up Your Website in 2026 (12 Tactics That Actually Work)",
+        title: "How to Speed Up Your Website in 2026",
         description: "12 proven tactics to speed up your website, the platform ceilings that block real progress, and when patching stops being worth a rebuild.",
         type: "article",
         publishedTime: "2026-04-30T00:00:00-05:00",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "How to Speed Up Your Website in 2026 (12 Tactics That Actually Work)",
+        title: "How to Speed Up Your Website in 2026",
         description: "12 proven tactics to speed up your website, the platform ceilings that block real progress, and when patching stops being worth a rebuild.",
     },
 };
@@ -62,7 +62,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/how-to-speed-up-your-website#article",
-            "headline": "How to Speed Up Your Website in 2026 (12 Tactics That Actually Work)",
+            "headline": "How to Speed Up Your Website in 2026",
             "description": "12 proven tactics to speed up your website, the platform ceilings that block real progress, and when patching stops being worth a rebuild.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-30T00:00:00-05:00",
@@ -92,7 +92,7 @@ const articleSchema = {
                 { "@type": "Thing", "name": "Website Speed Optimization" },
                 { "@type": "Thing", "name": "Core Web Vitals" },
                 { "@type": "Thing", "name": "Page Load Time" },
-                { "@type": "SoftwareApplication", "name": "Google PageSpeed Insights" }
+                { "@type": "SoftwareApplication", "name": "Google PageSpeed Insights", "applicationCategory": "DeveloperApplication", "operatingSystem": "Web", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } }
             ],
             "inLanguage": "en-US",
             "speakable": {
@@ -100,7 +100,7 @@ const articleSchema = {
                 "cssSelector": ["h1", "h2", "[data-speakable='true']"]
             },
             "citation": [
-                { "@type": "CreativeWork", "name": "Google PageSpeed Insights", "url": "https://pagespeed.web.dev/" },
+                { "@type": "CreativeWork", "name": "Google PageSpeed Insights Tool Documentation", "url": "https://pagespeed.web.dev/" },
                 { "@type": "CreativeWork", "name": "Core Web Vitals. Google Web Dev", "url": "https://web.dev/vitals/" },
                 { "@type": "CreativeWork", "name": "Largest Contentful Paint (LCP) Optimization", "url": "https://web.dev/lcp/" },
                 { "@type": "CreativeWork", "name": "Google Think: Mobile Page Speed Industry Benchmarks", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
@@ -123,7 +123,7 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/how-to-speed-up-your-website#webpage",
             "url": "https://www.pandacodegen.com/blog/how-to-speed-up-your-website",
-            "name": "How to Speed Up Your Website in 2026 (12 Tactics That Actually Work)",
+            "name": "How to Speed Up Your Website in 2026",
             "description": "12 proven tactics to speed up your website, the platform ceilings that block real progress, and when patching stops being worth a rebuild.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
