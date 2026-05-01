@@ -128,7 +128,7 @@ function BlogArticlesSection({ articles }: { articles: BlogPostMeta[] }) {
                   >
                     Featured
                   </div>
-                  <div className="text-6xl md:text-7xl font-black leading-none" style={{ color: heroDisplay.statColor }}>
+                  <div className="text-5xl md:text-6xl font-black leading-none break-words" style={{ color: heroDisplay.statColor }}>
                     {heroDisplay.stat}
                   </div>
                   <div className="text-xs font-bold uppercase tracking-widest mt-3" style={{ color: `${heroDisplay.statColor}90` }}>
@@ -171,7 +171,7 @@ function BlogArticlesSection({ articles }: { articles: BlogPostMeta[] }) {
                           className="relative overflow-hidden flex flex-col justify-center p-7"
                           style={{ backgroundColor: sd.bgTint, borderRight: `1px solid ${sd.border}` }}
                         >
-                          <div className="text-3xl md:text-4xl font-black leading-none" style={{ color: sd.statColor }}>
+                          <div className="text-2xl md:text-3xl font-black leading-none break-words" style={{ color: sd.statColor }}>
                             {sd.stat}
                           </div>
                           <div className="text-[10px] font-bold uppercase tracking-wider mt-2" style={{ color: `${sd.statColor}99` }}>
@@ -237,7 +237,7 @@ function BlogArticlesSection({ articles }: { articles: BlogPostMeta[] }) {
                   </div>
 
                   {/* Big stat */}
-                  <div className="text-5xl font-black leading-none" style={{ color: display.statColor }}>
+                  <div className="text-4xl font-black leading-none break-words" style={{ color: display.statColor }}>
                     {display.stat}
                   </div>
                   <div

@@ -34,6 +34,54 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "pagepro-alternatives",
+    cardStat: "$500",
+    cardStatLabel: "vs $25K+ minimums at Pagepro and Naturaily",
+    title: "Pagepro Alternatives in 2026: Cheaper, Faster, With a Guarantee",
+    excerpt: "Pagepro, Naturaily, and Blazity are strong Next.js agencies. They all charge $50-99/hr with $25K+ minimums and no published pricing. Here is what they do well, where they fall short, and who offers the same quality at a fraction of the cost with written guarantees.",
+    category: "Comparison",
+    readTime: "11 min",
+    date: "May 2",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: true,
+    illustrationType: 'cost',
+    lastModified: "2026-05-02",
+    faqs: [
+      { question: "Is Pagepro good for small businesses?", answer: "Pagepro is a strong Next.js agency with verified Clutch reviews and a proprietary Next.js + Sanity starter called Nexity. Their minimum project size is $25,000+ and they operate on monthly retainer pricing ($11,200 to $52,000 per month). For small businesses under $50K budget, Pagepro is likely out of range. PandaCodeGen offers the same Next.js + Sanity + Vercel stack with fixed pricing starting at $1,500 Starter and a $500 Founder's Offer for qualifying small migrations." },
+      { question: "How much does Pagepro charge?", answer: "Pagepro does not publish pricing on their website. Their Clutch profile lists monthly retainer tiers: $11,200 per month for one developer (160 hours), $26,000 per month for two developers, and $52,000 per month for four developers. Their minimum project size is $25,000+. Their hourly rate is listed as $50 to $99 per hour on Clutch. Custom quotes require a discovery call." },
+      { question: "How much does Naturaily charge?", answer: "Naturaily does not publish pricing on their website. Their Clutch profile shows a minimum project size of $25,000+ and an hourly rate of $50 to $99 per hour. They offer custom scoped projects and focused sprint engagements. A discovery call is required for any quote. They are based in Wroclaw, Poland with a team of 10 to 49 people." },
+      { question: "How much does Blazity charge?", answer: "Blazity does not publish pricing on their website. Their Clutch profile shows a minimum project size of $10,000+ (the lowest of the three) and an hourly rate of $50 to $99 per hour. They target enterprise clients and CTOs rather than small businesses. A Technical Consulting engagement (1 to 4 weeks) is their lowest entry point." },
+      { question: "What is the best affordable alternative to Pagepro?", answer: "PandaCodeGen uses the same core stack as Pagepro (Next.js, Sanity CMS, Vercel) with fixed published pricing starting at $1,500 Starter and $3,500 Growth. Unlike Pagepro, PandaCodeGen publishes all prices on the pricing page, requires no discovery call to get a number, guarantees 90+ Google PageSpeed or 100 percent refund in writing, and includes a full month of free post-launch support. For qualifying small migrations, the Founder's Offer starts at $500." },
+      { question: "Do Pagepro, Naturaily, or Blazity offer a PageSpeed guarantee?", answer: "None of the three offer a contractual PageSpeed guarantee. Pagepro claims a '92% client retention rate' and bug reduction metrics but no written PageSpeed guarantee. Naturaily claims '95% delivered within initial estimate' but no performance guarantee. Blazity claims 'zero downtime' and '18+ months of sustained performance' but these are positioning claims, not contractual guarantees. PandaCodeGen guarantees 90+ Google PageSpeed on every build or a 100 percent refund, in writing in the project contract." },
+      { question: "Are Pagepro, Naturaily, and Blazity based in the US?", answer: "All three are Polish agencies. Pagepro is headquartered in Bialystok, Poland with a London presence. Naturaily is in Wroclaw, Poland. Blazity is in Warsaw, Poland. All three bill in USD and serve US clients but engineering is performed from Poland. PandaCodeGen operates as a US LLC in Austin, Texas with engineering from Karachi, Pakistan — similar global structure with US legal and billing clarity." }
+    ]
+  },
+  {
+    id: "website-redesign-cost",
+    cardStat: "$500-$15K",
+    cardStatLabel: "Refresh, redesign, or full rebuild",
+    title: "Website Redesign Cost in 2026",
+    excerpt: "Honest pricing for refresh, redesign, and rebuild projects. The hidden costs most agencies leave out. When to patch vs when to start over. Real receipts from $1,200 to $15,000.",
+    category: "Pricing",
+    readTime: "14 min",
+    date: "Apr 30",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: true,
+    illustrationType: 'cost',
+    lastModified: "2026-04-30",
+    faqs: [
+      { question: "How long does a website redesign take from start to launch?", answer: "Refresh projects take 1 to 2 weeks. Redesigns (new visual design, same backend) take 2 to 4 weeks. Full rebuilds (new architecture, new code, full migration) take 3 to 5 weeks for most business sites and 4 to 8 weeks for complex e-commerce or 50+ page builds. Rushed timelines cost 30 to 50 percent more because they require parallel work streams. PandaCodeGen Founder's Offer ships in 1 week, Starter in 1 to 2 weeks, Growth in 3 to 5 weeks, Scale in 4 to 8 weeks." },
+      { question: "How often should a business redesign its website?", answer: "Most businesses redesign every 3 to 5 years. The right trigger is performance, not calendar time. If your site loads under 1 second, scores 90+ on PageSpeed, converts well, and looks modern, you do not need a redesign yet regardless of age. If any of those four metrics is failing, you need to act now. Conversion rate, bounce rate, and Core Web Vitals matter more than arbitrary timelines." },
+      { question: "Will a website redesign hurt my current SEO rankings?", answer: "No, if the migration is done correctly. Every old URL maps to a new URL with a 301 redirect. All metadata transfers (title tags, meta descriptions, schema markup, Open Graph). The sitemap rebuild matches the old structure. PandaCodeGen migrated Panda Patches (3-year-old WordPress site) to Next.js with zero ranking drops in Google Search Console. MyCustomPatches migrated 200+ pages with all SEO equity preserved. Botched migrations damage SEO. Careful migrations preserve it." },
+      { question: "Can I redesign my website without switching platforms?", answer: "Yes, if the platform itself is sound. A refresh (new visuals, same WordPress) or redesign (new design, same Shopify) keeps the platform. The decision comes down to whether the platform is the problem. WordPress sites with 30 plugins and 5-second load times need a rebuild, not a redesign. Webflow sites with 14 outages in 90 days need a rebuild. Sites that work technically but look dated need a refresh. Choose based on what is actually broken, not what is cheapest." },
+      { question: "What payment terms are typical for website redesign projects?", answer: "Standard structure is 30 percent deposit upfront, 40 to 50 percent at design approval or mid-build milestone, and 20 to 30 percent at launch. Some agencies require 50 percent deposit, which is reasonable for fixed-price projects under $5,000. Never pay 100 percent upfront. PandaCodeGen runs 30/70: 30 percent deposit at signing, 70 percent at launch after PageSpeed verification. Hourly billing has no deposit but creates unpredictable total cost." },
+      { question: "What is the cheapest website redesign that still produces good work?", answer: "PandaCodeGen Founder's Offer at $500 for qualifying small migrations (under 15 pages, no e-commerce, source platform WordPress/Webflow/Wix/Squarespace/GoHighLevel). 3 spots per month, exchanged for a verified Google or Clutch review after launch. Outside the Founder's Offer, custom-coded sites with 90+ PageSpeed guarantees start at $1,500 in our Starter tier. Below $500, expect template installations, not custom redesigns." },
+      { question: "What is the difference between a website refresh, redesign, and rebuild?", answer: "A refresh updates visuals and content without changing the underlying code or platform ($500 to $3,000). A redesign creates new visual design and UX while keeping the existing backend or CMS ($3,000 to $15,000). A rebuild replaces both frontend and backend with new architecture ($1,500 to $30,000+). Choose refresh when the site is technically sound but looks dated. Choose redesign when the brand has evolved but the platform works. Choose rebuild when the platform itself is the bottleneck." }
+    ]
+  },
+  {
     id: "cheap-web-developer",
     cardStat: "$500",
     cardStatLabel: "Custom site, fixed price, 90+ PageSpeed",

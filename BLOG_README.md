@@ -121,11 +121,53 @@ FAQPage node:
 
 | Topic | @type |
 |-------|-------|
-| Software (WordPress, Shopify, Next.js) | `"SoftwareApplication"` |
+| Software (WordPress, Shopify, Next.js) | `"SoftwareApplication"` (with required fields, see below) |
 | Concept (SEO, Security, Core Web Vitals) | `"Thing"` |
 | Process (Migration, Optimisation, Speed) | `"Thing"` |
 
 Rule: 4 entities minimum — 2 specific + 2 broad.
+
+#### CRITICAL: SoftwareApplication required fields
+
+When using `"@type": "SoftwareApplication"` in about[] OR citation[], you MUST include 4 fields or Google's Rich Results Test throws "1 invalid item detected" and blocks rich result eligibility.
+
+**Required pattern:**
+
+```json
+{
+  "@type": "SoftwareApplication",
+  "name": "Next.js",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Cross-platform",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+```
+
+**Reason:** Google requires SoftwareApplication entities to have at least 2 of these 4 properties: `offers`, `aggregateRating`, `applicationCategory`, `operatingSystem`. Naked `{ "@type": "SoftwareApplication", "name": "X" }` triggers a false-positive rich result error because Google interprets the entity as a software product being advertised, not a topic reference.
+
+**applicationCategory values by software type:**
+
+| Software | applicationCategory |
+|---------|---------------------|
+| Next.js, React, Vercel, Vite, Webpack | `"DeveloperApplication"` |
+| WordPress, Shopify, Webflow, Wix, Squarespace | `"WebApplication"` |
+| Sanity, Contentful, Strapi | `"WebApplication"` |
+| PageSpeed Insights, Lighthouse, GTmetrix | `"DeveloperApplication"` |
+| Google Search Console, Analytics | `"WebApplication"` |
+
+**operatingSystem values:**
+
+| Software type | operatingSystem |
+|---------------|-----------------|
+| Cross-platform frameworks (Next.js, React) | `"Cross-platform"` |
+| Web-only tools (PageSpeed Insights, Search Console) | `"Web"` |
+| SaaS platforms (Shopify, Webflow) | `"Web"` |
+
+**offers value:** Always use `{ "@type": "Offer", "price": "0", "priceCurrency": "USD" }` since you are not selling the software, just referencing it. Price 0 is the standard "free reference" pattern.
+
+**Alternative (if you don't want to add fields):** Change `@type` from `SoftwareApplication` to `Thing`. Loses the entity-type signal but never triggers the rich results error. Use this when SoftwareApplication accuracy doesn't matter for the blog topic.
+
+**Confirmed Apr 30, 2026:** Both `how-to-speed-up-your-website` and `cheap-web-developer` blogs hit this issue on launch. Fixed by adding the 4 required fields. Future blogs must include them from the start.
 
 ### Word Count to timeRequired
 
