@@ -44,6 +44,18 @@ export default function TermsPage() {
               <p className="mt-4">
                 Services are provided on a project basis with fixed pricing, timelines, and deliverables as outlined in signed project agreements or proposals.
               </p>
+
+              <h3 className="text-lg font-semibold text-charcoal mb-3 mt-6">2.1 Free Website Audit Tool</h3>
+              <p className="text-stone-600 mb-3">
+                PandaCodeGen provides a free website audit tool on our homepage. This tool is provided as-is for informational purposes. By submitting a URL through the audit tool, you agree to the following:
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-stone-600">
+                <li>The URL you submit is processed against the Google PageSpeed Insights API and our internal performance checks. You confirm you have the right to request an audit of the URL you submit.</li>
+                <li>You may use the audit tool freely without providing an email address. The on-screen results are yours to keep.</li>
+                <li>If you choose to receive a polished PDF report and personal video walkthrough, you provide your email address. We will use your email only to deliver the report and respond to questions about it. We will not add your email to a marketing list without consent.</li>
+                <li>Audit results are estimates based on third-party APIs and our own checks. They are accurate to the best of our knowledge but are not a guarantee of search ranking, conversion rate, or revenue impact.</li>
+                <li>We may store anonymous usage statistics (URL audited, performance score, approximate location) to understand tool usage. See our Privacy Policy for full details.</li>
+              </ul>
             </FadeIn>
 
             {/* Section 3 */}

@@ -45,6 +45,20 @@ export default function PrivacyPage() {
                 <li><strong>Device Information:</strong> Device type, operating system, IP address, and browser type.</li>
                 <li><strong>Cookies and Tracking:</strong> We use cookies to improve your experience and understand site performance.</li>
               </ul>
+
+              <h3 className="text-lg font-semibold text-charcoal mb-3 mt-6">2.3 Free Website Audit Tool Data</h3>
+              <p className="text-stone-600 mb-3">
+                Our homepage provides a free website audit tool. When you submit a URL through this tool, we collect and process the following information for the purpose of providing the audit and tracking tool usage:
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-stone-600">
+                <li><strong>The URL You Submit:</strong> We pass it to Google PageSpeed Insights API and our internal performance checks. We retain a record of audited URLs for usage tracking.</li>
+                <li><strong>Approximate Geographic Location:</strong> Country, region, and city derived from your IP address (when available via Vercel infrastructure). We do not store your raw IP address in our records.</li>
+                <li><strong>Audit Results:</strong> The performance score, platform detected, Core Web Vitals, and issue findings are stored as part of the usage record.</li>
+                <li><strong>Email Address (Optional):</strong> If you choose to receive a polished PDF report, you provide your email. This is the only step at which we collect personally identifiable contact information from audit users.</li>
+              </ul>
+              <p className="text-stone-600 mt-3">
+                You can use the audit tool freely without leaving an email. We use audit usage data to understand which platforms and regions are most interested in our services. We do not sell or share this data with third parties. The URL you submit is yours to share, and by submitting it you grant us permission to analyze it.
+              </p>
             </FadeIn>
 
             <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
