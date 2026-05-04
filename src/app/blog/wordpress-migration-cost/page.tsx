@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description: "WordPress migration costs $2,000 to $25,000 by site size. Full breakdown: WooCommerce vs brochure, what drives price, and when it pays for itself.",
         type: "article",
         publishedTime: "2026-03-22",
-        modifiedTime: "2026-03-22",
+        modifiedTime: "2026-05-05",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/wordpress-migration-cost",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -61,7 +61,7 @@ const articleSchema = {
             "description": "WordPress migration costs $2,000 to $25,000 by site size. Full breakdown: WooCommerce vs brochure, what drives price, and when it pays for itself.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-22T00:00:00-05:00",
-            "dateModified": "2026-04-13T00:00:00-05:00",
+            "dateModified": "2026-05-05T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -81,8 +81,8 @@ const articleSchema = {
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/wordpress-migration-cost" },
             "articleSection": "WordPress",
             "keywords": ["wordpress to nextjs migration cost", "wordpress migration price", "nextjs migration roi", "wordpress headless migration cost", "replace wordpress with nextjs"],
-            "wordCount": 2200,
-            "timeRequired": "PT9M",
+            "wordCount": 2900,
+            "timeRequired": "PT12M",
             "inLanguage": "en-US",
             "about": [
                 { "@type": "Thing", "name": "WordPress Migration Cost" },
@@ -100,7 +100,12 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Next.js Official Documentation", "url": "https://nextjs.org/docs" },
                 { "@type": "CreativeWork", "name": "Deloitte: Milliseconds Make Millions", "url": "https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" },
                 { "@type": "CreativeWork", "name": "Google Think: Page Speed Benchmarks", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
-                { "@type": "CreativeWork", "name": "WPScan Vulnerability Database", "url": "https://wpscan.com/wordpresses" }
+                { "@type": "CreativeWork", "name": "WPScan Vulnerability Database", "url": "https://wpscan.com/wordpresses" },
+                { "@type": "CreativeWork", "name": "The Repository: Matt Mullenweg Says The Wheels Have Fallen Off (April 14, 2026)", "url": "https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" },
+                { "@type": "CreativeWork", "name": "Patchstack: EssentialPlugin Supply Chain Compromise April 2026", "url": "https://patchstack.com/articles/critical-supply-chain-compromise-on-20-plugins-by-essentialplugin/" },
+                { "@type": "CreativeWork", "name": "Patchstack State of WordPress Security 2025", "url": "https://patchstack.com/whitepaper/state-of-wordpress-security-in-2025/" },
+                { "@type": "CreativeWork", "name": "TechCrunch: Backdoors Planted in Dozens of WordPress Plugins", "url": "https://techcrunch.com/2026/04/14/someone-planted-backdoors-in-dozens-of-wordpress-plugins-used-in-thousands-of-websites/" },
+                { "@type": "CreativeWork", "name": "Reddit r/Wordpress: Matt Mullenweg Wheels Have Fallen Off thread", "url": "https://www.reddit.com/r/Wordpress/comments/1sm8h38/continuing_the_trend_matt_mullenweg_says_the/" }
             ]
         },
         {
@@ -129,7 +134,7 @@ const articleSchema = {
             "description": "WordPress migration costs $2,000 to $25,000 by site size. Full breakdown: WooCommerce vs brochure, what drives price, and when it pays for itself.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-03-22T00:00:00-05:00",
-            "dateModified": "2026-04-13T00:00:00-05:00",
+            "dateModified": "2026-05-05T00:00:00-05:00",
             "inLanguage": "en-US"
         },
         {
@@ -182,8 +187,8 @@ export default function WordPressMigrationCostPage() {
                             The honest answer is $2,000 to $25,000. The range is wide because a 10-page brochure site and a 500-page WooCommerce store with custom integrations are completely different projects. This breakdown explains exactly what drives migration cost, what tier your site falls into, and how to calculate whether migration makes financial sense for your business.
                         </p>
                         <BlogAuthor
-                            date="Mar 22, 2026"
-                            readTime="9 min read"
+                            date="Mar 22, 2026 (updated May 5)"
+                            readTime="12 min read"
                             bio="Hassan has helped businesses migrate off WordPress to custom Next.js sites that load under 1 second and score 100/100 on Google PageSpeed. Every migration includes full SEO preservation and zero-downtime launch."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
@@ -246,6 +251,52 @@ export default function WordPressMigrationCostPage() {
                         On security:{" "}
                         <a href="https://wpscan.com/wordpresses" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">WPScan</a>{" "}
                         tracks over 50,000 documented vulnerabilities across WordPress core, themes, and plugins. Next.js has no plugin attack surface because it has no plugin system.
+                    </BlogText>
+
+                    <BlogHeader id="urgency-2026">Why Migration Is More Urgent in 2026 Than It Was a Year Ago</BlogHeader>
+                    <BlogText>
+                        Three things changed in April 2026 that pushed the migration question from &quot;should I&quot; to &quot;when&quot;.
+                    </BlogText>
+
+                    <BlogText>
+                        <BlogHighlight>First, WordPress&apos;s own founder publicly admitted the platform has lost its way.</BlogHighlight> On April 14, 2026, Matt Mullenweg posted in the WordPress core-committers Slack channel that{" "}
+                        <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">&quot;the wheels have fallen off&quot;</a>. His exact words, verified and reported by The Repository:
+                    </BlogText>
+
+                    <BlogQuote>
+                        We are not being killed by competition, I believe we have done this to ourselves. We did it by blindly following rules and ideals to a point when they became iatrogenic.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">Matt Mullenweg, WordPress founder, internal Slack post, April 14, 2026 · <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source →</a></p>
+
+                    <BlogQuote>
+                        When Cloudflare can ship the entire functionality of WordPress, and then some, in 2 months, we can take longer than that to almost not ship one sub-menu of our Settings screen. That is an input and a save button, stored in a meta field.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">Matt Mullenweg, comparing WordPress velocity to Cloudflare&apos;s EmDash CMS, April 14, 2026 · <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source →</a></p>
+
+                    <BlogQuote>
+                        We are operating at a level of collective delusion that is quite impressive! We keep driving away some of the most valuable people and rejecting them when they try to contribute.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">Matt Mullenweg, on community contributions to WordPress core, April 14, 2026 · <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source →</a></p>
+
+                    <BlogText>
+                        The community response on{" "}
+                        <a href="https://www.reddit.com/r/Wordpress/comments/1sm8h38/continuing_the_trend_matt_mullenweg_says_the/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">r/Wordpress (151 upvotes, 107 comments)</a>{" "}
+                        was overwhelmingly &quot;we have been telling you this for years&quot;. The top reply: <em>&quot;The dictator, who micromanaged the project for two decades, says community is to blame for the results.&quot;</em>
+                    </BlogText>
+
+                    <BlogText>
+                        <BlogHighlight>Second, the April 2026 plugin supply-chain attacks proved how exposed WordPress sites are.</BlogHighlight> In a single week (April 5 to 7, 2026), three documented incidents hit. Someone bought the Essential Plugin suite (31 plugins, ~400,000 active installs) on Flippa for six figures, then planted a backdoor in version 2.6.7 that sat dormant for 8 months before activating, documented by{" "}
+                        <a href="https://patchstack.com/articles/critical-supply-chain-compromise-on-20-plugins-by-essentialplugin/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Patchstack</a>{" "}
+                        and{" "}
+                        <a href="https://techcrunch.com/2026/04/14/someone-planted-backdoors-in-dozens-of-wordpress-plugins-used-in-thousands-of-websites/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">TechCrunch</a>. The same week, Smart Slider 3 Pro (800,000+ installs) was hijacked through a compromised update server, and WowShipping Pro got an unauthenticated remote-code-execution backdoor.
+                    </BlogText>
+
+                    <BlogText>
+                        <BlogHighlight>Third, the security data is now overwhelming.</BlogHighlight> Patchstack&apos;s State of WordPress Security 2025 report disclosed 7,966 new WordPress vulnerabilities in 2024. 96% of them were in plugins. 43% required zero authentication to exploit. 1,614 plugins were removed from the WordPress.org directory in 2024 for unpatched security issues. 33% of disclosed vulnerabilities never got patched in time.
+                    </BlogText>
+
+                    <BlogText>
+                        Migration cost is no longer a vanity question about PageSpeed scores. It is a risk-management question. The longer your business site stays on WordPress, the more attack surface you carry. The longer you wait to migrate, the more your migration timeline competes with the next supply-chain incident. The math has shifted.
                     </BlogText>
 
                     <BlogHeader id="cost-tiers">The 5 Price Tiers, From $2K Brochure to $25K Store</BlogHeader>

@@ -198,6 +198,78 @@ export default function SquarespacePageContent() {
       {/* 2b. SOCIAL PROOF — moved up for concentrated proof flow */}
       <SocialProof />
 
+      {/* 2c. REAL BUYER VOICES — Reddit citations for trust signal (Apr 2026 verified) */}
+      <section id="real-voices" className="py-12 md:py-20 px-6 bg-stone-50 border-y border-stone-200">
+        <div className="container mx-auto max-w-4xl">
+          <div className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest bg-charcoal text-white rounded-full mb-4">Real Reddit Threads. April 2026. Verifiable.</div>
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-3">What Squarespace Users Are Actually Saying Right Now</h2>
+          <p className="text-stone-600 text-lg leading-relaxed mb-8 max-w-2xl">
+            Not curated testimonials. Real Reddit threads from r/squarespace, all dated within the last 30 days. Click the links to verify every quote.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-5">
+            {/* Quote 1: Customization ceiling */}
+            <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
+              <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
+              <p className="text-stone-700 leading-relaxed mb-4 italic">
+                I am so sick of dealing with SS bullshit, not being able to customize things the way I want to. Having multiple sized fonts and varied text formatting in one text box, changing line height on one section of one page rather than across the entire website, making sure photos stay in place and the correct size rather than getting all wonky when you change the screen size. I could go on.
+              </p>
+              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
+                <span><strong className="text-charcoal">u/WholeHuckleberry7081</strong> · r/squarespace · Apr 8, 2026 · 16 upvotes</span>
+                <a href="https://www.reddit.com/r/squarespace/comments/1sec045/hate_ss_but_unsure_what_platform_to_move_to/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+              </div>
+            </div>
+
+            {/* Quote 2: Mobile/desktop layout breaks */}
+            <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
+              <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
+              <p className="text-stone-700 leading-relaxed mb-4 italic">
+                It is kind of baffling that there is still no option to have separate versions for desktop and mobile. Every time I finish something on desktop and then switch to mobile to tweak it, everything shifts, settings change, the layout breaks. It is really frustrating. I have seen platforms with way fewer resources handle this better.
+              </p>
+              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
+                <span><strong className="text-charcoal">u/Gabsnmaia</strong> · r/squarespace · Apr 30, 2026 · 13 upvotes</span>
+                <a href="https://www.reddit.com/r/squarespace/comments/1szxt8p/why_cant_we_customize_desktop_and_mobile/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+              </div>
+            </div>
+
+            {/* Quote 3: Domain hostage / lock-in */}
+            <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
+              <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
+              <p className="text-stone-700 leading-relaxed mb-4 italic">
+                It is not last minute, I have months remaining. But every few weeks I initiate the transfer procedure and it says &ldquo;Auth code will be sent by email within 24 hours.&rdquo; Never comes. Starting the ICANN rules violation process now. DON&apos;T LOSE YOUR VALUABLE BUSINESS.
+              </p>
+              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
+                <span><strong className="text-charcoal">u/alihusain007</strong> · r/squarespace · Apr 7, 2026 · 8 upvotes</span>
+                <a href="https://www.reddit.com/r/squarespace/comments/1sha064/squarespace_will_not_send_auth_code_to_transfer/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+              </div>
+            </div>
+
+            {/* Quote 4: Outage + no refund */}
+            <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
+              <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
+              <p className="text-stone-700 leading-relaxed mb-4 italic">
+                All my ads push customers to book through the site. When I told them I expected some compensation for loss of business they responded with: &ldquo;We don&apos;t offer refunds for site errors or other issues. Again, we do apologize and our Engineering team is working on a fix.&rdquo;
+              </p>
+              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
+                <span><strong className="text-charcoal">u/sandywilli</strong> · r/squarespace · Apr 25, 2026 · 41-upvote outage thread</span>
+                <a href="https://www.reddit.com/r/squarespace/comments/1sx6skq/503_service_unavailable/oiksgiq/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+              </div>
+            </div>
+          </div>
+
+          {/* Bridging CTA */}
+          <div className="mt-8 p-6 bg-charcoal text-white rounded-2xl text-center">
+            <p className="text-lg font-bold mb-2">These are this month&apos;s threads. The pattern is the same every month.</p>
+            <p className="text-stone-400 text-sm mb-4 max-w-2xl mx-auto">
+              Customization ceilings. Mobile editor that breaks every desktop edit. Domain transfers held hostage. Site-wide outages with no refund. We migrate Squarespace sites to custom Next.js with 90+ PageSpeed guaranteed or 100% refund. Your domain stays yours. Your code is yours. Your uptime runs on Vercel, not on a builder that locks you in.
+            </p>
+            <a href="#pricing" className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
+              See Migration Pricing →
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* 3. HOW WE MIGRATE - Process Timeline */}
       <section id="how-it-works" className="py-10 md:py-14 px-6">
         <div className="container mx-auto max-w-3xl">

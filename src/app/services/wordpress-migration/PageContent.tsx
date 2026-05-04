@@ -272,6 +272,78 @@ export default function PageContent() {
         </div>
       </section>
 
+      {/* 5.5. REAL BUYER VOICES — Reddit citations */}
+      <section id="real-voices" className="py-12 md:py-20 px-6 bg-stone-50 border-y border-stone-200">
+        <div className="container mx-auto max-w-4xl">
+          <div className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest bg-charcoal text-white rounded-full mb-4">Real Reddit Threads. Verifiable.</div>
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-3">What WordPress Owners Are Actually Saying</h2>
+          <p className="text-stone-600 text-lg leading-relaxed mb-8 max-w-2xl">
+            Not curated testimonials. Real Reddit threads from WordPress owners and Next.js community experts. Click the links to verify every quote.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-5">
+            {/* Quote 1: WordPressitis pain */}
+            <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
+              <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
+              <p className="text-stone-700 leading-relaxed mb-4 italic">
+                For almost a decade I have been suffering from WordPressitis, experimenting with various plugins, themes and suspicious developers. Something works for a quarter or a year then disappears, other things get stripped down and are now offered as monthly subscriptions.
+              </p>
+              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
+                <span><strong className="text-charcoal">Larvea</strong> · 10-year WordPress owner · 7 upvotes</span>
+                <a href="https://www.reddit.com/r/nextjs/comments/18pyr4p/would_love_to_upgrade_from_wordpress_but_need/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+              </div>
+            </div>
+
+            {/* Quote 2: The pricing gap */}
+            <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
+              <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
+              <p className="text-stone-700 leading-relaxed mb-4 italic">
+                I either stumble on an agency charging me 100k for one site, or an UpWork specialist who swears his templates are the right ones, and he can get a complete website up and running for 1k.
+              </p>
+              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
+                <span><strong className="text-charcoal">Larvea</strong> · The exact gap PandaCodeGen fills</span>
+                <a href="https://www.reddit.com/r/nextjs/comments/18pyr4p/would_love_to_upgrade_from_wordpress_but_need/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+              </div>
+            </div>
+
+            {/* Quote 3: Next.js endorsement from community */}
+            <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
+              <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
+              <p className="text-stone-700 leading-relaxed mb-4 italic">
+                Next absolutely can do just about anything you want. Yes, Next is an SEO powerhouse, but every single meta tag has to be provided and coded for almost every page or template.
+              </p>
+              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
+                <span><strong className="text-charcoal">corey_brown</strong> · r/nextjs · 16 upvotes</span>
+                <a href="https://www.reddit.com/r/nextjs/comments/18pyr4p/would_love_to_upgrade_from_wordpress_but_need/keri1wp/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+              </div>
+            </div>
+
+            {/* Quote 4: GoDaddy / hosting hell */}
+            <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
+              <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
+              <p className="text-stone-700 leading-relaxed mb-4 italic">
+                I would highly recommend wpengine. As one of my clients began to grow rapidly, we had innumerable issues with godaddy hosting being able to scale up properly... there were an equal amount of issues when I moved the site to Amazon S3.
+              </p>
+              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
+                <span><strong className="text-charcoal">bobobobobobooo</strong> · WordPress dev · WPEngine = $200+/mo</span>
+                <a href="https://www.reddit.com/r/Wordpress/comments/y7c71u/how_do_i_go_around_rebuilding_my_wordpress_website/isulxnp/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+              </div>
+            </div>
+          </div>
+
+          {/* Bridging CTA */}
+          <div className="mt-8 p-6 bg-charcoal text-white rounded-2xl text-center">
+            <p className="text-lg font-bold mb-2">Stuck between $1K Upwork templates and $100K agency quotes? That is the gap we built PandaCodeGen for.</p>
+            <p className="text-stone-400 text-sm mb-4 max-w-2xl mx-auto">
+              We migrate WordPress sites to custom Next.js for $500 to $10,000 with 90+ PageSpeed guaranteed or 100% refund. No plugin subscriptions. No WPEngine bill. Full code ownership on day one.
+            </p>
+            <a href="#pricing" className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
+              See Migration Pricing →
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* 6. THE UPGRADE PATH */}
       <section className="py-10 md:py-14 px-6">
         <div className="container mx-auto max-w-4xl text-center">

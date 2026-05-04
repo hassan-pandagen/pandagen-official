@@ -212,6 +212,78 @@ export default function WebflowPageContent() {
         </div>
       </section>
 
+      {/* 3.5. REAL BUYER VOICES — Reddit citations for trust signal */}
+      <section id="real-voices" className="py-12 md:py-20 px-6 bg-stone-50 border-y border-stone-200">
+        <div className="container mx-auto max-w-4xl">
+          <div className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest bg-charcoal text-white rounded-full mb-4">Real Reddit Threads. Verifiable.</div>
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-3">What Webflow Agency Owners Are Actually Saying</h2>
+          <p className="text-stone-600 text-lg leading-relaxed mb-8 max-w-2xl">
+            Not curated testimonials. Real Reddit threads from agency owners and Webflow Community MVPs. Click the links to verify every quote.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-5">
+            {/* Quote 1: Agency owner pain */}
+            <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
+              <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
+              <p className="text-stone-700 leading-relaxed mb-4 italic">
+                It just seems silly that Webflow makes it harder for us to make things easier for clients. Crazy how other builders like Wix make it simple to do this, yet Webflow does the opposite.
+              </p>
+              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
+                <span><strong className="text-charcoal">Small agency owner</strong> · r/webflow · 19 upvotes</span>
+                <a href="https://www.reddit.com/r/webflow/comments/1mdhvcx/why_does_webflow_make_hosting_so_expensive_and/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+              </div>
+            </div>
+
+            {/* Quote 2: Cost shock */}
+            <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
+              <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
+              <p className="text-stone-700 leading-relaxed mb-4 italic">
+                The new Workspace system is a mess for small client sites. Paying extra just to let them change a few lines of text feels way off, especially when some of them barely touch the site after launch.
+              </p>
+              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
+                <span><strong className="text-charcoal">Quick_Custard5288</strong> · r/webflow agency owner</span>
+                <a href="https://www.reddit.com/r/webflow/comments/1mdhvcx/why_does_webflow_make_hosting_so_expensive_and/n6872kw/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+              </div>
+            </div>
+
+            {/* Quote 3: Inside Webflow's own community */}
+            <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
+              <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
+              <p className="text-stone-700 leading-relaxed mb-4 italic">
+                Webflow&apos;s hosting came to about $159/mo on a 400GB/mo site... It doesn&apos;t really suit high traffic on a low budget.
+              </p>
+              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
+                <span><strong className="text-charcoal">memetican</strong> · Webflow Community MVP (verified badge)</span>
+                <a href="https://www.reddit.com/r/webflow/comments/1mdhvcx/why_does_webflow_make_hosting_so_expensive_and/n63wfd3/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+              </div>
+            </div>
+
+            {/* Quote 4: Competitor warning */}
+            <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
+              <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
+              <p className="text-stone-700 leading-relaxed mb-4 italic">
+                Webflow&apos;s amazing for design and dev, but their pricing model really doesn&apos;t work well for small agencies trying to offer simple, all-in-one support.
+              </p>
+              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
+                <span><strong className="text-charcoal">Quick_Custard5288</strong> · r/webflow</span>
+                <a href="https://www.reddit.com/r/webflow/comments/1mdhvcx/why_does_webflow_make_hosting_so_expensive_and/n6872kw/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+              </div>
+            </div>
+          </div>
+
+          {/* Bridging CTA */}
+          <div className="mt-8 p-6 bg-charcoal text-white rounded-2xl text-center">
+            <p className="text-lg font-bold mb-2">The agencies in this thread are stuck on Webflow because migrating feels expensive. It is not.</p>
+            <p className="text-stone-400 text-sm mb-4 max-w-2xl mx-auto">
+              We migrate Webflow agency client sites to custom Next.js for $500 to $15,000 with 90+ PageSpeed guaranteed or 100% refund. White-label for your agency. Your client never sees us.
+            </p>
+            <a href="#pricing" className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
+              See Migration Pricing →
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* 4. COMPARISON TABLE */}
       <section id="comparison" className="py-10 md:py-14 px-6 border-y border-stone-200 bg-stone-50">
         <div className="container mx-auto max-w-4xl">

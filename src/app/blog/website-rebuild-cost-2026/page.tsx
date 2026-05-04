@@ -4,7 +4,7 @@ import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
+import { BlogHeader, BlogText, BlogList, BlogQuote, BlogAuthor, BlogHighlight } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description: "Website rebuild costs range from $2,000 freelance to $250,000 enterprise in 2026. Honest pricing by platform, what drives cost up, and how to spot a padded quote.",
         type: "article",
         publishedTime: "2026-04-19T00:00:00-05:00",
-        modifiedTime: "2026-04-19T00:00:00-05:00",
+        modifiedTime: "2026-05-05T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/website-rebuild-cost-2026",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -61,7 +61,7 @@ const articleSchema = {
             "description": "Website rebuild costs range from $2,000 freelance to $250,000 enterprise in 2026. Honest pricing by platform, what drives cost up, and how to spot a padded quote.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-19T00:00:00-05:00",
-            "dateModified": "2026-04-19T00:00:00-05:00",
+            "dateModified": "2026-05-05T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -81,8 +81,8 @@ const articleSchema = {
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/website-rebuild-cost-2026" },
             "articleSection": "Pricing",
             "keywords": ["website rebuild cost 2026", "website rebuild pricing", "rebuild vs redesign cost", "custom website rebuild", "website migration cost"],
-            "wordCount": 3400,
-            "timeRequired": "PT14M",
+            "wordCount": 4000,
+            "timeRequired": "PT16M",
             "inLanguage": "en-US",
             "about": [
                 { "@type": "Thing", "name": "Website Rebuild Cost" },
@@ -100,7 +100,12 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Google Search Central: Site Moves With URL Changes", "url": "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" },
                 { "@type": "CreativeWork", "name": "Clutch Agency Pricing Directory", "url": "https://clutch.co" },
                 { "@type": "CreativeWork", "name": "Vercel Customer Stories", "url": "https://vercel.com/customers" },
-                { "@type": "CreativeWork", "name": "Next.js Official Documentation", "url": "https://nextjs.org/docs" }
+                { "@type": "CreativeWork", "name": "Next.js Official Documentation", "url": "https://nextjs.org/docs" },
+                { "@type": "CreativeWork", "name": "The Repository: Matt Mullenweg Says The Wheels Have Fallen Off (April 14, 2026)", "url": "https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" },
+                { "@type": "CreativeWork", "name": "Patchstack: EssentialPlugin Supply Chain Compromise April 2026", "url": "https://patchstack.com/articles/critical-supply-chain-compromise-on-20-plugins-by-essentialplugin/" },
+                { "@type": "CreativeWork", "name": "TechCrunch: Backdoors Planted in Dozens of WordPress Plugins", "url": "https://techcrunch.com/2026/04/14/someone-planted-backdoors-in-dozens-of-wordpress-plugins-used-in-thousands-of-websites/" },
+                { "@type": "CreativeWork", "name": "Patchstack State of WordPress Security 2025", "url": "https://patchstack.com/whitepaper/state-of-wordpress-security-in-2025/" },
+                { "@type": "CreativeWork", "name": "Reddit r/woocommerce: WooCommerce Core Team Lead Public Feedback Request", "url": "https://www.reddit.com/r/woocommerce/comments/1sqom3t/" }
             ]
         },
         {
@@ -129,7 +134,7 @@ const articleSchema = {
             "description": "Website rebuild costs range from $2,000 freelance to $250,000 enterprise in 2026. Honest pricing by platform, what drives cost up, and how to spot a padded quote.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-04-19T00:00:00-05:00",
-            "dateModified": "2026-04-19T00:00:00-05:00",
+            "dateModified": "2026-05-05T00:00:00-05:00",
             "inLanguage": "en-US",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/website-rebuild-cost-2026#breadcrumb" }
         },
@@ -185,8 +190,8 @@ export default function WebsiteRebuildCost2026Page() {
                             A website rebuild in 2026 costs between $2,000 with a freelancer and $250,000 with an agency. Most small-to-mid businesses overpay by 40 to 60 percent because they ask general agencies instead of specialists. This is the honest breakdown, with published pricing, a 90+ PageSpeed guarantee, and the red flags on padded quotes.
                         </p>
                         <BlogAuthor
-                            date="Apr 19, 2026"
-                            readTime="13 min read"
+                            date="Apr 19, 2026 (updated May 5)"
+                            readTime="16 min read"
                             bio="Hassan runs PandaCodeGen, a custom web development studio that rebuilds slow or outdated sites on Next.js. Every rebuild is fixed-price, ships in 2 to 6 weeks, and guarantees 95 to 100 on Google PageSpeed Mobile."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
@@ -267,6 +272,57 @@ export default function WebsiteRebuildCost2026Page() {
 
                     <BlogText>
                         The scope column on that table matters more than the cost column. Every tier includes the tier below it plus additional work. A freelancer can build a beautiful 15-page business site. An enterprise firm cannot build that site for under $80,000 because their overhead structure will not allow it. The question is not who can do the work. The question is whose cost structure matches your project size.
+                    </BlogText>
+
+                    <BlogHeader id="why-rebuild-2026">Why the Rebuild Question Got More Urgent in April 2026</BlogHeader>
+                    <BlogText>
+                        Three industry events in April 2026 changed the math on whether to keep patching an old website or commit to a rebuild. None of these are PandaCodeGen marketing. They are documented, primary-sourced, and dated within the last 30 days.
+                    </BlogText>
+
+                    <BlogText>
+                        <BlogHighlight>1. WordPress&apos;s own founder publicly admitted the platform has lost its way.</BlogHighlight> On April 14, 2026, Matt Mullenweg posted in WordPress&apos;s internal core-committers Slack channel a wide-ranging critique of the platform he founded. His exact words, reported by{" "}
+                        <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">The Repository</a>:
+                    </BlogText>
+
+                    <BlogQuote>
+                        We are not being killed by competition, I believe we have done this to ourselves. When Cloudflare can ship the entire functionality of WordPress, and then some, in 2 months, we can take longer than that to almost not ship one sub-menu of our Settings screen.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">Matt Mullenweg, WordPress founder, internal Slack post, April 14, 2026 · <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source →</a></p>
+
+                    <BlogText>
+                        For a business deciding whether to spend $5,000 patching an old WordPress site versus $5,000 rebuilding, the founder&apos;s own admission that the platform has stalled is part of the calculation. WordPress runs 43% of the web. When the founder says the platform cannot ship simple settings menus while competitors ship full CMSes in 2 months, that is a direct signal about future maintenance velocity.
+                    </BlogText>
+
+                    <BlogText>
+                        <BlogHighlight>2. Three plugin supply-chain attacks landed in one week.</BlogHighlight> Between April 5 and 7, 2026, three documented WordPress plugin compromises hit. The Essential Plugin suite (31 plugins, ~400,000 active installs) was bought on Flippa for six figures, then a backdoor was planted in version 2.6.7 in August 2025 that sat dormant for 8 months before activating, documented by{" "}
+                        <a href="https://patchstack.com/articles/critical-supply-chain-compromise-on-20-plugins-by-essentialplugin/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Patchstack</a>{" "}
+                        and{" "}
+                        <a href="https://techcrunch.com/2026/04/14/someone-planted-backdoors-in-dozens-of-wordpress-plugins-used-in-thousands-of-websites/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">TechCrunch</a>. The same week, Smart Slider 3 Pro (800,000+ installs) was hijacked through a compromised update server, and WowShipping Pro received an unauthenticated remote-code-execution backdoor.
+                    </BlogText>
+
+                    <BlogText>
+                        Patchstack&apos;s State of WordPress Security 2025 report disclosed 7,966 new WordPress vulnerabilities in 2024. <BlogHighlight>96% of them were in plugins. 43% required zero authentication to exploit.</BlogHighlight> 1,614 plugins were removed from the WordPress.org directory in 2024 for unpatched issues. 33% of disclosed vulnerabilities never got patched in time.
+                    </BlogText>
+
+                    <BlogText>
+                        For a business calculating rebuild ROI, security incidents are no longer hypothetical. They are happening at a pace where staying on a plugin-dependent platform compounds risk every month. A custom Next.js rebuild has zero third-party plugins, no auto-update channel an attacker can hijack, and no PHP execution surface. That security delta has dollar value, even before the PageSpeed and SEO benefits.
+                    </BlogText>
+
+                    <BlogText>
+                        <BlogHighlight>3. WooCommerce&apos;s own engineering team admitted plugin fatigue is structural.</BlogHighlight> On April 16, 2026, a{" "}
+                        <a href="https://www.reddit.com/r/woocommerce/comments/1sqom3t/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">WooCommerce Core team lead posted publicly on r/woocommerce</a>{" "}
+                        asking the community for direct feedback. They identified the three biggest user complaints in their own engineering team&apos;s words: plugin fatigue (&quot;30+ plugins, then troubleshooting becomes a nightmare&quot;), fear of updating (&quot;people are scared updating might break something&quot;), and performance (&quot;the store becoming sluggish&quot;). An independent study of 10,000 WooCommerce stores by Studio Wombat confirmed the average store runs 30 active plugins.
+                    </BlogText>
+
+                    <BlogText>
+                        These three events together change the rebuild calculation for most businesses on WordPress, WooCommerce, or any plugin-dependent platform. The cost of staying is rising. The cost of rebuilding has not changed. That is what makes 2026 different from 2025.
+                    </BlogText>
+
+                    <BlogText>
+                        For specific platform decisions, see our deeper analyses:{" "}
+                        <Link href="/blog/wordpress-migration-cost" className="text-cognac hover:underline font-medium">WordPress migration cost</Link>,{" "}
+                        <Link href="/blog/woocommerce-too-slow" className="text-cognac hover:underline font-medium">WooCommerce too slow</Link>, and{" "}
+                        <Link href="/blog/gohighlevel-keep-crm-replace-website" className="text-cognac hover:underline font-medium">keep GoHighLevel CRM, replace just the slow website</Link>.
                     </BlogText>
 
                     <BlogHeader id="rebuild-vs-redesign">Rebuild vs Redesign: Which Do You Actually Need?</BlogHeader>

@@ -318,6 +318,96 @@ export default function PageContent() {
         </div>
       </section>
 
+      {/* 5.5. REAL BUYER VOICES — Shopify app bloat from r/Solopreneur */}
+      <section id="real-voices" className="py-12 md:py-20 px-6 bg-stone-50 border-y border-stone-200">
+        <div className="container mx-auto max-w-4xl">
+          <div className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest bg-charcoal text-white rounded-full mb-4">Real Reddit Threads. Verifiable.</div>
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-3">What Shopify Merchants Are Actually Saying</h2>
+          <p className="text-stone-600 text-lg leading-relaxed mb-8 max-w-2xl">
+            Not curated testimonials. Real Reddit threads from Shopify store owners and solopreneurs. Click the links to verify every quote.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-5">
+            <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
+              <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
+              <p className="text-stone-700 leading-relaxed mb-4 italic">
+                Most Shopify stores have 6 to 10 apps running. Every single one adds javascript to your storefront. Every script adds load time. Load time kills sales.
+              </p>
+              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
+                <span><strong className="text-charcoal">No-Comparison-5247</strong> · r/Solopreneur OP</span>
+                <a href="https://www.reddit.com/r/Solopreneur/comments/1subtc4/your_shopify_store_is_probably_slower_than_you/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+              </div>
+            </div>
+
+            <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
+              <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
+              <p className="text-stone-700 leading-relaxed mb-4 italic">
+                The apps you installed to fix conversions are sometimes what is breaking them. Worst ones: popup tools, review widgets, live chat. Loading on every page even when nobody needs them.
+              </p>
+              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
+                <span><strong className="text-charcoal">No-Comparison-5247</strong> · r/Solopreneur OP</span>
+                <a href="https://www.reddit.com/r/Solopreneur/comments/1subtc4/your_shopify_store_is_probably_slower_than_you/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+              </div>
+            </div>
+
+            <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
+              <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
+              <p className="text-stone-700 leading-relaxed mb-4 italic">
+                Slow load time is invisible until you measure it and by then you have already wasted budget testing creatives that never had a chance.
+              </p>
+              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
+                <span><strong className="text-charcoal">Ok_Parfait_4006</strong> · r/Solopreneur</span>
+                <a href="https://www.reddit.com/r/Solopreneur/comments/1subtc4/your_shopify_store_is_probably_slower_than_you/ohzunib/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+              </div>
+            </div>
+
+            <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
+              <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
+              <p className="text-stone-700 leading-relaxed mb-4 italic">
+                Most people do not realize that even after you uninstall an app, it often leaves ghost code in your theme.liquid that still tries to fetch assets. That is why your PageSpeed never improved.
+              </p>
+              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
+                <span><strong className="text-charcoal">modulus3029</strong> · r/Solopreneur</span>
+                <a href="https://www.reddit.com/r/Solopreneur/comments/1subtc4/your_shopify_store_is_probably_slower_than_you/oi9gd61/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+              </div>
+            </div>
+
+            <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
+              <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
+              <p className="text-stone-700 leading-relaxed mb-4 italic">
+                Most Shopify stores are not losing on ads, they are losing on load time from bloated apps. Speed is a conversion lever people ignore.
+              </p>
+              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
+                <span><strong className="text-charcoal">Fast_Fly_8354</strong> · r/Solopreneur</span>
+                <a href="https://www.reddit.com/r/Solopreneur/comments/1subtc4/your_shopify_store_is_probably_slower_than_you/oi9tcba/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+              </div>
+            </div>
+
+            <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
+              <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
+              <p className="text-stone-700 leading-relaxed mb-4 italic">
+                I had a store where I kept stacking apps thinking I was optimizing, turns out I was just slowing everything down. Removed a couple popup and chat tools and conversion actually went up without touching ads.
+              </p>
+              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
+                <span><strong className="text-charcoal">ProfessionalCut6138</strong> · r/Solopreneur</span>
+                <a href="https://www.reddit.com/r/Solopreneur/comments/1subtc4/your_shopify_store_is_probably_slower_than_you/oia27tn/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+              </div>
+            </div>
+          </div>
+
+          {/* Bridging CTA */}
+          <div className="mt-8 p-6 bg-charcoal text-white rounded-2xl text-center">
+            <p className="text-lg font-bold mb-2">Headless removes app bloat at the source. No ghost code. No render-blocking JavaScript. No silent conversion killer.</p>
+            <p className="text-stone-400 text-sm mb-4 max-w-2xl mx-auto">
+              We rebuild Shopify stores headless on Next.js for $5,000 to $10,000. App functionality moves to native code. Your storefront loads in under 1 second. Same Shopify backend, same revenue, 200x lower app fees.
+            </p>
+            <a href="#pricing" className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
+              See Headless Pricing →
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* 6. THE UPGRADE PATH */}
       <section className="py-10 md:py-14 px-6">
         <div className="container mx-auto max-w-4xl text-center">

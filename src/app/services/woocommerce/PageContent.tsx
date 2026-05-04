@@ -198,6 +198,79 @@ export default function PageContent() {
       {/* 2b. SOCIAL PROOF — moved up for concentrated proof flow */}
       <SocialProof />
 
+      {/* 2c. REAL BUYER VOICES — Reddit citations for trust signal (Apr 2026 verified) */}
+      <section id="real-voices" className="py-12 md:py-20 px-6 bg-stone-50 border-y border-stone-200">
+        <div className="container mx-auto max-w-4xl">
+          <div className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest bg-charcoal text-white rounded-full mb-4">Real Reddit Threads. April 2026. Verifiable.</div>
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-3">What WooCommerce Operators Are Actually Saying Right Now</h2>
+          <p className="text-stone-600 text-lg leading-relaxed mb-8 max-w-2xl">
+            Not curated testimonials. Real Reddit threads from r/woocommerce in the last 30 days, including a public admission from a WooCommerce Core team lead and an independent study of 10,000 stores. Click the links to verify every quote.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-5">
+            {/* Quote 1: WooCommerce Core team lead public admission */}
+            <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
+              <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
+              <p className="text-stone-700 leading-relaxed mb-4 italic">
+                Plugin fatigue: people mention WooCommerce not working out of the box for their use case, or having to install 30+ plugins and then when something goes wrong, troubleshooting becomes a nightmare. Fear of updating: people are scared that updating might break something. Performance: people mentioning the store becoming sluggish.
+              </p>
+              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
+                <span><strong className="text-charcoal">u/sunyatasattva</strong> · WooCommerce Core team lead · Apr 16, 2026 · 21 upvotes</span>
+                <a href="https://www.reddit.com/r/woocommerce/comments/1sqom3t/i_am_a_woocommerce_core_team_lead_advocating_for/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+              </div>
+            </div>
+
+            {/* Quote 2: Independent study - 30 plugins average */}
+            <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
+              <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
+              <p className="text-stone-700 leading-relaxed mb-4 italic">
+                I tested 10,000 WooCommerce stores and found they use on average 30 plugins. I think a lot of stores can do a lot with just a handful of Woo plugins. What bothers users: other platforms have features in core that require a plugin with Woo, plugin conflicts and the minefield to navigate it, pricing of these plugins.
+              </p>
+              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
+                <span><strong className="text-charcoal">u/beloved-wombat</strong> · r/woocommerce · Apr 16, 2026 · independent 10K-store study</span>
+                <a href="https://www.reddit.com/r/woocommerce/comments/1sqom3t/i_am_a_woocommerce_core_team_lead_advocating_for/oh9orf3/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+              </div>
+            </div>
+
+            {/* Quote 3: 5-year dev frustration */}
+            <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
+              <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
+              <p className="text-stone-700 leading-relaxed mb-4 italic">
+                I have been developing WordPress and WooCommerce for 5 years. The more I dive deeper I get more and more annoyed and frustrated. Basic features required plugin. Each plugin have its own UI, analytics and more importantly its own bloat. Basic features like variations switches, cart recovery, better analytics. It is a big list. God help you when you decide to change the theme or plugin.
+              </p>
+              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
+                <span><strong className="text-charcoal">u/Investmaan</strong> · r/woocommerce · Apr 28, 2026 · 21 upvotes, 37 comments</span>
+                <a href="https://www.reddit.com/r/woocommerce/comments/1t2r2kr/i_feel_extremely_frustrated_with_woocommerce_and/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+              </div>
+            </div>
+
+            {/* Stat block 4: April 2026 plugin supply chain crisis */}
+            <div className="bg-charcoal border border-charcoal rounded-2xl p-6 shadow-xs text-white">
+              <div className="inline-block px-2 py-1 text-[10px] font-bold uppercase tracking-widest bg-red-500/20 text-red-300 rounded mb-3">Industry Incident · April 2026</div>
+              <p className="font-bold text-lg mb-3">31 plugins. 400,000 sites. 8 months dormant.</p>
+              <p className="text-stone-300 text-sm leading-relaxed mb-3">
+                Someone bought the Essential Plugin suite on Flippa for six figures, then planted a backdoor in all 31 plugins. The malicious code sat dormant for 8 months before activating on April 5, 2026. The same week, Smart Slider 3 Pro (800,000+ installs) was hijacked and WowShipping Pro got an unauthenticated remote code execution backdoor. WordPress.org permanently closed all 31 Essential Plugins. Already-injected wp-config.php spam must be cleaned manually.
+              </p>
+              <div className="flex items-center justify-between text-xs text-stone-400 pt-3 border-t border-stone-700">
+                <span><strong className="text-white">Patchstack · TechCrunch · BleepingComputer</strong></span>
+                <a href="https://patchstack.com/articles/critical-supply-chain-compromise-on-20-plugins-by-essentialplugin/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Source →</a>
+              </div>
+            </div>
+          </div>
+
+          {/* Bridging CTA */}
+          <div className="mt-8 p-6 bg-charcoal text-white rounded-2xl text-center">
+            <p className="text-lg font-bold mb-2">When the WooCommerce Core team lead publicly admits the problem, you know it is structural.</p>
+            <p className="text-stone-400 text-sm mb-4 max-w-2xl mx-auto">
+              30 plugins on average per store. Plugin fatigue. Fear of updating. Performance bottlenecks. Plus a working supply-chain attack playbook with 400,000+ sites compromised in a single April 2026 incident. Custom Next.js stores on Vercel have zero third-party plugins, no auto-update channel an attacker can hijack, and no PHP execution. We migrate WooCommerce stores to headless Next.js with Shopify, BigCommerce, or Sanity backend, with 90+ PageSpeed guaranteed or 100% refund.
+            </p>
+            <a href="#pricing" className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
+              See Migration Pricing →
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* 3. HOW IT WORKS */}
       <section id="how-it-works" className="py-12 md:py-20 px-6 bg-[#F8FAFC]">
         <div className="container mx-auto max-w-6xl">

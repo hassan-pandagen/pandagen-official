@@ -144,6 +144,78 @@ export default function PageContent() {
       {/* 2b. SOCIAL PROOF — moved up for concentrated proof flow */}
       <SocialProof />
 
+      {/* 2c. REAL BUYER VOICES — Reddit citations for trust signal (Apr 2026 verified) */}
+      <section id="real-voices" className="py-12 md:py-20 px-6 bg-stone-50 border-y border-stone-200">
+        <div className="container mx-auto max-w-4xl">
+          <div className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest bg-charcoal text-white rounded-full mb-4">Real Reddit Threads. April 2026. Verifiable.</div>
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-3">What Wix Users Are Actually Saying Right Now</h2>
+          <p className="text-stone-600 text-lg leading-relaxed mb-8 max-w-2xl">
+            Not curated testimonials. Real Reddit threads from r/WIX, all dated within the last 30 days. Click the links to verify every quote.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-5">
+            {/* Quote 1: Lock-in + can't export */}
+            <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
+              <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
+              <p className="text-stone-700 leading-relaxed mb-4 italic">
+                You are completely locked in. You cannot export your data, your code, anything. They want you trapped on their crappy service and paying them forever. Everything that they can do to make leaving difficult, they do do.
+              </p>
+              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
+                <span><strong className="text-charcoal">u/Temporary-Mix8022</strong> · r/WIX · Apr 3, 2026 · 60 upvotes, 70 comments</span>
+                <a href="https://www.reddit.com/r/WIX/comments/1scmih1/warning_do_not_use_wix/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+              </div>
+            </div>
+
+            {/* Quote 2: Mobile + 3x work */}
+            <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
+              <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
+              <p className="text-stone-700 leading-relaxed mb-4 italic">
+                Mobile is just a nightmare. You have to do the work 3x over, once for each version, and then you add a language, and it is all over again. As someone that can actually code JS, it is just a mess. Variable boxes, everything that should work, it does not.
+              </p>
+              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
+                <span><strong className="text-charcoal">u/Temporary-Mix8022</strong> · r/WIX · Apr 3, 2026</span>
+                <a href="https://www.reddit.com/r/WIX/comments/1scmih1/warning_do_not_use_wix/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+              </div>
+            </div>
+
+            {/* Quote 3: $ wasted + vendor lock-in */}
+            <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
+              <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
+              <p className="text-stone-700 leading-relaxed mb-4 italic">
+                The vendor lock in is extreme. I had a hobby site on Wix. The site would not load on any iOS Apple device. I spent hours with their support. I then was so fed up I paid a Wix Studio developer $500 to rebuild it on Wix Studio. It finally expired and I did not even bother with it anymore. Just money flushed down the drain and many hours wasted because of this awful company and vendor lock in.
+              </p>
+              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
+                <span><strong className="text-charcoal">u/jn024</strong> · r/WIX · Apr 3, 2026 · 7 upvotes</span>
+                <a href="https://www.reddit.com/r/WIX/comments/1scmih1/warning_do_not_use_wix/oece1a3/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+              </div>
+            </div>
+
+            {/* Quote 4: Wix denied refund + Next.js migration success */}
+            <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
+              <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
+              <p className="text-stone-700 leading-relaxed mb-4 italic">
+                I do have 2 years remaining on my Wix plan, and they denied a refund, so honestly dunno what to do about that. My new Next.js site is highly responsive, uses a modern tech-stack, is really fast and fluid (high scores on everything I tested). You can definitely beat anything Wix offers.
+              </p>
+              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
+                <span><strong className="text-charcoal">u/AnshulJ999</strong> · r/WIX · Apr 4, 2026 · 9 upvotes</span>
+                <a href="https://www.reddit.com/r/WIX/comments/1sdh7kp/my_experience_with_migrating_away_from_wix_to/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+              </div>
+            </div>
+          </div>
+
+          {/* Bridging CTA */}
+          <div className="mt-8 p-6 bg-charcoal text-white rounded-2xl text-center">
+            <p className="text-lg font-bold mb-2">These are this month&apos;s threads. The pattern is the same every month.</p>
+            <p className="text-stone-400 text-sm mb-4 max-w-2xl mx-auto">
+              Lock-in. Mobile editor that needs 3x the work. Refund denials on years of remaining time. We migrate Wix sites to custom Next.js with 90+ PageSpeed guaranteed or 100% refund. Your domain stays yours. Your code is yours. Your hosting is on Vercel, not on a builder that charges you to leave.
+            </p>
+            <a href="#pricing" className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
+              See Migration Pricing →
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* 3. HOW WE MIGRATE - Process Timeline */}
       <section id="how-it-works" className="py-10 md:py-14 px-6">
         <div className="container mx-auto max-w-3xl">

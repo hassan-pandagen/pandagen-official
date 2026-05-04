@@ -61,7 +61,7 @@ const articleSchema = {
             "description": "WooCommerce stores score 30-55 on mobile PageSpeed. Learn which fixes work, which don't, and when a headless rebuild beats another caching plugin.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-25T00:00:00-05:00",
-            "dateModified": "2026-04-13T00:00:00-05:00",
+            "dateModified": "2026-05-05T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -81,8 +81,8 @@ const articleSchema = {
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/woocommerce-too-slow" },
             "articleSection": "WooCommerce",
             "keywords": ["woocommerce slow", "woocommerce too slow", "woocommerce speed optimization", "woocommerce pagespeed", "headless woocommerce"],
-            "wordCount": 2800,
-            "timeRequired": "PT11M",
+            "wordCount": 3300,
+            "timeRequired": "PT13M",
             "inLanguage": "en-US",
             "about": [
                 { "@type": "Thing", "name": "WooCommerce" },
@@ -100,7 +100,11 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Deloitte: Milliseconds Make Millions", "url": "https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" },
                 { "@type": "CreativeWork", "name": "Google Think: Mobile Page Speed Benchmarks", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
                 { "@type": "CreativeWork", "name": "WooCommerce REST API Documentation", "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/" },
-                { "@type": "CreativeWork", "name": "WPScan Vulnerability Database", "url": "https://wpscan.com/wordpresses" }
+                { "@type": "CreativeWork", "name": "WPScan Vulnerability Database", "url": "https://wpscan.com/wordpresses" },
+                { "@type": "CreativeWork", "name": "Patchstack: EssentialPlugin Supply Chain Compromise April 2026", "url": "https://patchstack.com/articles/critical-supply-chain-compromise-on-20-plugins-by-essentialplugin/" },
+                { "@type": "CreativeWork", "name": "Patchstack State of WordPress Security 2025", "url": "https://patchstack.com/whitepaper/state-of-wordpress-security-in-2025/" },
+                { "@type": "CreativeWork", "name": "Reddit r/woocommerce: WooCommerce Core team lead public feedback request", "url": "https://www.reddit.com/r/woocommerce/comments/1sqom3t/i_am_a_woocommerce_core_team_lead_advocating_for/" },
+                { "@type": "CreativeWork", "name": "Studio Wombat: WooCommerce Data Insights 2026 (10,000 stores)", "url": "https://www.studiowombat.com/blog/woocommerce-data-insights-2026-edition/" }
             ]
         },
         {
@@ -129,7 +133,7 @@ const articleSchema = {
             "description": "WooCommerce stores average 30 to 55 on Google PageSpeed Mobile. The root cause is architectural. Here is exactly what is breaking your store speed and what permanently fixes it.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-03-25T00:00:00-05:00",
-            "dateModified": "2026-04-13T00:00:00-05:00",
+            "dateModified": "2026-05-05T00:00:00-05:00",
             "inLanguage": "en-US"
         },
         {
@@ -183,8 +187,8 @@ export default function WooCommerceTooSlowPage() {
                             The average WooCommerce store scores 30 to 55 on Google PageSpeed Mobile. Your theme is not the problem. Your images are not the problem. The architecture is.
                         </p>
                         <BlogAuthor
-                            date="Mar 25, 2026"
-                            readTime="11 min read"
+                            date="Mar 25, 2026 (updated May 5)"
+                            readTime="13 min read"
                             bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
@@ -347,6 +351,43 @@ export default function WooCommerceTooSlowPage() {
 
                         <BlogText>
                             WebP images are 25 to 35% smaller than equivalent JPEG files. AVIF images are 50% smaller. A product page with 8 product images, none of them in modern format, can add 3 to 8MB of image data that the browser must download before rendering. On a mobile connection at 10 Mbps, that is 3 to 6 seconds of download time before the page is usable.
+                        </BlogText>
+
+                        <BlogHeader>The April 2026 Plugin Crisis: Why Speed Is Now a Security Problem</BlogHeader>
+
+                        <BlogText>
+                            Speed and security are usually treated as separate problems. They are not. Both flow from the same source: WooCommerce&apos;s plugin dependency model. April 2026 made that crystal clear.
+                        </BlogText>
+
+                        <BlogText>
+                            On April 5 to 7, 2026, three separate plugin supply-chain attacks landed in the same week. The largest, documented by{" "}
+                            <a href="https://patchstack.com/articles/critical-supply-chain-compromise-on-20-plugins-by-essentialplugin/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Patchstack</a>{" "}
+                            and{" "}
+                            <a href="https://techcrunch.com/2026/04/14/someone-planted-backdoors-in-dozens-of-wordpress-plugins-used-in-thousands-of-websites/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">TechCrunch</a>: someone bought the Essential Plugin suite (31 plugins, ~400,000 active installs) on Flippa for six figures, then planted a backdoor in version 2.6.7 in August 2025. The malicious code sat dormant for 8 months before activating. The same week, Smart Slider 3 Pro (800,000+ installs) was hijacked through a compromised update server, and WowShipping Pro got an unauthenticated remote-code-execution backdoor.
+                        </BlogText>
+
+                        <BlogText>
+                            Why does this matter for store speed? Because the same architecture that makes WooCommerce slow also makes these attacks possible:
+                        </BlogText>
+
+                        <BlogList items={[
+                            "Auto-update by default. WooCommerce stores running auto-updates pulled the malicious version of 31 plugins within hours of release. The same auto-update channel that keeps your store secure is the same channel an attacker uses to push code to 400,000 sites.",
+                            "Average 30 plugins per store. An independent study of 10,000 WooCommerce stores by Studio Wombat in April 2026 found the average store runs 30 active plugins. Each plugin is a separate update channel an attacker can hijack. Each plugin runs PHP on every page request, slowing the store down. Speed and security share the same root cause.",
+                            "Plugin ownership transfers with no review. WordPress.org allows plugin sales on Flippa with zero security audit of the new owner. The Essential Plugin attacker paid six figures, took control of legitimate plugins with hundreds of thousands of installs, and inserted code that injected SEO spam into wp-config.php (visible only to Googlebot, invisible to site owners).",
+                            "96% of all WordPress vulnerabilities are in plugins. Patchstack&apos;s State of WordPress Security 2025 report disclosed 7,966 new WordPress vulnerabilities in 2024, 96% of which were plugin-level. 43% required zero authentication to exploit.",
+                            "1,614 plugins were removed from the WordPress.org directory in 2024 for unpatched security issues. 33% of disclosed vulnerabilities never get patched in time."
+                        ]} />
+
+                        <BlogText>
+                            Even WooCommerce&apos;s own engineering acknowledges the problem. On April 16, 2026, a{" "}
+                            <a href="https://www.reddit.com/r/woocommerce/comments/1sqom3t/i_am_a_woocommerce_core_team_lead_advocating_for/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">WooCommerce Core team lead posted publicly on r/woocommerce</a>{" "}
+                            asking the community for feedback. They identified the three biggest user complaints in their own words:{" "}
+                            <BlogHighlight>plugin fatigue (having to install 30+ plugins, then troubleshooting becomes a nightmare), fear of updating (people are scared updating might break something), and performance (the store becoming sluggish).</BlogHighlight>{" "}
+                            That is the platform&apos;s own engineering team confirming what every store operator already knows.
+                        </BlogText>
+
+                        <BlogText>
+                            A custom Next.js storefront eliminates the entire category. Zero third-party plugins. No auto-update channel an attacker can hijack. No PHP execution on the frontend. No wp-config.php to inject into. Supply chain risk reduces to the npm ecosystem (handled by lockfiles, Dependabot, and SCA scanners) and your code lives in your own repository, not a public plugin directory anyone can buy.
                         </BlogText>
 
                         {/* Mid CTA */}

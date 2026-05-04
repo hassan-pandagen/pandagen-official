@@ -68,3 +68,9 @@ remotion/assets/*.mov
 *.mp4
 *.mov
 *.webm
+
+# GSC + AirOps + analytics exports (never commit; data is local-only research)
+*.csv
+GSC/
+airops/
+exports/
