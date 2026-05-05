@@ -284,14 +284,132 @@ BlogAuthor rules:
     See Part 7 for the pain point research process
 ```
 
+### STEP 0.5 — Google 2026 Compliance (READ THIS BEFORE WRITING)
+
+**Google made FOUR major updates between Dec 2025 and Mar 2026 that materially change what wins in SERPs. Every blog must comply.**
+
+```
+=== UPDATE TIMELINE (memorize this) ===
+- Dec 11-29, 2025: Core Update — E-E-A-T extended from YMYL-only to ALL competitive queries.
+                   Author bylines + credentials now near-mandatory. Author byline + LinkedIn + GitHub = required.
+- Feb 5, 2026:     DISCOVER Core Update (first ever) — clickbait classifier deployed.
+                   Sites lost 30-60% of Discover traffic for sensational/exaggerated headlines.
+- Mar 24-25, 2026: Spam Update — pure SpamBrain refinement.
+- Mar 27 - Apr 8:  Core Update — "Information Gain" patent operational.
+                   Aggregator/comparison/AI-rewritten content lost 30-80%.
+                   YouTube domain visibility dropped -567 points; Reddit -64.
+                   Original case studies + proprietary frameworks gained 15-25%.
+
+=== WHAT THE 2026 CLASSIFIERS PENALIZE (NEVER USE IN TITLES) ===
+
+Clickbait/sensationalism words (Feb 2026 Discover Core Update — Discover traffic penalty only, NOT confirmed organic ranking penalty):
+  ❌ "Shocking", "Unbelievable", "Mind-blowing", "Jaw-dropping"
+  ❌ "The Truth About", "What No One Tells You", "What They Don't Want You to Know"
+  ❌ "Secret(s)", "Hidden Secret", "This One Trick", "Doctors Hate"
+  ❌ "Click Here to Find Out", "Find Out Why", "Number X Will Surprise You"
+
+  NOTE: "Amazing", "Eye-Catching", "Incredible", "Game-changer", "Revolutionary" etc.
+  are NOT confirmed to carry organic ranking penalties. Google's ban on these applies
+  to Google Ads (PPC policy), not organic search. Do not avoid them for organic SEO
+  reasons — avoid them only if they are factually inaccurate for the content.
+
+Trust-claim adjectives Google demotes if not proven on the page:
+  ❌ "Honest" / "Honestly" (Google's classifier requires explicit proof if claim made)
+  ❌ "True" / "The True" / "Truly"
+  ❌ "Real" / "The Real" / "Real Cost" (only OK if backed by named first-hand data on page)
+  ❌ "Actually" (when promising revelation)
+
+Confrontation framing flagged in Feb 2026 Discover Core Update:
+  ❌ "Agencies Charge $X. We Charge $Y." (clickbait pattern)
+  ❌ "Stop Wasting Money on..."
+  ❌ "Killing", "Killer", "Destroying" (in titles)
+  ❌ "Hidden Fees" / "Hidden Cost" / "Hidden Truth"
+
+Boilerplate that triggers title rewrite (76% of titles got rewritten by Google in Q1 2025):
+  ❌ "The Ultimate Guide to..." (massively overused)
+  ❌ "Everything You Need to Know About..."
+  ❌ "Top 10/15/20 [Anything]" without explicit ranking methodology on the page
+
+False specificity / fake authority that Google classifiers flag:
+  ❌ Round numbers presented as data ("99% of agencies...") with no source
+  ❌ "Studies show..." without naming the study
+  ❌ "Industry experts agree..." without naming experts
+  ❌ "Proven strategies" without case study evidence
+
+LLM tells (Google's classifiers reportedly weight these as low-quality signals):
+  ❌ "Dives into" / "dive deep into"
+  ❌ "Showcasing" / "emphasizes" / "underscores"
+  ❌ "In today's fast-paced world", "In the realm of", "In the world of"
+  ❌ "It's important to note"
+  ❌ "Whether you're a [persona A] or a [persona B]"
+  ❌ "Crucial" / "essential" / "vital" used 3+ times in the same article
+  ❌ "Robust", "seamless", "leverage", "synergy" overuse
+  ❌ "Navigate the complexities of", "Embark on a journey"
+
+=== WHAT WINS IN 2026 (USE THESE PATTERNS) ===
+
+Title formulas that earn Google CTR + AI Overview citations:
+
+  ✓ "How Much Does [Topic] Cost in 2026? ([Scope/Modifier])"
+    Example: "How Much Does Webflow Migration Cost in 2026? (Pricing by Site Size)"
+    Why: keyword first, year second, scope in parentheses (Backlinko 2026 study)
+
+  ✓ "[Topic] Cost in 2026: [Range] ([Scope])"
+    Example: "WordPress Migration Cost in 2026: $1,500 to $25,000 (By Site Size)"
+    Why: range framing replaces confrontation framing; specific dollars survive classifier
+
+  ✓ "[Platform A] vs [Platform B]: [Specific Outcome] (2026 Case Study)"
+    Example: "WordPress vs Next.js Migration: 3.2s to 0.7s in 4 Weeks (2026 Case Study)"
+    Why: comparison + case study format earns 32.5% of all AI Overview citations (Anyword 2026)
+
+  ✓ Question titles get +14% CTR (Backlinko 2026)
+  ✓ Numbers in titles get +15-40% CTR (odd numbers slightly outperform)
+  ✓ Titles 40-60 chars hit highest CTR
+  ✓ Parentheses for modifiers (Google rewrites brackets 77% of the time, parens 19%)
+  ✓ Year placement in first 30 chars
+  ✓ Specific number + outcome ("How we cut LCP from 4.1s to 0.8s")
+  ✓ First-hand framing ("What we learned migrating 12 clients off Squarespace")
+  ✓ Named source citations in body (Marie Haynes, Lily Ray, Sistrix, Search Engine Land by name)
+
+=== INFORMATION GAIN REQUIREMENT (MAR 2026 CORE UPDATE) ===
+
+After Mar 27 - Apr 8 2026 Core Update, content that summarizes top-10 SERP results
+without proprietary data, original frameworks, or first-hand evidence LOSES 30-80%
+of visibility. Every new blog must contribute Information Gain via at least ONE of:
+
+  ✓ Proprietary data we collected (audit of X clients, study of N stores, our own benchmark)
+  ✓ Original framework we created (a decision matrix, a scoring rubric, a stage model)
+  ✓ First-hand experience ("we did this on Y client, here is what happened")
+  ✓ Direct quotes from named industry sources we add expert framing to
+  ✓ Date-stamped industry events with primary-source citations
+
+If a blog could be written by reading the top 10 SERP results and rewording, it WILL lose
+visibility. Information Gain is now non-negotiable.
+
+=== E-E-A-T REQUIREMENTS (DEC 2025 CORE UPDATE) ===
+
+Every blog now requires (no longer YMYL-only):
+  ✓ Author byline visible (BlogAuthor component with date + read time + bio)
+  ✓ Author LinkedIn link in schema sameAs
+  ✓ HTTPS confirmed (we have this)
+  ✓ Privacy policy and contact info linked from blog footer (we have this)
+  ✓ Article schema with author Person reference
+  ✓ Specific credentials in bio (years experience, named clients, GitHub commits)
+```
+
 ### STEP 1 — Content Structure
 
 ```
-[ ] H1 format: [Keyword]: [Emotional/Specific Hook]
-    Good: "Shopify Plus Still Slow? Why $2,300/mo Doesn't Fix Core Web Vitals"
-    Bad:  "Shopify Speed Tips"
+[ ] H1 format: [Keyword]: [Specific Outcome or Range] (Year)
+    Good: "How Much Does Webflow Migration Cost in 2026? (Pricing by Site Size)"
+    Good: "WordPress Migration Cost in 2026: $1,500 to $25,000 (Real Pricing)"
+    Bad:  "Webflow Migration Cost: Agencies Charge $30K. We Charge $500." (confrontation = penalized)
+    Bad:  "Honest Pricing for Webflow Migration" ("Honest" = clickbait flag)
 
 [ ] Subtitle (p under H1): one sentence — "what will I get from this post?"
+    Should match the title promise specifically. Headline-body alignment classifier
+    flags any specific number, claim, or noun in title that doesn't appear in
+    first 200 words of article.
 
 [ ] Word count: 2,800+ minimum. Gold standard: 3,000+. Do not publish under 2,200.
 

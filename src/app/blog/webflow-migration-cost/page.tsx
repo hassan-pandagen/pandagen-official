@@ -16,14 +16,14 @@ const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAni
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "How Much Does Webflow Migration Cost in 2026? Honest Pricing From $500",
+    title: "Webflow Migration Cost in 2026 (Pricing by Site Size)",
     description: "Webflow migration: $1,500+ Starter, $3,500+ Growth, $5K-$10K+ Scale. Full 2026 breakdown by page count and hidden fees.",
     alternates: {
         canonical: '/blog/webflow-migration-cost',
     },
     keywords: ["webflow migration cost", "webflow to next.js cost", "webflow migration pricing", "how much does webflow migration cost", "webflow to custom code", "webflow migration cost for 50-100 page website", "webflow enterprise pricing migration cost", "factors that increase cost of webflow migration project", "webflow ongoing costs after migration", "webflow migration cost 2026"],
     openGraph: {
-        title: "How Much Does Webflow Migration Cost in 2026? Honest Pricing From $500",
+        title: "Webflow Migration Cost in 2026 (Pricing by Site Size)",
         description: "Webflow migration costs $500 to $60,000+ depending on site size, CMS complexity, and integrations. Full 2026 breakdown by page count, hidden fees agencies never quote, and honest pricing you can verify.",
         type: "article",
         publishedTime: "2026-03-25",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "How Much Does Webflow Migration Cost in 2026? Honest Pricing From $500",
+        title: "Webflow Migration Cost in 2026 (Pricing by Site Size)",
         description: "Webflow migration from $500 Founder Portfolio or $3,000 to $12,000 full rebuild. Breakdown by page count, hidden fees, honest pricing.",
     },
 };
@@ -45,7 +45,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/webflow-migration-cost#article",
-            "headline": "How Much Does Webflow Migration Cost in 2026? Honest Pricing From $500",
+            "headline": "Webflow Migration Cost in 2026 (Pricing by Site Size)",
             "description": "Webflow migration: $1,500+ Starter, $3,500+ Growth, $5K-$10K+ Scale. Full 2026 breakdown by page count and hidden fees.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-25T00:00:00-05:00",
@@ -196,6 +196,34 @@ export default function WebflowMigrationCostPage() {
                             "Most businesses spending $100+/month on Webflow recover migration costs within 12 to 18 months through hosting savings and improved SEO.",
                             "Webflow sites score 55 to 75 on Google PageSpeed Mobile. Custom Next.js sites score 95 to 100. The gap costs you real rankings."
                         ]} />
+                    </div>
+
+                    {/* Real Buyer Voices — verified Reddit threads, within 30 days */}
+                    <div className="my-8 p-5 bg-stone-50 border border-stone-200 rounded-2xl">
+                        <p className="text-xs font-bold uppercase tracking-widest text-stone-500 mb-4">What Webflow Users Are Saying Right Now</p>
+                        <div className="space-y-4">
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;That was the last straw for me. Removing my remaining three sites off this platform. Moved the rest of my sites a year ago.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/jmonroe200</strong> · r/webflow · Apr 13, 2026 · 8 upvotes</span>
+                                    <a href="https://www.reddit.com/r/webflow/comments/1sl9ubw/is_webflow_down_no_access_to_anything_bad_gateway/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;We are down as well and of course we just issued one of our biggest press releases of the year. Perfect timing.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/SirBowsersniff</strong> · r/webflow · Apr 13, 2026 · 32-upvote outage thread</span>
+                                    <a href="https://www.reddit.com/r/webflow/comments/1sl9ubw/is_webflow_down_no_access_to_anything_bad_gateway/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;This is the second time we have had this type of long-term downtime this year. I have been a Webflow customer for 7 years, and I am definitely considering switching to another platform.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/PureTrouble5575</strong> · r/webflow · Apr 13, 2026 · 7 upvotes</span>
+                                    <a href="https://www.reddit.com/r/webflow/comments/1sl9ubw/is_webflow_down_no_access_to_anything_bad_gateway/og6tysb/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div className="space-y-8">

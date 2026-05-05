@@ -16,14 +16,14 @@ const SalesImpactAnimation = lazyLoad(() => import("@/components/blog/SalesImpac
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "WordPress vs Custom Code: 3-Year Cost Breakdown (Custom Wins by Year 2)",
+    title: "WordPress vs Custom Code: 3-Year Cost Breakdown (2026)",
     description: "WordPress costs $15,000+ over 3 years. A custom Next.js site costs $10K once, then $0/year. Full TCO breakdown: hosting, plugins, maintenance, lost revenue.",
     alternates: {
         canonical: '/blog/wordpress-vs-custom-code-real-cost-3-years',
     },
     robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
-        title: "WordPress vs Custom Code: 3-Year Cost Breakdown (Custom Wins by Year 2)",
+        title: "WordPress vs Custom Code: 3-Year Cost Breakdown (2026)",
         description: "WordPress costs $15,000+ over 3 years. A custom Next.js site costs $10K once, then $0/year. Full TCO breakdown: hosting, plugins, maintenance, lost revenue.",
         type: "article",
         publishedTime: "2026-02-20",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "WordPress vs Custom Code: 3-Year Cost Breakdown (Custom Wins by Year 2)",
+        title: "WordPress vs Custom Code: 3-Year Cost Breakdown (2026)",
         description: "WordPress costs $15,000+ over 3 years. A custom Next.js site costs $10K once, then $0/year. Full TCO breakdown: hosting, plugins, maintenance, lost revenue.",
     },
     keywords: ["wordpress vs custom code cost", "wordpress real cost", "custom website vs wordpress", "wordpress hidden costs", "website total cost of ownership"],
@@ -45,11 +45,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-vs-custom-code-real-cost-3-years#article",
-            "headline": "WordPress vs Custom Code: 3-Year Cost Breakdown (Custom Wins by Year 2)",
+            "headline": "WordPress vs Custom Code: 3-Year Cost Breakdown (2026)",
             "description": "WordPress costs $15,000+ over 3 years. A custom Next.js site costs $10K once, then $0/year. Full TCO breakdown: hosting, plugins, maintenance, lost revenue.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-20T00:00:00-05:00",
-            "dateModified": "2026-04-13T00:00:00-05:00",
+            "dateModified": "2026-05-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -109,7 +109,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-20T00:00:00-05:00",
-            "dateModified": "2026-04-13T00:00:00-05:00",
+            "dateModified": "2026-05-06T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/wordpress-vs-custom-code-real-cost-3-years#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -195,6 +195,34 @@ export default function WordPressVsCustomCodeCostPage() {
                             "The hidden cost nobody talks about: slow WordPress sites lose 20 to 30% of organic traffic, translating to $50K to $150K/year in lost revenue.",
                             "After 3 years, custom coded sites are $10,000 to $25,000 cheaper in direct costs alone. Before counting the traffic and revenue difference."
                         ]} />
+                    </div>
+
+                    {/* Real Buyer Voices — verified Reddit threads */}
+                    <div className="my-8 p-5 bg-stone-50 border border-stone-200 rounded-2xl">
+                        <p className="text-xs font-bold uppercase tracking-widest text-stone-500 mb-4">What WordPress Users Are Saying Right Now</p>
+                        <div className="space-y-4">
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;We are not being killed by competition, I believe we have done this to ourselves. When Cloudflare can ship the entire functionality of WordPress, and then some, in 2 months, we can take longer than that to almost not ship one sub-menu of our Settings screen.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">Matt Mullenweg</strong> (WordPress founder) · April 14, 2026</span>
+                                    <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Source: The Repository →</a>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;Every time you load a page or post, WP wants to retrieve info from the database. We are long since past the point where the content on pages does not change enough to matter. This will reduce the footprint for most sites from 400MB down to 10MB to 30MB.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/user_number_666</strong> · r/Wordpress · Apr 14, 2026 · 103 upvotes</span>
+                                    <a href="https://www.reddit.com/r/Wordpress/comments/1slbbht/wordpress_is_a_lie/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;It is only when you check out some other CMS out there that you realise WordPress, even with its many flaws, is pretty well-rounded and user-friendly.&rdquo; — which is exactly the point: you only feel the 3-year cost when you compare total ownership, not upfront price.</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/hetsteentje</strong> · r/Wordpress · Apr 14, 2026 · 9 upvotes</span>
+                                    <a href="https://www.reddit.com/r/Wordpress/comments/1slbbht/wordpress_is_a_lie/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div className="space-y-8">

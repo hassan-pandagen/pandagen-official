@@ -16,7 +16,7 @@ const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAni
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Webflow Pricing 2026: Hidden Fees & $125-$400/mo Real Cost",
+    title: "Webflow Pricing in 2026: $125 to $400/mo (Full Breakdown)",
     description: "Webflow's real cost is $125 to $400/month once you add CMS tiers, forms, localization, and Optimize. Full 2026 hidden-fee breakdown plus the PageSpeed ceiling.",
     alternates: {
         canonical: '/blog/webflow-true-cost',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     keywords: ["Webflow cost", "Webflow alternative", "Webflow vs custom code", "Webflow migration", "Webflow SEO limitations", "Webflow to Next.js", "Webflow pricing 2026"],
     robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
-        title: "Webflow Pricing 2026: Hidden Fees & $125-$400/mo Real Cost",
+        title: "Webflow Pricing in 2026: $125 to $400/mo (Full Breakdown)",
         description: "Webflow's real cost is $125 to $400/month once you add CMS tiers, forms, localization, and Optimize. Full 2026 hidden-fee breakdown plus the PageSpeed ceiling.",
         type: "article",
         publishedTime: "2026-03-18",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Webflow Pricing 2026: Hidden Fees & $125-$400/mo Real Cost",
+        title: "Webflow Pricing in 2026: $125 to $400/mo (Full Breakdown)",
         description: "Webflow's real cost is $125 to $400/month once you add CMS tiers, forms, localization, and Optimize. Full 2026 hidden-fee breakdown plus the PageSpeed ceiling.",
     },
 };
@@ -45,7 +45,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/webflow-true-cost#article",
-            "headline": "Webflow Pricing 2026: Hidden Fees & $125-$400/mo Real Cost",
+            "headline": "Webflow Pricing in 2026: $125 to $400/mo (Full Breakdown)",
             "description": "Webflow's real cost is $125 to $400/month once you add CMS tiers, forms, localization, and Optimize. Full 2026 hidden-fee breakdown plus the PageSpeed ceiling.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-18T00:00:00-05:00",
@@ -206,6 +206,34 @@ export default function WebflowTrueCostPage() {
                             "You do not own your Webflow code. If you leave, you rebuild from scratch. Custom code is yours forever.",
                             "Businesses spending $100+/month on Webflow with PageSpeed below 70 will recover migration costs within 6 to 12 months through better SEO and lower hosting."
                         ]} />
+                    </div>
+
+                    {/* Real Buyer Voices — verified Reddit threads */}
+                    <div className="my-8 p-5 bg-stone-50 border border-stone-200 rounded-2xl">
+                        <p className="text-xs font-bold uppercase tracking-widest text-stone-500 mb-4">What Webflow Users Are Saying Right Now</p>
+                        <div className="space-y-4">
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;Your number one gripe by a wide margin is how awful your pricing is. It is an absolute hellhole and the worst part of trying to sell a Webflow project. You have somehow created a way to make it so much worse.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/wherethewifisweak</strong> (OP) · r/webflow · Mar 8, 2026 · 54 upvotes</span>
+                                    <a href="https://www.reddit.com/r/webflow/comments/1qxsin3/client_seats_and_pricing_update_webflow_just_made/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;I have been using Webflow for years and NEVER have been able to understand the pricing models nor fully communicate to my clients which plan they needed and why. It is so convoluted and counterintuitive but it seems the confusion is part of the business model here.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/proteanradish</strong> · r/webflow · Mar 8, 2026 · 16 upvotes</span>
+                                    <a href="https://www.reddit.com/r/webflow/comments/1qxsin3/client_seats_and_pricing_update_webflow_just_made/o3yx308/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;Webflow: great product to build with, awful, confusing, overpriced account management.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/originaladam</strong> · r/webflow · Mar 8, 2026 · 24 upvotes</span>
+                                    <a href="https://www.reddit.com/r/webflow/comments/1qxsin3/client_seats_and_pricing_update_webflow_just_made/o3yr07w/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div className="space-y-8">

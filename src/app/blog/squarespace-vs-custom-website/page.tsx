@@ -18,7 +18,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Squarespace vs Custom Website 2026: The 55/100 PageSpeed Ceiling That Kills Rankings",
+    title: "Squarespace vs Custom Website in 2026 (Speed and Cost)",
     description: "Squarespace caps at 30 to 55 on mobile PageSpeed. Custom Next.js hits 95 to 100. Honest cost, speed, and SEO comparison for 2026.",
     alternates: {
         canonical: "/blog/squarespace-vs-custom-website",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
         "squarespace pagespeed score"
     ],
     openGraph: {
-        title: "Squarespace vs Custom Website 2026: The 55/100 PageSpeed Ceiling That Kills Rankings",
+        title: "Squarespace vs Custom Website in 2026 (Speed and Cost)",
         description: "You picked Squarespace for the design. Now your site scores 35 on mobile, booking needs a separate subscription, and you cannot change templates without rebuilding.",
         type: "article",
         publishedTime: "2026-04-14",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Squarespace vs Custom Website 2026: The 55/100 PageSpeed Ceiling That Kills Rankings",
+        title: "Squarespace vs Custom Website in 2026 (Speed and Cost)",
         description: "You picked Squarespace for the design. Now your site scores 35 on mobile, booking needs a separate subscription, and you cannot change templates without rebuilding.",
     },
 };
@@ -57,7 +57,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/squarespace-vs-custom-website#article",
-            "headline": "Squarespace vs Custom Website 2026: The 55/100 PageSpeed Ceiling That Kills Rankings",
+            "headline": "Squarespace vs Custom Website in 2026 (Speed and Cost)",
             "description": "You picked Squarespace for the design. Now your site scores 35 on mobile, booking needs a separate subscription, and you cannot change templates without rebuilding. Here is when custom code makes sense and when Squarespace is still the right call.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-14T00:00:00-05:00",
@@ -115,7 +115,7 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/squarespace-vs-custom-website",
             "url": "https://www.pandacodegen.com/blog/squarespace-vs-custom-website",
-            "name": "Squarespace vs Custom Website 2026: The 55/100 PageSpeed Ceiling That Kills Rankings",
+            "name": "Squarespace vs Custom Website in 2026 (Speed and Cost)",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-04-14",
@@ -229,6 +229,34 @@ export default function SquarespaceVsCustomWebsitePage() {
                     </div>
 
                     <div className="space-y-8">
+
+                    {/* Real Buyer Voices — verified Reddit threads */}
+                    <div className="my-8 p-5 bg-stone-50 border border-stone-200 rounded-2xl">
+                        <p className="text-xs font-bold uppercase tracking-widest text-stone-500 mb-4">What Squarespace Users Are Saying Right Now</p>
+                        <div className="space-y-4">
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;I am so sick of dealing with SS — not being able to customize things the way I want to. Having multiple sized fonts and varied text formatting in one text box, changing line height on one section of one page rather than across the entire website, making sure photos stay in place and the correct size rather than getting all wonky when you change the screen size. I could go on.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/WholeHuckleberry7081</strong> · r/squarespace · Apr 8, 2026 · 16 upvotes, 61 comments</span>
+                                    <a href="https://www.reddit.com/r/squarespace/comments/1sec045/hate_ss_but_unsure_what_platform_to_move_to/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;It is kind of baffling that there is still no option to have separate versions for desktop and mobile. Every time I finish something on desktop and then switch to mobile to tweak it, everything shifts — settings change, the layout breaks. I have seen platforms with way fewer resources handle this better.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/Gabsnmaia</strong> · r/squarespace · Apr 30, 2026 · 13 upvotes</span>
+                                    <a href="https://www.reddit.com/r/squarespace/comments/1szxt8p/why_cant_we_customize_desktop_and_mobile/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;All my ads push customers to book through the site. When I told them I expected some compensation for loss of business they responded with: We do not offer refunds for site errors or other issues.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/sandywilli</strong> · r/squarespace · Apr 25, 2026 · on 41-upvote 503 outage thread</span>
+                                    <a href="https://www.reddit.com/r/squarespace/comments/1sx6skq/503_service_unavailable/oiksgiq/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                         {/* === SECTION 1: The Honeymoon === */}
                         <BlogHeader>You Chose Squarespace Because It Looked Premium</BlogHeader>

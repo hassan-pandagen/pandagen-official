@@ -18,14 +18,14 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Leaving Webflow in 2026: The 31-Hour Outage, Hidden Fees, and Where Businesses Are Going",
+    title: "Why We Left Webflow in 2026 (Cost, Timeline, SEO Results)",
     description: "Bandwidth cut 75%. Bills hit $170 overnight. Carts broke. Memberships killed. The real story of leaving Webflow and what comes next.",
     alternates: {
         canonical: "/blog/leaving-webflow-2026",
     },
     keywords: ["leaving webflow 2026", "webflow too expensive 2026", "webflow alternative custom code", "migrate from webflow 2026", "webflow problems 2026", "webflow bandwidth limit", "webflow membership deprecated", "webflow cart not working"],
     openGraph: {
-        title: "Leaving Webflow in 2026: The 31-Hour Outage, Hidden Fees, and Where Businesses Are Going",
+        title: "Why We Left Webflow in 2026 (Cost, Timeline, SEO Results)",
         description: "Bandwidth cut 75%. Bills hit $170 overnight. Cart buttons disappeared on live sites. Memberships killed with 6 weeks notice. The real story of leaving Webflow.",
         type: "article",
         publishedTime: "2026-04-06",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Leaving Webflow in 2026: The 31-Hour Outage, Hidden Fees, and Where Businesses Are Going",
+        title: "Why We Left Webflow in 2026 (Cost, Timeline, SEO Results)",
         description: "Bandwidth cut 75%. Bills hit $170 overnight. Cart buttons disappeared on live sites. Memberships killed. The real story of leaving Webflow.",
     },
 };
@@ -46,7 +46,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/leaving-webflow-2026#article",
-            "headline": "Leaving Webflow in 2026: The 31-Hour Outage, Hidden Fees, and Where Businesses Are Going",
+            "headline": "Why We Left Webflow in 2026 (Cost, Timeline, SEO Results)",
             "description": "Bandwidth cut 75%. Bills hit $170 overnight. Carts broke. Memberships killed. The real story of leaving Webflow and what comes next.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-06T00:00:00-05:00",
@@ -109,7 +109,7 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/leaving-webflow-2026#webpage",
             "url": "https://www.pandacodegen.com/blog/leaving-webflow-2026",
-            "name": "Leaving Webflow in 2026: The 31-Hour Outage, Hidden Fees, and Where Businesses Are Going",
+            "name": "Why We Left Webflow in 2026 (Cost, Timeline, SEO Results)",
             "description": "Bandwidth cut 75%. Bills hit $170 overnight. Cart buttons disappeared on live sites. Memberships killed. The real story of leaving Webflow and what we built instead.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
@@ -209,6 +209,34 @@ export default function LeavingWebflow2026Page() {
                     </div>
 
                     <div className="space-y-8">
+
+                    {/* Real Buyer Voices — verified Reddit threads */}
+                    <div className="my-8 p-5 bg-stone-50 border border-stone-200 rounded-2xl">
+                        <p className="text-xs font-bold uppercase tracking-widest text-stone-500 mb-4">What Webflow Users Are Saying Right Now</p>
+                        <div className="space-y-4">
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;I have been using Webflow for years and NEVER have been able to understand the pricing models nor fully communicate to my clients which plan they needed and why. It is so convoluted and counterintuitive but it seems the confusion is part of the business model here.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/proteanradish</strong> · r/webflow · Mar 8, 2026 · 16 upvotes</span>
+                                    <a href="https://www.reddit.com/r/webflow/comments/1qxsin3/client_seats_and_pricing_update_webflow_just_made/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;Webflow should credit us downtime.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/Jambajamba90</strong> (Webflow Community MVP) · r/webflow · Apr 13, 2026 · 15 upvotes</span>
+                                    <a href="https://www.reddit.com/r/webflow/comments/1sl9ubw/is_webflow_down_no_access_to_anything_bad_gateway/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;Really screwing up our development schedule. Hired people cannot continue website development because of these issues events.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/eweber911</strong> · r/webflow · Apr 13, 2026 · 6 upvotes</span>
+                                    <a href="https://www.reddit.com/r/webflow/comments/1sl9ubw/is_webflow_down_no_access_to_anything_bad_gateway/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                         <BlogHeader>The Moment Webflow Stopped Feeling Like a Good Deal</BlogHeader>
 

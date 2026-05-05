@@ -39,8 +39,8 @@ export const metadata: Metadata = {
         title: "Website Migration Cost 2026: $1,500 to $10,000 (7 Platforms)",
         description: "Website migration costs $1,500 to $10,000 in 2026 across WordPress, Webflow, Wix, Squarespace, and Shopify. Real client receipts. Fixed price. 1-week delivery.",
         type: "article",
-        publishedTime: "2026-04-29T00:00:00-05:00",
-        modifiedTime: "2026-04-29T00:00:00-05:00",
+        publishedTime: "2026-05-06T00:00:00-05:00",
+        modifiedTime: "2026-05-06T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/website-migration-cost-2026",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -61,8 +61,8 @@ const articleSchema = {
             "headline": "Website Migration Cost 2026: $1,500 to $10,000 (7 Platforms)",
             "description": "Website migration costs $1,500 to $10,000 in 2026 across WordPress, Webflow, Wix, Squarespace, and Shopify. Real client receipts. Fixed price. 1-week delivery.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-04-29T00:00:00-05:00",
-            "dateModified": "2026-04-29T00:00:00-05:00",
+            "datePublished": "2026-05-06T00:00:00-05:00",
+            "dateModified": "2026-05-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -131,8 +131,8 @@ const articleSchema = {
             "name": "Website Migration Cost 2026: $1,500 to $10,000 (7 Platforms)",
             "description": "Website migration costs $1,500 to $10,000 in 2026 across WordPress, Webflow, Wix, Squarespace, and Shopify. Real client receipts. Fixed price. 1-week delivery.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
-            "datePublished": "2026-04-29T00:00:00-05:00",
-            "dateModified": "2026-04-29T00:00:00-05:00",
+            "datePublished": "2026-05-06T00:00:00-05:00",
+            "dateModified": "2026-05-06T00:00:00-05:00",
             "inLanguage": "en-US",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/website-migration-cost-2026#breadcrumb" }
         },
@@ -214,6 +214,34 @@ export default function WebsiteMigrationCost2026Page() {
                             <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-cognac mt-0.5 shrink-0" /> Hosting after migration is $0 to $25 a month (Vercel free tier scales to 100,000 visits/mo). Compare to $150 to $400 a month most clients pay their current platform. The migration breaks even in 18 days at typical opportunity cost.</li>
                             <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-cognac mt-0.5 shrink-0" /> If your current quote is more than 3x the high column for your platform, and the agency cannot point to a published portfolio with verifiable PageSpeed scores, you are paying for someone&apos;s billing software, not your own website.</li>
                         </ul>
+                    </div>
+
+                    {/* Real Buyer Voices — verified Reddit threads + primary sources, Apr 2026 */}
+                    <div className="my-8 p-5 bg-stone-50 border border-stone-200 rounded-2xl">
+                        <p className="text-xs font-bold uppercase tracking-widest text-stone-500 mb-4">Why Migration Urgency Is Higher in 2026</p>
+                        <div className="space-y-4">
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;We are not being killed by competition, I believe we have done this to ourselves. When Cloudflare can ship the entire functionality of WordPress, and then some, in 2 months, we can take longer than that to almost not ship one sub-menu of our Settings screen.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">Matt Mullenweg</strong> (WordPress founder) · Internal Slack post · April 14, 2026</span>
+                                    <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Source: The Repository →</a>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;Every time you load a page or post, WP wants to retrieve info from the database. We are long since past the point where the content on pages does not change enough to matter. This will reduce the footprint for most sites from 400MB down to 10MB to 30MB.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/user_number_666</strong> · r/Wordpress · Apr 14, 2026 · 103 upvotes on 160-upvote thread</span>
+                                    <a href="https://www.reddit.com/r/Wordpress/comments/1slbbht/wordpress_is_a_lie/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;I am so sick of dealing with SS — not being able to customize things the way I want to. Making sure photos stay in place and the correct size rather than getting all wonky when you change the screen size. I could go on.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/WholeHuckleberry7081</strong> · r/squarespace · Apr 8, 2026 · 16 upvotes, 61 comments</span>
+                                    <a href="https://www.reddit.com/r/squarespace/comments/1sec045/hate_ss_but_unsure_what_platform_to_move_to/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <BlogText>

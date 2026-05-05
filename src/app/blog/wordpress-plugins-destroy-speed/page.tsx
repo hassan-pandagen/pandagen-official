@@ -16,12 +16,12 @@ const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAni
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "WordPress Plugins Killing Speed: The Real Cost of 30+ Plugins (2026)",
+    title: "WordPress Plugins and Page Speed: 30+ Plugin Cost (2026)",
     description: "Most WordPress sites with 30+ plugins score 35/100 on mobile. How much revenue you lose per month and how to actually fix it.",
     alternates: { canonical: "/blog/wordpress-plugins-destroy-speed" },
     keywords: ["wordpress plugins slow", "wordpress plugin performance", "too many wordpress plugins", "wordpress plugins killing speed", "fix slow wordpress plugins", "wordpress speed optimization"],
     openGraph: {
-        title: "WordPress Plugins Killing Speed: The Real Cost of 30+ Plugins (2026)",
+        title: "WordPress Plugins and Page Speed: 30+ Plugin Cost (2026)",
         description: "Most WordPress sites with 30+ plugins score 35/100 on mobile. How much revenue you lose per month and how to actually fix it.",
         type: "article",
         publishedTime: "2026-02-05T00:00:00-05:00",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "WordPress Plugins Killing Speed: The Real Cost of 30+ Plugins (2026)",
+        title: "WordPress Plugins and Page Speed: 30+ Plugin Cost (2026)",
         description: "Most WordPress sites with 30+ plugins score 35/100 on mobile. How much revenue you lose per month and how to actually fix it.",
     },
 };
@@ -43,7 +43,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-plugins-destroy-speed#article",
-            "headline": "WordPress Plugins Killing Speed: The Real Cost of 30+ Plugins (2026)",
+            "headline": "WordPress Plugins and Page Speed: 30+ Plugin Cost (2026)",
             "description": "Most WordPress sites with 30+ plugins score 35/100 on mobile. How much revenue you lose per month and how to actually fix it.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-05T00:00:00-05:00",
@@ -188,6 +188,27 @@ export default function WordPressPluginsSpeedPage() {
                             "You can reduce damage by auditing plugins, but WordPress has a hard performance ceiling of ~75/100.",
                             "For under 1 second load times and 95+ PageSpeed, a full migration to Next.js is the only reliable path."
                         ]} />
+                    </div>
+
+                    {/* Real Buyer Voices — verified Reddit threads */}
+                    <div className="my-8 p-5 bg-stone-50 border border-stone-200 rounded-2xl">
+                        <p className="text-xs font-bold uppercase tracking-widest text-stone-500 mb-4">What WordPress Developers Are Saying Right Now</p>
+                        <div className="space-y-4">
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;Every time you load a page or post, WP wants to retrieve info from the database. We are long since past the point where the content on pages does not change enough to matter. This will reduce the footprint for most sites from 400MB down to 10MB to 30MB.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/user_number_666</strong> · r/Wordpress · Apr 14, 2026 · 103 upvotes on 160-upvote thread</span>
+                                    <a href="https://www.reddit.com/r/Wordpress/comments/1slbbht/wordpress_is_a_lie/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;CMS should just generate a static HTML + CSS ONCE and then just let the server serve it, instead of hammering the DB every single time — unless someone installed enough caching plugins to fix this.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/Myth_Thrazz</strong> (Jack of All Trades) · r/Wordpress · Apr 14, 2026 · 44 upvotes</span>
+                                    <a href="https://www.reddit.com/r/Wordpress/comments/1slbbht/wordpress_is_a_lie/og5bmvs/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div className="space-y-8">

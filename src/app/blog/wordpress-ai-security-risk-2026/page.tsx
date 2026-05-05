@@ -16,24 +16,24 @@ const SecurityShieldAnimation = lazyLoad(() => import("@/components/blog/Securit
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: { absolute: "WordPress AI Security Risk 2026: 100K+ Sites Exposed Through Plugins" },
+    title: { absolute: "WordPress Security Risk in 2026: 100K Sites Exposed" },
     description: "AI plugins are the newest WordPress vulnerability. 100K+ sites exposed through AI plugin flaws. Here is what business owners need to know and how to protect your site.",
     alternates: {
         canonical: '/blog/wordpress-ai-security-risk-2026',
     },
     openGraph: {
-        title: "WordPress AI Security Risk 2026: 100K+ Sites Exposed Through Plugins",
+        title: "WordPress Security Risk in 2026: 100K Sites Exposed",
         description: "AI plugins are the newest WordPress vulnerability. 100K+ sites exposed through AI plugin flaws. Here is what business owners need to know and how to protect your site.",
         type: "article",
         publishedTime: "2026-02-19T00:00:00-05:00",
-        modifiedTime: "2026-04-20T00:00:00-05:00",
+        modifiedTime: "2026-05-06T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/wordpress-ai-security-risk-2026",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
     twitter: {
         card: "summary_large_image",
-        title: "WordPress AI Security Risk 2026: 100K+ Sites Exposed Through Plugins",
+        title: "WordPress Security Risk in 2026: 100K Sites Exposed",
         description: "AI plugins are the newest WordPress vulnerability. 100K+ sites exposed through AI plugin flaws. Here is what business owners need to know and how to protect your site.",
     },
     keywords: ["WordPress AI security risk", "is WordPress AI safe", "WordPress 6.9 security vulnerabilities", "AI Engine plugin security flaw", "WordPress site security 2026"],
@@ -45,11 +45,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-ai-security-risk-2026#article",
-            "headline": "WordPress AI Security Risk 2026: 100K+ Sites Exposed Through Plugins",
+            "headline": "WordPress Security Risk in 2026: 100K Sites Exposed",
             "description": "AI plugins are the newest WordPress vulnerability. 100K+ sites exposed through AI plugin flaws. Here is what business owners need to know and how to protect your site.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-19T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-05-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -130,7 +130,7 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/wordpress-ai-security-risk-2026#webpage",
             "url": "https://www.pandacodegen.com/blog/wordpress-ai-security-risk-2026",
-            "name": "WordPress AI Security Risk 2026: 100K+ Sites Exposed Through Plugins",
+            "name": "WordPress Security Risk in 2026: 100K Sites Exposed",
             "description": "AI plugins are the newest WordPress vulnerability. 100K+ sites exposed through AI plugin flaws. Here is what business owners need to know and how to protect your site.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
@@ -226,6 +226,34 @@ export default function WordPressAISecurityPage() {
                             "Security researchers found 43% of WordPress AI plugins let attackers run commands remotely on your server.",
                             "If your site processes payments or customer data, this risk is active now, not theoretical."
                         ]} />
+                    </div>
+
+                    {/* Real Buyer Voices — verified primary sources, April 2026 */}
+                    <div className="my-8 p-5 bg-stone-50 border border-stone-200 rounded-2xl">
+                        <p className="text-xs font-bold uppercase tracking-widest text-stone-500 mb-4">April 2026 Plugin Security Crisis — Primary Sources</p>
+                        <div className="space-y-4">
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;The backdoor was introduced long before it was triggered, so it was a calculated move to slide it under the radar. Beyond reading all the plugin code and vetting it yourself it is going to be difficult to avoid. The other step is trying to rely less on plugins wherever possible.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/BNfreelance</strong> · r/woocommerce · Apr 7, 2026 · on Essential Plugin backdoor thread</span>
+                                    <a href="https://www.reddit.com/r/woocommerce/comments/1skaoxn/someone_bought_30_wordpress_plugins_and_planted_a/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;It is alarming and according to the article this is the second time this has happened. The guy paid 6 figures for the plugins.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/shiftification</strong> · r/woocommerce · Apr 7, 2026 · 53-upvote thread</span>
+                                    <a href="https://www.reddit.com/r/woocommerce/comments/1skaoxn/someone_bought_30_wordpress_plugins_and_planted_a/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">From Patchstack analysis: 31 plugins compromised, ~400,000 active installs affected. Backdoor sat dormant for 8 months. Same week: Smart Slider 3 Pro (800K installs) hijacked through update server. WooPayments webhook vulnerability also patched. <strong>7,966 new WordPress vulnerabilities in 2024 — 96% in plugins.</strong></p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">Patchstack</strong> · State of WordPress Security 2025 · April 2026 supply chain report</span>
+                                    <a href="https://patchstack.com/articles/critical-supply-chain-compromise-on-20-plugins-by-essentialplugin/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Source: Patchstack →</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     {/* Opening */}

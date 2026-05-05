@@ -16,12 +16,12 @@ const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAni
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "WordPress Costs 3 to 5x More Than You Think: 2026 Hidden Fees",
+    title: "WordPress 3-Year Cost in 2026: Plugins, Hosting, Maintenance",
     description: "The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3 to 5x. Here are the real numbers.",
     alternates: { canonical: "/blog/wordpress-killer" },
     keywords: ["wordpress cost 2026", "wordpress waste of money", "true cost of wordpress", "wordpress vs next.js cost", "wordpress alternative for business"],
     openGraph: {
-        title: "WordPress Costs 3 to 5x More Than You Think: 2026 Hidden Fees",
+        title: "WordPress 3-Year Cost in 2026: Plugins, Hosting, Maintenance",
         description: "The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3 to 5x. Here are the real numbers.",
         type: "article",
         publishedTime: "2026-01-15",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "WordPress Costs 3 to 5x More Than You Think: 2026 Hidden Fees",
+        title: "WordPress 3-Year Cost in 2026: Plugins, Hosting, Maintenance",
         description: "The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3 to 5x. Here are the real numbers.",
     },
 };
@@ -42,7 +42,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-killer#article",
-            "headline": "WordPress Costs 3 to 5x More Than You Think: 2026 Hidden Fees",
+            "headline": "WordPress 3-Year Cost in 2026: Plugins, Hosting, Maintenance",
             "description": "The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3 to 5x. Here are the real numbers.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-01-15T00:00:00-05:00",
@@ -187,6 +187,34 @@ export default function WordPressKillerPage() {
                             "Custom Next.js sites cost more upfront but pay for themselves within 18 to 24 months and save money every year after.",
                             "The real cost isn't just money. It's the 20 to 30% organic traffic you lose to Google penalizing your slow site."
                         ]} />
+                    </div>
+
+                    {/* Real Buyer Voices — verified Reddit threads + primary source */}
+                    <div className="my-8 p-5 bg-stone-50 border border-stone-200 rounded-2xl">
+                        <p className="text-xs font-bold uppercase tracking-widest text-stone-500 mb-4">What the WordPress Community Is Saying Right Now</p>
+                        <div className="space-y-4">
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;We are not being killed by competition, I believe we have done this to ourselves. When Cloudflare can ship the entire functionality of WordPress, and then some, in 2 months, we can take longer than that to almost not ship one sub-menu of our Settings screen.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">Matt Mullenweg</strong> (WordPress founder) · Internal Slack post · Apr 14, 2026</span>
+                                    <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Source: The Repository →</a>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;The dictator, who micromanaged the project for two decades, says community is to blame for the results.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/Rarst</strong> · r/Wordpress · Apr 14, 2026 · 128 upvotes</span>
+                                    <a href="https://www.reddit.com/r/Wordpress/comments/1sm8h38/continuing_the_trend_matt_mullenweg_says_the/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;Having a db is not a problem, it is that WP database structure is straight from hell, and it is like that for the sake of being retrocompatible. They should have made a breaking change with v5 or v6 and completely redesign it.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/zenotds</strong> · r/Wordpress · Apr 14, 2026 · 4 upvotes</span>
+                                    <a href="https://www.reddit.com/r/Wordpress/comments/1slbbht/wordpress_is_a_lie/oghfw0f/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div className="space-y-8">

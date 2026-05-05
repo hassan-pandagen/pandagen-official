@@ -18,7 +18,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Core Web Vitals Explained for Business Owners 2026: What It Means for Your Revenue",
+    title: "Core Web Vitals in 2026: What It Means for Your Revenue",
     description: "Your agency said your Core Web Vitals are failing and you have no idea what that means. Here is what the 3 metrics cost your business in lost sales.",
     alternates: {
         canonical: "/blog/core-web-vitals-explained",
@@ -36,17 +36,17 @@ export const metadata: Metadata = {
         "fix core web vitals"
     ],
     openGraph: {
-        title: "Core Web Vitals Explained for Business Owners 2026: What It Means for Your Revenue",
+        title: "Core Web Vitals in 2026: What It Means for Your Revenue",
         description: "Your agency said your Core Web Vitals are failing and you have no idea what that means. Here is what the 3 metrics cost your business in lost sales.",
         type: "article",
-        publishedTime: "2026-04-16",
+        publishedTime: "2026-05-06",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/core-web-vitals-explained",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Core Web Vitals Explained for Business Owners 2026: What It Means for Your Revenue",
+        title: "Core Web Vitals in 2026: What It Means for Your Revenue",
         description: "Your agency said your Core Web Vitals are failing. Here is what the 3 metrics are, why Google ranks sites on them, and what each failing score costs your business.",
     },
 };
@@ -57,11 +57,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/core-web-vitals-explained#article",
-            "headline": "Core Web Vitals Explained for Business Owners 2026: What It Means for Your Revenue",
+            "headline": "Core Web Vitals in 2026: What It Means for Your Revenue",
             "description": "Your agency said your Core Web Vitals are failing and you have no idea what that means. Here is what the 3 metrics cost your business in lost sales.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-04-16T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "datePublished": "2026-05-06T00:00:00-05:00",
+            "dateModified": "2026-05-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -115,11 +115,11 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/core-web-vitals-explained",
             "url": "https://www.pandacodegen.com/blog/core-web-vitals-explained",
-            "name": "Core Web Vitals Explained for Business Owners 2026: What It Means for Your Revenue",
+            "name": "Core Web Vitals in 2026: What It Means for Your Revenue",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
-            "datePublished": "2026-04-16",
-            "dateModified": "2026-04-16"
+            "datePublished": "2026-05-06",
+            "dateModified": "2026-05-06"
         },
         {
             "@type": "Organization",
@@ -226,6 +226,34 @@ export default function CoreWebVitalsExplainedPage() {
                             "Every 1-second delay in load time reduces conversions by 7%. For a $100K/month store, that is $7,000 per month in lost sales. $84,000 per year.",
                             "You can check your scores in 30 seconds at pagespeed.web.dev. Most business sites on Wix, Squarespace, WordPress, and Shopify fail because the platform itself adds JavaScript you cannot remove."
                         ]} />
+                    </div>
+
+                    {/* Real Buyer Voices — verified Reddit threads, Apr 2026 */}
+                    <div className="my-8 p-5 bg-stone-50 border border-stone-200 rounded-2xl">
+                        <p className="text-xs font-bold uppercase tracking-widest text-stone-500 mb-4">What Business Owners Are Experiencing Right Now</p>
+                        <div className="space-y-4">
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;Total impressions: 57,000. Total clicks: 1,270. Average CTR: 2.2%. Average position: 8.6. Clicks are stuck at ~40 per day despite high impressions. CTR dropped from ~14% (brand queries only) to ~1.2% as non-brand impressions grew.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/Big_University_6035</strong> · r/SEO · Apr 20, 2026 · 25 upvotes, 35 comments</span>
+                                    <a href="https://www.reddit.com/r/SEO/comments/1sq96ph/started_a_project_site_on_march_8_50k_impressions/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;A 1-3% CTR at position 8-9 is expected, so the issue is not really CTR, it is that you are sitting at the bottom of page 1 where clicks are limited. Go after keywords where you are already ranking 5-12, improve titles to better match intent, and strengthen those pages with internal links.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/Exact-Delay2152</strong> · r/SEO · Apr 20, 2026 (community response)</span>
+                                    <a href="https://www.reddit.com/r/SEO/comments/1sq96ph/started_a_project_site_on_march_8_50k_impressions/oh7h4es/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;The recent thread about subscriptions being insane really hit home for me. I started my store a few months ago and quickly fell into the trap of adding apps for every little feature. Now my monthly bill is way higher than I expected.&rdquo; — The same pattern applies to Core Web Vitals: every app that loads on the front end drags LCP and INP, directly lowering your position, directly reducing your clicks.</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/Jinnapat397</strong> · r/shopify · Apr 14, 2026 · apps adding to page weight affecting rankings</span>
+                                    <a href="https://www.reddit.com/r/shopify/comments/1snbsz9/how_do_you_decide_which_paid_shopify_apps_are/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div className="space-y-8">

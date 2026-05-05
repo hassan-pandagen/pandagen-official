@@ -18,7 +18,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Wix vs Custom Website 2026: 5 Moments Wix Becomes a Business Liability",
+    title: "Wix vs Custom Website in 2026: When to Switch",
     description: "Wix caps at 35 to 55 on mobile PageSpeed. Custom Next.js hits 95 to 100. Real 3-year cost, SEO ceiling, and when to stay or switch. Honest breakdown.",
     alternates: {
         canonical: "/blog/wix-vs-custom-website",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
         "wix pagespeed score"
     ],
     openGraph: {
-        title: "Wix vs Custom Website 2026: 5 Moments Wix Becomes a Business Liability",
+        title: "Wix vs Custom Website in 2026: When to Switch",
         description: "You added a booking app. Then an SEO plugin. Then a form tool. Your Wix site still scores 35 on mobile and you cannot export your content. Here is when custom code makes sense.",
         type: "article",
         publishedTime: "2026-04-13",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Wix vs Custom Website 2026: 5 Moments Wix Becomes a Business Liability",
+        title: "Wix vs Custom Website in 2026: When to Switch",
         description: "You added a booking app. Then an SEO plugin. Then a form tool. Your Wix site still scores 35 on mobile and you cannot export your content. Here is when custom code makes sense.",
     },
 };
@@ -57,7 +57,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wix-vs-custom-website#article",
-            "headline": "Wix vs Custom Website 2026: 5 Moments Wix Becomes a Business Liability",
+            "headline": "Wix vs Custom Website in 2026: When to Switch",
             "description": "Wix scores 35 to 55 on mobile PageSpeed. Custom sites score 95 to 100. But Wix is free to start and easy to use. Here is the real cost, speed, and SEO comparison with honest advice on when to stay and when to switch.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-13T00:00:00-05:00",
@@ -115,7 +115,7 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/wix-vs-custom-website",
             "url": "https://www.pandacodegen.com/blog/wix-vs-custom-website",
-            "name": "Wix vs Custom Website 2026: 5 Moments Wix Becomes a Business Liability",
+            "name": "Wix vs Custom Website in 2026: When to Switch",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-04-13",
@@ -229,6 +229,34 @@ export default function WixVsCustomWebsitePage() {
                     </div>
 
                     <div className="space-y-8">
+
+                    {/* Real Buyer Voices — verified Reddit threads */}
+                    <div className="my-8 p-5 bg-stone-50 border border-stone-200 rounded-2xl">
+                        <p className="text-xs font-bold uppercase tracking-widest text-stone-500 mb-4">What Wix Users Are Saying Right Now</p>
+                        <div className="space-y-4">
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;You are completely locked in. You cannot export your data, your code, anything. They want you trapped on their crappy service and paying them forever. Everything that they can do to make leaving difficult, they do.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/Temporary-Mix8022</strong> · r/WIX · Apr 3, 2026 · 60 upvotes, 70 comments</span>
+                                    <a href="https://www.reddit.com/r/WIX/comments/1scmih1/warning_do_not_use_wix/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;The vendor lock in is extreme. I had a hobby site on Wix. The site would not load on any iOS Apple device. I spent hours with their support. I then was so fed up I paid a Wix Studio developer $500 to rebuild it on Wix Studio. It finally expired and I did not even bother with it anymore. Just money flushed down the drain and many hours wasted.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/jn024</strong> · r/WIX · Apr 3, 2026 · 7 upvotes</span>
+                                    <a href="https://www.reddit.com/r/WIX/comments/1scmih1/warning_do_not_use_wix/oece1a3/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;I am so fed up and broke because of years of paying for Wix where I host 3 websites. It just feels like a very expensive scam for what you get. Also, you still need to spend hours making it mobile responsive.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/Big-Link-9451</strong> · r/WIX · Apr 28, 2026 · 6 upvotes</span>
+                                    <a href="https://www.reddit.com/r/WIX/comments/1sygwki/i_really_want_to_liberate_myself_from_my_wix_jail/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                         {/* === SECTION 1: The Honeymoon === */}
                         <BlogHeader>Wix Works Great Until You Need It to Do More</BlogHeader>

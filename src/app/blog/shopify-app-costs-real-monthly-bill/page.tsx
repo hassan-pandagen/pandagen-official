@@ -16,7 +16,7 @@ const SalesImpactAnimation = lazyLoad(() => import("@/components/blog/SalesImpac
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Shopify App Costs 2026: Your Real Monthly Bill Is Higher Than You Think",
+    title: "Shopify App Costs in 2026: $300 to $800/mo (Real Store Data)",
     description: "You cut 3 apps to save money. Black Friday hits and the bill is $1,000 again. Full app cost breakdown and how to actually stop paying.",
     alternates: {
         canonical: "/blog/shopify-app-costs-real-monthly-bill",
@@ -38,18 +38,18 @@ export const metadata: Metadata = {
         "how much do shopify apps cost"
     ],
     openGraph: {
-        title: "Shopify App Costs 2026: Your Real Monthly Bill Is Higher Than You Think",
+        title: "Shopify App Costs in 2026: $300 to $800/mo (Real Store Data)",
         description: "You cut 3 apps to save money. Black Friday hits and the bill is $1,000 again. Full app cost breakdown and how to actually stop paying.",
         type: "article",
         publishedTime: "2026-03-19T00:00:00-05:00",
-        modifiedTime: "2026-04-20T00:00:00-05:00",
+        modifiedTime: "2026-05-06T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/shopify-app-costs-real-monthly-bill",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Shopify App Costs 2026: Your Real Monthly Bill Is Higher Than You Think",
+        title: "Shopify App Costs in 2026: $300 to $800/mo (Real Store Data)",
         description: "You cut 3 apps to save money. Black Friday hits and the bill is $1,000 again. Full app cost breakdown and how to actually stop paying.",
     },
 };
@@ -60,11 +60,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/shopify-app-costs-real-monthly-bill#article",
-            "headline": "Shopify App Costs 2026: Your Real Monthly Bill Is Higher Than You Think",
+            "headline": "Shopify App Costs in 2026: $300 to $800/mo (Real Store Data)",
             "description": "You cut 3 apps to save money. Black Friday hits and the bill is $1,000 again. Full app cost breakdown and how to actually stop paying.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-19T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-05-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -130,11 +130,11 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/shopify-app-costs-real-monthly-bill#webpage",
             "url": "https://www.pandacodegen.com/blog/shopify-app-costs-real-monthly-bill",
-            "name": "Shopify App Costs 2026: Your Real Monthly Bill Is Higher Than You Think",
+            "name": "Shopify App Costs in 2026: $300 to $800/mo (Real Store Data)",
             "description": "The full Shopify app cost breakdown. Default stack costs $1,000/month. Optimized stack costs $136/month. Here is every swap, named and priced.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-03-19T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-05-06T00:00:00-05:00",
             "inLanguage": "en-US"
         },
         {
@@ -215,6 +215,34 @@ export default function ShopifyAppCostsPage() {
                             <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" /> Swapping to cheaper alternatives doing the same job cuts the bill to $146/month. Saving: $715/month, $8,580/year for a $20K to $50K/month store.</li>
                             <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" /> Uninstalling a Shopify app does not cancel the subscription. You must cancel inside the app dashboard.</li>
                         </ul>
+                    </div>
+
+                    {/* Real Buyer Voices — verified Reddit threads, Apr 2026 */}
+                    <div className="my-8 p-5 bg-stone-50 border border-stone-200 rounded-2xl">
+                        <p className="text-xs font-bold uppercase tracking-widest text-stone-500 mb-4">What Shopify Store Owners Are Saying Right Now</p>
+                        <div className="space-y-4">
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;I added reviews with Judge.me, then a loyalty program, and suddenly I am paying for multiple apps on top of Shopify while I have barely launched and made sales. It feels like profits = subscriptions.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/Confusedmind75</strong> · r/shopify · Apr 14, 2026 · 105 upvotes, 149 comments</span>
+                                    <a href="https://www.reddit.com/r/shopify/comments/1sm2hly/starting_a_shopify_store_and_realizing_everything/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;I started my store a few months ago and quickly fell into the trap of adding apps for every little feature. Now my monthly bill is way higher than I expected. I have apps for reviews, upsells, email capture, currency conversion, and more. Some get used daily, others I barely touch.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/Jinnapat397</strong> · r/shopify · Apr 14, 2026 · 23 upvotes, 75 comments</span>
+                                    <a href="https://www.reddit.com/r/shopify/comments/1snbsz9/how_do_you_decide_which_paid_shopify_apps_are/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;If you can not directly measure ROI with them (conversions or time saving) you probably do not need them.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/ThePracticalDad</strong> · r/shopify · Apr 14, 2026 · 11 upvotes</span>
+                                    <a href="https://www.reddit.com/r/shopify/comments/1snbsz9/how_do_you_decide_which_paid_shopify_apps_are/ogkqa8s/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <BlogText>

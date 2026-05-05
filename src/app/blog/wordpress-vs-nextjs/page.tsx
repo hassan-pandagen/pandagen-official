@@ -16,7 +16,7 @@ const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAni
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "WordPress vs Next.js 2026: The 4x Speed Gap and 3-Year Cost Comparison",
+    title: "WordPress vs Next.js in 2026: Speed and Cost Comparison",
     description: "WordPress vs Next.js 2026: speed, SEO, cost, security compared with real data. Next.js scores 95-100, WordPress 35-65. Full breakdown inside.",
     alternates: {
         canonical: '/blog/wordpress-vs-nextjs',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     keywords: ["wordpress vs next.js", "wordpress vs nextjs 2026", "wordpress alternative", "migrate wordpress to nextjs", "nextjs better than wordpress", "wordpress vs custom code", "nextjs seo vs wordpress"],
     robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
-        title: "WordPress vs Next.js 2026: The 4x Speed Gap and 3-Year Cost Comparison",
+        title: "WordPress vs Next.js in 2026: Speed and Cost Comparison",
         description: "WordPress vs Next.js 2026: speed, SEO, cost, security compared with real data. Next.js scores 95-100, WordPress 35-65. Full breakdown inside.",
         type: "article",
         publishedTime: "2026-03-11",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "WordPress vs Next.js 2026: The 4x Speed Gap and 3-Year Cost Comparison",
+        title: "WordPress vs Next.js in 2026: Speed and Cost Comparison",
         description: "WordPress vs Next.js 2026: speed, SEO, cost, security compared with real data. Next.js scores 95-100, WordPress 35-65. Full breakdown inside.",
     },
 };
@@ -45,11 +45,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-vs-nextjs#article",
-            "headline": "WordPress vs Next.js 2026: The 4x Speed Gap and 3-Year Cost Comparison",
+            "headline": "WordPress vs Next.js in 2026: Speed and Cost Comparison",
             "description": "WordPress vs Next.js 2026: speed, SEO, cost, security compared with real data. Next.js scores 95-100, WordPress 35-65. Full breakdown inside.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-11T00:00:00-05:00",
-            "dateModified": "2026-04-13T00:00:00-05:00",
+            "dateModified": "2026-05-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -109,7 +109,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-11T00:00:00-05:00",
-            "dateModified": "2026-04-13T00:00:00-05:00",
+            "dateModified": "2026-05-06T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/wordpress-vs-nextjs#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -197,6 +197,34 @@ export default function WordPressVsNextJSPage() {
                         <p className="text-stone-700 leading-relaxed">
                             A custom coded website loads in under 1 second. A WordPress site loads in 3 to 4 seconds. That speed difference costs WordPress owners an average of $20,172 per year in lost sales, according to a 2025 Liquid Web study of 206 businesses. Custom built sites also skip the $150 to $500 per month in hosting and plugin fees that WordPress charges forever. If your website brings in real money, custom built is the better investment. If it is a simple hobby blog you will never grow, WordPress is fine. The only question that matters: is your website losing you sales right now?
                         </p>
+                    </div>
+
+                    {/* Real Buyer Voices — verified Reddit threads */}
+                    <div className="my-8 p-5 bg-stone-50 border border-stone-200 rounded-2xl">
+                        <p className="text-xs font-bold uppercase tracking-widest text-stone-500 mb-4">What the WordPress Community Is Saying Right Now</p>
+                        <div className="space-y-4">
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;We are operating at a level of collective delusion that is quite impressive. We keep driving away some of the most valuable people and rejecting them when they try to contribute.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">Matt Mullenweg</strong> (WordPress founder) · April 14, 2026 · reported by The Repository</span>
+                                    <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Source →</a>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;CMS should just generate a static HTML + CSS ONCE and then just let the server serve it, instead of hammering the DB every single time — unless someone installed enough caching plugins to fix this.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/Myth_Thrazz</strong> · r/Wordpress · Apr 14, 2026 · 44 upvotes on 160-upvote thread</span>
+                                    <a href="https://www.reddit.com/r/Wordpress/comments/1slbbht/wordpress_is_a_lie/og5bmvs/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;It is basically Matt and Automattic that steer the direction. There is no community driven direction or voting on what should be added or improved next. It is basically whatever Matt wants.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/-skyrocketeer-</strong> (Designer/Developer) · r/Wordpress · Apr 14, 2026 · 20 upvotes</span>
+                                    <a href="https://www.reddit.com/r/Wordpress/comments/1slbbht/wordpress_is_a_lie/og5qoca/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     {/* Section 1 */}

@@ -16,14 +16,14 @@ const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAni
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Shopify vs Custom Website 2026: 5 Signs Your Store Has Outgrown Shopify",
+    title: "Shopify vs Custom Website in 2026: 5 Signs to Switch",
     description: "Shopify works until app fees hit $1,000/month and your store loads in 4+ seconds. 5 signs you have outgrown Shopify and what to do next.",
     alternates: {
         canonical: '/blog/shopify-vs-custom-website',
     },
     keywords: ["shopify vs custom website", "outgrown shopify", "shopify alternative", "shopify too expensive", "shopify slow", "custom ecommerce website", "shopify hidden costs", "shopify to custom migration", "headless shopify", "shopify app costs", "shopify plus price increase 2026", "shopify core web vitals failing", "shopify checkout restrictions", "leaving shopify", "shopify transaction fees", "shopify duplicate content seo", "shopify frozen funds"],
     openGraph: {
-        title: "Shopify vs Custom Website 2026: 5 Signs Your Store Has Outgrown Shopify",
+        title: "Shopify vs Custom Website in 2026: 5 Signs to Switch",
         description: "Shopify works until app fees hit $1,000/month and your store loads in 4+ seconds. Here are the 5 signs and what to do next.",
         type: "article",
         publishedTime: "2026-03-30",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Shopify vs Custom Website 2026: 5 Signs Your Store Has Outgrown Shopify",
+        title: "Shopify vs Custom Website in 2026: 5 Signs to Switch",
         description: "Shopify works until app fees hit $1,000/month and your store loads in 4+ seconds. Here are the 5 signs.",
     },
 };
@@ -48,7 +48,7 @@ const articleSchema = {
             "description": "Shopify works for small stores. But when app fees exceed $500/month, your store loads in 4+ seconds, and conversion stalls below 2%, custom code becomes the better investment.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-30T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-05-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -108,7 +108,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-30T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-05-06T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/shopify-vs-custom-website#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -192,6 +192,34 @@ export default function ShopifyVsCustomWebsitePage() {
                             "A custom headless e-commerce site costs $3,000 Growth to $12,000 Scale to build and pays for itself within 12 to 18 months through eliminated fees and better conversion rates.",
                             "Headless Shopify is the middle ground: keep Shopify's admin, replace the slow frontend with custom code."
                         ]} />
+                    </div>
+
+                    {/* Real Buyer Voices — verified Reddit threads, Apr-May 2026 */}
+                    <div className="my-8 p-5 bg-stone-50 border border-stone-200 rounded-2xl">
+                        <p className="text-xs font-bold uppercase tracking-widest text-stone-500 mb-4">What Shopify Store Owners Are Saying Right Now</p>
+                        <div className="space-y-4">
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;There is $4,200 sitting in that account. That is literally my inventory money for next month. I am also starting to look at moving off Shopify entirely because I cannot run a business where the platform can just decide to hold my money whenever they want.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/hipap</strong> · r/shopify · Apr 9, 2026 · 27 upvotes, 62 comments</span>
+                                    <a href="https://www.reddit.com/r/shopify/comments/1skg672/shopify_payments_froze_4200_and_support_wont_tell/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;I have been using Shopify for 7 years now and it has truly gotten worse and worse with each year. The customer service has fallen off dramatically, the platform has almost weekly outages, and I am constantly finding issues that they cannot fix.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/Carey251</strong> · r/shopify · May 4, 2026 · 8 upvotes</span>
+                                    <a href="https://www.reddit.com/r/shopify/comments/1t028ic/why_are_devs_on_a_tear_making_shopify_admin_less/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-stone-100 rounded-xl p-4">
+                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;Feels like they are optimizing for new user simplicity at the expense of power users. Every update adds guardrails and abstraction, but kills speed for people who actually live in the admin all day. Death by a thousand clicks is real.&rdquo;</p>
+                                <div className="flex items-center justify-between text-xs text-stone-400">
+                                    <span><strong className="text-stone-600">u/HusainKaizar</strong> · r/shopify · May 4, 2026 · 17 upvotes</span>
+                                    <a href="https://www.reddit.com/r/shopify/comments/1t028ic/why_are_devs_on_a_tear_making_shopify_admin_less/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div className="space-y-8">
