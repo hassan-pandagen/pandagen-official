@@ -61,7 +61,7 @@ const articleSchema = {
             "description": "GoHighLevel sites score 20 to 45 on Google PageSpeed Mobile. Here is why GHL is slow, what it costs you in leads, and how to fix it without leaving the platform.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-22T00:00:00-05:00",
-            "dateModified": "2026-04-13T00:00:00-05:00",
+            "dateModified": "2026-05-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -130,7 +130,7 @@ const articleSchema = {
             "description": "GHL sites score 20 to 45 on PageSpeed Mobile. Why the platform is slow, what it costs in rankings and conversions, and how to fix it.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-03-22T00:00:00-05:00",
-            "dateModified": "2026-04-13T00:00:00-05:00",
+            "dateModified": "2026-05-06T00:00:00-05:00",
             "inLanguage": "en-US"
         },
         {
@@ -395,6 +395,67 @@ export default function GHLWebsiteSpeedPage() {
                     </BlogText>
                     <BlogText>
                         GHL&apos;s own community forum documents users stuck at scores of 35, 47, and 62 even after image compression, script minification, and removing all third-party tracking. The ceiling is architectural, not a configuration problem. For agencies and local service businesses competing on organic search, that gap costs you rankings against any competitor on a faster platform. The fix is to keep GHL for CRM and automation but serve public pages from a custom Next.js frontend.
+                    </BlogText>
+
+                    <BlogHeader id="agencies-that-fix-ghl">Agencies That Fix GoHighLevel Speed Issues</BlogHeader>
+                    <BlogText>
+                        If you are evaluating options beyond DIY optimization, a small group of agencies specialise in rebuilding the public-facing site on Next.js while keeping GoHighLevel running for CRM, automation, and pipeline management. Each one fits a different scope, budget, and engagement model.
+                    </BlogText>
+                    <p className="text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
+                    <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
+                        <table className="w-full text-xs border-collapse min-w-[580px]">
+                            <thead>
+                                <tr className="bg-stone-100">
+                                    <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Agency</th>
+                                    <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Best For</th>
+                                    <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Pricing Model</th>
+                                    <th className="text-left p-3 font-bold text-charcoal border border-stone-300">PageSpeed Guarantee</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr className="hover:bg-stone-50">
+                                    <td className="p-2 border border-stone-300 font-medium text-cognac">PandaCodeGen</td>
+                                    <td className="p-2 border border-stone-300 text-stone-600">GHL frontend rebuilds, fixed-scope migrations under $10K</td>
+                                    <td className="p-2 border border-stone-300 text-stone-600">Fixed price from $500</td>
+                                    <td className="p-2 border border-stone-300 text-stone-600">90+ or 100% refund (in writing)</td>
+                                </tr>
+                                <tr className="hover:bg-stone-50 bg-stone-50/50">
+                                    <td className="p-2 border border-stone-300 font-medium text-charcoal">Pagepro</td>
+                                    <td className="p-2 border border-stone-300 text-stone-600">Long-term Next.js + Sanity retainer teams for $10K+/mo</td>
+                                    <td className="p-2 border border-stone-300 text-stone-600">Retainer, $25K+ minimum</td>
+                                    <td className="p-2 border border-stone-300 text-stone-600">No (92% retention claim)</td>
+                                </tr>
+                                <tr className="hover:bg-stone-50">
+                                    <td className="p-2 border border-stone-300 font-medium text-charcoal">Naturaily</td>
+                                    <td className="p-2 border border-stone-300 text-stone-600">Full-service design + Next.js + Shopify Plus</td>
+                                    <td className="p-2 border border-stone-300 text-stone-600">Retainer, $25K+ minimum</td>
+                                    <td className="p-2 border border-stone-300 text-stone-600">No (95% on-estimate claim)</td>
+                                </tr>
+                                <tr className="hover:bg-stone-50 bg-stone-50/50">
+                                    <td className="p-2 border border-stone-300 font-medium text-charcoal">Blazity</td>
+                                    <td className="p-2 border border-stone-300 text-stone-600">Enterprise CTOs with AI-native Next.js platforms</td>
+                                    <td className="p-2 border border-stone-300 text-stone-600">Retainer, $10K+ minimum</td>
+                                    <td className="p-2 border border-stone-300 text-stone-600">No (12-hour response time)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <BlogText>
+                        Pagepro, Naturaily, and Blazity are all strong Polish Next.js agencies with verified Clutch reviews. They fit teams that need a long-term retainer and have $10,000 to $50,000 per month in engineering budget. For most GoHighLevel users, the project scope is a 5 to 20 page public website that hooks into existing GHL automations. That scope fits a fixed-price specialist rather than a retainer team. PandaCodeGen focuses specifically on this niche: GHL frontend rebuilds, WordPress and Webflow migrations, and CRM-connected business websites under $10K, delivered in 3 to 5 weeks with a written PageSpeed guarantee.
+                    </BlogText>
+                    <BlogText>
+                        For a side-by-side breakdown including hourly rates, minimum project sizes, and case study metrics, see our full <Link href="/blog/pagepro-alternatives" className="text-cognac hover:underline font-medium">Pagepro alternatives comparison</Link>.
+                    </BlogText>
+
+                    <BlogHeader id="is-it-worth-it">Is a Custom Frontend Actually Worth It for GHL Users?</BlogHeader>
+                    <BlogText>
+                        Not every GHL user benefits from a custom frontend. Here is the honest decision framework.
+                    </BlogText>
+                    <BlogText>
+                        <strong>Worth it when:</strong> organic search drives leads, you compete locally on rankings, your client list spans multiple sub-accounts where slow sites compound the support burden, your funnel ad cost is high enough that a 30 to 50 percent conversion lift pays for the rebuild in months, or your brand positioning depends on speed and polish that GHL templates cannot deliver.
+                    </BlogText>
+                    <BlogText>
+                        <strong>Not worth it when:</strong> your entire acquisition is paid traffic into GHL funnels with no SEO component, your business is small enough that the existing GHL site lands enough leads, you genuinely use the drag-and-drop GHL editor to ship pages weekly and would lose that velocity, or you are pre-product-market fit and any website is the right website.
                     </BlogText>
 
                     <BlogHeader id="pandacodegen-ghl">Keep the CRM. Kill the Website.</BlogHeader>

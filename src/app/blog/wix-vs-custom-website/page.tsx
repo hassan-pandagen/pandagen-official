@@ -105,6 +105,7 @@ const articleSchema = {
         },
         {
             "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/wix-vs-custom-website#breadcrumb",
             "itemListElement": [
                 { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
                 { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
@@ -158,7 +159,7 @@ const articleSchema = {
         },
         {
             "@type": "FAQPage",
-            "@id": "https://www.pandacodegen.com/blog/wix-vs-custom-website#faq",
+            "@id": "https://www.pandacodegen.com/blog/wix-vs-custom-website#faqpage",
             "mainEntity": postFAQs.map(faq => ({
                 "@type": "Question",
                 "name": faq.question,
@@ -407,6 +408,10 @@ export default function WixVsCustomWebsitePage() {
                                 Get Free Wix Speed Audit
                                 <ArrowRight className="w-4 h-4" />
                             </CalModalButton>
+                            <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
+                                <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration</p>
+                                <p className="text-sm text-stone-700 mt-1">For qualifying small Wix migrations (under 15 pages, no e-commerce). 3 spots per month. Same custom Next.js architecture as full-price clients, delivered in 1 week. Exchange: $500 + verified Google or Clutch review. April 2026: 1 filled, 2 remaining.</p>
+                            </div>
                         </div>
 
                         {/* === SECTION 5: The Lock-In === */}
