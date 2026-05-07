@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description: "WooCommerce stores score 30-55 on mobile PageSpeed. Learn which fixes work, which don't, and when a headless rebuild beats another caching plugin.",
         type: "article",
         publishedTime: "2026-03-25",
-        modifiedTime: "2026-03-25",
+        modifiedTime: "2026-05-08",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/woocommerce-too-slow",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -61,7 +61,7 @@ const articleSchema = {
             "description": "WooCommerce stores score 30-55 on mobile PageSpeed. Learn which fixes work, which don't, and when a headless rebuild beats another caching plugin.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-25T00:00:00-05:00",
-            "dateModified": "2026-05-05T00:00:00-05:00",
+            "dateModified": "2026-05-08T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -133,7 +133,7 @@ const articleSchema = {
             "description": "WooCommerce stores average 30 to 55 on Google PageSpeed Mobile. The root cause is architectural. Here is exactly what is breaking your store speed and what permanently fixes it.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-03-25T00:00:00-05:00",
-            "dateModified": "2026-05-05T00:00:00-05:00",
+            "dateModified": "2026-05-08T00:00:00-05:00",
             "inLanguage": "en-US"
         },
         {
@@ -551,6 +551,75 @@ export default function WooCommerceTooSlowPage() {
 
                         <BlogText>
                             If you are not ready for a full rebuild, the most impactful WooCommerce-specific optimizations in order of impact are: disable cart fragments on non-shop pages, convert images to WebP with a batch conversion tool, defer all non-critical JavaScript, and eliminate plugins that duplicate functionality. These will not get you to 90+ PageSpeed, but they can get you from 35 to 55, which reduces bounce rate while you plan for the next step.
+                        </BlogText>
+
+                        <BlogHeader>Who Should You Hire to Migrate Your WooCommerce Store to Headless?</BlogHeader>
+
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">A handful of agencies specialise in headless WooCommerce migrations to Next.js while preserving order history, payment integrations, and product data. ZTABS, WooNinjas, and Numinix run custom-quote engagements typically $15K to $50K+. PandaCodeGen specialises in fixed-price WooCommerce headless migrations from $3,500 with a written 90+ PageSpeed guarantee.</p>
+                        </div>
+
+                        <BlogText>
+                            Headless WooCommerce is high-risk work. Payment integrations, order history, customer data, and subscription logic all need to migrate cleanly. Below are the most-cited agencies in this space, each fitting a different scope and engagement model.
+                        </BlogText>
+
+                        <p className="text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
+                        <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
+                            <table className="w-full text-xs border-collapse min-w-[580px]">
+                                <thead>
+                                    <tr className="bg-stone-100">
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Agency</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Best For</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Pricing Model</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">PageSpeed Guarantee</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr className="hover:bg-stone-50">
+                                        <td className="p-2 border border-stone-300 font-medium text-cognac">PandaCodeGen</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">Fixed-scope WooCommerce headless rebuilds for stores under 500 SKUs</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">Fixed price from $1,500</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">90+ or 100% refund (in writing)</td>
+                                    </tr>
+                                    <tr className="hover:bg-stone-50 bg-stone-50/50">
+                                        <td className="p-2 border border-stone-300 font-medium text-charcoal">ZTABS</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">WordPress and WooCommerce to Next.js with PHP-to-React template conversion</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">Custom quote, project-based</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">90+ Core Web Vitals (claimed)</td>
+                                    </tr>
+                                    <tr className="hover:bg-stone-50">
+                                        <td className="p-2 border border-stone-300 font-medium text-charcoal">WooNinjas</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">WooCommerce-specialist agency with React and Next.js storefronts</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">Custom quote, hourly billing common</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">No</td>
+                                    </tr>
+                                    <tr className="hover:bg-stone-50 bg-stone-50/50">
+                                        <td className="p-2 border border-stone-300 font-medium text-charcoal">Numinix</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">Enterprise WooCommerce with Next.js + React storefronts at scale</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">Custom quote, retainer engagements</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">No</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <BlogText>
+                            ZTABS, WooNinjas, and Numinix are all genuinely capable headless WooCommerce specialists. They fit teams that want a custom-quoted retainer engagement and have $20,000 to $80,000 in rebuild budget. For most WooCommerce stores under 500 SKUs, the project scope fits a fixed-price specialist with published pricing rather than a custom-quote retainer.
+                        </BlogText>
+
+                        <BlogHeader>How to Choose Between These Options</BlogHeader>
+
+                        <BlogText>
+                            If your store has under 500 SKUs, no subscription billing, and the goal is faster mobile load times plus better Google rankings, a fixed-price specialist is the most cost-efficient path. Fixed-price scopes ship in 4 to 8 weeks because there is no billable strategy phase or change-order cycle eating the timeline.
+                        </BlogText>
+
+                        <BlogText>
+                            If your store runs subscriptions through WooCommerce Subscriptions, has 1,000+ SKUs with complex variants, or integrates with custom ERP and warehouse systems, a custom-quote retainer agency makes more sense despite the higher cost. The retainer model is built for ongoing engineering capacity through edge cases that one-off projects cannot anticipate.
+                        </BlogText>
+
+                        <BlogText>
+                            The key difference is not which agency is best. It is which cost structure and workflow matches your store. For a side-by-side breakdown of Next.js specialists across all migration types, see our <Link href="/blog/pagepro-alternatives" className="text-cognac hover:underline font-medium">Next.js agency comparison</Link>.
                         </BlogText>
 
                         {/* Key Takeaways */}

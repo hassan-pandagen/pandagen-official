@@ -49,7 +49,7 @@ const articleSchema = {
             "description": "Webflow's real cost is $125 to $400/month once you add CMS tiers, forms, localization, and Optimize. Full 2026 hidden-fee breakdown plus the PageSpeed ceiling.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-18T00:00:00-05:00",
-            "dateModified": "2026-04-15T00:00:00-05:00",
+            "dateModified": "2026-05-08T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -119,7 +119,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-18T00:00:00-05:00",
-            "dateModified": "2026-04-15T00:00:00-05:00",
+            "dateModified": "2026-05-08T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/webflow-true-cost#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -589,6 +589,75 @@ export default function WebflowTrueCostPage() {
                         ]} />
                         <BlogText>
                             The businesses that stay on Webflow are typically solo operators or small teams where the visual editor's ease of use outweighs the performance and cost trade-offs. That is a legitimate choice for that stage of business. But as you grow, the constraints of a platform you do not own become more expensive than the build cost of something you do.
+                        </BlogText>
+
+                        <BlogHeader>Who Should You Hire to Migrate Away from Webflow?</BlogHeader>
+
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Most Webflow agencies build new Webflow sites. A smaller group specialises in migrating away from Webflow to custom Next.js. Finsweet, Flow Ninja, and Edgar Allan are top-tier Webflow specialists ($20K to $100K+ engagements). PandaCodeGen specialises in fixed-price Webflow to Next.js migrations from $1,500 with a written 90+ PageSpeed guarantee.</p>
+                        </div>
+
+                        <BlogText>
+                            The agency you hire depends on whether you want to stay in Webflow with a better build, or leave Webflow for custom code. Most of the most-cited agencies in 2026 fall into the first camp. Below is the honest comparison.
+                        </BlogText>
+
+                        <p className="text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
+                        <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
+                            <table className="w-full text-xs border-collapse min-w-[580px]">
+                                <thead>
+                                    <tr className="bg-stone-100">
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Agency</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Best For</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Pricing Model</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">PageSpeed Guarantee</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr className="hover:bg-stone-50">
+                                        <td className="p-2 border border-stone-300 font-medium text-cognac">PandaCodeGen</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">Migrating off Webflow to custom Next.js with SEO preservation</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">Fixed price from $1,500</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">90+ or 100% refund (in writing)</td>
+                                    </tr>
+                                    <tr className="hover:bg-stone-50 bg-stone-50/50">
+                                        <td className="p-2 border border-stone-300 font-medium text-charcoal">Finsweet</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">Pushing Webflow to its technical limits with custom frameworks</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">Custom quote, $20K+ engagements</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">No</td>
+                                    </tr>
+                                    <tr className="hover:bg-stone-50">
+                                        <td className="p-2 border border-stone-300 font-medium text-charcoal">Flow Ninja</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">Webflow Enterprise Partner, embedded WebOps for ongoing teams</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">Retainer, $30K+ minimum</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">No</td>
+                                    </tr>
+                                    <tr className="hover:bg-stone-50 bg-stone-50/50">
+                                        <td className="p-2 border border-stone-300 font-medium text-charcoal">Edgar Allan</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">Product-led storytelling and SaaS positioning on Webflow</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">Custom quote, $40K+ engagements</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">No</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <BlogText>
+                            Finsweet, Flow Ninja, and Edgar Allan are excellent choices if you have decided to stay on Webflow and want the best possible Webflow build. They will not solve the platform-level PageSpeed ceiling because that ceiling is structural to Webflow itself. PandaCodeGen is the alternative path: you keep your design and content, but the underlying technology becomes custom Next.js with no platform speed cap.
+                        </BlogText>
+
+                        <BlogHeader>How to Choose Between These Options</BlogHeader>
+
+                        <BlogText>
+                            If your project is under 50 pages, your Webflow bill (CMS plan plus add-ons) is above $100 per month, and your goal is faster Google rankings or better mobile conversions, leaving Webflow for fixed-price custom Next.js is the most cost-efficient path. Custom Next.js on Vercel costs $0 to $20 per month. The migration pays for itself in hosting savings within 18 to 24 months.
+                        </BlogText>
+
+                        <BlogText>
+                            If you want to stay on Webflow because the visual editor matters to your team, your CMS workflows are tightly integrated, or your designers prefer the Webflow Designer over a code-based handoff, Finsweet, Flow Ninja, or Edgar Allan can build you the best version of Webflow possible. Just understand the structural ceilings stay in place: PageSpeed caps at 55 to 75, hosting fees scale with traffic, and you do not own the underlying code.
+                        </BlogText>
+
+                        <BlogText>
+                            The key difference is not which agency is best. It is whether you want a better Webflow site or a faster site that you own. For a side-by-side breakdown of Next.js specialists across all migration types, see our <Link href="/blog/pagepro-alternatives" className="text-cognac hover:underline font-medium">Next.js agency comparison</Link>.
                         </BlogText>
                     </div>
 
