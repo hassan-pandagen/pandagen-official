@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         description: "Webflow migration costs $500 to $60,000+ depending on site size, CMS complexity, and integrations. Full 2026 breakdown by page count, hidden fees agencies never quote, and honest pricing you can verify.",
         type: "article",
         publishedTime: "2026-03-25",
-        modifiedTime: "2026-04-18",
+        modifiedTime: "2026-05-07",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/webflow-migration-cost",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -49,7 +49,7 @@ const articleSchema = {
             "description": "Webflow migration: $1,500+ Starter, $3,500+ Growth, $5K-$10K+ Scale. Full 2026 breakdown by page count and hidden fees.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-25T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-05-07T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -70,7 +70,7 @@ const articleSchema = {
             "articleSection": "Webflow",
             "keywords": ["webflow migration cost", "webflow to Next.js", "webflow migration pricing", "webflow custom code", "website migration cost 2026"],
             "timeRequired": "PT12M",
-            "wordCount": 3100,
+            "wordCount": 4000,
             "about": [
                 { "@type": "Thing", "name": "Webflow Migration" },
                 { "@type": "Thing", "name": "Website Migration Cost" },
@@ -112,7 +112,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-25T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-05-07T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/webflow-migration-cost#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -418,6 +418,122 @@ export default function WebflowMigrationCostPage() {
 
                         <BlogText>
                             If a quote does not specify these items in writing, the cost of fixing missing SEO elements post-launch often exceeds what was saved by going with a cheaper quote.
+                        </BlogText>
+
+                        <BlogHeader>What Is NOT Included in a Standard Webflow Migration Quote</BlogHeader>
+
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Most Webflow migration quotes exclude content rewriting, image re-optimization, third-party service migrations, post-launch fixes, ongoing maintenance, and email or DNS coordination. These line items often add 30 to 50 percent to the final invoice if not negotiated upfront. Ask explicitly about each one before signing.</p>
+                        </div>
+
+                        <BlogText>
+                            Cheap quotes stay cheap by excluding the work most clients assume is included. Here is what typically lives outside the base migration price:
+                        </BlogText>
+
+                        <BlogList items={[
+                            "Content rewriting or restructuring during migration. If your existing content needs editing, updates, or rewrites for tone or SEO, most studios bill this separately at $75 to $150 per hour.",
+                            "Image and media re-optimization. Bulk converting existing images to WebP or AVIF, resizing for responsive display, and writing descriptive alt text adds 4 to 12 hours on content-heavy sites.",
+                            "Third-party service migrations. Mailchimp form replacements, Calendly embed reconfiguration, chat widget reinstallation, and analytics resetup each take 1 to 4 hours and almost never appear in the base quote.",
+                            "Domain email and DNS coordination. If your business email runs on the same host as your current Webflow site, you need a clean migration path to Google Workspace or Microsoft 365 to avoid email downtime during DNS cutover.",
+                            "Post-launch fixes. The first 30 days after launch always surface small issues. Some agencies include this. Most do not. Ask whether it is covered or billed at hourly.",
+                            "Ongoing maintenance contract. Custom Next.js sites need dramatically less maintenance than Webflow, but you still want agreed terms for new pages, pricing changes, or new features after launch.",
+                        ]} />
+
+                        <BlogText>
+                            The way to read a quote: every item not explicitly named will be billed separately. If your quote is a single lump sum with no line breakdown, you are looking at the agency&apos;s starting position, not the final cost.
+                        </BlogText>
+
+                        <BlogHeader>How to Tell If Your Webflow Migration Quote Is Padded</BlogHeader>
+
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Five red flags tell you a Webflow migration quote is padded 40 to 60 percent above the actual cost: no itemised scope, discovery billed as a separate phase, strategy priced higher than development, 50 percent or more required upfront, and vague deliverables without measurable performance targets. Each one is worth pushing back on before signing.</p>
+                        </div>
+
+                        <BlogText>
+                            Most Webflow migration quotes carry 40 to 60 percent padding above what the work actually requires. This is not always fraud. It is how agency overhead gets absorbed into client invoices. But you should know what padding looks like so you can negotiate it down or take the quote elsewhere.
+                        </BlogText>
+
+                        <BlogList items={[
+                            "No itemised scope. The quote is a single lump sum like 'Webflow migration: $35,000' with no line-item breakdown for design, development, content migration, SEO work, QA, and launch. You cannot negotiate what you cannot see. Ask for the breakdown. If they refuse, walk.",
+                            "Discovery billed as a separate phase. Agencies asking $5,000 to $20,000 for a 'discovery phase' before quoting the actual build are charging for what should be part of scoping. Freelancers and boutique studios run discovery in a 60-minute call for free because they want to win the work.",
+                            "Strategy priced higher than development. If the quote shows $20,000 for strategy and $15,000 for actual development, you are paying for slide decks, not a website. Strategy matters but should never be the most expensive line.",
+                            "50 percent or more required upfront. Fair payment terms are 30 percent on signing, 30 to 40 percent at a mid-project milestone, and the remainder on launch. Anything above 40 percent upfront concentrates risk entirely on the client.",
+                            "Vague deliverables without measurable outcomes. Quotes promising 'modern design,' 'best practices,' or 'fast loading site' without specifying PageSpeed score, page count, or accessibility target. If the agency does not commit to a 90+ PageSpeed score in writing, you cannot hold them accountable when they ship a 65.",
+                        ]} />
+
+                        <BlogText>
+                            The fastest way to test whether a quote is honest: ask for a written PageSpeed guarantee with a refund clause if the score is missed on launch. Agencies that build well refuse this rarely. Agencies that pad quotes refuse this almost always.
+                        </BlogText>
+
+                        <BlogHeader>Who Should You Hire for a Webflow Migration?</BlogHeader>
+
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">A handful of agencies specialise in rebuilding Webflow sites on Next.js while preserving SEO and content. Each fits a different scope, budget, and engagement model. Pagepro and Naturaily run retainer-based engagements with $25K+ minimums for enterprise builds. Blazity targets enterprise CTOs at $10K+ minimum. PandaCodeGen specialises in fixed-price Webflow migrations under $25K with a written 90+ PageSpeed guarantee.</p>
+                        </div>
+
+                        <BlogText>
+                            Most businesses comparing Webflow migration quotes are choosing between freelancers, boutique studios, and full-service agencies. Each comes with different pricing models, timelines, and outcomes. Here is how the most-cited Next.js specialist agencies compare for Webflow migration work specifically:
+                        </BlogText>
+
+                        <p className="text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
+                        <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
+                            <table className="w-full text-xs border-collapse min-w-[580px]">
+                                <thead>
+                                    <tr className="bg-stone-100">
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Agency</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Best For</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Pricing Model</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">PageSpeed Guarantee</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr className="hover:bg-stone-50">
+                                        <td className="p-2 border border-stone-300 font-medium text-cognac">PandaCodeGen</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">Fixed-scope Webflow migrations under $25K</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">Fixed price from $500</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">90+ or 100% refund (in writing)</td>
+                                    </tr>
+                                    <tr className="hover:bg-stone-50 bg-stone-50/50">
+                                        <td className="p-2 border border-stone-300 font-medium text-charcoal">Pagepro</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">Long-term Next.js + Sanity retainer teams</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">Retainer, $25K+ minimum</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">No (92% retention claim)</td>
+                                    </tr>
+                                    <tr className="hover:bg-stone-50">
+                                        <td className="p-2 border border-stone-300 font-medium text-charcoal">Naturaily</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">Full-service design + Next.js + Shopify Plus</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">Retainer, $25K+ minimum</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">No (95% on-estimate claim)</td>
+                                    </tr>
+                                    <tr className="hover:bg-stone-50 bg-stone-50/50">
+                                        <td className="p-2 border border-stone-300 font-medium text-charcoal">Blazity</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">Enterprise CTOs with AI-native Next.js platforms</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">Retainer, $10K+ minimum</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">No (12-hour response time)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <BlogText>
+                            Pagepro, Naturaily, and Blazity are all strong Polish Next.js agencies with verified Clutch reviews. They fit teams that need a long-term retainer team and have $10,000 to $50,000 per month in engineering budget. For most Webflow migrations, the project scope is a 5 to 50 page business or content site. That scope fits a fixed-price specialist rather than a retainer team.
+                        </BlogText>
+
+                        <BlogHeader>How to Choose Between These Options</BlogHeader>
+
+                        <BlogText>
+                            If your project is under 50 pages and performance is the priority, a smaller specialist team is usually the fastest and most cost-efficient option. Fixed-price scopes ship in 3 to 5 weeks because there are no billable strategy phases or multi-stakeholder review cycles eating the timeline.
+                        </BlogText>
+
+                        <BlogText>
+                            If you are managing a larger Webflow site with multiple stakeholders, custom integrations, or compliance requirements, a larger agency structure with dedicated project management may make more sense despite the higher cost. The retainer model is built for ongoing engineering capacity, not one-off migrations.
+                        </BlogText>
+
+                        <BlogText>
+                            The key difference is not which agency is best. It is which cost structure and workflow matches your project. For a side-by-side breakdown including hourly rates, minimum project sizes, and case study metrics, see our full <Link href="/blog/pagepro-alternatives" className="text-cognac hover:underline font-medium">Pagepro alternatives comparison</Link>.
                         </BlogText>
 
                         <BlogHeader>Webflow Ongoing Costs After Migration (and What You&apos;ll Save)</BlogHeader>
