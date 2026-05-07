@@ -493,7 +493,7 @@ export default function WebflowMigrationCostPage() {
                                     <tr className="hover:bg-stone-50">
                                         <td className="p-2 border border-stone-300 font-medium text-cognac">PandaCodeGen</td>
                                         <td className="p-2 border border-stone-300 text-stone-600">Fixed-scope Webflow migrations under $25K</td>
-                                        <td className="p-2 border border-stone-300 text-stone-600">Fixed price from $500</td>
+                                        <td className="p-2 border border-stone-300 text-stone-600">Fixed price from $1,500</td>
                                         <td className="p-2 border border-stone-300 text-stone-600">90+ or 100% refund (in writing)</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">

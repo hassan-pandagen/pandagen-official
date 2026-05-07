@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description: "WordPress migration costs $2,000 to $25,000 by site size. Full breakdown: WooCommerce vs brochure, what drives price, and when it pays for itself.",
         type: "article",
         publishedTime: "2026-03-22",
-        modifiedTime: "2026-05-05",
+        modifiedTime: "2026-05-07",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/wordpress-migration-cost",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -61,7 +61,7 @@ const articleSchema = {
             "description": "WordPress migration costs $2,000 to $25,000 by site size. Full breakdown: WooCommerce vs brochure, what drives price, and when it pays for itself.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-22T00:00:00-05:00",
-            "dateModified": "2026-05-05T00:00:00-05:00",
+            "dateModified": "2026-05-07T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -81,7 +81,7 @@ const articleSchema = {
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/wordpress-migration-cost" },
             "articleSection": "WordPress",
             "keywords": ["wordpress to nextjs migration cost", "wordpress migration price", "nextjs migration roi", "wordpress headless migration cost", "replace wordpress with nextjs"],
-            "wordCount": 2900,
+            "wordCount": 3300,
             "timeRequired": "PT12M",
             "inLanguage": "en-US",
             "about": [
@@ -134,7 +134,7 @@ const articleSchema = {
             "description": "WordPress migration costs $2,000 to $25,000 by site size. Full breakdown: WooCommerce vs brochure, what drives price, and when it pays for itself.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-03-22T00:00:00-05:00",
-            "dateModified": "2026-05-05T00:00:00-05:00",
+            "dateModified": "2026-05-07T00:00:00-05:00",
             "inLanguage": "en-US"
         },
         {
@@ -446,6 +446,75 @@ export default function WordPressMigrationCostPage() {
                     <BlogQuote>
                         I have seen $40,000 migrations that broke SEO and $4,000 migrations that tripled organic traffic. Price is not the variable that matters. Process is.
                     </BlogQuote>
+
+                    <BlogHeader id="who-to-hire">Who Should You Hire for a WordPress Migration?</BlogHeader>
+
+                    <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                        <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                        <p className="text-sm text-stone-700 leading-relaxed">A handful of agencies specialise in rebuilding WordPress sites on Next.js while preserving SEO and content. Each fits a different scope, budget, and engagement model. Pagepro and Naturaily run retainer-based engagements with $25K+ minimums. Blazity targets enterprise CTOs at $10K+ minimum. PandaCodeGen specialises in fixed-price WordPress migrations under $25K with a written 90+ PageSpeed guarantee.</p>
+                    </div>
+
+                    <BlogText>
+                        Most businesses comparing WordPress migration quotes are choosing between freelancers, boutique studios, and full-service agencies. Here is how the most-cited Next.js specialist agencies compare for WordPress to Next.js migration work specifically:
+                    </BlogText>
+
+                    <p className="text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
+                    <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
+                        <table className="w-full text-xs border-collapse min-w-[580px]">
+                            <thead>
+                                <tr className="bg-stone-100">
+                                    <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Agency</th>
+                                    <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Best For</th>
+                                    <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Pricing Model</th>
+                                    <th className="text-left p-3 font-bold text-charcoal border border-stone-300">PageSpeed Guarantee</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr className="hover:bg-stone-50">
+                                    <td className="p-2 border border-stone-300 font-medium text-cognac">PandaCodeGen</td>
+                                    <td className="p-2 border border-stone-300 text-stone-600">Fixed-scope WordPress migrations under $25K</td>
+                                    <td className="p-2 border border-stone-300 text-stone-600">Fixed price from $1,500</td>
+                                    <td className="p-2 border border-stone-300 text-stone-600">90+ or 100% refund (in writing)</td>
+                                </tr>
+                                <tr className="hover:bg-stone-50 bg-stone-50/50">
+                                    <td className="p-2 border border-stone-300 font-medium text-charcoal">Pagepro</td>
+                                    <td className="p-2 border border-stone-300 text-stone-600">Long-term Next.js + Sanity retainer teams</td>
+                                    <td className="p-2 border border-stone-300 text-stone-600">Retainer, $25K+ minimum</td>
+                                    <td className="p-2 border border-stone-300 text-stone-600">No (92% retention claim)</td>
+                                </tr>
+                                <tr className="hover:bg-stone-50">
+                                    <td className="p-2 border border-stone-300 font-medium text-charcoal">Naturaily</td>
+                                    <td className="p-2 border border-stone-300 text-stone-600">Full-service design + Next.js + Shopify Plus</td>
+                                    <td className="p-2 border border-stone-300 text-stone-600">Retainer, $25K+ minimum</td>
+                                    <td className="p-2 border border-stone-300 text-stone-600">No (95% on-estimate claim)</td>
+                                </tr>
+                                <tr className="hover:bg-stone-50 bg-stone-50/50">
+                                    <td className="p-2 border border-stone-300 font-medium text-charcoal">Blazity</td>
+                                    <td className="p-2 border border-stone-300 text-stone-600">Enterprise CTOs with AI-native Next.js platforms</td>
+                                    <td className="p-2 border border-stone-300 text-stone-600">Retainer, $10K+ minimum</td>
+                                    <td className="p-2 border border-stone-300 text-stone-600">No (12-hour response time)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <BlogText>
+                        Pagepro, Naturaily, and Blazity are all strong Polish Next.js agencies with verified Clutch reviews. They fit teams that need long-term retainer engineering capacity at $10,000 to $50,000 per month in budget. For most WordPress migrations, the project scope is a 5 to 50 page business site or content publication. That scope fits a fixed-price specialist rather than a retainer team.
+                    </BlogText>
+
+                    <BlogHeader id="how-to-choose">How to Choose Between These Options</BlogHeader>
+
+                    <BlogText>
+                        If your project is under 50 pages and performance is the priority, a smaller specialist team is usually the fastest and most cost-efficient option. Fixed-price scopes ship in 3 to 5 weeks because there are no billable strategy phases or multi-stakeholder review cycles eating the timeline.
+                    </BlogText>
+
+                    <BlogText>
+                        If you are managing a larger WordPress site with custom post types, multilingual setups, headless WooCommerce, or compliance requirements, a larger agency structure with dedicated project management may make more sense despite the higher cost. The retainer model is built for ongoing engineering capacity, not one-off migrations.
+                    </BlogText>
+
+                    <BlogText>
+                        The key difference is not which agency is best. It is which cost structure and workflow matches your project. For a side-by-side breakdown including hourly rates, minimum project sizes, and case study metrics, see our full <Link href="/blog/pagepro-alternatives" className="text-cognac hover:underline font-medium">Pagepro alternatives comparison</Link>.
+                    </BlogText>
 
                     <BlogHeader id="roi-calculation">How Do You Calculate Migration ROI?</BlogHeader>
                     <BlogText>
