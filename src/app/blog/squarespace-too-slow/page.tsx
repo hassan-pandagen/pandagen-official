@@ -322,6 +322,12 @@ export default function SquarespaceToSlowPage() {
                         ]} />
 
                         <BlogHeader>You Are Losing The Ranking Tiebreaker Every Time</BlogHeader>
+
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer: Is Squarespace Bad for SEO?</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Squarespace is not bad for SEO in terms of meta tags, sitemaps, or schema. It is bad for SEO because of structural Core Web Vitals limits that Google uses as a direct ranking signal. Squarespace caps at 35 to 55 mobile PageSpeed because the platform ships 200 to 400KB of mandatory JavaScript on every page that you cannot remove. For any keyword where two competing pages have similar content, the faster page wins the ranking tiebreaker. That is the SEO problem nobody can fix from inside Squarespace.</p>
+                        </div>
+
                         <BlogText>
                             Google confirmed Core Web Vitals as a direct ranking signal in the{" "}
                             <a href="https://developers.google.com/search/docs/appearance/page-experience" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Page Experience update</a>.

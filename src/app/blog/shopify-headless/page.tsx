@@ -204,6 +204,12 @@ export default function ShopifyHeadlessPage() {
                         </BlogText>
 
                         <BlogHeader>Why Is Your Shopify Store Slow No Matter What You Try?</BlogHeader>
+
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer: Why Is My Shopify Store Slow on Mobile?</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Shopify stores are slow on mobile because Liquid templates render server-side on every request, all theme CSS and JS load on every page (even code unused on that page), and third-party apps inject scripts that block render. Stock themes (Dawn, Sense, Refresh) score 50 to 65 on PageSpeed mobile in 2026. The fix is not theme optimization or fewer apps. It is decoupling the frontend with headless Shopify on Next.js so Liquid stops rendering pages on every request.</p>
+                        </div>
+
                         <BlogText>
                             Shopify uses a templating system called Liquid. Here&apos;s the fundamental problem:
                         </BlogText>
@@ -271,6 +277,12 @@ export default function ShopifyHeadlessPage() {
                         ]} />
 
                         <BlogHeader>Can I Still Use Shopify Apps After Going Headless?</BlogHeader>
+
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer: How to Make My Shopify Store Faster Without Apps</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">The fastest way to speed up Shopify without apps is to remove the apps, not add new ones. Most stores can drop 8 to 15 third-party apps by going headless: replace review apps with native Storefront API queries, replace email apps with Klaviyo direct integration, replace currency converters with build-time logic, replace upsell apps with custom Next.js components. Result: fewer apps loaded, no iframe overhead, mobile PageSpeed jumps from 40 to 60 range to 90 to 100.</p>
+                        </div>
+
                         <BlogText>
                             Most backend apps continue working normally because they connect to Shopify admin, not the frontend theme:
                         </BlogText>

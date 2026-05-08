@@ -436,6 +436,13 @@ export default function GHLKeepCRMReplaceWebsitePage() {
                         </table>
                     </div>
 
+                    <BlogHeader id="white-label-ghl">GoHighLevel Agency White-Label Website Development: How to Offer It</BlogHeader>
+
+                    <div className="my-4 p-4 bg-stone-50 border-l-4 border-amber-700 rounded-r-xl">
+                        <p className="text-xs font-bold text-amber-700 uppercase tracking-wide mb-1">Quick Answer</p>
+                        <p className="text-sm text-stone-700 leading-relaxed">GHL agencies offering white-label website development have two paths: native GHL builder sites (cheap to spin up, score 20 to 45 mobile PageSpeed, hurt client SEO), or a hybrid stack where the public website runs on custom Next.js while GHL handles CRM, automations, and sub-account billing under your white label. The hybrid path costs more per build but lets agencies position website performance as a competitive differentiator, charge $1,500 to $3,500 per client site, and keep all sub-account workflows intact.</p>
+                    </div>
+
                     <BlogHeader id="cost-reality">Cost Reality: Hybrid vs Native vs Custom Funnel Rebuild</BlogHeader>
                     <BlogText>
                         Every operator considering this asks the same question first. Here is the honest math.

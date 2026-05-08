@@ -516,6 +516,10 @@ export default function WordPressMigrationCostPage() {
                         The key difference is not which agency is best. It is which cost structure and workflow matches your project. For a side-by-side breakdown including hourly rates, minimum project sizes, and case study metrics, see our full <Link href="/blog/pagepro-alternatives" className="text-cognac hover:underline font-medium">Pagepro alternatives comparison</Link>.
                     </BlogText>
 
+                    <BlogText>
+                        The fastest way to evaluate any WordPress to Next.js developer or agency: ask them to share three live client URLs they have shipped, then run all three through Google PageSpeed Insights yourself. If two of three score 90+ on mobile, they know what they are doing. If most score 70 or below, no amount of pitching will fix the underlying skill gap.
+                    </BlogText>
+
                     <BlogHeader id="roi-calculation">How Do You Calculate Migration ROI?</BlogHeader>
                     <BlogText>
                         Migration ROI comes from three sources: reduced ongoing costs, higher organic traffic from better PageSpeed scores, and increased conversion rates from faster load times.

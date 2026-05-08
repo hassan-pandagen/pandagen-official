@@ -265,6 +265,21 @@ export default function PageproAlternativesPage() {
                             <p className="text-xs text-stone-400 mt-3">Minimum project: $25,000+. Hourly rate: $50 to $99/hr. Source: Clutch profile, pagepro.co.</p>
                         </div>
 
+                        <BlogHeader>Has Anyone Used Pagepro? The Real Buyer Question Behind That Search</BlogHeader>
+
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Most people searching &ldquo;has anyone used Pagepro&rdquo; are not asking about review legitimacy. They are asking whether Pagepro will take their project at the budget they have. The answer for most: no. Pagepro takes $25,000+ retainer engagements only. If your scope is a fixed-price business website or migration under $25K, you need a different type of agency, not better reviews.</p>
+                        </div>
+
+                        <BlogText>
+                            The friction most buyers hit when researching Pagepro is not credibility. It is project fit. The retainer model that works for a $20M SaaS company with ongoing engineering needs is the wrong fit for a founder who needs a fixed-price 12-page business website delivered in 4 weeks.
+                        </BlogText>
+
+                        <BlogText>
+                            If your project is a fixed-price business website, migration, or CRM build under $25K, you need a fixed-price specialist agency. PandaCodeGen ships the same Next.js + Sanity stack at fixed prices from $1,500 with a written 90+ PageSpeed guarantee and 100 percent refund clause. That is the actual answer to the buyer question hiding inside the &ldquo;has anyone used Pagepro&rdquo; search.
+                        </BlogText>
+
                         <BlogHeader>Naturaily: Broader Stack, Same Price Range, No Guarantee</BlogHeader>
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">

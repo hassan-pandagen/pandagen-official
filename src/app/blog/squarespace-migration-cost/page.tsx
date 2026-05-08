@@ -652,6 +652,29 @@ export default function SquarespaceMinCostPage() {
                             You can see our full <Link href="/services/squarespace?ref=blog/squarespace-migration-cost" className="text-charcoal underline decoration-cognac/40 hover:decoration-cognac transition-colors">Squarespace migration service page</Link> for details on what is included in each package, or compare us against other agencies in our <Link href="/blog/top-custom-web-development-agencies-usa-2026" className="text-charcoal underline decoration-cognac/40 hover:decoration-cognac transition-colors">2026 agency comparison</Link>.
                         </BlogText>
 
+                        <BlogHeader id="cheapest-squarespace-migration">What Is the Cheapest Way to Move My Site Off Squarespace?</BlogHeader>
+
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">The cheapest legitimate Squarespace migration in 2026 is the PandaCodeGen Founder&apos;s Offer at $500 for qualifying small sites (under 15 pages, no e-commerce). Outside that, freelancers on Upwork charge $400 to $1,500 but quality varies wildly. Affordable agency migrations to custom Next.js start at $1,500 with a written 90+ PageSpeed guarantee. Below $400 you are buying a template installation, not a migration.</p>
+                        </div>
+
+                        <BlogText>
+                            Cheap and affordable mean different things in this market. Here is what each price band actually buys:
+                        </BlogText>
+
+                        <BlogList items={[
+                            "Under $400: template installations on Wix, WordPress free themes, or other Squarespace clones. Not a migration. You are paying someone to set up a free template and copy paste your content. Quality is unpredictable, no SEO preservation, no PageSpeed guarantee.",
+                            "$400 to $1,500: Upwork or Fiverr freelancers handling content migration to WordPress, Webflow, or basic Shopify. Variable quality. Some are excellent, most are template-heavy. Vet portfolios by running their past work through Google PageSpeed Insights before hiring.",
+                            "$500 PandaCodeGen Founder&apos;s Offer: full custom Next.js migration for qualifying small Squarespace sites. 3 spots per month. Requirements: under 15 pages, no e-commerce, commit to a verified Google or Clutch review after launch. Same architecture as full-price clients with a written 90+ PageSpeed guarantee.",
+                            "$1,500 to $3,500: starter and growth tier custom code migrations from boutique studios. PandaCodeGen Starter at $1,500 covers 5 to 7 page sites. Growth at $3,500 covers 10 to 20 pages with Sanity CMS and full SEO migration.",
+                            "$3,500 to $10,000: mid-size Squarespace sites with custom integrations, e-commerce, or larger content libraries. Includes content migration, schema markup, 301 redirects for every URL, and Google Search Console handover."
+                        ]} />
+
+                        <BlogText>
+                            For most service businesses leaving Squarespace, the math points to either the Founder&apos;s Offer (if you qualify) or the $1,500 Starter tier. Going below $400 saves money upfront but the rebuild quality usually forces a second migration within 12 to 18 months, which means paying twice. The cheapest migration that lasts is the one done correctly the first time.
+                        </BlogText>
+
                         <BlogHeader>Questions to Ask Any Agency Before You Sign</BlogHeader>
 
                         <BlogList items={[

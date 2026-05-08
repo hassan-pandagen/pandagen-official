@@ -291,6 +291,11 @@ export default function WooCommerceTooSlowPage() {
 
                         <BlogHeader>The 5 Actual Reasons WooCommerce Is Slow</BlogHeader>
 
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer: Common Causes and How to Fix Them</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">WooCommerce stores are slow for 5 common causes: PHP rebuilding every page on every request, 60 to 150 database queries per page load, plugin bloat (the average store runs 30 active plugins), uncached cart and checkout pages, and theme scripts blocking the main thread. The fix depends on your scope. Plugin cleanup and caching get you from 35 to 55. The only way to reach 90+ is decoupling the frontend with headless WooCommerce on Next.js so PHP stops rendering pages on every request.</p>
+                        </div>
+
                         <BlogText>
                             These are not configuration problems. They are structural characteristics of how WooCommerce and WordPress are built.
                         </BlogText>
