@@ -435,6 +435,12 @@ export default function WordPressMigrationCostPage() {
                     </BlogText>
 
                     <BlogHeader id="agency-vs-freelance">Freelancer at $5K, Agency at $40K, Same Migration. Here Is Why.</BlogHeader>
+
+                    <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                        <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer: Where Can I Get My WordPress Site Rebuilt Cheap?</p>
+                        <p className="text-sm text-stone-700 leading-relaxed">The cheapest legitimate WordPress rebuild path is the PandaCodeGen Founder&apos;s Offer at $500 for qualifying small sites under 15 pages with no e-commerce. Affordable freelance options on Upwork or Toptal range $1,000 to $5,000 with variable quality. Budget agency rebuilds at PandaCodeGen Starter start at $1,500 with a written 90+ PageSpeed guarantee. Below $1,000 you are usually buying a template installation, not a custom rebuild.</p>
+                    </div>
+
                     <BlogText>
                         The same migration can cost $5,000 with a freelancer, $15,000 with a boutique studio, or $40,000 with a full-service agency. The difference is not always quality. It is overhead, risk management, and what happens when something goes wrong.
                     </BlogText>

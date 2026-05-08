@@ -482,6 +482,12 @@ export default function WebsiteRebuildCost2026Page() {
                     </div>
 
                     <BlogHeader id="red-flags">Red Flags: How to Spot a Padded Rebuild Quote</BlogHeader>
+
+                    <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                        <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer: Is $30,000 a Normal Quote for a Website?</p>
+                        <p className="text-sm text-stone-700 leading-relaxed">$30,000 is normal for a 30+ page agency build with custom design, multiple integrations, and a dedicated strategy phase. For a 10 to 20 page small business website, the same scope ships at $4,000 to $10,000 from boutique studios like PandaCodeGen with a written 90+ PageSpeed guarantee. If your scope is the second kind, the $30K quote is padded 40 to 60 percent above what the work actually requires. Ask for an itemized breakdown. If they refuse, get 2 more quotes from boutique specialists for comparison.</p>
+                    </div>
+
                     <BlogText>
                         Most rebuild quotes are padded 40 to 60 percent above the actual cost of the work. This is not necessarily fraud. It is how agency overhead gets absorbed into client invoices. But you should know what padding looks like so you can ask for it to be removed, or take the quote somewhere else.
                     </BlogText>
