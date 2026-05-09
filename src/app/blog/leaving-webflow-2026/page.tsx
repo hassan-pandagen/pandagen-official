@@ -18,8 +18,8 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Why We Left Webflow in 2026 (Cost, Timeline, SEO Results)",
-    description: "Bandwidth cut 75%. Bills hit $170 overnight. Carts broke. Memberships killed. The real story of leaving Webflow and what comes next.",
+    title: "Leaving Webflow in 2026: Real Migration Story After 14 Outages",
+    description: "Documented 14 Webflow outages between February and April 2026. Bandwidth bills hit $170 overnight. Memberships killed with 6 weeks notice. Full migration story, timeline, and results.",
     alternates: {
         canonical: "/blog/leaving-webflow-2026",
     },
@@ -46,7 +46,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/leaving-webflow-2026#article",
-            "headline": "Why We Left Webflow in 2026 (Cost, Timeline, SEO Results)",
+            "headline": "Leaving Webflow in 2026: Real Migration Story After 14 Outages",
             "description": "Bandwidth cut 75%. Bills hit $170 overnight. Carts broke. Memberships killed. The real story of leaving Webflow and what comes next.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-06T00:00:00-05:00",

@@ -16,8 +16,8 @@ const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAni
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Webflow Pricing in 2026: $125 to $400/mo (Full Breakdown)",
-    description: "Webflow's real cost is $125 to $400/month once you add CMS tiers, forms, localization, and Optimize. Full 2026 hidden-fee breakdown plus the PageSpeed ceiling.",
+    title: "Webflow Pricing 2026: Real Costs & Hidden Fees Explained ($125 to $400/mo)",
+    description: "Webflow's $29/month is the entry price. Real cost is $125 to $400/month with CMS tiers, form fees, localization, bandwidth overages. 14 outages in 90 days documented. Full breakdown.",
     alternates: {
         canonical: '/blog/webflow-true-cost',
     },
@@ -45,7 +45,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/webflow-true-cost#article",
-            "headline": "Webflow Pricing in 2026: $125 to $400/mo (Full Breakdown)",
+            "headline": "Webflow Pricing 2026: Real Costs & Hidden Fees Explained ($125 to $400/mo)",
             "description": "Webflow's real cost is $125 to $400/month once you add CMS tiers, forms, localization, and Optimize. Full 2026 hidden-fee breakdown plus the PageSpeed ceiling.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-18T00:00:00-05:00",

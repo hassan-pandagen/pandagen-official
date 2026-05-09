@@ -18,8 +18,8 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Webflow User Accounts Sunset Date 2026: What To Do",
-    description: "Webflow User Accounts were sunset January 29, 2026. Sites that did not migrate lost member data, gated pages went static, logins broke. Here is the fix.",
+    title: "Webflow User Accounts Sunset: Migration Guide for January 29, 2026",
+    description: "Webflow killed User Accounts on January 29, 2026. Memberstack ($25/mo) and Outseta ($79/mo) are temporary fixes. Custom code is permanent. Real cost comparison and 7-day migration timeline.",
     alternates: {
         canonical: "/blog/webflow-user-accounts-sunset-date-2026",
     },
@@ -47,7 +47,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/webflow-user-accounts-sunset-date-2026#article",
-            "headline": "Webflow User Accounts Sunset Date 2026: What To Do",
+            "headline": "Webflow User Accounts Sunset: Migration Guide for January 29, 2026",
             "description": "Webflow User Accounts were sunset on January 29, 2026. Sites that did not migrate lost member data, gated pages went static, and logins broke. Here is what happened, why Memberstack and Outseta are not the long-term fix, and how to rebuild on a stack that will not deprecate on you.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-22T00:00:00-05:00",

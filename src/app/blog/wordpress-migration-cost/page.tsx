@@ -16,8 +16,8 @@ const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAni
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: { absolute: "WordPress Migration Cost 2026: Full Pricing by Site Size (From $1,500 Starter)" },
-    description: "WordPress migration costs $2,000 to $25,000 by site size. Full breakdown: WooCommerce vs brochure, what drives price, and when it pays for itself.",
+    title: { absolute: "How Much Does WordPress to Next.js Migration Cost in 2026? ($1,500 to $25K)" },
+    description: "Real WordPress migration receipts: 5-page brochure $1,500, 20-page CMS $3,500, WooCommerce $5K to $10K. Pagepro charges $25K+ retainer minimums. PandaCodeGen ships fixed-price with 90+ PageSpeed guarantee.",
     alternates: {
         canonical: "/blog/wordpress-migration-cost",
     },
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
     ],
     robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
-        title: "WordPress Migration Cost 2026: Full Pricing by Site Size (From $1,500 Starter)",
-        description: "WordPress migration costs $2,000 to $25,000 by site size. Full breakdown: WooCommerce vs brochure, what drives price, and when it pays for itself.",
+        title: "How Much Does WordPress to Next.js Migration Cost in 2026? ($1,500 to $25K)",
+        description: "Real WordPress migration receipts: 5-page brochure $1,500, 20-page CMS $3,500, WooCommerce $5K to $10K. Pagepro charges $25K+ retainer minimums. PandaCodeGen ships fixed-price with 90+ PageSpeed guarantee.",
         type: "article",
         publishedTime: "2026-03-22",
         modifiedTime: "2026-05-07",
@@ -46,8 +46,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "WordPress Migration Cost 2026: Full Pricing by Site Size (From $1,500 Starter)",
-        description: "WordPress migration costs $2,000 to $25,000 by site size. Full breakdown: WooCommerce vs brochure, what drives price, and when it pays for itself.",
+        title: "How Much Does WordPress to Next.js Migration Cost in 2026? ($1,500 to $25K)",
+        description: "Real WordPress migration receipts: 5-page brochure $1,500, 20-page CMS $3,500, WooCommerce $5K to $10K. Pagepro charges $25K+ retainer minimums. PandaCodeGen ships fixed-price with 90+ PageSpeed guarantee.",
     },
 };
 
@@ -57,7 +57,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-migration-cost#article",
-            "headline": "WordPress Migration Cost 2026: Full Pricing by Site Size (From $1,500 Starter)",
+            "headline": "How Much Does WordPress to Next.js Migration Cost in 2026? ($1,500 to $25K)",
             "description": "WordPress migration costs $2,000 to $25,000 by site size. Full breakdown: WooCommerce vs brochure, what drives price, and when it pays for itself.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-22T00:00:00-05:00",
