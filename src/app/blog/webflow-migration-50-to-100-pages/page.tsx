@@ -514,6 +514,12 @@ export default function WebflowMigration50To100PagesPage() {
                     </section>
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
+
+                    <section className="mb-4 mt-6">
+                        <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
+                        <p className="text-stone-700 leading-relaxed">For the reasons businesses are accelerating Webflow exits in 2026, see <Link href="/blog/leaving-webflow-2026" className="text-cognac hover:underline font-medium">leaving Webflow in 2026</Link>. For the Webflow User Accounts deprecation timeline and migration path, see <Link href="/blog/webflow-user-accounts-sunset-date-2026" className="text-cognac hover:underline font-medium">Webflow User Accounts sunset date 2026</Link>.</p>
+                    </section>
+
                     <RelatedPosts currentPostId="webflow-migration-50-to-100-pages" category="Webflow" />
 
                 </article>

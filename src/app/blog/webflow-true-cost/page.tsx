@@ -277,7 +277,7 @@ export default function WebflowTrueCostPage() {
                             <div className="space-y-3 mb-4">
                                 <div className="flex items-start gap-3">
                                     <span className="font-bold text-amber-700 text-sm mt-0.5 shrink-0">Test 1</span>
-                                    <p className="text-stone-700 text-sm">Go to <a href="https://pagespeed.web.dev" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 text-stone-900 font-medium">pagespeed.web.dev</a> or use our free <Link href="/" className="underline underline-offset-2 text-stone-900 font-medium">AI audit tool</Link> and test your site on Mobile. <strong>If you score below 70, you are losing customers to faster competitors right now.</strong></p>
+                                    <p className="text-stone-700 text-sm">Go to <a href="https://pagespeed.web.dev" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 text-stone-900 font-medium">pagespeed.web.dev</a> or <Link href="/services/webflow" className="underline underline-offset-2 text-stone-900 font-medium">book a free audit</Link> and test your site on Mobile. <strong>If you score below 70, you are losing customers to faster competitors right now.</strong></p>
                                 </div>
                                 <div className="flex items-start gap-3">
                                     <span className="font-bold text-amber-700 text-sm mt-0.5 shrink-0">Test 2</span>
@@ -690,6 +690,11 @@ export default function WebflowTrueCostPage() {
 
                     {/* FAQ Section */}
                     {webflowFAQs.length > 0 && <FAQAccordion faqs={webflowFAQs} />}
+
+                    <section className="mb-4 mt-6">
+                        <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
+                        <p className="text-stone-700 leading-relaxed">For the full case on leaving Webflow, see <Link href="/blog/leaving-webflow-2026" className="text-cognac hover:underline font-medium">why businesses are leaving Webflow in 2026</Link>. For larger site migration scope and pricing, see <Link href="/blog/webflow-migration-50-to-100-pages" className="text-cognac hover:underline font-medium">Webflow migration for 50 to 100 page sites</Link>. For the Webflow User Accounts deprecation impact, see <Link href="/blog/webflow-user-accounts-sunset-date-2026" className="text-cognac hover:underline font-medium">Webflow User Accounts sunset 2026</Link>.</p>
+                    </section>
 
                     {/* Related Posts */}
                     <RelatedPosts currentPostId="webflow-true-cost" category="Comparison" />

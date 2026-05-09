@@ -536,6 +536,11 @@ export default function WebflowVsCustomWebsitePage() {
                     {/* FAQ Section */}
                     {webflowVsCustomFAQs.length > 0 && <FAQAccordion faqs={webflowVsCustomFAQs} />}
 
+                    <section className="mb-4 mt-6">
+                        <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
+                        <p className="text-stone-700 leading-relaxed">For the full Webflow pricing breakdown, see <Link href="/blog/webflow-true-cost" className="text-cognac hover:underline font-medium">Webflow true cost in 2026</Link>. For businesses already decided on moving, see <Link href="/blog/leaving-webflow-2026" className="text-cognac hover:underline font-medium">leaving Webflow in 2026</Link> and the full <Link href="/blog/webflow-migration-cost" className="text-cognac hover:underline font-medium">Webflow migration cost breakdown</Link>.</p>
+                    </section>
+
                     {/* Related Posts */}
                     <RelatedPosts currentPostId="webflow-vs-custom-website" category="Webflow" />
 

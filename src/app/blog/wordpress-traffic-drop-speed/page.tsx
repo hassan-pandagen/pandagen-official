@@ -338,6 +338,12 @@ export default function WordPressTrafficDropPage() {
                     </section>
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
+
+                    <section className="mb-4 mt-6">
+                        <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
+                        <p className="text-stone-700 leading-relaxed">For the full architectural breakdown of why WordPress is slow, see <Link href="/blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline font-medium">how WordPress plugins destroy speed</Link>. For the 3-year cost comparison of staying on WordPress vs migrating, see <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className="text-cognac hover:underline font-medium">WordPress vs custom code real cost over 3 years</Link>.</p>
+                    </section>
+
                     <RelatedPosts currentPostId="wordpress-traffic-drop-speed" category="Traffic Growth" />
 
                 </article>
