@@ -16,8 +16,8 @@ const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAni
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "50 to 100 Page Webflow Migration: $5K to $10K in 3 Weeks (2026)",
-    description: "Agencies quote $15K to $25K for 50 to 100 page Webflow migrations. Real scope, hour estimates per phase, and honest Scale-tier pricing for 2026.",
+    title: "How Much Should You Budget for a 50 to 100 Page Webflow Migration? ($5K to $10K)",
+    description: "Enterprise agencies quote $15K to $25K for 50 to 100 page Webflow migrations. Same scope costs $5K to $10K at PandaCodeGen Scale tier. Real hour estimates per phase, what drives price up, and 3-week delivery.",
     alternates: { canonical: "/blog/webflow-migration-50-to-100-pages" },
     keywords: ["webflow migration cost 50-100 pages", "webflow migration cost 50 pages", "webflow migration 60 pages", "webflow migration 100 pages", "webflow agency pricing site migration", "webflow enterprise migration", "webflow to nextjs 50 pages"],
     openGraph: {
@@ -43,7 +43,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/webflow-migration-50-to-100-pages#article",
-            "headline": "50 to 100 Page Webflow Migration: $5K to $10K in 3 Weeks (2026)",
+            "headline": "How Much Should You Budget for a 50 to 100 Page Webflow Migration? ($5K to $10K)",
             "description": "Agencies quote $15K to $25K for 50 to 100 page Webflow migrations. Real scope, hour estimates per phase, and honest Scale-tier pricing for 2026.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-20T00:00:00-05:00",
@@ -194,6 +194,9 @@ export default function WebflowMigration50To100PagesPage() {
                         </div>
 
                         <BlogHeader>Why 50 to 100 Pages Is a Distinct Pricing Tier</BlogHeader>
+
+                        <p className="text-stone-700 leading-relaxed mb-4">A 50 to 100 page Webflow migration should cost $5,000 to $10,000 with a boutique specialist agency. Enterprise agencies like Iron Horse Studio quote $15,000 to $25,000 for the same scope. The budget difference is overhead, not engineering quality. A 50-page site with 4 CMS collections and standard integrations takes 80 to 100 hours of real engineering work regardless of who does it.</p>
+
                         <BlogText>
                             Page count alone does not decide <Link href="/blog/webflow-migration-cost" className="text-cognac hover:underline">Webflow migration cost</Link>. CMS collection count, integration surface, and redirect complexity do. At 50 to 100 pages you typically have 3 to 8 CMS collections (blog posts, case studies, team, pricing, locations, resources, integrations, careers). Each collection is a separate schema in the new CMS, a separate import script, and a separate set of URL patterns to redirect.
                         </BlogText>

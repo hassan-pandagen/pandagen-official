@@ -15,8 +15,8 @@ const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: { absolute: "Website Migration Cost 2026: $1,500 to $10,000 (7 Platforms)" },
-    description: "Website migration costs $1,500 to $10,000 in 2026 across WordPress, Webflow, Wix, Squarespace, and Shopify. Real client receipts. Fixed price. 1-week delivery.",
+    title: { absolute: "How Much Does Website Migration Cost in 2026? $1,500 to $10,000 (7 Platforms)" },
+    description: "Real website migration receipts across 7 platforms in 2026: WordPress $1,500 to $10K, Webflow $1,500 to $25K, Wix $3,500, Squarespace $3,500, GHL $500 to $8K. Fixed price, 90+ PageSpeed guarantee.",
     alternates: {
         canonical: "/blog/website-migration-cost-2026",
     },
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
     ],
     robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
-        title: "Website Migration Cost 2026: $1,500 to $10,000 (7 Platforms)",
-        description: "Website migration costs $1,500 to $10,000 in 2026 across WordPress, Webflow, Wix, Squarespace, and Shopify. Real client receipts. Fixed price. 1-week delivery.",
+        title: "How Much Does Website Migration Cost in 2026? $1,500 to $10,000 (7 Platforms)",
+        description: "Real website migration receipts across 7 platforms in 2026: WordPress $1,500 to $10K, Webflow $1,500 to $25K, Wix $3,500, Squarespace $3,500, GHL $500 to $8K. Fixed price, 90+ PageSpeed guarantee.",
         type: "article",
         publishedTime: "2026-05-06T00:00:00-05:00",
         modifiedTime: "2026-05-06T00:00:00-05:00",
@@ -58,7 +58,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/website-migration-cost-2026#article",
-            "headline": "Website Migration Cost 2026: $1,500 to $10,000 (7 Platforms)",
+            "headline": "How Much Does Website Migration Cost in 2026? $1,500 to $10,000 (7 Platforms)",
             "description": "Website migration costs $1,500 to $10,000 in 2026 across WordPress, Webflow, Wix, Squarespace, and Shopify. Real client receipts. Fixed price. 1-week delivery.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-05-06T00:00:00-05:00",
@@ -258,6 +258,8 @@ export default function WebsiteMigrationCost2026Page() {
                     </BlogText>
 
                     <BlogHeader id="cost-table">The 2026 Website Migration Cost Table</BlogHeader>
+
+                    <p className="text-stone-700 leading-relaxed mb-4">Website migration costs $1,500 to $10,000 in 2026 depending on the source platform and site size. WordPress migrations start at $1,500. Webflow migrations start at $1,500 for small sites and reach $25,000 for enterprise. Wix and Squarespace migrations typically cost $3,500. GoHighLevel frontend rebuilds range from $500 to $8,000. All prices include 301 redirects, metadata migration, and 90+ PageSpeed guarantee.</p>
 
                     <div className="my-6 overflow-x-auto -mx-4 px-4">
                         <table className="responsive-stack-table w-full text-sm border-collapse border border-stone-300 rounded-xl overflow-hidden md:min-w-[640px]">
