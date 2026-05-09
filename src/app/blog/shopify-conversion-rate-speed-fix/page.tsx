@@ -221,7 +221,7 @@ export default function ShopifyConversionRateSpeedFixPage() {
 
                     <div className="space-y-8">
                         <BlogText>
-                            You&apos;ve tested new product photography. You&apos;ve rewritten your copy. You&apos;ve added trust badges and a sticky add-to-cart. Your conversion rate is still stuck at 1.2%.
+                            You&apos;ve tested new product photography. You&apos;ve rewritten your copy. You&apos;ve added trust badges and a sticky add-to-cart. Your conversion rate is still stuck at 1.2%. Speed is the missing variable. See how <Link href="/blog/shopify-headless" className="text-cognac hover:underline">headless Shopify on Next.js</Link> fixes load time at the architecture level.
                         </BlogText>
                         <BlogText>
                             Here&apos;s what nobody tells you: <BlogHighlight>if your Shopify store loads in 4 seconds on mobile, all the CRO in the world won&apos;t save you.</BlogHighlight> Your visitors are leaving before they see anything.

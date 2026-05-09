@@ -228,7 +228,7 @@ export default function WordPressVsCustomCodeCostPage() {
                     <div className="space-y-8">
 
                         <BlogText>
-                            You built your WordPress site for $3,000. You pay $50/month for hosting. Simple math: $3,000 + ($50 × 36 months) = $4,800 over 3 years. Sounds reasonable.
+                            You built your WordPress site for $3,000. You pay $50/month for hosting. Simple math: $3,000 + ($50 × 36 months) = $4,800 over 3 years. Sounds reasonable. For what migration to custom code actually costs, see the full <Link href="/blog/wordpress-migration-cost" className="text-cognac hover:underline">WordPress migration cost breakdown</Link>.
                         </BlogText>
 
                         <BlogText>

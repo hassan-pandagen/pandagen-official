@@ -197,7 +197,7 @@ export default function CloudflareEmdashPage() {
                         <BlogHeader>A $30 Billion Company Just Said WordPress Is Broken</BlogHeader>
 
                         <BlogText>
-                            On April 2, 2026, Cloudflare announced Emdash. They did not call it a content management system. They did not call it a website builder. They called it the &quot;spiritual successor to WordPress.&quot;
+                            On April 2, 2026, Cloudflare announced Emdash. They did not call it a content management system. They did not call it a website builder. They called it the &quot;spiritual successor to WordPress.&quot; If this is accelerating your WordPress exit decision, see the <Link href="/blog/wordpress-migration-cost" className="text-cognac hover:underline">WordPress migration cost breakdown</Link> first.
                         </BlogText>
 
                         <BlogText>

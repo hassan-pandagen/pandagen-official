@@ -246,7 +246,7 @@ export default function LeavingWebflow2026Page() {
                         </div>
 
                         <BlogText>
-                            There was a time when Webflow made sense. Visual editor, clean code output, no plugins to maintain. For a certain type of business at a certain size, it was a genuinely good choice. That time has passed for most of the businesses we talk to.
+                            There was a time when Webflow made sense. Visual editor, clean code output, no plugins to maintain. For a certain type of business at a certain size, it was a genuinely good choice. That time has passed for most of the businesses we talk to. See the full <Link href="/blog/webflow-migration-cost" className="text-cognac hover:underline">Webflow migration cost breakdown</Link> before deciding.
                         </BlogText>
 
                         <BlogText>

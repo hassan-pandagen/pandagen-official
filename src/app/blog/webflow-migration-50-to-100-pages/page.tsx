@@ -195,7 +195,7 @@ export default function WebflowMigration50To100PagesPage() {
 
                         <BlogHeader>Why 50 to 100 Pages Is a Distinct Pricing Tier</BlogHeader>
                         <BlogText>
-                            Page count alone does not decide migration cost. CMS collection count, integration surface, and redirect complexity do. At 50 to 100 pages you typically have 3 to 8 CMS collections (blog posts, case studies, team, pricing, locations, resources, integrations, careers). Each collection is a separate schema in the new CMS, a separate import script, and a separate set of URL patterns to redirect.
+                            Page count alone does not decide <Link href="/blog/webflow-migration-cost" className="text-cognac hover:underline">Webflow migration cost</Link>. CMS collection count, integration surface, and redirect complexity do. At 50 to 100 pages you typically have 3 to 8 CMS collections (blog posts, case studies, team, pricing, locations, resources, integrations, careers). Each collection is a separate schema in the new CMS, a separate import script, and a separate set of URL patterns to redirect.
                         </BlogText>
                         <BlogText>
                             This is why our <Link href="/pricing" className="text-cognac hover:underline">Growth tier at $3,500</Link> covers up to 30 pages but stops there. Beyond 30 pages, the redirect map alone becomes a multi-hour project, and the CMS schema design needs real thought, not a template. That is when Scale tier starts.

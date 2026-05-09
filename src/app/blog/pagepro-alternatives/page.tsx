@@ -216,7 +216,7 @@ export default function PageproAlternativesPage() {
                         </div>
 
                         <BlogText>
-                            Pagepro is one of the most-cited Next.js agencies in 2026. They are a Sanity development partner, they built a proprietary Next.js starter called Nexity, and they have strong Clutch reviews. If you search "top Next.js agency," Pagepro shows up near the top.
+                            Pagepro is one of the most-cited Next.js agencies in 2026. They are a Sanity development partner, they built a proprietary Next.js starter called Nexity, and they have strong Clutch reviews. If you search "top Next.js agency," Pagepro shows up near the top. For what a full website rebuild actually costs across agency tiers, see <Link href="/blog/website-rebuild-cost-2026" className="text-cognac hover:underline">website rebuild cost in 2026</Link>.
                         </BlogText>
 
                         <BlogText>

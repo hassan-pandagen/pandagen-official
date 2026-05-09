@@ -238,7 +238,7 @@ export default function WebflowTrueCostPage() {
 
                     <div className="space-y-8">
                         <BlogText>
-                            A prospect reached out last month. "We love our Webflow site," they said. "But our Google rankings keep dropping and we cannot figure out why."
+                            A prospect reached out last month. "We love our Webflow site," they said. "But our Google rankings keep dropping and we cannot figure out why." If you are evaluating migration, the <Link href="/blog/webflow-migration-cost" className="text-cognac hover:underline">Webflow migration cost breakdown</Link> covers pricing by site size.
                         </BlogText>
 
                         <BlogText>

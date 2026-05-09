@@ -224,7 +224,7 @@ export default function ShopifyVsCustomWebsitePage() {
 
                     <div className="space-y-8">
                         <BlogText>
-                            A pattern we see repeatedly: a store doing $1M to $3M per year, app bill pushing past $1,000 per month, mobile load at 4+ seconds, conversion pinned near 1.4% for six months despite trying every CRO app on the market.
+                            A pattern we see repeatedly: a store doing $1M to $3M per year, app bill pushing past $1,000 per month, mobile load at 4+ seconds, conversion pinned near 1.4% for six months despite trying every CRO app on the market. The fix is <Link href="/blog/shopify-headless" className="text-cognac hover:underline">headless Shopify on Next.js</Link>.
                         </BlogText>
 
                         <BlogText>

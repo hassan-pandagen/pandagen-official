@@ -213,7 +213,7 @@ export default function GHLWebsiteSpeedPage() {
                     </div>
 
                     <BlogText>
-                        I ran PageSpeed on 14 GoHighLevel client sites last month. Highest mobile score: 44. Lowest: 18. GHL&apos;s own JavaScript blocks the main thread for 1,300 milliseconds before your headline appears. Agencies paying $297 a month are quietly losing half their organic leads to load time.
+                        I ran PageSpeed on 14 GoHighLevel client sites last month. Highest mobile score: 44. Lowest: 18. GHL&apos;s own JavaScript blocks the main thread for 1,300 milliseconds before your headline appears. Agencies paying $297 a month are quietly losing half their organic leads to load time. For the full fix, see the <Link href="/blog/gohighlevel-migration" className="text-cognac hover:underline">GoHighLevel website migration guide</Link>.
                     </BlogText>
                     <BlogText>
                         This is not a setting you missed or an optimization you skipped. It is how GHL delivers pages, and the fix is not inside GHL at all.

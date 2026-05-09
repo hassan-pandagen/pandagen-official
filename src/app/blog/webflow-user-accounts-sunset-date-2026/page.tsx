@@ -220,7 +220,7 @@ export default function WebflowUserAccountsSunset2026Page() {
                         </div>
 
                         <BlogText>
-                            Webflow first announced the sunset in December 2024. The company said it was making a strategic decision to deprecate its native Logic and User Accounts in favour of its ecosystem of vetted app partners. The official framing was that Webflow was becoming a Website Experience Platform focused on design, CMS, and analytics, and handing off authentication and automation to specialists like Memberstack, Outseta, Zapier, and Make.
+                            Webflow first announced the sunset in December 2024. The company said it was making a strategic decision to deprecate its native Logic and User Accounts in favour of its ecosystem of vetted app partners. The official framing was that Webflow was becoming a Website Experience Platform focused on design, CMS, and analytics, and handing off authentication and automation to specialists like Memberstack, Outseta, Zapier, and Make. For businesses ready to move off Webflow, see the full <Link href="/blog/webflow-migration-cost" className="text-cognac hover:underline">Webflow migration cost breakdown</Link>.
                         </BlogText>
 
                         <BlogText>

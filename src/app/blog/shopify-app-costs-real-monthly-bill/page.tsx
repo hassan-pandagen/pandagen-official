@@ -246,7 +246,7 @@ export default function ShopifyAppCostsPage() {
                     </div>
 
                     <BlogText>
-                        You got the invoice. $39/month plan. That is what you signed up for.
+                        You got the invoice. $39/month plan. That is what you signed up for. See how <Link href="/blog/shopify-headless" className="text-cognac hover:underline">headless Shopify</Link> eliminates the entire app stack.
                     </BlogText>
                     <BlogText>
                         Then the other charges hit. Klaviyo for email marketing. Okendo for reviews. Loop Returns for returns. ReCharge for subscriptions. Smile.io for loyalty. Boost Commerce for search. ReConvert for upsells. A handful of smaller tools for automation, badges, and stock alerts.

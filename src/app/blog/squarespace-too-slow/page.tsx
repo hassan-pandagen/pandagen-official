@@ -237,7 +237,7 @@ export default function SquarespaceToSlowPage() {
 
                         <BlogHeader>Squarespace Is Slow By Design, Not By Accident</BlogHeader>
                         <BlogText>
-                            Last month I audited 11 Squarespace sites for businesses asking about migrations. Highest mobile PageSpeed: 54. Lowest: 29. Every bottleneck was the same, and it was not the images.
+                            Last month I audited 11 Squarespace sites for businesses asking about migrations. Highest mobile PageSpeed: 54. Lowest: 29. Every bottleneck was the same, and it was not the images. See the full <Link href="/blog/squarespace-migration-cost" className="text-cognac hover:underline">Squarespace migration cost breakdown</Link> if you are ready to move.
                         </BlogText>
                         <BlogText>
                             If you have tested your Squarespace site on{" "}

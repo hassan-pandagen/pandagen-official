@@ -192,7 +192,7 @@ export default function ShopifyPlusStillSlowPage() {
 
                     <div className="space-y-8">
                         <BlogText>
-                            You upgraded to Shopify Plus. You paid $2,300/month. You expected your store to be fast. It&apos;s still loading in 3.8 seconds on mobile.
+                            You upgraded to Shopify Plus. You paid $2,300/month. You expected your store to be fast. It&apos;s still loading in 3.8 seconds on mobile. The only architectural fix is <Link href="/blog/shopify-headless" className="text-cognac hover:underline">headless Shopify on Next.js</Link>.
                         </BlogText>
                         <BlogText>
                             You&apos;re not alone. This is one of the most common conversations we have with e-commerce brands. <BlogHighlight>Shopify Plus does not solve your speed problem.</BlogHighlight> Here&apos;s exactly why.

@@ -258,7 +258,7 @@ export default function WordPressAISecurityPage() {
 
                     {/* Opening */}
                     <BlogText>
-                        WordPress just made every plugin an AI endpoint. Why is nobody talking about the security side of this?
+                        WordPress just made every plugin an AI endpoint. Why is nobody talking about the security side of this? If this is pushing you toward migration, see the full <Link href="/blog/wordpress-migration-cost" className="text-cognac hover:underline">WordPress migration cost breakdown</Link> first.
                     </BlogText>
 
                     <BlogText>

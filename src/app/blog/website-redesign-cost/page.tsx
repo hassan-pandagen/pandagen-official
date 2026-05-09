@@ -253,7 +253,7 @@ export default function WebsiteRedesignCostPage() {
                         </div>
 
                         <BlogText>
-                            The agency pricing range for website redesigns runs from $500 to $80,000 with no clear logic for why. A 7-page site quoted at $32,000 by one agency lands at $1,500 with another. The difference is rarely quality. It is overhead, sales overhead, account managers, and margin layered on margin.
+                            The agency pricing range for website redesigns runs from $500 to $80,000 with no clear logic for why. A 7-page site quoted at $32,000 by one agency lands at $1,500 with another. The difference is rarely quality. It is overhead, sales overhead, account managers, and margin layered on margin. For the full rebuild cost breakdown by scope and tier, see <Link href="/blog/website-rebuild-cost-2026" className="text-cognac hover:underline">how much a website rebuild costs in 2026</Link>.
                         </BlogText>
 
                         <BlogText>

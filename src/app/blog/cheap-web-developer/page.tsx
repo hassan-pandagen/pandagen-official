@@ -255,7 +255,7 @@ export default function CheapWebDeveloperPage() {
                         </div>
 
                         <BlogText>
-                            The phrase &quot;cheap web developer&quot; covers a wider range than most buyers expect. At one end, a Fiverr seller installs a free WordPress theme for $50. At the other end, a fixed-price agency ships a custom-coded site for $1,500 with measurable speed guarantees. Same price tier in the search engine. Completely different outcomes for your business.
+                            The phrase &quot;cheap web developer&quot; covers a wider range than most buyers expect. At one end, a Fiverr seller installs a free WordPress theme for $50. At the other end, a fixed-price agency ships a custom-coded site for $1,500 with measurable speed guarantees. Same price tier in the search engine. Completely different outcomes for your business. See the full <Link href="/blog/website-rebuild-cost-2026" className="text-cognac hover:underline">website rebuild cost breakdown</Link> to calibrate what fair pricing looks like.
                         </BlogText>
 
                         <BlogText>

@@ -191,7 +191,7 @@ export default function WordPressTrafficDropPage() {
 
                     <div className="space-y-8">
                         <BlogText>
-                            You log into Google Search Console and the numbers are going in the wrong direction. Clicks down 18%. Impressions falling. Rankings that held for two years slowly sliding off page one.
+                            You log into Google Search Console and the numbers are going in the wrong direction. Clicks down 18%. Impressions falling. Rankings that held for two years slowly sliding off page one. If speed is the cause, see <Link href="/blog/wordpress-migration-cost" className="text-cognac hover:underline">what a WordPress migration actually costs</Link>.
                         </BlogText>
                         <BlogText>
                             You haven&apos;t changed your content. You haven&apos;t done anything wrong. But <BlogHighlight>your WordPress site is paying a speed tax, and Google is collecting it every single day.</BlogHighlight>

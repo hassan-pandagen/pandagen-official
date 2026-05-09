@@ -205,7 +205,7 @@ export default function ShopifySlowPage() {
                     {/* Content */}
                     <div className="space-y-8">
                         <BlogText>
-                            Every day, hundreds of people visit your online store. They're ready to buy. But most of them leave before they even see your products.
+                            Every day, hundreds of people visit your online store. They're ready to buy. But most of them leave before they even see your products. See how <Link href="/blog/shopify-headless" className="text-cognac hover:underline">headless Shopify on Next.js</Link> fixes this permanently.
                         </BlogText>
 
                         <BlogText>

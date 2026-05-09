@@ -219,7 +219,7 @@ export default function WixTooSlowPage() {
 
                     {/* Intro */}
                     <BlogText>
-                        You built it carefully. The design looks professional. You have spent hours compressing images, removing apps you did not want to remove, cutting animations, and reading every Wix speed guide you could find. Your Google score (PageSpeed) is still somewhere in the 40s or 50s on mobile and you cannot figure out why.
+                        You built it carefully. The design looks professional. You have spent hours compressing images, removing apps you did not want to remove, cutting animations, and reading every Wix speed guide you could find. Your Google score (PageSpeed) is still somewhere in the 40s or 50s on mobile and you cannot figure out why. See <Link href="/blog/wix-vs-custom-website" className="text-cognac hover:underline">Wix vs custom website</Link> if you are evaluating the switch.
                     </BlogText>
                     <BlogText>
                         This is not a you problem. Your site looks good because you did the design work right. Your score is still low because the problem is not in your design. It is in the platform itself. There is a hard ceiling on Wix performance that no amount of optimization gets you past. This post explains exactly what that ceiling is, what it is costing your business right now, and what your options are.

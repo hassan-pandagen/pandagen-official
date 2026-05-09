@@ -203,7 +203,7 @@ export default function WebflowVsCustomWebsitePage() {
 
                     <div className="space-y-8">
                         <BlogText>
-                            A business owner emailed us last month with a question we hear every week: &quot;We built our site on Webflow two years ago. It looked great. But our Google rankings have not moved in 6 months, and a competitor with a simpler site keeps outranking us. Should we rebuild?&quot;
+                            A business owner emailed us last month with a question we hear every week: &quot;We built our site on Webflow two years ago. It looked great. But our Google rankings have not moved in 6 months, and a competitor with a simpler site keeps outranking us. Should we rebuild?&quot; If you are already at that decision, see the <Link href="/blog/webflow-migration-cost" className="text-cognac hover:underline">Webflow migration cost breakdown</Link> first.
                         </BlogText>
 
                         <BlogText>

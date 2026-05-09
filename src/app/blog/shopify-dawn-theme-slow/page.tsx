@@ -204,7 +204,7 @@ export default function ShopifyDawnThemeSlowPage() {
                     <div className="space-y-8">
 
                         <BlogText>
-                            We took a Shopify Dawn store from 42 to 97 on mobile PageSpeed. Load time dropped from 3.8 seconds to 0.7 seconds. The store is <a href="https://www.mycustompatches.net" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">mycustompatches.net</a>. You can click it right now and run PageSpeed yourself. Here is what actually moved the needle.
+                            We took a Shopify Dawn store from 42 to 97 on mobile PageSpeed. Load time dropped from 3.8 seconds to 0.7 seconds via <Link href="/blog/shopify-headless" className="text-cognac hover:underline">headless Shopify on Next.js</Link>. The store is <a href="https://www.mycustompatches.net" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">mycustompatches.net</a>. You can click it right now and run PageSpeed yourself. Here is what actually moved the needle.
                         </BlogText>
 
                         <BlogText>
