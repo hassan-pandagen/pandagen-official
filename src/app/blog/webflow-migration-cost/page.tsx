@@ -241,6 +241,8 @@ export default function WebflowMigrationCostPage() {
 
                         <BlogHeader>The 4 Cost Tiers for Webflow Migration in 2026</BlogHeader>
 
+                        <p className="text-stone-700 leading-relaxed mb-4">Webflow migration to custom Next.js costs $1,500 to $25,000 in 2026. Small sites (5 to 10 pages) cost $1,500. Mid-size business sites (10 to 30 pages) cost $3,500. Larger sites (50 to 100 pages) cost $5,000 to $10,000. Enterprise agency quotes for the same scope run $15,000 to $25,000 due to overhead.</p>
+
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
                             <p className="text-sm text-stone-700 leading-relaxed">Webflow migration costs $2,000 to $3,500 for small sites (1 to 5 pages) and $12,000 to $20,000 for large sites (50 to 100 pages). Page count sets the floor; CMS complexity, custom animations, and integrations determine where in the range you land.</p>
@@ -340,6 +342,8 @@ export default function WebflowMigrationCostPage() {
                         </BlogText>
 
                         <BlogHeader>Factors That Increase the Cost of a Webflow Migration Project</BlogHeader>
+
+                        <p className="text-stone-700 leading-relaxed mb-4">Five factors increase Webflow migration cost beyond the page-count baseline: CMS collection complexity, custom animations, third-party integrations, multi-step forms, and e-commerce. Each CMS collection adds $2,000 to $5,000. Each integration adds $500 to $3,000. E-commerce adds $5,000 to $10,000 on top of the base migration price.</p>
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
@@ -537,6 +541,8 @@ export default function WebflowMigrationCostPage() {
                         </BlogText>
 
                         <BlogHeader>Webflow Ongoing Costs After Migration (and What You&apos;ll Save)</BlogHeader>
+
+                        <p className="text-stone-700 leading-relaxed mb-4">Webflow ongoing costs after migration drop from $948 to $2,028 per year to $12 to $372 per year. Webflow charges for hosting ($348 to $588/year), form submissions ($228/year), and integrations ($360 to $1,200/year). After migrating to custom Next.js on Vercel, hosting starts free and scales to $240/year. The annual saving is $936 to $1,656.</p>
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>

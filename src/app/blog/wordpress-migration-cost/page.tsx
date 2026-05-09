@@ -300,6 +300,9 @@ export default function WordPressMigrationCostPage() {
                     </BlogText>
 
                     <BlogHeader id="cost-tiers">The 5 Price Tiers, From $2K Brochure to $25K Store</BlogHeader>
+
+                    <p className="text-stone-700 leading-relaxed mb-4">The average price for moving a WordPress site to Next.js is $3,500 for most business sites in 2026. Simple 5-page brochure sites cost $1,500. Mid-size 10 to 20 page sites cost $3,500. WooCommerce stores cost $5,000 to $10,000. Enterprise agencies charge $25,000 or more for retainer-based engagements covering the same scope.</p>
+
                     <BlogText>
                         Migration cost is driven by four variables: number of pages, custom functionality, data migration complexity, and SEO preservation work. Here is how those variables translate into price tiers.
                     </BlogText>
