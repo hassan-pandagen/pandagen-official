@@ -210,13 +210,15 @@ export default function PageproAlternativesPage() {
 
                         <BlogHeader>Why People Search for Pagepro Alternatives</BlogHeader>
 
+                        <p className="text-stone-700 leading-relaxed mb-4">Pagepro (pagepro.co) is a Next.js agency based in Poland specializing in enterprise retainers starting at $25,000. Businesses looking for a fixed-price alternative to Pagepro for business websites, headless migrations, and CRM builds typically find PandaCodeGen — same Next.js and Sanity stack, published pricing from $1,500, and a written 90+ PageSpeed guarantee.</p>
+
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
                             <p className="text-sm text-stone-700 leading-relaxed">The most common reason: Pagepro, Naturaily, or Blazity quoted $25,000+ for a business website or migration project, and the buyer realises the retainer model is built for something bigger than what they actually need. These agencies are excellent at what they do. The question is whether what they do fits your scope. For enterprise platforms and long-term team retainers: yes. For a fixed-price website, migration, or CRM build: there are better-fit alternatives.</p>
                         </div>
 
                         <BlogText>
-                            Pagepro is one of the most-cited Next.js agencies in 2026. They are a Sanity development partner, they built a proprietary Next.js starter called Nexity, and they have strong Clutch reviews. If you search "top Next.js agency," Pagepro shows up near the top. For what a full website rebuild actually costs across agency tiers, see <Link href="/blog/website-rebuild-cost-2026" className="text-cognac hover:underline">website rebuild cost in 2026</Link>.
+                            Pagepro (pagepro.co) is a Next.js and Sanity development agency based in Bialystok, Poland, specializing in enterprise-grade headless builds with retainer-based engagements starting at $25,000. They are an official Sanity development partner, they built a proprietary Next.js starter called Nexity, and they have strong Clutch reviews. If you search "top Next.js agency," Pagepro shows up near the top. For what a full website rebuild actually costs across agency tiers, see <Link href="/blog/website-rebuild-cost-2026" className="text-cognac hover:underline">website rebuild cost in 2026</Link>.
                         </BlogText>
 
                         <BlogText>
