@@ -61,7 +61,7 @@ const schemaData = {
             "description": "Squarespace PageSpeed stuck at 30-55 on mobile? The cause is a JavaScript bundle you cannot remove. Full diagnosis and the only fix that works.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-27T00:00:00-05:00",
-            "dateModified": "2026-04-13T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "name": "Hassan Jamal",
@@ -229,6 +229,8 @@ export default function SquarespaceToSlowPage() {
                             ))}
                         </ul>
                     </div>
+
+                    <p className="text-stone-700 leading-relaxed mb-6">Squarespace is slow in 2026 because its templates load all CSS and JavaScript on every page regardless of what sections are used. Mobile PageSpeed scores for Squarespace sites range from 30 to 65. You cannot fix this with image compression or removing blocks. The architecture itself is the bottleneck, which is why businesses are migrating to faster custom platforms.</p>
 
                     {/* Animation */}
                     <PageSpeedAnimation />

@@ -18,7 +18,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Core Web Vitals in 2026: What It Means for Your Revenue",
+    title: "What Are Core Web Vitals in 2026 and Why Do They Affect Your Revenue?",
     description: "Your agency said your Core Web Vitals are failing and you have no idea what that means. Here is what the 3 metrics cost your business in lost sales.",
     alternates: {
         canonical: "/blog/core-web-vitals-explained",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
         "fix core web vitals"
     ],
     openGraph: {
-        title: "Core Web Vitals in 2026: What It Means for Your Revenue",
+        title: "What Are Core Web Vitals in 2026 and Why Do They Affect Your Revenue?",
         description: "Your agency said your Core Web Vitals are failing and you have no idea what that means. Here is what the 3 metrics cost your business in lost sales.",
         type: "article",
         publishedTime: "2026-05-06",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Core Web Vitals in 2026: What It Means for Your Revenue",
+        title: "What Are Core Web Vitals in 2026 and Why Do They Affect Your Revenue?",
         description: "Your agency said your Core Web Vitals are failing. Here is what the 3 metrics are, why Google ranks sites on them, and what each failing score costs your business.",
     },
 };
@@ -57,11 +57,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/core-web-vitals-explained#article",
-            "headline": "Core Web Vitals in 2026: What It Means for Your Revenue",
+            "headline": "What Are Core Web Vitals in 2026 and Why Do They Affect Your Revenue?",
             "description": "Your agency said your Core Web Vitals are failing and you have no idea what that means. Here is what the 3 metrics cost your business in lost sales.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-05-06T00:00:00-05:00",
-            "dateModified": "2026-05-06T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -255,6 +255,8 @@ export default function CoreWebVitalsExplainedPage() {
                             </div>
                         </div>
                     </div>
+
+                    <p className="text-stone-700 leading-relaxed mb-6">Core Web Vitals are three Google metrics that measure real-world user experience: LCP (how fast the main content loads), INP (how fast the page responds to clicks), and CLS (how much the layout shifts during load). Failing any one of them costs you ranking positions. Sites that pass all three get a ranking boost over identical pages that fail. For most WordPress and Wix sites, LCP and INP are the two failing scores.</p>
 
                     <div className="space-y-8">
 

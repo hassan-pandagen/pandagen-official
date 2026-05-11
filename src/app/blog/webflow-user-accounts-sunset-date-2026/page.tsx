@@ -18,7 +18,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Webflow User Accounts Sunset: Migration Guide for January 29, 2026",
+    title: "What Happened to Webflow User Accounts? Migration Guide After Jan 29, 2026",
     description: "Webflow killed User Accounts on January 29, 2026. Memberstack ($25/mo) and Outseta ($79/mo) are temporary fixes. Custom code is permanent. Real cost comparison and 7-day migration timeline.",
     alternates: {
         canonical: "/blog/webflow-user-accounts-sunset-date-2026",
@@ -47,11 +47,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/webflow-user-accounts-sunset-date-2026#article",
-            "headline": "Webflow User Accounts Sunset: Migration Guide for January 29, 2026",
+            "headline": "What Happened to Webflow User Accounts? Migration Guide After Jan 29, 2026",
             "description": "Webflow User Accounts were sunset on January 29, 2026. Sites that did not migrate lost member data, gated pages went static, and logins broke. Here is what happened, why Memberstack and Outseta are not the long-term fix, and how to rebuild on a stack that will not deprecate on you.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-22T00:00:00-05:00",
-            "dateModified": "2026-04-22T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -115,7 +115,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-04-22T00:00:00-05:00",
-            "dateModified": "2026-04-22T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/webflow-user-accounts-sunset-date-2026#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -209,6 +209,8 @@ export default function WebflowUserAccountsSunset2026Page() {
                             <li><strong>Cost to rebuild properly:</strong> $3,500 Growth tier for most membership sites. $500 Founder&apos;s Offer for qualifying small sites.</li>
                         </ul>
                     </div>
+
+                    <p className="text-stone-700 leading-relaxed mb-6">Webflow shut down its User Accounts feature on January 29, 2026. Any site using Webflow's native login, gated content, or member dashboards stopped working on that date. If your site was affected, your options are Memberstack, Outseta, or a full migration to a custom Next.js build with authentication you own and control.</p>
 
                     <div className="space-y-8">
 
@@ -484,7 +486,7 @@ export default function WebflowUserAccountsSunset2026Page() {
                         ]} />
 
                         <BlogText>
-                            Enterprise agencies like Iron Horse Studio commonly quote $15,000 to $30,000 for work that lands in our Growth or Scale tiers. They carry project managers, account executives, QA leads, and design reviewers across every engagement. For a 50 to 100 person company with a marketing and membership site, most of that overhead is cost you do not need. You need engineering, not PMO. The <Link href="/blog/webflow-migration-cost" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">full Webflow migration cost breakdown</Link> walks through the difference in detail.
+                            Enterprise agencies commonly quote $15,000 to $30,000 for work that lands in our Growth or Scale tiers. They carry project managers, account executives, QA leads, and design reviewers across every engagement. For a 50 to 100 person company with a marketing and membership site, most of that overhead is cost you do not need. You need engineering, not PMO. The <Link href="/blog/webflow-migration-cost" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">full Webflow migration cost breakdown</Link> walks through the difference in detail.
                         </BlogText>
 
                         <BlogText>

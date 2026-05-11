@@ -17,14 +17,14 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "GoHighLevel Website Migration 2026: Fast Site Without Leaving GHL",
+    title: "Can You Replace Your GoHighLevel Website Without Losing the CRM? (2026)",
     description: "GHL sites score 35 to 47 on mobile PageSpeed. Your ads cost more and your leads cost more. Here is how to fix it without losing your CRM.",
     alternates: {
         canonical: '/blog/gohighlevel-migration',
     },
     keywords: ["gohighlevel migration", "ghl website migration", "gohighlevel slow website", "ghl custom website", "gohighlevel pagespeed", "migrate from gohighlevel", "ghl website speed fix", "gohighlevel alternative website"],
     openGraph: {
-        title: "GoHighLevel Website Migration 2026: Fast Site Without Leaving GHL",
+        title: "Can You Replace Your GoHighLevel Website Without Losing the CRM? (2026)",
         description: "GHL sites score 35 to 47 on mobile PageSpeed. Your ads cost more and your leads cost more. Here is how to fix it without losing your CRM.",
         type: "article",
         publishedTime: "2026-04-03",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "GoHighLevel Website Migration 2026: Fast Site Without Leaving GHL",
+        title: "Can You Replace Your GoHighLevel Website Without Losing the CRM? (2026)",
         description: "GHL sites score 35 to 47 on mobile PageSpeed. Your ads cost more and your leads cost more. Here is how to fix it without losing your CRM.",
     },
 };
@@ -45,11 +45,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/gohighlevel-migration#article",
-            "headline": "GoHighLevel Website Migration 2026: Fast Site Without Leaving GHL",
+            "headline": "Can You Replace Your GoHighLevel Website Without Losing the CRM? (2026)",
             "description": "GHL sites score 35 to 47 on mobile PageSpeed. Your ads cost more and your leads cost more. Here is how to fix it without losing your CRM.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-03T00:00:00-05:00",
-            "dateModified": "2026-04-03T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -108,7 +108,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-04-03T00:00:00-05:00",
-            "dateModified": "2026-04-03T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/gohighlevel-migration#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -188,6 +188,8 @@ export default function GoHighLevelMigrationPage() {
                             GoHighLevel is a powerful CRM. But its website builder is costing you leads, ad spend, and search rankings. This post breaks down exactly why, what it costs you in real dollars, and how to fix it without leaving GHL. Key takeaways at the bottom.
                         </p>
                     </div>
+
+                    <p className="text-stone-700 leading-relaxed mb-6">Yes, you can replace your GoHighLevel website without losing the CRM. GHL's CRM, automations, calendars, and pipelines all stay intact. Only the public-facing website gets replaced with a custom Next.js site that loads in under 1 second and ranks on Google. Your GHL subdomain redirects to the new domain. Nothing breaks in your backend.</p>
 
                     {/* Content */}
                     <div className="space-y-8">

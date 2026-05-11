@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     ],
     robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
-        title: "Website Rebuild Cost in 2026: $2,000 to $250,000 (By Project)",
+        title: "How Much Does a Website Rebuild Cost in 2026? ($2K to $250K by Scope)",
         description: "Website rebuild costs range from $2,000 freelance to $250,000 enterprise in 2026. Honest pricing by platform, what drives cost up, and how to spot a padded quote.",
         type: "article",
         publishedTime: "2026-04-19T00:00:00-05:00",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Website Rebuild Cost in 2026: $2,000 to $250,000 (By Project)",
+        title: "How Much Does a Website Rebuild Cost in 2026? ($2K to $250K by Scope)",
         description: "Website rebuild costs range from $2,000 freelance to $250,000 enterprise in 2026. Honest pricing by platform and how to spot a padded quote.",
     },
 };
@@ -59,11 +59,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/website-rebuild-cost-2026#article",
-            "headline": "Website Rebuild Cost in 2026: $2,000 to $250,000 (By Project)",
+            "headline": "How Much Does a Website Rebuild Cost in 2026? ($2K to $250K by Scope)",
             "description": "Website rebuild costs range from $2,000 freelance to $250,000 enterprise in 2026. Honest pricing by platform, what drives cost up, and how to spot a padded quote.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-19T00:00:00-05:00",
-            "dateModified": "2026-05-05T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -136,7 +136,7 @@ const articleSchema = {
             "description": "Website rebuild costs range from $2,000 freelance to $250,000 enterprise in 2026. Honest pricing by platform, what drives cost up, and how to spot a padded quote.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-04-19T00:00:00-05:00",
-            "dateModified": "2026-05-05T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "inLanguage": "en-US",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/website-rebuild-cost-2026#breadcrumb" }
         },

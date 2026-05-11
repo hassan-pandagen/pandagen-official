@@ -16,7 +16,7 @@ const SecurityShieldAnimation = lazyLoad(() => import("@/components/blog/Securit
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: { absolute: "WordPress Security Risk in 2026: 100K Sites Exposed" },
+    title: "Is WordPress Safe in 2026? AI Plugin Vulnerabilities Exposed 100K Sites",
     description: "AI plugins are the newest WordPress vulnerability. 100K+ sites exposed through AI plugin flaws. Here is what business owners need to know and how to protect your site.",
     alternates: {
         canonical: '/blog/wordpress-ai-security-risk-2026',
@@ -45,7 +45,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-ai-security-risk-2026#article",
-            "headline": "WordPress Security Risk in 2026: 100K Sites Exposed",
+            "headline": "Is WordPress Safe in 2026? AI Plugin Vulnerabilities Exposed 100K Sites",
             "description": "AI plugins are the newest WordPress vulnerability. 100K+ sites exposed through AI plugin flaws. Here is what business owners need to know and how to protect your site.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-19T00:00:00-05:00",
@@ -135,7 +135,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-19T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/wordpress-ai-security-risk-2026#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -227,6 +227,8 @@ export default function WordPressAISecurityPage() {
                             "If your site processes payments or customer data, this risk is active now, not theoretical."
                         ]} />
                     </div>
+
+                    <p className="text-stone-700 leading-relaxed mb-6">WordPress is not safe in 2026 if you are running AI plugins. Over 100,000 sites were exposed through flaws in popular AI plugins that accidentally published admin credentials or allowed remote code execution. The risk is active now. If your site processes payments or stores customer data, this is an urgent issue, not a future concern.</p>
 
                     {/* Real Buyer Voices — verified primary sources, April 2026 */}
                     <div className="my-8 p-5 bg-stone-50 border border-stone-200 rounded-2xl">

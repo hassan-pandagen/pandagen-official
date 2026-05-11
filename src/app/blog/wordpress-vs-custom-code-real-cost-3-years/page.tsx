@@ -16,8 +16,8 @@ const SalesImpactAnimation = lazyLoad(() => import("@/components/blog/SalesImpac
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "WordPress vs Custom Code: 3-Year Cost Breakdown (2026)",
-    description: "WordPress costs $15,000+ over 3 years. A custom Next.js site costs $10K once, then $0/year. Full TCO breakdown: hosting, plugins, maintenance, lost revenue.",
+    title: "WordPress vs Custom Code: Which Costs Less Over 3 Years? (2026)",
+    description: "WordPress costs $15,000+ over 3 years when you add hosting, plugins, maintenance, and lost revenue. A custom Next.js site costs $3,500 once, then $0/year. Full TCO breakdown.",
     alternates: {
         canonical: '/blog/wordpress-vs-custom-code-real-cost-3-years',
     },
@@ -45,11 +45,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-vs-custom-code-real-cost-3-years#article",
-            "headline": "WordPress vs Custom Code: 3-Year Cost Breakdown (2026)",
+            "headline": "WordPress vs Custom Code: Which Costs Less Over 3 Years? (2026)",
             "description": "WordPress costs $15,000+ over 3 years. A custom Next.js site costs $10K once, then $0/year. Full TCO breakdown: hosting, plugins, maintenance, lost revenue.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-20T00:00:00-05:00",
-            "dateModified": "2026-05-06T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -109,7 +109,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-20T00:00:00-05:00",
-            "dateModified": "2026-05-06T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/wordpress-vs-custom-code-real-cost-3-years#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -224,6 +224,8 @@ export default function WordPressVsCustomCodeCostPage() {
                             </div>
                         </div>
                     </div>
+
+                    <p className="text-stone-700 leading-relaxed mb-6">Custom code costs less than WordPress over 3 years for most businesses. WordPress totals $12,000 to $18,000 over 3 years when you include hosting ($150 to $400/mo), plugins ($100 to $300/mo), developer time, and security costs. A custom Next.js site costs $3,500 once and $0 per year in platform fees. The break-even point is typically 14 to 18 months.</p>
 
                     <div className="space-y-8">
 

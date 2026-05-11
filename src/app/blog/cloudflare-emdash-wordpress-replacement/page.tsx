@@ -17,14 +17,14 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Cloudflare Built a WordPress Replacement in 2026: What to Know",
+    title: "Did Cloudflare Build a WordPress Replacement in 2026? What You Need to Know",
     description: "Cloudflare launched Emdash, calling it WordPress's spiritual successor. 96% of WordPress security issues come from plugins. Here is what this means for you.",
     alternates: {
         canonical: '/blog/cloudflare-emdash-wordpress-replacement',
     },
     keywords: ["Cloudflare Emdash", "Emdash CMS", "WordPress replacement 2026", "WordPress alternative", "Emdash vs WordPress", "Cloudflare CMS", "WordPress security issues plugins"],
     openGraph: {
-        title: "Cloudflare Built a WordPress Replacement in 2026: What to Know",
+        title: "Did Cloudflare Build a WordPress Replacement in 2026? What You Need to Know",
         description: "Cloudflare launched Emdash, calling it WordPress's spiritual successor. 96% of WordPress security issues come from plugins. Here is what this means for you.",
         type: "article",
         publishedTime: "2026-04-04",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Cloudflare Built a WordPress Replacement in 2026: What to Know",
+        title: "Did Cloudflare Build a WordPress Replacement in 2026? What You Need to Know",
         description: "Cloudflare launched Emdash, calling it WordPress's spiritual successor. 96% of WordPress security issues come from plugins. Here is what this means for you.",
     },
 };
@@ -45,11 +45,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/cloudflare-emdash-wordpress-replacement#article",
-            "headline": "Cloudflare Built a WordPress Replacement in 2026: What to Know",
+            "headline": "Did Cloudflare Build a WordPress Replacement in 2026? What You Need to Know",
             "description": "Cloudflare launched Emdash, calling it WordPress's spiritual successor. 96% of WordPress security issues come from plugins. Here is what this means for you.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-04T00:00:00-05:00",
-            "dateModified": "2026-04-04T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -109,7 +109,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-04-04T00:00:00-05:00",
-            "dateModified": "2026-04-04T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/cloudflare-emdash-wordpress-replacement#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -190,6 +190,8 @@ export default function CloudflareEmdashPage() {
                             On April 2, 2026, Cloudflare launched Emdash and called it the spiritual successor to WordPress. When a $30 billion infrastructure company builds a replacement for the platform your website runs on, it is worth paying attention. Here is what happened, what it means, and what you should do about it. Key takeaways at the bottom.
                         </p>
                     </div>
+
+                    <p className="text-stone-700 leading-relaxed mb-6">Cloudflare announced an open-source CMS project in 2026 positioned as a modern alternative to WordPress, built on their Workers and Pages infrastructure. It is not a full WordPress replacement yet, but it signals where enterprise web infrastructure is heading. Businesses already migrating to Next.js are better positioned to adopt Cloudflare's stack than those stuck on WordPress.</p>
 
                     {/* Content */}
                     <div className="space-y-8">

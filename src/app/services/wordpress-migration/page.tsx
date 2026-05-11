@@ -3,7 +3,7 @@ import PageContent from './PageContent';
 
 export const metadata: Metadata = {
   title: 'WordPress to Next.js Migration Service | PandaCodeGen',
-  description: 'WordPress sites average 40 to 60 on Google PageSpeed Mobile. We migrate to custom Next.js in 2 to 4 weeks. 95+ PageSpeed guaranteed, zero SEO loss, 301 redirects included. Tiers from $500 to $25,000.',
+  description: 'WordPress sites average 40 to 60 on Google PageSpeed Mobile. We migrate to custom Next.js in 2 to 4 weeks. 95+ PageSpeed guaranteed, zero SEO loss, 301 redirects included. Fixed pricing from $1,500.',
   alternates: { canonical: '/services/wordpress-migration' },
   keywords: [
     'wordpress to nextjs migration',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'WordPress to Next.js Migration Service | PandaCodeGen',
-    description: 'WordPress sites average 40 to 60 on Google PageSpeed. We migrate to custom Next.js in 2 to 4 weeks. 95+ PageSpeed guaranteed, zero SEO loss. Tiers from $500 to $25,000.',
+    description: 'WordPress sites average 40 to 60 on Google PageSpeed. We migrate to custom Next.js in 2 to 4 weeks. 95+ PageSpeed guaranteed, zero SEO loss. Fixed pricing from $1,500.',
     url: 'https://www.pandacodegen.com/services/wordpress-migration',
     siteName: 'PandaCodeGen',
     type: 'website',

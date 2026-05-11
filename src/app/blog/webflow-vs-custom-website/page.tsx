@@ -16,14 +16,14 @@ const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAni
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Webflow vs Custom Website 2026: When $150/mo Outcosts a Custom Build",
+    title: "Webflow vs Custom Website 2026: Which Is the Better Investment?",
     description: "Webflow works until your PageSpeed drops below 70, your bill hits $100+/month, or you need features it cannot build. Here are the 5 signs and what to do next.",
     alternates: {
         canonical: '/blog/webflow-vs-custom-website',
     },
     keywords: ["webflow vs custom website", "webflow alternative", "webflow limitations", "webflow vs next.js", "custom website vs webflow", "should I leave webflow", "webflow hidden costs"],
     openGraph: {
-        title: "Webflow vs Custom Website 2026: When $150/mo Outcosts a Custom Build",
+        title: "Webflow vs Custom Website 2026: Which Is the Better Investment?",
         description: "Webflow works until your PageSpeed drops below 70, your bill hits $100+/month, or you need features it cannot build. Here are the 5 signs and what to do next.",
         type: "article",
         publishedTime: "2026-03-27",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Webflow vs Custom Website 2026: When $150/mo Outcosts a Custom Build",
+        title: "Webflow vs Custom Website 2026: Which Is the Better Investment?",
         description: "Webflow works until your PageSpeed drops below 70, your bill hits $100+/month, or you need features it cannot build. Here are the 5 signs.",
     },
 };
@@ -44,11 +44,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/webflow-vs-custom-website#article",
-            "headline": "Webflow vs Custom Website 2026: When $150/mo Outcosts a Custom Build",
+            "headline": "Webflow vs Custom Website 2026: Which Is the Better Investment?",
             "description": "Webflow works for brochure sites. But when your PageSpeed drops below 70, your bill exceeds $100/month, or you need custom functionality, custom code becomes the better investment.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-27T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -114,7 +114,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-27T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/webflow-vs-custom-website#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -200,6 +200,8 @@ export default function WebflowVsCustomWebsitePage() {
                             "If your Webflow PageSpeed is below 70, your bill exceeds $100/month, or you need features Webflow cannot build, it is time to switch."
                         ]} />
                     </div>
+
+                    <p className="text-stone-700 leading-relaxed mb-6">A custom website is the better investment when Webflow costs over $150 per month and your site needs to rank on Google. Webflow locks you into monthly platform fees, CMS item limits, and bandwidth caps. A custom Next.js site costs $3,500 once, then $0 per month, scores 95 to 100 on PageSpeed, and you own the code outright.</p>
 
                     <div className="space-y-8">
                         <BlogText>

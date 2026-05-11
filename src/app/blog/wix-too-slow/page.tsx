@@ -63,7 +63,7 @@ const articleSchema = {
             "description": "Wix sites average 6.8-second LCP on mobile from 200-400KB of unkillable platform JavaScript. Real 2026 data and the only fix that works.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-06T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",

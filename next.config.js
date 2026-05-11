@@ -38,6 +38,22 @@ const nextConfig = {
   compress: true,
   // 7. Optimize for production
   poweredByHeader: false,
+  // 8. Catch malformed URLs (e.g. pandacodegen.com/$ from broken external links)
+  async redirects() {
+    return [
+      {
+        source: '/$',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/:path*',
+        has: [{ type: 'header', key: 'x-forwarded-proto', value: 'http' }],
+        destination: 'https://www.pandacodegen.com/:path*',
+        permanent: true,
+      },
+    ];
+  },
   // 9. Security headers + static asset caching
   async headers() {
     return [

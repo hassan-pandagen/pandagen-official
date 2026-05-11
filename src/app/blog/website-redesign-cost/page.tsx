@@ -18,7 +18,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Website Redesign Cost in 2026",
+    title: "How Much Does a Website Redesign Cost in 2026? ($3K to $50K Breakdown)",
     description: "Honest pricing for refresh, redesign, and rebuild projects from $500 to $15,000+. Hidden costs agencies leave out and how to know which option you actually need.",
     alternates: {
         canonical: '/blog/website-redesign-cost',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         "fixed-price website redesign",
     ],
     openGraph: {
-        title: "Website Redesign Cost in 2026",
+        title: "How Much Does a Website Redesign Cost in 2026? ($3K to $50K Breakdown)",
         description: "Honest pricing for refresh, redesign, and rebuild projects from $500 to $15,000+. Hidden costs agencies leave out and how to know which option you actually need.",
         type: "article",
         publishedTime: "2026-04-30T00:00:00-05:00",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Website Redesign Cost in 2026",
+        title: "How Much Does a Website Redesign Cost in 2026? ($3K to $50K Breakdown)",
         description: "Honest pricing for refresh, redesign, and rebuild projects from $500 to $15,000+. Hidden costs agencies leave out and how to know which option you actually need.",
     },
 };
@@ -59,11 +59,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/website-redesign-cost#article",
-            "headline": "Website Redesign Cost in 2026",
+            "headline": "How Much Does a Website Redesign Cost in 2026? ($3K to $50K Breakdown)",
             "description": "Honest pricing for refresh, redesign, and rebuild projects from $500 to $15,000+. Hidden costs agencies leave out and how to know which option you actually need.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-30T00:00:00-05:00",
-            "dateModified": "2026-04-30T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -125,7 +125,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-04-30T00:00:00-05:00",
-            "dateModified": "2026-04-30T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/website-redesign-cost#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -242,6 +242,8 @@ export default function WebsiteRedesignCostPage() {
                             These are not screenshots. Every site is live, indexed, and verifiable. Open Lighthouse on any of them yourself. Most agencies will not show you their portfolio scores because they cannot.
                         </p>
                     </div>
+
+                    <p className="text-stone-700 leading-relaxed mb-6">A website redesign costs $3,000 to $50,000 in 2026 depending on scope. A 5 to 7 page refresh with updated design and no CMS runs $1,500 to $3,500. A full 10 to 20 page redesign with blog migration and new CMS runs $3,500 to $8,000. Agency-level redesigns with custom integrations run $15,000 to $50,000. Fixed-price agencies like PandaCodeGen publish exact pricing online before the call.</p>
 
                     <div className="space-y-8">
 

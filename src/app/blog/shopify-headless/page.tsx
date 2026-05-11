@@ -16,8 +16,8 @@ const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAni
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Shopify Headless in 2026: Cut Load Time 80%, Boost Conversions",
-    description: "Shopify Liquid templates are render-blocking. The exact headless stack that cut load time from 4 seconds to 0.8 seconds.",
+    title: "Is Shopify Headless Worth It in 2026? Real Results From $1.2M Store",
+    description: "Shopify Liquid templates are render-blocking and cannot be fixed with apps. Headless Shopify on Next.js cuts load time from 4s to 0.8s. Real receipts, exact stack, fixed pricing.",
     alternates: { canonical: "/blog/shopify-headless" },
     keywords: ["headless shopify", "shopify speed optimization", "shopify core web vitals", "shopify next.js", "shopify storefront api", "shopify liquid slow"],
     openGraph: {
@@ -42,11 +42,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/shopify-headless#article",
-            "headline": "Shopify Headless in 2026: Cut Load Time 80%, Boost Conversions",
+            "headline": "Is Shopify Headless Worth It in 2026? Real Results From $1.2M Store",
             "description": "Shopify Liquid templates are render-blocking. The exact headless stack that cut load time from 4 seconds to 0.8 seconds.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-15T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-05-11T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -106,7 +106,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-15T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-05-11T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/shopify-headless#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -191,6 +191,8 @@ export default function ShopifyHeadlessPage() {
                             "Stores migrated headless see 55% more conversions and 4 to 5× faster load times within 30 days of launch."
                         ]} />
                     </div>
+
+                    <p className="text-stone-700 leading-relaxed mb-6">Shopify headless is worth it when your store does over $500K per year and loads slower than 3 seconds on mobile. You keep Shopify for orders, inventory, and checkout. You replace the Liquid frontend with Next.js. Load time drops from 4 seconds to under 1 second. Conversion rates typically double. PandaCodeGen Scale tier covers the full headless build at $5,000 to $10,000.</p>
 
                     <div className="space-y-8">
                         <BlogText>

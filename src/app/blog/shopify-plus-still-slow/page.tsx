@@ -46,7 +46,7 @@ const articleSchema = {
             "description": "You upgraded to Shopify Plus for speed. Still scoring 50 on mobile. Here is why $2,300/month never breaks the Liquid ceiling, and the headless fix that does.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-06T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -105,7 +105,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-06T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/shopify-plus-still-slow#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -189,6 +189,8 @@ export default function ShopifyPlusStillSlowPage() {
                             "The only path to under 1 second load times is a headless Next.js frontend connected to your Shopify Plus backend."
                         ]} />
                     </div>
+
+                    <p className="text-stone-700 leading-relaxed mb-6">Shopify Plus is still slow in 2026 because the platform fee does not change the architecture. Shopify Plus still uses Liquid templates that render server-side on every request. Paying $2,300 per month buys you higher API limits and priority support, not a faster frontend. The only fix for Shopify Plus speed is headless architecture on Next.js.</p>
 
                     <div className="space-y-8">
                         <BlogText>

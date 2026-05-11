@@ -16,7 +16,7 @@ const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAni
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "WordPress Plugins and Page Speed: 30+ Plugin Cost (2026)",
+    title: "Are WordPress Plugins Slowing Down Your Site? 30+ Plugin Impact (2026)",
     description: "Most WordPress sites with 30+ plugins score 35/100 on mobile. How much revenue you lose per month and how to actually fix it.",
     alternates: { canonical: "/blog/wordpress-plugins-destroy-speed" },
     keywords: ["wordpress plugins slow", "wordpress plugin performance", "too many wordpress plugins", "wordpress plugins killing speed", "fix slow wordpress plugins", "wordpress speed optimization"],
@@ -43,11 +43,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-plugins-destroy-speed#article",
-            "headline": "WordPress Plugins and Page Speed: 30+ Plugin Cost (2026)",
+            "headline": "Are WordPress Plugins Slowing Down Your Site? 30+ Plugin Impact (2026)",
             "description": "Most WordPress sites with 30+ plugins score 35/100 on mobile. How much revenue you lose per month and how to actually fix it.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-05T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -104,7 +104,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-05T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/wordpress-plugins-destroy-speed#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -210,6 +210,8 @@ export default function WordPressPluginsSpeedPage() {
                             </div>
                         </div>
                     </div>
+
+                    <p className="text-stone-700 leading-relaxed mb-6">Yes, WordPress plugins slow your site down. Each active plugin adds HTTP requests, CSS, and JavaScript. Sites with 30 or more plugins average 35 out of 100 on Mobile PageSpeed. Every 1-second delay costs 7% in conversions. The only permanent fix is removing plugins by replacing WordPress with a custom Next.js build.</p>
 
                     <div className="space-y-8">
                         <BlogText>

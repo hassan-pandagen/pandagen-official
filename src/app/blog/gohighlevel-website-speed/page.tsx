@@ -16,7 +16,7 @@ const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAni
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: { absolute: "GoHighLevel Sites Score 20 to 45 on PageSpeed: How to Fix It (2026)" },
+    title: "Why Is My GoHighLevel Site Slow? PageSpeed 20 to 45 Explained (2026)",
     description: "GoHighLevel sites score 20 to 45 on Google PageSpeed Mobile. Here is why GHL is slow, what it costs you in leads, and how to fix it without leaving the platform.",
     alternates: {
         canonical: "/blog/gohighlevel-website-speed",
@@ -57,11 +57,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/gohighlevel-website-speed#article",
-            "headline": "GoHighLevel Sites Score 20 to 45 on PageSpeed: How to Fix It (2026)",
+            "headline": "Why Is My GoHighLevel Site Slow? PageSpeed 20 to 45 Explained (2026)",
             "description": "GoHighLevel sites score 20 to 45 on Google PageSpeed Mobile. Here is why GHL is slow, what it costs you in leads, and how to fix it without leaving the platform.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-22T00:00:00-05:00",
-            "dateModified": "2026-05-06T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -130,7 +130,7 @@ const articleSchema = {
             "description": "GHL sites score 20 to 45 on PageSpeed Mobile. Why the platform is slow, what it costs in rankings and conversions, and how to fix it.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-03-22T00:00:00-05:00",
-            "dateModified": "2026-05-06T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "inLanguage": "en-US"
         },
         {

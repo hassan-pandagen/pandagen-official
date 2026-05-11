@@ -16,14 +16,14 @@ const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAni
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Shopify vs Custom Website in 2026: 5 Signs to Switch",
+    title: "Shopify vs Custom Website in 2026: When Should You Switch?",
     description: "Shopify works until app fees hit $1,000/month and your store loads in 4+ seconds. 5 signs you have outgrown Shopify and what to do next.",
     alternates: {
         canonical: '/blog/shopify-vs-custom-website',
     },
     keywords: ["shopify vs custom website", "outgrown shopify", "shopify alternative", "shopify too expensive", "shopify slow", "custom ecommerce website", "shopify hidden costs", "shopify to custom migration", "headless shopify", "shopify app costs", "shopify plus price increase 2026", "shopify core web vitals failing", "shopify checkout restrictions", "leaving shopify", "shopify transaction fees", "shopify duplicate content seo", "shopify frozen funds"],
     openGraph: {
-        title: "Shopify vs Custom Website in 2026: 5 Signs to Switch",
+        title: "Shopify vs Custom Website in 2026: When Should You Switch?",
         description: "Shopify works until app fees hit $1,000/month and your store loads in 4+ seconds. Here are the 5 signs and what to do next.",
         type: "article",
         publishedTime: "2026-03-30",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Shopify vs Custom Website in 2026: 5 Signs to Switch",
+        title: "Shopify vs Custom Website in 2026: When Should You Switch?",
         description: "Shopify works until app fees hit $1,000/month and your store loads in 4+ seconds. Here are the 5 signs.",
     },
 };
@@ -44,11 +44,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/shopify-vs-custom-website#article",
-            "headline": "Shopify vs Custom Website: 5 Signs You Have Outgrown Shopify",
+            "headline": "Shopify vs Custom Website in 2026: When Should You Switch?",
             "description": "Shopify works for small stores. But when app fees exceed $500/month, your store loads in 4+ seconds, and conversion stalls below 2%, custom code becomes the better investment.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-30T00:00:00-05:00",
-            "dateModified": "2026-05-06T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -108,7 +108,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-30T00:00:00-05:00",
-            "dateModified": "2026-05-06T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/shopify-vs-custom-website#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -221,6 +221,8 @@ export default function ShopifyVsCustomWebsitePage() {
                             </div>
                         </div>
                     </div>
+
+                    <p className="text-stone-700 leading-relaxed mb-6">You should switch from Shopify to a custom website when your mobile load time exceeds 3 seconds, your app bill tops $500 per month, or your conversion rate is stuck below 2%. Custom headless builds on Next.js deliver sub-1-second load times, eliminate app fees, and typically 2x to 3x conversion rates from the same traffic at $5,000 to $10,000 one-time cost.</p>
 
                     <div className="space-y-8">
                         <BlogText>

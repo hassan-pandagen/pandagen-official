@@ -81,7 +81,7 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Webflow CMS Collection Migration Docs", "url": "https://help.webflow.com/hc/en-us/articles/33961342531859-Migrate-CMS-Collection-content-to-another-project" },
                 { "@type": "CreativeWork", "name": "Webflow Redirect Manager Documentation", "url": "https://help.webflow.com/hc/en-us/articles/33961294898835-How-do-I-set-up-redirects-in-Webflow" },
                 { "@type": "CreativeWork", "name": "Webflow Website Cost in 2026", "url": "https://www.webflow.jobs/resources/how-much-does-a-webflow-website-cost-2026" },
-                { "@type": "CreativeWork", "name": "Iron Horse Studio Webflow Services", "url": "https://ironhorse.io/webflow-services" },
+                { "@type": "CreativeWork", "name": "Webflow Enterprise Pricing", "url": "https://webflow.com/enterprise" },
                 { "@type": "CreativeWork", "name": "Google Core Web Vitals", "url": "https://web.dev/vitals/" },
                 { "@type": "CreativeWork", "name": "Google PageSpeed Insights", "url": "https://pagespeed.web.dev/" }
             ]
@@ -178,7 +178,7 @@ export default function WebflowMigration50To100PagesPage() {
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
                         <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
-                            "Enterprise Webflow agencies like Iron Horse Studio commonly quote $15,000 to $25,000 for 50 to 100 page migrations and do not publish pricing upfront.",
+                            "Enterprise Webflow agencies commonly quote $15,000 to $25,000 for 50 to 100 page migrations and do not publish pricing upfront.",
                             "Real engineering scope is 80 to 125 hours. At market hourly rate ($100 to $150), that is $8,000 to $18,750 in labor before agency markup.",
                             "Our Scale tier covers this exact scope at $5,000 to $10,000, delivered in 3 weeks instead of 8 to 12.",
                             "The 301 redirect strategy and CMS collection migration are the two places where cheaper agencies lose SEO. We document both step by step."
@@ -195,7 +195,7 @@ export default function WebflowMigration50To100PagesPage() {
 
                         <BlogHeader>Why 50 to 100 Pages Is a Distinct Pricing Tier</BlogHeader>
 
-                        <p className="text-stone-700 leading-relaxed mb-4">A 50 to 100 page Webflow migration should cost $5,000 to $10,000 with a boutique specialist agency. Enterprise agencies like Iron Horse Studio quote $15,000 to $25,000 for the same scope. The budget difference is overhead, not engineering quality. A 50-page site with 4 CMS collections and standard integrations takes 80 to 100 hours of real engineering work regardless of who does it.</p>
+                        <p className="text-stone-700 leading-relaxed mb-4">A 50 to 100 page Webflow migration should cost $5,000 to $10,000 with a boutique specialist agency. Enterprise agencies quote $15,000 to $25,000 for the same scope. The budget difference is overhead, not engineering quality. A 50-page site with 4 CMS collections and standard integrations takes 80 to 100 hours of real engineering work regardless of who does it.</p>
 
                         <BlogText>
                             Page count alone does not decide <Link href="/blog/webflow-migration-cost" className="text-cognac hover:underline">Webflow migration cost</Link>. CMS collection count, integration surface, and redirect complexity do. At 50 to 100 pages you typically have 3 to 8 CMS collections (blog posts, case studies, team, pricing, locations, resources, integrations, careers). Each collection is a separate schema in the new CMS, a separate import script, and a separate set of URL patterns to redirect.
@@ -260,7 +260,7 @@ export default function WebflowMigration50To100PagesPage() {
 
                         <BlogHeader>Why Enterprise Agencies Charge 2 to 3 Times What a Solo Shop Charges</BlogHeader>
                         <BlogText>
-                            The honest answer is overhead, not engineering quality. Enterprise Webflow agencies like <a href="https://ironhorse.io/webflow-services" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Iron Horse Studio</a> have project managers, account executives, QA leads, designers, and developers on every engagement. Their public timeline for a simple Webflow migration is 8 to 12 weeks. Complex migrations go 4 to 6 months.
+                            The honest answer is overhead, not engineering quality. Enterprise Webflow agencies have project managers, account executives, QA leads, designers, and developers on every engagement. Public timelines for a simple Webflow migration run 8 to 12 weeks. Complex migrations go 4 to 6 months.
                         </BlogText>
                         <BlogText>
                             Those layers exist for enterprise clients who need procurement sign-off, multiple stakeholder reviews, and a single point of contact across departments. If you are a 50 to 100 person company with a marketing site, most of that layering is cost you do not need. You need the engineering, not the PMO.
@@ -508,7 +508,7 @@ export default function WebflowMigration50To100PagesPage() {
                     <section className="mb-8 md:mb-10 mt-8 md:mt-16">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>Enterprise agencies charge 2 to 3 times what solo shops charge for the same scope.</strong> Iron Horse and similar Webflow Enterprise partners quote $15,000 to $25,000 for 50 to 100 page migrations. Our Scale tier covers the exact same scope at $5,000 to $10,000.</li>
+                            <li><strong>Enterprise agencies charge 2 to 3 times what solo shops charge for the same scope.</strong> Webflow Enterprise partners quote $15,000 to $25,000 for 50 to 100 page migrations. Our Scale tier covers the exact same scope at $5,000 to $10,000.</li>
                             <li><strong>Real engineering scope is 80 to 125 hours, not 200 plus.</strong> That is 3 weeks of focused work from a boutique team, not 8 to 12 weeks of agency scheduling.</li>
                             <li><strong>CMS collection count matters more than page count.</strong> 50 pages with 2 collections is a different project from 70 pages with 6 collections. Our pricing reflects that.</li>
                             <li><strong>301 redirect strategy makes or breaks post-migration SEO.</strong> Webflow caps at 1,000 redirects. Next.js on Vercel has no cap. Top pages need 1-to-1 mapping, not wildcards.</li>

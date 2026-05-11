@@ -174,7 +174,7 @@ export default function PartnersContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className="text-center p-5 md:p-6 bg-white border border-stone-200 rounded-2xl shadow-card"
+                className="text-center p-5 md:p-6 bg-white border border-stone-300 rounded-2xl shadow-md"
               >
                 <p className="text-2xl md:text-3xl font-black text-charcoal tracking-tight leading-none">{stat.value}</p>
                 <p className="text-xs text-stone-600 font-semibold mt-2 leading-snug">{stat.label}</p>

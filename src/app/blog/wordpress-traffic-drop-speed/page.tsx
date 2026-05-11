@@ -16,8 +16,8 @@ const SEORankingAnimation = lazyLoad(() => import("@/components/blog/SEORankingA
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "WordPress Traffic Dropping in 2026? The Speed Tax Killing Your Rankings",
-    description: "Slow WordPress sites with Mobile PageSpeed below 50 lose 20 to 30% of organic traffic to faster competitors. Here is why and how to reverse it.",
+    title: "Why Is My WordPress Traffic Dropping in 2026? Speed Tax Explained",
+    description: "WordPress sites with Mobile PageSpeed below 50 lose 20 to 30% of organic traffic to faster competitors. Here is exactly why and how to reverse it fast.",
     alternates: { canonical: "/blog/wordpress-traffic-drop-speed" },
     keywords: ["wordpress losing traffic", "wordpress traffic drop", "wordpress speed seo", "core web vitals wordpress", "wordpress traffic decrease", "wordpress google ranking drop"],
     openGraph: {
@@ -42,11 +42,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed#article",
-            "headline": "WordPress Traffic Dropping in 2026? The Speed Tax Killing Your Rankings",
+            "headline": "Why Is My WordPress Traffic Dropping in 2026? Speed Tax Explained",
             "description": "Slow WordPress sites with Mobile PageSpeed below 50 lose 20 to 30% of organic traffic to faster competitors. Here is why and how to reverse it.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-07T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-05-11T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -103,7 +103,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-07T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-05-11T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -188,6 +188,8 @@ export default function WordPressTrafficDropPage() {
                             "The fix isn't another plugin. It's replacing WordPress with a fast Next.js site that loads in under 1 second."
                         ]} />
                     </div>
+
+                    <p className="text-stone-700 leading-relaxed mb-6">WordPress traffic drops in 2026 when Mobile PageSpeed falls below 50. Google's Core Web Vitals algorithm demotes slow sites by 5 to 10 positions compared to faster competitors. The fix is not another caching plugin. Sites that migrate from WordPress to Next.js recover organic traffic within 60 to 90 days as rankings climb back after Core Web Vitals flip from Poor to Good.</p>
 
                     <div className="space-y-8">
                         <BlogText>

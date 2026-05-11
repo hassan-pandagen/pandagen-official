@@ -18,7 +18,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: { absolute: "Keep GoHighLevel CRM. Replace the Slow Website (2026)" },
+    title: "Should You Replace Your GoHighLevel Website But Keep the CRM? (2026)",
     description: "Keep GoHighLevel for CRM, automations, calendars, and SaaS Mode. Replace only the slow public website with a Next.js frontend that talks to GHL via REST API v2 and webhooks. Full hybrid architecture and real PageSpeed numbers.",
     alternates: {
         canonical: "/blog/gohighlevel-keep-crm-replace-website",
@@ -59,11 +59,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/gohighlevel-keep-crm-replace-website#article",
-            "headline": "Keep Your GoHighLevel CRM. Replace Just the Slow Website.",
+            "headline": "Should You Replace Your GoHighLevel Website But Keep the CRM? (2026)",
             "description": "GoHighLevel is a strong CRM and a weak website builder. Keep GHL as the backend for forms, contacts, calendars, automations, and SaaS Mode. Replace only the public-facing website with a Next.js frontend that talks to GHL through its REST API v2 and webhooks.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-05-04T00:00:00-05:00",
-            "dateModified": "2026-05-04T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -135,7 +135,7 @@ const articleSchema = {
             "description": "Hybrid stack architecture for GoHighLevel: Next.js frontend, GHL backend. Real PageSpeed numbers, code paths, webhook events, and pitfalls.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-05-04T00:00:00-05:00",
-            "dateModified": "2026-05-04T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/gohighlevel-keep-crm-replace-website#breadcrumb" },
             "inLanguage": "en-US"
         },

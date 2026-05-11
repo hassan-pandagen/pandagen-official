@@ -16,7 +16,7 @@ const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAni
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Squarespace Migration Cost 2026: Full Breakdown Before You Sign",
+    title: "How Much Does Squarespace Migration Cost in 2026? Full Breakdown",
     description: "Squarespace costs $1,500 to $5,500 over 3 years with every fee counted. Real migration cost by site size plus the ROI payback math.",
     alternates: {
         canonical: "/blog/squarespace-migration-cost",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         "squarespace true cost 2026"
     ],
     openGraph: {
-        title: "Squarespace Migration Cost 2026: Full Breakdown Before You Sign",
+        title: "How Much Does Squarespace Migration Cost in 2026? Full Breakdown",
         description: "Squarespace costs $1,500 to $5,500 over 3 years. Here is the real migration cost by site size and exactly when it pays for itself.",
         type: "article",
         publishedTime: "2026-05-08T00:00:00-05:00",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Squarespace Migration Cost 2026: Full Breakdown Before You Sign",
+        title: "How Much Does Squarespace Migration Cost in 2026? Full Breakdown",
         description: "Squarespace costs $1,500 to $5,500 over 3 years. Here is the real migration cost and ROI breakdown.",
     },
 };
@@ -56,11 +56,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/squarespace-migration-cost#article",
-            "headline": "Squarespace Migration Cost 2026: Full Breakdown Before You Sign",
+            "headline": "How Much Does Squarespace Migration Cost in 2026? Full Breakdown",
             "description": "Squarespace costs $1,500 to $5,500 over 3 years with every fee counted. Real migration cost by site size plus the ROI payback math.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-05-08T00:00:00-05:00",
-            "dateModified": "2026-05-08T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -121,7 +121,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-05-08T00:00:00-05:00",
-            "dateModified": "2026-05-08T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/squarespace-migration-cost#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -207,6 +207,8 @@ export default function SquarespaceMinCostPage() {
                             "Most businesses recover migration costs in 2 to 4 years through hosting savings and improved organic traffic."
                         ]} />
                     </div>
+
+                    <p className="text-stone-700 leading-relaxed mb-6">Squarespace migration to a custom Next.js site costs $1,500 to $3,500 for most businesses in 2026. A 5 to 7 page site lands at $1,500 (Starter). A 10 to 20 page site with blog migration lands at $3,500 (Growth). The migration includes 301 redirects, SEO preservation, and zero downtime launch. Compare this to Squarespace's ongoing $23 to $65 per month in recurring fees.</p>
 
                     <div className="space-y-8">
                         <BlogText>

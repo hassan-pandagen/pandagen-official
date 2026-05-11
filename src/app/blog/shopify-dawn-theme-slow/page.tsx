@@ -49,7 +49,7 @@ const articleSchema = {
             "description": "You optimize Dawn to 75. Add one app and it drops to 50. Why the loop never ends and the one approach that stays at 95+.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-07T00:00:00-05:00",
-            "dateModified": "2026-04-13T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -112,7 +112,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-07T00:00:00-05:00",
-            "dateModified": "2026-04-13T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -200,6 +200,8 @@ export default function ShopifyDawnThemeSlowPage() {
                             "Theme-level fixes improve your score by 10 to 20 points. To hit 90 to 100/100, you need to leave Shopify's theme system.",
                         ]} />
                     </div>
+
+                    <p className="text-stone-700 leading-relaxed mb-6">Shopify Dawn theme is slow because it loads all theme CSS and JavaScript on every page, even sections not used on that page. Dawn scores 42 to 65 on mobile PageSpeed by default. You can optimize it to around 75 with image compression and script deferral, but you cannot break the 80 barrier without replacing Liquid entirely with a headless Next.js frontend.</p>
 
                     <div className="space-y-8">
 

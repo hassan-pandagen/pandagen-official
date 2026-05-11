@@ -18,7 +18,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Wix vs Custom Website in 2026: When to Switch",
+    title: "Wix vs Custom Website in 2026: Which Ranks Better on Google?",
     description: "Wix caps at 35 to 55 on mobile PageSpeed. Custom Next.js hits 95 to 100. Real 3-year cost, SEO ceiling, and when to stay or switch. Honest breakdown.",
     alternates: {
         canonical: "/blog/wix-vs-custom-website",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
         "wix pagespeed score"
     ],
     openGraph: {
-        title: "Wix vs Custom Website in 2026: When to Switch",
+        title: "Wix vs Custom Website in 2026: Which Ranks Better on Google?",
         description: "You added a booking app. Then an SEO plugin. Then a form tool. Your Wix site still scores 35 on mobile and you cannot export your content. Here is when custom code makes sense.",
         type: "article",
         publishedTime: "2026-04-13",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Wix vs Custom Website in 2026: When to Switch",
+        title: "Wix vs Custom Website in 2026: Which Ranks Better on Google?",
         description: "You added a booking app. Then an SEO plugin. Then a form tool. Your Wix site still scores 35 on mobile and you cannot export your content. Here is when custom code makes sense.",
     },
 };
@@ -57,11 +57,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wix-vs-custom-website#article",
-            "headline": "Wix vs Custom Website in 2026: When to Switch",
+            "headline": "Wix vs Custom Website in 2026: Which Ranks Better on Google?",
             "description": "Wix scores 35 to 55 on mobile PageSpeed. Custom sites score 95 to 100. But Wix is free to start and easy to use. Here is the real cost, speed, and SEO comparison with honest advice on when to stay and when to switch.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-13T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -228,6 +228,8 @@ export default function WixVsCustomWebsitePage() {
                             "A custom Next.js website scores 95 to 100 on PageSpeed, costs $0 to $20/month to host on Vercel, and you own every line of code. The upfront cost is higher, but the 3-year total cost is lower for any business spending $100+/month on Wix and apps."
                         ]} />
                     </div>
+
+                    <p className="text-stone-700 leading-relaxed mb-6">A custom website ranks better than Wix on Google in 2026. Wix sites average 45 to 65 on Mobile PageSpeed and fail Core Web Vitals at a higher rate than custom sites. Google's ranking algorithm uses Core Web Vitals as a tiebreaker. Custom Next.js sites score 95 to 100 and consistently outrank Wix competitors in the same niche within 60 to 90 days of launch.</p>
 
                     <div className="space-y-8">
 

@@ -16,14 +16,14 @@ const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAni
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Start Free, Scale to $20/mo: How We Host Client Sites on Vercel (2026)",
+    title: "How Much Does Next.js Hosting Cost in 2026? Start Free on Vercel",
     description: "Most businesses pay $50 to $300/mo for hosting. We deploy every client on Vercel starting free, scaling to $20/mo only when you grow.",
     alternates: {
         canonical: '/blog/nextjs-hosting-zero-cost',
     },
     keywords: ["free nextjs hosting", "vercel free tier", "free website hosting 2026", "nextjs hosting cost", "vercel vs wordpress hosting", "zero cost website hosting", "vercel free tier limits"],
     openGraph: {
-        title: "Start Free, Scale to $20/mo: How We Host Client Sites on Vercel (2026)",
+        title: "How Much Does Next.js Hosting Cost in 2026? Start Free on Vercel",
         description: "Most businesses pay $50 to $300/mo for hosting. We deploy every client on Vercel starting free, scaling to $20/mo only when you grow.",
         type: "article",
         publishedTime: "2026-03-13",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Start Free, Scale to $20/mo: How We Host Client Sites on Vercel (2026)",
+        title: "How Much Does Next.js Hosting Cost in 2026? Start Free on Vercel",
         description: "Most businesses pay $50 to $300/mo for hosting. We deploy every client on Vercel starting free, scaling to $20/mo only when you grow.",
     },
 };
@@ -44,11 +44,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost#article",
-            "headline": "Start Free, Scale to $20/mo: How We Host Client Sites on Vercel (2026)",
+            "headline": "How Much Does Next.js Hosting Cost in 2026? Start Free on Vercel",
             "description": "Most businesses pay $50 to $300/mo for hosting. We deploy every client on Vercel starting free, scaling to $20/mo only when you grow.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-13T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -111,7 +111,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-13T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -202,6 +202,8 @@ export default function NextjsHostingZeroCostPage() {
                             "Here's exactly how it works and whether it works for your business."
                         ]} />
                     </div>
+
+                    <p className="text-stone-700 leading-relaxed mb-6">Next.js hosting on Vercel starts at $0 per month for most business sites. The Hobby plan handles up to 100GB bandwidth and 100K function invocations free. Sites doing over 100K monthly visitors may need the Pro plan at $20 per month. Compare this to WordPress hosting at $50 to $400 per month. For most clients we migrate, hosting cost drops from $150 per month to $0 on launch day.</p>
 
                     {/* Content */}
                     <div className="space-y-8">

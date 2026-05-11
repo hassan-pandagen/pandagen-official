@@ -18,7 +18,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Leaving Webflow in 2026: Real Migration Story After 14 Outages",
+    title: "Should You Leave Webflow in 2026? Real Migration Story After 14 Outages",
     description: "Documented 14 Webflow outages between February and April 2026. Bandwidth bills hit $170 overnight. Memberships killed with 6 weeks notice. Full migration story, timeline, and results.",
     alternates: {
         canonical: "/blog/leaving-webflow-2026",
@@ -46,11 +46,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/leaving-webflow-2026#article",
-            "headline": "Leaving Webflow in 2026: Real Migration Story After 14 Outages",
+            "headline": "Should You Leave Webflow in 2026? Real Migration Story After 14 Outages",
             "description": "Bandwidth cut 75%. Bills hit $170 overnight. Carts broke. Memberships killed. The real story of leaving Webflow and what comes next.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-06T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -114,7 +114,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-04-06T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/leaving-webflow-2026#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -207,6 +207,8 @@ export default function LeavingWebflow2026Page() {
                             <li>The before and after numbers: PageSpeed, load time, and monthly cost</li>
                         </ul>
                     </div>
+
+                    <p className="text-stone-700 leading-relaxed mb-6">You should leave Webflow in 2026 if your site has experienced outages, your monthly Webflow bill exceeds $150, or your Google rankings are stuck. Webflow had 14 documented outages in 2025 to 2026. Migrating to a custom Next.js site gives you zero-downtime hosting on Vercel, $0 monthly fees, and full code ownership.</p>
 
                     <div className="space-y-8">
 

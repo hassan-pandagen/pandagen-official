@@ -18,7 +18,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Squarespace vs Custom Website in 2026 (Speed and Cost)",
+    title: "Squarespace vs Custom Website in 2026: Which Is Better for SEO?",
     description: "Squarespace caps at 30 to 55 on mobile PageSpeed. Custom Next.js hits 95 to 100. Honest cost, speed, and SEO comparison for 2026.",
     alternates: {
         canonical: "/blog/squarespace-vs-custom-website",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
         "squarespace pagespeed score"
     ],
     openGraph: {
-        title: "Squarespace vs Custom Website in 2026 (Speed and Cost)",
+        title: "Squarespace vs Custom Website in 2026: Which Is Better for SEO?",
         description: "You picked Squarespace for the design. Now your site scores 35 on mobile, booking needs a separate subscription, and you cannot change templates without rebuilding.",
         type: "article",
         publishedTime: "2026-04-14",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Squarespace vs Custom Website in 2026 (Speed and Cost)",
+        title: "Squarespace vs Custom Website in 2026: Which Is Better for SEO?",
         description: "You picked Squarespace for the design. Now your site scores 35 on mobile, booking needs a separate subscription, and you cannot change templates without rebuilding.",
     },
 };
@@ -57,11 +57,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/squarespace-vs-custom-website#article",
-            "headline": "Squarespace vs Custom Website in 2026 (Speed and Cost)",
+            "headline": "Squarespace vs Custom Website in 2026: Which Is Better for SEO?",
             "description": "You picked Squarespace for the design. Now your site scores 35 on mobile, booking needs a separate subscription, and you cannot change templates without rebuilding. Here is when custom code makes sense and when Squarespace is still the right call.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-14T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -227,6 +227,8 @@ export default function SquarespaceVsCustomWebsitePage() {
                             "A custom Next.js website scores 95 to 100 on PageSpeed, costs $0 to $20/month to host on Vercel, and you own every line of code. For businesses spending $80+/month on Squarespace, custom code is cheaper by year 2."
                         ]} />
                     </div>
+
+                    <p className="text-stone-700 leading-relaxed mb-6">A custom website is better than Squarespace for SEO in 2026. Squarespace scores 45 to 70 on Mobile PageSpeed due to render-blocking JavaScript and template overhead. Custom Next.js sites score 95 to 100. Google's Core Web Vitals algorithm directly rewards faster sites with higher rankings. For most businesses, the switch pays back in organic traffic within 3 to 6 months.</p>
 
                     <div className="space-y-8">
 

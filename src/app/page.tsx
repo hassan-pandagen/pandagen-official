@@ -23,11 +23,12 @@ const FounderSection = lazyLoad(() => import("@/components/sections/FounderSecti
 const AntiAgency = lazyLoad(() => import("@/components/sections/AntiAgency"));
 const LatestBlog = lazyLoad(() => import("@/components/sections/LatestBlog"));
 const FounderOfferModal = lazyLoad(() => import("@/components/sections/FounderOfferModal"));
+const TierQuiz = lazyLoad(() => import("@/components/sections/TierQuiz"));
 
 const homeFaqs = [
   {
-    q: "What is WordPress migration and why do I need it?",
-    a: "WordPress migration means moving your existing WordPress site to a custom coded platform built with Next.js (a modern framework used by Nike, Netflix, and TikTok for its speed). If your WordPress site has a slow load time, you're losing revenue. Studies show every 1 second delay in page load time reduces conversions by 7%. WordPress plugin bloat, shared hosting overhead, and theme weight are the primary causes of slow load times. We migrate your content, SEO settings, and design to a custom coded website that loads in under 1 second, with no monthly plugin fees and no vendor lock in.",
+    q: "How much does WordPress to Next.js migration cost?",
+    a: "WordPress to Next.js migration costs $1,500 for a 5 to 7 page business site (Starter), $3,500 for a 10 to 20 page site with blog migration and 301 redirects (Growth, most popular), and $5,000 to $10,000 for headless e-commerce with 30+ pages and custom integrations (Scale). Pricing is fixed with no surprises. Enterprise agencies charge $15,000 to $25,000 for the same scope. We move your content, SEO settings, and design to a custom coded site loading in under 1 second, with no monthly plugin fees and no vendor lock in. Every plan includes a written 90+ PageSpeed guarantee or full refund.",
   },
   {
     q: "How does the free AI website audit work?",
@@ -42,8 +43,8 @@ const homeFaqs = [
     a: "Yes. We build custom Shopify storefronts using headless architecture (your customers see a lightning-fast custom site, while you still manage products and orders in Shopify as usual). If your Shopify store is slow due to too many apps, a bloated theme, or unoptimized code, we replace the slow storefront with a custom coded solution that delivers 4x faster load times. You keep your entire Shopify backend for product management, orders, and payments.",
   },
   {
-    q: "How long does a WordPress or Shopify migration take?",
-    a: "Most migrations take 1 to 3 weeks depending on site complexity. Our process: Discovery call, Architecture planning, Build, QA testing, Launch. We handle the full migration including DNS transfer (pointing your domain to the new site), redirect mapping (so none of your Google rankings are lost), SEO preservation, and performance testing. There is zero downtime during the switch. Your old site stays live until the new one is fully verified.",
+    q: "Will I lose SEO rankings when migrating from WordPress?",
+    a: "No. We preserve every SEO ranking through a documented 301 redirect map (a permanent forwarding instruction that tells Google your URLs moved), schema markup migration, sitemap regeneration, and a phased DNS cutover. Most clients see rankings hold steady within 7 to 14 days post-launch, and many gain rankings because their Core Web Vitals scores jump from poor to excellent. We have done 12 migrations in 2026 with zero ranking losses. Most migrations take 1 to 3 weeks: Discovery, Architecture, Build, QA testing, Launch. Zero downtime during the switch, your old site stays live until the new one is fully verified.",
   },
   {
     q: "Why not just use a faster WordPress host or a caching plugin?",
@@ -181,13 +182,13 @@ export default function Home() {
         "itemReviewed": { "@id": "https://www.pandacodegen.com/#organization" }
       },
       {
-        "@type": "ProfessionalService",
+        "@type": ["ProfessionalService", "LocalBusiness"],
         "@id": "https://www.pandacodegen.com/#service",
         "name": "PandaCodeGen Development Services",
         "description": "Custom web development, WordPress migration, and Shopify optimization for growing businesses.",
         "image": "https://www.pandacodegen.com/og-image.jpg",
         "telephone": "+13027738982",
-        "priceRange": "$$",
+        "priceRange": "$1,500 - $25,000",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "701 Tillery St Ste 12",
@@ -195,6 +196,17 @@ export default function Home() {
           "addressRegion": "TX",
           "postalCode": "78702",
           "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 30.2603295,
+          "longitude": -97.7042901
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
         },
         "provider": {
           "@id": "https://www.pandacodegen.com/#organization"
@@ -319,6 +331,9 @@ export default function Home() {
 
       {/* Anti-Agency Manifesto */}
       <AntiAgency />
+
+      {/* Tier Finder Quiz, "Which tier is right for me?" */}
+      <TierQuiz />
 
       {/* FAQ Section */}
       <HomeFaqSection faqs={homeFaqs} />

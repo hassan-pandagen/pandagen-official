@@ -16,7 +16,7 @@ const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAni
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "WordPress 3-Year Cost in 2026: Plugins, Hosting, Maintenance",
+    title: "How Much Does WordPress Really Cost Over 3 Years? (2026 Breakdown)",
     description: "The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3 to 5x. Here are the real numbers.",
     alternates: { canonical: "/blog/wordpress-killer" },
     keywords: ["wordpress cost 2026", "wordpress waste of money", "true cost of wordpress", "wordpress vs next.js cost", "wordpress alternative for business"],
@@ -42,11 +42,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-killer#article",
-            "headline": "WordPress 3-Year Cost in 2026: Plugins, Hosting, Maintenance",
+            "headline": "How Much Does WordPress Really Cost Over 3 Years? (2026 Breakdown)",
             "description": "The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3 to 5x. Here are the real numbers.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-01-15T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -103,7 +103,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-01-15T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/wordpress-killer#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -216,6 +216,8 @@ export default function WordPressKillerPage() {
                             </div>
                         </div>
                     </div>
+
+                    <p className="text-stone-700 leading-relaxed mb-6">WordPress costs most businesses $8,000 to $15,000 over 3 years when you add up hosting, plugins, security, developer retainers, and lost revenue from slow load times. A custom Next.js site costs $3,500 once, then $0 per year. This breakdown shows the exact numbers side by side.</p>
 
                     <div className="space-y-8">
                         <BlogText>

@@ -50,7 +50,7 @@ const articleSchema = {
             "description": "1.58 million businesses use Divi. A 2025 survey of 206 businesses found slow websites cost an average of $20,172 per year in lost revenue. Here is what your Divi site is actually scoring and what that costs your business.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-08T00:00:00-05:00",
-            "dateModified": "2026-04-08T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -110,7 +110,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-04-08T00:00:00-05:00",
-            "dateModified": "2026-04-08T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/divi-theme-slow#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -207,6 +207,8 @@ export default function DiviThemeSlowPage() {
                             "The only way past the ceiling is to move off Divi entirely.",
                         ]} />
                     </div>
+
+                    <p className="text-stone-700 leading-relaxed mb-6">Divi theme is slow in 2026 because it loads over 400KB of CSS and JavaScript on every page regardless of which modules are used. Mobile PageSpeed scores for Divi sites range from 20 to 55. The only permanent fix is replacing Divi with a custom Next.js build. Optimization plugins can get you to 60 to 70, but Divi's architecture prevents you from reaching 90 or above.</p>
 
                     <div className="space-y-8">
 
