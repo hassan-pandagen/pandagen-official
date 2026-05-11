@@ -39,10 +39,10 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.pandacodegen.com'),
   title: {
-    default: "PandaCodeGen | WordPress & Shopify Migration, Under 1s Load Time",
+    default: "WordPress & Shopify Migration to Custom Next.js | PandaCodeGen",
     template: "%s | PandaCodeGen",
   },
-  description: "Free AI audit for slow WordPress or Shopify sites. We migrate to custom coded sites under 1 second. Zero bloat. Bank level security.",
+  description: "Migrate WordPress, Shopify, Webflow or Wix to a custom Next.js site. 90+ PageSpeed guaranteed or full refund. Fixed pricing from $1,500. No monthly fees.",
   alternates: {
     canonical: '/',
   },
@@ -102,8 +102,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.pandacodegen.com",
     siteName: "PandaCodeGen",
-    title: "PandaCodeGen | WordPress & Shopify Migration, Under 1s Load Time",
-    description: "Free AI audit for slow WordPress or Shopify sites. We migrate to custom coded sites under 1 second. Zero bloat. Bank level security.",
+    title: "WordPress & Shopify Migration to Custom Next.js | PandaCodeGen",
+    description: "Migrate WordPress, Shopify, Webflow or Wix to a custom Next.js site. 90+ PageSpeed guaranteed or full refund. Fixed pricing from $1,500. No monthly fees.",
     images: [
       {
         url: "/og-image.jpg",
@@ -115,8 +115,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "PandaCodeGen | WordPress & Shopify Migration, Under 1s Load Time",
-    description: "Free AI audit for slow WordPress or Shopify sites. We migrate to custom coded sites under 1 second. Zero bloat. Bank level security.",
+    title: "WordPress & Shopify Migration to Custom Next.js | PandaCodeGen",
+    description: "Migrate WordPress, Shopify, Webflow or Wix to a custom Next.js site. 90+ PageSpeed guaranteed or full refund. Fixed pricing from $1,500. No monthly fees.",
     creator: "@pandacodegen",
     images: ["/og-image.jpg"],
   },

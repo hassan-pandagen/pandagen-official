@@ -16,15 +16,15 @@ const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAni
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "How Much Does Webflow Migration Cost in 2026? ($1,500 to $25K)",
-    description: "Real Webflow migration receipts: $1,500 (5 pages), $3,500 (20 pages), $5K to $10K (50-100 pages). Iron Horse Studio quotes $15K to $25K for the same scope. Fixed pricing, 90+ PageSpeed guarantee.",
+    title: "Webflow Migration Cost 2026: Real Receipts From $1,500",
+    description: "Real Webflow migration receipts: $1,500 (5 pages), $3,500 (20 pages), $5K to $10K (50-100 pages). Enterprise agencies charge $15K to $25K for the same scope. Fixed pricing, 90+ PageSpeed guarantee.",
     alternates: {
         canonical: '/blog/webflow-migration-cost',
     },
     keywords: ["webflow migration cost", "webflow to next.js cost", "webflow migration pricing", "how much does webflow migration cost", "webflow to custom code", "webflow migration cost for 50-100 page website", "webflow enterprise pricing migration cost", "factors that increase cost of webflow migration project", "webflow ongoing costs after migration", "webflow migration cost 2026"],
     openGraph: {
         title: "How Much Does Webflow Migration Cost in 2026? ($1,500 to $25K)",
-        description: "Real Webflow migration receipts: $1,500 (5 pages), $3,500 (20 pages), $5K to $10K (50-100 pages). Iron Horse Studio quotes $15K to $25K for the same scope. Fixed pricing, 90+ PageSpeed guarantee.",
+        description: "Real Webflow migration receipts: $1,500 (5 pages), $3,500 (20 pages), $5K to $10K (50-100 pages). Enterprise agencies charge $15K to $25K for the same scope. Fixed pricing, 90+ PageSpeed guarantee.",
         type: "article",
         publishedTime: "2026-03-25",
         modifiedTime: "2026-05-07",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "How Much Does Webflow Migration Cost in 2026? ($1,500 to $25K)",
-        description: "Real Webflow migration receipts from $1,500 to $25K. Iron Horse Studio quotes $15K to $25K. PandaCodeGen ships same scope at $5K to $10K. Fixed price, 90+ PageSpeed guarantee.",
+        description: "Real Webflow migration receipts from $1,500 to $25K. Enterprise agencies charge $15K to $25K. PandaCodeGen delivers same scope at $5K to $10K. Fixed price, 90+ PageSpeed guarantee.",
     },
 };
 
@@ -46,7 +46,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/webflow-migration-cost#article",
             "headline": "How Much Does Webflow Migration Cost in 2026? ($1,500 to $25K)",
-            "description": "Real Webflow migration receipts: $1,500 (5 pages), $3,500 (20 pages), $5K to $10K (50-100 pages). Iron Horse Studio quotes $15K to $25K for the same scope. Fixed pricing, 90+ PageSpeed guarantee.",
+            "description": "Real Webflow migration receipts: $1,500 (5 pages), $3,500 (20 pages), $5K to $10K (50-100 pages). Enterprise agencies charge $15K to $25K for the same scope. Fixed pricing, 90+ PageSpeed guarantee.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-25T00:00:00-05:00",
             "dateModified": "2026-05-07T00:00:00-05:00",
@@ -330,7 +330,7 @@ export default function WebflowMigrationCostPage() {
                         </div>
 
                         <BlogText>
-                            Large Webflow migrations in our Scale tier run <BlogHighlight>$5,000 to $10,000+</BlogHighlight> for 50 to 100 page sites. At this scale the migration is no longer just a rebuild: complex CMS modeling, third-party integrations, and 301 redirect strategy become the bulk of the engineering hours. We broke down the exact hour-per-phase estimates and compared our pricing against Iron Horse and other enterprise agencies in our <Link href="/blog/webflow-migration-50-to-100-pages" className="text-cognac hover:underline">50 to 100 page Webflow migration pricing breakdown</Link>. Enterprise scopes beyond 100 pages are custom-quoted in Scale+.
+                            Large Webflow migrations in our Scale tier run <BlogHighlight>$5,000 to $10,000+</BlogHighlight> for 50 to 100 page sites. At this scale the migration is no longer just a rebuild: complex CMS modeling, third-party integrations, and 301 redirect strategy become the bulk of the engineering hours. We broke down the exact hour-per-phase estimates and compared our pricing against enterprise agencies in our <Link href="/blog/webflow-migration-50-to-100-pages" className="text-cognac hover:underline">50 to 100 page Webflow migration pricing breakdown</Link>. Enterprise scopes beyond 100 pages are custom-quoted in Scale+.
                         </BlogText>
 
                         <BlogText>
