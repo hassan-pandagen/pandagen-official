@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import PageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'Shopify Speed Optimization & Headless Development | PandaCodeGen',
+  title: 'Is Your Shopify Store Too Slow? Headless Next.js Rebuild | PandaCodeGen',
   description: "Your Shopify store scores 40 to 60 on PageSpeed. We rebuild the frontend in Next.js, loading under 1 second. 95+ PageSpeed guaranteed, no app fees, you own the code.",
   alternates: { canonical: '/services/ecommerce' },
   keywords: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'shopify speed fix agency',
   ],
   openGraph: {
-    title: 'Shopify Speed Optimization & Headless Development | PandaCodeGen',
+    title: 'Is Your Shopify Store Too Slow? Headless Next.js Rebuild | PandaCodeGen',
     description: "Your Shopify store scores 40 to 60 on PageSpeed. We rebuild the frontend in Next.js. 95+ PageSpeed guaranteed, no app fees, you own the code.",
     url: 'https://www.pandacodegen.com/services/ecommerce',
     siteName: 'PandaCodeGen',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shopify Speed Optimization & Headless Development | PandaCodeGen',
+    title: 'Is Your Shopify Store Too Slow? Headless Next.js Rebuild | PandaCodeGen',
     description: "Shopify scoring 40 to 60 on PageSpeed. We rebuild in Next.js. 95+ PageSpeed guaranteed, no app fees, you own the code.",
   },
 };
@@ -121,6 +121,7 @@ export default function EcommercePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
+      <p className="sr-only" data-speakable="true">PandaCodeGen rebuilds slow Shopify storefronts as headless Next.js sites that load under 1 second. Shopify stores score 40 to 60 on PageSpeed because Liquid templates render server-side on every request. We keep your Shopify backend for orders, inventory, and payments while replacing the slow frontend. Load times drop 80%, conversion rates typically double.</p>
       <PageContent />
     </>
   );

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import PageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'Next.js Development Agency | Custom Web Apps & SaaS | PandaCodeGen',
+  title: 'Need a Custom Next.js Web App Built From Scratch? | PandaCodeGen',
   description: 'We build custom Next.js web apps, SaaS platforms, and client portals from scratch. Fixed-price quotes, you own the code, built to scale from day one.',
   alternates: { canonical: '/services/custom-engineering' },
   keywords: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'custom portal development',
   ],
   openGraph: {
-    title: 'Next.js Development Agency | Custom Web Apps & SaaS | PandaCodeGen',
+    title: 'Need a Custom Next.js Web App Built From Scratch? | PandaCodeGen',
     description: 'Custom Next.js web apps, SaaS platforms, and client portals from scratch. Fixed-price quotes, you own the code, built to scale.',
     url: 'https://www.pandacodegen.com/services/custom-engineering',
     siteName: 'PandaCodeGen',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Next.js Development Agency | Custom Web Apps & SaaS | PandaCodeGen',
+    title: 'Need a Custom Next.js Web App Built From Scratch? | PandaCodeGen',
     description: 'Custom Next.js web apps, SaaS platforms, and client portals. Fixed-price quotes, you own the code, built to scale.',
   },
 };
@@ -74,7 +74,7 @@ export default function EngineeringPage() {
         "about": { "@id": "https://www.pandacodegen.com/services/custom-engineering#service" },
         "inLanguage": "en-US",
         "datePublished": "2026-02-10T00:00:00-05:00",
-        "dateModified": "2026-04-18T00:00:00-05:00",
+        "dateModified": "2026-05-12T00:00:00-05:00",
         "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2", "[data-speakable='true']"] }
       },
       {
@@ -132,6 +132,7 @@ export default function EngineeringPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
+      <p className="sr-only" data-speakable="true">PandaCodeGen builds custom Next.js web apps, SaaS dashboards, and internal tools from scratch. Fixed-price quotes, you own all the code, built to scale from day one. We handle architecture, build, and launch with a direct line to the engineers. No account managers, no hourly billing, no surprise invoices.</p>
       <PageContent />
     </>
   );

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import PageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'Squarespace to Next.js Migration Service | PandaCodeGen',
+  title: 'Is Squarespace Hurting Your SEO? We Migrate to Next.js | PandaCodeGen',
   description: "Squarespace scores 30 to 55 on Google PageSpeed Mobile. No plugin fixes it. We migrate to custom Next.js, delivering 95+ PageSpeed, full SEO control, and no monthly fees.",
   alternates: { canonical: '/services/squarespace' },
   keywords: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'squarespace to custom code',
   ],
   openGraph: {
-    title: 'Squarespace to Next.js Migration Service | PandaCodeGen',
+    title: 'Is Squarespace Hurting Your SEO? We Migrate to Next.js | PandaCodeGen',
     description: "Squarespace scores 30 to 55 on Google PageSpeed. No plugin fixes it. We migrate to custom Next.js. 95+ PageSpeed, full SEO control, no monthly fees.",
     url: 'https://www.pandacodegen.com/services/squarespace',
     siteName: 'PandaCodeGen',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Squarespace to Next.js Migration Service | PandaCodeGen',
+    title: 'Is Squarespace Hurting Your SEO? We Migrate to Next.js | PandaCodeGen',
     description: "Squarespace scores 30 to 55 on PageSpeed. No plugin fixes it. We migrate to custom Next.js. 95+ PageSpeed, no monthly fees.",
   },
 };
@@ -74,7 +74,7 @@ export default function SquarespaceServicePage() {
         "about": { "@id": "https://www.pandacodegen.com/services/squarespace#service" },
         "inLanguage": "en-US",
         "datePublished": "2026-02-10T00:00:00-05:00",
-        "dateModified": "2026-04-18T00:00:00-05:00",
+        "dateModified": "2026-05-12T00:00:00-05:00",
         "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2", "[data-speakable='true']"] }
       },
       {
@@ -132,6 +132,7 @@ export default function SquarespaceServicePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
+      <p className="sr-only" data-speakable="true">PandaCodeGen migrates Squarespace sites to custom Next.js in 1 to 3 weeks. Squarespace scores 30 to 55 on Google PageSpeed Mobile because its template architecture loads all CSS and JavaScript on every page. No plugin fixes this. After migration you get 95+ PageSpeed, full SEO control, zero monthly platform fees, and code you own outright.</p>
       <PageContent />
     </>
   );

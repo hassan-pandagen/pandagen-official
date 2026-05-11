@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import PageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'GoHighLevel Slow Website Fix | Custom Next.js Build | PandaCodeGen',
+  title: 'Why Is My GoHighLevel Site Slow? We Fix It With Custom Next.js | PandaCodeGen',
   description: "GoHighLevel sites score 20 to 45 on mobile PageSpeed and cannot rank on Google. We build a custom Next.js site that integrates with GHL's CRM, ranks organically, and loads under 1 second.",
   alternates: { canonical: '/services/gohighlevel' },
   keywords: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'ghl slow website',
   ],
   openGraph: {
-    title: 'GoHighLevel Slow Website Fix | Custom Next.js Build | PandaCodeGen',
+    title: 'Why Is My GoHighLevel Site Slow? We Fix It With Custom Next.js | PandaCodeGen',
     description: "GoHighLevel sites score 20 to 45 on mobile PageSpeed. We build a custom Next.js site that integrates with GHL's CRM and ranks on Google.",
     url: 'https://www.pandacodegen.com/services/gohighlevel',
     siteName: 'PandaCodeGen',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GoHighLevel Slow Website Fix | Custom Next.js Build | PandaCodeGen',
+    title: 'Why Is My GoHighLevel Site Slow? We Fix It With Custom Next.js | PandaCodeGen',
     description: "GHL sites score 20 to 45 on mobile PageSpeed. We build a custom Next.js site that integrates with GHL and ranks on Google.",
   },
 };
@@ -74,7 +74,7 @@ export default function GoHighLevelServicePage() {
         "about": { "@id": "https://www.pandacodegen.com/services/gohighlevel#service" },
         "inLanguage": "en-US",
         "datePublished": "2026-02-10T00:00:00-05:00",
-        "dateModified": "2026-04-18T00:00:00-05:00",
+        "dateModified": "2026-05-12T00:00:00-05:00",
         "speakable": {
           "@type": "SpeakableSpecification",
           "cssSelector": ["h1", "h2", "[data-speakable='true']"]
@@ -135,6 +135,7 @@ export default function GoHighLevelServicePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
+      <p className="sr-only" data-speakable="true">PandaCodeGen replaces slow GoHighLevel websites with custom Next.js frontends that load under 1 second. GHL sites score 20 to 45 on mobile PageSpeed because GHL JavaScript blocks the main thread. We keep your GHL CRM, automations, and calendars intact while replacing only the public-facing site that customers and Google actually see.</p>
       <PageContent />
     </>
   );

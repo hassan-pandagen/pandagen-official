@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import PageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'Wix to Next.js Migration Service | PandaCodeGen',
+  title: 'Is Wix Slowing Down Your Business? We Migrate to Next.js | PandaCodeGen',
   description: "Wix scores 30 to 60 on Google PageSpeed and blocks advanced SEO controls. We migrate to custom Next.js in 1 to 3 weeks. 95+ PageSpeed, no monthly fees, full SEO ownership.",
   alternates: { canonical: '/services/wix' },
   keywords: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'wix seo limitations',
   ],
   openGraph: {
-    title: 'Wix to Next.js Migration Service | PandaCodeGen',
+    title: 'Is Wix Slowing Down Your Business? We Migrate to Next.js | PandaCodeGen',
     description: "Wix scores 30 to 60 on PageSpeed and blocks advanced SEO. We migrate to custom Next.js in 1 to 3 weeks. 95+ PageSpeed, no monthly fees.",
     url: 'https://www.pandacodegen.com/services/wix',
     siteName: 'PandaCodeGen',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Wix to Next.js Migration Service | PandaCodeGen',
+    title: 'Is Wix Slowing Down Your Business? We Migrate to Next.js | PandaCodeGen',
     description: "Wix scores 30 to 60 on PageSpeed and blocks SEO. We migrate to custom Next.js in 1 to 3 weeks. 95+ PageSpeed, no monthly fees.",
   },
 };
@@ -74,7 +74,7 @@ export default function WixServicePage() {
         "about": { "@id": "https://www.pandacodegen.com/services/wix#service" },
         "inLanguage": "en-US",
         "datePublished": "2026-02-10T00:00:00-05:00",
-        "dateModified": "2026-04-18T00:00:00-05:00",
+        "dateModified": "2026-05-12T00:00:00-05:00",
         "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2", "[data-speakable='true']"] }
       },
       {
@@ -132,6 +132,7 @@ export default function WixServicePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
+      <p className="sr-only" data-speakable="true">PandaCodeGen migrates Wix sites to custom Next.js in 1 to 3 weeks. Wix scores 30 to 60 on Mobile PageSpeed and blocks advanced SEO controls. After migration you get 95+ PageSpeed, zero monthly platform fees, full code ownership, and rankings that climb because Google rewards faster Core Web Vitals.</p>
       <PageContent />
     </>
   );

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import PageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'Webflow to Next.js Migration Service | PandaCodeGen',
+  title: 'Is Webflow Too Expensive? We Migrate to Custom Next.js | PandaCodeGen',
   description: 'Webflow charges $23 to $49 per month and still scores 55 to 75 on mobile PageSpeed. We migrate to custom Next.js. 95+ PageSpeed, no monthly fees, you own the code.',
   alternates: { canonical: '/services/webflow' },
   keywords: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'webflow seo limitations',
   ],
   openGraph: {
-    title: 'Webflow to Next.js Migration Service | PandaCodeGen',
+    title: 'Is Webflow Too Expensive? We Migrate to Custom Next.js | PandaCodeGen',
     description: 'Webflow charges $23 to $49/month and still scores 55 to 75 on PageSpeed. We migrate to custom Next.js. 95+ PageSpeed, no monthly fees.',
     url: 'https://www.pandacodegen.com/services/webflow',
     siteName: 'PandaCodeGen',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Webflow to Next.js Migration Service | PandaCodeGen',
+    title: 'Is Webflow Too Expensive? We Migrate to Custom Next.js | PandaCodeGen',
     description: 'Webflow costs $23 to $49/month and still scores 55 to 75 on PageSpeed. We migrate to custom Next.js. 95+ PageSpeed, no monthly fees.',
   },
 };
@@ -65,7 +65,7 @@ export default function WebflowServicePage() {
         "about": { "@id": "https://www.pandacodegen.com/services/webflow#service" },
         "inLanguage": "en-US",
         "datePublished": "2026-02-10T00:00:00-05:00",
-        "dateModified": "2026-04-18T00:00:00-05:00",
+        "dateModified": "2026-05-12T00:00:00-05:00",
         "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2", "[data-speakable='true']"] }
       },
       {
@@ -123,6 +123,7 @@ export default function WebflowServicePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
+      <p className="sr-only" data-speakable="true">PandaCodeGen migrates Webflow sites to custom Next.js in 2 to 4 weeks. Webflow charges $23 to $49 per month and still scores 55 to 75 on mobile PageSpeed. After migration you get 95+ PageSpeed, zero monthly platform fees, full code ownership, and no more CMS item limits or bandwidth overages.</p>
       <PageContent />
     </>
   );

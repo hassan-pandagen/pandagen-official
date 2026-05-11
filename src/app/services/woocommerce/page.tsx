@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import PageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'WooCommerce Speed Optimization & Migration Service | PandaCodeGen',
+  title: 'Is WooCommerce Slowing Your Store? We Fix It With Next.js | PandaCodeGen',
   description: 'WooCommerce stores score 30 to 55 on mobile PageSpeed. We fix the root cause with a headless Next.js frontend. Keep your product catalog, get 95+ PageSpeed and sub-1-second load times.',
   alternates: {
     canonical: '/services/woocommerce',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     'woocommerce checkout slow',
   ],
   openGraph: {
-    title: 'WooCommerce Speed Optimization & Migration Service | PandaCodeGen',
+    title: 'Is WooCommerce Slowing Your Store? We Fix It With Next.js | PandaCodeGen',
     description: 'WooCommerce stores score 30 to 55 on mobile PageSpeed. We fix it with a headless Next.js frontend. Keep your catalog, get 95+ PageSpeed.',
     url: 'https://www.pandacodegen.com/services/woocommerce',
     siteName: 'PandaCodeGen',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'WooCommerce Speed Optimization & Migration Service | PandaCodeGen',
+    title: 'Is WooCommerce Slowing Your Store? We Fix It With Next.js | PandaCodeGen',
     description: 'WooCommerce scoring 30 to 55 on PageSpeed Mobile. We fix it with a headless Next.js frontend. 95+ PageSpeed, keep your product catalog.',
   },
 };
@@ -76,7 +76,7 @@ export default function WooCommerceServicePage() {
         "about": { "@id": "https://www.pandacodegen.com/services/woocommerce#service" },
         "inLanguage": "en-US",
         "datePublished": "2026-02-10T00:00:00-05:00",
-        "dateModified": "2026-04-18T00:00:00-05:00",
+        "dateModified": "2026-05-12T00:00:00-05:00",
         "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2", "[data-speakable='true']"] }
       },
       {
@@ -134,6 +134,7 @@ export default function WooCommerceServicePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
+      <p className="sr-only" data-speakable="true">PandaCodeGen fixes slow WooCommerce stores with a headless Next.js frontend. WooCommerce stores score 30 to 55 on mobile PageSpeed due to PHP server rendering and plugin bloat. We keep your WooCommerce product catalog and replace only the slow frontend. Checkout speed improves, cart abandonment drops, and mobile PageSpeed jumps to 95 or above.</p>
       <PageContent />
     </>
   );
