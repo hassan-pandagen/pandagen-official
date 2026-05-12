@@ -34,6 +34,29 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "shopify-store-speed-optimization",
+    cardStat: "35→97",
+    cardStatLabel: "typical PageSpeed lift after optimization",
+    title: "Shopify Store Speed Optimization: What Actually Works (2026)",
+    excerpt: "Your Shopify store scores 35 on PageSpeed, your ads are bleeding money, and every speed app made things worse. This guide covers what actually moves the needle: the specific changes, the mistakes that backfire, and when optimization hits a wall only a headless rebuild can break.",
+    category: "Shopify",
+    readTime: "18 min",
+    date: "May 12",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: true,
+    illustrationType: "performance",
+    lastModified: "2026-05-12",
+    faqs: [
+      { question: "How long does Shopify speed optimization take?", answer: "DIY fixes take a few hours and typically move scores by 10 to 20 points. Professional optimization by a developer takes 1 to 2 weeks and can move scores by 20 to 40 points. A full headless rebuild takes 2 to 4 weeks and consistently achieves 90+ PageSpeed scores that Liquid themes cannot reach." },
+      { question: "Do Shopify speed booster apps actually improve performance?", answer: "Most speed booster apps use perception tricks like predictive preloading rather than actual optimization. They add their own JavaScript overhead and often make the underlying problem worse. If your store is slow because of too many apps, adding another app to fix the problem is counterproductive. The real fix is removing unused apps and cleaning up leftover scripts from apps you have already uninstalled." },
+      { question: "Will optimizing my Shopify store speed hurt SEO rankings temporarily?", answer: "No, speed improvements help SEO. Core Web Vitals are a direct Google ranking signal, so faster pages rank better over time. If you change themes during optimization, maintain your URL structure exactly and set up 301 redirects for any URLs that change. Missing redirects after a theme migration is the most common cause of SEO drops." },
+      { question: "Is mobile or desktop speed more important for Shopify stores?", answer: "Mobile is more important. Mobile traffic typically represents 60 to 70 percent of Shopify store visits, and Google uses mobile-first indexing, meaning the mobile version of your page is what determines your search rankings. A 95 desktop score with a 45 mobile score means the majority of your visitors are experiencing your store at its worst. Always test and optimize mobile first." },
+      { question: "Can a Shopify Liquid theme achieve a 90+ PageSpeed score?", answer: "It is possible but difficult and usually requires sacrificing functionality to get there. An aggressively stripped Dawn theme with zero third-party apps, no custom fonts, minimal images, and no tracking pixels can approach 90. In practice, a working Shopify store with Klaviyo, reviews, and standard product pages typically plateaus at 65 to 80 on mobile regardless of optimization effort. Headless architectures on Next.js achieve 90 to 100 more reliably without sacrificing features." },
+      { question: "Does going headless on Shopify require leaving the Shopify platform?", answer: "No. Headless keeps Shopify as your backend for inventory, checkout, orders, payments, and fraud protection. It replaces only the customer-facing storefront with a custom-coded Next.js frontend. Your team still manages products, collections, and orders inside Shopify admin. Customers check out through Shopify's checkout, which handles tax, payments, and compliance. The only change is what they see before they reach checkout." }
+    ]
+  },
+  {
     id: "is-squarespace-bad-for-seo",
     cardStat: "40-65",
     cardStatLabel: "typical Squarespace mobile PageSpeed",
