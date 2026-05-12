@@ -17,6 +17,10 @@ const spots = [
 ];
 
 export default function FounderOffer() {
+  return null;
+}
+
+function FounderOfferDisabled() {
   return (
     <section
       className="bg-white border-y border-stone-200"

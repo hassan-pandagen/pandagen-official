@@ -368,10 +368,6 @@ export default function WebflowMigration50To100PagesPage() {
                             <p className="font-bold text-charcoal mb-2">Got a quote from an enterprise Webflow agency?</p>
                             <p className="text-stone-600 mb-4 text-sm">Bring it to the discovery call. We will match the scope line by line and show you what each line actually costs in engineering hours. If our Scale tier does not save you at least 30 percent, we will tell you directly.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Compare Your Quote <ArrowRight className="w-4 h-4" /></CalModalButton>
-                            <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                                <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
-                                <p className="text-sm text-stone-700 mt-1">If our Scale tier is out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
-                            </div>
                         </div>
 
                         <BlogHeader>The 3-Week Delivery Timeline</BlogHeader>
@@ -498,10 +494,6 @@ export default function WebflowMigration50To100PagesPage() {
                                 Book a discovery call. Bring your existing agency quote if you have one. We will scope your specific 50 to 100 page site and quote Scale tier pricing in writing on the call.
                             </p>
                             <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Book Scoping Call <ArrowRight className="w-5 h-5" /></CalModalButton>
-                            <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                                <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
-                                <p className="text-sm text-stone-700 mt-1">If our Scale tier is out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
-                            </div>
                         </div>
                     </div>
 

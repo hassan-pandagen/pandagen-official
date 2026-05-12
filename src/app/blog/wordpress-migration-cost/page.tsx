@@ -205,10 +205,6 @@ export default function WordPressMigrationCostPage() {
             <section className="px-6 pb-20">
                 <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
 
-                    <div className="bg-cognac/5 border-l-4 border-cognac p-5 mb-6 rounded-r-lg" data-speakable="true">
-                        <p className="text-sm text-charcoal leading-relaxed"><strong>Short answer:</strong> A WordPress migration costs $2,000 to $25,000 in 2026 depending on site size and complexity. Simple brochure sites $2K-$3.5K. Mid-size with blog and integrations $8K-$15K. Full WooCommerce with custom checkout $15K-$25K+. Most businesses recover the migration cost within 12 to 18 months from lower hosting and plugin costs alone.</p>
-                    </div>
-
                     {/* Executive Summary */}
                     <div className="mb-10 p-6 bg-orange-50 border border-orange-200 rounded-2xl" data-speakable="true">
                         <p className="font-bold text-charcoal mb-3 text-sm uppercase tracking-wide">Cost Summary</p>
@@ -423,10 +419,6 @@ export default function WordPressMigrationCostPage() {
                         <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-cognac transition-all">
                             Get a Free Migration Quote <ArrowRight className="w-4 h-4" />
                         </CalModalButton>
-                        <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
-                          <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
-                        </div>
                     </div>
 
                     <BlogHeader id="timeline">How Long Does a WordPress Migration Take?</BlogHeader>
@@ -441,7 +433,7 @@ export default function WordPressMigrationCostPage() {
 
                     <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer: Where Can I Get My WordPress Site Rebuilt Cheap?</p>
-                        <p className="text-sm text-stone-700 leading-relaxed">The cheapest legitimate WordPress rebuild path is the PandaCodeGen Founder&apos;s Offer at $500 for qualifying small sites under 15 pages with no e-commerce. Affordable freelance options on Upwork or Toptal range $1,000 to $5,000 with variable quality. Budget agency rebuilds at PandaCodeGen Starter start at $1,500 with a written 90+ PageSpeed guarantee. Below $1,000 you are usually buying a template installation, not a custom rebuild.</p>
+                        <p className="text-sm text-stone-700 leading-relaxed">The most affordable legitimate path is PandaCodeGen&apos;s Starter tier at $1,500 with a written 90+ PageSpeed guarantee. Affordable freelance options on Upwork or Toptal range $1,000 to $5,000 with variable quality. Below $1,000 you are usually buying a template installation, not a custom rebuild.</p>
                     </div>
 
                     <BlogText>
@@ -599,10 +591,6 @@ export default function WordPressMigrationCostPage() {
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-orange-600 transition-all">
                             Book Free Discovery Call <ArrowRight className="w-4 h-4" />
                         </CalModalButton>
-                        <div className="mt-4 p-4 bg-white/10 border border-white/20 rounded-xl">
-                          <p className="text-sm font-bold text-white">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
-                          <p className="text-sm text-stone-300 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
-                        </div>
                     </div>
 
                     <BlogHeader id="faq">Frequently Asked Questions</BlogHeader>

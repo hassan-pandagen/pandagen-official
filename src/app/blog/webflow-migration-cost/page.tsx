@@ -714,10 +714,6 @@ export default function WebflowMigrationCostPage() {
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                 Get Your Migration Quote <ArrowRight className="w-4 h-4" />
                             </CalModalButton>
-                            <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
-                              <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
-                            </div>
                         </div>
 
                         <BlogHeader>How to Get an Accurate Quote for Your Webflow Migration</BlogHeader>
@@ -756,10 +752,6 @@ export default function WebflowMigrationCostPage() {
                                 <CalModalButton className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
                                     Book a Migration Audit <ArrowRight className="w-4 h-4" />
                                 </CalModalButton>
-                                <div className="mt-4 p-4 bg-white/10 border border-white/20 rounded-xl">
-                                  <p className="text-sm font-bold text-white">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
-                                  <p className="text-sm text-stone-300 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
-                                </div>
                                 <Link
                                     href="/services/webflow?ref=blog/webflow-migration-cost"
                                     className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-white/20 text-white font-bold rounded-full text-sm hover:border-white/40 transition-all"

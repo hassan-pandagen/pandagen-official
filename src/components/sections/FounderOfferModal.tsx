@@ -7,6 +7,10 @@ const STORAGE_KEY = "founder_modal_dismissed";
 const TRIGGER_DELAY = 30000;
 
 export default function FounderOfferModal() {
+  return null;
+}
+
+function FounderOfferModalDisabled() {
   const [visible, setVisible] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");

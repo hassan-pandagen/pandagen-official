@@ -250,10 +250,6 @@ export default function ElementorKillsSEOPage() {
                             <p className="font-bold text-charcoal mb-2">Is Elementor killing your SEO and speed right now?</p>
                             <p className="text-stone-600 mb-4 text-sm">Drop your URL when you book. We run your PageSpeed and Core Web Vitals live on the call, show you what Elementor is costing you in rankings, and quote the migration.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free SEO Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
-                            <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
-                              <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
-                            </div>
                         </div>
 
                         <BlogHeader>Can You Fix Elementor&apos;s Performance Problems?</BlogHeader>
@@ -299,10 +295,6 @@ export default function ElementorKillsSEOPage() {
                             Free SEO audit. We&apos;ll score your current site and show you the exact traffic and revenue impact of your page builder.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Book Free SEO Audit <ArrowRight className="w-5 h-5" /></CalModalButton>
-                        <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
-                          <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
-                        </div>
                     </div>
 
                     <section className="mb-10">

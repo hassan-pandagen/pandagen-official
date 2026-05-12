@@ -402,10 +402,6 @@ export default function ShopifyStockySunset2026Page() {
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                 Book Free Migration Call <ArrowRight className="w-4 h-4" />
                             </CalModalButton>
-                            <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                                <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
-                                <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: under 15 pages, no e-commerce, source platform is WordPress, Webflow, Wix, Squarespace, or GoHighLevel. April 2026: 1 filled, 2 remaining.</p>
-                            </div>
                         </div>
 
                         <BlogHeader>The 14-Day Recovery Playbook (If You Need to Move Now)</BlogHeader>
@@ -508,10 +504,6 @@ export default function ShopifyStockySunset2026Page() {
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-white text-charcoal font-bold rounded-full hover:bg-stone-100 transition-all">
                             Book Free Migration Call <ArrowRight className="w-5 h-5" />
                         </CalModalButton>
-                        <div className="mt-4 p-4 bg-white/10 border border-white/20 rounded-xl">
-                            <p className="text-sm font-bold text-white">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
-                            <p className="text-sm text-stone-300 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: under 15 pages, no e-commerce, source platform is WordPress, Webflow, Wix, Squarespace, or GoHighLevel. April 2026: 1 filled, 2 remaining.</p>
-                        </div>
                     </div>
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}

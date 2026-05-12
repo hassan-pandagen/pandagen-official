@@ -475,10 +475,6 @@ export default function WebsiteRebuildCost2026Page() {
                         <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-cognac transition-all">
                             Get a Free Rebuild Quote <ArrowRight className="w-4 h-4" />
                         </CalModalButton>
-                        <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                            <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration</p>
-                            <p className="text-sm text-stone-700 mt-1">For qualifying small migrations (under 15 pages, no e-commerce, source platform WordPress/Webflow/Wix/Squarespace/GHL). 3 spots per month. Same custom Next.js architecture as full-price clients. April 2026: 1 filled, 2 remaining.</p>
-                        </div>
                     </div>
 
                     <BlogHeader id="red-flags">Red Flags: How to Spot a Padded Rebuild Quote</BlogHeader>

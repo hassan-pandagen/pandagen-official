@@ -426,7 +426,6 @@ export default function PageproAlternativesPage() {
                                 { icon: true, label: "90+ PageSpeed guarantee in writing", desc: "In the contract. If your site does not hit it on launch day, you get 100 percent refund. Verified before handover." },
                                 { icon: true, label: "Free month of post-launch support", desc: "Color changes, copy updates, bug fixes, CMS training. Scoped in your SOW. No hourly billing after launch." },
                                 { icon: true, label: "US LLC on the contract", desc: "MC Patches LLC d/b/a PandaCodeGen. Austin, Texas. Wyoming registered. US-jurisdiction contracts." },
-                                { icon: true, label: "$500 Founder's Offer", desc: "For qualifying small migrations: under 15 pages, no e-commerce, WordPress/Webflow/Wix/Squarespace/GHL source. 3 spots/month." },
                                 { icon: true, label: "Direct co-founder access", desc: "Hassan writes the code. Imran leads the architecture. No account managers, no junior handoffs, no subcontractors." },
                             ].map(({ label, desc }) => (
                                 <div key={label} className="flex items-start gap-3 p-4 bg-stone-50 border border-stone-200 rounded-xl">
@@ -499,10 +498,6 @@ export default function PageproAlternativesPage() {
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                 Get a Second Opinion <ArrowRight className="w-4 h-4" />
                             </CalModalButton>
-                            <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                                <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration</p>
-                                <p className="text-sm text-stone-700 mt-1">For qualifying small migrations (under 15 pages, no e-commerce, source platform WordPress/Webflow/Wix/Squarespace/GHL). 3 spots per month. Same Next.js architecture as full-price clients. April 2026: 1 filled, 2 remaining.</p>
-                            </div>
                         </div>
 
                         <BlogHeader>How to Decide: Use This Framework</BlogHeader>
@@ -528,7 +523,7 @@ export default function PageproAlternativesPage() {
                         </BlogText>
 
                         <BlogText>
-                            PandaCodeGen sits in a different lane. <BlogHighlight>Business websites, platform migrations, CRM and dashboard builds, headless commerce storefronts — fixed scope, fixed price, 3 to 5 weeks.</BlogHighlight> That is the niche. Not enterprise retainers. Not $100K platforms. Not multi-developer long-term teams. If your project is a business that needs a fast, well-built Next.js site or migration with published pricing and a written performance guarantee, that is exactly what PandaCodeGen was built for. Starter builds from $1,500. Founder's Offer at $500 for qualifying small migrations (3 spots per month). You can apply directly on the pricing page.
+                            PandaCodeGen sits in a different lane. <BlogHighlight>Business websites, platform migrations, CRM and dashboard builds, headless commerce storefronts — fixed scope, fixed price, 3 to 5 weeks.</BlogHighlight> That is the niche. Not enterprise retainers. Not $100K platforms. Not multi-developer long-term teams. If your project is a business that needs a fast, well-built Next.js site or migration with published pricing and a written performance guarantee, that is exactly what PandaCodeGen was built for. Starter builds from $1,500. You can see full pricing on the pricing page.
                         </BlogText>
 
                         {/* Bottom CTA */}

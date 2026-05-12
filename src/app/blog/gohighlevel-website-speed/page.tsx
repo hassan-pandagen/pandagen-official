@@ -81,14 +81,16 @@ const articleSchema = {
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/gohighlevel-website-speed" },
             "articleSection": "Performance",
             "keywords": ["gohighlevel website speed", "ghl slow website", "gohighlevel pagespeed", "ghl seo problems", "gohighlevel performance", "fix ghl speed"],
-            "wordCount": 2100,
-            "timeRequired": "PT9M",
+            "wordCount": 3000,
+            "timeRequired": "PT13M",
             "inLanguage": "en-US",
             "about": [
                 { "@type": "Thing", "name": "GoHighLevel Performance" },
                 { "@type": "Thing", "name": "Website Speed Optimization" },
                 { "@type": "Thing", "name": "Core Web Vitals" },
-                { "@type": "Thing", "name": "GHL SEO Issues" }
+                { "@type": "Thing", "name": "GHL SEO Issues" },
+                { "@type": "Thing", "name": "GoHighLevel Security" },
+                { "@type": "Thing", "name": "SaaS Data Exposure" }
             ],
             "speakable": {
                 "@type": "SpeakableSpecification",
@@ -101,7 +103,9 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Google Core Web Vitals", "url": "https://web.dev/vitals/" },
                 { "@type": "CreativeWork", "name": "Deloitte: Milliseconds Make Millions", "url": "https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" },
                 { "@type": "CreativeWork", "name": "Google Think: Mobile Page Speed Benchmarks", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
-                { "@type": "CreativeWork", "name": "Search Engine Journal: Core Web Vitals by CMS 2024", "url": "https://www.searchenginejournal.com/core-web-vitals-wordpress-wix-squarespace-joomla-duda-drupal/517907/" }
+                { "@type": "CreativeWork", "name": "Search Engine Journal: Core Web Vitals by CMS 2024", "url": "https://www.searchenginejournal.com/core-web-vitals-wordpress-wix-squarespace-joomla-duda-drupal/517907/" },
+                { "@type": "CreativeWork", "name": "JayeLTee: GoHighLevel Cloud Storage Exposure Disclosure (Jan 2025)", "url": "https://jltee.substack.com/p/all-in-one-platform-gohighlevel-exposed-attachments-from-clients" },
+                { "@type": "CreativeWork", "name": "Barracuda: NightSpire Ransomware Analysis (May 2026)", "url": "https://blog.barracuda.com/2026/05/01/nightspire-wannabe-warlords-in-ransomwares-shadow-realm" }
             ]
         },
         {
@@ -321,6 +325,52 @@ export default function GHLWebsiteSpeedPage() {
                         For an agency using GHL for their clients, this means funnels that could be converting at 8% are converting at 4 to 5%. The platform is eating half your results before a single word of copy has a chance to work.
                     </BlogText>
 
+                    <BlogHeader id="ghl-security">GHL Security: The Other Reason Agencies Are Migrating in 2026</BlogHeader>
+
+                    <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                        <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                        <p className="text-sm text-stone-700 leading-relaxed">In January 2025, security researcher JayeLTee disclosed a misconfigured GoHighLevel cloud storage bucket that exposed 14.3 million files across 47,885 GHL accounts. The exposure included SSN cards, passports, driver's licenses, healthcare documents, and credit card data belonging to 5.9 million end customers. GHL patched the issue in 22 days but the exposure window puts every agency that hosts client data on GHL on notice: when the platform leaks, your clients pay the price, not GHL.</p>
+                    </div>
+
+                    <BlogText>
+                        Speed is the obvious problem. Data ownership is the quieter one, and in 2026 it is the reason an increasing number of agencies are migrating client-facing assets off GoHighLevel. The receipt: <strong>14.3 million files, 11.95 terabytes of data, 47,885 GHL accounts, and 5.9 million unique contacts exposed</strong> through an unauthenticated cloud storage bucket discovered January 22, 2025 and disclosed publicly on the JayeLTee Substack after GoHighLevel offered the researcher an NDA in exchange for a quiet patch.
+                    </BlogText>
+
+                    <BlogText>
+                        What was sitting in that bucket, according to the public disclosure: healthcare documents, Social Security cards, passport scans, driver&apos;s licenses, insurance documents, signed contracts, CVs, waivers, and credit card data. Files belonging to your end customers, your clients&apos; customers, uploaded to GHL forms and stored on a server that did not require authentication to download from. The directory listing was open. Anyone with the URL could browse.
+                    </BlogText>
+
+                    <BlogText>
+                        GoHighLevel resolved the misconfiguration in 22 days, completing the full fix on February 13, 2025. There is no evidence that the data was downloaded by a bad actor before the patch, and GHL has not been required by any state breach-notification law we are aware of to notify affected end customers directly. Most agencies whose accounts were in that 47,885 list have never been told their data was exposed.
+                    </BlogText>
+
+                    <BlogQuote>
+                        If you are a marketing agency using GoHighLevel to collect client onboarding documents, customer ID verification, healthcare forms, or anything else sensitive, the question is not whether GoHighLevel will have another security incident. It is whether you will hear about it before your client does.
+                    </BlogQuote>
+
+                    <BlogHeader id="ghl-nightspire">The 2026 Ransomware Claim That GHL Has Not Acknowledged</BlogHeader>
+
+                    <BlogText>
+                        In late February 2026, a ransomware group called NightSpire listed GoHighLevel on its leak site with the message &quot;Data is not available now.&quot; No sample files, no record counts, no proof of exfiltration was published. The listing was tracked by Breachsense, DeXpose, HookPhish, and the public ransomware.live mirror. As of May 2026, GoHighLevel has issued no public statement about the listing.
+                    </BlogText>
+
+                    <BlogText>
+                        A May 1, 2026 Barracuda analysis classified NightSpire as a low-credibility group, calling them &quot;wannabe warlords in ransomware&apos;s shadow realm,&quot; with 259 claimed victims and little verified follow-through. Treat this incident as unconfirmed. The pattern, however, is what matters: when a single platform aggregates customer data for tens of thousands of agencies, it becomes a target. Whether NightSpire actually has data or not, every group like them is now scanning GHL surfaces for the next opportunity.
+                    </BlogText>
+
+                    <BlogHeader id="what-agencies-should-do">What Agencies Hosting Client Data on GHL Should Actually Do</BlogHeader>
+
+                    <BlogList items={[
+                        "Stop collecting sensitive documents through GHL forms. Move document collection to a service with stronger encryption-at-rest guarantees and signed BAAs if you handle healthcare clients.",
+                        "Move the public-facing website off GHL. Your funnels and landing pages are the most-attacked surface. A custom Next.js frontend on Vercel sits behind a CDN you control, with logging you own.",
+                        "Audit what end-customer data is sitting in your GHL subaccount right now. Anything you do not need, delete. The smaller the data footprint, the smaller the blast radius.",
+                        "Keep GHL for what it is good at: CRM, automation, pipelines, and calendars. Stop using it as a storage layer for client documents."
+                    ]} />
+
+                    <BlogText>
+                        The hybrid pattern works: GHL stays the CRM and automation engine. The public website moves to custom Next.js where you own the code, the data, the logs, and the incident response. If GHL has another incident, your client-facing site keeps running and your customer data is not in the affected bucket.
+                    </BlogText>
+
                     <BlogHeader id="what-we-do">You Do Not Have to Leave GoHighLevel to Fix This</BlogHeader>
                     <BlogText>
                         The solution is not to abandon GoHighLevel. Everything that makes GHL valuable, your CRM, your pipelines, your automation sequences, your appointment calendar, your reputation management, stays exactly as it is.
@@ -339,10 +389,6 @@ export default function GHLWebsiteSpeedPage() {
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-orange-600 transition-all">
                             Book a Free Audit Call <ArrowRight className="w-4 h-4" />
                         </CalModalButton>
-                        <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
-                          <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
-                        </div>
                     </div>
 
                     <BlogHeader id="the-fix">What Is the Actual Fix for GHL Speed Problems?</BlogHeader>

@@ -206,11 +206,9 @@ export default function WebflowUserAccountsSunset2026Page() {
                             <li><strong>What got lost:</strong> all member data that was not exported via CSV before the deadline.</li>
                             <li><strong>Webflow&apos;s recommended swap:</strong> Memberstack (50% off 6 months) or Outseta (50% off 12 months plus VIP migration).</li>
                             <li><strong>The long-term fix:</strong> custom Next.js auth on Clerk, NextAuth, or Supabase. You own the code. Nothing gets sunset unless you sunset it.</li>
-                            <li><strong>Cost to rebuild properly:</strong> $3,500 Growth tier for most membership sites. $500 Founder&apos;s Offer for qualifying small sites.</li>
+                            <li><strong>Cost to rebuild properly:</strong> $3,500 Growth tier for most membership sites. Fixed pricing, 90+ PageSpeed guaranteed.</li>
                         </ul>
                     </div>
-
-                    <p className="text-stone-700 leading-relaxed mb-6">Webflow shut down its User Accounts feature on January 29, 2026. Any site using Webflow's native login, gated content, or member dashboards stopped working on that date. If your site was affected, your options are Memberstack, Outseta, or a full migration to a custom Next.js build with authentication you own and control.</p>
 
                     <div className="space-y-8">
 
@@ -427,10 +425,6 @@ export default function WebflowUserAccountsSunset2026Page() {
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                 Book Free Recovery Call <ArrowRight className="w-4 h-4" />
                             </CalModalButton>
-                            <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                                <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
-                                <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
-                            </div>
                         </div>
 
                         <BlogHeader>The 14-Day Recovery Playbook (If Your Site Has Been Broken Since January)</BlogHeader>
@@ -548,10 +542,6 @@ export default function WebflowUserAccountsSunset2026Page() {
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-white text-charcoal font-bold rounded-full hover:bg-stone-100 transition-all">
                             Book Free Recovery Call <ArrowRight className="w-5 h-5" />
                         </CalModalButton>
-                        <div className="mt-4 p-4 bg-white/10 border border-white/20 rounded-xl">
-                            <p className="text-sm font-bold text-white">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
-                            <p className="text-sm text-stone-300 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
-                        </div>
                     </div>
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}

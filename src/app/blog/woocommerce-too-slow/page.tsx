@@ -404,10 +404,6 @@ export default function WooCommerceTooSlowPage() {
                             <CalModalButton className="inline-flex items-center gap-2 px-5 py-2.5 bg-charcoal text-white font-semibold rounded-full text-sm hover:bg-stone-800 transition-all">
                                 Get Free WooCommerce Audit <ArrowRight className="w-4 h-4" />
                             </CalModalButton>
-                            <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
-                              <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
-                            </div>
                         </div>
 
                         <BlogHeader>The Monthly Revenue You Are Losing While Reading This</BlogHeader>
@@ -657,10 +653,6 @@ export default function WooCommerceTooSlowPage() {
                         <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                             Get My Free Store Audit <ArrowRight className="w-4 h-4" />
                         </CalModalButton>
-                        <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
-                          <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
-                        </div>
                     </div>
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}

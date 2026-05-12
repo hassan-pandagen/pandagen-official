@@ -281,10 +281,6 @@ export default function WordPressKillerPage() {
                             <p className="font-bold text-charcoal mb-2">Is WordPress holding your business back right now?</p>
                             <p className="text-stone-600 mb-4 text-sm">Drop your URL when you book. We run your PageSpeed live on the call, compare it against what custom Next.js delivers, and give you a fixed migration quote on the spot.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free WordPress Cost Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
-                            <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
-                              <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
-                            </div>
                         </div>
 
                         <BlogHeader>Why Does a Slow WordPress Site Cost You Beyond the Monthly Bills?</BlogHeader>
@@ -342,10 +338,6 @@ export default function WordPressKillerPage() {
                             Free audit: We calculate your direct WordPress costs plus revenue you&apos;re losing from slow speed, no obligation.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Book Free Cost Audit <ArrowRight className="w-5 h-5" /></CalModalButton>
-                        <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
-                          <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
-                        </div>
                     </div>
 
                     {/* Key Takeaways */}

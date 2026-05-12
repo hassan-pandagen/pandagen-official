@@ -197,16 +197,7 @@ export default function WebflowTrueCostPage() {
                         <p className="text-sm text-charcoal leading-relaxed"><strong>Short answer:</strong> Webflow costs $125 to $400 per month once you add CMS Site plans ($14-$49), Ecommerce plans ($29-$212), Forms add-on ($19), Localization ($9/locale), Logic, Optimize ($299/mo), and Workspace seats. A real business site totals $1,500 to $5,000 per year. Webflow also caps at 55 to 75 mobile PageSpeed, which costs organic rankings.</p>
                     </div>
 
-                    {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
-                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
-                        <BlogList items={[
-                            "Webflow's $29/month price tag hides $1,500 to $5,000 in real annual costs when you add CMS plans, forms, bandwidth, and integrations.",
-                            "Webflow sites score 55 to 75 on Google PageSpeed Mobile. Custom Next.js sites score 95 to 100. That gap costs you 20 to 30% of organic traffic.",
-                            "You do not own your Webflow code. If you leave, you rebuild from scratch. Custom code is yours forever.",
-                            "Businesses spending $100+/month on Webflow with PageSpeed below 70 will recover migration costs within 6 to 12 months through better SEO and lower hosting."
-                        ]} />
-                    </div>
+                    {/* Key Takeaways moved to bottom of article — no duplicate summary here */}
 
                     {/* Real Buyer Voices — verified Reddit threads */}
                     <div className="my-8 p-5 bg-stone-50 border border-stone-200 rounded-2xl">
@@ -446,10 +437,6 @@ export default function WebflowTrueCostPage() {
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                     Schedule Free Audit <ArrowRight className="w-4 h-4" />
                                 </CalModalButton>
-                            <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                              <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
-                              <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
-                            </div>
                         </div>
 
                         <BlogHeader>Webflow vs Custom Code: The 5-Year Receipts</BlogHeader>
@@ -672,10 +659,6 @@ export default function WebflowTrueCostPage() {
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
                                 Schedule Free Assessment <ArrowRight className="w-5 h-5" />
                             </CalModalButton>
-                        <div className="mt-4 p-4 bg-cognac/10 border border-cognac/20 rounded-xl">
-                          <p className="text-sm font-bold text-charcoal">FOUNDER&apos;S OFFER: $500 Founder Migration (Apply)</p>
-                          <p className="text-sm text-stone-700 mt-1">If our Starter ($1,500+) or Growth ($3,500+) tiers are out of budget, apply for our Founder Migration. We pick 3 businesses per month for a $500 full migration (normally $5,000+) in exchange for a verified Google or Clutch review after launch. Requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel, under 15 pages, no e-commerce. April 2026: 1 filled, 2 remaining.</p>
-                        </div>
                     </div>
 
                     {/* Key Takeaways */}

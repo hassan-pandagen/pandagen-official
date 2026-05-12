@@ -658,7 +658,7 @@ export default function SquarespaceMinCostPage() {
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">The cheapest legitimate Squarespace migration in 2026 is the PandaCodeGen Founder&apos;s Offer at $500 for qualifying small sites (under 15 pages, no e-commerce). Outside that, freelancers on Upwork charge $400 to $1,500 but quality varies wildly. Affordable agency migrations to custom Next.js start at $1,500 with a written 90+ PageSpeed guarantee. Below $400 you are buying a template installation, not a migration.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">The most affordable legitimate path is PandaCodeGen&apos;s Starter tier at $1,500 with a written 90+ PageSpeed guarantee. Freelancers on Upwork charge $400 to $1,500 but quality varies wildly. Below $400 you are buying a template installation, not a migration.</p>
                         </div>
 
                         <BlogText>
