@@ -489,6 +489,92 @@ Note: wix-too-slow, shopify-slow-losing-sales, shopify-plus-still-slow, and webf
 [ ] A statistic appears in the first 150 words
 ```
 
+### STEP 2.5 — AirOps Blog Quality Patterns (Added May 12, 2026)
+
+These patterns came from comparing our blog output to AirOps-generated content. AirOps consistently does 3 things better. They are now required standards.
+
+**Pattern 1: Opening hook leads with NUMBER, not compliment**
+
+```
+BAD (old pattern):
+  "GoHighLevel is an excellent CRM platform. Its website builder is a different story."
+
+GOOD (AirOps pattern):
+  "Your GoHighLevel funnel pages score 20 to 45 on Google PageSpeed Mobile. That is not
+   a bug in your setup. It is how the platform works."
+
+Rule: First sentence must contain the primary stat or pain point.
+      Never open by complimenting the platform you are about to criticize.
+```
+
+**Pattern 2: Inline external citations on key claims (not just schema)**
+
+```
+BAD (our old pattern):
+  "Mobile scores matter more because paid ads drive mobile traffic first."
+  (stat buried in schema citation[] only, not clickable in body)
+
+GOOD (AirOps pattern):
+  "Mobile devices account for [over 52% of global web traffic](statista.com/...)
+   and paid ads drive mobile traffic first."
+
+Rule: Every stat or claim that can be sourced MUST have a clickable external link
+      in the body text, not just in the schema citation array.
+      Minimum 3 inline external links per blog post in the body (not navigation links).
+      Best sources: Statista, Google Ads docs, Think With Google, Deloitte, Portent,
+      Google Search Central, web.dev/vitals, official platform help docs.
+```
+
+**Pattern 3: Bold-term bullet format for multi-point sections**
+
+```
+BAD (our old pattern — flowing paragraphs):
+  "Google factors landing page speed into ad costs. A slow page drops your Quality Score,
+   which raises your CPC. Bounce rate also increases with slow load times..."
+
+GOOD (AirOps pattern — bold-term bullets):
+  • **Quality Score:** [Google's 1 to 10 rating](link). Landing page experience
+    is one of three components. A slow page raises your CPC.
+  • **Bounce rate:** Visitors who leave before the page loads.
+    [Google research](link) shows 32% higher bounce at 3s vs 1s.
+  • **CPA impact:** Higher bounce = fewer conversions = higher cost per acquisition.
+
+Rule: Any section listing 3+ mechanisms, factors, or consequences
+      MUST use bold-term bullets, not flowing paragraphs.
+      The bold term makes it scannable for humans and extractable for AI engines.
+```
+
+**Pattern 4: AirOps-generated articles as source material (NOT copy-paste)**
+
+```
+When AirOps generates an article for a keyword:
+  ✓ Use the AirOps outline (H2/H3 structure) as the skeleton
+  ✓ Extract external citation URLs from AirOps content
+  ✓ Use AirOps-generated bullet format for structured sections
+  ✓ Apply AirOps internal link recommendations via the grid
+  ✗ Do NOT copy AirOps body text verbatim — it lacks case studies, real data, and voice
+  ✗ Do NOT skip sections from the AirOps outline — they exist for SEO coverage reasons
+
+The correct workflow:
+  1. Get AirOps brief + article
+  2. Use the H2/H3 outline exactly
+  3. Write body content in our voice with our case studies
+  4. Insert AirOps external citation URLs inline
+  5. Apply AirOps internal link recommendations
+```
+
+**Word count standard updated (May 12, 2026):**
+
+| Word Count | timeRequired | Status |
+|-----------|-------------|--------|
+| Under 2,200 | — | Do not publish |
+| 2,500 | PT10M | Acceptable |
+| 3,000 | PT12M | Good |
+| 3,500 | PT14M | Gold standard |
+| 4,000+ | PT16M+ | Competitive/comprehensive topics (platform speed, SEO audits) |
+
+Formula: `wordCount / 250 = minutes`
+
 ### STEP 3 — Schema @graph Checklist
 
 ```
