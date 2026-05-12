@@ -16,8 +16,8 @@ const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAni
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Why Is My GoHighLevel Site Slow? PageSpeed 20 to 45 Explained (2026)",
-    description: "GoHighLevel sites score 20 to 45 on Google PageSpeed Mobile. Here is why GHL is slow, what it costs you in leads, and how to fix it without leaving the platform.",
+    title: "Why Your GoHighLevel Site Is Slow and How to Fix It (2026)",
+    description: "GoHighLevel sites score 20 to 45 on Mobile PageSpeed because of runtime rendering, shared JS bundles, and no edge caching. Full root cause breakdown, 5 in-platform fixes, and when to migrate to a custom Next.js frontend.",
     alternates: {
         canonical: "/blog/gohighlevel-website-speed",
     },
@@ -81,8 +81,8 @@ const articleSchema = {
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/gohighlevel-website-speed" },
             "articleSection": "Performance",
             "keywords": ["gohighlevel website speed", "ghl slow website", "gohighlevel pagespeed", "ghl seo problems", "gohighlevel performance", "fix ghl speed"],
-            "wordCount": 3000,
-            "timeRequired": "PT13M",
+            "wordCount": 4500,
+            "timeRequired": "PT18M",
             "inLanguage": "en-US",
             "about": [
                 { "@type": "Thing", "name": "GoHighLevel Performance" },
@@ -184,7 +184,7 @@ export default function GHLWebsiteSpeedPage() {
                             <span className="font-serif italic text-cognac">How to Fix It</span>
                         </h1>
                         <p className="text-lg text-stone-600 leading-relaxed mb-6" data-speakable="true">
-                            GoHighLevel is an excellent CRM, automation, and sales funnel platform. Its website builder is a different story. Test any standard GHL site on Google PageSpeed Insights and the mobile score is typically well below what Google rewards in search rankings. This post explains why that happens, what it costs you in leads, and what the fix actually looks like.
+                            Your GoHighLevel funnel pages score 20 to 45 on Google PageSpeed Mobile. That is not a bug in your setup. It is how the platform works. GHL uses runtime rendering, which means your visitor&apos;s browser assembles the page after downloading a large JavaScript bundle. Every sub-account, every funnel, every page shares the same architecture. This post covers why GHL sites are slow, what it costs in ad spend and conversions, and how to fix it without abandoning your CRM.
                         </p>
                         <BlogAuthor
                             date="Mar 22, 2026"
@@ -205,14 +205,14 @@ export default function GHLWebsiteSpeedPage() {
             <section className="px-6 pb-20">
                 <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
 
-                    {/* Executive Summary */}
-                    <div className="mb-10 p-6 bg-blue-50 border border-blue-200 rounded-2xl" data-speakable="true">
-                        <p className="font-bold text-charcoal mb-3 text-sm uppercase tracking-wide">What The PageSpeed Data Actually Says</p>
+                    {/* Short Answer — Brief spec: 4 bullet key takeaways, AI Overview bait */}
+                    <div className="mb-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl" data-speakable="true">
+                        <p className="font-bold text-charcoal mb-3 text-sm uppercase tracking-wide">The Short Answer on Slow GoHighLevel Sites</p>
                         <ul className="space-y-2 text-sm text-stone-700">
-                            <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-blue-600 mt-0.5 shrink-0" /> Test your GHL site at pagespeed.web.dev right now. Mobile scores below 50 are common. Google rewards sites that score 90 and above.</li>
-                            <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-blue-600 mt-0.5 shrink-0" /> According to Google's own research, 53% of mobile visitors leave a page that takes more than 3 seconds to load. Most GHL pages take 4 to 8 seconds.</li>
-                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-blue-600 mt-0.5 shrink-0" /> The fix does not require leaving GoHighLevel. A custom website handles your public pages while GHL keeps running your CRM, automations, and pipelines.</li>
-                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-blue-600 mt-0.5 shrink-0" /> Deloitte research found a 0.1-second improvement in load time increases conversions by 8%. Faster pages mean more leads from the same traffic.</li>
+                            <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-cognac mt-0.5 shrink-0" /> GoHighLevel sites score 20 to 45 on Google PageSpeed Mobile because the platform uses runtime rendering. Your visitor&apos;s browser downloads a JavaScript bundle, then assembles the page. A fast site sends finished HTML from the server. GHL sends instructions and makes your visitor&apos;s phone do the work.</li>
+                            <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-cognac mt-0.5 shrink-0" /> Typical custom Next.js frontend scores 90 to 100 on Mobile PageSpeed. The gap between 35 and 95 affects ad costs, bounce rates, and conversion rates every month.</li>
+                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> The fix: <Link href="/blog/gohighlevel-keep-crm-replace-website" className="text-cognac hover:underline">keeping the CRM and replacing the website</Link> gives you GHL&apos;s automation power with 90+ PageSpeed. You do not have to leave GoHighLevel.</li>
+                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> PandaCodeGen guarantee: 90+ PageSpeed or full refund, with zero downtime for your existing GHL workflows.</li>
                         </ul>
                     </div>
 
@@ -222,6 +222,22 @@ export default function GHLWebsiteSpeedPage() {
                     <BlogText>
                         This is not a setting you missed or an optimization you skipped. It is how GHL delivers pages, and the fix is not inside GHL at all.
                     </BlogText>
+
+                    <BlogHeader id="pagespeed-score">What PageSpeed Score a Typical GoHighLevel Site Gets</BlogHeader>
+                    <BlogText>
+                        PageSpeed is Google&apos;s 0 to 100 score measuring how fast your page loads and becomes usable on a visitor&apos;s device. Mobile scores matter more than desktop for most GHL users because mobile devices account for{" "}
+                        <a href="https://www.statista.com/statistics/277125/share-of-website-traffic-coming-from-mobile-devices/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">over 52% of global web traffic</a>{" "}
+                        and paid ads drive mobile traffic first. Google uses mobile-first indexing, meaning your mobile score is the one that affects search rankings.
+                    </BlogText>
+                    <BlogText>
+                        A typical GoHighLevel funnel page scores between 20 and 45 on mobile. That range sits well below Google&apos;s threshold for &ldquo;good&rdquo; performance, which starts at 90. Desktop scores run higher, usually 50 to 70, because desktop devices have more processing power to run JavaScript. But desktop is not where your ad traffic lands.
+                    </BlogText>
+                    <BlogList items={[
+                        "GHL funnel page mobile score: 20 to 45 (below Google's good threshold of 90)",
+                        "GHL desktop score: 50 to 70 (better but not what Google indexes)",
+                        "Custom Next.js mobile score: 90 to 100 (consistently)",
+                        "Real impact: a 35-point PageSpeed gap means 30 to 50% fewer conversions from the same traffic"
+                    ]} />
 
                     <BlogHeader id="why-ghl-is-slow">GHL Was Built for Speed of Building, Not Speed of Loading</BlogHeader>
                     <BlogText>
@@ -313,16 +329,74 @@ export default function GHLWebsiteSpeedPage() {
                     </BlogText>
 
 
-                    <BlogHeader id="conversion-cost">GHL Is a Conversion Platform That Kills Conversions</BlogHeader>
+                    <BlogHeader id="root-causes">Root Causes of Slow GoHighLevel Pages</BlogHeader>
                     <BlogText>
-                        GHL is primarily a conversion platform. Funnels, landing pages, and booking pages are what it is built for. The irony is that GHL's own infrastructure is slowing down the conversions it is supposed to maximize.
+                        Five technical factors stack together to create the speed problem on GHL. Some you can partially address yourself. Others are baked into the platform architecture and cannot be fixed from inside GHL.
                     </BlogText>
+
+                    <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Runtime Rendering Instead of Server-Side Rendering</h3>
                     <BlogText>
-                        <a href="https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Deloitte's research</a>{" "}
-                        found a 0.1-second improvement in load time increases conversion rates by 8%. The gap between a GHL page loading in 5 seconds versus a custom page loading in 0.8 seconds is 4.2 seconds, which corresponds to a 30 to 50% difference in conversion rate for identical offers presented on identical designs.
+                        When a visitor lands on your GHL page, their browser downloads a JavaScript bundle, parses it, executes it, then renders the page. This sequence delays Largest Contentful Paint (LCP) — the <Link href="/blog/core-web-vitals-explained" className="text-cognac hover:underline">Core Web Vital</Link> that measures when the main content becomes visible. A server-rendered page sends finished HTML immediately. The browser displays content while JavaScript loads in the background. GHL pages cannot do this because the platform architecture requires client-side assembly.
                     </BlogText>
+
+                    <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Heavy Shared JavaScript Bundles Across All Sub-Accounts</h3>
                     <BlogText>
-                        For an agency using GHL for their clients, this means funnels that could be converting at 8% are converting at 4 to 5%. The platform is eating half your results before a single word of copy has a chance to work.
+                        GHL loads the same large JavaScript files on every page regardless of what that page actually uses. A simple landing page with one form downloads the same bundle as a complex membership portal. A JavaScript bundle is a single file containing all the code a page might need. GHL&apos;s bundle runs 400KB to 800KB compressed. A custom Next.js page with equivalent functionality runs 50KB to 150KB because it loads only what the page requires.
+                    </BlogText>
+
+                    <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Unoptimized Images and Late-Loading Fonts</h3>
+                    <BlogText>
+                        Images uploaded to GHL are not automatically compressed or converted to modern formats like WebP or AVIF. A 2MB hero image stays a 2MB hero image. Fonts load late because GHL does not preload them — you see a flash of unstyled text (FOUT) or invisible text (FOIT) while the browser fetches font files. Both hurt perceived speed and user experience on mobile devices.
+                    </BlogText>
+
+                    <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Third-Party Scripts Stacked on Every Funnel</h3>
+                    <BlogText>
+                        Most GHL funnels include multiple tracking scripts that compete for bandwidth and block rendering:
+                    </BlogText>
+                    <BlogList items={[
+                        "Facebook Pixel: 80KB to 150KB, blocks rendering while loading",
+                        "Google Analytics or GA4: 40KB to 90KB of additional script",
+                        "Google Tag Manager: variable, often loads additional scripts behind it",
+                        "Chat widgets (Drift, Intercom, Crisp): 100KB to 300KB each",
+                        "Retargeting pixels (TikTok, LinkedIn, Twitter): 50KB to 100KB each"
+                    ]} />
+                    <BlogText>
+                        Stack five of them and you add 1 to 3 seconds to load time before your actual content appears.
+                    </BlogText>
+
+                    <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">No Edge Caching or Static Delivery</h3>
+                    <BlogText>
+                        Edge caching stores your page on servers close to your visitors. A CDN (content delivery network) serves cached pages from the nearest location instead of routing every request back to a central server. GHL serves pages from origin servers. A visitor in London requesting your page waits for a round trip to GHL&apos;s infrastructure, adding 100ms to 500ms of latency depending on geography. Static pages on Vercel&apos;s edge network serve from 60+ locations globally in under 50ms.
+                    </BlogText>
+
+                    <BlogHeader id="conversion-cost">How Slow GoHighLevel Pages Drain Ad Budget and Quality Score</BlogHeader>
+                    <BlogText>
+                        Google and Meta both factor landing page speed into ad costs. Slow pages mean higher costs per click and lower ad placement. Three mechanisms compound each other:
+                    </BlogText>
+
+                    <ul className="space-y-3 my-4 text-stone-700 leading-relaxed">
+                        <li className="flex items-start gap-2">
+                            <span className="w-2 h-2 rounded-full bg-cognac mt-2 flex-shrink-0"></span>
+                            <span><strong>Quality Score:</strong>{" "}
+                            <a href="https://support.google.com/google-ads/answer/6167118" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Google&apos;s 1 to 10 rating</a>{" "}
+                            of your ad relevance. Landing page experience is one of three components. A slow page drops your Quality Score, which raises your cost per click on every keyword you bid on.</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                            <span className="w-2 h-2 rounded-full bg-cognac mt-2 flex-shrink-0"></span>
+                            <span><strong>Bounce rate:</strong> Visitors who leave before the page finishes loading.{" "}
+                            <a href="https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Google&apos;s research</a>{" "}
+                            shows a 3-second load time increases bounce rate by 32% compared to a 1-second load time. More bounces means fewer leads from the same click volume.</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                            <span className="w-2 h-2 rounded-full bg-cognac mt-2 flex-shrink-0"></span>
+                            <span><strong>CPA impact:</strong> Higher bounce rate means fewer conversions from the same ad spend. Your cost per acquisition rises even if your ad creative stays the same.{" "}
+                            <a href="https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Deloitte research</a>{" "}
+                            found a 0.1-second improvement in load time increases conversions by 8%.</span>
+                        </li>
+                    </ul>
+
+                    <BlogText>
+                        If you spend $10,000 a month on Meta ads driving traffic to a GHL funnel that scores 35 on PageSpeed, you are paying a speed tax on every click. The same traffic to a 95+ PageSpeed landing page converts better and costs less per lead. For an agency using GHL for clients, funnels that could convert at 8% are converting at 4 to 5%. The platform is eating half your results before a single word of copy has a chance to work.
                     </BlogText>
 
                     <BlogHeader id="ghl-security">GHL Security: The Other Reason Agencies Are Migrating in 2026</BlogHeader>
@@ -371,6 +445,37 @@ export default function GHLWebsiteSpeedPage() {
                         The hybrid pattern works: GHL stays the CRM and automation engine. The public website moves to custom Next.js where you own the code, the data, the logs, and the incident response. If GHL has another incident, your client-facing site keeps running and your customer data is not in the affected bucket.
                     </BlogText>
 
+                    <BlogHeader id="fix-without-leaving">How to Fix GoHighLevel Speed Without Leaving the Platform</BlogHeader>
+                    <BlogText>
+                        These <Link href="/blog/how-to-speed-up-your-website" className="text-cognac hover:underline">optimizations help but hit a ceiling</Link>. If you want to stay on GHL for now, start here. Every fix below is free and does not require technical skills.
+                    </BlogText>
+
+                    <div className="space-y-4 my-6">
+                        {[
+                            { num: "1", title: "Compress and Resize Every Funnel Image", body: "Before uploading any image to GHL, compress it using TinyPNG or Squoosh. Resize to the actual display dimensions. A hero image displayed at 1,200px wide does not need to be 4,000px wide. Target: hero images under 150KB, thumbnails under 30KB." },
+                            { num: "2", title: "Strip Unused Pixels and Tracking Scripts", body: "Audit which scripts actually drive attribution. If you have not looked at your TikTok Pixel data in six months, remove the pixel. Consolidate where possible using Google Tag Manager. Every script you remove is bandwidth your visitors keep." },
+                            { num: "3", title: "Replace Custom Fonts with System Fonts", body: "Custom fonts require additional HTTP requests and delay text rendering. System fonts like -apple-system, Arial, and Georgia load instantly because they already exist on the visitor&apos;s device. The tradeoff is less brand differentiation in exchange for faster rendering." },
+                            { num: "4", title: "Simplify Section Stacks and Animations", body: "Complex GHL sections with nested rows, columns, and decorative elements increase render time. Each animation triggers JavaScript execution. Remove animations that do not serve conversion. Flatten nested layouts where possible." },
+                            { num: "5", title: "Audit Embedded Widgets and Chat Bubbles", body: "Calendly embeds, Drift chat, Intercom, and similar tools each add 100KB to 300KB of JavaScript. Consider lazy-loading chat widgets so they load after the main content. Or replace heavy embeds with simple links to external booking pages." }
+                        ].map((step) => (
+                            <div key={step.num} className="flex gap-4 p-4 bg-stone-50 rounded-xl border border-stone-200">
+                                <span className="flex-shrink-0 w-8 h-8 bg-cognac text-white font-bold rounded-full flex items-center justify-center text-sm">{step.num}</span>
+                                <div>
+                                    <p className="font-bold text-charcoal mb-1">{step.title}</p>
+                                    <p className="text-sm text-stone-700 leading-relaxed">{step.body}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <BlogHeader id="ceiling">Why In-Platform GoHighLevel Optimizations Hit a Ceiling</BlogHeader>
+                    <BlogText>
+                        Even after all five fixes above, your GHL page will not score above 60 to 70 on Mobile PageSpeed. The architecture prevents it. You cannot change how GHL renders pages. You cannot reduce the shared JavaScript bundle. You cannot enable server-side rendering or edge caching. The platform controls those decisions, and the platform chose ease of maintenance over frontend speed.
+                    </BlogText>
+                    <BlogText>
+                        The ceiling is real. The DebugBear website builder performance review found that drag-and-drop builders as a category consistently score poorly on mobile because they load large universal code libraries regardless of what is actually on the page. GHL sits in that same category. If you want <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">90+ PageSpeed</Link>, you want a different frontend.
+                    </BlogText>
+
                     <BlogHeader id="what-we-do">You Do Not Have to Leave GoHighLevel to Fix This</BlogHeader>
                     <BlogText>
                         The solution is not to abandon GoHighLevel. Everything that makes GHL valuable, your CRM, your pipelines, your automation sequences, your appointment calendar, your reputation management, stays exactly as it is.
@@ -379,7 +484,7 @@ export default function GHLWebsiteSpeedPage() {
                         What changes is your website. We build a custom Next.js site that handles everything the public sees: your homepage, service pages, landing pages, and blog. That site connects to your GoHighLevel account behind the scenes. Forms submit directly to your GHL pipeline. Every lead triggers your existing automations. Your team never touches a new dashboard.
                     </BlogText>
                     <BlogText>
-                        The result is a website that scores 95 to 100 on Google PageSpeed while running every GHL workflow you already have. See how our <Link href="/services/gohighlevel?ref=blog/gohighlevel-website-speed" className="text-cognac hover:underline font-medium">GoHighLevel speed fix service</Link> works, or book a free call below and we will audit your current GHL setup and show you exactly what a custom frontend would deliver.
+                        The result is a <Link href="/services/custom-engineering" className="text-cognac hover:underline">custom-coded Next.js site</Link> that scores 95 to 100 on Google PageSpeed while running every GHL workflow you already have. See how our <Link href="/services/gohighlevel?ref=blog/gohighlevel-website-speed" className="text-cognac hover:underline font-medium">GoHighLevel speed fix service</Link> works, or book a free call below and we will audit your current GHL setup and show you exactly what a custom frontend would deliver.
                     </BlogText>
                     <div className="my-6 p-5 bg-cognac/5 border border-cognac/20 rounded-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">Real Receipt: Local Service Business</p>
@@ -402,7 +507,7 @@ export default function GHLWebsiteSpeedPage() {
                         <BlogHighlight>Partial fix: optimize within GHL.</BlogHighlight> You can reduce image sizes manually, minimize the number of tracking scripts, and simplify page layouts to reduce JavaScript load. This typically moves a GHL score from 25 to 45. Better. Still not competitive for organic search.
                     </BlogText>
                     <BlogText>
-                        <BlogHighlight>Complete fix: decouple the frontend.</BlogHighlight> Build a custom Next.js website that handles all public-facing pages: homepage, service pages, blog, landing pages. Connect it to GoHighLevel via webhook and API for lead capture, form submissions, and CRM data. GHL handles automation, pipeline management, appointment scheduling, and email sequences. The website handles performance and SEO.
+                        <BlogHighlight>Complete fix: <Link href="/blog/what-is-headless-commerce" className="text-cognac hover:underline">decouple the frontend</Link>.</BlogHighlight> Build a custom Next.js website that handles all public-facing pages: homepage, service pages, blog, landing pages. Connect it to GoHighLevel via webhook and API for lead capture, form submissions, and CRM data. GHL handles automation, pipeline management, appointment scheduling, and email sequences. The website handles performance and SEO.
                     </BlogText>
                     <BlogText>
                         This architecture gives you 95 to 100 PageSpeed scores on the public-facing site while keeping every GHL workflow intact. Forms submit to GHL via API. Leads flow into the pipeline. Email sequences fire. Appointment booking works. Nothing changes in the backend. Everything changes in performance.
@@ -462,7 +567,7 @@ export default function GHLWebsiteSpeedPage() {
                                 <tr className="hover:bg-stone-50">
                                     <td className="p-2 border border-stone-300 font-medium text-cognac">PandaCodeGen</td>
                                     <td className="p-2 border border-stone-300 text-stone-600">GHL frontend rebuilds, fixed-scope migrations under $10K</td>
-                                    <td className="p-2 border border-stone-300 text-stone-600">Fixed price from $1,500</td>
+                                    <td className="p-2 border border-stone-300 text-stone-600"><Link href="/pricing" className="text-cognac hover:underline">Fixed price from $1,500</Link></td>
                                     <td className="p-2 border border-stone-300 text-stone-600">90+ or 100% refund (in writing)</td>
                                 </tr>
                                 <tr className="hover:bg-stone-50 bg-stone-50/50">
@@ -487,7 +592,7 @@ export default function GHLWebsiteSpeedPage() {
                         </table>
                     </div>
                     <BlogText>
-                        Pagepro, Naturaily, and Blazity are all strong Polish Next.js agencies with verified Clutch reviews. They fit teams that need a long-term retainer and have $10,000 to $50,000 per month in engineering budget. For most GoHighLevel users, the project scope is a 5 to 20 page public website that hooks into existing GHL automations. That scope fits a fixed-price specialist rather than a retainer team. PandaCodeGen focuses specifically on this niche: GHL frontend rebuilds, WordPress and Webflow migrations, and CRM-connected business websites under $10K, delivered in 3 to 5 weeks with a written PageSpeed guarantee.
+                        Pagepro, Naturaily, and Blazity are all strong Polish Next.js agencies with verified Clutch reviews. They fit teams that need a long-term retainer and have $10,000 to $50,000 per month in engineering budget. For most GoHighLevel users, the project scope is a 5 to 20 page public website that hooks into existing GHL automations. That scope fits a fixed-price specialist rather than a retainer team. <Link href="/about/hassan" className="text-cognac hover:underline">Hassan Jamal</Link> and PandaCodeGen focus specifically on this niche: GHL frontend rebuilds, WordPress and Webflow migrations, and CRM-connected business websites under $10K, delivered in 3 to 5 weeks with a written PageSpeed guarantee.
                     </BlogText>
                     <BlogText>
                         For a side-by-side breakdown including hourly rates, minimum project sizes, and case study metrics, see our full <Link href="/blog/pagepro-alternatives" className="text-cognac hover:underline font-medium">Pagepro alternatives comparison</Link>.
@@ -498,11 +603,23 @@ export default function GHLWebsiteSpeedPage() {
                         Not every GHL user benefits from a custom frontend. Here is the honest decision framework.
                     </BlogText>
                     <BlogText>
-                        <strong>Worth it when:</strong> organic search drives leads, you compete locally on rankings, your client list spans multiple sub-accounts where slow sites compound the support burden, your funnel ad cost is high enough that a 30 to 50 percent conversion lift pays for the rebuild in months, or your brand positioning depends on speed and polish that GHL templates cannot deliver.
+                        <strong>Worth it when:</strong> organic search drives leads, you compete locally on rankings, your client list spans multiple sub-accounts where slow sites compound the support burden, your funnel ad cost is high enough that a 30 to 50 percent conversion lift pays for the rebuild in months, or your brand positioning depends on speed and polish that GHL templates cannot deliver. A $5,000 monthly ad spend with a 15 percent conversion improvement generates $750 in additional monthly value. A <Link href="/blog/website-rebuild-cost-2026" className="text-cognac hover:underline">$3,500 rebuild</Link> pays for itself in under 5 months, then continues generating returns indefinitely.
                     </BlogText>
                     <BlogText>
                         <strong>Not worth it when:</strong> your entire acquisition is paid traffic into GHL funnels with no SEO component, your business is small enough that the existing GHL site lands enough leads, you genuinely use the drag-and-drop GHL editor to ship pages weekly and would lose that velocity, or you are pre-product-market fit and any website is the right website.
                     </BlogText>
+
+                    <BlogHeader id="cost-timeline">Cost and Timeline to Migrate a GoHighLevel Site to a Custom Frontend</BlogHeader>
+                    <BlogText>
+                        PandaCodeGen GHL migrations start at $1,500 (Starter tier) for simple 5 to 10 page funnels. Full <Link href="/blog/website-migration-cost-2026" className="text-cognac hover:underline">website migration costs</Link> run $3,500 to $10,000 depending on page count, funnels, and custom integrations. Every migration includes a 90+ PageSpeed guarantee — if we miss it, you get a full refund.
+                    </BlogText>
+                    <BlogList items={[
+                        "Page count: more pages means more build time. 5 to 7 pages = $1,500 Starter. 10 to 20 pages = $3,500 Growth.",
+                        "Custom features: membership portals, multi-step forms, and calculators add scope and cost",
+                        "Integrations: complex webhook flows and GHL API connections require additional architecture time",
+                        "Timeline: most GHL migrations complete in 2 to 4 weeks. Phased migrations (one funnel first) are supported.",
+                        "What is included: custom Next.js build, GHL API and webhook integration, 301 redirects, 90+ PageSpeed guarantee, 1 month post-launch support"
+                    ]} />
 
                     <BlogHeader id="pandacodegen-ghl">Keep the CRM. Kill the Website.</BlogHeader>
                     <BlogText>
