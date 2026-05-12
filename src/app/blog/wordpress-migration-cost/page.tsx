@@ -269,11 +269,6 @@ export default function WordPressMigrationCostPage() {
                     </BlogQuote>
                     <p className="text-xs text-stone-500 mt-1 mb-4">Matt Mullenweg, comparing WordPress velocity to Cloudflare&apos;s EmDash CMS, April 14, 2026 · <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source →</a></p>
 
-                    <BlogQuote>
-                        We are operating at a level of collective delusion that is quite impressive! We keep driving away some of the most valuable people and rejecting them when they try to contribute.
-                    </BlogQuote>
-                    <p className="text-xs text-stone-500 mt-1 mb-4">Matt Mullenweg, on community contributions to WordPress core, April 14, 2026 · <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source →</a></p>
-
                     <BlogText>
                         The community response on{" "}
                         <a href="https://www.reddit.com/r/Wordpress/comments/1sm8h38/continuing_the_trend_matt_mullenweg_says_the/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">r/Wordpress (151 upvotes, 107 comments)</a>{" "}

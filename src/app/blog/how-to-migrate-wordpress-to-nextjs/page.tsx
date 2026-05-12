@@ -175,7 +175,7 @@ export default function MigrateWordPressToNextJSPage() {
                             How to Migrate WordPress to <span className="font-serif italic text-cognac">Next.js</span> Without Losing SEO
                         </h1>
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed" data-speakable="true">
-                            Last one we ran: MyCustomPatches went from 3.2s load and 45 PageSpeed on WordPress to 0.7s and 97 PageSpeed on Next.js. Organic traffic up 45 percent in 90 days. Six migrations, zero ranking disasters. Here is the exact process.
+                            Last one we ran: MyCustomPatches went from 3.2s load and 45 PageSpeed on WordPress to 0.7s and 97 PageSpeed on Next.js. Organic traffic up 45 percent in 30 days. Six migrations, zero ranking disasters. Here is the exact process.
                         </p>
                         <BlogAuthor
                             date="Mar 11, 2026"
