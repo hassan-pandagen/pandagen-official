@@ -107,7 +107,10 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Patchstack: EssentialPlugin Supply Chain Compromise April 2026", "url": "https://patchstack.com/articles/critical-supply-chain-compromise-on-20-plugins-by-essentialplugin/" },
                 { "@type": "CreativeWork", "name": "TechCrunch: Backdoors Planted in Dozens of WordPress Plugins", "url": "https://techcrunch.com/2026/04/14/someone-planted-backdoors-in-dozens-of-wordpress-plugins-used-in-thousands-of-websites/" },
                 { "@type": "CreativeWork", "name": "Patchstack State of WordPress Security 2025", "url": "https://patchstack.com/whitepaper/state-of-wordpress-security-in-2025/" },
-                { "@type": "CreativeWork", "name": "Reddit r/woocommerce: WooCommerce Core Team Lead Public Feedback Request", "url": "https://www.reddit.com/r/woocommerce/comments/1sqom3t/" }
+                { "@type": "CreativeWork", "name": "Reddit r/woocommerce: WooCommerce Core Team Lead Public Feedback Request", "url": "https://www.reddit.com/r/woocommerce/comments/1sqom3t/" },
+                { "@type": "CreativeWork", "name": "Jim.com: Small Business Website Cost 2026", "url": "https://www.jim.com/blog/small-business-website-cost" },
+                { "@type": "CreativeWork", "name": "Think With Google: Mobile Page Speed Benchmarks", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
+                { "@type": "CreativeWork", "name": "MigrateLab: SEO Migration Survival Guide", "url": "https://migratelab.com/resources/seo-migration-survival-guide" }
             ]
         },
         {
@@ -189,7 +192,7 @@ export default function WebsiteRebuildCost2026Page() {
                             <span className="font-serif italic text-cognac">Honest Pricing From $2,000 to $250,000.</span>
                         </h1>
                         <p className="text-lg text-stone-600 leading-relaxed mb-6" data-speakable="true">
-                            A website rebuild in 2026 costs between $2,000 with a freelancer and $250,000 with an agency. Most small-to-mid businesses overpay by 40 to 60 percent because they ask general agencies instead of specialists. This is the honest breakdown, with published pricing, a 90+ PageSpeed guarantee, and the red flags on padded quotes.
+                            A website rebuild in 2026 costs between $2,000 with a freelancer and $250,000 with an agency, with <a href="https://www.jim.com/blog/small-business-website-cost" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">prices up 8 to 12% from 2025</a> due to higher design and AI-assisted development rates. Most small-to-mid businesses overpay by 40 to 60 percent because they ask general agencies instead of specialists. This is the honest breakdown, with published pricing, a 90+ PageSpeed guarantee, and the red flags on padded quotes.
                         </p>
                         <BlogAuthor
                             date="Apr 19, 2026 (updated May 5)"
@@ -532,7 +535,7 @@ export default function WebsiteRebuildCost2026Page() {
                         This is the single biggest unspoken fear behind every rebuild decision. Business owners have seen their competitor lose 60 percent of their organic traffic after a bad rebuild and never recover. The fear is rational. The outcome is avoidable.
                     </BlogText>
                     <BlogText>
-                        Most rebuild-related ranking losses come from three specific mistakes. Missing 301 redirects on high-traffic URLs. Metadata that did not migrate correctly. Site architecture changes that accidentally broke internal linking patterns Google had already indexed. All three are preventable with a competent SEO preservation process documented in{" "}
+                        <a href="https://migratelab.com/resources/seo-migration-survival-guide" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">60% of website migrations result in traffic loss</a> when not handled correctly. Most rebuild-related ranking losses come from three specific mistakes: missing 301 redirects on high-traffic URLs, metadata that did not migrate correctly, and site architecture changes that accidentally broke internal linking patterns Google had already indexed. All three are preventable with a competent SEO preservation process documented in{" "}
                         <a href="https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Google Search Central&apos;s official site-move guide</a>.
                     </BlogText>
                     <BlogList items={[
@@ -561,6 +564,7 @@ export default function WebsiteRebuildCost2026Page() {
                     </BlogText>
                     <BlogText>
                         <strong>On conversions:</strong>{" "}
+                        If your site takes 3+ seconds to load, <a href="https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">53% of mobile visitors leave</a> before they see your content.{" "}
                         <a href="https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Deloitte research</a>{" "}
                         found that a 0.1 second improvement in mobile load time lifts conversion by 8 percent. Moving from a 3.5 second WordPress load to a 0.8 second Next.js load is a 2.7 second improvement, which historically lifts conversion rates by 20 to 30 percent for most sites.
                     </BlogText>

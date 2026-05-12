@@ -171,7 +171,7 @@ export default function ShopifySpeedOptimizationPage() {
                 <div className="container mx-auto px-6 mt-8 md:mt-12">
                     <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-sm border border-stone-200 p-6 md:p-10">
 
-                        <p className="text-stone-700 leading-relaxed mb-6 text-lg" data-speakable="true">Your Shopify store&apos;s speed score sits at 35, your ads are bleeding money, and every speed optimization app you have installed has somehow made things worse. The irony isn&apos;t lost on you. Most Shopify speed advice recycles the same generic tips without acknowledging the hard ceiling built into Liquid themes — or the fact that some fixes actively hurt performance. This guide covers <Link href="/services/ecommerce" className="text-cognac hover:underline font-medium">what actually moves the needle</Link>: the specific changes that improve PageSpeed scores, the common mistakes that backfire, and when optimization hits a wall that only a headless rebuild can break through.</p>
+                        <p className="text-stone-700 leading-relaxed mb-6 text-lg" data-speakable="true">Your Shopify store&apos;s speed score sits at 35, your ads are bleeding money, and every speed optimization app you have installed has somehow made things worse. The irony isn&apos;t lost on you. Most Shopify speed advice recycles the same generic tips without acknowledging the hard ceiling built into Liquid themes, or the fact that some fixes actively hurt performance. This guide covers <Link href="/services/ecommerce" className="text-cognac hover:underline font-medium">what actually moves the needle</Link>: the specific changes that improve PageSpeed scores, the common mistakes that backfire, and when optimization hits a wall that only a headless rebuild can break through.</p>
 
                         <div className="mb-12"><PageSpeedAnimation /></div>
 
@@ -180,7 +180,7 @@ export default function ShopifySpeedOptimizationPage() {
                             <BlogHeader>Why Shopify Speed Optimization Drives Revenue</BlogHeader>
 
                             <BlogText>
-                                Speed affects revenue directly and on multiple channels simultaneously. On organic search, <a href="https://web.dev/vitals/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Google&apos;s Core Web Vitals</a> are a direct ranking factor, so slow stores get buried below faster competitors ranking for the same keywords. On paid advertising, faster pages earn higher Quality Scores, which translates to lower cost-per-click on Meta and Google Ads.
+                                <Link href="/blog/shopify-slow-losing-sales" className="text-cognac hover:underline">Speed affects revenue</Link> directly and on multiple channels simultaneously. On organic search, Google&apos;s <Link href="/blog/core-web-vitals-explained" className="text-cognac hover:underline">Core Web Vitals</Link> are a direct ranking factor, so slow stores get buried below faster competitors ranking for the same keywords. On paid advertising, faster pages earn higher Quality Scores, which translates to lower cost-per-click on Meta and Google Ads.
                             </BlogText>
 
                             <ul className="space-y-3 my-4 text-stone-700 leading-relaxed">
@@ -190,7 +190,7 @@ export default function ShopifySpeedOptimizationPage() {
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="w-2 h-2 rounded-full bg-cognac mt-2 flex-shrink-0"></span>
-                                    <span><strong>SEO penalty:</strong> Google measures page speed through Core Web Vitals and uses it to rank your store against competitors with equivalent content. Slow stores consistently rank 3 to 8 positions lower than faster stores on the same keywords.</span>
+                                    <span><strong>SEO penalty:</strong> Google measures page speed through Core Web Vitals and uses it to <Link href="/blog/how-website-speed-affects-seo" className="text-cognac hover:underline">rank your store against competitors</Link> with equivalent content. Slow stores consistently rank 3 to 8 positions lower than faster stores on the same keywords.</span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="w-2 h-2 rounded-full bg-cognac mt-2 flex-shrink-0"></span>
@@ -199,13 +199,13 @@ export default function ShopifySpeedOptimizationPage() {
                             </ul>
 
                             <BlogText>
-                                <a href="https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Deloitte&apos;s research</a> found a 0.1-second improvement in load time increases conversions by 8%. A store doing $50,000 per month with a 1 percent conversion lift from speed improvements gains $500 per month. The gap between a Shopify store loading at 4 seconds and one loading at under 1 second is not cosmetic — it is the difference between a business that compounds and one that plateaus. See the <Link href="/blog/shopify-slow-losing-sales" className="text-cognac hover:underline">full revenue math on slow Shopify stores</Link>.
+                                <a href="https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Deloitte&apos;s research</a> found a 0.1-second improvement in load time increases conversions by 8%. A store doing $50,000 per month with a 1 percent conversion lift from speed improvements gains $500 per month. The gap between a Shopify store loading at 4 seconds and one loading at under 1 second is not cosmetic, it is the difference between a business that compounds and one that plateaus. See the <Link href="/blog/shopify-slow-losing-sales" className="text-cognac hover:underline">full revenue math on slow Shopify stores</Link>.
                             </BlogText>
 
                             <BlogHeader>What Counts as a Good Shopify Speed Score</BlogHeader>
 
                             <BlogText>
-                                Shopify&apos;s built-in speed score and Google PageSpeed Insights measure different things. Shopify compares your store to other Shopify stores with similar features on a relative scale. Google PageSpeed measures absolute performance against web standards. You can score 60 on Shopify&apos;s dashboard and still fail Google&apos;s Core Web Vitals because you are being benchmarked against other slow stores.
+                                Shopify&apos;s built-in speed score and Google PageSpeed Insights measure different things. Shopify compares your store to other Shopify stores with similar features on a relative scale. Google PageSpeed measures absolute performance against web standards. You can score 60 on Shopify&apos;s dashboard and still fail Google&apos;s Core Web Vitals, <a href="https://ighenatt.es/en/resources/core-web-vitals/core-web-vitals-ecommerce/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">only 39% of ecommerce sites pass all three</a>, because you are being benchmarked against other slow stores, not against web standards.
                             </BlogText>
 
                             <div className="overflow-x-auto my-6">
@@ -235,7 +235,7 @@ export default function ShopifySpeedOptimizationPage() {
 
                             <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Google PageSpeed Insights</h3>
                             <BlogText>
-                                Enter your URL at <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">pagespeed.web.dev</a>. This is the industry standard and what Google actually uses for ranking signals. Test your homepage, a collection page, and a product page separately — they often score very differently because product pages carry more images and app-injected scripts.
+                                Enter your URL at <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">pagespeed.web.dev</a>. This is the industry standard and what Google actually uses for ranking signals. Test your homepage, a collection page, and a product page separately, they often score very differently because product pages carry more images and app-injected scripts.
                             </BlogText>
 
                             <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Shopify Speed Score in the Admin</h3>
@@ -257,27 +257,27 @@ export default function ShopifySpeedOptimizationPage() {
 
                             <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">App Bloat and Third-Party Scripts</h3>
                             <BlogText>
-                                Every app you install injects JavaScript into your theme. Even after you uninstall an app, the code often stays behind in your theme files. Stores commonly have 15 to 30 apps installed when they only use 5 to 10. Each app adds HTTP requests and JavaScript execution time that compounds across the page load. See the <Link href="/blog/shopify-app-costs-real-monthly-bill" className="text-cognac hover:underline">full breakdown of what Shopify apps actually cost per month</Link> — both in fees and in performance.
+                                Every app you install injects JavaScript into your theme. Even after you uninstall an app, the code often stays behind in your theme files. Stores commonly have 15 to 30 apps installed when they only use 5 to 10. Each app adds HTTP requests and JavaScript execution time that compounds across the page load. See the <Link href="/blog/shopify-app-costs-real-monthly-bill" className="text-cognac hover:underline">full breakdown of what Shopify apps actually cost per month</Link>, both in fees and in performance.
                             </BlogText>
 
                             <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Heavy Themes and Unused Liquid Code</h3>
                             <BlogText>
-                                Liquid is Shopify&apos;s templating language. Premium themes often include features you never use — mega menus, product quick-views, animations — but the code still loads on every page. Older themes built before Online Store 2.0 lack modern performance optimizations entirely. The <Link href="/blog/shopify-dawn-theme-slow" className="text-cognac hover:underline">Dawn theme specifically scored 42 on mobile before optimization</Link> — we took it to 97.
+                                Liquid is Shopify&apos;s templating language. Premium themes often include features you never use, mega menus, product quick-views, animations, but the code still loads on every page. Older themes built before Online Store 2.0 lack modern performance optimizations entirely. The <Link href="/blog/shopify-dawn-theme-slow" className="text-cognac hover:underline">Dawn theme specifically scored 42 on mobile before optimization</Link>, we took it to 97.
                             </BlogText>
 
                             <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Unoptimized Images and Video</h3>
                             <BlogText>
-                                Images are typically the largest page weight on any Shopify store. Uploading full-resolution product photos straight from your camera without compression is the single most common performance mistake we see in audits. Autoplay videos on homepages and product pages are the second biggest offender — a single autoplay background video can add 3 to 8 seconds to mobile load time.
+                                Images are typically the largest page weight on any Shopify store. Uploading full-resolution product photos straight from your camera without compression is the single most common performance mistake we see in audits. Autoplay videos on homepages and product pages are the second biggest offender, a single autoplay background video can add 3 to 8 seconds to mobile load time.
                             </BlogText>
 
                             <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Render-Blocking JavaScript and CSS</h3>
                             <BlogText>
-                                Render-blocking resources are scripts that the browser must load before it can display anything on screen. Your page might fully load in 2 seconds, but if the first paint takes 4 seconds because of blocking scripts, visitors see a blank white screen and leave before your content appears.
+                                <Link href="/blog/how-to-speed-up-your-website" className="text-cognac hover:underline">Render-blocking resources</Link> are scripts that the browser must load before it can display anything on screen. Your page might fully load in 2 seconds, but if the first paint takes 4 seconds because of blocking scripts, visitors see a blank white screen and leave before your content appears.
                             </BlogText>
 
                             <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Tracking Pixels and Tag Managers</h3>
                             <BlogText>
-                                Facebook Pixel, Google Analytics, Klaviyo, TikTok, Pinterest — each fires HTTP requests and runs JavaScript on every page load. A store with 8 tracking pixels can add 1 to 2 seconds of load time from tracking alone, before any product images or theme code has loaded.
+                                Facebook Pixel, Google Analytics, Klaviyo, TikTok, Pinterest, each fires HTTP requests and runs JavaScript on every page load. A store with 8 tracking pixels can add 1 to 2 seconds of load time from tracking alone, before any product images or theme code has loaded.
                             </BlogText>
 
                             {/* Mid CTA */}
@@ -296,7 +296,7 @@ export default function ShopifySpeedOptimizationPage() {
                                     { num: "3", title: "Lazy Load Below-the-Fold Assets", body: "Lazy loading means images and videos only load when the user scrolls to them. Online Store 2.0 themes have this built in. Older themes require code changes to implement. This single change can improve initial page load by 0.5 to 1.5 seconds on image-heavy collection pages." },
                                     { num: "4", title: "Defer Non-Critical JavaScript", body: "The defer and async attributes tell browsers to load scripts without blocking page render. Analytics, chat widgets, and review apps are safe to defer. Checkout and cart functionality typically cannot be deferred without breaking the store. This reduces Total Blocking Time and improves INP scores." },
                                     { num: "5", title: "Preload Hero Images and Critical Fonts", body: "Preloading tells the browser to fetch assets early, before it would normally discover them. Focus on your above-the-fold hero image and primary brand font. System fonts like Arial and Helvetica are the fastest option since they already exist on the visitor's device and require zero HTTP requests." },
-                                    { num: "6", title: "Switch to a Lightweight Performance Theme", body: "Dawn is Shopify's free reference theme and the Online Store 2.0 baseline for performance. Other fast options include Ride, Sense, and Craft. Online Store 2.0 architecture uses app blocks instead of injecting code directly into theme files, which makes future app removal cleaner." },
+                                    { num: "6", title: "Switch to a Lightweight Performance Theme", body: "Dawn is Shopify's free reference theme and the Online Store 2.0 baseline for performance, though it still scores around 55 without additional optimization. Other fast options include Ride, Sense, and Craft. Online Store 2.0 architecture uses app blocks instead of injecting code directly into theme files." },
                                     { num: "7", title: "Consolidate Tracking Through Server-Side Tagging", body: "Server-side tagging moves pixel processing off the visitor's browser and onto a server you control. Google Tag Manager's server container handles this. Instead of 8 pixels each firing independently, you fire one request to your server which handles the rest. Typically reduces tracking overhead by 60 to 80 percent." }
                                 ].map((step) => (
                                     <div key={step.num} className="flex gap-4 p-4 bg-stone-50 rounded-xl border border-stone-200">
@@ -323,12 +323,12 @@ export default function ShopifySpeedOptimizationPage() {
 
                             <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Replacing Paid Apps With Native Code</h3>
                             <BlogText>
-                                Custom code eliminates recurring app fees and improves speed simultaneously. A custom review display replaces Yotpo. Native upsells replace Rebuy. A custom subscription form replaces Recharge&apos;s widget. This requires a developer, but the ROI compounds monthly — both in eliminated app fees and in improved conversion rates from faster pages. See how <Link href="/blog/shopify-app-costs-real-monthly-bill" className="text-cognac hover:underline">Shopify app costs add up to $300 to $800 per month</Link>.
+                                Custom code eliminates recurring app fees and improves speed simultaneously. A custom review display replaces Yotpo. Native upsells replace Rebuy. A custom subscription form replaces Recharge&apos;s widget. This requires a developer, but the ROI compounds monthly, both in eliminated app fees and in improved conversion rates from faster pages. See how <Link href="/blog/shopify-app-costs-real-monthly-bill" className="text-cognac hover:underline">Shopify app costs add up to $300 to $800 per month</Link>.
                             </BlogText>
 
                             <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Going Headless With Next.js or Hydrogen</h3>
                             <BlogText>
-                                Headless commerce means a custom frontend with Shopify as the backend for inventory, checkout, and orders. Hydrogen is Shopify&apos;s own framework. Next.js is the broader industry standard. Either removes Liquid theme limitations entirely and makes 90+ PageSpeed scores achievable without compromising functionality. <Link href="/blog/shopify-headless" className="text-cognac hover:underline">Headless Shopify on Next.js is how we cut load time from 4 seconds to 0.8 seconds</Link> for a store doing $1.2M per year.
+                                <Link href="/blog/what-is-headless-commerce" className="text-cognac hover:underline">Headless commerce</Link> means a custom frontend with Shopify as the backend for inventory, checkout, and orders. Hydrogen is Shopify&apos;s own framework. Next.js is the broader industry standard. Either removes Liquid theme limitations entirely and makes <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">90+ PageSpeed scores</Link> achievable without compromising functionality. <Link href="/blog/shopify-headless" className="text-cognac hover:underline">Headless Shopify on Next.js is how we cut load time from 4 seconds to 0.8 seconds</Link> for a store doing $1.2M per year.
                             </BlogText>
 
                             <BlogHeader>Optimizing Core Web Vitals for Shopify</BlogHeader>
@@ -339,12 +339,12 @@ export default function ShopifySpeedOptimizationPage() {
 
                             <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Largest Contentful Paint Under 2.5 Seconds</h3>
                             <BlogText>
-                                LCP measures how long until the largest visible element loads — usually your hero image or main product photo. Target: under 2.5 seconds, ideally under 1.5 seconds. Preloading hero images and serving properly sized WebP files are the fastest fixes. On Shopify, the hero image is almost always the LCP element, which means image optimization has the highest direct impact on this metric.
+                                LCP measures how long until the largest visible element loads, usually your hero image or main product photo. Target: under 2.5 seconds, ideally under 1.5 seconds. Preloading hero images and serving properly sized WebP files are the fastest fixes, <a href="https://web.dev/case-studies/vodafone" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Vodafone&apos;s LCP improvement drove 8% more sales</a>. On Shopify, the hero image is almost always the LCP element, which means image optimization has the highest direct impact on this metric.
                             </BlogText>
 
                             <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Cumulative Layout Shift Below 0.1</h3>
                             <BlogText>
-                                CLS measures visual stability — elements jumping around as the page loads. Common causes: images without explicit width and height attributes, late-loading fonts causing text to reflow, injected banners from apps, and ad units loading after page render. Target: below 0.1. Adding explicit width and height attributes to all images is the simplest fix and often moves CLS from failing to passing in one change.
+                                CLS measures visual stability, elements jumping around as the page loads. Common causes: images without explicit width and height attributes, late-loading fonts causing text to reflow, injected banners from apps, and ad units loading after page render. Target: below 0.1. Adding explicit width and height attributes to all images is the simplest fix and often moves CLS from failing to passing in one change.
                             </BlogText>
 
                             <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Interaction to Next Paint Under 200 Milliseconds</h3>
@@ -384,13 +384,13 @@ export default function ShopifySpeedOptimizationPage() {
 
                             <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Switching Themes Without Auditing Apps</h3>
                             <BlogText>
-                                A new theme will not fix app bloat. Apps modify your store at the platform level — their scripts re-inject into any new theme you install because they operate through Shopify&apos;s app block system. Audit and remove unused apps before migrating themes, or you will discover the same performance problems on your new theme within days.
+                                A new theme will not fix app bloat. Apps modify your store at the platform level, their scripts re-inject into any new theme you install because they operate through Shopify&apos;s app block system. Audit and remove unused apps before migrating themes, or you will discover the same performance problems on your new theme within days.
                             </BlogText>
 
                             <BlogHeader>The Liquid Theme Ceiling and When to Go Headless</BlogHeader>
 
                             <BlogText>
-                                Even a perfectly optimized Liquid theme has a performance ceiling. Shopify&apos;s server-side rendering constraints, mandatory platform scripts, and Liquid&apos;s templating overhead create a floor you cannot optimize below. Most Liquid themes cap around 65 to 80 on mobile PageSpeed regardless of optimization effort.
+                                Even a perfectly optimized Liquid theme has a <Link href="/blog/shopify-vs-custom-website" className="text-cognac hover:underline">performance ceiling</Link>. Shopify&apos;s server-side rendering constraints, mandatory platform scripts, and Liquid&apos;s templating overhead create a floor you cannot optimize below. Most Liquid themes cap around 65 to 80 on mobile PageSpeed regardless of optimization effort. <Link href="/blog/google-march-2026-update" className="text-cognac hover:underline">Google&apos;s March 2026 update actively rewards faster sites</Link>, meaning that gap between your Liquid ceiling and a competitor&apos;s custom-coded 95 score translates directly into ranking positions lost.
                             </BlogText>
 
                             <BlogQuote>
@@ -432,7 +432,7 @@ export default function ShopifySpeedOptimizationPage() {
                             </div>
 
                             <BlogText>
-                                ROI depends on traffic volume and current conversion rate. A store doing $50,000 per month with a 1 percent conversion lift from speed improvements gains $500 per month. A <Link href="/blog/website-rebuild-cost-2026" className="text-cognac hover:underline">$5,000 to $10,000 headless rebuild</Link> pays for itself in 10 to 20 months at that scale, then continues generating returns indefinitely. For stores doing $200,000+ per month, the payback window compresses to 2 to 4 months.
+                                ROI depends on traffic volume and current <Link href="/blog/shopify-conversion-rate-speed-fix" className="text-cognac hover:underline">conversion rate</Link>. A store doing $50,000 per month with a 1 percent conversion lift from speed improvements gains $500 per month. A <Link href="/blog/website-rebuild-cost-2026" className="text-cognac hover:underline">$5,000 to $10,000 headless rebuild</Link> pays for itself in 10 to 20 months at that scale, then continues generating returns indefinitely. For stores doing $200,000+ per month, the payback window compresses to 2 to 4 months.
                             </BlogText>
 
                             <BlogHeader>When to Hire a Shopify Speed Optimization Expert</BlogHeader>
@@ -468,7 +468,7 @@ export default function ShopifySpeedOptimizationPage() {
                             <div className="my-10 md:my-12 p-6 md:p-8 bg-charcoal text-white rounded-2xl text-center">
                                 <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-3">Headless Shopify by PandaCodeGen</p>
                                 <h3 className="text-2xl md:text-3xl font-bold mb-3">Hit the Liquid Ceiling? We Break Through It.</h3>
-                                <p className="text-stone-300 mb-5 max-w-xl mx-auto">We build headless Shopify storefronts that score 90+ on PageSpeed with a written guarantee. Drop your store URL and we will benchmark your current scores, identify what is fixable in Liquid, and scope a headless build if that is what your store needs.</p>
+                                <p className="text-stone-300 mb-5 max-w-xl mx-auto">We build <a href="/services/ecommerce" className="text-cognac hover:underline">headless Shopify storefronts</a> that score 90+ on PageSpeed with a written guarantee. Drop your store URL and we will benchmark your current scores, identify what is fixable in Liquid, and scope a headless build if that is what your store needs.</p>
                                 <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-cognac hover:bg-cognac/90 text-white font-bold rounded-full transition-all">Book Free Migration Call <ArrowRight className="w-5 h-5" /></CalModalButton>
                             </div>
 
@@ -487,7 +487,7 @@ export default function ShopifySpeedOptimizationPage() {
                                     { href: "/blog/shopify-slow-losing-sales", label: "Slow Shopify Store? How Much Revenue You Are Losing (With Math)" },
                                     { href: "/blog/shopify-app-costs-real-monthly-bill", label: "How Much Do Shopify Apps Cost in 2026? $300 to $800/mo (Real Data)" },
                                     { href: "/blog/shopify-plus-still-slow", label: "Why Is Shopify Plus Still Slow in 2026?" },
-                                    { href: "/services/ecommerce", label: "PandaCodeGen Headless Shopify Service — 90+ PageSpeed Guaranteed" }
+                                    { href: "/services/ecommerce", label: "PandaCodeGen Headless Shopify Service, 90+ PageSpeed Guaranteed" }
                                 ].map(link => (
                                     <Link key={link.href} href={link.href} className="flex items-center gap-2 text-sm text-cognac hover:underline">
                                         <ArrowRight className="w-4 h-4 flex-shrink-0" />

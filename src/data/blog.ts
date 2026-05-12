@@ -34,6 +34,74 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "website-developer-agency",
+    cardStat: "90+",
+    cardStatLabel: "PageSpeed guaranteed or full refund",
+    title: "What Does a Website Developer Agency Actually Do in 2026?",
+    excerpt: "A website developer agency builds, migrates, and maintains custom-coded sites. This guide covers what services to expect, how much agencies charge in 2026, questions to ask before signing, and red flags that separate legitimate partners from padded quotes.",
+    category: "Agency",
+    readTime: "16 min",
+    date: "May 12",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: false,
+    illustrationType: "code",
+    lastModified: "2026-05-12",
+    faqs: [
+      { question: "Is web development dead because of AI?", answer: "No. AI assists with code generation but cannot replace custom architecture, business logic integration, or strategic technical decisions. AI tools like GitHub Copilot help developers write code faster, but they do not replace the judgment required to architect a scalable system, integrate with third-party APIs, or preserve SEO rankings during a platform migration. Development agencies that use AI tools ship faster; they do not become unnecessary." },
+      { question: "What is the 3 second rule in website design?", answer: "The 3 second rule states that users leave websites that take longer than 3 seconds to load. Research from Google shows the probability of a visitor bouncing increases 32 percent when load time goes from 1 to 3 seconds and 90 percent when it goes from 1 to 5 seconds. High-performance agencies target sub-1-second load times, not 3 seconds. The 3 second rule is the floor, not the target." },
+      { question: "Can a website developer agency preserve existing SEO rankings during migration?", answer: "Yes. A qualified agency implements 301 redirects for every old URL, maps metadata (title tags, meta descriptions, canonical URLs) to the new site, rebuilds the sitemap, and submits it to Google Search Console on launch day. Done correctly, rankings hold within 30 days and typically improve within 60 days because the new site scores higher on Core Web Vitals. Done incorrectly — skipping redirects, changing URL structure without mapping, or launching without a sitemap — you can lose years of SEO work overnight." },
+      { question: "How is a website developer agency different from a web design company?", answer: "A web design company typically focuses on visual design using templates and page builders like Wix, Squarespace, or WordPress page builders. A website developer agency builds custom-coded solutions with full-stack engineering: design, development, performance optimization, and SEO preservation. The practical difference shows up in PageSpeed scores (30 to 65 for template-built sites vs 90 to 100 for custom code) and in code ownership (you own nothing on Wix; you own everything with a proper developer agency)." },
+      { question: "What should I ask a website developer agency before signing?", answer: "Six questions matter most: What PageSpeed score will you guarantee in writing? Do I own the source code on day one? What are my total monthly costs after launch? Who will actually write my code? How do you handle 301 redirects during migration? What happens if you miss the performance targets? Acceptable answers are specific and measurable. Red flags are vague answers, no written guarantee, and agency-hosted code you cannot take elsewhere." }
+    ]
+  },
+  {
+    id: "how-much-does-a-website-cost",
+    cardStat: "$2K–$8K",
+    cardStatLabel: "typical small business website cost",
+    title: "How Much Does a Website Cost in 2026? Real Pricing by Build Type",
+    excerpt: "A website costs $0 to $50,000+ in 2026. The number that matters is what someone in your situation actually pays. This guide breaks down real costs by build type, business size, and the hidden fees that turn affordable platforms into expensive long-term commitments.",
+    category: "Pricing",
+    readTime: "15 min",
+    date: "May 12",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: false,
+    illustrationType: "cost",
+    lastModified: "2026-05-12",
+    faqs: [
+      { question: "Can I build a website for free?", answer: "Yes, platforms like Wix and WordPress.com offer free tiers. The tradeoff is ads on your site, a branded subdomain (yoursite.wixsite.com), and limited features. Free works for personal projects but rarely for businesses that need to convert visitors into customers. A business relying on its website for leads should budget at least $1,500 for a professionally built site." },
+      { question: "How much does a one-page website cost?", answer: "A single landing page typically costs $200 to $2,000 depending on design complexity and whether you DIY or hire a professional. For a business-quality landing page with copywriting, custom design, fast load times, and a working contact form, budget $1,000 to $2,000 with a professional developer. DIY options on Wix or Squarespace can get you a basic page for $100 to $200 per year in platform fees." },
+      { question: "How long does it take to build a website?", answer: "DIY sites can launch in 1 to 3 days. Freelancer projects take 2 to 6 weeks depending on complexity. Agency and custom builds typically run 4 to 12 weeks. PandaCodeGen ships Starter tier sites ($1,500, 5 to 7 pages) in 1 to 2 weeks, Growth tier sites ($3,500, 10 to 20 pages) in 2 to 4 weeks, and Scale tier sites ($5,000 to $10,000) in 4 to 6 weeks." },
+      { question: "Is it cheaper to build a website yourself or hire a professional?", answer: "Building yourself with a DIY platform is cheapest upfront at $0 to $500 per year, but factor in your time investment and the ongoing platform fees you pay indefinitely. A $200 per month platform with $300 per month in apps totals $18,000 over 3 years. A $3,500 professionally built custom site with $20 per month hosting totals $4,220 over 3 years and you own the code outright. For businesses that depend on their website for leads, professional builds typically deliver better ROI." },
+      { question: "How much does it cost to redesign an existing website?", answer: "Redesigns typically cost 60 to 80 percent of a new build because existing content and structure require auditing, migrating, and redirecting properly. A site that cost $5,000 to build originally costs $3,000 to $4,000 to redesign. PandaCodeGen charges the same fixed-price tiers for redesigns as for new builds: $1,500 Starter, $3,500 Growth, $5,000 to $10,000 Scale." },
+      { question: "What is the true cost of a slow or cheap website?", answer: "A cheap website that loads slowly often costs more over 3 to 5 years than building correctly the first time. Every second of load time above 2 seconds increases bounce rates by 32 percent. Slow landing pages receive lower Quality Scores in Google Ads, increasing cost per click. Google's Core Web Vitals directly impact search rankings. Cancel Wix or Squarespace and your site disappears. Building on an owned custom stack from the start eliminates platform dependency and compounds performance gains over time." }
+    ]
+  },
+  {
+    id: "why-is-my-website-loading-so-slow",
+    cardStat: "3s",
+    cardStatLabel: "when most visitors abandon your site",
+    title: "Why Is My Website Loading So Slow? 12 Causes and Fast Fixes",
+    excerpt: "Your site is slow because images, scripts, hosting, or the platform itself is making visitors wait. 12 root causes, diagnostic tools, step-by-step fixes, and when a rebuild makes more financial sense than optimization.",
+    category: "Performance",
+    readTime: "14 min",
+    date: "May 13",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: false,
+    illustrationType: "speed",
+    lastModified: "2026-05-13",
+    faqs: [
+      { question: "What is the 3 second rule in website design?", answer: "The 3 second rule means most visitors abandon a website if it takes longer than 3 seconds to load. Research from Google shows the probability of a visitor bouncing increases 32 percent when load time goes from 1 to 3 seconds and 90 percent when it goes from 1 to 5 seconds. Modern best practice targets under 1 second. Sites that load in under 1 second convert better, rank higher on Google, and cost less per click on paid ads." },
+      { question: "Why is my website slow but my internet connection is fast?", answer: "Internet speed affects how fast you download content, but website speed depends on the server response time, code efficiency, image optimization, and number of requests. A poorly built site loads slowly for everyone regardless of their bandwidth. The most common causes are unoptimized images, too many plugins or third-party scripts, cheap shared hosting, no CDN, and render-blocking JavaScript." },
+      { question: "Why are websites so laggy on mobile devices?", answer: "Mobile devices have less processing power than desktop computers and often use slower cellular connections. Heavy JavaScript that executes in 200ms on a desktop can take 800ms on a mid-range Android phone. Unoptimized images also download at full size even on mobile. Google uses mobile-first indexing, so your mobile performance directly determines your search rankings regardless of how fast your site is on desktop." },
+      { question: "How fast should a website load to rank well on Google?", answer: "Google recommends a Largest Contentful Paint (LCP) under 2.5 seconds to pass Core Web Vitals. Top-ranking sites typically load in under 1 second. Sites with LCP above 4 seconds, INP above 200ms, or CLS above 0.1 are rated as having poor user experience and are penalized in rankings compared to faster sites with equivalent content." },
+      { question: "Can a caching plugin alone fix a slow WordPress site?", answer: "Caching plugins help returning visitors but cannot solve bloated themes, excessive plugins, or cheap hosting. If the platform architecture is the problem, caching only masks part of it. WP Rocket and W3 Total Cache improve WordPress scores by 10 to 20 points typically. Reaching 90+ on Mobile PageSpeed from a plugin-heavy WordPress installation is extremely difficult because the bottleneck is the PHP rendering engine and JavaScript bloat from plugins, not just caching." },
+      { question: "Does switching web hosting actually make a website faster?", answer: "Moving from shared hosting to managed or dedicated hosting often improves server response time (TTFB) by 100 to 500 milliseconds. However, unoptimized code, images, and plugin bloat still prevent sub-1-second performance even on better hosting. Hosting improvement alone typically moves PageSpeed scores by 5 to 15 points. The structural improvements come from fixing images, reducing requests, and deferring scripts." }
+    ]
+  },
+  {
     id: "shopify-store-speed-optimization",
     cardStat: "35→97",
     cardStatLabel: "typical PageSpeed lift after optimization",
