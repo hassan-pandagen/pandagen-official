@@ -186,13 +186,13 @@ export default function CheapWebDeveloperPage() {
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            Where to actually find cheap web developers, what each price tier delivers, the red flags that wreck projects, and the fixed-price agencies that beat $5 Fiverr gigs without going to $30,000 enterprise quotes.
+                            A cheap web developer charges anywhere from $50 on Fiverr to $2,000 from a fixed-price agency — and the gap between those two experiences is enormous. The $200 WordPress install that loads in 5 seconds will cost you more in lost conversions over 12 months than a $1,500 custom build that loads in under 1 second. <a href="https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Portent research</a> shows conversion rates drop 4.42% per second of additional load time.
                         </p>
 
                         <BlogAuthor
                             date="Apr 30, 2026"
                             readTime="13 min read"
-                            bio="Hassan rebuilds slow WordPress, Shopify, Wix, and Webflow sites as custom Next.js builds at fixed prices starting from $500. Every build hits 90+ on Google PageSpeed or the project is fully refunded."
+                            bio="Hassan rebuilds slow WordPress, Shopify, Wix, and Webflow sites as custom Next.js builds at fixed prices starting from $1,500. Every build hits 90+ on Google PageSpeed or the project is fully refunded."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -207,9 +207,9 @@ export default function CheapWebDeveloperPage() {
                         <BlogList items={[
                             "Cheap web developers span $5 Fiverr gigs to $2,000 fixed-price agencies. Each tier delivers very different output.",
                             "Most cheap developers under $500 ship template-based work on WordPress or Wix. PageSpeed averages 40 to 65 mobile.",
-                            "Fixed-price agencies starting at $500 to $2,000 deliver custom code, code ownership, and 90+ PageSpeed guarantees.",
+                            "Fixed-price agencies from $1,500 to $2,000 deliver custom code, code ownership, and 90+ PageSpeed guarantees.",
                             "Five red flags signal a hire that will go badly: no portfolio, refusing source code, hourly billing with no cap, vague scope, and no performance guarantee.",
-                            "PandaCodeGen Founder's Offer ships custom Next.js sites at $500 with 90+ PageSpeed guaranteed or 100 percent refund. 3 spots per month, 1 week build time."
+                            "The cheapest option upfront often becomes the most expensive over 12 to 36 months through slow load times, monthly subscriptions, and rebuild costs."
                         ]} />
                     </div>
 
@@ -272,7 +272,7 @@ export default function CheapWebDeveloperPage() {
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">Cheap should mean money that stays in your business, not corners cut on your build. PandaCodeGen is rebuilding what agency pricing means: fixed prices from $500, 90+ PageSpeed guaranteed or 100 percent refund on every project, plus one full month of free post-launch support and tweaks for every client. No freelancer, agency, or platform offers all three.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Cheap should mean money that stays in your business, not corners cut on your build. PandaCodeGen is rebuilding what agency pricing means: fixed prices from $1,500, 90+ PageSpeed guaranteed or 100 percent refund on every project, plus one full month of free post-launch support and tweaks for every client. No freelancer, agency, or platform offers all three.</p>
                         </div>
 
                         <BlogText>
@@ -338,7 +338,7 @@ export default function CheapWebDeveloperPage() {
                         </BlogText>
 
                         <BlogText>
-                            If you stick with us past the free month, we offer optional retainers starting at $500 a month for ongoing work. Most clients use the free month to get the site exactly right and then handle their own content updates from Sanity CMS without needing us. That is the goal: ship a site so good and so easy to maintain that you do not need an agency on retainer for life.
+                            If you stick with us past the free month, we offer optional retainers for ongoing work. Most clients use the free month to get the site exactly right and then handle their own content updates from Sanity CMS without needing us. That is the goal: ship a site so good and so easy to maintain that you do not need an agency on retainer for life.
                         </BlogText>
 
                         <BlogHeader>How Much Does a Cheap Web Developer Cost</BlogHeader>
@@ -442,7 +442,7 @@ export default function CheapWebDeveloperPage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>$500 to $2,000.</strong> The first tier where custom-coded sites become realistic. Includes agencies offering 90+ PageSpeed guarantees, code ownership, and SEO-friendly architecture. Migration services from WordPress, Wix, or Squarespace to modern stacks like Next.js fall in this range. PandaCodeGen ships Starter sites at $1,500 and Founder&apos;s Offer migrations at $500. Custom code at this price exists, but only from agencies running lean operations.
+                            <strong>$500 to $2,000.</strong> The first tier where custom-coded sites become realistic. Includes agencies offering 90+ PageSpeed guarantees, code ownership, and SEO-friendly architecture. Migration services from WordPress, Wix, or Squarespace to modern stacks like Next.js fall in this range. PandaCodeGen ships Starter sites at $1,500. Custom code at this price exists, but only from agencies running lean operations.
                         </BlogText>
 
                         <BlogText>
@@ -530,11 +530,11 @@ export default function CheapWebDeveloperPage() {
                         </div>
 
                         <BlogText>
-                            <strong>Slow load times that kill conversions.</strong> A $200 WordPress site that loads in 5 seconds can cost you 20 to 30 percent of conversions every day. The apparent savings disappear when bounce rate doubles and lead volume drops. For an e-commerce site doing $20,000 a month, a 5-second load time costs roughly $4,000 per month in lost revenue compared to a 1-second site. The cheap site costs more by month 2.
+                            <strong>Slow load times that kill conversions.</strong> <a href="https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Google research</a> shows 53% of mobile visitors leave pages that take over 3 seconds to load. A $200 WordPress site that loads in 5 seconds can cost you 20 to 30 percent of conversions every day. The apparent savings disappear when bounce rate doubles and lead volume drops. For an e-commerce site doing $20,000 a month, a 5-second load time costs roughly $4,000 per month in lost revenue compared to a 1-second site. The cheap site costs more by month 2.
                         </BlogText>
 
                         <BlogText>
-                            <strong>Plugin and monthly subscription fees.</strong> Cheap WordPress builds often require $50 to $500 per month in plugin subscriptions for forms, SEO, security, caching, and performance. Over 3 years, that is $1,800 to $18,000 in recurring costs on top of the original build price. A $500 custom Next.js site with $0 monthly fees is cheaper by month 3 than a $200 WordPress site with $80 a month in plugin costs.
+                            <strong>Plugin and monthly subscription fees.</strong> Cheap WordPress builds often require $50 to $500 per month in plugin subscriptions for forms, SEO, security, caching, and performance. Over 3 years, that is $1,800 to $18,000 in recurring costs on top of the original build price. A $1,500 custom Next.js site with $0 monthly fees is cheaper by year 2 than a $200 WordPress site with $80 a month in plugin costs.
                         </BlogText>
 
                         <BlogText>
@@ -549,7 +549,7 @@ export default function CheapWebDeveloperPage() {
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">Migration pricing varies by source platform because the data export, redirect mapping, and rebuild complexity differ. WordPress migrations start at $1,500 in the Starter tier. Webflow at $500 Founder&apos;s Offer up to $15,000 for complex CMS rebuilds. WooCommerce 6 to 8 weeks at $8,000 plus. GoHighLevel 2 to 4 weeks at $4,000 plus while keeping your CRM intact.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Migration pricing varies by source platform because the data export, redirect mapping, and rebuild complexity differ. WordPress migrations start at $1,500 in the Starter tier. Webflow migrations up to $15,000 for complex CMS rebuilds. WooCommerce 6 to 8 weeks at $8,000 plus. GoHighLevel 2 to 4 weeks at $4,000 plus while keeping your CRM intact.</p>
                         </div>
 
                         <BlogText>
@@ -572,8 +572,8 @@ export default function CheapWebDeveloperPage() {
                                     <div className="w-2 h-2 rounded-full bg-cognac" />
                                     <p className="text-xs font-bold text-stone-500 uppercase tracking-wide">Webflow Migration</p>
                                 </div>
-                                <h3 className="font-bold text-charcoal mb-2 group-hover:text-cognac transition-colors">Leave Webflow for $500 to $15,000</h3>
-                                <p className="text-sm text-stone-600 leading-relaxed mb-3">Full CMS export, headless Sanity rebuild, eliminate $39 to $235 a month Webflow fees. Most agencies charge $30,000 plus. Founder&apos;s Offer covers small Webflow sites at $500.</p>
+                                <h3 className="font-bold text-charcoal mb-2 group-hover:text-cognac transition-colors">Leave Webflow from $3,500</h3>
+                                <p className="text-sm text-stone-600 leading-relaxed mb-3">Full CMS export, headless Sanity rebuild, eliminate $39 to $235 a month Webflow fees. Most agencies charge $30,000 plus. PandaCodeGen Growth tier starts at $3,500.</p>
                                 <p className="text-sm text-cognac font-bold flex items-center gap-1">View Webflow migration service <ArrowRight className="w-3 h-3" /></p>
                             </Link>
 
@@ -615,7 +615,7 @@ export default function CheapWebDeveloperPage() {
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">A cheap web developer ($200 to $2,000) gives you custom code with variable quality. A website builder (Wix, Squarespace) costs $15 to $50 per month with platform lock-in and 40 to 70 PageSpeed ceilings. AI tools like ChatGPT and Framer AI scaffold sites for $0 to $30 per month but produce generic results. Fixed-price agencies starting at $500 deliver custom code, ownership, and 90+ PageSpeed guarantees.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">A cheap web developer ($200 to $2,000) gives you custom code with variable quality. A website builder (Wix, Squarespace) costs $15 to $50 per month with platform lock-in and 40 to 70 PageSpeed ceilings. AI tools like ChatGPT and Framer AI scaffold sites for $0 to $30 per month but produce generic results. Fixed-price agencies starting at $1,500 deliver custom code, ownership, and 90+ PageSpeed guarantees.</p>
                         </div>
 
                         <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
@@ -704,7 +704,7 @@ export default function CheapWebDeveloperPage() {
                         </div>
 
                         <BlogText>
-                            <strong>Fixed price.</strong> You know the total cost upfront. The scope is defined before work begins. The developer is incentivized to deliver efficiently because slower work eats their margin, not your budget. PandaCodeGen runs entirely fixed-price: Founder&apos;s Offer at $500, Starter at $1,500, Growth at $3,500, Scale at $5,000 to $10,000. No hourly tracking, no surprise invoices, no ongoing fees.
+                            <strong>Fixed price.</strong> You know the total cost upfront. The scope is defined before work begins. The developer is incentivized to deliver efficiently because slower work eats their margin, not your budget. PandaCodeGen runs entirely fixed-price: Starter at $1,500, Growth at $3,500, Scale at $5,000 to $10,000. No hourly tracking, no surprise invoices, no ongoing fees.
                         </BlogText>
 
                         <BlogText>
@@ -722,7 +722,6 @@ export default function CheapWebDeveloperPage() {
                         </BlogText>
 
                         <BlogList items={[
-                            "Founder's Offer: $500 for qualifying small migrations (3 spots per month, 1 week build)",
                             "Starter: $1,500 for 5 to 7 page custom Next.js business sites",
                             "Growth: $3,500 for 10 to 20 pages with Sanity CMS and full migration",
                             "Scale: $5,000 to $10,000 for headless e-commerce or 30+ page builds",
@@ -750,7 +749,7 @@ export default function CheapWebDeveloperPage() {
                         {/* Bottom CTA */}
                         <div className="my-6 md:my-10 p-8 bg-charcoal text-white rounded-2xl text-center">
                             <p className="text-xl font-bold mb-2">Stop comparing $5 Fiverr gigs to $30,000 agency quotes.</p>
-                            <p className="text-stone-400 text-sm mb-6">Get a custom-coded Next.js site at fixed prices starting from $500. 90+ PageSpeed guaranteed or 100 percent refund. Free site audit on the call.</p>
+                            <p className="text-stone-400 text-sm mb-6">Get a custom-coded Next.js site at fixed prices starting from $1,500. 90+ PageSpeed guaranteed or 100 percent refund. Free site audit on the call.</p>
                             <div className="flex flex-col sm:flex-row gap-3 justify-center">
                                 <CalModalButton className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
                                     Book Free Quote Call <ArrowRight className="w-4 h-4" />
