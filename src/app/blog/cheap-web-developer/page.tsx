@@ -186,7 +186,7 @@ export default function CheapWebDeveloperPage() {
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            A cheap web developer charges anywhere from $50 on Fiverr to $2,000 from a fixed-price agency — and the gap between those two experiences is enormous. The $200 WordPress install that loads in 5 seconds will cost you more in lost conversions over 12 months than a $1,500 custom build that loads in under 1 second. <a href="https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Portent research</a> shows conversion rates drop 4.42% per second of additional load time.
+                            A cheap web developer charges anywhere from $50 on Fiverr to $2,000 from a fixed-price agency, and the gap between those two experiences is enormous. The $200 WordPress install that loads in 5 seconds will cost you more in lost conversions over 12 months than a $1,500 custom build that loads in under 1 second. <a href="https://genesysgrowth.com/blog/landing-page-conversion-stats-for-marketing-leaders" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Sites loading in 1 second see conversion rates 3x higher</a> than those loading in 5 seconds. <a href="https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Portent research</a> shows conversion rates drop 4.42% per second of additional load time.
                         </p>
 
                         <BlogAuthor
@@ -213,7 +213,7 @@ export default function CheapWebDeveloperPage() {
                         ]} />
                     </div>
 
-                    {/* Real Receipts — upfront proof */}
+                    {/* Real Receipts, upfront proof */}
                     <div className="mb-8 md:mb-12 p-6 md:p-8 bg-charcoal text-white rounded-2xl">
                         <div className="flex items-center gap-3 mb-4">
                             <div className="h-px w-8 bg-cognac" />
@@ -265,7 +265,7 @@ export default function CheapWebDeveloperPage() {
                         </BlogText>
 
                         <BlogText>
-                            <BlogHighlight>The cheapest sticker price is rarely the cheapest total cost.</BlogHighlight> A $200 WordPress site that loads in 5 seconds and needs $50 a month in plugins to function costs more in year one than a $1,500 custom site with $0 monthly fees. The rest of this article covers how to hire in the cheap range without paying twice.
+                            <BlogHighlight>The cheapest sticker price is rarely the cheapest total cost.</BlogHighlight> A $200 WordPress site that <Link href="/blog/why-is-my-website-loading-so-slow" className="text-cognac hover:underline">loads in 5 seconds</Link> and needs $50 a month in plugins to function costs more in year one than a $1,500 custom site with $0 monthly fees. The rest of this article covers how to hire in the cheap range without paying twice.
                         </BlogText>
 
                         <BlogHeader>Why &quot;Cheap&quot; Should Mean Your Profit, Not Lower Quality</BlogHeader>
@@ -388,7 +388,7 @@ export default function CheapWebDeveloperPage() {
                         </div>
 
                         <BlogText>
-                            For a typical small business website (5 to 10 pages, contact form, blog, mobile responsive), expect to pay $500 to $2,000 from a fixed-price agency, $300 to $1,200 from a freelance generalist, or $50 to $400 from a Fiverr seller. The freelance and Fiverr ranges almost always mean template-based work. The agency range is where custom code with measurable guarantees becomes possible.
+                            For a typical small business website, ask for the <Link href="/blog/how-much-does-a-website-cost" className="text-cognac hover:underline">total project cost</Link> rather than hourly rate. Expect to pay $500 to $2,000 from a fixed-price agency, $300 to $1,200 from a freelance generalist, or $50 to $400 from a Fiverr seller. The freelance and Fiverr ranges almost always mean template-based work. The agency range is where custom code with measurable guarantees becomes possible.
                         </BlogText>
 
                         <BlogHeader>Best Places to Hire a Cheap Web Developer</BlogHeader>
@@ -411,11 +411,11 @@ export default function CheapWebDeveloperPage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>Wix and Squarespace marketplaces.</strong> Developers specializing in those platforms only. Helpful when you already have a Wix or Squarespace site and need quick fixes within the platform. The trade-off: you stay locked into the platform&apos;s structural performance ceilings (40 to 70 PageSpeed) and ongoing monthly fees. Good for small tweaks, wrong for new builds where speed matters.
+                            <strong>Wix and Squarespace marketplaces.</strong> Developers specializing in those platforms only. Helpful when you already have a Wix or Squarespace site and need quick fixes within the platform. The trade-off: you stay locked into the platform&apos;s structural <Link href="/blog/wix-vs-custom-website" className="text-cognac hover:underline">performance ceilings (40 to 70 PageSpeed)</Link> and ongoing monthly fees. Good for small tweaks, wrong for new builds where speed matters.
                         </BlogText>
 
                         <BlogText>
-                            <strong>Fixed-price agencies with performance guarantees.</strong> Agencies like PandaCodeGen offer custom-coded Next.js sites starting at $500 with measurable guarantees: 90+ PageSpeed score or full refund, full source code ownership on day one, zero monthly platform fees, and fixed pricing rather than hourly billing. This tier produces the cheapest total cost of ownership over 3 years because there are no recurring platform fees, no plugin subscriptions, and no rebuild costs.
+                            <strong>Fixed-price agencies with performance guarantees.</strong> Agencies like PandaCodeGen offer <Link href="/pricing" className="text-cognac hover:underline">fixed-price custom-coded Next.js sites from $1,500</Link> with measurable guarantees: 90+ PageSpeed score or full refund, full source code ownership on day one, zero monthly platform fees, and fixed pricing rather than hourly billing. This tier produces the cheapest total cost of ownership over 3 years because there are no recurring platform fees, no plugin subscriptions, and no rebuild costs.
                         </BlogText>
 
                         <BlogText>
@@ -434,7 +434,7 @@ export default function CheapWebDeveloperPage() {
                         </div>
 
                         <BlogText>
-                            <strong>Under $100.</strong> Template installation, basic WordPress setup, minor CSS tweaks. Built on free or $50 themes, often with page builders like Elementor or Divi. Expect 40 to 60 PageSpeed mobile because of theme bloat. No custom design, no performance optimization, no SEO migration support. Fine for a personal project. Risky for a business that depends on the website for leads.
+                            <strong>Under $100.</strong> Template installation, basic WordPress setup, minor CSS tweaks. Built on free or $50 themes, often with page builders like Elementor or Divi. Sites at this price point typically <Link href="/blog/how-to-speed-up-your-website" className="text-cognac hover:underline">load in 3 to 5 seconds</Link> and score 40 to 60 on PageSpeed because of theme bloat. No custom design, no performance optimization, no SEO migration support. Fine for a personal project. Risky for a business that depends on the website for leads.
                         </BlogText>
 
                         <BlogText>
@@ -442,7 +442,7 @@ export default function CheapWebDeveloperPage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>$500 to $2,000.</strong> The first tier where custom-coded sites become realistic. Includes agencies offering 90+ PageSpeed guarantees, code ownership, and SEO-friendly architecture. Migration services from WordPress, Wix, or Squarespace to modern stacks like Next.js fall in this range. PandaCodeGen ships Starter sites at $1,500. Custom code at this price exists, but only from agencies running lean operations.
+                            <strong>$500 to $2,000.</strong> The first tier where custom-coded sites become realistic. Includes agencies offering 90+ PageSpeed guarantees, code ownership, and SEO-friendly architecture. <Link href="/blog/website-migration-cost-2026" className="text-cognac hover:underline">Migration services</Link> from WordPress, Wix, or Squarespace to modern stacks like Next.js fall in this range. PandaCodeGen ships Starter sites at $1,500. Custom code at this price exists, but only from agencies running lean operations.
                         </BlogText>
 
                         <BlogText>
@@ -461,7 +461,7 @@ export default function CheapWebDeveloperPage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>Step 2: Vet portfolios by checking live site performance.</strong> Do not trust screenshots. Open every portfolio site in a new tab and run it through <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Google PageSpeed Insights</a>. If the developer&apos;s previous work scores below 50 on mobile, expect similar results for your project. Test the site on a real phone. Check load time. Check responsiveness. Portfolio screenshots lie. Live PageSpeed scores do not.
+                            <strong>Step 2: Vet portfolios by checking live site performance.</strong> Do not trust screenshots. Open every portfolio site in a new tab and run it through <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">Google PageSpeed Insights</Link>. If the developer&apos;s previous work scores below 50 on mobile, expect similar results for your project. Test the site on a real phone. Check load time. Check responsiveness. Portfolio screenshots lie. Live PageSpeed scores do not.
                         </BlogText>
 
                         <BlogText>
@@ -500,7 +500,7 @@ export default function CheapWebDeveloperPage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>Performance guarantees and refund policy.</strong> The best cheap developers offer measurable guarantees: 90+ PageSpeed score, sub-1-second load time, or full refund. Without a guarantee, you absorb 100 percent of the project risk. With a guarantee, the developer has skin in the game. PandaCodeGen guarantees 90 plus PageSpeed on every build with a 100 percent refund if the score is not met.
+                            <strong>Performance guarantees and refund policy.</strong> The best cheap developers offer measurable guarantees: <Link href="/blog/core-web-vitals-explained" className="text-cognac hover:underline">90+ PageSpeed score</Link>, sub-1-second load time, or full refund. Without a guarantee, you absorb 100 percent of the project risk. With a guarantee, the developer has skin in the game. PandaCodeGen guarantees 90 plus PageSpeed on every build with a 100 percent refund if the score is not met.
                         </BlogText>
 
                         <BlogHeader>Front End vs Back End vs Full Stack Cheap Developers</BlogHeader>
@@ -530,19 +530,19 @@ export default function CheapWebDeveloperPage() {
                         </div>
 
                         <BlogText>
-                            <strong>Slow load times that kill conversions.</strong> <a href="https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Google research</a> shows 53% of mobile visitors leave pages that take over 3 seconds to load. A $200 WordPress site that loads in 5 seconds can cost you 20 to 30 percent of conversions every day. The apparent savings disappear when bounce rate doubles and lead volume drops. For an e-commerce site doing $20,000 a month, a 5-second load time costs roughly $4,000 per month in lost revenue compared to a 1-second site. The cheap site costs more by month 2.
+                            <strong>Slow load times that kill conversions.</strong> <a href="https://www.hostinger.com/tutorials/website-load-time-statistics" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Slow load times increase bounce rates by up to 90%</a>. <a href="https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Google research</a> shows 53% of mobile visitors leave pages that take over 3 seconds to load. A $200 WordPress site that loads in 5 seconds can cost you 20 to 30 percent of conversions every day. The apparent savings disappear when bounce rate doubles and lead volume drops. For an e-commerce site doing $20,000 a month, a 5-second load time costs roughly $4,000 per month in lost revenue compared to a 1-second site. The cheap site costs more by month 2.
                         </BlogText>
 
                         <BlogText>
-                            <strong>Plugin and monthly subscription fees.</strong> Cheap WordPress builds often require $50 to $500 per month in plugin subscriptions for forms, SEO, security, caching, and performance. Over 3 years, that is $1,800 to $18,000 in recurring costs on top of the original build price. A $1,500 custom Next.js site with $0 monthly fees is cheaper by year 2 than a $200 WordPress site with $80 a month in plugin costs.
+                            <strong>Plugin and monthly subscription fees.</strong> <Link href="/blog/wordpress-killer" className="text-cognac hover:underline">Cheap WordPress builds</Link> often require $50 to $500 per month in plugin subscriptions for forms, SEO, security, caching, and performance. <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className="text-cognac hover:underline">Over 3 years, that is $1,800 to $18,000 in recurring costs</Link> on top of the original build price. A $1,500 custom Next.js site with $0 monthly fees is cheaper by year 2 than a $200 WordPress site with $80 a month in plugin costs.
                         </BlogText>
 
                         <BlogText>
-                            <strong>Rebuild costs after broken code.</strong> Cheap code often breaks within 1 to 2 years. When it breaks, you pay again to fix or rebuild. The second build typically costs 1.5 to 2 times the original because the new developer has to reverse-engineer or replace the broken work. Budget for rebuild risk on cheap projects: it is the rule, not the exception.
+                            <strong>Rebuild costs after broken code.</strong> Cheap code often breaks within 1 to 2 years, requiring <Link href="/blog/website-rebuild-cost-2026" className="text-cognac hover:underline">complete rebuilds</Link>. When it breaks, you pay again to fix or rebuild. The second build typically costs 1.5 to 2 times the original because the new developer has to reverse-engineer or replace the broken work. Budget for rebuild risk on cheap projects: it is the rule, not the exception.
                         </BlogText>
 
                         <BlogText>
-                            <strong>Lost SEO rankings and organic traffic.</strong> Cheap developers rarely handle 301 redirects, metadata migration, or site structure correctly. A botched migration can tank Google rankings overnight. Recovery takes 3 to 6 months and sometimes never fully comes back. PandaCodeGen migrations preserve 100 percent of Google rankings through complete URL mapping. The Panda Patches WordPress migration moved a 3-year-old site to Next.js with zero ranking drops in Google Search Console.
+                            <strong>Lost SEO rankings and organic traffic.</strong> Cheap developers rarely handle 301 redirects, metadata migration, or site structure correctly. A botched migration can tank Google rankings overnight, since Google uses <a href="https://developers.google.com/search/docs/appearance/core-web-vitals" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Core Web Vitals as a ranking signal</a>. Recovery takes 3 to 6 months and sometimes never fully comes back. PandaCodeGen migrations preserve 100 percent of Google rankings through complete URL mapping. The Panda Patches WordPress migration moved a 3-year-old site to Next.js with zero ranking drops in Google Search Console.
                         </BlogText>
 
                         <BlogHeader>Cheap Web Developer Pricing by Source Platform</BlogHeader>
@@ -615,7 +615,7 @@ export default function CheapWebDeveloperPage() {
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">A cheap web developer ($200 to $2,000) gives you custom code with variable quality. A website builder (Wix, Squarespace) costs $15 to $50 per month with platform lock-in and 40 to 70 PageSpeed ceilings. AI tools like ChatGPT and Framer AI scaffold sites for $0 to $30 per month but produce generic results. Fixed-price agencies starting at $1,500 deliver custom code, ownership, and 90+ PageSpeed guarantees.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">A cheap web developer ($200 to $2,000) gives you custom code with variable quality. A website builder (Wix, <Link href="/blog/squarespace-migration-cost" className="text-cognac hover:underline">Squarespace charges $15 to $50 per month</Link>) with platform lock-in and 40 to 70 PageSpeed ceilings. AI tools like ChatGPT and Framer AI scaffold sites for $0 to $30 per month but produce generic results. Fixed-price agencies starting at $1,500 deliver custom code, ownership, and 90+ PageSpeed guarantees.</p>
                         </div>
 
                         <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
