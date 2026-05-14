@@ -313,7 +313,7 @@ export default function WebflowVsCustomWebsitePage() {
                         <BlogHeader>What a Custom Website Actually Gives You</BlogHeader>
 
                         <BlogText>
-                            &quot;Custom website&quot; sounds expensive and complicated. Five years ago it cost $25,000+ and took 4 to 6 months. AI-assisted development has changed that. Today a custom site starts at $500 Founder Portfolio, lands at $3,500 for Growth-tier builds, and runs $5,000 to $10,000+ for Scale, with most projects shipping in 4 to 8 weeks. Here is what it actually means in practice:
+                            &quot;Custom website&quot; sounds expensive and complicated. Five years ago it cost $25,000+ and took 4 to 6 months. AI-assisted development has changed that. Today a custom site starts at $1,500 Starter, lands at $3,500 for Growth-tier builds, and runs $5,000 to $10,000+ for Scale, with most projects shipping in 4 to 8 weeks. Here is what it actually means in practice:
                         </BlogText>
 
                         <BlogText>

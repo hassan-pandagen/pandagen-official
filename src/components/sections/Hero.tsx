@@ -70,7 +70,7 @@ export default function Hero() {
             </span>
             .{" "}
             <span className="text-charcoal font-bold" style={{ color: "#1C1917", fontWeight: 700 }}>
-              Fixed pricing from $500.
+              Fixed pricing from $1,500.
             </span>{" "}
             No monthly fees. No plugin updates. No vendor lock-in.
           </p>

@@ -203,7 +203,7 @@ export default function SquarespaceMinCostPage() {
                             "Squarespace's real annual cost is $552 to $1,992 depending on plan, email, and extensions. Most businesses undercount by 40 to 60%.",
                             "E-commerce businesses on the Basic plan also pay a 2% transaction fee on every sale, on top of Stripe's 2.9% + 30 cents.",
                             "Squarespace sites average 8.79 seconds LCP on mobile. Google's passing threshold is 2.5 seconds. That gap costs rankings.",
-                            "A Squarespace migration to custom Next.js runs $500 Founder Portfolio Pick for a core page rebuild, $3,500+ Growth for most 10 to 20 page sites, or $5,000 to $10,000+ Scale for larger e-commerce or booking workflows.",
+                            "A Squarespace migration to custom Next.js runs $1,500 Starter for 5 to 7 page sites, $3,500+ Growth for most 10 to 20 page sites, or $5,000 to $10,000+ Scale for larger e-commerce or booking workflows.",
                             "Most businesses recover migration costs in 2 to 4 years through hosting savings and improved organic traffic."
                         ]} />
                     </div>
@@ -668,13 +668,12 @@ export default function SquarespaceMinCostPage() {
                         <BlogList items={[
                             "Under $400: template installations on Wix, WordPress free themes, or other Squarespace clones. Not a migration. You are paying someone to set up a free template and copy paste your content. Quality is unpredictable, no SEO preservation, no PageSpeed guarantee.",
                             "$400 to $1,500: Upwork or Fiverr freelancers handling content migration to WordPress, Webflow, or basic Shopify. Variable quality. Some are excellent, most are template-heavy. Vet portfolios by running their past work through Google PageSpeed Insights before hiring.",
-                            "$500 PandaCodeGen Founder&apos;s Offer: full custom Next.js migration for qualifying small Squarespace sites. 3 spots per month. Requirements: under 15 pages, no e-commerce, commit to a verified Google or Clutch review after launch. Same architecture as full-price clients with a written 90+ PageSpeed guarantee.",
                             "$1,500 to $3,500: starter and growth tier custom code migrations from boutique studios. PandaCodeGen Starter at $1,500 covers 5 to 7 page sites. Growth at $3,500 covers 10 to 20 pages with Sanity CMS and full SEO migration.",
                             "$3,500 to $10,000: mid-size Squarespace sites with custom integrations, e-commerce, or larger content libraries. Includes content migration, schema markup, 301 redirects for every URL, and Google Search Console handover."
                         ]} />
 
                         <BlogText>
-                            For most service businesses leaving Squarespace, the math points to either the Founder&apos;s Offer (if you qualify) or the $1,500 Starter tier. Going below $400 saves money upfront but the rebuild quality usually forces a second migration within 12 to 18 months, which means paying twice. The cheapest migration that lasts is the one done correctly the first time.
+                            For most service businesses leaving Squarespace, the math points to the $1,500 Starter tier. Going below $400 saves money upfront but the rebuild quality usually forces a second migration within 12 to 18 months, which means paying twice. The cheapest migration that lasts is the one done correctly the first time.
                         </BlogText>
 
                         <BlogHeader>Questions to Ask Any Agency Before You Sign</BlogHeader>

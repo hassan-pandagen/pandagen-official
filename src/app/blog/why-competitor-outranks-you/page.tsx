@@ -473,7 +473,7 @@ export default function CompetitorRankingsPage() {
                         </BlogText>
 
                         <BlogList items={[
-                            "One-time cost: $500 Founder Portfolio, $3,500+ Growth, or $5,000 to $10,000+ Scale depending on scope",
+                            "One-time cost: $1,500 Starter, $3,500+ Growth, or $5,000 to $10,000+ Scale depending on scope",
                             "Hosting: $0-$20/month (saves $1,200-$4,800/year)",
                             "Load time: 0.8-1.5 seconds (3× faster than WordPress)",
                             "Google rankings: Jump 15-30 positions within 60-90 days",

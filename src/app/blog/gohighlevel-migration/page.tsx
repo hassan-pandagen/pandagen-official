@@ -366,7 +366,7 @@ export default function GoHighLevelMigrationPage() {
                         <BlogHeader>What This Costs and How Long It Takes</BlogHeader>
 
                         <BlogText>
-                            We are running a founder&apos;s offer right now. <BlogHighlight>$500 for a complete front end rebuild.</BlogHighlight> That covers your entire website. Design, build, testing, DNS transfer, redirect mapping, and GHL integration.
+                            Our GHL front-end rebuilds start at $1,500 (Starter, 5 to 7 pages) or $3,500 (Growth, 10 to 20 pages). That covers your entire website. Design, build, testing, DNS transfer, redirect mapping, and GHL integration.
                         </BlogText>
 
                         <BlogText>
@@ -374,8 +374,8 @@ export default function GoHighLevelMigrationPage() {
                         </BlogText>
 
                         <BlogList items={[
-                            "$500 total. Fixed price. Not $500 per page. Not $500 plus hourly billing. $500 for the whole project.",
-                            "30% upfront ($150 on the founder's offer), the rest after the site is live and you've tested everything. If it does not score 95+ on Google PageSpeed, you do not pay the balance.",
+                            "$1,500 (Starter) total. Fixed price. Not per page. Not plus hourly billing. One quoted price for the whole project.",
+                            "30% upfront ($450 on Starter), the rest after the site is live and you've tested everything. If it does not score 95+ on Google PageSpeed, you do not pay the balance.",
                             "No monthly platform fees for your website. You currently pay $297 per month for GHL Unlimited. You will still use GHL for CRM and automations, but you will no longer need GHL for your website. That is up to $3,564 per year you stop spending on a slow website builder.",
                             "The timeline is 3 to 4 weeks from kickoff to launch. We handle everything. You review the design, give feedback, and approve the final build."
                         ]} />
@@ -400,7 +400,7 @@ export default function GoHighLevelMigrationPage() {
                                 <li><strong>Slow GHL pages destroy your ad ROI</strong>: Google Ads Quality Scores of 2 to 4 out of 10 mean you pay 70% more per click. A business spending $3,000/month on ads wastes roughly $14,400 per year on inflated click costs.</li>
                                 <li><strong>You do not have to leave GoHighLevel</strong>: Keep GHL for CRM, automations, pipelines, and email. Replace only the website front end. Your forms still feed into GHL. Nothing changes on the backend.</li>
                                 <li><strong>A custom front end loads under 1 second and scores 95+</strong>: Quality Scores jump to 7 to 10. Conversion rates improve because visitors actually see your page before they leave.</li>
-                                <li><strong>The founder&apos;s offer is $500 with a speed guarantee</strong>: 3 to 4 weeks, fixed price, 30% upfront and the rest after launch. If it does not score 95+, you do not pay the balance.</li>
+                                <li><strong>Starter starts at $1,500 with a speed guarantee</strong>: 3 to 4 weeks, fixed price, 30% upfront and the rest after launch. If it does not score 95+, you do not pay the balance.</li>
                             </ol>
                         </section>
                     </div>

@@ -551,9 +551,8 @@ export default function HowToSpeedUpYourWebsitePage() {
                             "90+ PageSpeed Mobile guaranteed or full refund",
                             "Sub-1-second load times via static and edge rendering on Vercel",
                             "Fixed pricing: Starter $1,500, Growth $3,500, Scale $5,000 to $10,000",
-                            "Founder's Offer: $500 for qualifying small migrations (3 spots per month)",
                             "Zero monthly platform fees: you own the code and the hosting",
-                            "Timeline: 3 to 5 weeks for most business sites, 1 week for Founder's Offer",
+                            "Timeline: 1 to 2 weeks for Starter, 3 to 5 weeks for Growth, 4 to 6 weeks for Scale",
                             "30 days post-launch monitoring and optimization included"
                         ]} />
 

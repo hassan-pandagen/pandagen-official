@@ -207,7 +207,7 @@ export default function ShopifyStockySunset2026Page() {
                             <li><strong>Shopify&apos;s recommended swap:</strong> native Shopify inventory in Admin and POS. Covers basic tracking only.</li>
                             <li><strong>Third-party fixes:</strong> Sumtracker, Fabrikator, Prediko, Ordoro, Inflow, Finaloop. $99 to $300 per month, ongoing.</li>
                             <li><strong>The long-term fix:</strong> custom headless Shopify with your own inventory database. You own the code and the data. Nothing gets sunset unless you sunset it.</li>
-                            <li><strong>Cost to rebuild properly:</strong> $3,500 to $6,000 Growth tier for typical stores. $500 Founder&apos;s Offer for qualifying small stores.</li>
+                            <li><strong>Cost to rebuild properly:</strong> $1,500 Starter for simple stores. $3,500 to $6,000 Growth tier for typical stores.</li>
                         </ul>
                     </div>
 
@@ -454,10 +454,6 @@ export default function ShopifyStockySunset2026Page() {
                             Timeline is 3 to 6 weeks from kickoff to cutover depending on tier and integration complexity. For stores that have already lost min-max alerts since July 2025 or have been running on Stocky&apos;s last legs, we front-load the 14-day recovery playbook above and keep building the full system in parallel so the critical inventory flows come back online first.
                         </BlogText>
 
-                        <BlogText>
-                            Qualifying small businesses can apply for our Founder Migration: $500 for a full Shopify rebuild including basic custom inventory, in exchange for a verified Google or Clutch review after launch. The requirements are tight (under 15 pages, no e-commerce complexity, qualifying source platform), but the offer is real. Three spots per month. Two remain for April 2026 at the time of writing.
-                        </BlogText>
-
                         <BlogHeader>The Pattern Here Is Bigger Than Stocky</BlogHeader>
 
                         <BlogText>
@@ -491,7 +487,7 @@ export default function ShopifyStockySunset2026Page() {
                             <li><strong>Sumtracker, Fabrikator, Prediko, and Ordoro are short-term patches, not long-term fixes.</strong> They cover the feature gaps but carry the same SaaS sunset risk that just killed Stocky. Custom headless inventory is the permanent answer.</li>
                             <li><strong>The 3-year math favors custom for serious operations.</strong> $99 to $300 per month inventory SaaS over three years is $3,500 to $11,000. Custom build is $3,500 to $6,000 once and $45 per month forever after. Year four onward, the custom path saves real money.</li>
                             <li><strong>The 14-day recovery playbook gets broken stores back online before August 31.</strong> Data export, emergency dashboard, feature parity build, integration and handoff. Most operations come back in two weeks. Most data is preserved. Stocky subscription stops.</li>
-                            <li><strong>Pricing sits at $3,500 to $6,000 Growth tier for most Stocky migrations.</strong> $500 Founder Migration is available for qualifying small stores. Enterprise consultancies quote 5 to 15x more for the same scope.</li>
+                            <li><strong>Pricing sits at $3,500 to $6,000 Growth tier for most Stocky migrations.</strong> Enterprise consultancies quote 5 to 15x more for the same scope.</li>
                         </ol>
                     </section>
 

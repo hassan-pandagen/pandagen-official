@@ -432,7 +432,7 @@ export default function WixVsCustomWebsitePage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>The real cost:</strong> A Wix to custom Next.js migration starts at $500 Founder Portfolio Pick for a landing page rebuild, lands at $3,500+ Growth for most 5 to 30 page business sites, and runs $5,000 to $10,000+ Scale for larger catalogs or booking/e-commerce workflows. That sounds expensive until you compare it to what you are already paying. If your Wix bill (plan + apps + add-ons) is $100/month, that is $1,200/year or $3,600 over 3 years. A custom site hosted on Vercel starts free and only scales to $20/month when your business grows. The migration pays for itself in hosting savings alone within 18 to 24 months. Add the revenue gained from better PageSpeed scores and higher Google rankings, and payback is often under 12 months.
+                            <strong>The real cost:</strong> A Wix to custom Next.js migration starts at $1,500 Starter for 5 to 7 page sites, lands at $3,500+ Growth for most 5 to 30 page business sites, and runs $5,000 to $10,000+ Scale for larger catalogs or booking/e-commerce workflows. That sounds expensive until you compare it to what you are already paying. If your Wix bill (plan + apps + add-ons) is $100/month, that is $1,200/year or $3,600 over 3 years. A custom site hosted on Vercel starts free and only scales to $20/month when your business grows. The migration pays for itself in hosting savings alone within 18 to 24 months. Add the revenue gained from better PageSpeed scores and higher Google rankings, and payback is often under 12 months.
                         </BlogText>
 
                         {/* === SECTION 6: What Custom Gives You === */}
@@ -551,7 +551,7 @@ export default function WixVsCustomWebsitePage() {
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
                                         <td className="p-3 border border-stone-300 font-medium">Build cost</td>
                                         <td data-label="Wix (3 years)" className="p-3 border border-stone-300">$0 (DIY) or $500 to $2,000 (designer)</td>
-                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-300">$500 (Founder&apos;s Offer) to $10,000 (Scale), one-time</td>
+                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-300">$1,500 (Starter) to $10,000 (Scale), one-time</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
                                         <td className="p-3 border border-stone-300 font-bold">3-Year Total</td>

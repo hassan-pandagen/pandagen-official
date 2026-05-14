@@ -541,24 +541,24 @@ export default function SquarespacePageContent() {
         agencyComparison={{
           agencyPrice: "$10K to $30K+",
           agencyNote: "6-10 week timeline. Hourly billing. Squarespace subscription continues.",
-          ourPrice: "From $500",
+          ourPrice: "From $1,500",
           ourNote: "2-3 week timeline. Fixed price. No platform fees. You own the code.",
         }}
         tiers={[
           {
-            tier: "Founder&apos;s Offer",
-            price: "Starting from $500",
-            timeline: "1 week",
-            fit: "Simple Squarespace site. 5-15 pages, portfolio or brochure. Founder's offer.",
+            tier: "Starter",
+            price: "Starting from $1,500",
+            timeline: "1 to 2 weeks",
+            fit: "Simple Squarespace site. 5-15 pages, portfolio or brochure. Starter tier.",
             includes: [
               "Full Squarespace content export + migration",
               "Custom Next.js build matching your design",
               "Sanity CMS for content editing",
               "95+ PageSpeed guaranteed",
               "301 redirect mapping",
-              "Case study in exchange for public review",
+              "Free month of post-launch tweaks",
             ],
-            cta: "Claim Founder Rate",
+            cta: "Get Starter Quote",
           },
           {
             tier: "Growth",

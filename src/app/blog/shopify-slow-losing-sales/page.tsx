@@ -197,7 +197,7 @@ export default function ShopifySlowPage() {
                         <BlogList items={[
                             "Average Shopify store doing $500K/year loses $75K-$150K annually due to slow load times",
                             "Every 0.1 second delay costs roughly 8% of conversions (Deloitte). A 1-second gap compounds to a material revenue hit.",
-                            "A fast custom storefront runs $3,500+ Growth or $5,000 to $10,000+ Scale, with a $500 Founder Portfolio entry point. It pays for itself in 30 to 90 days through increased conversions.",
+                            "A fast custom storefront runs $1,500+ Starter, $3,500+ Growth, or $5,000 to $10,000+ Scale. It pays for itself in 30 to 90 days through increased conversions.",
                             "Fix your speed now, not later. You're bleeding money every single day."
                         ]} />
                     </div>
@@ -384,7 +384,7 @@ export default function ShopifySlowPage() {
                         <BlogHeader>How Quickly Does a Custom Shopify Storefront Pay for Itself?</BlogHeader>
 
                         <BlogText>
-                            A <Link href="/services/ecommerce" className="text-cognac hover:underline">custom fast storefront</Link> starts at $500 Founder Portfolio, lands in the <Link href="/pricing" className="text-cognac hover:underline">$3,500 Growth tier</Link> for most mid-sized stores, and scales to $5,000 to $10,000+ for larger catalogs.
+                            A <Link href="/services/ecommerce" className="text-cognac hover:underline">custom fast storefront</Link> starts at $1,500 Starter, lands in the <Link href="/pricing" className="text-cognac hover:underline">$3,500 Growth tier</Link> for most mid-sized stores, and scales to $5,000 to $10,000+ for larger catalogs.
                         </BlogText>
 
                         <BlogText>

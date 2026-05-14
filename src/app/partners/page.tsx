@@ -44,7 +44,7 @@ export default function PartnersPage() {
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
         "serviceType": ["White-Label Web Development", "Agency Partnership", "Custom Web Development", "Outsourced Development", "Referral Partner Program", "Joint Venture Partnership"],
-        "priceRange": "$500 - $25,000",
+        "priceRange": "$1,500 - $25,000",
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "Partnership Tiers",

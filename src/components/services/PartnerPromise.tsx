@@ -72,7 +72,7 @@ export default function PartnerPromise() {
                         },
                         {
                             title: "Fixed pricing, no scope creep",
-                            desc: "Founder's Offer $500, Starter $1,500, Growth $3,500, Scale $5,000 to $10,000. Quoted upfront, paid in milestones, no hidden fees ever.",
+                            desc: "Starter $1,500, Growth $3,500, Scale $5,000 to $10,000, Scale+ $10,000+. Quoted upfront, paid in milestones, no hidden fees ever.",
                         },
                     ].map((item, i) => (
                         <motion.div

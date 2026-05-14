@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     q: "How much does a custom Shopify storefront cost?",
-    a: "Typical agencies charge $30,000 to $60,000 and take 8 to 12 weeks. We meet you halfway. Founder&apos;s Offer stores start at $500 (our founder's offer for small catalogs with public case study exchange). Growth builds start at $3,500 (30-100 products, custom features). Scale builds start at $12,000 (subscriptions, custom logic, large catalogs). Most clients recover the investment within 4 to 6 months through eliminated app fees and conversion lift."
+    a: "Typical agencies charge $30,000 to $60,000 and take 8 to 12 weeks. We meet you halfway. Starter stores start at $1,500 (small catalogs, basic Shopify Storefront API). Growth builds start at $3,500 (30-100 products, custom features). Scale builds start at $12,000 (subscriptions, custom logic, large catalogs). Most clients recover the investment within 4 to 6 months through eliminated app fees and conversion lift."
   },
 ];
 
@@ -459,7 +459,7 @@ export default function PageContent() {
             </div>
             <div className="p-5 md:p-6 rounded-2xl bg-white border border-emerald-300 text-center shadow-card">
               <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-emerald-600 mb-2">PandaCodeGen</p>
-              <p className="text-2xl md:text-3xl font-black text-emerald-600 tracking-tight leading-none">From $500</p>
+              <p className="text-2xl md:text-3xl font-black text-emerald-600 tracking-tight leading-none">From $1,500</p>
               <p className="text-xs text-stone-500 mt-2 leading-relaxed">3 week timeline. Fixed price. You own 100% of the code.</p>
             </div>
           </div>
@@ -467,20 +467,20 @@ export default function PageContent() {
           <div className="grid md:grid-cols-3 gap-5">
             {[
               {
-                tier: "Founder&apos;s Offer",
-                price: "Starting from $500",
-                timeline: "1 week",
-                fit: "Small catalog, simple migration. Our founder's offer to prove the relationship.",
+                tier: "Starter",
+                price: "Starting from $1,500",
+                timeline: "1 to 2 weeks",
+                fit: "Small catalog, simple migration. Our Starter tier.",
                 includes: [
                   "Custom Next.js storefront up to 20 products",
                   "Shopify Storefront API integration",
                   "Mobile-first responsive design",
                   "90+ PageSpeed guaranteed",
                   "Sanity CMS for content",
-                  "Case study in exchange for public review",
+                  "Free month of post-launch tweaks",
                 ],
                 featured: false,
-                cta: "Claim Founder Rate",
+                cta: "Get Starter Quote",
               },
               {
                 tier: "Growth",

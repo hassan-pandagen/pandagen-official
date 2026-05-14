@@ -88,24 +88,11 @@ const pricingSchema = {
       "seller": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization" }
     },
     {
-      "@type": "Offer",
-      "@id": "https://www.pandacodegen.com/pricing#offer-founders",
-      "name": "Founder's Offer",
-      "description": "Qualification-gated full migration at $500, normally $5,000+. Three spots per month. Requirements: source platform is WordPress, Webflow, Wix, Squarespace, or GoHighLevel; site is under 15 pages with no e-commerce or complex integrations; you provide a verified Google or Clutch review after launch; you are available for fast feedback during the 1-week build. Same custom Next.js architecture as full-price clients.",
-      "price": "500",
-      "priceCurrency": "USD",
-      "priceValidUntil": "2026-12-31",
-      "availability": "https://schema.org/LimitedAvailability",
-      "url": "https://www.pandacodegen.com/pricing",
-      "seller": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization" }
-    },
-    {
       "@type": "FAQPage",
       "@id": "https://www.pandacodegen.com/pricing#faq",
       "mainEntity": [
         { "@type": "Question", "name": "Which tier should I start with?", "acceptedAnswer": { "@type": "Answer", "text": "Most business rebuilds land in the Growth tier from $3,500: 10 to 20 pages, Sanity CMS, full blog migration with 301 redirects. Starter ($1,500+) is for simpler 5 to 7 page business sites. Scale ($5,000 to $10,000+) is for headless e-commerce, 30+ pages, and custom integrations. Bigger scope is handled in Scale+ with a custom quote after a scoping call." } },
         { "@type": "Question", "name": "How does the deposit model work?", "acceptedAnswer": { "@type": "Answer", "text": "You pay 30% upfront to secure your engineering sprint and lock in your timeline. The remaining 70% is due on launch day, after you've seen the finished product and approved it." } },
-        { "@type": "Question", "name": "What is the $500 Founder's Offer?", "acceptedAnswer": { "@type": "Answer", "text": "A $500 full migration (normally $5,000+) for businesses that meet four requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel; it is under 15 pages with no e-commerce or complex integrations; you agree to a verified Google or Clutch review after launch; and you are available for fast feedback during the 1-week build. Three spots per month. Same custom Next.js architecture as full-price clients. We pick based on fit, not first-come-first-served." } },
         { "@type": "Question", "name": "Do you do retainers after launch?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Most clients keep us on for ongoing updates ($500/mo) or priority new feature development at discounted rates." } },
         { "@type": "Question", "name": "Why is your price higher than a freelancer?", "acceptedAnswer": { "@type": "Answer", "text": "Because we're not building templates. We're building assets. Clients typically see their investment pay for itself within 6 to 12 months through faster load times, higher conversion rates, and eliminated plugin fees." } },
         { "@type": "Question", "name": "What if my project is bigger than Scale?", "acceptedAnswer": { "@type": "Answer", "text": "Scale+ is for enterprise scope, multi-region e-commerce, custom SaaS platforms, and complex integrations. We cannot quote without understanding the work, so we scope it together on a call. Book a discovery call and tell us what you need." } },
@@ -356,97 +343,6 @@ export default function PricingPageClient() {
           </div>
         </motion.div>
 
-        {/* Founder's Offer full card */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-6 max-w-5xl mx-auto"
-        >
-          <div className="rounded-3xl bg-[#0C0A09] text-white shadow-2xl shadow-stone-900/30 overflow-hidden">
-            {/* Top bar: badge + spots tracker */}
-            <div className="flex flex-wrap items-center justify-between gap-3 px-6 md:px-10 pt-6 md:pt-8">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cognac/15 border border-cognac/30">
-                <span className="w-2 h-2 rounded-full bg-cognac animate-pulse"></span>
-                <span className="text-[11px] font-bold uppercase tracking-widest text-cognac">Founder Offer · April 2026</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="flex gap-1.5">
-                  <span className="w-2.5 h-2.5 rounded-full bg-cognac" aria-label="filled slot"></span>
-                  <span className="w-2.5 h-2.5 rounded-full border border-stone-500 bg-transparent" aria-label="open slot"></span>
-                  <span className="w-2.5 h-2.5 rounded-full border border-stone-500 bg-transparent" aria-label="open slot"></span>
-                </div>
-                <span className="text-xs font-bold text-stone-300">2 spots left</span>
-              </div>
-            </div>
-
-            {/* Body grid */}
-            <div className="grid md:grid-cols-2 gap-8 md:gap-12 px-6 md:px-10 py-8 md:py-10">
-              {/* Left column: pricing + hook + CTA */}
-              <div>
-                <div className="flex items-end gap-3 mb-4">
-                  <span className="text-6xl md:text-7xl font-black text-white leading-none">$500</span>
-                  <div className="flex flex-col">
-                    <span className="text-sm text-stone-500 line-through">$5,000+</span>
-                    <span className="text-sm font-bold text-cognac">Full migration</span>
-                  </div>
-                </div>
-
-                <h3 className="text-2xl md:text-3xl font-bold text-white leading-tight mb-1">We migrate your site.</h3>
-                <h3 className="text-2xl md:text-3xl font-serif italic text-cognac leading-tight mb-5">You leave us a review.</h3>
-
-                <p className="text-sm text-stone-300 leading-relaxed mb-6">
-                  We are selecting 3 businesses this month for a discounted migration. Custom Next.js build, 95+ PageSpeed guaranteed, zero downtime launch. In exchange, we ask for an honest verified review after launch.
-                </p>
-
-                {/* 3 feature badges */}
-                <div className="flex flex-wrap gap-4 mb-8">
-                  <div className="flex items-center gap-2">
-                    <Zap className="w-4 h-4 text-cognac shrink-0" />
-                    <span className="text-xs font-bold text-stone-300">Delivered in 1 week</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Clock className="w-4 h-4 text-cognac shrink-0" />
-                    <span className="text-xs font-bold text-stone-300">95+ PageSpeed guaranteed</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <ShieldCheck className="w-4 h-4 text-cognac shrink-0" />
-                    <span className="text-xs font-bold text-stone-300">You own the code</span>
-                  </div>
-                </div>
-
-                <button
-                  data-cal-namespace="discovery"
-                  data-cal-link="pandagen/discovery"
-                  data-cal-config='{"layout":"month_view"}'
-                  className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-cognac text-white font-bold rounded-full text-sm hover:bg-cognac/90 transition-all shadow-lg shadow-cognac/20"
-                >
-                  Apply for a Spot
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-              </div>
-
-              {/* Right column: requirements */}
-              <div>
-                <p className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-5">Requirements to Qualify</p>
-
-                <ul className="space-y-4 mb-6">
-                  <RequirementRow text="Your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel" />
-                  <RequirementRow text="Under 15 pages (no e-commerce or complex integrations)" />
-                  <RequirementRow text="You can provide a verified review on Google or Clutch after launch" />
-                  <RequirementRow text="You are available to give fast feedback during the build week" />
-                </ul>
-
-                <div className="p-4 rounded-xl bg-white/5 border border-white/10">
-                  <p className="text-xs text-stone-300 leading-relaxed">
-                    This is not a template build. You get the same custom Next.js architecture we deliver to full-price clients. The only difference is the price, and we ask for an honest review in return.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
         {/* Hourly / Retainer Option */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
@@ -650,7 +546,6 @@ export default function PricingPageClient() {
         <div className="space-y-6">
           <FAQ q="Which tier should I start with?" a="Most business rebuilds land in the Growth tier from $3,500: 10 to 20 pages, Sanity CMS, full blog migration with 301 redirects. Starter ($1,500+) is for simpler 5 to 7 page business sites. Scale ($5,000 to $10,000+) is for headless e-commerce, 30+ pages, and custom integrations. Bigger scope is handled in Scale+ with a custom quote after a scoping call." />
           <FAQ q="How does the deposit model work?" a="You pay 30% upfront to secure your engineering sprint and lock in your timeline. The remaining 70% is due on launch day, after you've seen the finished product and approved it." />
-          <FAQ q="What is the $500 Founder's Offer?" a="A $500 full migration (normally $5,000+) for businesses that meet four requirements: your site is on WordPress, Webflow, Wix, Squarespace, or GoHighLevel; it is under 15 pages with no e-commerce or complex integrations; you agree to a verified Google or Clutch review after launch; and you are available for fast feedback during the 1-week build. Three spots per month. Same custom Next.js architecture as full-price clients. We pick based on fit, not first-come-first-served." />
           <FAQ q="What if my project is bigger than Scale?" a="Scale+ is for enterprise scope, multi-region e-commerce, custom SaaS platforms, and complex integrations. We cannot quote without understanding the work, so we scope it together on a call. Book a discovery call and tell us what you need." />
           <FAQ q="Do you do retainers after launch?" a="Yes. Most clients keep us on for ongoing updates ($500/mo) or priority new feature development at discounted rates." />
           <FAQ q="Why not just hire a freelancer on Upwork or Fiverr?" a="A freelancer gives you a file. We give you a system. Our builds include architecture review, SEO preservation, performance guarantees, 30 days of post-launch support, and full IP handover to your accounts. Freelancers disappear after delivery. We don't, and we have the case studies to prove it." />
@@ -672,17 +567,6 @@ function Feature({ text, dark }: { text: string; dark?: boolean }) {
       <span className={`text-sm font-medium ${dark ? "text-stone-300" : "text-stone-600"}`}
         dangerouslySetInnerHTML={{ __html: text }}
       />
-    </li>
-  );
-}
-
-function RequirementRow({ text }: { text: string }) {
-  return (
-    <li className="flex items-start gap-3">
-      <span className="shrink-0 mt-0.5 w-5 h-5 rounded-full border border-cognac/40 flex items-center justify-center">
-        <Check className="w-3 h-3 text-cognac" />
-      </span>
-      <span className="text-sm text-stone-300 leading-relaxed">{text}</span>
     </li>
   );
 }

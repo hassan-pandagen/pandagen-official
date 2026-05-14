@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     q: "How much does a WordPress to Next.js migration cost?",
-    a: "Typical agencies charge $15,000 to $40,000 and take 8-12 weeks. We meet you halfway. Three tiers: Founder&apos;s Offer starts at $500 (simple sites, founder's offer with public case study exchange). Growth starts at $3,500 (15-50 pages, custom features). Scale starts at $12,000 (complex sites, WooCommerce, integrations). Most clients recover the investment within 3 to 6 months through eliminated hosting, plugin licenses, and maintenance fees."
+    a: "Typical agencies charge $15,000 to $40,000 and take 8-12 weeks. We meet you halfway. Three tiers: Starter starts at $1,500 (5 to 7 pages, custom Next.js, 90+ PageSpeed). Growth starts at $3,500 (15-50 pages, custom features). Scale starts at $12,000 (complex sites, WooCommerce, integrations). Most clients recover the investment within 3 to 6 months through eliminated hosting, plugin licenses, and maintenance fees."
   },
   {
     q: "Can I still edit my website after migration?",
@@ -335,7 +335,7 @@ export default function PageContent() {
           <div className="mt-8 p-6 bg-charcoal text-white rounded-2xl text-center">
             <p className="text-lg font-bold mb-2">Stuck between $1K Upwork templates and $100K agency quotes? That is the gap we built PandaCodeGen for.</p>
             <p className="text-stone-400 text-sm mb-4 max-w-2xl mx-auto">
-              We migrate WordPress sites to custom Next.js for $500 to $10,000 with 90+ PageSpeed guaranteed or 100% refund. No plugin subscriptions. No WPEngine bill. Full code ownership on day one.
+              We migrate WordPress sites to custom Next.js for $1,500 to $10,000 with 90+ PageSpeed guaranteed or 100% refund. No plugin subscriptions. No WPEngine bill. Full code ownership on day one.
             </p>
             <a href="#pricing" className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
               See Migration Pricing →
@@ -430,24 +430,24 @@ export default function PageContent() {
         agencyComparison={{
           agencyPrice: "$15K to $40K+",
           agencyNote: "8-12 week timeline. Hourly billing. Plugin bloat carries over.",
-          ourPrice: "From $500",
+          ourPrice: "From $1,500",
           ourNote: "3 week timeline. Fixed price. You own 100% of the code.",
         }}
         tiers={[
           {
-            tier: "Founder&apos;s Offer",
-            price: "Starting from $500",
-            timeline: "1 week",
-            fit: "Simple WordPress site. Brochure, small blog. Our founder's offer.",
+            tier: "Starter",
+            price: "Starting from $1,500",
+            timeline: "1 to 2 weeks",
+            fit: "Simple WordPress site. Brochure, small blog. Our Starter tier.",
             includes: [
               "Full WordPress content export + cleanup",
               "Custom Next.js build up to 15 pages",
               "Sanity CMS so your team can edit",
               "90+ PageSpeed guaranteed",
               "301 redirect mapping (no SEO loss)",
-              "Case study in exchange for public review",
+              "Free month of post-launch tweaks",
             ],
-            cta: "Claim Founder Rate",
+            cta: "Get Starter Quote",
           },
           {
             tier: "Growth",

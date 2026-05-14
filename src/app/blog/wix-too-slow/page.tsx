@@ -471,7 +471,7 @@ export default function WixTooSlowPage() {
                         <Zap className="w-8 h-8 text-amber-400 mx-auto mb-4" />
                         <h2 className="text-2xl font-bold mb-3">Your Wix Site Can Score 95+ on Google (PageSpeed)</h2>
                         <p className="text-[var(--muted)] mb-6 max-w-lg mx-auto">
-                            We migrate Wix sites to custom Next.js. The result: 95 to 100 on Google&apos;s speed test (PageSpeed). Under 1-second load time. Vercel hosting that starts free and only scales to $20/month when your business grows. Founder engagements start at $500. Most 10 to 30 page migrations land in our $3,500 Growth tier. If the new site does not score 95 or higher, you do not pay the balance.
+                            We migrate Wix sites to custom Next.js. The result: 95 to 100 on Google&apos;s speed test (PageSpeed). Under 1-second load time. Vercel hosting that starts free and only scales to $20/month when your business grows. Starter engagements start at $1,500 (5 to 7 pages). Most 10 to 30 page migrations land in our $3,500 Growth tier. If the new site does not score 95 or higher, you do not pay the balance.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-semibold px-6 py-3 rounded-xl transition-colors">
                             Get Your Free Speed Audit
@@ -589,9 +589,9 @@ export default function WixTooSlowPage() {
                     </BlogText>
 
                     {/* H2 8 */}
-                    <BlogHeader>How We Migrate Wix Sites to Next.js (Starting at $500)</BlogHeader>
+                    <BlogHeader>How We Migrate Wix Sites to Next.js (Starting at $1,500)</BlogHeader>
                     <BlogText>
-                        The main thing that stops business owners from leaving Wix is the migration process. Wix does not have an export button. There is no plugin that moves your design to another platform. Every page needs to be rebuilt. Engagements start at $500 for a Founder scope. Most 10 to 30 page Wix migrations land in our $3,500 Growth tier.
+                        The main thing that stops business owners from leaving Wix is the migration process. Wix does not have an export button. There is no plugin that moves your design to another platform. Every page needs to be rebuilt. Engagements start at $1,500 for a Starter scope. Most 10 to 30 page Wix migrations land in our $3,500 Growth tier.
                     </BlogText>
                     <BlogText>
                         Here is exactly what that includes.
@@ -625,7 +625,7 @@ export default function WixTooSlowPage() {
                             <li className="flex gap-3"><span className="text-amber-400 font-bold shrink-0">2.</span><span>48% of Wix sites fail Core Web Vitals. The best-case Google score (PageSpeed) on mobile with full optimization is around 83. Custom Next.js sites consistently reach 95 to 100.</span></li>
                             <li className="flex gap-3"><span className="text-amber-400 font-bold shrink-0">3.</span><span>Wix Studio is measurably slower than the standard editor. Blog pages regularly load in 15+ seconds on mobile. Lazy loading is broken in Studio as of early 2026.</span></li>
                             <li className="flex gap-3"><span className="text-amber-400 font-bold shrink-0">4.</span><span>A 2-second mobile delay causes 87% cart abandonment. If you are running an e-commerce store on Wix, this is directly reducing your revenue every day the site stays slow.</span></li>
-                            <li className="flex gap-3"><span className="text-amber-400 font-bold shrink-0">5.</span><span>Leaving Wix requires a complete rebuild because Wix does not export design or layout files. We do the full rebuild for $500 with a 95+ Google score guarantee or you do not pay.</span></li>
+                            <li className="flex gap-3"><span className="text-amber-400 font-bold shrink-0">5.</span><span>Leaving Wix requires a complete rebuild because Wix does not export design or layout files. We do the full rebuild starting at $1,500 (Starter) with a 95+ Google score guarantee or you do not pay.</span></li>
                         </ol>
                     </div>
 
@@ -633,7 +633,7 @@ export default function WixTooSlowPage() {
                     <div className="bg-gradient-to-br from-amber-500/10 to-orange-500/10 border border-amber-500/30 rounded-2xl p-8 my-6 md:my-10 text-center">
                         <h2 className="text-2xl font-bold mb-3">Stop Optimizing. Start Migrating.</h2>
                         <p className="text-[var(--muted)] mb-6 max-w-xl mx-auto text-sm">
-                            You have hit the Wix ceiling. No more optimization is going to get you to 95. The only path to a fast Wix site is a site that is not on Wix. We migrate you for $500, guarantee a 95+ Google score (PageSpeed), and host it on Vercel starting free (you only scale to $20/month when your business grows). Book a free 20-minute call to see exactly what the migration would involve for your site.
+                            You have hit the Wix ceiling. No more optimization is going to get you to 95. The only path to a fast Wix site is a site that is not on Wix. We migrate you starting at $1,500 (Starter), guarantee a 95+ Google score (PageSpeed), and host it on Vercel starting free (you only scale to $20/month when your business grows). Book a free 20-minute call to see exactly what the migration would involve for your site.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-3 justify-center">
                             <CalModalButton className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-semibold px-6 py-3 rounded-xl transition-colors">

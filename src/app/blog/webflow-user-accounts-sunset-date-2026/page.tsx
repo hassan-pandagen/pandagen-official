@@ -487,10 +487,6 @@ export default function WebflowUserAccountsSunset2026Page() {
                             Timeline is 3 to 6 weeks from kickoff to launch depending on tier and data-recovery complexity. For sites that have been broken since January 29, we front-load the 14-day recovery playbook above and keep building the full site in parallel so critical member flows come back online first.
                         </BlogText>
 
-                        <BlogText>
-                            Qualifying businesses can apply for our Founder Migration: $500 for a full Webflow to Next.js rebuild in exchange for a verified Google or Clutch review after launch. The requirements are strict (under 15 pages, no e-commerce, source platform must be WordPress, Webflow, Wix, Squarespace, or GoHighLevel), but it is a real offer and we fill three spots per month. Two remain for April 2026 at the time of writing.
-                        </BlogText>
-
                         <BlogHeader>The Pattern Here Is Bigger Than Webflow User Accounts</BlogHeader>
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
@@ -529,7 +525,7 @@ export default function WebflowUserAccountsSunset2026Page() {
                             <li><strong>Memberstack and Outseta are short-term patches, not long-term fixes.</strong> Both offered Webflow users migration discounts, but both are SaaS tools that carry the same deprecation risk that broke Webflow User Accounts.</li>
                             <li><strong>Custom Next.js auth on Clerk, NextAuth, or Supabase is the permanent answer.</strong> You own the code, the data, and the auth layer. Nothing gets sunset unless you sunset it. Three-year cost beats Memberstack or Outseta once volume crosses a few hundred members.</li>
                             <li><strong>The 14-day recovery playbook gets broken sites back online in under two weeks.</strong> Data recovery, emergency landing page, custom auth build, DNS cutover. Most members come back in. Most revenue is preserved. Monthly Webflow fees stop.</li>
-                            <li><strong>Pricing sits at $3,500 Growth tier for most post-Webflow membership rebuilds.</strong> $500 Founder Migration is available for qualifying small sites. Enterprise agencies quote three to five times more for the same scope.</li>
+                            <li><strong>Pricing sits at $3,500 Growth tier for most post-Webflow membership rebuilds.</strong> Enterprise agencies quote three to five times more for the same scope.</li>
                         </ol>
                     </section>
 

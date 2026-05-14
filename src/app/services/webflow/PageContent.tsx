@@ -39,7 +39,7 @@ const faqData = [
   },
   {
     q: "How much does it cost to migrate from Webflow?",
-    a: "Typical agencies charge $20,000 to $60,000 and take 10-16 weeks. We meet you halfway. Three tiers: Founder&apos;s Offer starts at $500 (simple Webflow sites, founder's offer with public case study exchange). Growth starts at $3,500 (business sites with custom interactions and CMS). Scale starts at $12,000 (complex builds, Webflow Ecommerce, localization). You also stop paying $39 to $235/month in Webflow fees forever.",
+    a: "Typical agencies charge $20,000 to $60,000 and take 10-16 weeks. We meet you halfway. Three tiers: Starter starts at $1,500 (5 to 7 pages, custom Next.js). Growth starts at $3,500 (business sites with custom interactions and CMS). Scale starts at $12,000 (complex builds, Webflow Ecommerce, localization). You also stop paying $39 to $235/month in Webflow fees forever.",
   },
   {
     q: "What if Webflow adds the features I need later?",
@@ -275,7 +275,7 @@ export default function WebflowPageContent() {
           <div className="mt-8 p-6 bg-charcoal text-white rounded-2xl text-center">
             <p className="text-lg font-bold mb-2">The agencies in this thread are stuck on Webflow because migrating feels expensive. It is not.</p>
             <p className="text-stone-400 text-sm mb-4 max-w-2xl mx-auto">
-              We migrate Webflow agency client sites to custom Next.js for $500 to $15,000 with 90+ PageSpeed guaranteed or 100% refund. White-label for your agency. Your client never sees us.
+              We migrate Webflow agency client sites to custom Next.js for $1,500 to $15,000 with 90+ PageSpeed guaranteed or 100% refund. White-label for your agency. Your client never sees us.
             </p>
             <a href="#pricing" className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
               See Migration Pricing →
@@ -395,24 +395,24 @@ export default function WebflowPageContent() {
         agencyComparison={{
           agencyPrice: "$20K to $60K+",
           agencyNote: "10-16 week timeline. Hourly billing. Plus $235/mo Webflow fees forever.",
-          ourPrice: "From $500",
+          ourPrice: "From $1,500",
           ourNote: "3 week timeline. Fixed price. You own the code. No platform fees.",
         }}
         tiers={[
           {
-            tier: "Founder&apos;s Offer",
-            price: "Starting from $500",
-            timeline: "1 week",
-            fit: "Simple Webflow site. 5-15 pages. Our founder's offer.",
+            tier: "Starter",
+            price: "Starting from $1,500",
+            timeline: "1 to 2 weeks",
+            fit: "Simple Webflow site. 5-15 pages. Our Starter tier.",
             includes: [
               "Full Webflow content export + migration",
               "Custom Next.js build matching your design",
               "Sanity CMS for content editing",
               "90+ PageSpeed guaranteed",
               "301 redirect mapping",
-              "Case study in exchange for public review",
+              "Free month of post-launch tweaks",
             ],
-            cta: "Claim Founder Rate",
+            cta: "Get Starter Quote",
           },
           {
             tier: "Growth",

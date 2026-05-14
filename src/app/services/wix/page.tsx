@@ -44,7 +44,7 @@ export default function WixServicePage() {
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
         "serviceType": ["Wix Development", "Wix Migration", "Wix to Next.js", "Wix Alternative"],
-        "priceRange": "$500 - $15,000",
+        "priceRange": "$1,500 - $15,000",
         "image": "https://www.pandacodegen.com/og-image.jpg",
         "telephone": "+13027738982",
         "address": {
@@ -59,7 +59,7 @@ export default function WixServicePage() {
           "@type": "OfferCatalog",
           "name": "Wix Migration Tiers",
           "itemListElement": [
-            { "@type": "Offer", "name": "Founder's Offer", "price": "500", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Starter", "price": "1500", "priceCurrency": "USD" },
             { "@type": "Offer", "name": "Growth", "price": "3000", "priceCurrency": "USD" },
             { "@type": "Offer", "name": "Scale", "price": "10000", "priceCurrency": "USD" }
           ]

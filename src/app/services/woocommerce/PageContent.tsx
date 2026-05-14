@@ -413,24 +413,24 @@ export default function PageContent() {
         agencyComparison={{
           agencyPrice: "$15K to $40K+",
           agencyNote: "8-12 week timeline. Hourly billing. Plugin fees carry over.",
-          ourPrice: "From $500",
+          ourPrice: "From $1,500",
           ourNote: "3 week timeline. Fixed price. No plugin taxes. You own the code.",
         }}
         tiers={[
           {
-            tier: "Founder&apos;s Offer",
-            price: "Starting from $500",
-            timeline: "1 week",
-            fit: "Simple WooCommerce store. 10-30 products, basic catalog. Founder's offer.",
+            tier: "Starter",
+            price: "Starting from $1,500",
+            timeline: "1 to 2 weeks",
+            fit: "Simple WooCommerce store. 10-30 products, basic catalog. Starter tier.",
             includes: [
               "Full WooCommerce product + order export",
               "Custom Next.js storefront",
               "Stripe checkout integration",
               "90+ PageSpeed guaranteed",
               "301 redirect mapping",
-              "Case study in exchange for public review",
+              "Free month of post-launch tweaks",
             ],
-            cta: "Claim Founder Rate",
+            cta: "Get Starter Quote",
           },
           {
             tier: "Growth",

@@ -504,7 +504,7 @@ export default function WebflowMigration50To100PagesPage() {
                             <li><strong>Real engineering scope is 80 to 125 hours, not 200 plus.</strong> That is 3 weeks of focused work from a boutique team, not 8 to 12 weeks of agency scheduling.</li>
                             <li><strong>CMS collection count matters more than page count.</strong> 50 pages with 2 collections is a different project from 70 pages with 6 collections. Our pricing reflects that.</li>
                             <li><strong>301 redirect strategy makes or breaks post-migration SEO.</strong> Webflow caps at 1,000 redirects. Next.js on Vercel has no cap. Top pages need 1-to-1 mapping, not wildcards.</li>
-                            <li><strong>If Scale is out of budget, the $500 Founder Migration is a separate qualification-gated offer.</strong> It is not a downgrade of Scale. It is a different scope with explicit requirements.</li>
+                            <li><strong>If Scale is out of budget, consider Starter ($1,500) for 5 to 7 page sites or drop your URL on a free 60-second audit.</strong></li>
                         </ol>
                     </section>
 

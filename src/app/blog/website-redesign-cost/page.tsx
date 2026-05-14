@@ -19,7 +19,7 @@ export const dynamic = "force-static";
 
 export const metadata: Metadata = {
     title: "How Much Does a Website Redesign Cost in 2026? ($3K to $50K Breakdown)",
-    description: "Honest pricing for refresh, redesign, and rebuild projects from $500 to $15,000+. Hidden costs agencies leave out and how to know which option you actually need.",
+    description: "Honest pricing for refresh, redesign, and rebuild projects from $1,500 to $15,000+. Hidden costs agencies leave out and how to know which option you actually need.",
     alternates: {
         canonical: '/blog/website-redesign-cost',
     },
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: "How Much Does a Website Redesign Cost in 2026? ($3K to $50K Breakdown)",
-        description: "Honest pricing for refresh, redesign, and rebuild projects from $500 to $15,000+. Hidden costs agencies leave out and how to know which option you actually need.",
+        description: "Honest pricing for refresh, redesign, and rebuild projects from $1,500 to $15,000+. Hidden costs agencies leave out and how to know which option you actually need.",
         type: "article",
         publishedTime: "2026-04-30T00:00:00-05:00",
         authors: ["Hassan Jamal"],
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "How Much Does a Website Redesign Cost in 2026? ($3K to $50K Breakdown)",
-        description: "Honest pricing for refresh, redesign, and rebuild projects from $500 to $15,000+. Hidden costs agencies leave out and how to know which option you actually need.",
+        description: "Honest pricing for refresh, redesign, and rebuild projects from $1,500 to $15,000+. Hidden costs agencies leave out and how to know which option you actually need.",
     },
 };
 
@@ -60,7 +60,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/website-redesign-cost#article",
             "headline": "How Much Does a Website Redesign Cost in 2026? ($3K to $50K Breakdown)",
-            "description": "Honest pricing for refresh, redesign, and rebuild projects from $500 to $15,000+. Hidden costs agencies leave out and how to know which option you actually need.",
+            "description": "Honest pricing for refresh, redesign, and rebuild projects from $1,500 to $15,000+. Hidden costs agencies leave out and how to know which option you actually need.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-30T00:00:00-05:00",
             "dateModified": "2026-05-12T00:00:00-05:00",
@@ -121,7 +121,7 @@ const articleSchema = {
             "@id": "https://www.pandacodegen.com/blog/website-redesign-cost#webpage",
             "url": "https://www.pandacodegen.com/blog/website-redesign-cost",
             "name": "Website Redesign Cost in 2026",
-            "description": "Honest pricing for refresh, redesign, and rebuild projects from $500 to $15,000+. Hidden costs agencies leave out and how to know which option you actually need.",
+            "description": "Honest pricing for refresh, redesign, and rebuild projects from $1,500 to $15,000+. Hidden costs agencies leave out and how to know which option you actually need.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-04-30T00:00:00-05:00",
@@ -184,7 +184,7 @@ export default function WebsiteRedesignCostPage() {
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            What you should actually pay for a refresh, redesign, or full rebuild. Real ranges from $500 to $15,000 plus, the hidden costs agencies leave out, and how to know which option your site actually needs.
+                            What you should actually pay for a refresh, redesign, or full rebuild. Real ranges from $1,500 to $15,000 plus, the hidden costs agencies leave out, and how to know which option your site actually needs.
                         </p>
 
                         <BlogAuthor
@@ -224,7 +224,7 @@ export default function WebsiteRedesignCostPage() {
                             <div className="p-5 bg-white/5 border border-white/10 rounded-xl">
                                 <div className="text-3xl font-black text-cognac mb-1">$1,200</div>
                                 <div className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-3">Obare Magazine</div>
-                                <p className="text-sm text-stone-300 leading-relaxed">Wix to custom Next.js. 7 day rebuild. 98 Mobile PageSpeed. Culture publication with 225,000 Instagram followers. Founder&apos;s Offer rate.</p>
+                                <p className="text-sm text-stone-300 leading-relaxed">Wix to custom Next.js. 7 day rebuild. 98 Mobile PageSpeed. Culture publication with 225,000 Instagram followers.</p>
                             </div>
                             <div className="p-5 bg-white/5 border border-white/10 rounded-xl">
                                 <div className="text-3xl font-black text-cognac mb-1">100/100</div>
@@ -266,7 +266,7 @@ export default function WebsiteRedesignCostPage() {
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">We aren&apos;t your typical web dev agency. Consider us your partners. Cheap should mean money that stays in your business, not corners cut on your build. PandaCodeGen offers fixed prices from $500, 90+ PageSpeed guaranteed or 100 percent refund, and a full month of free post-launch support. No freelancer or agency offers all three.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">We aren&apos;t your typical web dev agency. Consider us your partners. Cheap should mean money that stays in your business, not corners cut on your build. PandaCodeGen offers fixed prices from $1,500, 90+ PageSpeed guaranteed or 100 percent refund, and a full month of free post-launch support. No freelancer or agency offers all three.</p>
                         </div>
 
                         <BlogText>
@@ -280,7 +280,7 @@ export default function WebsiteRedesignCostPage() {
                         <BlogList items={[
                             "100% refund if your site does not score 90+ on Google PageSpeed. Verified before handover. The clause exists in writing but rarely triggers because we hit 90+ on every build.",
                             "Free month of post-launch support and tweaks. Color changes, copy updates, bug fixes, and CMS training included. Tweak boundaries scoped per project in your SOW. No hourly billing.",
-                            "Fixed pricing with milestone payments. No hourly billing under any circumstances. Founder's Offer $500, Starter $1,500, Growth $3,500, Scale $5,000 to $10,000."
+                            "Fixed pricing with milestone payments. No hourly billing under any circumstances. Starter $1,500, Growth $3,500, Scale $5,000 to $10,000, Scale+ $10,000+."
                         ]} />
 
                         <BlogText>
@@ -385,7 +385,7 @@ export default function WebsiteRedesignCostPage() {
                         </div>
 
                         <BlogText>
-                            Small businesses often overpay for features they do not need. A 7-page service business site does not need a custom CMS, multi-language support, or e-commerce. The fixed-price floor for a clean, fast small business site in 2026 is $1,500 with PandaCodeGen Starter or $500 at the Founder&apos;s Offer for qualifying small migrations.
+                            Small businesses often overpay for features they do not need. A 7-page service business site does not need a custom CMS, multi-language support, or e-commerce. The fixed-price floor for a clean, fast small business site in 2026 is $1,500 with PandaCodeGen Starter for qualifying small business sites.
                         </BlogText>
 
                         <BlogText>
@@ -593,7 +593,7 @@ export default function WebsiteRedesignCostPage() {
                         </BlogText>
 
                         <BlogText>
-                            PandaCodeGen runs entirely fixed-price across all tiers. Founder&apos;s Offer $500, Starter $1,500, Growth $3,500, Scale $5,000 to $10,000. No hourly tracking, no surprise invoices, no ongoing fees. The exception is post-launch retainers (optional, $500 a month) for clients who want continuous work after the included free month.
+                            PandaCodeGen runs entirely fixed-price across all tiers. Starter $1,500, Growth $3,500, Scale $5,000 to $10,000, Scale+ $10,000+. No hourly tracking, no surprise invoices, no ongoing fees. The exception is post-launch retainers (optional, $500 a month) for clients who want continuous work after the included free month.
                         </BlogText>
 
                         <BlogHeader>Agency vs Freelancer vs In House Website Redesign Pricing</BlogHeader>
@@ -635,7 +635,7 @@ export default function WebsiteRedesignCostPage() {
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50 font-bold">
                                         <td className="p-3 border border-stone-300 text-charcoal">Founder-built agency (PandaCodeGen)</td>
-                                        <td data-label="Typical Cost" className="p-3 border border-stone-300 text-green-700">$500 to $10K</td>
+                                        <td data-label="Typical Cost" className="p-3 border border-stone-300 text-green-700">$1,500 to $10K</td>
                                         <td data-label="Pros" className="p-3 border border-stone-300 text-green-700">Direct co-founder access, written guarantees</td>
                                         <td data-label="Best For" className="p-3 border border-stone-300">Migrations, fixed-price builds, $50K+/mo businesses</td>
                                     </tr>
@@ -746,7 +746,6 @@ export default function WebsiteRedesignCostPage() {
                         </BlogText>
 
                         <BlogList items={[
-                            "Founder's Offer: $500 for qualifying small migrations (3 spots per month, 1 week build)",
                             "Starter: $1,500 for 5 to 7 page custom Next.js business sites",
                             "Growth: $3,500 for 10 to 20 pages with Sanity CMS and full migration",
                             "Scale: $5,000 to $10,000 for headless e-commerce or 30+ page builds",
@@ -760,7 +759,7 @@ export default function WebsiteRedesignCostPage() {
                         <div className="grid md:grid-cols-2 gap-3 my-6">
                             {[
                                 { label: "WordPress migration", href: "/services/wordpress-migration", desc: "Custom Next.js rebuild from $1,500. MyCustomPatches went from PageSpeed 40 to 100 in 6 weeks." },
-                                { label: "Webflow migration", href: "/services/webflow", desc: "Leave Webflow for $500 to $15,000. Eliminate $39 to $235 a month Webflow fees." },
+                                { label: "Webflow migration", href: "/services/webflow", desc: "Leave Webflow for $1,500 to $15,000. Eliminate $39 to $235 a month Webflow fees." },
                                 { label: "WooCommerce migration", href: "/services/woocommerce", desc: "Headless from $8,000. Zero lost orders, full product migration, 6 to 8 week timeline." },
                                 { label: "GoHighLevel migration", href: "/services/gohighlevel", desc: "Replace GHL website, keep CRM, $4,000 plus. Custom Next.js with GHL pipelines preserved." },
                             ].map(({ label, href, desc }) => (

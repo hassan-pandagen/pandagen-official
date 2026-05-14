@@ -94,7 +94,7 @@ export default function PageContent() {
           <p className="text-sm text-stone-500 mt-4 text-center max-w-xl mx-auto leading-relaxed">30-min call. Drop your Wix URL when you book. We run your PageSpeed live and <span className="text-charcoal font-medium">give you a fixed migration quote before we hang up.</span></p>
 
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-6 text-xs font-bold uppercase tracking-widest text-stone-500">
-            <span>From $500</span>
+            <span>From $1,500</span>
             <span>&bull;</span>
             <span>7 days</span>
             <span>&bull;</span>
@@ -379,24 +379,24 @@ export default function PageContent() {
         agencyComparison={{
           agencyPrice: "$10K to $25K+",
           agencyNote: "6-10 week timeline. Hourly billing. Wix monthly fees continue.",
-          ourPrice: "From $500",
+          ourPrice: "From $1,500",
           ourNote: "2-3 week timeline. Fixed price. No platform fees. You own the code.",
         }}
         tiers={[
           {
-            tier: "Founder&apos;s Offer",
-            price: "Starting from $500",
-            timeline: "1 week",
-            fit: "Simple Wix site. 5-15 pages, portfolio or brochure. Founder's offer.",
+            tier: "Starter",
+            price: "Starting from $1,500",
+            timeline: "1 to 2 weeks",
+            fit: "Simple Wix site. 5-15 pages, portfolio or brochure. Starter tier.",
             includes: [
               "Full Wix content export + migration",
               "Custom Next.js build matching your design",
               "Sanity CMS for content editing",
               "90+ PageSpeed guaranteed",
               "301 redirect mapping",
-              "Case study in exchange for public review",
+              "Free month of post-launch tweaks",
             ],
-            cta: "Claim Founder Rate",
+            cta: "Get Starter Quote",
           },
           {
             tier: "Growth",

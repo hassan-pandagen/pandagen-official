@@ -591,7 +591,7 @@ export default function AchievePageSpeedPage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>Investment:</strong> $500 Founder Portfolio migration, $3,500+ Growth, $5,000 to $10,000+ Scale. Full tier breakdown on the <a href="/pricing" className="text-cognac hover:underline">pricing page</a>.
+                            <strong>Investment:</strong> $1,500 Starter migration, $3,500+ Growth, $5,000 to $10,000+ Scale. Full tier breakdown on the <a href="/pricing" className="text-cognac hover:underline">pricing page</a>.
                         </BlogText>
 
                         <BlogText>
@@ -660,7 +660,7 @@ export default function AchievePageSpeedPage() {
                         ]} />
 
                         <BlogText>
-                            Most business owners choose Option 2. Why? <BlogHighlight>Because 4 to 9 months of learning and building costs you more in lost revenue from slow speed than the actual build. Our Scale tier runs $5,000 to $10,000+. Growth starts at $3,500. Founder migration is $500.</BlogHighlight>
+                            Most business owners choose Option 2. Why? <BlogHighlight>Because 4 to 9 months of learning and building costs you more in lost revenue from slow speed than the actual build. Our Scale tier runs $5,000 to $10,000+. Growth starts at $3,500. Starter is $1,500.</BlogHighlight>
                         </BlogText>
 
                         <BlogText>

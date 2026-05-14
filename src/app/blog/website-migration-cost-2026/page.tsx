@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRight, CheckCircle2, AlertTriangle, DollarSign, TrendingUp, Scale, Clock } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle2, AlertTriangle, DollarSign, TrendingUp, Scale } from "lucide-react";
 import Link from "next/link";
 import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
@@ -16,7 +16,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: { absolute: "How Much Does Website Migration Cost in 2026? $1,500 to $10,000 (7 Platforms)" },
-    description: "Real website migration receipts across 7 platforms in 2026: WordPress $1,500 to $10K, Webflow $1,500 to $25K, Wix $3,500, Squarespace $3,500, GHL $500 to $8K. Fixed price, 90+ PageSpeed guarantee.",
+    description: "Real website migration receipts across 7 platforms in 2026: WordPress $1,500 to $10K, Webflow $1,500 to $25K, Wix $3,500, Squarespace $3,500, GHL $1,500 to $8K. Fixed price, 90+ PageSpeed guarantee.",
     alternates: {
         canonical: "/blog/website-migration-cost-2026",
     },
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
         title: "How Much Does Website Migration Cost in 2026? $1,500 to $10,000 (7 Platforms)",
-        description: "Real website migration receipts across 7 platforms in 2026: WordPress $1,500 to $10K, Webflow $1,500 to $25K, Wix $3,500, Squarespace $3,500, GHL $500 to $8K. Fixed price, 90+ PageSpeed guarantee.",
+        description: "Real website migration receipts across 7 platforms in 2026: WordPress $1,500 to $10K, Webflow $1,500 to $25K, Wix $3,500, Squarespace $3,500, GHL $1,500 to $8K. Fixed price, 90+ PageSpeed guarantee.",
         type: "article",
         publishedTime: "2026-05-06T00:00:00-05:00",
         modifiedTime: "2026-05-06T00:00:00-05:00",
@@ -259,7 +259,7 @@ export default function WebsiteMigrationCost2026Page() {
 
                     <BlogHeader id="cost-table">The 2026 Website Migration Cost Table</BlogHeader>
 
-                    <p className="text-stone-700 leading-relaxed mb-4">Website migration costs $1,500 to $10,000 in 2026 depending on the source platform and site size. WordPress migrations start at $1,500. Webflow migrations start at $1,500 for small sites and reach $25,000 for enterprise. Wix and Squarespace migrations typically cost $3,500. GoHighLevel frontend rebuilds range from $500 to $8,000. All prices include 301 redirects, metadata migration, and 90+ PageSpeed guarantee.</p>
+                    <p className="text-stone-700 leading-relaxed mb-4">Website migration costs $1,500 to $10,000 in 2026 depending on the source platform and site size. WordPress migrations start at $1,500. Webflow migrations start at $1,500 for small sites and reach $25,000 for enterprise. Wix and Squarespace migrations typically cost $3,500. GoHighLevel frontend rebuilds range from $1,500 to $8,000. All prices include 301 redirects, metadata migration, and 90+ PageSpeed guarantee.</p>
 
                     <div className="my-6 overflow-x-auto -mx-4 px-4">
                         <table className="responsive-stack-table w-full text-sm border-collapse border border-stone-300 rounded-xl overflow-hidden md:min-w-[640px]">
@@ -276,11 +276,10 @@ export default function WebsiteMigrationCost2026Page() {
                                 <tr><td className="p-3 font-medium">WordPress</td><td data-label="Low" className="p-3">$1,500</td><td data-label="Median" className="p-3">$3,500</td><td data-label="High" className="p-3">$10,000+</td><td data-label="Real receipt" className="p-3 text-stone-600">Panda Patches and MyCustomPatches (in-house)</td></tr>
                                 <tr><td className="p-3 font-medium">WooCommerce</td><td data-label="Low" className="p-3">$3,500</td><td data-label="Median" className="p-3">$8,000</td><td data-label="High" className="p-3">$10,000+</td><td data-label="Real receipt" className="p-3 text-stone-600">Headless cart with Stripe + Sanity inventory</td></tr>
                                 <tr><td className="p-3 font-medium">Webflow</td><td data-label="Low" className="p-3">$1,500</td><td data-label="Median" className="p-3">$3,500</td><td data-label="High" className="p-3">$5,000-$10,000</td><td data-label="Real receipt" className="p-3 text-stone-600">Same scope enterprise agencies quote at $25,000+</td></tr>
-                                <tr><td className="p-3 font-medium">Wix</td><td data-label="Low" className="p-3">$500 (Founder)</td><td data-label="Median" className="p-3">$1,500</td><td data-label="High" className="p-3">$3,500</td><td data-label="Real receipt" className="p-3 text-stone-600">Obare Magazine: $1,200, 7 days, 225K IG audience</td></tr>
+                                <tr><td className="p-3 font-medium">Wix</td><td data-label="Low" className="p-3">$1,500 (Starter)</td><td data-label="Median" className="p-3">$1,500</td><td data-label="High" className="p-3">$3,500</td><td data-label="Real receipt" className="p-3 text-stone-600">Obare Magazine: 7 days, 225K IG audience</td></tr>
                                 <tr><td className="p-3 font-medium">Squarespace</td><td data-label="Low" className="p-3">$1,500</td><td data-label="Median" className="p-3">$3,500</td><td data-label="High" className="p-3">$5,000-$10,000</td><td data-label="Real receipt" className="p-3 text-stone-600">Squarespace 7.1 Fluid Engine to Tailwind grid</td></tr>
                                 <tr><td className="p-3 font-medium">Shopify (headless)</td><td data-label="Low" className="p-3">$5,000</td><td data-label="Median" className="p-3">$8,000</td><td data-label="High" className="p-3">$10,000+</td><td data-label="Real receipt" className="p-3 text-stone-600">Panda Patches: $38K+/mo store on $25/mo tooling</td></tr>
                                 <tr><td className="p-3 font-medium">GoHighLevel</td><td data-label="Low" className="p-3">$1,500</td><td data-label="Median" className="p-3">$3,500</td><td data-label="High" className="p-3">$5,000</td><td data-label="Real receipt" className="p-3 text-stone-600">Funnels rebuilt as static pages, traffic preserved</td></tr>
-                                <tr className="bg-cognac/5"><td className="p-3 font-bold">Founder&apos;s Offer (qualified)</td><td data-label="Low" className="p-3 font-bold">$500</td><td data-label="Median" className="p-3"></td><td data-label="High" className="p-3"></td><td data-label="Real receipt" className="p-3 text-cognac font-medium">Full migration. 1 week. Anchored against $5,000+ standard.</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -334,13 +333,13 @@ export default function WebsiteMigrationCost2026Page() {
                         <strong>Page count and template depth.</strong> A 5-page brochure site is not the same project as a 50-page content library. Page count drives layout work, content entry, image optimization, and quality assurance. PandaCodeGen tiers map to this directly: Starter at $1,500 covers 8 to 10 pages, Growth at $3,500 covers 10 to 22 pages with a blog, Scale at $5,000 to $10,000 covers 30+ pages with custom integrations.
                     </BlogText>
                     <BlogText>
-                        <strong>Content management system setup.</strong> Whether the owner can edit the site without calling a developer is a make-or-break feature. We ship every site above the Founder rate with Sanity, an open-source content management system that costs $0 a month at typical small-business volume. Sanity replaces Yoast, ACF, Elementor, and Webflow Editor in one tool, and the owner gets a clean visual editor for posts, pages, products, and forms.
+                        <strong>Content management system setup.</strong> Whether the owner can edit the site without calling a developer is a make-or-break feature. We ship every site at the Starter tier and above with Sanity, an open-source content management system that costs $0 a month at typical small-business volume. Sanity replaces Yoast, ACF, Elementor, and Webflow Editor in one tool, and the owner gets a clean visual editor for posts, pages, products, and forms.
                     </BlogText>
                     <BlogText>
-                        <strong>SEO preservation (the lever nobody charges enough for).</strong> This is where most migrations break ranking. We map every old URL to a new URL with a 301 redirect, transfer all metadata (title tags, meta descriptions, schema markup, Open Graph data), preserve the sitemap structure, and validate the redirect map against Google Search Console before launch. On the Panda Patches WordPress migration we kept all rankings across the cutover. Most agencies treat this as an afterthought and charge an extra $1,500 to $3,000 for it. We include it in every migration above the Founder rate.
+                        <strong>SEO preservation (the lever nobody charges enough for).</strong> This is where most migrations break ranking. We map every old URL to a new URL with a 301 redirect, transfer all metadata (title tags, meta descriptions, schema markup, Open Graph data), preserve the sitemap structure, and validate the redirect map against Google Search Console before launch. On the Panda Patches WordPress migration we kept all rankings across the cutover. Most agencies treat this as an afterthought and charge an extra $1,500 to $3,000 for it. We include it in every migration.
                     </BlogText>
                     <BlogText>
-                        <strong>Custom integrations.</strong> Stripe checkout, Cal.com booking, Resend transactional email, Zoho Campaigns email marketing, custom dashboards, gated member areas. Each integration adds 4 to 12 hours of work. The Scale tier ($5,000 to $10,000) is where these get bundled in. The Founder&apos;s Offer ($500) and Starter ($1,500) tiers ship with one default integration (Web3Forms or Cal.com).
+                        <strong>Custom integrations.</strong> Stripe checkout, Cal.com booking, Resend transactional email, Zoho Campaigns email marketing, custom dashboards, gated member areas. Each integration adds 4 to 12 hours of work. The Scale tier ($5,000 to $10,000) is where these get bundled in. The Starter ($1,500) tier ships with one default integration (Web3Forms or Cal.com).
                     </BlogText>
                     <BlogText>
                         <strong>Post-launch support.</strong> Every migration comes with one free month of bug fixes and minor updates. After that, we offer a flat $300 a month growth retainer that covers ongoing development support, SEO maintenance (schema, sitemap, technical audits, ranking monitoring), and 4 fresh blog posts per month written and shipped to your CMS. Most clients on the retainer use it for the content engine, not the maintenance, because the Vercel + Sanity + Stripe stack we ship is roughly maintenance-free at the small-business scale.
@@ -413,12 +412,12 @@ export default function WebsiteMigrationCost2026Page() {
                         For a client moving off the $40,000 to $60,000 a month enterprise CMS upgrade quote, a $5,000 to $10,000 PandaCodeGen migration pays for itself inside the first month.
                     </BlogText>
                     <BlogText>
-                        <strong>How long it takes.</strong> Same as WordPress: 7 days (Founder), 1 to 2 weeks (Starter), 2 to 3 weeks (Growth), 3 to 4 weeks (Scale). Webflow migrations have the bonus that we can pull design assets directly from Webflow&apos;s editor before the cutover, which trims design time by about 30 percent.
+                        <strong>How long it takes.</strong> Same as WordPress: 1 to 2 weeks (Starter), 2 to 3 weeks (Growth), 3 to 4 weeks (Scale). Webflow migrations have the bonus that we can pull design assets directly from Webflow&apos;s editor before the cutover, which trims design time by about 30 percent.
                     </BlogText>
 
                     <BlogHeader id="wix-migration-cost">How much does a Wix migration cost?</BlogHeader>
                     <BlogText>
-                        A Wix to custom-coded migration on PandaCodeGen pricing: $500 (Founder&apos;s Offer, qualification-gated), $1,500 (Starter), $3,500 (Growth, for sites with Wix Stores or Bookings).
+                        A Wix to custom-coded migration on PandaCodeGen pricing: $1,500 (Starter), $3,500 (Growth, for sites with Wix Stores or Bookings).
                     </BlogText>
                     <BlogText>
                         <strong>Obare Magazine: $1,200, 7 days, 225,000 Instagram followers watching.</strong> Obare Magazine, a culture and design publication with 225,000 Instagram followers, was running on Wix Editor in 2025. Pages loaded at 3 to 5 seconds. The Wix Velo runtime injected over 600KB of JavaScript on every page. SEO scores capped at 35 to 50 on mobile PageSpeed.
@@ -555,8 +554,7 @@ export default function WebsiteMigrationCost2026Page() {
                         The right tier for your business is a function of three variables: page count, e-commerce or not, and post-launch complexity.
                     </BlogText>
                     <BlogList items={[
-                        "Choose Founder's Offer ($500) if your site is 5 to 15 pages, no e-commerce, no complex integrations, you are willing to commit to a verified Google or Clutch review after launch, and you can move fast on feedback during build week. 3 spots per month.",
-                        "Choose Starter ($1,500) if your site is 8 to 10 pages, simple business or portfolio scope, no blog or e-commerce.",
+                        "Choose Starter ($1,500) if your site is 5 to 7 pages, no e-commerce, and no complex integrations.",
                         "Choose Growth ($3,500) if your site is 10 to 22 pages, blog migration with 301 redirects, simple form integrations. This is the tier most clients land on.",
                         "Choose Scale ($5,000 to $10,000) if you are migrating a Shopify or WooCommerce store, have 30+ pages, need custom integrations, or are running enterprise features (member areas, multi-language, advanced booking).",
                         "Choose Scale+ ($10,000+) for enterprise scope: multi-warehouse e-commerce, B2B portals, advanced upsell logic, custom CRM replacement."
@@ -575,11 +573,7 @@ export default function WebsiteMigrationCost2026Page() {
                         </CalModalButton>
                         <div className="mt-4 p-4 bg-white/10 border border-white/20 rounded-xl">
                             <p className="text-sm font-bold text-white flex items-center justify-center gap-2"><Scale className="w-4 h-4" /> Published pricing, fixed scope, no surprises</p>
-                            <p className="text-sm text-stone-300 mt-1">$500 Founder&apos;s, $1,500 Starter, $3,500 Growth, $5,000 to $10,000 Scale. 30 percent upfront, the rest on launch. Guaranteed 90+ PageSpeed Mobile or full refund.</p>
-                        </div>
-                        <div className="mt-3 flex items-center justify-center gap-2 text-xs text-stone-400">
-                            <Clock className="w-3 h-3" />
-                            <span>Founder&apos;s Offer: 3 spots per month, currently 2 remaining</span>
+                            <p className="text-sm text-stone-300 mt-1">$1,500 Starter, $3,500 Growth, $5,000 to $10,000 Scale, $10,000+ Scale+. 30 percent upfront, the rest on launch. Guaranteed 90+ PageSpeed Mobile or full refund.</p>
                         </div>
                     </div>
 

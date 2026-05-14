@@ -452,8 +452,7 @@ export default function GHLKeepCRMReplaceWebsitePage() {
                         "Native GHL site (default builder, default theme): zero one-time cost, $97 to $497 per month for the platform. Mobile PageSpeed: 18 to 50.",
                         "GHL Partner agency rebuild inside the native builder: $3,000 to $15,000 one-time, plus the same $97 to $497 per month. Mobile PageSpeed: 25 to 55. The platform ceiling does not move.",
                         "PandaCodeGen Starter ($1,500 one-time, 5 to 7 pages): Next.js frontend, GHL backend, basic webhook integration, calendar embed. 90+ mobile PageSpeed guaranteed in writing. Plus the same $97 to $497 per month for GHL.",
-                        "PandaCodeGen Growth ($3,500 one-time, 10 to 20 pages): everything above, plus Sanity CMS for blog migration, custom calendar UI option, OAuth token refresh worker, 301 redirect mapping, and a 90 plus PageSpeed guarantee in writing or full refund.",
-                        "Founder's Offer ($500, qualifying small migrations only): full Next.js custom build, same engineering, in exchange for a verified Google or Clutch review after launch. 3 spots per month. Requirements: under 15 pages, no e-commerce."
+                        "PandaCodeGen Growth ($3,500 one-time, 10 to 20 pages): everything above, plus Sanity CMS for blog migration, custom calendar UI option, OAuth token refresh worker, 301 redirect mapping, and a 90 plus PageSpeed guarantee in writing or full refund."
                     ]} />
 
                     <BlogText>

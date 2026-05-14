@@ -570,7 +570,7 @@ export default function LeavingWebflow2026Page() {
                             <Link href="/blog/webflow-migration-cost" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 what Webflow migration actually costs in 2026
                             </Link>{" "}
-                            if you want to see the exact pricing by page count. The short version: a 50-page site is $500 with our founder&apos;s offer. Agencies charge $15,000 to $35,000 for the same job. The difference is that we do not have a team of 30 people, a Soho office, and a brand deck to pay for.
+                            if you want to see the exact pricing by page count. The short version: a 50-page site is $3,500 with our Growth tier or scales to $5,000 to $10,000 with Scale. Agencies charge $15,000 to $35,000 for the same job. The difference is that we do not have a team of 30 people, a Soho office, and a brand deck to pay for.
                         </BlogText>
 
                         <BlogText>
@@ -591,7 +591,7 @@ export default function LeavingWebflow2026Page() {
                             <li><strong>The real monthly cost of Webflow is not the base plan price</strong>: Add workspace fees, localization, editor seats, third-party tools replacing deprecated features, and transaction fees. Many businesses are paying $300 to $700+ per month for a site they do not own.</li>
                             <li><strong>Webflow deprecated memberships and automation tools in 2025 and 2026</strong>: Logic was sunset June 2025. User Accounts were deprecated January 2026. Businesses had weeks to rebuild workflows they spent months creating.</li>
                             <li><strong>Cart and checkout failures are persistent and unresolved</strong>: Checkout buttons disappearing on live sites, add-to-cart failing on mobile, and a hard 50-variant product cap make Webflow unreliable for serious e-commerce.</li>
-                            <li><strong>Migration to custom Next.js takes 4 weeks and costs $500 with our founder&apos;s offer</strong>: You get 95+ PageSpeed, $0 monthly hosting, zero transaction fees, unlimited bandwidth, and you own every line of code. The migration pays for itself within 90 days for most businesses.</li>
+                            <li><strong>Migration to custom Next.js takes 4 weeks and costs $1,500 (Starter) or $3,500 (Growth)</strong>: You get 95+ PageSpeed, $0 monthly hosting, zero transaction fees, unlimited bandwidth, and you own every line of code. The migration pays for itself within 90 days for most businesses.</li>
                         </ol>
                     </section>
 

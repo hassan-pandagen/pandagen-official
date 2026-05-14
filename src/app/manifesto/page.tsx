@@ -147,10 +147,10 @@ export default function ManifestoPage() {
                   6. We meet you halfway on cost.
                 </h2>
                 <p className="text-base md:text-lg text-stone-700 leading-[1.75] mb-4">
-                  Agencies quote $30K. Offshore shops quote $5K and ghost you mid-project. Neither of those is a real option for most business owners. So we built something in between: fixed-scope pricing from $500 to $25,000, transparent tiers, same-day quotes, NDAs before anything else.
+                  Agencies quote $30K. Offshore shops quote $5K and ghost you mid-project. Neither of those is a real option for most business owners. So we built something in between: fixed-scope pricing from $1,500 to $25,000, transparent tiers, same-day quotes, NDAs before anything else.
                 </p>
                 <p className="text-base md:text-lg text-stone-700 leading-[1.75]">
-                  If that&apos;s still too much, we offer a Founder&apos;s Offer tier at $500 in exchange for a public case study. You get the proof you need. We get the credibility we need. Both sides win.
+                  If you want proof before you commit, drop your URL on a free 60-second audit and we will show you where you are leaking revenue.
                 </p>
               </section>
 

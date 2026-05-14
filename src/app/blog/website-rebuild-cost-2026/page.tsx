@@ -616,10 +616,9 @@ export default function WebsiteRebuildCost2026Page() {
                         Published pricing is rare in this industry. Most studios require a discovery call before quoting because pricing transparency removes negotiation leverage. We publish pricing because that leverage is not worth the friction it creates for every legitimate buyer.
                     </BlogText>
                     <BlogText>
-                        Our rebuild pricing is $500 to $25,000 fixed price. The range reflects site size, complexity, integrations, and custom design work. The most common tiers:
+                        Our rebuild pricing is $1,500 to $25,000 fixed price. The range reflects site size, complexity, integrations, and custom design work. The most common tiers:
                     </BlogText>
                     <BlogList items={[
-                        "$500 founder's rate: qualifying sites under 10 pages with basic design porting. Ideal for GoHighLevel, Wix, Squarespace, or small WordPress brochure sites.",
                         "$3,500 to $8,000: 10 to 30 page business sites with headless CMS, forms, integrations, blog migration, and full SEO preservation. Most common tier for service businesses.",
                         "$8,000 to $15,000: 30 to 80 page mid-size sites with custom post types, multi-stakeholder content, and complex integrations. Webflow and WordPress rebuilds typically land here.",
                         "$15,000 to $25,000: larger content operations, WooCommerce migrations, or sites with custom functionality (calculators, member portals, booking systems, editorial publications with Sanity CMS).",
@@ -641,7 +640,7 @@ export default function WebsiteRebuildCost2026Page() {
                         </CalModalButton>
                         <div className="mt-4 p-4 bg-white/10 border border-white/20 rounded-xl">
                             <p className="text-sm font-bold text-white flex items-center justify-center gap-2"><Scale className="w-4 h-4" /> Published pricing, fixed scope, no surprises</p>
-                            <p className="text-sm text-stone-300 mt-1">$500 to $25,000. 30 percent upfront, the rest on launch. Guaranteed 90+ PageSpeed Mobile or we continue working until it passes.</p>
+                            <p className="text-sm text-stone-300 mt-1">$1,500 to $25,000. 30 percent upfront, the rest on launch. Guaranteed 90+ PageSpeed Mobile or we continue working until it passes.</p>
                         </div>
                     </div>
 

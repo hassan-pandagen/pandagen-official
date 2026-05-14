@@ -138,7 +138,7 @@ const articleSchema = {
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites for businesses migrating off slow platforms. Fixed pricing from $500. 90+ PageSpeed guaranteed or 100 percent refund.",
+            "description": "PandaCodeGen builds custom Next.js websites for businesses migrating off slow platforms. Fixed pricing from $1,500. 90+ PageSpeed guaranteed or 100 percent refund.",
             "areaServed": "Worldwide",
             "foundingDate": "2026"
         },
@@ -186,7 +186,7 @@ export default function PageproAlternativesPage() {
                         <BlogAuthor
                             date="May 2, 2026"
                             readTime="11 min read"
-                            bio="Hassan builds and migrates production websites on Next.js. PandaCodeGen ships the same stack as Pagepro, Naturaily, and Blazity at fixed prices starting from $500, with a 90+ PageSpeed guarantee in writing."
+                            bio="Hassan builds and migrates production websites on Next.js. PandaCodeGen ships the same stack as Pagepro, Naturaily, and Blazity at fixed prices starting from $1,500, with a 90+ PageSpeed guarantee in writing."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -201,7 +201,7 @@ export default function PageproAlternativesPage() {
                         <BlogList items={[
                             "Pagepro, Naturaily, and Blazity are strong Next.js agencies built for enterprise retainers, large platforms, and multi-developer teams. If that is your scope, they are solid choices.",
                             "For business websites, CRM builds, headless migrations, and custom storefronts under $25K, all three require minimums ($10K to $25K+), monthly retainer models, and no published pricing. That structure does not fit fixed-scope project work.",
-                            "PandaCodeGen specialises in exactly that scope: business websites, headless migrations, CRM and dashboard builds. Same Next.js stack. Fixed prices from $500. 90+ PageSpeed guaranteed or 100 percent refund. Free month of post-launch support.",
+                            "PandaCodeGen specialises in exactly that scope: business websites, headless migrations, CRM and dashboard builds. Same Next.js stack. Fixed prices from $1,500. 90+ PageSpeed guaranteed or 100 percent refund. Free month of post-launch support.",
                             "The honest split: enterprise platform retainer needing a long-term dev team: Pagepro or Blazity. Fixed-price business website, migration, or CRM build: PandaCodeGen."
                         ]} />
                     </div>
@@ -326,7 +326,7 @@ export default function PageproAlternativesPage() {
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">All three Polish agencies charge $50 to $99/hr with no published pricing and no contractual guarantees. PandaCodeGen uses the same Next.js + Sanity + Vercel stack at fixed prices from $500, with 90+ PageSpeed guaranteed or 100 percent refund, a free month of post-launch support, and a US LLC for contracts.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">All three Polish agencies charge $50 to $99/hr with no published pricing and no contractual guarantees. PandaCodeGen uses the same Next.js + Sanity + Vercel stack at fixed prices from $1,500, with 90+ PageSpeed guaranteed or 100 percent refund, a free month of post-launch support, and a US LLC for contracts.</p>
                         </div>
 
                         <p className="text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
@@ -347,9 +347,9 @@ export default function PageproAlternativesPage() {
                                         { label: "Founded", pagepro: "2010", naturaily: "2012", blazity: "2018", pcg: "2026" },
                                         { label: "Core stack", pagepro: "Next.js + Sanity", naturaily: "Next.js + Shopify + CMS", blazity: "Next.js enterprise", pcg: "Next.js + Sanity + Vercel" },
                                         { label: "Hourly rate", pagepro: "$50-99/hr", naturaily: "$50-99/hr", blazity: "$50-99/hr", pcg: "No hourly billing" },
-                                        { label: "Min. project", pagepro: "$25,000+", naturaily: "$25,000+", blazity: "$10,000+", pcg: "From $500" },
+                                        { label: "Min. project", pagepro: "$25,000+", naturaily: "$25,000+", blazity: "$10,000+", pcg: "From $1,500" },
                                         { label: "Published pricing", pagepro: "No", naturaily: "No", blazity: "No", pcg: "Yes — /pricing" },
-                                        { label: "Fixed-price packages", pagepro: "No (retainer)", naturaily: "No", blazity: "No", pcg: "$500 / $1,500 / $3,500 / $5K+" },
+                                        { label: "Fixed-price packages", pagepro: "No (retainer)", naturaily: "No", blazity: "No", pcg: "$1,500 / $3,500 / $5K+ / $10K+" },
                                         { label: "PageSpeed guarantee", pagepro: "No", naturaily: "No", blazity: "No", pcg: "90+ or full refund" },
                                         { label: "Post-launch support", pagepro: "No", naturaily: "No", blazity: "No", pcg: "1 month free" },
                                         { label: "Clutch rating", pagepro: "4.9/5 (32)", naturaily: "4.9/5 (36)", blazity: "5.0/5 (27)", pcg: "5 platforms verified" },
@@ -413,7 +413,7 @@ export default function PageproAlternativesPage() {
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">PandaCodeGen specialises in business websites, platform migrations (WordPress, Webflow, Wix, Squarespace, GoHighLevel), custom CRM and dashboard builds, and headless commerce. These are the project types where a fixed-price, fixed-scope, 3 to 5 week engagement makes more sense than a long-term retainer team. Same Next.js + Sanity + Vercel stack. Published fixed prices from $500. 90+ PageSpeed guaranteed or 100 percent refund. No hourly billing.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">PandaCodeGen specialises in business websites, platform migrations (WordPress, Webflow, Wix, Squarespace, GoHighLevel), custom CRM and dashboard builds, and headless commerce. These are the project types where a fixed-price, fixed-scope, 3 to 5 week engagement makes more sense than a long-term retainer team. Same Next.js + Sanity + Vercel stack. Published fixed prices from $1,500. 90+ PageSpeed guaranteed or 100 percent refund. No hourly billing.</p>
                         </div>
 
                         <BlogText>
@@ -529,7 +529,7 @@ export default function PageproAlternativesPage() {
                         {/* Bottom CTA */}
                         <div className="my-6 md:my-10 p-8 bg-charcoal text-white rounded-2xl text-center">
                             <p className="text-xl font-bold mb-2">Same stack. Fixed price. Written guarantee.</p>
-                            <p className="text-stone-400 text-sm mb-6">Next.js + Sanity + Vercel. 90+ PageSpeed or 100 percent refund. Free month of post-launch support. Published pricing at $500 to $10,000. No retainer required.</p>
+                            <p className="text-stone-400 text-sm mb-6">Next.js + Sanity + Vercel. 90+ PageSpeed or 100 percent refund. Free month of post-launch support. Published pricing at $1,500 to $10,000. No retainer required.</p>
                             <div className="flex flex-col sm:flex-row gap-3 justify-center">
                                 <CalModalButton className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
                                     Book Free Scope Call <ArrowRight className="w-4 h-4" />

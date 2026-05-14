@@ -46,7 +46,7 @@ export default function WooCommerceServicePage() {
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": ["US", "GB", "AU", "CA", "DE", "FR", "NL", "IE"],
         "serviceType": ["WooCommerce Migration", "WooCommerce to Next.js", "Custom E-Commerce", "Headless Commerce"],
-        "priceRange": "$500 - $25,000",
+        "priceRange": "$1,500 - $25,000",
         "telephone": "+13027738982",
         "address": {
           "@type": "PostalAddress",
@@ -61,7 +61,7 @@ export default function WooCommerceServicePage() {
           "@type": "OfferCatalog",
           "name": "WooCommerce Migration Tiers",
           "itemListElement": [
-            { "@type": "Offer", "name": "Founder's Offer", "price": "500", "priceCurrency": "USD", "description": "Simple WooCommerce migration, 10 to 30 products" },
+            { "@type": "Offer", "name": "Starter", "price": "1500", "priceCurrency": "USD", "description": "Simple WooCommerce migration, 10 to 30 products" },
             { "@type": "Offer", "name": "Growth", "price": "3500", "priceCurrency": "USD", "description": "30 to 150 products with custom cart logic" },
             { "@type": "Offer", "name": "Scale", "price": "12000", "priceCurrency": "USD", "description": "Subscriptions, B2B pricing, wholesale" }
           ]
@@ -122,7 +122,7 @@ export default function WooCommerceServicePage() {
         "@id": "https://www.pandacodegen.com/services/woocommerce#faq",
         "mainEntity": [
           { "@type": "Question", "name": "Will I lose my WooCommerce orders and customer data during migration?", "acceptedAnswer": { "@type": "Answer", "text": "No. We export your full order history, customer records, and product catalog from WooCommerce before we touch anything. All data migrates to your new platform. Nothing is deleted until you confirm everything transferred correctly." } },
-          { "@type": "Question", "name": "How much does a WooCommerce to custom code migration cost?", "acceptedAnswer": { "@type": "Answer", "text": "Typical agencies charge $15,000 to $40,000 and take 8-12 weeks. We meet you halfway. Three tiers: Founder's Offer starts at $500 (simple WooCommerce stores with public case study exchange). Growth starts at $3,500 (30-150 products with custom cart and reviews). Scale starts at $12,000 (subscriptions, B2B pricing, large catalogs, wholesale). Most stores recover the investment within 4-6 months through eliminated plugin fees and faster checkout." } },
+          { "@type": "Question", "name": "How much does a WooCommerce to custom code migration cost?", "acceptedAnswer": { "@type": "Answer", "text": "Typical agencies charge $15,000 to $40,000 and take 8-12 weeks. We meet you halfway. Three tiers: Starter starts at $1,500 (small WooCommerce stores, 10 to 30 products). Growth starts at $3,500 (30-150 products with custom cart and reviews). Scale starts at $12,000 (subscriptions, B2B pricing, large catalogs, wholesale). Most stores recover the investment within 4-6 months through eliminated plugin fees and faster checkout." } },
           { "@type": "Question", "name": "Can I still use Stripe and PayPal after leaving WooCommerce?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We integrate Stripe and PayPal directly into your custom storefront using their official APIs. No payment gateway plugins needed. Your checkout is faster, more reliable, and you save the WooCommerce payment plugin fees." } },
           { "@type": "Question", "name": "How long does a WooCommerce migration take?", "acceptedAnswer": { "@type": "Answer", "text": "Typically 6-8 weeks. Week 1-2: product export and new architecture. Weeks 3-5: build custom storefront with cart, checkout, and product pages. Week 6-7: data migration and testing. Week 8: zero-downtime launch." } },
           { "@type": "Question", "name": "What happens to my WooCommerce SEO rankings after migration?", "acceptedAnswer": { "@type": "Answer", "text": "We map every product URL, category page, and blog post with 301 redirects so Google sees continuity. Combined with faster load times and improved Core Web Vitals, most clients see rankings improve within 30-60 days of launch." } }

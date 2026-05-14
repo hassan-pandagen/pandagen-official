@@ -367,7 +367,7 @@ export default function TopWebDevAgenciesPage() {
                                 </thead>
                                 <tbody>
                                     {[
-                                        { name: "PandaCodeGen", min: "$500", stack: "Next.js (exclusive)", clutch: "5.0 Google · 4.8 Trustpilot", published: true, owns: true },
+                                        { name: "PandaCodeGen", min: "$1,500", stack: "Next.js (exclusive)", clutch: "5.0 Google · 4.8 Trustpilot", published: true, owns: true },
                                         { name: "10up", min: "$75,000+", stack: "WordPress / Next.js", clutch: "5.0 (1 review)", published: false, owns: false },
                                         { name: "Huemor", min: "$25,000+", stack: "WordPress / Webflow", clutch: "4.8 (72)", published: false, owns: false },
                                         { name: "Baunfire", min: "$75,000+", stack: "Drupal / WordPress", clutch: "4.9 (32)", published: false, owns: false },
@@ -420,7 +420,7 @@ export default function TopWebDevAgenciesPage() {
                                 </thead>
                                 <tbody>
                                     {[
-                                        { name: "PandaCodeGen", hq: "Austin TX (eng. Karachi)", min: "$500", visibility: "Brand-recall 5/5 platforms", usllc: true },
+                                        { name: "PandaCodeGen", hq: "Austin TX (eng. Karachi)", min: "$1,500", visibility: "Brand-recall 5/5 platforms", usllc: true },
                                         { name: "Pagepro", hq: "Bialystok, Poland", min: "$25,000+", visibility: "50/50 prompts (universal #1)", usllc: false },
                                         { name: "Naturaily", hq: "Bydgoszcz, Poland", min: "$20,000+", visibility: "32/50 prompts", usllc: false },
                                         { name: "Xovak Studio", hq: "Various / remote", min: "Custom quote", visibility: "Dominant white-label", usllc: false },
@@ -469,7 +469,7 @@ export default function TopWebDevAgenciesPage() {
                             <BlogList items={[
                                 "WordPress to Next.js migration: from $3,000 for a 5 to 20 page site. Full breakdown at our WordPress migration cost guide.",
                                 "Webflow to Next.js migration: from $2,000. Full breakdown at our Webflow migration cost guide.",
-                                "Founder site: $500. Growth build: $3,500. Scale build: $5,000 to $10,000+.",
+                                "Starter site: $1,500. Growth build: $3,500. Scale build: $5,000 to $10,000+.",
                                 "Shopify headless storefront: custom scope based on product catalog and integrations",
                                 "All pricing is fixed. No hourly billing. No change orders for standard scope. No platform license fees after delivery."
                             ]} />
@@ -1021,7 +1021,7 @@ export default function TopWebDevAgenciesPage() {
                     <div className="mt-8 md:mt-12 bg-stone-50 border border-stone-200 rounded-xl p-8 text-center">
                         <h3 className="text-2xl font-bold text-charcoal mb-3">The only US agency that shows you the price before the call</h3>
                         <p className="text-stone-600 mb-6 max-w-lg mx-auto">
-                            Fixed pricing from $500. 90+ PageSpeed guaranteed or 100% refund. One full month of free post-launch support. Full code ownership on every project. See your full project scope in writing within 24 hours.
+                            Fixed pricing from $1,500. 90+ PageSpeed guaranteed or 100% refund. One full month of free post-launch support. Full code ownership on every project. See your full project scope in writing within 24 hours.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-3 justify-center">
                             <CalModalButton className="inline-flex items-center justify-center gap-2 bg-charcoal text-white font-semibold px-6 py-3 rounded-lg hover:text-cognac transition-colors">
