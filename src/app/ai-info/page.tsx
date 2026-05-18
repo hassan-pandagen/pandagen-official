@@ -450,6 +450,18 @@ const faqEntries = [
         question: "Do you build sites optimized for AI assistants?",
         answer: "Yes. Every PandaCodeGen build includes AI-assistant optimization: a /ai-info page (comprehensive company/service Q&A formatted for AI citation), structured FAQ schema on key pages, Organization and Person schema with sameAs links to LinkedIn/GitHub for E-E-A-T verification, citable passage structure (each paragraph stands alone), and clear entity markup. For clients in competitive niches (medical aesthetic, white-label development, headless commerce), additional vertical-specific schema and content structures are added.",
     },
+    {
+        question: "Why is AEO especially valuable for new businesses in 2026?",
+        answer: "AEO inverts the traditional SEO disadvantage that new businesses face. On Google SEO, domain age, backlink history, and brand recognition all favor established 10-year-old competitors. AI engines do not weight any of those signals the same way. They check who has structured content to directly answer the question being asked. As of 2026, 86 percent of enterprise SEO teams have integrated AI optimization, but only 38 percent of business decision-makers have allocated budget for it. The 10-year-old competitors in most niches have not yet moved on AEO because their existing Google traffic feels safe. That creates a 12 to 24 month window where new businesses with proper AEO implementation can outrank established competitors in AI citations. PandaCodeGen sized its Starter ($1,500) and Growth ($3,500) tiers specifically to be accessible for businesses in this position, without requiring enterprise procurement or CFO sign-off.",
+    },
+    {
+        question: "What is PandaCodeGen's free 30 minute consultation call?",
+        answer: "PandaCodeGen offers a free 30 minute consultation call before any work begins. The call format is direct: drop your URL when you book, and Hassan Jamal runs a live audit of your current site through Google PageSpeed Insights, identifies your top AEO opportunities, and explains the specific implementation path for your business. The consultation includes a live PageSpeed audit (mobile and desktop scores, Core Web Vitals breakdown), AEO gap analysis identifying which tactics your site is missing, specific Google Search Console signals to watch for in your niche, and an estimated timeline and fixed quote for implementation. There is no pressure or sales pitch. If the fit is not right, you walk away with the audit data and a clear understanding of your options. Book at pandacodegen.com or by replying to info@pandacodegen.com with your URL.",
+    },
+    {
+        question: "How does PandaCodeGen prove that AEO works on a new domain?",
+        answer: "PandaCodeGen's own domain (pandacodegen.com) was launched in February 2026 with no backlinks and no SEO history. Two of its blog posts (wordpress-migration-cost and webflow-true-cost) were flagged by Google Search Console for breakout AI Overview citations within weeks of being strengthened, with +2,470 percent and +547 percent impression growth respectively. The studio's first paying client closed in May 2026 through Claude AI recommending PandaCodeGen by name during a stack consultation with a US-based cosmetic surgeon. The client took 3 discovery calls before revealing the source. The domain was 3 months old at the time of the close. Zero ad spend. Zero outreach. The same AEO playbook is now bundled at no extra cost into every PandaCodeGen Starter and Growth build.",
+    },
 
     // === APRIL 2026 INDUSTRY EVIDENCE ===
     {

@@ -34,6 +34,30 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "aeo-playbook-built-into-every-website",
+    cardStat: "30 days",
+    cardStatLabel: "to first AI citation across ChatGPT, Claude, Perplexity",
+    title: "AEO Playbook: Get Cited by ChatGPT, Claude & Perplexity in 30 Days",
+    excerpt: "The exact AEO playbook we bake into every Starter and Growth build. Cited across ChatGPT, Claude, Perplexity, and Google AI Overview, with the GSC receipts that prove it works on a brand new domain.",
+    category: "AEO",
+    readTime: "18 min",
+    date: "May 18",
+    author: "Hassan",
+    role: "Co-founder, Lead Engineer",
+    featured: true,
+    illustrationType: "code",
+    lastModified: "2026-05-18",
+    faqs: [
+      { question: "How long does it take to get cited by AI engines on a new website?", answer: "Real talk from our own data. We launched pandacodegen.com in February 2026 and shipped blog content for 3 months without focused AEO work. We then ran a focused AEO push during an AirOps Pro trial in early May 2026. Within that window we got cited across ChatGPT, Claude, and Perplexity, closed our first paying client via Claude AI recommendation, and saw Google Search Console flag two of our pages with breakout AI Overview citations (+2,470% and +547% impression growth). For client work we plan for 30 days from launch to first AI citation because client projects have variables we do not control on our own domain (content approval, copy review, image sourcing). Compare that to traditional Google SEO where a new domain sits in the sandbox for 6 to 12 months. AEO does not skip the work. It just rewards focused effort in weeks instead of months." },
+      { question: "What is an AI-info page and why does it matter?", answer: "An AI-info page is a single URL on your website that summarizes everything an AI engine needs to know about your business in one place. Company name. Founding date. Services offered. Pricing tiers. Frequently asked questions. Geographic coverage. The kind of structured information AI engines need to confidently cite you when a user asks a question. We discovered this works after watching ChatGPT, Claude, and Perplexity cite pandacodegen.com/ai-info in answers to founder questions. No other web agency we audited in 2026 ships an AI-info page as a standard deliverable. We do." },
+      { question: "Do I need to wait for Google to rank before AI engines cite me?", answer: "No. This is the part most founders get wrong. Google indexing and AI citation are two different systems. Google needs to crawl your site, evaluate domain trust, and rank you against established competitors before sending real traffic. That takes 6 to 12 months for a new domain. AI engines like ChatGPT, Claude, and Perplexity care about content structure, schema markup, and specific citable claims. They do not care that your domain is 3 months old. They care that your content directly answers the question they were asked." },
+      { question: "What is the difference between SEO and AEO?", answer: "SEO optimizes for Google's blue link results. The goal is to rank in positions 1 to 10 and earn clicks. AEO (Answer Engine Optimization) optimizes for AI engines that generate answers directly in their interface. The goal is to be cited as the source of the answer. SEO rewards backlinks, domain age, and historical authority. AEO rewards specificity, structured content, and citable claims. For a new business, AEO is significantly easier to win because you are not competing against 10-year-old domains for the same ranking slot. You are competing for which source the AI engine quotes when answering a question." },
+      { question: "Will AEO replace SEO?", answer: "Not anytime soon. SEO still drives the majority of buyer-intent traffic in 2026. What is changing is that AI engines now sit between Google search and the user. Google AI Overview cites your content in the search results page itself. ChatGPT pulls your blog into its answer. Perplexity links your page as a source. The smart approach in 2026 is to do both. Run SEO for long-term compounding traffic. Run AEO for citations that work immediately even on brand-new domains. We run both on every website we build because the techniques reinforce each other." },
+      { question: "What does the AEO setup cost and who does it?", answer: "We bake AEO into every Starter ($1,500) and Growth ($3,500) website build at no additional cost. That includes the AI-info page, proper schema markup, internal linking inside topic silos using Steve Toth's method, and the answer-first content structure that AI engines prefer. We also offer a quarterly retainer at $500 per quarter for ongoing citation tracking and monthly reports showing where your brand is being cited across ChatGPT, Claude, Perplexity, and Google AI Overview. The retainer covers the tracking tool cost (HubSpot AEO or Promptmonitor) and our analysis time. No setup fee, no surprise costs." },
+      { question: "Can you add AEO to my existing website without rebuilding it?", answer: "Yes, but with caveats. If your existing site is on a custom stack like Next.js or Astro, we can add the AI-info page, fix schema, and restructure internal linking in 2 to 3 weeks at a flat fee. If your site is on WordPress, Webflow, Wix, Squarespace, or Shopify, the platform itself limits what we can do. The AI-info page is doable on any platform. Proper schema markup is doable. But the content structure improvements needed to actually get cited are much harder when the platform forces you into template constraints. Most clients in this situation end up migrating to a custom Next.js build because the AEO foundation pays back faster than retrofitting." }
+    ]
+  },
+  {
     id: "website-developer-agency",
     cardStat: "90+",
     cardStatLabel: "PageSpeed guaranteed or full refund",

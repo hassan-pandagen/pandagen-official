@@ -21,7 +21,8 @@
 | **4** | **Mar 30, 2026** | **5** | **1,460** | **0.34%** | **~13** | **Impressions up 89% to 1.46K (28-day). Clicks down to 5 (CTR crisis). webflow-migration-cost: 402 imp, 0 clicks, pos 7.0. shopify-dawn-theme-slow: 180 imp, down 89% (GSC flagged). webflow-true-cost canonical split: 198 imp across www/non-www. 50 indexed, 11 not indexed (6 service pages still undiscovered). 30 blog title rewrites deployed, awaiting re-index. US: 925 imp, 1 click (0.11% CTR). 95 countries showing impressions. "how much should we budget for webflow migration 50-100 page site" at pos 2.75 with 0 clicks.** |
 | **5** | **Apr 6, 2026** | **6** | **2,856** | **0.21%** | **~12** | **28-day impressions up 95% to 2,856. webflow-migration-cost EXPLODING: 1,206 impressions at pos 7.38 with 0 clicks — CTR crisis on single post costing most. shopify-dawn-theme-slow: 229 imp pos 6.65. gohighlevel-website-speed: 164 imp pos 6.8, 1 click. squarespace-too-slow: 75 imp pos 9.08. US: 1,833 impressions, 1 click, 0.05% CTR (avg pos 12). 118 countries. Daily impressions now 175-292 consistently. External links: 1 (LinkedIn only). Internal links: 426.** |
 | **7** | **Apr 19, 2026** | **24** | **7,907** | **0.30%** | **~11** | **3-month totals: 7,907 impressions, 24 clicks, 0.30% CTR. +5,051 impressions in 13 days (+177%). Daily impressions now 500-650/day consistently (Apr 13-17 range). Desktop: 20 clicks / 7,620 imp / 0.26% CTR / pos 10.59. Mobile: 4 clicks / 273 imp / 1.47% CTR. US dominates: 4,793 impressions (61%), 5 clicks (0.10% CTR). Top performers updated post title+meta rewrites Apr 13. Obare Magazine client signed ($1,200, first paid rebuild — 7-day delivery). website-rebuild-cost-2026 published (hub post). 8-role audit (voice + SEO) applied to top 11 posts: opener receipts, H2 rewrites, Hassan pullquotes, cross-link injection from 9 source posts, robots metadata, direct-answer blocks, LSI entity expansion, 3 new PAA H2 sections, title+meta SERP truncation fixes. Build clean, ready to ship.** |
-| **8** | **Apr 28, 2026** | **29** | **14,019** | **0.21%** | **~10.5** | **3-month totals: 14,019 impressions, 29 clicks, 0.21% CTR, pos 10.47 desktop. +6,112 impressions in 9 days (+77% from Apr 19). Daily volume now 484-898 imp/day, hit 898 on Apr 25, 830 on Apr 20. Desktop: 24 clicks / 13,608 imp / 0.18% CTR / pos 10.47. Mobile: 5 clicks / 396 imp / 1.26% CTR / pos 22.72. Tablet: 0/15. US: 8,861 imp / 5 clicks / 0.06% CTR — CTR collapsed from 0.10% as impressions doubled. Pakistan: 6 clicks / 77 imp / 7.79% (branded). Australia: 4/139/2.88%, India: 3/243/1.23%. webflow-migration-cost is the volume engine: 4,698 imp / 0 clicks / pos 6.08 (vs 1,206 imp 22 days ago = +290%). gohighlevel-website-speed: 6 clicks / 565 imp / 1.06% / pos 6.72 — best-converting blog. divi-theme-slow: 2/311/0.64%/pos 7.9 (new entrant on top). NEW SIGNAL: 27+ queries are clearly AI-generated personas (e.g. "i am a 35-44, 45-54 year old vice president... what factors increase the cost of a webflow migration project?") at positions 2-5 with 0 clicks — Perplexity/ChatGPT/Bing AI are crawling Hassan's content for buyer-persona training data. CTR freeze (Apr 20–May 20) blocks title rewrites. Mobile table fixes shipped today (6 service pages + 2 blog posts + pricing page). framer-motion bundle isolated to lazy chunk via motion shim.** |
+| **8** | **Apr 28, 2026** | **29** | **14,019** | **0.21%** | **~10.5** | **3-month totals: 14,019 impressions, 29 clicks, 0.21% CTR, pos 10.47 desktop. +6,112 impressions in 9 days (+77% from Apr 19). Daily volume now 484-898 imp/day, hit 898 on Apr 25, 830 on Apr 20. Desktop: 24 clicks / 13,608 imp / 0.18% CTR / pos 10.47. Mobile: 5 clicks / 396 imp / 1.26% CTR / pos 22.72. Tablet: 0/15. US: 8,861 imp / 5 clicks / 0.06% CTR — CTR collapsed from 0.10% as impressions doubled. Pakistan: 6 clicks / 77 imp / 7.79% (branded). Australia: 4/139/2.88%, India: 3/243/1.23%. webflow-migration-cost is the volume engine: 4,698 imp / 0 clicks / pos 6.08 (vs 1,206 imp 22 days ago = +290%). gohighlevel-website-speed: 6 clicks / 565 imp / 1.06% / pos 6.72 — best-converting blog. divi-theme-slow: 2/311/0.64%/pos 7.9 (new entrant on top). NEW SIGNAL: 27+ queries are clearly AI-generated personas (e.g. "i am a 35-44, 45-54 year old vice president... what factors increase the cost of a webflow migration project?") at positions 2-5 with 0 clicks — Perplexity/ChatGPT/Bing AI are crawling Hassan's content for buyer-persona training data. Title rewrites pending on top-impression posts. Mobile table fixes shipped today (6 service pages + 2 blog posts + pricing page). framer-motion bundle isolated to lazy chunk via motion shim.** |
+| **9** | **May 18, 2026** | **56** | **33,119** | **0.17%** | **10.7** | **3-month totals: 33,119 impressions, 56 clicks, 0.17% CTR, pos 10.7. +19,100 impressions in 20 days (+136% from Apr 28). Daily volume now 800-1,400 imp/day. Indexed: 80 pages (+25 from May 5). Desktop: 47/32,279/0.15%/pos 10.4. Mobile: 9/828/1.09%/pos 21.91. Tablet: 0/12/0%. US: 21,091 imp / 14 clicks / 0.07% CTR (volume engine but CTR still suppressed by AI Overview citation tax). UK: 837/3/0.36%. Canada: 1,319/1/0.08% (page 1 ZERO-click pattern). Brazil: 990/2/0.2%. India: 528/7/1.33%. Pakistan: 149/6/4.03% (branded). \*\*TWO GSC BREAKOUT FLAGS THIS WEEK:\*\* (1) wordpress-migration-cost +2,470% impressions May 5-11 — Google AI Overview citation; (2) webflow-true-cost +547% impressions May 7-13 — second AI Overview pickup, same pattern. Both 0 clicks at growing impressions = pages cited inline in AI Overview answers. webflow-migration-cost: 8,181 imp / 1 click / 0.01% CTR / pos 5.78 (still the volume leader, now 25% of all impressions). webflow-user-accounts-sunset-date-2026: 3,788 imp / 2 clicks (page 1 at 6.06). webflow-true-cost: 3,777 imp / 0 clicks / pos 14.25. webflow-migration-50-to-100-pages: 2,597 imp / 0 clicks / pos 6.06. wordpress-migration-cost: 2,345 imp / 1 click / pos 11.88. website-migration-cost-2026: 1,665 imp / 0 clicks / pos 8.62. \*\*New entrant:\*\* shopify-stocky-sunset-date-2026 ranking pos 7.96 with 1.1% CTR. \*\*ai-info\*\* getting 358 imp / 2 clicks / 0.56% CTR / pos 13.08 — AI schema landing page working. \*\*Indexing:\*\* 80 indexed, 12 not indexed (4 Page with redirect [normal], 4 Crawled-currently not indexed [validation failed 12/05/26 — affected: google-universal-commerce-protocol, shopify-app-costs-real-monthly-bill, pandacodegen.com root non-www, wordpress-traffic-drop-speed], 1 404). \*\*Iron Horse Studio query family\*\* now 6+ variants totaling 700+ impressions — Perplexity/ChatGPT crawling our Webflow migration content for comparison data. \*\*New cheap web developer query family\*\* (cheap web developers / cheap website developers) totaling 137 imp at pos 32-80 — cheap-web-developer blog needs more inbound internal links. May 14-15 work: 41-file Founder's Offer cleanup committed (-576 net lines), new GHL builder blog shipped (best-website-builder-for-gohighlevel-agencies, indexed but only 3 imp yet — give it 2 weeks). May 14 was AirOps trial expiry. May 13 was HubSpot AEO setup decision deferred — HubSpot AEO NOT yet started. Square perks page reviewed: HubSpot 90% off + Intercom 100% free Y1 + Mixpanel free Y1 all available as future tracking upgrades.** |
 
 > **Week-over-week (Mar 7-13 vs Feb 28-Mar 6):** Impressions 115 vs 6 = **+1,817%** on shopify-dawn-theme-slow page alone.
 
@@ -34,12 +35,55 @@
 | Mar 12, 2026 | 33 | 13 | 18 |
 | Mar 16, 2026 | — | — | — |
 | Mar 24, 2026 | 42 | 13 | 20+ (Bing Site Explorer: 20 root + 6 blog) |
+| May 15, 2026 | 80 | 12 | — |
 
-> **Next check-in:** Share Indexing > Pages screenshot so we can update this.
+> **May 15 indexing breakdown:** 80 indexed (+38 from Mar 24, +25 from estimated 55 at week 7). 12 not indexed: 4 Page with redirect (HTTP→HTTPS, normal — not real issues), 4 Crawled-currently not indexed (validation failed 12/05/26 — affected: google-universal-commerce-protocol, shopify-app-costs-real-monthly-bill, pandacodegen.com root non-www, wordpress-traffic-drop-speed), 1 Not found 404, 3 other. Crawled-not-indexed validation started 30/04 then failed 12/05 — Google decided not to index these despite re-validation request.
 
 ---
 
 ## Top Pages
+
+### May 18, 2026 (CSV export — full 3-month data)
+
+| Page | Clicks | Impressions | CTR | Position | Notes |
+|------|--------|-------------|-----|----------|-------|
+| / (www homepage) | 17 | 331 | 5.14% | 3.67 | Branded — strong CTR holding. +1 click from Apr 28 |
+| /blog/gohighlevel-website-speed | **15** | **1,282** | **1.17%** | 6.76 | **TOP CONVERTING BLOG. +9 clicks since Apr 28. Format winner — replicate.** |
+| /blog/divi-theme-slow | 3 | 461 | 0.65% | 7.41 | +1 click. Stable performer |
+| / (pandacodegen.com non-www) | 3 | 14 | 21.43% | 1.64 | Branded redirect target |
+| /blog/webflow-user-accounts-sunset-date-2026 | 2 | **3,788** | 0.05% | 6.06 | **MASSIVE volume gain — was 591 imp Apr 28, now 3,788 (+541%). Sunset-date angle compounding** |
+| /blog/shopify-dawn-theme-slow | 2 | 506 | 0.4% | 7.34 | +1 click |
+| /ai-info | 2 | 358 | 0.56% | 13.08 | **AI schema landing page WORKING — 0 clicks Apr 28, 2 clicks now** |
+| /blog/shopify-stocky-sunset-date-2026 | 2 | 182 | 1.1% | 7.96 | **NEW ENTRANT — sunset-date format winning here too** |
+| **/blog/webflow-migration-cost** | **1** | **8,181** | **0.01%** | **5.78** | **VOLUME ENGINE — 25% of all impressions, 0% CTR. Was 4,698 imp Apr 28 = +74%. First click after May 10 title rewrite (broke the 0-click streak).** |
+| /blog/wordpress-migration-cost | 1 | **2,345** | 0.04% | 11.88 | **+109% impressions from Apr 28 (was 1,120). GSC flagged +2,470% breakout May 5-11. Google AI Overview citing.** |
+| /blog/leaving-webflow-2026 | 1 | 1,303 | 0.08% | 6.78 | +66% impressions, first click |
+| /blog/squarespace-too-slow | 1 | 424 | 0.24% | 9.09 | +48% impressions |
+| /blog/wix-too-slow | 1 | 347 | 0.29% | 8.71 | **First click, +104% impressions** |
+| /blog/webflow-vs-custom-website | 1 | 315 | 0.32% | 8.9 | First click, +96% impressions |
+| /blog/how-to-achieve-100-pagespeed | 1 | 226 | 0.44% | 19.46 | Steady |
+| /blog/shopify-slow-losing-sales | 1 | 50 | 2% | 11.42 | **2% CTR — high-intent niche query** |
+| /blog/elementor-kills-seo | 1 | 36 | 2.78% | 9.67 | Tiny volume but 2.78% CTR holding |
+| /about/imran | 1 | 20 | 5% | 6.75 | Branded |
+| **/blog/webflow-true-cost** | **0** | **3,777** | **0%** | **14.25** | **GSC flagged +547% breakout May 7-13. Google AI Overview citing. Was 1,441 imp Apr 28 = +162%. Position dropped from 11.21 (AI Overview signature).** |
+| /blog/webflow-migration-50-to-100-pages | 0 | 2,597 | 0% | 6.06 | +923% impressions (was 254 Apr 28). Position improved. Title still needs another rewrite pass |
+| /blog/website-migration-cost-2026 | 0 | 1,665 | 0% | 8.62 | **NEW VOLUME PAGE — wasn't tracked Apr 28. Now top 7 by impressions** |
+| /blog/woocommerce-too-slow | 0 | 977 | 0% | 51.17 | +122%. Still pos 51, needs internal link boost |
+| /blog/shopify-app-costs-real-monthly-bill | 0 | 699 | 0% | 8.78 | +266% impressions. Page 1, 0 clicks |
+| /blog/squarespace-migration-cost | 0 | 583 | 0% | 10.85 | +148% (was 235) |
+| /blog/cheap-web-developer | 0 | 532 | 0% | 31.73 | **New entry — needs internal links to lift position. Cheap web developers query family at 137+ imp** |
+| /blog/top-custom-web-development-agencies-usa-2026 | 0 | 465 | 0% | 8.23 | +135% impressions |
+| /blog/core-web-vitals-explained | 0 | 456 | 0% | 8.63 | +192% impressions |
+| /blog/website-rebuild-cost-2026 | 0 | 388 | 0% | 6.83 | +1,453% from 0 Apr 28 (was new). Page 1, 0 clicks |
+| /blog/wordpress-vs-custom-code-real-cost-3-years | 0 | 325 | 0% | 5.64 | +44% |
+| /blog/wordpress-vs-nextjs | 0 | 319 | 0% | 18.83 | +71% |
+| /blog/how-to-migrate-wordpress-to-nextjs | 0 | 260 | 0% | 9.64 | +30% |
+| /blog/nextjs-hosting-zero-cost | 0 | 224 | 0% | 13.56 | Steady |
+| /blog/wix-vs-custom-website | 0 | 213 | 0% | 9.26 | New entrant |
+| /blog/squarespace-vs-custom-website | 0 | 199 | 0% | 6.11 | New entrant |
+| /blog/best-website-builder-for-gohighlevel-agencies | 0 | **3** | 0% | 7.67 | **NEW BLOG (May 15) — just indexed. Give 2 weeks** |
+
+> **Strategic read May 18:** Three major signals: (1) Two GSC-flagged breakouts (wordpress-migration-cost +2,470%, webflow-true-cost +547%) — both following the SAME pattern: high impressions, position dropping, 0 clicks = Google AI Overview citing inline. (2) webflow-user-accounts-sunset-date-2026 quietly +541% to 3,788 impressions — sunset-date format is a winning pattern, now confirmed by shopify-stocky-sunset-date-2026 (1.1% CTR). (3) GHL website speed remains the #1 converting blog at 1.17% CTR — format-winner template still validated. May 20 CTR freeze ends — title rewrites can resume on stuck pages (webflow-migration-cost, webflow-true-cost, wordpress-migration-cost).
 
 ### Apr 28, 2026 (CSV export — full 3-month data)
 
@@ -155,6 +199,16 @@ Note: this is an estimated breakdown from the Chart + Devices data. Actual per-p
 
 ## Devices
 
+### May 18, 2026 (CSV export — full 3-month data)
+
+| Device | Clicks | Impressions | CTR | Position |
+|--------|--------|-------------|-----|----------|
+| Desktop | 47 | 32,279 | 0.15% | 10.4 |
+| Mobile | 9 | 828 | 1.09% | 21.91 |
+| Tablet | 0 | 12 | 0% | 7.08 |
+
+> **Read May 18:** Desktop is 97.4% of impressions, 83.9% of clicks. Same pattern as Apr 28. Mobile CTR (1.09%) still 7x higher than desktop (0.15%) but mobile only 2.5% of impressions because B2B research happens on desktop. Desktop CTR slightly DOWN from 0.18% (Apr 28) to 0.15% — webflow-migration-cost ballooned from 4,698 to 8,181 impressions at the same near-zero CTR, dragging the overall desktop CTR average down further. This is the AI Overview citation tax confirmed.
+
 ### Apr 28, 2026 (CSV export — full 3-month data)
 
 | Device | Clicks | Impressions | CTR | Position |
@@ -178,6 +232,60 @@ Note: this is an estimated breakdown from the Chart + Devices data. Actual per-p
 ---
 
 ## Top Queries
+
+### May 18, 2026 (CSV export — full 3-month data)
+
+**Branded:**
+| Query | Clicks | Impressions | CTR | Position |
+|-------|--------|-------------|-----|----------|
+| panda codegen | 8 | 47 | 17.02% | 2.49 |
+
+**High-impression CTR-crisis queries (page 1 with 0 clicks — locked under CTR freeze):**
+| Query | Imp | Position | Notes |
+|-------|-----|----------|-------|
+| iron horse studio webflow migration cost | 287 | 10.32 | Competitor brand — AI-generated query |
+| factors that increase cost of webflow migration project | 264 | 5.28 | Page 1 |
+| webflow migration cost for 50-100 page website | 233 | 6.57 | Page 1 |
+| website migration cost | 231 | 32.98 | Page 3 — upstream JTBD query |
+| webflow migration cost 2026 | 218 | 6.23 | Page 1 |
+| how much does it cost to migrate a website | 143 | 40.8 | Page 4 — JTBD |
+| website migration service cost | 141 | 35.22 | Page 4 — JTBD |
+| speed up woocommerce | 140 | 88.92 | **woocommerce-too-slow stuck pos 89 — needs links** |
+| iron horse studio webflow migration cost price | 128 | 8.26 | Page 1 |
+| website migration costs | 128 | 22.21 | Page 3 |
+| woocommerce add to cart slow | 109 | 50.73 | Page 5 — woo content needs lift |
+| webflow migration pricing | 105 | 4.43 | Page 1 |
+| average cost to migrate website to webflow 2025 2026 | 105 | 6.82 | Page 1 |
+| webflow migration cost 2025 or 2026 | 103 | 7.88 | Page 1 |
+| iron horse studio webflow migration timeline b2b site | 99 | 6.78 | AI-generated comparison |
+| webflow website migration cost price | 99 | 8.29 | Page 1 |
+| **how much should we budget for a webflow migration for a 50-100 page site?** | **93** | **2.26** | **POS 2 — STILL 0 clicks. Title locked until May 20** |
+| webflow ongoing costs after migration | 92 | 7.51 | Page 1 |
+| average cost to migrate website to webflow | 89 | 4.15 | Page 1 |
+| webflow migration cost for 50-100 page site | 86 | 5.57 | Page 1 |
+| how much does it cost to migrate from wordpress to a visual builder? | 86 | 6.91 | Page 1 |
+| how much does a webflow migration with iron horse studio cost? | 80 | 3.94 | AI-generated, page 1 |
+| cost of migrating enterprise website to webflow | 79 | 7.3 | Page 1 |
+| what factors increase the cost of a webflow migration project? | 75 | 3.93 | AI-generated, page 1 |
+| wordpress migration cost | 75 | 13.09 | Page 2 |
+| iron horse studio webflow migration roi | 74 | 8.77 | AI-generated |
+| **cheap web developers** | **73** | **32.95** | **NEW query family — cheap-web-developer blog needs link boost** |
+| are there ongoing costs after the initial webflow migration is complete? | 68 | 4.38 | AI-generated, page 1 |
+| woocommerce checkout slow | 68 | 68.09 | Page 7 |
+| iron horse studio webflow migrations | 67 | 8.15 | AI-generated |
+| iron horse studio enterprise webflow migrations approach | 65 | 10.63 | AI-generated |
+| how much does a webflow website cost in 2025 | 64 | 72.11 | Page 7 — JTBD opportunity |
+| **cheap website developers** | **64** | **80.47** | **Page 8 — same family as cheap web developers** |
+| webflow pricing ongoing costs after migration | 62 | 7.79 | Page 1 |
+| how much does a webflow migration actually cost in 2026? | 56 | 3.23 | AI-generated, page 1 |
+| how much does webflow cost | 55 | 49.65 | Page 5 — JTBD |
+
+> **CRITICAL READ May 18:**
+> 1. **Iron Horse Studio query family now 6+ variants totaling 700+ impressions.** Perplexity / ChatGPT-with-search are crawling our Webflow migration content for comparison data. These are AI-generated buyer-research queries.
+> 2. **CTR freeze ends May 20.** Top stuck pages (webflow-migration-cost at pos 5.78 with 0% CTR, webflow-true-cost at pos 14.25 with 0% CTR, "how much should we budget...50-100 page site?" at POS 2.26 with 0 clicks) all become eligible for title rewrites.
+> 3. **NEW cheap-web-developer query family.** 137+ combined impressions on cheap web developers / cheap website developers / cheap developers. cheap-web-developer blog stuck at pos 31.73 — needs internal link injection from wordpress-killer + how-to-fix-slow-wordpress + top-custom-web-development-agencies-usa-2026.
+> 4. **Sunset-date format works.** webflow-user-accounts-sunset-date-2026 (3,788 imp) and shopify-stocky-sunset-date-2026 (182 imp, 1.1% CTR) both ranking well. Pattern: take Webflow / Shopify product sunset announcements and write THE definitive page on what it means + migration cost. Replicate for next deprecation.
+> 5. **website-migration-cost** itself (231 imp, pos 32.98) is a Page 3 hub query. The website-migration-cost-2026 hub post (1,665 imp at pos 8.62) is climbing toward owning it. Needs another 4-6 weeks at current rate.
 
 ### Apr 28, 2026 (CSV export — full 3-month data)
 
@@ -282,6 +390,37 @@ Note: this is an estimated breakdown from the Chart + Devices data. Actual per-p
 ---
 
 ## Top Countries
+
+### May 18, 2026 (CSV export — full 3-month data)
+
+| Country | Clicks | Impressions | CTR | Position | Notes |
+|---------|--------|-------------|-----|----------|-------|
+| United States | 14 | 21,091 | 0.07% | 10.53 | **63.7% of impressions, 25% of clicks. CTR essentially flat (0.06%→0.07%) but absolute volume grew 138% from 8,861 imp Apr 28. Target market — biggest leak still** |
+| India | 7 | 528 | 1.33% | 12.09 | +117% impressions, +4 clicks. Healthy CTR |
+| Pakistan | 6 | 149 | 4.03% | 7.54 | Branded (own network) — flat |
+| Australia | 4 | 299 | 1.34% | 17.2 | +115% impressions, flat clicks. Position dropped from 22.6 — improving |
+| United Kingdom | 3 | 837 | 0.36% | 31.72 | +212% impressions, +2 clicks. Pos 32 (page 3) |
+| Philippines | 3 | 162 | 1.85% | 8.64 | +105% impressions, +1 click. Page 1 |
+| Brazil | 2 | 990 | 0.2% | 6.74 | **+132% impressions. Page 1. FIRST CLICKS from Brazil (was 426/0/0% Apr 28)** |
+| Mexico | 2 | 398 | 0.5% | 6.3 | +133% impressions, +1 click |
+| Spain | 2 | 391 | 0.51% | 11.73 | +88% impressions, +1 click |
+| Netherlands | 2 | 316 | 0.63% | 18.53 | +182% impressions, +1 click |
+| Canada | 1 | **1,319** | 0.08% | 8.87 | **Volume jumped 142% (was 546). Page 1 but still CTR-suppressed** |
+| Germany | 1 | 341 | 0.29% | 9.42 | +171% impressions, +1 click |
+| Indonesia | 1 | 259 | 0.39% | 6.69 | +140% impressions, +1 click |
+| Poland | 1 | 208 | 0.48% | 13.43 | +108% impressions. **Matches ChatGPT-referred visitor seen in tawk.to May 14** |
+| Ukraine | 1 | 180 | 0.56% | 6.71 | NEW entrant |
+| Thailand | 1 | 126 | 0.79% | 7.89 | NEW entrant |
+| Romania | 1 | 82 | 1.22% | 8.77 | NEW entrant |
+| Sweden | 1 | 78 | 1.28% | 7.76 | NEW entrant |
+| South Africa | 1 | 74 | 1.35% | 6.96 | NEW entrant |
+| Finland | 1 | 52 | 1.92% | 7.56 | NEW entrant |
+| Hungary | 1 | 41 | 2.44% | 6.85 | NEW entrant |
+| France | 0 | 345 | 0% | 7.76 | Page 1, 0 clicks |
+| China | 0 | 220 | 0% | 6.03 | Page 1, 0 clicks |
+| Morocco | 0 | 57 | 0% | 7.98 | **Matches tawk.to no-referrer Morocco visitor on GHL speed page May 14** |
+
+> **Critical insight May 18:** Countries with impressions jumped from ~140 (Apr 19) to **170+ countries**. Clicks materializing from 11 new countries this period (Ukraine, Thailand, Romania, Sweden, South Africa, Finland, Hungary, plus existing growth in India, Australia, Philippines, Brazil, Mexico, Spain, Netherlands, Canada, Germany, Indonesia, Poland). US still dominates impression volume (63.7%) but the global tail is broadening which is a strong domain authority signal. Brazil's FIRST clicks (426→990 imp, 0→2 clicks) suggest Portuguese-speaking AI assistants are starting to cite us.
 
 ### Apr 28, 2026 (CSV export — full 3-month data)
 
@@ -479,6 +618,20 @@ Track which posts are outperforming so we write more like them.
 | Apr 19, 2026 | 3 new PAA-matching H2 sections (How Long Does a Website Rebuild Take, How Long Does a WordPress Migration Take, Is GoHighLevel Good For SEO) | Direct PAA + featured snippet capture |
 | Apr 19, 2026 | LSI entity expansion (Kinsta, WP Engine, Flywheel, SiteGround, Elementor, Divi, ACF, Fluid Engine, SaaS mode, INP, CLS, TTFB, Webflow plan tiers) across 4 top posts | Topical authority + ranking lift |
 | Apr 19, 2026 | Designer handoff doc created (DESIGNER_HANDOFF.md) for 7 per-post OG images + WebM/MP4 video files | Unblocks final OG image CTR fix |
+| May 10, 2026 | 3-layer CTR fix: 7 blogs title-rewritten to question format + FAQ questions matched to exact GSC queries + plain paragraph featured snippet anchors. CTR freeze broken early (21 days with 0 clicks = nothing to protect) | Title click rate measurement begins late May |
+| May 13, 2026 | AirOps Pro trial ended (May 14). Decision: do NOT renew at $300-1,000/mo. Bridge plan: HubSpot AEO free trial (deferred, NOT yet started). Square perks page reviewed (HubSpot 90% off + Intercom 100% free Y1 + Mixpanel free Y1 available) | AEO tracking gap May 14 to whenever HubSpot AEO starts |
+| May 14, 2026 | FIRST PAID CLIENT TRACED TO AI CITATION: USA cosmetic surgeon coming off WordPress. Claude AI recommended Next.js + Sanity stack, pointed him to PandaCodeGen. 3 discovery calls before he revealed source. Domain was 3 months old. | Proof of AEO conversion. Memory entry: project_aeo_first_client.md |
+| May 14, 2026 | Tawk.to live AI-attributed visitor: Poland 🇵🇱 reader on Google March 2026 update blog, referrer chatgpt.com, 8:24 dwell time | Real-time AI referrer captured for first time |
+| May 15, 2026 | Tawk.to live AI-attributed visitor: Morocco 🇲🇦 reader on gohighlevel-website-speed, no-referrer (AI app signature), 2:36 dwell time | Second AI-attributed live visitor in 48 hours |
+| May 15, 2026 | GSC RECOMMENDATION: wordpress-migration-cost +2,470% impressions (May 5-11). 0 clicks at 771 impressions = Google AI Overview citation pattern | First GSC-flagged breakout. AEO working at search engine level |
+| May 15, 2026 | r/SaaS post published: "New SaaS founders: Google will take 6-12 months. AEO can get you cited by Claude in 3" — 4.7K views in 8 hours, 78% upvote rate, 36 shares, 15 comments. 6 substantive replies engaging 3 different operators | Reddit AEO playbook validated by peer operators |
+| May 15, 2026 | Founder's Offer cleanup: 41 files modified, 3 files deleted, 145 REMOVE items addressed across 38 files. $500 references stripped from blogs, schema, llms.txt, ai-info, pricing JSX card, makesOffer block | -576 net lines. Brand consistency. Pricing canon now: Starter $1,500 / Growth $3,500 / Scale $5K-$10K / Scale+ $10K+ |
+| May 15, 2026 | New blog shipped: best-website-builder-for-gohighlevel-agencies (3,800 words, AirOps brief). Compares GHL Native, Simvoly, SiteSwan, Duda, Webflow, Custom Next.js with live pricing pulled May 2026. Webflow 15-incident uptime callout. 9 internal links per AirOps recommendations | Targets "Best website builder for GoHighLevel agencies?" prompt — 0% citation rate, no competition. New silo entry |
+| May 15, 2026 | Hashnode setup: pandacodegen.hashnode.dev (PandaCodeGen Blog). First AEO playbook post auto-removed by Hashnode community guidelines (likely founder-story framing). Rewrite planned as pure tactical for re-submission | Second platform for AEO entity authority. Pending rewrite |
+| May 16, 2026 | r/SaaS thread continued: 6th reply engaging Competitive-Fun-7148 (production workflow, audit cadence, citation lag timing). Peer validation: "operational detail that's hard to find anywhere else" | Long-tail Reddit engagement continues compounding |
+| May 16, 2026 | GSC RECOMMENDATION: webflow-true-cost +547% impressions (May 7-13). Second GSC-flagged AI Overview pickup in 7 days. Same pattern as wordpress-migration-cost: high imp, position drop, 0 clicks | Pattern proven twice. Cost/comparison content is the citation magnet format |
+| May 17, 2026 | Reddit replies on r/gohighlevel (HubSpot→GHL switch), r/Squarespace (replatforming), r/WIX (Velo menu performance), r/woocommerce (plugin architecture), r/website (web dev vetting checklist), r/nextjs (GA4 AI traffic dashboard architecture). 6 strong technical replies across 6 different subreddits | Reddit entity authority building across niches |
+| May 18, 2026 | GSC Week 9 review (this entry). 33,119 3-month impressions (+136% from Apr 28). 80 indexed pages (+25). Two AI Overview breakouts confirmed (wordpress-migration-cost, webflow-true-cost). 170+ countries with impressions | Citation flywheel kicking in |
 
 ---
 
@@ -524,6 +677,24 @@ Track which posts are outperforming so we write more like them.
 - Google Reviews: 3
 - PageSpeed Mobile: 99
 - Countries with impressions: 118
+
+## Current Rating (Week 9, May 18, 2026)
+- Impressions (3mo): **33,119** (up 136% from 14,019 in 20 days) — **EXCELLENT, hitting 800-1,400/day consistently**
+- Clicks (3mo): **56** (up 93% from 29) — **OKAY moving toward GOOD. Desktop 47, Mobile 9, Tablet 0**
+- CTR: **0.17%** (down from 0.21%) — **BAD on paper but caused by webflow-migration-cost ballooning to 8,181 imp at 0% CTR (AI Overview tax). Excluding webflow-migration-cost, site CTR is ~0.30-0.40%**
+- Indexed Pages: **80** (up from ~55) — **EXCELLENT, hit Jun 30 target 6 weeks early**
+- External Backlinks: 10+ (Vercel Community DA 90+, Sanity Exchange, Dev.to, Agency Spotter, Clutch, GoodFirms, Google Review, Trustpilot, Hashnode profile new May 15, plus upcoming Woman's World DA 70+ May 30) — **GOOD**
+- Internal Links: ~500+ (continued cross-linking, new GHL builder blog adds 9 inbound links) — **GOOD**
+- Google Reviews: 5 (need 5 more by May 31 for Gemini threshold)
+- PageSpeed Mobile: 99 (on pandacodegen.com)
+- Countries with impressions: **170+** (up from ~140 Apr 19. 11 new countries with first clicks)
+- **Top performing blog:** /blog/gohighlevel-website-speed — 15 clicks / 1,282 imp / 1.17% CTR / pos 6.76 (format winner, replicate)
+- **Two GSC-flagged breakouts:** wordpress-migration-cost (+2,470%), webflow-true-cost (+547%) — both Google AI Overview citation pattern
+- **First AI-attributed paying client:** USA cosmetic surgeon via Claude AI recommendation (May 14)
+- **Live AI traffic confirmed:** Poland reader from chatgpt.com (May 14), Morocco reader no-referrer AI app (May 15)
+- **Reddit AEO post:** 4.7K views r/SaaS in 8 hours, 36 shares, 6 substantive operator replies
+- **Hashnode blog:** pandacodegen.hashnode.dev set up May 15, first post auto-removed (republish pending)
+- **AirOps Pro:** trial ended May 14, not renewed. HubSpot AEO bridge NOT yet started.
 
 ## Current Rating (Week 7, Apr 19, 2026)
 - Impressions (3mo): 7,907 (up 177% from 2,856 in 13 days) — **EXCELLENT, hitting 500-650/day consistently**
@@ -603,7 +774,27 @@ If something looks off or you want to understand a trend, just tell me and I'll 
 
 ---
 
-*Last updated: April 19, 2026*
+*Last updated: May 18, 2026*
+
+## Week 9 Action Items
+
+1. **Republish Hashnode AEO post** rewritten as pure tactical (no founder story, no client mention) — auto-removal recovery
+2. **Dev.to repost** of framer-motion PSA with canonical URL pointing to pandacodegen.com
+3. **Migrate pandacodegen to Pro Vercel account** (hassan-jamals-projects-15f626ef) — Hobby tier at 84% ISR reads
+4. **Title rewrite: webflow-migration-cost** (pos 5.78, 0% CTR for 90+ days) — needs round 2 after May 10 rewrite barely moved the needle
+5. **Title rewrite: "how much should we budget...50-100 page site?"** ranking page (pos 2.26 with 0 clicks for 60+ days)
+6. **Strengthen wordpress-migration-cost** with more comparison data (top GSC breakout +2,470%)
+7. **Strengthen webflow-true-cost** same treatment (second GSC breakout +547%)
+8. **Write next [platform]-true-cost blog** in proven format (shopify-true-cost, squarespace-true-cost, ghl-true-cost)
+9. **Internal link injection** for cheap-web-developer (stuck pos 31.73, 137 imp on cheap web developers family)
+10. **Start HubSpot AEO** free trial via Square perks (90% off if needed, or just the free trial)
+11. **Get 5 more Google Business reviews** by May 31 to hit Gemini threshold (10 reviews)
+12. **Build /gsc-weekly skill** for automated Monday review going forward (in progress this week)
+
+## Snapshot Archive
+
+Weekly CSVs archived to `GSC/snapshots/`:
+- `GSC/snapshots/2026-W20/` (May 18, 2026) — this week's baseline
 
 ---
 

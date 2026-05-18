@@ -187,6 +187,56 @@ export default function PageContent() {
       {/* 2b. SOCIAL PROOF — moved up for concentrated proof flow */}
       <SocialProof />
 
+      {/* 2c. AEO BLOCK — AI-info commitment + Claude AI receipt */}
+      <section className="py-12 md:py-16 px-6 bg-charcoal text-white">
+        <div className="container mx-auto max-w-4xl">
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-cognac/20 text-cognac rounded-full text-xs font-semibold mb-4">
+            <Zap className="w-3 h-3" /> AEO Built In
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Cited by Claude AI from <span className="font-serif italic text-cognac">launch day</span>, not month 12.
+          </h2>
+          <p className="text-lg text-stone-300 leading-relaxed mb-6">
+            We closed our first paying client through Claude AI recommending us. A US-based cosmetic surgeon was migrating off WordPress. He asked Claude what stack to move to. Claude said Next.js plus Sanity, then pointed him at PandaCodeGen. Domain was 3 months old. Zero ad spend. Three discovery calls before he told us the source.
+          </p>
+          <p className="text-lg text-stone-300 leading-relaxed mb-6">
+            We now bake the same AEO playbook into every GoHighLevel custom frontend we build. That includes a dedicated AI-info page no other GHL agency ships, structured schema markup AI engines actually parse, and the Steve Toth silo linking pattern adapted for AI citation.
+          </p>
+          <div className="my-8 p-5 bg-white/5 border-l-4 border-cognac rounded-r-xl">
+            <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">Why this matters for new GHL agencies in 2026</p>
+            <p className="text-stone-300 leading-relaxed mb-3">
+              86 percent of enterprise SEO teams are already integrating AI into their strategy. The 10-year-old GHL agencies in your space mostly are not. By the time their slow internal teams approve AEO budget, it will be 2027 or 2028. That gives you a 12 to 24 month window to break out on AI citations before the field closes.
+            </p>
+            <p className="text-stone-300 leading-relaxed">
+              Read the <Link href="/blog/aeo-playbook-built-into-every-website" className="text-cognac hover:underline font-medium">full AEO playbook</Link> for the 10 tactics, the 2026 adoption data, and the GSC receipts that prove it works on a brand new domain.
+            </p>
+          </div>
+          <div className="my-8 p-5 bg-cognac/10 border-l-4 border-cognac rounded-r-xl">
+            <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">The AI traffic is smaller but converts way higher</p>
+            <p className="text-stone-300 leading-relaxed mb-3">
+              AI referral traffic converts 4 to 5 times higher than organic search traffic in 2026 data. A Visibility Labs study of 94 ecommerce brands found ChatGPT traffic converted at 1.81 percent versus 1.39 percent for non-branded organic, a 31 percent higher conversion rate. Independent studies show AI-referred traffic converting 4.4x to 23x higher than organic, depending on industry.
+            </p>
+            <p className="text-stone-300 leading-relaxed">
+              For GHL agencies running paid ads, this matters twice. Your client ad budget burns harder on slow GHL pages with low Quality Score. The custom Next.js frontend we build solves the speed problem AND opens the AI citation channel, which sends fewer visitors but those visitors close at 4 to 5x the rate.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-4 mt-8">
+            <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
+              <div className="text-2xl font-bold text-cognac mb-1">AI-info page</div>
+              <p className="text-sm text-stone-400">Custom written for your GHL business. No other agency ships this as standard.</p>
+            </div>
+            <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
+              <div className="text-2xl font-bold text-cognac mb-1">3 schema types</div>
+              <p className="text-sm text-stone-400">Organization, Article, FAQPage on every relevant page. AI engines cite cleanly.</p>
+            </div>
+            <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
+              <div className="text-2xl font-bold text-cognac mb-1">$500 / quarter</div>
+              <p className="text-sm text-stone-400">Optional retainer for ongoing citation tracking across ChatGPT, Claude, Perplexity, Gemini.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 3. HOW IT WORKS - Process Timeline */}
       <section id="how-it-works" className="py-12 md:py-20 px-6 bg-white">
         <div className="container mx-auto max-w-6xl">

@@ -150,6 +150,56 @@ export default function WebflowPageContent() {
       {/* 2b. SOCIAL PROOF — moved up for concentrated proof flow */}
       <SocialProof />
 
+      {/* 2c. AEO BLOCK — Day 1 AI citations + Webflow uptime contrast */}
+      <section className="py-12 md:py-16 px-6 bg-charcoal text-white">
+        <div className="container mx-auto max-w-4xl">
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-cognac/20 text-cognac rounded-full text-xs font-semibold mb-4">
+            <Zap className="w-3 h-3" /> AEO Built In
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Cited by Claude AI from <span className="font-serif italic text-cognac">launch day</span>, not month 12.
+          </h2>
+          <p className="text-lg text-stone-300 leading-relaxed mb-6">
+            Webflow had 15 plus documented outages on <a href="https://status.webflow.com" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline">status.webflow.com</a> between February and May 2026. Each outage burns paid ad budget on dead landing pages. We rebuild your site on custom Next.js plus Sanity, hosted on Vercel with 99.99 percent uptime SLA. Two of our Webflow comparison blogs were flagged by Google Search Console for breakout AI Overview citations within 90 days of publish.
+          </p>
+          <p className="text-lg text-stone-300 leading-relaxed mb-6">
+            Every Webflow migration we ship includes a dedicated AI-info page no other agency offers, structured schema markup AI engines parse cleanly, and the Steve Toth silo linking pattern adapted for AI citation.
+          </p>
+          <div className="my-8 p-5 bg-white/5 border-l-4 border-cognac rounded-r-xl">
+            <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">Why this matters when leaving Webflow in 2026</p>
+            <p className="text-stone-300 leading-relaxed mb-3">
+              86 percent of enterprise SEO teams are already integrating AI into their strategy. The 10-year-old design agencies and Webflow Experts in your space mostly are not. By the time their internal teams approve AEO budget, it will be 2027 or 2028. That gives you a 12 to 24 month window to break out on AI citations before the field closes, on a faster and more reliable stack than Webflow.
+            </p>
+            <p className="text-stone-300 leading-relaxed">
+              Read the <Link href="/blog/aeo-playbook-built-into-every-website" className="text-cognac hover:underline font-medium">full AEO playbook</Link> for the 10 tactics, or see the <Link href="/blog/webflow-true-cost" className="text-cognac hover:underline font-medium">Webflow true cost breakdown</Link> Google AI Overview is now citing.
+            </p>
+          </div>
+          <div className="my-8 p-5 bg-cognac/10 border-l-4 border-cognac rounded-r-xl">
+            <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">AI traffic is smaller but converts at 4 to 5x organic</p>
+            <p className="text-stone-300 leading-relaxed mb-3">
+              A Visibility Labs study of 94 ecommerce brands found ChatGPT referral traffic converted at 1.81 percent versus 1.39 percent for non-branded organic, a 31 percent higher conversion rate. Independent studies show AI traffic converting 4.4x to 23x higher than organic depending on industry. The volume is smaller. The buyer intent is sharper.
+            </p>
+            <p className="text-stone-300 leading-relaxed">
+              For design-led D2C brands leaving Webflow, this is the unlock. The visitors that arrive through ChatGPT or Claude already trust the recommendation. They land with intent. The custom Next.js stack we build is the only way to capture both the AI citation pickup AND the speed required to convert them when they land.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-4 mt-8">
+            <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
+              <div className="text-2xl font-bold text-cognac mb-1">AI-info page</div>
+              <p className="text-sm text-stone-400">Custom written for your business. No other Webflow migration agency ships this.</p>
+            </div>
+            <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
+              <div className="text-2xl font-bold text-cognac mb-1">99.99% uptime</div>
+              <p className="text-sm text-stone-400">Vercel edge network vs Webflow&apos;s 15+ documented incidents Feb to May 2026.</p>
+            </div>
+            <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
+              <div className="text-2xl font-bold text-cognac mb-1">$500 / quarter</div>
+              <p className="text-sm text-stone-400">Optional retainer for citation tracking across ChatGPT, Claude, Perplexity, Gemini.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 3. WHEN TO MIGRATE */}
       <section id="when-to-migrate" className="py-12 md:py-20 px-6 bg-[#0F172A]">
         <div className="container mx-auto max-w-5xl">
