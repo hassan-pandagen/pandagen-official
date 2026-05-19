@@ -139,11 +139,12 @@ export default function AuditWidget() {
                   className="space-y-5"
                 >
                   <div>
+                    <p className="text-xs text-stone-500 mb-2">276 sites reviewed in 2026. Average revenue leak identified: $3,200/month.</p>
                     <h2 className="text-xl font-bold text-charcoal leading-tight mb-1">
-                      Free Optimization Report. No Call Required.
+                      Find out why your website isn&apos;t converting visitors into customers.
                     </h2>
                     <p className="text-sm text-stone-600">
-                      Paste your URL. See exactly what&apos;s slowing your site down in 30 seconds. Full written report with a personal video walkthrough delivered within <span className="font-semibold text-charcoal">24 business hours</span>. No sign-up, no sales pitch.
+                      Drop your URL. We&apos;ll show you the top 3 revenue leaks within <span className="font-semibold text-charcoal">24 hours</span>. No sign-up, no sales pitch.
                     </p>
                   </div>
 
@@ -315,8 +316,9 @@ export default function AuditWidget() {
               {state === "input" && (
                 <motion.div key="m-input" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="space-y-4">
                   <div>
-                    <h2 className="text-lg font-bold text-charcoal mb-1">Free Optimization Report. No Call Required.</h2>
-                    <p className="text-xs text-stone-600">Instant preview + full written report with video walkthrough in <span className="font-semibold text-charcoal">24 business hours</span>. No sign-up, no sales pitch.</p>
+                    <p className="text-[10px] text-stone-500 mb-1">276 sites reviewed in 2026. Average revenue leak: $3,200/month.</p>
+                    <h2 className="text-lg font-bold text-charcoal mb-1">Find out why your website isn&apos;t converting.</h2>
+                    <p className="text-xs text-stone-600">Drop your URL. We&apos;ll show you the top 3 revenue leaks within <span className="font-semibold text-charcoal">24 hours</span>. No sign-up, no sales pitch.</p>
                   </div>
                   <div className="relative">
                     <Globe className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
