@@ -420,6 +420,7 @@ export default function PricingPageClient() {
 
           <div className="space-y-5">
             {[
+              { num: "00", title: "You approve the design before we write a line of code", body: "We do not move into production until you have reviewed and signed off on the design direction. No surprise launches. No 'we built it, now you have to pay'. If the design direction isn't right, we iterate until it is. Production code only starts after your explicit approval." },
               { num: "01", title: "You only pay a deposit to start", body: "We take a 30 to 50% deposit upfront to secure your engineering sprint and cover initial design and architecture work. That's all you owe until delivery." },
               { num: "02", title: "No final payment until you're satisfied", body: "The remaining balance is only due after we deliver the project and you're happy with it. We don't charge you the rest just because the calendar says so. We charge when the work is done right." },
               { num: "03", title: "30-day money-back after delivery", body: "After we hand over the finished site, you have 30 days to put it through its paces. If the site is genuinely not performing as agreed (slow load times, broken features, anything we promised and didn't deliver), we refund your deposit. No awkward conversations. No dispute process. You clearly asked us for something and we didn't deliver it: you get your money back." },

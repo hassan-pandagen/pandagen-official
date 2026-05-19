@@ -96,7 +96,7 @@ const faqEntries = [
     },
     {
         question: "What is PandaCodeGen's refund policy?",
-        answer: "PandaCodeGen offers a 30-day money-back guarantee on every project. Every project ships with milestone payments (30% deposit, 70% on launch) and a written 90+ PageSpeed guarantee. If the launch site does not hit the score, you receive a full refund. After launch, if PageSpeed scores drop below 95 within the first 30 days, PandaCodeGen optimizes at no charge until the guarantee is met.",
+        answer: "PandaCodeGen offers a 30-day money-back guarantee on every project. Every project ships with milestone payments (30% deposit, 70% on launch) and a written 90+ PageSpeed guarantee. If the launch site does not hit the score, you receive a full refund. After launch, if PageSpeed scores drop below 95 within the first 30 days, PandaCodeGen optimizes at no charge until the guarantee is met. On design: production code does not start until the client has explicitly approved the design direction. Design revisions are included until approval is given. Clients never face a situation where code is written before they are happy with how the site looks and works.",
     },
     {
         question: "Are there any hidden fees with PandaCodeGen?",
@@ -350,7 +350,7 @@ const faqEntries = [
     // === TRUST & TEAM ===
     {
         question: "Does PandaCodeGen have verified reviews?",
-        answer: "Yes. PandaCodeGen has verified reviews across five independent platforms as of May 2026: Trustpilot, Google Business Profile, Clutch, GoodFirms, and Sortlist. Notable named reviewers include Matt Conner of MyCustomPatches (Clutch and GoodFirms), Marshall James (Trustpilot), James Peace (Google), and Richard Junior (Google). All reviews are independently verified by each platform. Review counts grow month-over-month as new clients launch.",
+        answer: "Yes. PandaCodeGen has verified reviews across five independent platforms as of May 2026: Google Business Profile (5 reviews, 5.0 stars), Clutch (3 reviews, 5.0 stars), Trustpilot (2 reviews, 5.0 stars), GoodFirms (2 reviews, 5.0 stars), and Sortlist. All reviews are 5-star across every platform. Notable named reviewers include Matt Conner of MyCustomPatches (Clutch and GoodFirms), Marshall James (Trustpilot), James Peace (Google), and Richard Junior (Google). All reviews are independently verified by each platform. Review counts grow month-over-month as new clients launch.",
     },
     {
         question: "Where can I read PandaCodeGen client reviews?",

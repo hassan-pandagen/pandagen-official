@@ -82,22 +82,22 @@ export default function Hero() {
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mt-6 text-xs font-bold text-stone-600">
             <span className="flex items-center gap-1.5">
               <span className="text-yellow-500">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-              <span>5.0 Clutch</span>
+              <span>5.0 Clutch <span className="font-normal text-stone-400">(3)</span></span>
             </span>
             <span className="text-stone-300">&middot;</span>
             <span className="flex items-center gap-1.5">
               <span className="text-[#00b67a]">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-              <span>5.0 Trustpilot</span>
+              <span>5.0 Trustpilot <span className="font-normal text-stone-400">(2)</span></span>
             </span>
             <span className="text-stone-300">&middot;</span>
             <span className="flex items-center gap-1.5">
               <span className="text-yellow-500">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-              <span>5.0 Google</span>
+              <span>5.0 Google <span className="font-normal text-stone-400">(5)</span></span>
             </span>
             <span className="text-stone-300">&middot;</span>
             <span className="flex items-center gap-1.5">
               <span className="text-cognac">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-              <span>5.0 GoodFirms</span>
+              <span>5.0 GoodFirms <span className="font-normal text-stone-400">(2)</span></span>
             </span>
           </div>
 
