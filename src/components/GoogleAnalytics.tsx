@@ -44,9 +44,16 @@ export default function GoogleAnalytics() {
 
 /**
  * Helper to fire custom GA4 events from anywhere in the app.
- * Usage: trackGAEvent("audit_submit", { url: "..." });
+ * Falls back to dataLayer push if gtag hasn't loaded yet.
+ * Usage: trackGAEvent("audit_url_submit", { url: "..." });
  */
 export function trackGAEvent(name: string, params: Record<string, unknown> = {}) {
-  if (typeof window === "undefined" || !window.gtag) return;
-  window.gtag("event", name, params);
+  if (typeof window === "undefined") return;
+  if (window.gtag) {
+    window.gtag("event", name, params);
+  } else {
+    // gtag not ready yet — push directly to dataLayer queue
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: name, ...params });
+  }
 }
