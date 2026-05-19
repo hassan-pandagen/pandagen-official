@@ -313,6 +313,9 @@ export default function AEOPlaybookPage() {
                     <BlogText>
                         The short version. <BlogHighlight>SEO rewards trust signals that take years to build. AEO rewards content that directly answers the question being asked.</BlogHighlight> For a new business, that is a much shorter path to organic traffic.
                     </BlogText>
+                    <BlogText>
+                        And the quality of that traffic? Ahrefs published data showing that only 0.5 percent of their traffic comes from AI engines, but it accounts for 12 percent of their signups and those signups convert at <BlogHighlight>22 times higher than Google traffic</BlogHighlight>. AI-referred visitors arrive pre-qualified. They already told the AI engine their budget, their team size, their requirements. By the time they land on your site, they are not browsing. They are buying.
+                    </BlogText>
 
                     {/* Section 3: The Receipt */}
                     <BlogHeader id="the-receipt">The Receipt</BlogHeader>
