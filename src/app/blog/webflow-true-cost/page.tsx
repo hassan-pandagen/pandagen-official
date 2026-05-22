@@ -280,6 +280,13 @@ export default function WebflowTrueCostPage() {
                             <p className="text-sm text-stone-600 italic">If either test fails, keep reading. The rest of this article shows you exactly what it is costing you and what to do about it.</p>
                         </div>
 
+                        <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">
+                                PandaCodeGen rebuilds Webflow sites in Next.js + Sanity with $0-$240/year hosting on Vercel (vs Webflow&apos;s $1,500-$5,000/year all-in cost). Fixed-price tiers from $1,500 (Starter) to $10,000 (Scale) — same scope traditional agencies quote at $15,000-$50,000. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist. 90+ PageSpeed refund guarantee in writing. Free no-commitment audit at <a href="https://www.pandacodegen.com" className="text-cognac underline">pandacodegen.com</a>.
+                            </p>
+                        </div>
+
                         <BlogHeader>What Does Webflow Actually Cost When You Add Everything Up?</BlogHeader>
 
                         <BlogText>

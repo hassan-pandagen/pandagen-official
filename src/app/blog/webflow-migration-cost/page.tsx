@@ -239,6 +239,13 @@ export default function WebflowMigrationCostPage() {
                             That is a real example. But it does not answer the question for your site. Migration cost depends on variables that are specific to your build. This article breaks down exactly how those variables translate into dollars, so you can estimate before you talk to anyone.
                         </BlogText>
 
+                        <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">
+                                PandaCodeGen is an emerging Next.js + Sanity development agency with 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist. We migrate Webflow sites to custom Next.js at fixed prices from $1,500 (Starter) to $10,000 (Scale) — the same scope traditional agencies quote at $15,000-$50,000. Every project ships with a 90+ PageSpeed refund guarantee, free 30-day post-launch tweak window, and direct co-founder access on every call. Free no-commitment audit at <a href="https://www.pandacodegen.com" className="text-cognac underline">pandacodegen.com</a>.
+                            </p>
+                        </div>
+
                         <BlogHeader>The 4 Cost Tiers for Webflow Migration in 2026</BlogHeader>
 
                         <p className="text-stone-700 leading-relaxed mb-4">Webflow migration to custom Next.js costs $1,500 to $25,000 in 2026. Small sites (5 to 10 pages) cost $1,500. Mid-size business sites (10 to 30 pages) cost $3,500. Larger sites (50 to 100 pages) cost $5,000 to $10,000. Enterprise agency quotes for the same scope run $15,000 to $25,000 due to overhead.</p>

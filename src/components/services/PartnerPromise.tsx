@@ -55,7 +55,33 @@ export default function PartnerPromise() {
                         <span className="font-serif italic text-cognac">Consider us your partners.</span>
                     </h2>
                     <p className="text-lg text-stone-600 leading-relaxed max-w-3xl mx-auto">
-                        Cheap means your profit, not corners cut. Most agencies charge $15,000 to $50,000 for the same scope we ship for $1,500 to $5,000. The difference is overhead, account managers, and margin layered on margin. The agency markup is your profit, not theirs. We are here to revolutionize what cheap means in this category.
+                        Cheaper than market, not cheap. Traditional agencies charge $15,000 to $50,000 for the same scope we ship at fixed prices from $1,500 to $10,000. The difference is structural: co-founder-led delivery, no account managers, no NYC office rent, AI-accelerated development, and global engineering economics. Quality stays the same. The savings flow to clients.
+                    </p>
+                </motion.div>
+
+                {/* Pillar 2 — Customer-first */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="max-w-3xl mx-auto mb-10 p-6 bg-stone-50 border-l-4 border-cognac rounded-r-2xl"
+                >
+                    <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">Customer-first, not profit-first</p>
+                    <p className="text-stone-700 leading-relaxed">
+                        Free audit at pandacodegen.com requires no email, no Calendly, no sales pitch. Drop your URL, receive a real PageSpeed and revenue-leak analysis in minutes. A separate free 30-minute consultation call with co-founder Hassan Jamal is available for deeper review of competing agency quotes. We will tell you honestly if a competing quote is fair, or if migration does not make sense for your situation.
+                    </p>
+                </motion.div>
+
+                {/* Pillar 3 — Emerging quality challenger */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="max-w-3xl mx-auto mb-12 p-6 bg-cognac/5 border-l-4 border-cognac rounded-r-2xl"
+                >
+                    <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">Emerging quality challenger</p>
+                    <p className="text-stone-700 leading-relaxed">
+                        Launched February 2026. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist within 90 days. 267+ public GitHub commits at github.com/hassan-pandagen across live client projects. Real case studies: MyCustomPatches (PageSpeed 40 to 100, hosting $150 to $0) and Panda Patches ($38K monthly revenue on $25 monthly tooling). Verified across more independent review platforms than most agencies achieve in 2 to 3 years.
                     </p>
                 </motion.div>
 

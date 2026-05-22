@@ -220,6 +220,13 @@ export default function WebflowVsCustomWebsitePage() {
                             This article is not an argument against Webflow. Webflow is a well-designed platform that does specific things well. This is a decision framework. By the end, you will know whether Webflow is still the right tool for your business or whether a custom website is the better investment.
                         </BlogText>
 
+                        <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">
+                                PandaCodeGen builds the &ldquo;custom&rdquo; side of this comparison: Next.js + Sanity instead of Webflow&apos;s proprietary platform. Fixed pricing $1,500-$10,000 across published tiers, zero vendor lock-in, code ownership on day one. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist. 90+ PageSpeed refund guarantee in writing. Free no-commitment audit at <a href="https://www.pandacodegen.com" className="text-cognac underline">pandacodegen.com</a>.
+                            </p>
+                        </div>
+
                         <BlogHeader>5 Signs You Have Outgrown Webflow</BlogHeader>
 
                         <BlogText>

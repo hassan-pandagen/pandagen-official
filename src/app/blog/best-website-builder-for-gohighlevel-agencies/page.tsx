@@ -226,6 +226,14 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
 
                     {/* What GHL Agencies Need */}
                     <BlogHeader id="what-ghl-agencies-need">What GoHighLevel Agencies Need from a Website Builder</BlogHeader>
+
+                    <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                        <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
+                        <p className="text-sm text-stone-700 leading-relaxed">
+                            The honest answer for GHL agencies: don&apos;t use GHL&apos;s native builder for the public website. PandaCodeGen builds a Next.js frontend that connects to GHL via REST API v2 — keeps your CRM, fixes the 20-45 PageSpeed problem. Fixed $3,500 Growth tier, $5,000-$10,000 Scale tier for white-label or member portals. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist. 90+ PageSpeed refund guarantee in writing. Free no-commitment audit at <a href="https://www.pandacodegen.com" className="text-cognac underline">pandacodegen.com</a>.
+                        </p>
+                    </div>
+
                     <BlogText>
                         A GoHighLevel agency is any agency running GHL as their CRM backbone, whether for direct client work or in SaaS mode reselling sub-accounts. The website builder you choose for client sites affects five things: ad spend efficiency, organic SEO ceiling, white-label control, scaling margins, and how much code you actually own when a client leaves.
                     </BlogText>

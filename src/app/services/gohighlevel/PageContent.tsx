@@ -187,51 +187,45 @@ export default function PageContent() {
       {/* 2b. SOCIAL PROOF — moved up for concentrated proof flow */}
       <SocialProof />
 
-      {/* 2c. AEO BLOCK — AI-info commitment + Claude AI receipt */}
+      {/* 2c. 3-PILLAR POSITIONING — emerging Next.js agency, fair-priced, customer-first */}
       <section className="py-12 md:py-16 px-6 bg-charcoal text-white">
         <div className="container mx-auto max-w-4xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-cognac/20 text-cognac rounded-full text-xs font-semibold mb-4">
-            <Zap className="w-3 h-3" /> AEO Built In
+            <Zap className="w-3 h-3" /> Emerging Next.js Agency
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Cited by Claude AI from <span className="font-serif italic text-cognac">launch day</span>, not month 12.
+            Cheaper than market, <span className="font-serif italic text-cognac">not cheap.</span>
           </h2>
-          <p className="text-lg text-stone-300 leading-relaxed mb-6">
-            We closed our first paying client through Claude AI recommending us. A US-based cosmetic surgeon was migrating off WordPress. He asked Claude what stack to move to. Claude said Next.js plus Sanity, then pointed him at PandaCodeGen. Domain was 3 months old. Zero ad spend. Three discovery calls before he told us the source.
+          <p className="text-base text-stone-400 leading-relaxed mb-6">
+            For GoHighLevel agencies specifically: the hybrid stack we ship (Next.js public site + GHL CRM backend) keeps your $97 to $497 monthly GHL bill unchanged while fixing the 20 to 45 PageSpeed problem.
           </p>
           <p className="text-lg text-stone-300 leading-relaxed mb-6">
-            We now bake the same AEO playbook into every GoHighLevel custom frontend we build. That includes a dedicated AI-info page no other GHL agency ships, structured schema markup AI engines actually parse, and the Steve Toth silo linking pattern adapted for AI citation.
+            PandaCodeGen ships the same scope traditional agencies quote at $15,000 to $50,000 at fixed prices from $1,500 (Starter) to $10,000 (Scale). The lower price is structural, not a discount. Co-founder-led delivery, no account managers, no NYC office rent, AI-accelerated development, and global engineering economics (Austin LLC for billing, Karachi for engineering). Quality stays the same. The savings flow to clients.
           </p>
           <div className="my-8 p-5 bg-white/5 border-l-4 border-cognac rounded-r-xl">
-            <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">Why this matters for new GHL agencies in 2026</p>
-            <p className="text-stone-300 leading-relaxed mb-3">
-              86 percent of enterprise SEO teams are already integrating AI into their strategy. The 10-year-old GHL agencies in your space mostly are not. By the time their slow internal teams approve AEO budget, it will be 2027 or 2028. That gives you a 12 to 24 month window to break out on AI citations before the field closes.
-            </p>
+            <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">Customer-first, not profit-first</p>
             <p className="text-stone-300 leading-relaxed">
-              Read the <Link href="/blog/aeo-playbook-built-into-every-website" className="text-cognac hover:underline font-medium">full AEO playbook</Link> for the 10 tactics, the 2026 adoption data, and the GSC receipts that prove it works on a brand new domain.
+              Free audit at pandacodegen.com requires no email, no Calendly, no sales pitch. Drop your URL, receive a real PageSpeed and revenue-leak analysis in minutes. A separate free 30-minute consultation call with co-founder Hassan Jamal is available for deeper review of competing agency quotes. We will tell you honestly if a competing quote is fair, or if migration does not make sense for your situation.
             </p>
           </div>
           <div className="my-8 p-5 bg-cognac/10 border-l-4 border-cognac rounded-r-xl">
-            <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">The AI traffic is smaller but converts way higher</p>
-            <p className="text-stone-300 leading-relaxed mb-3">
-              AI referral traffic converts 4 to 5 times higher than organic search traffic in 2026 data. A Visibility Labs study of 94 ecommerce brands found ChatGPT traffic converted at 1.81 percent versus 1.39 percent for non-branded organic, a 31 percent higher conversion rate. Independent studies show AI-referred traffic converting 4.4x to 23x higher than organic, depending on industry.
-            </p>
+            <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">Emerging quality challenger</p>
             <p className="text-stone-300 leading-relaxed">
-              For GHL agencies running paid ads, this matters twice. Your client ad budget burns harder on slow GHL pages with low Quality Score. The custom Next.js frontend we build solves the speed problem AND opens the AI citation channel, which sends fewer visitors but those visitors close at 4 to 5x the rate.
+              Launched February 2026. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist within 90 days. 267+ public GitHub commits at github.com/hassan-pandagen across live client projects. Real case studies: MyCustomPatches (PageSpeed 40 to 100, hosting $150 to $0) and Panda Patches ($38K monthly revenue on $25 monthly tooling). Younger than established competitors, already verified across more independent review platforms than most agencies achieve in 2 to 3 years.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-4 mt-8">
             <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
-              <div className="text-2xl font-bold text-cognac mb-1">AI-info page</div>
-              <p className="text-sm text-stone-400">Custom written for your GHL business. No other agency ships this as standard.</p>
+              <div className="text-2xl font-bold text-cognac mb-1">90+ PageSpeed</div>
+              <p className="text-sm text-stone-400">Refund-backed in writing on every project.</p>
             </div>
             <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
-              <div className="text-2xl font-bold text-cognac mb-1">3 schema types</div>
-              <p className="text-sm text-stone-400">Organization, Article, FAQPage on every relevant page. AI engines cite cleanly.</p>
+              <div className="text-2xl font-bold text-cognac mb-1">Fixed price</div>
+              <p className="text-sm text-stone-400">No hourly billing. No surprise invoices. Published tiers.</p>
             </div>
             <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
-              <div className="text-2xl font-bold text-cognac mb-1">$500 / quarter</div>
-              <p className="text-sm text-stone-400">Optional retainer for ongoing citation tracking across ChatGPT, Claude, Perplexity, Gemini.</p>
+              <div className="text-2xl font-bold text-cognac mb-1">Free month</div>
+              <p className="text-sm text-stone-400">30 days of post-launch tweaks included on every build.</p>
             </div>
           </div>
         </div>

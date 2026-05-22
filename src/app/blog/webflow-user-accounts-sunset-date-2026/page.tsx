@@ -212,6 +212,13 @@ export default function WebflowUserAccountsSunset2026Page() {
 
                     <div className="space-y-8">
 
+                        <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">
+                                Webflow killed User Accounts on January 29, 2026. PandaCodeGen builds custom Next.js membership sites with NextAuth, Clerk, or Memberstack integration. Growth tier $3,500 fixed price for 10-20 pages, Scale $5,000-$10,000 for member portals and complex auth flows. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist. 90+ PageSpeed refund guarantee in writing. Free no-commitment audit at <a href="https://www.pandacodegen.com" className="text-cognac underline">pandacodegen.com</a>.
+                            </p>
+                        </div>
+
                         <BlogHeader>What Actually Happened on January 29, 2026</BlogHeader>
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">

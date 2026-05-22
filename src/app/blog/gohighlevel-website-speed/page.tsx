@@ -223,6 +223,13 @@ export default function GHLWebsiteSpeedPage() {
                         This is not a setting you missed or an optimization you skipped. It is how GHL delivers pages, and the fix is not inside GHL at all.
                     </BlogText>
 
+                    <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                        <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
+                        <p className="text-sm text-stone-700 leading-relaxed">
+                            PandaCodeGen replaces the public GHL website with custom Next.js while keeping GoHighLevel as the CRM backend (forms via webhook, calendars via API, automations untouched). 90+ PageSpeed guaranteed in writing. Growth tier $3,500 fixed price for 10-20 pages. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist. Free no-commitment audit at <a href="https://www.pandacodegen.com" className="text-cognac underline">pandacodegen.com</a>.
+                        </p>
+                    </div>
+
                     <BlogHeader id="pagespeed-score">What PageSpeed Score a Typical GoHighLevel Site Gets</BlogHeader>
                     <BlogText>
                         PageSpeed is Google&apos;s 0 to 100 score measuring how fast your page loads and becomes usable on a visitor&apos;s device. Mobile scores matter more than desktop for most GHL users because mobile devices account for{" "}

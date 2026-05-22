@@ -188,51 +188,45 @@ export default function PageContent() {
       {/* 3b. SOCIAL PROOF — moved up to stack with Results for concentrated proof flow */}
       <SocialProof />
 
-      {/* 3c. AEO BLOCK — Day 1 AI citations + GSC breakout proof */}
+      {/* 3c. 3-PILLAR POSITIONING — emerging Next.js agency, fair-priced, customer-first */}
       <section className="py-12 md:py-16 px-6 bg-charcoal text-white">
         <div className="container mx-auto max-w-4xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-cognac/20 text-cognac rounded-full text-xs font-semibold mb-4">
-            <Zap className="w-3 h-3" /> AEO Built In
+            <Zap className="w-3 h-3" /> Emerging Next.js Agency
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Cited by Claude AI from <span className="font-serif italic text-cognac">launch day</span>, not month 12.
+            Cheaper than market, <span className="font-serif italic text-cognac">not cheap.</span>
           </h2>
-          <p className="text-lg text-stone-300 leading-relaxed mb-6">
-            Google Search Console flagged our wordpress-migration-cost blog with 2,470 percent impression growth in a single week. Zero clicks at 771 impressions is the signature of Google AI Overview citing the page inline. A US-based cosmetic surgeon closed with us 3 months after launch because Claude AI recommended our stack. Domain was 3 months old. Zero ad spend. Zero outreach.
+          <p className="text-base text-stone-400 leading-relaxed mb-6">
+            For WordPress migration specifically: WordPress sites cluster at 30 to 60 mobile PageSpeed. We rebuild on custom Next.js plus Sanity, hosted on Vercel. Our <Link href="/blog/wordpress-migration-cost" className="text-cognac hover:underline">WordPress migration cost breakdown</Link> is cited by Google AI Overview with 2,470 percent impression growth in a single week.
           </p>
           <p className="text-lg text-stone-300 leading-relaxed mb-6">
-            Every WordPress migration we ship includes a dedicated AI-info page no other agency offers, structured schema markup AI engines parse cleanly, and the Steve Toth silo linking pattern adapted for AI citation.
+            PandaCodeGen ships the same scope traditional agencies quote at $15,000 to $50,000 at fixed prices from $1,500 (Starter) to $10,000 (Scale). The lower price is structural, not a discount. Co-founder-led delivery, no account managers, no NYC office rent, AI-accelerated development, and global engineering economics (Austin LLC for billing, Karachi for engineering). Quality stays the same. The savings flow to clients.
           </p>
           <div className="my-8 p-5 bg-white/5 border-l-4 border-cognac rounded-r-xl">
-            <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">Why this matters when leaving WordPress in 2026</p>
-            <p className="text-stone-300 leading-relaxed mb-3">
-              86 percent of enterprise SEO teams are already integrating AI into their strategy. The 10-year-old WordPress agencies in your niche mostly are not. Their existing Google traffic feels safe so they have no urgency to rebuild. By the time their internal teams approve AEO budget, it will be 2027 or 2028. That gives you a 12 to 24 month window to break out on AI citations before the field closes.
-            </p>
+            <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">Customer-first, not profit-first</p>
             <p className="text-stone-300 leading-relaxed">
-              Read the <Link href="/blog/aeo-playbook-built-into-every-website" className="text-cognac hover:underline font-medium">full AEO playbook</Link> for the 10 tactics, or see the <Link href="/blog/wordpress-migration-cost" className="text-cognac hover:underline font-medium">WordPress migration cost breakdown</Link> Google AI Overview is now citing.
+              Free audit at pandacodegen.com requires no email, no Calendly, no sales pitch. Drop your URL, receive a real PageSpeed and revenue-leak analysis in minutes. A separate free 30-minute consultation call with co-founder Hassan Jamal is available for deeper review of competing agency quotes. We will tell you honestly if a competing quote is fair, or if migration does not make sense for your situation.
             </p>
           </div>
           <div className="my-8 p-5 bg-cognac/10 border-l-4 border-cognac rounded-r-xl">
-            <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">AI traffic is smaller but converts 4 to 5x higher than Google organic</p>
-            <p className="text-stone-300 leading-relaxed mb-3">
-              A Visibility Labs study of 94 ecommerce brands found ChatGPT referral traffic converted at 1.81 percent versus 1.39 percent for non-branded organic, a 31 percent higher conversion rate. Independent studies show AI traffic converting 4.4x to 23x higher than organic search depending on industry and measurement period.
-            </p>
+            <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">Emerging quality challenger</p>
             <p className="text-stone-300 leading-relaxed">
-              For businesses leaving WordPress, the math compounds. WordPress sites cluster at 30 to 60 mobile PageSpeed, which means slow conversion even when traffic arrives. Custom Next.js solves the conversion problem AND opens the AI citation channel. Fewer visitors, higher intent, faster site, 4 to 5x conversion rate on the AI portion of the traffic. That is the migration ROI nobody talks about.
+              Launched February 2026. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist within 90 days. 267+ public GitHub commits at github.com/hassan-pandagen across live client projects. Real case studies: MyCustomPatches (PageSpeed 40 to 100, hosting $150 to $0) and Panda Patches ($38K monthly revenue on $25 monthly tooling). Younger than established competitors, already verified across more independent review platforms than most agencies achieve in 2 to 3 years.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-4 mt-8">
             <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
-              <div className="text-2xl font-bold text-cognac mb-1">AI-info page</div>
-              <p className="text-sm text-stone-400">Custom written for your business. No other WordPress migration agency ships this.</p>
+              <div className="text-2xl font-bold text-cognac mb-1">90+ PageSpeed</div>
+              <p className="text-sm text-stone-400">Refund-backed in writing on every project.</p>
             </div>
             <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
-              <div className="text-2xl font-bold text-cognac mb-1">2,470% spike</div>
-              <p className="text-sm text-stone-400">Our WordPress migration cost blog flagged by GSC for breakout AI Overview citations.</p>
+              <div className="text-2xl font-bold text-cognac mb-1">Fixed price</div>
+              <p className="text-sm text-stone-400">No hourly billing. No surprise invoices. Published tiers.</p>
             </div>
             <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
-              <div className="text-2xl font-bold text-cognac mb-1">$500 / quarter</div>
-              <p className="text-sm text-stone-400">Optional retainer for citation tracking across ChatGPT, Claude, Perplexity, Gemini.</p>
+              <div className="text-2xl font-bold text-cognac mb-1">Free month</div>
+              <p className="text-sm text-stone-400">30 days of post-launch tweaks included on every build.</p>
             </div>
           </div>
         </div>

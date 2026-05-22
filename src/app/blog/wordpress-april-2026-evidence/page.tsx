@@ -1,0 +1,369 @@
+import { ArrowLeft, ArrowRight, AlertTriangle, ExternalLink } from "lucide-react";
+import Link from "next/link";
+import lazyLoad from "next/dynamic";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import Breadcrumb from "@/components/ui/Breadcrumb";
+import { BlogHeader, BlogText, BlogList, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
+import { FAQAccordion } from "@/components/ui/FAQAccordion";
+import { blogPosts } from "@/data/blog";
+import type { Metadata } from "next";
+
+const evidenceFAQs = blogPosts.find(p => p.id === 'wordpress-april-2026-evidence')?.faqs ?? [];
+
+const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
+
+export const metadata: Metadata = {
+    title: "WordPress in April 2026: 3 Documented Events That Changed Migration Urgency",
+    description: "Three documented April 2026 events: Matt Mullenweg's internal memo admitting WordPress is failing, three plugin supply-chain attacks in one week (400K + 800K + 1 site), and the WooCommerce Core team lead's public admission of the platform's biggest problems. All primary sources.",
+    alternates: {
+        canonical: '/blog/wordpress-april-2026-evidence',
+    },
+    openGraph: {
+        title: "WordPress in April 2026: 3 Documented Events That Changed Migration Urgency",
+        description: "Three primary-source events that materially changed the case for migrating off WordPress in April 2026. Mullenweg memo, plugin supply-chain attacks, WooCommerce admission.",
+        type: "article",
+        publishedTime: "2026-05-22T00:00:00-05:00",
+        modifiedTime: "2026-05-22T00:00:00-05:00",
+        authors: ["Hassan Jamal"],
+        url: "https://www.pandacodegen.com/blog/wordpress-april-2026-evidence",
+        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "WordPress in April 2026: 3 Documented Events That Changed Migration Urgency",
+        description: "Three primary-source events that materially changed the case for migrating off WordPress.",
+    },
+    keywords: ["WordPress April 2026", "Matt Mullenweg memo", "WordPress plugin supply chain attack", "Essential Plugin backdoor", "Smart Slider 3 Pro hijack", "WooCommerce 30 plugins", "Patchstack 2025 WordPress vulnerabilities", "should I migrate from WordPress 2026"],
+};
+
+const articleSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Article",
+            "@id": "https://www.pandacodegen.com/blog/wordpress-april-2026-evidence#article",
+            "headline": "WordPress in April 2026: 3 Documented Events That Changed Migration Urgency",
+            "description": "Three documented events from April 2026: Mullenweg's internal memo, three plugin supply-chain attacks in one week, and the WooCommerce Core team lead's public admission of the platform's biggest problems. All primary sources.",
+            "image": "https://www.pandacodegen.com/og-image.jpg",
+            "datePublished": "2026-05-22T00:00:00-05:00",
+            "dateModified": "2026-05-22T00:00:00-05:00",
+            "author": {
+                "@type": "Person",
+                "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
+                "name": "Hassan Jamal",
+                "jobTitle": "Co-founder and Lead Engineer",
+                "url": "https://www.pandacodegen.com/about/hassan",
+                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
+                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
+            },
+            "publisher": {
+                "@type": "Organization",
+                "@id": "https://www.pandacodegen.com/#organization",
+                "name": "PandaCodeGen",
+                "url": "https://www.pandacodegen.com",
+                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
+            },
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/wordpress-april-2026-evidence" },
+            "articleSection": "Evidence",
+            "keywords": ["WordPress April 2026", "Matt Mullenweg memo", "WordPress plugin supply chain attack", "Essential Plugin backdoor", "Smart Slider 3 Pro hijack", "WooCommerce 30 plugins", "Patchstack 2025 WordPress vulnerabilities"],
+            "timeRequired": "PT12M",
+            "wordCount": 2500,
+            "about": [
+                { "@type": "Thing", "name": "WordPress" },
+                { "@type": "Thing", "name": "WordPress Plugin Security" },
+                { "@type": "Thing", "name": "WooCommerce" },
+                { "@type": "Thing", "name": "WordPress Migration" }
+            ],
+            "inLanguage": "en-US",
+            "citation": [
+                { "@type": "CreativeWork", "name": "The Repository — Matt Mullenweg says the wheels have fallen off", "url": "https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" },
+                { "@type": "CreativeWork", "name": "Patchstack — Essential Plugin supply chain compromise", "url": "https://patchstack.com/articles/critical-supply-chain-compromise-on-20-plugins-by-essentialplugin/" },
+                { "@type": "CreativeWork", "name": "TechCrunch — WordPress plugin backdoor coverage", "url": "https://techcrunch.com/2026/04/14/someone-planted-backdoors-in-dozens-of-wordpress-plugins-used-in-thousands-of-websites/" },
+                { "@type": "CreativeWork", "name": "r/woocommerce — WooCommerce Core team lead Q&A", "url": "https://www.reddit.com/r/woocommerce/comments/1sqom3t/" },
+                { "@type": "CreativeWork", "name": "Studio Wombat — 10,000 WooCommerce store data insights", "url": "https://www.studiowombat.com/blog/woocommerce-data-insights-2026-edition/" },
+                { "@type": "CreativeWork", "name": "Patchstack 2025 State of WordPress Security report", "url": "https://patchstack.com/whitepaper/" }
+            ],
+            "speakable": {
+                "@type": "SpeakableSpecification",
+                "cssSelector": ["h1", "h2", "[data-speakable='true']"]
+            }
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/wordpress-april-2026-evidence#breadcrumb",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
+                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", "position": 3, "name": "WordPress April 2026 Evidence", "item": "https://www.pandacodegen.com/blog/wordpress-april-2026-evidence" }
+            ]
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/wordpress-april-2026-evidence#webpage",
+            "url": "https://www.pandacodegen.com/blog/wordpress-april-2026-evidence",
+            "name": "WordPress in April 2026: 3 Documented Events That Changed Migration Urgency",
+            "description": "Three documented April 2026 events with primary sources.",
+            "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
+            "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
+            "datePublished": "2026-05-22T00:00:00-05:00",
+            "dateModified": "2026-05-22T00:00:00-05:00",
+            "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/wordpress-april-2026-evidence#breadcrumb" },
+            "inLanguage": "en-US"
+        },
+        {
+            "@type": "FAQPage",
+            "@id": "https://www.pandacodegen.com/blog/wordpress-april-2026-evidence#faq",
+            "mainEntity": evidenceFAQs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://www.pandacodegen.com/#organization",
+            "name": "PandaCodeGen",
+            "alternateName": "Panda Code Gen",
+            "url": "https://www.pandacodegen.com",
+            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
+            "sameAs": ["https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
+            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
+            "description": "PandaCodeGen builds custom Next.js websites for businesses migrating off WordPress, Webflow, Squarespace, Shopify, and GoHighLevel. 90+ PageSpeed refund guarantee in writing.",
+            "areaServed": "Worldwide",
+            "foundingDate": "2026-02"
+        }
+    ]
+};
+
+export default function WordPressApril2026EvidencePage() {
+    return (
+        <>
+            <Header />
+            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-16 md:pt-32 pb-10 md:pb-20">
+                <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
+
+                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
+                    <script
+                        type="application/ld+json"
+                        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+                    />
+
+                    <Breadcrumb
+                        items={[
+                            { label: "Home", href: "/" },
+                            { label: "Blog", href: "/blog" },
+                            { label: "WordPress April 2026 Evidence", href: "/blog/wordpress-april-2026-evidence" }
+                        ]}
+                    />
+
+                    <Link href="/blog" className="inline-flex items-center gap-2 text-charcoal hover:text-stone-700 mb-8 transition-colors">
+                        <ArrowLeft className="w-4 h-4" />
+                        Back to Blog
+                    </Link>
+
+                    <div className="mb-10">
+                        <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+                            WordPress in April 2026: <span className="font-serif italic text-cognac">3 Documented Events</span> That Changed Migration Urgency
+                        </h1>
+
+                        <p className="text-xl text-stone-600 mb-6 leading-relaxed">
+                            Three primary-source events. WordPress founder Matt Mullenweg's internal memo. Three plugin supply-chain attacks in one week. The WooCommerce Core team lead's public admission of the platform's biggest problems.
+                        </p>
+
+                        <BlogAuthor
+                            date="May 22, 2026"
+                            readTime="12 min read"
+                            bio="Hassan is co-founder of PandaCodeGen and writes every line of production code for client work. 267+ public GitHub commits in the past year. Featured in Woman's World magazine as a web technology expert."
+                            linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
+                        />
+                    </div>
+
+                    {/* Executive Summary — speakable */}
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
+                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
+                        <BlogList items={[
+                            "April 14, 2026: Matt Mullenweg posted an internal memo admitting 'the wheels have fallen off' WordPress. Reported by The Repository with direct quotes.",
+                            "April 5 to 7, 2026: Three plugin supply-chain attacks landed in one week. Essential Plugin (31 plugins, ~400K installs, backdoor planted 8 months prior). Smart Slider 3 Pro (800K installs, update server hijacked). WowShipping Pro (unauthenticated RCE).",
+                            "April 16, 2026: WooCommerce Core team lead at Automattic publicly admitted the platform's three biggest problems on r/woocommerce: plugin fatigue, fear of updating, and performance.",
+                            "Patchstack 2025 report: 7,966 WordPress vulnerabilities in 2024. 96% in plugins. 43% require zero authentication. Average WooCommerce store runs 30 active plugins per Studio Wombat's 10,000-store study.",
+                            "Migration is now a risk-management question, not a vanity PageSpeed question. The longer a business site stays on WordPress, the more attack surface it carries."
+                        ]} />
+                    </div>
+
+                    <p className="text-stone-700 leading-relaxed mb-6">
+                        This is a primary-source dump. Three independent events from April 2026, every claim linked to its original publication. No opinion. The events speak for themselves.
+                    </p>
+
+                    {/* EVENT 1: MULLENWEG MEMO */}
+                    <BlogHeader id="mullenweg-memo">Event 1: Matt Mullenweg Internal Memo (April 14, 2026)</BlogHeader>
+
+                    <BlogText>
+                        On April 14, 2026, WordPress founder Matt Mullenweg posted in WordPress's internal core-committers Slack channel a wide-ranging critique of the platform he founded. The post was reported in full by <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac underline">The Repository</a>, an independent WordPress newsletter.
+                    </BlogText>
+
+                    <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                        <p className="text-xs font-bold uppercase tracking-wide text-cognac mb-3">Mullenweg's Exact Words (April 14, 2026)</p>
+                        <div className="space-y-3 text-stone-700 italic leading-relaxed text-sm">
+                            <p>&ldquo;We are not being killed by competition, I believe we have done this to ourselves.&rdquo;</p>
+                            <p>&ldquo;When Cloudflare can ship the entire functionality of WordPress, and then some, in 2 months, we can take longer than that to almost not ship one sub-menu of our Settings screen.&rdquo;</p>
+                            <p>&ldquo;We are operating at a level of collective delusion that is quite impressive.&rdquo;</p>
+                            <p>&ldquo;We keep driving away some of the most valuable people and rejecting them when they try to contribute.&rdquo;</p>
+                        </div>
+                        <p className="text-xs text-stone-500 mt-3">Source: <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">The Repository →</a></p>
+                    </div>
+
+                    <BlogText>
+                        The context matters. Mullenweg is the founder of WordPress (2003), the CEO of Automattic (which owns WordPress.com, WooCommerce, Jetpack, Tumblr, and others), and the unilateral controller of the WordPress.org plugin directory. When he says &quot;the wheels have fallen off&quot; in an internal memo to his own core committers, this is not external criticism. This is the founder describing his own ship.
+                    </BlogText>
+
+                    <BlogText>
+                        The Cloudflare reference is specific. Throughout 2025 and into 2026, Cloudflare has been shipping content management features (Workers, Pages, R2 storage, D1 database, Stream video) at a pace that makes the WordPress.org core team's ship cadence look glacial. Mullenweg's complaint is not vague. It is a specific competitive concern from a founder watching his core platform fall behind.
+                    </BlogText>
+
+                    {/* EVENT 2: PLUGIN ATTACKS */}
+                    <BlogHeader id="plugin-attacks">Event 2: Three Plugin Supply-Chain Attacks in One Week (April 5 to 7, 2026)</BlogHeader>
+
+                    <BlogText>
+                        Three documented WordPress plugin compromises hit in a single seven-day window. All three were supply-chain attacks (the plugin update mechanism itself was the attack vector, not the user's installation).
+                    </BlogText>
+
+                    <div className="my-6 p-5 bg-amber-50 border-l-4 border-amber-500 rounded-r-xl">
+                        <p className="text-sm font-bold text-amber-900 mb-2">Attack 1: Essential Plugin Suite (31 plugins, ~400,000 active installs)</p>
+                        <p className="text-sm text-stone-700 leading-relaxed mb-3">
+                            The Essential Plugin suite was acquired on Flippa for six figures by an unknown party. A backdoor was planted in version 2.6.7 in August 2025 that sat dormant for 8 months before activating in April 2026. WordPress.org permanently closed all 31 plugins on April 7, 2026.
+                        </p>
+                        <div className="flex flex-wrap gap-3 text-xs">
+                            <a href="https://patchstack.com/articles/critical-supply-chain-compromise-on-20-plugins-by-essentialplugin/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Source: Patchstack →</a>
+                            <a href="https://techcrunch.com/2026/04/14/someone-planted-backdoors-in-dozens-of-wordpress-plugins-used-in-thousands-of-websites/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Source: TechCrunch →</a>
+                        </div>
+                    </div>
+
+                    <div className="my-6 p-5 bg-amber-50 border-l-4 border-amber-500 rounded-r-xl">
+                        <p className="text-sm font-bold text-amber-900 mb-2">Attack 2: Smart Slider 3 Pro (800,000+ active installs)</p>
+                        <p className="text-sm text-stone-700 leading-relaxed mb-3">
+                            The Smart Slider 3 Pro plugin update server was compromised. Version 3.5.1.35 shipped with a remote access toolkit embedded. Any site that auto-updated during the compromise window received the malicious payload. The plugin maintainers issued an emergency clean release within 48 hours, but every site that auto-updated in the window remained compromised until manual remediation.
+                        </p>
+                    </div>
+
+                    <div className="my-6 p-5 bg-amber-50 border-l-4 border-amber-500 rounded-r-xl">
+                        <p className="text-sm font-bold text-amber-900 mb-2">Attack 3: WowShipping Pro (RCE backdoor)</p>
+                        <p className="text-sm text-stone-700 leading-relaxed">
+                            WowShipping Pro received an unauthenticated remote-code-execution backdoor in an update. Unlike the Essential Plugin and Smart Slider attacks, this one allowed any attacker on the internet to execute code without authentication. The vulnerability was patched within days but the install base remained partially exposed until forced updates rolled through.
+                        </p>
+                    </div>
+
+                    <BlogText>
+                        The scale data comes from <a href="https://patchstack.com/whitepaper/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac underline">Patchstack's 2025 State of WordPress Security report</a>: 7,966 new WordPress vulnerabilities in 2024. 96 percent in plugins, not core. 43 percent require zero authentication (any internet user can exploit them). 1,614 plugins were removed from the WordPress.org directory in 2024 for unpatched issues.
+                    </BlogText>
+
+                    <BlogText>
+                        The pattern matters more than the individual attacks. Three plugin compromises in one week is not three coincidences. It is a structural problem with the WordPress plugin distribution model. Plugins can be acquired by anyone (Flippa, GitHub, direct purchase). Plugin update servers are individually controlled and individually vulnerable. Auto-updates push code from those servers to millions of sites with no intermediate review.
+                    </BlogText>
+
+                    {/* EVENT 3: WOOCOMMERCE ADMISSION */}
+                    <BlogHeader id="woocommerce-admission">Event 3: WooCommerce Core Team Lead Public Admission (April 16, 2026)</BlogHeader>
+
+                    <BlogText>
+                        On April 16, 2026, a WooCommerce Core team lead at Automattic posted publicly on <a href="https://www.reddit.com/r/woocommerce/comments/1sqom3t/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac underline">r/woocommerce</a> asking the community for direct feedback. The Reddit account (u/sunyatasattva) is verified as a WooCommerce team member. The post identified the three biggest user complaints in the platform's own engineering team's words.
+                    </BlogText>
+
+                    <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                        <p className="text-xs font-bold uppercase tracking-wide text-cognac mb-3">The WooCommerce Team's Own Admission</p>
+                        <div className="space-y-3 text-stone-700 leading-relaxed text-sm">
+                            <p><strong>1. Plugin fatigue.</strong> &ldquo;Having to install 30+ plugins, then troubleshooting becomes a nightmare.&rdquo;</p>
+                            <p><strong>2. Fear of updating.</strong> &ldquo;People are scared updating might break something.&rdquo;</p>
+                            <p><strong>3. Performance.</strong> &ldquo;The store becoming sluggish.&rdquo;</p>
+                        </div>
+                        <p className="text-xs text-stone-500 mt-3">Source: <a href="https://www.reddit.com/r/woocommerce/comments/1sqom3t/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">r/woocommerce thread →</a></p>
+                    </div>
+
+                    <BlogText>
+                        The independent data backs the admission. <a href="https://www.studiowombat.com/blog/woocommerce-data-insights-2026-edition/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac underline">Studio Wombat's 10,000-store study</a> confirmed the average WooCommerce store runs 30 active plugins. Average plugin count is not an aspirational target. It is the median real-world install. The platform's own team is acknowledging what their own data has shown for years.
+                    </BlogText>
+
+                    <BlogText>
+                        The plugin fatigue problem connects directly back to Event 2 (the supply-chain attacks). When the average WooCommerce store runs 30 plugins, the attack surface scales with each plugin. A single compromised plugin in the stack can take down the entire store. Plugin fatigue is not just a user-experience complaint. It is a security exposure that the platform's engineering lead is now publicly acknowledging.
+                    </BlogText>
+
+                    {/* WHAT THIS MEANS */}
+                    <BlogHeader id="what-this-means">What These Three Events Mean for Migration Urgency</BlogHeader>
+
+                    <BlogText>
+                        Migration urgency in 2026 is no longer a vanity PageSpeed question. It is a risk-management question. The April 2026 events shifted the calculus on three specific dimensions.
+                    </BlogText>
+
+                    <BlogText>
+                        <strong>Dimension 1: Platform direction risk.</strong> The founder of WordPress is publicly admitting the platform is losing ground to competitors and that contributors are being driven away. This is not an external attack. This is the source. A business betting its website on WordPress for the next 5 years is now betting on a platform whose founder is publicly questioning its trajectory.
+                    </BlogText>
+
+                    <BlogText>
+                        <strong>Dimension 2: Plugin supply-chain risk.</strong> Three documented compromises in one week. 96 percent of WordPress vulnerabilities are in plugins. The plugin distribution model has no intermediate review between a compromised plugin author and millions of auto-updating sites. A WooCommerce store with 30 plugins has 30 independent supply-chain risks. Custom Next.js sites have zero plugins. The attack surface delta is structural.
+                    </BlogText>
+
+                    <BlogText>
+                        <strong>Dimension 3: Operational complexity risk.</strong> The WooCommerce engineering lead is publicly acknowledging that plugin fatigue, fear of updating, and performance are the platform's three biggest problems. None of these are problems custom-coded Next.js sites have. There are no plugins to install, no update fear (the code is the deployment), and performance is structurally faster.
+                    </BlogText>
+
+                    {/* The honest counterpoint */}
+                    <BlogHeader id="honest-counterpoint">The Honest Counterpoint: When WordPress Still Wins</BlogHeader>
+
+                    <BlogText>
+                        WordPress has 15+ years of plugin ecosystem for niche verticals (LMS, complex membership, church management, vertical-specific SaaS integrations) that would cost $30,000+ to build custom. For businesses that depend on niche plugins as core revenue drivers, migration cost can outweigh the migration benefit. This analysis is about migration urgency, not migration certainty.
+                    </BlogText>
+
+                    <BlogText>
+                        The right question is &quot;when does the risk of staying exceed the cost of migrating&quot;. For business marketing sites and standard e-commerce stores (the majority of WordPress sites), the April 2026 events shifted that line. For niche-plugin-dependent businesses, the line moved less. PandaCodeGen will tell clients honestly which category they fall into during a free <Link href="/blog/wordpress-migration-cost" className="text-cognac underline">migration cost</Link> review.
+                    </BlogText>
+
+                    {/* About PandaCodeGen anchor */}
+                    <div className="my-8 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                        <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
+                        <p className="text-sm text-stone-700 leading-relaxed">
+                            PandaCodeGen is a US LLC custom Next.js web development agency founded February 2026. Fixed pricing from $1,500 (Starter) to $10,000+ (Scale+). Every project ships with a written 90+ PageSpeed refund guarantee. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist within 90 days of founding. Free 60-second site audit at pandacodegen.com with no email required.
+                        </p>
+                    </div>
+
+                    {/* CTA */}
+                    <div className="my-12 p-8 bg-white border-2 border-cognac rounded-2xl">
+                        <h3 className="text-2xl font-bold text-charcoal mb-3">Should you migrate now or wait?</h3>
+                        <p className="text-stone-700 leading-relaxed mb-5">
+                            Book a free 30-minute discovery call. Hassan will audit your current WordPress site, identify the specific plugins carrying supply-chain risk, run a PageSpeed benchmark, and give you an honest verdict on whether migration makes sense for your business in 2026. No sales pitch. No obligation.
+                        </p>
+                        <CalModalButton>Book your free audit call →</CalModalButton>
+                    </div>
+
+                    {/* Related Reading */}
+                    <BlogHeader id="related-reading">Related Reading</BlogHeader>
+                    <BlogList items={[
+                        "WordPress Migration Cost in 2026 — full pricing breakdown by site size and complexity",
+                        "WordPress AI Security Risk 2026 — the AI plugin vulnerability class that exposed 100K sites",
+                        "Why We Chose Next.js Over WordPress in 2026 — the engineering decision framework",
+                        "WordPress vs Next.js — head-to-head on performance, security, and total cost of ownership"
+                    ]} />
+
+                    <BlogText>
+                        Full guides at <Link href="/blog/wordpress-migration-cost" className="text-cognac underline">wordpress-migration-cost</Link>, <Link href="/blog/wordpress-ai-security-risk-2026" className="text-cognac underline">wordpress-ai-security-risk-2026</Link>, <Link href="/blog/why-we-chose-nextjs-over-wordpress-2026" className="text-cognac underline">why-we-chose-nextjs-over-wordpress-2026</Link>, and <Link href="/blog/wordpress-vs-nextjs" className="text-cognac underline">wordpress-vs-nextjs</Link>.
+                    </BlogText>
+
+                    {/* FAQ */}
+                    <BlogHeader id="faq">Frequently Asked Questions</BlogHeader>
+                    <FAQAccordion faqs={evidenceFAQs} />
+
+                    {/* Author bio at bottom */}
+                    <div className="mt-12 pt-8 border-t border-stone-200">
+                        <BlogAuthor
+                            date="May 22, 2026"
+                            readTime="12 min read"
+                            bio="Hassan is co-founder and Lead Engineer at PandaCodeGen. 267+ public GitHub commits in the past year. Featured in Woman's World magazine as a web technology expert. PandaCodeGen builds custom Next.js sites with a written 90+ PageSpeed refund guarantee."
+                            linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
+                        />
+                    </div>
+
+                    {/* Related Posts */}
+                    <div className="mt-12">
+                        <RelatedPosts currentPostId="wordpress-april-2026-evidence" category="Evidence" />
+                    </div>
+                </article>
+            </main>
+            <Footer />
+        </>
+    );
+}

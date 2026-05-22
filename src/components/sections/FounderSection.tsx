@@ -9,7 +9,7 @@ const founders = [
   {
     name: "Hassan Jamal",
     title: "Co-founder & Lead Engineer",
-    bio: "Builds the architectures. Writes the code. 267 GitHub contributions this year across live client projects. Every commit is visible. US contracts and support. Senior engineering at founder rates.",
+    bio: "Builds the architectures. Writes the code. 267 GitHub contributions this year across live client projects. Every commit is visible. US contracts and support. Senior engineering with direct founder access.",
     image: "/team/hassan.png",
     github: "https://github.com/hassan-pandagen",
     linkedin: "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
@@ -47,7 +47,7 @@ export default function FounderSection() {
           </h2>
           <p className="text-lg text-gray-400 max-w-xl">
             When you book a call, Hassan answers. He writes every line of code.
-            Imran leads the architecture. US contracts and support, senior engineering at founder rates. No NYC office rent padding your invoice, no account managers, no white-label outsourcing.
+            Imran leads the architecture. US contracts and support with direct founder access on every project. No NYC office rent padding your invoice, no account managers, no white-label outsourcing.
           </p>
         </motion.div>
 

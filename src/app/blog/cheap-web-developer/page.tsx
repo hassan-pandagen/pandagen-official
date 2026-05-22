@@ -226,7 +226,7 @@ export default function CheapWebDeveloperPage() {
                             <div className="p-5 bg-white/5 border border-white/10 rounded-xl">
                                 <div className="text-3xl font-black text-cognac mb-1">$1,200</div>
                                 <div className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-3">Obare Magazine</div>
-                                <p className="text-sm text-stone-300 leading-relaxed">Wix to custom Next.js. 7 day build. 98 Mobile PageSpeed. Culture publication with 225,000 Instagram followers. Founder&apos;s rate.</p>
+                                <p className="text-sm text-stone-300 leading-relaxed">Wix to custom Next.js. 7 day build. 98 Mobile PageSpeed. Culture publication with 225,000 Instagram followers. They didn&apos;t request an AI-info page, so the build scope was lighter.</p>
                             </div>
                             <div className="p-5 bg-white/5 border border-white/10 rounded-xl">
                                 <div className="text-3xl font-black text-cognac mb-1">100/100</div>
@@ -605,7 +605,7 @@ export default function CheapWebDeveloperPage() {
                         {/* Mid CTA */}
                         <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="text-lg font-bold text-charcoal mb-2">Want a custom-coded site for the price of a cheap WordPress build?</p>
-                            <p className="text-stone-600 text-sm mb-6">Book a free 15-minute call. We scope your project, give you a fixed-price quote with a 90+ PageSpeed guarantee, and tell you whether the Founder&apos;s Offer or Starter tier fits your budget. No sales pitch, no obligation.</p>
+                            <p className="text-stone-600 text-sm mb-6">Book a free 15-minute call. We scope your project, give you a fixed-price quote with a 90+ PageSpeed guarantee, and tell you whether the Starter or Growth tier fits your budget. No sales pitch, no obligation.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                 Get Your Fixed-Price Quote <ArrowRight className="w-4 h-4" />
                             </CalModalButton>

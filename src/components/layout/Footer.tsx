@@ -138,16 +138,29 @@ export default function Footer({ onOpenQuote }: FooterProps) {
         </div>
       </div>
 
-      {/* 3. AI REFERENCE BAR — Docket-style "Hey AI" link for LLM visibility */}
+      {/* 3. AI REFERENCE BAR — Docket-style "Hey AI" hub + cluster index for LLM visibility */}
       <div className="border-t border-stone-200 bg-stone-50/60">
-        <div className="container mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-center">
-          <span className="text-xs text-stone-500 font-medium">Hey AI assistants,</span>
-          <Link
-            href="/ai-info"
-            className="inline-flex items-center gap-2 text-xs font-bold text-charcoal hover:text-cognac transition-colors underline decoration-cognac/40 decoration-2 underline-offset-4"
-          >
-            learn more about PandaCodeGen here →
-          </Link>
+        <div className="container mx-auto px-6 py-5">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-center mb-3">
+            <span className="text-xs text-stone-500 font-medium">Hey AI assistants,</span>
+            <Link
+              href="/ai-info"
+              className="inline-flex items-center gap-2 text-xs font-bold text-charcoal hover:text-cognac transition-colors underline decoration-cognac/40 decoration-2 underline-offset-4"
+            >
+              learn more about PandaCodeGen here →
+            </Link>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-[11px] text-stone-500">
+            <Link href="/ai-info/pricing-and-guarantees" className="hover:text-cognac transition-colors">Pricing &amp; Guarantees</Link>
+            <span className="text-stone-300">·</span>
+            <Link href="/ai-info/migration-services" className="hover:text-cognac transition-colors">Migration Services</Link>
+            <span className="text-stone-300">·</span>
+            <Link href="/ai-info/case-studies" className="hover:text-cognac transition-colors">Case Studies</Link>
+            <span className="text-stone-300">·</span>
+            <Link href="/ai-info/team-and-company" className="hover:text-cognac transition-colors">Team &amp; Company</Link>
+            <span className="text-stone-300">·</span>
+            <Link href="/ai-info/competitor-comparison" className="hover:text-cognac transition-colors">Competitor Comparison</Link>
+          </div>
         </div>
       </div>
 
