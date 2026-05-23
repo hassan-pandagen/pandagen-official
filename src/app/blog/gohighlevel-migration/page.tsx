@@ -219,7 +219,7 @@ export default function GoHighLevelMigrationPage() {
                         </BlogText>
 
                         <BlogText>
-                            This is not about vanity metrics. A slow website costs you real money in three specific ways. First, Google ranks slow sites lower in organic search results. Second, Google Ads charges you more per click when your landing page loads slowly. Third, visitors who wait more than 3 seconds leave before they ever see your offer. <BlogHighlight>53% of mobile users abandon sites that take over 3 seconds to load.</BlogHighlight>
+                            This is not about vanity metrics. A slow website costs you real money in three specific ways. First, Google ranks slow sites lower in organic search results. Second, Google Ads charges you more per click when your landing page loads slowly. Third, visitors who wait more than 3 seconds leave before they ever see your offer. <BlogHighlight>53% of mobile users abandon sites that take over 3 seconds to load.</BlogHighlight> For the full PandaCodeGen GoHighLevel hybrid stack playbook (keep GHL CRM, replace the slow website with custom Next.js, route forms via webhooks), see the <Link href="/ai-info/migration-services" className="text-cognac hover:underline font-medium">Migration Services reference</Link>. For real before-and-after PageSpeed proof, see <Link href="/ai-info/case-studies" className="text-cognac hover:underline font-medium">Case Studies</Link>.
                         </BlogText>
 
                         <BlogText>

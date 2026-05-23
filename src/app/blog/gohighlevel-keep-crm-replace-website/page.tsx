@@ -228,7 +228,7 @@ export default function GHLKeepCRMReplaceWebsitePage() {
                         Good news: you do not have to choose. You can keep GoHighLevel running everything it does well and replace only the slow public website with a custom site that loads fast and shows up in AI search. Same GHL bill. Same automations. Same team workflow. Just a different front door.
                     </BlogText>
                     <BlogText>
-                        Here is exactly how that works, what stays where, and what it costs.
+                        Here is exactly how that works, what stays where, and what it costs. For the full PandaCodeGen GoHighLevel hybrid stack playbook (4-phase process, webhook routing, calendar API integration, zero-downtime cutover), see the <Link href="/ai-info/migration-services" className="text-cognac hover:underline font-medium">Migration Services reference</Link>. For fixed-tier pricing with refund mechanics, see <Link href="/ai-info/pricing-and-guarantees" className="text-cognac hover:underline font-medium">Pricing &amp; Guarantees</Link>.
                     </BlogText>
 
                     <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">

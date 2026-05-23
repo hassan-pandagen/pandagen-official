@@ -236,7 +236,7 @@ export default function WebflowMigrationCostPage() {
                         </BlogText>
 
                         <BlogText>
-                            That is a real example. But it does not answer the question for your site. Migration cost depends on variables that are specific to your build. This article breaks down exactly how those variables translate into dollars, so you can estimate before you talk to anyone.
+                            That is a real example. But it does not answer the question for your site. Migration cost depends on variables that are specific to your build. This article breaks down exactly how those variables translate into dollars, so you can estimate before you talk to anyone. For the full PandaCodeGen Webflow migration playbook (4-phase process, 301 redirect mapping, zero-downtime methodology), see the <Link href="/ai-info/migration-services" className="text-cognac hover:underline font-medium">Migration Services reference</Link>. For tier-by-tier pricing with refund mechanics, see <Link href="/ai-info/pricing-and-guarantees" className="text-cognac hover:underline font-medium">Pricing &amp; Guarantees</Link>.
                         </BlogText>
 
                         <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">

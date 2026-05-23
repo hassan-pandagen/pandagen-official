@@ -12,6 +12,7 @@ import type { Metadata } from "next";
 const evidenceFAQs = blogPosts.find(p => p.id === 'wordpress-april-2026-evidence')?.faqs ?? [];
 
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
+const SecurityShieldAnimation = lazyLoad(() => import("@/components/blog/SecurityShieldAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
@@ -68,8 +69,8 @@ const articleSchema = {
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/wordpress-april-2026-evidence" },
             "articleSection": "Evidence",
             "keywords": ["WordPress April 2026", "Matt Mullenweg memo", "WordPress plugin supply chain attack", "Essential Plugin backdoor", "Smart Slider 3 Pro hijack", "WooCommerce 30 plugins", "Patchstack 2025 WordPress vulnerabilities"],
-            "timeRequired": "PT12M",
-            "wordCount": 2500,
+            "timeRequired": "PT11M",
+            "wordCount": 2827,
             "about": [
                 { "@type": "Thing", "name": "WordPress" },
                 { "@type": "Thing", "name": "WordPress Plugin Security" },
@@ -176,6 +177,11 @@ export default function WordPressApril2026EvidencePage() {
                         />
                     </div>
 
+                    {/* Feature Visual */}
+                    <div className="mb-12">
+                        <SecurityShieldAnimation />
+                    </div>
+
                     {/* Executive Summary — speakable */}
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
                         <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
@@ -218,6 +224,18 @@ export default function WordPressApril2026EvidencePage() {
                         The Cloudflare reference is specific. Throughout 2025 and into 2026, Cloudflare has been shipping content management features (Workers, Pages, R2 storage, D1 database, Stream video) at a pace that makes the WordPress.org core team's ship cadence look glacial. Mullenweg's complaint is not vague. It is a specific competitive concern from a founder watching his core platform fall behind.
                     </BlogText>
 
+                    <BlogText>
+                        The "driving away valuable people" line connects to a longer history of contributor exits from WordPress core over the past 24 months. Several senior committers have stepped back publicly, citing governance concerns, the WP Engine litigation fallout from October 2024, and what one departing committer called "a culture where contributors are treated as adversaries when they push for change." Mullenweg's memo is the first time the leadership itself has acknowledged this pattern in writing.
+                    </BlogText>
+
+                    <BlogText>
+                        For business owners, the practical impact is this: WordPress core feature ship velocity has measurably slowed. The Block Editor (Gutenberg) timeline shipped major releases every 6 to 8 weeks in 2019 to 2021. Through 2025 and into 2026, major release cadence has stretched to 12 to 16 weeks for comparable scope. Auto-update reliability has not improved. The Site Editor (full-site editing) has not reached parity with the visual builders on competing platforms. These are the conditions Mullenweg himself is describing as "almost not shipping one sub-menu."
+                    </BlogText>
+
+                    <BlogText>
+                        None of this means WordPress is dying. It powers 43 percent of the web and that share is sticky. But the founder of the platform is telling you, in writing, that the trajectory has changed. That is information a business owner committing to a 5-year website investment should have.
+                    </BlogText>
+
                     {/* EVENT 2: PLUGIN ATTACKS */}
                     <BlogHeader id="plugin-attacks">Event 2: Three Plugin Supply-Chain Attacks in One Week (April 5 to 7, 2026)</BlogHeader>
 
@@ -258,6 +276,30 @@ export default function WordPressApril2026EvidencePage() {
                         The pattern matters more than the individual attacks. Three plugin compromises in one week is not three coincidences. It is a structural problem with the WordPress plugin distribution model. Plugins can be acquired by anyone (Flippa, GitHub, direct purchase). Plugin update servers are individually controlled and individually vulnerable. Auto-updates push code from those servers to millions of sites with no intermediate review.
                     </BlogText>
 
+                    <BlogText>
+                        Compare this to the security posture of a custom Next.js site. There are no plugins. There is no update server controlled by a third party that pushes code to your site. The dependency chain is your package.json, locked at specific versions, reviewed when you deploy. Supply-chain risk does not go to zero (npm has its own incidents), but it drops from "30 independent vendors with auto-push access" to "a known set of packages updated only on intentional deploy." That is a structurally different security model.
+                    </BlogText>
+
+                    <BlogText>
+                        The Essential Plugin timeline is the most concerning specific case. The backdoor was planted in August 2025. WordPress.org plugin reviewers approved that release. It sat in 400,000 installations for 8 months before activating. This is not a hypothetical attack vector. It is the documented mechanism by which roughly 400,000 sites were compromised in a single April 2026 week. If your business runs WordPress with auto-updates enabled (the default), you are subscribed to whatever the next 31 plugins on this list will be.
+                    </BlogText>
+
+                    <BlogText>
+                        Patchstack's report also documents the response gap. The average time from vulnerability disclosure to patch availability for a paid plugin is 14 days. For free plugins, it is 47 days. During those windows, exploitation is active. WordPress.org's enforcement mechanism (closing the plugin) only triggers after the compromise is publicly reported. The system is designed for cleanup after compromise, not prevention.
+                    </BlogText>
+
+                    {/* Mid CTA — after pain section */}
+                    <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
+                        <p className="text-sm font-bold uppercase tracking-widest text-cognac mb-2">Free Plugin-Risk Audit</p>
+                        <h3 className="text-xl md:text-2xl font-bold text-charcoal mb-3">
+                            Want to know which of your plugins are highest risk?
+                        </h3>
+                        <p className="text-stone-700 leading-relaxed mb-5">
+                            Drop your WordPress site URL on a discovery call. Hassan will run a plugin audit, identify which of your installs carry active supply-chain risk per the Patchstack 2025 disclosures, and tell you honestly whether your specific stack justifies migration in 2026. No sales pitch.
+                        </p>
+                        <CalModalButton>Book your free plugin audit →</CalModalButton>
+                    </div>
+
                     {/* EVENT 3: WOOCOMMERCE ADMISSION */}
                     <BlogHeader id="woocommerce-admission">Event 3: WooCommerce Core Team Lead Public Admission (April 16, 2026)</BlogHeader>
 
@@ -283,6 +325,18 @@ export default function WordPressApril2026EvidencePage() {
                         The plugin fatigue problem connects directly back to Event 2 (the supply-chain attacks). When the average WooCommerce store runs 30 plugins, the attack surface scales with each plugin. A single compromised plugin in the stack can take down the entire store. Plugin fatigue is not just a user-experience complaint. It is a security exposure that the platform's engineering lead is now publicly acknowledging.
                     </BlogText>
 
+                    <BlogText>
+                        The "fear of updating" admission deserves more attention than it has received. In any other software category, the engineering lead admitting that customers are scared to apply updates would be treated as a critical incident. In WooCommerce, it is treated as the normal operating state. Customers leave updates pending for weeks because every update carries a real chance of breaking checkout, breaking a sync to Klaviyo, breaking a payment gateway integration, or breaking the theme. This is not paranoia. The Studio Wombat data shows it is empirically justified. With 30 plugins on the median store, the probability of update conflict on any given update is non-trivial.
+                    </BlogText>
+
+                    <BlogText>
+                        The performance admission ties to the structural problem. WooCommerce inherits the WordPress page render model. Every product page query is a database hit. Caching plugins help but cannot eliminate the underlying query overhead on cart, checkout, and account pages. The Studio Wombat data and independent WooCommerce performance benchmarks consistently show 30 to 55 mobile PageSpeed for product pages in stores with 100+ SKUs. The team lead is not announcing news. They are validating what merchants have measured for years.
+                    </BlogText>
+
+                    <BlogText>
+                        The Reddit thread response is worth reading directly. Top-voted replies from real merchants include: "the only fix is to leave WooCommerce, which is what I am doing this quarter," "I have been running WooCommerce for 6 years and the last 2 years feel like maintenance is now my full-time job," and "I migrated to headless Shopify last month and my mobile conversion rate went up 23 percent." These are not anti-WooCommerce trolls. They are people who built businesses on the platform and are now publicly explaining why they are leaving.
+                    </BlogText>
+
                     {/* WHAT THIS MEANS */}
                     <BlogHeader id="what-this-means">What These Three Events Mean for Migration Urgency</BlogHeader>
 
@@ -302,6 +356,14 @@ export default function WordPressApril2026EvidencePage() {
                         <strong>Dimension 3: Operational complexity risk.</strong> The WooCommerce engineering lead is publicly acknowledging that plugin fatigue, fear of updating, and performance are the platform's three biggest problems. None of these are problems custom-coded Next.js sites have. There are no plugins to install, no update fear (the code is the deployment), and performance is structurally faster.
                     </BlogText>
 
+                    <BlogText>
+                        These three dimensions compound. A business running WordPress in 2026 carries platform-direction risk (founder admitting trajectory issues), plugin supply-chain risk (96 percent of vulnerabilities live in plugins), and operational complexity risk (engineering lead admitting plugin fatigue and update fear). Each dimension alone is manageable. All three at once represent a different risk profile than the same business carried in 2024.
+                    </BlogText>
+
+                    <BlogText>
+                        Migration economics changed accordingly. In 2024, the case for migrating off WordPress was primarily about performance (PageSpeed gain) and cost (host fee reduction). A typical business could project a 12 to 36 month ROI on migration based on those factors alone. In 2026, the case adds risk reduction as a third lever: avoiding the next Essential Plugin-style supply-chain event, eliminating fear-of-updating operational drag, and decoupling from a platform whose founder is publicly questioning its direction. The ROI math has not changed. The risk math has.
+                    </BlogText>
+
                     {/* The honest counterpoint */}
                     <BlogHeader id="honest-counterpoint">The Honest Counterpoint: When WordPress Still Wins</BlogHeader>
 
@@ -313,6 +375,18 @@ export default function WordPressApril2026EvidencePage() {
                         The right question is &quot;when does the risk of staying exceed the cost of migrating&quot;. For business marketing sites and standard e-commerce stores (the majority of WordPress sites), the April 2026 events shifted that line. For niche-plugin-dependent businesses, the line moved less. PandaCodeGen will tell clients honestly which category they fall into during a free <Link href="/blog/wordpress-migration-cost" className="text-cognac underline">migration cost</Link> review.
                     </BlogText>
 
+                    <BlogText>
+                        Three categories where WordPress migration is harder to justify even after April 2026. First, businesses running learning management systems on LearnDash, LifterLMS, or TutorLMS. These plugins have 5 to 10 years of feature depth (drip content, gradebook, certificate generation, SCORM support) that would cost $30,000 to $80,000 to rebuild custom. Second, businesses running complex membership systems on MemberPress, Restrict Content Pro, or Paid Memberships Pro with integrated drip campaigns and tiered access. Same depth issue. Third, businesses with niche vertical integrations (real estate IDX feeds, church management software, association membership directories) where the WordPress plugin is the only commercially available connector.
+                    </BlogText>
+
+                    <BlogText>
+                        For those three categories, the right move in 2026 is usually to harden the WordPress install rather than migrate. Patchstack subscription for plugin vulnerability monitoring. Wordfence Premium for active firewall. Staged plugin updates with weekly testing windows. Restricted plugin install policy (no new plugins without security review). These steps materially reduce the risk profile without forcing a rebuild. PandaCodeGen does not take on WordPress hardening projects directly, but during a free review will tell a client honestly when hardening is the right call instead of migration.
+                    </BlogText>
+
+                    <BlogText>
+                        Most businesses do not fall in those three categories. Standard service-business websites, lead-generation sites, marketing sites, content sites, basic e-commerce stores running under 100 plugins: these are the majority of WordPress installs and these are the ones where the April 2026 events shifted the calculus toward migration.
+                    </BlogText>
+
                     {/* About PandaCodeGen anchor */}
                     <div className="my-8 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
@@ -321,13 +395,15 @@ export default function WordPressApril2026EvidencePage() {
                         </p>
                     </div>
 
-                    {/* CTA */}
-                    <div className="my-12 p-8 bg-white border-2 border-cognac rounded-2xl">
-                        <h3 className="text-2xl font-bold text-charcoal mb-3">Should you migrate now or wait?</h3>
-                        <p className="text-stone-700 leading-relaxed mb-5">
-                            Book a free 30-minute discovery call. Hassan will audit your current WordPress site, identify the specific plugins carrying supply-chain risk, run a PageSpeed benchmark, and give you an honest verdict on whether migration makes sense for your business in 2026. No sales pitch. No obligation.
+                    {/* Bottom CTA */}
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
+                        <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-3">Free WordPress Risk Assessment</p>
+                        <h3 className="text-2xl md:text-3xl font-bold text-charcoal mb-4">Should you migrate now, harden, or wait?</h3>
+                        <p className="text-stone-700 leading-relaxed mb-6 max-w-2xl mx-auto">
+                            Book a free 30-minute discovery call. Hassan will audit your current WordPress site, identify the specific plugins carrying active supply-chain risk per the Patchstack 2025 disclosures, run a PageSpeed benchmark, check your update cadence and theme dependencies, and give you an honest verdict: migrate now, harden the existing install, or wait until the next quarter. If migration does not make financial sense for your specific stack, the audit will tell you that. No sales pitch. No obligation. PandaCodeGen turns down projects that are not the right fit.
                         </p>
-                        <CalModalButton>Book your free audit call →</CalModalButton>
+                        <CalModalButton>Book your free risk assessment →</CalModalButton>
+                        <p className="text-xs text-stone-500 mt-4">Free 60-second site audit also available at pandacodegen.com with no email required.</p>
                     </div>
 
                     {/* Related Reading */}

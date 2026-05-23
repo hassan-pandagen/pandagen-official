@@ -234,7 +234,7 @@ export default function WebsiteRebuildCost2026Page() {
                         The gap between those two quotes is this entire blog post. Not because her agency was dishonest. They were charging what their overhead structure requires. But she almost signed a $35,000 contract because nobody had ever shown her what a rebuild actually costs when you remove agency padding, platform tax, and billable strategy sessions that do not ship code.
                     </BlogText>
                     <BlogText>
-                        Here is the honest answer. Every tier, every line item, every red flag, and the math that tells you when a rebuild pays for itself.
+                        Here is the honest answer. Every tier, every line item, every red flag, and the math that tells you when a rebuild pays for itself. For tier-by-tier PandaCodeGen pricing with the 90+ PageSpeed refund guarantee mechanics, see <Link href="/ai-info/pricing-and-guarantees" className="text-cognac hover:underline font-medium">Pricing &amp; Guarantees</Link>. For real before-and-after rebuild receipts (MyCustomPatches 45 to 100 PageSpeed, Panda Patches 64 to 99), see <Link href="/ai-info/case-studies" className="text-cognac hover:underline font-medium">Case Studies</Link>.
                     </BlogText>
 
                     <BlogHeader id="cost-by-tier">How Much Does a Website Rebuild Cost in 2026?</BlogHeader>
