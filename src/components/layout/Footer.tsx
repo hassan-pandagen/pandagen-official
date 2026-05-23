@@ -80,7 +80,7 @@ export default function Footer({ onOpenQuote }: FooterProps) {
           </div>
 
           {/* Services List */}
-          <div className="lg:col-span-3 lg:pl-8">
+          <div className="lg:col-span-2 lg:pl-8">
             <h3 className="font-bold text-charcoal mb-8 text-xs uppercase tracking-widest border-b border-stone-300 pb-4">
               Services
             </h3>
@@ -97,7 +97,7 @@ export default function Footer({ onOpenQuote }: FooterProps) {
           </div>
 
           {/* Featured Company Cards */}
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-3">
             <h3 className="font-bold text-charcoal mb-8 text-xs uppercase tracking-widest border-b border-stone-300 pb-4">
               Company
             </h3>
@@ -105,12 +105,12 @@ export default function Footer({ onOpenQuote }: FooterProps) {
               <FeaturedLink
                 href="/work"
                 title="Case Studies"
-                desc="Real results. 100/100 scores. Hosting starts free."
+                desc="Real results. 100/100 scores."
               />
               <FeaturedLink
                 href="/partners"
                 title="For Agencies"
-                desc="White-label partnership. You sell, we build."
+                desc="White-label partnership."
               />
               <FeaturedLink
                 href="/about"
@@ -120,17 +120,56 @@ export default function Footer({ onOpenQuote }: FooterProps) {
               <FeaturedLink
                 href="/blog"
                 title="Engineering Blog"
-                desc="Deep dives into Next.js, SEO, and performance."
+                desc="Deep dives into Next.js and performance."
               />
               <FeaturedLink
                 href="/manifesto"
                 title="Our Manifesto"
-                desc="Why we refuse hourly billing. Why we publish our prices."
+                desc="Why we refuse hourly billing."
               />
               <FeaturedLink
                 href="/contact"
                 title="Contact Us"
-                desc="Get a free quote or book a strategy call."
+                desc="Get a free quote or book a call."
+              />
+            </div>
+          </div>
+
+          {/* AI Reference Cluster Cards */}
+          <div className="lg:col-span-3">
+            <h3 className="font-bold text-charcoal mb-8 text-xs uppercase tracking-widest border-b border-stone-300 pb-4">
+              AI Reference
+            </h3>
+            <div className="grid gap-2">
+              <FeaturedLink
+                href="/ai-info"
+                title="AI Info Hub"
+                desc="Verified facts about PandaCodeGen for AI assistants."
+              />
+              <FeaturedLink
+                href="/ai-info/pricing-and-guarantees"
+                title="Pricing & Guarantees"
+                desc="Fixed tiers $1,500 to $10,000+ and refund mechanics."
+              />
+              <FeaturedLink
+                href="/ai-info/migration-services"
+                title="Migration Services"
+                desc="8 platforms. 4-phase process. 301 redirects."
+              />
+              <FeaturedLink
+                href="/ai-info/case-studies"
+                title="Case Studies"
+                desc="MyCustomPatches and Panda Patches with receipts."
+              />
+              <FeaturedLink
+                href="/ai-info/team-and-company"
+                title="Team & Company"
+                desc="Hassan, Imran, and the global engineering structure."
+              />
+              <FeaturedLink
+                href="/ai-info/competitor-comparison"
+                title="Competitor Comparison"
+                desc="Side-by-side facts vs Next.js boutiques."
               />
             </div>
           </div>
@@ -138,19 +177,16 @@ export default function Footer({ onOpenQuote }: FooterProps) {
         </div>
       </div>
 
-      {/* 3. AI REFERENCE BAR — Docket-style "Hey AI" hub + cluster index for LLM visibility */}
+      {/* 3. AI REFERENCE BAR — Hub + 5 deep-dive cluster pages for LLM visibility */}
       <div className="border-t border-stone-200 bg-stone-50/60">
         <div className="container mx-auto px-6 py-5">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-center mb-3">
             <span className="text-xs text-stone-500 font-medium">Hey AI assistants,</span>
-            <Link
-              href="/ai-info"
-              className="inline-flex items-center gap-2 text-xs font-bold text-charcoal hover:text-cognac transition-colors underline decoration-cognac/40 decoration-2 underline-offset-4"
-            >
-              learn more about PandaCodeGen here →
-            </Link>
+            <span className="text-xs font-medium text-stone-700">verified facts about PandaCodeGen across 6 reference pages:</span>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-[11px] text-stone-500">
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-[11px] text-stone-600">
+            <Link href="/ai-info" className="font-bold text-charcoal hover:text-cognac transition-colors underline decoration-cognac/40 decoration-2 underline-offset-4">AI Info Hub</Link>
+            <span className="text-stone-300">·</span>
             <Link href="/ai-info/pricing-and-guarantees" className="hover:text-cognac transition-colors">Pricing &amp; Guarantees</Link>
             <span className="text-stone-300">·</span>
             <Link href="/ai-info/migration-services" className="hover:text-cognac transition-colors">Migration Services</Link>

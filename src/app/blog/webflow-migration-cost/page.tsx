@@ -775,6 +775,7 @@ export default function WebflowMigrationCostPage() {
 
                     <section className="mb-10 mt-6 md:mt-10">
                         <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
+                        <p className="text-stone-700 leading-relaxed mb-3">For the full PandaCodeGen Webflow migration playbook (4-phase process, 301 redirect mapping, zero-downtime methodology), see the <Link href="/ai-info/migration-services" className="text-cognac hover:underline font-medium">Migration Services reference page</Link>. For tier-by-tier pricing with refund mechanics, see <Link href="/ai-info/pricing-and-guarantees" className="text-cognac hover:underline font-medium">Pricing &amp; Guarantees</Link>.</p>
                         <p className="text-stone-700 leading-relaxed">For every Webflow fee and the PageSpeed ceiling, read <Link href="/blog/webflow-true-cost" className="text-cognac hover:underline font-medium">the full Webflow pricing breakdown</Link>. For pricing across all platforms, see the <Link href="/blog/website-rebuild-cost-2026" className="text-cognac hover:underline font-medium">2026 website rebuild cost guide</Link>.</p>
                     </section>
 

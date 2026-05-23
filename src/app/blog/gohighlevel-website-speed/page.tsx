@@ -656,6 +656,11 @@ export default function GHLWebsiteSpeedPage() {
                     <BlogHeader id="faq">Frequently Asked Questions</BlogHeader>
                     <FAQAccordion faqs={ghlSpeedFAQs} />
 
+                    <section className="mb-10 mt-8 md:mt-10">
+                        <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
+                        <p className="text-stone-700 leading-relaxed mb-3">For the full PandaCodeGen GoHighLevel hybrid stack playbook (keep GHL CRM, replace the slow website with custom Next.js), see the <Link href="/ai-info/migration-services" className="text-cognac hover:underline font-medium">Migration Services reference page</Link>. For real PageSpeed proof with full receipts (MyCustomPatches 45 to 100, Panda Patches 64 to 99), see the <Link href="/ai-info/case-studies" className="text-cognac hover:underline font-medium">Case Studies reference page</Link>. For fixed pricing tiers with refund mechanics, see <Link href="/ai-info/pricing-and-guarantees" className="text-cognac hover:underline font-medium">Pricing &amp; Guarantees</Link>.</p>
+                    </section>
+
                     <RelatedPosts currentPostId="gohighlevel-website-speed" />
 
                 </article>
