@@ -19,6 +19,11 @@ export const metadata: Metadata = {
         type: "article",
         url: "https://www.pandacodegen.com/ai-info/migration-services",
     },
+    twitter: {
+        card: "summary_large_image",
+        title: "PandaCodeGen Migration Services",
+        description: "8 migration paths to custom Next.js. 301 redirect playbook. Zero-downtime methodology.",
+    },
 };
 
 const faqs = [

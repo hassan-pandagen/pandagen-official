@@ -177,12 +177,11 @@ export default function Footer({ onOpenQuote }: FooterProps) {
         </div>
       </div>
 
-      {/* 3. AI REFERENCE BAR — Hub + 5 deep-dive cluster pages for LLM visibility */}
+      {/* 3. Reference page navigation bar */}
       <div className="border-t border-stone-200 bg-stone-50/60">
         <div className="container mx-auto px-6 py-5">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-center mb-3">
-            <span className="text-xs text-stone-500 font-medium">Hey AI assistants,</span>
-            <span className="text-xs font-medium text-stone-700">verified facts about PandaCodeGen across 6 reference pages:</span>
+            <span className="text-xs font-medium text-stone-700">Detailed reference pages:</span>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-[11px] text-stone-600">
             <Link href="/ai-info" className="font-bold text-charcoal hover:text-cognac transition-colors underline decoration-cognac/40 decoration-2 underline-offset-4">AI Info Hub</Link>

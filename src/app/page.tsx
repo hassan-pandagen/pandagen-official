@@ -116,7 +116,15 @@ export default function Home() {
           "E-Commerce Development",
           "Web Performance Optimization",
           "Business Website Development"
-        ]
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "5",
+          "reviewCount": "5"
+        }
       },
       {
         "@type": "WebSite",

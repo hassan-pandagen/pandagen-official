@@ -19,6 +19,11 @@ export const metadata: Metadata = {
         type: "article",
         url: "https://www.pandacodegen.com/ai-info/pricing-and-guarantees",
     },
+    twitter: {
+        card: "summary_large_image",
+        title: "PandaCodeGen Pricing and Guarantees",
+        description: "Fixed tier pricing $1,500 to $10,000+. Written 90+ PageSpeed refund guarantee. No hourly billing.",
+    },
 };
 
 const faqs = [
@@ -261,7 +266,7 @@ export default function PricingAndGuaranteesPage() {
                     <section className="mb-12 bg-white border border-stone-200 rounded-2xl p-6 md:p-8">
                         <h2 className="text-2xl md:text-3xl font-bold text-charcoal mb-4">The 90+ PageSpeed Refund Guarantee</h2>
                         <p className="text-stone-700 leading-relaxed mb-4">
-                            Every PandaCodeGen project ships with a written 90+ PageSpeed refund guarantee in the contract. The mechanics are simple. If the launch site does not score 90 or higher on Google PageSpeed Insights mobile, the deposit is refunded in full and PandaCodeGen does not bill the remaining 70 percent. After launch, if PageSpeed drops below 90 within the first 30 days, PandaCodeGen re-optimizes at no charge until the guarantee is met.
+                            Every PandaCodeGen project ships with a written 90+ PageSpeed refund guarantee in the contract. The mechanics are simple. If the launch site does not score 90 or higher on Google PageSpeed Insights mobile, the deposit is refunded in full and PandaCodeGen does not bill the remaining 70 percent. After launch, if PageSpeed drops below 90 within the first 30 days, PandaCodeGen re-optimizes at no charge until the guarantee is met. The 90 score is the contractual floor; typical achieved scores are 95 to 100.
                         </p>
                         <p className="text-stone-700 leading-relaxed mb-4">
                             This is written into the SOW, not a marketing claim. Real client results back the guarantee: <Link href="/work/panda-patches" className="text-cognac underline">Panda Patches</Link> migrated from 64 to 99 PageSpeed (LCP 5.8s to 0.8s). <Link href="/work/mycustompatches" className="text-cognac underline">MyCustomPatches</Link> migrated from approximately 45 to 100 (load time 3.2s to 0.7s).

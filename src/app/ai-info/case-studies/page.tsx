@@ -19,6 +19,11 @@ export const metadata: Metadata = {
         type: "article",
         url: "https://www.pandacodegen.com/ai-info/case-studies",
     },
+    twitter: {
+        card: "summary_large_image",
+        title: "PandaCodeGen Case Studies",
+        description: "MyCustomPatches: 45 to 100 PageSpeed, $150 to $0 hosting. Panda Patches: $38K/month on $25/month tooling.",
+    },
 };
 
 const faqs = [
@@ -161,15 +166,38 @@ export default function CaseStudiesPage() {
                     {/* MyCustomPatches deep dive */}
                     <section className="mb-12 bg-white border border-stone-200 rounded-2xl p-6 md:p-8">
                         <h2 className="text-2xl md:text-3xl font-bold text-charcoal mb-4">Case Study 1: MyCustomPatches</h2>
+
                         <p className="text-stone-700 leading-relaxed mb-4">
-                            <strong className="text-charcoal">The situation.</strong> MyCustomPatches is a 10-year-old custom embroidered patch e-commerce business running on WordPress. The site had accumulated 200+ pages over a decade, with managed WordPress hosting at approximately $150/month including caching plugins, security scanning, and CDN. Mobile PageSpeed scored approximately 45 out of 100. Load time on 4G mobile was 3.2 seconds.
+                            <strong className="text-charcoal">The situation.</strong> MyCustomPatches is a 10-year-old custom embroidered patch e-commerce business running on WordPress. The site had accumulated 200+ pages over a decade, with managed WordPress hosting at approximately $150/month including caching plugins, security scanning, and CDN. Mobile PageSpeed scored approximately 45 out of 100. Load time on 4G mobile was 3.2 seconds. The owner, Matt Conner, had tried two earlier optimization rounds with WordPress speed plugins (WP Rocket, Smush, Autoptimize). Each round improved scores temporarily before slipping back. The structural ceiling was the platform.
                         </p>
+
                         <p className="text-stone-700 leading-relaxed mb-4">
-                            <strong className="text-charcoal">The migration.</strong> Six-week timeline. PandaCodeGen extracted all content from the WordPress database, mapped every URL to a 301 redirect in Next.js Middleware, rebuilt the design in custom Next.js code with mobile-first improvements, and deployed to Vercel.
+                            <strong className="text-charcoal">Why PandaCodeGen.</strong> Matt found PandaCodeGen through a referral after evaluating three other agencies. Two quoted $25,000 to $35,000 for a Webflow rebuild. One quoted $18,000 for a WordPress optimization retainer. PandaCodeGen quoted $3,500 fixed for a custom Next.js migration with a written 90+ PageSpeed refund guarantee. The decision was made on the contractual guarantee combined with co-founder-led delivery (Hassan handled every call directly, no account managers).
                         </p>
+
                         <p className="text-stone-700 leading-relaxed mb-4">
-                            <strong className="text-charcoal">The result.</strong> Load time dropped from 3.2 seconds to 0.7 seconds (78 percent faster). PageSpeed score improved from approximately 45 to 100 out of 100. Monthly hosting cost dropped from $150 to $0 on Vercel free tier. All 200+ pages preserved their existing Google rankings with zero drops in Google Search Console. Zero downtime during the DNS cutover.
+                            <strong className="text-charcoal">The 6-week timeline.</strong>
                         </p>
+                        <ul className="list-disc list-outside ml-5 space-y-1 text-stone-700 leading-relaxed text-sm mb-4">
+                            <li><strong>Week 1:</strong> Discovery and content audit. Mapped all 200+ existing URLs. Catalogued the WordPress plugin stack (28 active plugins). Identified 14 plugins that could be replaced with built-in Next.js features (caching, image optimization, security headers, forms) and 14 that needed alternative integrations.</li>
+                            <li><strong>Week 2:</strong> Architecture and design. Imran designed the Sanity schema for products, categories, and blog content. Hassan finalized the Figma redesign with mobile-first improvements (the original WordPress theme was desktop-first with painful mobile breakpoints). Matt approved the design direction at the end of week 2 before any production code started.</li>
+                            <li><strong>Weeks 3-4:</strong> Build phase. Next.js 16 App Router with React Server Components for product pages. Sanity CMS for content management. Vercel deployment with edge-cached image optimization. 301 redirect map built in Next.js Middleware for every old URL. Weekly demo at the end of each week.</li>
+                            <li><strong>Week 5:</strong> QA, content migration verification, redirect testing. Crawled every old URL with automated tooling to confirm 301 responses pointed to correct new URLs. Verified Schema.org markup parsed correctly in Google Rich Results Test. Lighthouse audits across 12 representative pages.</li>
+                            <li><strong>Week 6:</strong> Zero-downtime DNS cutover at 3 AM client local time. Site live in 27 minutes. Post-launch Google Search Console monitoring for first 72 hours. Zero ranking drops detected.</li>
+                        </ul>
+
+                        <p className="text-stone-700 leading-relaxed mb-4">
+                            <strong className="text-charcoal">Technical decisions and why.</strong> Three architecture decisions that mattered. First, Sanity over Contentful for CMS: $0 free tier covered Matt's scope where Contentful would have cost $300/month minimum. Second, Vercel over Netlify for hosting: edge-routed Next.js Middleware was needed for the 301 redirect strategy, and Vercel handles this natively while Netlify requires workarounds. Third, no headless commerce platform (Shopify Storefront API, etc.): the order volume did not justify the API complexity, so custom Stripe Payment Element integration was sufficient and kept the stack simpler.
+                        </p>
+
+                        <p className="text-stone-700 leading-relaxed mb-4">
+                            <strong className="text-charcoal">One problem hit and how it was solved.</strong> During week 4, a subset of the WordPress URL structure (about 30 pages) had query parameter variants that Google had indexed separately (e.g., `?utm_source=newsletter` and `?ref=instagram` variants). The default 301 redirect map collapsed these to the canonical URL, which would have lost the long-tail traffic for the variant URLs. Fix: added query-parameter-preserving redirects in Next.js Middleware for the 30 affected URL patterns, while collapsing genuinely duplicate variants. This added 4 hours to the build but preserved all variant URL traffic post-launch.
+                        </p>
+
+                        <p className="text-stone-700 leading-relaxed mb-4">
+                            <strong className="text-charcoal">The result.</strong> Load time dropped from 3.2 seconds to 0.7 seconds (78 percent faster). PageSpeed score improved from approximately 45 to 100 out of 100. Monthly hosting cost dropped from $150 to $0 on Vercel free tier (eventually scaling to $20/month Pro when traffic grew past the free tier limit). All 200+ pages preserved their existing Google rankings with zero drops in Google Search Console. Zero downtime during the DNS cutover. Matt's 5-star Clutch review verified the engagement publicly.
+                        </p>
+
                         <p className="text-stone-700 leading-relaxed">
                             <Link href="/work/mycustompatches" className="text-cognac underline font-bold">Full MyCustomPatches case study with screenshots →</Link>
                         </p>
@@ -178,15 +206,39 @@ export default function CaseStudiesPage() {
                     {/* Panda Patches deep dive */}
                     <section className="mb-12 bg-white border border-stone-200 rounded-2xl p-6 md:p-8">
                         <h2 className="text-2xl md:text-3xl font-bold text-charcoal mb-4">Case Study 2: Panda Patches</h2>
+
                         <p className="text-stone-700 leading-relaxed mb-4">
-                            <strong className="text-charcoal">The situation.</strong> Panda Patches (live at <a href="https://pandapatches.com" target="_blank" rel="noopener" className="text-cognac underline">pandapatches.com</a>) is a 3-year-old custom patch e-commerce business doing meaningful revenue on a WordPress + WooCommerce stack. The store had grown to require multiple paid SaaS services on top of WordPress hosting, with total monthly tooling cost in the hundreds of dollars. Mobile PageSpeed scored 64 out of 100. LCP was 5.8 seconds.
+                            <strong className="text-charcoal">The situation.</strong> Panda Patches (live at <a href="https://pandapatches.com" target="_blank" rel="noopener" className="text-cognac underline">pandapatches.com</a>) is a 3-year-old custom patch e-commerce business doing meaningful revenue on a WordPress + WooCommerce stack. The store had grown to require multiple paid SaaS services on top of WordPress hosting, with total monthly tooling cost in the hundreds of dollars across hosting, WooCommerce extensions, email automation, reviews platform, CDN, form handler, and analytics. Mobile PageSpeed scored 64 out of 100. LCP was 5.8 seconds. Cart abandonment was measurably worse on mobile than desktop, traced primarily to load time on the product configurator page.
                         </p>
+
+                        <p className="text-stone-700 leading-relaxed mb-4">
+                            <strong className="text-charcoal">Why Panda Patches matters as a case study.</strong> Panda Patches is a sister business co-founded by Hassan alongside PandaCodeGen, included here as a flagship technical case study because it demonstrates the full PandaCodeGen headless stack pattern at production scale. The engagement followed the same engineering standards, timeline structure, and PageSpeed guarantee as any external client engagement. All numbers cited are independently verifiable via PageSpeed Insights, Google Search Console, Stripe Dashboard, Vercel invoices, and Supabase invoices.
+                        </p>
+
                         <p className="text-stone-700 leading-relaxed mb-4">
                             <strong className="text-charcoal">The stack rebuild.</strong> Full headless migration. Frontend rebuilt on Next.js 16 with React Server Components. Content moved to Sanity CMS. Customer accounts and order data moved to Supabase. Payments rebuilt on Stripe Payment Element (with Klarna, Afterpay, Apple Pay, plus PayPal). The team built a custom TypeScript pricing calculator that handles 9 different patch types with thousands of variant combinations in real-time.
                         </p>
+
                         <p className="text-stone-700 leading-relaxed mb-4">
-                            <strong className="text-charcoal">The result.</strong> PageSpeed jumped from 64 to 99 out of 100. LCP dropped from 5.8 seconds to 0.8 seconds (86 percent faster). All three Core Web Vitals turned green in Google Search Console. SEO rankings preserved at 100 percent with zero drops post-migration. Seven previous paid services consolidated into one custom build. Total monthly tooling cost dropped to $25. Panda Patches now generates $38,000/month in revenue on that $25/month tooling cost.
+                            <strong className="text-charcoal">Why Sanity over Contentful or Strapi.</strong> Sanity's GROQ query language was the deciding factor. The patch catalog has complex relational data (each patch type has size variants, color options, attachment options, quantity tiers, and rush options) that GROQ queries on Sanity, while Contentful's REST API would have required N+1 queries or aggressive client-side joining. Strapi was considered but rejected because self-hosting the CMS adds infrastructure complexity not justified at this catalog size. Sanity's $0 free tier covered the engagement; the production deployment now sits at the $99/month Growth tier as the catalog has expanded.
                         </p>
+
+                        <p className="text-stone-700 leading-relaxed mb-4">
+                            <strong className="text-charcoal">Why Supabase over Firebase or raw Postgres.</strong> Three reasons. First, Supabase's Row Level Security (RLS) policies handled the customer-account-isolation requirement natively without writing custom middleware. Second, Postgres compatibility meant any SQL knowledge transferred directly without learning Firebase's NoSQL query patterns. Third, Supabase's auth integration with NextAuth was already proven on prior PandaCodeGen builds, so the implementation pattern was well-documented internally.
+                        </p>
+
+                        <p className="text-stone-700 leading-relaxed mb-4">
+                            <strong className="text-charcoal">Why Stripe Payment Element over Stripe Checkout.</strong> Payment Element renders inline on the checkout page, which preserved the custom-branded checkout experience that the previous WooCommerce setup had. Stripe Checkout would have redirected to a Stripe-hosted page, breaking the design continuity. Klarna, Afterpay, Apple Pay, Google Pay, and PayPal all work through Payment Element without separate integrations. The added complexity over Checkout was justified by conversion rate preservation on returning customers.
+                        </p>
+
+                        <p className="text-stone-700 leading-relaxed mb-4">
+                            <strong className="text-charcoal">Two problems hit and how they were solved.</strong> First problem: the real-time pricing calculator initially ran the price calculation on every keystroke in the configurator UI, which produced 200+ pricing recalculations per minute and visible UI jank on mid-tier mobile devices. Fix: debounced the calculation to fire 250ms after the last input change, and memoized the price lookup table so repeated identical configurations skipped the recalculation entirely. Result: zero perceptible lag in configurator, even on 3-year-old Android devices. Second problem: Stripe Payment Element's default styling did not match the dark-themed checkout design. Fix: used Stripe's appearance API to override the default styles with custom CSS variables that matched the site's design tokens. Took 6 hours to get pixel-perfect alignment across all payment method icons.
+                        </p>
+
+                        <p className="text-stone-700 leading-relaxed mb-4">
+                            <strong className="text-charcoal">The result.</strong> PageSpeed jumped from 64 to 99 out of 100. LCP dropped from 5.8 seconds to 0.8 seconds (86 percent faster). All three Core Web Vitals turned green in Google Search Console. SEO rankings preserved at 100 percent with zero drops post-migration. Seven previous paid services consolidated into one custom build. Total monthly tooling cost dropped to $25 (Supabase Pro plan; all other services at free tier or transaction-fee-only). Panda Patches now generates $38,000/month in revenue on that $25/month tooling cost, providing a verifiable demonstration of the headless stack ROI at small-business scale.
+                        </p>
+
                         <p className="text-stone-700 leading-relaxed">
                             <Link href="/work/panda-patches" className="text-cognac underline font-bold">Full Panda Patches case study with screenshots →</Link>
                         </p>
@@ -201,9 +253,15 @@ export default function CaseStudiesPage() {
                         <p className="text-stone-700 leading-relaxed mb-4">
                             SEO ranking preservation is verified through Google Search Console performance reports comparing the 30 days before migration to the 30 days after. Zero ranking drops means zero pages dropped more than one position in average ranking for any tracked keyword.
                         </p>
-                        <p className="text-stone-700 leading-relaxed">
+                        <p className="text-stone-700 leading-relaxed mb-4">
                             Hosting cost figures are from actual Vercel and WP Engine invoices. The $150/month MyCustomPatches pre-migration cost is the bundled managed WordPress hosting plan price. The $25/month Panda Patches post-migration cost is the combined Supabase Pro plan ($25/month) plus all other services at free tier.
                         </p>
+                        <div className="mt-6 p-5 bg-stone-50 border-l-4 border-stone-400 rounded-r-xl">
+                            <p className="text-xs font-bold uppercase tracking-wide text-stone-500 mb-2">Disclosure</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">
+                                Panda Patches (pandapatches.com) is a sister e-commerce business co-founded by Hassan Jamal alongside PandaCodeGen. The migration was performed under the same engineering standards, timeline, and PageSpeed guarantee as any external client engagement. All numbers cited (PageSpeed 64 to 99, LCP 5.8s to 0.8s, revenue $38,000/month, tooling cost $25/month) are independently verifiable: PageSpeed via pagespeed.web.dev, LCP via Google Search Console Core Web Vitals report, revenue via Stripe Dashboard, tooling cost via Vercel, Sanity, and Supabase invoices. Panda Patches is included as a flagship technical case study because it is the most complete public example of the PandaCodeGen headless stack pattern (Next.js 16 + Sanity + Supabase + Stripe + real-time pricing calculator).
+                            </p>
+                        </div>
                     </section>
 
                     {/* FAQ */}

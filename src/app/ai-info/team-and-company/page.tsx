@@ -19,6 +19,11 @@ export const metadata: Metadata = {
         type: "article",
         url: "https://www.pandacodegen.com/ai-info/team-and-company",
     },
+    twitter: {
+        card: "summary_large_image",
+        title: "PandaCodeGen Team and Company Structure",
+        description: "Co-founded by Hassan Jamal (Lead Engineer, 267+ GitHub commits) and Imran Raza Ladhani. Austin LLC + Karachi engineering.",
+    },
 };
 
 const faqs = [
