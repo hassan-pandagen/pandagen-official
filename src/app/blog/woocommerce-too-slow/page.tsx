@@ -655,6 +655,10 @@ export default function WooCommerceTooSlowPage() {
                         </CalModalButton>
                     </div>
 
+                    <div className="mt-8">
+                        <p className="text-stone-700 leading-relaxed text-base">WooCommerce app costs are part of a broader 2026 software pricing pattern. For the full cross-platform audit covering Klaviyo, Webflow, Microsoft 365, HubSpot, Salesforce, Recharge, and Adobe, see our <Link href="/blog/saas-software-pricing-audit-2026" className="text-cognac hover:underline font-medium">2026 Software Pricing Audit</Link>.</p>
+                    </div>
+
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
 
                     <RelatedPosts currentPostId="woocommerce-too-slow" category="WooCommerce" />

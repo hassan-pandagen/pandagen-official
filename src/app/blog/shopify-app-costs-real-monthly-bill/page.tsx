@@ -566,6 +566,9 @@ export default function ShopifyAppCostsPage() {
                         <Link href="/blog/shopify-headless" className="text-cognac hover:underline font-medium">our headless Shopify guide</Link>{" "}
                         explains what the migration actually looks like and when the ROI makes sense.
                     </BlogText>
+                    <BlogText>
+                        Shopify is one piece of a bigger pricing pattern. For the cross-platform view including Webflow&apos;s May 2026 restructure, Microsoft 365&apos;s July 2026 hike, Klaviyo&apos;s stealth billing change, and the 5-step audit framework, see our <Link href="/blog/saas-software-pricing-audit-2026" className="text-cognac hover:underline font-medium">2026 Software Pricing Audit</Link>.
+                    </BlogText>
 
                     {/* Bottom CTA */}
                     <div className="my-6 md:my-10 p-8 bg-charcoal text-white rounded-2xl text-center">

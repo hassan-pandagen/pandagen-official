@@ -7,7 +7,7 @@ export default function Hero() {
       className="relative flex flex-col justify-center overflow-hidden bg-paper"
       style={{
         backgroundColor: "#f5f5f4",
-        paddingTop: "var(--space-section-xl)",
+        paddingTop: "var(--space-section)",
         paddingBottom: "var(--space-section-sm)",
       }}
     >
@@ -34,7 +34,7 @@ export default function Hero() {
         <div className="max-w-2xl">
 
           {/* Founder trust pill: replaces generic "Accepting Q2 Clients" with Hassan signature */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-stone-200 text-xs font-bold uppercase tracking-widest text-stone-500 mb-8 shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-stone-200 text-xs font-bold uppercase tracking-widest text-stone-500 mb-5 shadow-xs">
             <span className="relative flex h-2 w-2">
               <span className="relative inline-flex rounded-full h-2 w-2 bg-cognac" />
             </span>
@@ -43,8 +43,8 @@ export default function Hero() {
 
           {/* Headline: LCP candidate, pure server HTML, inline fontFamily forces instant paint */}
           <h1
-            className="text-[2rem] md:text-[3.5rem] font-sans font-bold text-charcoal tracking-tight mb-6 leading-[1.1]"
-            style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", fontWeight: 700, color: "#1C1917", letterSpacing: "-0.025em", lineHeight: 1.1, marginBottom: "1.5rem", fontFamily: "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" }}
+            className="text-[2rem] md:text-[3.5rem] font-sans font-bold text-charcoal tracking-tight mb-4 leading-[1.1]"
+            style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", fontWeight: 700, color: "#1C1917", letterSpacing: "-0.025em", lineHeight: 1.1, marginBottom: "1rem", fontFamily: "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" }}
           >
             Your slow website is <br />
             <span
@@ -58,51 +58,56 @@ export default function Hero() {
           {/* Subtitle: LCP element. Inline fontFamily forces system-font paint instantly,
               custom font swaps in when ready (zero CLS via size-adjust in globals.css). */}
           <p
-            className="text-lg md:text-xl text-stone-600 mb-6 md:mb-10 leading-relaxed max-w-lg font-medium"
+            className="text-lg md:text-xl text-stone-600 mb-4 leading-relaxed max-w-lg font-medium"
             style={{ color: "#57534e", fontSize: "1.125rem", lineHeight: 1.75, maxWidth: "32rem", fontWeight: 500, display: "block", visibility: "visible", fontFamily: "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" }}
           >
-            We replace slow WordPress, Shopify, Wix, Squarespace, and drag-and-drop sites with{" "}
+            We replace slow WordPress, Shopify, and drag-and-drop sites, plus the monthly subscriptions and tools that come with them, with{" "}
             <span
               className="text-charcoal font-bold underline decoration-cognac/40 decoration-2 underline-offset-2"
               style={{ color: "#1C1917", fontWeight: 700 }}
             >
-              custom built websites that load under a second
+              custom code you own forever
             </span>
             .{" "}
             <span className="text-charcoal font-bold" style={{ color: "#1C1917", fontWeight: 700 }}>
               Fixed pricing from $1,500.
             </span>{" "}
-            No monthly fees. No plugin updates. No vendor lock-in.
+            Most clients cut monthly software spend 40 to 70% over 3 years.<sup className="text-cognac">*</sup>
+          </p>
+
+          {/* Methodology footnote for the savings claim — FTC-safe disclosure */}
+          <p
+            className="text-xs text-stone-500 mb-5 md:mb-6 max-w-lg leading-relaxed"
+            style={{ fontStyle: "italic" }}
+          >
+            *Based on 3-year total cost of ownership vs replaced subscription fees. Methodology and case studies on request. Results vary by stack size.
           </p>
 
           {/* CTAs, animated client component */}
           <HeroCTAs />
 
-          {/* Platform review badges: above-the-fold trust proof */}
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mt-6 text-xs font-bold text-stone-600">
+          {/* Platform review badges: 2x2 grid on all sizes, no wrapping ambiguity */}
+          <div className="grid grid-cols-2 gap-x-4 gap-y-2 mt-5 text-xs font-bold text-stone-600 max-w-md">
             <span className="flex items-center gap-1.5">
               <span className="text-yellow-500">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
               <span>5.0 Clutch <span className="font-normal text-stone-400">(3)</span></span>
             </span>
-            <span className="text-stone-300">&middot;</span>
             <span className="flex items-center gap-1.5">
               <span className="text-[#00b67a]">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
               <span>5.0 Trustpilot <span className="font-normal text-stone-400">(2)</span></span>
             </span>
-            <span className="text-stone-300">&middot;</span>
             <span className="flex items-center gap-1.5">
               <span className="text-yellow-500">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
               <span>5.0 Google <span className="font-normal text-stone-400">(5)</span></span>
             </span>
-            <span className="text-stone-300">&middot;</span>
             <span className="flex items-center gap-1.5">
               <span className="text-cognac">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
               <span>5.0 GoodFirms <span className="font-normal text-stone-400">(2)</span></span>
             </span>
           </div>
 
-          {/* Trust signals: pure server HTML, zero CLS */}
-          <div className="flex flex-wrap items-center gap-x-8 gap-y-3 mt-10 text-sm text-stone-500 font-medium">
+          {/* Trust signals: 2x2 grid on all sizes, tighter top margin */}
+          <div className="grid grid-cols-2 gap-x-6 gap-y-2 mt-6 text-sm text-stone-500 font-medium max-w-md">
             <div className="flex items-center gap-2">
               <Zap className="w-4 h-4 text-cognac shrink-0" />
               <span>&lt;1s Load Time</span>
@@ -122,11 +127,20 @@ export default function Hero() {
           </div>
 
           {/* PageSpeed Guarantee — risk reversal */}
-          <div className="mt-6 inline-flex items-start gap-3 px-4 py-3 bg-white border border-cognac/30 rounded-xl shadow-xs max-w-lg">
+          <div className="mt-5 inline-flex items-start gap-3 px-4 py-3 bg-white border border-cognac/30 rounded-xl shadow-xs max-w-lg">
             <ShieldCheck className="w-5 h-5 text-cognac shrink-0 mt-0.5" />
             <p className="text-sm text-charcoal leading-snug">
               <span className="font-bold">Our guarantee:</span> if your new site doesn&apos;t score{" "}
               <span className="font-bold text-orange-800">90+ on Google PageSpeed</span>, we refund 100%. In writing.
+            </p>
+          </div>
+
+          {/* Subscription-free build — ownership positioning, factual not promissory */}
+          <div className="mt-2 inline-flex items-start gap-3 px-4 py-3 bg-white border border-stone-300 rounded-xl shadow-xs max-w-lg">
+            <CheckCircle2 className="w-5 h-5 text-charcoal shrink-0 mt-0.5" />
+            <p className="text-sm text-charcoal leading-snug">
+              <span className="font-bold">Subscription-free build:</span> full source code handed over on launch.{" "}
+              <span className="font-bold">You own it.</span> No platform fees. No monthly license. No vendor lock-in.
             </p>
           </div>
 

@@ -660,6 +660,10 @@ export default function WixTooSlowPage() {
                         </div>
                     </div>
 
+                    <div className="mt-8 mb-6">
+                        <p className="text-stone-700 leading-relaxed text-base">For the cross-platform 2026 pricing audit covering Webflow, Microsoft 365, Klaviyo, Recharge, HubSpot, Salesforce, and Adobe, see our <Link href="/blog/saas-software-pricing-audit-2026" className="text-cognac hover:underline font-medium">2026 Software Pricing Audit</Link>.</p>
+                    </div>
+
                     <FAQAccordion faqs={postFAQs} />
 
                     <RelatedPosts currentPostId="wix-too-slow" category="Wix" />

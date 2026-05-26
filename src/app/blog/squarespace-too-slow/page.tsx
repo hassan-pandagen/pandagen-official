@@ -491,6 +491,10 @@ export default function SquarespaceToSlowPage() {
 
                     </article>
 
+                    <div className="max-w-3xl mx-auto px-4 md:px-8 pt-6 pb-2">
+                        <p className="text-stone-700 leading-relaxed text-base">For the broader 2026 pricing pattern across Webflow, Microsoft 365, Klaviyo, Recharge, HubSpot, Salesforce, and Adobe, see our <Link href="/blog/saas-software-pricing-audit-2026" className="text-cognac hover:underline font-medium">2026 Software Pricing Audit</Link>.</p>
+                    </div>
+
                     <FAQAccordion faqs={squarespaceSlowFAQs} />
 
                     <RelatedPosts currentPostId="squarespace-too-slow" category="Squarespace" />
