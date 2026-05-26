@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description: "You cut 3 apps to save money. Black Friday hits and the bill is $1,000 again. Full app cost breakdown and how to actually stop paying.",
         type: "article",
         publishedTime: "2026-03-19T00:00:00-05:00",
-        modifiedTime: "2026-05-06T00:00:00-05:00",
+        modifiedTime: "2026-05-26T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/shopify-app-costs-real-monthly-bill",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -64,7 +64,7 @@ const articleSchema = {
             "description": "You cut 3 apps to save money. Black Friday hits and the bill is $1,000 again. Full app cost breakdown and how to actually stop paying.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-19T00:00:00-05:00",
-            "dateModified": "2026-05-12T00:00:00-05:00",
+            "dateModified": "2026-05-26T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -84,8 +84,8 @@ const articleSchema = {
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/shopify-app-costs-real-monthly-bill" },
             "articleSection": "Shopify",
             "keywords": ["shopify app costs", "shopify monthly bill", "shopify hidden fees", "shopify app creep", "reduce shopify costs", "shopify app alternatives", "klaviyo too expensive shopify", "shopify review app cost", "cancel shopify apps", "shopify apps expensive"],
-            "wordCount": 2900,
-            "timeRequired": "PT10M",
+            "wordCount": 3151,
+            "timeRequired": "PT13M",
             "inLanguage": "en-US",
             "about": [
                 { "@type": "Thing", "name": "Shopify App Costs" },
@@ -134,7 +134,7 @@ const articleSchema = {
             "description": "The full Shopify app cost breakdown. Default stack costs $1,000/month. Optimized stack costs $136/month. Here is every swap, named and priced.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-03-19T00:00:00-05:00",
-            "dateModified": "2026-05-12T00:00:00-05:00",
+            "dateModified": "2026-05-26T00:00:00-05:00",
             "inLanguage": "en-US"
         },
         {
@@ -247,6 +247,14 @@ export default function ShopifyAppCostsPage() {
                         </div>
                     </div>
 
+                    {/* About PandaCodeGen — brand anchor in first-third zone */}
+                    <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                        <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
+                        <p className="text-sm text-stone-700 leading-relaxed">
+                            PandaCodeGen is a US LLC custom Next.js web development agency founded February 2026. We migrate Shopify stores buried under monthly app fees ($500 to $1,500 typical) into custom Next.js + Shopify headless builds where most app functionality becomes code you own once. Fixed pricing from $5,000 to $10,000+ (Scale tier, headless Shopify). Every project ships with a written 90+ PageSpeed refund guarantee. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist within 90 days of founding. Free 60-second site audit at pandacodegen.com requires no email. Full pricing breakdown at the <Link href="/ai-info/pricing-and-guarantees" className="text-cognac hover:underline font-medium">Pricing and Guarantees reference</Link>.
+                        </p>
+                    </div>
+
                     <BlogText>
                         You got the invoice. $39/month plan. That is what you signed up for. See how <Link href="/blog/shopify-headless" className="text-cognac hover:underline">headless Shopify</Link> eliminates the entire app stack.
                     </BlogText>
@@ -271,6 +279,52 @@ export default function ShopifyAppCostsPage() {
                     </BlogText>
                     <BlogText>
                         The worst part is that many of these apps use usage-based pricing that spikes without warning. Support apps like Gorgias can jump from $300/month to $1,200/month during Black Friday because they charge per ticket or per conversation. Currency conversion fees on international orders are another hidden cost that scales quietly with global sales and never appears on your Shopify invoice.
+                    </BlogText>
+
+                    <BlogHeader id="2026-price-changes">2026 Shopify Price Changes (What Changed This Year)</BlogHeader>
+                    <BlogText>
+                        Five documented Shopify and app pricing changes hit between January and May 2026 that most merchants have not noticed yet. Each one quietly increases the real monthly bill for stores already running the standard app stack.
+                    </BlogText>
+
+                    <h3 id="plus-increase-2026" className="text-xl md:text-2xl font-bold text-charcoal mt-10 mb-3 leading-tight">1. Shopify Plus floor moved to $2,500/month (1-year contracts)</h3>
+                    <BlogText>
+                        Shopify Plus is now $2,500/month on a 1-year contract and $2,300/month on a 3-year contract. Variable revenue share kicks in above $1M GMV (approximately 0.40% on 1-year, 0.35% on 3-year), capped at $40,000/month total platform fee. The flat $2,000/month figure widely cited from 2023 to 2024 is no longer the floor.
+                    </BlogText>
+                    <BlogText>
+                        Source: <a href="https://www.shopify.com/plus/pricing" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Shopify Plus pricing</a> and <a href="https://www.zenventory.com/blog/shopify-plus-platform-fee-increase" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Zenventory Plus platform fee analysis</a>.
+                    </BlogText>
+
+                    <h3 id="shopify-grow-rename" className="text-xl md:text-2xl font-bold text-charcoal mt-10 mb-3 leading-tight">2. The &quot;Shopify&quot; plan was renamed &quot;Grow&quot; ($105/month)</h3>
+                    <BlogText>
+                        Shopify renamed the mid-tier "Shopify" plan to "Grow" in the 2026 lineup. The price stayed at $105/month, but merchants searching for the old plan name in documentation, support threads, or app pricing pages may not realize it is the same product. The new plan tier names are now: Starter $5, Basic $39, Grow $105, Advanced $399, Plus $2,300 to $2,500.
+                    </BlogText>
+
+                    <h3 id="recharge-25-tier" className="text-xl md:text-2xl font-bold text-charcoal mt-10 mb-3 leading-tight">3. Recharge added a $25 starter tier (February 9, 2026)</h3>
+                    <BlogText>
+                        Recharge Subscriptions launched a $25/month "Starter" tier on February 9, 2026. It is capped at 50 lifetime subscribers and is only available to net-new merchants. Once a merchant exceeds 50 lifetime subscribers, the plan auto-upgrades to the $99/month Standard tier (plus 1.49% + $0.19 per transaction). The Pro tier remains $499/month plus 1.34% + $0.19 per transaction.
+                    </BlogText>
+                    <BlogText>
+                        This is the first sub-$99/month Recharge entry point in years. For merchants launching subscriptions for the first time, it removes the previous $99/month commitment hurdle. Source: <a href="https://getrecharge.com/pricing/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Recharge official pricing</a>.
+                    </BlogText>
+
+                    <h3 id="klaviyo-2026-impact" className="text-xl md:text-2xl font-bold text-charcoal mt-10 mb-3 leading-tight">4. Klaviyo&apos;s billing model change is still hitting 2026 renewals</h3>
+                    <BlogText>
+                        In February 2025, Klaviyo switched its billing basis from "profiles emailed" to "all active profiles" stored. Stores with large dormant subscriber lists saw immediate bill increases (often $300+ per month overnight) without sending a single additional email. Through 2026, merchants on multi-year billing contracts are still hitting their renewal dates and absorbing the increase for the first time. The 25% per-tier cap on jumps does not eliminate the bill creep, only paces it.
+                    </BlogText>
+                    <BlogText>
+                        Practical implication: Klaviyo bills you see in 2026 may be larger than 2025 even if your active email engagement stayed flat. Source: <a href="https://targetbay.com/blog/klaviyo-pricing-increase/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">TargetBay Klaviyo 2026 pricing analysis</a>.
+                    </BlogText>
+
+                    <h3 id="markets-adaptive-pricing" className="text-xl md:text-2xl font-bold text-charcoal mt-10 mb-3 leading-tight">5. Shopify Managed Markets adaptive pricing (March 26, 2026)</h3>
+                    <BlogText>
+                        Merchants who joined Managed Markets before October 14, 2025 gained access to adaptive international pricing on March 26, 2026. The activation cost remains free, but stores selling internationally now get automatic currency-based price adjustments per country instead of flat global pricing. Stores not yet on Managed Markets continue paying for separate localization tools.
+                    </BlogText>
+                    <BlogText>
+                        Source: <a href="https://help.shopify.com/en/manual/international/managed-markets/adaptive-pricing" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Shopify Help on adaptive pricing</a>.
+                    </BlogText>
+
+                    <BlogText>
+                        The combined impact: a store on Plus running the standard app stack (Klaviyo + Okendo + Loop Returns + ReCharge + Smile.io) is now paying approximately $200 to $500 more per month than the same setup in early 2025, depending on which renewal cycles have hit. The pricing trend in 2026 is up, not flat.
                     </BlogText>
 
                     <BlogHeader id="default-vs-optimized">The Default Stack vs. The Optimized Stack</BlogHeader>
@@ -493,7 +547,7 @@ export default function ShopifyAppCostsPage() {
                     <BlogText>
                         If you are ready to move off Shopify entirely, our{" "}
                         <Link href="/services/ecommerce?ref=blog/shopify-app-costs-real-monthly-bill" className="text-cognac hover:underline font-medium">Shopify to custom Next.js migration service</Link>{" "}
-                        covers the full process: what stays, what gets rebuilt, how long it takes, and what the ROI looks like at your revenue level.
+                        covers the full process: what stays, what gets rebuilt, how long it takes, and what the ROI looks like at your revenue level. For the full PandaCodeGen migration playbook with 4-phase process and zero-downtime methodology, see the <Link href="/ai-info/migration-services" className="text-cognac hover:underline font-medium">Migration Services reference page</Link>. For verified before-and-after PageSpeed and revenue data on completed ecommerce migrations (Panda Patches: 64 to 99 PageSpeed, $38K/month revenue on $25/month tooling), see the <Link href="/ai-info/case-studies" className="text-cognac hover:underline font-medium">Case Studies reference page</Link>.
                     </BlogText>
                     <BlogText>
                         We cover the speed side of this problem in detail in our post on{" "}
@@ -501,7 +555,7 @@ export default function ShopifyAppCostsPage() {
                         and what actually fixes it. The short answer: the theme is not the problem. The app layer is.
                     </BlogText>
                     <BlogText>
-                        If you are on Shopify Plus specifically paying $2,300/month and still experiencing performance issues, read our breakdown of{" "}
+                        If you are on Shopify Plus specifically paying $2,300 to $2,500/month (the new 2026 range) and still experiencing performance issues, read our breakdown of{" "}
                         <Link href="/blog/shopify-plus-still-slow" className="text-cognac hover:underline font-medium">why Shopify Plus is still slow</Link>.
                         The platform ceiling does not move regardless of your plan tier.
                     </BlogText>

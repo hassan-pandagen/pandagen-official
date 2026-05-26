@@ -7,6 +7,8 @@ interface CalModalButtonProps {
   className?: string;
 }
 
+type GtagWindow = Window & { gtag?: (...args: unknown[]) => void };
+
 export default function CalModalButton({ children, className }: CalModalButtonProps) {
   useEffect(() => {
     let loaded = false;
@@ -34,6 +36,23 @@ export default function CalModalButton({ children, className }: CalModalButtonPr
         },
         hideEventTypeDetails: false,
         layout: "month_view",
+      });
+
+      cal("on", {
+        action: "bookingSuccessful",
+        callback: (event) => {
+          const data = event?.detail?.data;
+          const eventTypeTitle =
+            (data?.eventType as { title?: string } | undefined)?.title ?? "discovery";
+          const gtag = (window as GtagWindow).gtag;
+          if (typeof gtag === "function") {
+            gtag("event", "cal_booking", {
+              event_category: "conversion",
+              event_label: eventTypeTitle,
+              booking_date: data?.date,
+            });
+          }
+        },
       });
     }
 

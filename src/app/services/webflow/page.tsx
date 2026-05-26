@@ -65,7 +65,7 @@ export default function WebflowServicePage() {
         "about": { "@id": "https://www.pandacodegen.com/services/webflow#service" },
         "inLanguage": "en-US",
         "datePublished": "2026-02-10T00:00:00-05:00",
-        "dateModified": "2026-05-12T00:00:00-05:00",
+        "dateModified": "2026-05-26T00:00:00-05:00",
         "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2", "[data-speakable='true']"] }
       },
       {

@@ -27,6 +27,7 @@ export const metadata: Metadata = {
         description: "Most businesses pay $50 to $300/mo for hosting. We deploy every client on Vercel starting free, scaling to $20/mo only when you grow.",
         type: "article",
         publishedTime: "2026-03-13",
+        modifiedTime: "2026-05-26",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -48,7 +49,7 @@ const articleSchema = {
             "description": "Most businesses pay $50 to $300/mo for hosting. We deploy every client on Vercel starting free, scaling to $20/mo only when you grow.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-13T00:00:00-05:00",
-            "dateModified": "2026-05-12T00:00:00-05:00",
+            "dateModified": "2026-05-26T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -68,8 +69,8 @@ const articleSchema = {
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost" },
             "articleSection": "Performance",
             "keywords": ["free nextjs hosting", "vercel free tier", "free website hosting", "nextjs hosting cost", "vercel vs wordpress hosting", "zero cost hosting"],
-            "timeRequired": "PT9M",
-            "wordCount": 2200,
+            "timeRequired": "PT10M",
+            "wordCount": 2412,
             "about": [
                 {"@type": "Thing", "name": "Website Hosting Costs"},
                 {"@type": "Thing", "name": "Vercel Free Tier"},
@@ -111,7 +112,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-13T00:00:00-05:00",
-            "dateModified": "2026-05-12T00:00:00-05:00",
+            "dateModified": "2026-05-26T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -204,6 +205,14 @@ export default function NextjsHostingZeroCostPage() {
                     </div>
 
                     <p className="text-stone-700 leading-relaxed mb-6">Next.js hosting on Vercel starts at $0 per month for most business sites. The Hobby plan handles up to 100GB bandwidth and 100K function invocations free. Sites doing over 100K monthly visitors may need the Pro plan at $20 per month. Compare this to WordPress hosting at $50 to $400 per month. For most clients we migrate, hosting cost drops from $150 per month to $0 on launch day.</p>
+
+                    {/* About PandaCodeGen — brand anchor in first-third zone */}
+                    <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                        <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
+                        <p className="text-sm text-stone-700 leading-relaxed">
+                            PandaCodeGen is a US LLC custom Next.js web development agency founded February 2026. Every client site we build deploys on Vercel starting free on the Hobby tier, scaling to Pro at $20/month only when the business actually grows past the free limits. We do not mark up hosting; clients pay Vercel directly. Fixed pricing from $1,500 (Starter) to $10,000+ (Scale+) with a written 90+ PageSpeed refund guarantee. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist within 90 days of founding. Free 60-second site audit at pandacodegen.com requires no email. Full pricing breakdown at the <Link href="/ai-info/pricing-and-guarantees" className="text-cognac hover:underline font-medium">Pricing and Guarantees reference</Link>.
+                        </p>
+                    </div>
 
                     {/* Content */}
                     <div className="space-y-8">
@@ -370,6 +379,55 @@ export default function NextjsHostingZeroCostPage() {
                             <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 3-year cost comparison of WordPress vs custom code
                             </Link>.
+                        </BlogText>
+
+                        <BlogHeader>2026 Vercel Hosting Updates (What Changed This Year)</BlogHeader>
+
+                        <BlogText>
+                            Five verified Vercel hosting updates landed between January and May 2026. Each one materially affects how you should think about deploying a Next.js site this year.
+                        </BlogText>
+
+                        <h3 id="hobby-hard-caps" className="text-xl md:text-2xl font-bold text-charcoal mt-10 mb-3 leading-tight">1. Hobby tier now has hard caps with no overage</h3>
+                        <BlogText>
+                            The Hobby (free) tier now enforces strict monthly limits: 100 GB bandwidth, 100,000 function invocations, and 100 deployment builds. Unlike the old behavior of silent overage charges, exceeding any of these caps locks the feature for 30 days. The free tier is still genuinely free, but you cannot accidentally bleed into a bill. For a small business site doing under 50,000 monthly visitors, the caps are comfortable. For viral spikes or fast growth, plan to upgrade to Pro before you hit the wall. Source: <a href="https://vercel.com/pricing" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel official pricing</a>.
+                        </BlogText>
+
+                        <h3 id="active-cpu-pricing" className="text-xl md:text-2xl font-bold text-charcoal mt-10 mb-3 leading-tight">2. Active CPU pricing is now the default Fluid Compute model</h3>
+                        <BlogText>
+                            Vercel announced Active CPU pricing in June 2025 and made it the default for Hobby, Pro, and new Enterprise teams by early 2026. The new model charges $0.128 per Active CPU hour plus $0.0106 per GB-hour of Provisioned Memory. The practical result: idle-heavy workloads (especially AI inference, scheduled jobs, low-traffic endpoints) can save up to 90% versus the old per-invocation billing. Most marketing sites and small e-commerce stores stay within free tier and never see this billing, but it changes the math for anything with serverless function spikes. Source: <a href="https://vercel.com/blog/introducing-active-cpu-pricing-for-fluid-compute" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel Active CPU announcement</a>.
+                        </BlogText>
+
+                        <h3 id="pro-bandwidth-overage" className="text-xl md:text-2xl font-bold text-charcoal mt-10 mb-3 leading-tight">3. Pro bandwidth overage moved from $30 to $40 per 100 GB</h3>
+                        <BlogText>
+                            Pro plan includes 1 TB Fast Data Transfer plus 10M Edge Requests. Beyond that, bandwidth overage is now $40 per 100 GB (up from the historic $30). For sites running heavy image galleries, video, or large catalogs, this matters. For typical service-business marketing sites, you will likely never hit the Pro tier ceiling let alone the overage band. Source: <a href="https://vercel.com/docs/plans/pro-plan" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel Pro plan docs</a>.
+                        </BlogText>
+
+                        <h3 id="enterprise-floor" className="text-xl md:text-2xl font-bold text-charcoal mt-10 mb-3 leading-tight">4. Enterprise floor is actually $20K/year (not $150K+)</h3>
+                        <BlogText>
+                            A widely repeated claim across older articles is that Vercel Enterprise starts at $150,000 per year. Verified procurement data from Vendr and SpendHound in 2026 shows the actual Enterprise floor sits around $20,000 per year, median deal value approximately $45,000, and average approximately $60,000. The $150K+ figure was outlier-anchored. For mid-market clients evaluating Enterprise (typically for SSO, audit logs, and BAA execution), the real conversation starts in the $20K to $60K range, not six figures. Source: <a href="https://www.vendr.com/marketplace/vercel" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vendr Vercel marketplace data</a>.
+                        </BlogText>
+
+                        <h3 id="nextjs-16-build-adapters" className="text-xl md:text-2xl font-bold text-charcoal mt-10 mb-3 leading-tight">5. Next.js 16 Build Adapters API made leaving Vercel painless</h3>
+                        <BlogText>
+                            The Build Adapters API stabilized in Next.js 16.2 (March 2026). For the first time, Cloudflare Pages, AWS, and self-hosted setups fully support Next.js 16 features including proxy.ts middleware. Leaving Vercel is no longer a feature downgrade. This is structural: Vercel has to compete on actual value (DX, edge network, integrations) rather than lock-in. Source: <a href="https://nextjs.org/blog/next-16-1" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Next.js 16.1 release notes</a>.
+                        </BlogText>
+
+                        <BlogHeader>Cloudflare Pages and Netlify: When to Consider Alternatives</BlogHeader>
+
+                        <BlogText>
+                            Vercel is the default choice for Next.js because the framework and the host are built by the same team. But two alternatives are genuinely competitive in 2026.
+                        </BlogText>
+
+                        <BlogText>
+                            <strong>Cloudflare Pages.</strong> The free tier offers unlimited bandwidth, unlimited requests, 500 builds per month, and 100 custom domains. For high-traffic Next.js sites that would otherwise blow past Vercel Hobby&apos;s 100 GB cap, deploying via the @cloudflare/next-on-pages adapter sidesteps the bandwidth charge entirely. Tradeoff: Cloudflare&apos;s Next.js compatibility is improving but still behind Vercel on the bleeding edge. Production-stable for most use cases, frustrating for early Next.js feature adoption. Source: <a href="https://www.devtoolreviews.com/reviews/vercel-vs-netlify-vs-cloudflare-pages-pricing-comparison-2026" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">DevToolReviews 2026 comparison</a>.
+                        </BlogText>
+
+                        <BlogText>
+                            <strong>Netlify (April 14, 2026 repricing).</strong> Netlify killed seat-based pricing. Pro is now $20 per month total with unlimited team seats plus 3,000 credits per month. The credit system changed: bandwidth went from 10 to 20 credits per GB (price increase), compute went from 5 to 10 credits per GB-hour (price increase), web requests went from 3 to 2 credits per 10K (price decrease), and form submissions are now free. Net result: larger teams benefit (unlimited seats), bandwidth-heavy sites pay more. Worth re-evaluating if you previously priced out Netlify for team-size reasons. Source: <a href="https://www.netlify.com/changelog/2026-04-14-pricing-updates-april-2026/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Netlify April 2026 changelog</a>.
+                        </BlogText>
+
+                        <BlogText>
+                            For PandaCodeGen client work, we still default to Vercel on every project because the Next.js + Vercel integration is the most mature, the edge network is the broadest, and the AI Gateway plus preview deployments are unmatched. We will deploy to Cloudflare Pages on request if a client expects very high bandwidth (over 5 TB per month) where the Vercel pricing becomes meaningful. For the full PandaCodeGen migration playbook covering Vercel deployment strategy and zero-downtime DNS cutover, see the <Link href="/ai-info/migration-services" className="text-cognac hover:underline">Migration Services reference page</Link>.
                         </BlogText>
 
                         <BlogHeader>Real Numbers: MyCustomPatches Before and After</BlogHeader>

@@ -19,7 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/contact', lastModified: '2026-03-23', changeFrequency: 'monthly', priority: 0.7 },
 
     // 2. Service Pillars
-    { path: '/services/wordpress-migration', lastModified: '2026-05-18', changeFrequency: 'monthly', priority: 0.9 },
+    { path: '/services/wordpress-migration', lastModified: '2026-05-26', changeFrequency: 'monthly', priority: 0.9 },
     { path: '/services/ecommerce', lastModified: '2026-03-23', changeFrequency: 'monthly', priority: 0.9 },
     { path: '/services/custom-engineering', lastModified: '2026-03-01', changeFrequency: 'monthly', priority: 0.8 },
 
@@ -27,8 +27,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/services/woocommerce', lastModified: '2026-03-01', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/services/wix', lastModified: '2026-03-01', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/services/squarespace', lastModified: '2026-03-01', changeFrequency: 'monthly', priority: 0.7 },
-    { path: '/services/webflow', lastModified: '2026-05-18', changeFrequency: 'monthly', priority: 0.8 },
-    { path: '/services/gohighlevel', lastModified: '2026-05-18', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/services/webflow', lastModified: '2026-05-26', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/services/gohighlevel', lastModified: '2026-05-26', changeFrequency: 'monthly', priority: 0.8 },
 
     // Agency Partnerships
     { path: '/partners', lastModified: '2026-03-01', changeFrequency: 'monthly', priority: 0.6 },

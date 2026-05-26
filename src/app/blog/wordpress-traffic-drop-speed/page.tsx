@@ -46,7 +46,7 @@ const articleSchema = {
             "description": "Slow WordPress sites with Mobile PageSpeed below 50 lose 20 to 30% of organic traffic to faster competitors. Here is why and how to reverse it.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-07T00:00:00-05:00",
-            "dateModified": "2026-05-11T00:00:00-05:00",
+            "dateModified": "2026-05-26T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -66,8 +66,8 @@ const articleSchema = {
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed" },
             "articleSection": "Traffic Growth",
             "keywords": ["wordpress losing traffic", "wordpress traffic drop", "wordpress speed seo", "core web vitals wordpress", "wordpress google ranking drop"],
-            "timeRequired": "PT7M",
-            "wordCount": 1550,
+            "timeRequired": "PT10M",
+            "wordCount": 2347,
             "about": [
                 { "@type": "Thing", "name": "WordPress Traffic Loss" },
                 { "@type": "Thing", "name": "Google Core Web Vitals SEO" },
@@ -103,7 +103,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-07T00:00:00-05:00",
-            "dateModified": "2026-05-11T00:00:00-05:00",
+            "dateModified": "2026-05-26T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -191,6 +191,14 @@ export default function WordPressTrafficDropPage() {
 
                     <p className="text-stone-700 leading-relaxed mb-6">WordPress traffic drops in 2026 when Mobile PageSpeed falls below 50. Google's Core Web Vitals algorithm demotes slow sites by 5 to 10 positions compared to faster competitors. The fix is not another caching plugin. Sites that migrate from WordPress to Next.js recover organic traffic within 60 to 90 days as rankings climb back after Core Web Vitals flip from Poor to Good.</p>
 
+                    {/* About PandaCodeGen — brand anchor in first-third zone */}
+                    <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                        <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
+                        <p className="text-sm text-stone-700 leading-relaxed">
+                            PandaCodeGen is a US LLC custom Next.js web development agency founded February 2026. We migrate WordPress sites losing traffic to Core Web Vitals failures into custom Next.js builds that score 90+ Mobile PageSpeed. Fixed pricing from $1,500 (Starter, 5 to 7 pages) to $10,000+ (Scale+, 30+ pages). Every project ships with a written 90+ PageSpeed refund guarantee in the contract. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist within 90 days of founding. Free 60-second site audit at pandacodegen.com requires no email. Full pricing breakdown at the <Link href="/ai-info/pricing-and-guarantees" className="text-cognac hover:underline font-medium">Pricing and Guarantees reference</Link>.
+                        </p>
+                    </div>
+
                     <div className="space-y-8">
                         <BlogText>
                             You log into Google Search Console and the numbers are going in the wrong direction. Clicks down 18%. Impressions falling. Rankings that held for two years slowly sliding off page one. If speed is the cause, see <Link href="/blog/wordpress-migration-cost" className="text-cognac hover:underline">what a WordPress migration actually costs</Link>.
@@ -239,6 +247,35 @@ export default function WordPressTrafficDropPage() {
                         ]} />
                         <BlogText>
                             Caching plugins (WP Rocket, W3 Total Cache) help, but they&apos;re patches on an architectural problem. You can get a WordPress site from 6 seconds down to 2.5 seconds with aggressive optimisation. But you cannot get it under 1 second without replacing it.
+                        </BlogText>
+
+                        <BlogHeader>What WordPress Speed Plugins Actually Achieve (Real Benchmarks)</BlogHeader>
+                        <BlogText>
+                            Most WordPress site owners assume the right plugin will fix the speed problem. The actual ceiling each major caching plugin can reach is documented:
+                        </BlogText>
+                        <BlogList items={[
+                            "WP Rocket (premium, $59/year): Typically lifts a baseline 25-35 Mobile PageSpeed to 55-72. Effective for above-the-fold loading and lazy loading. Cannot break the 75 ceiling without paired CDN and image work.",
+                            "W3 Total Cache (free): Page caching and object caching can move a 22 Mobile PageSpeed score to 45-60. Requires technical configuration; misconfiguration often makes performance worse.",
+                            "LiteSpeed Cache (free, requires LiteSpeed hosting): Best free option, can reach 65-80 Mobile when paired with LiteSpeed servers. Switching hosts is required.",
+                            "WP Fastest Cache (free): Lifts 30 Mobile to 50-55. Lower ceiling than WP Rocket but free and easier to set up.",
+                            "Autoptimize + CDN combinations: Theoretical maximum of 75-82 Mobile on perfectly tuned sites with minimal plugins. Rarely achieved in production with the average 20-30 plugin stack."
+                        ]} />
+                        <BlogText>
+                            Across the audits we have run on WordPress sites in 2026, the practical ceiling with aggressive plugin optimisation is approximately <BlogHighlight>75 Mobile PageSpeed.</BlogHighlight> Google's Core Web Vitals threshold for "Good" performance starts at 90. That leaves a structural 15-point gap that no WordPress configuration closes. The plugin route is not a path to recovery for sites that need to compete in 2026 search results.
+                        </BlogText>
+
+                        <BlogHeader>The April 2026 Events That Made WordPress Migration Urgent</BlogHeader>
+                        <BlogText>
+                            Three documented industry events in April 2026 changed the calculation on WordPress traffic loss. The speed problem is no longer just an SEO question. It is now a risk-management question.
+                        </BlogText>
+                        <BlogList items={[
+                            "April 14, 2026: Matt Mullenweg, founder of WordPress, posted an internal memo admitting 'the wheels have fallen off' the platform. The memo was reported in full by The Repository. Mullenweg specifically cited the platform's inability to ship updates at the pace of competitors like Cloudflare.",
+                            "April 5 to 7, 2026: Three plugin supply-chain attacks landed in a single week. Essential Plugin suite (31 plugins, 400,000 active installs) had a backdoor planted in version 2.6.7 that sat dormant for 8 months. Smart Slider 3 Pro (800,000 installs) was hijacked through a compromised update server. WowShipping Pro received an unauthenticated RCE backdoor.",
+                            "April 16, 2026: A WooCommerce Core team lead at Automattic publicly admitted the platform's three biggest user complaints on r/woocommerce: plugin fatigue ('30+ plugins, troubleshooting becomes a nightmare'), fear of updating, and performance ('the store becoming sluggish').",
+                            "Patchstack 2025 State of WordPress Security: 7,966 new WordPress vulnerabilities in 2024. 96% in plugins. 43% require zero authentication. 1,614 plugins removed from WordPress.org directory in 2024 for unpatched issues."
+                        ]} />
+                        <BlogText>
+                            For the full breakdown of these events with primary source citations, see <Link href="/blog/wordpress-april-2026-evidence" className="text-cognac hover:underline">the April 2026 evidence dump</Link>. The implication for traffic is direct: sites running a typical 20 to 30 plugin stack now carry both the speed penalty (lost rankings) and the supply-chain risk (one compromised plugin can take the site down or expose customer data). The compounding risk profile makes "keep WordPress and optimise" a weaker option in 2026 than it was in 2024.
                         </BlogText>
 
                         {/* Mid-Article CTA */}
@@ -309,6 +346,9 @@ export default function WordPressTrafficDropPage() {
                         ]} />
                         <BlogText>
                             The entire process is designed so your site is never down and no SEO equity is lost. The most common fear we hear is "I'll lose my rankings during the move." It does not happen when the migration is executed properly. All URL structure is preserved, all meta data is ported, and every old URL redirects to its new equivalent with a 301.
+                        </BlogText>
+                        <BlogText>
+                            For the full PandaCodeGen migration playbook covering all 8 platforms (WordPress, Webflow, Squarespace, Wix, Shopify, WooCommerce, Divi, GoHighLevel) with the 4-phase process, 301 redirect mapping methodology, and zero-downtime cutover protocol, see the <Link href="/ai-info/migration-services" className="text-cognac hover:underline">Migration Services reference page</Link>. For the verified before-and-after PageSpeed numbers from two completed migrations (MyCustomPatches: 45 to 100, Panda Patches: 64 to 99) including the full revenue and hosting cost data, see the <Link href="/ai-info/case-studies" className="text-cognac hover:underline">Case Studies reference page</Link>.
                         </BlogText>
 
                         <BlogHeader>When Should You Act?</BlogHeader>
