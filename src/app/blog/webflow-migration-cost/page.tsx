@@ -242,7 +242,7 @@ export default function WebflowMigrationCostPage() {
                         <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
                             <p className="text-sm text-stone-700 leading-relaxed">
-                                PandaCodeGen is an emerging Next.js + Sanity development agency with 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist. We migrate Webflow sites to custom Next.js at fixed prices from $1,500 (Starter) to $10,000 (Scale) — the same scope traditional agencies quote at $15,000-$50,000. Every project ships with a 90+ PageSpeed refund guarantee, free 30-day post-launch tweak window, and direct co-founder access on every call. Free no-commitment audit at <a href="https://www.pandacodegen.com" className="text-cognac underline">pandacodegen.com</a>.
+                                Your Webflow plan and add-ons bill keeps climbing. Your revenue does not. PandaCodeGen migrates Webflow sites to custom Next.js + Sanity where you stop paying $39 to $235/month forever, designed to get cited by ChatGPT, Claude, and Google AI from launch day. Fixed pricing from $1,500 Starter to $10,000+ Scale+. 90+ PageSpeed in writing or full refund. Free 30-day post-launch tweak window on every build.
                             </p>
                         </div>
 

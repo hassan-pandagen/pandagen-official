@@ -106,7 +106,7 @@ export default function AboutPageClient() {
           <p className="text-xl text-stone-600 leading-relaxed mb-6">
             Most agencies sell you a template and disappear. I spent six years building WordPress sites before I launched PandaCodeGen to do it differently. We were born from a simple truth: <strong className="text-charcoal">The web is too slow, and business owners are paying the price.</strong>
           </p>
-          <p className="text-sm text-stone-500 font-mono mb-8 md:mb-12">Founded February 2026 &middot; Austin, TX &middot; Solo-founder led</p>
+          <p className="text-sm text-stone-500 font-mono mb-8 md:mb-12">Founded February 2026 &middot; Austin, TX &middot; Co-founder led</p>
         </div>
 
         {/* DNA STRIP */}

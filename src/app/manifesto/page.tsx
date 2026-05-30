@@ -16,6 +16,11 @@ export const metadata: Metadata = {
     type: "article",
     images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "The PandaCodeGen Manifesto",
+    description: "The first principles behind PandaCodeGen. Why we refuse hourly billing. Why we publish our prices. Why we meet clients halfway on cost.",
+  },
 };
 
 export default function ManifestoPage() {
@@ -111,7 +116,7 @@ export default function ManifestoPage() {
                   Every agency page that says &quot;contact for quote&quot; is protecting a pricing strategy that can&apos;t survive public scrutiny. They change the number based on what they think you can pay. We refuse to play that game.
                 </p>
                 <p className="text-base md:text-lg text-stone-700 leading-[1.75]">
-                  Our pricing is on every service page. Starter. Growth. Scale. Founder&apos;s Offer. You know what we charge before you ever book a call. If someone tells you &quot;it depends&quot; as a pricing answer, they&apos;re deciding how much they can extract from you specifically.
+                  Our pricing is on every service page. Starter. Growth. Scale. Scale+. You know what we charge before you ever book a call. If someone tells you &quot;it depends&quot; as a pricing answer, they&apos;re deciding how much they can extract from you specifically.
                 </p>
               </section>
 

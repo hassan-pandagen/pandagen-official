@@ -60,8 +60,8 @@ export default function WixServicePage() {
           "name": "Wix Migration Tiers",
           "itemListElement": [
             { "@type": "Offer", "name": "Starter", "price": "1500", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Growth", "price": "3000", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Scale", "price": "10000", "priceCurrency": "USD" }
+            { "@type": "Offer", "name": "Growth", "price": "3500", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Scale", "price": "5000", "priceCurrency": "USD" }
           ]
         }
       },

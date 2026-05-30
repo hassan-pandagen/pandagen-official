@@ -356,9 +356,9 @@ export default function PageContent() {
         }}
         tiers={[
           {
-            tier: "Founder&apos;s Offer",
+            tier: "Starter",
             price: "Starting from $3,000",
-            timeline: "1-2 weeks",
+            timeline: "1 to 2 weeks",
             fit: "Marketing site, internal tool, or small portal. Clear scope.",
             includes: [
               "Custom Next.js + TypeScript build",
@@ -373,10 +373,10 @@ export default function PageContent() {
           {
             tier: "Growth",
             price: "Starting from $10,000",
-            timeline: "3-5 weeks",
+            timeline: "3 to 5 weeks",
             fit: "SaaS MVP, client portal, or full dashboard. Custom business logic.",
             includes: [
-              "Everything in Founder&apos;s Offer",
+              "Everything in Starter",
               "Stripe payments + subscriptions",
               "Admin dashboard with analytics",
               "Custom business workflow logic",

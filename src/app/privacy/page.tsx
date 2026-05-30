@@ -1,6 +1,26 @@
+import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FadeIn from "@/components/ui/FadeIn";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | PandaCodeGen",
+  description: "How PandaCodeGen collects, uses, and protects your data. Last updated January 26, 2026.",
+  alternates: { canonical: "/privacy" },
+  openGraph: {
+    title: "Privacy Policy | PandaCodeGen",
+    description: "How PandaCodeGen collects, uses, and protects your data.",
+    url: "https://www.pandacodegen.com/privacy",
+    siteName: "PandaCodeGen",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Privacy Policy | PandaCodeGen",
+    description: "How PandaCodeGen collects, uses, and protects your data.",
+  },
+  robots: { index: true, follow: true },
+};
 
 export default function PrivacyPage() {
   return (

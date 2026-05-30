@@ -10,10 +10,15 @@ export const metadata: Metadata = {
     description: "How we migrated a 10-year-old WordPress patch business to Next.js 14. Load time dropped from 3.2s to 0.7s. PageSpeed went from ~40 to 100/100. Hosting cost dropped from $150/mo to $0. Zero downtime. All 200+ pages and SEO rankings fully preserved.",
     openGraph: {
         title: "MyCustomPatches, WordPress to Next.js Migration. 100/100 PageSpeed.",
-        description: "3.2s → 0.7s load time. PageSpeed ~40 → 100/100. $150/mo → $0 hosting. Zero downtime. 200+ pages migrated. Full case study.",
+        description: "3.2s to 0.7s load time. PageSpeed ~40 to 100/100. $150/mo to $0 hosting. Zero downtime. 200+ pages migrated. Full case study.",
         type: "article",
         url: "https://www.pandacodegen.com/work/mycustompatches",
         images: [{ url: "https://www.pandacodegen.com/work/mycustompatches.png", width: 1200, height: 630 }],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "MyCustomPatches, WordPress to Next.js Migration. 100/100 PageSpeed.",
+        description: "3.2s to 0.7s load time. PageSpeed ~40 to 100/100. $150/mo to $0 hosting. Zero downtime. 200+ pages migrated.",
     },
     alternates: { canonical: "/work/mycustompatches" },
 };

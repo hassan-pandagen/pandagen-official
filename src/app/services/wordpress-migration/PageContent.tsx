@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     q: "How much does a WordPress to Next.js migration cost?",
-    a: "Typical agencies charge $15,000 to $40,000 and take 8-12 weeks. We meet you halfway. Three tiers: Starter starts at $1,500 (5 to 7 pages, custom Next.js, 90+ PageSpeed). Growth starts at $3,500 (15-50 pages, custom features). Scale starts at $12,000 (complex sites, WooCommerce, integrations). Most clients recover the investment within 3 to 6 months through eliminated hosting, plugin licenses, and maintenance fees."
+    a: "Typical agencies charge $15,000 to $40,000 and take 8 to 12 weeks. We meet you halfway. Four tiers: Starter starts at $1,500 (5 to 7 pages, custom Next.js, 90+ PageSpeed). Growth starts at $3,500 (15 to 50 pages, custom features). Scale is $5,000 to $10,000 (complex WordPress or WooCommerce sites, 30+ pages, custom integrations). Scale+ is $10,000+ for enterprise scope, custom-quoted after a scoping call. Most clients recover the investment within 3 to 6 months through eliminated hosting, plugin licenses, and maintenance fees."
   },
   {
     q: "Can I still edit my website after migration?",
@@ -499,7 +499,7 @@ export default function PageContent() {
             timeline: "2-3 weeks",
             fit: "Business WordPress site. 15-50 pages. Blog, forms, integrations.",
             includes: [
-              "Everything in Founder&apos;s Offer",
+              "Everything in Starter",
               "Custom post types and taxonomies",
               "Forms with custom API routes",
               "Full SEO migration with schema",
@@ -510,12 +510,12 @@ export default function PageContent() {
           },
           {
             tier: "Scale",
-            price: "Starting from $12,000",
-            timeline: "3-5 weeks",
-            fit: "Complex WordPress or WooCommerce. 50+ pages, custom plugins, integrations.",
+            price: "$5,000 to $10,000",
+            timeline: "3 to 5 weeks",
+            fit: "Complex WordPress or WooCommerce. 30+ pages, custom plugins, integrations.",
             includes: [
               "Everything in Growth",
-              "WooCommerce → custom ecommerce",
+              "WooCommerce to custom ecommerce",
               "Complex plugin replacements",
               "Custom admin dashboard",
               "Multi-author / multi-site support",

@@ -39,7 +39,7 @@ const faqData = [
   },
   {
     q: "How much does it cost to migrate from Webflow?",
-    a: "Typical agencies charge $20,000 to $60,000 and take 10-16 weeks. We meet you halfway. Three tiers: Starter starts at $1,500 (5 to 7 pages, custom Next.js). Growth starts at $3,500 (business sites with custom interactions and CMS). Scale starts at $12,000 (complex builds, Webflow Ecommerce, localization). You also stop paying $39 to $235/month in Webflow fees forever.",
+    a: "Typical agencies charge $20,000 to $60,000 and take 10 to 16 weeks. We meet you halfway. Four tiers: Starter starts at $1,500 (5 to 7 pages, custom Next.js). Growth starts at $3,500 (business sites with custom interactions and CMS). Scale is $5,000 to $10,000 (complex builds, Webflow Ecommerce, localization, 30+ pages). Scale+ is $10,000+ for enterprise scope, custom-quoted after a scoping call. You also stop paying $39 to $235/month in Webflow fees forever.",
   },
   {
     q: "What if Webflow adds the features I need later?",
@@ -464,7 +464,7 @@ export default function WebflowPageContent() {
             timeline: "2-3 weeks",
             fit: "Business Webflow site. 15-50 pages. Custom interactions, CMS collections.",
             includes: [
-              "Everything in Founder&apos;s Offer",
+              "Everything in Starter",
               "Custom Webflow interactions recreated in code",
               "Complex CMS collections migrated",
               "Full SEO migration with schema",
@@ -475,12 +475,12 @@ export default function WebflowPageContent() {
           },
           {
             tier: "Scale",
-            price: "Starting from $12,000",
-            timeline: "3-5 weeks",
-            fit: "Complex Webflow. 50+ pages, localization, ecommerce, custom logic.",
+            price: "$5,000 to $10,000",
+            timeline: "3 to 5 weeks",
+            fit: "Complex Webflow. 30+ pages, localization, ecommerce, custom logic.",
             includes: [
               "Everything in Growth",
-              "Webflow Ecommerce → custom storefront",
+              "Webflow Ecommerce to custom storefront",
               "Multi-language / localization",
               "Custom admin dashboard",
               "Performance monitoring",

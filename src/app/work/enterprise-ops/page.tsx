@@ -15,6 +15,11 @@ export const metadata: Metadata = {
         url: "https://www.pandacodegen.com/work/enterprise-ops",
         images: [{ url: "https://www.pandacodegen.com/work/panda-operations.png", width: 1200, height: 630 }],
     },
+    twitter: {
+        card: "summary_large_image",
+        title: "Enterprise Operations Platform Case Study, Custom Business Dashboard",
+        description: "Real-time order pipeline. Role-based access for 3 teams. Automated attendance (PKT timezone). 95% process automation. Full case study.",
+    },
     alternates: { canonical: "/work/enterprise-ops" },
 };
 

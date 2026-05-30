@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     q: "How much does a custom Shopify storefront cost?",
-    a: "Typical agencies charge $30,000 to $60,000 and take 8 to 12 weeks. We meet you halfway. Starter stores start at $1,500 (small catalogs, basic Shopify Storefront API). Growth builds start at $3,500 (30-100 products, custom features). Scale builds start at $12,000 (subscriptions, custom logic, large catalogs). Most clients recover the investment within 4 to 6 months through eliminated app fees and conversion lift."
+    a: "Typical agencies charge $30,000 to $60,000 and take 8 to 12 weeks. We meet you halfway. Four tiers: Starter stores start at $1,500 (small catalogs, basic Shopify Storefront API). Growth builds start at $3,500 (30 to 100 products, custom features). Scale builds are $5,000 to $10,000 (subscriptions, custom logic, large catalogs, 30+ pages). Scale+ is $10,000+ for enterprise headless commerce, custom-quoted after a scoping call. Most clients recover the investment within 4 to 6 months through eliminated app fees and conversion lift."
   },
 ];
 
@@ -488,7 +488,7 @@ export default function PageContent() {
                 timeline: "2-3 weeks",
                 fit: "30-100 products. Custom features. Serious scaling.",
                 includes: [
-                  "Everything in Founder&apos;s Offer",
+                  "Everything in Starter",
                   "Custom product filtering & search",
                   "Advanced checkout flow",
                   "Upsell and personalization logic",
@@ -500,8 +500,8 @@ export default function PageContent() {
               },
               {
                 tier: "Scale",
-                price: "Starting from $12,000",
-                timeline: "3-4 weeks",
+                price: "$5,000 to $10,000",
+                timeline: "3 to 4 weeks",
                 fit: "Subscriptions, custom logic, large catalogs, headless APIs.",
                 includes: [
                   "Everything in Growth",

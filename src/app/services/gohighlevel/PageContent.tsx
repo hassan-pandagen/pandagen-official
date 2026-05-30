@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     q: "How much does a custom site with GHL integration cost?",
-    a: "Three tiers. Starter starts at $1,500 (5 to 7 page landing site with GHL API integration). Growth starts at $3,000 (15 to 40 page marketing site with full GHL API integration). Scale starts at $8,000 (agency white-label, member portals, complex Workflows). Your GHL CRM, automations, snapshots, and sub-accounts stay fully intact."
+    a: "Four tiers. Starter starts at $1,500 (5 to 7 page landing site with GHL API integration). Growth starts at $3,500 (15 to 40 page marketing site with full GHL API integration). Scale is $5,000 to $10,000 (agency white-label, member portals, complex Workflows, 30+ pages). Scale+ is $10,000+ for enterprise agency scope, custom-quoted after a scoping call. Your GHL CRM, automations, snapshots, and sub-accounts stay fully intact at every tier."
   },
   {
     q: "Can you build custom landing pages that work with GHL?",
@@ -410,11 +410,11 @@ export default function PageContent() {
           },
           {
             tier: "Growth",
-            price: "Starting from $3,000",
-            timeline: "2-3 weeks",
-            fit: "Multi-page marketing site. 15-40 pages. Blog, forms, GHL integrations.",
+            price: "Starting from $3,500",
+            timeline: "2 to 3 weeks",
+            fit: "Multi-page marketing site. 15 to 40 pages. Blog, forms, GHL integrations.",
             includes: [
-              "Everything in Founder&apos;s Offer",
+              "Everything in Starter",
               "Full GHL API + webhook integration",
               "Custom lead capture flows",
               "Full SEO with schema markup",
@@ -425,8 +425,8 @@ export default function PageContent() {
           },
           {
             tier: "Scale",
-            price: "Starting from $8,000",
-            timeline: "3-5 weeks",
+            price: "$5,000 to $10,000",
+            timeline: "3 to 5 weeks",
             fit: "Agency white-label sites, membership portals, complex GHL integrations.",
             includes: [
               "Everything in Growth",

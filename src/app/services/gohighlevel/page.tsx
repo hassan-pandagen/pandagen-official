@@ -60,8 +60,8 @@ export default function GoHighLevelServicePage() {
           "name": "GoHighLevel Development Tiers",
           "itemListElement": [
             { "@type": "Offer", "name": "Starter", "price": "1500", "priceCurrency": "USD", "description": "Simple funnel or 5 to 7 page landing site with full GHL API integration" },
-            { "@type": "Offer", "name": "Growth", "price": "3000", "priceCurrency": "USD", "description": "15 to 40 page marketing site with GHL Workflows and Pipelines intact" },
-            { "@type": "Offer", "name": "Scale", "price": "8000", "priceCurrency": "USD", "description": "Agency white-label, SaaS mode sub-accounts, member portals, complex Workflows" }
+            { "@type": "Offer", "name": "Growth", "price": "3500", "priceCurrency": "USD", "description": "15 to 40 page marketing site with GHL Workflows and Pipelines intact" },
+            { "@type": "Offer", "name": "Scale", "price": "5000", "priceCurrency": "USD", "description": "Agency white-label, SaaS mode sub-accounts, member portals, complex Workflows, 30+ pages" }
           ]
         }
       },

@@ -61,7 +61,7 @@ export default function EcommercePage() {
           "itemListElement": [
             { "@type": "Offer", "name": "Starter", "price": "1500", "priceCurrency": "USD", "description": "Custom Next.js storefront up to 20 products with Shopify Storefront API integration" },
             { "@type": "Offer", "name": "Growth", "price": "3500", "priceCurrency": "USD", "description": "30 to 100 products, custom checkout, upsell logic, custom review system" },
-            { "@type": "Offer", "name": "Scale", "price": "12000", "priceCurrency": "USD", "description": "Subscriptions, multi-currency, custom loyalty logic, large catalogs" }
+            { "@type": "Offer", "name": "Scale", "price": "5000", "priceCurrency": "USD", "description": "Subscriptions, multi-currency, custom loyalty logic, large catalogs, 30+ pages" }
           ]
         }
       },

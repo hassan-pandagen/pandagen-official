@@ -230,7 +230,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
                     <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
                         <p className="text-sm text-stone-700 leading-relaxed">
-                            The honest answer for GHL agencies: don&apos;t use GHL&apos;s native builder for the public website. PandaCodeGen builds a Next.js frontend that connects to GHL via REST API v2 — keeps your CRM, fixes the 20-45 PageSpeed problem. Fixed $3,500 Growth tier, $5,000-$10,000 Scale tier for white-label or member portals. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist. 90+ PageSpeed refund guarantee in writing. Free no-commitment audit at <a href="https://www.pandacodegen.com" className="text-cognac underline">pandacodegen.com</a>.
+                            Your GoHighLevel plan and add-ons bill keeps climbing. Your revenue does not. The honest answer for GHL agencies: do not use GHL native builder for the public website. PandaCodeGen builds a Next.js frontend that connects to GHL via REST API v2, keeps your CRM intact, and fixes the 20 to 45 PageSpeed problem, designed to get cited by ChatGPT, Claude, and Google AI from launch day. Fixed pricing from $1,500 Starter to $10,000+ Scale+ (white-label or member portals). 90+ PageSpeed in writing or full refund.
                         </p>
                     </div>
 

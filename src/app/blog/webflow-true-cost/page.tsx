@@ -283,7 +283,7 @@ export default function WebflowTrueCostPage() {
                         <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
                             <p className="text-sm text-stone-700 leading-relaxed">
-                                PandaCodeGen rebuilds Webflow sites in Next.js + Sanity with $0-$240/year hosting on Vercel (vs Webflow&apos;s $1,500-$5,000/year all-in cost). Fixed-price tiers from $1,500 (Starter) to $10,000 (Scale) — same scope traditional agencies quote at $15,000-$50,000. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist. 90+ PageSpeed refund guarantee in writing. Free no-commitment audit at <a href="https://www.pandacodegen.com" className="text-cognac underline">pandacodegen.com</a>.
+                                Your Webflow plan and add-ons bill keeps climbing ($1,500 to $5,000/year all-in). Your revenue does not. PandaCodeGen rebuilds Webflow sites in Next.js + Sanity with $0 to $240/year hosting on Vercel, designed to get cited by ChatGPT, Claude, and Google AI from launch day. Fixed pricing from $1,500 Starter to $10,000+ Scale+. 90+ PageSpeed in writing or full refund.
                             </p>
                         </div>
 

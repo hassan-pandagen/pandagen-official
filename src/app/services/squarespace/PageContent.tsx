@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     q: "How much does a Squarespace migration cost?",
-    a: "Standard business sites typically range from $4,000-$12,000 depending on number of pages and complexity. Over 3 years, you'll save $1,200-$2,400 in Squarespace subscription fees alone."
+    a: "Four tiers. Starter $1,500 (5 to 7 pages, custom Next.js). Growth $3,500 (15 to 50 pages with forms and blog). Scale $5,000 to $10,000 (Squarespace Commerce, Scheduling, member areas, 30+ pages). Scale+ $10,000+ for enterprise scope, custom-quoted after a scoping call. Over 3 years, you also save $1,200 to $2,400 in Squarespace subscription fees alone."
   },
   {
     q: "What if I have a blog on Squarespace?",
@@ -562,11 +562,11 @@ export default function SquarespacePageContent() {
           },
           {
             tier: "Growth",
-            price: "Starting from $3,000",
-            timeline: "2-3 weeks",
-            fit: "Business Squarespace site. 15-50 pages. Blog, forms, Commerce Lite.",
+            price: "Starting from $3,500",
+            timeline: "2 to 3 weeks",
+            fit: "Business Squarespace site. 15 to 50 pages. Blog, forms, Commerce Lite.",
             includes: [
-              "Everything in Founder&apos;s Offer",
+              "Everything in Starter",
               "Custom animations and transitions",
               "Forms with custom API routes",
               "Full SEO migration with schema",
@@ -577,9 +577,9 @@ export default function SquarespacePageContent() {
           },
           {
             tier: "Scale",
-            price: "Starting from $10,000",
-            timeline: "3-4 weeks",
-            fit: "Squarespace Commerce. 50+ pages, scheduling, member areas, integrations.",
+            price: "$5,000 to $10,000",
+            timeline: "3 to 4 weeks",
+            fit: "Squarespace Commerce. 30+ pages, scheduling, member areas, integrations.",
             includes: [
               "Everything in Growth",
               "Squarespace Commerce → custom ecommerce",

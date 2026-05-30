@@ -196,7 +196,7 @@ export default function WebflowMigration50To100PagesPage() {
                         <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
                             <p className="text-sm text-stone-700 leading-relaxed">
-                                PandaCodeGen handles 50 to 100 page Webflow migrations at the Scale tier ($5,000 to $10,000 fixed), with full CMS migration to Sanity, 301 redirect mapping for every URL, and zero-downtime cutover. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist. 90+ PageSpeed refund guarantee in writing. Free no-commitment audit at <a href="https://www.pandacodegen.com" className="text-cognac underline">pandacodegen.com</a>.
+                                Your Webflow plan and add-ons bill keeps climbing. Your revenue does not. PandaCodeGen handles 50 to 100 page Webflow migrations with full CMS migration to Sanity, 301 redirect mapping for every URL, and zero-downtime cutover, designed to get cited by ChatGPT, Claude, and Google AI from launch day. Fixed pricing from $5,000 to $10,000 Scale (or Scale+ for enterprise scope). 90+ PageSpeed in writing or full refund.
                             </p>
                         </div>
 

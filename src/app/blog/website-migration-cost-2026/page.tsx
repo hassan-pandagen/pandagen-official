@@ -380,7 +380,7 @@ export default function WebsiteMigrationCost2026Page() {
                     </BlogText>
 
                     <BlogText>
-                        <strong>How long it takes.</strong> Founder&apos;s Offer: 7 days for a 5 to 15 page brochure site. Starter ($1,500): 1 to 2 weeks. Growth ($3,500): 2 to 3 weeks. Scale ($10,000+): 3 to 4 weeks for WooCommerce or 30+ page sites.
+                        <strong>How long it takes.</strong> Starter ($1,500): 1 to 2 weeks for 5 to 7 page business sites. Growth ($3,500): 2 to 3 weeks for 10 to 20 page sites with Sanity CMS. Scale ($5,000 to $10,000): 3 to 4 weeks for WooCommerce or 30+ page sites. Scale+ ($10,000+): 6 to 12 weeks for enterprise scope, custom-quoted after a scoping call.
                     </BlogText>
 
                     {/* Mid CTA */}
@@ -423,10 +423,10 @@ export default function WebsiteMigrationCost2026Page() {
                         <strong>Obare Magazine: $1,200, 7 days, 225,000 Instagram followers watching.</strong> Obare Magazine, a culture and design publication with 225,000 Instagram followers, was running on Wix Editor in 2025. Pages loaded at 3 to 5 seconds. The Wix Velo runtime injected over 600KB of JavaScript on every page. SEO scores capped at 35 to 50 on mobile PageSpeed.
                     </BlogText>
                     <BlogText>
-                        We migrated the entire publication from Wix to Next.js in 7 days for $1,200 (Founder&apos;s Offer rate). All articles moved into Sanity for ongoing editorial work. All URLs preserved with 301 redirect mapping. Page load dropped to under 0.8 seconds. PageSpeed jumped to 95+. Monthly Wix subscription: gone. Total monthly cost after migration: $0.
+                        We migrated the entire publication from Wix to Next.js in 7 days. All articles moved into Sanity for ongoing editorial work. All URLs preserved with 301 redirect mapping. Page load dropped to under 0.8 seconds. PageSpeed jumped to 95+. Monthly Wix subscription: gone. Total monthly cost after migration: $0.
                     </BlogText>
                     <BlogText>
-                        Obare&apos;s audience watched the cutover happen on Instagram in real time. Rankings preserved. Zero downtime. The new site shipped at the original $1,200 quote.
+                        Obare&apos;s audience watched the cutover happen on Instagram in real time. Rankings preserved. Zero downtime. The new site shipped at the original fixed quote with no scope creep.
                     </BlogText>
                     <BlogText>
                         <strong>What real Wix users say (forum receipts).</strong> The Wix Studio forum thread &ldquo;I&apos;ve had enough of wixs corvid api and site builder constant problems&rdquo; documents repeated production breakages on the Velo runtime, with users reporting their product pages getting stuck in loading states with no error message. Wix support&apos;s typical response is &ldquo;clear your cache.&rdquo; When you cannot export your site to fix it yourself, that is the entire customer support experience.

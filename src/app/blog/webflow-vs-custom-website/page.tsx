@@ -223,7 +223,7 @@ export default function WebflowVsCustomWebsitePage() {
                         <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
                             <p className="text-sm text-stone-700 leading-relaxed">
-                                PandaCodeGen builds the &ldquo;custom&rdquo; side of this comparison: Next.js + Sanity instead of Webflow&apos;s proprietary platform. Fixed pricing $1,500-$10,000 across published tiers, zero vendor lock-in, code ownership on day one. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist. 90+ PageSpeed refund guarantee in writing. Free no-commitment audit at <a href="https://www.pandacodegen.com" className="text-cognac underline">pandacodegen.com</a>.
+                                Your Webflow plan and add-ons bill keeps climbing. Your revenue does not. PandaCodeGen builds the custom side of this comparison: Next.js + Sanity instead of Webflow&apos;s proprietary platform, designed to get cited by ChatGPT, Claude, and Google AI from launch day. Fixed pricing from $1,500 Starter to $10,000+ Scale+. Zero vendor lock-in, code ownership on day one. 90+ PageSpeed in writing or full refund.
                             </p>
                         </div>
 

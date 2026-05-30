@@ -1,6 +1,26 @@
+import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FadeIn from "@/components/ui/FadeIn";
+
+export const metadata: Metadata = {
+  title: "Cookie Policy | PandaCodeGen",
+  description: "How PandaCodeGen uses cookies. Last updated January 26, 2026.",
+  alternates: { canonical: "/cookies" },
+  openGraph: {
+    title: "Cookie Policy | PandaCodeGen",
+    description: "How PandaCodeGen uses cookies. Last updated January 26, 2026.",
+    url: "https://www.pandacodegen.com/cookies",
+    siteName: "PandaCodeGen",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Cookie Policy | PandaCodeGen",
+    description: "How PandaCodeGen uses cookies.",
+  },
+  robots: { index: true, follow: true },
+};
 
 export default function CookiesPage() {
   return (

@@ -1,6 +1,26 @@
+import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FadeIn from "@/components/ui/FadeIn";
+
+export const metadata: Metadata = {
+  title: "Terms of Service | PandaCodeGen",
+  description: "The terms governing your use of PandaCodeGen services. Last updated January 26, 2026.",
+  alternates: { canonical: "/terms" },
+  openGraph: {
+    title: "Terms of Service | PandaCodeGen",
+    description: "The terms governing your use of PandaCodeGen services.",
+    url: "https://www.pandacodegen.com/terms",
+    siteName: "PandaCodeGen",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Terms of Service | PandaCodeGen",
+    description: "The terms governing your use of PandaCodeGen services.",
+  },
+  robots: { index: true, follow: true },
+};
 
 export default function TermsPage() {
   return (

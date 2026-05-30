@@ -15,6 +15,11 @@ export const metadata: Metadata = {
         url: "https://www.pandacodegen.com/work/panda-codelab",
         images: [{ url: "https://www.pandacodegen.com/work/pandacodelab.png", width: 1200, height: 630 }],
     },
+    twitter: {
+        card: "summary_large_image",
+        title: "Panda CodeLab, Custom Agency Website Built by PandaCodeGen",
+        description: "Live at pandacodelab.com. Next.js 16. Spring physics. Magnetic buttons. Spline 3D. WCAG 2.1 AA. Full case study.",
+    },
     alternates: { canonical: "/work/panda-codelab" },
 };
 

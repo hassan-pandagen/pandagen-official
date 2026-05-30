@@ -63,7 +63,7 @@ export default function WooCommerceServicePage() {
           "itemListElement": [
             { "@type": "Offer", "name": "Starter", "price": "1500", "priceCurrency": "USD", "description": "Simple WooCommerce migration, 10 to 30 products" },
             { "@type": "Offer", "name": "Growth", "price": "3500", "priceCurrency": "USD", "description": "30 to 150 products with custom cart logic" },
-            { "@type": "Offer", "name": "Scale", "price": "12000", "priceCurrency": "USD", "description": "Subscriptions, B2B pricing, wholesale" }
+            { "@type": "Offer", "name": "Scale", "price": "5000", "priceCurrency": "USD", "description": "Subscriptions, B2B pricing, wholesale, 100+ products" }
           ]
         }
       },

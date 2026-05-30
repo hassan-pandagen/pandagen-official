@@ -197,7 +197,7 @@ export default function GoHighLevelMigrationPage() {
                         <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
                             <p className="text-sm text-stone-700 leading-relaxed">
-                                PandaCodeGen migrates from GHL website builder to custom Next.js + Sanity in 2-4 weeks (Growth tier $3,500 fixed). GHL stays as the CRM + automation engine. Zero downtime, 90+ PageSpeed refund guarantee in writing. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist. Free no-commitment audit at <a href="https://www.pandacodegen.com" className="text-cognac underline">pandacodegen.com</a>.
+                                Your GoHighLevel plan and add-ons bill keeps climbing. Your revenue does not. PandaCodeGen migrates GHL website builder sites to custom Next.js + Sanity in 2 to 4 weeks while GHL stays as the CRM and automation engine, designed to get cited by ChatGPT, Claude, and Google AI from launch day. Fixed pricing from $1,500 Starter to $10,000+ Scale+. Zero downtime. 90+ PageSpeed in writing or full refund.
                             </p>
                         </div>
 

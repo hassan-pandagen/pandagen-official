@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     q: "How much does a WooCommerce migration cost?",
-    a: "Most WooCommerce migrations range from $6,000 to $18,000 depending on store size and complexity. A simple store (under 500 products) is at the lower end. Complex stores with custom pricing, subscriptions, or B2B logic are higher. We give a fixed-price quote upfront. No hourly surprises."
+    a: "Four tiers. Starter $1,500 (simple WooCommerce migration, 10 to 30 products). Growth $3,500 (30 to 150 products with custom cart logic). Scale $5,000 to $10,000 (subscriptions, B2B pricing, wholesale, 100+ products). Scale+ $10,000+ for enterprise WooCommerce scope, custom-quoted after a scoping call. We give a fixed-price quote upfront. No hourly surprises."
   },
   {
     q: "My WooCommerce store has subscriptions / bookings / B2B pricing. Can you handle that?",
@@ -438,7 +438,7 @@ export default function PageContent() {
             timeline: "2-3 weeks",
             fit: "30-150 products. Custom cart logic, reviews, email capture.",
             includes: [
-              "Everything in Founder&apos;s Offer",
+              "Everything in Starter",
               "Custom filtering & search",
               "Upsell / cross-sell logic",
               "Native review system (no plugins)",
@@ -449,9 +449,9 @@ export default function PageContent() {
           },
           {
             tier: "Scale",
-            price: "Starting from $12,000",
-            timeline: "3-5 weeks",
-            fit: "150+ products, subscriptions, B2B pricing, wholesale, custom logic.",
+            price: "$5,000 to $10,000",
+            timeline: "3 to 5 weeks",
+            fit: "100+ products, subscriptions, B2B pricing, wholesale, custom logic.",
             includes: [
               "Everything in Growth",
               "Stripe Subscriptions",

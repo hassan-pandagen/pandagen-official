@@ -61,7 +61,7 @@ export default function MigrationPage() {
           "itemListElement": [
             { "@type": "Offer", "name": "Starter", "price": "1500", "priceCurrency": "USD", "description": "Small WordPress site migration, 5 to 7 pages" },
             { "@type": "Offer", "name": "Growth", "price": "3500", "priceCurrency": "USD", "description": "15 to 50 pages with blog, forms, integrations" },
-            { "@type": "Offer", "name": "Scale", "price": "12000", "priceCurrency": "USD", "description": "Large WordPress migrations, WooCommerce, 50+ pages" }
+            { "@type": "Offer", "name": "Scale", "price": "5000", "priceCurrency": "USD", "description": "Complex WordPress or WooCommerce migrations, 30+ pages, custom integrations" }
           ]
         }
       },

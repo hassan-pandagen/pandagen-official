@@ -400,11 +400,11 @@ export default function PageContent() {
           },
           {
             tier: "Growth",
-            price: "Starting from $3,000",
-            timeline: "2-3 weeks",
-            fit: "Business site. 15-50 pages. Forms, blog, custom interactions.",
+            price: "Starting from $3,500",
+            timeline: "2 to 3 weeks",
+            fit: "Business site. 15 to 50 pages. Forms, blog, custom interactions.",
             includes: [
-              "Everything in Founder&apos;s Offer",
+              "Everything in Starter",
               "Custom animations and interactions",
               "Forms with custom API routes",
               "Full SEO migration with schema",
@@ -415,9 +415,9 @@ export default function PageContent() {
           },
           {
             tier: "Scale",
-            price: "Starting from $10,000",
-            timeline: "3-4 weeks",
-            fit: "Wix Ecommerce or 50+ pages. Custom features, integrations, booking.",
+            price: "$5,000 to $10,000",
+            timeline: "3 to 4 weeks",
+            fit: "Wix Ecommerce or 30+ pages. Custom features, integrations, booking.",
             includes: [
               "Everything in Growth",
               "Wix Stores → custom ecommerce",
