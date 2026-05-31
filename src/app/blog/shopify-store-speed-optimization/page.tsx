@@ -40,8 +40,8 @@ export const metadata: Metadata = {
         title: "Shopify Store Speed Optimization: What Actually Works (2026)",
         description: "7 high-impact Shopify speed fixes, Core Web Vitals targets, the Liquid theme ceiling, and when a headless rebuild is the only path to 90+ PageSpeed.",
         type: "article",
-        publishedTime: "2026-05-12T00:00:00-05:00",
-        modifiedTime: "2026-05-12T00:00:00-05:00",
+        publishedTime: "2026-05-31T00:00:00-05:00",
+        modifiedTime: "2026-05-31T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/shopify-store-speed-optimization",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -62,8 +62,8 @@ const articleSchema = {
             "headline": "Shopify Store Speed Optimization: What Actually Works (2026)",
             "description": "Your Shopify store scores 35 on PageSpeed and speed apps are making it worse. 7 high-impact fixes, Core Web Vitals targets, the Liquid theme ceiling, and when headless is the only answer.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-05-12T00:00:00-05:00",
-            "dateModified": "2026-05-12T00:00:00-05:00",
+            "datePublished": "2026-05-31T00:00:00-05:00",
+            "dateModified": "2026-05-31T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -83,8 +83,8 @@ const articleSchema = {
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/shopify-store-speed-optimization" },
             "articleSection": "Shopify",
             "keywords": ["shopify speed optimization", "shopify pagespeed", "shopify core web vitals", "shopify headless", "liquid theme performance"],
-            "timeRequired": "PT18M",
-            "wordCount": 4200,
+            "timeRequired": "PT19M",
+            "wordCount": 4550,
             "about": [
                 { "@type": "Thing", "name": "Shopify Speed Optimization" },
                 { "@type": "Thing", "name": "Core Web Vitals" },
@@ -117,8 +117,8 @@ const articleSchema = {
             "url": "https://www.pandacodegen.com/blog/shopify-store-speed-optimization",
             "name": "Shopify Store Speed Optimization: What Actually Works (2026)",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
-            "datePublished": "2026-05-12T00:00:00-05:00",
-            "dateModified": "2026-05-12T00:00:00-05:00",
+            "datePublished": "2026-05-31T00:00:00-05:00",
+            "dateModified": "2026-05-31T00:00:00-05:00",
             "inLanguage": "en-US"
         },
         {
@@ -396,6 +396,19 @@ export default function ShopifySpeedOptimizationPage() {
                             <BlogQuote>
                                 We have audited 40+ Shopify stores. The highest mobile PageSpeed score we have seen on a real, functioning Liquid theme with apps, tracking, and live products is 78. The median for stores doing over $500K per year is 42.
                             </BlogQuote>
+
+                            <h3 id="2026-shopify-speed-data" className="text-xl md:text-2xl font-bold text-charcoal mt-10 mb-3 leading-tight">The 2026 numbers: average Shopify store scores 30 on mobile</h3>
+                            <BlogText>
+                                Our 40-store sample is not an outlier. A 2026 audit of 1,166 Shopify stores by Hyperspeed found the <BlogHighlight>average mobile PageSpeed score is just 30 out of 100</BlogHighlight>, with the root cause being third-party apps and JavaScript rather than Shopify&apos;s servers. CrUX field data puts the median Shopify mobile Largest Contentful Paint at 2.26 seconds, barely inside Google&apos;s &ldquo;good&rdquo; threshold with almost no margin. Source: <a href="https://hyperspeed.me/blog/why-the-average-pagespeed-score-is-only-30" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Hyperspeed 2026 PageSpeed audit</a>.
+                            </BlogText>
+
+                            <h3 id="horizon-theme" className="text-xl md:text-2xl font-bold text-charcoal mt-10 mb-3 leading-tight">Dawn is no longer the default. Horizon is. It still trails on mobile.</h3>
+                            <BlogText>
+                                Most Shopify speed articles still assume Dawn is the default theme. In 2026 that is outdated. Shopify&apos;s new default is <BlogHighlight>Horizon</BlogHighlight>, which replaces Dawn&apos;s flat Liquid structure with modular, load-on-demand components. Horizon improves desktop LCP (roughly 2.1s versus Dawn&apos;s 2.4s), but Horizon mobile still lags Dawn by close to 30 PageSpeed points, a gap that is closing but real. If you are reading older optimization advice written for Dawn, the theme-specific tactics may not map cleanly to a Horizon store. Source: <a href="https://craftshift.com/shopify-horizon-vs-dawn-2026/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Craftshift Horizon vs Dawn analysis</a>.
+                            </BlogText>
+                            <BlogText>
+                                The bigger 2026 shift: Shopify reported in its Q1 2026 results that orders from AI-powered searches grew roughly 13x year over year, on $100.7B GMV (up 35%). As more buying moves to AI agents, storefront speed and clean structured data stop being a ranking nicety and become the difference between getting parsed by an AI agent or skipped. For the full cross-platform cost picture, see our <Link href="/blog/saas-software-pricing-audit-2026" className="text-cognac hover:underline font-medium">2026 software pricing audit</Link>, and for the app-fee side specifically, our <Link href="/blog/shopify-app-costs-real-monthly-bill" className="text-cognac hover:underline font-medium">Shopify app cost breakdown</Link>.
+                            </BlogText>
 
                             <BlogText>
                                 Headless makes sense when any of these apply:

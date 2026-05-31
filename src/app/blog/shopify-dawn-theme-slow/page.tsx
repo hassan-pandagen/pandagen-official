@@ -558,7 +558,7 @@ export default function ShopifyDawnThemeSlowPage() {
 
                     <section className="mb-4 mt-6">
                         <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
-                        <p className="text-stone-700 leading-relaxed">For the full conversion rate impact of slow Shopify, see <Link href="/blog/shopify-conversion-rate-speed-fix" className="text-cognac hover:underline font-medium">Shopify conversion rate and speed fix</Link>. For why Shopify Plus still has the same speed ceiling, see <Link href="/blog/shopify-plus-still-slow" className="text-cognac hover:underline font-medium">why Shopify Plus is still slow in 2026</Link>.</p>
+                        <p className="text-stone-700 leading-relaxed">For the complete Shopify speed playbook (Dawn is no longer the default theme in 2026, Horizon is), see our <Link href="/blog/shopify-store-speed-optimization" className="text-cognac hover:underline font-medium">Shopify speed optimization guide</Link>. For the full conversion rate impact of slow Shopify, see <Link href="/blog/shopify-conversion-rate-speed-fix" className="text-cognac hover:underline font-medium">Shopify conversion rate and speed fix</Link>. For why Shopify Plus still has the same speed ceiling, see <Link href="/blog/shopify-plus-still-slow" className="text-cognac hover:underline font-medium">why Shopify Plus is still slow in 2026</Link>.</p>
                     </section>
 
                     <RelatedPosts currentPostId="shopify-dawn-theme-slow" category="Shopify" />

@@ -309,10 +309,15 @@ export default function ShopifyPlusStillSlowPage() {
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Book Free Shopify Plus Audit <ArrowRight className="w-5 h-5" /></CalModalButton>
                     </div>
 
+                    <section className="mb-6 mt-6">
+                        <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
+                        <p className="text-stone-700 leading-relaxed">For the complete Shopify speed playbook (the 2026 average store scores just 30 on mobile and Dawn is no longer the default theme), see our <Link href="/blog/shopify-store-speed-optimization" className="text-cognac hover:underline font-medium">Shopify speed optimization guide</Link>. For the headless rebuild path with verified 2026 cost ranges, see our <Link href="/blog/shopify-headless" className="text-cognac hover:underline font-medium">headless Shopify guide</Link>.</p>
+                    </section>
+
                     <section className="mb-10">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>Shopify Plus fixes your backend, not your speed</strong>: The $2,300/month plan gives you better automation and support, but uses the exact same slow Liquid template system as Basic Shopify.</li>
+                            <li><strong>Shopify Plus fixes your backend, not your speed</strong>: The $2,300 to $2,500/month plan (the new 2026 range) gives you better automation and support, but uses the exact same slow Liquid template system as Basic Shopify.</li>
                             <li><strong>A 3.8-second load time costs a $2M store $400K-$600K/year</strong>: Over half of mobile visitors leave before your Shopify Plus store finishes loading.</li>
                             <li><strong>The Liquid rendering problem is identical on every Shopify plan</strong>: You cannot buy your way out of a 400-800ms server rendering delay that exists by design.</li>
                             <li><strong>Headless Next.js + Shopify Plus is the winning combination</strong>: Keep the enterprise backend features you need while replacing the slow frontend with a under 1 second storefront.</li>

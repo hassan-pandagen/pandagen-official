@@ -565,6 +565,10 @@ export default function ShopifySlowPage() {
                             </CalModalButton>
                     </div>
 
+                    <div className="mt-8">
+                        <p className="text-stone-700 leading-relaxed text-base">Ready to fix the speed problem? Our <Link href="/blog/shopify-store-speed-optimization" className="text-cognac hover:underline font-medium">Shopify speed optimization guide</Link> covers what actually works in 2026 (the average store scores just 30 on mobile), and our <Link href="/blog/shopify-headless" className="text-cognac hover:underline font-medium">headless Shopify guide</Link> covers the rebuild path when optimization hits its ceiling.</p>
+                    </div>
+
                     {/* Related Posts */}
                     <RelatedPosts currentPostId="shopify-slow-losing-sales" category="E-Commerce" />
 

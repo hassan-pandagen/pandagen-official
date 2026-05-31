@@ -562,7 +562,8 @@ export default function ShopifyAppCostsPage() {
                     <BlogText>
                         For stores where the conversion rate has been the primary concern, our post on{" "}
                         <Link href="/blog/shopify-conversion-rate-speed-fix" className="text-cognac hover:underline font-medium">fixing Shopify&apos;s conversion rate through speed</Link>{" "}
-                        covers the technical side. And if you are at the point of considering headless commerce,{" "}
+                        covers the technical side. For the full speed-fix playbook (the 2026 data shows the average Shopify store scores just 30 on mobile PageSpeed), see our{" "}
+                        <Link href="/blog/shopify-store-speed-optimization" className="text-cognac hover:underline font-medium">Shopify speed optimization guide</Link>. And if you are at the point of considering headless commerce,{" "}
                         <Link href="/blog/shopify-headless" className="text-cognac hover:underline font-medium">our headless Shopify guide</Link>{" "}
                         explains what the migration actually looks like and when the ROI makes sense.
                     </BlogText>

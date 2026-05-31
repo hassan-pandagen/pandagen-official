@@ -644,6 +644,10 @@ export default function WebsiteRebuildCost2026Page() {
                         </div>
                     </div>
 
+                    <BlogText>
+                        Trying to do it on the cheap instead? Read our guide on <Link href="/blog/cheap-web-developer" className="text-cognac hover:underline font-medium">finding a cheap web developer without getting burned</Link> first. The 2026 data shows businesses that go cheap spend roughly 3x their initial investment fixing the result, and Gartner predicts AI-builder shortcuts will raise software defects 2,500% by 2028.
+                    </BlogText>
+
                     <BlogHeader id="faq">Frequently Asked Questions</BlogHeader>
                     {rebuildCostFAQs.length > 0 && <FAQAccordion faqs={rebuildCostFAQs} />}
 

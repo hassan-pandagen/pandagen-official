@@ -1,13 +1,12 @@
-import { Zap, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { Zap, ShieldCheck, CheckCircle2, Sparkles } from "lucide-react";
 import { HeroCTAs, HeroAuditWidget } from "./HeroClient";
 
 export default function Hero() {
   return (
     <section
-      className="relative flex flex-col justify-center overflow-hidden bg-paper"
+      className="relative flex flex-col justify-center overflow-hidden bg-paper pt-20 md:pt-24 lg:pt-28"
       style={{
         backgroundColor: "#f5f5f4",
-        paddingTop: "var(--space-section)",
         paddingBottom: "var(--space-section-sm)",
       }}
     >
@@ -41,92 +40,62 @@ export default function Hero() {
             Built by Hassan Jamal &middot; Austin, TX &middot; 267 Public Commits
           </div>
 
-          {/* Headline: LCP candidate, pure server HTML, inline fontFamily forces instant paint */}
+          {/* Headline: LCP candidate, pure server HTML, inline fontFamily forces instant paint.
+              AEO + first-mover urgency — the one claim no competitor can copy. */}
           <h1
             className="text-[2rem] md:text-[3.5rem] font-sans font-bold text-charcoal tracking-tight mb-4 leading-[1.1]"
             style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", fontWeight: 700, color: "#1C1917", letterSpacing: "-0.025em", lineHeight: 1.1, marginBottom: "1rem", fontFamily: "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" }}
           >
-            Your slow website is <br />
+            Get in front of AI search{" "}
             <span
               className="font-serif italic text-cognac"
               style={{ fontStyle: "italic" }}
             >
-              costing you revenue.
+              before your competitor does.
             </span>
           </h1>
 
-          {/* Subtitle: LCP element. Inline fontFamily forces system-font paint instantly,
-              custom font swaps in when ready (zero CLS via size-adjust in globals.css). */}
+          {/* Subtitle: LCP element. Inline fontFamily forces system-font paint instantly.
+              Carries the second moat (subscription savings) + the mechanism (custom code) + price. */}
           <p
-            className="text-lg md:text-xl text-stone-600 mb-4 leading-relaxed max-w-lg font-medium"
+            className="text-lg md:text-xl text-stone-600 mb-3 leading-relaxed max-w-lg font-medium"
             style={{ color: "#57534e", fontSize: "1.125rem", lineHeight: 1.75, maxWidth: "32rem", fontWeight: 500, display: "block", visibility: "visible", fontFamily: "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" }}
           >
-            We replace slow WordPress, Shopify, and drag-and-drop sites, plus the monthly subscriptions and tools that come with them, with{" "}
-            <span
-              className="text-charcoal font-bold underline decoration-cognac/40 decoration-2 underline-offset-2"
-              style={{ color: "#1C1917", fontWeight: 700 }}
-            >
-              custom code you own forever
+            We rebuild your slow WordPress or Shopify site into{" "}
+            <span className="text-charcoal font-semibold" style={{ color: "#1C1917", fontWeight: 600 }}>
+              custom code that ChatGPT, Claude and Google AI cite
             </span>
-            .{" "}
-            <span className="text-charcoal font-bold" style={{ color: "#1C1917", fontWeight: 700 }}>
-              Fixed pricing from $1,500.
-            </span>{" "}
-            Most clients cut monthly software spend 40 to 70% over 3 years.<sup className="text-cognac">*</sup>
+            , and cut the monthly subscriptions that come with it by 40 to 70%.<sup className="text-cognac">*</sup>
           </p>
 
-          {/* Methodology footnote for the savings claim — FTC-safe disclosure */}
+          {/* Price + ownership on its own line so it never breaks mid-phrase */}
           <p
-            className="text-xs text-stone-500 mb-5 md:mb-6 max-w-lg leading-relaxed"
-            style={{ fontStyle: "italic" }}
+            className="text-lg md:text-xl text-charcoal mb-3 font-bold max-w-lg"
+            style={{ color: "#1C1917", fontSize: "1.125rem", fontWeight: 700, fontFamily: "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" }}
           >
-            *Based on 3-year total cost of ownership vs replaced subscription fees. Methodology and case studies on request. Results vary by stack size.
+            <span className="whitespace-nowrap">Fixed pricing from $1,500.</span>{" "}
+            <span className="whitespace-nowrap">You own the code.</span>
           </p>
+
+          {/* Honest "as cited" proof line — defensible: we ARE cited, not claiming to be THE recommendation */}
+          <div className="mb-5">
+            <p className="text-sm font-semibold text-charcoal flex items-center gap-2">
+              <Sparkles className="w-4 h-4 text-cognac shrink-0" />
+              Already cited by ChatGPT, Claude and Perplexity.
+            </p>
+            <p className="text-xs font-normal text-stone-400 italic mt-1">*40 to 70% based on 3-year cost vs replaced subscriptions. Results vary.</p>
+          </div>
 
           {/* CTAs, animated client component */}
           <HeroCTAs />
 
-          {/* Platform review badges: 2x2 grid on all sizes, no wrapping ambiguity */}
-          <div className="grid grid-cols-2 gap-x-4 gap-y-2 mt-5 text-xs font-bold text-stone-600 max-w-md">
-            <span className="flex items-center gap-1.5">
-              <span className="text-yellow-500">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-              <span>5.0 Clutch <span className="font-normal text-stone-400">(3)</span></span>
-            </span>
-            <span className="flex items-center gap-1.5">
-              <span className="text-[#00b67a]">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-              <span>5.0 Trustpilot <span className="font-normal text-stone-400">(2)</span></span>
-            </span>
-            <span className="flex items-center gap-1.5">
-              <span className="text-yellow-500">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-              <span>5.0 Google <span className="font-normal text-stone-400">(5)</span></span>
-            </span>
-            <span className="flex items-center gap-1.5">
-              <span className="text-cognac">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-              <span>5.0 GoodFirms <span className="font-normal text-stone-400">(2)</span></span>
-            </span>
-          </div>
+          {/* Consolidated rating line — one credible line beats four "suspiciously perfect" badges */}
+          <p className="mt-5 text-sm font-bold text-stone-600 flex items-center gap-2 flex-wrap">
+            <span className="text-yellow-500">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <span>5.0 across Clutch, Trustpilot, Google &amp; GoodFirms</span>
+          </p>
 
-          {/* Trust signals: 2x2 grid on all sizes, tighter top margin */}
-          <div className="grid grid-cols-2 gap-x-6 gap-y-2 mt-6 text-sm text-stone-500 font-medium max-w-md">
-            <div className="flex items-center gap-2">
-              <Zap className="w-4 h-4 text-cognac shrink-0" />
-              <span>&lt;1s Load Time</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-charcoal shrink-0" />
-              <span>Bank Grade Security</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-charcoal shrink-0" />
-              <span>Fixed Pricing</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-charcoal shrink-0" />
-              <span>Zero Maintenance</span>
-            </div>
-          </div>
-
-          {/* PageSpeed Guarantee — risk reversal */}
+          {/* PageSpeed Guarantee — the single strongest risk-reversal (verifiable + unique) */}
           <div className="mt-5 inline-flex items-start gap-3 px-4 py-3 bg-white border border-cognac/30 rounded-xl shadow-xs max-w-lg">
             <ShieldCheck className="w-5 h-5 text-cognac shrink-0 mt-0.5" />
             <p className="text-sm text-charcoal leading-snug">
@@ -135,13 +104,11 @@ export default function Hero() {
             </p>
           </div>
 
-          {/* Subscription-free build — ownership positioning, factual not promissory */}
-          <div className="mt-2 inline-flex items-start gap-3 px-4 py-3 bg-white border border-stone-300 rounded-xl shadow-xs max-w-lg">
-            <CheckCircle2 className="w-5 h-5 text-charcoal shrink-0 mt-0.5" />
-            <p className="text-sm text-charcoal leading-snug">
-              <span className="font-bold">Subscription-free build:</span> full source code handed over on launch.{" "}
-              <span className="font-bold">You own it.</span> No platform fees. No monthly license. No vendor lock-in.
-            </p>
+          {/* Benefits strip — features as a quiet single line, not a competing 2x2 grid */}
+          <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-stone-500 font-medium">
+            <span className="flex items-center gap-1.5"><Zap className="w-3.5 h-3.5 text-cognac shrink-0" /> &lt;1s Load Time</span>
+            <span className="flex items-center gap-1.5"><ShieldCheck className="w-3.5 h-3.5 text-charcoal shrink-0" /> Bank Grade Security</span>
+            <span className="flex items-center gap-1.5"><CheckCircle2 className="w-3.5 h-3.5 text-charcoal shrink-0" /> Zero Maintenance</span>
           </div>
 
         </div>

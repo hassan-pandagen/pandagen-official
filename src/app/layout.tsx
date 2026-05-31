@@ -39,10 +39,10 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.pandacodegen.com'),
   title: {
-    default: "WordPress & Shopify Migration to Custom Next.js | PandaCodeGen",
+    default: "Get Cited by AI Search | Custom Next.js Web Development | PandaCodeGen",
     template: "%s | PandaCodeGen",
   },
-  description: "Migrate WordPress, Shopify, Webflow or Wix to a custom Next.js site. 90+ PageSpeed guaranteed or full refund. Fixed pricing from $1,500. No monthly fees.",
+  description: "We rebuild slow WordPress and Shopify sites into custom Next.js code that ChatGPT, Claude and Google AI cite, and cut your monthly subscriptions 40 to 70%. 90+ PageSpeed or full refund. Fixed pricing from $1,500.",
   alternates: {
     canonical: '/',
   },
@@ -82,6 +82,14 @@ export const metadata: Metadata = {
     "web performance agency",
     "wordpress plugin bloat fix",
     "shopify alternative for businesses",
+    // AEO / AI-search visibility positioning
+    "AI search optimization",
+    "get cited by ChatGPT",
+    "AEO agency",
+    "generative engine optimization",
+    "AI visibility for websites",
+    "cut SaaS subscription costs",
+    "custom code vs subscriptions",
   ],
   authors: [{ name: "PandaCodeGen" }],
   creator: "PandaCodeGen",
@@ -102,8 +110,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.pandacodegen.com",
     siteName: "PandaCodeGen",
-    title: "WordPress & Shopify Migration to Custom Next.js | PandaCodeGen",
-    description: "Migrate WordPress, Shopify, Webflow or Wix to a custom Next.js site. 90+ PageSpeed guaranteed or full refund. Fixed pricing from $1,500. No monthly fees.",
+    title: "Get Cited by AI Search | Custom Next.js Web Development | PandaCodeGen",
+    description: "We rebuild slow WordPress and Shopify sites into custom Next.js code that ChatGPT, Claude and Google AI cite, and cut your monthly subscriptions 40 to 70%. 90+ PageSpeed or full refund. Fixed pricing from $1,500.",
     images: [
       {
         url: "/og-image.jpg",
@@ -115,8 +123,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "WordPress & Shopify Migration to Custom Next.js | PandaCodeGen",
-    description: "Migrate WordPress, Shopify, Webflow or Wix to a custom Next.js site. 90+ PageSpeed guaranteed or full refund. Fixed pricing from $1,500. No monthly fees.",
+    title: "Get Cited by AI Search | Custom Next.js Web Development | PandaCodeGen",
+    description: "We rebuild slow WordPress and Shopify sites into custom Next.js code that ChatGPT, Claude and Google AI cite, and cut your monthly subscriptions 40 to 70%. Fixed pricing from $1,500.",
     creator: "@pandacodegen",
     images: ["/og-image.jpg"],
   },

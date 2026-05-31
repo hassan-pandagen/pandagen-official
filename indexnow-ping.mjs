@@ -19,6 +19,7 @@ const urls = [
   `${BASE}/about/imran`,
   `${BASE}/partners`,
   `${BASE}/blog`,
+  `${BASE}/ai-info`,
 
   // Service pages
   `${BASE}/services/wordpress-migration`,
@@ -65,6 +66,11 @@ const urls = [
   `${BASE}/blog/wix-too-slow`,
   `${BASE}/blog/website-rebuild-cost-2026`,
   `${BASE}/blog/saas-software-pricing-audit-2026`,
+  `${BASE}/blog/shopify-store-speed-optimization`,
+  `${BASE}/blog/cheap-web-developer`,
+  `${BASE}/blog/saas-price-increases-2026-tracker`,
+  `${BASE}/blog/build-vs-buy-software-2026-cost-comparison`,
+  `${BASE}/blog/how-to-cut-saas-bill-2026`,
 
   // Legal
   `${BASE}/privacy`,

@@ -192,9 +192,11 @@ export async function POST(request: NextRequest) {
     });
 
     // 2. Send lead notification to business owner (full technical details + geo) — Hassan uses this to prepare the Gamma PDF + Loom
+    // Goes to AUDIT_NOTIFY_EMAIL (a real inbox you read) if set, else the send-from address.
+    const notifyEmail = process.env.AUDIT_NOTIFY_EMAIL || fromEmail;
     await resend.emails.send({
       from: fromEmail,
-      to: fromEmail,
+      to: notifyEmail,
       subject: `NEW AUDIT LEAD — prepare report within 24h: ${perfScore}/100 | ${auditData.platformDetected} | ${geo.country} | ${email}`,
       text: buildOwnerNotification(email, url, auditData, geo),
     }).catch((err) => console.error('Owner notification failed:', err));

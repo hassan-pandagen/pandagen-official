@@ -407,7 +407,7 @@ export default function ShopifyConversionRateSpeedFixPage() {
 
                     <section className="mb-4 mt-6">
                         <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
-                        <p className="text-stone-700 leading-relaxed">For the full revenue loss calculation from slow Shopify, see <Link href="/blog/shopify-slow-losing-sales" className="text-cognac hover:underline font-medium">how slow Shopify costs stores $75K per year</Link>. For why Dawn theme specifically hits performance ceilings, see <Link href="/blog/shopify-dawn-theme-slow" className="text-cognac hover:underline font-medium">why the Shopify Dawn theme is slow</Link>.</p>
+                        <p className="text-stone-700 leading-relaxed">For the complete speed playbook (the 2026 average Shopify store scores just 30 on mobile), see our <Link href="/blog/shopify-store-speed-optimization" className="text-cognac hover:underline font-medium">Shopify speed optimization guide</Link>. For the full revenue loss calculation from slow Shopify, see <Link href="/blog/shopify-slow-losing-sales" className="text-cognac hover:underline font-medium">how slow Shopify costs stores $75K per year</Link>. For why Dawn theme specifically hits performance ceilings, see <Link href="/blog/shopify-dawn-theme-slow" className="text-cognac hover:underline font-medium">why the Shopify Dawn theme is slow</Link>.</p>
                     </section>
 
                     <RelatedPosts currentPostId="shopify-conversion-rate-speed-fix" category="Conversion" />

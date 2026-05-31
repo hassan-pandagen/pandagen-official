@@ -68,7 +68,7 @@ export default function Home() {
           "width": 655,
           "height": 113
         },
-        "description": "Custom web development agency specializing in WordPress migration, Shopify optimization, and custom web applications. Load times under 1 second guaranteed.",
+        "description": "Custom Next.js web development agency. We rebuild slow WordPress and Shopify sites into custom code that ChatGPT, Claude and Google AI cite, and cut clients' monthly subscriptions 40 to 70%. Load times under 1 second, 90+ PageSpeed guaranteed.",
         "email": "info@pandacodegen.com",
         "telephone": "+13027738982",
         "foundingDate": "2026",
@@ -131,7 +131,7 @@ export default function Home() {
         "@id": "https://www.pandacodegen.com/#website",
         "url": "https://www.pandacodegen.com",
         "name": "PandaCodeGen - Custom Web Development",
-        "description": "We migrate WordPress and Shopify sites to custom coded websites. Load times under 1 second. Zero bloat. Enterprise level security.",
+        "description": "We rebuild slow WordPress and Shopify sites into custom Next.js code that ChatGPT, Claude and Google AI cite, and cut monthly subscriptions 40 to 70%. Load times under 1 second. 90+ PageSpeed guaranteed.",
         "publisher": {
           "@id": "https://www.pandacodegen.com/#organization"
         },
@@ -150,7 +150,7 @@ export default function Home() {
         "@id": "https://www.pandacodegen.com/#webpage",
         "url": "https://www.pandacodegen.com",
         "name": "PandaCodeGen | Custom Web Development & Shopify Optimization",
-        "description": "We migrate WordPress and Shopify sites to custom coded websites. Load times under 1 second. Zero bloat. Enterprise level security and SEO.",
+        "description": "We rebuild slow WordPress and Shopify sites into custom Next.js code that ChatGPT, Claude and Google AI cite, and cut monthly subscriptions 40 to 70%. Load times under 1 second. 90+ PageSpeed guaranteed.",
         "isPartOf": {
           "@id": "https://www.pandacodegen.com/#website"
         },
@@ -159,7 +159,7 @@ export default function Home() {
         },
         "inLanguage": "en-US",
         "datePublished": "2026-02-10",
-        "dateModified": "2026-04-20",
+        "dateModified": "2026-06-01",
         "speakable": {
           "@type": "SpeakableSpecification",
           "cssSelector": ["h1", "h2", "[data-speakable='true']"]

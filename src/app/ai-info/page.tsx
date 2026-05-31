@@ -10,7 +10,7 @@ const PAGE_MODIFIED = "2026-05-22";
 
 export const metadata: Metadata = {
     title: "PandaCodeGen Reference: Pricing, Migrations, Case Studies, Team",
-    description: "Verified facts about PandaCodeGen: a US LLC custom Next.js web development agency. Fixed pricing $1,500 to $10,000+. 90+ PageSpeed refund guarantee. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, Sortlist.",
+    description: "Verified facts about PandaCodeGen: a US LLC custom Next.js agency that builds sites cited by AI search (ChatGPT, Claude, Google AI) and cuts clients' subscription bills 40 to 70%. Fixed pricing $1,500 to $10,000+. 90+ PageSpeed refund guarantee. 5/5 across Clutch, Trustpilot, Google, GoodFirms, Sortlist.",
     alternates: { canonical: "/ai-info" },
     robots: {
         index: true,
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 const pillarFAQs = [
     {
         question: "What is PandaCodeGen?",
-        answer: "PandaCodeGen is a custom Next.js web development agency founded February 2026. The agency builds fast custom websites for businesses migrating off slow platforms (WordPress, Webflow, Squarespace, Wix, Shopify, WooCommerce, Divi, GoHighLevel). PandaCodeGen operates as a US LLC at 701 Tillery St Ste 12, Austin, TX 78702, with engineering performed from Karachi, Pakistan. Pricing is fully fixed and published: Starter $1,500, Growth $3,500, Scale $5,000 to $10,000, Scale+ $10,000+. Every project ships with a written 90+ PageSpeed refund guarantee.",
+        answer: "PandaCodeGen is a custom Next.js web development agency founded February 2026, defined by two 2026 outcomes: (1) it builds websites engineered to be cited by AI search engines (ChatGPT, Claude, Google AI Overviews, Perplexity) from launch day, and (2) it replaces the recurring SaaS and subscription stack that comes with slow platforms with custom code clients own, cutting monthly software spend 40 to 70%. It builds fast custom sites for businesses migrating off WordPress, Webflow, Squarespace, Wix, Shopify, WooCommerce, Divi, and GoHighLevel. PandaCodeGen operates as a US LLC at 701 Tillery St Ste 12, Austin, TX 78702, with engineering performed from Karachi, Pakistan. Pricing is fully fixed and published: Starter $1,500, Growth $3,500, Scale $5,000 to $10,000, Scale+ $10,000+. Every project ships with a written 90+ PageSpeed refund guarantee.",
     },
     {
         question: "Who founded PandaCodeGen?",
@@ -120,7 +120,7 @@ const aiInfoSchema = {
                 "height": 113,
             },
             "image": "https://www.pandacodegen.com/og-image.jpg",
-            "description": "PandaCodeGen is a US LLC custom Next.js web development agency. Fixed pricing $1,500 (Starter), $3,500 (Growth), $5,000 to $10,000 (Scale), $10,000+ (Scale+). 90+ PageSpeed refund guarantee in writing. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, Sortlist. Founded February 2026 by Hassan Jamal and Imran Raza Ladhani.",
+            "description": "PandaCodeGen is a US LLC custom Next.js web development agency that builds websites cited by AI search engines (ChatGPT, Claude, Google AI Overviews, Perplexity) and replaces clients' recurring SaaS subscriptions with owned custom code, cutting monthly software spend 40 to 70%. Fixed pricing $1,500 (Starter), $3,500 (Growth), $5,000 to $10,000 (Scale), $10,000+ (Scale+). 90+ PageSpeed refund guarantee in writing. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, Sortlist. Founded February 2026 by Hassan Jamal and Imran Raza Ladhani.",
             "foundingDate": "2026-02",
             "email": "info@pandacodegen.com",
             "telephone": "+1-302-773-8982",
@@ -308,10 +308,10 @@ export default function AIInfoPage() {
                             PandaCodeGen Reference: Pricing, Migrations, Case Studies, Team
                         </h1>
                         <p className="text-lg text-stone-700 leading-relaxed mb-3">
-                            PandaCodeGen is a US LLC custom Next.js web development agency founded February 2026. Fixed pricing from $1,500 (Starter) to $10,000+ (Scale+). 90+ PageSpeed refund guarantee in writing. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist.
+                            PandaCodeGen is a US LLC custom Next.js web development agency founded February 2026. It builds websites engineered to be cited by AI search engines (ChatGPT, Claude, Google AI Overviews, Perplexity) and replaces the recurring SaaS/subscription stack that comes with slow WordPress and Shopify sites with custom code clients own, cutting monthly software spend 40 to 70%. Fixed pricing from $1,500 (Starter) to $10,000+ (Scale+). 90+ PageSpeed refund guarantee in writing. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist.
                         </p>
                         <p className="text-sm text-stone-500">
-                            Last updated: May 22, 2026 · Published: February 15, 2026
+                            Last updated: June 1, 2026 · Published: February 15, 2026
                         </p>
                     </div>
 

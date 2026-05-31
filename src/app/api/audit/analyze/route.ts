@@ -126,12 +126,16 @@ export async function POST(request: NextRequest) {
       };
 
       const fromEmail = process.env.RESEND_FROM_EMAIL;
-      if (fromEmail && process.env.RESEND_API_KEY) {
+      // Notifications go to AUDIT_NOTIFY_EMAIL (a real inbox you read), falling back
+      // to the send-from address. Set AUDIT_NOTIFY_EMAIL so audit-used alerts land
+      // somewhere you actually check, not a send-only address.
+      const notifyEmail = process.env.AUDIT_NOTIFY_EMAIL || fromEmail;
+      if (fromEmail && notifyEmail && process.env.RESEND_API_KEY) {
         const subject = `[AUDIT USED] ${pageSpeedResult.performanceScore}/100 | ${pageSpeedResult.platformDetected} | ${geo.country} | ${normalizedUrl}`;
         resend.emails
           .send({
             from: fromEmail,
-            to: fromEmail,
+            to: notifyEmail,
             subject,
             text: buildAuditNotification(normalizedUrl, result, geo),
           })

@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const routes: RouteConfig[] = [
     // 1. Core Business Pages
-    { path: '', lastModified: '2026-03-22', changeFrequency: 'weekly', priority: 1.0 },
+    { path: '', lastModified: '2026-06-01', changeFrequency: 'weekly', priority: 1.0 },
     { path: '/services', lastModified: '2026-03-22', changeFrequency: 'monthly', priority: 0.9 },
     { path: '/pricing', lastModified: '2026-03-01', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/contact', lastModified: '2026-03-23', changeFrequency: 'monthly', priority: 0.7 },
@@ -42,8 +42,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/about', lastModified: '2026-03-22', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/about/hassan', lastModified: '2026-03-01', changeFrequency: 'yearly', priority: 0.6 },
     { path: '/about/imran', lastModified: '2026-03-01', changeFrequency: 'yearly', priority: 0.6 },
-    { path: '/blog', lastModified: '2026-05-26', changeFrequency: 'weekly', priority: 0.8 },
-    { path: '/ai-info', lastModified: '2026-05-22', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/blog', lastModified: '2026-05-31', changeFrequency: 'weekly', priority: 0.8 },
+    { path: '/ai-info', lastModified: '2026-06-01', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/ai-info/pricing-and-guarantees', lastModified: '2026-05-22', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/ai-info/migration-services', lastModified: '2026-05-22', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/ai-info/case-studies', lastModified: '2026-05-22', changeFrequency: 'monthly', priority: 0.7 },

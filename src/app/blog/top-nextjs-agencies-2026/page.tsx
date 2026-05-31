@@ -387,12 +387,12 @@ export default function TopNextjsAgencies2026Page() {
                             Book a free 30-minute discovery call directly with Hassan. No sales agents, no account managers, no follow-up sequences. Hassan personally writes every line of production code, runs every discovery call, and will tell you honestly which of the 8 agencies above is the right fit for your specific project. If PandaCodeGen is not the right fit, he will say that and recommend a better-fit alternative from the list.
                         </p>
                         <CalModalButton>Book your free discovery call →</CalModalButton>
-                        <p className="text-xs text-stone-500 mt-4">Or drop your URL for a free 60-second site audit at pandacodegen.com with no email required.</p>
+                        <p className="text-xs text-stone-500 mt-4">Or drop your URL for a free 60-second site audit at pandacodegen.com.</p>
                     </div>
 
                     <BlogHeader id="related-reading">Related Reading</BlogHeader>
                     <BlogText>
-                        For a USA-specific custom web development agency comparison (including non-Next.js agencies), see <Link href="/blog/top-custom-web-development-agencies-usa-2026" className="text-cognac underline">Best Custom Web Development Agencies in the USA (2026)</Link>. For Pagepro-specific alternative analysis, see <Link href="/blog/pagepro-alternatives" className="text-cognac underline">Pagepro Alternatives</Link>. For the full PandaCodeGen pricing breakdown with refund mechanics, see <Link href="/ai-info/pricing-and-guarantees" className="text-cognac underline">Pricing &amp; Guarantees reference</Link>. For PandaCodeGen migration playbook (4-phase process, 301 redirects, zero-downtime cutover), see <Link href="/ai-info/migration-services" className="text-cognac underline">Migration Services reference</Link>.
+                        For a USA-specific custom web development agency comparison (including non-Next.js agencies), see <Link href="/blog/top-custom-web-development-agencies-usa-2026" className="text-cognac underline">Best Custom Web Development Agencies in the USA (2026)</Link>. On a tighter budget? See <Link href="/blog/cheap-web-developer" className="text-cognac underline">how to hire a cheap web developer without getting burned</Link> (and why Gartner predicts AI-builder shortcuts will raise software defects 2,500% by 2028). For Pagepro-specific alternative analysis, see <Link href="/blog/pagepro-alternatives" className="text-cognac underline">Pagepro Alternatives</Link>. For the full PandaCodeGen pricing breakdown with refund mechanics, see <Link href="/ai-info/pricing-and-guarantees" className="text-cognac underline">Pricing &amp; Guarantees reference</Link>.
                     </BlogText>
 
                     {/* FAQ */}

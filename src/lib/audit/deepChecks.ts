@@ -563,8 +563,16 @@ function checkMobileCheckout(html: string): DeepCheckResult {
   const findings: string[] = [];
   let score = 80;
 
-  const ecomIndicators = /cart|checkout|add[\s-]*to[\s-]*cart|product|price|shop|store|woocommerce|shopify/i;
-  const isEcommerce = ecomIndicators.test(html);
+  // Detect e-commerce by STRUCTURE, not by mere word mentions. An agency site that
+  // writes about Shopify/WooCommerce is not a store. Require real storefront signals:
+  // a cart/checkout link or button, Product/Offer schema, or an add-to-cart control.
+  const hasCartLink = /href=["'][^"']*\/(cart|checkout|basket)\b/i.test(html);
+  const hasAddToCart = /(add[\s-]*to[\s-]*cart|add[\s-]*to[\s-]*bag|add[\s-]*to[\s-]*basket)/i.test(html)
+    && /<button|type=["']submit["']|class=["'][^"']*(add-to-cart|product-form|buy)/i.test(html);
+  const hasProductSchema = /"@type"\s*:\s*"(Product|Offer|AggregateOffer)"/i.test(html);
+  const hasStorePlatform = /cdn\.shopify\.com|shopify\.com\/s\/|woocommerce|wp-content\/plugins\/woocommerce|cdn\.bigcommerce|squarespace.*commerce/i.test(html);
+  const ecomSignals = [hasCartLink, hasAddToCart, hasProductSchema, hasStorePlatform].filter(Boolean).length;
+  const isEcommerce = ecomSignals >= 1;
 
   if (isEcommerce) {
     findings.push('E-commerce indicators detected');
@@ -606,98 +614,160 @@ function checkMobileCheckout(html: string): DeepCheckResult {
   return { id, name, score, status: status(score), findings, fix: isEcommerce ? 'Add payment badges, enable form autocomplete, and offer guest checkout for better mobile conversion.' : 'Consider adding a contact form or booking widget to improve conversions.' };
 }
 
-function checkAIReadiness(html: string, robotsTxt: string, robotsOk: boolean, llmsTxtOk: boolean): DeepCheckResult {
+function checkAIReadiness(
+  html: string,
+  robotsTxt: string,
+  robotsOk: boolean,
+  llmsTxtOk: boolean,
+  aiTxtOk: boolean
+): DeepCheckResult {
   const id = 'ai-readiness';
   const name = 'AI Readiness';
   const findings: string[] = [];
   let score = 0;
 
-  // 1. /llms.txt (20 pts) — strongest AI-specific signal
-  if (llmsTxtOk) {
-    findings.push('llms.txt file found');
-    score += 20;
+  // ── 1. AI manifest files: llms.txt / ai.txt (15 pts) ──────────────
+  // The AI-specific manifests that tell engines how to read and cite you.
+  if (llmsTxtOk && aiTxtOk) {
+    findings.push('Both llms.txt and ai.txt found (full AI manifest)');
+    score += 15;
+  } else if (llmsTxtOk) {
+    findings.push('llms.txt found (add ai.txt too)');
+    score += 11;
+  } else if (aiTxtOk) {
+    findings.push('ai.txt found (add llms.txt too)');
+    score += 8;
   } else {
-    findings.push('No llms.txt file found');
+    findings.push('No llms.txt or ai.txt found — AI engines have no usage manifest');
   }
 
-  // 2. Structured data depth (20 pts)
+  // ── 2. Structured data depth + @graph (15 pts) ────────────────────
   const ldJsonPattern = /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi;
   let schemaCount = 0;
   let hasGraph = false;
+  let schemaBlob = '';
   let m: RegExpExecArray | null;
   while ((m = ldJsonPattern.exec(html)) !== null) {
     schemaCount++;
+    schemaBlob += m[1];
     if (m[1].includes('@graph')) hasGraph = true;
   }
   if (hasGraph || schemaCount >= 2) {
-    findings.push(`${schemaCount} structured data block${schemaCount !== 1 ? 's' : ''} found${hasGraph ? ' (@graph detected)' : ''}`);
-    score += 20;
+    findings.push(`${schemaCount} structured data block${schemaCount !== 1 ? 's' : ''}${hasGraph ? ' with @graph' : ''}`);
+    score += 15;
   } else if (schemaCount === 1) {
-    findings.push('1 structured data block found (no @graph)');
-    score += 10;
+    findings.push('1 structured data block (no @graph — entity context is thin)');
+    score += 8;
   } else {
-    findings.push('No structured data found');
+    findings.push('No structured data — AI cannot resolve your entity');
   }
 
-  // 3. Speakable markup (15 pts)
-  const hasSpeakable = /speakable/i.test(html);
-  if (hasSpeakable) { findings.push('Speakable markup detected'); score += 15; }
-  else { findings.push('No speakable markup'); }
+  // ── 3. FAQPage schema (10 pts) — highest-citation schema type ─────
+  // AI Overviews lift FAQ content more than any other schema.
+  const hasFAQ = /"@type"\s*:\s*"FAQPage"/i.test(schemaBlob) || /"@type"\s*:\s*"Question"/i.test(schemaBlob);
+  if (hasFAQ) {
+    findings.push('FAQPage schema present (top AI-citation format)');
+    score += 10;
+  } else {
+    findings.push('No FAQPage schema — missing the highest-citation format');
+  }
 
-  // 4. Meta description (15 pts) — AI tools pull this for summaries
+  // ── 4. Entity / E-E-A-T signals: Organization + Person + sameAs (10 pts) ──
+  const hasOrg = /"@type"\s*:\s*"Organization"/i.test(schemaBlob);
+  const hasPerson = /"@type"\s*:\s*"Person"/i.test(schemaBlob);
+  const hasSameAs = /"sameAs"\s*:/i.test(schemaBlob);
+  let eeatPts = 0;
+  if (hasOrg) eeatPts += 4;
+  if (hasPerson) eeatPts += 3;
+  if (hasSameAs) eeatPts += 3;
+  if (eeatPts >= 7) {
+    findings.push('Strong entity signals (Organization + Person + sameAs)');
+  } else if (eeatPts > 0) {
+    findings.push(`Partial entity signals (${[hasOrg && 'Organization', hasPerson && 'Person', hasSameAs && 'sameAs'].filter(Boolean).join(', ')})`);
+  } else {
+    findings.push('No entity/author signals — weak E-E-A-T for AI trust');
+  }
+  score += eeatPts;
+
+  // ── 5. AI-info hub / cluster (10 pts) — the AEO power signal ──────
+  // A dedicated /ai-info, /llms, or similar hub of "verified facts for AI"
+  // is what separates AEO-serious sites from everyone else.
+  const aiHubPattern = /href=["'][^"']*\/(ai-info|ai-faq|llms?|for-ai|ai-overview|knowledge-base)\b/i;
+  const mentionsAiHub = aiHubPattern.test(html);
+  if (mentionsAiHub) {
+    findings.push('Dedicated AI-info hub/cluster linked (AEO-serious signal)');
+    score += 10;
+  } else {
+    findings.push('No AI-info hub found — no dedicated page feeding AI verified facts');
+  }
+
+  // ── 6. Speakable markup (8 pts) ───────────────────────────────────
+  if (/speakable/i.test(html)) { findings.push('Speakable markup detected'); score += 8; }
+  else { findings.push('No speakable markup (voice/AI answer eligibility)'); }
+
+  // ── 7. Meta description (7 pts) — AI pulls this for summaries ─────
   const metaDescMatch = html.match(/<meta[^>]*name=["']description["'][^>]*content=["']([^"']+)["']/i);
   if (metaDescMatch) {
     const descLen = metaDescMatch[1].length;
-    if (descLen >= 140 && descLen <= 165) {
-      findings.push(`Meta description: ${descLen} chars (optimal)`);
-      score += 15;
-    } else if (descLen >= 100 && descLen <= 180) {
-      findings.push(`Meta description: ${descLen} chars (acceptable)`);
-      score += 10;
-    } else {
-      findings.push(`Meta description: ${descLen} chars (aim for 140-165)`);
-      score += 5;
-    }
+    if (descLen >= 140 && descLen <= 165) { findings.push(`Meta description: ${descLen} chars (optimal)`); score += 7; }
+    else if (descLen >= 100 && descLen <= 180) { findings.push(`Meta description: ${descLen} chars (acceptable)`); score += 5; }
+    else { findings.push(`Meta description: ${descLen} chars (aim 140-165)`); score += 2; }
   } else {
     findings.push('Missing meta description');
   }
 
-  // 5. Open Graph tags (15 pts) — AI tools use OG for context
+  // ── 8. Open Graph tags (5 pts) ────────────────────────────────────
   const ogTags = html.match(/<meta[^>]*property=["']og:/gi) || [];
-  if (ogTags.length >= 4) {
-    findings.push(`${ogTags.length} Open Graph tags found`);
-    score += 15;
-  } else if (ogTags.length > 0) {
-    findings.push(`${ogTags.length} Open Graph tag(s) found (add more)`);
-    score += 8;
+  if (ogTags.length >= 4) { findings.push(`${ogTags.length} Open Graph tags`); score += 5; }
+  else if (ogTags.length > 0) { findings.push(`${ogTags.length} Open Graph tag(s) (add more)`); score += 2; }
+  else { findings.push('No Open Graph tags'); }
+
+  // ── 9. Content freshness — dateModified (5 pts) ───────────────────
+  // AI engines favor fresh, dated content. Reward a recent dateModified.
+  const dateModMatch = schemaBlob.match(/"dateModified"\s*:\s*"(\d{4})-(\d{2})/);
+  if (dateModMatch) {
+    const year = parseInt(dateModMatch[1], 10);
+    if (year >= 2026) { findings.push('Fresh dateModified (2026+)'); score += 5; }
+    else { findings.push(`dateModified is ${year} (stale — AI favors fresh)`); score += 2; }
   } else {
-    findings.push('No Open Graph tags found');
+    findings.push('No dateModified in schema (freshness signal missing)');
   }
 
-  // 6. Bot access in robots.txt (15 pts)
+  // ── 10. AI crawler access in robots.txt (15 pts) ──────────────────
+  // The 2026 crawler landscape: 12 bots that matter. Blocking them = invisible to AI.
   if (robotsOk) {
-    const aiBlockedBots: string[] = [];
-    const aiBots = ['GPTBot', 'ClaudeBot', 'PerplexityBot', 'CCBot', 'ChatGPT-User'];
+    const aiBots = [
+      'GPTBot', 'ChatGPT-User', 'OAI-SearchBot',        // OpenAI
+      'ClaudeBot', 'Claude-Web', 'anthropic-ai',         // Anthropic
+      'PerplexityBot', 'Perplexity-User',                // Perplexity
+      'Google-Extended', 'Google-Agent',                 // Google AI / agentic
+      'CCBot', 'Applebot-Extended',                      // Common Crawl / Apple
+    ];
+    const blocked: string[] = [];
     for (const bot of aiBots) {
-      const botBlocked = new RegExp(`user-agent:\\s*${bot}[\\s\\S]*?disallow:\\s*/`, 'im').test(robotsTxt);
-      if (botBlocked) {
-        aiBlockedBots.push(bot);
-      }
+      const botBlocked = new RegExp(`user-agent:\\s*${bot}[\\s\\S]*?disallow:\\s*/\\s*$`, 'im').test(robotsTxt);
+      if (botBlocked) blocked.push(bot);
     }
-    if (aiBlockedBots.length > 0) {
-      findings.push(`AI bots blocked in robots.txt: ${aiBlockedBots.join(', ')}`);
-      score -= aiBlockedBots.length * 3;
-    } else {
-      findings.push('AI bots not blocked in robots.txt');
+    if (blocked.length === 0) {
+      findings.push('No AI crawlers blocked (all 12 major 2026 bots allowed)');
       score += 15;
+    } else if (blocked.length <= 2) {
+      findings.push(`${blocked.length} AI crawler(s) blocked: ${blocked.join(', ')}`);
+      score += 8;
+    } else {
+      findings.push(`${blocked.length} AI crawlers blocked: ${blocked.join(', ')} — you are invisible to these engines`);
+      score += 0;
     }
   } else {
-    findings.push('Cannot check bot access (robots.txt unavailable)');
-    score += 5; // don't penalize for unreachable robots.txt
+    findings.push('Cannot check AI crawler access (robots.txt unavailable)');
+    score += 5;
   }
 
   score = clamp(score);
-  return { id, name, score, status: status(score), findings, fix: score < 70 ? 'Improve AI readiness: add structured data, speakable markup, Open Graph tags, and an llms.txt file.' : 'Good AI readiness signals.' };
+  const fix = score < 70
+    ? 'Tighten AI readiness: add llms.txt + ai.txt, FAQPage schema, Organization + Person + sameAs entity markup, a dedicated AI-info hub, speakable markup, and confirm all 12 major AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Google-Agent, OAI-SearchBot and others) are allowed in robots.txt.'
+    : 'Strong AI readiness. AI engines can crawl, parse, and cite this site.';
+  return { id, name, score, status: status(score), findings, fix };
 }
 
 /* ------------------------------------------------------------------ */
@@ -709,17 +779,19 @@ export async function runDeepChecks(url: string, pageSpeedData: PageSpeedResult)
   const origin = urlObj.origin;
 
   // Fetch all external resources in parallel
-  const [htmlRes, robotsRes, sitemapRes, llmsRes] = await Promise.allSettled([
+  const [htmlRes, robotsRes, sitemapRes, llmsRes, aiTxtRes] = await Promise.allSettled([
     safeFetch(url),
     safeFetch(`${origin}/robots.txt`),
     safeFetch(`${origin}/sitemap.xml`),
     safeFetch(`${origin}/llms.txt`),
+    safeFetch(`${origin}/ai.txt`),
   ]);
 
   const htmlData = htmlRes.status === 'fulfilled' ? htmlRes.value : { ok: false, text: '', headers: new Headers() };
   const robotsData = robotsRes.status === 'fulfilled' ? robotsRes.value : { ok: false, text: '', headers: new Headers() };
   const sitemapData = sitemapRes.status === 'fulfilled' ? sitemapRes.value : { ok: false, text: '', headers: new Headers() };
   const llmsData = llmsRes.status === 'fulfilled' ? llmsRes.value : { ok: false, text: '', headers: new Headers() };
+  const aiTxtData = aiTxtRes.status === 'fulfilled' ? aiTxtRes.value : { ok: false, text: '', headers: new Headers() };
 
   const html = htmlData.text;
   const htmlFetched = htmlData.ok && html.length > 0;
@@ -739,7 +811,7 @@ export async function runDeepChecks(url: string, pageSpeedData: PageSpeedResult)
     () => checkTrustSignals(html, url),
     () => checkSecurityHeaders(headers),
     () => checkMobileCheckout(html),
-    () => checkAIReadiness(html, robotsData.text, robotsData.ok, llmsData.ok),
+    () => checkAIReadiness(html, robotsData.text, robotsData.ok, llmsData.ok, aiTxtData.ok),
   ];
 
   for (const runner of runners) {
