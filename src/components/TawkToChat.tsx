@@ -1,255 +1,246 @@
 "use client";
 
 import { useEffect } from 'react';
+import { trackGAEvent } from '@/components/GoogleAnalytics';
 
-// ─── Page Greeting Map ──────────────────────────────────────────────────────
-// Maps URL path patterns to suggested founder openers.
-// When chat opens, agent sees the right message to lead with based on what page
-// the visitor is reading.
+// ─── Intent-Tiered Opener System ─────────────────────────────────────────────
+// Refactored June 2026 from a 40-entry per-page map to a 3-tier decision-stage
+// model. At ~70 clicks/mo the lever is founder-voice consistency matched to where
+// the buyer is in their decision, NOT per-page coverage breadth.
+//
+//   TIER 1 DECISION      → comparing us NOW. Scope-help + price anchor. (hottest)
+//   TIER 2 PROBLEM-AWARE → knows the pain, shopping the fix. Audit offer is native.
+//   TIER 3 LEARNING      → researching, not buying. Question-first, NO pitch.
+//
+// A referral overlay (see getReferralPrefix) prepends a warm line for AI-referred
+// visitors (ChatGPT/Claude/Perplexity) on ANY tier — they convert 6-10x.
+//
+// The "greeting" is a Suggested Opener the agent (Hassan) sees in the Tawk
+// dashboard when a chat opens. It is NOT a proactive popup.
 
-const pageGreetings: Array<{ match: string | RegExp; greeting: string; intent: string }> = [
-  // ── Webflow blogs ────────────────────────────────────────────────
-  {
-    match: '/blog/webflow-migration-cost',
-    intent: 'Webflow migration pricing',
-    greeting: 'Webflow migration? Drop your site URL and I will send a real cost breakdown in 24h. No sales call.',
-  },
-  {
-    match: '/blog/webflow-true-cost',
-    intent: 'Webflow pricing comparison',
-    greeting: 'Adding up your Webflow bill? Send me your site, I will show you what a custom rebuild costs same scope.',
-  },
-  {
-    match: '/blog/webflow-user-accounts-sunset-date-2026',
-    intent: 'Webflow User Accounts sunset',
-    greeting: 'Migrating off Webflow User Accounts before Jan 29? I can map your auth in 30 min. Drop your URL.',
-  },
-  {
-    match: '/blog/webflow-migration-50-to-100-pages',
-    intent: 'Mid-size Webflow migration',
-    greeting: '50 to 100 page Webflow migration? That is our sweet spot. Drop your URL for a same-week estimate.',
-  },
-  {
-    match: '/blog/leaving-webflow-2026',
-    intent: 'Leaving Webflow',
-    greeting: 'Leaving Webflow? I have done 12 of these. Drop your URL, I will send a migration plan in 24h.',
-  },
-  {
-    match: /\/blog\/webflow-/,
-    intent: 'Webflow research',
-    greeting: 'Researching Webflow? Drop your current site URL, I will send a free 60-second audit.',
-  },
+type Tier = 'DECISION' | 'PROBLEM_AWARE' | 'LEARNING';
 
-  // ── WordPress blogs ──────────────────────────────────────────────
-  {
-    match: '/blog/wordpress-migration-cost',
-    intent: 'WordPress migration pricing',
-    greeting: 'WordPress to Next.js? I will send a fixed-price quote in 24h, no discovery call. Drop your URL.',
-  },
-  {
-    match: '/blog/how-to-fix-slow-wordpress',
-    intent: 'WordPress speed fix',
-    greeting: 'Slow WordPress? Drop your URL and I will pinpoint exactly what is killing your speed in 60 seconds.',
-  },
-  {
-    match: '/blog/wordpress-ai-security-risk-2026',
-    intent: 'WordPress security',
-    greeting: 'Worried about WordPress security? Tell me what plugins you run, I will flag the risk plugins free.',
-  },
-  {
-    match: '/blog/wordpress-plugins-destroy-speed',
-    intent: 'WordPress plugin audit',
-    greeting: 'Plugin bloat killing speed? Send your URL, I will list which plugins to ditch in your stack.',
-  },
-  {
-    match: /\/blog\/wordpress-/,
-    intent: 'WordPress research',
-    greeting: 'Looking at WordPress alternatives? Drop your URL for a free PageSpeed + plugin audit.',
-  },
-
-  // ── Shopify blogs ────────────────────────────────────────────────
-  {
-    match: '/blog/shopify-dawn-theme-slow',
-    intent: 'Shopify Dawn theme speed',
-    greeting: 'Dawn theme slow? Drop your store URL, I will show you what is blocking the render in plain English.',
-  },
-  {
-    match: '/blog/shopify-plus-still-slow',
-    intent: 'Shopify Plus speed',
-    greeting: 'Shopify Plus still slow? Send your store URL, I will benchmark vs your competitor for free.',
-  },
-  {
-    match: '/blog/shopify-app-costs-real-monthly-bill',
-    intent: 'Shopify app cost audit',
-    greeting: 'Adding up Shopify apps? Drop your URL, I will run a real monthly bill breakdown.',
-  },
-  {
-    match: /\/blog\/shopify-/,
-    intent: 'Shopify research',
-    greeting: 'Pricing out a Shopify rebuild? Drop your store URL for a free speed and apps audit.',
-  },
-
-  // ── GHL / Squarespace / Wix / WooCommerce ─────────────────────────
-  {
-    match: '/blog/gohighlevel-website-speed',
-    intent: 'GHL speed audit',
-    greeting: 'GHL site too slow? I rebuilt mine from 28 to 96 PageSpeed in a week. Drop your URL for a free audit.',
-  },
-  {
-    match: '/blog/gohighlevel-migration',
-    intent: 'GHL migration',
-    greeting: 'Leaving GHL? I have migrated 8 GHL sites in 2026. Drop your URL for a fixed-price quote.',
-  },
-  {
-    match: /\/blog\/squarespace-/,
-    intent: 'Squarespace research',
-    greeting: 'Squarespace too slow? Drop your URL for a free PageSpeed audit and a fixed-price migration quote.',
-  },
-  {
-    match: /\/blog\/wix-/,
-    intent: 'Wix research',
-    greeting: 'Looking at Wix alternatives? Drop your URL, I will send a free 60-second audit.',
-  },
-  {
-    match: '/blog/woocommerce-too-slow',
-    intent: 'WooCommerce speed',
-    greeting: 'WooCommerce slow checkout? Drop your store URL for a free 60-second audit.',
-  },
-
-  // ── Cost & comparison blogs ───────────────────────────────────────
-  {
-    match: '/blog/website-migration-cost-2026',
-    intent: 'Migration cost research',
-    greeting: 'Pricing out a migration? Send me your current site URL, I will send a real fixed-price quote.',
-  },
-  {
-    match: '/blog/website-rebuild-cost-2026',
-    intent: 'Rebuild cost research',
-    greeting: 'Budgeting a rebuild? I can give you a fixed-price ballpark in 24 hours. No sales call.',
-  },
-  {
-    match: '/blog/website-redesign-cost',
-    intent: 'Redesign cost research',
-    greeting: 'Quoting a redesign? Drop your URL, I will send a real fixed-price quote (no discovery call).',
-  },
-  {
-    match: '/blog/cheap-web-developer',
-    intent: 'Budget developer search',
-    greeting: 'Looking for an affordable developer? Drop your URL, I will give you a fixed price (no agency markup).',
-  },
-  {
-    match: '/blog/top-custom-web-development-agencies-usa-2026',
-    intent: 'Agency comparison',
-    greeting: 'Comparing agencies? I can show you what we deliver same scope at fixed price. Drop your URL.',
-  },
-  {
-    match: '/blog/pagepro-alternatives',
-    intent: 'Pagepro alternative search',
-    greeting: 'Comparing Pagepro alternatives? Drop your URL, I will send a same-scope quote in 24h.',
-  },
-
-  // ── Performance / technical ───────────────────────────────────────
-  {
-    match: '/blog/how-to-achieve-100-pagespeed',
-    intent: 'PageSpeed optimization',
-    greeting: 'Trying to hit 100 PageSpeed? Share your URL, I will show you what is slowing it down in plain English.',
-  },
-  {
-    match: '/blog/core-web-vitals-explained',
-    intent: 'Core Web Vitals',
-    greeting: 'Fixing Core Web Vitals? Drop your URL, I will benchmark all 3 metrics free.',
-  },
-  {
-    match: '/blog/how-website-speed-affects-seo',
-    intent: 'Speed and SEO',
-    greeting: 'Worried site speed is hurting SEO? Drop your URL, I will show you the SEO impact in 60 seconds.',
-  },
-
-  // ── Service & pricing pages ───────────────────────────────────────
-  {
-    match: '/pricing',
-    intent: 'Pricing page (high intent)',
-    greeting: 'Picking a tier? Drop your current site URL and I will tell you exactly which tier fits in 5 min.',
-  },
-  {
-    match: '/services/ecommerce',
-    intent: 'E-commerce service',
-    greeting: 'E-commerce rebuild? Drop your store URL, I will benchmark speed vs your top competitor free.',
-  },
-  {
-    match: '/services/wix',
-    intent: 'Wix migration service',
-    greeting: 'Leaving Wix? Drop your URL, I will send a fixed-price quote (no Wix lock-in BS).',
-  },
-  {
-    match: '/services/squarespace',
-    intent: 'Squarespace migration service',
-    greeting: 'Leaving Squarespace? Drop your URL, I will send a fixed-price migration quote in 24h.',
-  },
-  {
-    match: '/services/woocommerce',
-    intent: 'WooCommerce service',
-    greeting: 'WooCommerce headless rebuild? Drop your URL for a free speed + checkout audit.',
-  },
-  {
-    match: '/services/custom-engineering',
-    intent: 'Custom engineering service',
-    greeting: 'Custom build? Tell me what you are trying to do, I will tell you if it is a fit and the price.',
-  },
-  {
-    match: /^\/services/,
-    intent: 'Services page',
-    greeting: 'Researching services? Drop your URL and what you want fixed, I will quote in 24h.',
-  },
-
-  // ── About / contact / work pages ──────────────────────────────────
-  {
-    match: '/about/hassan',
-    intent: 'Founder page (high trust intent)',
-    greeting: 'Hi, Hassan here. You found me. Drop your URL and what you want built, I will reply personally.',
-  },
-  {
-    match: '/about/imran',
-    intent: 'Co-founder page',
-    greeting: 'Hi, Hassan here. Imran is our architecture lead. Drop your URL, I will loop him in if it is technical.',
-  },
-  {
-    match: '/work',
-    intent: 'Case studies page',
-    greeting: 'Want a case study match? Tell me your platform and scale, I will send the closest receipt.',
-  },
-  {
-    match: '/contact',
-    intent: 'Contact page (highest intent)',
-    greeting: 'Easier than the form. Drop your URL here and I will reply in under 4 hours.',
-  },
-  {
-    match: '/partners',
-    intent: 'Partners page',
-    greeting: 'Agency partner inquiry? Tell me your client load, I will send our white-label deck.',
-  },
-
-  // ── Fallback for any blog ─────────────────────────────────────────
-  {
-    match: /\/blog\//,
-    intent: 'General blog reader',
-    greeting: 'Reading our blog. Drop your site URL, I will send a free PageSpeed audit (no email required).',
-  },
+// ── TIER 1: DECISION ─────────────────────────────────────────────────────────
+// Buyer is comparing us against a shortlist right now. Lead with scope-help and
+// the real price anchor (Growth $3,500). Never dodge price, never just quote —
+// help them place themselves. These pages convert; the opener earns the reply.
+const DECISION_PATTERNS: Array<string | RegExp> = [
+  '/pricing',
+  '/contact',
+  /\/blog\/.*-vs-custom-website$/,        // shopify/squarespace/webflow/wix-vs-custom
+  '/blog/build-vs-buy-software-2026-cost-comparison',
+  '/blog/shopify-vs-custom-website',
+  '/blog/wordpress-vs-custom-code-real-cost-3-years',
+  '/blog/wordpress-vs-nextjs',
+  /\/blog\/.*-migration-cost/,            // wordpress/webflow/squarespace-migration-cost
+  '/blog/website-migration-cost-2026',
+  '/blog/website-rebuild-cost-2026',
+  '/blog/website-redesign-cost',
+  '/blog/how-much-does-a-website-cost',
+  '/blog/cheap-web-developer',
+  '/blog/top-custom-web-development-agencies-usa-2026',
+  '/blog/top-nextjs-agencies-2026',
+  '/blog/pagepro-alternatives',
+  '/work',                                // evaluating proof → bridge to their project
 ];
 
+// Per-path opener overrides for DECISION pages that deserve a sharper line than
+// the tier default. Anything in DECISION_PATTERNS without an entry here uses
+// DECISION_DEFAULT.
+const DECISION_OPENERS: Record<string, { intent: string; greeting: string }> = {
+  '/pricing': {
+    intent: 'Pricing page (hottest buyer) — nurture first, NO number until they describe scope',
+    greeting: 'Comparing quotes? Ask their platform + rough page count first, give a REAL fixed number once they describe it. Do not lead with $3,500 (sticker shock). Value first, price in conversation.',
+  },
+  '/contact': {
+    intent: 'Contact page (ready now)',
+    greeting: 'Faster to just chat here. Ask what they want built + their platform, reply personally. Do not lead with price.',
+  },
+  '/work': {
+    intent: 'Case studies (evaluating proof)',
+    greeting: 'That rebuild hit 98 PageSpeed. Want me to estimate what is realistic for your site? Tell me your platform and scale. — Hassan',
+  },
+  '/blog/build-vs-buy-software-2026-cost-comparison': {
+    intent: 'Build vs buy decision',
+    greeting: 'Working the build-vs-buy math? Ask the tool + monthly cost, give the honest all-in number for their case. Value first, no cold price.',
+  },
+  '/blog/cheap-web-developer': {
+    intent: 'Budget developer search',
+    greeting: 'Comparing on price? Tell me your platform and page count and I will give you a real fixed number, no agency markup. — Hassan',
+  },
+  '/blog/pagepro-alternatives': {
+    intent: 'Pagepro alternative search',
+    greeting: 'Comparing us against Pagepro? Happy to walk you through where we differ, same scope. What are you weighing? — Hassan',
+  },
+};
+
+const DECISION_DEFAULT: { intent: string; greeting: string } = {
+  intent: 'Decision-stage (comparing costs) — value first, fixed number once they describe scope',
+  greeting: 'Comparing quotes? Ask their platform + rough page count, then give a REAL fixed number, not a range. Value first, do not throw a price cold.',
+};
+
+// ── TIER 2: PROBLEM-AWARE ────────────────────────────────────────────────────
+// Visitor knows the pain (slow site, platform lock-in) and is shopping the fix.
+// This is the ONE tier where the audit/URL offer is native — they came in with
+// a problem. Diagnostic empathy: name the platform issue, offer to check theirs.
+// Mirrors the 45s silo dashboard popups they already saw.
+const PROBLEM_AWARE_PATTERNS: Array<string | RegExp> = [
+  /^\/services/,                          // all service pages
+  // Platform-pain blogs (slow / too-slow / plugins / theme / speed)
+  /\/blog\/.*-too-slow/,
+  /\/blog\/.*-slow/,
+  /\/blog\/slow-/,
+  '/blog/how-to-fix-slow-wordpress',
+  '/blog/wordpress-plugins-destroy-speed',
+  '/blog/wordpress-traffic-drop-speed',
+  '/blog/wordpress-ai-security-risk-2026',
+  '/blog/elementor-kills-seo',
+  '/blog/divi-theme-slow',
+  '/blog/shopify-dawn-theme-slow',
+  '/blog/shopify-plus-still-slow',
+  '/blog/shopify-conversion-rate-speed-fix',
+  '/blog/shopify-app-costs-real-monthly-bill',
+  '/blog/gohighlevel-website-speed',
+  '/blog/gohighlevel-migration',
+  '/blog/gohighlevel-keep-crm-replace-website',
+  '/blog/why-competitor-outranks-you',
+  '/blog/why-is-my-website-loading-so-slow',
+  '/blog/how-to-speed-up-your-website',
+];
+
+// Per-path overrides for PROBLEM-AWARE pages. The audit offer is native here, so
+// the note tells Hassan to lead diagnostic. Unmatched → PROBLEM_AWARE_DEFAULT.
+const PROBLEM_AWARE_OPENERS: Record<string, { intent: string; greeting: string }> = {
+  '/services/gohighlevel': {
+    intent: 'GHL service (platform pain)',
+    greeting: 'GHL speed pain. Lead diagnostic: offer to pull their mobile PageSpeed and show the ad-cost impact. Audit offer is native here.',
+  },
+  '/services/ecommerce': {
+    intent: 'E-commerce service (platform pain)',
+    greeting: 'Store rebuild. Offer to benchmark their speed vs top competitor. Audit/URL offer is native here.',
+  },
+  '/blog/gohighlevel-website-speed': {
+    intent: 'GHL speed (top converter blog)',
+    greeting: 'This is the winning converter page. Lead with the receipt (28→96 PageSpeed) then offer to check theirs. Audit offer native.',
+  },
+};
+
+const PROBLEM_AWARE_DEFAULT: { intent: string; greeting: string } = {
+  intent: 'Problem-aware (knows the pain, shopping a fix)',
+  greeting: 'They came in with a platform pain. Lead diagnostic: name the issue, offer to check THEIR site (audit/URL offer is native here, not pushy). Then bridge to the fix.',
+};
+
+// ── TIER 3: LEARNING ─────────────────────────────────────────────────────────
+// Researching, not buying. Educational blogs, thought pieces, the SaaS pillar,
+// /ai-info, /about, /manifesto, /partners. The reader is learning — an audit
+// pitch is premature and pushy. Be the expert in the room: question-first, tie
+// to the article, NO "drop your URL". This is the DEFAULT for anything Tier 1/2
+// did not catch, so it must be safe and soft.
+const LEARNING_OPENERS: Record<string, { intent: string; greeting: string }> = {
+  '/partners': {
+    intent: 'Agency partner (peer, NOT a B2C audit pitch)',
+    greeting: 'Agency-to-agency. They want white-label CAPACITY, not an audit. Ask their overflow pipeline. NEVER pitch "drop your URL" — it reads as "you don\'t get who I am".',
+  },
+  '/about/hassan': {
+    intent: 'Founder page (trust-checking)',
+    greeting: 'They are checking the founder. Be personal, zero pressure. "This is my actual inbox, ask me anything before reaching out." Authenticity is the lever.',
+  },
+  '/about/imran': {
+    intent: 'Co-founder page (trust-checking)',
+    greeting: 'Imran is architecture lead. Personal, no pitch. Offer to loop him in if their question is technical.',
+  },
+  '/manifesto': {
+    intent: 'Manifesto (values-aligned reader)',
+    greeting: 'They read the values. Invite the conversation those values started: "what are you building?" No offer, no pitch.',
+  },
+  '/blog/saas-software-pricing-audit-2026': {
+    intent: 'SaaS pricing pillar (researcher)',
+    greeting: 'Researching software spend, NOT ready to buy a rebuild. Be the expert: offer honest math on whether to build or keep paying. NO audit pitch.',
+  },
+};
+
+const LEARNING_DEFAULT: { intent: string; greeting: string } = {
+  intent: 'Learning / researching (not buying yet)',
+  greeting: 'They are researching, not shopping. Be the expert in the room: ask a question tied to the article, offer to clarify. Do NOT pitch an audit or "drop your URL" — premature here. Helpfulness earns the next step.',
+};
+
+function matchesAny(pathname: string, patterns: Array<string | RegExp>): boolean {
+  return patterns.some((p) =>
+    typeof p === 'string'
+      ? pathname === p || pathname.startsWith(p + '/')
+      : p.test(pathname)
+  );
+}
+
+function classifyTier(pathname: string): Tier {
+  // Order matters: DECISION wins over PROBLEM_AWARE when a page matches both
+  // (e.g. a "-migration-cost" page is decision-stage, not just problem-aware).
+  if (matchesAny(pathname, DECISION_PATTERNS)) return 'DECISION';
+  if (matchesAny(pathname, PROBLEM_AWARE_PATTERNS)) return 'PROBLEM_AWARE';
+  // Tier 3 LEARNING is wired next. Until then, everything else falls to LEARNING.
+  return 'LEARNING';
+}
+
 function getPageGreeting(pathname: string): { intent: string; greeting: string } {
-  for (const entry of pageGreetings) {
-    if (typeof entry.match === 'string') {
-      if (pathname === entry.match || pathname.startsWith(entry.match + '/')) {
-        return { intent: entry.intent, greeting: entry.greeting };
-      }
-    } else if (entry.match.test(pathname)) {
-      return { intent: entry.intent, greeting: entry.greeting };
-    }
+  const tier = classifyTier(pathname);
+
+  if (tier === 'DECISION') {
+    return DECISION_OPENERS[pathname] ?? DECISION_DEFAULT;
   }
+
+  if (tier === 'PROBLEM_AWARE') {
+    return PROBLEM_AWARE_OPENERS[pathname] ?? PROBLEM_AWARE_DEFAULT;
+  }
+
+  // Tier 3 LEARNING — the default for anything Tier 1/2 did not catch.
+  // Specific overrides (partners, about, manifesto, SaaS pillar) win; else the
+  // soft question-first default. Homepage uses its own warm line below.
+  if (pathname === '/' || pathname === '') {
+    return {
+      intent: 'Homepage (mixed intent)',
+      greeting: 'Mixed intent. Light router: ask what brought them in — slow site, full rebuild, or partnering. Let their answer segment them. No pitch up front.',
+    };
+  }
+  return LEARNING_OPENERS[pathname] ?? LEARNING_DEFAULT;
+}
+
+// ─── AI-Referral Overlay ──────────────────────────────────────────────────────
+// Visitors arriving from ChatGPT / Claude / Perplexity / Gemini / Copilot convert
+// 6-10x and arrive pre-vouched (they've already done their homework). When detected,
+// we PREPEND a warm acknowledgment to whatever tier opener applies and bump the
+// intent label so Hassan treats them as top priority. Uses document.referrer —
+// the same signal getTrafficSource() already reads.
+const AI_REFERRERS: Array<{ host: string; name: string }> = [
+  { host: 'chatgpt.com',     name: 'ChatGPT' },
+  { host: 'chat.openai.com', name: 'ChatGPT' },
+  { host: 'openai.com',      name: 'ChatGPT' },
+  { host: 'perplexity.ai',   name: 'Perplexity' },
+  { host: 'claude.ai',       name: 'Claude' },
+  { host: 'gemini.google.com', name: 'Gemini' },
+  { host: 'copilot.microsoft.com', name: 'Copilot' },
+];
+
+function getAIReferral(): { name: string } | null {
+  try {
+    const ref = document.referrer || '';
+    for (const { host, name } of AI_REFERRERS) {
+      if (ref.includes(host)) return { name };
+    }
+  } catch {
+    /* referrer unavailable — ignore */
+  }
+  return null;
+}
+
+// Wraps a tier opener with the AI-referral acknowledgment when applicable.
+function applyReferralOverlay(
+  base: { intent: string; greeting: string }
+): { intent: string; greeting: string } {
+  const ai = getAIReferral();
+  if (!ai) return base;
   return {
-    intent: 'Homepage / general visitor',
-    greeting: 'Hassan here, founder of PandaCodeGen. Drop your site URL, I will send a free PageSpeed audit in under 4h.',
+    intent: `⭐ AI-referred via ${ai.name} (6-10x converter — TOP PRIORITY) · ${base.intent}`,
+    greeting: `They found us through ${ai.name} — already did their homework, route to Hassan FAST. Acknowledge it warmly ("saw you came via ${ai.name}"), then: ${base.greeting}`,
   };
 }
 
@@ -374,7 +365,7 @@ export default function TawkToChat() {
       const tawkApi = (window as any).Tawk_API || {};
       (window as any).Tawk_API = tawkApi;
 
-      const pageContext = getPageGreeting(window.location.pathname);
+      const pageContext = applyReferralOverlay(getPageGreeting(window.location.pathname));
 
       tawkApi.onLoad = function () {
         tawkApi.setAttributes(
@@ -418,6 +409,36 @@ export default function TawkToChat() {
         // No auto-popup. Passive chat only. Our sticky bar handles mobile engagement.
       };
 
+      // ─── GA4 chat tracking ──────────────────────────────────────────────
+      // Builds the shared attribution payload for every chat event. Answers the
+      // core question: which SOURCE produced this conversation, and was it AI?
+      // 2026 hybrid approach: GA4's native "AI Assistant" channel under-counts
+      // (35-70% of AI sessions arrive referrer-less → land in Direct), so we
+      // capture our own ai_referral flag at the event level as the reliable signal.
+      const buildChatPayload = () => {
+        const ai = getAIReferral();
+        return {
+          page_path:      window.location.pathname,
+          intent_tier:    classifyTier(window.location.pathname),
+          traffic_source: sourceData.source || 'Direct',
+          traffic_medium: sourceData.medium || 'none',
+          campaign:       sourceData.campaign || 'none',
+          ai_referral:    ai ? ai.name : 'none',
+          is_ai_referred: ai ? true : false,
+        };
+      };
+
+      // onChatMaximized: visitor OPENED the panel (soft intent signal).
+      tawkApi.onChatMaximized = function () {
+        trackGAEvent('chat_open', buildChatPayload());
+      };
+
+      // onChatStarted: visitor actually SENT a message (real lead signal —
+      // mark this as a Key Event in GA4 Admin). This is the conversion to watch.
+      tawkApi.onChatStarted = function () {
+        trackGAEvent('chat_start', buildChatPayload());
+      };
+
       // Inject Tawk.to script
       const s1 = document.createElement('script');
       const s0 = document.getElementsByTagName('script')[0];
@@ -441,7 +462,7 @@ export default function TawkToChat() {
     const updatePage = () => {
       const api = (window as any).Tawk_API;
       if (api?.setAttributes) {
-        const ctx = getPageGreeting(window.location.pathname);
+        const ctx = applyReferralOverlay(getPageGreeting(window.location.pathname));
         api.setAttributes({
           'Current Page':     window.location.pathname,
           'Visitor Intent':   ctx.intent,
