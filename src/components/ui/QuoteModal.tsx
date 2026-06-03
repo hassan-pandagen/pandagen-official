@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, Upload, Send, Paperclip, CheckCircle2 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { trackFBEvent } from "@/components/FacebookPixel";
+import { trackGAEvent } from "@/components/GoogleAnalytics";
 
 interface QuoteModalProps {
   isOpen: boolean;
@@ -127,6 +128,14 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
         content_category: 'Contact Form',
         value: 0,
         currency: 'USD',
+      });
+
+      // Track GA4 conversion event (mark quote_submit as a Key Event in GA4 Admin)
+      trackGAEvent('quote_submit', {
+        form: 'quote_modal',
+        service: String(formData.get('service') || 'not_specified'),
+        traffic_source: trafficSource?.source || 'Direct',
+        traffic_medium: trafficSource?.medium || 'none',
       });
 
       setIsSubmitted(true);

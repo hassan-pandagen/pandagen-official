@@ -183,7 +183,7 @@ export default function WebsiteCostPage() {
                             </div>
 
                             <BlogText>
-                                The spread is wide because &ldquo;website&rdquo; covers everything from a 5-page brochure site for a local plumber to a 500-product ecommerce store to a SaaS dashboard with user logins and payment processing. Your number depends on which category you fall into.
+                                The spread is wide because &ldquo;website&rdquo; covers everything from a 5-page brochure site for a local plumber to a 500-product ecommerce store to a SaaS dashboard with user logins and payment processing. Your number depends on which category you fall into. The same scope that drives the price also drives <Link href="/blog/how-long-does-a-custom-website-take" className="text-cognac hover:underline font-medium">how long it takes to build</Link>, so it helps to think about both together.
                             </BlogText>
 
                             <div className="overflow-x-auto my-6">

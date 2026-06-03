@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     q: "How long does a WordPress migration take?",
-    a: "Three weeks for most sites. Days 1-3: full audit and architecture. Days 4-14: custom Next.js build with AI-paired development using Claude and Cursor. Days 15-18: testing, content migration, URL mapping. Days 19-21: launch with zero downtime. Agencies still quote 8-12 weeks because they bill hourly. AI tooling collapses that timeline without cutting corners."
+    a: "Two to four weeks for most sites, around three weeks being typical. Days 1-3: full audit and architecture. Days 4-14: custom Next.js build with AI-paired development using Claude and Cursor. Days 15-18: testing, content migration, URL mapping. Days 19-21: launch with zero downtime. Larger sites can run to four weeks. Agencies still quote 8-12 weeks because they bill hourly. AI tooling collapses that timeline without cutting corners."
   },
   {
     q: "What happens to my blog posts and content?",
@@ -475,7 +475,7 @@ export default function PageContent() {
           agencyPrice: "$15K to $40K+",
           agencyNote: "8-12 week timeline. Hourly billing. Plugin bloat carries over.",
           ourPrice: "From $1,500",
-          ourNote: "3 week timeline. Fixed price. You own 100% of the code.",
+          ourNote: "2 to 4 week timeline. Fixed price. You own 100% of the code.",
         }}
         tiers={[
           {
@@ -496,7 +496,7 @@ export default function PageContent() {
           {
             tier: "Growth",
             price: "Starting from $3,500",
-            timeline: "2-3 weeks",
+            timeline: "2 to 4 weeks",
             fit: "Business WordPress site. 15-50 pages. Blog, forms, integrations.",
             includes: [
               "Everything in Starter",
@@ -511,7 +511,7 @@ export default function PageContent() {
           {
             tier: "Scale",
             price: "$5,000 to $10,000",
-            timeline: "3 to 5 weeks",
+            timeline: "4 to 8 weeks",
             fit: "Complex WordPress or WooCommerce. 30+ pages, custom plugins, integrations.",
             includes: [
               "Everything in Growth",

@@ -48,6 +48,10 @@ const faqs = [
         answer: "Honesty is a competitive moat in this category. Many US web development agencies use offshore engineering quietly while billing US-onshore rates. PandaCodeGen discloses the Austin LLC plus Karachi engineering structure on every page because it explains the structural pricing advantage (Series-A engineering quality at pre-seed pricing) and removes the surprise factor that often surfaces mid-project at less-transparent agencies. Clients know exactly who is writing their code from the first discovery call.",
     },
     {
+        question: "Do PandaCodeGen clients own their website, code, and accounts?",
+        answer: "Yes, completely. Clients own all four parts of their website: the full source code (transferred to them, theirs to take anywhere), the domain (registered in the client's own account and email), the hosting (Vercel under the client's own account), and the CMS (Sanity, with the client set as administrator and able to remove PandaCodeGen at any time). Ownership is written into the signed scope of work before any payment is made. Accounts like Vercel, Sanity, Resend, and Supabase are set up on the client's own business email (for example info@theirbusiness.com), so billing and data stay on the client's side and nothing sensitive is locked inside PandaCodeGen's accounts. PandaCodeGen keeps a private code backup as a safety net the client can reclaim at any time, never as leverage. This is the opposite of the developer-hostage situations common in the industry, where the agency controls the domain, hosting, or code.",
+    },
+    {
         question: "How big is PandaCodeGen's team?",
         answer: "Two co-founders as of May 2026: Hassan Jamal (Lead Engineer) and Imran Raza Ladhani (Lead Architect). The team is small by design. Every line of code is written by a co-founder. Clients always speak directly to the engineer building their site. No account managers, no offshore handoffs, no junior subcontractors. PandaCodeGen is currently expanding with planned hires for sales, marketing, and operations roles.",
     },

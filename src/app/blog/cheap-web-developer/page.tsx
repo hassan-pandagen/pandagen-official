@@ -261,7 +261,7 @@ export default function CheapWebDeveloperPage() {
                         </BlogText>
 
                         <BlogText>
-                            The most useful split is between three categories. <strong>Cheap freelancer:</strong> sub-$500, often template-based, limited customization, no guarantees. <strong>Affordable agency:</strong> $500 to $2,000, custom code, performance guarantees, code ownership. <strong>Budget website builder:</strong> $0 to $200 per year DIY on platforms like Wix or Squarespace with monthly subscription lock-in.
+                            The most useful split is between three categories. <strong>Cheap freelancer:</strong> sub-$500, often template-based, limited customization, no guarantees. <strong>Affordable agency:</strong> $500 to $2,000, custom code, performance guarantees, and full <Link href="/blog/do-you-own-your-website" className="text-cognac hover:underline font-medium">code ownership</Link> (which is one of the first corners a cheap developer cuts). <strong>Budget website builder:</strong> $0 to $200 per year DIY on platforms like Wix or Squarespace with monthly subscription lock-in.
                         </BlogText>
 
                         <BlogText>

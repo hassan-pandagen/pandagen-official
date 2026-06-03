@@ -34,6 +34,129 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "will-migrating-hurt-my-seo",
+    cardStat: "95 to 100%",
+    cardStatLabel: "of rankings kept when a migration is done right",
+    title: "Will Migrating My Website Hurt My SEO? (The Honest Answer)",
+    excerpt: "Done wrong, a migration can lose 50% of your traffic and take over a year to recover. Done right, you keep 95 to 100% of your rankings and your site ends up faster. Here is exactly what separates the two, the honest recovery timeline nobody mentions, and the checklist that protects your rankings.",
+    category: "Guide",
+    readTime: "9 min",
+    date: "Jun 3",
+    author: "Hassan",
+    role: "Co-founder, Lead Engineer",
+    featured: true,
+    illustrationType: "ranking",
+    lastModified: "2026-06-03",
+    faqs: [
+      {
+        question: "Will I lose my Google rankings if I migrate my website?",
+        answer: "Not if it is done properly. Migrations executed correctly, with full 301 redirect mapping, preserved metadata, and maintained or improved page speed, keep 95 to 100% of rankings and traffic. The danger is a careless migration: missing or broken redirects, dropped title tags, and slower load times can cost up to 50% of traffic with an average recovery of over 500 days. The outcome is entirely about execution, not about migrating itself. Migrating to a faster site usually helps rankings over time because Core Web Vitals improve."
+      },
+      {
+        question: "What is the number one cause of traffic loss during a migration?",
+        answer: "Missing or misconfigured 301 redirects. When you move to a new site, your URLs often change. A 301 redirect tells Google a page permanently moved to its new address and transfers 90 to 99% of that page's SEO authority across. If a URL changes and there is no redirect, that page's ranking power evaporates and visitors hit a dead end. Mapping every old URL to its closest new equivalent before launch is the single most important safeguard, and it is the step careless migrations skip."
+      },
+      {
+        question: "How long does it take for traffic to recover after a migration?",
+        answer: "For a well-executed migration, expect a small, temporary dip. Typically 2 to 4 weeks of volatility as Google re-crawls and reprocesses the site, 4 to 8 weeks for core pages to stabilize, and full recovery by 8 to 12 weeks. Many clean migrations recover 90 to 95% of traffic within the first 30 days. Honest agencies tell you about this dip up front. The danger sign is traffic that keeps declining past the first 30 days, which usually means a redirect or indexing problem that needs fixing."
+      },
+      {
+        question: "Besides redirects, what else can hurt SEO during a migration?",
+        answer: "Four silent killers beyond redirects. First, lost metadata: title tags and descriptions get dropped or reset to defaults because different platforms handle them differently. Second, page speed regression: if the new site is slower, Core Web Vitals drop and so do rankings. Third, broken internal links and content moved below the fold, which changes how Google reads your pages. Fourth, wrong canonical tags or accidentally blocking crawlers in robots.txt. A proper migration checks all of these before and after launch, not just the redirects."
+      },
+      {
+        question: "Does moving to a faster platform like Next.js help or hurt SEO?",
+        answer: "It helps, as long as the redirects and metadata are handled correctly during the move. Google rewards Core Web Vitals, and a slow platform with a poor mobile PageSpeed score is already costing you rankings every day. Moving to a fast custom build improves those signals, which is a long-term ranking gain. The migration itself carries short-term risk if done carelessly, but the destination, a faster site, is a tailwind for SEO once you are through the transition."
+      },
+      {
+        question: "How does PandaCodeGen protect my rankings during a migration?",
+        answer: "We treat the pre-launch work as 60 to 70% of the job, because that is where migrations succeed or fail. We audit your current site, map every existing URL to a 301 redirect in Next.js before launch, preserve your title tags, descriptions, and structured data, and confirm the new site scores 90+ on PageSpeed so Core Web Vitals improve rather than regress. After launch we monitor indexed pages, crawl errors, and organic traffic. The goal is keeping 95 to 100% of your rankings, and a faster site that ranks better over time."
+      }
+    ]
+  },
+  {
+    id: "how-long-does-a-custom-website-take",
+    cardStat: "1 to 4 weeks",
+    cardStatLabel: "for most custom builds, when your content is ready",
+    title: "How Long Does a Custom Website Take to Build? (Honest 2026 Timelines)",
+    excerpt: "Most agencies quote 8 to 16 weeks. The honest truth is that most of that is waiting on you, not building. Here are real timelines by project size, the one thing that actually controls the clock, and the receipts behind a 7 day build and a 20 day e-commerce store.",
+    category: "Guide",
+    readTime: "8 min",
+    date: "Jun 3",
+    author: "Hassan",
+    role: "Co-founder, Lead Engineer",
+    featured: true,
+    illustrationType: "performance",
+    lastModified: "2026-06-03",
+    faqs: [
+      {
+        question: "How long does it take to build a custom website in 2026?",
+        answer: "For most custom builds, 1 to 4 weeks when your content is ready. A 5 to 7 page Starter site is 1 to 2 weeks. A 10 to 20 page Growth site is 2 to 4 weeks. A 30 plus page or e-commerce Scale build is 4 to 8 weeks, and a complex migration can take up to 6 weeks. We have shipped faster when all the content was ready up front, but those ranges are what we commit to. Most agencies quote 8 to 16 weeks, and the honest reason their timelines are longer is that most of that window is spent waiting on content and feedback, not actually building. At PandaCodeGen the clock is driven by how ready your content is, not by our code."
+      },
+      {
+        question: "Why do other agencies say a website takes 8 to 16 weeks?",
+        answer: "Because a 12 week project is rarely 12 weeks of work. It is often 60 to 100 actual hours of building, spread across 12 weeks, because the agency has other clients in the queue, projects pause waiting for your content and photos, and feedback rounds take days or weeks each. The design and development itself is not what makes it slow. Waiting is. A small founder-led team with fixed scope and no client queue can compress that calendar dramatically without cutting any corners."
+      },
+      {
+        question: "What is the single biggest thing that slows a website project down?",
+        answer: "Your content. Across every study and every agency, waiting on the client's text, photos, and decisions is the number one cause of delay. The clearest example: a medical practice we work with cannot use any stock photos because the work depends on the doctor's specific expertise, the owner is busy so feedback rounds take a day each, and the content is genuinely complex. That project takes time, and rightly so. Compare that to a build where the client had everything ready up front, which shipped in 20 days. Same team. The difference was content readiness, not build speed."
+      },
+      {
+        question: "Do I need to have a design ready before you start?",
+        answer: "No. You need content and a direction, not a finished design. You can hand us a clear vision, send inspiration and references, or simply say surprise us and let us design it from scratch. We do not charge extra for the design work either way. Some clients come with just a few references and ask us to take it from there, and on a recent build we delivered a homepage and three sections in two days from that kind of brief. What moves the timeline is how ready your content is, not whether you arrive with a finished design."
+      },
+      {
+        question: "Can you build a website in a week?",
+        answer: "Yes, for the right project. A 5 to 7 page site with content ready can ship in about a week. We have done it: PandaCodeLab and a WordPress migration both launched in 7 days. But a 20 page site or an e-commerce store cannot honestly be done in a week without cutting corners, so we will not promise that. If you genuinely need a rush, we can prioritize it, but rush jobs carry extra dev hours and we price that honestly up front rather than pretend it is free."
+      },
+      {
+        question: "How do you make builds faster than a typical agency?",
+        answer: "Three things. First, we spend at least two days up front with you and a structured questionnaire, which surfaces the content and decisions you are missing before the clock starts, so the project does not stall halfway through. Second, fixed scope signed before we begin, so there is no mid-project scope creep. Third, we are founder-led and small, so your project is not sitting in a queue behind 30 others. The result is real custom work delivered in weeks, not months."
+      }
+    ]
+  },
+  {
+    id: "do-you-own-your-website",
+    cardStat: "You own it",
+    cardStatLabel: "code, domain, hosting, and CMS, all in your name",
+    title: "Do You Actually Own Your Website? (And What Happens If Your Developer Disappears)",
+    excerpt: "Most business owners assume they own the website they paid for. By default, copyright law says the developer does. Here is what ownership actually means, the four things you must control, the horror stories that happen when you do not, and exactly how PandaCodeGen hands over all of it.",
+    category: "Guide",
+    readTime: "9 min",
+    date: "Jun 3",
+    author: "Hassan",
+    role: "Co-founder, Lead Engineer",
+    featured: true,
+    illustrationType: "code",
+    lastModified: "2026-06-03",
+    faqs: [
+      {
+        question: "Do I own my website if an agency builds it?",
+        answer: "Not automatically. Under default copyright law, whoever writes the code owns it unless the contract explicitly transfers ownership to you. Many business owners discover too late that the agency, not them, legally owns the code, design, and sometimes even the domain. The only way to be sure is a written agreement that transfers full ownership of source code, design files, domain, and hosting credentials to you on final payment. At PandaCodeGen, you own everything by default, in writing, in the signed scope of work before any payment is made."
+      },
+      {
+        question: "What are the four things I need to own to truly control my website?",
+        answer: "Website ownership is not one thing, it is four separate things, and you can be trapped on any one of them. First, the source code: the actual files your site is built from. Second, the domain name: registered in your own account, not the developer's. Third, the hosting: your own account, so you can take the live site anywhere. Fourth, the CMS: the system you use to edit content, ideally one where you are the administrator and can remove anyone. If a developer controls even one of these, they can hold the others hostage."
+      },
+      {
+        question: "What happens to my website if my developer disappears or we stop working together?",
+        answer: "If you own all four pieces (code, domain, hosting, CMS) in your own accounts, nothing happens. You revoke the developer's access and everything keeps running. The danger is when the developer holds any of those pieces. There are documented cases of developers demanding thousands of dollars to release a domain they registered in their own name. At PandaCodeGen, your domain, hosting (Vercel), and services (Sanity, Resend, Supabase) all live in your own accounts from day one. You hold the keys. We just have access to manage them, access you can revoke at any time."
+      },
+      {
+        question: "Can I edit my website myself, or do I have to pay the developer for every change?",
+        answer: "It depends on the CMS. Proprietary builders and custom systems sometimes lock you into paying the developer for every word change. A good setup gives you a clean content editor where you make text and image changes yourself, with the developer only needed for structural work. PandaCodeGen builds on Sanity and makes you the administrator. You can edit content freely, and small in-house tweaks like a logo color change are handled free of charge. You are never charged to fix a typo."
+      },
+      {
+        question: "Why do some agencies keep a copy of my website code?",
+        answer: "A reputable agency may keep a private backup of your code, not to hold anything over you, but as a safety net. If you ever accidentally delete your files or lose access, even years after you stop working together, you can ask for the backup and get it back. The key difference is that you own your copy completely and can take it anywhere at any time. The backup is insurance for you, not leverage against you. That is exactly how PandaCodeGen handles it."
+      },
+      {
+        question: "What should I ask before hiring someone to build my website?",
+        answer: "Ask one direct question: will all source code, design files, domain, and hosting credentials be transferred to me, in my own accounts, upon final payment, and is that in writing? If the answer is vague, that is your warning sign. Also confirm the domain will be registered in your name from the start, the hosting will be your account, and you will be the administrator of the CMS. A trustworthy builder will happily put all of this in a signed scope of work before you pay anything."
+      }
+    ]
+  },
+  {
     id: "saas-price-increases-2026-tracker",
     cardStat: "9 hikes",
     cardStatLabel: "documented software price increases in 2026",
@@ -138,7 +261,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "code",
-    lastModified: "2026-05-25",
+    lastModified: "2026-06-03",
     faqs: [
       { question: "Who are the top Next.js development agencies in 2026?", answer: "The 8 Next.js development agencies most frequently cited in 2026 rankings are Pagepro (Poland), FocusReactive (UK/EU), Naturaily (Poland), Blazity (Poland), Bejamas (EU), Netguru (Poland), Brainhub (Poland), and PandaCodeGen (US LLC, Austin TX with global engineering). Each agency has verified Clutch profiles, public review history, and demonstrated Next.js production work. PandaCodeGen is the only agency in the list publishing fixed-tier pricing from $1,500 to $10,000+, while the other 7 use inquiry-based custom quoting." },
       { question: "Which Next.js agency has the lowest published minimum project size?", answer: "PandaCodeGen has the lowest published minimum at $1,500 (Starter tier). Among the top boutique Next.js agencies on Clutch, the typical minimum project size ranges from $10,000 (Naturaily, Blazity) to $25,000+ (Pagepro, FocusReactive). The minimum is published on each agency's Clutch verified profile. PandaCodeGen's lower minimum reflects the published-tier model rather than custom quoting." },

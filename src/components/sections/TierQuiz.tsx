@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import { motion } from "@/components/ui/motion";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import dynamic from "next/dynamic";
+import { trackGAEvent } from "@/components/GoogleAnalytics";
 
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
@@ -107,8 +108,20 @@ export default function TierQuiz() {
   const result = useMemo(() => (isDone ? pickTier(answers) : null), [isDone, answers]);
 
   function choose(value: "starter" | "growth" | "scale" | "scaleplus") {
-    setAnswers([...answers, value]);
+    // Fire quiz_start on the very first answer (engagement signal).
+    if (step === 0) {
+      trackGAEvent("quiz_start", { quiz: "tier_finder" });
+    }
+    const nextAnswers = [...answers, value];
+    setAnswers(nextAnswers);
     setStep(step + 1);
+    // When this answer completes the quiz, fire quiz_complete with the resulting tier.
+    if (nextAnswers.length >= steps.length) {
+      trackGAEvent("quiz_complete", {
+        quiz: "tier_finder",
+        recommended_tier: pickTier(nextAnswers),
+      });
+    }
   }
 
   function reset() {

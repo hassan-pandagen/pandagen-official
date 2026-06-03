@@ -194,7 +194,7 @@ export default function MigrateWordPressToNextJSPage() {
                     <div data-speakable="true" className="bg-stone-50 border border-stone-200 rounded-xl p-6 mb-10">
                         <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-3">How To Migrate WordPress To Next.js In 8 Steps</p>
                         <p className="text-stone-700 leading-relaxed">
-                            We have migrated WordPress to Next.js six times without losing a single ranking. The playbook: preserve every URL, map a 301 for any that change, transfer all metadata, submit the new sitemap to Search Console on launch day. Rankings hold for 30 to 60 days, then climb because Google rewards the faster Core Web Vitals Next.js delivers natively. Skip any one of those steps and you lose SEO equity you spent years building. Here is the exact process.
+                            We have migrated WordPress to Next.js six times without losing a single ranking. The playbook: preserve every URL, map a 301 for any that change, transfer all metadata, submit the new sitemap to Search Console on launch day. Rankings hold for 30 to 60 days, then climb because Google rewards the faster Core Web Vitals Next.js delivers natively. Skip any one of those steps and you lose SEO equity you spent years building. If you are still weighing the risk, our honest take on <Link href="/blog/will-migrating-hurt-my-seo" className="text-cognac hover:underline font-medium">whether migrating hurts your SEO</Link> covers what separates a clean migration from a costly one. Here is the exact process.
                         </p>
                     </div>
 

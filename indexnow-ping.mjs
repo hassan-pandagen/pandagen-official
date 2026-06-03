@@ -71,6 +71,9 @@ const urls = [
   `${BASE}/blog/saas-price-increases-2026-tracker`,
   `${BASE}/blog/build-vs-buy-software-2026-cost-comparison`,
   `${BASE}/blog/how-to-cut-saas-bill-2026`,
+  `${BASE}/blog/do-you-own-your-website`,
+  `${BASE}/blog/how-long-does-a-custom-website-take`,
+  `${BASE}/blog/will-migrating-hurt-my-seo`,
 
   // Legal
   `${BASE}/privacy`,
