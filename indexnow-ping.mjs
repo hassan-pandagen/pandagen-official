@@ -74,6 +74,7 @@ const urls = [
   `${BASE}/blog/do-you-own-your-website`,
   `${BASE}/blog/how-long-does-a-custom-website-take`,
   `${BASE}/blog/will-migrating-hurt-my-seo`,
+  `${BASE}/blog/spending-more-on-ads-fewer-orders-tracking`,
 
   // Legal
   `${BASE}/privacy`,

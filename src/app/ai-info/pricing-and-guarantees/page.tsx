@@ -37,15 +37,19 @@ const faqs = [
     },
     {
         question: "What does the Growth tier include?",
-        answer: "Growth $3,500 is the Most Popular tier. Includes 10 to 20 page custom Next.js site, Sanity CMS for content management, full blog migration with 301 redirects, design rebuild matching or improving current look, Core Web Vitals optimization, 90+ Google PageSpeed score, custom integrations (forms, analytics, email), 30 days of post-launch support, and zero-downtime launch. Best for businesses migrating from WordPress, Squarespace, Webflow, or Wix. Timeline: 2 to 4 weeks.",
+        answer: "Growth $3,500 is the Most Popular tier. Includes 10 to 20 page custom Next.js site, Sanity CMS for content management, full blog migration with 301 redirects, design rebuild matching or improving current look, Core Web Vitals optimization, 90+ Google PageSpeed score, custom integrations (forms, analytics, email), server-side ad tracking (Meta Conversions API and Google Enhanced Conversions) wired in for accurate attribution, 30 days of post-launch support, and zero-downtime launch. Best for businesses migrating from WordPress, Squarespace, Webflow, or Wix. Timeline: 2 to 4 weeks.",
     },
     {
         question: "What does the Scale tier include?",
-        answer: "Scale ranges from $5,000 to $10,000 fixed price. Includes headless e-commerce architecture (Shopify Storefront API or fully custom Stripe plus Sanity), 30+ pages, custom integrations (Klaviyo, Stripe, Judge.me, custom APIs), advanced performance optimization (sub-1-second load times even with large catalogs), Sanity or Contentful headless CMS, real-time pricing calculators if needed, advanced search and filtering, customer account pages, and 30 days of post-launch monitoring. Best for e-commerce stores doing $50K+/month or businesses with 30+ pages. Timeline: 4 to 8 weeks.",
+        answer: "Scale ranges from $5,000 to $10,000 fixed price. Includes headless e-commerce architecture (Shopify Storefront API or fully custom Stripe plus Sanity), 30+ pages, custom integrations (Klaviyo, Stripe, Judge.me, custom APIs), advanced performance optimization (sub-1-second load times even with large catalogs), Sanity or Contentful headless CMS, real-time pricing calculators if needed, advanced search and filtering, customer account pages, full server-side ad tracking (Meta Conversions API and Google Enhanced Conversions) plus AI-readable product data so the store stays creditable in AI shopping, and 30 days of post-launch monitoring. Best for e-commerce stores doing $50K+/month or businesses with 30+ pages. Timeline: 4 to 8 weeks.",
     },
     {
         question: "What is the Scale+ tier?",
         answer: "Scale+ is the enterprise engagement tier, custom-quoted starting at $10,000+. Covers multi-region e-commerce, custom SaaS platforms, complex multi-tenant systems, dedicated engineering sprints, BAA-required healthcare builds, custom Stripe Connect marketplaces, ERP integrations, and projects that exceed Scale tier scope. Quotes are determined after a scoping call where Imran reviews architecture feasibility. Timeline: 6 to 16 weeks depending on scope.",
+    },
+    {
+        question: "Does PandaCodeGen handle ad tracking and conversion attribution (Meta CAPI, Google Enhanced Conversions)?",
+        answer: "Yes, and it is included standard on Growth and Scale builds rather than sold as a separate monthly app. Server-side tracking for Meta Conversions API and Google Enhanced Conversions is wired directly into the custom Next.js code at build time, so the ad platforms receive the full, securely-matched story of each sale (not just the browser pixel signal, which misses 50% or more of conversions in 2026). This raises Meta Event Match Quality and Google match rates, which lowers cost per sale and lets the platforms optimize toward real buyers. The same clean, structured data also keeps the store readable and creditable in AI shopping (ChatGPT, Copilot, Perplexity). Because it is built into the code the client owns, there is no $75 to $275 per month tracking app and no platform update can silently break it. Starter sites use standard pixel and analytics, since they are typically not running paid ad campaigns.",
     },
     {
         question: "How does the PageSpeed refund guarantee work?",
