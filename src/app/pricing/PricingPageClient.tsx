@@ -260,13 +260,8 @@ export default function PricingPageClient() {
               <Feature dark text="30 Days Post-Launch Support (bug fixes and refinements at no extra cost)" />
             </ul>
 
-            <button
-              data-cal-namespace="discovery"
-              data-cal-link="pandagen/discovery"
-              data-cal-config='{"layout":"month_view"}'
-              className="w-full py-5 rounded-xl bg-white text-charcoal font-bold hover:bg-cognac hover:text-white transition-all duration-300 flex items-center justify-center gap-2 shadow-[0_0_24px_rgba(255,255,255,0.15)]"
-            >
-              Start Project <ArrowRight className="w-5 h-5" />
+            <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"start_project",location:"cta"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="w-full py-5 rounded-xl bg-white text-charcoal font-bold hover:bg-cognac hover:text-white transition-all duration-300 flex items-center justify-center gap-2 shadow-[0_0_24px_rgba(255,255,255,0.15)]">
+                Start Project <ArrowRight className="w-5 h-5" />
             </button>
 
             <p className="text-xs text-center text-stone-500 mt-4">
@@ -332,13 +327,8 @@ export default function PricingPageClient() {
               <h3 className="text-lg md:text-xl font-bold text-charcoal mb-1">Bigger project? Let&apos;s scope it together.</h3>
               <p className="text-sm text-stone-600">Enterprise scope, multi-region e-commerce, custom SaaS platforms, complex integrations. We cannot quote without understanding the work. Message us and we will scope it on a call.</p>
             </div>
-            <button
-              data-cal-namespace="discovery"
-              data-cal-link="pandagen/discovery"
-              data-cal-config='{"layout":"month_view"}'
-              className="shrink-0 px-5 py-2.5 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-cognac transition-all"
-            >
-              Scope It With Us
+            <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"scope_it_with_us",location:"cta"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="shrink-0 px-5 py-2.5 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-cognac transition-all">
+                Scope It With Us
             </button>
           </div>
         </motion.div>
@@ -358,13 +348,8 @@ export default function PricingPageClient() {
                 Some clients prefer hourly for audits, code reviews, bug fixes, or ongoing feature work after launch. We accommodate that too. Rate starts at $50 to $99/hr depending on scope. Retainers from $500/mo for priority access.
               </p>
             </div>
-            <button
-              data-cal-namespace="discovery"
-              data-cal-link="pandagen/discovery"
-              data-cal-config='{"layout":"month_view"}'
-              className="shrink-0 px-6 py-3 border border-stone-300 text-charcoal font-bold rounded-xl hover:border-cognac hover:text-cognac transition-colors text-sm whitespace-nowrap"
-            >
-              Discuss Your Needs
+            <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"discuss_your_needs",location:"cta"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="shrink-0 px-6 py-3 border border-stone-300 text-charcoal font-bold rounded-xl hover:border-cognac hover:text-cognac transition-colors text-sm whitespace-nowrap">
+                Discuss Your Needs
             </button>
           </div>
         </motion.div>

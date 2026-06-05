@@ -96,12 +96,7 @@ export default function MethodToCreativity() {
                 A proven development process designed to eliminate risk and guarantee speed.
               </p>
 
-              <button
-                data-cal-namespace="discovery"
-                data-cal-link="pandagen/discovery"
-                data-cal-config='{"layout":"month_view"}'
-                className="px-8 py-4 bg-charcoal text-white rounded-full font-bold hover:bg-stone-800 transition-all w-fit"
-              >
+              <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"start_your_build",location:"cta"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="px-8 py-4 bg-charcoal text-white rounded-full font-bold hover:bg-stone-800 transition-all w-fit">
                 Start Your Build
               </button>
             </div>

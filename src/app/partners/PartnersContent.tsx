@@ -146,13 +146,8 @@ export default function PartnersContent() {
             >
               Apply for Partnership <ArrowRight className="w-5 h-5" />
             </button>
-            <button
-              data-cal-namespace="discovery"
-              data-cal-link="pandagen/discovery"
-              data-cal-config='{"layout":"month_view"}'
-              className="px-8 py-4 bg-white border border-stone-200 text-charcoal font-bold rounded-full hover:border-stone-400 transition-all inline-flex items-center justify-center gap-2"
-            >
-              Book a Partner Call
+            <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"book_a_partner_call",location:"cta"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="px-8 py-4 bg-white border border-stone-200 text-charcoal font-bold rounded-full hover:border-stone-400 transition-all inline-flex items-center justify-center gap-2">
+                Book a Partner Call
             </button>
           </motion.div>
         </div>

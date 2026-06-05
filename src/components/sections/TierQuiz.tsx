@@ -19,7 +19,7 @@ const tierMap: Record<Tier, { name: string; price: string; tagline: string; fits
       "Under 10 pages",
       "Brochure or service site, no e-commerce",
       "Next.js custom build, 90+ PageSpeed guaranteed",
-      "1 week delivery",
+      "1 to 2 weeks delivery",
     ],
   },
   Growth: {
@@ -30,7 +30,7 @@ const tierMap: Record<Tier, { name: string; price: string; tagline: string; fits
       "10 to 20 pages",
       "Sanity CMS (you edit content yourself, no developer needed)",
       "Blog migration plus 301 redirects to keep your Google rankings",
-      "2 to 3 weeks delivery",
+      "2 to 4 weeks delivery",
     ],
   },
   Scale: {
@@ -41,7 +41,7 @@ const tierMap: Record<Tier, { name: string; price: string; tagline: string; fits
       "30 or more pages, or 50 to 100 page sites",
       "Shopify or WooCommerce headless rebuild",
       "Custom integrations (HubSpot, Salesforce, Stripe, etc.)",
-      "4 to 6 weeks delivery",
+      "4 to 8 weeks delivery",
     ],
   },
   ScalePlus: {

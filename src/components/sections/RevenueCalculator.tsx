@@ -44,13 +44,8 @@ export default function RevenueCalculator() {
               </p>
             </div>
 
-            <button
-              data-cal-namespace="discovery"
-              data-cal-link="pandagen/discovery"
-              data-cal-config='{"layout":"month_view"}'
-              className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all hover:scale-105"
-            >
-              Recover This Revenue <ArrowRight className="w-5 h-5" />
+            <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"recover_this_revenue",location:"cta"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all hover:scale-105">
+                Recover This Revenue <ArrowRight className="w-5 h-5" />
             </button>
           </motion.div>
 

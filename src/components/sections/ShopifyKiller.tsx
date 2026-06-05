@@ -90,13 +90,8 @@ export default function ShopifyKiller({ onOpenQuote }: ShopifyKillerProps) {
                     >
                       See Your Savings <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </button>
-                    <button
-                      data-cal-namespace="discovery"
-                      data-cal-link="pandagen/discovery"
-                      data-cal-config='{"layout":"month_view"}'
-                      className="px-6 py-3 md:px-8 md:py-4 bg-stone-50 border border-stone-200 text-charcoal font-semibold text-sm md:text-base rounded-full hover:bg-stone-100 transition-all"
-                    >
-                      Get Honest Audit
+                    <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"get_honest_audit",location:"cta"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="px-6 py-3 md:px-8 md:py-4 bg-stone-50 border border-stone-200 text-charcoal font-semibold text-sm md:text-base rounded-full hover:bg-stone-100 transition-all">
+                Get Honest Audit
                     </button>
                   </div>
                 </div>

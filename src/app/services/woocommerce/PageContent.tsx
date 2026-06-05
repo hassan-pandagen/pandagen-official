@@ -483,12 +483,7 @@ export default function PageContent() {
                   </li>
                 ))}
               </ul>
-              <button
-                data-cal-namespace="discovery"
-                data-cal-link="pandagen/discovery"
-                data-cal-config='{"layout":"month_view"}'
-                className="w-full px-6 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all"
-              >
+              <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"optimize_my_woocommerce",location:"service_page"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="w-full px-6 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all">
                 Optimize My WooCommerce
               </button>
             </div>
@@ -507,12 +502,7 @@ export default function PageContent() {
                   </li>
                 ))}
               </ul>
-              <button
-                data-cal-namespace="discovery"
-                data-cal-link="pandagen/discovery"
-                data-cal-config='{"layout":"month_view"}'
-                className="w-full px-6 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all"
-              >
+              <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"migrate_my_store",location:"service_page"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="w-full px-6 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all">
                 Migrate My Store
               </button>
             </div>

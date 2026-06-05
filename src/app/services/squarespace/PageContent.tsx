@@ -609,12 +609,7 @@ export default function SquarespacePageContent() {
                 <li className="flex items-center gap-2 text-slate-400 text-sm"><XCircle className="w-4 h-4 text-red-300 shrink-0" /> Still paying $33-65/mo forever</li>
                 <li className="flex items-center gap-2 text-slate-400 text-sm"><XCircle className="w-4 h-4 text-red-300 shrink-0" /> Still locked into templates</li>
               </ul>
-              <button
-                data-cal-namespace="discovery"
-                data-cal-link="pandagen/discovery"
-                data-cal-config='{"layout":"month_view"}'
-                className="w-full py-3 rounded-xl border border-slate-200 text-slate-600 font-bold hover:bg-slate-50 transition-colors"
-              >
+              <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"optimize_existing_site",location:"service_page"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="w-full py-3 rounded-xl border border-slate-200 text-slate-600 font-bold hover:bg-slate-50 transition-colors">
                 Optimize Existing Site
               </button>
             </div>
@@ -633,12 +628,7 @@ export default function SquarespacePageContent() {
                 <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> Zero Monthly Platform Fees</li>
                 <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> You Own the Code</li>
               </ul>
-              <button
-                data-cal-namespace="discovery"
-                data-cal-link="pandagen/discovery"
-                data-cal-config='{"layout":"month_view"}'
-                className="w-full py-4 rounded-xl bg-charcoal text-white font-bold hover:bg-cognac transition-all shadow-lg flex items-center justify-center gap-2"
-              >
+              <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"get_migration_plan",location:"service_page"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="w-full py-4 rounded-xl bg-charcoal text-white font-bold hover:bg-cognac transition-all shadow-lg flex items-center justify-center gap-2">
                 Get Migration Plan <ArrowRight className="w-5 h-5" />
               </button>
             </div>

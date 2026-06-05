@@ -77,6 +77,17 @@ export default function Header({ onOpenQuote }: HeaderProps) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Let any CTA across the site open the quote modal via a window event,
+  // e.g. the Hero "Get a Free Quote" button. Keeps the modal a single instance.
+  useEffect(() => {
+    const openQuote = () => {
+      if (onOpenQuote) onOpenQuote();
+      else setInternalQuoteOpen(true);
+    };
+    window.addEventListener("open-quote-modal", openQuote);
+    return () => window.removeEventListener("open-quote-modal", openQuote);
+  }, [onOpenQuote]);
+
   useEffect(() => {
     document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };

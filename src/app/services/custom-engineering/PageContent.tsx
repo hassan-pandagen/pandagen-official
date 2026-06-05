@@ -423,12 +423,7 @@ export default function PageContent() {
                   </li>
                 ))}
               </ul>
-              <button
-                data-cal-namespace="discovery"
-                data-cal-link="pandagen/discovery"
-                data-cal-config='{"layout":"month_view"}'
-                className="w-full px-6 py-4 border border-charcoal text-charcoal font-bold rounded-full hover:bg-cognac hover:text-white hover:border-cognac transition-all"
-              >
+              <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"build_my_mvp",location:"service_page"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="w-full px-6 py-4 border border-charcoal text-charcoal font-bold rounded-full hover:bg-cognac hover:text-white hover:border-cognac transition-all">
                 Build My MVP
               </button>
             </div>
@@ -448,12 +443,7 @@ export default function PageContent() {
                   </li>
                 ))}
               </ul>
-              <button
-                data-cal-namespace="discovery"
-                data-cal-link="pandagen/discovery"
-                data-cal-config='{"layout":"month_view"}'
-                className="w-full px-6 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all"
-              >
+              <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"build_my_platform",location:"service_page"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="w-full px-6 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all">
                 Build My Platform
               </button>
             </div>

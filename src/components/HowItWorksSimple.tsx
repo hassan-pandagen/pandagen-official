@@ -212,13 +212,8 @@ export default function HowItWorksSimple() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="text-center mt-12"
         >
-          <button
-            data-cal-namespace="discovery"
-            data-cal-link="pandagen/discovery"
-            data-cal-config='{"layout":"month_view"}'
-            className="px-10 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 hover:scale-[1.02] transition-all duration-300 inline-flex items-center gap-2"
-          >
-            Start with Step 1 <ArrowRight className="w-5 h-5" />
+          <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"start_with_step_1",location:"cta"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="px-10 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 hover:scale-[1.02] transition-all duration-300 inline-flex items-center gap-2">
+                Start with Step 1 <ArrowRight className="w-5 h-5" />
           </button>
           <p className="text-sm text-stone-500 mt-3">Response within 2 hours. No credit card required.</p>
         </motion.div>

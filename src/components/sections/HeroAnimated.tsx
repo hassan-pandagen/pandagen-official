@@ -31,12 +31,13 @@ export function HeroCTAs() {
         transition={{ delay: 0.35, duration: 0.5 }}
         className="flex flex-col sm:flex-row items-start gap-4"
       >
-        {/* Primary CTA: Charcoal (signals seriousness, not SaaS) */}
+        {/* Primary CTA: Charcoal (signals seriousness, not SaaS).
+            Opens the quote form (lower friction than Cal.com, better on mobile). */}
         <button
-          data-cal-namespace="discovery"
-          data-cal-link="pandagen/discovery"
-          data-cal-config='{"layout":"month_view"}'
-          onClick={() => trackGAEvent("cta_click", { cta: "get_a_free_quote", location: "hero" })}
+          onClick={() => {
+            trackGAEvent("cta_click", { cta: "get_a_free_quote", location: "hero" });
+            window.dispatchEvent(new Event("open-quote-modal"));
+          }}
           className="w-full sm:w-auto px-8 py-4 bg-charcoal text-white font-bold text-base rounded-full hover:bg-cognac transition-all duration-300 flex items-center justify-center gap-2 shadow-xl hover:shadow-2xl hover:-translate-y-0.5 hover:scale-105 cursor-pointer"
         >
           Get a Free Quote <ArrowRight className="w-5 h-5 text-cognac" />
