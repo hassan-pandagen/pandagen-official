@@ -49,7 +49,7 @@ const articleSchema = {
             "description": "WordPress vs Next.js 2026: speed, SEO, cost, security compared with real data. Next.js scores 95-100, WordPress 35-65. Full breakdown inside.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-11T00:00:00-05:00",
-            "dateModified": "2026-05-12T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -109,7 +109,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-11T00:00:00-05:00",
-            "dateModified": "2026-05-12T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/wordpress-vs-nextjs#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -319,7 +319,7 @@ export default function WordPressVsNextJSPage() {
                             The ceiling matters more than the average. A WordPress site can be optimised with good hosting, aggressive caching, image compression, and a premium CDN. With all of that, you reach 65 to 75/100 mobile PageSpeed. Then you hit a wall. PHP rendering overhead, database query latency, and plugin script weight cannot be optimised away. They are architectural.
                         </BlogText>
                         <BlogQuote>
-                            Our client MyCustomPatches came to us with a Shopify store scoring 45/100 on mobile, loading in 3.2 seconds. After migrating to a custom Next.js build: 97/100 mobile, 0.7 seconds, 45% increase in conversions. Not from new marketing. From speed alone.
+                            Our client MyCustomPatches came to us with a WooCommerce store on WordPress scoring 45/100 on mobile, loading in 3.2 seconds. After migrating to a custom Next.js build: 97/100 mobile, 0.7 seconds, 45% increase in conversions. Not from new marketing. From speed alone.
                         </BlogQuote>
                         <BlogText>
                             According to{" "}

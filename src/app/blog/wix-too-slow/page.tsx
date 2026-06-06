@@ -63,7 +63,7 @@ const articleSchema = {
             "description": "Wix sites average 6.8-second LCP on mobile from 200-400KB of unkillable platform JavaScript. Real 2026 data and the only fix that works.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-06T00:00:00-05:00",
-            "dateModified": "2026-05-12T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -121,7 +121,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-04-06T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00"
+            "dateModified": "2026-06-06T00:00:00-05:00"
         },
         {
             "@type": "Organization",
@@ -214,6 +214,7 @@ export default function WixTooSlowPage() {
                             <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-amber-400 mt-0.5 shrink-0" /><span>Wix loads 200 to 400KB of JavaScript before your content. You cannot remove it.</span></li>
                             <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-amber-400 mt-0.5 shrink-0" /><span>Best-case Wix mobile score: 83/100. Custom Next.js baseline: 95 to 100.</span></li>
                             <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-amber-400 mt-0.5 shrink-0" /><span>Every 2-second mobile delay: 87% cart abandonment rate.</span></li>
+                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" /><span>Real result: we rebuilt Obare Magazine off Wix onto a Next.js frontend with Sanity in a 7-day turnaround. Mobile PageSpeed went from the 50s-60s to 95-100, LCP from over 4 seconds to under 1.</span></li>
                         </ul>
                     </div>
 

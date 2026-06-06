@@ -166,17 +166,20 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
             className="fixed inset-0 bg-black/50 backdrop-blur-xs z-9998"
           />
 
-          {/* 2. THE MODAL CONTAINER */}
-          <div className="fixed inset-0 z-9999 flex items-center justify-center p-3 md:p-4 pointer-events-none">
+          {/* 2. THE MODAL CONTAINER — biased slightly above center so it sits comfortably high on tall phones */}
+          <div className="fixed inset-0 z-9999 flex items-start justify-center pt-[6vh] md:pt-0 md:items-center p-3 md:p-4 pointer-events-none">
             <motion.div
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="relative bg-paper border border-stone-200 w-full max-w-lg rounded-2xl md:rounded-3xl shadow-elevated overflow-y-auto pointer-events-auto max-h-[90dvh]"
+              className="relative bg-paper border border-stone-200 w-full max-w-lg rounded-2xl md:rounded-3xl shadow-elevated overflow-hidden pointer-events-auto max-h-[90dvh] flex flex-col"
               style={{ backgroundColor: "#f5f5f4" }}
             >
-              {/* Noise texture to match the editorial brand surface */}
+              {/* Noise texture to match the editorial brand surface (on the clipped outer box) */}
               <div className="absolute inset-0 bg-noise opacity-40 mix-blend-overlay pointer-events-none" />
+
+              {/* Inner scroll container: this is what actually scrolls, keeping the rounded box and noise fixed */}
+              <div className="relative overflow-y-auto">
 
               {/* SUCCESS STATE */}
               {isSubmitted ? (
@@ -194,7 +197,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                 </div>
               ) : (
                 /* FORM STATE */
-                <div className="relative p-6 md:p-8">
+                <div className="relative p-5 md:p-8">
                   {/* Close Button */}
                   <button
                     onClick={onClose}
@@ -204,18 +207,18 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                     <X className="w-5 h-5" />
                   </button>
 
-                  <div className="mb-6 md:mb-8">
-                    <h2 className="text-2xl md:text-3xl font-bold text-charcoal mb-1">
+                  <div className="mb-4 md:mb-8">
+                    <h2 className="text-xl md:text-3xl font-bold text-charcoal mb-0.5 md:mb-1">
                         Get a <span className="font-serif italic text-cognac">quote.</span>
                     </h2>
-                    <p className="text-stone-600 text-sm">Tell us what you need. We move fast.</p>
+                    <p className="text-stone-600 text-xs md:text-sm">Tell us what you need. We move fast.</p>
                   </div>
 
-                  <form onSubmit={handleSubmit} className="space-y-4 md:space-y-5">
+                  <form onSubmit={handleSubmit} className="space-y-3 md:space-y-5">
 
                     {/* NAME (Required) */}
                     <div>
-                        <label htmlFor="quote-name" className="block text-xs font-bold text-stone-500 uppercase tracking-wider mb-2">
+                        <label htmlFor="quote-name" className="block text-xs font-bold text-stone-500 uppercase tracking-wider mb-1 md:mb-2">
                             Name <span className="text-cognac">*</span>
                         </label>
                         <input
@@ -224,14 +227,14 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                             id="quote-name"
                             name="name"
                             placeholder="John Doe"
-                            className="w-full bg-white border border-stone-200 rounded-xl px-4 py-3 text-charcoal placeholder:text-stone-400 focus:outline-hidden focus:border-cognac focus:ring-1 focus:ring-cognac transition-all"
+                            className="w-full bg-white border border-stone-200 rounded-xl px-4 py-2.5 md:py-3 text-charcoal placeholder:text-stone-400 focus:outline-hidden focus:border-cognac focus:ring-1 focus:ring-cognac transition-all"
                         />
                     </div>
 
                     {/* EMAIL & PHONE GRID (Required) */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5">
                         <div>
-                            <label htmlFor="quote-email" className="block text-xs font-bold text-stone-500 uppercase tracking-wider mb-2">
+                            <label htmlFor="quote-email" className="block text-xs font-bold text-stone-500 uppercase tracking-wider mb-1 md:mb-2">
                                 Email <span className="text-cognac">*</span>
                             </label>
                             <input
@@ -240,11 +243,11 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                                 id="quote-email"
                                 name="email"
                                 placeholder="john@company.com"
-                                className="w-full bg-white border border-stone-200 rounded-xl px-4 py-3 text-charcoal placeholder:text-stone-400 focus:outline-hidden focus:border-cognac focus:ring-1 focus:ring-cognac transition-all"
+                                className="w-full bg-white border border-stone-200 rounded-xl px-4 py-2.5 md:py-3 text-charcoal placeholder:text-stone-400 focus:outline-hidden focus:border-cognac focus:ring-1 focus:ring-cognac transition-all"
                             />
                         </div>
                         <div>
-                            <label htmlFor="quote-phone" className="block text-xs font-bold text-stone-500 uppercase tracking-wider mb-2">
+                            <label htmlFor="quote-phone" className="block text-xs font-bold text-stone-500 uppercase tracking-wider mb-1 md:mb-2">
                                 Phone <span className="text-stone-400 normal-case font-medium">(optional)</span>
                             </label>
                             <input
@@ -252,18 +255,18 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                                 id="quote-phone"
                                 name="phone"
                                 placeholder="+1 (555) 000-0000"
-                                className="w-full bg-white border border-stone-200 rounded-xl px-4 py-3 text-charcoal placeholder:text-stone-400 focus:outline-hidden focus:border-cognac focus:ring-1 focus:ring-cognac transition-all"
+                                className="w-full bg-white border border-stone-200 rounded-xl px-4 py-2.5 md:py-3 text-charcoal placeholder:text-stone-400 focus:outline-hidden focus:border-cognac focus:ring-1 focus:ring-cognac transition-all"
                             />
                         </div>
                     </div>
 
-                    {/* SERVICE (Optional) */}
-                    <div>
-                        <label htmlFor="quote-service" className="block text-xs font-bold text-stone-500 uppercase tracking-wider mb-2">
+                    {/* SERVICE (Optional) — desktop only; on mobile users describe their need in Project Details */}
+                    <div className="hidden md:block">
+                        <label htmlFor="quote-service" className="block text-xs font-bold text-stone-500 uppercase tracking-wider mb-1 md:mb-2">
                             Service Interested In (Optional)
                         </label>
                         <div className="relative">
-                             <select id="quote-service" name="service" defaultValue="" className="w-full bg-white border border-stone-200 rounded-xl px-4 py-3 text-charcoal focus:outline-hidden focus:border-cognac focus:ring-1 focus:ring-cognac appearance-none">
+                             <select id="quote-service" name="service" defaultValue="" className="w-full bg-white border border-stone-200 rounded-xl px-4 py-2.5 md:py-3 text-charcoal focus:outline-hidden focus:border-cognac focus:ring-1 focus:ring-cognac appearance-none">
                                  <option value="" disabled hidden>Select a service...</option>
                                  <option value="WordPress Migration" className="bg-white">WordPress Migration</option>
                                  <option value="Web Apps & Dashboards" className="bg-white">Web Apps &amp; Dashboards</option>
@@ -279,7 +282,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
 
                     {/* DETAILS (Optional) */}
                     <div>
-                        <label htmlFor="quote-details" className="block text-xs font-bold text-stone-500 uppercase tracking-wider mb-2">
+                        <label htmlFor="quote-details" className="block text-xs font-bold text-stone-500 uppercase tracking-wider mb-1 md:mb-2">
                             Project Details (Optional)
                         </label>
                         <textarea
@@ -320,15 +323,15 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
 
                         {/* Add Files Button */}
                         {selectedFiles.length < 3 && (
-                          <label className="flex items-center gap-3 w-full p-3 border border-dashed border-stone-300 rounded-xl cursor-pointer bg-white hover:border-cognac/40 transition-colors group">
+                          <label className="flex items-center gap-3 w-full p-2.5 md:p-3 border border-dashed border-stone-300 rounded-xl cursor-pointer bg-white hover:border-cognac/40 transition-colors group">
                              <div className="p-2 bg-stone-50 rounded-lg text-stone-400 group-hover:text-cognac transition-colors">
                                  <Paperclip className="w-4 h-4" />
                              </div>
                              <div className="text-sm text-stone-600 flex-1">
                                  <span className="text-charcoal font-medium">
                                    {selectedFiles.length === 0 ? 'Attach files' : 'Add another file'}
-                                 </span> (Max 3 allowed &bull; Optional)
-                                 <div className="text-xs text-stone-400 mt-0.5">
+                                 </span> <span className="text-stone-400">(optional)</span>
+                                 <div className="hidden md:block text-xs text-stone-400 mt-0.5">
                                    PDF, DOC, PNG, JPG, ZIP &bull; 10 MB each &bull; 25 MB total
                                  </div>
                              </div>
@@ -370,7 +373,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                      <button
                        type="submit"
                        disabled={isLoading}
-                       className="w-full py-4 bg-charcoal text-white font-bold text-lg rounded-xl hover:bg-cognac transition-all duration-300 flex items-center justify-center gap-2 hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
+                       className="w-full py-3 md:py-4 bg-charcoal text-white font-bold text-base md:text-lg rounded-xl hover:bg-cognac transition-all duration-300 flex items-center justify-center gap-2 hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
                      >
                          {isLoading ? (
                            <>
@@ -387,6 +390,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                   </form>
                 </div>
               )}
+              </div>
             </motion.div>
           </div>
         </>

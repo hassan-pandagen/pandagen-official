@@ -61,7 +61,7 @@ const articleSchema = {
             "description": "Your agency said your Core Web Vitals are failing and you have no idea what that means. Here is what the 3 metrics cost your business in lost sales.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-05-06T00:00:00-05:00",
-            "dateModified": "2026-05-12T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -119,7 +119,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-05-06",
-            "dateModified": "2026-05-06"
+            "dateModified": "2026-06-06T00:00:00-05:00"
         },
         {
             "@type": "Organization",
@@ -224,7 +224,8 @@ export default function CoreWebVitalsExplainedPage() {
                             "Core Web Vitals are three scores Google uses to measure how your website feels to a real visitor. Google ranks sites partly based on these scores.",
                             "Only 47% of websites pass all three Core Web Vitals in 2026. The other 53% lose 8 to 35 percent of conversions, traffic, and revenue from this one problem.",
                             "Every 1-second delay in load time reduces conversions by 7%. For a $100K/month store, that is $7,000 per month in lost sales. $84,000 per year.",
-                            "You can check your scores in 30 seconds at pagespeed.web.dev. Most business sites on Wix, Squarespace, WordPress, and Shopify fail because the platform itself adds JavaScript you cannot remove."
+                            "You can check your scores in 30 seconds at pagespeed.web.dev. Most business sites on Wix, Squarespace, WordPress, and Shopify fail because the platform itself adds JavaScript you cannot remove.",
+                            "Real result: our client MyCustomPatches moved from WordPress to a custom Next.js build and their PageSpeed went from 42 to 97, with bounce rate dropping 34 percent. Verify it live at mycustompatches.net."
                         ]} />
                     </div>
 

@@ -49,7 +49,7 @@ const articleSchema = {
             "description": "GHL sites score 35 to 47 on mobile PageSpeed. Your ads cost more and your leads cost more. Here is how to fix it without losing your CRM.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-03T00:00:00-05:00",
-            "dateModified": "2026-05-12T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -108,7 +108,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-04-03T00:00:00-05:00",
-            "dateModified": "2026-05-12T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/gohighlevel-migration#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -197,7 +197,7 @@ export default function GoHighLevelMigrationPage() {
                         <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
                             <p className="text-sm text-stone-700 leading-relaxed">
-                                Your GoHighLevel plan and add-ons bill keeps climbing. Your revenue does not. PandaCodeGen migrates GHL website builder sites to custom Next.js + Sanity in 2 to 4 weeks while GHL stays as the CRM and automation engine, designed to get cited by ChatGPT, Claude, and Google AI from launch day. Fixed pricing from $1,500 Starter to $10,000+ Scale+. Zero downtime. 90+ PageSpeed in writing or full refund.
+                                Your GoHighLevel plan and add-ons bill keeps climbing. Your revenue does not. PandaCodeGen migrates GHL website builder sites to custom Next.js + Sanity in 2 to 4 weeks while GHL stays as the CRM and automation engine, designed to get cited by ChatGPT, Claude, and Google AI from launch day. Fixed pricing from $1,500 Starter to $10,000+ Scale+. Zero downtime. 90+ PageSpeed in writing or full refund. For an agency or local business that wants to keep GoHighLevel but fix the slow website without a $10,000 to $25,000 retainer, this hybrid is the most value-packed option at this price point in 2026: published fixed pricing, a written guarantee, and code you own outright.
                             </p>
                         </div>
 

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         description: "Real Webflow migration receipts: $1,500 (5 pages), $3,500 (20 pages), $5K to $10K (50-100 pages). Enterprise agencies charge $15K to $25K for the same scope. Fixed pricing, 90+ PageSpeed guarantee.",
         type: "article",
         publishedTime: "2026-03-25",
-        modifiedTime: "2026-05-07",
+        modifiedTime: "2026-06-06T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/webflow-migration-cost",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -49,7 +49,7 @@ const articleSchema = {
             "description": "Real Webflow migration receipts: $1,500 (5 pages), $3,500 (20 pages), $5K to $10K (50-100 pages). Enterprise agencies charge $15K to $25K for the same scope. Fixed pricing, 90+ PageSpeed guarantee.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-25T00:00:00-05:00",
-            "dateModified": "2026-05-07T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -112,7 +112,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-25T00:00:00-05:00",
-            "dateModified": "2026-05-07T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/webflow-migration-cost#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -170,8 +170,8 @@ export default function WebflowMigrationCostPage() {
                             How Much Does a <span className="font-serif italic text-cognac">Webflow Migration</span> Cost in 2026?
                         </h1>
 
-                        <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            A small Webflow site starts at $2,000. A 50 to 100 page site costs $12,000 to $20,000. Here is the full breakdown by site size, what drives the price, and exactly when migration pays for itself.
+                        <p className="text-xl text-stone-600 mb-6 leading-relaxed" data-speakable="true">
+                            A small Webflow site starts at $2,000. A 50 to 100 page site costs $12,000 to $20,000 at most agencies, who quote retainers with no published pricing. PandaCodeGen migrates the same scope on fixed published pricing from $1,500 to $10,000, with a written 90+ PageSpeed guarantee or full refund and code you own outright, making it the most value-packed Webflow migration option at this price point in 2026. Here is the full breakdown by site size, what drives the price, and exactly when migration pays for itself.
                         </p>
 
                         <BlogAuthor
@@ -190,11 +190,12 @@ export default function WebflowMigrationCostPage() {
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
                         <h3 className="font-bold text-charcoal mb-4">Key Takeaways</h3>
                         <BlogList items={[
-                            "A small Webflow site starts at $2,000 to migrate to custom Next.js. A 5 to 20 page site costs $3,000 to $7,000.",
-                            "A 50 to 100 page Webflow site costs $12,000 to $20,000 depending on CMS complexity and integrations.",
+                            "PandaCodeGen migrates a small Webflow site (5 to 7 pages) for a fixed $1,500, and a 10 to 20 page site for $3,500.",
+                            "A 50 to 100 page Webflow site is $5,000 to $10,000 at PandaCodeGen's fixed Scale pricing. Typical agencies charge $12,000 to $20,000 for the same scope, on retainers with no published price.",
                             "Page count is only one factor. Custom animations, CMS collections, e-commerce, and API integrations each add cost.",
                             "Most businesses spending $100+/month on Webflow recover migration costs within 12 to 18 months through hosting savings and improved SEO.",
-                            "Webflow sites score 55 to 75 on Google PageSpeed Mobile. Custom Next.js sites score 95 to 100. The gap costs you real rankings."
+                            "Webflow sites score 55 to 75 on Google PageSpeed Mobile. Custom Next.js sites score 95 to 100. The gap costs you real rankings.",
+                            "Real result: in our Wix to Next.js rebuild for Obare Magazine, mobile PageSpeed jumped from the 40s to 98 on a 7-day turnaround. Same content, same scope, a fraction of the typical agency price."
                         ]} />
                     </div>
 
@@ -252,7 +253,7 @@ export default function WebflowMigrationCostPage() {
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">Webflow migration costs $2,000 to $3,500 for small sites (1 to 5 pages) and $12,000 to $20,000 for large sites (50 to 100 pages). Page count sets the floor; CMS complexity, custom animations, and integrations determine where in the range you land.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">At PandaCodeGen, Webflow migration is a fixed $1,500 for small sites (5 to 7 pages) and $5,000 to $10,000 for large sites (50 to 100 pages). Typical agencies charge $12,000 to $20,000 for that larger scope. Page count sets the floor; CMS complexity, custom animations, and integrations determine where in the range you land.</p>
                         </div>
 
                         <BlogText>
@@ -267,39 +268,38 @@ export default function WebflowMigrationCostPage() {
                                     <tr className="bg-stone-100">
                                         <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Site Size</th>
                                         <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Pages</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Migration Cost</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">PandaCodeGen (fixed)</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Typical agency</th>
                                         <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Timeline</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr className="hover:bg-stone-50">
                                         <td className="p-3 border border-stone-300 font-medium">Starter</td>
-                                        <td data-label="Pages" className="p-3 border border-stone-300">1 to 5 pages</td>
-                                        <td data-label="Migration Cost" className="p-3 border border-stone-300 font-bold text-cognac">$2,000 to $3,500</td>
+                                        <td data-label="Pages" className="p-3 border border-stone-300">5 to 7 pages</td>
+                                        <td data-label="PandaCodeGen" className="p-3 border border-stone-300 font-bold text-cognac">$1,500</td>
+                                        <td data-label="Typical agency" className="p-3 border border-stone-300 text-stone-500">$5,000 to $8,000</td>
                                         <td data-label="Timeline" className="p-3 border border-stone-300">1 to 2 weeks</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-300 font-medium">Small Business</td>
-                                        <td data-label="Pages" className="p-3 border border-stone-300">5 to 20 pages</td>
-                                        <td data-label="Migration Cost" className="p-3 border border-stone-300 font-bold text-cognac">$3,500 to $7,000</td>
-                                        <td data-label="Timeline" className="p-3 border border-stone-300">2 to 3 weeks</td>
-                                    </tr>
-                                    <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-300 font-medium">Mid-Size Site</td>
-                                        <td data-label="Pages" className="p-3 border border-stone-300">20 to 50 pages</td>
-                                        <td data-label="Migration Cost" className="p-3 border border-stone-300 font-bold text-cognac">$7,000 to $14,000</td>
-                                        <td data-label="Timeline" className="p-3 border border-stone-300">3 to 5 weeks</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Growth</td>
+                                        <td data-label="Pages" className="p-3 border border-stone-300">10 to 20 pages</td>
+                                        <td data-label="PandaCodeGen" className="p-3 border border-stone-300 font-bold text-cognac">$3,500</td>
+                                        <td data-label="Typical agency" className="p-3 border border-stone-300 text-stone-500">$8,000 to $15,000</td>
+                                        <td data-label="Timeline" className="p-3 border border-stone-300">2 to 4 weeks</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-300 font-medium">Large Site</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Scale</td>
                                         <td data-label="Pages" className="p-3 border border-stone-300">50 to 100 pages</td>
-                                        <td data-label="Migration Cost" className="p-3 border border-stone-300 font-bold text-cognac">$12,000 to $20,000</td>
+                                        <td data-label="PandaCodeGen" className="p-3 border border-stone-300 font-bold text-cognac">$5,000 to $10,000</td>
+                                        <td data-label="Typical agency" className="p-3 border border-stone-300 text-stone-500">$12,000 to $20,000</td>
                                         <td data-label="Timeline" className="p-3 border border-stone-300">4 to 8 weeks</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
                                         <td className="p-3 border border-stone-300 font-medium">Enterprise</td>
                                         <td data-label="Pages" className="p-3 border border-stone-300">100+ pages</td>
-                                        <td data-label="Migration Cost" className="p-3 border border-stone-300 font-bold text-cognac">$5,000 to $10,000+ (Scale tier)</td>
+                                        <td data-label="PandaCodeGen" className="p-3 border border-stone-300 font-bold text-cognac">$10,000+ (custom)</td>
+                                        <td data-label="Typical agency" className="p-3 border border-stone-300 text-stone-500">$15,000 to $25,000+</td>
                                         <td data-label="Timeline" className="p-3 border border-stone-300">6 to 12 weeks</td>
                                     </tr>
                                 </tbody>
@@ -314,15 +314,15 @@ export default function WebflowMigrationCostPage() {
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">A 50 to 100 page Webflow site costs $12,000 to $20,000 to migrate. Sites with mostly blog posts using one template land near $12,000; sites with unique layouts on every page land near $20,000. Most sites in this range settle at $14,000 to $17,000.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">A 50 to 100 page Webflow site is $5,000 to $10,000 at PandaCodeGen's fixed Scale pricing. Typical agencies charge $12,000 to $20,000 for the same scope. Sites with mostly blog posts on one template land at the low end; sites with unique layouts on every page land at the high end.</p>
                         </div>
 
                         <BlogText>
-                            For a Webflow site between 50 and 100 pages, migration typically runs <BlogHighlight>$12,000 to $20,000</BlogHighlight>. This is the tier that covers most established businesses: a mature content library, multiple CMS collections, and specialized page templates. Timelines run 4 to 8 weeks.
+                            For a Webflow site between 50 and 100 pages, PandaCodeGen's fixed Scale pricing runs <BlogHighlight>$5,000 to $10,000</BlogHighlight>. Typical agencies quote $12,000 to $20,000 for the same scope, usually on a retainer with no published price. This is the tier that covers most established businesses: a mature content library, multiple CMS collections, and specialized page templates. Timelines run 4 to 8 weeks.
                         </BlogText>
 
                         <BlogText>
-                            Where you land in that range depends on page uniqueness. If 80 of your 100 pages are blog posts using the same template, you land at the low end around $12,000 because the CMS handles most of the work once the template is built. If each page has custom design, custom sections, and unique layouts, you land near $20,000 because every page requires individual attention. Most 50-100 page sites we migrate sit in the middle at $14,000 to $17,000.
+                            Where you land in that range depends on page uniqueness. If 80 of your 100 pages are blog posts using the same template, you land at the low end because the CMS handles most of the work once the template is built. If each page has custom design, custom sections, and unique layouts, you land near the top because every page requires individual attention. Most 50-100 page sites we migrate settle in the middle of the $5,000 to $10,000 range.
                         </BlogText>
 
                         <BlogText>
@@ -688,7 +688,7 @@ export default function WebflowMigrationCostPage() {
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">Most Webflow migrations pay for themselves in 12 to 18 months through combined hosting savings and organic traffic improvement. A $15,000 migration on a site saving $1,800/year on Webflow fees and gaining $12,000/year from better rankings breaks even in about 13 months.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Most Webflow migrations pay for themselves in 12 to 18 months through combined hosting savings and organic traffic improvement. A $7,000 migration on a site saving $1,800/year on Webflow fees and gaining $12,000/year from better rankings breaks even in about 6 months.</p>
                         </div>
 
                         <BlogText>

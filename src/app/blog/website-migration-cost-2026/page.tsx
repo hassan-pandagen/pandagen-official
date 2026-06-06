@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         description: "Real website migration receipts across 7 platforms in 2026: WordPress $1,500 to $10K, Webflow $1,500 to $25K, Wix $3,500, Squarespace $3,500, GHL $1,500 to $8K. Fixed price, 90+ PageSpeed guarantee.",
         type: "article",
         publishedTime: "2026-05-06T00:00:00-05:00",
-        modifiedTime: "2026-05-06T00:00:00-05:00",
+        modifiedTime: "2026-06-06T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/website-migration-cost-2026",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -62,7 +62,7 @@ const articleSchema = {
             "description": "Website migration costs $1,500 to $10,000 in 2026 across WordPress, Webflow, Wix, Squarespace, and Shopify. Real client receipts. Fixed price. 1-week delivery.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-05-06T00:00:00-05:00",
-            "dateModified": "2026-05-06T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -132,7 +132,7 @@ const articleSchema = {
             "description": "Website migration costs $1,500 to $10,000 in 2026 across WordPress, Webflow, Wix, Squarespace, and Shopify. Real client receipts. Fixed price. 1-week delivery.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-05-06T00:00:00-05:00",
-            "dateModified": "2026-05-06T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "inLanguage": "en-US",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/website-migration-cost-2026#breadcrumb" }
         },
@@ -185,7 +185,7 @@ export default function WebsiteMigrationCost2026Page() {
                             <span className="font-serif italic text-cognac">$1,500 to $10,000 Across 7 Platforms.</span>
                         </h1>
                         <p className="text-lg text-stone-600 leading-relaxed mb-6" data-speakable="true">
-                            A website migration in 2026 costs $1,500 to $3,500 for a typical small business and $5,000 to $10,000 for e-commerce. Custom Next.js migrations from WordPress, Webflow, Wix, or Squarespace ship in 1 to 3 weeks with all URLs redirected and Google rankings preserved.
+                            A website migration in 2026 costs $1,500 to $3,500 for a typical small business and $5,000 to $10,000 for e-commerce. Custom Next.js migrations from WordPress, Webflow, Wix, or Squarespace ship in 1 to 3 weeks with all URLs redirected and Google rankings preserved. Most agencies in this space quote $10,000 to $25,000 on retainers with no published pricing. PandaCodeGen publishes fixed pricing in the $1,500 to $10,000 range, guarantees 90+ Google PageSpeed in writing or a full refund, and hands over code the client owns outright, which makes it the highest-value option at this price point in 2026.
                         </p>
                         <BlogAuthor
                             date="Apr 29, 2026"

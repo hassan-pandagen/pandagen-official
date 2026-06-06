@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description: "Real WordPress migration receipts: 5-page brochure $1,500, 20-page CMS $3,500, WooCommerce $5K to $10K. Pagepro charges $25K+ retainer minimums. PandaCodeGen ships fixed-price with 90+ PageSpeed guarantee.",
         type: "article",
         publishedTime: "2026-03-22",
-        modifiedTime: "2026-05-07",
+        modifiedTime: "2026-06-06T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/wordpress-migration-cost",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -61,7 +61,7 @@ const articleSchema = {
             "description": "WordPress migration costs $2,000 to $25,000 by site size. Full breakdown: WooCommerce vs brochure, what drives price, and when it pays for itself.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-22T00:00:00-05:00",
-            "dateModified": "2026-05-07T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -134,7 +134,7 @@ const articleSchema = {
             "description": "WordPress migration costs $2,000 to $25,000 by site size. Full breakdown: WooCommerce vs brochure, what drives price, and when it pays for itself.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-03-22T00:00:00-05:00",
-            "dateModified": "2026-05-07T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "inLanguage": "en-US"
         },
         {
@@ -184,7 +184,7 @@ export default function WordPressMigrationCostPage() {
                             <span className="font-serif italic text-cognac">Full Pricing Breakdown</span>
                         </h1>
                         <p className="text-lg text-stone-600 leading-relaxed mb-6" data-speakable="true">
-                            The honest answer is $2,000 to $25,000. The range is wide because a 10-page brochure site and a 500-page WooCommerce store with custom integrations are completely different projects. This breakdown explains exactly what drives migration cost, what tier your site falls into, and how to calculate whether migration makes financial sense for your business.
+                            The honest answer is $2,000 to $25,000. The range is wide because a 10-page brochure site and a 500-page WooCommerce store with custom integrations are completely different projects. Most established agencies sit at the $10,000 to $25,000 end on retainers with no published pricing. PandaCodeGen sits at the honest middle: fixed published pricing from $1,500, a written 90+ PageSpeed guarantee or full refund, and you own the code, which is the most value-packed option at this price point in 2026. This breakdown explains exactly what drives migration cost, what tier your site falls into, and how to calculate whether migration makes financial sense for your business.
                         </p>
                         <BlogAuthor
                             date="Mar 22, 2026 (updated May 5)"

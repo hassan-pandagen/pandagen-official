@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         description: "Squarespace costs $1,500 to $5,500 over 3 years. Here is the real migration cost by site size and exactly when it pays for itself.",
         type: "article",
         publishedTime: "2026-05-08T00:00:00-05:00",
-        modifiedTime: "2026-05-08T00:00:00-05:00",
+        modifiedTime: "2026-06-06T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/squarespace-migration-cost",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -60,7 +60,7 @@ const articleSchema = {
             "description": "Squarespace costs $1,500 to $5,500 over 3 years with every fee counted. Real migration cost by site size plus the ROI payback math.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-05-08T00:00:00-05:00",
-            "dateModified": "2026-05-12T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -121,7 +121,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-05-08T00:00:00-05:00",
-            "dateModified": "2026-05-12T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/squarespace-migration-cost#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -364,33 +364,27 @@ export default function SquarespaceMinCostPage() {
                                 <tbody>
                                     <tr className="hover:bg-stone-50">
                                         <td className="p-3 border border-stone-300 font-medium">Portfolio / Freelancer</td>
-                                        <td data-label="Pages" className="p-3 border border-stone-300">3 to 8 pages</td>
-                                        <td data-label="Migration Cost" className="p-3 border border-stone-300 font-bold text-cognac">$3,500 to $5,500</td>
+                                        <td data-label="Pages" className="p-3 border border-stone-300">5 to 7 pages</td>
+                                        <td data-label="Migration Cost" className="p-3 border border-stone-300 font-bold text-cognac">$1,500 (Starter)</td>
                                         <td data-label="Timeline" className="p-3 border border-stone-300">1 to 2 weeks</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
                                         <td className="p-3 border border-stone-300 font-medium">Small Business Site</td>
-                                        <td data-label="Pages" className="p-3 border border-stone-300">8 to 20 pages</td>
-                                        <td data-label="Migration Cost" className="p-3 border border-stone-300 font-bold text-cognac">$5,500 to $10,000</td>
-                                        <td data-label="Timeline" className="p-3 border border-stone-300">2 to 3 weeks</td>
+                                        <td data-label="Pages" className="p-3 border border-stone-300">10 to 20 pages</td>
+                                        <td data-label="Migration Cost" className="p-3 border border-stone-300 font-bold text-cognac">$3,500 (Growth)</td>
+                                        <td data-label="Timeline" className="p-3 border border-stone-300">2 to 4 weeks</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
                                         <td className="p-3 border border-stone-300 font-medium">Service Business</td>
-                                        <td data-label="Pages" className="p-3 border border-stone-300">20 to 50 pages</td>
-                                        <td data-label="Migration Cost" className="p-3 border border-stone-300 font-bold text-cognac">$10,000 to $18,000</td>
-                                        <td data-label="Timeline" className="p-3 border border-stone-300">3 to 6 weeks</td>
+                                        <td data-label="Pages" className="p-3 border border-stone-300">30+ pages</td>
+                                        <td data-label="Migration Cost" className="p-3 border border-stone-300 font-bold text-cognac">$5,000 to $10,000 (Scale)</td>
+                                        <td data-label="Timeline" className="p-3 border border-stone-300">4 to 8 weeks</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
                                         <td className="p-3 border border-stone-300 font-medium">E-Commerce Store</td>
                                         <td data-label="Pages" className="p-3 border border-stone-300">Any size</td>
-                                        <td data-label="Migration Cost" className="p-3 border border-stone-300 font-bold text-cognac">Add 20 to 30%</td>
+                                        <td data-label="Migration Cost" className="p-3 border border-stone-300 font-bold text-cognac">Custom quote</td>
                                         <td data-label="Timeline" className="p-3 border border-stone-300">Add 1 to 3 weeks</td>
-                                    </tr>
-                                    <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-300 font-medium">Large Site</td>
-                                        <td data-label="Pages" className="p-3 border border-stone-300">50+ pages</td>
-                                        <td data-label="Migration Cost" className="p-3 border border-stone-300 font-bold text-cognac">$5,000 to $10,000+ (Scale tier)</td>
-                                        <td data-label="Timeline" className="p-3 border border-stone-300">5 to 10 weeks</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -620,21 +614,21 @@ export default function SquarespaceMinCostPage() {
                                 <tbody>
                                     <tr className="hover:bg-stone-50">
                                         <td className="p-3 border border-stone-300 font-medium">Starter</td>
-                                        <td data-label="Site Size" className="p-3 border border-stone-300">Up to 10 pages</td>
-                                        <td data-label="Price" className="p-3 border border-stone-300 font-bold text-cognac">From $3,500</td>
+                                        <td data-label="Site Size" className="p-3 border border-stone-300">5 to 7 pages</td>
+                                        <td data-label="Price" className="p-3 border border-stone-300 font-bold text-cognac">$1,500</td>
                                         <td data-label="Includes" className="p-3 border border-stone-300 text-stone-500">Full migration + redirects + SEO</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-300 font-medium">Business</td>
-                                        <td data-label="Site Size" className="p-3 border border-stone-300">10 to 30 pages</td>
-                                        <td data-label="Price" className="p-3 border border-stone-300 font-bold text-cognac">From $6,500</td>
-                                        <td data-label="Includes" className="p-3 border border-stone-300 text-stone-500">Everything in Starter + blog migration</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Growth</td>
+                                        <td data-label="Site Size" className="p-3 border border-stone-300">10 to 20 pages</td>
+                                        <td data-label="Price" className="p-3 border border-stone-300 font-bold text-cognac">$3,500</td>
+                                        <td data-label="Includes" className="p-3 border border-stone-300 text-stone-500">Everything in Starter + Sanity CMS + blog migration</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-300 font-medium">Growth</td>
-                                        <td data-label="Site Size" className="p-3 border border-stone-300">30 to 60 pages</td>
-                                        <td data-label="Price" className="p-3 border border-stone-300 font-bold text-cognac">From $12,000</td>
-                                        <td data-label="Includes" className="p-3 border border-stone-300 text-stone-500">Everything in Business + custom CMS</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Scale</td>
+                                        <td data-label="Site Size" className="p-3 border border-stone-300">30+ pages</td>
+                                        <td data-label="Price" className="p-3 border border-stone-300 font-bold text-cognac">$5,000 to $10,000</td>
+                                        <td data-label="Includes" className="p-3 border border-stone-300 text-stone-500">Everything in Growth + custom integrations</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
                                         <td className="p-3 border border-stone-300 font-medium">E-Commerce</td>
@@ -647,7 +641,7 @@ export default function SquarespaceMinCostPage() {
                         </div>
 
                         <BlogText>
-                            Every package includes 301 redirect mapping, full metadata migration, Google Search Console setup, schema markup, and a 95 to 100/100 PageSpeed guarantee. The guarantee is in writing. We do not launch until the score is there.
+                            Every package includes 301 redirect mapping, full metadata migration, Google Search Console setup, schema markup, and a written 90+ PageSpeed guarantee. The guarantee is in the contract. We do not launch until the score is there.
                         </BlogText>
 
                         <BlogText>

@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description: "Squarespace PageSpeed stuck at 30-55 on mobile? The cause is a JavaScript bundle you cannot remove. Full diagnosis and the only fix that works.",
         type: "article",
         publishedTime: "2026-03-27T00:00:00-05:00",
-        modifiedTime: "2026-03-27T00:00:00-05:00",
+        modifiedTime: "2026-06-06T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/squarespace-too-slow",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -61,7 +61,7 @@ const schemaData = {
             "description": "Squarespace PageSpeed stuck at 30-55 on mobile? The cause is a JavaScript bundle you cannot remove. Full diagnosis and the only fix that works.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-27T00:00:00-05:00",
-            "dateModified": "2026-05-12T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "name": "Hassan Jamal",
@@ -142,7 +142,7 @@ const schemaData = {
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/squarespace-too-slow#breadcrumb" },
             "inLanguage": "en-US",
             "datePublished": "2026-03-27T00:00:00-05:00",
-            "dateModified": "2026-03-27T00:00:00-05:00"
+            "dateModified": "2026-06-06T00:00:00-05:00"
         },
         {
             "@type": "Organization",
@@ -221,6 +221,7 @@ export default function SquarespaceToSlowPage() {
                                 "No Squarespace setting or third-party tool removes this bundle. The ceiling is 55 to 65 even fully optimized",
                                 "Poor Core Web Vitals directly cost rankings when competing sites perform better",
                                 "A custom Next.js build delivers 95 to 100 on mobile and LCP under 1.2 seconds",
+                                "Real result: we rebuilt an Austin photographer off Squarespace onto Next.js in 9 days. PageSpeed went 44 to 98, LCP 5.2s to 0.8s, and she climbed from position 11 to 3 on her primary keyword in 47 days",
                             ].map((item) => (
                                 <li key={item} className="flex items-start gap-2 text-sm text-stone-700">
                                     <CheckCircle2 className="w-4 h-4 text-violet-500 mt-0.5 shrink-0" />

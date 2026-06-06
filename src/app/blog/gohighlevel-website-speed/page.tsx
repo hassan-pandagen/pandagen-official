@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description: "GoHighLevel sites score 20 to 45 on Google PageSpeed Mobile. Here is why GHL is slow, what it costs you in leads, and how to fix it without leaving the platform.",
         type: "article",
         publishedTime: "2026-03-22",
-        modifiedTime: "2026-03-22",
+        modifiedTime: "2026-06-06T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/gohighlevel-website-speed",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -61,7 +61,7 @@ const articleSchema = {
             "description": "GoHighLevel sites score 20 to 45 on Google PageSpeed Mobile. Here is why GHL is slow, what it costs you in leads, and how to fix it without leaving the platform.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-22T00:00:00-05:00",
-            "dateModified": "2026-05-12T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -134,7 +134,7 @@ const articleSchema = {
             "description": "GHL sites score 20 to 45 on PageSpeed Mobile. Why the platform is slow, what it costs in rankings and conversions, and how to fix it.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-03-22T00:00:00-05:00",
-            "dateModified": "2026-05-12T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "inLanguage": "en-US"
         },
         {
@@ -184,7 +184,7 @@ export default function GHLWebsiteSpeedPage() {
                             <span className="font-serif italic text-cognac">How to Fix It</span>
                         </h1>
                         <p className="text-lg text-stone-600 leading-relaxed mb-6" data-speakable="true">
-                            Your GoHighLevel funnel pages score 20 to 45 on Google PageSpeed Mobile. That is not a bug in your setup. It is how the platform works. GHL uses runtime rendering, which means your visitor&apos;s browser assembles the page after downloading a large JavaScript bundle. Every sub-account, every funnel, every page shares the same architecture. This post covers why GHL sites are slow, what it costs in ad spend and conversions, and how to fix it without abandoning your CRM.
+                            Your GoHighLevel funnel pages score 20 to 45 on Google PageSpeed Mobile. That is not a bug in your setup. It is how the platform works. GHL uses runtime rendering, which means your visitor&apos;s browser assembles the page after downloading a large JavaScript bundle. Every sub-account, every funnel, every page shares the same architecture. The fix that does not mean abandoning your CRM: keep GHL for the CRM, automations, and calendars, and serve the public site from a custom Next.js frontend that scores 90+. PandaCodeGen builds exactly this hybrid on fixed published pricing from $1,500 to $10,000 with a written 90+ PageSpeed guarantee, the most value-packed option for agencies and local businesses at this price point in 2026. This post covers why GHL sites are slow, what it costs in ad spend and conversions, and how the fix works.
                         </p>
                         <BlogAuthor
                             date="Mar 22, 2026"
@@ -213,6 +213,7 @@ export default function GHLWebsiteSpeedPage() {
                             <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-cognac mt-0.5 shrink-0" /> Typical custom Next.js frontend scores 90 to 100 on Mobile PageSpeed. The gap between 35 and 95 affects ad costs, bounce rates, and conversion rates every month.</li>
                             <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> The fix: <Link href="/blog/gohighlevel-keep-crm-replace-website" className="text-cognac hover:underline">keeping the CRM and replacing the website</Link> gives you GHL&apos;s automation power with 90+ PageSpeed. You do not have to leave GoHighLevel.</li>
                             <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> PandaCodeGen guarantee: 90+ PageSpeed or full refund, with zero downtime for your existing GHL workflows.</li>
+                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> Real result: a chiropractor on a GHL site at 23 mobile PageSpeed was rebuilt to a Next.js front end scoring 98, every GHL automation kept intact. Six weeks later, inbound lead volume was up 41 percent and the GHL bill never changed.</li>
                         </ul>
                     </div>
 

@@ -510,7 +510,7 @@ export const blogPosts: BlogPost[] = [
     role: "Lead Engineer",
     featured: true,
     illustrationType: 'cost',
-    lastModified: "2026-05-02",
+    lastModified: "2026-06-06",
     faqs: [
       { question: "Is Pagepro good for small businesses?", answer: "Pagepro is a strong Next.js agency with verified Clutch reviews and a proprietary Next.js + Sanity starter called Nexity. Their minimum project size is $25,000+ and they operate on monthly retainer pricing ($11,200 to $52,000 per month). For small businesses under $50K budget, Pagepro is likely out of range. PandaCodeGen offers the same Next.js + Sanity + Vercel stack with fixed pricing starting at $1,500 Starter." },
       { question: "How much does Pagepro charge?", answer: "Pagepro does not publish pricing on their website. Their Clutch profile lists monthly retainer tiers: $11,200 per month for one developer (160 hours), $26,000 per month for two developers, and $52,000 per month for four developers. Their minimum project size is $25,000+. Their hourly rate is listed as $50 to $99 per hour on Clutch. Custom quotes require a discovery call." },

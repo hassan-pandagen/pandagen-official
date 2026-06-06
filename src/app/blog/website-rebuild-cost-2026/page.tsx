@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description: "Website rebuild costs range from $2,000 freelance to $250,000 enterprise in 2026. Honest pricing by platform, what drives cost up, and how to spot a padded quote.",
         type: "article",
         publishedTime: "2026-04-19T00:00:00-05:00",
-        modifiedTime: "2026-05-05T00:00:00-05:00",
+        modifiedTime: "2026-06-06T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/website-rebuild-cost-2026",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -63,7 +63,7 @@ const articleSchema = {
             "description": "Website rebuild costs range from $2,000 freelance to $250,000 enterprise in 2026. Honest pricing by platform, what drives cost up, and how to spot a padded quote.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-19T00:00:00-05:00",
-            "dateModified": "2026-05-12T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -139,7 +139,7 @@ const articleSchema = {
             "description": "Website rebuild costs range from $2,000 freelance to $250,000 enterprise in 2026. Honest pricing by platform, what drives cost up, and how to spot a padded quote.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-04-19T00:00:00-05:00",
-            "dateModified": "2026-05-12T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "inLanguage": "en-US",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/website-rebuild-cost-2026#breadcrumb" }
         },
@@ -221,6 +221,7 @@ export default function WebsiteRebuildCost2026Page() {
                             <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-cognac mt-0.5 shrink-0" /> Most businesses pay $2,000 to $30,000 total. Freelancer $2K-$12K, boutique studio $8K-$30K, full agency $30K-$120K. The $60K agency quote and the $12K specialist quote often ship the same outcome.</li>
                             <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-cognac mt-0.5 shrink-0" /> Rebuild and redesign are not the same. A redesign updates how the site looks. A rebuild replaces the underlying technology. Redesigns cost 30 to 60 percent less but do not fix speed, security, or platform lock-in.</li>
                             <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-cognac mt-0.5 shrink-0" /> A well-scoped rebuild on a modern framework like Next.js pays for itself in 12 to 24 months through reduced hosting and maintenance costs alone. Every PandaCodeGen rebuild ships with a written 90+ PageSpeed Mobile guarantee. If the site does not hit it, we keep working until it does.</li>
+                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-cognac mt-0.5 shrink-0" /> Real results: MyCustomPatches rebuilt from 45 to 100 PageSpeed with hosting cut from $150/month to $0, and our own store Panda Patches went 64 to 99. A digital magazine quoted $35,000 by an agency shipped with us for $1,200 in one week.</li>
                         </ul>
                     </div>
 

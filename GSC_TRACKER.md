@@ -649,6 +649,30 @@ Track which posts are outperforming so we write more like them.
 
 ---
 
+## Non-Commodity Content Standard (Jun 6, 2026 — researched, now a tracked metric)
+
+**Why this is now a primary lever:** Google's March 2026 core update re-weighted Information Gain and Google's own term for the target is "non-commodity content." Verified 2026 data: proprietary-data / case-study pages **gained 15-25% visibility** in the March update; original-data brands get AI citations at **~3x** the rate of repurposed-stat brands; firsthand-research sites saw **+45% sustained organic traffic**. Penalties: templated/rewritten content **dropped 30-50%**, generic AI-farm content **lost 60-80%**, and "summarize the top 10 with no original data" pages are the single most consistent losers across 2025-2026 core updates. Case studies + pricing pages out-cite "what is/how to" guides for AI traffic. Full rule lives in **AEO_BLOG_TEMPLATE.md** (the non-commodity rule section).
+
+**The split standard (the 2026 metric is Information Density = unique facts ÷ word count, NOT word count):**
+- **≥1 first-party non-commodity asset is mandatory per blog** (named receipt / own dataset / screenshot / published price). Zero = "consistent loser." Never ship without one.
+- **Foreground it** in the first ~25% (the `data-speakable` block) — that is what AI lifts.
+- **Opening block ≈ 50% first-party / 50% framing.** Do not lead with borrowed Deloitte/Portent stats.
+- **~1 verifiable fact per 75-100 words.** Commodity is allowed as wrapper, never filler.
+- **Named/live-linked > anonymous.** Round-number invented "profiles" are the worst case — cut them.
+
+**Per-page non-commodity rating (audited Jun 6, 2026):**
+
+| Score | Meaning | Action |
+|-------|---------|--------|
+| 8-10 | Dense first-party, foregrounded | Leave. These are the citation magnets. |
+| 6-7 | Real receipt present, maybe not foregrounded | Foreground-fix (move receipt up). |
+| 4-5 | Thin first-party, mostly framing | Foreground-fix + add a fact or two. |
+| 2-3 | Pure commodity, no/weak first-party | Foreground-fix if it has a receipt to move; merge/retire if duplicate; rewrite only if a real receipt can anchor it. |
+
+**Jun 6 audit verdicts (70 blogs):** ~8 pages 8-9 (aeo-playbook, spending-more-on-ads, pagepro-alternatives, wordpress-april-2026-evidence, wordpress-vs-nextjs, ghl-keep-crm, ghl-website-speed, webflow-user-accounts-sunset). ~18 solid (6-7). ~22 mediocre (4-5). ~22 commodity (2-3). **Jun 6 action taken:** 8 BURIED receipts foregrounded (gohighlevel-website-speed, webflow-migration-cost, squarespace-too-slow, wix-too-slow, core-web-vitals-explained, shopify-app-costs, website-rebuild-cost, + value sentences earlier). **4 NONE pages** (webflow-migration-50-to-100, webflow-user-accounts-sunset, shopify-stocky-sunset, divi-theme-slow) have no receipt to move — webflow-50-100 + webflow-sunset get one when Obare is finished; others pending a real client result. **3 data-integrity bugs fixed** (squarespace pricing tables off-canon, webflow $12-20K vs $5-10K contradiction, wordpress-vs-nextjs Shopify→WooCommerce error).
+
+---
+
 ## Performance Rating Scale
 
 | Metric | Bad | Okay | Good | Excellent |
@@ -658,6 +682,7 @@ Track which posts are outperforming so we write more like them.
 | CTR | < 0.5% | 0.5-2% | 2-5% | 5%+ |
 | Indexed Pages | < 30 | 30-50 | 50-80 | 80+ |
 | Avg Position | > 50 | 20-50 | 10-20 | < 10 |
+| **Non-commodity score** | **0-3 (commodity)** | **4-5** | **6-7** | **8-10 (citation magnet)** |
 
 ## 30/60/90 Day Targets (from Mar 31, 2026)
 

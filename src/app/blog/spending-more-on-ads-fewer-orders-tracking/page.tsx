@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         description: "Meta, Google, and AI shopping agents can no longer see most of your conversions. Why platform stores leak the signal, what it costs, and the fix that is not another monthly app.",
         type: "article",
         publishedTime: "2026-06-04",
-        modifiedTime: "2026-06-04",
+        modifiedTime: "2026-06-06T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/spending-more-on-ads-fewer-orders-tracking",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -62,7 +62,7 @@ const articleSchema = {
             "description": "In 2026, browser tracking misses 50% or more of conversions. When Meta, Google, and AI shopping agents cannot see your sales, they cannot attribute or optimize, so your cost per order quietly rises. Platform stores leak this signal at the source. Server-side tracking on a custom build fixes it without a monthly app.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-06-04T00:00:00-05:00",
-            "dateModified": "2026-06-04T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -134,7 +134,7 @@ const articleSchema = {
             "description": "Why Meta, Google, and AI shopping agents can no longer see most of your conversions, what it costs, and the custom-build fix.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-06-04T00:00:00-05:00",
-            "dateModified": "2026-06-04T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/spending-more-on-ads-fewer-orders-tracking#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -350,6 +350,14 @@ export default function SpendingMoreOnAdsFewerOrdersPage() {
 
                     <BlogText>
                         That last point is where this connects to everything else we build. A store that AI cannot read does not get surfaced when a shopper asks ChatGPT for a recommendation, and a sale made inside an AI conversation often never shows up in your analytics at all. The fix for ad attribution and the fix for AI visibility are the same fix: own a clean, structured, server-side data layer. For more on the AI side, see <Link href="/blog/google-universal-commerce-protocol-what-it-means-for-your-store" className="text-cognac hover:underline font-medium">what the Universal Commerce Protocol means for your store</Link>.
+                    </BlogText>
+
+                    <BlogHeader id="meta-free-capi">Meta Made Conversions API Free. So Why Pay Anyone to Set It Up?</BlogHeader>
+                    <BlogText>
+                        In April 2026, Meta launched a free one-click Conversions API. It is real and it is genuinely useful, so it is worth being clear about what it does and does not do. The free button forwards a server-side copy of the events your pixel is <em>already</em> sending. It is a relay. It does not install your pixel, decide which events fire and when, pass the customer-match details that raise the score, remove duplicate events, or tie each sale back to the ad that earned it. If the data going in is thin, the free version just relays thin data faster. The 17.8% lower cost per result Meta reports comes from a properly matched setup, not from flipping the relay on.
+                    </BlogText>
+                    <BlogText>
+                        So someone still has to build the layer underneath it: the pixel, the right events with the right values, the securely-matched identifiers that push the score from 3 toward 8, the deduplication, and the lead-source attribution that tells the platform which ad produced which customer. That is the actual work, and it is the part that recovers revenue. Agencies and tracking platforms charge <strong>$2,000 to $5,000 upfront</strong> for it, often plus a monthly fee for a hosted container. On a custom Next.js build that data layer lives on the server you already own, so there is no separate container to rent and no monthly tracking app. We build proper server-side tracking with full match quality and ad-source attribution into the project itself, which is uncommon at this price point in 2026.
                     </BlogText>
 
                     <figure className="my-8">
