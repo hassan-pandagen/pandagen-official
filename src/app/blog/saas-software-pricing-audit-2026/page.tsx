@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description: "Webflow restructured May 13. Microsoft 365 tier increases take effect July 1, 2026. Klaviyo's stealth billing change raised most stores 30 to 150%. Full 2026 pricing audit with primary sources.",
         type: "article",
         publishedTime: "2026-05-31T00:00:00-05:00",
-        modifiedTime: "2026-05-31T00:00:00-05:00",
+        modifiedTime: "2026-06-06T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/saas-software-pricing-audit-2026",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -61,7 +61,7 @@ const articleSchema = {
             "description": "Webflow restructured May 13. Microsoft 365 tier increases take effect July 1, 2026. Klaviyo's stealth billing change raised most stores 30 to 150%. Recharge added a $25 tier existing customers cannot use. Full 2026 pricing audit across 30 tools with primary sources and a replacement framework.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-05-31T00:00:00-05:00",
-            "dateModified": "2026-05-31T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -69,7 +69,7 @@ const articleSchema = {
                 "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
-                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
+                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
             },
             "publisher": {
                 "@type": "Organization",
@@ -131,7 +131,7 @@ const articleSchema = {
             "description": "Webflow restructured May 13. Microsoft 365 tier increases take effect July 1, 2026. Klaviyo's stealth billing change raised most stores 30 to 150%. Full 2026 pricing audit across 30 tools.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-05-31T00:00:00-05:00",
-            "dateModified": "2026-05-31T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "inLanguage": "en-US"
         },
         {
@@ -146,12 +146,22 @@ const articleSchema = {
             "description": "PandaCodeGen builds custom Next.js websites and operations software that replace expensive SaaS stacks. Sites load under 1 second, score 100/100 on Google PageSpeed, and you own the code outright.",
             "areaServed": "Worldwide",
             "sameAs": [
+                "https://x.com/PandaCodeGen",
                 "https://www.linkedin.com/company/pandacodegen",
                 "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
-                "https://twitter.com/pandacodegen",
+                "https://github.com/hassan-pandagen",
                 "https://clutch.co/profile/panda-code-gen",
                 "https://www.trustpilot.com/review/pandacodegen.com",
-                "https://www.google.com/maps?cid=16271659886069582158"
+                "https://www.google.com/maps?cid=16271659886069582158",
+                "https://www.goodfirms.co/company/pandacodegen",
+                "https://www.crunchbase.com/organization/pandacodegen",
+                "https://www.designrush.com/agency/profile/pandacodegen",
+                "https://www.sortlist.com/agency/pandacodegen",
+                "https://www.f6s.com/pandacodegen",
+                "https://www.sanity.io/exchange/community/pandacodegen",
+                "https://www.behance.net/pandacodegen",
+                "https://dev.to/pandacodegen",
+                "https://www.reddit.com/user/PandaCodeGen/",
             ]
         }
     ]

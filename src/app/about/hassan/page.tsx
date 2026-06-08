@@ -59,6 +59,7 @@ const personSchema = {
                 "https://clutch.co/profile/panda-code-gen",
                 "https://www.crunchbase.com/person/hassan-jamal",
                 "https://www.google.com/maps?cid=16271659886069582158",
+                "https://www.reddit.com/user/PandaCodeGen/",
             ],
         },
         {
@@ -201,7 +202,7 @@ export default function HassanAuthorPage() {
                     <section className="mb-10 md:mb-16 p-6 md:p-8 bg-white border border-stone-300 rounded-2xl shadow-xs">
                         <h3 className="text-xl font-serif text-charcoal mb-6">Credentials &amp; Press</h3>
                         <div className="space-y-4 text-stone-600 text-sm leading-relaxed">
-                            <p><strong>Quoted in Woman&apos;s World magazine</strong> (1.6M readers) as a technology expert on AI and web development. Article publishing June 8, 2026.</p>
+                            <p><strong>Quoted as an AI expert in <a href="https://www.womansworld.com/life/money/land-no-experience-remote-jobs-ai-training-that-pay" target="_blank" rel="noopener noreferrer" className="text-cognac underline decoration-cognac/40 hover:decoration-cognac transition-colors">Woman&apos;s World</a></strong> (1.6M readers), 2026.</p>
                             <p><strong>Google Business Profile:</strong> 5-star rating with verified client reviews including MyCustomPatches (Matt Conner) and James Peace.</p>
                             <p><strong>31 published articles</strong> on web performance, SEO, and e-commerce migration. Every article uses first-hand data from real client projects, not generic advice.</p>
                         </div>

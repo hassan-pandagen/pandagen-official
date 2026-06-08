@@ -50,7 +50,7 @@ const articleSchema = {
             "description": "1.58 million businesses use Divi. A 2025 survey of 206 businesses found slow websites cost an average of $20,172 per year in lost revenue. Here is what your Divi site is actually scoring and what that costs your business.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-08T00:00:00-05:00",
-            "dateModified": "2026-05-12T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -58,7 +58,7 @@ const articleSchema = {
                 "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
-                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
+                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
             },
             "publisher": {
                 "@type": "Organization",
@@ -110,7 +110,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-04-08T00:00:00-05:00",
-            "dateModified": "2026-05-12T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/divi-theme-slow#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -134,7 +134,7 @@ const articleSchema = {
             },
             "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites for businesses losing revenue to slow WordPress and Divi sites. We guarantee 95 to 100/100 Google PageSpeed on every build.",
+            "description": "PandaCodeGen builds custom Next.js websites for businesses losing revenue to slow WordPress and Divi sites. We guarantee 90+ Google PageSpeed in writing or a full refund on every build.",
             "areaServed": "Worldwide",
             "foundingDate": "2026"
         },

@@ -61,7 +61,7 @@ const articleSchema = {
             "description": "Wix scores 35 to 55 on mobile PageSpeed. Custom sites score 95 to 100. But Wix is free to start and easy to use. Here is the real cost, speed, and SEO comparison with honest advice on when to stay and when to switch.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-13T00:00:00-05:00",
-            "dateModified": "2026-05-12T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -69,7 +69,7 @@ const articleSchema = {
                 "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
-                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
+                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
             },
             "publisher": {
                 "@type": "Organization",
@@ -120,7 +120,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-04-13",
-            "dateModified": "2026-04-13"
+            "dateModified": "2026-06-06T00:00:00-05:00"
         },
         {
             "@type": "Organization",
@@ -129,7 +129,7 @@ const articleSchema = {
             "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow, expensive platforms. We guarantee 95 to 100/100 Google PageSpeed on every build.",
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow, expensive platforms. We guarantee 90+ Google PageSpeed in writing or a full refund on every build.",
             "foundingDate": "2026",
             "areaServed": "Worldwide",
             "email": "info@pandacodegen.com",
@@ -143,7 +143,7 @@ const articleSchema = {
                 "addressCountry": "US"
             },
             "sameAs": [
-                "https://twitter.com/pandacodegen",
+                "https://x.com/PandaCodeGen",
                 "https://www.linkedin.com/company/pandacodegen",
                 "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
                 "https://github.com/hassan-pandagen",
@@ -152,9 +152,13 @@ const articleSchema = {
                 "https://www.google.com/maps?cid=16271659886069582158",
                 "https://www.goodfirms.co/company/pandacodegen",
                 "https://www.crunchbase.com/organization/pandacodegen",
+                "https://www.designrush.com/agency/profile/pandacodegen",
+                "https://www.sortlist.com/agency/pandacodegen",
+                "https://www.f6s.com/pandacodegen",
                 "https://www.sanity.io/exchange/community/pandacodegen",
                 "https://www.behance.net/pandacodegen",
-                "https://dev.to/pandacodegen"
+                "https://dev.to/pandacodegen",
+                "https://www.reddit.com/user/PandaCodeGen/",
             ]
         },
         {

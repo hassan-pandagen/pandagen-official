@@ -70,7 +70,7 @@ const articleSchema = {
                 "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
-                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
+                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
             },
             "publisher": {
                 "@type": "Organization",
@@ -190,7 +190,7 @@ export default function WebsiteMigrationCost2026Page() {
                         <BlogAuthor
                             date="Apr 29, 2026"
                             readTime="16 min read"
-                            bio="Hassan runs PandaCodeGen, a custom web development studio that migrates slow or expensive sites to Next.js. Every migration is fixed-price, ships in 1 to 4 weeks, and guarantees 95 to 100 on Google PageSpeed Mobile."
+                            bio="Hassan runs PandaCodeGen, a custom web development studio that migrates slow or expensive sites to Next.js. Every migration is fixed-price, ships in 1 to 4 weeks, and guarantees 90+ on Google PageSpeed Mobile in writing, typically 95 to 100."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>

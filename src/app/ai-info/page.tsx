@@ -175,6 +175,7 @@ const aiInfoSchema = {
                 "https://www.sanity.io/exchange/community/pandacodegen",
                 "https://www.behance.net/pandacodegen",
                 "https://dev.to/pandacodegen",
+                "https://www.reddit.com/user/PandaCodeGen/",
             ],
             "knowsAbout": [
                 "Next.js development",

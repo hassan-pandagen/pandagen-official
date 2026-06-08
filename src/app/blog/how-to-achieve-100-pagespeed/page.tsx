@@ -48,7 +48,7 @@ const articleSchema = {
             "description": "Most sites score 35 to 55 on PageSpeed. We hit 98 to 100 every build. The exact 8-step process, with real before/after data.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-17T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -56,7 +56,7 @@ const articleSchema = {
                 "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
-                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
+                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
             },
             "publisher": {
                 "@type": "Organization",
@@ -111,7 +111,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-17T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -122,9 +122,9 @@ const articleSchema = {
             "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158"],
+            "sameAs": ["https://x.com/PandaCodeGen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158", "https://www.goodfirms.co/company/pandacodegen", "https://www.crunchbase.com/organization/pandacodegen", "https://www.designrush.com/agency/profile/pandacodegen", "https://www.sortlist.com/agency/pandacodegen", "https://www.f6s.com/pandacodegen", "https://www.sanity.io/exchange/community/pandacodegen", "https://www.behance.net/pandacodegen", "https://dev.to/pandacodegen", "https://www.reddit.com/user/PandaCodeGen/"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95 to 100/100 Google PageSpeed on every build.",
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 90+ Google PageSpeed in writing or a full refund on every build.",
             "areaServed": "Worldwide",
             "foundingDate": "2026"
         },
@@ -568,7 +568,7 @@ export default function AchievePageSpeedPage() {
                             <BlogHighlight>The bigger issue: You need to rebuild your entire site on Next.js first.</BlogHighlight> Optimization comes after migration. If you're on WordPress, you can't apply these techniques.
                         </BlogText>
 
-                        <BlogHeader>What Is the Professional Path to a Guaranteed 95-100/100 PageSpeed Score?</BlogHeader>
+                        <BlogHeader>What Is the Professional Path to a Guaranteed 90+ PageSpeed Score (Typically 95-100)?</BlogHeader>
 
                         <BlogText>
                             We've built 6+ Next.js sites. Every single one scores 95-100/100 on PageSpeed Mobile.
@@ -583,7 +583,7 @@ export default function AchievePageSpeedPage() {
                             "Implement all 8 optimizations (built into our standard process)",
                             "Test on real devices to ensure 95-100 score",
                             "Launch with zero downtime, zero SEO loss",
-                            "Guarantee: 95+ PageSpeed score or we fix it for free"
+                            "Guarantee: 90+ PageSpeed score or we fix it for free"
                         ]} />
 
                         <BlogText>
@@ -654,7 +654,7 @@ export default function AchievePageSpeedPage() {
                         <BlogList items={[
                             "We migrate your site to Next.js 16 (4-6 weeks)",
                             "All 8 optimizations included in standard build",
-                            "Guaranteed 95-100 PageSpeed score",
+                            "Guaranteed 90+ PageSpeed score (typically 95-100)",
                             "Zero downtime, zero SEO loss",
                             "You focus on business while we handle technical work"
                         ]} />

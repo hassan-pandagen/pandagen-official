@@ -71,7 +71,7 @@ const articleSchema = {
                 "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
-                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
+                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
             },
             "publisher": {
                 "@type": "Organization",
@@ -151,7 +151,7 @@ const articleSchema = {
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "foundingDate": "2026",
-            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow, expensive platforms. We guarantee 95 to 100/100 Google PageSpeed on every build.",
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow, expensive platforms. We guarantee 90+ Google PageSpeed in writing or a full refund on every build.",
             "areaServed": "Worldwide",
             "sameAs": [
                 "https://www.linkedin.com/company/pandacodegen",
@@ -197,7 +197,7 @@ export default function WebsiteRebuildCost2026Page() {
                         <BlogAuthor
                             date="Apr 19, 2026 (updated May 5)"
                             readTime="16 min read"
-                            bio="Hassan runs PandaCodeGen, a custom web development studio that rebuilds slow or outdated sites on Next.js. Every rebuild is fixed-price, ships in 2 to 6 weeks, and guarantees 95 to 100 on Google PageSpeed Mobile."
+                            bio="Hassan runs PandaCodeGen, a custom web development studio that rebuilds slow or outdated sites on Next.js. Every rebuild is fixed-price, ships in 2 to 6 weeks, and guarantees 90+ on Google PageSpeed Mobile in writing, typically 95 to 100."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>

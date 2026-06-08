@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         description: "Agencies quote $15K to $25K for 50 to 100 page Webflow migrations. Real scope, hour estimates per phase, and honest Scale-tier pricing for 2026.",
         type: "article",
         publishedTime: "2026-04-20T00:00:00-05:00",
-        modifiedTime: "2026-04-20T00:00:00-05:00",
+        modifiedTime: "2026-06-06T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/webflow-migration-50-to-100-pages",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -47,7 +47,7 @@ const articleSchema = {
             "description": "Agencies quote $15K to $25K for 50 to 100 page Webflow migrations. Real scope, hour estimates per phase, and honest Scale-tier pricing for 2026.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-20T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -55,7 +55,7 @@ const articleSchema = {
                 "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
-                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
+                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
             },
             "publisher": {
                 "@type": "Organization",
@@ -104,7 +104,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-04-20T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/webflow-migration-50-to-100-pages#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -115,7 +115,7 @@ const articleSchema = {
             "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158"],
+            "sameAs": ["https://x.com/PandaCodeGen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158", "https://www.goodfirms.co/company/pandacodegen", "https://www.crunchbase.com/organization/pandacodegen", "https://www.designrush.com/agency/profile/pandacodegen", "https://www.sortlist.com/agency/pandacodegen", "https://www.f6s.com/pandacodegen", "https://www.sanity.io/exchange/community/pandacodegen", "https://www.behance.net/pandacodegen", "https://dev.to/pandacodegen", "https://www.reddit.com/user/PandaCodeGen/"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
             "description": "PandaCodeGen builds custom Next.js websites for businesses migrating from Webflow, WordPress, Wix, Squarespace, and Shopify. All sites score 95 to 100 on Google PageSpeed or you do not pay.",
             "areaServed": "Worldwide",
@@ -300,7 +300,7 @@ export default function WebflowMigration50To100PagesPage() {
                                     <tr className="bg-stone-50">
                                         <td data-label="Dimension" className="p-3 border border-stone-300 font-medium">Typical Lighthouse (mobile)</td>
                                         <td data-label="Webflow" className="p-3 border border-stone-300">60 to 75</td>
-                                        <td data-label="Next.js" className="p-3 border border-stone-300 font-bold text-cognac">95 to 100, guaranteed in contract</td>
+                                        <td data-label="Next.js" className="p-3 border border-stone-300 font-bold text-cognac">90+ guaranteed in contract, typically 95 to 100 achieved</td>
                                     </tr>
                                     <tr>
                                         <td data-label="Dimension" className="p-3 border border-stone-300 font-medium">CMS item ceiling</td>
@@ -333,7 +333,7 @@ export default function WebflowMigration50To100PagesPage() {
 
                         <BlogHeader>Our Scale Tier Pricing for 50 to 100 Page Migrations</BlogHeader>
                         <BlogText>
-                            Here is what a 50 to 100 page Webflow to Next.js migration costs in our Scale tier. Fixed price, 3-week delivery, 95+ PageSpeed guaranteed or you do not pay the balance.
+                            Here is what a 50 to 100 page Webflow to Next.js migration costs in our Scale tier. Fixed price, 3-week delivery, 90+ PageSpeed guaranteed or you do not pay the balance.
                         </BlogText>
 
                         <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 flex items-center gap-1">&larr; Swipe to see more &rarr;</p>
@@ -461,7 +461,7 @@ export default function WebflowMigration50To100PagesPage() {
                                         <td data-label="Option" className="p-3 border border-stone-300 font-medium">Boutique shop (us)</td>
                                         <td data-label="Price" className="p-3 border border-stone-300 font-bold text-cognac">$5,000 to $10,000 fixed</td>
                                         <td data-label="Timeline" className="p-3 border border-stone-300 font-bold text-cognac">3 weeks</td>
-                                        <td data-label="Best for" className="p-3 border border-stone-300">Direct founder contact, no PM layer, 95+ PageSpeed guarantee in writing.</td>
+                                        <td data-label="Best for" className="p-3 border border-stone-300">Direct founder contact, no PM layer, 90+ PageSpeed guarantee in writing.</td>
                                     </tr>
                                     <tr>
                                         <td data-label="Option" className="p-3 border border-stone-300 font-medium">Enterprise Webflow agency</td>

@@ -69,7 +69,7 @@ const articleSchema = {
                 "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
-                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
+                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
             },
             "publisher": {
                 "@type": "Organization",
@@ -651,7 +651,7 @@ export default function GHLWebsiteSpeedPage() {
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-orange-600 transition-all">
                             Book Free Discovery Call <ArrowRight className="w-4 h-4" />
                         </CalModalButton>
-                        <p className="text-xs text-stone-400 mt-4">Custom Next.js frontend. 95+ PageSpeed guarantee. Every GHL automation preserved. Zero monthly platform fees.</p>
+                        <p className="text-xs text-stone-400 mt-4">Custom Next.js frontend. 90+ PageSpeed guarantee. Every GHL automation preserved. Zero monthly platform fees.</p>
                     </div>
 
                     <BlogHeader id="faq">Frequently Asked Questions</BlogHeader>

@@ -3,7 +3,7 @@ import PageContent from './PageContent';
 
 export const metadata: Metadata = {
   title: 'Is Your Shopify Store Too Slow? Headless Next.js Rebuild | PandaCodeGen',
-  description: "Your Shopify store scores 40 to 60 on PageSpeed. We rebuild the frontend in Next.js, loading under 1 second. 95+ PageSpeed guaranteed, no app fees, you own the code.",
+  description: "Your Shopify store scores 40 to 60 on PageSpeed. We rebuild the frontend in Next.js, loading under 1 second. 90+ PageSpeed guaranteed, no app fees, you own the code.",
   alternates: { canonical: '/services/ecommerce' },
   keywords: [
     'shopify speed optimization service',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Is Your Shopify Store Too Slow? Headless Next.js Rebuild | PandaCodeGen',
-    description: "Your Shopify store scores 40 to 60 on PageSpeed. We rebuild the frontend in Next.js. 95+ PageSpeed guaranteed, no app fees, you own the code.",
+    description: "Your Shopify store scores 40 to 60 on PageSpeed. We rebuild the frontend in Next.js. 90+ PageSpeed guaranteed, no app fees, you own the code.",
     url: 'https://www.pandacodegen.com/services/ecommerce',
     siteName: 'PandaCodeGen',
     type: 'website',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Is Your Shopify Store Too Slow? Headless Next.js Rebuild | PandaCodeGen',
-    description: "Shopify scoring 40 to 60 on PageSpeed. We rebuild in Next.js. 95+ PageSpeed guaranteed, no app fees, you own the code.",
+    description: "Shopify scoring 40 to 60 on PageSpeed. We rebuild in Next.js. 90+ PageSpeed guaranteed, no app fees, you own the code.",
   },
 };
 

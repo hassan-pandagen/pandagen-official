@@ -100,7 +100,8 @@ export default function Home() {
           "https://www.f6s.com/pandacodegen",
           "https://www.sanity.io/exchange/community/pandacodegen",
           "https://www.behance.net/pandacodegen",
-          "https://dev.to/pandacodegen"
+          "https://dev.to/pandacodegen",
+          "https://www.reddit.com/user/PandaCodeGen/"
         ],
         "contactPoint": {
           "@type": "ContactPoint",

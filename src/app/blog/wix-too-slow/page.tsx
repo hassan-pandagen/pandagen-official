@@ -71,7 +71,7 @@ const articleSchema = {
                 "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
-                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
+                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
             },
             "publisher": {
                 "@type": "Organization",
@@ -139,13 +139,22 @@ const articleSchema = {
             "addressRegion": "TX",
             "postalCode": "78702",
             "sameAs": [
-                "https://twitter.com/pandacodegen",
+                "https://x.com/PandaCodeGen",
                 "https://www.linkedin.com/company/pandacodegen",
                 "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
                 "https://github.com/hassan-pandagen",
                 "https://clutch.co/profile/panda-code-gen",
                 "https://www.trustpilot.com/review/pandacodegen.com",
-                "https://www.google.com/maps?cid=16271659886069582158"
+                "https://www.google.com/maps?cid=16271659886069582158",
+                "https://www.goodfirms.co/company/pandacodegen",
+                "https://www.crunchbase.com/organization/pandacodegen",
+                "https://www.designrush.com/agency/profile/pandacodegen",
+                "https://www.sortlist.com/agency/pandacodegen",
+                "https://www.f6s.com/pandacodegen",
+                "https://www.sanity.io/exchange/community/pandacodegen",
+                "https://www.behance.net/pandacodegen",
+                "https://dev.to/pandacodegen",
+                "https://www.reddit.com/user/PandaCodeGen/",
             ]
         },
         {

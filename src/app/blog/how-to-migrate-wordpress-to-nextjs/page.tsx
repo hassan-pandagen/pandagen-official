@@ -49,7 +49,7 @@ const articleSchema = {
             "description": "Step-by-step WordPress to Next.js migration: content export, 301 redirects, SEO preservation, zero downtime launch. 6 migrations, zero ranking drops.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-11T00:00:00-05:00",
-            "dateModified": "2026-04-13T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -57,7 +57,7 @@ const articleSchema = {
                 "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
-                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
+                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
             },
             "publisher": {
                 "@type": "Organization",
@@ -112,7 +112,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-11T00:00:00-05:00",
-            "dateModified": "2026-04-13T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -123,9 +123,9 @@ const articleSchema = {
             "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158"],
+            "sameAs": ["https://x.com/PandaCodeGen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158", "https://www.goodfirms.co/company/pandacodegen", "https://www.crunchbase.com/organization/pandacodegen", "https://www.designrush.com/agency/profile/pandacodegen", "https://www.sortlist.com/agency/pandacodegen", "https://www.f6s.com/pandacodegen", "https://www.sanity.io/exchange/community/pandacodegen", "https://www.behance.net/pandacodegen", "https://dev.to/pandacodegen", "https://www.reddit.com/user/PandaCodeGen/"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95 to 100/100 Google PageSpeed on every build.",
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 90+ Google PageSpeed in writing or a full refund on every build.",
             "areaServed": "Worldwide",
             "foundingDate": "2026"
         },
@@ -398,7 +398,7 @@ export default function MigrateWordPressToNextJSPage() {
                         <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-2">Done It 6+ Times</p>
                         <h3 className="text-2xl font-bold mb-3">Want Us to Handle the Migration?</h3>
                         <p className="text-stone-300 mb-6 leading-relaxed">
-                            We handle the entire process: audit, build, QA, redirect mapping, DNS cutover, and 30-day post-launch monitoring. Guaranteed 95+ PageSpeed score or we fix it for free.
+                            We handle the entire process: audit, build, QA, redirect mapping, DNS cutover, and 30-day post-launch monitoring. Guaranteed 90+ PageSpeed score or we fix it for free.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 bg-white text-stone-900 font-semibold px-6 py-3 rounded-lg hover:bg-stone-100 transition-colors">
                                 Book Free Migration Assessment <ArrowRight className="w-4 h-4" />
@@ -457,7 +457,7 @@ export default function MigrateWordPressToNextJSPage() {
                                     "Learning curve: None, handled end to end by us",
                                     "Risk: Low. We have done this 6+ times with zero ranking disasters",
                                     "Cost: $8,000 to $35,000 depending on complexity",
-                                    "PageSpeed result: Guaranteed 95 to 100/100 mobile",
+                                    "PageSpeed result: 90+ guaranteed, typically 95 to 100/100 mobile",
                                     "Redirect mapping: Automated crawl + manual verification"
                                 ]} />
                             </div>

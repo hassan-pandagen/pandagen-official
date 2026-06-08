@@ -57,7 +57,7 @@ const articleSchema = {
                 "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
-                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
+                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
             },
             "publisher": {
                 "@type": "Organization",
@@ -119,9 +119,9 @@ const articleSchema = {
             "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158"],
+            "sameAs": ["https://x.com/PandaCodeGen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158", "https://www.goodfirms.co/company/pandacodegen", "https://www.crunchbase.com/organization/pandacodegen", "https://www.designrush.com/agency/profile/pandacodegen", "https://www.sortlist.com/agency/pandacodegen", "https://www.f6s.com/pandacodegen", "https://www.sanity.io/exchange/community/pandacodegen", "https://www.behance.net/pandacodegen", "https://dev.to/pandacodegen", "https://www.reddit.com/user/PandaCodeGen/"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95 to 100/100 Google PageSpeed on every build.",
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 90+ Google PageSpeed in writing or a full refund on every build.",
             "areaServed": "Worldwide",
             "foundingDate": "2026"
         },
@@ -347,7 +347,7 @@ export default function GoHighLevelMigrationPage() {
 
                         <BlogList items={[
                             "Page load time under 1 second on mobile and desktop. Not 10 to 30 seconds. Under one second.",
-                            "Google PageSpeed score of 95 to 100 on every page. Guaranteed.",
+                            "Google PageSpeed score of 90+ guaranteed, typically 95 to 100 on every page.",
                             "Google Ads Quality Score of 7 to 10 instead of 2 to 4. Lower cost per click, better ad positions, more leads for the same budget.",
                             "Forms that submit directly into your GoHighLevel CRM. Same automations, same pipelines, same workflows. Zero disruption.",
                             "Full control over your design. No template limitations. No GHL editor restrictions. Your site looks exactly the way you want it to look.",
@@ -407,7 +407,7 @@ export default function GoHighLevelMigrationPage() {
                                 <li><strong>Slow GHL pages destroy your ad ROI</strong>: Google Ads Quality Scores of 2 to 4 out of 10 mean you pay 70% more per click. A business spending $3,000/month on ads wastes roughly $14,400 per year on inflated click costs.</li>
                                 <li><strong>You do not have to leave GoHighLevel</strong>: Keep GHL for CRM, automations, pipelines, and email. Replace only the website front end. Your forms still feed into GHL. Nothing changes on the backend.</li>
                                 <li><strong>A custom front end loads under 1 second and scores 95+</strong>: Quality Scores jump to 7 to 10. Conversion rates improve because visitors actually see your page before they leave.</li>
-                                <li><strong>Starter starts at $1,500 with a speed guarantee</strong>: 3 to 4 weeks, fixed price, 30% upfront and the rest after launch. If it does not score 95+, you do not pay the balance.</li>
+                                <li><strong>Starter starts at $1,500 with a speed guarantee</strong>: 3 to 4 weeks, fixed price, 30% upfront and the rest after launch. If it does not score 90+, you do not pay the balance.</li>
                             </ol>
                         </section>
                     </div>

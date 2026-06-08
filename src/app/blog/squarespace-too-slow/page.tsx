@@ -155,7 +155,7 @@ const schemaData = {
                 "width": 655,
                 "height": 113
             },
-            "description": "PandaCodeGen builds custom Next.js websites for businesses migrating from Squarespace, WordPress, Webflow, and GoHighLevel. 95+ PageSpeed guaranteed.",
+            "description": "PandaCodeGen builds custom Next.js websites for businesses migrating from Squarespace, WordPress, Webflow, and GoHighLevel. 90+ PageSpeed guaranteed.",
             "areaServed": "US",
             "foundingDate": "2026",
             "sameAs": [
@@ -203,7 +203,7 @@ export default function SquarespaceToSlowPage() {
                     <BlogAuthor
                         date="Mar 27, 2026"
                         readTime="10 min read"
-                        bio="Hassan builds custom Next.js sites for businesses migrating off Squarespace, WordPress, and Webflow. Every migration comes with a 95+ PageSpeed guarantee."
+                        bio="Hassan builds custom Next.js sites for businesses migrating off Squarespace, WordPress, and Webflow. Every migration comes with a 90+ PageSpeed guarantee."
                         linkedIn="https://www.linkedin.com/in/hassanjamal"
                     />
 

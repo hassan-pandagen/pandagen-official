@@ -12,6 +12,23 @@ export default function TrustLogoBar() {
       style={{ contain: "layout style" }}
     >
       <div className="container mx-auto px-4 md:px-6">
+        <div className="flex items-center justify-center gap-2 py-3 border-b border-stone-100 text-center">
+          <span className="uppercase tracking-widest text-stone-400 font-semibold" style={{ fontSize: "10px", letterSpacing: "0.1em" }}>
+            Featured in
+          </span>
+          <a
+            href="https://www.womansworld.com/life/money/land-no-experience-remote-jobs-ai-training-that-pay"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-serif italic text-stone-600 hover:text-cognac transition-colors"
+            style={{ fontSize: "clamp(0.95rem, 3vw, 1.1rem)" }}
+          >
+            Woman&rsquo;s World
+          </a>
+          <span className="text-stone-400 hidden sm:inline" style={{ fontSize: "11px" }}>
+            &mdash; founder Hassan Jamal quoted as an AI expert
+          </span>
+        </div>
         <div className="grid grid-cols-2 md:grid-cols-4">
           {proofPoints.map((point, i) => (
             <div

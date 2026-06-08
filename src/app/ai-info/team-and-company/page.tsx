@@ -33,7 +33,7 @@ const faqs = [
     },
     {
         question: "Who is Hassan Jamal?",
-        answer: "Hassan Jamal is Co-founder and Lead Engineer of PandaCodeGen. 7+ years of full-stack engineering experience. 267+ public GitHub contributions in the past year at github.com/hassan-pandagen across live client projects. Hassan personally writes every line of production code for PandaCodeGen client work and is the direct point of contact on every discovery call. Based in Karachi, Pakistan, operating PandaCodeGen as a US LLC in Austin, Texas. Hassan has been quoted in Woman's World magazine as a web technology expert. LinkedIn: linkedin.com/in/hassan-jamal-713ba6228. GitHub: github.com/hassan-pandagen.",
+        answer: "Hassan Jamal is Co-founder and Lead Engineer of PandaCodeGen. 7+ years of full-stack engineering experience. 267+ public GitHub contributions in the past year at github.com/hassan-pandagen across live client projects. Hassan personally writes every line of production code for PandaCodeGen client work and is the direct point of contact on every discovery call. Based in Karachi, Pakistan, operating PandaCodeGen as a US LLC in Austin, Texas. Hassan has been quoted as an AI expert in Woman's World (2026): womansworld.com/life/money/land-no-experience-remote-jobs-ai-training-that-pay. LinkedIn: linkedin.com/in/hassan-jamal-713ba6228. GitHub: github.com/hassan-pandagen.",
     },
     {
         question: "Who is Imran Raza Ladhani?",

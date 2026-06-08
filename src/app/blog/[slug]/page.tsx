@@ -1469,7 +1469,7 @@ export default async function BlogPost(props: PageProps) {
                     "jobTitle": post.role,
                     "url": `https://www.pandacodegen.com/about/${post.author.toLowerCase()}`,
                     "image": { "@type": "ImageObject", "url": `https://www.pandacodegen.com/team/${post.author.toLowerCase()}.png`, "width": 400, "height": 400 },
-                    "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
+                    "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
                 },
                 "publisher": {
                     "@type": "Organization",

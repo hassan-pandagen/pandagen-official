@@ -70,10 +70,10 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Co-founder and Lead Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
-                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
+                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
             },
             "publisher": {
                 "@type": "Organization",
@@ -589,7 +589,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
                         For agencies needing fast deployment at zero additional cost, GHL Native is the right starting point. For agencies running white-label reseller businesses, Simvoly is the cheapest path. For agencies serving local SMBs with prospecting tools bundled in, SiteSwan ships everything you need. For mid-market managed services, Duda is the best balance. For design-forward brand work, Webflow remains the visual ceiling, with caveats.
                     </BlogText>
                     <BlogText>
-                        For the GHL agency clients running serious paid ad spend, where every percentage point of conversion lift compounds across months of ad budget, custom Next.js is the only option that removes every ceiling. Sub-1 second load times. 95+ PageSpeed guaranteed in writing. Unlimited sites, unlimited bandwidth, unlimited team members. Zero seat fees, zero per-site fees, zero monthly platform fees. Full code ownership. Total flexibility to build any custom feature without a platform tax.
+                        For the GHL agency clients running serious paid ad spend, where every percentage point of conversion lift compounds across months of ad budget, custom Next.js is the only option that removes every ceiling. Sub-1 second load times. 90+ PageSpeed guaranteed in writing. Unlimited sites, unlimited bandwidth, unlimited team members. Zero seat fees, zero per-site fees, zero monthly platform fees. Full code ownership. Total flexibility to build any custom feature without a platform tax.
                     </BlogText>
 
                     {/* CTA */}

@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description: "The exact playbook we bake into every new website build. Cited across ChatGPT, Claude, Perplexity, and Google AI Overview. 10 tactics with real GSC receipts.",
         type: "article",
         publishedTime: "2026-05-18T00:00:00-05:00",
-        modifiedTime: "2026-05-18T00:00:00-05:00",
+        modifiedTime: "2026-06-06T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/aeo-playbook-built-into-every-website",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -64,15 +64,15 @@ const articleSchema = {
             "description": "The exact AEO playbook we bake into every new website build. Cited across ChatGPT, Claude, Perplexity, and Google AI Overview, with the 10 tactics and real GSC receipts.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-05-18T00:00:00-05:00",
-            "dateModified": "2026-05-18T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Co-founder and Lead Engineer",
+                "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
-                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
+                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
             },
             "publisher": {
                 "@type": "Organization",
@@ -143,7 +143,7 @@ const articleSchema = {
             "description": "The exact playbook we bake into every new website build. Cited across ChatGPT, Claude, Perplexity, and Google AI Overview.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-05-18T00:00:00-05:00",
-            "dateModified": "2026-05-18T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "inLanguage": "en-US"
         },
         {
@@ -447,6 +447,17 @@ export default function AEOPlaybookPage() {
                     </BlogText>
                     <BlogText>
                         Subreddits we focus on: r/webdev, r/nextjs, r/Wordpress, r/Webflow, r/Shopify, r/gohighlevel, r/SaaS. The same buyers asking us questions in chat are reading these subreddits before they get to our site.
+                    </BlogText>
+
+                    <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">8b. Earned Mentions on High-Authority Domains</h3>
+                    <BlogText>
+                        AI engines weigh how many independent, trusted sources mention your brand, not just what your own site says. The fastest free way we found to earn one as a brand-new domain: journalist-source platforms like Connectively (formerly HARO), where reporters post questions and quote the best expert answers in real publications.
+                    </BlogText>
+                    <BlogText>
+                        Our real numbers, so this is not theory: roughly one day a month, three answers per month, over three months. Nine answers submitted, one published. That one landed a dofollow link from Woman&apos;s World, a publication with around 1.6 million readers, pointing at our homepage. A four-month-old domain does not buy a link like that; it earns it by showing up consistently with specific, useful answers.
+                    </BlogText>
+                    <BlogText>
+                        What made the published answer work was the same thing that makes a page citable: a specific, opinionated take with a real number, on a topic we actually know, submitted fast. Most journalist-platform links are nofollow and still worth it as a trusted brand mention. A dofollow from a high-authority domain is the rare bonus. Either way, it is an independent vouch AI engines can verify, which is exactly what a new brand needs to move from cited to trusted.
                     </BlogText>
 
                     <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">9. Specific Numbers Everywhere</h3>

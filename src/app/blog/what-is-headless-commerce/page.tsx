@@ -48,7 +48,7 @@ const articleSchema = {
             "description": "Headless commerce separates storefront from backend for faster loads and better conversions. What it costs and who needs it.",
             "image": "https://www.pandacodegen.com/blog/what-is-headless-commerce/opengraph-image",
             "datePublished": "2026-03-14T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -56,7 +56,7 @@ const articleSchema = {
                 "jobTitle": "Founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
-                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"]
+                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
             },
             "publisher": {
                 "@type": "Organization",
@@ -108,7 +108,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/blog/what-is-headless-commerce/opengraph-image" },
             "datePublished": "2026-03-14T00:00:00-05:00",
-            "dateModified": "2026-04-20T00:00:00-05:00",
+            "dateModified": "2026-06-06T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/what-is-headless-commerce#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -119,9 +119,9 @@ const articleSchema = {
             "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158"],
+            "sameAs": ["https://x.com/PandaCodeGen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158", "https://www.goodfirms.co/company/pandacodegen", "https://www.crunchbase.com/organization/pandacodegen", "https://www.designrush.com/agency/profile/pandacodegen", "https://www.sortlist.com/agency/pandacodegen", "https://www.f6s.com/pandacodegen", "https://www.sanity.io/exchange/community/pandacodegen", "https://www.behance.net/pandacodegen", "https://dev.to/pandacodegen", "https://www.reddit.com/user/PandaCodeGen/"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 95 to 100/100 Google PageSpeed on every build.",
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 90+ Google PageSpeed in writing or a full refund on every build.",
             "areaServed": "Worldwide",
             "foundingDate": "2026"
         },
@@ -551,7 +551,7 @@ export default function WhatIsHeadlessCommercePage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>Our guarantee:</strong> <BlogHighlight>95+ PageSpeed score on mobile or we fix it for free.</BlogHighlight> Our MyCustomPatches rebuild hit 97 on mobile. Every new headless build we ship carries the same guarantee. For the Shopify-specific breakdown see <Link href="/blog/shopify-headless" className="text-cognac hover:underline">our headless Shopify guide</Link>, for the revenue math see <Link href="/blog/shopify-slow-losing-sales" className="text-cognac hover:underline">how much slow Shopify costs per year</Link>, and for the Plus-tier reality check see <Link href="/blog/shopify-plus-still-slow" className="text-cognac hover:underline">why Shopify Plus is still slow</Link>. Comparing to a full custom rebuild? See <Link href="/blog/shopify-vs-custom-website" className="text-cognac hover:underline">Shopify vs custom website</Link> and <Link href="/blog/woocommerce-too-slow" className="text-cognac hover:underline">why WooCommerce stalls at scale</Link>.
+                            <strong>Our guarantee:</strong> <BlogHighlight>90+ PageSpeed score on mobile or we fix it for free.</BlogHighlight> Our MyCustomPatches rebuild hit 97 on mobile. Every new headless build we ship carries the same guarantee. For the Shopify-specific breakdown see <Link href="/blog/shopify-headless" className="text-cognac hover:underline">our headless Shopify guide</Link>, for the revenue math see <Link href="/blog/shopify-slow-losing-sales" className="text-cognac hover:underline">how much slow Shopify costs per year</Link>, and for the Plus-tier reality check see <Link href="/blog/shopify-plus-still-slow" className="text-cognac hover:underline">why Shopify Plus is still slow</Link>. Comparing to a full custom rebuild? See <Link href="/blog/shopify-vs-custom-website" className="text-cognac hover:underline">Shopify vs custom website</Link> and <Link href="/blog/woocommerce-too-slow" className="text-cognac hover:underline">why WooCommerce stalls at scale</Link>.
                         </BlogText>
 
                         <BlogText>

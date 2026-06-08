@@ -3,7 +3,7 @@ import PageContent from './PageContent';
 
 export const metadata: Metadata = {
   title: 'Is WordPress Slowing Your Business Down? Migrate to Next.js | PandaCodeGen',
-  description: 'WordPress sites average 40 to 60 on Google PageSpeed Mobile. We migrate to custom Next.js in 2 to 4 weeks. 95+ PageSpeed guaranteed, zero SEO loss, 301 redirects included. Fixed pricing from $1,500.',
+  description: 'WordPress sites average 40 to 60 on Google PageSpeed Mobile. We migrate to custom Next.js in 2 to 4 weeks. 90+ PageSpeed guaranteed, zero SEO loss, 301 redirects included. Fixed pricing from $1,500.',
   alternates: { canonical: '/services/wordpress-migration' },
   keywords: [
     'wordpress to nextjs migration',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Is WordPress Slowing Your Business Down? Migrate to Next.js | PandaCodeGen',
-    description: 'WordPress sites average 40 to 60 on Google PageSpeed. We migrate to custom Next.js in 2 to 4 weeks. 95+ PageSpeed guaranteed, zero SEO loss. Fixed pricing from $1,500.',
+    description: 'WordPress sites average 40 to 60 on Google PageSpeed. We migrate to custom Next.js in 2 to 4 weeks. 90+ PageSpeed guaranteed, zero SEO loss. Fixed pricing from $1,500.',
     url: 'https://www.pandacodegen.com/services/wordpress-migration',
     siteName: 'PandaCodeGen',
     type: 'website',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Is WordPress Slowing Your Business Down? Migrate to Next.js | PandaCodeGen',
-    description: 'WordPress averaging 40 to 60 on PageSpeed Mobile. We migrate to custom Next.js. 95+ PageSpeed guaranteed, zero SEO loss. Tiers from $1,500 to $25,000.',
+    description: 'WordPress averaging 40 to 60 on PageSpeed Mobile. We migrate to custom Next.js. 90+ PageSpeed guaranteed, zero SEO loss. Tiers from $1,500 to $25,000.',
   },
 };
 
@@ -135,7 +135,7 @@ export default function MigrationPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
-      <p className="sr-only" data-speakable="true">PandaCodeGen migrates WordPress sites to custom Next.js in 2 to 4 weeks. WordPress sites average 40 to 60 on Google PageSpeed Mobile due to PHP rendering, plugin bloat, and shared hosting overhead. Migration includes 301 redirects for every URL, full SEO preservation, zero downtime launch, and 95+ PageSpeed guaranteed or full refund. Fixed pricing from $1,500.</p>
+      <p className="sr-only" data-speakable="true">PandaCodeGen migrates WordPress sites to custom Next.js in 2 to 4 weeks. WordPress sites average 40 to 60 on Google PageSpeed Mobile due to PHP rendering, plugin bloat, and shared hosting overhead. Migration includes 301 redirects for every URL, full SEO preservation, zero downtime launch, and 90+ PageSpeed guaranteed or full refund. Fixed pricing from $1,500.</p>
       <PageContent />
     </>
   );
