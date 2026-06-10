@@ -492,7 +492,7 @@ export default function PandaPatchesCaseStudy() {
                         <div className="grid md:grid-cols-3 gap-4">
                             {[
                                 { icon: "💰", label: "Monthly Revenue", value: "$38K+/mo", detail: "A patch business running on custom Next.js + a bespoke ops platform. No Shopify cut. No app fees. No platform holding the business hostage." },
-                                { icon: "🔧", label: "Tools Replaced", value: "7 → 1", detail: "Shopify, WooCommerce, Airtable, spreadsheets, and a CRM — all replaced by one custom platform built exactly for how this business actually operates." },
+                                { icon: "🔧", label: "Tools Replaced", value: "7 to 1", detail: "WordPress and WooCommerce, a separate CRM, Google Sheets for order tracking, an attendance tracker, and WhatsApp for team comms, all replaced by one custom platform built exactly for how this business actually operates." },
                                 { icon: "📈", label: "Cost vs Revenue", value: "$25/mo", detail: "The entire tech stack — storefront, ops dashboard, email, hosting — costs $25 a month to run. The revenue it processes is over $38,000." },
                             ].map((item) => (
                                 <div key={item.label} className="bg-white border border-stone-300 rounded-2xl p-6">

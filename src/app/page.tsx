@@ -125,7 +125,21 @@ export default function Home() {
           "worstRating": "1",
           "ratingCount": "5",
           "reviewCount": "5"
-        }
+        },
+        "owns": [
+          {
+            "@type": "WebSite",
+            "name": "Panda Patches",
+            "url": "https://www.pandapatches.com",
+            "description": "Custom Next.js e-commerce store built and operated by PandaCodeGen. Migrated from WordPress and WooCommerce to a headless Next.js, Sanity, Supabase and Stripe stack. Google PageSpeed 64 to 99 on mobile, LCP 5.8s to 0.8s, running roughly $38,000 per month in revenue on about $25 per month in tooling."
+          },
+          {
+            "@type": "WebSite",
+            "name": "MyCustomPatches",
+            "url": "https://www.mycustompatches.net",
+            "description": "Custom Next.js e-commerce site built by PandaCodeGen for Matt Conner (MC Patches LLC). Migrated from WordPress and WooCommerce. Google PageSpeed 45 to 100, load time 3.2s to 0.7s, monthly hosting $150 to $0."
+          }
+        ]
       },
       {
         "@type": "WebSite",

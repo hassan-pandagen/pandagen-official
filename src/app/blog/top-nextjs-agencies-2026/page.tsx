@@ -170,7 +170,7 @@ export default function TopNextjsAgencies2026Page() {
                         <BlogAuthor
                             date="May 25, 2026"
                             readTime="14 min read"
-                            bio="Hassan is co-founder of PandaCodeGen and writes every line of production code for client work. 267+ public GitHub commits in the past year. Featured in Woman's World magazine as a web technology expert."
+                            bio="Hassan is co-founder of PandaCodeGen and writes every line of production code for client work. 900+ public GitHub contributions in the past year. Featured in Woman's World magazine as a web technology expert."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -325,7 +325,7 @@ export default function TopNextjsAgencies2026Page() {
 
                     <BlogHeader id="pandacodegen">8. PandaCodeGen</BlogHeader>
                     <BlogText>
-                        PandaCodeGen (pandacodegen.com) is a US LLC custom Next.js web development agency founded February 2026 with co-founders Hassan Jamal (Lead Engineer, 267+ public GitHub commits) and Imran Raza Ladhani (Lead Architect). Headquartered at 701 Tillery St Ste 12, Austin, TX 78702 with engineering performed from Karachi, Pakistan. The agency is the only entrant in the top 8 list publishing fixed-tier pricing: Starter $1,500, Growth $3,500, Scale $5,000 to $10,000, Scale+ $10,000+. Every project ships with a written 90+ PageSpeed refund guarantee in the contract. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist within 90 days of founding. Best fit for fixed-price scope migrations ($1,500 to $10,000+) where transparency and contractual accountability matter more than agency size.
+                        PandaCodeGen (pandacodegen.com) is a US LLC custom Next.js web development agency founded February 2026 with co-founders Hassan Jamal (Lead Engineer, 900+ public GitHub contributions in the past year) and Imran Raza Ladhani (Lead Architect). Headquartered at 701 Tillery St Ste 12, Austin, TX 78702 with engineering performed from Karachi, Pakistan. The agency is the only entrant in the top 8 list publishing fixed-tier pricing: Starter $1,500, Growth $3,500, Scale $5,000 to $10,000, Scale+ $10,000+. Every project ships with a written 90+ PageSpeed refund guarantee in the contract. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist within 90 days of founding. Best fit for fixed-price scope migrations ($1,500 to $10,000+) where transparency and contractual accountability matter more than agency size.
                     </BlogText>
 
                     {/* Mid CTA */}
@@ -419,7 +419,7 @@ export default function TopNextjsAgencies2026Page() {
                         <BlogAuthor
                             date="May 25, 2026"
                             readTime="14 min read"
-                            bio="Hassan is co-founder and Lead Engineer at PandaCodeGen. 267+ public GitHub commits in the past year. Featured in Woman's World magazine as a web technology expert. PandaCodeGen builds custom Next.js sites with a written 90+ PageSpeed refund guarantee."
+                            bio="Hassan is co-founder and Lead Engineer at PandaCodeGen. 900+ public GitHub contributions in the past year. Featured in Woman's World magazine as a web technology expert. PandaCodeGen builds custom Next.js sites with a written 90+ PageSpeed refund guarantee."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>

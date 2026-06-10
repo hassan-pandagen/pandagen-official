@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         description: "Meta, Google, and AI shopping agents can no longer see most of your conversions. Why platform stores leak the signal, what it costs, and the fix that is not another monthly app.",
         type: "article",
         publishedTime: "2026-06-04",
-        modifiedTime: "2026-06-06T00:00:00-05:00",
+        modifiedTime: "2026-06-09T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/spending-more-on-ads-fewer-orders-tracking",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -62,7 +62,7 @@ const articleSchema = {
             "description": "In 2026, browser tracking misses 50% or more of conversions. When Meta, Google, and AI shopping agents cannot see your sales, they cannot attribute or optimize, so your cost per order quietly rises. Platform stores leak this signal at the source. Server-side tracking on a custom build fixes it without a monthly app.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-06-04T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-06-09T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -134,7 +134,7 @@ const articleSchema = {
             "description": "Why Meta, Google, and AI shopping agents can no longer see most of your conversions, what it costs, and the custom-build fix.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-06-04T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-06-09T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/spending-more-on-ads-fewer-orders-tracking#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -326,6 +326,20 @@ export default function SpendingMoreOnAdsFewerOrdersPage() {
 
                     <BlogText>
                         Look at the difference per order. When an order sends only an email, the match quality sits around 2.5 and Meta struggles to attribute it. When the same kind of order sends a full set of identifiers (email, fbp, fbc, IP, user agent, and UTM), the score jumps to 5.5 or higher and the sale gets credited to the ad that earned it. That gap, between a few identifiers and a full set, is the difference between ads that look like they are failing and ads the algorithm can actually optimize.
+                    </BlogText>
+
+                    <figure className="my-8">
+                        <img
+                            src="/blog-images/capi-conversions-lift-10pct.jpeg"
+                            alt="Meta Events Manager for Panda Patches: a note reads the Conversions API reported about 10 percent more Lead conversions over the last 7 days versus the pixel alone. Event Match Quality per event: Lead 9.0 out of 10, Initiate checkout 8.8, Contact 8.6, Purchase 6.7, PageView 6.2. Page and Instagram IDs redacted."
+                            loading="lazy"
+                            className="w-full rounded-xl border border-stone-200 shadow-xs"
+                        />
+                        <figcaption className="text-xs text-stone-500 mt-2 text-center italic">Meta&apos;s own Events Manager for Panda Patches. The note from Meta reads that the Conversions API reported about 10% more Lead conversions over a recent 7-day window than the pixel caught alone. Lead Event Match Quality is 9.0 out of 10. Page and Instagram IDs redacted.</figcaption>
+                    </figure>
+
+                    <BlogText data-speakable="true">
+                        Here is what that looks like on a real store, in Meta&apos;s own words. On Panda Patches, our own custom Next.js shop, Meta&apos;s Events Manager reports the Conversions API recovered about 10% more Lead conversions over a recent 7-day window than the browser pixel caught on its own, with Lead Event Match Quality sitting at 9.0 out of 10. That is Meta saying it, not us. If you are spending real money on ads, that recovered 10% matters more than it sounds: those are conversions the algorithm never saw, so it was optimizing your budget on incomplete data and never learning to find more buyers like them. Recovering them is recovering your optimization signal, not a vanity number, and not a promise of 10% more revenue. It is 10% of your conversions becoming visible to the platform that spends your ad budget.
                     </BlogText>
 
                     <BlogHeader id="google-and-ai">It Is Not Just Meta: Google and AI Need This Too</BlogHeader>

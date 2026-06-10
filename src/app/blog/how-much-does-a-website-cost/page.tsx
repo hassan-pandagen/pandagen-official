@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description: "Real cost breakdown by build type, business size, and hidden fees that turn affordable platforms into expensive long-term commitments.",
         type: "article",
         publishedTime: "2026-05-12T00:00:00-05:00",
-        modifiedTime: "2026-05-12T00:00:00-05:00",
+        modifiedTime: "2026-06-09T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/how-much-does-a-website-cost",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -61,7 +61,7 @@ const articleSchema = {
             "description": "A website costs $0 to $50,000+ in 2026. Real cost breakdown by build type, business size, and hidden fees that turn affordable platforms into expensive long-term commitments.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-05-12T00:00:00-05:00",
-            "dateModified": "2026-05-12T00:00:00-05:00",
+            "dateModified": "2026-06-09T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -116,7 +116,7 @@ const articleSchema = {
             "name": "How Much Does a Website Cost in 2026? Real Pricing by Build Type",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-05-12T00:00:00-05:00",
-            "dateModified": "2026-05-12T00:00:00-05:00",
+            "dateModified": "2026-06-09T00:00:00-05:00",
             "inLanguage": "en-US"
         },
         {
@@ -180,6 +180,11 @@ export default function WebsiteCostPage() {
                             <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl" data-speakable="true">
                                 <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
                                 <p className="text-sm text-stone-700 leading-relaxed">A website in 2026 runs $0 to $450 for a DIY builder like Wix or Squarespace, $1,500 to $10,000 for a professionally built site, and $10,000 to $50,000+ for a custom agency build. Most small businesses pay $2,000 to $8,000 for a functional site. Ongoing costs, hosting, domain, maintenance, add $100 to $1,000+ per year on top of that.</p>
+                            </div>
+
+                            <div className="my-6 p-5 bg-cognac/5 border border-cognac/20 rounded-xl" data-speakable="true">
+                                <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">Real Receipt: MyCustomPatches</p>
+                                <p className="text-sm text-stone-700 leading-relaxed">Here is what the numbers look like in practice. We rebuilt MyCustomPatches (owner Matt Conner) from a slow WordPress and WooCommerce setup to a custom Next.js build. Mobile PageSpeed went from 45 to 100, load time from 3.2 seconds to 0.7, and monthly hosting dropped from $150 to $0 because the site no longer pays platform or plugin fees. The fixed build cost paid for itself in months on hosting savings alone, before counting the traffic the speed recovered. You can verify the live site at mycustompatches.net and the review on our Clutch and GoodFirms profiles.</p>
                             </div>
 
                             <BlogText>

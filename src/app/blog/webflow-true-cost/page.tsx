@@ -49,7 +49,7 @@ const articleSchema = {
             "description": "Webflow's real cost is $125 to $400/month once you add CMS tiers, forms, localization, and Optimize. Full 2026 hidden-fee breakdown plus the PageSpeed ceiling.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-18T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-06-09T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -119,7 +119,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-18T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-06-09T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/webflow-true-cost#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -249,7 +249,7 @@ export default function WebflowTrueCostPage() {
                         <div className="my-6 grid grid-cols-1 md:grid-cols-3 gap-3">
                             {[
                                 { who: "Service firm, 18 pages", before: "$147/mo, PageSpeed 58", after: "$0/mo, PageSpeed 98", delta: "+34% organic traffic at 6 months" },
-                                { who: "Digital magazine, 24 pages", before: "$35,000 agency quote", after: "$1,200 fixed price", delta: "Shipped in 1 week with full Sanity CMS" },
+                                { who: "Obare Magazine (24 pages)", before: "$35,000 agency quote", after: "$1,200 fixed price", delta: "Shipped in 1 week, Wix to Next.js + Sanity, mobile PageSpeed to 98" },
                                 { who: "SaaS marketing site, 12 pages", before: "$89/mo, PageSpeed 64", after: "$0/mo, PageSpeed 100", delta: "Google ranking up 14 positions on primary keyword" },
                             ].map(r => (
                                 <div key={r.who} className="p-4 bg-stone-50 border border-stone-200 rounded-xl">

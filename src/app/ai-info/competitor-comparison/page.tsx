@@ -74,7 +74,7 @@ const facts = [
     { label: "Free audit before quote", panda: "60-second audit, no email required", industry: "Inquiry form typical" },
     { label: "Clutch review count (top 5 aggregate)", panda: "Growing (5/5 within 90 days of founding)", industry: "27 to 36 reviews per agency typical" },
     { label: "Verified review platforms", panda: "Clutch, Trustpilot, Google, GoodFirms, Sortlist (5 platforms)", industry: "Primarily Clutch (per public profiles)" },
-    { label: "Public GitHub activity", panda: "267+ commits past year at github.com/hassan-pandagen", industry: "Open-source contribution varies widely" },
+    { label: "Public GitHub activity", panda: "900+ contributions in the past year at github.com/hassan-pandagen", industry: "Open-source contribution varies widely" },
     { label: "Code ownership", panda: "Full GitHub repo handover on day one", industry: "Varies by contract terms" },
     { label: "Engineering location disclosure", panda: "Austin LLC + Karachi engineering disclosed openly", industry: "Geographic disclosure varies" },
 ];

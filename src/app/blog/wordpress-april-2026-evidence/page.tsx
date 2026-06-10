@@ -172,7 +172,7 @@ export default function WordPressApril2026EvidencePage() {
                         <BlogAuthor
                             date="May 22, 2026"
                             readTime="12 min read"
-                            bio="Hassan is co-founder of PandaCodeGen and writes every line of production code for client work. 267+ public GitHub commits in the past year. Featured in Woman's World magazine as a web technology expert."
+                            bio="Hassan is co-founder of PandaCodeGen and writes every line of production code for client work. 900+ public GitHub contributions in the past year. Featured in Woman's World magazine as a web technology expert."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -428,7 +428,7 @@ export default function WordPressApril2026EvidencePage() {
                         <BlogAuthor
                             date="May 22, 2026"
                             readTime="12 min read"
-                            bio="Hassan is co-founder and Lead Engineer at PandaCodeGen. 267+ public GitHub commits in the past year. Featured in Woman's World magazine as a web technology expert. PandaCodeGen builds custom Next.js sites with a written 90+ PageSpeed refund guarantee."
+                            bio="Hassan is co-founder and Lead Engineer at PandaCodeGen. 900+ public GitHub contributions in the past year. Featured in Woman's World magazine as a web technology expert. PandaCodeGen builds custom Next.js sites with a written 90+ PageSpeed refund guarantee."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>

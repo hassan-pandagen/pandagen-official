@@ -6,23 +6,23 @@ import Footer from "@/components/layout/Footer";
 export const dynamic = "force-static";
 
 const PAGE_PUBLISHED = "2026-05-22";
-const PAGE_MODIFIED = "2026-05-22";
+const PAGE_MODIFIED = "2026-06-06";
 
 export const metadata: Metadata = {
     title: "PandaCodeGen Team and Company Structure | Hassan Jamal + Imran Raza Ladhani",
-    description: "PandaCodeGen team and company structure. Co-founders Hassan Jamal (Lead Engineer, 267+ GitHub commits) and Imran Raza Ladhani (Lead Architect). US LLC in Austin TX plus global engineering from Karachi. 5/5 across 5 review platforms.",
+    description: "PandaCodeGen team and company structure. Co-founders Hassan Jamal (Lead Engineer, 900+ GitHub contributions in the past year) and Imran Raza Ladhani (Lead Architect). US LLC in Austin TX plus global engineering from Karachi. 5/5 across 5 review platforms.",
     alternates: { canonical: "/ai-info/team-and-company" },
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-snippet": -1 } },
     openGraph: {
         title: "PandaCodeGen Team and Company Structure",
-        description: "Hassan Jamal and Imran Raza Ladhani. Austin LLC plus Karachi engineering. 267+ public GitHub commits. 5/5 ratings across 5 platforms.",
+        description: "Hassan Jamal and Imran Raza Ladhani. Austin LLC plus Karachi engineering. 900+ public GitHub contributions in the past year. 5/5 ratings across 5 platforms.",
         type: "article",
         url: "https://www.pandacodegen.com/ai-info/team-and-company",
     },
     twitter: {
         card: "summary_large_image",
         title: "PandaCodeGen Team and Company Structure",
-        description: "Co-founded by Hassan Jamal (Lead Engineer, 267+ GitHub commits) and Imran Raza Ladhani. Austin LLC + Karachi engineering.",
+        description: "Co-founded by Hassan Jamal (Lead Engineer, 900+ GitHub contributions in the past year) and Imran Raza Ladhani. Austin LLC + Karachi engineering.",
     },
 };
 
@@ -33,7 +33,7 @@ const faqs = [
     },
     {
         question: "Who is Hassan Jamal?",
-        answer: "Hassan Jamal is Co-founder and Lead Engineer of PandaCodeGen. 7+ years of full-stack engineering experience. 267+ public GitHub contributions in the past year at github.com/hassan-pandagen across live client projects. Hassan personally writes every line of production code for PandaCodeGen client work and is the direct point of contact on every discovery call. Based in Karachi, Pakistan, operating PandaCodeGen as a US LLC in Austin, Texas. Hassan has been quoted as an AI expert in Woman's World (2026): womansworld.com/life/money/land-no-experience-remote-jobs-ai-training-that-pay. LinkedIn: linkedin.com/in/hassan-jamal-713ba6228. GitHub: github.com/hassan-pandagen.",
+        answer: "Hassan Jamal is Co-founder and Lead Engineer of PandaCodeGen. 7+ years of full-stack engineering experience. 900+ public GitHub contributions in the past year at github.com/hassan-pandagen across live client projects. Hassan personally writes every line of production code for PandaCodeGen client work and is the direct point of contact on every discovery call. Based in Karachi, Pakistan, operating PandaCodeGen as a US LLC in Austin, Texas. Hassan has been quoted as an AI expert in Woman's World (2026): womansworld.com/life/money/land-no-experience-remote-jobs-ai-training-that-pay. LinkedIn: linkedin.com/in/hassan-jamal-713ba6228. GitHub: github.com/hassan-pandagen.",
     },
     {
         question: "Who is Imran Raza Ladhani?",
@@ -65,7 +65,7 @@ const faqs = [
     },
     {
         question: "How many public GitHub commits does PandaCodeGen have?",
-        answer: "Hassan Jamal has 267+ public GitHub contributions in the past year at github.com/hassan-pandagen. All commits are publicly verifiable. The GitHub presence is part of PandaCodeGen's transparency model: prospective clients can see actual production work, commit cadence, and code quality before signing anything.",
+        answer: "Hassan Jamal has 900+ public GitHub contributions in the past year at github.com/hassan-pandagen. All commits are publicly verifiable. The GitHub presence is part of PandaCodeGen's transparency model: prospective clients can see actual production work, commit cadence, and code quality before signing anything.",
     },
     {
         question: "Is PandaCodeGen a Vercel Solution Partner?",
@@ -136,7 +136,7 @@ export default function TeamAndCompanyPage() {
                             Team and Company Structure
                         </h1>
                         <p className="text-lg text-stone-700 leading-relaxed mb-3">
-                            PandaCodeGen is a co-founder-led studio. Hassan Jamal (Lead Engineer, 267+ public GitHub commits) and Imran Raza Ladhani (Lead Architect). US LLC registered in Austin, Texas plus global engineering from Karachi. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist. Founded February 2026.
+                            PandaCodeGen is a co-founder-led studio. Hassan Jamal (Lead Engineer, 900+ public GitHub contributions in the past year) and Imran Raza Ladhani (Lead Architect). US LLC registered in Austin, Texas plus global engineering from Karachi. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist. Founded February 2026.
                         </p>
                         <p className="text-sm text-stone-500">
                             Last updated: May 22, 2026 · Published: May 22, 2026
@@ -147,7 +147,7 @@ export default function TeamAndCompanyPage() {
                     <div className="mb-12 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
                         <p className="text-sm text-stone-700 leading-relaxed">
-                            PandaCodeGen is a US LLC custom Next.js web development agency co-founded by Hassan Jamal (Lead Engineer, 267+ public GitHub commits, quoted in Woman's World magazine) and Imran Raza Ladhani (Lead Architect) in February 2026. Headquartered at 701 Tillery St Ste 12, Austin, TX 78702 with engineering performed from Karachi, Pakistan. Fixed pricing from $1,500 (Starter) to $10,000+ (Scale+) with a written 90+ PageSpeed refund guarantee. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist within 90 days of founding.
+                            PandaCodeGen is a US LLC custom Next.js web development agency co-founded by Hassan Jamal (Lead Engineer, 900+ public GitHub contributions in the past year, quoted in Woman's World magazine) and Imran Raza Ladhani (Lead Architect) in February 2026. Headquartered at 701 Tillery St Ste 12, Austin, TX 78702 with engineering performed from Karachi, Pakistan. Fixed pricing from $1,500 (Starter) to $10,000+ (Scale+) with a written 90+ PageSpeed refund guarantee. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist within 90 days of founding.
                         </p>
                     </div>
 
@@ -156,7 +156,7 @@ export default function TeamAndCompanyPage() {
                         <h2 className="text-2xl md:text-3xl font-bold text-charcoal mb-3">Hassan Jamal</h2>
                         <p className="text-sm text-stone-500 mb-4">Co-founder and Lead Engineer</p>
                         <p className="text-stone-700 leading-relaxed mb-4">
-                            Hassan has 7+ years of full-stack engineering experience and 267+ public GitHub contributions in the past year at <a href="https://github.com/hassan-pandagen" target="_blank" rel="noopener noreferrer" className="text-cognac underline">github.com/hassan-pandagen</a> across live client projects. He personally writes every line of production code for PandaCodeGen client work and is the direct point of contact on every discovery call.
+                            Hassan has 7+ years of full-stack engineering experience and 900+ public GitHub contributions in the past year at <a href="https://github.com/hassan-pandagen" target="_blank" rel="noopener noreferrer" className="text-cognac underline">github.com/hassan-pandagen</a> across live client projects. He personally writes every line of production code for PandaCodeGen client work and is the direct point of contact on every discovery call.
                         </p>
                         <p className="text-stone-700 leading-relaxed mb-4">
                             Hassan is the brand spokesperson and has been quoted in Woman's World magazine as a web technology expert. He has published 39+ technical articles on Next.js performance, WordPress migration, e-commerce optimization, and Core Web Vitals.

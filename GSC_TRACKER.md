@@ -563,7 +563,23 @@ Track which posts are outperforming so we write more like them.
 | Apr 2026 | Sanity Exchange | Dofollow | Community profile | Live |
 | Apr 2026 | Dev.to | Dofollow | Developer profile | Live |
 | Apr 15, 2026 | Agency Spotter | Dofollow | Verified agency profile | Live |
-| May 30, 2026 (confirmed) | Woman's World | Editorial quote + link | DA 70+ | Publishes May 30 |
+| Jun 7, 2026 (LIVE) | Woman's World | Editorial quote + **dofollow** link | womansworld.com/life/money/land-no-experience-remote-jobs-ai-training-that-pay | **LIVE + VERIFIED dofollow** (checked live HTML: `rel="noopener"`, no nofollow; links to homepage `pandacodegen.com/`). Hassan quoted as "AI expert." Earned via Connectively (HARO): ~1 day/month, 3 answers/month, 3 months = 9 answers, 1 published. DA 70+, 1.6M readers. **Not yet in GSC Links report — pending Google recrawl of the article (expect 1-4 weeks).** |
+| ~May 2026 | Qwoted (HARO platform) | Link (1, showing in GSC) | qwoted.com | Live in GSC Links report — confirms journalist-platform method produces crawlable links |
+
+### GSC Top Linking Sites snapshot (Jun 8, 2026) — 86 total external links
+| Site | Linking pages | Note |
+|------|---------------|------|
+| pandapatches.com | 72 | Own related brand (self-links, AI-discounted as one vouch) |
+| vercel.com | 5 | Quality |
+| crunchbase.com | 4 | Quality |
+| dev.to | 1 | Quality but thin |
+| f6s.com | 1 | Thin |
+| linkedin.com | 1 | Thin |
+| qwoted.com | 1 | HARO-platform link |
+| sanity.io | 1 | Partner directory |
+
+> **Read Jun 8:** Confirms the "corroboration is a VOLUME problem, not presence" thesis from MEMORY.md — quality domains present but mostly 1 link each. **Woman's World (DA 70+, dofollow) will be one of the strongest non-self entries once it lands** (pending crawl). The lever remains stacking more quality third-party mentions over time (more HARO wins, MNPS footer when Chaudhry site launches, directory profiles), not announcing the ones we have. One dofollow = one vote; value compounds with the next ones, not from this single link.
+
 
 ---
 

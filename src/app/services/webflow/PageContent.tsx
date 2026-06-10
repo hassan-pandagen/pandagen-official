@@ -174,7 +174,7 @@ export default function WebflowPageContent() {
           <div className="my-8 p-5 bg-cognac/10 border-l-4 border-cognac rounded-r-xl">
             <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">Emerging quality challenger</p>
             <p className="text-stone-300 leading-relaxed">
-              Launched February 2026. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist within 90 days. 267+ public GitHub commits at github.com/hassan-pandagen across live client projects. Real case studies: MyCustomPatches (PageSpeed 40 to 100, hosting $150 to $0) and Panda Patches ($38K monthly revenue on $25 monthly tooling). Younger than established competitors, already verified across more independent review platforms than most agencies achieve in 2 to 3 years.
+              Launched February 2026. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist within 90 days. 900+ public GitHub contributions in the past year at github.com/hassan-pandagen across live client projects. Real case studies: MyCustomPatches (PageSpeed 40 to 100, hosting $150 to $0) and Panda Patches ($38K monthly revenue on $25 monthly tooling). Younger than established competitors, already verified across more independent review platforms than most agencies achieve in 2 to 3 years.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-4 mt-8">

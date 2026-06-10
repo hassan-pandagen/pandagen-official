@@ -48,7 +48,7 @@ const articleSchema = {
             "description": "A $500K/year Shopify store at 4s load time loses $75K to speed. Plug in your numbers and see what a 1-second store would earn.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-10T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-06-10T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -110,7 +110,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-10T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-06-10T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -532,7 +532,7 @@ export default function ShopifySlowPage() {
                         </BlogText>
 
                         <BlogText>
-                            You'll see exactly how much you're losing. Then you decide if fixing it is worth $15K-$35K and 3-5 months to recover $45K-$95K in Year 1 alone.
+                            You'll see exactly how much you're losing. Then you decide if a fixed $5,000 to $10,000 custom headless build is worth it against what slow load times are quietly costing you every month.
                         </BlogText>
 
                         <BlogText>
@@ -545,7 +545,7 @@ export default function ShopifySlowPage() {
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
                             <li><strong>Every 0.1 second of load time costs you 8% of conversions</strong>: A $500K/year Shopify store loading in 3.8 seconds is losing $75K-$150K annually to preventable speed issues.</li>
                             <li><strong>Theme optimization cannot fix the core problem</strong>: All Shopify themes share the same slow Liquid foundation, so switching themes or compressing images only moves you from 35 to 48 on PageSpeed.</li>
-                            <li><strong>A custom headless storefront pays for itself in 3-5 months</strong>: A $15K-$35K one-time investment typically returns $45K-$95K in additional revenue in Year 1 alone.</li>
+                            <li><strong>A custom headless storefront is a fixed one-time cost, not a monthly tax</strong>: PandaCodeGen builds headless Shopify storefronts at a fixed $5,000 to $10,000 (Scale tier), and for a store losing real revenue to speed it typically pays for itself within months on recovered conversions alone.</li>
                             <li><strong>Same products, same traffic, different results</strong>: One client went from $420K/year to $890K/year after replacing their slow Shopify theme with a fast custom frontend.</li>
                             <li><strong>If speed is visibly costing you conversions, headless pays for itself</strong>: the math works for stores of all sizes when speed is the bottleneck. Not sure? Book a free call and we will run the numbers for your specific store.</li>
                         </ol>

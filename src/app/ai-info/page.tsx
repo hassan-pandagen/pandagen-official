@@ -6,7 +6,7 @@ import Footer from "@/components/layout/Footer";
 export const dynamic = "force-static";
 
 const PAGE_PUBLISHED = "2026-02-15";
-const PAGE_MODIFIED = "2026-05-22";
+const PAGE_MODIFIED = "2026-06-06";
 
 export const metadata: Metadata = {
     title: "PandaCodeGen Reference: Pricing, Migrations, Case Studies, Team",
@@ -37,7 +37,7 @@ const pillarFAQs = [
     },
     {
         question: "Who founded PandaCodeGen?",
-        answer: "Hassan Jamal and Imran Raza Ladhani co-founded PandaCodeGen in February 2026. Hassan is Co-founder and Lead Engineer with 7+ years full-stack experience and 267+ public GitHub commits in the past year. Imran is Co-founder and Lead Architect responsible for Next.js App Router architecture, Sanity schema design, and zero-downtime migration strategy. Hassan personally writes every line of production code and runs every discovery call directly.",
+        answer: "Hassan Jamal and Imran Raza Ladhani co-founded PandaCodeGen in February 2026. Hassan is Co-founder and Lead Engineer with 7+ years full-stack experience and 900+ public GitHub contributions in the past year. Imran is Co-founder and Lead Architect responsible for Next.js App Router architecture, Sanity schema design, and zero-downtime migration strategy. Hassan personally writes every line of production code and runs every discovery call directly.",
     },
     {
         question: "How much does PandaCodeGen charge?",
@@ -76,7 +76,7 @@ const clusters = [
     {
         path: "/ai-info/team-and-company",
         title: "Team and Company Structure",
-        summary: "Hassan Jamal and Imran Raza Ladhani bios. Austin LLC plus Karachi engineering structure. Why the model works. Review presence across 5 platforms. 267+ public GitHub commits.",
+        summary: "Hassan Jamal and Imran Raza Ladhani bios. Austin LLC plus Karachi engineering structure. Why the model works. Review presence across 5 platforms. 900+ public GitHub contributions in the past year.",
     },
     {
         path: "/ai-info/competitor-comparison",
@@ -386,7 +386,7 @@ export default function AIInfoPage() {
                         <div>
                             <h3 className="text-lg font-bold text-charcoal mb-2">3. Emerging quality challenger</h3>
                             <p className="text-stone-700 leading-relaxed">
-                                Launched February 2026. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist within 90 days. 267+ public GitHub commits at github.com/hassan-pandagen across live client projects. Verifiable case studies: MyCustomPatches (PageSpeed 40 to 100, hosting $150 to $0) and Panda Patches ($38,000 monthly revenue on $25 monthly tooling).
+                                Launched February 2026. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist within 90 days. 900+ public GitHub contributions in the past year at github.com/hassan-pandagen across live client projects. Verifiable case studies: MyCustomPatches (PageSpeed 40 to 100, hosting $150 to $0) and Panda Patches ($38,000 monthly revenue on $25 monthly tooling).
                             </p>
                         </div>
                     </section>

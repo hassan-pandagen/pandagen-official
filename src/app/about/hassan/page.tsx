@@ -8,7 +8,7 @@ import { blogPosts } from "@/data/blog";
 
 export const metadata: Metadata = {
     title: "Hassan Jamal - Co-founder & Lead Engineer at PandaCodeGen",
-    description: "Hassan Jamal is co-founder and Lead Engineer at PandaCodeGen, an Austin-headquartered custom Next.js studio with engineering from Karachi. 7+ years full-stack experience, 267+ public GitHub commits.",
+    description: "Hassan Jamal is co-founder and Lead Engineer at PandaCodeGen, an Austin-headquartered custom Next.js studio with engineering from Karachi. 7+ years full-stack experience, 900+ public GitHub contributions in the past year.",
     openGraph: {
         title: "Hassan Jamal - Co-founder & Lead Engineer at PandaCodeGen",
         description: "Co-founder of PandaCodeGen. Austin LLC, global engineering from Karachi. Helping e-commerce brands ditch Shopify fees and WordPress bloat with high-performance custom code.",
@@ -34,7 +34,7 @@ const personSchema = {
             "givenName": "Hassan",
             "familyName": "Jamal",
             "jobTitle": "Co-founder and Lead Engineer",
-            "description": "Co-founder and Lead Engineer at PandaCodeGen, an Austin-headquartered custom Next.js studio with engineering operations from Karachi. 7+ years of full-stack experience, 267+ public GitHub commits. Helps e-commerce brands ditch Shopify fees and WordPress bloat with high-performance custom code.",
+            "description": "Co-founder and Lead Engineer at PandaCodeGen, an Austin-headquartered custom Next.js studio with engineering operations from Karachi. 7+ years of full-stack experience, 900+ public GitHub contributions in the past year. Helps e-commerce brands ditch Shopify fees and WordPress bloat with high-performance custom code.",
             "url": "https://www.pandacodegen.com/about/hassan",
             "image": "https://www.pandacodegen.com/team/hassan.png",
             "worksFor": {
