@@ -268,7 +268,7 @@ export default function AuditWidget() {
                     className="w-full py-3 bg-white border border-stone-200 text-charcoal font-semibold rounded-xl hover:border-cognac/40 transition-all flex items-center justify-center gap-2 text-sm"
                   >
                     <Mail className="w-4 h-4 text-stone-500" />
-                    Or email me the full PDF + a Loom walkthrough
+                    Or email me the 3 biggest fixes for my site + what each costs
                   </button>
                   <button onClick={handleReset} className="w-full text-center text-sm text-gray-500 hover:text-cognac transition-colors">
                     Scan another site
@@ -376,7 +376,7 @@ export default function AuditWidget() {
                     onClick={() => setIsEmailGateOpen(true)}
                     className="w-full py-2.5 bg-white border border-stone-200 text-charcoal font-semibold rounded-xl hover:border-cognac/40 transition-all flex items-center justify-center gap-2 text-xs"
                   >
-                    <Mail className="w-3.5 h-3.5 text-stone-500" /> Or email me the PDF + Loom
+                    <Mail className="w-3.5 h-3.5 text-stone-500" /> Or email me the 3 biggest fixes + costs
                   </button>
                   <button onClick={handleReset} className="w-full text-center text-xs text-gray-500 hover:text-cognac transition-colors">
                     Scan another site

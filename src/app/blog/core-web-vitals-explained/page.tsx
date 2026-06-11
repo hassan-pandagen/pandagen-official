@@ -61,7 +61,7 @@ const articleSchema = {
             "description": "Your agency said your Core Web Vitals are failing and you have no idea what that means. Here is what the 3 metrics cost your business in lost sales.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-05-06T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-06-11T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -119,7 +119,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-05-06",
-            "dateModified": "2026-06-06T00:00:00-05:00"
+            "dateModified": "2026-06-11T00:00:00-05:00"
         },
         {
             "@type": "Organization",
@@ -681,7 +681,7 @@ export default function CoreWebVitalsExplainedPage() {
                             <li><strong>Only 47% of sites pass all three in 2026.</strong> The other 53% lose 8 to 35 percent of conversions, traffic, and revenue. This is a real business cost, not a theoretical one.</li>
                             <li><strong>Every 1-second delay = 7% fewer conversions.</strong> For a $100K/month business, that is $7,000 per month in lost sales. $84,000 per year.</li>
                             <li><strong>Platform-based sites have a structural ceiling.</strong> Wix, Squarespace, page-builder WordPress, and GoHighLevel cannot consistently pass Core Web Vitals because the platform itself loads too much mandatory JavaScript.</li>
-                            <li><strong>Check your scores at pagespeed.web.dev in 30 seconds.</strong> Test mobile first. If you fail, the fix is either basic optimization (images, apps, caching) or a platform migration. Do not pay for anything else.</li>
+                            <li><strong>Check your scores at pagespeed.web.dev in 30 seconds.</strong> Test mobile first. If you fail, the fix is either basic optimization (images, apps, caching) or a <Link href="/services/wordpress-migration" className="text-cognac hover:underline">platform migration</Link>. Fixed migration pricing is published on our <Link href="/pricing" className="text-cognac hover:underline">pricing page</Link>. Do not pay for anything else.</li>
                         </ol>
                     </section>
 

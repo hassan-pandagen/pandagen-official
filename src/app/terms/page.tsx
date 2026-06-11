@@ -4,7 +4,7 @@ import Footer from "@/components/layout/Footer";
 import FadeIn from "@/components/ui/FadeIn";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | PandaCodeGen",
+  title: { absolute: "Terms of Service | PandaCodeGen" },
   description: "The terms governing your use of PandaCodeGen services. Last updated January 26, 2026.",
   alternates: { canonical: "/terms" },
   openGraph: {

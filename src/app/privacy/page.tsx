@@ -4,7 +4,7 @@ import Footer from "@/components/layout/Footer";
 import FadeIn from "@/components/ui/FadeIn";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | PandaCodeGen",
+  title: { absolute: "Privacy Policy | PandaCodeGen" },
   description: "How PandaCodeGen collects, uses, and protects your data. Last updated January 26, 2026.",
   alternates: { canonical: "/privacy" },
   openGraph: {

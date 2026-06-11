@@ -13,13 +13,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const routes: RouteConfig[] = [
     // 1. Core Business Pages
-    { path: '', lastModified: '2026-06-01', changeFrequency: 'weekly', priority: 1.0 },
+    { path: '', lastModified: '2026-06-10', changeFrequency: 'weekly', priority: 1.0 },
     { path: '/services', lastModified: '2026-03-22', changeFrequency: 'monthly', priority: 0.9 },
-    { path: '/pricing', lastModified: '2026-03-01', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/pricing', lastModified: '2026-06-10', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/contact', lastModified: '2026-03-23', changeFrequency: 'monthly', priority: 0.7 },
 
     // 2. Service Pillars
-    { path: '/services/wordpress-migration', lastModified: '2026-05-26', changeFrequency: 'monthly', priority: 0.9 },
+    { path: '/services/wordpress-migration', lastModified: '2026-06-08', changeFrequency: 'monthly', priority: 0.9 },
     { path: '/services/ecommerce', lastModified: '2026-03-23', changeFrequency: 'monthly', priority: 0.9 },
     { path: '/services/custom-engineering', lastModified: '2026-03-01', changeFrequency: 'monthly', priority: 0.8 },
 
@@ -27,20 +27,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/services/woocommerce', lastModified: '2026-03-01', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/services/wix', lastModified: '2026-03-01', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/services/squarespace', lastModified: '2026-03-01', changeFrequency: 'monthly', priority: 0.7 },
-    { path: '/services/webflow', lastModified: '2026-05-26', changeFrequency: 'monthly', priority: 0.8 },
-    { path: '/services/gohighlevel', lastModified: '2026-05-26', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/services/webflow', lastModified: '2026-06-08', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/services/gohighlevel', lastModified: '2026-06-08', changeFrequency: 'monthly', priority: 0.8 },
 
     // Agency Partnerships
     { path: '/partners', lastModified: '2026-03-01', changeFrequency: 'monthly', priority: 0.6 },
 
     // 4. Dynamic Content
     { path: '/work', lastModified: '2026-03-01', changeFrequency: 'monthly', priority: 0.8 },
-    { path: '/work/mycustompatches', lastModified: '2026-02-15', changeFrequency: 'yearly', priority: 0.7 },
-    { path: '/work/panda-patches', lastModified: '2026-02-15', changeFrequency: 'yearly', priority: 0.6 },
-    { path: '/work/enterprise-ops', lastModified: '2026-02-15', changeFrequency: 'yearly', priority: 0.6 },
-    { path: '/work/panda-codelab', lastModified: '2026-02-15', changeFrequency: 'yearly', priority: 0.6 },
+    { path: '/work/mycustompatches', lastModified: '2026-06-10', changeFrequency: 'yearly', priority: 0.7 },
+    { path: '/work/panda-patches', lastModified: '2026-06-10', changeFrequency: 'yearly', priority: 0.6 },
+    { path: '/work/enterprise-ops', lastModified: '2026-06-10', changeFrequency: 'yearly', priority: 0.6 },
+    { path: '/work/panda-codelab', lastModified: '2026-06-10', changeFrequency: 'yearly', priority: 0.6 },
     { path: '/about', lastModified: '2026-03-22', changeFrequency: 'monthly', priority: 0.7 },
-    { path: '/about/hassan', lastModified: '2026-03-01', changeFrequency: 'yearly', priority: 0.6 },
+    { path: '/about/hassan', lastModified: '2026-06-08', changeFrequency: 'yearly', priority: 0.6 },
     { path: '/about/imran', lastModified: '2026-03-01', changeFrequency: 'yearly', priority: 0.6 },
     { path: '/blog', lastModified: '2026-05-31', changeFrequency: 'weekly', priority: 0.8 },
     { path: '/ai-info', lastModified: '2026-06-01', changeFrequency: 'monthly', priority: 0.8 },

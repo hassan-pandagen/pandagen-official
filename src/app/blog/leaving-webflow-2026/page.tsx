@@ -50,7 +50,7 @@ const articleSchema = {
             "description": "Bandwidth cut 75%. Bills hit $170 overnight. Carts broke. Memberships killed. The real story of leaving Webflow and what comes next.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-06T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-06-11T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -114,7 +114,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-04-06T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-06-11T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/leaving-webflow-2026#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -449,7 +449,7 @@ export default function LeavingWebflow2026Page() {
                         </div>
 
                         <BlogText>
-                            We ran this exact process on our Obare Magazine rebuild (Wix to Next.js and Sanity, 7 days). The playbook travels to Webflow cleanly. Here is what a real migration looks like from the inside, with no glossing over the hard parts. For the full scope breakdown and hour-per-phase estimates specifically for 50 to 100 page Webflow sites, see our <Link href="/blog/webflow-migration-50-to-100-pages" className="text-cognac hover:underline">Scale-tier pricing breakdown</Link>.
+                            We ran this exact process on our Obare Magazine rebuild (Wix to Next.js and Sanity, 7 days). The playbook travels to Webflow cleanly. Here is what a real migration looks like from the inside, with no glossing over the hard parts. For the full scope breakdown and hour-per-phase estimates specifically for 50 to 100 page Webflow sites, see our <Link href="/blog/webflow-migration-50-to-100-pages" className="text-cognac hover:underline">Scale-tier pricing breakdown</Link>. The fixed-price scope and what every migration includes is on our <Link href="/services/webflow" className="text-cognac hover:underline">Webflow migration service page</Link>, with the full tier menu at <Link href="/pricing" className="text-cognac hover:underline">pricing</Link>.
                         </BlogText>
 
                         <BlogText>

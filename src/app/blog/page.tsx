@@ -9,7 +9,7 @@ export const metadata: Metadata = {
         canonical: "/blog",
     },
     openGraph: {
-        title: "Web Development & Performance Blog | PandaCodeGen",
+        title: { absolute: "Web Development & Performance Blog | PandaCodeGen" },
         description: "Guides on WordPress migration, Shopify speed, Next.js performance, and Core Web Vitals. Written by engineers who build 100/100 PageSpeed sites.",
         url: "https://www.pandacodegen.com/blog",
         type: "website",

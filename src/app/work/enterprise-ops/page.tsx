@@ -6,7 +6,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 
 export const metadata: Metadata = {
-    title: "Enterprise Operations Platform Case Study, Custom Business Dashboard | PandaCodeGen",
+    title: { absolute: "Enterprise Operations Platform Case Study, Custom Business Dashboard | PandaCodeGen" },
     description: "How we replaced spreadsheets, WhatsApp chains, and 3 SaaS tools with a single custom ops platform. Real-time order pipeline, RBAC, automated attendance, profit tracking. Rated 10/10 by senior developer review.",
     openGraph: {
         title: "Enterprise Operations Platform Case Study, Custom Business Dashboard",

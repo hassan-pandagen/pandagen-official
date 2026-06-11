@@ -2,6 +2,14 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 export function proxy(request: NextRequest) {
+    const { pathname, searchParams } = request.nextUrl;
+
+    // Strip ?ref= tracking params — prevents Bing from indexing duplicate parameterised URLs
+    if (searchParams.has("ref")) {
+        const clean = new URL(pathname, request.url);
+        return NextResponse.redirect(clean, 301);
+    }
+
     const response = NextResponse.next();
 
     // Security Headers

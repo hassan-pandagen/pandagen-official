@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import PricingPageClient from "./PricingPageClient";
 
 export const metadata: Metadata = {
-    title: "Fixed-Price Web Development: From $1,500 | PandaCodeGen",
+    title: { absolute: "Fixed-Price Web Development: From $1,500 | PandaCodeGen" },
     description: "Fixed-price custom web development. Starter sites from $1,500, Growth migrations $3,500, Scale e-commerce $5K to $10K. 90+ PageSpeed guarantee or full refund.",
     alternates: {
         canonical: "/pricing",

@@ -6,7 +6,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 
 export const metadata: Metadata = {
-    title: "Panda CodeLab, Custom Agency Website, Spline 3D + Framer Motion + WCAG 2.1 AA | PandaCodeGen",
+    title: { absolute: "Panda CodeLab, Custom Agency Website, Spline 3D + Framer Motion + WCAG 2.1 AA | PandaCodeGen" },
     description: "How we built pandacodelab.com, a separate brand, fully custom. Next.js 16, React 19, Framer Motion spring physics, magnetic interactions, Spline 3D scenes, WCAG 2.1 AA. Zero templates. Zero page builders. Under a second load.",
     openGraph: {
         title: "Panda CodeLab, Custom Agency Website Built by PandaCodeGen",

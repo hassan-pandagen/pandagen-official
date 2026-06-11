@@ -6,7 +6,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 
 export const metadata: Metadata = {
-    title: "MyCustomPatches Case Study, WordPress Migration, 100/100 PageSpeed | PandaCodeGen",
+    title: { absolute: "MyCustomPatches Case Study, WordPress Migration, 100/100 PageSpeed | PandaCodeGen" },
     description: "How we migrated a 10-year-old WordPress patch business to Next.js 14. Load time dropped from 3.2s to 0.7s. PageSpeed went from ~40 to 100/100. Hosting cost dropped from $150/mo to $0. Zero downtime. All 200+ pages and SEO rankings fully preserved.",
     openGraph: {
         title: "MyCustomPatches, WordPress to Next.js Migration. 100/100 PageSpeed.",

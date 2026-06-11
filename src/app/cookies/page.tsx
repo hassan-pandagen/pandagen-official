@@ -4,7 +4,7 @@ import Footer from "@/components/layout/Footer";
 import FadeIn from "@/components/ui/FadeIn";
 
 export const metadata: Metadata = {
-  title: "Cookie Policy | PandaCodeGen",
+  title: { absolute: "Cookie Policy | PandaCodeGen" },
   description: "How PandaCodeGen uses cookies. Last updated January 26, 2026.",
   alternates: { canonical: "/cookies" },
   openGraph: {

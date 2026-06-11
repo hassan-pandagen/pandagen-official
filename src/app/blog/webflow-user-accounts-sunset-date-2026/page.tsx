@@ -29,7 +29,7 @@ export const metadata: Metadata = {
         description: "Webflow User Accounts were sunset January 29, 2026. Logins broke. Member data lost. Gated pages went static. Here is why Memberstack and Outseta are short-term fixes, and what the permanent answer looks like.",
         type: "article",
         publishedTime: "2026-04-22",
-        modifiedTime: "2026-06-06T00:00:00-05:00",
+        modifiedTime: "2026-06-11T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/webflow-user-accounts-sunset-date-2026",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -51,7 +51,7 @@ const articleSchema = {
             "description": "Webflow User Accounts were sunset on January 29, 2026. Sites that did not migrate lost member data, gated pages went static, and logins broke. Here is what happened, why Memberstack and Outseta are not the long-term fix, and how to rebuild on a stack that will not deprecate on you.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-22T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-06-11T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -115,7 +115,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-04-22T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-06-11T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/webflow-user-accounts-sunset-date-2026#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -206,7 +206,7 @@ export default function WebflowUserAccountsSunset2026Page() {
                             <li><strong>What got lost:</strong> all member data that was not exported via CSV before the deadline.</li>
                             <li><strong>Webflow&apos;s recommended swap:</strong> Memberstack (50% off 6 months) or Outseta (50% off 12 months plus VIP migration).</li>
                             <li><strong>The long-term fix:</strong> custom Next.js auth on Clerk, NextAuth, or Supabase. You own the code. Nothing gets sunset unless you sunset it.</li>
-                            <li><strong>Cost to rebuild properly:</strong> $3,500 Growth tier for most membership sites. Fixed pricing, 90+ PageSpeed guaranteed.</li>
+                            <li><strong>Cost to rebuild properly:</strong> <Link href="/pricing" className="text-cognac hover:underline">$3,500 Growth tier</Link> for most membership sites. Fixed pricing, 90+ PageSpeed guaranteed. Full scope on the <Link href="/services/webflow" className="text-cognac hover:underline">Webflow migration service page</Link>.</li>
                         </ul>
                     </div>
 

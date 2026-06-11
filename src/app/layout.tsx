@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     default: "Get Cited by AI Search | Custom Next.js Web Development | PandaCodeGen",
     template: "%s | PandaCodeGen",
   },
-  description: "We rebuild slow WordPress and Shopify sites into custom Next.js code that ChatGPT, Claude and Google AI cite, and cut your monthly subscriptions 40 to 70%. 90+ PageSpeed or full refund. Fixed pricing from $1,500.",
+  description: "We rebuild slow WordPress and Shopify into custom Next.js. Cut subscriptions 40 to 70%. 90+ PageSpeed guaranteed or full refund. Fixed pricing from $1,500.",
   alternates: {
     canonical: '/',
   },
@@ -111,7 +111,7 @@ export const metadata: Metadata = {
     url: "https://www.pandacodegen.com",
     siteName: "PandaCodeGen",
     title: "Get Cited by AI Search | Custom Next.js Web Development | PandaCodeGen",
-    description: "We rebuild slow WordPress and Shopify sites into custom Next.js code that ChatGPT, Claude and Google AI cite, and cut your monthly subscriptions 40 to 70%. 90+ PageSpeed or full refund. Fixed pricing from $1,500.",
+    description: "We rebuild slow WordPress and Shopify into custom Next.js. Cut subscriptions 40 to 70%. 90+ PageSpeed guaranteed or full refund. Fixed pricing from $1,500.",
     images: [
       {
         url: "/og-image.jpg",
