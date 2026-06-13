@@ -34,6 +34,52 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "custom-website-5000-whats-included",
+    cardStat: "from $5K",
+    cardStatLabel: "scoped, not a flat fee (vs $15-30K most agencies quote)",
+    title: "What You Get for a Custom Website Starting at $5,000 (2026)",
+    excerpt: "Most agencies quote $15,000 to $30,000 for a custom website, or hide the number behind a contact form. Here is the honest version: what a custom build actually includes starting at $5,000, why it is a scoped starting point and not a flat fee, and the things we include that buyers do not even know to ask for, like server-side ad tracking and ongoing advice on which ads to run.",
+    category: "Guide",
+    readTime: "11 min",
+    date: "Jun 14",
+    author: "Hassan",
+    role: "Co-founder, Lead Engineer",
+    featured: false,
+    illustrationType: "cost",
+    lastModified: "2026-06-14",
+    faqs: [
+      { question: "How much does a custom website cost in 2026?", answer: "Most agencies quote $15,000 to $30,000 for a custom website, and many hide the number behind a contact form. PandaCodeGen publishes its tiers: business sites from $1,500 (Starter), content sites with a CMS and blog migration at $3,500 (Growth), and custom builds with e-commerce, server-side ad tracking, and 30-plus pages starting at $5,000 (Scale). Scale is a starting point scoped to your project, not a flat fee. You get a fixed quote before any work begins, you own all the code, and there are no monthly platform fees." },
+      { question: "What is included in a custom website starting at $5,000?", answer: "A custom Next.js build (headless e-commerce or a custom lead-gen platform, 30-plus pages), Sanity CMS so your team edits without a developer, server-side Meta Conversions API tracking so your ad data is clean, a written 90-plus PageSpeed guarantee or full refund, a fixed price agreed before work starts, full ownership of the code, complete 301 redirect mapping with a zero-downtime launch, a free month of post-launch tweaks, and Vercel hosting that starts free and scales to about $20 a month. You also get the advisory layer: because we build the tracking, we tell you what is working in your ads and what to run." },
+      { question: "Why is it 'starting from $5,000' and not a fixed price?", answer: "Because scope genuinely varies. The $5,000 starting point covers a custom build with the core server-side tracking you can watch working. Price scales up with two things mainly: more pages, and how much of your customer journey you want tracked server-side. Meta supports many events beyond a basic Purchase (InitiateCheckout, AddToCart, ViewContent, Contact, and custom pipeline stages), and each one set up properly is real work. At $10,000 we add a monitoring dashboard and can fold ongoing tracking, SEO, and AEO into a retainer. Either way you get a fixed quote before any work starts, with no hourly surprises." },
+      { question: "Why do most agencies charge $15,000 to $30,000 for the same thing?", answer: "Some of it is real senior engineering time, and some of it is overhead: layers of account managers, sales teams, and office costs you end up funding. PandaCodeGen is a small, founder-led team with global engineering, so the price reflects the build, not the bureaucracy. You also talk directly to the person writing your code, not an account manager relaying messages." },
+      { question: "What is the difference between the $3,500 Growth tier and the $5,000 Scale tier?", answer: "Growth ($3,500) is the content-site tier: a 10 to 20 page marketing site, Sanity CMS, blog migration, and full 301 redirects. It does not include server-side ad tracking. Scale (from $5,000) is the custom-platform tier: e-commerce or a custom lead-gen build, 30-plus pages, server-side Meta Conversions API tracking, custom integrations, and the ongoing ad advisory. If you run paid ads and take payments online, you want Scale. If you mainly need a fast, well-structured content site, Growth is the fit." },
+      { question: "Do I own the code, and can I leave whenever I want?", answer: "Yes. You own the entire codebase, and we transfer the repository to you. There is no lock-in, no proprietary builder, and no monthly platform fee the way there is with Webflow, Wix, or Shopify themes. If you ever want to take the site to another developer, you can, it is your code on your hosting account." },
+    ]
+  },
+  {
+    id: "meta-conversions-api-setup-cost",
+    cardStat: "$4K-$16K",
+    cardStatLabel: "to build CAPI standalone. We include it in the build.",
+    title: "Meta Conversions API Setup: What It Costs and Why a Pixel Isn't Enough (2026)",
+    excerpt: "A client-side Meta pixel misses up to half your conversions. Proper server-side Conversions API setup runs $4,000 to $16,000 as a standalone project, or arrives as monthly middleware with a third party sitting in your customer data. Here is what it actually costs, what it delivered on our own store (Meta reporting ~10% more leads, 9.0 Event Match Quality), and how a custom, direct, database-driven integration is built with no middleware in the path.",
+    category: "Guide",
+    readTime: "12 min",
+    date: "Jun 14",
+    author: "Hassan",
+    role: "Co-founder, Lead Engineer",
+    featured: true,
+    illustrationType: "conversion",
+    lastModified: "2026-06-14",
+    faqs: [
+      { question: "How much does Meta Conversions API setup cost in 2026?", answer: "As a standalone project, Meta Conversions API setup costs $500 to $7,000 as an agency setup fee, or $4,000 to $16,000 in developer time when built custom (a mid-size store typically needs 40 to 80 hours at $100 to $200 per hour). The cheaper-looking route is managed middleware like Stape, which starts around $20 per month but adds a recurring fee forever and puts a third-party data processor between your store and Meta. PandaCodeGen builds a custom, direct server-to-server integration as part of a Scale-tier website build starting at $5,000, with no monthly middleware and no extra data processor in the path." },
+      { question: "Is the Meta pixel enough on its own?", answer: "No. A client-side pixel alone misses a large share of conversions in 2026 because of iOS tracking limits, ad blockers, and cookie loss. When Meta cannot see a conversion, it cannot attribute it or learn from it, so it optimizes your ad budget against a blurry, partial picture of who actually buys. The pixel is the browser half. The Conversions API is the server half that sends the conversion directly from your server, with no browser to lose it. You want both, firing together and deduplicated." },
+      { question: "What is the difference between Stape and a custom server-side setup?", answer: "Stape (and similar tools like Conversios, Elevar, and Meta's Conversions API Gateway) is hosted middleware. You rent a server container, pay monthly, and your customer data flows through a third party before reaching Meta. A custom server-side setup sends events directly from your own server to Meta's Graph API, with no middleman, no monthly platform fee, and no extra company holding your customer data. The custom route is more work to build (which is why it costs more upfront) but it is more robust, has no ongoing fee, and keeps your data first-party." },
+      { question: "Will server-side tracking actually improve my ad performance?", answer: "It improves the data Meta optimizes against, which is what moves performance. On our own store, after building server-side tracking, Meta began reporting roughly 10% more lead conversions and Event Match Quality on lead events reached 9.0 out of 10. Because Meta could finally see exactly which ads produced paying customers, we identified three underperforming ads it had been wasting budget on, cut them, and moved that spend to the winners. Better signal does not change your creative; it changes how accurately the algorithm spends your money." },
+      { question: "Do I need the Conversions API if I am not on Shopify?", answer: "Yes, if you run Meta ads and take leads or payments on any platform. The Conversions API is platform-agnostic. It matters most when your checkout or payment completes on a hosted page (Stripe, Square, a booking tool) because the browser pixel often never sees the confirmation. A server-side setup fires the Purchase or Lead from your payment webhook or database the moment it happens, so it cannot be lost to a redirect or a closed tab." },
+      { question: "Is the Conversions API setup included in a PandaCodeGen build?", answer: "It is included starting at the Scale tier ($5,000). The Growth tier ($3,500) does not include it. At Scale we set up a working custom server-side integration you can see firing in Meta Events Manager. At $10,000 we add a monitoring dashboard and can fold ongoing tracking, SEO, and AEO into a retainer. The setup is custom-built for your stack, not a middleware subscription, so there is no recurring tracking fee after launch." },
+    ]
+  },
+  {
     id: "spending-more-on-ads-fewer-orders-tracking",
     cardStat: "50% invisible",
     cardStatLabel: "of ad conversions most stores never send to Meta or Google",
@@ -889,7 +935,7 @@ export const blogPosts: BlogPost[] = [
     role: "Lead Engineer",
     featured: false,
     illustrationType: 'plugins',
-    lastModified: "2026-04-04",
+    lastModified: "2026-06-14",
     faqs: [
       { question: "What is Cloudflare EmDash?", answer: "EmDash is a new open-source CMS launched by Cloudflare on April 2, 2026. They describe it as the spiritual successor to WordPress. It is built on TypeScript and Astro, runs serverless on Cloudflare Workers, and isolates plugins in sandboxed environments for better security." },
       { question: "Should I switch from WordPress to EmDash?", answer: "Not yet. EmDash is in beta with zero plugin ecosystem, no community support, and requires CLI setup. It is technically impressive but not ready for businesses that need their website to work today." },

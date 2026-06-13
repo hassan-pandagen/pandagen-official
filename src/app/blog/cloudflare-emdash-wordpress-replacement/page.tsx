@@ -49,7 +49,7 @@ const articleSchema = {
             "description": "Cloudflare launched Emdash, calling it WordPress's spiritual successor. 96% of WordPress security issues come from plugins. Here is what this means for you.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-04T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-06-14T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -109,7 +109,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-04-04T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-06-14T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/cloudflare-emdash-wordpress-replacement#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -259,6 +259,10 @@ export default function CloudflareEmdashPage() {
 
                         <BlogText>
                             <strong>What Emdash gets right:</strong> It is serverless, so there is no server to maintain or pay for when traffic is low. It uses TypeScript instead of PHP, which is a modern language that catches errors before they reach your visitors. Plugin isolation is genuinely innovative. And the AI-native approach, where the system was partly built with and designed for AI workflows, points toward where the industry is heading.
+                        </BlogText>
+
+                        <BlogText>
+                            The detail worth flagging for 2026: Emdash ships with a built-in MCP server, which means AI agents can read and manage your content directly, with no plugins and no glue code. Cloudflare putting that at the core of a CMS is a signal, machine-readable content is becoming the default, not a nice-to-have. It is the same reason we build sites structured for AI search to read and cite, covered in our <Link href="/ai-info" className="text-cognac hover:underline font-medium">AI search reference</Link>. Under the hood Emdash runs on Astro and stores content as Portable Text rather than WordPress&apos;s HTML model, which is part of why you cannot simply migrate a WordPress site into it. The themes and plugins do not carry over. It is a rebuild either way, which is the same decision point you reach whether you move to Emdash or to a custom site.
                         </BlogText>
 
                         <BlogText>
