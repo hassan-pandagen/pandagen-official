@@ -330,7 +330,7 @@ export default function CustomWebsite5000Page() {
                     <section className="mb-10 mt-8 md:mt-10">
                         <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
                         <p className="text-stone-700 leading-relaxed mb-3">
-                            For the server-side ad tracking that comes with this tier (and the numbers it produced on our own store), read <Link href="/blog/meta-conversions-api-setup-cost" className="text-cognac hover:underline font-medium">what Meta Conversions API setup costs and why a pixel is not enough</Link>. For how a custom build cuts the monthly software bill over time, see the <Link href="/blog/shopify-app-costs-real-monthly-bill" className="text-cognac hover:underline font-medium">real Shopify app cost breakdown</Link>.
+                            For the server-side ad tracking that comes with this tier (and the numbers it produced on our own store), read <Link href="/blog/meta-conversions-api-setup-cost" className="text-cognac hover:underline font-medium">what Meta Conversions API setup costs and why a pixel is not enough</Link>. For how a custom build cuts the monthly software bill over time, see the <Link href="/blog/shopify-app-costs-real-monthly-bill" className="text-cognac hover:underline font-medium">real Shopify app cost breakdown</Link>. And if you are moving an existing site, see what a <Link href="/blog/website-migration-cost-2026" className="text-cognac hover:underline font-medium">website migration costs by platform</Link>.
                         </p>
                     </section>
 

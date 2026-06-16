@@ -25,10 +25,10 @@ const deepCheckNames = [
 // Hyperspeed audit of 1,166 stores = 30/100 avg mobile PageSpeed; 58% fail CWV.
 const sampleScanLines = [
   { name: "AI Readiness", verdict: "Invisible to ChatGPT & Claude", status: "fail" as const },
-  { name: "Mobile load time", verdict: "4.2s — 58% fail Google's bar", status: "fail" as const },
-  { name: "Core Web Vitals", verdict: "LCP 3.8s (poor)", status: "fail" as const },
-  { name: "Structured data", verdict: "No @graph entity", status: "fail" as const },
-  { name: "Security headers", verdict: "3 of 6 missing", status: "warn" as const },
+  { name: "Mobile load time", verdict: "4.2s — most visitors leave before it loads", status: "fail" as const },
+  { name: "Core Web Vitals", verdict: "Poor — Google ranks it below faster sites", status: "fail" as const },
+  { name: "Structured data", verdict: "Missing — AI can't read the business", status: "fail" as const },
+  { name: "Security headers", verdict: "3 of 6 missing — flagged less secure", status: "warn" as const },
   { name: "Heading structure", verdict: "OK", status: "pass" as const },
 ];
 
@@ -147,9 +147,9 @@ export default function AuditWidget() {
 
                   {/* 3 hero diagnostics — shown failing on a typical site */}
                   <div className="space-y-2.5">
-                    <HeroDiag icon={Bot} q="Can ChatGPT, Claude & Google AI see you?" verdict="Most sites: invisible to AI search" bad />
-                    <HeroDiag icon={Gauge} q="Does it load under 1 second on mobile?" verdict="Average: 4.2s · 58% fail Google's bar" bad />
-                    <HeroDiag icon={TrendingDown} q="What is slow speed costing you?" verdict="~$3,200/month in lost conversions" bad />
+                    <HeroDiag icon={Bot} q="Can ChatGPT, Claude & Google AI see you?" verdict="Invisible sites aren't in the answer when buyers ask AI" bad />
+                    <HeroDiag icon={Gauge} q="Does it load under 1 second on mobile?" verdict="Average is 4.2s. Past 3 seconds, most visitors leave" bad />
+                    <HeroDiag icon={TrendingDown} q="What is slow speed costing you?" verdict="~$3,200/mo leaking to faster competitors" bad />
                   </div>
 
                   {/* Live sample scan ticker */}
@@ -309,7 +309,7 @@ export default function AuditWidget() {
                     <h2 className="text-lg font-bold text-charcoal leading-tight">Most sites we audit look like this.</h2>
                   </div>
                   <div className="space-y-2">
-                    <HeroDiag icon={Bot} q="Can ChatGPT & Google AI see you?" verdict="Most: invisible" bad compact />
+                    <HeroDiag icon={Bot} q="Can ChatGPT & Google AI see you?" verdict="Most: invisible to AI" bad compact />
                     <HeroDiag icon={Gauge} q="Loads under 1s on mobile?" verdict="Avg: 4.2s" bad compact />
                     <HeroDiag icon={TrendingDown} q="What slow speed costs you" verdict="~$3,200/mo" bad compact />
                   </div>

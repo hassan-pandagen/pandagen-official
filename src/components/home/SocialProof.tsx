@@ -2,64 +2,58 @@
 
 import { motion } from "@/components/ui/motion";
 import { Zap, Clock, DollarSign, ShieldOff, ChevronLeft, ChevronRight } from "lucide-react";
-import { useRef } from "react";
+import { useState, useEffect } from "react";
 
+// Real reviews. Add `imgSrc` (a real headshot URL) per reviewer when available;
+// until then the card falls back to the initials avatar. Never use stock/fake faces.
 const reviews = [
   {
     platform: "Clutch",
     platformColor: "#b91c25",
     starColor: "#e8222f",
     title: "Available at any time. Response always under an hour.",
-    body: "Panda Code Gen successfully delivered a speedy, bug free website using the latest coding language. The team was punctual, responsive, helpful, and communicative via email. They assisted with UI design and didn't charge for revisions. Overall, their expertise and support were commendable.",
     name: "Matt Conner",
     initials: "MC",
     initialsColor: "#b91c25",
     detail: "MC Patches LLC",
     date: "Nov 2025",
-    verified: true,
-    url: "https://clutch.co/profile/panda-code-gen#reviews",
+    imgSrc: "/Matt%20connor.jpg",
   },
   {
     platform: "Trustpilot",
     platformColor: "#007a54",
     starColor: "#00b67a",
     title: "Hassan made all the difference",
-    body: "I recently worked with PandaCodeGen and had a great experience. Hassan was super helpful and communicative throughout the process. Even though I'm not tech-savvy, he broke things down in a way that made sense to me. The service was pretty good overall.",
     name: "Marshall James",
     initials: "MJ",
     initialsColor: "#007a54",
     detail: "",
     date: "Mar 2026",
-    verified: true,
-    url: "https://www.trustpilot.com/review/pandacodegen.com",
+    imgSrc: "/marshall%20james.jpg",
   },
   {
     platform: "Google",
     platformColor: "#1a73e8",
     starColor: "#f4b400",
     title: "They worked with me to make a website I could afford",
-    body: "I was not sure at first. Can a custom website really be built for $300 with no costs? PandaCodeGen. Hassan showed me it can be done. They gave me a quote at first. They worked with me to make a website that I could afford. They made sure there are no costs or extra fees. PandaCodeGen and Hassan are good at what they do. They care about their customers.",
     name: "James Peace",
     initials: "JP",
     initialsColor: "#1e7e34",
     detail: "",
     date: "Mar 2026",
-    verified: true,
-    url: "https://www.google.com/maps?cid=16271659886069582158",
+    imgSrc: "/james%20peace.jpeg",
   },
   {
     platform: "Google",
     platformColor: "#1a73e8",
     starColor: "#fbbc04",
     title: "PandaCodeGen really understood what I needed",
-    body: "I was on the fence about leaving Squarespace, but PandaCodeGen really understood what I needed. I talked to a few other agencies and PandaCodeGen's proposal aligned best with my vision. They migrated my site in 10 days and did exactly what they said they'd do. Super happy with the result! Would definitely recommend them.",
     name: "Richard Junior",
     initials: "RJ",
     initialsColor: "#1a73e8",
     detail: "",
     date: "Apr 2026",
-    verified: true,
-    url: "https://www.google.com/maps?cid=16271659886069582158",
+    imgSrc: "/richard%20junior.jpg",
   },
 ];
 
@@ -82,7 +76,7 @@ function Stars({ color, count = 5 }: { color: string; count?: number }) {
   return (
     <div className="flex gap-0.5">
       {[...Array(count)].map((_, i) => (
-        <svg key={i} className="w-5 h-5" style={{ color }} fill="currentColor" viewBox="0 0 20 20">
+        <svg key={i} className="w-4 h-4" style={{ color }} fill="currentColor" viewBox="0 0 20 20">
           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
         </svg>
       ))}
@@ -90,15 +84,128 @@ function Stars({ color, count = 5 }: { color: string; count?: number }) {
   );
 }
 
-export default function SocialProof() {
-  const scrollRef = useRef<HTMLDivElement>(null);
+type Review = (typeof reviews)[number] & { tempId: number };
 
-  const scroll = (dir: "left" | "right") => {
-    if (!scrollRef.current) return;
-    const amount = scrollRef.current.offsetWidth * 0.8;
-    scrollRef.current.scrollBy({ left: dir === "left" ? -amount : amount, behavior: "smooth" });
+// Staggered card deck. Click a side card (or use the arrows) to bring it to center.
+// No animation library — pure CSS transitions, so it stays light.
+function ReviewDeck() {
+  const [cardSize, setCardSize] = useState(340);
+  const [list, setList] = useState<Review[]>(reviews.map((r, i) => ({ ...r, tempId: i })));
+
+  const handleMove = (steps: number) => {
+    setList((prev) => {
+      const next = [...prev];
+      if (steps > 0) {
+        for (let i = steps; i > 0; i--) {
+          const item = next.shift();
+          if (!item) return prev;
+          next.push({ ...item, tempId: -item.tempId - 1000 - i });
+        }
+      } else if (steps < 0) {
+        for (let i = steps; i < 0; i++) {
+          const item = next.pop();
+          if (!item) return prev;
+          next.unshift({ ...item, tempId: -item.tempId - 1000 + i });
+        }
+      }
+      return next;
+    });
   };
 
+  useEffect(() => {
+    const update = () => {
+      const matches = typeof window !== "undefined" && window.matchMedia("(min-width: 640px)").matches;
+      setCardSize(matches ? 340 : 280);
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+
+  return (
+    <div className="relative w-full overflow-hidden" style={{ height: cardSize + 160 }}>
+      {list.map((r, index) => {
+        const position = list.length % 2 ? index - (list.length + 1) / 2 : index - list.length / 2;
+        const isCenter = position === 0;
+        return (
+          <div
+            key={r.tempId}
+            onClick={() => handleMove(position)}
+            className={`absolute left-1/2 top-1/2 cursor-pointer rounded-2xl border-2 p-7 transition-all duration-500 ease-in-out flex flex-col select-none ${
+              isCenter
+                ? "z-10 bg-charcoal text-white border-charcoal shadow-2xl"
+                : "z-0 bg-white text-charcoal border-stone-200 hover:border-cognac/50"
+            }`}
+            style={{
+              width: cardSize,
+              height: cardSize,
+              transform: `translate(-50%, -50%) translateX(${(cardSize / 1.6) * position}px) translateY(${
+                isCenter ? -55 : position % 2 ? 14 : -14
+              }px) rotate(${isCenter ? 0 : position % 2 ? 2.5 : -2.5}deg)`,
+            }}
+          >
+            {/* Avatar: real photo if provided, else initials */}
+            {r.imgSrc ? (
+              <img
+                src={r.imgSrc}
+                alt={r.name}
+                className="mb-5 h-14 w-14 rounded-full object-cover border-2 border-white/40"
+              />
+            ) : (
+              <div
+                className="mb-5 h-14 w-14 rounded-full flex items-center justify-center text-white text-sm font-bold shrink-0"
+                style={{ backgroundColor: isCenter ? "rgba(255,255,255,0.18)" : r.initialsColor }}
+              >
+                {r.initials}
+              </div>
+            )}
+
+            <Stars color={isCenter ? "#fbbf24" : r.starColor} />
+
+            <h3 className={`text-lg sm:text-xl font-bold leading-snug mt-3 ${isCenter ? "text-white" : "text-charcoal"}`}>
+              &ldquo;{r.title}&rdquo;
+            </h3>
+
+            <div className="mt-auto pt-4 flex items-center justify-between gap-2">
+              <div className="min-w-0">
+                <div className={`text-sm font-bold ${isCenter ? "text-white" : "text-charcoal"}`}>{r.name}</div>
+                <div className={`text-xs ${isCenter ? "text-white/60" : "text-stone-500"}`}>
+                  {r.detail}{r.detail && " · "}{r.date}
+                </div>
+              </div>
+              <span
+                className="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded shrink-0"
+                style={{ backgroundColor: r.platformColor, color: "#fff" }}
+              >
+                {r.platform}
+              </span>
+            </div>
+          </div>
+        );
+      })}
+
+      {/* Controls */}
+      <div className="absolute bottom-0 left-1/2 flex -translate-x-1/2 gap-3">
+        <button
+          onClick={() => handleMove(-1)}
+          aria-label="Previous review"
+          className="flex h-11 w-11 items-center justify-center rounded-full bg-white border border-stone-200 shadow-md text-stone-600 hover:bg-charcoal hover:text-white transition-all"
+        >
+          <ChevronLeft className="w-5 h-5" />
+        </button>
+        <button
+          onClick={() => handleMove(1)}
+          aria-label="Next review"
+          className="flex h-11 w-11 items-center justify-center rounded-full bg-white border border-stone-200 shadow-md text-stone-600 hover:bg-charcoal hover:text-white transition-all"
+        >
+          <ChevronRight className="w-5 h-5" />
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export default function SocialProof() {
   return (
     <section
       className="bg-[#faf9f7] border-b border-stone-200/80"
@@ -132,99 +239,14 @@ export default function SocialProof() {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-10"
+          className="text-center mb-6"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-2">What Our Clients Say</h2>
-          <p className="text-stone-500 text-sm">Real projects. Real results. Real people.</p>
-          <p className="md:hidden text-xs font-bold text-cognac mt-3 flex items-center justify-center gap-1">&larr; Swipe to read more reviews &rarr;</p>
+          <p className="text-stone-500 text-sm">Real projects. Real results. Real people. Tap a card to read it.</p>
         </motion.div>
 
-        {/* Reviews Carousel */}
-        <div className="relative">
-          {/* Scroll Arrows (desktop only) */}
-          <button
-            onClick={() => scroll("left")}
-            className="hidden md:flex absolute -left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 items-center justify-center rounded-full bg-white border border-stone-200 shadow-md hover:bg-stone-50 transition-all"
-            aria-label="Scroll left"
-          >
-            <ChevronLeft className="w-5 h-5 text-stone-600" />
-          </button>
-          <button
-            onClick={() => scroll("right")}
-            className="hidden md:flex absolute -right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 items-center justify-center rounded-full bg-white border border-stone-200 shadow-md hover:bg-stone-50 transition-all"
-            aria-label="Scroll right"
-          >
-            <ChevronRight className="w-5 h-5 text-stone-600" />
-          </button>
-
-          {/* Grid on desktop, horizontal scroll on mobile */}
-          <div
-            ref={scrollRef}
-            className="flex md:grid md:grid-cols-4 gap-5 overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none scrollbar-hide pb-4 md:pb-0"
-            style={{
-              scrollbarWidth: "none",
-              msOverflowStyle: "none",
-              WebkitOverflowScrolling: "touch",
-              touchAction: "pan-x pan-y",
-              overscrollBehaviorX: "contain",
-            }}
-          >
-            {reviews.map((r, i) => (
-              <a
-                key={i}
-                href={r.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                draggable={false}
-                className="group flex-shrink-0 w-[280px] sm:w-[300px] md:w-auto snap-start bg-white border border-stone-200 rounded-2xl p-5 hover:shadow-lg hover:border-stone-300 transition-all duration-200 flex flex-col select-none md:select-auto"
-                style={{ touchAction: "pan-x pan-y" }}
-              >
-                {/* Stars */}
-                <Stars color={r.starColor} />
-
-                {/* Title */}
-                <h3 className="font-bold text-charcoal text-base mt-3 mb-2 leading-snug">{r.title}</h3>
-
-                {/* Full Review Body */}
-                <p className="text-stone-600 text-sm leading-relaxed flex-1 mb-4">{r.body}</p>
-
-                {/* Reviewer Footer */}
-                <div className="flex items-center gap-3 pt-4 border-t border-stone-100">
-                  <div
-                    className="w-9 h-9 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0"
-                    style={{ backgroundColor: r.initialsColor }}
-                  >
-                    {r.initials}
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2">
-                      <span className="text-sm font-bold text-charcoal">{r.name}</span>
-                      {r.verified && (
-                        <svg className="w-4 h-4 text-[#00b67a] shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                        </svg>
-                      )}
-                    </div>
-                    <div className="text-xs text-stone-500">{r.detail}{r.detail && " · "}{r.date}</div>
-                  </div>
-                  <span
-                    className="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded shrink-0"
-                    style={{ backgroundColor: r.platformColor, color: "#fff" }}
-                  >
-                    {r.platform}
-                  </span>
-                </div>
-              </a>
-            ))}
-          </div>
-
-          {/* Scroll Hint (mobile) */}
-          <div className="flex md:hidden justify-center mt-2 gap-1.5">
-            {reviews.map((_, i) => (
-              <div key={i} className="w-1.5 h-1.5 rounded-full bg-stone-300" />
-            ))}
-          </div>
-        </div>
+        {/* Stacked review deck */}
+        <ReviewDeck />
 
         {/* Review CTAs */}
         <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mt-8 mb-12">
