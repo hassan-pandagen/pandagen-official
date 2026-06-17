@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import PageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'Is Wix Slowing Down Your Business? We Migrate to Next.js | PandaCodeGen',
+  title: 'Is Wix Slowing Down Your Business? We Migrate to Next.js',
   description: "Wix scores 30 to 60 on Google PageSpeed and blocks advanced SEO controls. We migrate to custom Next.js in 1 to 3 weeks. 95+ PageSpeed, no monthly fees, full SEO ownership.",
   alternates: { canonical: '/services/wix' },
   keywords: [

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import PageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'Is Webflow Too Expensive? We Migrate to Custom Next.js | PandaCodeGen',
+  title: 'Is Webflow Too Expensive? We Migrate to Custom Next.js',
   description: 'Webflow charges $23 to $49 per month and still scores 55 to 75 on mobile PageSpeed. We migrate to custom Next.js. 95+ PageSpeed, no monthly fees, you own the code.',
   alternates: { canonical: '/services/webflow' },
   keywords: [

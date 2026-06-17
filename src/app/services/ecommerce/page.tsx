@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import PageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'Is Your Shopify Store Too Slow? Headless Next.js Rebuild | PandaCodeGen',
+  title: 'Is Your Shopify Store Too Slow? Headless Next.js Rebuild',
   description: "Your Shopify store scores 40 to 60 on PageSpeed. We rebuild the frontend in Next.js, loading under 1 second. 90+ PageSpeed guaranteed, no app fees, you own the code.",
   alternates: { canonical: '/services/ecommerce' },
   keywords: [

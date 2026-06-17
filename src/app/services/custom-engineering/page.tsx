@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import PageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'Need a Custom Next.js Web App Built From Scratch? | PandaCodeGen',
+  title: 'Need a Custom Next.js Web App Built From Scratch?',
   description: 'We build custom Next.js web apps, SaaS platforms, and client portals from scratch. Fixed-price quotes, you own the code, built to scale from day one.',
   alternates: { canonical: '/services/custom-engineering' },
   keywords: [

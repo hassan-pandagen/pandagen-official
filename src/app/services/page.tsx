@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import PageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'Services & Capabilities | PandaCodeGen',
+  title: 'Services & Capabilities',
   description: 'WordPress migration, Shopify headless commerce, and custom web app development. Under a second load times, zero bloat, bank level security.',
   alternates: { canonical: '/services' },
   openGraph: {

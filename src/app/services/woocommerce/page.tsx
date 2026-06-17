@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import PageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'Is WooCommerce Slowing Your Store? We Fix It With Next.js | PandaCodeGen',
+  title: 'Is WooCommerce Slowing Your Store? We Fix It With Next.js',
   description: 'WooCommerce stores score 30 to 55 on mobile PageSpeed. We fix the root cause with a headless Next.js frontend. Keep your product catalog, get 95+ PageSpeed and sub-1-second load times.',
   alternates: {
     canonical: '/services/woocommerce',

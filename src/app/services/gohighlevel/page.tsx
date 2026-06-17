@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import PageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'Why Is My GoHighLevel Site Slow? We Fix It With Custom Next.js | PandaCodeGen',
+  title: 'Why Is My GoHighLevel Site Slow? We Fix It With Custom Next.js',
   description: "GoHighLevel sites score 20 to 45 on mobile PageSpeed and cannot rank on Google. We build a custom Next.js site that integrates with GHL's CRM, ranks organically, and loads under 1 second.",
   alternates: { canonical: '/services/gohighlevel' },
   keywords: [

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import PageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'Is Squarespace Hurting Your SEO? We Migrate to Next.js | PandaCodeGen',
+  title: 'Is Squarespace Hurting Your SEO? We Migrate to Next.js',
   description: "Squarespace scores 30 to 55 on Google PageSpeed Mobile. No plugin fixes it. We migrate to custom Next.js, delivering 95+ PageSpeed, full SEO control, and no monthly fees.",
   alternates: { canonical: '/services/squarespace' },
   keywords: [

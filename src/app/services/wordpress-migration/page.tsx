@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import PageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'Is WordPress Slowing Your Business Down? Migrate to Next.js | PandaCodeGen',
+  title: 'Is WordPress Slowing Your Business Down? Migrate to Next.js',
   description: 'WordPress sites average 40 to 60 on Google PageSpeed Mobile. We migrate to custom Next.js in 2 to 4 weeks. 90+ PageSpeed guaranteed, zero SEO loss, 301 redirects included. Fixed pricing from $1,500.',
   alternates: { canonical: '/services/wordpress-migration' },
   keywords: [
