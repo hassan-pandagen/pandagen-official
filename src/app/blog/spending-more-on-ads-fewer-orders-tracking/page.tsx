@@ -224,7 +224,7 @@ export default function SpendingMoreOnAdsFewerOrdersPage() {
                     <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
                         <p className="text-sm text-stone-700 leading-relaxed">
-                            PandaCodeGen builds custom <Link href="/services/ecommerce" className="text-cognac hover:underline font-medium">Next.js e-commerce sites</Link> with server-side ad tracking wired in at build and owned by you. No $200-a-month tracking app stacked on top, and the same clean data layer keeps your store visible to AI shopping agents. Included standard on Growth and Scale builds.
+                            PandaCodeGen builds custom <Link href="/services/ecommerce" className="text-cognac hover:underline font-medium">Next.js e-commerce sites</Link> with server-side ad tracking wired in at build and owned by you. No $200-a-month tracking app stacked on top, and the same clean data layer keeps your store <Link href="/blog/agentic-browsing-pagespeed-score" className="text-cognac hover:underline font-medium">visible to AI shopping agents</Link>. Included standard on Growth and Scale builds.
                         </p>
                     </div>
 

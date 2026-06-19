@@ -364,7 +364,7 @@ export default function MetaCAPISetupCostPage() {
                     <section className="mb-10 mt-8 md:mt-10">
                         <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
                         <p className="text-stone-700 leading-relaxed mb-3">
-                            For why platform stores leak conversion signal in the first place (and what Event Match Quality means in plain English), read <Link href="/blog/spending-more-on-ads-fewer-orders-tracking" className="text-cognac hover:underline font-medium">why your ad costs climb while orders stay flat</Link>. For how custom builds cut the monthly software bill that funds all of this, see the <Link href="/blog/shopify-app-costs-real-monthly-bill" className="text-cognac hover:underline font-medium">real Shopify app cost breakdown</Link>.
+                            For why platform stores leak conversion signal in the first place (and what Event Match Quality means in plain English), read <Link href="/blog/spending-more-on-ads-fewer-orders-tracking" className="text-cognac hover:underline font-medium">why your ad costs climb while orders stay flat</Link>. For how custom builds cut the monthly software bill that funds all of this, see the <Link href="/blog/shopify-app-costs-real-monthly-bill" className="text-cognac hover:underline font-medium">real Shopify app cost breakdown</Link>. And for how the same clean foundation makes your site readable by AI agents, see <Link href="/blog/agentic-browsing-pagespeed-score" className="text-cognac hover:underline font-medium">is your website ready for AI agents</Link>.
                         </p>
                     </section>
 

@@ -13,7 +13,7 @@ export default function TrustLogoBar() {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-center gap-2 py-3 border-b border-stone-100 text-center">
-          <span className="uppercase tracking-widest text-stone-400 font-semibold" style={{ fontSize: "10px", letterSpacing: "0.1em" }}>
+          <span className="uppercase tracking-widest text-stone-500 font-semibold" style={{ fontSize: "10px", letterSpacing: "0.1em" }}>
             Featured in
           </span>
           <a

@@ -34,6 +34,29 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "agentic-browsing-pagespeed-score",
+    cardStat: "3/3",
+    cardStatLabel: "Agentic Browsing score on Google PageSpeed. Our sites already pass.",
+    title: "Is Your Website Ready for AI Agents? Google Now Scores It (2026)",
+    excerpt: "In May 2026 Google quietly added an 'Agentic Browsing' category to PageSpeed Insights that scores whether AI agents can browse and act on your site, not just whether humans can read it. Here is what it checks, what the WebMCP layer is and why it shows as 'Not Applicable' for almost everyone, what the score means for your business, and how our own site already passes 3 out of 3.",
+    category: "AI Search",
+    readTime: "9 min",
+    date: "Jun 19",
+    author: "Hassan",
+    role: "Co-founder, Lead Engineer",
+    featured: true,
+    illustrationType: "aicommerce",
+    lastModified: "2026-06-19",
+    faqs: [
+      { question: "What is Agentic Browsing in Google PageSpeed Insights?", answer: "Agentic Browsing is a category Google added to PageSpeed Insights and Lighthouse in May 2026. It measures whether an AI agent, not just a human, can read and interact with your website. Unlike Performance or SEO, it does not give a 0-to-100 score. It shows a ratio like 3/3, because the checks are pass or fail rather than weighted. The category is experimental and based on proposed standards, so the exact checks will change over time." },
+      { question: "What does the Agentic Browsing score actually check?", answer: "Today it scores three things: whether your page's accessibility tree is well-formed (so an agent can navigate it), whether your layout stays stable while it loads (Cumulative Layout Shift), and whether your llms.txt file follows Google's recommendations. It also lists three WebMCP checks (form coverage, registered tools, valid schemas), but those are currently unscored and marked Not Applicable for nearly every site because the WebMCP standard is still in an origin trial." },
+      { question: "Why does my WebMCP check show 'Not Applicable' or 'Unscored'?", answer: "Because WebMCP, the standard that lets AI agents act on your site, is still experimental. It entered a Chrome 149 origin trial in May 2026 and the audit needs a newer Chrome plus an origin-trial registration to even run, so Google weights it low and marks it Not Applicable while the standard stabilizes. In plain terms: Google is not scoring WebMCP yet, which means building production WebMCP integrations today is premature for almost every business. The signal to build is when those checks become scored." },
+      { question: "How do I make my website ready for AI agents?", answer: "Start with the layer Google scores today, and it is built on fundamentals: clean semantic HTML with a well-formed accessibility tree, a stable layout (low Cumulative Layout Shift), and a compliant llms.txt file. Custom-built sites usually pass this automatically. Heavy platform and plugin-driven sites often fail the accessibility-tree and layout checks because of bloated, non-semantic markup. The deeper agent-action layer (WebMCP) can wait until Google starts scoring it." },
+      { question: "Does AI actually read my llms.txt file?", answer: "Google's Lighthouse rewards having a compliant llms.txt, but be realistic: as of early 2026, OpenAI, Google, Anthropic, and Meta had not all publicly committed to consuming llms.txt in their production systems. Its strongest confirmed use today is developer tooling, where AI coding assistants fetch your docs efficiently. So treat llms.txt as a cheap, recommended best practice that Google scores, not as a guaranteed pipeline into every AI answer." },
+      { question: "Should I build WebMCP on my site now?", answer: "For almost every business, not yet. WebMCP is in an origin trial as of mid-2026, no agents are transacting through it at scale, and Google itself is not scoring it. Building a production WebMCP integration now means engineering against a moving target that nothing hits. The smart sequence is to pass the browsability layer today (accessibility, layout, llms.txt), which is the same foundation that makes you citable in AI search, then add the WebMCP action layer the moment Google moves those checks from Not Applicable to scored." },
+    ]
+  },
+  {
     id: "custom-website-5000-whats-included",
     cardStat: "from $5K",
     cardStatLabel: "scoped, not a flat fee (vs $15-30K most agencies quote)",

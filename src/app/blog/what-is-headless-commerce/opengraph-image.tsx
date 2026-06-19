@@ -27,7 +27,7 @@ export default function Image() {
             border: '1px solid rgba(234,88,12,0.35)',
             borderRadius: '100px',
             padding: '8px 24px',
-            color: '#ea580c',
+            color: '#b8410c',
             fontSize: '18px',
             fontWeight: 600,
           }}
@@ -40,10 +40,10 @@ export default function Image() {
             <div style={{ fontSize: '56px', fontWeight: 800, color: '#ffffff', lineHeight: 1.1, letterSpacing: '-0.02em', display: 'flex' }}>
               Best of Both Worlds.
             </div>
-            <div style={{ fontSize: '56px', fontWeight: 800, color: '#ea580c', lineHeight: 1.1, letterSpacing: '-0.02em', display: 'flex' }}>
+            <div style={{ fontSize: '56px', fontWeight: 800, color: '#b8410c', lineHeight: 1.1, letterSpacing: '-0.02em', display: 'flex' }}>
               Shopify Backend.
             </div>
-            <div style={{ fontSize: '56px', fontWeight: 800, color: '#ea580c', lineHeight: 1.1, letterSpacing: '-0.02em', display: 'flex' }}>
+            <div style={{ fontSize: '56px', fontWeight: 800, color: '#b8410c', lineHeight: 1.1, letterSpacing: '-0.02em', display: 'flex' }}>
               Custom Frontend.
             </div>
           </div>
@@ -55,15 +55,15 @@ export default function Image() {
         <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', width: '100%' }}>
           <div style={{ display: 'flex', gap: '52px' }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-              <div style={{ fontSize: '32px', fontWeight: 700, color: '#ea580c', display: 'flex' }}>3-5x</div>
+              <div style={{ fontSize: '32px', fontWeight: 700, color: '#b8410c', display: 'flex' }}>3-5x</div>
               <div style={{ fontSize: '15px', color: '#555555', display: 'flex' }}>Faster Load Time</div>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-              <div style={{ fontSize: '32px', fontWeight: 700, color: '#ea580c', display: 'flex' }}>$0/mo</div>
+              <div style={{ fontSize: '32px', fontWeight: 700, color: '#b8410c', display: 'flex' }}>$0/mo</div>
               <div style={{ fontSize: '15px', color: '#555555', display: 'flex' }}>Frontend Hosting</div>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-              <div style={{ fontSize: '32px', fontWeight: 700, color: '#ea580c', display: 'flex' }}>+35%</div>
+              <div style={{ fontSize: '32px', fontWeight: 700, color: '#b8410c', display: 'flex' }}>+35%</div>
               <div style={{ fontSize: '15px', color: '#555555', display: 'flex' }}>Conversion Lift</div>
             </div>
           </div>

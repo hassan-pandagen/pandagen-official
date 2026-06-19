@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "@/components/ui/motion";
+import Image from "next/image";
 import { Zap, Clock, DollarSign, ShieldOff, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -17,7 +18,7 @@ const reviews = [
     initialsColor: "#b91c25",
     detail: "MC Patches LLC",
     date: "Nov 2025",
-    imgSrc: "/Matt%20connor.jpg",
+    imgSrc: "/matt-conner.jpg",
   },
   {
     platform: "Trustpilot",
@@ -29,7 +30,7 @@ const reviews = [
     initialsColor: "#007a54",
     detail: "",
     date: "Mar 2026",
-    imgSrc: "/marshall%20james.jpg",
+    imgSrc: "/marshall-james.jpg",
   },
   {
     platform: "Google",
@@ -41,7 +42,7 @@ const reviews = [
     initialsColor: "#1e7e34",
     detail: "",
     date: "Mar 2026",
-    imgSrc: "/james%20peace.jpeg",
+    imgSrc: "/james-peace.jpeg",
   },
   {
     platform: "Google",
@@ -53,7 +54,7 @@ const reviews = [
     initialsColor: "#1a73e8",
     detail: "",
     date: "Apr 2026",
-    imgSrc: "/richard%20junior.jpg",
+    imgSrc: "/richard-junior.jpg",
   },
 ];
 
@@ -131,7 +132,7 @@ function ReviewDeck() {
           <div
             key={r.tempId}
             onClick={() => handleMove(position)}
-            className={`absolute left-1/2 top-1/2 cursor-pointer rounded-2xl border-2 p-7 transition-all duration-500 ease-in-out flex flex-col select-none ${
+            className={`absolute left-1/2 top-1/2 cursor-pointer rounded-2xl border-2 p-7 transition-[transform,opacity,background-color,border-color,box-shadow] duration-500 ease-in-out flex flex-col select-none ${
               isCenter
                 ? "z-10 bg-charcoal text-white border-charcoal shadow-2xl"
                 : "z-0 bg-white text-charcoal border-stone-200 hover:border-cognac/50"
@@ -146,9 +147,11 @@ function ReviewDeck() {
           >
             {/* Avatar: real photo if provided, else initials */}
             {r.imgSrc ? (
-              <img
+              <Image
                 src={r.imgSrc}
                 alt={r.name}
+                width={56}
+                height={56}
                 className="mb-5 h-14 w-14 rounded-full object-cover border-2 border-white/40"
               />
             ) : (

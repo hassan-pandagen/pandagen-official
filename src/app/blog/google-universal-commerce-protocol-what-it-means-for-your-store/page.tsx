@@ -734,6 +734,10 @@ export default function UCPBlogPage() {
                                 <ArrowRight className="w-4 h-4 shrink-0" />
                                 Why Your Competitor Outranks You on Google (And Pays Less for Hosting)
                             </Link>
+                            <Link href="/blog/agentic-browsing-pagespeed-score" className="flex items-center gap-2 text-stone-600 hover:text-charcoal transition-colors text-sm">
+                                <ArrowRight className="w-4 h-4 shrink-0" />
+                                Is Your Website Ready for AI Agents? Google Now Scores It
+                            </Link>
                         </div>
                     </div>
 

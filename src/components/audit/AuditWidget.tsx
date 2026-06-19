@@ -199,7 +199,7 @@ export default function AuditWidget() {
                       Find out how you look
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </button>
-                    <p className="text-center text-xs text-stone-400">Full 11-point breakdown on screen. No email required.</p>
+                    <p className="text-center text-xs text-stone-500">Full 11-point breakdown on screen. No email required.</p>
                   </div>
                 </motion.div>
               )}
@@ -217,7 +217,7 @@ export default function AuditWidget() {
                     <Search className="w-4 h-4 text-cognac" />
                     <span className="truncate">{url}</span>
                     {auditData.platformDetected && auditData.platformDetected !== "Unknown" && (
-                      <span className="ml-auto text-[10px] font-bold uppercase tracking-wider text-stone-400">{auditData.platformDetected}</span>
+                      <span className="ml-auto text-[10px] font-bold uppercase tracking-wider text-stone-500">{auditData.platformDetected}</span>
                     )}
                   </div>
 
@@ -332,7 +332,7 @@ export default function AuditWidget() {
                   >
                     Find out how you look <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </button>
-                  <p className="text-center text-[10px] text-stone-400">Full breakdown on screen. No email required.</p>
+                  <p className="text-center text-[10px] text-stone-500">Full breakdown on screen. No email required.</p>
                 </motion.div>
               )}
 

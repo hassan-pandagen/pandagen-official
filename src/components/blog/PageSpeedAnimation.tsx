@@ -38,7 +38,7 @@ export default function PageSpeedAnimation() {
   const isGood = d.score >= 90;
   const isMid  = d.score >= 50 && d.score < 90;
 
-  const ringColor  = isGood ? "#EA580C" : isMid ? "#78716C" : "#D6D3D1";
+  const ringColor  = isGood ? "#b8410c" : isMid ? "#78716C" : "#D6D3D1";
   const scoreColor = isGood ? "text-cognac" : isMid ? "text-stone-500" : "text-stone-400";
 
   const vitals = [

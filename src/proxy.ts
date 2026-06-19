@@ -24,7 +24,7 @@ export function proxy(request: NextRequest) {
     );
     response.headers.set(
         "Content-Security-Policy-Report-Only",
-        "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://embed.tawk.to https://connect.facebook.net https://www.clarity.ms https://scripts.clarity.ms https://widget.trustpilot.com https://cal.com https://app.cal.com https://va.vercel-scripts.com; img-src 'self' data: https:; connect-src 'self' https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://embed.tawk.to https://cal.com https://app.cal.com https://widget.trustpilot.com;"
+        "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://embed.tawk.to https://connect.facebook.net https://www.clarity.ms https://scripts.clarity.ms https://widget.trustpilot.com https://cal.com https://app.cal.com https://va.vercel-scripts.com https://www.googletagmanager.com https://www.google-analytics.com; img-src 'self' data: https:; connect-src 'self' https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://embed.tawk.to https://cal.com https://app.cal.com https://widget.trustpilot.com;"
     );
 
     return response;

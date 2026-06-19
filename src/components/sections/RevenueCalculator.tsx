@@ -73,7 +73,7 @@ export default function RevenueCalculator() {
                     type="range" min="5000" max="500000" step="5000"
                     value={visitors}
                     onChange={(e) => setVisitors(Number(e.target.value))}
-                    className="w-full h-2 bg-stone-200 rounded-lg appearance-none cursor-pointer accent-[#EA580C]"
+                    className="w-full h-2 bg-stone-200 rounded-lg appearance-none cursor-pointer accent-[#b8410c]"
                   />
                   <div className="flex justify-between text-xs text-stone-500 mt-1">
                     <span>5K</span><span>500K</span>

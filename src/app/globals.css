@@ -20,7 +20,7 @@
   --color-paper: #f5f5f4;
   --color-charcoal: #1c1917;
   --color-midnight: #0c0a09;
-  --color-cognac: #ea580c;
+  --color-cognac: #b8410c;
   --color-brand-blue: #2563eb;
 
   --color-stone-50: #fafaf9;
@@ -307,15 +307,15 @@
 
 @utility text-cognac {
   /* Cognac accent helpers */
-  color: #ea580c;
+  color: #b8410c;
 }
 
 @utility bg-cognac {
-  background-color: #ea580c;
+  background-color: #b8410c;
 }
 
 @utility border-cognac {
-  border-color: #ea580c;
+  border-color: #b8410c;
 }
 
 /* Base styles in @layer base — overridden by utilities, overrides v4 preflight */
@@ -382,6 +382,17 @@
 
   ::-webkit-scrollbar-thumb:hover {
     background: #94a3b8;
+  }
+
+  /* ── Typography polish: balanced headings + orphan-free paragraphs ──
+     text-wrap: balance evens heading line lengths (no lone last word on titles).
+     text-wrap: pretty prevents orphans/runts at the end of body paragraphs.
+     Both degrade gracefully — unsupported browsers just wrap normally, no layout shift. */
+  h1, h2, h3, h4 {
+    text-wrap: balance;
+  }
+  p, li {
+    text-wrap: pretty;
   }
 }
 
