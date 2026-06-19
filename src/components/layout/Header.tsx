@@ -97,10 +97,10 @@ export default function Header({ onOpenQuote }: HeaderProps) {
     <>
       <header
         className={cn(
-          "fixed top-0 left-0 right-0 z-[60] transition-all duration-300",
+          "fixed top-0 left-0 right-0 z-[60] transition-all duration-300 backdrop-blur-md",
           isScrolled
-            ? "bg-white/95 backdrop-blur-md border-b border-stone-200 py-3 shadow-card"
-            : "bg-transparent py-5"
+            ? "bg-white/95 border-b border-stone-200 py-3 shadow-card"
+            : "bg-paper/90 py-5"
         )}
       >
         <div className="container mx-auto px-6 flex items-center justify-between">

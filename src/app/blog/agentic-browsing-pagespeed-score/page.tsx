@@ -175,7 +175,7 @@ export default function AgenticBrowsingPage() {
                             <span className="font-serif italic text-cognac">Google Now Scores It</span>
                         </h1>
                         <p className="text-lg text-stone-600 leading-relaxed mb-6" data-speakable="true">
-                            In May 2026 Google quietly added an &ldquo;Agentic Browsing&rdquo; category to PageSpeed Insights and Lighthouse. It scores whether an AI agent, not just a human, can read and act on your website. It does not use a 0 to 100 number. It shows a ratio like 3/3, because the checks are pass or fail. Today it scores three things you can pass with clean fundamentals (a well-formed accessibility tree, a stable layout, and a compliant llms.txt file), plus a deeper WebMCP layer that is still experimental and shows as &ldquo;Not Applicable&rdquo; for almost everyone. Our own site already passes 3 of 3. This post explains what it checks, what it means for your business, and what to do now.
+                            In May 2026 Google quietly added a new grade to its free website checker (the tool called PageSpeed Insights). For years that tool measured how well your site works for people. This new grade, called Agentic Browsing, measures something different: whether an AI assistant can read and use your site. It is not a 0 to 100 score, just a simple pass count, like 3 out of 3. The checks are basic things a well-built site already does, and our own site passes all of them. Below, in plain English: what it checks, why it matters for your business, and what you should do about it.
                         </p>
                         <BlogAuthor
                             date="Jun 19, 2026"
@@ -198,6 +198,7 @@ export default function AgenticBrowsingPage() {
                             <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> The three scored checks today are simple: can an AI cleanly read your page (a tidy behind-the-scenes structure), does the page stay still as it loads instead of jumping around, and do you have an llms.txt file (a short text file that maps your site for AI). Clean, custom-built sites pass these automatically.</li>
                             <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-cognac mt-0.5 shrink-0" /> The WebMCP checks (the layer that lets agents take actions) are listed but unscored and marked &ldquo;Not Applicable&rdquo; for almost everyone, because WebMCP, the standard behind them, is still in early testing in Chrome. Building it now is premature.</li>
                             <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> Our own site (pandacodegen.com) passes 3 of 3 on the scored checks, with zero special work, because the same foundation that makes a site fast and AI-citable is what passes Agentic Browsing.</li>
+                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> And it pays off in real money: customers who found us through AI assistants (mostly ChatGPT, plus Claude and Perplexity) have placed more than $7,000 in orders on our own store so far. Passing the score is the foundation. The orders are the point.</li>
                         </ul>
                     </div>
 
@@ -237,7 +238,7 @@ export default function AgenticBrowsingPage() {
                     <figure className="my-8">
                         <img
                             src="/blog-images/agentic-browsing-3-of-3.png"
-                            alt="Google PageSpeed Insights showing pandacodegen.com passing 3 of 3 Agentic Browsing checks: accessibility tree well-formed, Cumulative Layout Shift 0.035, and llms.txt follows recommendations, with the WebMCP checks marked Not Applicable"
+                            alt="Google PageSpeed Insights showing pandacodegen.com passing 3 of 3 Agentic Browsing checks: a well-formed accessibility tree, a stable layout (low Cumulative Layout Shift), and a compliant llms.txt file, with the WebMCP checks marked Not Applicable"
                             width={1200}
                             height={700}
                             loading="lazy"
@@ -256,24 +257,24 @@ export default function AgenticBrowsingPage() {
 
                     <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                        <p className="text-sm text-stone-700 leading-relaxed">Yes. The same clean foundation that passes these checks is what gets you recommended by AI assistants like ChatGPT and Claude, and those recommendations turn into real orders. On our own store, customers who found us through AI assistants placed roughly $6,000 in orders over two months, including a single $1,600 order from a buyer referred by Claude. Passing a technical score is not the point. The orders are.</p>
+                        <p className="text-sm text-stone-700 leading-relaxed">Yes. The same clean foundation that passes these checks is what gets you recommended by AI assistants like ChatGPT and Claude, and those recommendations turn into real orders. On our own store, customers who found us through AI assistants have placed more than $7,000 in orders so far, including a single $1,680 order from a buyer referred by Claude. Passing a technical score is not the point. The orders are.</p>
                     </div>
 
                     <BlogText>
-                        This is the part that matters for a business owner, because the score is not the goal. We tag where every order comes from on our own store, and a growing share now arrives from people who found us by asking an AI assistant, not from a Google search or an ad. Over about two months that was roughly $6,000 in orders we could trace back to AI assistants: mostly ChatGPT, plus a high-value order from Perplexity, and a $1,600 order from a customer who told us Claude sent them.
+                        This is the part that matters for a business owner, because the score is not the goal. We tag where every order comes from on our own store, and a growing share now arrives from people who found us by asking an AI assistant, not from a Google search or an ad. So far that adds up to more than $7,000 we can trace back to AI assistants: around $5,100 from ChatGPT across 25 orders, a $590 order from Perplexity, and a $1,680 order from a customer who told us Claude sent them.
                     </BlogText>
 
                     <figure className="my-8">
                         <img
                             src="/blog-images/ai-referred-orders.png"
-                            alt="PandaCodeGen order dashboard showing orders attributed to AI assistants as the lead source: ChatGPT, Claude, and Perplexity, each with revenue attached"
+                            alt="PandaCodeGen order dashboard, AI and LLMs category: orders and revenue attributed to AI assistants. ChatGPT 25 orders at $5,149, Claude 1 order at $1,680, Perplexity 1 order at $590, with Gemini, Meta AI, and DeepSeek at zero so far"
                             width={1200}
                             height={700}
                             loading="lazy"
                             className="w-full h-auto rounded-xl border border-stone-200"
                         />
                         <figcaption className="text-xs text-stone-500 mt-2 text-center">
-                            Our own order dashboard: every order tagged by where the customer came from. ChatGPT, Claude, and Perplexity now show up as real lead sources with revenue attached.
+                            Our own order dashboard, AI and LLMs breakdown (June 2026): ChatGPT, Claude, and Perplexity have driven real orders and revenue. Gemini, Meta AI, and DeepSeek are tracked too, but have not converted yet.
                         </figcaption>
                     </figure>
 
