@@ -118,7 +118,9 @@ export default function Hero() {
           className="relative lg:min-h-[400px]"
           style={{ contain: "layout" }}
         >
-          <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-white/50 blur-3xl rounded-full pointer-events-none" />
+          {/* Fixed size + fixed vertical anchor so the glow never reflows when the
+              audit widget swaps from fallback to real (was the CLS 0.122 culprit). */}
+          <div className="hidden md:block absolute -top-[100px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-white/50 blur-3xl rounded-full pointer-events-none" />
           <div className="relative z-10">
             <HeroAuditWidget />
           </div>

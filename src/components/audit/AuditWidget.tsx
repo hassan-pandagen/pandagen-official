@@ -156,7 +156,7 @@ export default function AuditWidget() {
                   <div className="rounded-xl border border-stone-200 bg-stone-50/60 overflow-hidden">
                     <div className="px-4 py-2 border-b border-stone-100 flex items-center justify-between">
                       <span className="text-[10px] font-bold uppercase tracking-widest text-stone-500">Sample: typical store</span>
-                      <span className="text-[10px] font-bold font-mono text-red-500">31/100</span>
+                      <span className="text-[10px] font-bold font-mono text-red-600">31/100</span>
                     </div>
                     <div className="divide-y divide-stone-100">
                       {sampleScanLines.map((line, i) => (
@@ -168,10 +168,10 @@ export default function AuditWidget() {
                           className="flex items-center gap-2.5 px-4 py-1.5"
                         >
                           {line.status === "pass" && <CheckCircle2 className="w-3.5 h-3.5 text-green-500 shrink-0" />}
-                          {line.status === "warn" && <AlertTriangle className="w-3.5 h-3.5 text-orange-500 shrink-0" />}
-                          {line.status === "fail" && <XCircle className="w-3.5 h-3.5 text-red-500 shrink-0" />}
+                          {line.status === "warn" && <AlertTriangle className="w-3.5 h-3.5 text-orange-700 shrink-0" />}
+                          {line.status === "fail" && <XCircle className="w-3.5 h-3.5 text-red-600 shrink-0" />}
                           <span className="text-xs font-medium text-stone-700 flex-1">{line.name}</span>
-                          <span className={`text-[11px] font-mono ${line.status === "pass" ? "text-green-600" : line.status === "warn" ? "text-orange-500" : "text-red-500"}`}>{line.verdict}</span>
+                          <span className={`text-[11px] font-mono ${line.status === "pass" ? "text-green-700" : line.status === "warn" ? "text-orange-700" : "text-red-600"}`}>{line.verdict}</span>
                         </motion.div>
                       ))}
                     </div>
@@ -241,8 +241,8 @@ export default function AuditWidget() {
                         {auditData.deepChecks.checks.map((check) => (
                           <div key={check.id} className="flex items-center gap-2.5 px-4 py-2">
                             {check.status === "pass" && <CheckCircle2 className="w-3.5 h-3.5 text-green-500 shrink-0" />}
-                            {check.status === "warn" && <AlertTriangle className="w-3.5 h-3.5 text-orange-500 shrink-0" />}
-                            {check.status === "fail" && <XCircle className="w-3.5 h-3.5 text-red-500 shrink-0" />}
+                            {check.status === "warn" && <AlertTriangle className="w-3.5 h-3.5 text-orange-700 shrink-0" />}
+                            {check.status === "fail" && <XCircle className="w-3.5 h-3.5 text-red-600 shrink-0" />}
                             <span className="text-xs font-medium text-stone-700 flex-1">{check.name}</span>
                             <span className={`text-xs font-bold font-mono ${getScoreTextClass(check.score)}`}>{check.score}</span>
                           </div>
@@ -360,8 +360,8 @@ export default function AuditWidget() {
                         {auditData.deepChecks.checks.map((check) => (
                           <div key={check.id} className="flex items-center gap-2 px-3 py-1.5">
                             {check.status === "pass" && <CheckCircle2 className="w-3 h-3 text-green-500 shrink-0" />}
-                            {check.status === "warn" && <AlertTriangle className="w-3 h-3 text-orange-500 shrink-0" />}
-                            {check.status === "fail" && <XCircle className="w-3 h-3 text-red-500 shrink-0" />}
+                            {check.status === "warn" && <AlertTriangle className="w-3 h-3 text-orange-700 shrink-0" />}
+                            {check.status === "fail" && <XCircle className="w-3 h-3 text-red-600 shrink-0" />}
                             <span className="text-[11px] font-medium text-stone-700 flex-1">{check.name}</span>
                             <span className={`text-[11px] font-bold font-mono ${getScoreTextClass(check.score)}`}>{check.score}</span>
                           </div>
@@ -415,7 +415,7 @@ function HeroDiag({
 }) {
   return (
     <div className={`flex items-start gap-3 rounded-xl border ${bad ? "border-red-100 bg-red-50/50" : "border-stone-200 bg-stone-50"} ${compact ? "px-3 py-2" : "px-4 py-3"}`}>
-      <Icon className={`${compact ? "w-4 h-4" : "w-5 h-5"} ${bad ? "text-red-500" : "text-stone-500"} shrink-0 mt-0.5`} />
+      <Icon className={`${compact ? "w-4 h-4" : "w-5 h-5"} ${bad ? "text-red-600" : "text-stone-500"} shrink-0 mt-0.5`} />
       <div className="min-w-0 flex-1">
         <p className={`${compact ? "text-xs" : "text-sm"} font-bold text-charcoal leading-tight`}>{q}</p>
         <p className={`${compact ? "text-[10px]" : "text-xs"} ${bad ? "text-red-600" : "text-stone-500"} mt-0.5`}>{verdict}</p>
@@ -451,7 +451,7 @@ function HeroResult({
   } else {
     tone = score >= 90 ? "good" : score >= 50 ? "ok" : "bad";
   }
-  const toneClass = tone === "good" ? "text-green-600" : tone === "ok" ? "text-orange-500" : "text-red-500";
+  const toneClass = tone === "good" ? "text-green-700" : tone === "ok" ? "text-orange-700" : "text-red-600";
   const borderClass = tone === "good" ? "border-green-100 bg-green-50/50" : tone === "ok" ? "border-orange-100 bg-orange-50/50" : "border-red-100 bg-red-50/50";
 
   return (

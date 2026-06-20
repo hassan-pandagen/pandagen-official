@@ -11,9 +11,9 @@ export function getScoreLabel(score: number): string {
 }
 
 export function getScoreTextClass(score: number): string {
-  if (score >= 90) return 'text-green-600';
-  if (score >= 50) return 'text-orange-500';
-  return 'text-red-500';
+  if (score >= 90) return 'text-green-700';
+  if (score >= 50) return 'text-orange-700';
+  return 'text-red-600';
 }
 
 export function getScoreBorderClass(score: number): string {
