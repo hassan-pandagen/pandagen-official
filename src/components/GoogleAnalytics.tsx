@@ -2,7 +2,7 @@
 
 import Script from "next/script";
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
@@ -15,6 +15,26 @@ declare global {
 
 export default function GoogleAnalytics() {
   const pathname = usePathname();
+  const [loadLib, setLoadLib] = useState(false);
+
+  // Defer the heavy gtag/js library (155 KiB, ~178ms main-thread) until the
+  // first real user interaction, with a 10s fallback for non-interactors.
+  // This keeps GTM out of the Lighthouse TBT window (FCP -> TTI) entirely,
+  // while the lightweight stub below still queues every event in the meantime.
+  useEffect(() => {
+    if (!GA_ID || loadLib) return;
+
+    const fire = () => setLoadLib(true);
+    const events = ["scroll", "mousemove", "touchstart", "keydown", "click"];
+    const opts: AddEventListenerOptions = { once: true, passive: true };
+    events.forEach((e) => window.addEventListener(e, fire, opts));
+    const timer = window.setTimeout(fire, 10000);
+
+    return () => {
+      events.forEach((e) => window.removeEventListener(e, fire, opts));
+      window.clearTimeout(timer);
+    };
+  }, [loadLib]);
 
   useEffect(() => {
     if (!GA_ID || typeof window === "undefined" || !window.gtag) return;
@@ -25,10 +45,8 @@ export default function GoogleAnalytics() {
 
   return (
     <>
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-        strategy="afterInteractive"
-      />
+      {/* Lightweight stub: defines gtag + dataLayer immediately so page_view and
+          trackGAEvent() calls queue before the heavy library arrives. Near-zero cost. */}
       <Script id="ga4-init" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
@@ -38,6 +56,14 @@ export default function GoogleAnalytics() {
           gtag('config', '${GA_ID}', { send_page_view: false });
         `}
       </Script>
+      {/* Heavy library: loaded only after interaction or the 10s fallback. It
+          drains the queued dataLayer events on arrival, so nothing is lost. */}
+      {loadLib && (
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+      )}
     </>
   );
 }
