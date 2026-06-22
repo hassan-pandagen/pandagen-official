@@ -244,6 +244,16 @@ function applyReferralOverlay(
   };
 }
 
+// Short "v-Source" label for the Tawk visitor LIST (e.g. v-Claude, v-Google, v-Referral),
+// paired with the landing page — gives at-a-glance triage in the dashboard, like Panda Patches.
+function getVisitorLabel(): string {
+  const ai = getAIReferral();
+  if (ai) return `v-${ai.name}`;
+  const { source } = getTrafficSource();
+  const clean = (source || 'Direct').replace(/[\s/]+/g, '');
+  return `v-${clean}`;
+}
+
 // ─── Helpers ────────────────────────────────────────────────────────────────
 
 function getTrafficSource() {
@@ -366,6 +376,12 @@ export default function TawkToChat() {
       (window as any).Tawk_API = tawkApi;
 
       const pageContext = applyReferralOverlay(getPageGreeting(window.location.pathname));
+
+      // At-a-glance label in the Tawk visitor list: source + landing page (e.g. "v-Claude | /ai-info")
+      tawkApi.visitor = {
+        ...(tawkApi.visitor || {}),
+        name: `${getVisitorLabel()} | ${window.location.pathname}`,
+      };
 
       tawkApi.onLoad = function () {
         tawkApi.setAttributes(
