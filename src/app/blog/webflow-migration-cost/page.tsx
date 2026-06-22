@@ -14,6 +14,7 @@ const webflowMigrationFAQs = blogPosts.find(p => p.id === 'webflow-migration-cos
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
 const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
+const QuoteModalButton = lazyLoad(() => import("@/components/ui/QuoteModalButton"));
 
 export const metadata: Metadata = {
     title: "Webflow Migration Cost 2026: Real Receipts From $1,500",
@@ -718,9 +719,14 @@ export default function WebflowMigrationCostPage() {
                         <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="text-lg font-bold text-charcoal mb-2">Ready to know the exact cost of your Webflow migration?</p>
                             <p className="text-stone-600 text-sm mb-6">Drop your Webflow URL when you book. We scope your migration live by page count and complexity, give you a fixed-price quote, and show you your break-even date before we hang up.</p>
-                            <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
-                                Get Your Migration Quote <ArrowRight className="w-4 h-4" />
-                            </CalModalButton>
+                            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                                <QuoteModalButton cta="webflow_mid_quote" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
+                                    Get Your Migration Quote <ArrowRight className="w-4 h-4" />
+                                </QuoteModalButton>
+                                <CalModalButton className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-stone-300 text-charcoal font-bold rounded-full text-sm hover:border-charcoal transition-all">
+                                    Or Book a Call
+                                </CalModalButton>
+                            </div>
                         </div>
 
                         <BlogHeader>How to Get an Accurate Quote for Your Webflow Migration</BlogHeader>
@@ -756,14 +762,17 @@ export default function WebflowMigrationCostPage() {
                             <p className="text-xl font-bold mb-2">We migrate Webflow sites to custom Next.js.</p>
                             <p className="text-stone-400 text-sm mb-6">Fixed price. Zero-downtime launch. 90+ PageSpeed guaranteed. We have done this before.</p>
                             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                                <CalModalButton className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
-                                    Book a Migration Audit <ArrowRight className="w-4 h-4" />
+                                <QuoteModalButton cta="webflow_bottom_quote" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
+                                    Get a Free Quote <ArrowRight className="w-4 h-4" />
+                                </QuoteModalButton>
+                                <CalModalButton className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-white/20 text-white font-bold rounded-full text-sm hover:border-white/40 transition-all">
+                                    Or Book a Call
                                 </CalModalButton>
                                 <Link
                                     href="/services/webflow?ref=blog/webflow-migration-cost"
                                     className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-white/20 text-white font-bold rounded-full text-sm hover:border-white/40 transition-all"
                                 >
-                                    View Webflow Service Page <ArrowRight className="w-4 h-4" />
+                                    Webflow Service Page <ArrowRight className="w-4 h-4" />
                                 </Link>
                             </div>
                         </div>

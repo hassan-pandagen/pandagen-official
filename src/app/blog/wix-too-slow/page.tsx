@@ -14,6 +14,7 @@ const postFAQs = blogPosts.find(p => p.id === "wix-too-slow")?.faqs ?? [];
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
 const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
+const QuoteModalButton = lazyLoad(() => import("@/components/ui/QuoteModalButton"));
 
 export const dynamic = "force-static";
 
@@ -483,10 +484,15 @@ export default function WixTooSlowPage() {
                         <p className="text-[var(--muted)] mb-6 max-w-lg mx-auto">
                             We migrate Wix sites to custom Next.js. The result: 95 to 100 on Google&apos;s speed test (PageSpeed). Under 1-second load time. Vercel hosting that starts free and only scales to $20/month when your business grows. Starter engagements start at $1,500 (5 to 7 pages). Most 10 to 30 page migrations land in our $3,500 Growth tier. If the new site does not score 95 or higher, you do not pay the balance.
                         </p>
-                        <CalModalButton className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-semibold px-6 py-3 rounded-xl transition-colors">
-                            Get Your Free Speed Audit
-                            <ArrowRight className="w-4 h-4" />
-                        </CalModalButton>
+                        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                            <QuoteModalButton cta="wix_mid_quote" className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-semibold px-6 py-3 rounded-xl transition-colors">
+                                Get a Free Quote
+                                <ArrowRight className="w-4 h-4" />
+                            </QuoteModalButton>
+                            <CalModalButton className="inline-flex items-center justify-center gap-2 border border-[var(--border)] hover:border-amber-500/50 px-6 py-3 rounded-xl transition-colors text-sm">
+                                Or Book a Call
+                            </CalModalButton>
+                        </div>
                     </div>
 
                     {/* H2 6 */}
@@ -646,9 +652,12 @@ export default function WixTooSlowPage() {
                             You have hit the Wix ceiling. No more optimization is going to get you to 95. The only path to a fast Wix site is a site that is not on Wix. We migrate you starting at $1,500 (Starter), guarantee a 95+ Google score (PageSpeed), and host it on Vercel starting free (you only scale to $20/month when your business grows). Book a free 20-minute call to see exactly what the migration would involve for your site.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                            <CalModalButton className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-semibold px-6 py-3 rounded-xl transition-colors">
-                                Book Free 20-Minute Call
+                            <QuoteModalButton cta="wix_bottom_quote" className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-semibold px-6 py-3 rounded-xl transition-colors">
+                                Get a Free Quote
                                 <ArrowRight className="w-4 h-4" />
+                            </QuoteModalButton>
+                            <CalModalButton className="inline-flex items-center justify-center gap-2 border border-[var(--border)] hover:border-amber-500/50 px-6 py-3 rounded-xl transition-colors text-sm">
+                                Or Book a Call
                             </CalModalButton>
                             <Link href="/blog/squarespace-too-slow" className="inline-flex items-center gap-2 border border-[var(--border)] hover:border-amber-500/50 px-6 py-3 rounded-xl transition-colors text-sm">
                                 Compare: Squarespace Speed Issues

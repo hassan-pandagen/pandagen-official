@@ -14,6 +14,7 @@ const shopifyLostSalesFAQs = blogPosts.find(p => p.id === 'shopify-slow-losing-s
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
 const SalesImpactAnimation = lazyLoad(() => import("@/components/blog/SalesImpactAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
+const QuoteModalButton = lazyLoad(() => import("@/components/ui/QuoteModalButton"));
 
 export const metadata: Metadata = {
     title: "Slow Shopify Store? How Much Revenue You Are Losing in 2026 (With Math)",
@@ -376,9 +377,11 @@ export default function ShopifySlowPage() {
                         <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">How much is your Shopify store bleeding per month?</p>
                             <p className="text-stone-600 mb-4 text-sm">Drop your store URL in the booking form. We run your PageSpeed live on the call, calculate your exact monthly revenue loss to the dollar, and give you a fixed quote before we hang up.</p>
-                            <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
-                                    Get Free Revenue Audit <ArrowRight className="w-4 h-4" />
-                                </CalModalButton>
+                            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                                <Link href="/#audit-widget" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Run Your Free Audit <ArrowRight className="w-4 h-4" /></Link>
+                                <QuoteModalButton cta="shopify_revenue_mid_quote" className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-stone-300 text-charcoal font-bold rounded-full text-sm hover:border-charcoal transition-all">Get a Free Quote</QuoteModalButton>
+                                <CalModalButton className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-stone-300 text-charcoal font-bold rounded-full text-sm hover:border-charcoal transition-all">Or Book a Call</CalModalButton>
+                            </div>
                         </div>
 
                         <BlogHeader>How Quickly Does a Custom Shopify Storefront Pay for Itself?</BlogHeader>
@@ -560,9 +563,11 @@ export default function ShopifySlowPage() {
                         <p className="text-stone-600 mb-6">
                             Get a free revenue audit. See exactly how much your store is losing to slow speed.
                         </p>
-                        <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
-                                Schedule Free Audit <ArrowRight className="w-5 h-5" />
-                            </CalModalButton>
+                        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                            <Link href="/#audit-widget" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Run Your Free Audit <ArrowRight className="w-5 h-5" /></Link>
+                            <QuoteModalButton cta="shopify_revenue_bottom_quote" className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-stone-300 text-charcoal font-bold rounded-full hover:border-charcoal transition-all">Get a Free Quote</QuoteModalButton>
+                            <CalModalButton className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-stone-300 text-charcoal font-bold rounded-full hover:border-charcoal transition-all">Or Book a Call</CalModalButton>
+                        </div>
                     </div>
 
                     <div className="mt-8">

@@ -14,6 +14,7 @@ const pageproFAQs = blogPosts.find(p => p.id === 'pagepro-alternatives')?.faqs ?
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
 const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
+const QuoteModalButton = lazyLoad(() => import("@/components/ui/QuoteModalButton"));
 
 export const dynamic = "force-static";
 
@@ -495,9 +496,14 @@ export default function PageproAlternativesPage() {
                         <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="text-lg font-bold text-charcoal mb-2">Got a quote from Pagepro, Naturaily, or Blazity?</p>
                             <p className="text-stone-600 text-sm mb-6">Send us the scope. We will give you a fixed-price counter-quote for the same Next.js + Sanity + Vercel build. Takes 24 hours. No obligation. If our number is higher, we will tell you why.</p>
-                            <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
-                                Get a Second Opinion <ArrowRight className="w-4 h-4" />
-                            </CalModalButton>
+                            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                                <QuoteModalButton cta="pagepro_mid_quote" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
+                                    Get a Second Opinion <ArrowRight className="w-4 h-4" />
+                                </QuoteModalButton>
+                                <CalModalButton className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-stone-300 text-charcoal font-bold rounded-full text-sm hover:border-charcoal transition-all">
+                                    Or Book a Call
+                                </CalModalButton>
+                            </div>
                         </div>
 
                         <BlogHeader>How to Decide: Use This Framework</BlogHeader>
@@ -531,8 +537,11 @@ export default function PageproAlternativesPage() {
                             <p className="text-xl font-bold mb-2">Same stack. Fixed price. Written guarantee.</p>
                             <p className="text-stone-400 text-sm mb-6">Next.js + Sanity + Vercel. 90+ PageSpeed or 100 percent refund. Free month of post-launch support. Published pricing at $1,500 to $10,000. No retainer required.</p>
                             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                                <CalModalButton className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
-                                    Book Free Scope Call <ArrowRight className="w-4 h-4" />
+                                <QuoteModalButton cta="pagepro_bottom_quote" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
+                                    Get a Fixed-Price Quote <ArrowRight className="w-4 h-4" />
+                                </QuoteModalButton>
+                                <CalModalButton className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-white/20 text-white font-bold rounded-full text-sm hover:border-white/40 transition-all">
+                                    Or Book a Call
                                 </CalModalButton>
                                 <Link href="/pricing" className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-white/20 text-white font-bold rounded-full text-sm hover:border-white/40 transition-all">
                                     View Full Pricing <ArrowRight className="w-4 h-4" />

@@ -14,6 +14,7 @@ const migrationCostFAQs = blogPosts.find(p => p.id === "wordpress-migration-cost
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
 const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
+const QuoteModalButton = lazyLoad(() => import("@/components/ui/QuoteModalButton"));
 
 export const metadata: Metadata = {
     title: { absolute: "How Much Does WordPress to Next.js Migration Cost in 2026? ($1,500 to $25K)" },
@@ -411,9 +412,14 @@ export default function WordPressMigrationCostPage() {
                     <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                         <p className="font-bold text-charcoal mb-2">Ready to know the exact cost of your WordPress migration?</p>
                         <p className="text-stone-600 mb-4 text-sm">Drop your URL when you book. We scope your migration live on the call, give you a fixed-price quote, and calculate your break-even point before we hang up.</p>
-                        <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-cognac transition-all">
-                            Get a Free Migration Quote <ArrowRight className="w-4 h-4" />
-                        </CalModalButton>
+                        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                            <QuoteModalButton cta="wp_mid_quote" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-cognac transition-all">
+                                Get a Free Migration Quote <ArrowRight className="w-4 h-4" />
+                            </QuoteModalButton>
+                            <CalModalButton className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-stone-300 text-charcoal font-bold rounded-full text-sm hover:border-charcoal transition-all">
+                                Or Book a Call
+                            </CalModalButton>
+                        </div>
                     </div>
 
                     <BlogHeader id="timeline">How Long Does a WordPress Migration Take?</BlogHeader>
@@ -583,9 +589,14 @@ export default function WordPressMigrationCostPage() {
                         <TrendingUp className="w-8 h-8 text-cognac mx-auto mb-3" />
                         <p className="font-bold text-xl mb-2">Get Your Migration Quote Today</p>
                         <p className="text-stone-300 mb-5 text-sm max-w-md mx-auto">We review your current site, identify all scope factors, and give you a precise quote with full line-item breakdown. Free discovery call, 24-hour turnaround.</p>
-                        <CalModalButton className="inline-flex items-center gap-2 px-8 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-orange-600 transition-all">
-                            Book Free Discovery Call <ArrowRight className="w-4 h-4" />
-                        </CalModalButton>
+                        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                            <QuoteModalButton cta="wp_bottom_quote" className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-orange-600 transition-all">
+                                Get Your Migration Quote <ArrowRight className="w-4 h-4" />
+                            </QuoteModalButton>
+                            <CalModalButton className="inline-flex items-center justify-center gap-2 px-8 py-3 border border-white/20 text-white font-bold rounded-full text-sm hover:border-white/40 transition-all">
+                                Or Book a Call
+                            </CalModalButton>
+                        </div>
                     </div>
 
                     <BlogHeader id="faq">Frequently Asked Questions</BlogHeader>

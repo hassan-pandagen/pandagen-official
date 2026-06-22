@@ -14,6 +14,7 @@ const postFAQs = blogPosts.find(p => p.id === "shopify-plus-still-slow")?.faqs ?
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
 const SalesImpactAnimation = lazyLoad(() => import("@/components/blog/SalesImpactAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
+const QuoteModalButton = lazyLoad(() => import("@/components/ui/QuoteModalButton"));
 
 export const metadata: Metadata = {
     title: "Shopify Plus Still Slow in 2026? Why $2,300/Month Does Not Fix Speed",
@@ -252,7 +253,11 @@ export default function ShopifyPlusStillSlowPage() {
                         <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Still paying $2,300/month for a 3-second load time?</p>
                             <p className="text-stone-600 mb-4 text-sm">Drop your Shopify URL when you book. We pull your PageSpeed score live on the call, calculate exactly how much your slow store is costing you in lost conversions, and show you the headless fix.</p>
-                            <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free Shopify Plus Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
+                            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                                <Link href="/#audit-widget" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Run Your Free Audit <ArrowRight className="w-4 h-4" /></Link>
+                                <QuoteModalButton cta="shopify_plus_mid_quote" className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-stone-300 text-charcoal font-bold rounded-full text-sm hover:border-charcoal transition-all">Get a Free Quote</QuoteModalButton>
+                                <CalModalButton className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-stone-300 text-charcoal font-bold rounded-full text-sm hover:border-charcoal transition-all">Or Book a Call</CalModalButton>
+                            </div>
                         </div>
 
                         <BlogHeader>What Is the Solution for Shopify Plus Speed?</BlogHeader>
@@ -306,7 +311,11 @@ export default function ShopifyPlusStillSlowPage() {
                         <p className="text-stone-600 mb-6">
                             Free audit. We&apos;ll calculate your exact revenue loss and show you the headless migration path for your store.
                         </p>
-                        <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Book Free Shopify Plus Audit <ArrowRight className="w-5 h-5" /></CalModalButton>
+                        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                            <Link href="/#audit-widget" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Run Your Free Audit <ArrowRight className="w-5 h-5" /></Link>
+                            <QuoteModalButton cta="shopify_plus_bottom_quote" className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-stone-300 text-charcoal font-bold rounded-full hover:border-charcoal transition-all">Get a Free Quote</QuoteModalButton>
+                            <CalModalButton className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-stone-300 text-charcoal font-bold rounded-full hover:border-charcoal transition-all">Or Book a Call</CalModalButton>
+                        </div>
                     </div>
 
                     <section className="mb-6 mt-6">

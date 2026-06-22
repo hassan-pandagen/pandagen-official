@@ -14,6 +14,7 @@ const postFAQs = blogPosts.find(p => p.id === "shopify-conversion-rate-speed-fix
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
 const SalesImpactAnimation = lazyLoad(() => import("@/components/blog/SalesImpactAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
+const QuoteModalButton = lazyLoad(() => import("@/components/ui/QuoteModalButton"));
 
 export const metadata: Metadata = {
     title: "Low Shopify Conversion Rate? How Site Speed Hurts Sales",
@@ -337,7 +338,11 @@ export default function ShopifyConversionRateSpeedFixPage() {
                         <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Is your Shopify conversion rate suffering from slow load times right now?</p>
                             <p className="text-stone-600 mb-4 text-sm">Drop your store URL when you book. We test your load time live on the call, calculate your exact conversion loss per month, and show you what a custom storefront returns in Year 1.</p>
-                            <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free Conversion Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
+                            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                                <Link href="/#audit-widget" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Run Your Free Audit <ArrowRight className="w-4 h-4" /></Link>
+                                <QuoteModalButton cta="shopify_conv_mid_quote" className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-stone-300 text-charcoal font-bold rounded-full text-sm hover:border-charcoal transition-all">Get a Free Quote</QuoteModalButton>
+                                <CalModalButton className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-stone-300 text-charcoal font-bold rounded-full text-sm hover:border-charcoal transition-all">Or Book a Call</CalModalButton>
+                            </div>
                         </div>
 
                         <BlogHeader>The Real Fix: Under 1 second Load Times</BlogHeader>
@@ -390,7 +395,11 @@ export default function ShopifyConversionRateSpeedFixPage() {
                         <p className="text-stone-600 mb-6">
                             Free audit. We&apos;ll analyse your store speed, calculate your exact conversion rate loss, and show you the headless migration path that recovers it.
                         </p>
-                        <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Book Free Conversion Audit <ArrowRight className="w-5 h-5" /></CalModalButton>
+                        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                            <Link href="/#audit-widget" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Run Your Free Audit <ArrowRight className="w-5 h-5" /></Link>
+                            <QuoteModalButton cta="shopify_conv_bottom_quote" className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-stone-300 text-charcoal font-bold rounded-full hover:border-charcoal transition-all">Get a Free Quote</QuoteModalButton>
+                            <CalModalButton className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-stone-300 text-charcoal font-bold rounded-full hover:border-charcoal transition-all">Or Book a Call</CalModalButton>
+                        </div>
                     </div>
 
                     <section className="mb-10">

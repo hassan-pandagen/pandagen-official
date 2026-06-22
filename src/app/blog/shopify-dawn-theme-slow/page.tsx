@@ -14,6 +14,7 @@ const dawnFAQs = blogPosts.find(p => p.id === 'shopify-dawn-theme-slow')?.faqs ?
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
 const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
+const QuoteModalButton = lazyLoad(() => import("@/components/ui/QuoteModalButton"));
 
 export const metadata: Metadata = {
     title: "Shopify Dawn Theme Slow? How We Fixed It From 42 to 97 (2026)",
@@ -308,9 +309,11 @@ export default function ShopifyDawnThemeSlowPage() {
                         <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Is Dawn the fastest your store will ever get?</p>
                             <p className="text-stone-600 mb-4 text-sm">Drop your store URL when you book. We run your real PageSpeed ceiling live on the call and quote a custom storefront that actually breaks past 90/100. Takes 30 minutes.</p>
-                            <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
-                                    Get Free Store Audit <ArrowRight className="w-4 h-4" />
-                                </CalModalButton>
+                            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                                <Link href="/#audit-widget" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Run Your Free Audit <ArrowRight className="w-4 h-4" /></Link>
+                                <QuoteModalButton cta="shopify_dawn_mid_quote" className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-stone-300 text-charcoal font-bold rounded-full text-sm hover:border-charcoal transition-all">Get a Free Quote</QuoteModalButton>
+                                <CalModalButton className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-stone-300 text-charcoal font-bold rounded-full text-sm hover:border-charcoal transition-all">Or Book a Call</CalModalButton>
+                            </div>
                         </div>
 
                         <div className="my-8 p-6 bg-cognac/5 border-l-4 border-cognac rounded-r-xl">
@@ -537,9 +540,11 @@ export default function ShopifyDawnThemeSlowPage() {
                         <p className="text-stone-600 mb-6">
                             Book a free 30-minute audit. We screen-share, run your store live through PageSpeed and Core Web Vitals, identify every bottleneck, and tell you exactly what&apos;s recoverable, and what it&apos;s costing you. You leave with a written report. No pitch, no obligation.
                         </p>
-                        <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
-                                Book Free Store Audit <ArrowRight className="w-5 h-5" />
-                            </CalModalButton>
+                        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                            <Link href="/#audit-widget" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Run Your Free Audit <ArrowRight className="w-5 h-5" /></Link>
+                            <QuoteModalButton cta="shopify_dawn_bottom_quote" className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-stone-300 text-charcoal font-bold rounded-full hover:border-charcoal transition-all">Get a Free Quote</QuoteModalButton>
+                            <CalModalButton className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-stone-300 text-charcoal font-bold rounded-full hover:border-charcoal transition-all">Or Book a Call</CalModalButton>
+                        </div>
                     </div>
 
                     {/* Key Takeaways */}

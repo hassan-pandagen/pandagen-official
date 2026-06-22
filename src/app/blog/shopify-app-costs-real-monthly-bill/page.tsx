@@ -14,6 +14,7 @@ const shopifyAppFAQs = blogPosts.find(p => p.id === "shopify-app-costs-real-mont
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
 const SalesImpactAnimation = lazyLoad(() => import("@/components/blog/SalesImpactAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
+const QuoteModalButton = lazyLoad(() => import("@/components/ui/QuoteModalButton"));
 
 export const metadata: Metadata = {
     title: "How Much Do Shopify Apps Cost in 2026? $300 to $800/mo (Real Store Data)",
@@ -486,9 +487,17 @@ export default function ShopifyAppCostsPage() {
                     <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                         <p className="font-bold text-charcoal mb-2">How much are your Shopify apps actually costing you every month?</p>
                         <p className="text-stone-600 mb-4 text-sm">Drop your store URL when you book. We audit your app stack live on the call, add up your exact monthly bleed, and show you what a custom build eliminates permanently.</p>
-                        <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
-                            Book a Free Cost Audit <ArrowRight className="w-4 h-4" />
-                        </CalModalButton>
+                        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                            <Link href="/#audit-widget" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
+                                Run Your Free Audit <ArrowRight className="w-4 h-4" />
+                            </Link>
+                            <QuoteModalButton cta="shopify_apps_mid_quote" className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-stone-300 text-charcoal font-bold rounded-full text-sm hover:border-charcoal transition-all">
+                                Get a Free Quote
+                            </QuoteModalButton>
+                            <CalModalButton className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-stone-300 text-charcoal font-bold rounded-full text-sm hover:border-charcoal transition-all">
+                                Or Book a Call
+                            </CalModalButton>
+                        </div>
                     </div>
 
                     <BlogHeader id="loyalty-search">Loyalty and Search: Two Categories Where Free Wins</BlogHeader>
@@ -577,9 +586,17 @@ export default function ShopifyAppCostsPage() {
                         <TrendingDown className="w-8 h-8 text-amber-400 mx-auto mb-3" />
                         <p className="font-bold text-xl mb-2">Calculate Your Real Shopify Cost</p>
                         <p className="text-stone-300 mb-5 text-sm max-w-md mx-auto">We audit your current platform costs, app stack, and performance metrics, then show you the exact ROI of switching to a custom build. Most stores recoup the migration cost within 6 months.</p>
-                        <CalModalButton className="inline-flex items-center gap-2 px-8 py-3 bg-amber-400 text-charcoal font-bold rounded-full text-sm hover:bg-amber-300 transition-all">
-                            Book Free Cost Audit Call <ArrowRight className="w-4 h-4" />
-                        </CalModalButton>
+                        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                            <Link href="/#audit-widget" className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-amber-400 text-charcoal font-bold rounded-full text-sm hover:bg-amber-300 transition-all">
+                                Run Your Free Audit <ArrowRight className="w-4 h-4" />
+                            </Link>
+                            <QuoteModalButton cta="shopify_apps_bottom_quote" className="inline-flex items-center justify-center gap-2 px-8 py-3 border border-white/20 text-white font-bold rounded-full text-sm hover:border-white/40 transition-all">
+                                Get a Free Quote
+                            </QuoteModalButton>
+                            <CalModalButton className="inline-flex items-center justify-center gap-2 px-8 py-3 border border-white/20 text-white font-bold rounded-full text-sm hover:border-white/40 transition-all">
+                                Or Book a Call
+                            </CalModalButton>
+                        </div>
                     </div>
 
                     <BlogHeader id="faq">Frequently Asked Questions</BlogHeader>
