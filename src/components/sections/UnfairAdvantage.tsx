@@ -1,28 +1,28 @@
 "use client";
 
 import { motion } from "@/components/ui/motion";
-import { Lock, Zap, FileCode, ArrowUpRight } from "lucide-react";
+import { TrendingDown, Target, Receipt, ArrowUpRight } from "lucide-react";
 
 const stats = [
   {
-    icon: Zap,
-    number: "<1s",
-    title: "Blazing Speed",
-    body: "Google rewards fast sites with higher rankings. We eliminate every speed bottleneck so your pages load before competitors' sites even start.",
+    icon: TrendingDown,
+    number: "40-70%",
+    title: "Lower Subscription Tax",
+    body: "We replace the paid apps, plugins, and platform fees bleeding you every month with custom code you own. Clients cut their software bills 40 to 70 percent.",
     borderRight: true,
   },
   {
-    icon: Lock,
-    number: "0",
-    title: "Vulnerabilities",
-    body: "No plugins means no backdoors. We build enterprise grade architecture compliant with OWASP (the global security standard that protects against the top 10 most common website attacks).",
+    icon: Target,
+    number: "20-40%",
+    title: "Conversions Recovered",
+    body: "iOS, ad blockers, and cookie limits hide 20 to 40 percent of your sales from Meta and Google. Our server-side tracking sends every purchase straight to them, so your ad budget optimizes on real buyers, not guesses.",
     borderRight: true,
   },
   {
-    icon: FileCode,
-    number: "100%",
-    title: "Total Ownership",
-    body: "Stop renting your business. We hand over the full source code on day one. You own the IP, the data, and can take it to any developer if you ever want to.",
+    icon: Receipt,
+    number: "$1,500",
+    title: "Fixed Price, No Surprises",
+    body: "Published pricing from $1,500. No hourly billing, no change-order traps, no $15,000 enterprise minimum. You know the number before you ever talk to us.",
     borderRight: false,
   },
 ];
@@ -44,8 +44,9 @@ export default function UnfairAdvantage() {
               <span className="font-serif italic text-cognac">Advantage.</span>
             </h2>
             <p className="text-lg text-stone-600 leading-relaxed">
-              Most agencies sell you a car with the hood welded shut. We sell you the engine blueprints.
-              Engineering-grade infrastructure for brands that can&apos;t afford downtime.
+              Most agencies sell you a pretty site and walk away. The unfair part is everything underneath:
+              lower monthly bills, ad tracking that actually sees your sales, and a fixed price you know
+              before you ever call.
             </p>
           </div>
           <div className="hidden md:block pb-2">

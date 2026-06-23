@@ -55,6 +55,11 @@ export default function TrustLogoBar() {
             </div>
           ))}
         </div>
+        <div className="border-t border-stone-100 py-3 text-center">
+          <p className="text-xs md:text-sm text-stone-600">
+            <span className="font-bold text-charcoal">Our guarantee:</span> 90+ Google PageSpeed or 100% refund. In writing.
+          </p>
+        </div>
       </div>
     </section>
   );

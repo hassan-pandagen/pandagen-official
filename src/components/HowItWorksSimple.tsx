@@ -38,26 +38,33 @@ function DiscoveryDiagram() {
 }
 
 function ArchitectureDiagram() {
+  const apps = [
+    { name: "Page Builder", cost: "$49/mo" },
+    { name: "SEO Plugin", cost: "$29/mo" },
+    { name: "Reviews App", cost: "$39/mo" },
+    { name: "Speed Booster", cost: "$19/mo" },
+  ];
   return (
-    <div className="rounded-xl border border-stone-200 bg-stone-50 p-4">
-      <div className="flex flex-col items-center gap-2">
-        <div className="flex gap-2">
-          <div className="px-3 py-1.5 rounded-lg bg-stone-100 border border-stone-300 text-stone-600 font-bold text-xs">Pages</div>
-          <div className="px-3 py-1.5 rounded-lg bg-stone-100 border border-stone-300 text-stone-600 font-bold text-xs">API</div>
-          <div className="px-3 py-1.5 rounded-lg bg-stone-100 border border-stone-300 text-stone-600 font-bold text-xs">DB</div>
+    <div className="rounded-xl border border-stone-200 bg-stone-50 p-4 space-y-2.5">
+      <div className="text-[11px] font-bold uppercase tracking-wider text-stone-500 pb-1">
+        Apps we kill, rebuilt as custom code
+      </div>
+      {apps.map((a) => (
+        <div key={a.name} className="flex items-center justify-between">
+          <span className="text-xs text-stone-400 line-through decoration-red-300 flex items-center gap-1.5">
+            <span className="text-red-400">✕</span> {a.name}
+          </span>
+          <span className="text-xs font-mono text-stone-400 line-through decoration-red-300">{a.cost}</span>
         </div>
-        <div className="flex flex-col items-center">
-          <div className="w-px h-4 bg-stone-300" />
-          <div className="w-2.5 h-2.5 rounded-full bg-stone-300 border border-stone-400" />
-          <div className="w-px h-4 bg-stone-300" />
-        </div>
-        <div className="px-5 py-2 rounded-xl bg-charcoal/10 border border-charcoal/30 text-charcoal font-bold text-sm">
-          Next.js App
-        </div>
-        <div className="w-px h-4 bg-stone-300" />
-        <div className="px-4 py-1.5 rounded-lg bg-white border border-stone-200 text-stone-500 font-medium text-xs">
-          300+ Locations · Worldwide
-        </div>
+      ))}
+      <div className="flex items-center justify-between border-t border-stone-200 pt-2.5">
+        <span className="text-xs font-bold text-charcoal flex items-center gap-1.5">
+          <span className="text-emerald-500">→</span> Custom code, yours
+        </span>
+        <span className="text-xs font-mono font-bold text-emerald-600">$0/mo</span>
+      </div>
+      <div className="text-center pt-1">
+        <span className="text-sm font-bold text-cognac">$136/mo back in your pocket</span>
       </div>
     </div>
   );
@@ -129,7 +136,7 @@ const steps = [
   {
     number: "02",
     title: "Architecture",
-    description: "Database structure, page layouts, and how everything connects. All planned before a single line of production code is written.",
+    description: "We map exactly which paid apps and plugins are draining you each month, then rebuild only what you actually need into custom code you own. The monthly bill drops to zero.",
     Diagram: ArchitectureDiagram,
   },
   {

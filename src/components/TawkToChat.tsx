@@ -422,6 +422,12 @@ export default function TawkToChat() {
           });
         }
 
+        // If an "Ask our experts" button requested the chat before it finished loading, open it now.
+        if ((window as any).__tawkOpenPending) {
+          (window as any).__tawkOpenPending = false;
+          if (typeof tawkApi.maximize === 'function') tawkApi.maximize();
+        }
+
         // No auto-popup. Passive chat only. Our sticky bar handles mobile engagement.
       };
 
@@ -469,6 +475,17 @@ export default function TawkToChat() {
       if (loaded) return;
       loaded = true;
       loadTawkTo();
+    };
+
+    // Public trigger for the "Ask our experts" CTA: open chat now, loading it first if needed.
+    (window as any).__openChat = () => {
+      const api = (window as any).Tawk_API;
+      if (api && typeof api.maximize === 'function') {
+        api.maximize();
+      } else {
+        (window as any).__tawkOpenPending = true;
+        load();
+      }
     };
 
     window.addEventListener('scroll', load, { passive: true, once: true });

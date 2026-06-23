@@ -2,7 +2,7 @@
 
 import { motion } from "@/components/ui/motion";
 import Image from "next/image";
-import { Zap, Clock, DollarSign, ShieldOff, ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
 
 // Real reviews. Add `imgSrc` (a real headshot URL) per reviewer when available;
@@ -64,13 +64,6 @@ const platformBadges = [
   { name: "Google", rating: "5.0", count: "4", color: "#1a73e8", url: "https://www.google.com/maps?cid=16271659886069582158" },
   { name: "GoodFirms", rating: "5.0", count: "1", color: "#b8860b", url: "https://www.goodfirms.co/company/pandacodegen" },
   { name: "Sortlist", rating: "5.0", count: "2", color: "#0f172a", url: "https://www.sortlist.com/agency/pandacodegen" },
-];
-
-const metrics = [
-  { icon: Clock, before: "3.2s", after: "0.7s", label: "Load Time", desc: "Guaranteed under 1 second on every build." },
-  { icon: Zap, before: "45", after: "100", label: "PageSpeed Score", desc: "Perfect 100/100 Lighthouse. Not 98. Not 99." },
-  { icon: DollarSign, before: "$150/mo", after: "Free", label: "Hosting Cost", desc: "Starts free on Vercel. You only pay when your business scales." },
-  { icon: ShieldOff, before: "25+", after: "0", label: "Plugins Killed", desc: "No plugins means no vulnerabilities, no bloat." },
 ];
 
 function Stars({ color, count = 5 }: { color: string; count?: number }) {
@@ -270,31 +263,6 @@ export default function SocialProof() {
             Review us on Google
           </a>
         </div>
-
-        {/* Metrics Strip */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.15 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto"
-        >
-          {metrics.map((m) => (
-            <div key={m.label} className="p-5 bg-white border border-stone-200 rounded-2xl shadow-xs hover:border-cognac/30 hover:shadow-md transition-all duration-200">
-              <div className="flex items-center gap-2 mb-3">
-                <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-cognac/10">
-                  <m.icon className="w-4 h-4 text-cognac" />
-                </span>
-                <span className="text-xs font-black text-stone-500 uppercase tracking-widest">{m.label}</span>
-              </div>
-              <div className="mb-2">
-                <div className="text-2xl font-black text-cognac leading-none">{m.after}</div>
-                <div className="text-stone-500 line-through text-xs font-medium mt-0.5">{m.before}</div>
-              </div>
-              <p className="text-xs text-stone-500 leading-relaxed">{m.desc}</p>
-            </div>
-          ))}
-        </motion.div>
 
       </div>
     </section>

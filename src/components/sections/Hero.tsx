@@ -1,5 +1,6 @@
-import { Zap, ShieldCheck, CheckCircle2, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import { HeroCTAs, HeroAuditWidget } from "./HeroClient";
+import AskExpertsButton from "@/components/ui/AskExpertsButton";
 
 export default function Hero() {
   return (
@@ -37,7 +38,7 @@ export default function Hero() {
             <span className="relative flex h-2 w-2">
               <span className="relative inline-flex rounded-full h-2 w-2 bg-cognac" />
             </span>
-            Built by Hassan Jamal &middot; Austin, TX &middot; 267 Public Commits
+            Built by Hassan Jamal &middot; Austin, TX &middot; Featured in Woman&apos;s World
           </div>
 
           {/* Headline: LCP candidate, pure server HTML, inline fontFamily forces instant paint.
@@ -55,67 +56,33 @@ export default function Hero() {
             </span>
           </h1>
 
-          {/* Subtitle: LCP element. Inline fontFamily forces system-font paint instantly.
-              Carries the second moat (subscription savings) + the mechanism (custom code) + price. */}
+          {/* Clarifying subhead: explains the H1 in plain terms + names the AI platforms.
+              Soft-styled so it supports the headline without competing. */}
           <p
-            className="text-lg md:text-xl text-stone-600 mb-3 leading-relaxed max-w-lg font-medium"
-            style={{ color: "#57534e", fontSize: "1.125rem", lineHeight: 1.75, maxWidth: "32rem", fontWeight: 500, display: "block", visibility: "visible", fontFamily: "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" }}
+            className="text-lg md:text-xl font-medium mb-4 max-w-xl leading-snug"
+            style={{ color: "#44403c", fontFamily: "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" }}
           >
-            We rebuild your slow WordPress or Shopify site into{" "}
-            <span className="text-charcoal font-semibold" style={{ color: "#1C1917", fontWeight: 600 }}>
-              custom code that ChatGPT, Claude and Google AI cite
-            </span>
-            , and cut the monthly subscriptions that come with it by 40 to 70%.<sup className="text-cognac">*</sup>
+            We build the sites{" "}
+            <span style={{ color: "#1C1917", fontWeight: 700 }}>ChatGPT, Claude and Google AI recommend</span>, so when your buyers ask who to buy from, you&apos;re the answer, not your competitor.
           </p>
 
-          {/* Price + ownership on its own line so it never breaks mid-phrase */}
-          <p
-            className="text-lg md:text-xl text-charcoal mb-3 font-bold max-w-lg"
-            style={{ color: "#1C1917", fontSize: "1.125rem", fontWeight: 700, fontFamily: "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" }}
-          >
-            <span className="whitespace-nowrap">Fixed pricing from $1,500.</span>{" "}
-            <span className="whitespace-nowrap">You own the code.</span>
+          {/* One proof line: reason to believe — cited (proof) + ownership + price, tight. */}
+          <p className="text-sm font-semibold text-charcoal flex items-center gap-2 mb-6">
+            <Sparkles className="w-4 h-4 text-cognac shrink-0" />
+            Already cited by ChatGPT, Claude and Perplexity. Custom code you own, from $1,500.
           </p>
-
-          {/* Honest "as cited" proof line — defensible: we ARE cited, not claiming to be THE recommendation */}
-          <div className="mb-5">
-            <p className="text-sm font-semibold text-charcoal flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-cognac shrink-0" />
-              Already cited by ChatGPT, Claude and Perplexity.
-            </p>
-            <p className="text-xs font-normal text-stone-400 italic mt-1">*40 to 70% based on 3-year cost vs replaced subscriptions. Results vary.</p>
-          </div>
 
           {/* CTAs, animated client component */}
           <HeroCTAs />
 
-          {/* Consolidated rating line — one credible line beats four "suspiciously perfect" badges */}
-          <p className="mt-5 text-sm font-bold text-stone-600 flex items-center gap-2 flex-wrap">
-            <span className="text-yellow-500">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <span>5.0 across Clutch, Trustpilot, Google &amp; GoodFirms</span>
-          </p>
-
-          {/* PageSpeed Guarantee — the single strongest risk-reversal (verifiable + unique) */}
-          <div className="mt-5 inline-flex items-start gap-3 px-4 py-3 bg-white border border-cognac/30 rounded-xl shadow-xs max-w-lg">
-            <ShieldCheck className="w-5 h-5 text-cognac shrink-0 mt-0.5" />
-            <p className="text-sm text-charcoal leading-snug">
-              <span className="font-bold">Our guarantee:</span> if your new site doesn&apos;t score{" "}
-              <span className="font-bold text-orange-800">90+ on Google PageSpeed</span>, we refund 100%. In writing.
-            </p>
-          </div>
-
-          {/* Benefits strip — features as a quiet single line, not a competing 2x2 grid */}
-          <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-stone-500 font-medium">
-            <span className="flex items-center gap-1.5"><Zap className="w-3.5 h-3.5 text-cognac shrink-0" /> &lt;1s Load Time</span>
-            <span className="flex items-center gap-1.5"><ShieldCheck className="w-3.5 h-3.5 text-charcoal shrink-0" /> Bank Grade Security</span>
-            <span className="flex items-center gap-1.5"><CheckCircle2 className="w-3.5 h-3.5 text-charcoal shrink-0" /> Zero Maintenance</span>
-          </div>
+          {/* Low-friction door: opens chat for the curious-but-not-ready-to-quote majority */}
+          <AskExpertsButton className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-cognac hover:text-cognac/80 transition-colors" />
 
         </div>
 
         {/* --- RIGHT: AUDIT WIDGET --- */}
         <div
-          className="relative lg:min-h-[400px]"
+          className="relative lg:min-h-[400px] lg:-mt-8"
           style={{ contain: "layout" }}
         >
           {/* Fixed size + fixed vertical anchor so the glow never reflows when the
