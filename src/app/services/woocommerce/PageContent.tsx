@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "@/components/ui/motion";
-import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Lock, Database, Server, FileSearch, Wrench, Rocket, HelpCircle, ShoppingBag, CreditCard, Package } from "lucide-react";
+import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Lock, Database, Server, FileSearch, Wrench, Rocket, HelpCircle, ShoppingBag, CreditCard, Package, Network, Truck, RefreshCw, LayoutTemplate, Unplug } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -405,6 +405,78 @@ export default function PageContent() {
 
       {/* PARTNER PROMISE — locked brand voice, 3 guarantees */}
       <PartnerPromise />
+
+      {/* SIGNATURE BLOCK — Plugin Dependency Web (unique to WooCommerce) */}
+      <section id="plugin-dependency-web" className="py-12 md:py-20 px-6 bg-paper">
+        <div className="container mx-auto max-w-5xl">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-200 text-sm text-cognac mb-4">
+            <Network className="w-4 h-4" /> The Dependency Map
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+            One update, and the whole web <span className="font-serif italic text-cognac">snaps.</span>
+          </h2>
+          <p data-speakable="true" className="text-stone-600 text-lg leading-relaxed mb-12 max-w-3xl">
+            A WooCommerce store is not one thing. It is a tangle of plugins from different vendors, each depending on the others to hold the line. When your payment gateway plugin auto-updates, it can break the subscriptions plugin, which breaks the cart, which takes your checkout offline mid-sale. A custom Next.js storefront has no web to snap: every piece of that logic lives inside one codebase we own and test together.
+          </p>
+
+          {/* Node graph */}
+          <div className="relative rounded-3xl border border-stone-200 bg-white p-6 md:p-12 shadow-xs overflow-hidden">
+            {/* Central node */}
+            <div className="flex justify-center mb-8 md:mb-12">
+              <div className="relative z-10 flex flex-col items-center gap-2 px-6 py-4 rounded-2xl bg-charcoal text-white shadow-md">
+                <ShoppingBag className="w-6 h-6 text-cognac" />
+                <span className="font-bold text-sm">WooCommerce Core</span>
+                <span className="text-[10px] uppercase tracking-widest text-stone-400">central dependency</span>
+              </div>
+            </div>
+
+            {/* Satellite plugin nodes — stack on mobile, web on md+ */}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 relative z-10">
+              {[
+                { icon: CreditCard, label: "Stripe Gateway", note: "v8.2 → breaks cart", broken: true },
+                { icon: RefreshCw, label: "Subscriptions", note: "depends on gateway", broken: true },
+                { icon: Truck, label: "Shipping Rates", note: "stable", broken: false },
+                { icon: LayoutTemplate, label: "Page Builder", note: "stable", broken: false },
+                { icon: Zap, label: "Cache Layer", note: "stable", broken: false },
+                { icon: ShieldCheck, label: "Security Plugin", note: "stable", broken: false },
+              ].map((node, i) => (
+                <div
+                  key={i}
+                  className={`flex items-center gap-3 px-4 py-3 rounded-2xl border bg-white ${node.broken ? "border-red-300 bg-red-50/50" : "border-stone-200"}`}
+                >
+                  <div className={`p-2 rounded-xl shrink-0 ${node.broken ? "bg-red-100 text-red-500" : "bg-stone-50 text-cognac border border-stone-100"}`}>
+                    <node.icon className="w-4 h-4" />
+                  </div>
+                  <div className="min-w-0">
+                    <p className="text-sm font-bold text-charcoal truncate">{node.label}</p>
+                    <p className={`text-[11px] font-medium truncate ${node.broken ? "text-red-500" : "text-stone-400"}`}>{node.note}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Connecting edges — decorative SVG, hidden on mobile to avoid overflow */}
+            <svg className="hidden md:block absolute inset-0 w-full h-full pointer-events-none" preserveAspectRatio="none" aria-hidden="true">
+              <line x1="50%" y1="22%" x2="20%" y2="62%" stroke="#dc2626" strokeWidth="2" strokeDasharray="5 4" />
+              <line x1="50%" y1="22%" x2="50%" y2="62%" stroke="#dc2626" strokeWidth="2" strokeDasharray="5 4" />
+              <line x1="50%" y1="22%" x2="80%" y2="62%" stroke="#d6d3d1" strokeWidth="2" />
+              <line x1="20%" y1="62%" x2="50%" y2="62%" stroke="#dc2626" strokeWidth="2" strokeDasharray="5 4" />
+            </svg>
+
+            {/* Legend */}
+            <div className="relative z-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-8 md:mt-12 pt-6 border-t border-stone-100 text-xs text-stone-500">
+              <span className="flex items-center gap-2"><span className="inline-block w-6 h-0.5 bg-red-500" style={{ borderTop: "2px dashed #dc2626" }} /> Conflict / breakage path</span>
+              <span className="flex items-center gap-2"><span className="inline-block w-6 h-0.5 bg-stone-300" /> Stable dependency</span>
+            </div>
+          </div>
+
+          {/* Metaphor caption */}
+          <p className="text-center text-sm text-stone-600 mt-6 max-w-2xl mx-auto leading-relaxed">
+            <Unplug className="w-4 h-4 text-cognac inline-block mr-1 -mt-0.5" />
+            A tangle of interdependent plugins versus one self-contained custom codebase. We do not patch the web. We replace it.
+          </p>
+        </div>
+      </section>
 
       {/* PRICING TIERS */}
       <PricingTiers

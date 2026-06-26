@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "@/components/ui/motion";
-import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Lock, Cpu, Users, Palette, HelpCircle, FileSearch, Lightbulb, Code, Rocket, Gauge, ShoppingBag, Wrench } from "lucide-react";
+import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Lock, Cpu, Users, Palette, HelpCircle, FileSearch, Lightbulb, Code, Rocket, Gauge, ShoppingBag, Wrench, Layers, Database, KeyRound, Plug, Server, GitBranch } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/layout/Header";
@@ -343,6 +343,62 @@ export default function PageContent() {
 
       {/* PARTNER PROMISE — locked brand voice, 3 guarantees */}
       <PartnerPromise />
+
+      {/* SIGNATURE BLOCK — Build Blueprint Spec (unique to Custom Engineering) */}
+      <section id="build-blueprint" className="py-12 md:py-20 px-6 bg-charcoal">
+        <div className="container mx-auto max-w-5xl">
+          <div className="mb-10 md:mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-cognac font-mono uppercase tracking-widest mb-6">
+              <Server className="w-4 h-4" /> Spec Sheet
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              The exact <span className="font-serif italic text-cognac">build blueprint</span> behind every project
+            </h2>
+            <p data-speakable="true" className="text-stone-300 text-lg max-w-2xl leading-relaxed">
+              Before we write a line of code, you get the datasheet. This is the production architecture we ship, every field locked to a real, outcome-oriented value, so you know precisely what you own before kickoff.
+            </p>
+          </div>
+
+          <div className="rounded-3xl border border-stone-700 bg-[#0F172A] overflow-hidden">
+            {/* Datasheet header — blueprint stamp */}
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 px-6 md:px-8 py-4 border-b border-stone-700 bg-white/5">
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-stone-400">SPEC // CUSTOM-ENGINEERING-BUILD</span>
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-cognac">REV 2026.06 · STATUS: SHIP-READY</span>
+            </div>
+
+            {/* Ruled spec rows */}
+            <dl>
+              {[
+                { icon: Layers, field: "ARCHITECTURE", value: "Next.js 15 App Router · React Server Components · TypeScript · Tailwind" },
+                { icon: Database, field: "DATA_LAYER", value: "Postgres (Supabase) or headless CMS · typed schema · row-level security" },
+                { icon: KeyRound, field: "AUTH", value: "Session-based auth · role-based access control · multi-tenant isolation" },
+                { icon: Plug, field: "APIS_&_INTEGRATIONS", value: "REST + GraphQL endpoints · Stripe, OpenAI, Claude · inbound/outbound webhooks" },
+                { icon: Gauge, field: "PERFORMANCE_TARGET", value: "90+ Lighthouse · sub-1s LCP · edge-cached static + streamed dynamic" },
+                { icon: Server, field: "HOSTING", value: "Vercel edge network · $0 to start · pay-as-you-scale, no idle cost" },
+                { icon: GitBranch, field: "OWNERSHIP", value: "100% your GitHub repo on Day 1 · full IP + docs · zero vendor lock-in" },
+              ].map((row, i, arr) => (
+                <div
+                  key={i}
+                  className={`grid grid-cols-1 md:grid-cols-[minmax(0,260px)_1fr] gap-2 md:gap-6 px-6 md:px-8 py-5 ${i < arr.length - 1 ? "border-b border-stone-700/70" : ""} hover:bg-white/5 transition-colors`}
+                >
+                  <dt className="flex items-center gap-3 font-mono text-sm text-stone-400">
+                    <row.icon className="w-4 h-4 text-cognac shrink-0" />
+                    <span className="tracking-wider">{row.field}</span>
+                  </dt>
+                  <dd className="font-mono text-sm md:text-base text-white leading-relaxed">{row.value}</dd>
+                </div>
+              ))}
+            </dl>
+
+            {/* Datasheet footer note */}
+            <div className="px-6 md:px-8 py-4 border-t border-stone-700 bg-white/5">
+              <p className="font-mono text-xs text-stone-500 leading-relaxed">
+                {/* */}— Fields are defaults; every value is tuned to your scope on the discovery call. No part of this stack is rented from us.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* PRICING TIERS — SaaS / custom application pricing */}
       <PricingTiers

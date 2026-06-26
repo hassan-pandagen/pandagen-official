@@ -2,7 +2,7 @@
 
 import FadeIn from "@/components/ui/FadeIn";
 import { useState } from "react";
-import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Gauge, Lock, Palette, Search, HelpCircle, FileSearch, Wrench, Rocket, PenTool, Heart, AlertOctagon, Anchor, Wallet, Layout, Smartphone, Check } from "lucide-react";
+import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Gauge, Lock, Palette, Search, HelpCircle, FileSearch, Wrench, Rocket, PenTool, Heart, AlertOctagon, Anchor, Wallet, Layout, Smartphone, Check, ChevronDown, Unlock } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/layout/Header";
@@ -533,6 +533,68 @@ export default function SquarespacePageContent() {
 
       {/* PARTNER PROMISE — locked brand voice, 3 guarantees */}
       <PartnerPromise />
+
+      {/* SIGNATURE BLOCK — Template Ceiling Pairs (unique to Squarespace) */}
+      <section id="template-ceiling" className="py-12 md:py-20 px-6 bg-paper">
+        <div className="container mx-auto max-w-3xl">
+          <div className="text-center mb-10 md:mb-14">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-50 border border-stone-200 text-xs font-bold uppercase tracking-widest text-cognac mb-4">
+              <Layout className="w-3.5 h-3.5" /> The Template Ceiling
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+              Every Squarespace limit has a <span className="font-serif italic text-cognac">custom-code exit.</span>
+            </h2>
+            <p data-speakable="true" className="text-stone-600 text-lg leading-relaxed max-w-2xl mx-auto">
+              A Squarespace template is a ceiling you only feel once you push against it. Below, each grey tile is a hard limit baked into the platform, and the cognac tile stacked beneath it is exactly what custom Next.js code does instead, the same constraint, lifted.
+            </p>
+          </div>
+
+          <div className="space-y-10 md:space-y-12">
+            {[
+              { icon: Layout, ceiling: "Fixed template structure you can't restructure", liberation: "We architect the page from a blank file, so layout follows your funnel, not a theme's section order." },
+              { icon: Code2, ceiling: "Custom code injection capped to a few header/footer fields", liberation: "Full source access, every component, route, and API handler is yours to edit without a 1,000-character limit." },
+              { icon: FileSearch, ceiling: "No true control over markup or structured-data schema", liberation: "Hand-authored semantic HTML plus JSON-LD schema on every page, tuned for Google and AI search." },
+              { icon: Gauge, ceiling: "Performance ceiling from heavy, shared template JavaScript", liberation: "Static-first Next.js ships near-zero unused JS, dropping Total Blocking Time from seconds to milliseconds." },
+              { icon: Palette, ceiling: "Design locked to the template's grid and breakpoints", liberation: "Pixel-level Tailwind control with independent desktop and mobile layouts that never fight each other." },
+            ].map((pair, i) => (
+              <FadeIn key={i} style={{ transitionDelay: `${i * 70}ms` }} className="relative">
+                {/* Constraint tile (muted, top) */}
+                <div className="rounded-2xl border border-stone-200 bg-stone-50 p-5 md:p-6 flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-stone-200/70 border border-stone-200 flex items-center justify-center shrink-0">
+                    <pair.icon className="w-5 h-5 text-stone-500" />
+                  </div>
+                  <div>
+                    <p className="text-[11px] uppercase tracking-widest font-bold text-stone-400 mb-1 flex items-center gap-1.5">
+                      <Lock className="w-3 h-3" /> Squarespace constraint
+                    </p>
+                    <p className="text-charcoal font-semibold leading-snug">{pair.ceiling}</p>
+                  </div>
+                </div>
+
+                {/* Connector */}
+                <div className="flex justify-center -my-3 relative z-10">
+                  <div className="w-7 h-7 rounded-full bg-cognac text-white flex items-center justify-center shadow-md shadow-cognac/20">
+                    <ChevronDown className="w-4 h-4" />
+                  </div>
+                </div>
+
+                {/* Liberation tile (accent, bottom) */}
+                <div className="rounded-2xl border border-cognac/30 bg-white p-5 md:p-6 flex items-start gap-4 shadow-xs">
+                  <div className="w-10 h-10 rounded-xl bg-cognac/10 border border-cognac/20 flex items-center justify-center shrink-0">
+                    <Unlock className="w-5 h-5 text-cognac" />
+                  </div>
+                  <div>
+                    <p className="text-[11px] uppercase tracking-widest font-bold text-cognac mb-1 flex items-center gap-1.5">
+                      <Unlock className="w-3 h-3" /> Custom-code liberation
+                    </p>
+                    <p className="text-charcoal leading-snug">{pair.liberation}</p>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* PRICING TIERS */}
       <PricingTiers

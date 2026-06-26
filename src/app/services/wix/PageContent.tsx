@@ -2,7 +2,7 @@
 
 import FadeIn from "@/components/ui/FadeIn";
 import { useState } from "react";
-import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Gauge, Lock, Palette, HelpCircle, FileSearch, Wrench, Rocket, Search } from "lucide-react";
+import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Gauge, Lock, Palette, HelpCircle, FileSearch, Wrench, Rocket, Search, Scale, Unlock } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/layout/Header";
@@ -371,6 +371,73 @@ export default function PageContent() {
 
       {/* PARTNER PROMISE — locked brand voice, 3 guarantees */}
       <PartnerPromise />
+
+      {/* SIGNATURE BLOCK — SEO Control Ledger (unique to Wix) */}
+      <section id="seo-control-ledger" className="py-12 md:py-20 px-6 bg-paper">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-8 md:mb-12">
+            <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-bold uppercase tracking-widest bg-stone-50 border border-stone-200 text-cognac rounded-full mb-4">
+              <Scale className="w-4 h-4" /> The SEO Control Ledger
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+              Every SEO lever Wix locks, and what you{" "}
+              <span className="font-serif italic text-cognac">get back in writing.</span>
+            </h2>
+            <p data-speakable="true" className="text-stone-600 text-lg leading-relaxed max-w-2xl mx-auto">
+              This is the balance sheet your Wix plan never shows you. On the left, the technical SEO controls Wix keeps off-limits. On the right, the exact control you own line-for-line on a custom Next.js build hosted on your own infrastructure.
+            </p>
+          </div>
+
+          {/* Ledger panel: single bordered panel, centered vertical rule, ruled rows */}
+          <div className="rounded-3xl border border-stone-200 bg-white overflow-hidden">
+            {/* Ledger headers */}
+            <div className="grid grid-cols-2 border-b-2 border-stone-200 bg-stone-50/60">
+              <div className="flex items-center gap-2 p-4 md:p-5 border-r border-stone-200">
+                <Lock className="w-4 h-4 text-stone-400 shrink-0" />
+                <span className="text-xs md:text-sm font-bold uppercase tracking-wider text-stone-500">What Wix Locks</span>
+              </div>
+              <div className="flex items-center gap-2 p-4 md:p-5">
+                <Unlock className="w-4 h-4 text-cognac shrink-0" />
+                <span className="text-xs md:text-sm font-bold uppercase tracking-wider text-cognac">What You Own on Custom Next.js</span>
+              </div>
+            </div>
+
+            {/* Ruled ledger rows, aligned row-for-row across the centered rule */}
+            {[
+              { locked: "No real robots.txt control — Wix generates it for you", owned: "Hand-authored robots.txt and per-route crawl rules you commit to git" },
+              { locked: "Templated, capped schema markup you can’t extend", owned: "Custom JSON-LD schema for any entity Google and AI search reward" },
+              { locked: "Rigid URL structure dictated by the Wix editor", owned: "Full URL architecture, clean slugs, and 301 maps you define" },
+              { locked: "No true server-side rendering — JS-heavy client paint", owned: "Server-rendered HTML crawlers and LLMs read on first request" },
+              { locked: "Slow Core Web Vitals you have no way to fix", owned: "Sub-second LCP you tune directly in code, 90+ guaranteed" },
+              { locked: "No log-file or crawl-budget visibility or control", owned: "Server logs, sitemaps, and crawl signals fully in your hands" },
+            ].map((row, i, arr) => (
+              <div
+                key={i}
+                className={`grid grid-cols-2 ${i < arr.length - 1 ? "border-b border-stone-200" : ""}`}
+              >
+                <div className="flex items-start gap-2 p-4 md:p-5 border-r border-stone-200">
+                  <XCircle className="w-4 h-4 text-red-400/90 shrink-0 mt-0.5" />
+                  <span className="text-sm text-stone-500 leading-relaxed line-through decoration-stone-300">{row.locked}</span>
+                </div>
+                <div className="flex items-start gap-2 p-4 md:p-5">
+                  <CheckCircle2 className="w-4 h-4 text-cognac shrink-0 mt-0.5" />
+                  <span className="text-sm text-charcoal font-medium leading-relaxed">{row.owned}</span>
+                </div>
+              </div>
+            ))}
+
+            {/* Bottom balance line: net SEO control gained */}
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-3 p-5 md:p-6 bg-charcoal text-white border-t-2 border-stone-200">
+              <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-stone-300">
+                <Scale className="w-4 h-4 text-cognac" /> Net Balance
+              </div>
+              <p className="text-sm md:text-base text-center sm:text-right text-stone-300">
+                Six locked controls cleared <span className="text-white font-bold">→ 100% of your technical SEO surface owned, editable, and portable.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* PRICING TIERS */}
       <PricingTiers

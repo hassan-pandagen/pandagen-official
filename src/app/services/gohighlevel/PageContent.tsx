@@ -2,7 +2,7 @@
 
 import { motion } from "@/components/ui/motion";
 import { useState } from "react";
-import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Gauge, Lock, Palette, Users, BarChart3, HelpCircle, FileSearch, Wrench, Rocket, Cable } from "lucide-react";
+import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Gauge, Lock, Palette, Users, BarChart3, HelpCircle, FileSearch, Wrench, Rocket, Cable, Database, Workflow, CalendarClock, MessageSquare, Webhook } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
@@ -381,6 +381,83 @@ export default function PageContent() {
 
       {/* PARTNER PROMISE — locked brand voice, 3 guarantees */}
       <PartnerPromise />
+
+      {/* SIGNATURE BLOCK — Keep/Replace Architecture Split (unique to GoHighLevel) */}
+      <section id="keep-replace-architecture" className="py-12 md:py-20 px-6 bg-charcoal">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-10 md:mb-14">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-cognac mb-6">
+              <Cable className="w-4 h-4" /> The Architecture
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Keep the engine. <span className="font-serif italic text-cognac">Replace the bodywork.</span>
+            </h2>
+            <p data-speakable="true" className="text-stone-300 leading-relaxed max-w-2xl mx-auto">
+              Your migration is one clean cut, not a teardown. Everything GoHighLevel does well stays exactly where it is. The only thing that changes is the slow public site visitors actually see, rebuilt as custom Next.js code you own, wired back to your CRM over the same GHL API and webhooks.
+            </p>
+          </div>
+
+          {/* Split: KEEP | bridge | REPLACE. Stacks on mobile with bridge between. */}
+          <div className="grid md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-0 items-stretch">
+            {/* LEFT — KEEP */}
+            <div className="rounded-3xl border border-cognac/30 bg-white/5 p-6 md:p-8 md:rounded-r-none">
+              <div className="flex items-center gap-2 mb-1">
+                <CheckCircle2 className="w-5 h-5 text-cognac" />
+                <span className="text-xs font-bold uppercase tracking-widest text-cognac">Keep — GHL Backend</span>
+              </div>
+              <p className="text-sm text-stone-400 mb-6">The systems your business runs on. Untouched.</p>
+              <ul className="space-y-3">
+                {[
+                  { icon: Database, label: "CRM, contacts & opportunities" },
+                  { icon: BarChart3, label: "Pipelines & deal stages" },
+                  { icon: Workflow, label: "Automations & Workflows" },
+                  { icon: CalendarClock, label: "Calendars & booking widgets" },
+                  { icon: MessageSquare, label: "SMS & email sequences" },
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3">
+                    <item.icon className="w-5 h-5 text-cognac shrink-0" />
+                    <span className="text-sm text-stone-300">{item.label}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* CENTER — API / WEBHOOK BRIDGE */}
+            <div className="relative flex md:flex-col items-center justify-center gap-3 py-2 md:py-0 md:px-4">
+              <div className="hidden md:block absolute top-0 bottom-0 left-1/2 w-px -translate-x-1/2 bg-linear-to-b from-cognac/40 via-stone-500/40 to-cognac/40" />
+              <div className="md:hidden h-px flex-1 bg-linear-to-r from-cognac/40 to-stone-500/40" />
+              <div className="relative z-10 flex flex-col items-center gap-2 rounded-2xl border border-white/15 bg-charcoal px-4 py-4 shadow-lg">
+                <Webhook className="w-6 h-6 text-cognac" />
+                <span className="text-[11px] font-bold uppercase tracking-wider text-white text-center leading-tight">GHL API<br />/ Webhooks</span>
+                <ArrowRight className="w-4 h-4 text-stone-400 rotate-90 md:rotate-0" />
+              </div>
+              <div className="md:hidden h-px flex-1 bg-linear-to-r from-stone-500/40 to-stone-400/40" />
+            </div>
+
+            {/* RIGHT — REPLACE */}
+            <div className="rounded-3xl border border-stone-500/40 bg-white/5 p-6 md:p-8 md:rounded-l-none">
+              <div className="flex items-center gap-2 mb-1">
+                <XCircle className="w-5 h-5 text-stone-400" />
+                <span className="text-xs font-bold uppercase tracking-widest text-stone-400">Replace — Public Front-End</span>
+              </div>
+              <p className="text-sm text-stone-400 mb-6">The slow GHL-hosted site, rebuilt and owned.</p>
+              <div className="rounded-xl border border-red-500/20 bg-red-500/10 px-4 py-3 mb-3">
+                <div className="flex items-center gap-2 mb-1"><Gauge className="w-4 h-4 text-red-400 shrink-0" /><span className="text-xs font-bold text-red-400">Before — GHL funnel / site</span></div>
+                <p className="text-sm text-stone-300 leading-relaxed">3 to 5s loads, 20 to 45 PageSpeed, template look, no SEO, code you can never export.</p>
+              </div>
+              <div className="flex items-center justify-center my-2"><ArrowRight className="w-5 h-5 text-cognac rotate-90" /></div>
+              <div className="rounded-xl border border-cognac/30 bg-cognac/10 px-4 py-3">
+                <div className="flex items-center gap-2 mb-1"><Code2 className="w-4 h-4 text-cognac shrink-0" /><span className="text-xs font-bold text-cognac">After — custom Next.js front-end</span></div>
+                <p className="text-sm text-stone-300 leading-relaxed">Sub-second loads, 90+ PageSpeed, pixel-perfect design, full SEO, and 100% of the code in your repo.</p>
+              </div>
+            </div>
+          </div>
+
+          <p className="text-center text-sm text-stone-400 mt-8 max-w-2xl mx-auto">
+            One bridge, two halves: the CRM keeps firing while every visitor lands on a site you actually own.
+          </p>
+        </div>
+      </section>
 
       {/* PRICING TIERS — GoHighLevel site overlay pricing */}
       <PricingTiers
