@@ -1,30 +1,28 @@
 import Link from "next/link";
 import { ArrowRight, Clock } from "lucide-react";
 import { blogPosts } from "@/data/blog";
+import { getRelatedPostIds } from "@/data/topical-map";
 
 interface RelatedPostsProps {
   currentPostId: string;
+  /** @deprecated Kept for backwards-compat with existing callers. Ranking now
+   * derives from the topical map (shared-cluster proximity), not flat category. */
   category?: string;
   maxPosts?: number;
 }
 
 export default function RelatedPosts({
   currentPostId,
-  category,
   maxPosts = 3
 }: RelatedPostsProps) {
-  // Filter out current post and optionally match category
-  let relatedPosts = blogPosts.filter(post => post.id !== currentPostId);
-
-  // Prioritize posts from same category
-  if (category) {
-    const sameCategoryPosts = relatedPosts.filter(post => post.category === category);
-    const otherPosts = relatedPosts.filter(post => post.category !== category);
-    relatedPosts = [...sameCategoryPosts, ...otherPosts];
-  }
-
-  // Limit to maxPosts
-  relatedPosts = relatedPosts.slice(0, maxPosts);
+  // Relationship-ranked: score candidates by how many topical clusters they
+  // share with the current post (true topical proximity), recency as tiebreak.
+  // Falls back to recency for posts not yet placed in the topical map.
+  const orderedIds = blogPosts.map(p => p.id);
+  const byId = new Map(blogPosts.map(p => [p.id, p]));
+  const relatedPosts = getRelatedPostIds(currentPostId, orderedIds, maxPosts)
+    .map(id => byId.get(id))
+    .filter((p): p is (typeof blogPosts)[number] => Boolean(p));
 
   if (relatedPosts.length === 0) return null;
 

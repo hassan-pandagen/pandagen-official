@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Code2, ShoppingBag, Globe, Zap, ArrowRightLeft } from "lucide-react";
+import { getRelatedServiceHrefs } from "@/data/topical-map";
 
 const ALL_SERVICES = [
   { href: "/services/wordpress-migration", icon: Code2,        title: "WordPress Migration",   desc: "Escape plugin bloat. Load under 1 second." },
@@ -19,7 +20,17 @@ type Props = {
 };
 
 export default function RelatedServicesGrid({ currentHref }: Props) {
-  const services = ALL_SERVICES.filter((s) => s.href !== currentHref);
+  // Order by topical adjacency from the topical map: the closest related
+  // services surface first, the rest follow. Falls back to declaration order
+  // when no currentHref is given. /partners (non-/services pillar) always trails.
+  const order = currentHref ? getRelatedServiceHrefs(currentHref) : [];
+  const rank = (href: string) => {
+    const i = order.indexOf(href);
+    return i === -1 ? order.length + ALL_SERVICES.findIndex((s) => s.href === href) : i;
+  };
+  const services = ALL_SERVICES
+    .filter((s) => s.href !== currentHref)
+    .sort((a, b) => rank(a.href) - rank(b.href));
 
   return (
     <section className="py-10 md:py-16 px-6 bg-[#F8FAFC]">
