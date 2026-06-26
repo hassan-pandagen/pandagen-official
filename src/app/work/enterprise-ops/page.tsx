@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { CheckCircle2, BarChart3, Lock, Users, Clock, Shield, Database, Zap, AlertTriangle, TrendingUp } from "lucide-react";
+import { CheckCircle2, BarChart3, Lock, Users, Clock, Shield, Database, Zap, AlertTriangle, TrendingUp, FileText, PieChart, Plug, Receipt, LineChart } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -33,7 +33,7 @@ const caseStudySchema = {
             "description": "How we replaced spreadsheets, WhatsApp updates, and 3 separate SaaS tools with a single full-stack business intelligence platform. Real-time order tracking, RBAC, automated attendance, and profit analytics.",
             "image": "https://www.pandacodegen.com/work/panda-operations.png",
             "datePublished": "2025-11-01T00:00:00Z",
-            "dateModified": "2026-02-01T00:00:00Z",
+            "dateModified": "2026-06-26T00:00:00Z",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -84,7 +84,7 @@ const caseStudySchema = {
                 {
                     "@type": "Question",
                     "name": "What is a custom business operations platform?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "A custom business operations platform is a single web application that replaces multiple disconnected SaaS tools, like CRMs, spreadsheets, attendance trackers, and reporting tools. For this client, we replaced 5 separate tools with one Supabase-backed platform featuring real-time order tracking, RBAC, employee attendance, and automated profit calculations." }
+                    "acceptedAnswer": { "@type": "Answer", "text": "A custom business operations platform is a single web application that replaces multiple disconnected SaaS tools, like CRMs, spreadsheets, attendance trackers, and reporting tools. For this client, we replaced multiple separate tools with one Supabase-backed platform featuring real-time order tracking, 8+ financial reporting modules, RBAC, payments via Square and Stripe, server-side Meta CAPI ad tracking, employee attendance, and automated profit calculations." }
                 },
                 {
                     "@type": "Question",
@@ -99,7 +99,7 @@ const caseStudySchema = {
                 {
                     "@type": "Question",
                     "name": "How long did it take to build the Enterprise Operations platform?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "The full platform, 14-table Supabase schema, 5-stage order pipeline, RBAC with RLS policies, sales dashboards, attendance system with PKT timezone, automated profit calculations, and Supabase Edge Functions, was built in 10 weeks. It received a 10/10 rating from independent senior developer review: 9.4/10 code quality, 9.3/10 architecture, 10/10 UX." }
+                    "acceptedAnswer": { "@type": "Answer", "text": "The full platform, a Supabase schema with Row-Level Security, a 13-status order pipeline, 8+ reporting modules, RBAC with RLS policies, payments via Square and Stripe, attendance with PKT timezone, automated profit calculations, and 20 Supabase Edge Functions, was built in 10 weeks. It received a 10/10 rating from independent senior developer review: 9.4/10 code quality, 9.3/10 architecture, 10/10 UX." }
                 },
                 {
                     "@type": "Question",
@@ -113,25 +113,70 @@ const caseStudySchema = {
 
 const techStack = [
     { name: "React 18", role: "Frontend UI", color: "bg-sky-500 text-white" },
-    { name: "TypeScript", role: "100% type safety", color: "bg-blue-600 text-white" },
-    { name: "Vite", role: "Build tooling", color: "bg-violet-500 text-white" },
-    { name: "Tailwind CSS", role: "Styling", color: "bg-sky-400 text-white" },
-    { name: "Supabase", role: "Database + Auth + RLS", color: "bg-emerald-600 text-white" },
-    { name: "TanStack Query", role: "Server state + caching", color: "bg-red-500 text-white" },
+    { name: "TypeScript 5", role: "100% type safety (strict)", color: "bg-blue-600 text-white" },
+    { name: "Vite 5", role: "Build + code-split HMR", color: "bg-violet-500 text-white" },
+    { name: "Tailwind CSS 3", role: "Design system + dark mode", color: "bg-sky-400 text-white" },
+    { name: "Supabase", role: "Postgres + Auth + RLS", color: "bg-emerald-600 text-white" },
+    { name: "TanStack Query 5", role: "Server state + caching", color: "bg-red-500 text-white" },
+    { name: "React Router 6", role: "Protected + nested routes", color: "bg-rose-500 text-white" },
+    { name: "React Hook Form + Zod", role: "Validated forms", color: "bg-pink-600 text-white" },
+    { name: "Recharts", role: "Analytics charts", color: "bg-indigo-500 text-white" },
+    { name: "@react-pdf/renderer", role: "Invoices / PDFs", color: "bg-stone-600 text-white" },
     { name: "Framer Motion", role: "UI animations", color: "bg-pink-500 text-white" },
+    { name: "Row-Level Security", role: "Per-table DB policies", color: "bg-emerald-700 text-white" },
+    { name: "Edge Functions (Deno)", role: "20 serverless functions", color: "bg-emerald-800 text-white" },
+    { name: "Square + Stripe", role: "Checkout + payouts", color: "bg-blue-800 text-white" },
+    { name: "Meta CAPI", role: "Server-side ad tracking", color: "bg-blue-500 text-white" },
     { name: "Sentry", role: "APM + error tracking", color: "bg-violet-700 text-white" },
-    { name: "Row-Level Security", role: "Supabase RLS policies", color: "bg-emerald-700 text-white" },
-    { name: "Service Worker", role: "Offline-first capability", color: "bg-stone-700 text-white" },
-    { name: "PostgreSQL", role: "Database (via Supabase)", color: "bg-blue-700 text-white" },
-    { name: "Edge Functions", role: "Server logic", color: "bg-emerald-800 text-white" },
 ];
 
 const orderStages = [
-    { stage: "NEW_ORDER", color: "bg-blue-100 text-blue-700 border-blue-200", desc: "Order received from storefront or direct" },
+    { stage: "NEW_ORDER", color: "bg-blue-100 text-blue-700 border-blue-200", desc: "Order received from the marketing-site checkout or created by an agent" },
     { stage: "IN_PRODUCTION", color: "bg-amber-100 text-amber-700 border-amber-200", desc: "Assigned to production team, materials allocated" },
-    { stage: "READY_TO_SHIP", color: "bg-violet-100 text-violet-700 border-violet-200", desc: "Production complete, awaiting dispatch" },
+    { stage: "QUALITY_ASSURANCE", color: "bg-violet-100 text-violet-700 border-violet-200", desc: "Production complete, QA check before dispatch" },
     { stage: "SHIPPED", color: "bg-sky-100 text-sky-700 border-sky-200", desc: "Tracking number generated, customer notified" },
     { stage: "DELIVERED", color: "bg-emerald-100 text-emerald-700 border-emerald-200", desc: "Confirmed delivered, payment reconciled" },
+];
+
+// Exception / branch statuses outside the linear happy path (13 statuses total).
+const exceptionStates = [
+    { stage: "REMAKE", color: "bg-orange-100 text-orange-700 border-orange-200" },
+    { stage: "CANCELLED", color: "bg-stone-200 text-stone-600 border-stone-300" },
+    { stage: "REFUNDED", color: "bg-rose-100 text-rose-700 border-rose-200" },
+    { stage: "FEEDBACK", color: "bg-teal-100 text-teal-700 border-teal-200" },
+];
+
+// Reporting & analytics modules — the platform's core strength (date-range filtered, CSV export).
+const reportingModules = [
+    { icon: TrendingUp, name: "Sales Report", desc: "Gross vs. net revenue, AOV, daily trend, per-agent performance & commission, repeat-customer metrics." },
+    { icon: PieChart, name: "Profit & Loss", desc: "Revenue vs. cost vs. net profit, cost-breakdown donut, and loss alerts for orders sold below cost." },
+    { icon: FileText, name: "Income Statement", desc: "Industry-standard P&L: gross → net revenue → COGS → gross profit → opex → net profit, with margins." },
+    { icon: Receipt, name: "Cancellation & Refund", desc: "Lost revenue and reason-category breakdown for cancelled and refunded orders." },
+    { icon: BarChart3, name: "Product Mix", desc: "Revenue, cost, and margin by patch type and by quantity band (1–50, 51–100, 101–200, 200+)." },
+    { icon: LineChart, name: "Lead Source Distribution", desc: "Lead volume by channel — Search, Social, Paid Ads, AI/LLM, Referral — pulled from quotes." },
+    { icon: Zap, name: "Funnel & Attribution", desc: "Quote→order conversion, quote-flow bypass detection, and Meta CAPI data-quality breakdown." },
+    { icon: Users, name: "Customer & Form Feedback", desc: "1–5★ satisfaction from order notes and ease-of-use ratings from website quote forms." },
+];
+
+// Production integrations wired into the platform.
+const integrations = [
+    { name: "Supabase", role: "Postgres · Auth · Storage · Realtime · 20 Edge Functions" },
+    { name: "Meta CAPI", role: "Server-side purchase/lead events, reversal on refund" },
+    { name: "Square", role: "Public payment links (/pay/:token) + checkout" },
+    { name: "Stripe", role: "Balance & payout webhooks (idempotent)" },
+    { name: "ZeptoMail", role: "Transactional email for every order milestone" },
+    { name: "Sentry", role: "APM + error tracking via first-party proxy" },
+    { name: "Vercel", role: "Frontend hosting, SPA routing, asset caching" },
+];
+
+// Verified scope from the production codebase.
+const byNumbers = [
+    { value: "23", label: "Staff routes" },
+    { value: "8+", label: "Reporting modules" },
+    { value: "20", label: "Edge Functions" },
+    { value: "13", label: "Order statuses" },
+    { value: "3 · 11", label: "Roles · permissions" },
+    { value: "10", label: "DB migrations" },
 ];
 
 const roles = [
@@ -250,6 +295,26 @@ export default function EnterpriseOpsCaseStudy() {
                         </div>
                     </div>
 
+                    {/* BY THE NUMBERS — verified production scope */}
+                    <section className="mb-20">
+                        <div className="flex items-center gap-3 mb-8">
+                            <div className="h-px w-8 bg-cognac" />
+                            <span className="text-cognac text-sm font-bold uppercase tracking-widest">By the Numbers</span>
+                        </div>
+                        <h2 className="text-3xl font-bold text-charcoal mb-3">The platform today, in production.</h2>
+                        <p className="text-stone-600 mb-8 max-w-2xl" data-speakable="true">
+                            This is not a prototype. It is the live operating system the business runs on every day, and it keeps growing. The customer-facing portal has since moved to the marketing website; this is the internal staff CRM plus its shared serverless backend.
+                        </p>
+                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                            {byNumbers.map((n) => (
+                                <div key={n.label} className="p-5 bg-white border border-stone-300 rounded-2xl shadow-xs text-center">
+                                    <div className="text-3xl font-black text-cognac mb-1">{n.value}</div>
+                                    <div className="text-xs font-bold text-stone-500 uppercase tracking-wider leading-snug">{n.label}</div>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
                     {/* THE PROBLEM */}
                     <section className="mb-20">
                         <div className="flex items-center gap-3 mb-8">
@@ -301,9 +366,9 @@ export default function EnterpriseOpsCaseStudy() {
                             <div className="h-px w-8 bg-cognac" />
                             <span className="text-cognac text-sm font-bold uppercase tracking-widest">Solution, Order Pipeline</span>
                         </div>
-                        <h2 className="text-3xl font-bold text-charcoal mb-3">5-stage order lifecycle. Fully automated.</h2>
+                        <h2 className="text-3xl font-bold text-charcoal mb-3">13-status order lifecycle. Fully automated.</h2>
                         <p className="text-stone-600 mb-8 max-w-2xl">
-                            Every order moves through a defined lifecycle. Each stage transition is logged with the responsible agent and timestamp. No order can be &quot;lost&quot; in a chat thread. Status changes trigger automated notifications to the right team members.
+                            Every order moves through a defined lifecycle, from the linear happy path below to branch states like remake, cancellation, and refund. Each status transition is logged with the responsible agent and timestamp. No order can be &quot;lost&quot; in a chat thread, and status changes trigger automated email to the right people.
                         </p>
 
                         <div className="space-y-3 mb-8">
@@ -321,6 +386,16 @@ export default function EnterpriseOpsCaseStudy() {
                                     </div>
                                 </div>
                             ))}
+                        </div>
+
+                        {/* Branch / exception statuses — the other 4 of 13 */}
+                        <div className="mb-8">
+                            <p className="text-xs font-bold text-stone-400 uppercase tracking-widest mb-3">Plus branch statuses (13 total)</p>
+                            <div className="flex flex-wrap gap-2">
+                                {exceptionStates.map((s) => (
+                                    <span key={s.stage} className={`px-3 py-1.5 rounded-lg text-xs font-black tracking-wider border ${s.color}`}>{s.stage}</span>
+                                ))}
+                            </div>
                         </div>
 
                         <div className="p-6 bg-charcoal text-white rounded-2xl">
@@ -415,7 +490,7 @@ export default function EnterpriseOpsCaseStudy() {
                         </div>
                         <h2 className="text-3xl font-bold text-charcoal mb-3">One platform. Everything.</h2>
                         <p className="text-stone-600 mb-8 max-w-2xl">
-                            9 features, 14 database tables, 3 database views, and Edge Functions for automated summaries. All connected to the same Supabase instance powering the storefront.
+                            Real-time analytics, payments, RBAC, and automation across 23 staff routes and 20 Supabase Edge Functions, with Row-Level Security on every table. All connected to the same Supabase backend now shared with the customer portal on the marketing site.
                         </p>
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -424,6 +499,54 @@ export default function EnterpriseOpsCaseStudy() {
                                     <f.icon className="w-5 h-5 text-cognac mb-3" />
                                     <h3 className="font-bold text-charcoal mb-2">{f.title}</h3>
                                     <p className="text-stone-500 text-sm leading-relaxed">{f.desc}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    {/* REPORTING & ANALYTICS — core strength */}
+                    <section className="mb-20">
+                        <div className="flex items-center gap-3 mb-8">
+                            <div className="h-px w-8 bg-cognac" />
+                            <span className="text-cognac text-sm font-bold uppercase tracking-widest">Reporting &amp; Analytics</span>
+                        </div>
+                        <h2 className="text-3xl font-bold text-charcoal mb-3">8+ financial reports. One date-range filter.</h2>
+                        <p className="text-stone-600 mb-8 max-w-2xl" data-speakable="true">
+                            The reporting layer is the platform&apos;s core strength: a dedicated Reports page with date-range filtering across every analytical module, each one CSV-exportable and charted with Recharts. From gross-to-net revenue to a full income statement to Meta CAPI attribution quality, the answer is one click, not a 30-minute spreadsheet.
+                        </p>
+                        <div className="grid md:grid-cols-2 gap-4">
+                            {reportingModules.map((m) => (
+                                <div key={m.name} className="flex items-start gap-4 p-5 bg-white border border-stone-300 rounded-2xl shadow-xs">
+                                    <div className="w-10 h-10 rounded-xl bg-cognac/10 flex items-center justify-center shrink-0">
+                                        <m.icon className="w-5 h-5 text-cognac" />
+                                    </div>
+                                    <div>
+                                        <h3 className="font-bold text-charcoal mb-1">{m.name}</h3>
+                                        <p className="text-stone-500 text-sm leading-relaxed">{m.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    {/* INTEGRATIONS */}
+                    <section className="mb-20">
+                        <div className="flex items-center gap-3 mb-8">
+                            <div className="h-px w-8 bg-cognac" />
+                            <span className="text-cognac text-sm font-bold uppercase tracking-widest">Integrations</span>
+                        </div>
+                        <h2 className="text-3xl font-bold text-charcoal mb-3">Wired into the tools the business already runs on.</h2>
+                        <p className="text-stone-600 mb-8 max-w-2xl">
+                            Payments, ads attribution, transactional email, and monitoring all flow through the same backend, no copy-paste between systems.
+                        </p>
+                        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                            {integrations.map((it) => (
+                                <div key={it.name} className="flex items-start gap-3 p-5 bg-stone-50 border border-stone-200 rounded-2xl">
+                                    <Plug className="w-5 h-5 text-cognac shrink-0 mt-0.5" />
+                                    <div>
+                                        <h3 className="font-bold text-charcoal text-sm">{it.name}</h3>
+                                        <p className="text-stone-500 text-xs mt-0.5 leading-relaxed">{it.role}</p>
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -509,10 +632,14 @@ export default function EnterpriseOpsCaseStudy() {
                         <h2 className="text-3xl font-bold text-charcoal mb-6">Everything that was built.</h2>
                         <div className="grid md:grid-cols-2 gap-3">
                             {[
-                                "14-table Supabase database schema with Row-Level Security",
-                                "5-stage order pipeline (NEW_ORDER → DELIVERED)",
+                                "PostgreSQL schema with Row-Level Security on every table (10 migrations)",
+                                "13-status order pipeline (NEW_ORDER → DELIVERED, plus REMAKE / CANCELLED / REFUNDED / FEEDBACK)",
+                                "8+ financial reporting modules (Sales, P&L, Income Statement, Product Mix, Attribution), CSV export",
+                                "Payments: Square checkout + public payment links (/pay/:token), Stripe payout webhooks",
+                                "Server-side Meta Conversions API with refund reversal + attribution-quality scoring",
+                                "Transactional email via ZeptoMail for every order milestone",
                                 "Immutable order_history audit log, every change attributed",
-                                "RBAC: ADMIN, SALES, PRODUCTION roles with granular JSONB permissions",
+                                "RBAC: ADMIN, SALES, PRODUCTION roles with 11 granular JSONB permissions",
                                 "Sales agent dashboards, revenue, conversion rate, response time per agent",
                                 "Customer quote management with email template system",
                                 "Automated profit calculation: order_amount − production − shipping − marketing",
@@ -521,7 +648,7 @@ export default function EnterpriseOpsCaseStudy() {
                                 "Payroll export (CSV) from attendance_summary table",
                                 "Performance metrics table for goal tracking",
                                 "3 database views: orders_with_details, sales_agent_reports, active_attendance_sessions",
-                                "Supabase Edge Functions for automated monthly reporting",
+                                "20 Supabase Edge Functions (user admin, email, Meta CAPI, Square/Stripe payments, webhooks)",
                                 "Sentry APM + error tracking integration",
                                 "Offline-first via Service Worker, works on poor connectivity",
                                 "100% TypeScript with zero implicit any",

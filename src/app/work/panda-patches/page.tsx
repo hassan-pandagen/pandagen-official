@@ -1,13 +1,13 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { CheckCircle2, Zap, DollarSign, Server, ShoppingBag, BarChart3, Lock, Users, Clock } from "lucide-react";
+import { CheckCircle2, Zap, DollarSign, Server, ShoppingBag, BarChart3, Lock, Users, Clock, Sparkles, CreditCard, LineChart, Search, UserRound, Trophy, Star } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 
 export const metadata: Metadata = {
     title: "Panda Patches: WordPress to Next.js Migration, Zero SEO Drops",
-    description: "3-year-old WordPress store migrated to a headless Next.js + Sanity + Supabase + Stripe stack. 100% of Google rankings preserved. Now $38K/mo on $25/mo tooling.",
+    description: "3-year-old WordPress store migrated to a headless Next.js + Sanity + Supabase + Square stack. 100% of Google rankings preserved. Now $38K/mo on $25/mo tooling.",
     openGraph: {
         title: "Panda Patches: WordPress to Next.js Migration (Zero SEO Drops)",
         description: "3-year-old WordPress site migrated to a headless stack with zero Google ranking drops. $38K/mo revenue on $25/mo tooling.",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Panda Patches: WordPress to Next.js Migration with Zero SEO Drops",
-        description: "3-year-old WordPress e-commerce site migrated to Next.js + Sanity + Supabase + Stripe. 100% rankings preserved. $38K/mo on $25/mo tooling.",
+        description: "3-year-old WordPress e-commerce site migrated to Next.js + Sanity + Supabase + Square. 100% rankings preserved. $38K/mo on $25/mo tooling.",
     },
     alternates: { canonical: "/work/panda-patches" },
 };
@@ -30,10 +30,10 @@ const caseStudySchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/work/panda-patches#article",
             "headline": "Panda Patches: WordPress to Next.js Migration with Zero SEO Drops",
-            "description": "A 3-year-old WordPress e-commerce site migrated to a headless stack (Next.js + Sanity + Supabase + Stripe) with 100% of Google rankings preserved. Includes a real-time pricing calculator handling 9 patch types. Now generates $38,000/month revenue on $25/month tooling costs.",
+            "description": "A 3-year-old WordPress e-commerce site migrated to a headless stack (Next.js + Sanity + Supabase + Square) with 100% of Google rankings preserved. Includes a real-time pricing calculator handling 9 patch types. Now generates $38,000/month revenue on $25/month tooling costs.",
             "image": "https://www.pandacodegen.com/work/panda-patches.png",
             "datePublished": "2025-10-01T00:00:00Z",
-            "dateModified": "2026-04-12T00:00:00Z",
+            "dateModified": "2026-06-26T00:00:00Z",
             "articleSection": "Case Study",
             "inLanguage": "en-US",
             "wordCount": 2100,
@@ -44,7 +44,7 @@ const caseStudySchema = {
                 { "@type": "Thing", "name": "Real-Time Pricing Engine" },
                 { "@type": "SoftwareApplication", "name": "Sanity CMS" },
                 { "@type": "SoftwareApplication", "name": "Supabase" },
-                { "@type": "SoftwareApplication", "name": "Stripe" }
+                { "@type": "SoftwareApplication", "name": "Square" }
             ],
             "author": {
                 "@type": "Person",
@@ -71,8 +71,10 @@ const caseStudySchema = {
                 "seo preservation wordpress migration",
                 "zero google ranking drops migration",
                 "headless commerce case study",
-                "next.js sanity supabase stripe",
+                "next.js sanity supabase square",
                 "real-time pricing calculator",
+                "ai patch generator",
+                "square checkout bnpl afterpay",
                 "custom e-commerce development",
                 "3 year old wordpress migration",
                 "custom ops platform",
@@ -124,7 +126,7 @@ const caseStudySchema = {
             "@type": "Product",
             "@id": "https://pandapatches.com/#product",
             "name": "Panda Patches E-Commerce Platform",
-            "description": "Custom embroidered patches e-commerce site built on Next.js, Sanity, Supabase, and Stripe. Flagship case study for PandaCodeGen.",
+            "description": "Custom embroidered patches e-commerce site built on Next.js, Sanity, Supabase, and Square, with an AI patch generator and server-side conversion tracking. Flagship case study for PandaCodeGen.",
             "url": "https://pandapatches.com",
             "brand": {
                 "@type": "Brand",
@@ -154,7 +156,7 @@ const caseStudySchema = {
                 {
                     "@type": "Question",
                     "name": "How much does it cost to build a custom e-commerce platform like this?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "A custom e-commerce platform with a real-time pricing engine, CMS, payment integrations (Stripe, PayPal, Apple Pay, Klarna, Afterpay), and an ops portal starts at $15,000 to $30,000 depending on complexity. Panda Patches runs on under $25/month in total tooling costs after launch." }
+                    "acceptedAnswer": { "@type": "Answer", "text": "A custom e-commerce platform with a real-time pricing engine, CMS, Square checkout (card, Apple Pay, Google Pay, Cash App Pay, and Afterpay BNPL), an AI mockup generator, a customer portal, and a full server-side conversion-tracking stack starts at $15,000 to $30,000 depending on complexity. Panda Patches runs on under $25/month in total tooling costs after launch." }
                 },
                 {
                     "@type": "Question",
@@ -164,7 +166,7 @@ const caseStudySchema = {
                 {
                     "@type": "Question",
                     "name": "How long did it take to build the Panda Patches platform?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "The full platform, custom storefront with real-time pricing, Sanity CMS, 6 payment gateways, Supabase ops portal, and sales agent dashboards, was built and launched within 8 weeks. The Lighthouse score is 90+ across all Core Web Vitals." }
+                    "acceptedAnswer": { "@type": "Answer", "text": "The storefront, custom real-time pricing, Sanity CMS, AI patch generator, Square checkout with BNPL, customer portal, and the server-side conversion-tracking stack, was built and launched within 8 weeks. The connected staff CRM that runs order operations is a separate application sharing the same Supabase backend. The Lighthouse score is 90+ across all Core Web Vitals." }
                 }
             ]
         }
@@ -176,16 +178,34 @@ const techStack = [
     { name: "React 19", role: "UI runtime", color: "bg-sky-600 text-white" },
     { name: "TypeScript", role: "Type safety", color: "bg-blue-600 text-white" },
     { name: "Tailwind CSS 3", role: "Styling", color: "bg-sky-500 text-white" },
-    { name: "Sanity CMS", role: "Content management", color: "bg-red-500 text-white" },
-    { name: "Supabase", role: "Ops database + auth", color: "bg-emerald-600 text-white" },
-    { name: "Stripe", role: "Card payments + Klarna + Afterpay + Apple Pay", color: "bg-violet-600 text-white" },
-    { name: "PayPal", role: "Alternative checkout", color: "bg-blue-700 text-white" },
-    { name: "Upstash Redis", role: "Rate limiting + cache", color: "bg-red-600 text-white" },
-    { name: "Zod", role: "Schema validation", color: "bg-indigo-600 text-white" },
-    { name: "React Hook Form", role: "Forms + pricing calculator", color: "bg-pink-600 text-white" },
-    { name: "Zeptomail", role: "Transactional email", color: "bg-amber-600 text-white" },
-    { name: "next-sitemap", role: "Automated SEO sitemap", color: "bg-emerald-700 text-white" },
-    { name: "Vercel", role: "Hosting + CDN + edge", color: "bg-stone-700 text-white" },
+    { name: "Sanity CMS", role: "25 doc types · ISR content", color: "bg-red-500 text-white" },
+    { name: "Supabase", role: "DB + Auth + Storage (shared)", color: "bg-emerald-600 text-white" },
+    { name: "Square", role: "Checkout · Apple/Google Pay · Cash App · Afterpay", color: "bg-stone-800 text-white" },
+    { name: "FAL", role: "AI patch image generation", color: "bg-violet-600 text-white" },
+    { name: "Meta Pixel + CAPI", role: "Deduped server-side tracking", color: "bg-blue-600 text-white" },
+    { name: "GA4 + GTM + Google Ads", role: "Conversion measurement", color: "bg-amber-600 text-white" },
+    { name: "Upstash Redis", role: "Per-route rate limiting", color: "bg-red-600 text-white" },
+    { name: "React Hook Form + Zod", role: "Validated forms + calculator", color: "bg-pink-600 text-white" },
+    { name: "ZeptoMail", role: "Transactional + abandoned-cart email", color: "bg-indigo-600 text-white" },
+    { name: "Vercel", role: "Hosting + CDN + Cron", color: "bg-stone-700 text-white" },
+];
+
+const storefrontFeatures = [
+    { icon: Sparkles, title: "AI Patch Generator", desc: "Branded “Panda AI” — a FAL-powered mockup generator with no signup required, a shape/style prompt pipeline, 120+ abuse-blocking rules (trademarks, logos, hate symbols), 30-day artifact TTL, and a clean handoff straight into the order flow." },
+    { icon: UserRound, title: "Customer Portal", desc: "Supabase-auth accounts auto-provisioned on first paid order: dashboard, order history, tracking, and one-click re-priced reorder with loyalty pricing." },
+    { icon: CreditCard, title: "Square Checkout + BNPL", desc: "Hosted Square Payment Links: card, Apple Pay, Google Pay, Cash App Pay, and Afterpay 'pay in installments.' Server-side re-pricing blocks tampering." },
+    { icon: LineChart, title: "Conversion & Attribution", desc: "Meta Pixel + CAPI (deduped via shared eventID), GA4/GTM, Google Ads, Pinterest, Bing UET, and an OpenAI pixel, with fbp/fbc/gclid/UTM re-derived server-side on every order." },
+    { icon: ShoppingBag, title: "Offers & Bulk Ordering", desc: "Fixed-price /offers packs with inline multi-step checkout, volume-tier bulk pricing, and a two-stage abandoned-cart recovery sequence (30 min, then 24 h with a code)." },
+    { icon: Search, title: "SEO / AEO Surface", desc: "180+ indexed pages: a 63-post blog, US state & city location pages, product-category and competitor-comparison pages, partner & offers pages, and an /ai-info answer hub with topic cluster pages, all backed by llms.txt, JSON-LD, hreflang (US/UK/CA/AU), dynamic sitemap/robots, and IndexNow pinging." },
+];
+
+const storefrontNumbers = [
+    { value: "180+", label: "Pages indexed" },
+    { value: "63", label: "Blog posts" },
+    { value: "20+", label: "Location pages" },
+    { value: "9", label: "Patch categories" },
+    { value: "25", label: "Sanity doc types" },
+    { value: "5", label: "Ways to pay" },
 ];
 
 const pricingDimensions = [
@@ -241,7 +261,7 @@ export default function PandaPatchesCaseStudy() {
                                 Zero SEO Drops
                             </span>
                             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-stone-100 border border-stone-200 text-stone-500 text-xs font-bold uppercase tracking-widest">
-                                Headless Next.js + Sanity + Supabase + Stripe
+                                Headless Next.js + Sanity + Supabase + Square
                             </span>
                         </div>
 
@@ -251,7 +271,7 @@ export default function PandaPatchesCaseStudy() {
                         </h1>
 
                         <p className="text-xl text-stone-600 leading-relaxed max-w-3xl mb-10">
-                            A 3-year-old WordPress e-commerce site with real search traffic, existing customers, and a pricing problem WordPress couldn&apos;t solve. We migrated it to a complete headless stack (Next.js + Sanity + Supabase + Stripe) with a real-time pricing calculator and a custom ops platform. 100% of the Google rankings were preserved. Zero drops in Google Search Console. Now generates $38K/month revenue on $25/month in total tooling costs.
+                            A 3-year-old WordPress e-commerce site with real search traffic, existing customers, and a pricing problem WordPress couldn&apos;t solve. We migrated it to a complete headless stack (Next.js + Sanity + Supabase + Square) with a real-time pricing calculator and a custom ops platform. 100% of the Google rankings were preserved. Zero drops in Google Search Console. Now generates $38K/month revenue on $25/month in total tooling costs.
                         </p>
 
                         {/* Key metrics */}
@@ -285,6 +305,74 @@ export default function PandaPatchesCaseStudy() {
                             </span>
                         </div>
                     </div>
+
+                    {/* TRUSTED BY — real customers, real volume */}
+                    <section className="mb-20">
+                        <div className="flex items-center gap-3 mb-8">
+                            <div className="h-px w-8 bg-cognac" />
+                            <span className="text-cognac text-sm font-bold uppercase tracking-widest">Real Customers, Real Volume</span>
+                        </div>
+                        <h2 className="text-3xl font-bold text-charcoal mb-3">
+                            Not a portfolio piece. A business that has shipped <span className="font-serif italic text-cognac">1,000,000+ patches.</span>
+                        </h2>
+                        <p className="text-stone-600 mb-8 max-w-2xl" data-speakable="true">
+                            The platform we built runs a real, high-volume manufacturing business that has delivered custom patches to teams at some of the world&apos;s biggest brands.
+                        </p>
+
+                        {/* Brand names */}
+                        <div className="flex flex-wrap items-center gap-x-8 gap-y-3 mb-8">
+                            {["Google", "Microsoft", "Coca-Cola", "Nissan", "Wise"].map((b) => (
+                                <span key={b} className="text-lg md:text-2xl font-bold text-stone-400 tracking-tight">{b}</span>
+                            ))}
+                        </div>
+
+                        {/* Flagship + reputation */}
+                        <div className="grid md:grid-cols-2 gap-4">
+                            <div className="p-6 bg-white border border-stone-300 rounded-2xl shadow-xs">
+                                <div className="flex items-center gap-2 mb-3">
+                                    <Trophy className="w-5 h-5 text-cognac" />
+                                    <span className="text-xs font-bold text-stone-400 uppercase tracking-widest">Flagship Activation</span>
+                                </div>
+                                <p className="text-charcoal font-bold mb-2">16,000 patches for Wise&apos;s Nasdaq Times Square activation</p>
+                                <p className="text-stone-500 text-sm leading-relaxed mb-3">
+                                    Designed, approved, and delivered in under two weeks to hit a Nasdaq listing date that could not move, ordered, produced, and tracked through the platform.
+                                </p>
+                                <a href="https://www.pandapatches.com/case-studies/wise-nasdaq-times-square-activation" target="_blank" rel="noopener" className="text-sm font-bold text-cognac hover:underline">
+                                    Read the Wise case study →
+                                </a>
+                            </div>
+                            <div className="p-6 bg-white border border-stone-300 rounded-2xl shadow-xs">
+                                <div className="flex items-center gap-2 mb-3">
+                                    <Star className="w-5 h-5 text-cognac" />
+                                    <span className="text-xs font-bold text-stone-400 uppercase tracking-widest">Reputation</span>
+                                </div>
+                                <p className="text-charcoal font-bold mb-2">Rated 4.8/5 by 72+ customers on Trustpilot</p>
+                                <p className="text-stone-500 text-sm leading-relaxed">
+                                    1,000,000+ patches delivered, with 5-piece minimums, mockups in 12 to 24 hours, and a money-back guarantee, all transacted through the custom storefront.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* BY THE NUMBERS — current storefront scope */}
+                    <section className="mb-20">
+                        <div className="flex items-center gap-3 mb-8">
+                            <div className="h-px w-8 bg-cognac" />
+                            <span className="text-cognac text-sm font-bold uppercase tracking-widest">By the Numbers</span>
+                        </div>
+                        <h2 className="text-3xl font-bold text-charcoal mb-3">The storefront today, in production.</h2>
+                        <p className="text-stone-600 mb-8 max-w-2xl" data-speakable="true">
+                            What started as a WordPress migration is now a deep custom storefront on Next.js 16 + React 19, with an AI generator, a customer portal, and a full conversion-tracking stack. The staff side, order operations, production, and reporting, runs in a separate connected CRM that shares the same Supabase backend.
+                        </p>
+                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                            {storefrontNumbers.map((n) => (
+                                <div key={n.label} className="p-5 bg-white border border-stone-300 rounded-2xl shadow-xs text-center">
+                                    <div className="text-3xl font-black text-cognac mb-1">{n.value}</div>
+                                    <div className="text-xs font-bold text-stone-500 uppercase tracking-wider leading-snug">{n.label}</div>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
 
                     {/* SEO PRESERVATION */}
                     <section className="mb-20">
@@ -410,16 +498,40 @@ export default function PandaPatchesCaseStudy() {
                         </div>
                     </section>
 
+                    {/* 2026 STOREFRONT CAPABILITIES */}
+                    <section className="mb-20">
+                        <div className="flex items-center gap-3 mb-8">
+                            <div className="h-px w-8 bg-cognac" />
+                            <span className="text-cognac text-sm font-bold uppercase tracking-widest">Solution, 2026 Storefront</span>
+                        </div>
+                        <h2 className="text-3xl font-bold text-charcoal mb-3">Far past a migration. A conversion machine.</h2>
+                        <p className="text-stone-600 mb-8 max-w-2xl">
+                            The storefront kept growing after launch. Today it generates and converts demand end-to-end: an AI mockup generator pulls people in, Square checkout with installment options closes the sale, a customer portal handles self-serve reorders, and a server-side tracking stack measures every step without slowing the page down.
+                        </p>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            {storefrontFeatures.map((f) => (
+                                <div key={f.title} className="p-5 bg-white border border-stone-300 rounded-xl shadow-xs">
+                                    <f.icon className="w-5 h-5 text-cognac mb-3" />
+                                    <h3 className="font-bold text-charcoal mb-2">{f.title}</h3>
+                                    <p className="text-stone-500 text-sm leading-relaxed">{f.desc}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
                     {/* THE OPS PLATFORM */}
                     <section className="mb-20">
                         <div className="flex items-center gap-3 mb-8">
                             <div className="h-px w-8 bg-cognac" />
                             <span className="text-cognac text-sm font-bold uppercase tracking-widest">Solution, Operations</span>
                         </div>
-                        <h2 className="text-3xl font-bold text-charcoal mb-3">One platform. 7 tools gone.</h2>
-                        <p className="text-stone-600 mb-8 max-w-2xl">
-                            We built a private Supabase-backed ops portal that replaced the CRM, Google Sheets, attendance tracker, and WhatsApp update chains. 7 team members. One platform. Every change logged with a timestamp and author.
+                        <h2 className="text-3xl font-bold text-charcoal mb-3">One backend. The whole business runs on it.</h2>
+                        <p className="text-stone-600 mb-6 max-w-2xl">
+                            Beyond the storefront, we built the staff side too: a separate Supabase-backed CRM that replaced the old CRM, Google Sheets, attendance tracker, and WhatsApp update chains. It shares the same backend as this storefront, so leads, quotes, orders, and payments flow straight in. 7 team members, one source of truth, every change logged with a timestamp and author.
                         </p>
+                        <Link href="/work/enterprise-ops" className="inline-flex items-center gap-2 mb-8 text-sm font-bold text-cognac hover:underline">
+                            Read the full CRM case study →
+                        </Link>
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                             {opsFeatures.map((f) => (
@@ -517,9 +629,14 @@ export default function PandaPatchesCaseStudy() {
                                 "9 product category pages (embroidered, woven, PVC, chenille, leather, silicone, printed, sequin, 3D)",
                                 "4 additional product pages (lapel pins, challenge coins, keychains, PVC shoe charms)",
                                 "Real-time pricing calculator with all dimensions",
-                                "Stripe + PayPal checkout (Apple Pay, Klarna, Afterpay via Stripe Payment Element)",
-                                "Sanity CMS, content editors manage everything without code",
-                                "Blog system with 50+ post capacity (dynamic + SEO-optimized)",
+                                "Square checkout: card, Apple Pay, Google Pay, Cash App Pay, and Afterpay BNPL (server-side re-pricing)",
+                                "AI patch generator (FAL) with prompt pipeline, 120+ abuse rules, and 30-day artifact cleanup",
+                                "Customer portal: Supabase auth, order history, tracking, one-click re-priced reorder",
+                                "Server-side conversion stack: Meta CAPI + GA4/GTM + Google Ads + Pinterest + Bing + OpenAI pixel",
+                                "Two-stage abandoned-cart recovery (email at 30 min, then 24 h with a discount code)",
+                                "~30 SEO/AEO landing pages + /ai-info answer hub with cluster pages, partner & offers pages, llms.txt, hreflang, IndexNow",
+                                "Sanity CMS (25 doc types), content editors manage everything without code",
+                                "63-post blog library (dynamic, SEO-optimized) feeding the topical cluster",
                                 "Order confirmation emails + customer order history",
                                 "File upload for custom design mockups",
                                 "Supabase ops portal, order pipeline with real-time status",

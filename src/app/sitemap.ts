@@ -34,10 +34,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/partners', lastModified: '2026-03-01', changeFrequency: 'monthly', priority: 0.6 },
 
     // 4. Dynamic Content
-    { path: '/work', lastModified: '2026-03-01', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/work', lastModified: '2026-06-26', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/work/mycustompatches', lastModified: '2026-06-10', changeFrequency: 'yearly', priority: 0.7 },
-    { path: '/work/panda-patches', lastModified: '2026-06-10', changeFrequency: 'yearly', priority: 0.6 },
-    { path: '/work/enterprise-ops', lastModified: '2026-06-10', changeFrequency: 'yearly', priority: 0.6 },
+    { path: '/work/panda-patches', lastModified: '2026-06-26', changeFrequency: 'yearly', priority: 0.6 },
+    { path: '/work/enterprise-ops', lastModified: '2026-06-26', changeFrequency: 'yearly', priority: 0.6 },
     { path: '/work/panda-codelab', lastModified: '2026-06-10', changeFrequency: 'yearly', priority: 0.6 },
     { path: '/about', lastModified: '2026-03-22', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/about/hassan', lastModified: '2026-06-08', changeFrequency: 'yearly', priority: 0.6 },
