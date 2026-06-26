@@ -644,6 +644,18 @@ export default function PageContent() {
         </div>
       </section>
 
+      {/* Further Reading — blog cluster links (closes the pillar -> supporting-content loop) */}
+      <section className="py-10 px-6 bg-white border-t border-stone-200">
+        <div className="container mx-auto max-w-4xl">
+          <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-4">Further reading</p>
+          <ul className="space-y-2 text-stone-700">
+            <li>&rarr; <Link href="/blog/woocommerce-too-slow" className="text-charcoal hover:text-cognac underline underline-offset-2">WooCommerce too slow? How to speed it up (and when to migrate)</Link></li>
+            <li>&rarr; <Link href="/blog/wordpress-plugins-destroy-speed" className="text-charcoal hover:text-cognac underline underline-offset-2">How WordPress plugins destroy site speed</Link></li>
+            <li>&rarr; <Link href="/blog/what-is-headless-commerce" className="text-charcoal hover:text-cognac underline underline-offset-2">What is headless commerce, and is it worth it?</Link></li>
+          </ul>
+        </div>
+      </section>
+
       {/* Related Services — expanded to all platforms via reusable component */}
       <RelatedServicesGrid currentHref="/services/woocommerce" />
 

@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description: "WooCommerce stores score 30-55 on mobile PageSpeed. Learn which fixes work, which don't, and when a headless rebuild beats another caching plugin.",
         type: "article",
         publishedTime: "2026-03-25",
-        modifiedTime: "2026-05-31",
+        modifiedTime: "2026-06-26",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/woocommerce-too-slow",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -61,7 +61,7 @@ const articleSchema = {
             "description": "WooCommerce stores score 30-55 on mobile PageSpeed. Learn which fixes work, which don't, and when a headless rebuild beats another caching plugin.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-25T00:00:00-05:00",
-            "dateModified": "2026-05-31T00:00:00-05:00",
+            "dateModified": "2026-06-26T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -133,7 +133,7 @@ const articleSchema = {
             "description": "WooCommerce stores average 30 to 55 on Google PageSpeed Mobile. The root cause is architectural. Here is exactly what is breaking your store speed and what permanently fixes it.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-03-25T00:00:00-05:00",
-            "dateModified": "2026-05-31T00:00:00-05:00",
+            "dateModified": "2026-06-26T00:00:00-05:00",
             "inLanguage": "en-US"
         },
         {
@@ -187,7 +187,7 @@ export default function WooCommerceTooSlowPage() {
                             The average WooCommerce store scores 30 to 55 on Google PageSpeed Mobile. Your theme is not the problem. Your images are not the problem. The architecture is.
                         </p>
                         <BlogAuthor
-                            date="Mar 25, 2026 (updated May 5)"
+                            date="Mar 25, 2026 (updated Jun 26)"
                             readTime="13 min read"
                             bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
@@ -357,6 +357,54 @@ export default function WooCommerceTooSlowPage() {
                         <BlogText>
                             WebP images are 25 to 35% smaller than equivalent JPEG files. AVIF images are 50% smaller. A product page with 8 product images, none of them in modern format, can add 3 to 8MB of image data that the browser must download before rendering. On a mobile connection at 10 Mbps, that is 3 to 6 seconds of download time before the page is usable.
                         </BlogText>
+
+                        {/* ANSWER-FIRST FIXES — match high-demand queries: speed up / add-to-cart slow / checkout slow / slow backend */}
+                        <BlogHeader>How to Speed Up WooCommerce (The Fixes That Actually Help, Ranked)</BlogHeader>
+                        <BlogText>
+                            Here is the honest order of operations, highest impact first. Do these before you spend another dollar on a caching plugin:
+                        </BlogText>
+                        <BlogList items={[
+                            "Move to performance hosting with a Redis object cache and PHP 8.2 or newer. Cheap shared hosting is the single biggest cause of a slow WooCommerce store.",
+                            "Turn on full-page caching (server-level or WP Rocket), but know it only caches static pages, never cart, checkout, or logged-in sessions.",
+                            "Convert every image to WebP or AVIF and lazy-load anything below the fold. Unoptimized product photos add 3 to 8MB per page.",
+                            "Audit plugins ruthlessly. The average store runs 25 to 40, and each one adds CSS, JavaScript, and database queries to every page.",
+                            "Enable HPOS (High-Performance Order Storage) so orders use dedicated database tables instead of the wp_posts table.",
+                            "Put a CDN in front of static assets so images and scripts load from an edge server near the visitor.",
+                        ]} />
+                        <BlogText>
+                            Done well, this takes a typical store from the 30s into the <BlogHighlight>60 to 75 range on mobile</BlogHighlight>. The reason it stalls there is the next three problems, which no plugin can fix.
+                        </BlogText>
+
+                        <BlogHeader>Why Is WooCommerce Add to Cart Slow?</BlogHeader>
+                        <BlogText>
+                            WooCommerce add to cart is slow because of <BlogHighlight>cart fragments</BlogHighlight>. On every page load, WooCommerce fires an uncached AJAX request (wc-ajax=get_refreshed_fragments) through admin-ajax.php to keep the mini-cart in sync, on every page, including ones with no cart on them. On a busy store those requests queue behind each other and the &quot;Add to Cart&quot; button feels laggy.
+                        </BlogText>
+                        <BlogList items={[
+                            "Stop loading cart fragments on pages that do not show a cart (home, blog, most landing pages).",
+                            "Make sure admin-ajax.php is not blocked by your cache and that the server has spare PHP workers.",
+                            "On a headless build the cart lives behind a fast API, so add to cart is an instant client-side update with no admin-ajax round trip at all.",
+                        ]} />
+
+                        <BlogHeader>Why Is WooCommerce Checkout Slow?</BlogHeader>
+                        <BlogText>
+                            Checkout is the slowest page in any WooCommerce store because it is the one page that <BlogHighlight>can never be cached</BlogHighlight>. It is dynamic by definition: it runs the full WordPress stack, loads every active plugin, calculates taxes and shipping, and makes live calls to your payment gateway, on every single load, for every customer.
+                        </BlogText>
+                        <BlogList items={[
+                            "Cut the number of plugins that hook into checkout. Many tax, shipping, and upsell plugins add server time to every order.",
+                            "Enable HPOS and a persistent object cache so order writes do not thrash the database.",
+                            "Use a well-provisioned server. Checkout is PHP-bound, so CPU and PHP workers matter more than any caching plugin.",
+                            "Headless removes the bottleneck entirely: the storefront is static and instant, and only the final payment step talks to WooCommerce.",
+                        ]} />
+
+                        <BlogHeader>Why Is the WooCommerce Backend (wp-admin) Slow?</BlogHeader>
+                        <BlogText>
+                            A slow WooCommerce admin is usually <BlogHighlight>autoloaded options bloat and legacy order storage</BlogHighlight>. Years of plugins leave thousands of rows in wp_options set to autoload on every request, and legacy WooCommerce stored every order in the same wp_posts table as your blog content, so the Orders screen crawls as the store grows.
+                        </BlogText>
+                        <BlogList items={[
+                            "Enable HPOS so orders move to dedicated tables. This alone transforms the Orders screen on large stores.",
+                            "Clean up autoloaded options. A tool like Query Monitor shows the worst offenders.",
+                            "Add a Redis or Memcached object cache so repeated admin queries are not recomputed on every page load.",
+                        ]} />
 
                         <BlogHeader>The April 2026 Plugin Crisis: Why Speed Is Now a Security Problem</BlogHeader>
 
