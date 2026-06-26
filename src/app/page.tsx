@@ -15,6 +15,7 @@ export const dynamic = "force-static";
 const SocialProof = lazyLoad(() => import("@/components/home/SocialProof"));
 const UnfairAdvantage = lazyLoad(() => import("@/components/sections/UnfairAdvantage"));
 const ServicesHub = lazyLoad(() => import("@/components/sections/ServicesHub"));
+const WhoWeHelp = lazyLoad(() => import("@/components/home/WhoWeHelp"));
 const HowItWorksSimple = lazyLoad(() => import("@/components/HowItWorksSimple"));
 const AIPowered = lazyLoad(() => import("@/components/sections/AIPowered"));
 const RevenueCalculator = lazyLoad(() => import("@/components/sections/RevenueCalculator"));
@@ -331,6 +332,9 @@ export default function Home() {
 
       {/* Services Bento, premium bento grid (Paper) */}
       <ServicesHub />
+
+      {/* Who We Help, ICP audience cards */}
+      <WhoWeHelp />
 
       {/* How It Works, 4 Steps with Visual Diagrams */}
       <HowItWorksSimple />
