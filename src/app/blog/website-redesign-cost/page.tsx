@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         "hidden costs of website redesign",
         "website redesign ROI",
         "agency vs freelancer website redesign",
-        "website rebuild cost",
+        "website refresh cost",
         "fixed-price website redesign",
     ],
     openGraph: {

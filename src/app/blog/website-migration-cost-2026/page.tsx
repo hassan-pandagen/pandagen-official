@@ -25,11 +25,9 @@ export const metadata: Metadata = {
         "how much does it cost to migrate a website",
         "website migration service cost",
         "website migration costs",
-        "wordpress migration cost",
-        "webflow migration cost",
+        "cost to migrate a website to next.js",
         "shopify headless migration cost",
         "wix migration cost",
-        "squarespace migration cost",
         "gohighlevel migration cost",
         "custom website migration price",
         "website migration agency cost"

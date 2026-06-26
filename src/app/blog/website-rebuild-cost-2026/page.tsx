@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         "custom website rebuild price",
         "agency website rebuild quote",
         "website rebuild budget 2026",
-        "website migration cost 2026",
+        "cost to rebuild a website from scratch",
         "nextjs rebuild cost"
     ],
     robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
