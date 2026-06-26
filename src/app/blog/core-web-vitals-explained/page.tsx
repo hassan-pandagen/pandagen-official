@@ -61,7 +61,7 @@ const articleSchema = {
             "description": "Your agency said your Core Web Vitals are failing and you have no idea what that means. Here is what the 3 metrics cost your business in lost sales.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-05-06T00:00:00-05:00",
-            "dateModified": "2026-06-11T00:00:00-05:00",
+            "dateModified": "2026-05-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",

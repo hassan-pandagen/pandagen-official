@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 const webflowMigrationFAQs = blogPosts.find(p => p.id === 'webflow-migration-cost')?.faqs ?? [];
 
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const FeatureVisual = lazyLoad(() => import("@/components/blog/CostStackAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 const QuoteModalButton = lazyLoad(() => import("@/components/ui/QuoteModalButton"));
 
@@ -50,7 +50,7 @@ const articleSchema = {
             "description": "Real Webflow migration receipts: $1,500 (5 pages), $3,500 (20 pages), $5K to $10K (50-100 pages). Enterprise agencies charge $15K to $25K for the same scope. Fixed pricing, 90+ PageSpeed guarantee.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-25T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-04-15T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -184,7 +184,7 @@ export default function WebflowMigrationCostPage() {
                     </div>
 
                     <div className="mb-12">
-                        <PageSpeedAnimation />
+                        <FeatureVisual />
                     </div>
 
                     {/* Executive Summary */}

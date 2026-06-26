@@ -47,7 +47,7 @@ const articleSchema = {
             "description": "Most WordPress sites with 30+ plugins score 35/100 on mobile. How much revenue you lose per month and how to actually fix it.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-05T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-02-05T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",

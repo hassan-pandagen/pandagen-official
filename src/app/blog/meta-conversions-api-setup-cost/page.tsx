@@ -4,7 +4,7 @@ import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
+import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor, StatCard, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
@@ -282,9 +282,19 @@ export default function MetaCAPISetupCostPage() {
                     </div>
                     <p className="text-xs text-stone-400 mt-2 mb-8">Standalone cost ranges per published 2026 implementation guides. A mid-size store typically needs 40 to 80 hours of developer time for a custom build at $100 to $200/hour.</p>
 
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 my-10">
+                        <StatCard stat="$500-$7K" label="Agency setup fee" context="Standalone Conversions API setup" />
+                        <StatCard stat="$4K-$16K" label="Custom developer time" context="Standalone build, no middleware" />
+                        <StatCard stat="From $5K" label="Bundled in a build" context="Scale tier, integration included, no monthly fee" />
+                    </div>
+
                     <BlogText>
                         The cheapest-looking option, middleware, is the one most agencies quietly resell because it takes a few clicks. The catch is the recurring fee and the fact that your customer data flows through a third-party company before it reaches Meta. The custom direct build costs more upfront because it is real engineering, but it has no monthly fee, no extra data processor, and it does not break when a tool changes its pricing or its terms.
                     </BlogText>
+
+                    <InsightBox variant="info">
+                        Middleware looks cheaper month to month, but it rents you a third-party data processor forever. A custom direct build costs more upfront and then nothing, with no monthly fee and no other company sitting in your customer data.
+                    </InsightBox>
 
                     <BlogHeader id="how-its-built">How a Proper Setup Works (In Plain English)</BlogHeader>
                     <BlogText>

@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 const cheapDevFAQs = blogPosts.find(p => p.id === 'cheap-web-developer')?.faqs ?? [];
 
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const FeatureVisual = lazyLoad(() => import("@/components/blog/CostStackAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const dynamic = "force-static";
@@ -65,7 +65,7 @@ const articleSchema = {
             "description": "Where to find cheap web developers in 2026, what each price tier actually delivers, red flags that wreck projects, and how to hire without getting burned.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-30T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-05-31T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -198,7 +198,7 @@ export default function CheapWebDeveloperPage() {
                     </div>
 
                     <div className="mb-12">
-                        <PageSpeedAnimation />
+                        <FeatureVisual />
                     </div>
 
                     {/* Executive Summary */}

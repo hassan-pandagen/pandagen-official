@@ -4,7 +4,7 @@ import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
+import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor, StatCard, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
@@ -254,6 +254,12 @@ export default function CustomWebsite5000Page() {
                         Not every business needs the Scale tier. Here is the honest line between them so you do not overpay for scope you will not use.
                     </BlogText>
 
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 my-10">
+                        <StatCard stat="$1,500" label="Starter" context="5 to 7 page business site" />
+                        <StatCard stat="$3,500" label="Growth" context="10 to 20 page content site, CMS, blog migration" />
+                        <StatCard stat="$5,000+" label="Scale" context="E-commerce or custom platform, 30+ pages, runs ads" />
+                    </div>
+
                     <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
                     <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
                         <table className="w-full text-sm border-collapse min-w-[560px] responsive-stack-table">
@@ -282,6 +288,8 @@ export default function CustomWebsite5000Page() {
                     <BlogText>
                         The simple rule: if you run paid ads and take payments or leads online, you want Scale, because the server-side tracking pays for itself in cleaner ad spend. If you mainly need a fast, well-structured content site, <Link href="/pricing" className="text-cognac hover:underline">Growth at $3,500</Link> is the fit. The full tier breakdown and the written guarantees are on our <Link href="/pricing" className="text-cognac hover:underline">pricing page</Link>.
                     </BlogText>
+
+                    <InsightBox variant="tip">If you run paid ads and take payments or leads online, the Scale tier&apos;s server-side tracking pays for itself in cleaner ad spend.</InsightBox>
 
                     <div className="my-8 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-orange-600 transition-all">

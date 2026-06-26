@@ -4,7 +4,7 @@ import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
+import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor, InsightBox, ComparisonGrid } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
@@ -240,6 +240,10 @@ export default function DoYouOwnYourWebsitePage() {
                         What does that mean in practice? If you try to leave, you may discover the agency owns the website, not you. Your site can be taken offline. You can lose access to your files. Or the agency can simply refuse and hold everything until you pay to get it back. None of that requires bad intentions on day one. It only requires a contract that never spelled ownership out.
                     </BlogText>
 
+                    <InsightBox variant="danger">
+                        If a developer controls even one of the four parts &mdash; code, domain, hosting, or CMS &mdash; they can hold the others hostage. None of it requires bad intentions on day one; it only requires a contract that never spelled ownership out.
+                    </InsightBox>
+
                     <BlogHeader id="four-things">Ownership Is Four Things, Not One</BlogHeader>
                     <BlogText>
                         The biggest mistake is thinking of &quot;my website&quot; as a single object you either have or do not have. It is four separate things, each held in a different place, and you can be locked out of any one of them while holding the rest.
@@ -263,6 +267,27 @@ export default function DoYouOwnYourWebsitePage() {
                             <p className="text-sm text-stone-700 leading-relaxed">Some builders lock you into paying them for every word change, or build on a proprietary system so you can take the content but not the site. You want to be the administrator of an open system, able to edit freely and remove anyone, including the agency.</p>
                         </div>
                     </div>
+
+                    <ComparisonGrid
+                        left={{
+                            label: "Renting (platform / agency)",
+                            items: [
+                                "Hosting sits on the agency's proprietary platform; you only rent a spot",
+                                "Domain registered in the developer's account, so they control it",
+                                "Built on a proprietary CMS, so you can export text but not the working site",
+                                "No source files, so leaving means rebuilding from scratch",
+                            ],
+                        }}
+                        right={{
+                            label: "Owning (custom code)",
+                            items: [
+                                "Hosting in your own account, so you can move the live site anytime",
+                                "Domain registered in your own name and email",
+                                "You are the administrator of an open CMS and can remove anyone",
+                                "Full source code transferred to you in writing",
+                            ],
+                        }}
+                    />
 
                     <BlogHeader id="horror-stories">What It Looks Like When You Do Not Own It</BlogHeader>
                     <BlogText>

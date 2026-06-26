@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 const postFAQs = blogPosts.find(p => p.id === "website-developer-agency")?.faqs ?? [];
 
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const FeatureVisual = lazyLoad(() => import("@/components/blog/SalesImpactAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
@@ -169,7 +169,7 @@ export default function WebsiteDeveloperAgencyPage() {
 
                         <p className="text-stone-700 leading-relaxed mb-6 text-lg" data-speakable="true">A website developer agency builds, migrates, and maintains custom-coded websites for businesses that have outgrown templates and page builders. The difference between a full-service agency and a freelancer or DIY platform is scope: agencies handle design, development, hosting, SEO, and ongoing support as a single accountable team. This guide covers what services to expect, how much agencies charge in 2026, what questions to ask before signing, and how to spot the red flags that separate legitimate partners from padded quotes.</p>
 
-                        <div className="mb-12"><PageSpeedAnimation /></div>
+                        <div className="mb-12"><FeatureVisual /></div>
 
                         <div className="space-y-8">
 

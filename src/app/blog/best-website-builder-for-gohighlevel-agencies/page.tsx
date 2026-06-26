@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 const ghlBuilderFAQs = blogPosts.find(p => p.id === "best-website-builder-for-gohighlevel-agencies")?.faqs ?? [];
 
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const FeatureVisual = lazyLoad(() => import("@/components/blog/PlatformComparisonAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const dynamic = "force-static";
@@ -204,7 +204,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
 
             <section className="px-6 pb-6">
                 <div className="max-w-3xl mx-auto">
-                    <PageSpeedAnimation />
+                    <FeatureVisual />
                 </div>
             </section>
 

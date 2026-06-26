@@ -4,7 +4,7 @@ import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
+import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor, StatCard, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
@@ -224,6 +224,12 @@ export default function WillMigratingHurtSeoPage() {
                         So here is the truth, with the numbers. The research is consistent: a well-executed migration keeps 95 to 100% of rankings and traffic. A poorly executed one can lose around 50% of traffic, with an average recovery of more than 500 days. Same goal, wildly different outcomes, and the only variable is how carefully it was done.
                     </BlogText>
 
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 my-10">
+                        <StatCard stat="95–100%" label="Rankings Kept" context="When the migration is done correctly" />
+                        <StatCard stat="50%" label="Traffic At Risk" context="A careless migration, ~500+ days to recover" />
+                        <StatCard stat="90–99%" label="Ranking Power Carried" context="By each properly mapped 301 redirect" />
+                    </div>
+
                     <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
                         <p className="text-sm text-stone-700 leading-relaxed">
@@ -238,6 +244,9 @@ export default function WillMigratingHurtSeoPage() {
                     <BlogText>
                         When you move to a new site, your page addresses often change. A 301 redirect is a permanent signal to Google that a page has moved to a new address, and it carries 90 to 99% of that page's accumulated ranking authority across to the new URL. Map every old URL to its closest new equivalent and your rankings come with you. Miss a redirect, and that page's ranking power simply evaporates while visitors hit a dead end. A careless migration skips this mapping. A careful one treats it as the most important task of the entire project.
                     </BlogText>
+                    <InsightBox variant="danger">
+                        Missing or broken 301 redirects are the single biggest cause of traffic loss in a migration, and they are entirely preventable. Miss a redirect and that page's ranking power simply evaporates.
+                    </InsightBox>
 
                     <BlogHighlight>
                         Pre-launch preparation accounts for 60 to 70% of migration success. The redirect map, the metadata inventory, and the URL audit all happen before anyone flips the switch. Errors made there compound the moment you go live.

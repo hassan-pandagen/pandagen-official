@@ -47,7 +47,7 @@ const articleSchema = {
             "description": "You upgraded to Shopify Plus for speed. Still scoring 50 on mobile. Here is why $2,300/month never breaks the Liquid ceiling, and the headless fix that does.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-06T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-02-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",

@@ -46,7 +46,7 @@ const articleSchema = {
             "description": "Slow WordPress sites with Mobile PageSpeed below 50 lose 20 to 30% of organic traffic to faster competitors. Here is why and how to reverse it.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-07T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-05-26T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",

@@ -4,7 +4,7 @@ import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
+import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor, StatCard, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
@@ -264,6 +264,12 @@ export default function AgenticBrowsingPage() {
                         This is the part that matters for a business owner, because the score is not the goal. We tag where every order comes from on our own store, and a growing share now arrives from people who found us by asking an AI assistant, not from a Google search or an ad. So far that adds up to more than $7,000 we can trace back to AI assistants: around $5,100 from ChatGPT across 25 orders, a $590 order from Perplexity, and a $1,680 order from a customer who told us Claude sent them.
                     </BlogText>
 
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 my-10">
+                        <StatCard stat="3/3" label="Agentic Browsing" context="Our own site passes all scored checks with zero special work" />
+                        <StatCard stat="$7,000+" label="Traceable to AI" context="Orders we can trace back to AI assistants so far" />
+                        <StatCard stat="25" label="ChatGPT Orders" context="Around $5,100 in orders from ChatGPT referrals" />
+                    </div>
+
                     <figure className="my-8">
                         <img
                             src="/blog-images/ai-referred-orders.png"
@@ -281,6 +287,8 @@ export default function AgenticBrowsingPage() {
                     <BlogText>
                         One honest distinction. These are real people who found us through an AI assistant and then bought, not AI agents buying on their own. Autonomous agent purchases are what the WebMCP layer below is built for, and that is still coming. But the foundation is the same: a site an AI can read cleanly is a site an AI recommends, and today that recommendation reaches a person who places the order. Passing Agentic Browsing is the technical proof. The orders are the business proof.
                     </BlogText>
+
+                    <InsightBox variant="tip">The same clean foundation that passes Agentic Browsing is what gets you recommended by AI assistants. Passing the score is the foundation; the orders are the point.</InsightBox>
 
                     <BlogHeader id="what-is-webmcp">What Is WebMCP, and Why Is It &ldquo;Not Applicable&rdquo;?</BlogHeader>
 

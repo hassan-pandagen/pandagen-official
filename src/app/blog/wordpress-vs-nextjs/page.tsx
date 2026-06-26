@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 const wpVsNextFAQs = blogPosts.find(p => p.id === 'wordpress-vs-nextjs')?.faqs ?? [];
 
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const FeatureVisual = lazyLoad(() => import("@/components/blog/PlatformComparisonAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
@@ -49,7 +49,7 @@ const articleSchema = {
             "description": "WordPress vs Next.js 2026: speed, SEO, cost, security compared with real data. Next.js scores 95-100, WordPress 35-65. Full breakdown inside.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-11T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-05-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -184,7 +184,7 @@ export default function WordPressVsNextJSPage() {
 
                     {/* Animation */}
                     <div className="mb-10">
-                        <PageSpeedAnimation />
+                        <FeatureVisual />
                     </div>
 
                     {/* Executive Summary */}

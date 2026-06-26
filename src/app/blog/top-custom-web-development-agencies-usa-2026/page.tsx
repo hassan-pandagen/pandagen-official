@@ -4,7 +4,7 @@ import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogAuthor } from "@/components/ui/BlogStyles";
+import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogAuthor, InsightBox, StatCard } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
@@ -382,8 +382,18 @@ export default function TopWebDevAgenciesPage() {
                             "Code ownership: does the client own 100% of the source code at delivery, or is there ongoing platform dependency?"
                         ]} />
 
+                        <InsightBox variant="info">
+                            We ranked on six things a buyer can verify: pricing transparency, tech stack, verified Clutch and Google reviews, minimum project size, a written PageSpeed guarantee, and whether you own 100% of the source code at delivery.
+                        </InsightBox>
+
                         {/* Comparison Table */}
                         <BlogHeader>At a Glance: How the Top 10 Compare</BlogHeader>
+
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 my-10">
+                            <StatCard stat="9 of 10" label="Hide their pricing" context="Only 1 of the 10 publishes prices upfront" />
+                            <StatCard stat="20-40%" label="Typical cost overrun" context="Change orders, support, and license fees after you sign" />
+                            <StatCard stat="72" label="Most Clutch reviews" context="Huemor, the most verified social proof on this list" />
+                        </div>
 
                         <p className="md:hidden text-xs font-bold text-cognac mt-2 mb-2 flex items-center gap-1">← Swipe to see more →</p>
                         <div className="my-4 overflow-x-auto -mx-4 px-4">

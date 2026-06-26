@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 const pageproFAQs = blogPosts.find(p => p.id === 'pagepro-alternatives')?.faqs ?? [];
 
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const FeatureVisual = lazyLoad(() => import("@/components/blog/PlatformComparisonAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 const QuoteModalButton = lazyLoad(() => import("@/components/ui/QuoteModalButton"));
 
@@ -193,7 +193,7 @@ export default function PageproAlternativesPage() {
                     </div>
 
                     <div className="mb-12">
-                        <PageSpeedAnimation />
+                        <FeatureVisual />
                     </div>
 
                     {/* Executive Summary */}

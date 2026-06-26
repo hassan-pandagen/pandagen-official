@@ -61,7 +61,7 @@ const articleSchema = {
             "description": "Webflow restructured May 13. Microsoft 365 tier increases take effect July 1, 2026. Klaviyo's stealth billing change raised most stores 30 to 150%. Recharge added a $25 tier existing customers cannot use. Full 2026 pricing audit across 30 tools with primary sources and a replacement framework.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-05-31T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-05-31T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",

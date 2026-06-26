@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 const aeoPlaybookFAQs = blogPosts.find(p => p.id === "aeo-playbook-built-into-every-website")?.faqs ?? [];
 
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const FeatureVisual = lazyLoad(() => import("@/components/blog/SEORankingAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const dynamic = "force-static";
@@ -64,7 +64,7 @@ const articleSchema = {
             "description": "The exact AEO playbook we bake into every new website build. Cited across ChatGPT, Claude, Perplexity, and Google AI Overview, with the 10 tactics and real GSC receipts.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-05-18T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-05-18T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -209,7 +209,7 @@ export default function AEOPlaybookPage() {
 
             <section className="px-6 pb-6">
                 <div className="max-w-3xl mx-auto">
-                    <PageSpeedAnimation />
+                    <FeatureVisual />
                 </div>
             </section>
 

@@ -50,7 +50,7 @@ const articleSchema = {
             "description": "You optimize Dawn to 75. Add one app and it drops to 50. Why the loop never ends and the one approach that stays at 95+.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-07T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-03-07T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",

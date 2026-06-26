@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 const migrationCostFAQs = blogPosts.find(p => p.id === "wordpress-migration-cost")?.faqs ?? [];
 
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const FeatureVisual = lazyLoad(() => import("@/components/blog/CostStackAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 const QuoteModalButton = lazyLoad(() => import("@/components/ui/QuoteModalButton"));
 
@@ -62,7 +62,7 @@ const articleSchema = {
             "description": "WordPress migration costs $2,000 to $25,000 by site size. Full breakdown: WooCommerce vs brochure, what drives price, and when it pays for itself.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-22T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-05-05T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -199,7 +199,7 @@ export default function WordPressMigrationCostPage() {
 
             <section className="px-6 pb-6">
                 <div className="max-w-3xl mx-auto">
-                    <PageSpeedAnimation />
+                    <FeatureVisual />
                 </div>
             </section>
 

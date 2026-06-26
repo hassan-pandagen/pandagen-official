@@ -66,7 +66,7 @@ const articleSchema = {
             "description": "12 proven tactics to speed up your website, the platform ceilings that block real progress, and when patching stops being worth a rebuild.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-30T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-04-30T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",

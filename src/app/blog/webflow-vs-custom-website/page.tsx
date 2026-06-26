@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 const webflowVsCustomFAQs = blogPosts.find(p => p.id === 'webflow-vs-custom-website')?.faqs ?? [];
 
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const FeatureVisual = lazyLoad(() => import("@/components/blog/PlatformComparisonAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
@@ -48,7 +48,7 @@ const articleSchema = {
             "description": "Webflow works for brochure sites. But when your PageSpeed drops below 70, your bill exceeds $100/month, or you need custom functionality, custom code becomes the better investment.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-27T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-04-15T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -186,7 +186,7 @@ export default function WebflowVsCustomWebsitePage() {
                     </div>
 
                     <div className="mb-12">
-                        <PageSpeedAnimation />
+                        <FeatureVisual />
                     </div>
 
                     {/* Executive Summary */}

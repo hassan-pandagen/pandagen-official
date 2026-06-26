@@ -48,7 +48,7 @@ const articleSchema = {
             "description": "Most sites score 35 to 55 on PageSpeed. We hit 98 to 100 every build. The exact 8-step process, with real before/after data.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-17T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-02-17T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",

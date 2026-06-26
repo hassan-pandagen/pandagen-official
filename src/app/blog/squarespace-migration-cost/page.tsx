@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 const squarespaceMinCostFAQs = blogPosts.find(p => p.id === "squarespace-migration-cost")?.faqs ?? [];
 
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const FeatureVisual = lazyLoad(() => import("@/components/blog/CostStackAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
@@ -60,7 +60,7 @@ const articleSchema = {
             "description": "Squarespace costs $1,500 to $5,500 over 3 years with every fee counted. Real migration cost by site size plus the ROI payback math.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-05-08T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-05-08T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -193,7 +193,7 @@ export default function SquarespaceMinCostPage() {
                     </div>
 
                     <div className="mb-12">
-                        <PageSpeedAnimation />
+                        <FeatureVisual />
                     </div>
 
                     {/* Executive Summary */}

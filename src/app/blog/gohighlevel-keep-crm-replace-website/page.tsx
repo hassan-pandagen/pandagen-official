@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 const ghlHybridFAQs = blogPosts.find(p => p.id === "gohighlevel-keep-crm-replace-website")?.faqs ?? [];
 
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const FeatureVisual = lazyLoad(() => import("@/components/blog/PlatformComparisonAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const dynamic = "force-static";
@@ -63,7 +63,7 @@ const articleSchema = {
             "description": "GoHighLevel is a strong CRM and a weak website builder. Keep GHL as the backend for forms, contacts, calendars, automations, and SaaS Mode. Replace only the public-facing website with a Next.js frontend that talks to GHL through its REST API v2 and webhooks.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-05-04T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-05-04T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -203,7 +203,7 @@ export default function GHLKeepCRMReplaceWebsitePage() {
 
             <section className="px-6 pb-6">
                 <div className="max-w-3xl mx-auto">
-                    <PageSpeedAnimation />
+                    <FeatureVisual />
                 </div>
             </section>
 

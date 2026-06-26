@@ -4,7 +4,7 @@ import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
+import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor, ComparisonGrid, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
@@ -62,7 +62,7 @@ const articleSchema = {
             "description": "In 2026, browser tracking misses 50% or more of conversions. When Meta, Google, and AI shopping agents cannot see your sales, they cannot attribute or optimize, so your cost per order quietly rises. Platform stores leak this signal at the source. Server-side tracking on a custom build fixes it without a monthly app.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-06-04T00:00:00-05:00",
-            "dateModified": "2026-06-09T00:00:00-05:00",
+            "dateModified": "2026-06-04T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -328,6 +328,29 @@ export default function SpendingMoreOnAdsFewerOrdersPage() {
                         Look at the difference per order. When an order sends only an email, the match quality sits around 2.5 and Meta struggles to attribute it. When the same kind of order sends a full set of identifiers (email, fbp, fbc, IP, user agent, and UTM), the score jumps to 5.5 or higher and the sale gets credited to the ad that earned it. That gap, between a few identifiers and a full set, is the difference between ads that look like they are failing and ads the algorithm can actually optimize.
                     </BlogText>
 
+                    <ComparisonGrid
+                        left={{
+                            label: "Broken / client-side tracking",
+                            items: [
+                                "Browser pixel misses 50% or more of real conversions",
+                                "Lost to iOS limits, Safari, ad blockers, third-party cookie death",
+                                "Sends only an email, match quality sits around 2.5",
+                                "Most stores stuck at EMQ 4 to 6, Meta sees about half the sales",
+                                "Bolt-on app at $75 to $275+ per month, and it breaks when the platform changes",
+                            ],
+                        }}
+                        right={{
+                            label: "Server-side tracking",
+                            items: [
+                                "Sends the full story from your own server",
+                                "Full identifier set (email, fbp, fbc, IP, user agent, UTM)",
+                                "Match quality jumps to 5.5 or higher, reached 9.0 on Panda Patches",
+                                "Recovered about 10% more Lead conversions vs the pixel alone",
+                                "Wired in once, owned by you, no monthly app",
+                            ],
+                        }}
+                    />
+
                     <figure className="my-8">
                         <img
                             src="/blog-images/capi-conversions-lift-10pct.jpeg"
@@ -391,6 +414,10 @@ export default function SpendingMoreOnAdsFewerOrdersPage() {
                     <BlogText>
                         The clearest recent example: Shopify deprecated checkout.liquid in August 2025, and for many stores, email, phone, name, and address stopped passing to the tracking scripts. CAPI events started arriving without the customer data Meta needs, and EMQ scores dropped, through no fault of the store owner. That is the structural risk of bolt-on tracking. You can do everything right and still lose signal because the platform moved underneath you. Meanwhile the floor keeps rising: Meta's matching standards tighten every quarter, so a store parked at 5 or 6 falls further behind even by standing still.
                     </BlogText>
+
+                    <InsightBox variant="warning">
+                        With bolt-on tracking you can do everything right and still lose signal because the platform moved underneath you, exactly what happened when Shopify deprecated checkout.liquid in August 2025 and EMQ scores dropped through no fault of the store owner.
+                    </InsightBox>
 
                     <BlogQuote>
                         The tracking apps are not wrong, they are just treating a symptom. The disease is that you do not control the data layer. On a custom build, you do.

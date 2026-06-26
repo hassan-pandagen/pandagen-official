@@ -61,7 +61,7 @@ const schemaData = {
             "description": "Squarespace PageSpeed stuck at 30-55 on mobile? The cause is a JavaScript bundle you cannot remove. Full diagnosis and the only fix that works.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-27T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-03-27T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "name": "Hassan Jamal",

@@ -48,7 +48,7 @@ const articleSchema = {
             "description": "Your competitor gets 3x your traffic with a faster coded site. Google, ChatGPT, and Bing all prefer fast sites. Here is the exact reason and the fix.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-15T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-02-15T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",

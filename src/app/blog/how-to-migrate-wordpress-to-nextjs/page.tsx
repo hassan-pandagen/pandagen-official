@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 const migrateFAQs = blogPosts.find(p => p.id === 'how-to-migrate-wordpress-to-nextjs')?.faqs ?? [];
 
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const FeatureVisual = lazyLoad(() => import("@/components/blog/PlatformComparisonAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
@@ -49,7 +49,7 @@ const articleSchema = {
             "description": "Step-by-step WordPress to Next.js migration: content export, 301 redirects, SEO preservation, zero downtime launch. 6 migrations, zero ranking drops.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-11T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-03-11T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -187,7 +187,7 @@ export default function MigrateWordPressToNextJSPage() {
 
                     {/* Animation */}
                     <div className="mb-10">
-                        <PageSpeedAnimation />
+                        <FeatureVisual />
                     </div>
 
                     {/* Executive Summary */}

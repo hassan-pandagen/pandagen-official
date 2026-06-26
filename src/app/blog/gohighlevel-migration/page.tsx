@@ -4,7 +4,7 @@ import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
+import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor, ComparisonGrid, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
@@ -49,7 +49,7 @@ const articleSchema = {
             "description": "GHL sites score 35 to 47 on mobile PageSpeed. Your ads cost more and your leads cost more. Here is how to fix it without losing your CRM.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-03T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-04-03T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -326,6 +326,31 @@ export default function GoHighLevelMigrationPage() {
                         <BlogText>
                             A custom front end replaces only that front door. Your forms still feed into GHL. Your automations still trigger. Your pipelines still work. Your contacts, email sequences, and workflows stay exactly where they are. Nothing changes on the backend. The only thing that changes is what your visitors and Google see when they land on your page.
                         </BlogText>
+
+                        <ComparisonGrid
+                            left={{
+                                label: "Replace: the slow GHL website",
+                                items: [
+                                    "Scores 35 to 47 on mobile PageSpeed",
+                                    "First page loads take 10 to 30 seconds",
+                                    "Shared infrastructure slows down when US traffic peaks",
+                                    "No staging environment; every change goes live immediately",
+                                ],
+                            }}
+                            right={{
+                                label: "Keep: GHL CRM & automations",
+                                items: [
+                                    "CRM, automations, calendars, and pipelines all stay intact",
+                                    "Email and SMS sequences keep running unchanged",
+                                    "Forms still feed directly into GHL via webhooks",
+                                    "Nothing changes on the backend",
+                                ],
+                            }}
+                        />
+
+                        <InsightBox variant="tip">
+                            Keep GoHighLevel for what it does well &mdash; CRM, automation, pipelines, email, and SMS &mdash; and replace only the website layer with a custom Next.js front end.
+                        </InsightBox>
 
                         <BlogText>
                             This is the same approach agencies use when they want fast{" "}

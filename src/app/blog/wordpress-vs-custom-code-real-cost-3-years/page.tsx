@@ -49,7 +49,7 @@ const articleSchema = {
             "description": "WordPress costs $15,000+ over 3 years. A custom Next.js site costs $10K once, then $0/year. Full TCO breakdown: hosting, plugins, maintenance, lost revenue.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-20T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-05-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",

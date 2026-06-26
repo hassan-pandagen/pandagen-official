@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 const postFAQs = blogPosts.find(p => p.id === "wordpress-killer")?.faqs ?? [];
 
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const FeatureVisual = lazyLoad(() => import("@/components/blog/CostStackAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
@@ -46,7 +46,7 @@ const articleSchema = {
             "description": "The hidden math behind plugins, hosting, and lost revenue. Most business owners underestimate their true WordPress cost by 3 to 5x. Here are the real numbers.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-01-15T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-01-15T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -176,7 +176,7 @@ export default function WordPressKillerPage() {
                     </div>
 
                     {/* Animation */}
-                    <div className="mb-12"><PageSpeedAnimation /></div>
+                    <div className="mb-12"><FeatureVisual /></div>
 
                     {/* Executive Summary */}
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">

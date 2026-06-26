@@ -48,7 +48,7 @@ const articleSchema = {
             "description": "WordPress loads in 4 seconds. Your competitor loads in 0.9 seconds. Here are 8 speed methods ranked by impact, plus the hard truth about WordPress's performance ceiling.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-17T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-02-17T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",

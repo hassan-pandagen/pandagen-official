@@ -4,7 +4,7 @@ import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
+import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor, InsightBox, StatCard } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
@@ -50,7 +50,7 @@ const articleSchema = {
             "description": "Google's March 2026 core update tightened speed requirements and dropped 47% of slow sites. Here's what changed and what your business should do now.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-01T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-04-01T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -207,6 +207,10 @@ export default function GoogleMarchUpdatePage() {
                             If your website takes more than 2 seconds to load, this update likely affected you. Here is what changed, why it matters for your revenue, and exactly what you can do about it.
                         </BlogText>
 
+                        <InsightBox variant="warning">
+                            The March 2026 core update tightened the LCP threshold from 2.5 seconds to 2.0 seconds and elevated INP to a primary ranking signal. Slow sites dropped, fast sites climbed &mdash; if your site loads in more than 2 seconds, it likely lost ground.
+                        </InsightBox>
+
                         <BlogHeader>What Google Changed on March 27, 2026</BlogHeader>
 
                         <BlogText>
@@ -267,6 +271,12 @@ export default function GoogleMarchUpdatePage() {
                             "Small businesses lose an average of $20,172 per year from slow website performance",
                             "52% of e-commerce sites were affected by this update, with product pages hit hardest"
                         ]} />
+
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 my-10">
+                            <StatCard stat="55%" label="Sites Saw Ranking Changes" context="Within two weeks of the update" />
+                            <StatCard stat="47%" label="Slow Sites Lost Rankings" context="Sites with poor Core Web Vitals" />
+                            <StatCard stat="$20,172" label="Lost Per Year" context="Average for small businesses with slow sites" />
+                        </div>
 
                         <BlogText>
                             <BlogHighlight>If your site dropped from position 3 to position 13, you did not just lose a number on a screen. You lost 70 to 80% of the clicks that position was generating.</BlogHighlight> For a business getting 5,000 monthly visitors from that keyword, that is 3,500 to 4,000 fewer potential customers every month.

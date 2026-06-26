@@ -4,7 +4,7 @@ import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
+import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor, StatCard, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
@@ -270,6 +270,12 @@ export default function HowLongCustomWebsitePage() {
                         These line up with the migration timelines in our <Link href="/ai-info/migration-services" className="text-cognac hover:underline font-medium">Migration Services reference</Link>, which breaks down the per-platform ranges (WordPress, Webflow, Squarespace, Wix) in more detail.
                     </BlogText>
 
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 my-10">
+                        <StatCard stat="1-2 wks" label="Starter site" context="5 to 7 pages, when content is ready" />
+                        <StatCard stat="2-4 wks" label="Growth site" context="10 to 20 pages, content is the variable" />
+                        <StatCard stat="4-8 wks" label="Scale / e-commerce" context="30 plus pages, catalog and integrations" />
+                    </div>
+
                     <BlogHeader id="content-is-the-clock">The One Thing That Controls the Clock: Content</BlogHeader>
                     <BlogText>
                         If you take one thing from this article, take this. Across every study of website timelines, and across every project we have shipped, the number one cause of delay is the same: waiting on the client's content. Text, photos, and decisions. Not the build.
@@ -280,6 +286,10 @@ export default function HowLongCustomWebsitePage() {
                     <BlogText>
                         Now compare that to a build where the client handed us everything up front. That one shipped in 20 days, and it was a full e-commerce store. Same team, same standards. The only difference was content readiness. When you have your content and a clear direction, we go fast. When the content is still being created and decided, the calendar stretches, no matter who builds it.
                     </BlogText>
+
+                    <InsightBox variant="tip">
+                        Want the fastest possible timeline? Get your content and a clear direction ready before the build starts. That single thing is the difference between a 20-day e-commerce store and a project that stretches for months.
+                    </InsightBox>
 
                     <BlogQuote>
                         The honest math: the build is hours. The timeline is mostly waiting. Remove the waiting and the timeline collapses.

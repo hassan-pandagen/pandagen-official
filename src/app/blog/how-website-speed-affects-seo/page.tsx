@@ -47,7 +47,7 @@ const articleSchema = {
             "description": "A site loading in 1 second converts 3x better than one at 5 seconds. Here is exactly how page speed affects your rankings and revenue.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-09T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-03-09T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",

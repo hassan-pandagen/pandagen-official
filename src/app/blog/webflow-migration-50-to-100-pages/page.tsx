@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 const postFAQs = blogPosts.find(p => p.id === "webflow-migration-50-to-100-pages")?.faqs ?? [];
 
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const FeatureVisual = lazyLoad(() => import("@/components/blog/PlatformComparisonAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
@@ -47,7 +47,7 @@ const articleSchema = {
             "description": "Agencies quote $15K to $25K for 50 to 100 page Webflow migrations. Real scope, hour estimates per phase, and honest Scale-tier pricing for 2026.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-20T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-04-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -172,7 +172,7 @@ export default function WebflowMigration50To100PagesPage() {
                     </div>
 
                     {/* Animation */}
-                    <div className="mb-8 md:mb-12"><PageSpeedAnimation /></div>
+                    <div className="mb-8 md:mb-12"><FeatureVisual /></div>
 
                     {/* Executive Summary */}
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">

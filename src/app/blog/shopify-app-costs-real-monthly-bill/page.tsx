@@ -65,7 +65,7 @@ const articleSchema = {
             "description": "You cut 3 apps to save money. Black Friday hits and the bill is $1,000 again. Full app cost breakdown and how to actually stop paying.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-19T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-05-26T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",

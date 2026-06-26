@@ -47,7 +47,7 @@ const articleSchema = {
             "description": "Your Shopify conversion rate is stuck at 1.4% because your store loads in 4 seconds. Stores under 2 seconds convert at 3 to 5%. Here is the fix.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-11T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-03-15T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",

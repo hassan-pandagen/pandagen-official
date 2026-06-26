@@ -49,7 +49,7 @@ const articleSchema = {
             "description": "A $500K/year Shopify store at 4s load time loses $75K to speed. Plug in your numbers and see what a 1-second store would earn.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-10T00:00:00-05:00",
-            "dateModified": "2026-06-10T00:00:00-05:00",
+            "dateModified": "2026-03-15T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",

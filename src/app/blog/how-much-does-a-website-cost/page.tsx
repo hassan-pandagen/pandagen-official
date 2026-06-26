@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 const postFAQs = blogPosts.find(p => p.id === "how-much-does-a-website-cost")?.faqs ?? [];
 
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const FeatureVisual = lazyLoad(() => import("@/components/blog/CostStackAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
@@ -61,7 +61,7 @@ const articleSchema = {
             "description": "A website costs $0 to $50,000+ in 2026. Real cost breakdown by build type, business size, and hidden fees that turn affordable platforms into expensive long-term commitments.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-05-12T00:00:00-05:00",
-            "dateModified": "2026-06-09T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -171,7 +171,7 @@ export default function WebsiteCostPage() {
 
                         <p className="text-stone-700 leading-relaxed mb-6 text-lg" data-speakable="true">A website costs anywhere from $0 to $50,000+ in 2026, which is about as useful as saying a car costs between $500 and $500,000. The number that matters is what someone in your situation actually pays, and that depends on whether you DIY, hire a freelancer, or go custom. This guide breaks down real costs by build type, business size, and the hidden fees that turn &ldquo;affordable&rdquo; platforms into expensive long-term commitments.</p>
 
-                        <div className="mb-12"><PageSpeedAnimation /></div>
+                        <div className="mb-12"><FeatureVisual /></div>
 
                         <div className="space-y-8">
 

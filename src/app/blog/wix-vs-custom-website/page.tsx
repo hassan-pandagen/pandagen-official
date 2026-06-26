@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 const postFAQs = blogPosts.find(p => p.id === "wix-vs-custom-website")?.faqs ?? [];
 
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const FeatureVisual = lazyLoad(() => import("@/components/blog/PlatformComparisonAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const dynamic = "force-static";
@@ -61,7 +61,7 @@ const articleSchema = {
             "description": "Wix scores 35 to 55 on mobile PageSpeed. Custom sites score 95 to 100. But Wix is free to start and easy to use. Here is the real cost, speed, and SEO comparison with honest advice on when to stay and when to switch.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-13T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-05-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -219,7 +219,7 @@ export default function WixVsCustomWebsitePage() {
                     </div>
 
                     <div className="mb-12">
-                        <PageSpeedAnimation />
+                        <FeatureVisual />
                     </div>
 
                     {/* Executive Summary */}

@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 const hostingFAQs = blogPosts.find(p => p.id === 'nextjs-hosting-zero-cost')?.faqs ?? [];
 
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const FeatureVisual = lazyLoad(() => import("@/components/blog/CostStackAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
@@ -49,7 +49,7 @@ const articleSchema = {
             "description": "Most businesses pay $50 to $300/mo for hosting. We deploy every client on Vercel starting free, scaling to $20/mo only when you grow.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-13T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-05-26T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -190,7 +190,7 @@ export default function NextjsHostingZeroCostPage() {
 
                     {/* Feature Visual */}
                     <div className="mb-12">
-                        <PageSpeedAnimation />
+                        <FeatureVisual />
                     </div>
 
                     {/* Executive Summary */}

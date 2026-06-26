@@ -4,7 +4,7 @@ import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
+import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor, ComparisonGrid, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
@@ -214,6 +214,25 @@ export default function CloudflareEmdashPage() {
                             Emdash was built in roughly two months using AI-assisted development. It runs on TypeScript and Astro, deploys serverless on Cloudflare Workers, and scales to zero when nobody is visiting your site. The entire project is MIT open source.
                         </BlogText>
 
+                        <ComparisonGrid
+                            left={{
+                                label: "WordPress",
+                                items: [
+                                    "96% of security issues come from plugins",
+                                    "Average site runs 20 to 30 plugins",
+                                    "Built on PHP",
+                                ],
+                            }}
+                            right={{
+                                label: "Cloudflare Emdash",
+                                items: [
+                                    "Plugins sandboxed in isolates to contain breaches",
+                                    "Serverless, scales to zero when idle",
+                                    "TypeScript and Astro, MIT open source",
+                                ],
+                            }}
+                        />
+
                         <BlogQuote>
                             Cloudflare called Emdash the spiritual successor to WordPress. When a company that handles 20% of internet traffic builds a replacement for your platform, the message is clear.
                         </BlogQuote>
@@ -343,6 +362,8 @@ export default function CloudflareEmdashPage() {
                         <BlogText>
                             Emdash solves the security problem by creating a new dependency. You are trading WordPress lock-in for Cloudflare lock-in.
                         </BlogText>
+
+                        <InsightBox variant="warning">Emdash&apos;s plugin security only works on Cloudflare&apos;s runtime. Host it anywhere else and you lose the main selling point.</InsightBox>
 
                         <BlogHeader>There Is a Third Option Nobody in This Debate Is Talking About</BlogHeader>
 

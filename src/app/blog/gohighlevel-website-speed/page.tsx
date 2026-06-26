@@ -61,7 +61,7 @@ const articleSchema = {
             "description": "GoHighLevel sites score 20 to 45 on Google PageSpeed Mobile. Here is why GHL is slow, what it costs you in leads, and how to fix it without leaving the platform.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-22T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",

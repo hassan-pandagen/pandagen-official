@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 const agencyFAQs = blogPosts.find(p => p.id === 'top-nextjs-agencies-2026')?.faqs ?? [];
 
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const FeatureVisual = lazyLoad(() => import("@/components/blog/SEORankingAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
@@ -47,7 +47,7 @@ const articleSchema = {
             "description": "Verified comparison of 8 Next.js development agencies most frequently cited in 2026 rankings. Clutch data, published pricing, structural differences.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-05-25T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-06-03T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -177,7 +177,7 @@ export default function TopNextjsAgencies2026Page() {
 
                     {/* Feature Visual */}
                     <div className="mb-12">
-                        <PageSpeedAnimation />
+                        <FeatureVisual />
                     </div>
 
                     {/* Executive Summary */}

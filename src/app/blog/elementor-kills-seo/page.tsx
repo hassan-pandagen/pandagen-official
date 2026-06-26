@@ -46,7 +46,7 @@ const articleSchema = {
             "description": "Average Elementor site scores 38/100 on mobile. See the Core Web Vitals, DOM bloat, and ranking loss across 500 audited WordPress sites.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2025-12-28T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2025-12-28T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",

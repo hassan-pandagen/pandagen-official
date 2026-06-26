@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 const agencyFAQs = blogPosts.find(p => p.id === 'for-agencies-offer-custom-web-development')?.faqs ?? [];
 
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const FeatureVisual = lazyLoad(() => import("@/components/blog/SalesImpactAnimation"));
 
 export const metadata: Metadata = {
     title: "Can Your Agency Offer Custom Web Development Without Hiring Developers? (2026)",
@@ -47,7 +47,7 @@ const articleSchema = {
             "description": "Your client wants a custom site but you have no dev team. Here is how agency partners deliver premium custom builds under their own brand without writing code.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-06T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-03-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -184,7 +184,7 @@ export default function ForAgenciesCustomDevPage() {
                     </div>
 
                     <div className="mb-12">
-                        <PageSpeedAnimation />
+                        <FeatureVisual />
                     </div>
 
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">

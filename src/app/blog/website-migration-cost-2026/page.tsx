@@ -4,7 +4,7 @@ import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
+import { BlogHeader, BlogText, BlogList, BlogQuote, BlogAuthor, StatCard, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
@@ -62,7 +62,7 @@ const articleSchema = {
             "description": "Website migration costs $1,500 to $10,000 in 2026 across WordPress, Webflow, Wix, Squarespace, and Shopify. Real client receipts. Fixed price. 1-week delivery.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-05-06T00:00:00-05:00",
-            "dateModified": "2026-06-11T00:00:00-05:00",
+            "dateModified": "2026-05-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -261,6 +261,12 @@ export default function WebsiteMigrationCost2026Page() {
 
                     <p className="text-stone-700 leading-relaxed mb-4">Website migration costs $1,500 to $10,000 in 2026 depending on the source platform and site size. WordPress migrations start at $1,500. Webflow migrations start at $1,500 for small sites and reach $25,000 for enterprise. Wix and Squarespace migrations typically cost $3,500. GoHighLevel frontend rebuilds range from $1,500 to $8,000. All prices include 301 redirects, metadata migration, and 90+ PageSpeed guarantee.</p>
 
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 my-10">
+                        <StatCard stat="$1,500" label="Starter Migration" context="8 to 10 page business sites" />
+                        <StatCard stat="$3,500" label="Growth Migration" context="Blog migration with 301 redirects" />
+                        <StatCard stat="$5K–$10K" label="Scale Migration" context="E-commerce and 30+ page sites" />
+                    </div>
+
                     <div className="my-6 overflow-x-auto -mx-4 px-4">
                         <table className="responsive-stack-table w-full text-sm border-collapse border border-stone-300 rounded-xl overflow-hidden md:min-w-[640px]">
                             <thead>
@@ -329,6 +335,9 @@ export default function WebsiteMigrationCost2026Page() {
                     <BlogText>
                         Migration prices vary so widely because most agencies bundle five distinct work units into one number, then refuse to break it down. Here is what is actually inside each migration we ship, and where the cost variance comes from.
                     </BlogText>
+                    <InsightBox variant="info">
+                        Five things drive a migration price: page count and template depth, content management system setup, SEO preservation (301 redirects and metadata), custom integrations, and post-launch support.
+                    </InsightBox>
                     <BlogText>
                         <strong>Page count and template depth.</strong> A 5-page brochure site is not the same project as a 50-page content library. Page count drives layout work, content entry, image optimization, and quality assurance. PandaCodeGen tiers map to this directly: Starter at $1,500 covers 8 to 10 pages, Growth at $3,500 covers 10 to 22 pages with a blog, Scale at $5,000 to $10,000 covers 30+ pages with custom integrations.
                     </BlogText>

@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 const webflowFAQs = blogPosts.find(p => p.id === 'webflow-true-cost')?.faqs ?? [];
 
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const FeatureVisual = lazyLoad(() => import("@/components/blog/CostStackAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
@@ -49,7 +49,7 @@ const articleSchema = {
             "description": "Webflow's real cost is $125 to $400/month once you add CMS tiers, forms, localization, and Optimize. Full 2026 hidden-fee breakdown plus the PageSpeed ceiling.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-18T00:00:00-05:00",
-            "dateModified": "2026-06-09T00:00:00-05:00",
+            "dateModified": "2026-04-15T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -190,7 +190,7 @@ export default function WebflowTrueCostPage() {
                     </div>
 
                     <div className="mb-12">
-                        <PageSpeedAnimation />
+                        <FeatureVisual />
                     </div>
 
                     <div className="bg-cognac/5 border-l-4 border-cognac p-5 mb-6 rounded-r-lg" data-speakable="true">

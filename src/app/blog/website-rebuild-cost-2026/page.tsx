@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 const rebuildCostFAQs = blogPosts.find(p => p.id === "website-rebuild-cost-2026")?.faqs ?? [];
 
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const FeatureVisual = lazyLoad(() => import("@/components/blog/CostStackAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const dynamic = "force-static";
@@ -63,7 +63,7 @@ const articleSchema = {
             "description": "Website rebuild costs range from $2,000 freelance to $250,000 enterprise in 2026. Honest pricing by platform, what drives cost up, and how to spot a padded quote.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-19T00:00:00-05:00",
-            "dateModified": "2026-06-11T00:00:00-05:00",
+            "dateModified": "2026-05-05T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -206,7 +206,7 @@ export default function WebsiteRebuildCost2026Page() {
 
             <section className="px-6 pb-6">
                 <div className="max-w-3xl mx-auto">
-                    <PageSpeedAnimation />
+                    <FeatureVisual />
                 </div>
             </section>
 

@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 const postFAQs = blogPosts.find(p => p.id === "webflow-user-accounts-sunset-date-2026")?.faqs ?? [];
 
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
+const FeatureVisual = lazyLoad(() => import("@/components/blog/PlatformComparisonAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const dynamic = "force-static";
@@ -51,7 +51,7 @@ const articleSchema = {
             "description": "Webflow User Accounts were sunset on January 29, 2026. Sites that did not migrate lost member data, gated pages went static, and logins broke. Here is what happened, why Memberstack and Outseta are not the long-term fix, and how to rebuild on a stack that will not deprecate on you.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-22T00:00:00-05:00",
-            "dateModified": "2026-06-11T00:00:00-05:00",
+            "dateModified": "2026-04-22T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -195,7 +195,7 @@ export default function WebflowUserAccountsSunset2026Page() {
                     </div>
 
                     <div className="mb-12">
-                        <PageSpeedAnimation />
+                        <FeatureVisual />
                     </div>
 
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">

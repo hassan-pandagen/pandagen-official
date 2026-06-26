@@ -49,7 +49,7 @@ const articleSchema = {
             "description": "AI plugins are the newest WordPress vulnerability. 100K+ sites exposed through AI plugin flaws. Here is what business owners need to know and how to protect your site.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-19T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-05-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
