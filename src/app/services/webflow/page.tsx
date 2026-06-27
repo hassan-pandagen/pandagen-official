@@ -3,7 +3,7 @@ import PageContent from './PageContent';
 
 export const metadata: Metadata = {
   title: 'Is Webflow Too Expensive? We Migrate to Custom Next.js',
-  description: 'Webflow charges $23 to $49 per month and still scores 55 to 75 on mobile PageSpeed. We migrate to custom Next.js. 95+ PageSpeed, no monthly fees, you own the code.',
+  description: 'Webflow charges $23 to $49 per month and still scores 55 to 75 on mobile PageSpeed. We migrate to custom Next.js. 90+ PageSpeed, no monthly fees, you own the code.',
   alternates: { canonical: '/services/webflow' },
   keywords: [
     'webflow migration service',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Is Webflow Too Expensive? We Migrate to Custom Next.js | PandaCodeGen',
-    description: 'Webflow charges $23 to $49/month and still scores 55 to 75 on PageSpeed. We migrate to custom Next.js. 95+ PageSpeed, no monthly fees.',
+    description: 'Webflow charges $23 to $49/month and still scores 55 to 75 on PageSpeed. We migrate to custom Next.js. 90+ PageSpeed, no monthly fees.',
     url: 'https://www.pandacodegen.com/services/webflow',
     siteName: 'PandaCodeGen',
     type: 'website',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Is Webflow Too Expensive? We Migrate to Custom Next.js | PandaCodeGen',
-    description: 'Webflow costs $23 to $49/month and still scores 55 to 75 on PageSpeed. We migrate to custom Next.js. 95+ PageSpeed, no monthly fees.',
+    description: 'Webflow costs $23 to $49/month and still scores 55 to 75 on PageSpeed. We migrate to custom Next.js. 90+ PageSpeed, no monthly fees.',
   },
 };
 
@@ -44,7 +44,7 @@ export default function WebflowServicePage() {
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
         "serviceType": ["Webflow Migration", "Webflow to Next.js", "Webflow Alternative", "Webflow to Custom Code"],
-        "priceRange": "$1,500 - $25,000",
+        "priceRange": "$1,500 - $10,000",
         "telephone": "+13027738982",
         "address": {
           "@type": "PostalAddress",
@@ -86,6 +86,7 @@ export default function WebflowServicePage() {
         "email": "info@pandacodegen.com",
         "foundingDate": "2026",
         "areaServed": "Worldwide",
+        "knowsAbout": ["Webflow CMS migration", "headless Sanity", "Vercel", "Core Web Vitals"],
         "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158"]
       },
       {
@@ -93,7 +94,7 @@ export default function WebflowServicePage() {
         "@id": "https://www.pandacodegen.com/services/webflow#review-clutch",
         "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
         "author": { "@type": "Person", "name": "Executive, MC Patches LLC" },
-        "reviewBody": "Panda Code Gen successfully delivered a speedy, bug free website. They did exactly what they said they would, delivering a blazing fast Next.js website with a 100/100 PageSpeed score. The communication throughout was excellent.",
+        "reviewBody": "Panda Code Gen successfully delivered a speedy, bug free website. They did exactly what they said they would, delivering a blazing fast Next.js website with a 90+ PageSpeed score. The communication throughout was excellent.",
         "datePublished": "2025-11-01",
         "itemReviewed": { "@id": "https://www.pandacodegen.com/services/webflow#service" }
       },
@@ -113,7 +114,7 @@ export default function WebflowServicePage() {
           { "@type": "Question", "name": "Is custom code harder to use than Webflow's visual editor?", "acceptedAnswer": { "@type": "Answer", "text": "For content editing, no. We set up a content management system that's just as easy. For design changes, yes, you'll need a developer. But that's the trade-off: unlimited power vs. visual simplicity. Most businesses outgrow the visual editor anyway." } },
           { "@type": "Question", "name": "Can you recreate my Webflow animations in code?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Custom animations can do everything Webflow interactions can do, and more. We can even add interactions that Webflow's interaction panel can't handle: scroll-triggered 3D effects, page transitions, and real-time data animations." } },
           { "@type": "Question", "name": "What about Webflow's CMS?", "acceptedAnswer": { "@type": "Answer", "text": "We migrate all your CMS content to a headless CMS like Sanity or Contentful. No 10,000-item limit. Relational data, computed fields, and API access. You can query your content from anywhere: web, mobile, even AI agents." } },
-          { "@type": "Question", "name": "How much does it cost to migrate from Webflow?", "acceptedAnswer": { "@type": "Answer", "text": "Typical agencies charge $20,000 to $60,000 and take 10-16 weeks. We meet you halfway. Three tiers: Starter starts at $1,500 (5 to 7 pages, custom Next.js). Growth starts at $3,500 (business sites with custom interactions and CMS). Scale starts at $12,000 (complex builds, Webflow Ecommerce, localization). You also stop paying $39 to $235/month in Webflow fees forever." } },
+          { "@type": "Question", "name": "How much does it cost to migrate from Webflow?", "acceptedAnswer": { "@type": "Answer", "text": "Typical agencies charge $20,000 to $60,000 and take 10-16 weeks. We meet you halfway. Four tiers: Starter starts at $1,500 (5 to 7 pages, custom Next.js). Growth starts at $3,500 (business sites with custom interactions and CMS). Scale is $5,000 to $10,000 (complex builds, Webflow Ecommerce, localization, 30+ pages). Scale+ is $10,000+ for enterprise scope, custom-quoted after a scoping call. You also stop paying $39 to $235/month in Webflow fees forever." } },
           { "@type": "Question", "name": "What if Webflow adds the features I need later?", "acceptedAnswer": { "@type": "Answer", "text": "It's possible. But Webflow has been promising server-side logic and better CMS for years. Meanwhile, custom code has no roadmap dependency. You build exactly what you need, when you need it." } }
         ]
       }
@@ -123,7 +124,7 @@ export default function WebflowServicePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
-      <p className="sr-only" data-speakable="true">PandaCodeGen migrates Webflow sites to custom Next.js in 2 to 4 weeks. Webflow charges $23 to $49 per month and still scores 55 to 75 on mobile PageSpeed. After migration you get 95+ PageSpeed, zero monthly platform fees, full code ownership, and no more CMS item limits or bandwidth overages.</p>
+      <p className="sr-only" data-speakable="true">PandaCodeGen migrates Webflow sites to custom Next.js in 2 to 4 weeks. Webflow charges $23 to $49 per month and still scores 55 to 75 on mobile PageSpeed. After migration you get 90+ PageSpeed, zero monthly platform fees, full code ownership, and no more CMS item limits or bandwidth overages.</p>
       <PageContent />
     </>
   );

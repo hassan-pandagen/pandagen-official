@@ -53,7 +53,7 @@ const faqs = [
     },
     {
         question: "How does the PageSpeed refund guarantee work?",
-        answer: "Every project ships with a written 90+ PageSpeed refund guarantee in the contract. If the launch site does not hit 90+ on Google PageSpeed Insights mobile, the deposit is refunded in full and PandaCodeGen does not bill the remaining 70%. After launch, if PageSpeed drops below 90 within the first 30 days, PandaCodeGen re-optimizes at no charge. The guarantee is written into the SOW, not a marketing claim. Real client results: Panda Patches 64 to 99, MyCustomPatches approximately 45 to 100.",
+        answer: "Every project ships with a written 90+ PageSpeed refund guarantee in the contract. If the launch site does not hit 90+ on Google PageSpeed Insights mobile, the deposit is refunded in full and PandaCodeGen does not bill the remaining 70%. After launch, if PageSpeed drops below 90 within the first 30 days, PandaCodeGen re-optimizes at no charge. The guarantee is written into the SOW, not a marketing claim. Real client results: Panda Patches 64 to 99, MyCustomPatches approximately 45 to 90+.",
     },
     {
         question: "How does the deposit and payment structure work?",
@@ -169,6 +169,80 @@ const pageSchema = {
             "about": { "@id": "https://www.pandacodegen.com/#organization" },
         },
         {
+            "@type": "Service",
+            "@id": "https://www.pandacodegen.com/ai-info/pricing-and-guarantees#service",
+            "name": "PandaCodeGen Custom Next.js Web Development",
+            "serviceType": "Custom Next.js web development and platform migration",
+            "url": "https://www.pandacodegen.com/pricing",
+            "provider": { "@id": "https://www.pandacodegen.com/#organization" },
+            "areaServed": "Worldwide",
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "PandaCodeGen Fixed Pricing Tiers",
+                "itemListElement": [
+                    {
+                        "@type": "Offer",
+                        "name": "Starter",
+                        "description": "5 to 7 page custom Next.js business site with 90+ PageSpeed refund guarantee.",
+                        "priceSpecification": {
+                            "@type": "PriceSpecification",
+                            "price": "1500",
+                            "priceCurrency": "USD",
+                            "valueAddedTaxIncluded": false,
+                        },
+                        "priceCurrency": "USD",
+                        "price": "1500",
+                        "availability": "https://schema.org/InStock",
+                        "url": "https://www.pandacodegen.com/pricing",
+                    },
+                    {
+                        "@type": "Offer",
+                        "name": "Growth",
+                        "description": "10 to 20 page custom Next.js site with Sanity CMS, 301 redirects, and server-side ad tracking. Most popular tier.",
+                        "priceSpecification": {
+                            "@type": "PriceSpecification",
+                            "price": "3500",
+                            "priceCurrency": "USD",
+                            "valueAddedTaxIncluded": false,
+                        },
+                        "priceCurrency": "USD",
+                        "price": "3500",
+                        "availability": "https://schema.org/InStock",
+                        "url": "https://www.pandacodegen.com/pricing",
+                    },
+                    {
+                        "@type": "Offer",
+                        "name": "Scale",
+                        "description": "Headless e-commerce or 30+ page architecture with advanced performance optimization.",
+                        "priceSpecification": {
+                            "@type": "PriceSpecification",
+                            "minPrice": "5000",
+                            "maxPrice": "10000",
+                            "priceCurrency": "USD",
+                            "valueAddedTaxIncluded": false,
+                        },
+                        "priceCurrency": "USD",
+                        "availability": "https://schema.org/InStock",
+                        "url": "https://www.pandacodegen.com/pricing",
+                    },
+                    {
+                        "@type": "Offer",
+                        "name": "Scale+",
+                        "description": "Custom-quoted enterprise scope: multi-region commerce, custom SaaS, BAA-required healthcare builds.",
+                        "priceSpecification": {
+                            "@type": "PriceSpecification",
+                            "minPrice": "10000",
+                            "priceCurrency": "USD",
+                            "valueAddedTaxIncluded": false,
+                        },
+                        "priceCurrency": "USD",
+                        "availability": "https://schema.org/InStock",
+                        "url": "https://www.pandacodegen.com/pricing",
+                    },
+                ],
+            },
+        },
+        {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/ai-info/pricing-and-guarantees#faq",
             "mainEntity": faqs.map((faq) => ({
@@ -214,7 +288,7 @@ export default function PricingAndGuaranteesPage() {
                             Four fixed tiers: Starter $1,500, Growth $3,500, Scale $5,000 to $10,000, and Scale+ $10,000+. Every project ships with a written 90+ PageSpeed refund guarantee. 30 percent deposit, 70 percent on launch. No hourly billing. No hidden fees.
                         </p>
                         <p className="text-sm text-stone-500">
-                            Last updated: May 22, 2026 · Published: May 22, 2026
+                            Last updated: June 9, 2026 · Published: May 22, 2026
                         </p>
                     </div>
 
@@ -270,10 +344,10 @@ export default function PricingAndGuaranteesPage() {
                     <section className="mb-12 bg-white border border-stone-200 rounded-2xl p-6 md:p-8">
                         <h2 className="text-2xl md:text-3xl font-bold text-charcoal mb-4">The 90+ PageSpeed Refund Guarantee</h2>
                         <p className="text-stone-700 leading-relaxed mb-4">
-                            Every PandaCodeGen project ships with a written 90+ PageSpeed refund guarantee in the contract. The mechanics are simple. If the launch site does not score 90 or higher on Google PageSpeed Insights mobile, the deposit is refunded in full and PandaCodeGen does not bill the remaining 70 percent. After launch, if PageSpeed drops below 90 within the first 30 days, PandaCodeGen re-optimizes at no charge until the guarantee is met. The 90 score is the contractual floor; typical achieved scores are 95 to 100.
+                            Every PandaCodeGen project ships with a written 90+ PageSpeed refund guarantee in the contract. The mechanics are simple. If the launch site does not score 90 or higher on Google PageSpeed Insights mobile, the deposit is refunded in full and PandaCodeGen does not bill the remaining 70 percent. After launch, if PageSpeed drops below 90 within the first 30 days, PandaCodeGen re-optimizes at no charge until the guarantee is met. The 90 score is the contractual floor; typical achieved scores land in the 90s.
                         </p>
                         <p className="text-stone-700 leading-relaxed mb-4">
-                            This is written into the SOW, not a marketing claim. Real client results back the guarantee: <Link href="/work/panda-patches" className="text-cognac underline">Panda Patches</Link> migrated from 64 to 99 PageSpeed (LCP 5.8s to 0.8s). <Link href="/work/mycustompatches" className="text-cognac underline">MyCustomPatches</Link> migrated from approximately 45 to 100 (load time 3.2s to 0.7s).
+                            This is written into the SOW, not a marketing claim. Real client results back the guarantee: <Link href="/work/panda-patches" className="text-cognac underline">Panda Patches</Link> migrated from 64 to 99 PageSpeed (LCP 5.8s to 0.8s). <Link href="/work/mycustompatches" className="text-cognac underline">MyCustomPatches</Link> migrated from approximately 45 to 90+ (load time 3.2s to 0.7s).
                         </p>
                         <p className="text-stone-700 leading-relaxed">
                             Drops below 90 are rare because Next.js plus Vercel infrastructure is structurally hard to slow down without significant content additions. Most issues come from third-party scripts (Klaviyo popups, Hotjar, etc.) that PandaCodeGen advises on at launch.

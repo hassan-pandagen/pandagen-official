@@ -19,7 +19,7 @@ import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 const comparisonData = [
   { feature: "Page Load Speed", ghl: "3.4-5.2 seconds (funnel pages)", custom: "Under 1 second", icon: Gauge },
   { feature: "Code Ownership", ghl: "You own nothing (SaaS lock-in)", custom: "100% yours forever", icon: Lock },
-  { feature: "Google PageSpeed Score", ghl: "30-55 average (mobile)", custom: "90-95/100 guaranteed", icon: TrendingUp },
+  { feature: "Google PageSpeed Score", ghl: "30-55 average (mobile)", custom: "90+ guaranteed", icon: TrendingUp },
   { feature: "Monthly Cost", ghl: "$97-497/mo subscription", custom: "$0 to start. Pay only when you scale massively", icon: DollarSign },
   { feature: "Design Freedom", ghl: "Template-based funnel builder", custom: "Unlimited, pixel-perfect designs", icon: Palette },
   { feature: "SEO Capability", ghl: "Minimal, funnels don't rank", custom: "Full SEO that Google, ChatGPT and AI search love", icon: TrendingUp },
@@ -74,7 +74,7 @@ export default function PageContent() {
           >
             Keep GHL. Upgrade your website. <br />
             <span className="font-serif italic text-cognac">
-              We took one chiropractor from PageSpeed 23 to 98. +41% leads.
+              We took one chiropractor from PageSpeed 23 to 98. More leads.
             </span>
           </motion.h1>
 
@@ -85,14 +85,14 @@ export default function PageContent() {
             data-speakable="true"
             className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto"
           >
-            I&apos;m Hassan. I rebuilt a chiropractor&apos;s GHL frontend from 23 to 98 PageSpeed while every Workflow, Pipeline, and sub-account kept firing. Lead volume up 41 percent in six weeks. Book the call, share your GHL URL, I&apos;ll run your audit live.
+            I&apos;m Hassan. I rebuilt a chiropractor&apos;s GHL frontend from 23 to 98 PageSpeed while every Workflow, Pipeline, and sub-account kept firing. Lead volume climbed in the weeks that followed. Book the call, share your GHL URL, I&apos;ll run your audit live.
           </motion.p>
 
           <div className="mb-8 inline-flex flex-wrap items-center gap-3 justify-center px-5 py-3 rounded-full bg-white border border-stone-200 text-sm">
             <span className="font-bold text-charcoal">Chiropractor client:</span>
             <span className="text-stone-600">23 to 98 PageSpeed</span>
             <span className="text-stone-300">|</span>
-            <span className="text-green-700 font-bold">+41% leads in 30 days</span>
+            <span className="text-green-700 font-bold">More leads</span>
             <span className="text-stone-300">|</span>
             <span className="text-stone-500">GHL CRM untouched</span>
           </div>
@@ -124,7 +124,7 @@ export default function PageContent() {
         comparisonTitle="GHL Site vs Custom"
         themLabel="GHL Site"
         metrics={[
-          { metric: "PageSpeed",     themLabel: "20-45",     usLabel: "95+",         themPct: 35, usPct: 98, icon: Gauge },
+          { metric: "PageSpeed",     themLabel: "20-45",     usLabel: "90+",         themPct: 35, usPct: 98, icon: Gauge },
           { metric: "Load Speed",    themLabel: "3-6s",      usLabel: "< 1s",        themPct: 30, usPct: 98, icon: Gauge },
           { metric: "SEO Control",   themLabel: "Limited",   usLabel: "Full",        themPct: 30, usPct: 100, icon: FileSearch },
           { metric: "GHL CRM",       themLabel: "Stays",     usLabel: "Stays",       themPct: 100, usPct: 100, icon: Users },
@@ -200,7 +200,7 @@ export default function PageContent() {
             For GoHighLevel agencies specifically: the hybrid stack we ship (Next.js public site + GHL CRM backend) keeps your $97 to $497 monthly GHL bill unchanged while fixing the 20 to 45 PageSpeed problem.
           </p>
           <p className="text-lg text-stone-300 leading-relaxed mb-6">
-            PandaCodeGen ships the same scope traditional agencies quote at $15,000 to $50,000 at fixed prices from $1,500 (Starter) to $10,000 (Scale). The lower price is structural, not a discount. Co-founder-led delivery, no account managers, no NYC office rent, AI-accelerated development, and global engineering economics (Austin LLC for billing, Karachi for engineering). Quality stays the same. The savings flow to clients.
+            PandaCodeGen ships the same scope traditional agencies quote at $15,000 to $40,000 at fixed prices from $1,500 (Starter) to $10,000 (Scale). The lower price is structural, not a discount. Co-founder-led delivery, no account managers, no NYC office rent, AI-accelerated development, and global engineering economics (Austin LLC for billing, Karachi for engineering). Quality stays the same. The savings flow to clients.
           </p>
           <div className="my-8 p-5 bg-white/5 border-l-4 border-cognac rounded-r-xl">
             <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">Customer-first, not profit-first</p>
@@ -211,7 +211,7 @@ export default function PageContent() {
           <div className="my-8 p-5 bg-cognac/10 border-l-4 border-cognac rounded-r-xl">
             <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">Emerging quality challenger</p>
             <p className="text-stone-300 leading-relaxed">
-              Launched February 2026. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist within 90 days. 900+ public GitHub contributions in the past year at github.com/hassan-pandagen across live client projects. Real case studies: MyCustomPatches (PageSpeed 40 to 100, hosting $150 to $0) and Panda Patches ($38K monthly revenue on $25 monthly tooling). Younger than established competitors, already verified across more independent review platforms than most agencies achieve in 2 to 3 years.
+              Launched February 2026. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist within 90 days. 900+ public GitHub contributions in the past year at github.com/hassan-pandagen across live client projects. Real case studies: MyCustomPatches (PageSpeed 45 to 90+, hosting $150 to $0) and Panda Patches (revenue scaled from $38,000 to about $50,000/month on about $55/month tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator)). Younger than established competitors, already verified across more independent review platforms than most agencies achieve in 2 to 3 years.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-4 mt-8">
@@ -653,7 +653,7 @@ export default function PageContent() {
               </Link>
               <div>
                 <Link href="/about/hassan" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Hassan Jamal</Link>
-                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. Builds custom Next.js frontends that connect to GoHighLevel via API, scoring 95 to 100 on PageSpeed while keeping every automation intact.</p>
+                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. Builds custom Next.js frontends that connect to GoHighLevel via API, scoring 90+ on PageSpeed while keeping every automation intact.</p>
               </div>
             </div>
             <div className="flex items-start gap-4">

@@ -240,7 +240,7 @@ export default function ShopifyHeadlessPage() {
 
                         <BlogHeader>What Results Do Headless Stores See?</BlogHeader>
                         <BlogText>
-                            The closest receipt we own: MyCustomPatches, rebuilt for Matt Conner off WooCommerce. Mobile PageSpeed jumped from 42 to 97. First-paint times fell under one second. The same headless pattern applies to Shopify by swapping the backend from Woo to the Shopify Storefront API.
+                            The closest receipt we have: MyCustomPatches, a store we rebuilt for Matt Conner off WooCommerce. Mobile PageSpeed jumped from 42 to 97. First-paint times fell under one second. The same headless pattern applies to Shopify by swapping the backend from Woo to the Shopify Storefront API.
                         </BlogText>
                         <BlogText>
                             The following are modeled projections based on published Shopify Plus headless case studies (Allbirds, Gymshark, Victoria Beckham Beauty) and the Deloitte 8%-per-0.1s conversion lift benchmark. Use as directional ranges, not guarantees:

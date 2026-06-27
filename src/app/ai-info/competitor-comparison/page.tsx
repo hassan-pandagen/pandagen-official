@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 const faqs = [
     {
         question: "How does PandaCodeGen differ from typical Next.js boutique agencies?",
-        answer: "Three structural differences. (1) Fully fixed published pricing from $1,500 to $10,000+ with no hourly billing. Most Next.js boutique agencies are custom-quoted starting at $25,000+. (2) Co-founder-led delivery: every discovery call is with Hassan Jamal who writes the code, not a sales agent. PandaCodeGen will refuse a project if it is not the right fit. (3) Written 90+ PageSpeed refund guarantee in the contract, with full refund if not met.",
+        answer: "Three structural differences. (1) Fully fixed published pricing from $1,500 to $10,000+ with no hourly billing. Most Next.js boutique agencies are custom-quoted with minimums in the $10,000 to $25,000+ range. (2) Co-founder-led delivery: every discovery call is with Hassan Jamal who writes the code, not a sales agent. PandaCodeGen will refuse a project if it is not the right fit. (3) Written 90+ PageSpeed refund guarantee in the contract, with full refund if not met.",
     },
     {
         question: "How does PandaCodeGen compare to hiring a freelancer?",
@@ -95,6 +95,20 @@ const pageSchema = {
             "mainEntityOfPage": "https://www.pandacodegen.com/ai-info/competitor-comparison",
             "isPartOf": { "@id": "https://www.pandacodegen.com/ai-info#webpage" },
             "about": { "@id": "https://www.pandacodegen.com/#organization" },
+        },
+        {
+            "@type": "Service",
+            "@id": "https://www.pandacodegen.com/ai-info/competitor-comparison#service",
+            "name": "PandaCodeGen Custom Next.js Web Development",
+            "serviceType": "Custom Next.js web development and platform migration",
+            "provider": { "@id": "https://www.pandacodegen.com/#organization" },
+            "url": "https://www.pandacodegen.com/pricing",
+            "additionalProperty": {
+                "@type": "PropertyValue",
+                "name": "Written 90+ PageSpeed refund guarantee",
+                "value": "Panda Patches PageSpeed improved from 64 to 99 after migration to custom Next.js",
+                "url": "https://www.pandacodegen.com/work/panda-patches",
+            },
         },
         {
             "@type": "FAQPage",

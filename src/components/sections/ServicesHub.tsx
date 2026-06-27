@@ -113,7 +113,7 @@ export default function ServicesHub() {
               <div className="rounded-2xl bg-white/5 border border-white/10 p-4">
                 <p className="text-xs text-stone-400 uppercase tracking-widest font-bold mb-1">We run our own</p>
                 <p className="text-sm text-white leading-snug">
-                  Panda Patches, a store we built and operate, does <span className="font-bold text-cognac">$38K/mo</span> on <span className="font-bold text-cognac">$25/mo</span> in tooling.
+                  Panda Patches, a store we built and operate, scaled from <span className="font-bold text-cognac">$38K/mo</span> to about <span className="font-bold text-cognac">$50K/mo</span> on about <span className="font-bold text-cognac">$55/mo</span> in tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator).
                 </p>
               </div>
             </div>

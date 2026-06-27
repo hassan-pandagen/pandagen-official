@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     "wordpress migration service",
     "shopify slow loading fix",
     "custom web development agency",
-    "100/100 pagespeed score",
+    "90+ pagespeed score",
     "wordpress to nextjs migration",
     "replace shopify with custom code",
     "custom ecommerce development",

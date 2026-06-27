@@ -152,7 +152,7 @@ export default function ManifestoPage() {
                   6. We meet you halfway on cost.
                 </h2>
                 <p className="text-base md:text-lg text-stone-700 leading-[1.75] mb-4">
-                  Agencies quote $30K. Offshore shops quote $5K and ghost you mid-project. Neither of those is a real option for most business owners. So we built something in between: fixed-scope pricing from $1,500 to $25,000, transparent tiers, same-day quotes, NDAs before anything else.
+                  Agencies quote $30K. Offshore shops quote $5K and ghost you mid-project. Neither of those is a real option for most business owners. So we built something in between: fixed-scope pricing across four published tiers (Starter, Growth, Scale, Scale+) from $1,500 to $10,000+, transparent tiers, same-day quotes, NDAs before anything else.
                 </p>
                 <p className="text-base md:text-lg text-stone-700 leading-[1.75]">
                   If you want proof before you commit, drop your URL on a free 60-second audit and we will show you where you are leaking revenue.
@@ -197,7 +197,7 @@ export default function ManifestoPage() {
                 <p className="text-base md:text-lg text-stone-600 font-medium">
                   Hassan Jamal
                   <br />
-                  <span className="text-sm text-stone-500">Founder, PandaCodeGen</span>
+                  <span className="text-sm text-stone-500">Co-founder, PandaCodeGen (with co-founder Imran Raza)</span>
                 </p>
               </section>
             </div>

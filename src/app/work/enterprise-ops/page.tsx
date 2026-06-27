@@ -7,7 +7,7 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 
 export const metadata: Metadata = {
     title: { absolute: "Enterprise Operations Platform Case Study, Custom Business Dashboard | PandaCodeGen" },
-    description: "How we replaced spreadsheets, WhatsApp chains, and 3 SaaS tools with a single custom ops platform. Real-time order pipeline, RBAC, automated attendance, profit tracking. Rated 10/10 by senior developer review.",
+    description: "How we replaced spreadsheets, WhatsApp chains, and 3 SaaS tools with a single custom ops platform. Real-time order pipeline, RBAC, automated attendance, profit tracking. Rated 9.0/10 by senior developer review.",
     openGraph: {
         title: "Enterprise Operations Platform Case Study, Custom Business Dashboard",
         description: "Real-time order pipeline. Role-based access for 3 teams. Automated attendance (PKT timezone). 95% process automation. Full case study.",
@@ -78,13 +78,62 @@ const caseStudySchema = {
             ]
         },
         {
+            "@type": "Organization",
+            "@id": "https://www.pandacodegen.com/#organization",
+            "name": "PandaCodeGen",
+            "alternateName": "Panda Code Gen",
+            "url": "https://www.pandacodegen.com",
+            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
+            "description": "PandaCodeGen is a custom software studio that builds and operates its own products. This operations platform is PandaCodeGen's own custom CRM and business-intelligence system for the Panda Patches business, replacing spreadsheets, a disconnected CRM, and WhatsApp updates with a single Supabase-backed application.",
+            "email": "info@pandacodegen.com",
+            "foundingDate": "2026",
+            "areaServed": "Worldwide",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Austin",
+                "addressRegion": "TX",
+                "addressCountry": "US"
+            },
+            "founder": [
+                {
+                    "@type": "Person",
+                    "name": "Imran Raza",
+                    "jobTitle": "Co-Founder"
+                },
+                {
+                    "@type": "Person",
+                    "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
+                    "name": "Hassan Jamal",
+                    "jobTitle": "Co-Founder & Lead Full-Stack Engineer",
+                    "url": "https://www.pandacodegen.com/about/hassan"
+                }
+            ],
+            "knowsAbout": [
+                "Custom ERP and operations platforms",
+                "Role-based access control (RBAC)",
+                "Supabase",
+                "PostgreSQL Row-Level Security (RLS)",
+                "Real-time order pipelines",
+                "Business intelligence and financial reporting"
+            ],
+            "sameAs": [
+                "https://twitter.com/pandacodegen",
+                "https://www.linkedin.com/company/pandacodegen",
+                "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
+                "https://github.com/hassan-pandagen",
+                "https://clutch.co/profile/panda-code-gen",
+                "https://www.trustpilot.com/review/pandacodegen.com",
+                "https://www.google.com/maps?cid=16271659886069582158"
+            ]
+        },
+        {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/work/enterprise-ops#faq",
             "mainEntity": [
                 {
                     "@type": "Question",
                     "name": "What is a custom business operations platform?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "A custom business operations platform is a single web application that replaces multiple disconnected SaaS tools, like CRMs, spreadsheets, attendance trackers, and reporting tools. For this client, we replaced multiple separate tools with one Supabase-backed platform featuring real-time order tracking, 8+ financial reporting modules, RBAC, payments via Square and Stripe, server-side Meta CAPI ad tracking, employee attendance, and automated profit calculations." }
+                    "acceptedAnswer": { "@type": "Answer", "text": "A custom business operations platform is a single web application that replaces multiple disconnected SaaS tools, like CRMs, spreadsheets, attendance trackers, and reporting tools. This is PandaCodeGen's own custom ops platform for the Panda Patches business: we replaced multiple separate tools with one Supabase-backed platform featuring real-time order tracking, 8+ financial reporting modules, RBAC, payments via Square and Stripe, server-side Meta CAPI ad tracking, employee attendance, and automated profit calculations." }
                 },
                 {
                     "@type": "Question",
@@ -99,7 +148,7 @@ const caseStudySchema = {
                 {
                     "@type": "Question",
                     "name": "How long did it take to build the Enterprise Operations platform?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "The full platform, a Supabase schema with Row-Level Security, a 13-status order pipeline, 8+ reporting modules, RBAC with RLS policies, payments via Square and Stripe, attendance with PKT timezone, automated profit calculations, and 20 Supabase Edge Functions, was built in 10 weeks. It received a 10/10 rating from independent senior developer review: 9.4/10 code quality, 9.3/10 architecture, 10/10 UX." }
+                    "acceptedAnswer": { "@type": "Answer", "text": "The full platform, a Supabase schema with Row-Level Security, a 13-status order pipeline, 8+ reporting modules, RBAC with RLS policies, payments via Square and Stripe, attendance with PKT timezone, automated profit calculations, and 20 Supabase Edge Functions, was built in 10 weeks. It received a 9.0/10 rating from independent senior developer review: 9.4/10 code quality, 9.3/10 architecture, 9.0/10 UX." }
                 },
                 {
                     "@type": "Question",
@@ -265,7 +314,7 @@ export default function EnterpriseOpsCaseStudy() {
                                 Custom Business Dashboard
                             </span>
                             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-600 text-xs font-bold uppercase tracking-widest">
-                                10/10 Dev Rating
+                                9.0/10 Dev Rating
                             </span>
                         </div>
 
@@ -275,7 +324,7 @@ export default function EnterpriseOpsCaseStudy() {
                         </h1>
 
                         <p className="text-xl text-stone-600 leading-relaxed max-w-3xl mb-10">
-                            A high-volume production business running entirely on Google Sheets, a disconnected CRM, and WhatsApp status updates. We replaced all of it, order pipeline, sales dashboards, attendance tracking, profit analytics, and role-based access, with a single custom platform rated 10/10 by independent senior developer review.
+                            This is our own custom CRM and ops platform for the Panda Patches business, which once ran entirely on Google Sheets, a disconnected CRM, and WhatsApp status updates. We replaced all of it, order pipeline, sales dashboards, attendance tracking, profit analytics, and role-based access, with a single custom platform built for exactly how the business operates.
                         </p>
 
                         {/* Key metrics */}
@@ -284,7 +333,7 @@ export default function EnterpriseOpsCaseStudy() {
                                 { value: "95%", label: "Process Automation", sub: "was near-zero manual processes" },
                                 { value: "Live", label: "Reporting", sub: "was daily manual CSV exports" },
                                 { value: "10×", label: "Efficiency Gain", sub: "team of 7, one platform" },
-                                { value: "10/10", label: "Developer Rating", sub: "Code 9.4 · Arch 9.3 · UX 10/10" },
+                                { value: "9.0/10", label: "Developer Rating", sub: "Code 9.4 · Arch 9.3 · UX 9.0/10" },
                             ].map((m) => (
                                 <div key={m.label} className="p-5 bg-white border border-stone-300 rounded-2xl shadow-xs">
                                     <div className="text-3xl font-black text-charcoal mb-1">{m.value}</div>
@@ -653,7 +702,7 @@ export default function EnterpriseOpsCaseStudy() {
                                 "Offline-first via Service Worker, works on poor connectivity",
                                 "100% TypeScript with zero implicit any",
                                 "TanStack Query for optimistic updates + server state",
-                                "Framer Motion animated UI, rated UX 10/10",
+                                "Framer Motion animated UI, rated UX 9.0/10",
                             ].map((item, i) => (
                                 <div key={i} className="flex items-start gap-3 p-3 bg-stone-50 border border-stone-100 rounded-lg">
                                     <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
@@ -669,12 +718,12 @@ export default function EnterpriseOpsCaseStudy() {
                             <div className="h-px w-8 bg-blue-400" />
                             <span className="text-blue-500 text-sm font-bold uppercase tracking-widest">Independent Review</span>
                         </div>
-                        <h2 className="text-2xl font-bold text-charcoal mb-6">Rated 10/10 by a senior developer.</h2>
+                        <h2 className="text-2xl font-bold text-charcoal mb-6">Rated 9.0/10 by a senior developer.</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                             {[
                                 { category: "Code Quality", score: "9.4/10", notes: "Type safety, separation of concerns, zero implicit any" },
                                 { category: "Architecture", score: "9.3/10", notes: "RLS policies, audit trail, RBAC design, DB schema" },
-                                { category: "UX / Design", score: "10/10", notes: "Framer Motion transitions, dark/light, accessibility" },
+                                { category: "UX / Design", score: "9.0/10", notes: "Framer Motion transitions, dark/light, accessibility" },
                             ].map((r) => (
                                 <div key={r.category} className="p-4 md:p-5 bg-white border border-stone-300 rounded-2xl shadow-xs text-center min-w-0">
                                     <div className="text-2xl md:text-3xl font-black text-charcoal mb-1">{r.score}</div>

@@ -251,7 +251,7 @@ export const clusters: Cluster[] = [
     pillarHref: '/services/woocommerce',
     entityIds: ['woocommerce', 'wordpress'],
     relatedClusterIds: ['wordpress', 'shopify', 'performance'],
-    postIds: ['woocommerce-too-slow'],
+    postIds: ['woocommerce-vs-custom-website', 'woocommerce-too-slow'],
   },
   {
     id: 'webflow',
@@ -295,6 +295,7 @@ export const clusters: Cluster[] = [
     entityIds: ['custom-engineering', 'nextjs'],
     relatedClusterIds: ['wordpress', 'shopify', 'pricing', 'agency'],
     postIds: [
+      'woocommerce-vs-custom-website',
       'custom-website-5000-whats-included', 'how-long-does-a-custom-website-take', 'do-you-own-your-website',
       'build-vs-buy-software-2026-cost-comparison', 'meta-conversions-api-setup-cost',
     ],

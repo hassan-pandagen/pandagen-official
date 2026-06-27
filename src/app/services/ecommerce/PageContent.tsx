@@ -147,8 +147,8 @@ export default function PageContent() {
                 platform: "WordPress → Custom",
                 pagespeed: 92,
                 loadTime: "< 1s",
-                saved: "$625/mo",
-                note: "Migrated from WordPress + WooCommerce. Cut monthly tool bill from $650 to $25. 1 Million+ patches delivered.",
+                saved: "$595/mo",
+                note: "Owned by co-founder Imran Raza, built and operated by PandaCodeGen. Migrated from WordPress + WooCommerce to a custom Next.js storefront with Square payments. Cut monthly tool bill from $650 to about $55 (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). 1 Million+ patches delivered.",
               },
               {
                 name: "MyCustomPatches",
@@ -587,7 +587,7 @@ export default function PageContent() {
                 A fully custom storefront that keeps Shopify&apos;s backend but eliminates all frontend limitations. The ultimate e-commerce upgrade.
               </p>
               <ul className="space-y-3 mb-8">
-                {["Under a second load times", "Zero monthly app fees", "Custom checkout flows", "90-95/100 PageSpeed score", "Unique brand experience", "30-day money-back guarantee"].map((item, i) => (
+                {["Under a second load times", "Zero monthly app fees", "Custom checkout flows", "90+ PageSpeed score", "Unique brand experience", "30-day money-back guarantee"].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
                     <CheckCircle2 className="w-4 h-4 text-cognac shrink-0" /> {item}
                   </li>
@@ -731,7 +731,7 @@ export default function PageContent() {
               </Link>
               <div>
                 <Link href="/about/hassan" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Hassan Jamal</Link>
-                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. Headless Shopify builds that score 95 to 100 on PageSpeed. Full storefront migrations from Liquid templates to custom Next.js storefronts, with zero downtime and zero lost orders.</p>
+                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. Headless Shopify builds that score 90+ on PageSpeed. Full storefront migrations from Liquid templates to custom Next.js storefronts, with zero downtime and zero lost orders.</p>
               </div>
             </div>
             <div className="flex items-start gap-4">

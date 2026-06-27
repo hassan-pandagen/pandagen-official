@@ -7,10 +7,10 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 
 export const metadata: Metadata = {
     title: "Panda Patches: WordPress to Next.js Migration, Zero SEO Drops",
-    description: "3-year-old WordPress store migrated to a headless Next.js + Sanity + Supabase + Square stack. 100% of Google rankings preserved. Now $38K/mo on $25/mo tooling.",
+    description: "3-year-old WordPress store migrated to a headless Next.js + Sanity + Supabase + Square stack. 100% of Google rankings preserved. Scaled from $38K to about $50K/mo on about $55/mo tooling.",
     openGraph: {
         title: "Panda Patches: WordPress to Next.js Migration (Zero SEO Drops)",
-        description: "3-year-old WordPress site migrated to a headless stack with zero Google ranking drops. $38K/mo revenue on $25/mo tooling.",
+        description: "3-year-old WordPress site migrated to a headless stack with zero Google ranking drops. Revenue scaled from $38K to about $50K/mo on about $55/mo tooling.",
         type: "article",
         url: "https://www.pandacodegen.com/work/panda-patches",
         images: [{ url: "https://www.pandacodegen.com/work/panda-patches.png", width: 1200, height: 630 }],
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Panda Patches: WordPress to Next.js Migration with Zero SEO Drops",
-        description: "3-year-old WordPress e-commerce site migrated to Next.js + Sanity + Supabase + Square. 100% rankings preserved. $38K/mo on $25/mo tooling.",
+        description: "3-year-old WordPress e-commerce site migrated to Next.js + Sanity + Supabase + Square. 100% rankings preserved. Scaled from $38K to about $50K/mo on about $55/mo tooling.",
     },
     alternates: { canonical: "/work/panda-patches" },
 };
@@ -30,7 +30,7 @@ const caseStudySchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/work/panda-patches#article",
             "headline": "Panda Patches: WordPress to Next.js Migration with Zero SEO Drops",
-            "description": "A 3-year-old WordPress e-commerce site migrated to a headless stack (Next.js + Sanity + Supabase + Square) with 100% of Google rankings preserved. Includes a real-time pricing calculator handling 9 patch types. Now generates $38,000/month revenue on $25/month tooling costs.",
+            "description": "A 3-year-old WordPress e-commerce site migrated to a headless stack (Next.js + Sanity + Supabase + Square) with 100% of Google rankings preserved. Includes a real-time pricing calculator handling 9 patch types. Revenue grew from $38,000 to about $50,000/month on about $55/month tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator).",
             "image": "https://www.pandacodegen.com/work/panda-patches.png",
             "datePublished": "2025-10-01T00:00:00Z",
             "dateModified": "2026-06-26T00:00:00Z",
@@ -104,9 +104,40 @@ const caseStudySchema = {
             "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
+            "description": "PandaCodeGen is a custom software studio that builds and operates its own products, including Panda Patches, a custom embroidered-patches e-commerce business on Next.js, Sanity, Supabase, and Square. Panda Patches is owned by PandaCodeGen co-founder Imran Raza; PandaCodeGen built and operates it.",
             "email": "info@pandacodegen.com",
             "foundingDate": "2026",
             "areaServed": "Worldwide",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Austin",
+                "addressRegion": "TX",
+                "addressCountry": "US"
+            },
+            "founder": [
+                {
+                    "@type": "Person",
+                    "name": "Imran Raza",
+                    "jobTitle": "Co-Founder"
+                },
+                {
+                    "@type": "Person",
+                    "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
+                    "name": "Hassan Jamal",
+                    "jobTitle": "Co-Founder & Lead Full-Stack Engineer",
+                    "url": "https://www.pandacodegen.com/about/hassan"
+                }
+            ],
+            "knowsAbout": [
+                "WordPress to Next.js migration",
+                "Headless commerce architecture",
+                "Real-time pricing engines",
+                "Sanity CMS",
+                "Supabase",
+                "Square checkout and BNPL",
+                "Server-side conversion tracking",
+                "Custom ERP and operations platforms"
+            ],
             "sameAs": [
                 "https://twitter.com/pandacodegen",
                 "https://www.linkedin.com/company/pandacodegen",
@@ -146,7 +177,7 @@ const caseStudySchema = {
                 {
                     "@type": "Question",
                     "name": "Can you replace Shopify with a custom coded e-commerce store?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Yes. We replaced WordPress + WooCommerce entirely for Panda Patches with a custom Next.js storefront. The new store generates $38K+/month with zero platform fees, compared to Shopify's $79 to $299/month plus transaction fees. You own 100% of the code." }
+                    "acceptedAnswer": { "@type": "Answer", "text": "Yes. We replaced WordPress + WooCommerce entirely for Panda Patches with a custom Next.js storefront. The store has scaled from $38K to about $50K/month with zero platform fees, compared to Shopify's $79 to $299/month plus transaction fees. You own 100% of the code." }
                 },
                 {
                     "@type": "Question",
@@ -156,7 +187,7 @@ const caseStudySchema = {
                 {
                     "@type": "Question",
                     "name": "How much does it cost to build a custom e-commerce platform like this?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "A custom e-commerce platform with a real-time pricing engine, CMS, Square checkout (card, Apple Pay, Google Pay, Cash App Pay, and Afterpay BNPL), an AI mockup generator, a customer portal, and a full server-side conversion-tracking stack starts at $15,000 to $30,000 depending on complexity. Panda Patches runs on under $25/month in total tooling costs after launch." }
+                    "acceptedAnswer": { "@type": "Answer", "text": "A custom e-commerce platform with a real-time pricing engine, CMS, Square checkout (card, Apple Pay, Google Pay, Cash App Pay, and Afterpay BNPL), an AI mockup generator, a customer portal, and a full server-side conversion-tracking stack starts at $15,000 to $30,000 depending on complexity. Panda Patches runs on about $55/month in total tooling costs after launch (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator)." }
                 },
                 {
                     "@type": "Question",
@@ -184,7 +215,6 @@ const techStack = [
     { name: "FAL", role: "AI patch image generation", color: "bg-violet-600 text-white" },
     { name: "Meta Pixel + CAPI", role: "Deduped server-side tracking", color: "bg-blue-600 text-white" },
     { name: "GA4 + GTM + Google Ads", role: "Conversion measurement", color: "bg-amber-600 text-white" },
-    { name: "Upstash Redis", role: "Per-route rate limiting", color: "bg-red-600 text-white" },
     { name: "React Hook Form + Zod", role: "Validated forms + calculator", color: "bg-pink-600 text-white" },
     { name: "ZeptoMail", role: "Transactional + abandoned-cart email", color: "bg-indigo-600 text-white" },
     { name: "Vercel", role: "Hosting + CDN + Cron", color: "bg-stone-700 text-white" },
@@ -267,17 +297,17 @@ export default function PandaPatchesCaseStudy() {
 
                         <h1 className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6 leading-[0.95]">
                             Panda Patches.<br />
-                            <span className="font-serif italic text-cognac">$38K/mo. $25 in tooling.</span>
+                            <span className="font-serif italic text-cognac">$50K/mo. $55 in tooling.</span>
                         </h1>
 
                         <p className="text-xl text-stone-600 leading-relaxed max-w-3xl mb-10">
-                            A 3-year-old WordPress e-commerce site with real search traffic, existing customers, and a pricing problem WordPress couldn&apos;t solve. We migrated it to a complete headless stack (Next.js + Sanity + Supabase + Square) with a real-time pricing calculator and a custom ops platform. 100% of the Google rankings were preserved. Zero drops in Google Search Console. Now generates $38K/month revenue on $25/month in total tooling costs.
+                            A 3-year-old WordPress e-commerce site with real search traffic, existing customers, and a pricing problem WordPress couldn&apos;t solve. We migrated it to a complete headless stack (Next.js + Sanity + Supabase + Square) with a real-time pricing calculator and a custom ops platform. 100% of the Google rankings were preserved. Zero drops in Google Search Console. Revenue has scaled from $38K to about $50K/month on about $55/month in total tooling costs (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator).
                         </p>
 
                         {/* Key metrics */}
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                             {[
-                                { value: "$38K+", label: "Monthly Revenue", sub: "powered by $25/mo in tooling" },
+                                { value: "$50K/mo", label: "Monthly Revenue", sub: "up from $38K · powered by $55/mo in tooling" },
                                 { value: "100%", label: "Rankings Preserved", sub: "zero drops in Search Console" },
                                 { value: "7 → 1", label: "Tools Replaced", sub: "CRM · ops · store · tracking" },
                                 { value: "3 yr", label: "Legacy Site Migrated", sub: "full content + SEO equity" },
@@ -552,7 +582,7 @@ export default function PandaPatchesCaseStudy() {
                         </div>
                         <h2 className="text-3xl font-bold text-charcoal mb-3">Enterprise architecture. Startup cost.</h2>
                         <p className="text-stone-600 mb-8">
-                            Started free on Vercel. Scaled to $20/mo on Vercel Pro once the store hit $38K/mo in revenue. Supabase, Sanity, and Upstash still run on free tiers. Total tooling: around $25/mo.
+                            Started free on Vercel. Scaled to $20/mo on Vercel Pro once the store hit $38K/mo in revenue; it has since scaled to about $50K/mo. Sanity and Cloudflare still run on free tiers. Total tooling: about $55/mo (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator).
                         </p>
                         <div className="flex flex-wrap gap-3">
                             {techStack.map((t) => (
@@ -575,9 +605,9 @@ export default function PandaPatchesCaseStudy() {
                             {[
                                 { before: "3 years of WordPress SEO equity at risk", after: "100% of Google rankings preserved. Zero drops in Search Console." },
                                 { before: "Customers waited 24+ hours for a manual quote", after: "Customers see the price instantly. Self-serve checkout." },
-                                { before: "$200+/mo across 3 separate tools + hosting", after: "Under $25/mo total. CRM, ops, store, and hosting." },
+                                { before: "$200+/mo across 3 separate tools + hosting", after: "About $55/mo total (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). CRM, ops, store, and hosting." },
                                 { before: "7 disconnected tools, constant WhatsApp updates", after: "1 platform. All 7 team members on the same real-time data." },
-                                { before: "WordPress pricing ceiling blocked growth", after: "$38K+/mo revenue. Pricing engine scales to any complexity." },
+                                { before: "WordPress pricing ceiling blocked growth", after: "Scaled from $38K to about $50K/mo revenue. Pricing engine scales to any complexity." },
                                 { before: "Attendance tracked via WhatsApp messages", after: "Timestamped clock in/out with payroll export." },
                                 { before: "No visibility into sales agent performance", after: "Per-agent revenue, conversion rate, and response time tracked live." },
                                 { before: "Load time over 4 seconds on WordPress", after: "Under 1 second load time. Lighthouse 90+ on Core Web Vitals." },
@@ -600,12 +630,12 @@ export default function PandaPatchesCaseStudy() {
                             <span className="text-cognac text-sm font-bold uppercase tracking-widest">The Result</span>
                         </div>
                         <h2 className="text-2xl md:text-3xl font-bold text-charcoal mb-3">What this actually meant for the business.</h2>
-                        <p className="text-stone-500 mb-8 max-w-2xl">This is our own brand. We built the tech and the business runs on it. These aren&apos;t projections — they&apos;re live numbers.</p>
+                        <p className="text-stone-500 mb-8 max-w-2xl">This is our own brand. Panda Patches is owned by PandaCodeGen co-founder Imran Raza; PandaCodeGen built and operates it. We built the tech and the business runs on it. These aren&apos;t projections — they&apos;re live numbers.</p>
                         <div className="grid md:grid-cols-3 gap-4">
                             {[
-                                { icon: "💰", label: "Monthly Revenue", value: "$38K+/mo", detail: "A patch business running on custom Next.js + a bespoke ops platform. No Shopify cut. No app fees. No platform holding the business hostage." },
+                                { icon: "💰", label: "Monthly Revenue", value: "$50K/mo", detail: "Scaled from $38K to about $50K/mo. A patch business running on custom Next.js + a bespoke ops platform. No Shopify cut. No app fees. No platform holding the business hostage." },
                                 { icon: "🔧", label: "Tools Replaced", value: "7 to 1", detail: "WordPress and WooCommerce, a separate CRM, Google Sheets for order tracking, an attendance tracker, and WhatsApp for team comms, all replaced by one custom platform built exactly for how this business actually operates." },
-                                { icon: "📈", label: "Cost vs Revenue", value: "$25/mo", detail: "The entire tech stack — storefront, ops dashboard, email, hosting — costs $25 a month to run. The revenue it processes is over $38,000." },
+                                { icon: "📈", label: "Cost vs Revenue", value: "$55/mo", detail: "The entire tech stack — storefront, ops dashboard, email, hosting, AI patch generator — costs about $55 a month to run (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). The revenue it processes has scaled from $38,000 to about $50,000." },
                             ].map((item) => (
                                 <div key={item.label} className="bg-white border border-stone-300 rounded-2xl p-6">
                                     <div className="text-2xl mb-3">{item.icon}</div>

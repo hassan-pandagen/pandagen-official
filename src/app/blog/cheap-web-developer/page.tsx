@@ -234,9 +234,9 @@ export default function CheapWebDeveloperPage() {
                                 <p className="text-sm text-stone-300 leading-relaxed">10 year WordPress site to Next.js. Load time 3.2s to 0.7s. Hosting $150/mo to $0/mo. 200+ pages, zero SEO drops. <Link href="/work/mycustompatches" className="text-cognac underline">Case study</Link>.</p>
                             </div>
                             <div className="p-5 bg-white/5 border border-white/10 rounded-xl">
-                                <div className="text-3xl font-black text-cognac mb-1">$38K/mo</div>
-                                <div className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-3">Panda Patches</div>
-                                <p className="text-sm text-stone-300 leading-relaxed">Headless Next.js + Sanity + Supabase + Stripe. Revenue on $25/mo tooling. PageSpeed 64 to 99. Zero ranking drops. <Link href="/work/panda-patches" className="text-cognac underline">Case study</Link>.</p>
+                                <div className="text-3xl font-black text-cognac mb-1">$50K/mo</div>
+                                <div className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-3">Panda Patches <span className="normal-case text-stone-500">(up from $38K)</span></div>
+                                <p className="text-sm text-stone-300 leading-relaxed">Headless Next.js + Sanity + Supabase + Square. Revenue on about $55/mo tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). PageSpeed 64 to 99. Zero ranking drops. <Link href="/work/panda-patches" className="text-cognac underline">Case study</Link>.</p>
                             </div>
                         </div>
 
@@ -745,7 +745,7 @@ export default function CheapWebDeveloperPage() {
                         <div className="grid md:grid-cols-2 gap-3 my-6">
                             {[
                                 { label: "MyCustomPatches", desc: "10-year-old WordPress site to Next.js. PageSpeed went from 40 to 100. Hosting cost dropped from $150 a month to $0." },
-                                { label: "Panda Patches", desc: "3-year-old WordPress to headless Next.js + Sanity + Supabase + Stripe. PageSpeed 64 to 99. Now $38K a month revenue on $25 a month tooling." },
+                                { label: "Panda Patches", desc: "3-year-old WordPress to headless Next.js + Sanity + Supabase + Square. PageSpeed 64 to 99. Scaled from $38K to about $50K a month revenue on about $55 a month tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator)." },
                             ].map(({ label, desc }) => (
                                 <div key={label} className="flex items-start gap-3 p-4 bg-stone-50 border border-stone-200 rounded-xl">
                                     <CheckCircle2 className="w-5 h-5 text-emerald-600 mt-0.5 shrink-0" />

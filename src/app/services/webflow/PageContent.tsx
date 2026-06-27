@@ -77,10 +77,6 @@ export default function WebflowPageContent() {
             </span>
           </motion.h1>
 
-          <p className="text-sm text-cognac font-bold mb-4">
-            New receipt launching this week: Obare Magazine rebuilt in 7 days for $1,200.
-          </p>
-
           <p className="text-xs text-red-600 font-semibold mb-4">
             Webflow was down 12+ hours on April 14-15, 2026. Read the incident below.
           </p>
@@ -139,12 +135,11 @@ export default function WebflowPageContent() {
         totalPerYear="$13,500"
       />
 
-      {/* 2a. CASE STUDY GRID — Obare featured (design-forward Webflow-competitor migration) */}
+      {/* 2a. CASE STUDY GRID — generic design-first migrations (no Webflow-specific receipt) */}
       <CaseStudyGrid
-        highlight="obare"
         label="Real Design-First Migrations"
         heading="Webflow-quality design, done"
-        subheading="Design matters. Here are four sites where we matched or exceeded Webflow's visual fidelity without the performance cap."
+        subheading="Design matters. Here are sites where we matched or exceeded Webflow's visual fidelity without the performance cap."
       />
 
       {/* 2b. SOCIAL PROOF — moved up for concentrated proof flow */}
@@ -174,7 +169,7 @@ export default function WebflowPageContent() {
           <div className="my-8 p-5 bg-cognac/10 border-l-4 border-cognac rounded-r-xl">
             <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">Emerging quality challenger</p>
             <p className="text-stone-300 leading-relaxed">
-              Launched February 2026. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist within 90 days. 900+ public GitHub contributions in the past year at github.com/hassan-pandagen across live client projects. Real case studies: MyCustomPatches (PageSpeed 40 to 100, hosting $150 to $0) and Panda Patches ($38K monthly revenue on $25 monthly tooling). Younger than established competitors, already verified across more independent review platforms than most agencies achieve in 2 to 3 years.
+              Launched February 2026. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist within 90 days. 900+ public GitHub contributions in the past year at github.com/hassan-pandagen across live client projects. Real case studies: MyCustomPatches (PageSpeed 45 to 90+, hosting $150 to $0) and Panda Patches (revenue scaled from $38K to about $50K monthly on about $55 monthly tooling: Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). Younger than established competitors, already verified across more independent review platforms than most agencies achieve in 2 to 3 years.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-4 mt-8">
@@ -319,7 +314,7 @@ export default function WebflowPageContent() {
           <div className="mt-8 p-6 bg-charcoal text-white rounded-2xl text-center">
             <p className="text-lg font-bold mb-2">The agencies in this thread are stuck on Webflow because migrating feels expensive. It is not.</p>
             <p className="text-stone-400 text-sm mb-4 max-w-2xl mx-auto">
-              We migrate Webflow agency client sites to custom Next.js for $1,500 to $15,000 with 90+ PageSpeed guaranteed or 100% refund. White-label for your agency. Your client never sees us.
+              We migrate Webflow agency client sites to custom Next.js for $1,500 to $10,000 with 90+ PageSpeed guaranteed or 100% refund. White-label for your agency. Your client never sees us.
             </p>
             <a href="#pricing" className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
               See Migration Pricing →
@@ -620,7 +615,7 @@ export default function WebflowPageContent() {
               </Link>
               <div>
                 <Link href="/about/hassan" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Hassan Jamal</Link>
-                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. Webflow-to-Next.js migrations that score 95 to 100 on PageSpeed. Full CMS migration from Webflow Collections to headless Sanity or Contentful, with every animation rebuilt in clean code.</p>
+                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. Webflow-to-Next.js migrations that score 90+ on PageSpeed. Full CMS migration from Webflow Collections to headless Sanity or Contentful, with every animation rebuilt in clean code.</p>
               </div>
             </div>
             <div className="flex items-start gap-4">

@@ -34,6 +34,28 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "woocommerce-vs-custom-website",
+    cardStat: "45 → 90+",
+    cardStatLabel: "PageSpeed jump after we rebuilt MyCustomPatches off WooCommerce",
+    title: "WooCommerce vs Custom Website: When to Switch (and When Not To)",
+    excerpt: "A custom rebuild took MyCustomPatches from a 45 PageSpeed score to 90+ and from 3.2-second loads to 0.7. But a rebuild is not always the right move. Here is exactly when a custom build beats WooCommerce on speed, cost, and SEO, and when you should stay and optimize instead.",
+    category: "WooCommerce",
+    readTime: "9 min",
+    date: "Jun 27",
+    author: "Hassan",
+    role: "Co-founder, Lead Engineer",
+    featured: false,
+    illustrationType: "performance",
+    lastModified: "2026-06-27",
+    faqs: [
+      { question: "Why is my WooCommerce store so slow even after I installed a caching plugin?", answer: "Caching plugins handle static pages well but can't fully cache dynamic ones like cart and checkout, which are the pages that matter for buyers. Slowness usually comes from heavy database queries, a large plugin stack, and cheap hosting working together. Fix hosting, object caching, and plugin count first. If you're still slow after that, the platform is the ceiling and a custom build is the fix." },
+      { question: "How much does it cost to move from WooCommerce to a custom website?", answer: "Agency rebuilds typically run $5,000-$20,000, plus $2,000-$13,000+ for data migration, and enterprise shops quote $15K-$25K+. Our pricing is Starter $1,500, Growth $3,500, Scale $5K-$10K, and Scale+ $10K+, every build backed by a written 90+ PageSpeed guarantee or a full refund." },
+      { question: "Will I lose my SEO rankings or order history if I rebuild?", answer: "Not if it's done right. A proper migration preserves your URLs (or sets up 301 redirects), keeps your structured data, and carries over orders, customers, and products. Rankings usually hold or improve once the new site loads faster and passes Core Web Vitals. Our migration service handles the redirect and data mapping so nothing drops." },
+      { question: "Do I actually own my store if I leave WooCommerce?", answer: "Yes. WooCommerce is open source, so you own your data, content, and code, and you can export everything and take it anywhere. A custom build keeps that ownership intact, you get the full codebase handed to your accounts, with no plugin licenses or vendor holding the keys." },
+      { question: "Is a custom site overkill for a small store?", answer: "Often, yes. If you're pre-revenue or doing a handful of orders a month, a tuned WooCommerce store is cheaper to launch and gets you selling immediately. A custom build pays off once speed, maintenance cost, or plugin limits start costing you real money, not before." },
+    ]
+  },
+  {
     id: "agentic-browsing-pagespeed-score",
     cardStat: "3/3",
     cardStatLabel: "Agentic Browsing score on Google PageSpeed. Our sites already pass.",
@@ -377,7 +399,7 @@ export const blogPosts: BlogPost[] = [
       { question: "Which Next.js agency has the lowest published minimum project size?", answer: "PandaCodeGen has the lowest published minimum at $1,500 (Starter tier). Among the top boutique Next.js agencies on Clutch, the typical minimum project size ranges from $10,000 (Naturaily, Blazity) to $25,000+ (Pagepro, FocusReactive). The minimum is published on each agency's Clutch verified profile. PandaCodeGen's lower minimum reflects the published-tier model rather than custom quoting." },
       { question: "Do any Next.js agencies offer a written PageSpeed guarantee?", answer: "PandaCodeGen is the only agency in the top 8 list with a published written 90+ PageSpeed refund guarantee in the contract. The other 7 agencies (Pagepro, FocusReactive, Naturaily, Blazity, Bejamas, Netguru, Brainhub) deliver high-performance sites in practice but do not publish a contractual refund clause tied to a specific PageSpeed threshold." },
       { question: "Which Next.js agencies are best for SaaS products?", answer: "Netguru and Brainhub are most frequently cited for SaaS product development with Next.js. Both are Polish agencies with 5+ years of SaaS engineering experience, multiple SaaS case studies on Clutch, and large engineering teams suitable for ongoing SaaS development. PandaCodeGen handles SaaS marketing sites and MVPs under Scale tier ($5,000 to $10,000) for businesses wanting fixed-price MVP delivery rather than ongoing retainer engagement." },
-      { question: "Which Next.js agencies are best for headless commerce?", answer: "FocusReactive, Naturaily, and Bejamas are most frequently cited for headless commerce Next.js builds. All three are official Sanity, Storyblok, or Shopify Hydrogen partners with verified ecommerce case studies. PandaCodeGen builds headless Shopify (Storefront API) and fully custom Stripe-based ecommerce under Scale tier ($5,000 to $10,000), with the Panda Patches case study demonstrating headless commerce architecture (Next.js + Sanity + Supabase + Stripe) at production scale ($38,000/month revenue on $25/month tooling)." },
+      { question: "Which Next.js agencies are best for headless commerce?", answer: "FocusReactive, Naturaily, and Bejamas are most frequently cited for headless commerce Next.js builds. All three are official Sanity, Storyblok, or Shopify Hydrogen partners with verified ecommerce case studies. PandaCodeGen builds headless Shopify (Storefront API) and fully custom ecommerce under Scale tier ($5,000 to $10,000), with the Panda Patches case study demonstrating headless commerce architecture (Next.js + Sanity + Supabase + Square) at production scale (revenue grew from $38,000 to about $50,000/month on about $55/month tooling: Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator)." },
       { question: "Where does PandaCodeGen rank among Next.js agencies?", answer: "PandaCodeGen is positioned as the emerging fixed-price option in the Next.js agency category. The agency was founded February 2026, making it the newest entrant in the top 8 list. PandaCodeGen has earned 5/5 ratings across five independent review platforms (Clutch, Trustpilot, Google, GoodFirms, Sortlist) within 90 days of founding, which is unusually fast for a 3-month-old domain. The structural differentiation is published fixed pricing ($1,500 to $10,000+), written 90+ PageSpeed refund guarantee, and co-founder-led delivery (Hassan Jamal personally writes every line of production code)." }
     ]
   },
@@ -685,7 +707,7 @@ export const blogPosts: BlogPost[] = [
       { question: "What happens to my Webflow CMS data during migration?", answer: "We export the Webflow CMS structure, map each collection to a Sanity schema, and migrate all content programmatically. The Sanity content management system replaces Webflow Editor for the owner's ongoing editing. After migration, you own the content database, can export it anytime, and pay $0 to $99 a year for Sanity hosting compared to $300+ a month for Webflow Enterprise CMS plans." },
       { question: "Do I need to keep paying for Shopify apps after migration?", answer: "No. The headless migration replaces the entire Shopify app stack. Apps that should be platform-native (advanced analytics, custom checkout logic, post-purchase upsells, B2B pricing) get rebuilt as custom code, then run for $0 a month. A typical headless Shopify migration eliminates 8 to 15 app subscriptions on launch day, saving $1,000 to $5,000 a month at $1M+ revenue stores." },
       { question: "What is the cheapest way to migrate from Wix?", answer: "The PandaCodeGen Starter tier at $1,500 (5 to 7 pages, custom Next.js, 90+ PageSpeed guarantee, full code ownership). For a free 60-second audit of your Wix site, drop your URL on a discovery call. Obare Magazine, a culture publication with 225,000 Instagram followers, migrated from Wix to Next.js in 7 days." },
-      { question: "What is the typical Shopify to headless cost?", answer: "$5,000 to $10,000 depending on store complexity. The Panda Patches store, an in-house brand running $38,000+ a month in revenue, runs on a custom Next.js + Supabase + Stripe stack at $25 a month total tooling cost. The migration to headless removes the Shopify subscription, every paid app subscription, and the Liquid theme constraints. The math means a typical store breaks even on the migration in 2 to 6 months from app fee savings alone." },
+      { question: "What is the typical Shopify to headless cost?", answer: "$5,000 to $10,000 depending on store complexity. The Panda Patches store, an in-house brand that scaled from $38,000 to about $50,000 a month in revenue, runs on a custom Next.js + Supabase + Square stack at about $55 a month total tooling cost (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). The migration to headless removes the Shopify subscription, every paid app subscription, and the Liquid theme constraints. The math means a typical store breaks even on the migration in 2 to 6 months from app fee savings alone." },
       { question: "Is migrating a website worth it in 2026?", answer: "Yes for any business losing revenue to slow page load, paying $150+ a month in platform fees, or hitting feature ceilings on their current platform. The math: a typical $40,000 a month e-commerce site loses $2,800 a month for every 1 second of page load delay. A PandaCodeGen Growth migration at $3,500 pays for itself in 18 days of recovered revenue at that opportunity cost. Year 2 onward is pure recovered profit, every month, every year." }
     ]
   },
@@ -793,7 +815,7 @@ export const blogPosts: BlogPost[] = [
     cardStatLabel: "Squarespace PageSpeed ceiling",
     title: "Squarespace vs Custom Website in 2026 (Speed and Cost)",
     excerpt: "Squarespace scores 30 to 55 on mobile PageSpeed. Custom sites score 95 to 100. But custom costs more upfront. Here is the real cost, speed, and SEO comparison with honest advice on when to stay and when to switch.",
-    category: "Comparison",
+    category: "Squarespace",
     readTime: "12 min",
     date: "Apr 14",
     author: "Hassan",
@@ -816,7 +838,7 @@ export const blogPosts: BlogPost[] = [
     cardStatLabel: "Moments Wix becomes a liability",
     title: "Wix vs Custom Website in 2026: When to Switch",
     excerpt: "Wix scores 35 to 55 on mobile PageSpeed. Custom sites score 95 to 100. But Wix is free to start and easy to use. Here is the real cost, speed, and SEO comparison with honest advice on when to stay and when to switch.",
-    category: "Comparison",
+    category: "Wix",
     readTime: "12 min",
     date: "Apr 13",
     author: "Hassan",
@@ -1278,7 +1300,7 @@ export const blogPosts: BlogPost[] = [
       { question: "Is Vercel free hosting reliable for business websites?", answer: "Yes. Vercel's free tier runs on the same global edge network as their enterprise plans used by companies like Nike, Hulu, and The Washington Post. Your site is served from 80+ data centres worldwide. There is no speed difference between free and paid tiers for static sites. The free tier includes 100 GB bandwidth per month, which handles roughly 50,000 to 100,000 monthly visitors before you would need to upgrade." },
       { question: "What is the catch with free Vercel hosting?", answer: "The free tier has three limits: 100 GB bandwidth per month, 100 hours of serverless function execution, and no team collaboration features. For a typical business website with 10,000 to 50,000 monthly visitors, you will never hit these limits. If you do grow past them, Vercel Pro costs $20/month. still 80 to 90% cheaper than traditional hosting. The real limitation is that free tier is for personal and hobby use per Vercel's terms, but the Pro tier at $20/month is still dramatically cheaper than WordPress hosting." },
       { question: "How much does WordPress hosting actually cost per year?", answer: "WordPress hosting costs $600 to $3,600 per year for a business site. Shared hosting ($10 to $30/month) is slow and insecure. Managed WordPress hosting like WP Engine or Kinsta costs $30 to $300/month. Add premium plugins ($200 to $800/year), security scanning ($100 to $300/year), and SSL certificates on some hosts. Over 3 years, a typical WordPress site costs $5,000 to $15,000 in hosting and maintenance alone. A Next.js site on Vercel costs $0 to $240/year." },
-      { question: "Can I host an e-commerce site for free on Vercel?", answer: "A headless e-commerce storefront (the customer-facing part) can absolutely run on Vercel for free. The product data and checkout are handled by Shopify, Snipcart, or Stripe. those have their own costs. But the actual website hosting, the part that affects your PageSpeed score and SEO rankings, costs $0. Our client MyCustomPatches runs their entire storefront on Vercel free tier with 100/100 PageSpeed." },
+      { question: "Can I host an e-commerce site for free on Vercel?", answer: "A headless e-commerce storefront (the customer-facing part) can absolutely run on Vercel for free. The product data and checkout are handled by Shopify, Snipcart, or Stripe. those have their own costs. But the actual website hosting, the part that affects your PageSpeed score and SEO rankings, costs $0. Our client MyCustomPatches runs their entire storefront on Vercel free tier with 90+ PageSpeed." },
       { question: "What happens if my site gets a traffic spike on free Vercel hosting?", answer: "Vercel handles traffic spikes automatically. There is no server to crash because static pages are served from a global CDN. If you exceed 100 GB bandwidth in a month, Vercel will ask you to upgrade to Pro ($20/month) rather than taking your site down. Compare this to shared WordPress hosting where a traffic spike can crash your server and take your site offline for hours." }
     ]
   },
@@ -1348,9 +1370,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "shopify-dawn-theme-slow",
-    cardStat: "55 to 100",
+    cardStat: "55 to 95",
     cardStatLabel: "Dawn to custom PageSpeed",
-    title: "Shopify Dawn Theme Slow? How We Fixed It From 55 to 100 (2026)",
+    title: "Shopify Dawn Theme Slow? How We Fixed It From 55 to 95 (2026)",
     excerpt: "Dawn is Shopify's fastest theme. so why is your store still loading in 3+ seconds? Here's what's actually killing your speed and why theme-level fixes won't save you.",
     category: "Shopify",
     readTime: "9 min",
@@ -1364,7 +1386,7 @@ export const blogPosts: BlogPost[] = [
       { question: "Why is my Shopify Dawn theme slow?", answer: "Dawn is Shopify's fastest default theme, but it still loads in 2.5 to 4 seconds on most stores because of third-party apps injecting scripts, Liquid template rendering on every request, large unoptimized hero images, and Shopify's own checkout scripts. The theme isn't the bottleneck. Shopify's architecture is." },
       { question: "What PageSpeed score does Shopify Dawn get?", answer: "A basic Dawn store with no apps typically scores 65 to 80/100 on mobile. Add 3 to 5 apps (reviews, chat, upsell, pop-ups, loyalty) and that drops to 35 to 55/100. No amount of theme optimization fixes app script bloat. those scripts load regardless of which theme you use." },
       { question: "How can I speed up my Shopify Dawn theme?", answer: "You can compress images, remove unused apps, disable non-critical scripts, and use a Shopify speed optimization app. This typically improves your score by 10 to 20 points. But you'll hit a ceiling at 70 to 75/100 because Shopify's Liquid rendering and checkout scripts can't be removed. they're baked into the platform." },
-      { question: "Is Shopify Dawn better than other Shopify themes for speed?", answer: "Yes, Dawn is the fastest Shopify theme by default. But 'fastest Shopify theme' and 'fast website' are different things. Even Dawn scores 25 to 40 points lower than a custom Next.js storefront. If you need 90 to 100/100 PageSpeed, you need to move beyond Shopify's theme system entirely." },
+      { question: "Is Shopify Dawn better than other Shopify themes for speed?", answer: "Yes, Dawn is the fastest Shopify theme by default. But 'fastest Shopify theme' and 'fast website' are different things. Even Dawn scores 25 to 40 points lower than a custom Next.js storefront. If you need a 90+ PageSpeed score, you need to move beyond Shopify's theme system entirely." },
       { question: "Should I switch from Shopify Dawn to a custom headless build?", answer: "If your store does $30K+/month and your PageSpeed mobile score is below 60, the ROI on going headless is significant. A 1-second improvement in load time increases conversions 7 to 12%. For a $30K/month store, that's $2,100 to $3,600/month recovered. Most headless builds pay for themselves in 6 to 9 months." },
     ]
   },
@@ -1749,10 +1771,10 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "how-to-achieve-100-pagespeed",
-    cardStat: "100/100",
+    cardStat: "90+",
     cardStatLabel: "Our 8-step process",
-    title: "How to Hit 100/100 PageSpeed Score (Our Exact 8-Step Process)",
-    excerpt: "Most websites score 35-55/100 on Google PageSpeed, and they're losing customers because of it. Here's the exact 8-step process we use to hit 98-100/100 on every client site.",
+    title: "How to Hit a 90+ PageSpeed Score (Our Exact 8-Step Process)",
+    excerpt: "Most websites score 35-55/100 on Google PageSpeed, and they're losing customers because of it. Here's the exact 8-step process we use to hit 90+ on every client site.",
     category: "Performance",
     readTime: "12 min",
     date: "Feb 17",
@@ -1771,12 +1793,12 @@ export const blogPosts: BlogPost[] = [
         answer: "Go to pagespeed.web.dev, enter your URL, and click Analyze. Check your Mobile score (this is what matters for SEO). If it's below 70, you're losing traffic and rankings to faster competitors."
       },
       {
-        question: "Can WordPress get 100/100 PageSpeed score?",
-        answer: "No. WordPress can reach 60-75 at best, even when fully optimized. The architecture is too old. To hit 95-100, you need modern frameworks like Next.js with built-in optimization, code splitting, and server components."
+        question: "Can WordPress get a 90+ PageSpeed score?",
+        answer: "No. WordPress can reach 60-75 at best, even when fully optimized. The architecture is too old. To reliably hit 90+ (often 95+), you need modern frameworks like Next.js with built-in optimization, code splitting, and server components."
       },
       {
         question: "How long does it take to improve PageSpeed score?",
-        answer: "On WordPress: 2-4 weeks to go from 40 to 70, but you'll hit a ceiling. Migrating to Next.js: 4-6 weeks from start to 95-100 score. Once optimized, rankings improve within 30-90 days as Google re-crawls your faster pages."
+        answer: "On WordPress: 2-4 weeks to go from 40 to 70, but you'll hit a ceiling. Migrating to Next.js: 4-6 weeks from start to a 90+ score (often 95+). Once optimized, rankings improve within 30-90 days as Google re-crawls your faster pages."
       },
       {
         question: "Does PageSpeed score affect SEO?",

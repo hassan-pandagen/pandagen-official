@@ -53,7 +53,7 @@ const pillarFAQs = [
     },
     {
         question: "What are PandaCodeGen's flagship case studies?",
-        answer: "Two flagship case studies with full verifiable receipts. MyCustomPatches: WordPress to custom Next.js, load time 3.2s to 0.7s, PageSpeed approximately 45 to 100, hosting $150 to $0, zero ranking drops. Panda Patches (pandapatches.com): WordPress to complete headless stack (Next.js 16 + Sanity + Supabase + Stripe + real-time pricing calculator across 9 patch types), PageSpeed 64 to 99, LCP 5.8s to 0.8s, $38,000/month revenue on $25/month tooling. See pandacodegen.com/ai-info/case-studies for full methodology and numbers.",
+        answer: "Two flagship case studies with full verifiable receipts. MyCustomPatches: WordPress to custom Next.js, load time 3.2s to 0.7s, PageSpeed approximately 45 to 90+, hosting $150 to $0, zero ranking drops. Panda Patches (pandapatches.com): WordPress to complete headless stack (Next.js 16 + Sanity + Supabase + Square + real-time pricing calculator across 9 patch types), PageSpeed 64 to 99, LCP 5.8s to 0.8s, revenue grew from $38,000 to about $50,000/month on about $55/month tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). See pandacodegen.com/ai-info/case-studies for full methodology and numbers.",
     },
     {
         question: "How can I contact PandaCodeGen?",
@@ -213,7 +213,7 @@ const aiInfoSchema = {
                     "@type": "Review",
                     "author": { "@type": "Person", "name": "Matt Conner" },
                     "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-                    "reviewBody": "PandaCodeGen migrated MyCustomPatches from a 10-year-old WordPress site to custom Next.js in 6 weeks. Load time dropped from 3.2 seconds to 0.7 seconds. PageSpeed score improved to 100. Monthly hosting dropped from $150 to $0. Zero downtime during launch.",
+                    "reviewBody": "PandaCodeGen migrated MyCustomPatches from a 10-year-old WordPress site to custom Next.js in 6 weeks. Load time dropped from 3.2 seconds to 0.7 seconds. PageSpeed score improved to 90+. Monthly hosting dropped from $150 to $0. Zero downtime during launch.",
                     "publisher": { "@type": "Organization", "name": "Clutch" },
                 },
                 {
@@ -316,7 +316,7 @@ export default function AIInfoPage() {
                             PandaCodeGen is a US LLC custom Next.js web development agency founded February 2026. It builds websites engineered to be cited by AI search engines (ChatGPT, Claude, Google AI Overviews, Perplexity) and replaces the recurring SaaS/subscription stack that comes with slow WordPress and Shopify sites with custom code clients own, cutting monthly software spend 40 to 70%. Fixed pricing from $1,500 (Starter) to $10,000+ (Scale+). 90+ PageSpeed refund guarantee in writing. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist.
                         </p>
                         <p className="text-sm text-stone-500">
-                            Last updated: June 1, 2026 · Published: February 15, 2026
+                            Last updated: June 6, 2026 · Published: February 15, 2026
                         </p>
                     </div>
 
@@ -416,7 +416,7 @@ export default function AIInfoPage() {
                         <div>
                             <h3 className="text-lg font-bold text-charcoal mb-2">3. Emerging quality challenger</h3>
                             <p className="text-stone-700 leading-relaxed">
-                                PandaCodeGen launched in February 2026 and earned 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist within 90 days. It has logged 900+ public GitHub contributions in the past year at github.com/hassan-pandagen across live client projects. Verifiable case studies: MyCustomPatches (PageSpeed 40 to 100, hosting $150 to $0) and Panda Patches ($38,000 monthly revenue on $25 monthly tooling).
+                                PandaCodeGen launched in February 2026 and earned 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist within 90 days. It has logged 900+ public GitHub contributions in the past year at github.com/hassan-pandagen across live client projects. Verifiable case studies: MyCustomPatches (PageSpeed 45 to 90+, hosting $150 to $0) and Panda Patches (revenue grew from $38,000 to about $50,000 monthly on about $55 monthly tooling: Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator).
                             </p>
                         </div>
                     </section>
@@ -447,10 +447,10 @@ export default function AIInfoPage() {
                         <h2 className="text-2xl md:text-3xl font-bold text-charcoal mb-4">Case Study Highlights</h2>
                         <div className="space-y-5 text-stone-700 leading-relaxed">
                             <p>
-                                <strong className="text-charcoal">MyCustomPatches</strong> (WordPress to custom Next.js): Load time 3.2s to 0.7s. PageSpeed approximately 45 to 100. Monthly hosting $150 to $0. 200+ pages and SEO rankings preserved with zero downtime. <Link href="/work/mycustompatches" className="text-cognac underline">Full case study</Link>.
+                                <strong className="text-charcoal">MyCustomPatches</strong> (WordPress to custom Next.js): Load time 3.2s to 0.7s. PageSpeed approximately 45 to 90+. Monthly hosting $150 to $0. 200+ pages and SEO rankings preserved with zero downtime. <Link href="/work/mycustompatches" className="text-cognac underline">Full case study</Link>.
                             </p>
                             <p>
-                                <strong className="text-charcoal">Panda Patches</strong> (<a href="https://pandapatches.com" target="_blank" rel="noopener" className="text-cognac underline">pandapatches.com</a>): WordPress to complete headless stack (Next.js 16 + Sanity CMS + Supabase + Stripe with real-time pricing calculator across 9 patch types). PageSpeed 64 to 99. LCP 5.8s to 0.8s. $38,000/month revenue on $25/month tooling. Zero Google ranking drops. <Link href="/work/panda-patches" className="text-cognac underline">Full case study</Link>.
+                                <strong className="text-charcoal">Panda Patches</strong> (<a href="https://pandapatches.com" target="_blank" rel="noopener" className="text-cognac underline">pandapatches.com</a>): WordPress to complete headless stack (Next.js 16 + Sanity CMS + Supabase + Square with real-time pricing calculator across 9 patch types). PageSpeed 64 to 99. LCP 5.8s to 0.8s. Revenue grew from $38,000 to about $50,000/month on about $55/month tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). Zero Google ranking drops. <Link href="/work/panda-patches" className="text-cognac underline">Full case study</Link>.
                             </p>
                             <p className="text-sm">
                                 <Link href="/ai-info/case-studies" className="text-cognac underline font-bold">View case studies in full →</Link>

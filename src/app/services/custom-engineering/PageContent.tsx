@@ -18,8 +18,8 @@ import BuiltWith from "@/components/sections/BuiltWith";
 const comparisonData = [
   { feature: "Scalability",     nocode: "Bubble: 1,000-user hard limit on $119/mo plan", custom: "Vercel Edge + Supabase: handles millions, pay only when you scale", icon: Users },
   { feature: "Code Ownership",  nocode: "Bubble shuts down → your product disappears", custom: "100% yours on GitHub, Day 1. Fire us and hire anyone.", icon: Lock },
-  { feature: "Performance",     nocode: "30 to 55 PageSpeed mobile (Bubble / Webflow avg)", custom: "90 to 98/100 PageSpeed (our own site scores 100)", icon: TrendingUp },
-  { feature: "Monthly Cost",    nocode: "$49 to $499/mo forever, forced annual upgrades", custom: "Starts free. $20/mo only when you scale. Our $38K/mo brand runs on under $25/mo.", icon: DollarSign },
+  { feature: "Performance",     nocode: "30 to 55 PageSpeed mobile (Bubble / Webflow avg)", custom: "90 to 98 PageSpeed (our own site scores 90+)", icon: TrendingUp },
+  { feature: "Monthly Cost",    nocode: "$49 to $499/mo forever, forced annual upgrades", custom: "Starts free. $20/mo only when you scale. Our brand that scaled from $38K to about $50K/mo runs on about $55/mo (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator).", icon: DollarSign },
   { feature: "Customization",   nocode: "Can't build complex logic: custom auth, B2B pricing, real-time", custom: "Unlimited: role-based access, live data, custom pricing calculators, anything", icon: Palette },
   { feature: "AI Integration",  nocode: "Zapier webhooks only. No real AI architecture", custom: "OpenAI + Claude natively in your product, trained on your own data", icon: Cpu },
 ];
@@ -31,7 +31,7 @@ const faqData = [
   },
   {
     q: "How much does custom development cost?",
-    a: "MVPs typically range from $8,000-$20,000. Full platforms range from $20,000-$60,000+. We give fixed-price quotes upfront. No hourly billing surprises. The ROI comes from owning the code (no SaaS fees) and having a product that actually scales.",
+    a: "Typical dev shops charge $50,000 to $200,000+ and take 3-6 months. We meet you halfway. Three tiers: Starter starts at $3,000 (small internal tool or marketing site with clear scope). Growth starts at $10,000 (SaaS MVP, client portal, or full dashboard with custom business logic). Scale starts at $25,000 (multi-tenant SaaS, complex integrations, enterprise features). Fixed-price quotes. No hourly billing surprises. You own 100% of the code and IP from Day 1.",
   },
   {
     q: "Can I add AI features to my app?",

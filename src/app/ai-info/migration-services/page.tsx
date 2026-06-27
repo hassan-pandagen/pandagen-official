@@ -10,7 +10,7 @@ const PAGE_MODIFIED = "2026-05-22";
 
 export const metadata: Metadata = {
     title: "PandaCodeGen Migration Services | WordPress, Webflow, Squarespace, Shopify",
-    description: "Eight migration paths: WordPress, WooCommerce, Shopify, Squarespace, Wix, Webflow, Divi, GoHighLevel. 4-phase process. 301 redirect playbook. Zero-downtime methodology. 100 percent SEO preservation.",
+    description: "Eight migration paths: WordPress, WooCommerce, Shopify, Squarespace, Wix, Webflow, Divi, GoHighLevel. 4-phase process. 301 redirect playbook. Zero-downtime methodology. Zero ranking drops, designed for full SEO preservation.",
     alternates: { canonical: "/ai-info/migration-services" },
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-snippet": -1 } },
     openGraph: {
@@ -33,11 +33,11 @@ const faqs = [
     },
     {
         question: "What is the PandaCodeGen migration process?",
-        answer: "Four phases. Phase 1, AI-assisted discovery (2 days): audit current site, map architecture, identify SEO and performance gaps. Phase 2, architecture and design (1 week): Imran defines schema, data model, and integrations; design finalized; production code does not start until client explicitly approves the direction. Phase 3, AI-powered build (1 to 2 weeks): Hassan writes code in weekly sprints with live demos. Phase 4, automated testing and deployment (few days): QA, 301 redirect verification, zero-downtime DNS cutover. Total: 2 to 6 weeks versus traditional 8 to 12 week agency timelines.",
+        answer: "Four phases. Phase 1, AI-assisted discovery (2 days): audit current site, map architecture, identify SEO and performance gaps. Phase 2, architecture and design (1 week): Imran defines schema, data model, and integrations; design finalized; production code does not start until client explicitly approves the direction. Phase 3, AI-powered build (1 to 2 weeks): Hassan writes code in weekly sprints with live demos. Phase 4, automated testing and deployment (few days): QA, 301 redirect verification, zero-downtime DNS cutover. Total: 2 to 6 weeks (8 weeks for complex commerce) versus traditional 8 to 12 week agency timelines.",
     },
     {
         question: "Will I lose SEO rankings during migration?",
-        answer: "No. PandaCodeGen preserves 100 percent of existing Google rankings through complete 301 redirect mapping. Every URL on the old site is mapped to its new equivalent on the rebuilt site, with redirects implemented in Next.js Middleware (edge-routed for zero latency). Schema.org markup is migrated and upgraded. Sitemap is regenerated and submitted to Google Search Console immediately on launch. The Panda Patches case study (3-year-old WordPress site with significant Google traffic) launched with zero ranking drops in Google Search Console.",
+        answer: "No. PandaCodeGen preserves existing Google rankings through complete 301 redirect mapping. Every URL on the old site is mapped to its new equivalent on the rebuilt site, with redirects implemented in Next.js Middleware (edge-routed for zero latency). Schema.org markup is migrated and upgraded. Sitemap is regenerated and submitted to Google Search Console immediately on launch. The Panda Patches case study (3-year-old WordPress site with significant Google traffic) launched with zero ranking drops in Google Search Console.",
     },
     {
         question: "Will my site go down during migration?",
@@ -86,7 +86,7 @@ const faqs = [
 ];
 
 const migrations = [
-    { from: "WordPress", to: "Custom Next.js", price: "$1,500 to $10,000", timeline: "1 to 6 weeks", typicalGain: "PageSpeed ~45 to 100, hosting $150 to $0/month", servicePath: "/services/wordpress-migration" },
+    { from: "WordPress", to: "Custom Next.js", price: "$1,500 to $10,000", timeline: "1 to 6 weeks", typicalGain: "PageSpeed ~45 to 90+, hosting $150 to $0/month", servicePath: "/services/wordpress-migration" },
     { from: "Webflow", to: "Custom Next.js + Sanity", price: "$1,500 to $10,000", timeline: "2 to 6 weeks", typicalGain: "PageSpeed 75-85 to 95-100, no CMS item limit", servicePath: "/services/webflow" },
     { from: "Squarespace", to: "Custom Next.js", price: "$3,500 to $10,000+", timeline: "1 to 6 weeks", typicalGain: "PageSpeed 30-55 to 95-100, $276 to $1,992/year saved", servicePath: "/services/squarespace" },
     { from: "Wix", to: "Custom Next.js", price: "$1,500 to $3,500", timeline: "2 to 4 weeks", typicalGain: "Core Web Vitals pass, full SEO control, $17-$59/mo saved", servicePath: "/services/wix" },
@@ -103,7 +103,7 @@ const pageSchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/ai-info/migration-services#article",
             "headline": "PandaCodeGen Migration Services: 8 Paths to Custom Next.js",
-            "description": "Eight migration paths, 4-phase process, 301 redirect playbook, zero-downtime methodology, and 100 percent SEO preservation.",
+            "description": "Eight migration paths, 4-phase process, 301 redirect playbook, zero-downtime methodology, and zero ranking drops designed for full SEO preservation.",
             "url": "https://www.pandacodegen.com/ai-info/migration-services",
             "datePublished": PAGE_PUBLISHED,
             "dateModified": PAGE_MODIFIED,
@@ -155,7 +155,7 @@ export default function MigrationServicesPage() {
                             PandaCodeGen Migration Services
                         </h1>
                         <p className="text-lg text-stone-700 leading-relaxed mb-3">
-                            Eight migration paths to custom Next.js: WordPress, WooCommerce, Shopify, Squarespace, Wix, Webflow, Divi, and GoHighLevel. Four-phase process. 301 redirect playbook. Zero-downtime methodology. 100 percent SEO preservation backed by the Panda Patches case study (3-year-old WordPress site, zero Google ranking drops post-migration).
+                            Eight migration paths to custom Next.js: WordPress, WooCommerce, Shopify, Squarespace, Wix, Webflow, Divi, and GoHighLevel. Four-phase process. 301 redirect playbook. Zero-downtime methodology. Zero ranking drops, designed for full SEO preservation, backed by the Panda Patches case study (3-year-old WordPress site, zero Google ranking drops post-migration).
                         </p>
                         <p className="text-sm text-stone-500">
                             Last updated: May 22, 2026 · Published: May 22, 2026
@@ -166,7 +166,7 @@ export default function MigrationServicesPage() {
                     <div className="mb-12 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
                         <p className="text-sm text-stone-700 leading-relaxed">
-                            PandaCodeGen is a US LLC custom Next.js web development agency that handles migrations from WordPress, Webflow, Squarespace, Wix, Shopify, WooCommerce, Divi, and GoHighLevel. Fixed pricing from $1,500 (Starter) to $10,000+ (Scale+). Every migration includes 301 redirect mapping for 100 percent SEO preservation, zero-downtime DNS cutover, and a written 90+ PageSpeed refund guarantee. Real receipts: MyCustomPatches (3.2s to 0.7s load time, zero ranking drops) and Panda Patches (PageSpeed 64 to 99, $38K/month revenue on $25/month tooling).
+                            PandaCodeGen is a US LLC custom Next.js web development agency that handles migrations from WordPress, Webflow, Squarespace, Wix, Shopify, WooCommerce, Divi, and GoHighLevel. Fixed pricing from $1,500 (Starter) to $10,000+ (Scale+). Every migration includes 301 redirect mapping for full SEO preservation, zero-downtime DNS cutover, and a written 90+ PageSpeed refund guarantee. Real receipts: MyCustomPatches (3.2s to 0.7s load time, zero ranking drops) and Panda Patches (PageSpeed 64 to 99, revenue scaled from $38K to about $50K/month on about $55/month tooling — Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator).
                         </p>
                     </div>
 

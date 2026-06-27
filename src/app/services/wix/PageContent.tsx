@@ -70,7 +70,7 @@ export default function PageContent() {
           <h1 className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.08] md:leading-tight break-words animate-fade-in-up">
             Trapped on Wix? <br />
             <span className="font-serif italic text-cognac">
-              We got Obare Magazine out in 7 days.
+              We rebuilt Obare Magazine in 7 days.
             </span>
           </h1>
 
@@ -137,8 +137,8 @@ export default function PageContent() {
       <CaseStudyGrid
         highlight="obare"
         label="Real Wix Migrations"
-        heading="Wix to custom, done"
-        subheading="Obare Magazine migrated from Wix to a custom Next.js site with 225K Instagram followers watching. Here is their build plus three others."
+        heading="Wix to custom, in progress"
+        subheading="Obare Magazine, a Wix site with 225K Instagram followers, rebuilt on custom Next.js for $1,350. Built and in final review on staging. Here is their build plus three others."
       />
 
       {/* 2b. SOCIAL PROOF — moved up for concentrated proof flow */}
@@ -622,7 +622,7 @@ export default function PageContent() {
               </Link>
               <div>
                 <Link href="/about/hassan" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Hassan Jamal</Link>
-                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. Wix-to-Next.js migrations that score 95 to 100 on PageSpeed. Full site rebuilds with 301-mapped URLs, zero downtime, and content editors clients can use without developer help.</p>
+                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. Wix-to-Next.js migrations that score 90+ on PageSpeed. Full site rebuilds with 301-mapped URLs, zero downtime, and content editors clients can use without developer help.</p>
               </div>
             </div>
             <div className="flex items-start gap-4">

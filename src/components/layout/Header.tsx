@@ -48,7 +48,7 @@ const services = [
 const workLinks = [
   { name: "All Projects", href: "/work" },
   { name: "MyCustomPatches: WordPress Migration", href: "/work/mycustompatches" },
-  { name: "Panda Patches: $38K/mo E-Commerce", href: "/work/panda-patches" },
+  { name: "Panda Patches: $50K/mo E-Commerce", href: "/work/panda-patches" },
   { name: "Enterprise Ops Platform", href: "/work/enterprise-ops" },
   { name: "Panda CodeLab Agency Site", href: "/work/panda-codelab" },
 ];

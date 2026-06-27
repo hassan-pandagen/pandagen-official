@@ -232,9 +232,9 @@ export default function WebsiteRedesignCostPage() {
                                 <p className="text-sm text-stone-300 leading-relaxed">10 year WordPress site to Next.js. Load time 3.2s to 0.7s. Hosting $150/mo to $0/mo. 200+ pages, zero SEO drops. <Link href="/work/mycustompatches" className="text-cognac underline">Case study</Link>.</p>
                             </div>
                             <div className="p-5 bg-white/5 border border-white/10 rounded-xl">
-                                <div className="text-3xl font-black text-cognac mb-1">$38K/mo</div>
-                                <div className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-3">Panda Patches</div>
-                                <p className="text-sm text-stone-300 leading-relaxed">Headless Next.js + Sanity + Supabase + Stripe rebuild. PageSpeed 64 to 99. Revenue on $25/mo tooling. Zero ranking drops. <Link href="/work/panda-patches" className="text-cognac underline">Case study</Link>.</p>
+                                <div className="text-3xl font-black text-cognac mb-1">$50K/mo</div>
+                                <div className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-3">Panda Patches <span className="normal-case text-stone-500">(up from $38K)</span></div>
+                                <p className="text-sm text-stone-300 leading-relaxed">Headless Next.js + Sanity + Supabase + Square rebuild. PageSpeed 64 to 99. Revenue on about $55/mo tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). Zero ranking drops. <Link href="/work/panda-patches" className="text-cognac underline">Case study</Link>.</p>
                             </div>
                         </div>
 
@@ -424,7 +424,7 @@ export default function WebsiteRedesignCostPage() {
                         ]} />
 
                         <BlogText>
-                            Panda Patches ($38,000+ per month in revenue) runs on a custom Next.js + Sanity + Supabase + Stripe stack at $25 a month total tooling cost. The full rebuild was Scale tier work. The math means the migration paid for itself in 3 months on app fee savings alone. <Link href="/services/woocommerce" className="text-cognac hover:underline">See our WooCommerce migration service</Link> for the full breakdown.
+                            Panda Patches (which scaled from $38,000 to about $50,000 per month in revenue) runs on a custom Next.js + Sanity + Supabase + Square stack at about $55 a month total tooling cost (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). The full rebuild was Scale tier work. The math means the migration paid for itself in 3 months on app fee savings alone. <Link href="/services/woocommerce" className="text-cognac hover:underline">See our WooCommerce migration service</Link> for the full breakdown.
                         </BlogText>
 
                         <BlogHeader>Website Refresh vs Redesign vs Rebuild</BlogHeader>

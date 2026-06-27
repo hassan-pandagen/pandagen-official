@@ -670,7 +670,7 @@ export default function PageContent() {
               </Link>
               <div>
                 <Link href="/about/hassan" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Hassan Jamal</Link>
-                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. WooCommerce-to-Next.js migrations with sub-second checkouts, zero lost orders, and direct Stripe and PayPal integration. Headless storefronts that score 95 to 100 on PageSpeed.</p>
+                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. WooCommerce-to-Next.js migrations with sub-second checkouts, zero lost orders, and direct Stripe and PayPal integration. Headless storefronts that score 90+ on PageSpeed.</p>
               </div>
             </div>
             <div className="flex items-start gap-4">

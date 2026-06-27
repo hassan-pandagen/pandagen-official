@@ -69,7 +69,7 @@ export default function SquarespacePageContent() {
           <h1 className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.08] md:leading-tight break-words animate-fade-in-up">
             Stuck at 30-55 PageSpeed on Squarespace? <br />
             <span className="font-serif italic text-cognac">
-              We rebuild you at 95+ in 3 weeks.
+              We rebuild you at 90+ in 3 weeks.
             </span>
           </h1>
 
@@ -192,7 +192,7 @@ export default function SquarespacePageContent() {
         highlight="saforne"
         label="Real Template-Platform Migrations"
         heading="Squarespace to custom, done"
-        subheading="Four sites we built or migrated. Live URLs, verifiable PageSpeed scores, honest before/after numbers."
+        subheading="Four sites we built or migrated, including a recently launched build still in progress. Verifiable PageSpeed scores and honest before/after numbers."
       />
 
       {/* 2b. SOCIAL PROOF — moved up for concentrated proof flow */}
@@ -616,7 +616,7 @@ export default function SquarespacePageContent() {
               "Full Squarespace content export + migration",
               "Custom Next.js build matching your design",
               "Sanity CMS for content editing",
-              "95+ PageSpeed guaranteed",
+              "90+ PageSpeed guaranteed",
               "301 redirect mapping",
               "Free month of post-launch tweaks",
             ],
@@ -743,7 +743,7 @@ export default function SquarespacePageContent() {
               </div>
             </div>
             <div className="flex-1">
-              <h3 className="text-2xl md:text-3xl font-bold text-green-900 mb-3 tracking-tight">95+ PageSpeed <span className="font-serif italic">or full refund.</span></h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-green-900 mb-3 tracking-tight">90+ PageSpeed <span className="font-serif italic">or full refund.</span></h3>
               <p className="text-green-800 leading-relaxed mb-6">
                 Every PandaCodeGen Squarespace migration ships at 90+ on Google PageSpeed. If your new site doesn&apos;t hit that score on launch day, we refund 100% of your payment. Guaranteed, in writing.
               </p>
@@ -779,7 +779,7 @@ export default function SquarespacePageContent() {
               </Link>
               <div>
                 <Link href="/about/hassan" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Hassan Jamal</Link>
-                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. Squarespace-to-Next.js migrations that score 95 to 100 on PageSpeed. Full site rebuilds with zero downtime, 301-mapped URLs, and CMS setups clients can manage themselves.</p>
+                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. Squarespace-to-Next.js migrations that score 90+ on PageSpeed. Full site rebuilds with zero downtime, 301-mapped URLs, and CMS setups clients can manage themselves.</p>
               </div>
             </div>
             <div className="flex items-start gap-4">

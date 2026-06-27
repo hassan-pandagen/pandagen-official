@@ -6,19 +6,19 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 
 export const metadata: Metadata = {
-    title: { absolute: "MyCustomPatches Case Study, WordPress Migration, 100/100 PageSpeed | PandaCodeGen" },
-    description: "How we migrated a 10-year-old WordPress patch business to Next.js 14. Load time dropped from 3.2s to 0.7s. PageSpeed went from ~40 to 100/100. Hosting cost dropped from $150/mo to $0. Zero downtime. All 200+ pages and SEO rankings fully preserved.",
+    title: { absolute: "MyCustomPatches Case Study, WordPress Migration, 90+ PageSpeed | PandaCodeGen" },
+    description: "How we migrated an aging WordPress patch business to Next.js 14. Load time dropped from 3.2s to 0.7s. PageSpeed went from ~45 to 90+. Hosting cost dropped from $150/mo to $0. Zero downtime. All 200+ pages and SEO rankings fully preserved.",
     openGraph: {
-        title: "MyCustomPatches, WordPress to Next.js Migration. 100/100 PageSpeed.",
-        description: "3.2s to 0.7s load time. PageSpeed ~40 to 100/100. $150/mo to $0 hosting. Zero downtime. 200+ pages migrated. Full case study.",
+        title: "MyCustomPatches, WordPress to Next.js Migration. 90+ PageSpeed.",
+        description: "3.2s to 0.7s load time. PageSpeed ~45 to 90+. $150/mo to $0 hosting. Zero downtime. 200+ pages migrated. Full case study.",
         type: "article",
         url: "https://www.pandacodegen.com/work/mycustompatches",
         images: [{ url: "https://www.pandacodegen.com/work/mycustompatches.png", width: 1200, height: 630 }],
     },
     twitter: {
         card: "summary_large_image",
-        title: "MyCustomPatches, WordPress to Next.js Migration. 100/100 PageSpeed.",
-        description: "3.2s to 0.7s load time. PageSpeed ~40 to 100/100. $150/mo to $0 hosting. Zero downtime. 200+ pages migrated.",
+        title: "MyCustomPatches, WordPress to Next.js Migration. 90+ PageSpeed.",
+        description: "3.2s to 0.7s load time. PageSpeed ~45 to 90+. $150/mo to $0 hosting. Zero downtime. 200+ pages migrated.",
     },
     alternates: { canonical: "/work/mycustompatches" },
 };
@@ -29,8 +29,8 @@ const caseStudySchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/work/mycustompatches#article",
-            "headline": "MyCustomPatches: WordPress Migration to Next.js 14, 100/100 PageSpeed, $0 Hosting",
-            "description": "A 10-year-old WordPress e-commerce site running on $150/mo hosting with a 3.2s load time and ~40 PageSpeed score. We migrated every page, product, and blog post to a custom Next.js 14 build. Result: 0.7s load time, 100/100 PageSpeed, $0/mo hosting, zero SEO rankings lost.",
+            "headline": "MyCustomPatches: WordPress Migration to Next.js 14, 90+ PageSpeed, $0 Hosting",
+            "description": "An aging WordPress e-commerce site running on $150/mo hosting with a 3.2s load time and ~45 PageSpeed score. We migrated every page, product, and blog post to a custom Next.js 14 build in about 22 days. Result: 0.7s load time, 90+ PageSpeed, $0/mo hosting, zero SEO rankings lost.",
             "image": "https://www.pandacodegen.com/work/mycustompatches.png",
             "datePublished": "2025-10-01T00:00:00Z",
             "dateModified": "2026-02-01T00:00:00Z",
@@ -70,7 +70,7 @@ const caseStudySchema = {
             },
             "keywords": [
                 "wordpress migration case study",
-                "nextjs migration 100 pagespeed",
+                "nextjs migration 90 pagespeed",
                 "wordpress to nextjs migration",
                 "ecommerce speed optimization",
                 "wordpress slow site fix",
@@ -215,23 +215,23 @@ export default function MyCustomPatchesCaseStudy() {
                                 WordPress Migration
                             </span>
                             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-600 text-xs font-bold uppercase tracking-widest">
-                                100/100 PageSpeed
+                                90+ PageSpeed
                             </span>
                         </div>
 
                         <h1 className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6 leading-[0.95]">
-                            10 years on WordPress.<br />
-                            <span className="font-serif italic text-cognac">Gone in 6 weeks.</span>
+                            A decade on WordPress.<br />
+                            <span className="font-serif italic text-cognac">Gone in about 22 days.</span>
                         </h1>
 
                         <p className="text-xl text-stone-600 leading-relaxed max-w-3xl mb-10">
-                            A custom patch business running a 10-year-old WordPress site: 3.2s load time, ~40 PageSpeed score, $150/mo in managed hosting, and 45 active plugins. We rebuilt every page in Next.js 14, 8 product categories, full quote system, blog, live chat, and launched with zero downtime. Every SEO ranking preserved. Every dollar saved.
+                            A custom patch business running an aging WordPress site: 3.2s load time, ~45 PageSpeed score, $150/mo in managed hosting, and 45 active plugins. We rebuilt every page in Next.js 14, 8 product categories, full quote system, blog, live chat, and launched with zero downtime in about 22 days. Every SEO ranking preserved. Every dollar saved.
                         </p>
 
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                             {[
                                 { value: "0.7s", label: "Load Time", sub: "was 3.2s" },
-                                { value: "100/100", label: "PageSpeed", sub: "was ~40" },
+                                { value: "90+", label: "PageSpeed", sub: "was ~45" },
                                 { value: "$0/mo", label: "Hosting Cost", sub: "was $150/mo" },
                                 { value: "200+", label: "Pages Migrated", sub: "zero rankings lost" },
                             ].map((m) => (
@@ -338,9 +338,9 @@ export default function MyCustomPatchesCaseStudy() {
                             <div className="h-px w-8 bg-cognac" />
                             <span className="text-cognac text-sm font-bold uppercase tracking-widest">Performance</span>
                         </div>
-                        <h2 className="text-3xl font-bold text-charcoal mb-3">100/100 with real content. Not a blank page.</h2>
+                        <h2 className="text-3xl font-bold text-charcoal mb-3">90+ with real content. Not a blank page.</h2>
                         <p className="text-stone-600 mb-8 max-w-2xl">
-                            The 100/100 Lighthouse score runs on the live production site, with gallery images, Facebook Pixel, live chat, and form scripts loaded. Every optimization was deliberate.
+                            The 90+ Lighthouse score runs on the live production site, with gallery images, Facebook Pixel, live chat, and form scripts loaded. Every optimization was deliberate.
                         </p>
 
                         <div className="grid md:grid-cols-2 gap-4">
@@ -361,7 +361,7 @@ export default function MyCustomPatchesCaseStudy() {
                                 <div>
                                     <p className="font-bold mb-2">Facebook Pixel was the only uncontrollable factor</p>
                                     <p className="text-stone-300 text-sm leading-relaxed">
-                                        <code className="text-cognac">fbevents.js</code> (~97 KB) loads <code className="text-cognac">afterInteractive</code> to avoid blocking LCP. Its 20-minute cache TTL and ~35 KB of unused JS are controlled by Meta and cannot be reduced from the codebase. Everything else is fully optimized. The site still scores 100/100.
+                                        <code className="text-cognac">fbevents.js</code> (~97 KB) loads <code className="text-cognac">afterInteractive</code> to avoid blocking LCP. Its 20-minute cache TTL and ~35 KB of unused JS are controlled by Meta and cannot be reduced from the codebase. Everything else is fully optimized. The site still scores 90+.
                                     </p>
                                 </div>
                             </div>
@@ -420,7 +420,7 @@ export default function MyCustomPatchesCaseStudy() {
                     {/* RESULTS SUMMARY, speakable for AI */}
                     <section className="mb-10" data-speakable="true">
                         <p className="text-lg text-stone-700 leading-relaxed bg-stone-50 border border-stone-200 rounded-2xl p-6">
-                            MyCustomPatches migrated from a 10-year-old WordPress site to a custom Next.js 14 build in 6 weeks. Load time dropped from 3.2 seconds to 0.7 seconds. Google PageSpeed score went from approximately 40 to a perfect 100 out of 100. Monthly hosting costs dropped from $150 to $0 by deploying on Vercel&apos;s free tier with Cloudflare CDN. All 200+ pages were migrated with zero downtime and zero SEO rankings lost. The site eliminated 45 WordPress plugins and replaced them with 12 purpose built integrations.
+                            MyCustomPatches migrated from an aging WordPress site to a custom Next.js 14 build in about 22 days. Load time dropped from 3.2 seconds to 0.7 seconds. Google PageSpeed score went from approximately 45 to 90+ out of 100. Monthly hosting costs dropped from $150 to $0 by deploying on Vercel&apos;s free tier with Cloudflare CDN. All 200+ pages were migrated with zero downtime and zero SEO rankings lost. The site eliminated 45 WordPress plugins and replaced them with 12 purpose built integrations.
                         </p>
                     </section>
 
@@ -438,7 +438,7 @@ export default function MyCustomPatchesCaseStudy() {
                                 </thead>
                                 <tbody className="divide-y divide-stone-100">
                                     <tr><td className="px-4 py-3 font-medium text-stone-700">Load Time</td><td className="px-4 py-3 text-red-600">3.2 seconds</td><td className="px-4 py-3 text-emerald-600">0.7 seconds</td></tr>
-                                    <tr className="bg-stone-50/50"><td className="px-4 py-3 font-medium text-stone-700">PageSpeed Score</td><td className="px-4 py-3 text-red-600">~40/100</td><td className="px-4 py-3 text-emerald-600">100/100</td></tr>
+                                    <tr className="bg-stone-50/50"><td className="px-4 py-3 font-medium text-stone-700">PageSpeed Score</td><td className="px-4 py-3 text-red-600">~45/100</td><td className="px-4 py-3 text-emerald-600">90+</td></tr>
                                     <tr><td className="px-4 py-3 font-medium text-stone-700">Monthly Hosting Cost</td><td className="px-4 py-3 text-red-600">$150/month</td><td className="px-4 py-3 text-emerald-600">$0/month</td></tr>
                                     <tr className="bg-stone-50/50"><td className="px-4 py-3 font-medium text-stone-700">Active Plugins</td><td className="px-4 py-3 text-red-600">45 plugins</td><td className="px-4 py-3 text-emerald-600">0 plugins</td></tr>
                                     <tr><td className="px-4 py-3 font-medium text-stone-700">Security Vulnerabilities</td><td className="px-4 py-3 text-red-600">45 attack surfaces</td><td className="px-4 py-3 text-emerald-600">Zero attack surface</td></tr>
@@ -461,7 +461,7 @@ export default function MyCustomPatchesCaseStudy() {
                         <div className="grid md:grid-cols-2 gap-6">
                             {[
                                 { before: "3.2s load time, competitors winning on speed", after: "0.7s load time. Fastest custom patches site in search results." },
-                                { before: "~40 PageSpeed, Google flagging every page as slow", after: "100/100 PageSpeed. Core Web Vitals all green." },
+                                { before: "~45 PageSpeed, Google flagging every page as slow", after: "90+ PageSpeed. Core Web Vitals all green." },
                                 { before: "$150/mo managed WordPress hosting", after: "$0/mo. Vercel free tier + Cloudflare. No monthly platform cost." },
                                 { before: "45 active plugins, security risk, update anxiety", after: "Zero plugins. 12 purpose built integrations. No maintenance overhead." },
                                 { before: "200+ pages of SEO equity at risk during migration", after: "100% SEO rankings preserved. Zero pages lost. Zero 404s post-launch." },
@@ -540,7 +540,7 @@ export default function MyCustomPatchesCaseStudy() {
                     <section className="mb-20 p-8 md:p-12 bg-linear-to-br from-stone-900 to-stone-800 text-white rounded-3xl text-center">
                         <h2 className="text-3xl font-bold mb-4">Want results like this for your site?</h2>
                         <p className="text-stone-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-                            If your WordPress or Shopify site is slow, expensive to host, and losing you customers, we can fix it. Same process. Same results. Guaranteed 95-100/100 PageSpeed or we fix it for free.
+                            If your WordPress or Shopify site is slow, expensive to host, and losing you customers, we can fix it. Same process. Same results. Guaranteed 90+ PageSpeed or we fix it for free.
                         </p>
                         <a
                             href="https://cal.com/pandagen/discovery"

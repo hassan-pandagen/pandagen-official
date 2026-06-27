@@ -35,7 +35,7 @@ const homeFaqs = [
   },
   {
     q: "How much faster will my site be after migration from WordPress or Shopify?",
-    a: "Most WordPress and Shopify sites we migrate go from 4 to 8 second load times to under 1 second, an improvement of 80 to 95%. Our average PageSpeed score across all builds is 100/100. Load times under 1 second directly improve your Google rankings, lower bounce rates, and increase conversion rates. Faster sites also cost less to host because they require fewer server resources.",
+    a: "Most WordPress and Shopify sites we migrate go from 4 to 8 second load times to under 1 second, an improvement of 80 to 95%. Our builds reliably score 90+ on Google PageSpeed (most land 95-100). Load times under 1 second directly improve your Google rankings, lower bounce rates, and increase conversion rates. Faster sites also cost less to host because they require fewer server resources.",
   },
   {
     q: "Do you work with Shopify stores?",
@@ -146,20 +146,6 @@ export default function Home() {
           "ratingCount": "5",
           "reviewCount": "5"
         },
-        "owns": [
-          {
-            "@type": "WebSite",
-            "name": "Panda Patches",
-            "url": "https://www.pandapatches.com",
-            "description": "Custom Next.js e-commerce store built and operated by PandaCodeGen. Migrated from WordPress and WooCommerce to a headless Next.js, Sanity, Supabase and Stripe stack. Google PageSpeed 64 to 99 on mobile, LCP 5.8s to 0.8s, running roughly $38,000 per month in revenue on about $25 per month in tooling."
-          },
-          {
-            "@type": "WebSite",
-            "name": "MyCustomPatches",
-            "url": "https://www.mycustompatches.net",
-            "description": "Custom Next.js e-commerce site built by PandaCodeGen for Matt Conner (MC Patches LLC). Migrated from WordPress and WooCommerce. Google PageSpeed 45 to 100, load time 3.2s to 0.7s, monthly hosting $150 to $0."
-          }
-        ]
       },
       {
         "@type": "WebSite",
@@ -229,7 +215,7 @@ export default function Home() {
         "description": "Custom web development, WordPress migration, and Shopify optimization for growing businesses.",
         "image": "https://www.pandacodegen.com/og-image.jpg",
         "telephone": "+13027738982",
-        "priceRange": "$1,500 - $25,000",
+        "priceRange": "$1,500 - $10,000",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "701 Tillery St Ste 12",
@@ -340,7 +326,7 @@ export default function Home() {
       {/* Hero */}
       <Hero />
 
-      {/* Trust Stats Strip, 98+ PageSpeed, <1s load, $0 fees, 100% ownership */}
+      {/* Trust Stats Strip, 90+ PageSpeed, <1s load, $0 fees, 100% ownership */}
       <TrustLogoBar />
 
       {/* Social Proof, quiet confidence strip (Paper) */}

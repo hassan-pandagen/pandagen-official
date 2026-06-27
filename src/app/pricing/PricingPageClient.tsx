@@ -7,7 +7,7 @@ import Footer from "@/components/layout/Footer";
 
 const comparisonRows = [
   { label: "Technology",    agency: "WordPress / Elementor",              pandagen: "Custom Next.js architecture",   isPain: false },
-  { label: "PageSpeed",     agency: "40-70/100 average",                  pandagen: "100/100 guaranteed",            isPain: true  },
+  { label: "PageSpeed",     agency: "40-70/100 average",                  pandagen: "90+ guaranteed",            isPain: true  },
   { label: "Load Time",     agency: "2.0s to 4.0s average",               pandagen: "Under 1s, guaranteed",          isPain: true  },
   { label: "Security",      agency: "Plugin vulnerabilities",             pandagen: "No plugins, no backdoors",      isPain: true  },
   { label: "Ownership",     agency: "Locked to theme / agency",           pandagen: "100% code ownership",           isPain: true  },
@@ -39,7 +39,7 @@ const pricingSchema = {
       "@type": "Offer",
       "@id": "https://www.pandacodegen.com/pricing#offer-starter",
       "name": "Starter",
-      "description": "5 to 7 page custom Next.js business site. Under 1 second load time. 95+ Google PageSpeed guaranteed. Mobile-first build. Zero monthly fees.",
+      "description": "5 to 7 page custom Next.js business site. Under 1 second load time. 90+ Google PageSpeed guaranteed. Mobile-first build. Zero monthly fees.",
       "price": "1500",
       "priceCurrency": "USD",
       "priceValidUntil": "2026-12-31",
@@ -151,7 +151,7 @@ export default function PricingPageClient() {
               </div>
             </div>
             <span className="text-sm font-bold text-stone-600 uppercase tracking-widest">
-              Avg PageSpeed: 98/100 · Avg Load Time: 0.8s · Founded Feb 2026, Austin TX
+              Avg PageSpeed: 90+ · Avg Load Time: 0.8s · Founded Feb 2026, Austin TX
             </span>
           </motion.div>
 
@@ -163,7 +163,7 @@ export default function PricingPageClient() {
             className="flex flex-wrap md:flex-nowrap justify-center gap-3"
           >
             {[
-              { icon: <Zap className="w-4 h-4" />, text: "100/100 PageSpeed. Guaranteed." },
+              { icon: <Zap className="w-4 h-4" />, text: "90+ PageSpeed. Guaranteed." },
               { icon: <Clock className="w-4 h-4" />, text: "Under 1s load time. Guaranteed." },
               { icon: <DollarSign className="w-4 h-4" />, text: "Hosting starts free on Vercel." },
               { icon: <RotateCcw className="w-4 h-4" />, text: "30-day money-back guarantee." },
@@ -207,7 +207,7 @@ export default function PricingPageClient() {
             <ul className="space-y-3 mb-8 grow">
               <Feature text="5 to 7 Custom Pages (home, about, services, contact, and up to 3 more. Every page hand-built, not templated)" />
               <Feature text="Next.js + Vercel Deployment (production-grade framework, same stack Nike and Hulu ship on)" />
-              <Feature text="95+ Google PageSpeed Mobile (guaranteed in writing. We fix it free if it scores lower)" />
+              <Feature text="90+ Google PageSpeed Mobile (guaranteed in writing. We fix it free if it scores lower)" />
               <Feature text="Under 1 Second Load Time (your site loads before slow sites render their hero image)" />
               <Feature text="Mobile-First Build (designed on mobile screen first, then scaled up, not the other way around)" />
               <Feature text="Zero Monthly Fees (no Webflow subscription, no plugin bills, no hosting invoices. Ever)" />
@@ -255,7 +255,7 @@ export default function PricingPageClient() {
               <Feature dark text="10 to 20 Page Custom Site (full marketing site with service pages, case studies, and resources)" />
               <Feature dark text="Sanity CMS Integration (your team updates content without touching code)" />
               <Feature dark text="Full Blog Migration (every post moved, 301 redirects preserved, SEO rankings held)" />
-              <Feature dark text="95 to 100 PageSpeed Guaranteed (not an aspiration, a contract)" />
+              <Feature dark text="90+ PageSpeed Guaranteed (not an aspiration, a contract)" />
               <Feature dark text="Zero Monthly Fees Forever (Vercel starts free, only $20/month when you grow)" />
               <Feature dark text="30 Days Post-Launch Support (bug fixes and refinements at no extra cost)" />
             </ul>
@@ -513,7 +513,7 @@ export default function PricingPageClient() {
             ))}
           </div>
           <blockquote className="text-lg md:text-xl font-serif italic text-charcoal leading-relaxed mb-6 max-w-2xl mx-auto">
-            &ldquo;Load time dropped from 3+ seconds to 0.7 seconds. PageSpeed went from 40 to 100/100. Hosting cost dropped from $150/month to $0. Zero data loss, zero downtime during cutover. The ROI was immediate.&rdquo;
+            &ldquo;Load time dropped from 3+ seconds to 0.7 seconds. PageSpeed went from 45 to 90+. Hosting cost dropped from $150/month to $0. Zero data loss, zero downtime during cutover. The ROI was immediate.&rdquo;
           </blockquote>
           <div className="flex items-center justify-center gap-3">
             <div className="h-px w-8 bg-stone-300" />
@@ -535,9 +535,9 @@ export default function PricingPageClient() {
           <FAQ q="What if my project is bigger than Scale?" a="Scale+ is for enterprise scope, multi-region e-commerce, custom SaaS platforms, and complex integrations. We cannot quote without understanding the work, so we scope it together on a call. Book a discovery call and tell us what you need." />
           <FAQ q="Do you do retainers after launch?" a="Yes. Most clients keep us on for ongoing updates ($500/mo) or priority new feature development at discounted rates." />
           <FAQ q="Why not just hire a freelancer on Upwork or Fiverr?" a="A freelancer gives you a file. We give you a system. Our builds include architecture review, SEO preservation, performance guarantees, 30 days of post-launch support, and full IP handover to your accounts. Freelancers disappear after delivery. We don't, and we have the case studies to prove it." />
-          <FAQ q="Why is your price higher than a freelancer?" a="Because we're not building templates. We're building assets. Clients typically see their investment pay for itself within 6 to 12 months through faster load times, higher conversion rates, and eliminated plugin and hosting fees. MyCustomPatches went from $150/mo in hosting to $0 and from a 40 PageSpeed score to 100/100. The build paid for itself in under a year." />
+          <FAQ q="Why is your price higher than a freelancer?" a="Because we're not building templates. We're building assets. Clients typically see their investment pay for itself within 6 to 12 months through faster load times, higher conversion rates, and eliminated plugin and hosting fees. MyCustomPatches went from $150/mo in hosting to $0 and from a 45 PageSpeed score to 90+. The build paid for itself in under a year." />
           <FAQ q="What's in the Discovery Call?" a="We audit your current site, understand your revenue goals, and map out the tech stack. Free, non-binding. Takes 30 minutes." />
-          <FAQ q="What exactly does the 100/100 PageSpeed guarantee mean?" a="It means your site will score 100/100 on Google PageSpeed Insights on desktop and 95+ on mobile at launch. If it doesn't, we keep working until it does at no extra cost. We have never failed to hit this on a completed project." />
+          <FAQ q="What exactly does the 90+ PageSpeed guarantee mean?" a="It means your site will score 90+ on Google PageSpeed Insights at launch. If it doesn't, we keep working until it does at no extra cost. We have never failed to hit our 90+ guarantee on a completed project." />
         </div>
       </section>
 

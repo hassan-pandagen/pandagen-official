@@ -443,7 +443,7 @@ export default function PageproAlternativesPage() {
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">Two verifiable case studies: MyCustomPatches (WordPress to Next.js, PageSpeed 40 to 100, hosting $150/mo to $0/mo, 200+ pages, zero SEO drops) and Panda Patches (PageSpeed 64 to 99, LCP 5.8s to 0.8s, $38K/month revenue on $25/month tooling). Both sites are live and testable in Lighthouse.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Two verifiable case studies: MyCustomPatches (WordPress to Next.js, PageSpeed 40 to 100, hosting $150/mo to $0/mo, 200+ pages, zero SEO drops) and Panda Patches (PageSpeed 64 to 99, LCP 5.8s to 0.8s, revenue scaled from $38K to about $50K/month on about $55/month tooling: Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). Both sites are live and testable in Lighthouse.</p>
                         </div>
 
                         <div className="grid md:grid-cols-2 gap-4 my-6">
@@ -460,13 +460,13 @@ export default function PageproAlternativesPage() {
                                 <Link href="/work/mycustompatches" className="inline-block mt-3 text-cognac text-xs underline">View full case study</Link>
                             </div>
                             <div className="p-5 bg-charcoal text-white rounded-xl">
-                                <div className="text-3xl font-black text-cognac mb-1">$38K/mo</div>
-                                <div className="text-xs font-bold text-stone-400 uppercase tracking-wide mb-3">Panda Patches. Headless Stack</div>
+                                <div className="text-3xl font-black text-cognac mb-1">$50K/mo</div>
+                                <div className="text-xs font-bold text-stone-400 uppercase tracking-wide mb-3">Panda Patches. Headless Stack <span className="normal-case text-stone-500">(up from $38K)</span></div>
                                 <ul className="space-y-1 text-sm text-stone-300">
                                     <li>PageSpeed: 64 to 99</li>
                                     <li>LCP: 5.8s to 0.8s</li>
-                                    <li>Revenue: $38K+/month</li>
-                                    <li>Tooling cost: $25/month</li>
+                                    <li>Revenue: $50K/month (up from $38K)</li>
+                                    <li>Tooling cost: $55/month (Supabase ~$25, Vercel ~$20, ~$10 FAL Flux Schnell AI patch generator)</li>
                                     <li>Google ranking drops: zero</li>
                                 </ul>
                                 <Link href="/work/panda-patches" className="inline-block mt-3 text-cognac text-xs underline">View full case study</Link>

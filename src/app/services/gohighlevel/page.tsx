@@ -44,7 +44,7 @@ export default function GoHighLevelServicePage() {
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
         "serviceType": ["GoHighLevel Development", "GHL Funnel Building", "GoHighLevel Migration", "GoHighLevel Alternative"],
-        "priceRange": "$1,500 - $15,000",
+        "priceRange": "$1,500 - $10,000",
         "telephone": "+13027738982",
         "address": {
           "@type": "PostalAddress",
@@ -61,7 +61,8 @@ export default function GoHighLevelServicePage() {
           "itemListElement": [
             { "@type": "Offer", "name": "Starter", "price": "1500", "priceCurrency": "USD", "description": "Simple funnel or 5 to 7 page landing site with full GHL API integration" },
             { "@type": "Offer", "name": "Growth", "price": "3500", "priceCurrency": "USD", "description": "15 to 40 page marketing site with GHL Workflows and Pipelines intact" },
-            { "@type": "Offer", "name": "Scale", "price": "5000", "priceCurrency": "USD", "description": "Agency white-label, SaaS mode sub-accounts, member portals, complex Workflows, 30+ pages" }
+            { "@type": "Offer", "name": "Scale", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "5000", "maxPrice": "10000", "priceCurrency": "USD" }, "description": "Agency white-label, SaaS mode sub-accounts, member portals, complex Workflows, 30+ pages" },
+            { "@type": "Offer", "name": "Scale+", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "10000", "priceCurrency": "USD" }, "description": "Enterprise agency scope, custom-quoted after a scoping call" }
           ]
         }
       },
@@ -98,6 +99,7 @@ export default function GoHighLevelServicePage() {
         "email": "info@pandacodegen.com",
         "foundingDate": "2026",
         "areaServed": "Worldwide",
+        "knowsAbout": ["GoHighLevel API and webhooks", "Headless CRM", "Next.js", "Answer Engine Optimization (AEO)"],
         "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158"]
       },
       {
@@ -105,10 +107,10 @@ export default function GoHighLevelServicePage() {
         "@id": "https://www.pandacodegen.com/services/gohighlevel#faq",
         "mainEntity": [
           { "@type": "Question", "name": "Will my GHL automations break during migration?", "acceptedAnswer": { "@type": "Answer", "text": "No. We build the new site in parallel while your GHL funnels stay live. When we launch, all forms and triggers connect to your existing GHL pipelines through the API. Everything keeps working." } },
-          { "@type": "Question", "name": "Do I need to cancel GHL?", "acceptedAnswer": { "@type": "Answer", "text": "Not if you don't want to. Option B keeps GHL for CRM while upgrading your website. Option C replaces GHL entirely with a custom CRM. Most clients choose Option B because GHL's automation engine is solid." } },
-          { "@type": "Question", "name": "How much does a custom site with GHL integration cost?", "acceptedAnswer": { "@type": "Answer", "text": "Typical agencies charge $8,000 to $25,000 and take 6-10 weeks. We meet you halfway. Three tiers: Starter starts at $1,500 (5 to 7 page landing site with GHL API integration). Growth starts at $3,000 (multi-page marketing site with full GHL API integration). Scale starts at $8,000 (agency white-label, member portals, complex GHL workflows). Your GHL CRM and automations stay fully intact." } },
+          { "@type": "Question", "name": "Do I need to cancel GHL?", "acceptedAnswer": { "@type": "Answer", "text": "Not if you don't want to. Option A keeps GHL for CRM while upgrading your website. Option B replaces GHL entirely with a custom CRM. Most clients choose Option A because GHL's automation engine is solid." } },
+          { "@type": "Question", "name": "How much does a custom site with GHL integration cost?", "acceptedAnswer": { "@type": "Answer", "text": "Typical agencies charge $8,000 to $25,000 and take 6 to 10 weeks. We meet you halfway. Four tiers: Starter starts at $1,500 (5 to 7 page landing site with GHL API integration). Growth starts at $3,500 (15 to 40 page marketing site with full GHL API integration). Scale is $5,000 to $10,000 (agency white-label, member portals, complex GHL workflows, 30+ pages). Scale+ is $10,000+ for enterprise agency scope, custom-quoted after a scoping call. Your GHL CRM and automations stay fully intact at every tier." } },
           { "@type": "Question", "name": "Can you build custom landing pages that work with GHL?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We build custom landing pages that load in under 1 second and push leads directly into your GHL CRM via API. Higher Quality Scores on Google Ads means lower cost per lead." } },
-          { "@type": "Question", "name": "What if I want to leave GHL later?", "acceptedAnswer": { "@type": "Answer", "text": "If you chose Option B, your custom website already works independently. We can replace the GHL API connections with a custom backend whenever you're ready. No vendor lock-in, no rebuilding from scratch." } }
+          { "@type": "Question", "name": "What if I want to leave GHL later?", "acceptedAnswer": { "@type": "Answer", "text": "If you chose Option A, your custom website already works independently. We can replace the GHL API connections with a custom backend whenever you're ready. No vendor lock-in, no rebuilding from scratch." } }
         ]
       },
       {

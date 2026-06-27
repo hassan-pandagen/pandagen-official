@@ -27,8 +27,8 @@ const ALL_CLIENTS: Record<string, CaseStudyClient> = {
     platform: "WordPress → Custom",
     pagespeed: 92,
     loadTime: "< 1s",
-    saved: "$625/mo",
-    note: "Migrated from WordPress + WooCommerce. Cut monthly tool bill from $650 to $25. 1 Million+ patches delivered.",
+    saved: "$595/mo",
+    note: "Migrated from WordPress + WooCommerce. Cut monthly tool bill from $650 to about $55 (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). 1 Million+ patches delivered.",
   },
   myCustomPatches: {
     name: "MyCustomPatches",
@@ -50,7 +50,7 @@ const ALL_CLIENTS: Record<string, CaseStudyClient> = {
     pagespeed: 96,
     loadTime: "< 1s",
     saved: "Premium UX",
-    note: "Handcrafted UK leather brand. Custom ecommerce with Stripe, Sanity, multi-currency support. Built in 2 weeks.",
+    note: "Handcrafted UK leather brand. Custom ecommerce with Stripe, Sanity, multi-currency support. Recently launched, still being refined.",
   },
   obare: {
     name: "Obare Magazine",
@@ -61,7 +61,7 @@ const ALL_CLIENTS: Record<string, CaseStudyClient> = {
     pagespeed: 95,
     loadTime: "< 1s",
     saved: "225K IG",
-    note: "Editorial design magazine with 225K Instagram following. Migrated from Wix to custom Next.js.",
+    note: "Editorial design magazine with 225K Instagram following. Migrated from Wix to custom Next.js for $1,350, in final review on staging.",
   },
 };
 

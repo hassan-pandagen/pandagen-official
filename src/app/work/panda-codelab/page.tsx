@@ -77,13 +77,62 @@ const caseStudySchema = {
             ]
         },
         {
+            "@type": "Organization",
+            "@id": "https://www.pandacodegen.com/#organization",
+            "name": "PandaCodeGen",
+            "alternateName": "Panda Code Gen",
+            "url": "https://www.pandacodegen.com",
+            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
+            "description": "PandaCodeGen is a custom software studio that builds premium, hand-coded websites and applications. Panda CodeLab is a separate agency brand PandaCodeGen built and operates on Next.js, React, Framer Motion, and Spline 3D.",
+            "email": "info@pandacodegen.com",
+            "foundingDate": "2026",
+            "areaServed": "Worldwide",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Austin",
+                "addressRegion": "TX",
+                "addressCountry": "US"
+            },
+            "founder": [
+                {
+                    "@type": "Person",
+                    "name": "Imran Raza",
+                    "jobTitle": "Co-Founder"
+                },
+                {
+                    "@type": "Person",
+                    "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
+                    "name": "Hassan Jamal",
+                    "jobTitle": "Co-Founder & Lead Full-Stack Engineer",
+                    "url": "https://www.pandacodegen.com/about/hassan"
+                }
+            ],
+            "knowsAbout": [
+                "Custom agency website development",
+                "Next.js and React",
+                "Framer Motion animation",
+                "Spline 3D integration",
+                "WCAG 2.1 AA accessibility",
+                "Core Web Vitals optimization"
+            ],
+            "sameAs": [
+                "https://twitter.com/pandacodegen",
+                "https://www.linkedin.com/company/pandacodegen",
+                "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
+                "https://github.com/hassan-pandagen",
+                "https://clutch.co/profile/panda-code-gen",
+                "https://www.trustpilot.com/review/pandacodegen.com",
+                "https://www.google.com/maps?cid=16271659886069582158"
+            ]
+        },
+        {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/work/panda-codelab#faq",
             "mainEntity": [
                 {
                     "@type": "Question",
                     "name": "Why build an agency website in Next.js 16 instead of a website builder?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "We couldn't sell custom-code performance to clients while running our own site on Webflow or WordPress. Next.js 16 gave us App Router, React 19, server components, and full control over every render. The result: sub-700ms load times, 100/100 PageSpeed, and zero platform fees. It's our live proof of concept." }
+                    "acceptedAnswer": { "@type": "Answer", "text": "We couldn't sell custom-code performance to clients while running our own site on Webflow or WordPress. Next.js 16 gave us App Router, React 19, server components, and full control over every render. The result: sub-700ms load times, 90+ PageSpeed, and zero platform fees. It's our live proof of concept." }
                 },
                 {
                     "@type": "Question",
@@ -183,10 +232,14 @@ export default function PandaCodelabCaseStudy() {
                             You can&apos;t sell custom-code performance to clients while running your own site on a page builder. We built the Panda CodeLab agency site on Next.js 16, React 19, and Framer Motion 12, spring physics, magnetic interactions, Spline 3D, and full WCAG 2.1 AA compliance. Zero TypeScript errors. Zero ESLint errors. This is the live proof.
                         </p>
 
+                        <a href="https://www.pandacodelab.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 mb-10 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-cognac transition-colors">
+                            View the live site at pandacodelab.com →
+                        </a>
+
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                             {[
                                 { value: "0", label: "Build Errors", sub: "TypeScript strict + ESLint" },
-                                { value: "100/100", label: "PageSpeed", sub: "0.6s load time" },
+                                { value: "90+", label: "PageSpeed", sub: "sub-700ms load time" },
                                 { value: "WCAG AA", label: "Accessibility", sub: "Full keyboard + screen reader" },
                                 { value: "9", label: "Pages Built", sub: "4 service detail pages" },
                             ].map((m) => (
@@ -222,7 +275,7 @@ export default function PandaCodelabCaseStudy() {
                                     The constraint
                                 </h3>
                                 <p className="text-stone-600 text-sm leading-relaxed">
-                                    Ship on Next.js 16 + React 19 before most agencies had even updated from Next.js 13. Hit 100/100 PageSpeed with full motion animations running. Pass WCAG 2.1 AA. Zero compromises on design quality.
+                                    Ship on Next.js 16 + React 19 before most agencies had even updated from Next.js 13. Hit 90+ PageSpeed with full motion animations running. Pass WCAG 2.1 AA. Zero compromises on design quality.
                                 </p>
                             </div>
                         </div>
@@ -416,7 +469,7 @@ export default function PandaCodelabCaseStudy() {
                         <p className="text-stone-500 mb-8 max-w-2xl">We don&apos;t just build fast websites for clients. We built one for ourselves — with every technique we recommend, applied to our own brand.</p>
                         <div className="grid md:grid-cols-3 gap-4">
                             {[
-                                { icon: "🏆", label: "PageSpeed Score", value: "100/100", detail: "Full 3D scenes, scroll animations, spring physics on buttons — and still 100/100 on PageSpeed. This is proof it&apos;s possible, not a trade-off." },
+                                { icon: "🏆", label: "PageSpeed Score", value: "90+", detail: "Full 3D scenes, scroll animations, spring physics on buttons — and still 90+ on PageSpeed. This is proof it&apos;s possible, not a trade-off." },
                                 { icon: "♿", label: "Accessibility", value: "WCAG AA", detail: "Zero accessibility violations. Every interactive element has a focus state, every image has alt text, every animation respects prefers-reduced-motion." },
                                 { icon: "🍽", label: "We Eat Our Own Cooking", value: "Built for us", detail: "Every technique we sell — custom animations, zero plugins, sub-1s load — runs on our own site. If it wasn&apos;t good enough for us, we wouldn&apos;t sell it to you." },
                             ].map((item) => (

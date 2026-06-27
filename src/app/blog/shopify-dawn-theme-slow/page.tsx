@@ -17,7 +17,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 const QuoteModalButton = lazyLoad(() => import("@/components/ui/QuoteModalButton"));
 
 export const metadata: Metadata = {
-    title: "Shopify Dawn Theme Slow? How We Fixed It From 42 to 97 (2026)",
+    title: "Shopify Dawn Theme Slow? How We Fixed It From 55 to 95 (2026)",
     description: "You optimize Dawn to 75. Add one app and it drops to 50. Why the loop never ends and the one approach that stays at 95+.",
     alternates: {
         canonical: "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     keywords: ["shopify dawn theme slow", "shopify dawn theme speed", "shopify 2.0 performance", "why is shopify slow", "shopify pagespeed score", "shopify speed optimization", "shopify dawn pagespeed"],
     robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
-        title: "Shopify Dawn Theme Slow? How We Fixed It From 42 to 97 (2026)",
+        title: "Shopify Dawn Theme Slow? How We Fixed It From 55 to 95 (2026)",
         description: "You optimize Dawn to 75. Add one app and it drops to 50. Why the loop never ends and the one approach that stays at 95+.",
         type: "article",
         publishedTime: "2026-03-07",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Shopify Dawn Theme Slow? How We Fixed It From 42 to 97 (2026)",
+        title: "Shopify Dawn Theme Slow? How We Fixed It From 55 to 95 (2026)",
         description: "You optimize Dawn to 75. Add one app and it drops to 50. Why the loop never ends and the one approach that stays at 95+.",
     },
 };
@@ -46,7 +46,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow#article",
-            "headline": "Shopify Dawn Theme Slow? How We Fixed It From 42 to 97 (2026)",
+            "headline": "Shopify Dawn Theme Slow? How We Fixed It From 55 to 95 (2026)",
             "description": "You optimize Dawn to 75. Add one app and it drops to 50. Why the loop never ends and the one approach that stays at 95+.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-07T00:00:00-05:00",
@@ -168,7 +168,7 @@ export default function ShopifyDawnThemeSlowPage() {
                     <div className="mb-10">
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
                             Shopify Dawn Theme Slow?{" "}
-                            <span className="font-serif italic text-cognac">How We Fixed It to 100.</span>
+                            <span className="font-serif italic text-cognac">How We Fixed It From 55 to 95.</span>
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
@@ -198,7 +198,7 @@ export default function ShopifyDawnThemeSlowPage() {
                             "Dawn is Shopify's fastest theme, but 'fastest Shopify theme' and 'fast website' are not the same thing.",
                             "A clean Dawn store scores 65 to 80/100 on mobile. Add 5 apps and you're at 35 to 55/100.",
                             "The speed killers are apps, Liquid rendering, Shopify's checkout scripts. None of which the theme controls.",
-                            "Theme-level fixes improve your score by 10 to 20 points. To hit 90 to 100/100, you need to leave Shopify's theme system.",
+                            "Theme-level fixes improve your score by 10 to 20 points. To hit 90+, you need to leave Shopify's theme system.",
                         ]} />
                     </div>
 
@@ -308,7 +308,7 @@ export default function ShopifyDawnThemeSlowPage() {
                         {/* Mid CTA */}
                         <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="font-bold text-charcoal mb-2">Is Dawn the fastest your store will ever get?</p>
-                            <p className="text-stone-600 mb-4 text-sm">Drop your store URL when you book. We run your real PageSpeed ceiling live on the call and quote a custom storefront that actually breaks past 90/100. Takes 30 minutes.</p>
+                            <p className="text-stone-600 mb-4 text-sm">Drop your store URL when you book. We run your real PageSpeed ceiling live on the call and quote a custom storefront that actually clears 90+. Takes 30 minutes.</p>
                             <div className="flex flex-col sm:flex-row gap-3 justify-center">
                                 <Link href="/#audit-widget" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Run Your Free Audit <ArrowRight className="w-4 h-4" /></Link>
                                 <QuoteModalButton cta="shopify_dawn_mid_quote" className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-stone-300 text-charcoal font-bold rounded-full text-sm hover:border-charcoal transition-all">Get a Free Quote</QuoteModalButton>
@@ -442,7 +442,7 @@ export default function ShopifyDawnThemeSlowPage() {
                         <BlogHeader>75/100 Is the Orange Zone. Your Competitors Are in the Green.</BlogHeader>
 
                         <BlogText>
-                            Google classifies 75/100 as &ldquo;Needs Improvement&rdquo;. The orange zone. Your competitors running custom storefronts are at 90 to 100/100.
+                            Google classifies 75/100 as &ldquo;Needs Improvement&rdquo;. The orange zone. Your competitors running custom storefronts are at 90+, comfortably in the green.
                         </BlogText>
 
                         <BlogText>
@@ -456,7 +456,7 @@ export default function ShopifyDawnThemeSlowPage() {
                         <BlogHeader>How We Got MyCustomPatches From 42 to 97</BlogHeader>
 
                         <BlogText>
-                            The fix that actually gets you to 90 to 100/100 is headless Shopify. Keeping your Shopify backend (products, orders, inventory, payments) and replacing the Shopify storefront with a custom Next.js frontend. Our <Link href="/services/ecommerce?ref=blog/shopify-dawn-theme-slow" className="text-cognac hover:underline font-medium">headless Shopify development service</Link> covers the full transition.
+                            The fix that actually gets you into the 90+ green zone is headless Shopify. Keeping your Shopify backend (products, orders, inventory, payments) and replacing the Shopify storefront with a custom Next.js frontend. Our <Link href="/services/ecommerce?ref=blog/shopify-dawn-theme-slow" className="text-cognac hover:underline font-medium">headless Shopify development service</Link> covers the full transition.
                         </BlogText>
 
                         <BlogText>
@@ -472,7 +472,7 @@ export default function ShopifyDawnThemeSlowPage() {
                         ]} />
 
                         <BlogText>
-                            The result is a storefront that loads in under 1 second with a 90 to 100/100 PageSpeed score, while your Shopify backend handles all the e-commerce operations you already rely on.
+                            The result is a storefront that loads in under 1 second with a 90+ PageSpeed score, while your Shopify backend handles all the e-commerce operations you already rely on.
                         </BlogText>
 
                         <BlogText>
@@ -555,7 +555,7 @@ export default function ShopifyDawnThemeSlowPage() {
                             <li><strong>Every app you install adds 80-200KB of JavaScript</strong>: Five typical apps can add 1-2 seconds to every page load, dropping your score from 75 to 40.</li>
                             <li><strong>Theme-level fixes only gain 10-20 points</strong>: Removing unused apps, compressing images, and deferring scripts help, but the ceiling on standard Shopify is 70-75/100.</li>
                             <li><strong>A store at 45/100 is leaving $10K-$15K/month on the table</strong>: Every 0.1-second improvement increases conversions by 8%, and the gap between 45 and 95 is enormous.</li>
-                            <li><strong>Headless Shopify is the only path to 90-100/100</strong>: Keeping your Shopify backend while replacing the storefront with Next.js eliminates every speed bottleneck the platform imposes.</li>
+                            <li><strong>Headless Shopify is the only path to a 90+ score</strong>: Keeping your Shopify backend while replacing the storefront with Next.js eliminates every speed bottleneck the platform imposes.</li>
                         </ol>
                     </section>
 

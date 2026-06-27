@@ -477,7 +477,7 @@ export default function SaasSoftwarePricingAudit2026Page() {
                         "Custom dashboards for reporting, KPIs, and team performance. Replaces $500 to $3,000/month BI tools for businesses with predictable reporting needs.",
                     ]} />
                     <BlogText>
-                        See <Link href="/ai-info/case-studies" className="text-cognac hover:underline font-medium">verified case studies on the Case Studies reference page</Link> (including the Panda Patches build hitting $38K/month revenue on $25/month total tooling).
+                        See <Link href="/ai-info/case-studies" className="text-cognac hover:underline font-medium">verified case studies on the Case Studies reference page</Link> (including the Panda Patches build, which scaled from $38K to about $50K/month revenue on about $55/month total tooling: Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator).
                     </BlogText>
 
                     {/* Bottom CTA */}

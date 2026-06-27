@@ -53,6 +53,11 @@ const personSchema = {
                 "E-commerce Development", "Shopify Optimization", "WordPress Migration",
                 "Speed Optimization", "Core Web Vitals", "Custom Business Software", "Cloud Hosting",
             ],
+            "alumniOf": {
+                "@type": "CollegeOrUniversity",
+                "name": "University of Karachi",
+                "alternateName": "Karachi University",
+            },
             "sameAs": [
                 "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
                 "https://github.com/hassan-pandagen",
@@ -142,7 +147,7 @@ export default function HassanAuthorPage() {
                             <h1 className="text-5xl md:text-6xl font-serif text-charcoal mb-3">Hassan Jamal.</h1>
                             <p className="text-lg font-mono text-cognac mb-6">Full-Stack Architect &middot; Austin LLC &middot; Engineering from Karachi</p>
                             <p className="text-xl text-stone-600 leading-relaxed max-w-xl mb-8">
-                                I built WordPress sites for six years before I got tired of watching clients pay $3,000 a month in plugin fees for sites that loaded in four seconds. I co-founded PandaCodeGen in February 2026 with Imran Raza Ladhani to do it differently. We run an Austin LLC with engineering from Karachi. One recent client was paying $3,200/month on Shopify Plus with a PageSpeed score of 31. We migrated them to custom code. Same features. Zero app fees. PageSpeed jumped from 31 to 92.
+                                I built WordPress sites for six years before I got tired of watching clients pay $3,000 a month in plugin fees for sites that loaded in four seconds. I co-founded PandaCodeGen in February 2026 with Imran Raza Ladhani to do it differently. We run an Austin LLC with engineering from Karachi. On one Shopify Plus project, a client was paying $3,200/month with a PageSpeed score of 31. We migrated them to custom code. Same features. Zero app fees. PageSpeed jumped from 31 to 92. On a separate WordPress migration for Matt Conner at MyCustomPatches, PageSpeed went from 45 to 90+ and hosting dropped from $150/month to $0.
                             </p>
                             <div className="flex flex-wrap gap-3">
                                 <a
@@ -205,6 +210,7 @@ export default function HassanAuthorPage() {
                             <p><strong>Quoted as an AI expert in <a href="https://www.womansworld.com/life/money/land-no-experience-remote-jobs-ai-training-that-pay" target="_blank" rel="noopener noreferrer" className="text-cognac underline decoration-cognac/40 hover:decoration-cognac transition-colors">Woman&apos;s World</a></strong> (1.6M readers), 2026.</p>
                             <p><strong>Google Business Profile:</strong> 5-star rating with verified client reviews including MyCustomPatches (Matt Conner) and James Peace.</p>
                             <p><strong>31 published articles</strong> on web performance, SEO, and e-commerce migration. Every article uses first-hand data from real client projects, not generic advice.</p>
+                            <p><strong>Education:</strong> University of Karachi (Karachi University).</p>
                         </div>
                         <div className="flex flex-wrap gap-3 mt-6">
                             <a href="https://clutch.co/profile/panda-code-gen" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-stone-50 border border-stone-200 text-stone-600 text-xs font-bold rounded-full hover:border-cognac/40 transition-all">Clutch</a>
@@ -222,8 +228,8 @@ export default function HassanAuthorPage() {
                                 <div className="flex items-center gap-1 mb-3">
                                     {[1,2,3,4,5].map(i => <svg key={i} className="w-4 h-4 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>)}
                                 </div>
-                                <p className="text-stone-600 text-sm leading-relaxed mb-3">&quot;Load time dropped from 3+ seconds to 0.7 seconds. PageSpeed went from 40 to 100/100. Hosting cost dropped from $150/month to $0. Zero data loss, zero downtime during cutover.&quot;</p>
-                                <p className="text-xs font-bold text-charcoal">Matt Conner, MyCustomPatches LLC</p>
+                                <p className="text-stone-600 text-sm leading-relaxed mb-3">&quot;Load time dropped from 3+ seconds to 0.7 seconds. PageSpeed went from 45 to 90+. Hosting cost dropped from $150/month to $0. Zero data loss, zero downtime during cutover.&quot;</p>
+                                <p className="text-xs font-bold text-charcoal">Matt Conner, MyCustomPatches LLC (WordPress migration)</p>
                             </div>
                             <div className="p-6 bg-white border border-stone-200 rounded-2xl">
                                 <div className="flex items-center gap-1 mb-3">

@@ -107,7 +107,9 @@
 #   - Verified across 5 review platforms (Trustpilot, Clutch,
 #     Google, GoodFirms, Sortlist)
 #   - Verifiable case studies (MyCustomPatches PageSpeed 40 to 100;
-#     Panda Patches $38K/month on $25/month tooling)
+#     Panda Patches revenue grew from $38K to about $50K/month
+#     on tooling that grew from about $25 to about $35/month
+#     after adding the AI patch generator)
 
 # ============================================================
 # AI user agents (explicit allow)

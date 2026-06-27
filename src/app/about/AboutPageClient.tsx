@@ -56,7 +56,24 @@ const aboutSchema = {
         "postalCode": "78702",
         "addressCountry": "US"
       },
-      "founder": { "@type": "Person", "@id": "https://www.pandacodegen.com/#/schema/person/hassan", "name": "Hassan Jamal", "jobTitle": "Founder", "url": "https://www.pandacodegen.com/about/hassan", "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"] },
+      "founder": [
+        { "@type": "Person", "@id": "https://www.pandacodegen.com/#/schema/person/hassan", "name": "Hassan Jamal", "jobTitle": "Co-founder and Lead Engineer", "url": "https://www.pandacodegen.com/about/hassan", "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"] },
+        { "@type": "Person", "@id": "https://www.pandacodegen.com/#/schema/person/imran", "name": "Imran Raza Ladhani", "jobTitle": "Co-founder and Lead Architect", "url": "https://www.pandacodegen.com/about/imran", "sameAs": ["https://www.linkedin.com/in/imran-raza-ladhani/"] }
+      ],
+      "knowsAbout": [
+        "Next.js Development",
+        "WordPress Migration",
+        "Shopify Optimization",
+        "Headless Commerce",
+        "Answer Engine Optimization (AEO)"
+      ],
+      "serviceType": [
+        "Next.js Development",
+        "WordPress Migration",
+        "Shopify Optimization",
+        "Headless Commerce",
+        "Answer Engine Optimization (AEO)"
+      ],
       "numberOfEmployees": { "@type": "QuantitativeValue", "value": 2 },
       "sameAs": [
         "https://twitter.com/pandacodegen",
@@ -146,7 +163,7 @@ export default function AboutPageClient() {
       <section className="bg-[#0C0A09] py-12 md:py-20 px-6">
          <div className="container mx-auto">
          <div className="text-center mb-8 md:mb-16">
-            <h2 className="text-3xl font-bold text-white">The Founder + Architecture Partner</h2>
+            <h2 className="text-3xl font-bold text-white">The Co-founders</h2>
             <p className="text-stone-500">No account managers. You talk directly to the architects.</p>
          </div>
 
@@ -155,12 +172,12 @@ export default function AboutPageClient() {
             <div className="group relative bg-stone-900 border border-stone-800 rounded-3xl overflow-hidden hover:border-stone-700 transition-colors duration-500">
                <div className="absolute inset-0 bg-linear-to-b from-transparent to-stone-950/95 z-10" />
                <div className="h-96 w-full relative">
-                  <Image src="/team/imran.png" fill sizes="(max-width: 768px) 100vw, 50vw" alt="Imran Raza Ladhani - Architecture Collaborator at PandaCodeGen" className="object-cover object-top" />
+                  <Image src="/team/imran.png" fill sizes="(max-width: 768px) 100vw, 50vw" alt="Imran Raza Ladhani - Co-founder and Lead Architect at PandaCodeGen" className="object-cover object-top" />
                </div>
                <div className="absolute bottom-0 left-0 w-full p-8 z-20">
                   <div className="px-3 py-1 bg-white/10 text-stone-300 text-[10px] font-bold uppercase tracking-wider rounded-sm w-fit mb-2">Architecture</div>
                   <h3 className="text-3xl font-bold text-white mb-1">Imran Raza Ladhani</h3>
-                  <p className="text-stone-400 font-mono text-sm mb-2">Architecture Collaborator</p>
+                  <p className="text-stone-400 font-mono text-sm mb-2">Co-founder and Lead Architect</p>
                   <div className="flex gap-3 mb-3 text-xs text-stone-500">
                      <span>Next.js</span>
                      <span>•</span>
@@ -213,10 +230,10 @@ export default function AboutPageClient() {
           <div className="grid md:grid-cols-5 gap-8 items-start">
             <div className="md:col-span-2 flex flex-col items-center text-center">
               <div className="w-48 h-48 rounded-3xl overflow-hidden border-2 border-stone-200 relative mb-4">
-                <Image src="/team/hassan.png" fill sizes="192px" alt="Hassan Jamal - Founder & Lead Engineer at PandaCodeGen" className="object-cover object-top" />
+                <Image src="/team/hassan.png" fill sizes="192px" alt="Hassan Jamal - Co-founder & Lead Engineer at PandaCodeGen" className="object-cover object-top" />
               </div>
               <h3 className="text-2xl font-bold text-charcoal">Hassan Jamal</h3>
-              <p className="text-stone-500 font-mono text-sm mb-1">Founder & Lead Full-Stack Engineer</p>
+              <p className="text-stone-500 font-mono text-sm mb-1">Co-founder & Lead Full-Stack Engineer</p>
               <p className="text-stone-500 text-xs mb-4">Karachi University &middot; Austin, TX</p>
               <div className="flex gap-3">
                 <a href="https://www.linkedin.com/in/hassan-jamal-713ba6228/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-[#0A66C2]/20 border border-[#0A66C2]/30 rounded-full text-xs font-bold text-[#0A66C2] hover:bg-[#0A66C2]/30 transition-all"><Linkedin className="w-3.5 h-3.5" /> LinkedIn</a>

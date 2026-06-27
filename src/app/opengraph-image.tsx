@@ -45,14 +45,14 @@ export default function Image() {
             </div>
           </div>
           <div style={{ fontSize: '24px', color: '#999999', lineHeight: 1.4, maxWidth: '760px', display: 'flex' }}>
-            We migrate WordPress and Shopify to custom Next.js. Load times under 1 second, zero bloat, 100/100 PageSpeed on every build.
+            We migrate WordPress and Shopify to custom Next.js. Load times under 1 second, zero bloat, 90+ PageSpeed on every build.
           </div>
         </div>
 
         <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', width: '100%' }}>
           <div style={{ display: 'flex', gap: '52px' }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-              <div style={{ fontSize: '32px', fontWeight: 700, color: '#b8410c', display: 'flex' }}>100/100</div>
+              <div style={{ fontSize: '32px', fontWeight: 700, color: '#b8410c', display: 'flex' }}>90+</div>
               <div style={{ fontSize: '15px', color: '#555555', display: 'flex' }}>PageSpeed Score</div>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>

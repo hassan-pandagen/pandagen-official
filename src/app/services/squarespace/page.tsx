@@ -3,7 +3,7 @@ import PageContent from './PageContent';
 
 export const metadata: Metadata = {
   title: 'Is Squarespace Hurting Your SEO? We Migrate to Next.js',
-  description: "Squarespace scores 30 to 55 on Google PageSpeed Mobile. No plugin fixes it. We migrate to custom Next.js, delivering 95+ PageSpeed, full SEO control, and no monthly fees.",
+  description: "Squarespace scores 30 to 55 on Google PageSpeed Mobile. No plugin fixes it. We migrate to custom Next.js, delivering 90+ PageSpeed, full SEO control, and no monthly fees.",
   alternates: { canonical: '/services/squarespace' },
   keywords: [
     'squarespace migration service',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Is Squarespace Hurting Your SEO? We Migrate to Next.js | PandaCodeGen',
-    description: "Squarespace scores 30 to 55 on Google PageSpeed. No plugin fixes it. We migrate to custom Next.js. 95+ PageSpeed, full SEO control, no monthly fees.",
+    description: "Squarespace scores 30 to 55 on Google PageSpeed. No plugin fixes it. We migrate to custom Next.js. 90+ PageSpeed, full SEO control, no monthly fees.",
     url: 'https://www.pandacodegen.com/services/squarespace',
     siteName: 'PandaCodeGen',
     type: 'website',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Is Squarespace Hurting Your SEO? We Migrate to Next.js | PandaCodeGen',
-    description: "Squarespace scores 30 to 55 on PageSpeed. No plugin fixes it. We migrate to custom Next.js. 95+ PageSpeed, no monthly fees.",
+    description: "Squarespace scores 30 to 55 on PageSpeed. No plugin fixes it. We migrate to custom Next.js. 90+ PageSpeed, no monthly fees.",
   },
 };
 
@@ -44,7 +44,7 @@ export default function SquarespaceServicePage() {
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
         "serviceType": ["Squarespace Migration", "Squarespace to Next.js", "Squarespace Alternative", "Squarespace to Custom Code"],
-        "priceRange": "$1,500 - $15,000",
+        "priceRange": "$1,500 - $10,000",
         "telephone": "+13027738982",
         "address": {
           "@type": "PostalAddress",
@@ -61,7 +61,8 @@ export default function SquarespaceServicePage() {
           "itemListElement": [
             { "@type": "Offer", "name": "Starter", "price": "1500", "priceCurrency": "USD" },
             { "@type": "Offer", "name": "Growth", "price": "3500", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Scale", "price": "5000", "priceCurrency": "USD" }
+            { "@type": "Offer", "name": "Scale", "priceCurrency": "USD", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "5000", "maxPrice": "10000", "priceCurrency": "USD" } },
+            { "@type": "Offer", "name": "Scale+", "priceCurrency": "USD", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "10000", "priceCurrency": "USD" } }
           ]
         }
       },
@@ -95,6 +96,7 @@ export default function SquarespaceServicePage() {
         "email": "info@pandacodegen.com",
         "foundingDate": "2026",
         "areaServed": "Worldwide",
+        "knowsAbout": ["Squarespace 7.1", "Fluid Engine", "Acuity Scheduling", "301 redirects", "Core Web Vitals", "Next.js"],
         "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158"]
       },
       {
@@ -102,7 +104,7 @@ export default function SquarespaceServicePage() {
         "@id": "https://www.pandacodegen.com/services/squarespace#review-clutch",
         "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
         "author": { "@type": "Person", "name": "Executive, MC Patches LLC" },
-        "reviewBody": "Panda Code Gen successfully delivered a speedy, bug free website. They did exactly what they said they would, delivering a blazing fast Next.js website with a 100/100 PageSpeed score. The communication throughout was excellent.",
+        "reviewBody": "Panda Code Gen successfully delivered a speedy, bug free website. They did exactly what they said they would, delivering a blazing fast Next.js website with a 90+ PageSpeed score. The communication throughout was excellent.",
         "datePublished": "2025-11-01",
         "itemReviewed": { "@id": "https://www.pandacodegen.com/services/squarespace#service" }
       },
@@ -132,7 +134,7 @@ export default function SquarespaceServicePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
-      <p className="sr-only" data-speakable="true">PandaCodeGen migrates Squarespace sites to custom Next.js in 1 to 3 weeks. Squarespace scores 30 to 55 on Google PageSpeed Mobile because its template architecture loads all CSS and JavaScript on every page. No plugin fixes this. After migration you get 95+ PageSpeed, full SEO control, zero monthly platform fees, and code you own outright.</p>
+      <p className="sr-only" data-speakable="true">PandaCodeGen migrates Squarespace sites to custom Next.js in 1 to 3 weeks. Squarespace scores 30 to 55 on Google PageSpeed Mobile because its template architecture loads all CSS and JavaScript on every page. No plugin fixes this. After migration you get 90+ PageSpeed, full SEO control, zero monthly platform fees, and code you own outright.</p>
       <PageContent />
     </>
   );

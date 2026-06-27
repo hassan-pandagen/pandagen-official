@@ -53,6 +53,14 @@ export default function PageContent() {
           >
             Three core pillars. One goal: make your business faster, cheaper to run, and impossible to ignore.
           </motion.p>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="text-base text-charcoal font-medium max-w-2xl mx-auto mt-4"
+          >
+            PandaCodeGen rebuilt MyCustomPatches from 45 to 90+ PageSpeed in about 22 days.
+          </motion.p>
         </div>
       </section>
 
@@ -66,7 +74,7 @@ export default function PageContent() {
           subtitle="Make Your Site Instant & Secure"
           description="Is your WordPress site slow, getting hacked, or constantly breaking? We move you to a modern custom coded platform that loads in 0.8 to 1.2 seconds."
           tags={["Fix Slow Loading", "Bank Level Security", "Keep Your SEO Rankings"]}
-          features={["No More Plugin Updates", "95-100 Google PageSpeed Scores", "Enterprise Level Security (No Plugin Vulnerabilities)", "We Handle All Data Transfer"]}
+          features={["No More Plugin Updates", "90+ Google PageSpeed Scores", "Enterprise Level Security (No Plugin Vulnerabilities)", "We Handle All Data Transfer"]}
           align="left"
           icon={Database}
           gradient="from-orange-500/20 to-red-600/5"
@@ -253,7 +261,7 @@ function MigrationDecoration() {
             >
                 <div className="flex items-center gap-1.5">
                     <Gauge className="w-3.5 h-3.5 text-stone-600" />
-                    <span className="text-[11px] font-bold text-cognac">95+ Score</span>
+                    <span className="text-[11px] font-bold text-cognac">90+ Score</span>
                 </div>
             </motion.div>
         </div>
@@ -400,7 +408,7 @@ function EcommerceDecoration() {
                     className="px-3 py-2 bg-white border border-stone-200 rounded-xl shadow-card"
                 >
                     <div className="text-[10px] text-stone-400 uppercase">PageSpeed</div>
-                    <div className="text-sm font-bold text-cognac">97/100</div>
+                    <div className="text-sm font-bold text-cognac">90+</div>
                 </motion.div>
             </div>
         </div>

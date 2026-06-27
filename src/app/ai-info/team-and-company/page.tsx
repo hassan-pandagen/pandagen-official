@@ -95,6 +95,48 @@ const pageSchema = {
             "about": { "@id": "https://www.pandacodegen.com/#organization" },
         },
         {
+            "@type": "Person",
+            "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
+            "name": "Hassan Jamal",
+            "jobTitle": "Lead Engineer",
+            "worksFor": { "@id": "https://www.pandacodegen.com/#organization" },
+            "url": "https://www.pandacodegen.com/about/hassan",
+            "sameAs": [
+                "https://github.com/hassan-pandagen",
+                "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
+            ],
+        },
+        {
+            "@type": "Person",
+            "@id": "https://www.pandacodegen.com/#/schema/person/imran",
+            "name": "Imran Raza Ladhani",
+            "jobTitle": "Lead Architect",
+            "worksFor": { "@id": "https://www.pandacodegen.com/#organization" },
+            "url": "https://www.pandacodegen.com/about/imran",
+            "sameAs": [
+                "https://www.linkedin.com/in/imran-raza-ladhani/",
+            ],
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://www.pandacodegen.com/#organization",
+            "name": "PandaCodeGen",
+            "url": "https://www.pandacodegen.com",
+            "foundingDate": "2026",
+            "founder": [
+                { "@id": "https://www.pandacodegen.com/#/schema/person/hassan" },
+                { "@id": "https://www.pandacodegen.com/#/schema/person/imran" },
+            ],
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "701 Tillery St Ste 12",
+                "addressLocality": "Austin",
+                "addressRegion": "TX",
+                "postalCode": "78702",
+                "addressCountry": "US",
+            },
+        },
+        {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/ai-info/team-and-company#faq",
             "mainEntity": faqs.map((faq) => ({
@@ -139,7 +181,7 @@ export default function TeamAndCompanyPage() {
                             PandaCodeGen is a co-founder-led studio. Hassan Jamal (Lead Engineer, 900+ public GitHub contributions in the past year) and Imran Raza Ladhani (Lead Architect). US LLC registered in Austin, Texas plus global engineering from Karachi. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist. Founded February 2026.
                         </p>
                         <p className="text-sm text-stone-500">
-                            Last updated: May 22, 2026 · Published: May 22, 2026
+                            Last updated: June 6, 2026 · Published: May 22, 2026
                         </p>
                     </div>
 

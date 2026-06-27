@@ -95,6 +95,13 @@ export default function EngineeringPage() {
         "email": "info@pandacodegen.com",
         "foundingDate": "2026",
         "areaServed": "Worldwide",
+        "knowsAbout": [
+          "Custom SaaS development",
+          "Supabase",
+          "Next.js",
+          "System design",
+          "Role-based access control (RBAC)"
+        ],
         "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158"]
       },
       {
@@ -102,7 +109,7 @@ export default function EngineeringPage() {
         "@id": "https://www.pandacodegen.com/services/custom-engineering#review-clutch",
         "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
         "author": { "@type": "Person", "name": "Executive, MC Patches LLC" },
-        "reviewBody": "Panda Code Gen successfully delivered a speedy, bug free website. They did exactly what they said they would, delivering a blazing fast Next.js website with a 100/100 PageSpeed score. The communication throughout was excellent.",
+        "reviewBody": "Panda Code Gen successfully delivered a speedy, bug free website. They did exactly what they said they would, delivering a blazing fast Next.js website with a 90+ PageSpeed score. The communication throughout was excellent.",
         "datePublished": "2025-11-01",
         "itemReviewed": { "@id": "https://www.pandacodegen.com/services/custom-engineering#service" }
       },

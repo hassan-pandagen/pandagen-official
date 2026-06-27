@@ -51,6 +51,12 @@ const personSchema = {
                 "Headless Commerce", "WordPress Migration", "Shopify Headless",
                 "Performance Optimization", "Technical Planning",
             ],
+            "owns": {
+                "@type": "WebSite",
+                "name": "Panda Patches",
+                "url": "https://www.pandapatches.com",
+                "description": "Custom embroidered patches e-commerce store fully owned by Imran Raza, built and operated on the PandaCodeGen stack (Next.js, Sanity, Supabase, Square). As of 2026, revenue grew from $38,000 to about $50,000 per month while tooling stayed near $55 per month (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator).",
+            },
         },
         {
             "@type": "ProfilePage",
@@ -187,6 +193,22 @@ export default function ImranAuthorPage() {
                         </div>
                     </div>
 
+                    {/* Operator Receipt: Panda Patches ownership */}
+                    <section className="mb-10 md:mb-16 p-6 md:p-8 bg-white border border-stone-300 rounded-2xl shadow-xs">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-50 border border-stone-200 text-xs font-bold uppercase tracking-widest text-charcoal mb-5">
+                            Owner-Operator
+                        </div>
+                        <h3 className="text-xl font-serif text-charcoal mb-4">I Own The Store I Architected</h3>
+                        <div className="space-y-4 text-stone-600 text-sm leading-relaxed">
+                            <p>
+                                I own <a href="https://www.pandapatches.com" target="_blank" rel="noopener noreferrer" className="text-cognac underline decoration-cognac/40 hover:decoration-cognac transition-colors">Panda Patches</a> outright, a custom embroidered patches e-commerce store built and operated on the same PandaCodeGen stack we ship to clients: Next.js, Sanity, Supabase, and Square. I am not just advising on architecture; I run the production system that proves it.
+                            </p>
+                            <p>
+                                <strong>The receipt:</strong> as of 2026, revenue grew from <strong className="text-charcoal">$38,000 to about $50,000 per month</strong>, while tooling stayed near <strong className="text-charcoal">$55 per month</strong> (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). That is the cost discipline I bring to every migration call.
+                            </p>
+                        </div>
+                    </section>
+
                     {/* Articles */}
                     {imranPosts.length > 0 && (
                         <section className="border-t border-stone-200 pt-10 md:pt-16 mb-10 md:mb-16">
@@ -233,7 +255,7 @@ export default function ImranAuthorPage() {
                                 href="/about/hassan"
                                 className="px-8 py-4 bg-white border border-stone-200 text-charcoal font-bold rounded-full hover:bg-cognac hover:text-white hover:border-cognac transition-all"
                             >
-                                Meet the Founder
+                                Meet the Co-founder
                             </Link>
                         </div>
                     </section>
