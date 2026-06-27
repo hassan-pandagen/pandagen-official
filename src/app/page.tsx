@@ -119,6 +119,25 @@ export default function Home() {
           "Web Performance Optimization",
           "Business Website Development"
         ],
+        "knowsAbout": [
+          "Next.js development",
+          "WordPress migration",
+          "Shopify headless commerce",
+          "WooCommerce migration",
+          "Wix migration",
+          "Squarespace migration",
+          "Webflow migration",
+          "GoHighLevel migration",
+          "Core Web Vitals optimization",
+          "Custom e-commerce development",
+          "Custom SaaS and dashboard development",
+          "Server-side ad tracking (Meta Conversions API)",
+          "SaaS cost reduction",
+          "Answer Engine Optimization (AEO)",
+          "Technical SEO",
+          "Headless CMS architecture",
+          "Vercel deployment"
+        ],
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "5.0",
