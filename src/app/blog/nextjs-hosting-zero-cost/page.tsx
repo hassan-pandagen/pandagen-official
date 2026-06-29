@@ -16,26 +16,26 @@ const FeatureVisual = lazyLoad(() => import("@/components/blog/CostStackAnimatio
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "How Much Does Next.js Hosting Cost in 2026? Start Free on Vercel",
-    description: "Most businesses pay $50 to $300/mo for hosting. We deploy every client on Vercel starting free, scaling to $20/mo only when you grow.",
+    title: "Is Vercel Free? 2026 Pricing, Limits & the 100GB Bandwidth Cap",
+    description: "Yes, Vercel's free Hobby plan gives you 100GB bandwidth a month in 2026. Here's what's included, the new hard caps, when you hit $20/mo Pro, and how to stay near-free.",
     alternates: {
         canonical: '/blog/nextjs-hosting-zero-cost',
     },
-    keywords: ["free nextjs hosting", "vercel free tier", "free website hosting 2026", "nextjs hosting cost", "vercel vs wordpress hosting", "zero cost website hosting", "vercel free tier limits"],
+    keywords: ["is vercel free", "vercel free tier bandwidth 100gb 2026", "vercel pricing next.js 2026", "free nextjs hosting", "vercel free tier", "free website hosting 2026", "nextjs hosting cost", "vercel vs wordpress hosting", "zero cost website hosting", "vercel free tier limits"],
     openGraph: {
-        title: "How Much Does Next.js Hosting Cost in 2026? Start Free on Vercel",
-        description: "Most businesses pay $50 to $300/mo for hosting. We deploy every client on Vercel starting free, scaling to $20/mo only when you grow.",
+        title: "Is Vercel Free? 2026 Pricing, Limits & the 100GB Bandwidth Cap",
+        description: "Yes, Vercel's free Hobby plan gives you 100GB bandwidth a month in 2026. Here's what's included, the new hard caps, when you hit $20/mo Pro, and how to stay near-free.",
         type: "article",
         publishedTime: "2026-03-13",
-        modifiedTime: "2026-06-06T00:00:00-05:00",
+        modifiedTime: "2026-06-29T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
     twitter: {
         card: "summary_large_image",
-        title: "How Much Does Next.js Hosting Cost in 2026? Start Free on Vercel",
-        description: "Most businesses pay $50 to $300/mo for hosting. We deploy every client on Vercel starting free, scaling to $20/mo only when you grow.",
+        title: "Is Vercel Free? 2026 Pricing, Limits & the 100GB Bandwidth Cap",
+        description: "Yes, Vercel's free Hobby plan gives you 100GB bandwidth a month in 2026. Here's what's included, the new hard caps, when you hit $20/mo Pro, and how to stay near-free.",
     },
 };
 
@@ -45,16 +45,16 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost#article",
-            "headline": "How Much Does Next.js Hosting Cost in 2026? Start Free on Vercel",
-            "description": "Most businesses pay $50 to $300/mo for hosting. We deploy every client on Vercel starting free, scaling to $20/mo only when you grow.",
+            "headline": "Is Vercel Free? 2026 Pricing, Limits & the 100GB Bandwidth Cap",
+            "description": "Yes, Vercel's free Hobby plan gives you 100GB bandwidth a month in 2026. Here's what's included, the new hard caps, when you hit $20/mo Pro, and how to stay near-free.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-13T00:00:00-05:00",
-            "dateModified": "2026-05-26T00:00:00-05:00",
+            "dateModified": "2026-06-29T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -173,11 +173,11 @@ export default function NextjsHostingZeroCostPage() {
                     {/* Title & Meta */}
                     <div className="mb-10">
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                            How We Host Client Websites <span className="font-serif italic text-cognac">Starting Free</span> on Vercel
+                            Is Vercel Free? The <span className="font-serif italic text-cognac">2026 Cost</span> of Next.js Hosting
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            What if you could host your business website for $0/month and only pay when your business scales? This guide walks you through exactly how we do it for every client.
+                            Short answer: yes. Vercel&apos;s Hobby plan is free in 2026, with 100GB of bandwidth a month, and you only pay $20/month (Pro) once you outgrow it. Here is exactly what is included, where the new caps bite, and how we host every client site starting at $0.
                         </p>
 
                         <BlogAuthor
