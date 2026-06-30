@@ -295,7 +295,7 @@ export default function WooCommerceVsCustomWebsitePage() {
                         </BlogText>
 
                         <BlogText>
-                            A custom Next.js site flips this. No plugin update roulette. MyCustomPatches went from $150/month in hosting to $0, and there is no plugin stack to license or patch. The full cost breakdown for a switch is in <Link href="/blog/website-migration-cost-2026" className="text-cognac underline underline-offset-2 hover:text-amber-700">our website migration cost breakdown</Link>.
+                            A custom Next.js site flips this. No plugin update roulette. MyCustomPatches went from $150/month in hosting to $0, and there is no plugin stack to license or patch. The full cost breakdown for a switch is in <Link href="/blog/woocommerce-migration-cost" className="text-cognac underline underline-offset-2 hover:text-amber-700">our WooCommerce migration cost breakdown</Link>.
                         </BlogText>
 
                         <BlogHeader>Is WooCommerce good for SEO compared to a custom site?</BlogHeader>

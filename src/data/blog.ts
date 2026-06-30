@@ -34,6 +34,28 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "woocommerce-migration-cost",
+    cardStat: "$1.5K-$10K",
+    cardStatLabel: "Fixed-price tiers to migrate off WooCommerce",
+    title: "WooCommerce Migration Cost: What You'll Actually Pay (2026)",
+    excerpt: "Migrating off WooCommerce to a custom Next.js build runs $1,500 for a small store, $3,500 for a mid-size store with a CMS and blog, and $5,000 to $10,000 for full headless e-commerce. Agencies quote $15,000 to $25,000+ for the same scope. Here is what each price actually buys, what pushes the number up, and how to read a quote.",
+    category: "WooCommerce",
+    readTime: "8 min",
+    date: "Jun 30",
+    author: "Hassan",
+    role: "Co-founder, Lead Engineer",
+    featured: false,
+    illustrationType: "cost",
+    lastModified: "2026-06-30",
+    faqs: [
+      { question: "How much does it cost to migrate off WooCommerce to a custom site?", answer: "$1,500 for a small storefront, $3,500 for a mid-size store with a CMS and blog migration, and $5,000-$10,000 for full headless e-commerce with integrations. Enterprise scope runs past $10,000. The same scope is commonly quoted at $15,000-$25,000+ by traditional agencies." },
+      { question: "Will I lose my SEO rankings during the migration?", answer: "Not if it's done right. The deciding factor is a complete 301 redirect map created before launch. With redirects in place, any traffic dip is usually small and recovers within 1-4 weeks. Without them, stores can lose 40%+ of traffic. Insist that redirects are included, not sold separately." },
+      { question: "Is it cheaper to just fix my WooCommerce hosting instead of migrating?", answer: "If speed is your only issue and your catalog is small, yes, better hosting is the cheaper fix and you should take it. Migration pays off when you're also carrying plugin conflicts, a stack of monthly subscriptions, and a maintenance burden. Removing those recurring costs is usually what tips the math, and the savings start the month you launch." },
+      { question: "Why is an agency quoting me $20,000 for what a freelancer quotes at $6,000?", answer: "Often you're paying for overhead and margin, not extra work. Agencies commonly charge 50-100% more than freelancers for the same scope, and some require an annual retainer minimum on top. A fixed-price shop can deliver the same headless build for $5,000-$10,000 with a written performance guarantee. Ask what's actually different in the deliverables before you pay the premium." },
+      { question: "How long does the migration take and will my store go down?", answer: "A small site takes days to two weeks; a full headless store with integrations takes 4-8 weeks; larger catalogs take longer. Your store never goes down: it stays live and selling the whole time while we build and test the new site on a separate staging setup, and we only switch over once everything is 100% ready. The cutover itself is brief and reversible, so you never lose a day of revenue." },
+    ]
+  },
+  {
     id: "woocommerce-vs-custom-website",
     cardStat: "45 → 90+",
     cardStatLabel: "PageSpeed jump after we rebuilt MyCustomPatches off WooCommerce",

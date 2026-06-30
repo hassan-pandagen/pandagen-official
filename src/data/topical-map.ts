@@ -251,7 +251,7 @@ export const clusters: Cluster[] = [
     pillarHref: '/services/woocommerce',
     entityIds: ['woocommerce', 'wordpress'],
     relatedClusterIds: ['wordpress', 'shopify', 'performance'],
-    postIds: ['woocommerce-vs-custom-website', 'woocommerce-too-slow'],
+    postIds: ['woocommerce-vs-custom-website', 'woocommerce-too-slow', 'woocommerce-migration-cost'],
   },
   {
     id: 'webflow',
@@ -337,7 +337,7 @@ export const clusters: Cluster[] = [
     label: 'Migration (cross-platform)',
     entityIds: ['nextjs'],
     relatedClusterIds: ['wordpress', 'webflow', 'seo-aeo', 'pricing'],
-    postIds: ['will-migrating-hurt-my-seo', 'website-migration-cost-2026'],
+    postIds: ['will-migrating-hurt-my-seo', 'website-migration-cost-2026', 'woocommerce-migration-cost'],
   },
   {
     id: 'seo-aeo',
