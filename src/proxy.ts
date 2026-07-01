@@ -31,7 +31,10 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
+    // Run on HTML pages only. Exclude static assets AND crawler-facing files
+    // (sitemap.xml, robots.txt, llms.txt, ai.txt) so the proxy never touches
+    // what SEO/AI crawlers fetch — mirrors pandapatches' known-good setup.
     matcher: [
-        "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|css|js)$).*)",
+        "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|css|js|xml|txt)$).*)",
     ],
 };

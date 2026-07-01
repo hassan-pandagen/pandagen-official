@@ -44,6 +44,12 @@ next-env.d.ts
 # Claude Code internal files
 .claude/
 
+# Playwright MCP artifacts (screenshots, console logs, page snapshots — local research only)
+.playwright-mcp/
+*.png.playwright
+playwright-report/
+test-results/
+
 # Internal docs and trackers (not for repo)
 *.md
 !README.md
