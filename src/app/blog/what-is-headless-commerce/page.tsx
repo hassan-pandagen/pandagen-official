@@ -289,7 +289,7 @@ export default function WhatIsHeadlessCommercePage() {
                                     <tr className="bg-stone-50">
                                         <td className="border border-stone-300 px-4 py-3 font-medium">PageSpeed score (mobile)</td>
                                         <td data-label="Traditional (Shopify/WooCommerce)" className="border border-stone-300 px-4 py-3">30 to 55</td>
-                                        <td data-label="Headless (Next.js + Shopify API)" className="border border-stone-300 px-4 py-3">95 to 100</td>
+                                        <td data-label="Headless (Next.js + Shopify API)" className="border border-stone-300 px-4 py-3">90+</td>
                                     </tr>
                                     <tr>
                                         <td className="border border-stone-300 px-4 py-3 font-medium">Design flexibility</td>
@@ -317,7 +317,7 @@ export default function WhatIsHeadlessCommercePage() {
 
                         <ComparisonGrid
                             left={{ label: "Traditional / Monolith", items: ["Mobile load 3 to 5 seconds", "PageSpeed 30 to 55 on mobile", "Limited to theme options", "Hosting $30 to $300/month", "Each app adds 100 to 500ms"] }}
-                            right={{ label: "Headless Commerce", items: ["Mobile load 0.8 to 1.2 seconds", "PageSpeed 95 to 100 on mobile", "Fully custom, pixel-perfect", "Hosting $0 to $20/month", "Features built natively, zero bloat"] }}
+                            right={{ label: "Headless Commerce", items: ["Mobile load 0.8 to 1.2 seconds", "PageSpeed 90+ on mobile", "Fully custom, pixel-perfect", "Hosting $0 to $20/month", "Features built natively, zero bloat"] }}
                         />
 
                         <BlogText>
@@ -430,7 +430,7 @@ export default function WhatIsHeadlessCommercePage() {
                             "Nike runs a fully custom headless frontend for nike.com. Their product configurator (Nike By You) would be impossible on a standard e-commerce template.",
                             "Allbirds runs a headless storefront on Next.js with the Shopify Storefront API. The pattern works at scale: pre-built product pages, real-time inventory via GraphQL, Shopify checkout preserved.",
                             "Shopify Hydrogen is Shopify's own headless framework built on React and Remix. It is designed for developers building custom Shopify storefronts without the Liquid theme layer.",
-                            "Smaller brands prove the same model at their scale. We rebuilt MyCustomPatches for Matt Conner from a slow WooCommerce store (42 PageSpeed) to a custom Next.js frontend scoring 97. You do not need to be a billion-dollar brand to benefit from headless architecture."
+                            "Smaller brands prove the same model at their scale. We rebuilt MyCustomPatches for Matt Conner from a slow WooCommerce store (45 PageSpeed) to a custom Next.js frontend scoring 90+. You do not need to be a billion-dollar brand to benefit from headless architecture."
                         ]} />
 
                         <BlogText>
@@ -556,11 +556,11 @@ export default function WhatIsHeadlessCommercePage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>What changes:</strong> The storefront your customers see. It loads in under 1 second. It scores 95 to 100 on PageSpeed. It looks exactly how you want it to look, not how a theme template dictates.
+                            <strong>What changes:</strong> The storefront your customers see. It loads in under 1 second. It scores 90+ on PageSpeed. It looks exactly how you want it to look, not how a theme template dictates.
                         </BlogText>
 
                         <BlogText>
-                            <strong>Our guarantee:</strong> <BlogHighlight>90+ PageSpeed score on mobile or we fix it for free.</BlogHighlight> Our MyCustomPatches rebuild hit 97 on mobile. Every new headless build we ship carries the same guarantee. For the Shopify-specific breakdown see <Link href="/blog/shopify-headless" className="text-cognac hover:underline">our headless Shopify guide</Link>, for the revenue math see <Link href="/blog/shopify-slow-losing-sales" className="text-cognac hover:underline">how much slow Shopify costs per year</Link>, and for the Plus-tier reality check see <Link href="/blog/shopify-plus-still-slow" className="text-cognac hover:underline">why Shopify Plus is still slow</Link>. Comparing to a full custom rebuild? See <Link href="/blog/shopify-vs-custom-website" className="text-cognac hover:underline">Shopify vs custom website</Link> and <Link href="/blog/woocommerce-too-slow" className="text-cognac hover:underline">why WooCommerce stalls at scale</Link>.
+                            <strong>Our guarantee:</strong> <BlogHighlight>90+ PageSpeed score on mobile or we fix it for free.</BlogHighlight> Our MyCustomPatches rebuild hit 90+ on mobile. Every new headless build we ship carries the same guarantee. For the Shopify-specific breakdown see <Link href="/blog/shopify-headless" className="text-cognac hover:underline">our headless Shopify guide</Link>, for the revenue math see <Link href="/blog/shopify-slow-losing-sales" className="text-cognac hover:underline">how much slow Shopify costs per year</Link>, and for the Plus-tier reality check see <Link href="/blog/shopify-plus-still-slow" className="text-cognac hover:underline">why Shopify Plus is still slow</Link>. Comparing to a full custom rebuild? See <Link href="/blog/shopify-vs-custom-website" className="text-cognac hover:underline">Shopify vs custom website</Link> and <Link href="/blog/woocommerce-too-slow" className="text-cognac hover:underline">why WooCommerce stalls at scale</Link>.
                         </BlogText>
 
                         <BlogText>

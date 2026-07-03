@@ -608,6 +608,18 @@ export default function PageContent() {
         </div>
       </section>
 
+      {/* Further Reading — blog cluster links (closes the pillar -> supporting-content loop) */}
+      <section className="py-10 px-6 bg-white border-t border-stone-200">
+        <div className="container mx-auto max-w-4xl">
+          <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-4">Further reading</p>
+          <ul className="space-y-2 text-stone-700">
+            <li>&rarr; <Link href="/blog/wix-migration-cost" className="text-charcoal hover:text-cognac underline underline-offset-2">Wix migration cost: what it really costs to leave Wix</Link></li>
+            <li>&rarr; <Link href="/blog/wix-vs-custom-website" className="text-charcoal hover:text-cognac underline underline-offset-2">Wix vs custom website: the honest comparison</Link></li>
+            <li>&rarr; <Link href="/blog/wix-too-slow" className="text-charcoal hover:text-cognac underline underline-offset-2">Wix too slow? Why it happens and how to fix it</Link></li>
+          </ul>
+        </div>
+      </section>
+
       {/* Related Services — expanded to all platforms via reusable component */}
       <RelatedServicesGrid currentHref="/services/wix" />
 

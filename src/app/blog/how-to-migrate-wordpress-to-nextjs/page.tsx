@@ -205,7 +205,7 @@ export default function MigrateWordPressToNextJSPage() {
                             Before getting into the how, it is worth being clear on why. Businesses migrate WordPress to Next.js for one of three reasons. Understanding which one applies to you affects how you approach the migration.
                         </BlogText>
                         <BlogList items={[
-                            "Speed ceiling: WordPress mobile PageSpeed scores plateau at 65 to 75/100 regardless of optimisation. Next.js sites score 95 to 100/100 natively. If you have spent money on speed optimisation and are still stuck, the platform is the problem.",
+                            "Speed ceiling: WordPress mobile PageSpeed scores plateau at 65 to 75/100 regardless of optimisation. Next.js sites score 90+ natively. If you have spent money on speed optimisation and are still stuck, the platform is the problem.",
                             "SEO stagnation: 56% of WordPress sites fail Google's Core Web Vitals on mobile. Failing Core Web Vitals means a persistent structural ranking disadvantage that no amount of content or backlinks fully overcomes.",
                             "Cost and maintenance burden: WordPress hosting, plugin licences, and maintenance typically cost $10,000 to $20,000 over 3 years. Next.js hosting on Vercel is free. The total cost of ownership drops significantly after the initial migration investment."
                         ]} />
@@ -457,14 +457,14 @@ export default function MigrateWordPressToNextJSPage() {
                                     "Learning curve: None, handled end to end by us",
                                     "Risk: Low. We have done this 6+ times with zero ranking disasters",
                                     "Cost: $8,000 to $35,000 depending on complexity",
-                                    "PageSpeed result: 90+ guaranteed, typically 95 to 100/100 mobile",
+                                    "PageSpeed result: 90+ on mobile, guaranteed in writing",
                                     "Redirect mapping: Automated crawl + manual verification"
                                 ]} />
                             </div>
                         </div>
 
                         <BlogText>
-                            The decision comes down to your technical background and the revenue your site generates. If your site generates $20,000+/month and you're losing rankings to slow Core Web Vitals, a professional migration pays back within months. If you are a developer who wants to learn Next.js by doing a real project, DIY is a legitimate path. Just budget time for the learning curve. To see exactly what 95+ PageSpeed looks like in practice, read our post on <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">achieving 100/100 PageSpeed scores</Link>.
+                            The decision comes down to your technical background and the revenue your site generates. If your site generates $20,000+/month and you're losing rankings to slow Core Web Vitals, a professional migration pays back within months. If you are a developer who wants to learn Next.js by doing a real project, DIY is a legitimate path. Just budget time for the learning curve. To see exactly what 90+ PageSpeed looks like in practice, read our post on <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">achieving 100/100 PageSpeed scores</Link>.
                         </BlogText>
                         <BlogText>
                             Either way, read our post on{" "}

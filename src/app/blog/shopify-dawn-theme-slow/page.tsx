@@ -18,7 +18,7 @@ const QuoteModalButton = lazyLoad(() => import("@/components/ui/QuoteModalButton
 
 export const metadata: Metadata = {
     title: "Shopify Dawn Theme Slow? How We Fixed It From 55 to 95 (2026)",
-    description: "You optimize Dawn to 75. Add one app and it drops to 50. Why the loop never ends and the one approach that stays at 95+.",
+    description: "You optimize Dawn to 75. Add one app and it drops to 50. Why the loop never ends and the one approach that stays at 90+.",
     alternates: {
         canonical: "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow",
     },
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
         title: "Shopify Dawn Theme Slow? How We Fixed It From 55 to 95 (2026)",
-        description: "You optimize Dawn to 75. Add one app and it drops to 50. Why the loop never ends and the one approach that stays at 95+.",
+        description: "You optimize Dawn to 75. Add one app and it drops to 50. Why the loop never ends and the one approach that stays at 90+.",
         type: "article",
         publishedTime: "2026-03-07",
         authors: ["Hassan Jamal"],
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Shopify Dawn Theme Slow? How We Fixed It From 55 to 95 (2026)",
-        description: "You optimize Dawn to 75. Add one app and it drops to 50. Why the loop never ends and the one approach that stays at 95+.",
+        description: "You optimize Dawn to 75. Add one app and it drops to 50. Why the loop never ends and the one approach that stays at 90+.",
     },
 };
 
@@ -47,7 +47,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow#article",
             "headline": "Shopify Dawn Theme Slow? How We Fixed It From 55 to 95 (2026)",
-            "description": "You optimize Dawn to 75. Add one app and it drops to 50. Why the loop never ends and the one approach that stays at 95+.",
+            "description": "You optimize Dawn to 75. Add one app and it drops to 50. Why the loop never ends and the one approach that stays at 90+.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-07T00:00:00-05:00",
             "dateModified": "2026-03-07T00:00:00-05:00",

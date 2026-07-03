@@ -178,7 +178,7 @@ export default function GoogleMarchUpdatePage() {
                         <BlogAuthor
                             date="Apr 1, 2026"
                             readTime="10 min read"
-                            bio="Hassan founded PandaCodeGen in Feb 2026 to build custom-coded websites that load under 1 second and score 95 to 100 on PageSpeed. Six years of WordPress experience before going fully custom. No templates, no bloat, no plugins."
+                            bio="Hassan founded PandaCodeGen in Feb 2026 to build custom-coded websites that load under 1 second and score 90+ on PageSpeed. Six years of WordPress experience before going fully custom. No templates, no bloat, no plugins."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -189,7 +189,7 @@ export default function GoogleMarchUpdatePage() {
                         <BlogList items={[
                             "Google's March 2026 core update tightened LCP from 2.5s to 2.0s and made INP a primary ranking signal. 55% of sites saw ranking changes within two weeks.",
                             "47% of sites with slow Core Web Vitals lost rankings. Small businesses lose an average of $20,172 per year from slow websites.",
-                            "Recovery takes 3 to 6 months. The fastest path forward is rebuilding on a modern framework that scores 95 to 100 on PageSpeed out of the box."
+                            "Recovery takes 3 to 6 months. The fastest path forward is rebuilding on a modern framework that scores 90+ on PageSpeed out of the box."
                         ]} />
                     </div>
 
@@ -385,7 +385,7 @@ export default function GoogleMarchUpdatePage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>Step 4: Consider a migration to a modern framework.</strong> Custom-coded sites built on Next.js consistently score 95 to 100 on PageSpeed with load times under 1 second. That is not a theoretical number. Every site we build hits that benchmark. Our{" "}
+                            <strong>Step 4: Consider a migration to a modern framework.</strong> Custom-coded sites built on Next.js consistently score 90+ on PageSpeed with load times under 1 second. That is not a theoretical number. Every site we build hits that benchmark. Our{" "}
                             <Link href="/services/wordpress-migration?ref=blog/google-march-2026-update" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 WordPress migration service
                             </Link>{" "}
@@ -421,7 +421,7 @@ export default function GoogleMarchUpdatePage() {
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Ready to Future-Proof Your Rankings?</h3>
                         <p className="text-stone-600 mb-6">
-                            Get a free speed audit. We will show you your Core Web Vitals, identify what is slowing you down, and map out the fastest path to a site that scores 95 to 100 on PageSpeed.
+                            Get a free speed audit. We will show you your Core Web Vitals, identify what is slowing you down, and map out the fastest path to a site that scores 90+ on PageSpeed.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
                             Schedule Free Audit <ArrowRight className="w-5 h-5" />

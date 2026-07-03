@@ -384,7 +384,7 @@ export default function DiviThemeSlowPage() {
                         </BlogText>
 
                         <BlogText>
-                            Elegant Themes themselves advised site owners to wait before migrating production sites that use third-party Divi extensions. Real-world Divi 5 sites with the typical plugin stack are still nowhere near the 95 to 100 range that custom-built sites achieve from day one.
+                            Elegant Themes themselves advised site owners to wait before migrating production sites that use third-party Divi extensions. Real-world Divi 5 sites with the typical plugin stack are still nowhere near the 90+ range that custom-built sites achieve from day one.
                         </BlogText>
 
                         <BlogHeader>The Actual Cost of &ldquo;Fixing&rdquo; Divi</BlogHeader>
@@ -477,7 +477,7 @@ export default function DiviThemeSlowPage() {
                         <BlogHeader>What a Custom-Built Site Looks Like Compared to Divi</BlogHeader>
 
                         <BlogList items={[
-                            "Mobile PageSpeed: 95 to 100 on every build vs. Divi's 64 to 78 ceiling",
+                            "Mobile PageSpeed: 90+ on every build vs. Divi's 64 to 78 ceiling",
                             "Load time: under 1 second vs. Divi's 2.5 to 5.8 seconds",
                             "LCP: under 1.2 seconds vs. Divi's 5.8-second average",
                             "CLS: 0.000 vs. Divi's 0.196 (your page stops shifting after it loads)",
@@ -497,7 +497,7 @@ export default function DiviThemeSlowPage() {
                     <div className="my-8 md:my-12 border border-stone-200 rounded-xl p-8 text-center">
                         <p className="text-sm font-semibold uppercase tracking-widest text-cognac mb-3">Done With Divi</p>
                         <h3 className="text-2xl font-bold text-charcoal mb-3">We Migrate Divi Sites to Custom Next.js</h3>
-                        <p className="text-stone-600 mb-6 max-w-lg mx-auto">Your content, your domain, your URLs, all preserved. The new site scores 95 to 100 on PageSpeed and loads in under 1 second. No monthly fees, no plugins, no Divi.</p>
+                        <p className="text-stone-600 mb-6 max-w-lg mx-auto">Your content, your domain, your URLs, all preserved. The new site scores 90+ on PageSpeed and loads in under 1 second. No monthly fees, no plugins, no Divi.</p>
                         <CalModalButton className="inline-flex items-center gap-2 bg-charcoal hover:bg-stone-800 text-white font-bold px-8 py-4 rounded-xl transition-colors">
                             Book a Free Discovery Call
                         </CalModalButton>

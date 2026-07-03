@@ -272,7 +272,7 @@ export default function ElementorKillsSEOPage() {
                             If Google traffic drives your business, here are your options ranked by performance:
                         </BlogText>
                         <BlogList items={[
-                            "Next.js with Tailwind CSS: 95 to 100/100 PageSpeed, zero builder bloat, full design control: the gold standard",
+                            "Next.js with Tailwind CSS: 90+ PageSpeed, zero builder bloat, full design control: the gold standard",
                             "Webflow: Better than Elementor (60 to 75/100 typical), still JavaScript-heavy but manageable",
                             "Clean WordPress theme (no builder): Can reach 70 to 80 without Elementor's overhead",
                             "Elementor with all optimizations: Ceiling of 50 to 60/100, not competitive for modern SEO"
@@ -303,7 +303,7 @@ export default function ElementorKillsSEOPage() {
                             <li><strong>Elementor&apos;s bloat is architectural, not fixable</strong>: The average Elementor site scores 38/100 on mobile because the drag-and-drop framework loads hundreds of kilobytes of unused code on every page.</li>
                             <li><strong>71% of Elementor sites are in Google&apos;s red zone</strong>: Across the Elementor sites we audited, most fail Core Web Vitals, costing them 20 to 30% of organic traffic.</li>
                             <li><strong>Optimization has a ceiling of 50 to 60/100</strong>: Caching plugins and image compression help, but you cannot optimize past Elementor&apos;s built-in DOM bloat and render-blocking CSS.</li>
-                            <li><strong>Migrating to Next.js recovers rankings in 30 to 60 days</strong>: Businesses that switch from Elementor to custom coded sites consistently score 95 to 100/100 and gain 2 to 3x organic traffic within 90 days.</li>
+                            <li><strong>Migrating to Next.js recovers rankings in 30 to 60 days</strong>: Businesses that switch from Elementor to custom coded sites consistently score 90+ and gain 2 to 3x organic traffic within 90 days.</li>
                         </ol>
                     </section>
 

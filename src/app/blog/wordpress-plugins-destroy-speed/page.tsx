@@ -186,7 +186,7 @@ export default function WordPressPluginsSpeedPage() {
                             "Every WordPress plugin adds 2 to 15 HTTP requests, CSS files, and JavaScript to every single page load.",
                             "Sites with 30+ plugins average 35/100 Mobile PageSpeed. Google's red zone for organic rankings.",
                             "You can reduce damage by auditing plugins, but WordPress has a hard performance ceiling of ~75/100.",
-                            "For under 1 second load times and 95+ PageSpeed, a full migration to Next.js is the only reliable path."
+                            "For under 1 second load times and 90+ PageSpeed, a full migration to Next.js is the only reliable path."
                         ]} />
                     </div>
 
@@ -297,7 +297,7 @@ export default function WordPressPluginsSpeedPage() {
                             "Absolute best case WordPress: ~75/100 Mobile, still below Google's 90+ green zone"
                         ]} />
                         <BlogText>
-                            <BlogHighlight>You cannot reach 90+ on WordPress regardless of how many plugins you remove.</BlogHighlight> <a href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">The architecture itself is the limiting factor</a>. To consistently hit 95 to 100, you need <a href="/services/wordpress-migration?ref=blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline">Next.js</a>.
+                            <BlogHighlight>You cannot reach 90+ on WordPress regardless of how many plugins you remove.</BlogHighlight> <a href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">The architecture itself is the limiting factor</a>. To consistently hit 90+, you need <a href="/services/wordpress-migration?ref=blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline">Next.js</a>.
                         </BlogText>
 
                         <BlogHeader>When Is It Time to Stop Optimizing and Migrate?</BlogHeader>
@@ -320,7 +320,7 @@ export default function WordPressPluginsSpeedPage() {
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4">Find Out Which Plugins Are Costing You the Most</h3>
                         <p className="text-stone-600 mb-6">
-                            Free WordPress speed audit: we identify your worst plugins, calculate revenue loss, and show your path to 95+ PageSpeed.
+                            Free WordPress speed audit: we identify your worst plugins, calculate revenue loss, and show your path to 90+ PageSpeed.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Book Free Speed Audit <ArrowRight className="w-5 h-5" /></CalModalButton>
                     </div>
@@ -333,7 +333,7 @@ export default function WordPressPluginsSpeedPage() {
                             <li><strong>30+ plugins typically means a 35/100 PageSpeed score</strong>: That is Google's red zone, actively suppressing your organic rankings and handing traffic to faster competitors.</li>
                             <li><strong>Plugin bloat costs real revenue</strong>: A 4-second load time on a $500K/year business translates to $75K-$150K in lost annual revenue from abandoned visits and lower conversions.</li>
                             <li><strong>Removing half your plugins only gets you to 55-65/100</strong>: You can reduce the damage, but WordPress's hard ceiling of ~75/100 means you will never reach Google's green zone.</li>
-                            <li><strong>Migration is the only path to 95+ PageSpeed</strong>: Once you have removed all non-essential plugins and still score below 70, the platform itself is the bottleneck, not your settings.</li>
+                            <li><strong>Migration is the only path to 90+ PageSpeed</strong>: Once you have removed all non-essential plugins and still score below 70, the platform itself is the bottleneck, not your settings.</li>
                         </ol>
                     </section>
 

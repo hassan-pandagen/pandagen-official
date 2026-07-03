@@ -177,7 +177,7 @@ export default function GoHighLevelMigrationPage() {
                         <BlogAuthor
                             date="Apr 3, 2026"
                             readTime="10 min read"
-                            bio="Hassan builds custom Next.js front ends that score 95 to 100 on PageSpeed. Recent receipt: a chiropractor client went from PageSpeed 23 to 98 and saw a 41% lift in leads. Every build comes with a speed guarantee."
+                            bio="Hassan builds custom Next.js front ends that score 90+ on PageSpeed. Recent receipt: a chiropractor client went from PageSpeed 23 to 90+ and saw a 41% lift in leads. Every build comes with a speed guarantee."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -290,7 +290,7 @@ export default function GoHighLevelMigrationPage() {
                             <Link href="/blog/how-to-achieve-100-pagespeed" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 how to achieve 100 on PageSpeed
                             </Link>{" "}
-                            explains why a 95+ score makes such a measurable difference in ad performance and organic traffic.
+                            explains why a 90+ score makes such a measurable difference in ad performance and organic traffic.
                         </BlogText>
 
                         <BlogText>
@@ -372,7 +372,7 @@ export default function GoHighLevelMigrationPage() {
 
                         <BlogList items={[
                             "Page load time under 1 second on mobile and desktop. Not 10 to 30 seconds. Under one second.",
-                            "Google PageSpeed score of 90+ guaranteed, typically 95 to 100 on every page.",
+                            "Google PageSpeed score of 90+ guaranteed on every page.",
                             "Google Ads Quality Score of 7 to 10 instead of 2 to 4. Lower cost per click, better ad positions, more leads for the same budget.",
                             "Forms that submit directly into your GoHighLevel CRM. Same automations, same pipelines, same workflows. Zero disruption.",
                             "Full control over your design. No template limitations. No GHL editor restrictions. Your site looks exactly the way you want it to look.",
@@ -407,7 +407,7 @@ export default function GoHighLevelMigrationPage() {
 
                         <BlogList items={[
                             "$1,500 (Starter) total. Fixed price. Not per page. Not plus hourly billing. One quoted price for the whole project.",
-                            "30% upfront ($450 on Starter), the rest after the site is live and you've tested everything. If it does not score 95+ on Google PageSpeed, you do not pay the balance.",
+                            "30% upfront ($450 on Starter), the rest after the site is live and you've tested everything. If it does not score 90+ on Google PageSpeed, you do not pay the balance.",
                             "No monthly platform fees for your website. You currently pay $297 per month for GHL Unlimited. You will still use GHL for CRM and automations, but you will no longer need GHL for your website. That is up to $3,564 per year you stop spending on a slow website builder.",
                             "The timeline is 3 to 4 weeks from kickoff to launch. We handle everything. You review the design, give feedback, and approve the final build."
                         ]} />
@@ -431,7 +431,7 @@ export default function GoHighLevelMigrationPage() {
                                 <li><strong>GHL websites score 35 to 47 on mobile PageSpeed</strong>: A blank page scores 80. The platform uses shared infrastructure, injects unused fonts, and has no staging environment. No optimization setting fixes this.</li>
                                 <li><strong>Slow GHL pages destroy your ad ROI</strong>: Google Ads Quality Scores of 2 to 4 out of 10 mean you pay 70% more per click. A business spending $3,000/month on ads wastes roughly $14,400 per year on inflated click costs.</li>
                                 <li><strong>You do not have to leave GoHighLevel</strong>: Keep GHL for CRM, automations, pipelines, and email. Replace only the website front end. Your forms still feed into GHL. Nothing changes on the backend.</li>
-                                <li><strong>A custom front end loads under 1 second and scores 95+</strong>: Quality Scores jump to 7 to 10. Conversion rates improve because visitors actually see your page before they leave.</li>
+                                <li><strong>A custom front end loads under 1 second and scores 90+</strong>: Quality Scores jump to 7 to 10. Conversion rates improve because visitors actually see your page before they leave.</li>
                                 <li><strong>Starter starts at $1,500 with a speed guarantee</strong>: 3 to 4 weeks, fixed price, 30% upfront and the rest after launch. If it does not score 90+, you do not pay the balance.</li>
                             </ol>
                         </section>
@@ -441,7 +441,7 @@ export default function GoHighLevelMigrationPage() {
                     <div className="bg-charcoal rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
                         <h3 className="text-2xl font-bold mb-4 text-white">Ready to Fix Your GHL Website Speed?</h3>
                         <p className="text-stone-300 mb-6">
-                            Get a free speed audit. We will run your GHL site through PageSpeed, show you the exact bottlenecks, and map out what a 95+ scoring front end looks like for your business. Keep GHL for everything it does well. Just replace the slow website.
+                            Get a free speed audit. We will run your GHL site through PageSpeed, show you the exact bottlenecks, and map out what a 90+ scoring front end looks like for your business. Keep GHL for everything it does well. Just replace the slow website.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-white text-charcoal font-bold rounded-full hover:bg-stone-100 transition-all">
                             Schedule Free Audit <ArrowRight className="w-5 h-5" />

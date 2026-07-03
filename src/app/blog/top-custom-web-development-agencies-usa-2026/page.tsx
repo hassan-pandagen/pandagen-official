@@ -969,7 +969,7 @@ export default function TopWebDevAgenciesPage() {
                             {[
                                 {
                                     q: "1. What framework will you build on and what Google PageSpeed Mobile score will the finished site achieve?",
-                                    a: "Wrong answer: 'We use WordPress and optimize for performance.' Correct answer: a specific framework and a specific score commitment. Next.js sites consistently score 95 to 100. WordPress sites top out at 65 to 80 with full optimization."
+                                    a: "Wrong answer: 'We use WordPress and optimize for performance.' Correct answer: a specific framework and a specific score commitment. Next.js sites consistently score 90+. WordPress sites top out at 65 to 80 with full optimization."
                                 },
                                 {
                                     q: "2. Can you share the PageSpeed scores for three sites you delivered in the last 12 months?",
@@ -1013,7 +1013,7 @@ export default function TopWebDevAgenciesPage() {
 
                         <p className="font-bold text-charcoal text-lg mt-6 mb-2">Tech stack and performance ceiling</p>
                         <BlogText>
-                            The framework an agency builds on determines the performance ceiling of your site. WordPress and Drupal top out at 65 to 80 on Google PageSpeed Mobile regardless of how much optimization is applied. Next.js consistently delivers 95 to 100. The gap has a measurable impact on Google rankings and conversion rates. Ask for the specific score on a delivered site, not a general claim about performance focus.
+                            The framework an agency builds on determines the performance ceiling of your site. WordPress and Drupal top out at 65 to 80 on Google PageSpeed Mobile regardless of how much optimization is applied. Next.js consistently delivers 90+. The gap has a measurable impact on Google rankings and conversion rates. Ask for the specific score on a delivered site, not a general claim about performance focus.
                         </BlogText>
 
                         <p className="font-bold text-charcoal text-lg mt-6 mb-2">Independent verified reviews</p>

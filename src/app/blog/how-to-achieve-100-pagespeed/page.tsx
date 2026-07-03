@@ -17,14 +17,14 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "How to Hit a 90+ PageSpeed Score (Our Exact 8-Step Process)",
-    description: "Most sites score 35 to 55 on PageSpeed. We hit 90+ every build, often 95+. The exact 8-step process, with real before/after data.",
+    description: "Most sites score 35 to 55 on PageSpeed. We hit 90+ every build. The exact 8-step process, with real before/after data.",
     alternates: {
         canonical: '/blog/how-to-achieve-100-pagespeed',
     },
     keywords: ["90+ PageSpeed score", "Core Web Vitals optimization", "Next.js PageSpeed score", "website speed optimization 2026", "how to improve PageSpeed score", "Google PageSpeed Insights guide", "fix slow website"],
     openGraph: {
         title: "How to Hit a 90+ PageSpeed Score (Our Exact 8-Step Process)",
-        description: "Most sites score 35 to 55 on PageSpeed. We hit 90+ every build, often 95+. The exact 8-step process, with real before/after data.",
+        description: "Most sites score 35 to 55 on PageSpeed. We hit 90+ every build. The exact 8-step process, with real before/after data.",
         type: "article",
         publishedTime: "2026-02-17T00:00:00-05:00",
         authors: ["Hassan Jamal"],
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "How to Hit a 90+ PageSpeed Score (Our Exact 8-Step Process)",
-        description: "Most sites score 35 to 55 on PageSpeed. We hit 90+ every build, often 95+. The exact 8-step process, with real before/after data.",
+        description: "Most sites score 35 to 55 on PageSpeed. We hit 90+ every build. The exact 8-step process, with real before/after data.",
     },
 };
 
@@ -45,7 +45,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed#article",
             "headline": "How to Hit a 90+ PageSpeed Score (Our Exact 8-Step Process)",
-            "description": "Most sites score 35 to 55 on PageSpeed. We hit 90+ every build, often 95+. The exact 8-step process, with real before/after data.",
+            "description": "Most sites score 35 to 55 on PageSpeed. We hit 90+ every build. The exact 8-step process, with real before/after data.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-17T00:00:00-05:00",
             "dateModified": "2026-02-17T00:00:00-05:00",
@@ -107,7 +107,7 @@ const articleSchema = {
             "@id": "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed#webpage",
             "url": "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed",
             "name": "How to Hit a 90+ PageSpeed Score (Our Exact 8-Step Process)",
-            "description": "Most sites score 35 to 55 on PageSpeed. We hit 90+ every build, often 95+. The exact 8-step process, with real before/after data.",
+            "description": "Most sites score 35 to 55 on PageSpeed. We hit 90+ every build. The exact 8-step process, with real before/after data.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-17T00:00:00-05:00",
@@ -176,7 +176,7 @@ export default function AchievePageSpeedPage() {
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            Eight engineering steps. Every client build clears 90+ on Mobile, and most land in the high 90s. No plugins, no guesswork, no templates.
+                            Eight engineering steps. Every client build clears 90+ on Mobile. No plugins, no guesswork, no templates.
                         </p>
 
                         <BlogAuthor
@@ -198,7 +198,7 @@ export default function AchievePageSpeedPage() {
                         <BlogList items={[
                             "Google PageSpeed score directly affects your rankings. Sites below 70 lose 20-30% of organic traffic.",
                             "WordPress can reach 60-75 max. To reliably hit 90+, you need modern architecture (Next.js, React).",
-                            "We use 8 specific optimizations to land a 90+ score (most builds hit the high 90s) on every client site.",
+                            "We use 8 specific optimizations to land a 90+ score on every client site.",
                             "Result: Higher rankings, lower bounce rate, 8% more conversions per 0.1s speed improvement."
                         ]} />
                     </div>
@@ -222,7 +222,7 @@ export default function AchievePageSpeedPage() {
                         </BlogText>
 
                         <BlogText>
-                            This guide shows you the exact 8-step process we use to reliably land a 90+ PageSpeed score on every client site, with most builds settling in the high 90s. No magic. Just engineering.
+                            This guide shows you the exact 8-step process we use to reliably land a 90+ PageSpeed score on every client site. No magic. Just engineering.
                         </BlogText>
 
                         <BlogText>
@@ -344,7 +344,7 @@ export default function AchievePageSpeedPage() {
                         ]} />
 
                         <BlogQuote>
-                            The pattern is consistent: Move from WordPress/Shopify to Next.js with these 8 optimizations → 90+ PageSpeed score (usually high 90s) → 2-4× more traffic within 90 days.
+                            The pattern is consistent: Move from WordPress/Shopify to Next.js with these 8 optimizations → 90+ PageSpeed score → 2-4× more traffic within 90 days.
                         </BlogQuote>
 
                         {/* Mid-Article CTA */}
@@ -572,10 +572,10 @@ export default function AchievePageSpeedPage() {
                             <BlogHighlight>The bigger issue: You need to rebuild your entire site on Next.js first.</BlogHighlight> Optimization comes after migration. If you're on WordPress, you can't apply these techniques.
                         </BlogText>
 
-                        <BlogHeader>What Is the Professional Path to a Guaranteed 90+ PageSpeed Score (Typically 95+)?</BlogHeader>
+                        <BlogHeader>What Is the Professional Path to a Guaranteed 90+ PageSpeed Score?</BlogHeader>
 
                         <BlogText>
-                            We've built 6+ Next.js sites. Every single one clears 90+ on PageSpeed Mobile, with most landing in the high 90s.
+                            We've built 6+ Next.js sites. Every single one clears 90+ on PageSpeed Mobile.
                         </BlogText>
 
                         <BlogText>
@@ -658,7 +658,7 @@ export default function AchievePageSpeedPage() {
                         <BlogList items={[
                             "We migrate your site to Next.js 16 (4-6 weeks)",
                             "All 8 optimizations included in standard build",
-                            "Guaranteed 90+ PageSpeed score (typically high 90s)",
+                            "Guaranteed 90+ PageSpeed score",
                             "Zero downtime, zero SEO loss",
                             "You focus on business while we handle technical work"
                         ]} />

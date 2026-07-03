@@ -134,7 +134,7 @@ const articleSchema = {
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://x.com/PandaCodeGen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158", "https://www.goodfirms.co/company/pandacodegen", "https://www.crunchbase.com/organization/pandacodegen", "https://www.designrush.com/agency/profile/pandacodegen", "https://www.sortlist.com/agency/pandacodegen", "https://www.f6s.com/pandacodegen", "https://www.sanity.io/exchange/community/pandacodegen", "https://www.behance.net/pandacodegen", "https://dev.to/pandacodegen", "https://www.reddit.com/user/PandaCodeGen/"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites for businesses leaving Squarespace, WordPress, and Webflow. Every build scores 95 to 100 on Google PageSpeed with no monthly platform fees.",
+            "description": "PandaCodeGen builds custom Next.js websites for businesses leaving Squarespace, WordPress, and Webflow. Every build scores 90+ on Google PageSpeed with no monthly platform fees.",
             "areaServed": "Worldwide",
             "foundingDate": "2026",
             "email": "info@pandacodegen.com"
@@ -187,7 +187,7 @@ export default function SquarespaceMinCostPage() {
                         <BlogAuthor
                             date="Apr 9, 2026"
                             readTime="11 min read"
-                            bio="Hassan founded PandaCodeGen in Feb 2026 and builds custom Next.js sites that score 95 to 100 on Google PageSpeed. Recent rebuild: Obare Magazine migrated from Wix to Next.js and Sanity in 7 days. Six years of WordPress experience prior to going fully custom."
+                            bio="Hassan founded PandaCodeGen in Feb 2026 and builds custom Next.js sites that score 90+ on Google PageSpeed. Recent rebuild: Obare Magazine migrated from Wix to Next.js and Sanity in 7 days. Six years of WordPress experience prior to going fully custom."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -787,7 +787,7 @@ export default function SquarespaceMinCostPage() {
                     <BlogAuthor
                         date="Apr 9, 2026"
                         readTime="11 min read"
-                        bio="Hassan founded PandaCodeGen in Feb 2026 and builds custom Next.js sites that score 95 to 100 on Google PageSpeed. Recent rebuild: Obare Magazine migrated from Wix to Next.js and Sanity in 7 days. Six years of WordPress experience prior to going fully custom."
+                        bio="Hassan founded PandaCodeGen in Feb 2026 and builds custom Next.js sites that score 90+ on Google PageSpeed. Recent rebuild: Obare Magazine migrated from Wix to Next.js and Sanity in 7 days. Six years of WordPress experience prior to going fully custom."
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                     />
 

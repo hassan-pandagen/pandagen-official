@@ -178,7 +178,7 @@ export default function WebflowMigrationCostPage() {
                         <BlogAuthor
                             date="Mar 25, 2026"
                             readTime="10 min read"
-                            bio="Hassan founded PandaCodeGen in Feb 2026 after six years of WordPress work. Recent migration: Obare Magazine, Wix to Next.js and Sanity, 7-day rebuild to 98 Mobile PageSpeed. Every build scores 95 to 100 on Google PageSpeed."
+                            bio="Hassan founded PandaCodeGen in Feb 2026 after six years of WordPress work. Recent migration: Obare Magazine, Wix to Next.js and Sanity, 7-day rebuild with Mobile PageSpeed in the 90s. Every build scores 90+ on Google PageSpeed."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -195,8 +195,8 @@ export default function WebflowMigrationCostPage() {
                             "A 50 to 100 page Webflow site is $5,000 to $10,000 at PandaCodeGen's fixed Scale pricing. Typical agencies charge $12,000 to $20,000 for the same scope, on retainers with no published price.",
                             "Page count is only one factor. Custom animations, CMS collections, e-commerce, and API integrations each add cost.",
                             "Most businesses spending $100+/month on Webflow recover migration costs within 12 to 18 months through hosting savings and improved SEO.",
-                            "Webflow sites score 55 to 75 on Google PageSpeed Mobile. Custom Next.js sites score 95 to 100. The gap costs you real rankings.",
-                            "Real result: in our Wix to Next.js rebuild for Obare Magazine, mobile PageSpeed jumped from the 40s to 98 on a 7-day turnaround. Same content, same scope, a fraction of the typical agency price."
+                            "Webflow sites score 55 to 75 on Google PageSpeed Mobile. Custom Next.js sites score 90+. The gap costs you real rankings.",
+                            "Real result: in our Wix to Next.js rebuild for Obare Magazine, mobile PageSpeed jumped from the 40s into the 90s on a 7-day turnaround. Same content, same scope, a fraction of the typical agency price."
                         ]} />
                     </div>
 
@@ -610,7 +610,7 @@ export default function WebflowMigrationCostPage() {
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">Webflow sites score 55 to 75 on Google PageSpeed Mobile. Custom Next.js sites score 95 to 100. That 20 to 40 point gap is a direct ranking factor. Google uses Core Web Vitals in its algorithm, and sites with faster scores consistently outrank slower competitors on the same keywords.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Webflow sites score 55 to 75 on Google PageSpeed Mobile. Custom Next.js sites score 90+. That gap is a direct ranking factor. Google uses Core Web Vitals in its algorithm, and sites with faster scores consistently outrank slower competitors on the same keywords.</p>
                         </div>
 
                         <BlogText>
@@ -618,11 +618,11 @@ export default function WebflowMigrationCostPage() {
                         </BlogText>
 
                         <BlogText>
-                            Webflow sites score <BlogHighlight>55 to 75 on Google PageSpeed Mobile</BlogHighlight>. Custom Next.js sites score 95 to 100. That 20 to 40 point gap is not cosmetic. Google uses Core Web Vitals as a direct ranking factor. Sites that score higher rank higher for the same keywords.
+                            Webflow sites score <BlogHighlight>55 to 75 on Google PageSpeed Mobile</BlogHighlight>. Custom Next.js sites score 90+. That gap is not cosmetic. Google uses Core Web Vitals as a direct ranking factor. Sites that score higher rank higher for the same keywords.
                         </BlogText>
 
                         <BlogText>
-                            In our recent Wix to Next.js rebuild for Obare Magazine, mobile PageSpeed jumped from the 40s to 98 in a 7-day turnaround. The same performance ceiling applies when leaving Webflow: the platform caps what Core Web Vitals you can hit, and the uplift typically shows up in organic traffic within 90 days of launch.
+                            In our recent Wix to Next.js rebuild for Obare Magazine, mobile PageSpeed jumped from the 40s into the 90s in a 7-day turnaround. The same performance ceiling applies when leaving Webflow: the platform caps what Core Web Vitals you can hit, and the uplift typically shows up in organic traffic within 90 days of launch.
                         </BlogText>
 
                         <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
@@ -640,7 +640,7 @@ export default function WebflowMigrationCostPage() {
                                     <tr className="hover:bg-stone-50">
                                         <td className="p-3 border border-stone-300">Mobile PageSpeed</td>
                                         <td data-label="Webflow" className="p-3 border border-stone-300 text-amber-700 font-medium">55 to 75</td>
-                                        <td data-label="Custom Next.js" className="p-3 border border-stone-300 text-green-700 font-medium">95 to 100</td>
+                                        <td data-label="Custom Next.js" className="p-3 border border-stone-300 text-green-700 font-medium">90+</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
                                         <td className="p-3 border border-stone-300">Typical load time (mobile)</td>

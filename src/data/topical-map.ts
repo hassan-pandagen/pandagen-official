@@ -270,7 +270,7 @@ export const clusters: Cluster[] = [
     pillarHref: '/services/wix',
     entityIds: ['wix', 'nextjs'],
     relatedClusterIds: ['webflow', 'squarespace', 'custom'],
-    postIds: ['wix-too-slow', 'wix-vs-custom-website'],
+    postIds: ['wix-too-slow', 'wix-vs-custom-website', 'wix-migration-cost'],
   },
   {
     id: 'squarespace',

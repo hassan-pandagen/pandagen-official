@@ -189,7 +189,7 @@ export default function WebflowUserAccountsSunset2026Page() {
                         <BlogAuthor
                             date="Apr 22, 2026"
                             readTime="13 min read"
-                            bio="Hassan builds custom-coded websites for businesses that have outgrown their platforms. Every site scores 95 to 100 on PageSpeed, loads in under 1 second, and costs $0 per month to host."
+                            bio="Hassan builds custom-coded websites for businesses that have outgrown their platforms. Every site scores 90+ on PageSpeed, loads in under 1 second, and costs $0 per month to host."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>

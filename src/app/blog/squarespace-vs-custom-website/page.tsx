@@ -19,7 +19,7 @@ export const dynamic = "force-static";
 
 export const metadata: Metadata = {
     title: "Squarespace vs Custom Website in 2026: Which Is Better for SEO?",
-    description: "Squarespace caps at 30 to 55 on mobile PageSpeed. Custom Next.js hits 95 to 100. Honest cost, speed, and SEO comparison for 2026.",
+    description: "Squarespace caps at 30 to 55 on mobile PageSpeed. Custom Next.js hits 90+. Honest cost, speed, and SEO comparison for 2026.",
     alternates: {
         canonical: "/blog/squarespace-vs-custom-website",
     },
@@ -212,7 +212,7 @@ export default function SquarespaceVsCustomWebsitePage() {
                         <BlogAuthor
                             date="Apr 14, 2026"
                             readTime="12 min read"
-                            bio="Hassan is the founder of PandaCodeGen, a custom Next.js studio building sites that score 95 to 100 on Google PageSpeed. Recent rebuild: Obare Magazine, Wix to Next.js and Sanity, 7 days. No templates. No page builders. No recurring platform fees."
+                            bio="Hassan is the founder of PandaCodeGen, a custom Next.js studio building sites that score 90+ on Google PageSpeed. Recent rebuild: Obare Magazine, Wix to Next.js and Sanity, 7 days. No templates. No page builders. No recurring platform fees."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -228,11 +228,11 @@ export default function SquarespaceVsCustomWebsitePage() {
                             "Squarespace is built for creative professionals who value design. The problem starts when that beautiful design loads in 5 to 7 seconds on mobile and your competitors load in under 1 second.",
                             "Every extension you add (scheduling, email marketing, e-commerce) is a separate SaaS subscription that injects JavaScript and slows your site further. Your $29/month plan quietly becomes $80 to $150/month.",
                             "Squarespace limits schema markup, locks your design to the platform, charges 3% transaction fees on Business plan sales, and exports only blog XML. Not images, not forms, not products, not your design.",
-                            "A custom Next.js website scores 95 to 100 on PageSpeed, costs $0 to $20/month to host on Vercel, and you own every line of code. For businesses spending $80+/month on Squarespace, custom code is cheaper by year 2."
+                            "A custom Next.js website scores 90+ on PageSpeed, costs $0 to $20/month to host on Vercel, and you own every line of code. For businesses spending $80+/month on Squarespace, custom code is cheaper by year 2."
                         ]} />
                     </div>
 
-                    <p className="text-stone-700 leading-relaxed mb-6">A custom website is better than Squarespace for SEO in 2026. Squarespace scores 45 to 70 on Mobile PageSpeed due to render-blocking JavaScript and template overhead. Custom Next.js sites score 95 to 100. Google's Core Web Vitals algorithm directly rewards faster sites with higher rankings. For most businesses, the switch pays back in organic traffic within 3 to 6 months.</p>
+                    <p className="text-stone-700 leading-relaxed mb-6">A custom website is better than Squarespace for SEO in 2026. Squarespace scores 45 to 70 on Mobile PageSpeed due to render-blocking JavaScript and template overhead. Custom Next.js sites score 90+. Google's Core Web Vitals algorithm directly rewards faster sites with higher rankings. For most businesses, the switch pays back in organic traffic within 3 to 6 months.</p>
 
                     <div className="space-y-8">
 
@@ -354,7 +354,7 @@ export default function SquarespaceVsCustomWebsitePage() {
                             "Schema markup is auto-generated and cannot be edited. Squarespace does not support FAQ, JobPosting, Recipe, or other rich result schema types natively. Adding them requires custom code injection, which adds more JavaScript.",
                             "You cannot edit or remove the auto-generated structured data. If Squarespace generates incorrect schema for your page type, you are stuck with it.",
                             "The sitemap is auto-generated with limited customization. You cannot prioritize high-value pages or exclude thin content without workarounds.",
-                            "Core Web Vitals scores are capped at 30 to 55 on mobile because of the mandatory platform JavaScript bundle (200 to 400KB). Google uses Core Web Vitals as a ranking signal. A competitor scoring 95 has a permanent structural advantage.",
+                            "Core Web Vitals scores are capped at 30 to 55 on mobile because of the mandatory platform JavaScript bundle (200 to 400KB). Google uses Core Web Vitals as a ranking signal. A competitor scoring 90+ has a permanent structural advantage.",
                             "No server-side rendering control. You cannot implement dynamic meta tags, conditional redirects, or custom API routes that advanced SEO strategies require."
                         ]} />
 
@@ -397,7 +397,7 @@ export default function SquarespaceVsCustomWebsitePage() {
                         </BlogText>
 
                         <BlogText>
-                            A custom Next.js site ships 40 to 80KB of JavaScript per page. Pages are pre-built at deploy time. Nothing runs on the server when a visitor arrives. The browser downloads a lightweight HTML file and paints it immediately. That is why custom sites score 95 to 100 on the same test where Squarespace scores 30 to 55.
+                            A custom Next.js site ships 40 to 80KB of JavaScript per page. Pages are pre-built at deploy time. Nothing runs on the server when a visitor arrives. The browser downloads a lightweight HTML file and paints it immediately. That is why custom sites score 90+ on the same test where Squarespace scores 30 to 55.
                         </BlogText>
 
                         <BlogText>
@@ -442,7 +442,7 @@ export default function SquarespaceVsCustomWebsitePage() {
 
                         <div className="grid gap-4 my-8">
                             {[
-                                { icon: Zap, title: "95 to 100/100 PageSpeed on mobile", desc: "Your portfolio loads in under 1 second. Every image is served in WebP or AVIF format at exactly the right dimensions. No platform JavaScript overhead. Your work appears instantly on any device." },
+                                { icon: Zap, title: "90+ PageSpeed on mobile", desc: "Your portfolio loads in under 1 second. Every image is served in WebP or AVIF format at exactly the right dimensions. No platform JavaScript overhead. Your work appears instantly on any device." },
                                 { icon: Palette, title: "Design that evolves with your brand", desc: "Redesign without rebuilding content. Change your entire visual identity in a day. No template restrictions. No manual page-by-page reconstruction. The design layer is separate from your content." },
                                 { icon: DollarSign, title: "Hosting starts free on Vercel", desc: "Vercel's free tier handles most portfolio and business sites. You only scale to $20/month when your business grows past free tier limits. No platform fees. No extension subscriptions. No transaction fees." },
                                 { icon: Lock, title: "You own every line of code", desc: "Source code in your GitHub repository from day one. Fire us and hire any developer. Move to any host. Your site is a portable asset, not a subscription you rent." },
@@ -460,7 +460,7 @@ export default function SquarespaceVsCustomWebsitePage() {
                         </div>
 
                         <BlogText>
-                            For a real example of what custom code enables at scale, look at MyCustomPatches, the WooCommerce e-commerce store we rebuilt for Matt Conner into a headless Next.js platform. It now runs on roughly $25/month in total tooling, down from a four-figure monthly WordPress + plugin stack. And we recently rebuilt Obare Magazine off Wix into a Next.js and Sanity stack in a 7-day turnaround, proving the same methodology travels across every template-based platform.
+                            For a real example of what custom code enables at scale, look at MyCustomPatches, the WooCommerce e-commerce store we rebuilt for Matt Conner into a custom Next.js storefront. Hosting went from $150 a month to $0, and PageSpeed from 45 to 90+. And we recently rebuilt Obare Magazine off Wix into a Next.js and Sanity stack in a 7-day turnaround, proving the same methodology travels across every template-based platform.
                         </BlogText>
 
                         {/* === SECTION 8: When to STAY === */}
@@ -561,7 +561,7 @@ export default function SquarespaceVsCustomWebsitePage() {
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
                                         <td className="p-3 border border-stone-300 font-bold">PageSpeed Score</td>
                                         <td data-label="Squarespace (3 years)" className="p-3 border border-stone-300 font-bold text-red-600">30 to 55 (mobile)</td>
-                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-300 font-bold text-green-700">95 to 100 (mobile)</td>
+                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-300 font-bold text-green-700">90+ (mobile)</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
                                         <td className="p-3 border border-stone-300 font-bold">Code Ownership</td>
@@ -582,7 +582,7 @@ export default function SquarespaceVsCustomWebsitePage() {
                         <BlogList items={[
                             "Week 1: Discovery call. We audit your Squarespace site, run PageSpeed, inventory every page and portfolio item, map all URLs for 301 redirects, and identify scheduling, e-commerce, and form integrations that need rebuilding.",
                             "Week 2 to 3: Build. We rebuild your site in Next.js. Every portfolio image gets a custom pipeline (WebP/AVIF, responsive sizing, lazy loading). Booking, contact forms, and e-commerce are built natively. No third-party scripts. You review on a staging URL.",
-                            "Week 4: QA and launch. We test every page, verify all redirects, confirm PageSpeed scores are 95+, and execute a zero-downtime DNS cutover. Your Squarespace site stays live until the new one is fully verified.",
+                            "Week 4: QA and launch. We test every page, verify all redirects, confirm PageSpeed scores are 90+, and execute a zero-downtime DNS cutover. Your Squarespace site stays live until the new one is fully verified.",
                             "Day 1 to 30 post-launch: We monitor Google Search Console for ranking changes, fix any crawl issues, and confirm all rankings have held or improved. 30 days of post-launch support included."
                         ]} />
 
@@ -598,7 +598,7 @@ export default function SquarespaceVsCustomWebsitePage() {
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
                             <li><strong>Squarespace excels at design.</strong> If your site is a digital business card and you do not depend on Google search traffic, it is a solid choice. Stay.</li>
                             <li><strong>Every extension adds cost and slows your site.</strong> A $29/month plan quickly becomes $80 to $200/month when you add scheduling, email, e-commerce, and review widgets. Each one injects JavaScript that hurts your PageSpeed.</li>
-                            <li><strong>The PageSpeed ceiling is 30 to 55 on mobile.</strong> Squarespace loads 200 to 400KB of platform JavaScript on every page. No optimization can remove it. Custom Next.js sites score 95 to 100.</li>
+                            <li><strong>The PageSpeed ceiling is 30 to 55 on mobile.</strong> Squarespace loads 200 to 400KB of platform JavaScript on every page. No optimization can remove it. Custom Next.js sites score 90+.</li>
                             <li><strong>You cannot switch templates or fully export your content.</strong> Design changes require manual rebuilding. Content export gives you XML of blog posts only. Images, products, forms, and design stay locked in.</li>
                             <li><strong>For businesses spending $80+/month on Squarespace, custom code is cheaper by year 2.</strong> And the site is 3 to 5 times faster with no transaction fees, no extension subscriptions, and full code ownership.</li>
                         </ol>

@@ -195,7 +195,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
                             name="Hassan Jamal"
                             date="May 13, 2026"
                             readTime="16 min read"
-                            bio="Hassan builds custom Next.js frontends for GoHighLevel agencies that need ad-grade speed and full code ownership. Sites score 95 to 100 on Google PageSpeed Mobile while staying connected to GHL for CRM, pipelines, and automations."
+                            bio="Hassan builds custom Next.js frontends for GoHighLevel agencies that need ad-grade speed and full code ownership. Sites score 90+ on Google PageSpeed Mobile while staying connected to GHL for CRM, pipelines, and automations."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -220,7 +220,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
                             "For local web design resellers: SiteSwan at $199 per month gives you the prospecting tools to find local clients.",
                             "For mid-market managed services: Duda Agency at $52 per month balances design freedom and per-site economics.",
                             "For design-led brand work: Webflow delivers the visual ceiling, with caveats on uptime and per-site fees.",
-                            "For premium clients running serious ad spend: Custom Next.js at $1,500 once beats every recurring builder on 3-year cost while delivering 95+ PageSpeed."
+                            "For premium clients running serious ad spend: Custom Next.js at $1,500 once beats every recurring builder on 3-year cost while delivering 90+ PageSpeed."
                         ]} />
                     </div>
 
@@ -314,7 +314,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
                                 <tr><td className="p-3 font-bold text-charcoal border border-stone-300">SiteSwan</td><td className="p-3 text-stone-600 border border-stone-300">Local SMB resellers</td><td className="p-3 text-stone-600 border border-stone-300">Webhook + Zapier</td><td className="p-3 text-right text-stone-600 border border-stone-300">40 to 65</td><td className="p-3 text-center text-stone-600 border border-stone-300">Full</td><td className="p-3 text-right font-bold text-cognac border border-stone-300">$199 per month</td></tr>
                                 <tr className="bg-stone-50"><td className="p-3 font-bold text-charcoal border border-stone-300">Duda</td><td className="p-3 text-stone-600 border border-stone-300">Managed mid-market</td><td className="p-3 text-stone-600 border border-stone-300">Webhook + Zapier</td><td className="p-3 text-right text-stone-600 border border-stone-300">60 to 80</td><td className="p-3 text-center text-stone-600 border border-stone-300">Full ($149)</td><td className="p-3 text-right font-bold text-cognac border border-stone-300">$19 per month</td></tr>
                                 <tr><td className="p-3 font-bold text-charcoal border border-stone-300">Webflow</td><td className="p-3 text-stone-600 border border-stone-300">Design-forward brands</td><td className="p-3 text-stone-600 border border-stone-300">Webhook + Zapier</td><td className="p-3 text-right text-stone-600 border border-stone-300">65 to 85</td><td className="p-3 text-center text-stone-600 border border-stone-300">No</td><td className="p-3 text-right font-bold text-cognac border border-stone-300">$15 per month</td></tr>
-                                <tr className="bg-cognac/5"><td className="p-3 font-bold text-charcoal border border-stone-300">Custom Next.js</td><td className="p-3 text-stone-600 border border-stone-300">Premium ad-spend clients</td><td className="p-3 text-stone-600 border border-stone-300">Direct API + webhooks</td><td className="p-3 text-right font-bold text-charcoal border border-stone-300">95 to 100</td><td className="p-3 text-center font-bold text-charcoal border border-stone-300">Full</td><td className="p-3 text-right font-bold text-cognac border border-stone-300">$1,500 once</td></tr>
+                                <tr className="bg-cognac/5"><td className="p-3 font-bold text-charcoal border border-stone-300">Custom Next.js</td><td className="p-3 text-stone-600 border border-stone-300">Premium ad-spend clients</td><td className="p-3 text-stone-600 border border-stone-300">Direct API + webhooks</td><td className="p-3 text-right font-bold text-charcoal border border-stone-300">90+</td><td className="p-3 text-center font-bold text-charcoal border border-stone-300">Full</td><td className="p-3 text-right font-bold text-cognac border border-stone-300">$1,500 once</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -478,7 +478,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
 
                     <h3 id="custom-performance" className="text-xl font-bold text-charcoal mt-6 mb-3">Performance, SEO, and AI Search Advantages</h3>
                     <BlogText>
-                        Custom Next.js sites load in under 1 second on mobile and routinely score 95 to 100 on PageSpeed. Server-side rendering means search engines see fully formed HTML with proper schema markup, which translates to faster indexing and better organic rankings. The same SSR-rendered HTML is what AI search engines (ChatGPT, Perplexity, Google AI Mode) cite when answering user questions, so custom-coded sites get cited at meaningfully higher rates than template-built sites.
+                        Custom Next.js sites load in under 1 second on mobile and routinely score 90+ on PageSpeed. Server-side rendering means search engines see fully formed HTML with proper schema markup, which translates to faster indexing and better organic rankings. The same SSR-rendered HTML is what AI search engines (ChatGPT, Perplexity, Google AI Mode) cite when answering user questions, so custom-coded sites get cited at meaningfully higher rates than template-built sites.
                     </BlogText>
 
                     <h3 id="custom-flexibility" className="text-xl font-bold text-charcoal mt-6 mb-3">Total Flexibility, Zero Ceilings</h3>
@@ -504,7 +504,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
                                 <tr><td className="p-3 font-bold text-charcoal border border-stone-300">Custom CSS or JS</td><td className="p-3 text-stone-600 border border-stone-300">Limited, sandboxed</td><td className="p-3 text-charcoal border border-stone-300">Full control, any framework</td></tr>
                                 <tr className="bg-stone-50"><td className="p-3 font-bold text-charcoal border border-stone-300">Database access</td><td className="p-3 text-stone-600 border border-stone-300">None, locked to builder</td><td className="p-3 text-charcoal border border-stone-300">Full Supabase, Postgres, anything</td></tr>
                                 <tr><td className="p-3 font-bold text-charcoal border border-stone-300">Custom backend logic</td><td className="p-3 text-stone-600 border border-stone-300">Webhooks only</td><td className="p-3 text-charcoal border border-stone-300">Full server-side API routes</td></tr>
-                                <tr className="bg-stone-50"><td className="p-3 font-bold text-charcoal border border-stone-300">PageSpeed ceiling</td><td className="p-3 text-stone-600 border border-stone-300">40 to 80 mobile</td><td className="p-3 text-charcoal border border-stone-300">95+ guaranteed</td></tr>
+                                <tr className="bg-stone-50"><td className="p-3 font-bold text-charcoal border border-stone-300">PageSpeed ceiling</td><td className="p-3 text-stone-600 border border-stone-300">40 to 80 mobile</td><td className="p-3 text-charcoal border border-stone-300">90+ guaranteed</td></tr>
                                 <tr><td className="p-3 font-bold text-charcoal border border-stone-300">Code ownership</td><td className="p-3 text-stone-600 border border-stone-300">None, rent forever</td><td className="p-3 text-charcoal border border-stone-300">100% yours forever</td></tr>
                             </tbody>
                         </table>
@@ -554,7 +554,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
                     </div>
 
                     <BlogText>
-                        Custom Next.js at $1,500 once beats every recurring builder except GHL Native on 3-year cost, while delivering 95+ PageSpeed (vs 25 to 85 for the builders) and full code ownership.
+                        Custom Next.js at $1,500 once beats every recurring builder except GHL Native on 3-year cost, while delivering 90+ PageSpeed (vs 25 to 85 for the builders) and full code ownership.
                     </BlogText>
 
                     {/* How to Choose */}

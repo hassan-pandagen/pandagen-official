@@ -19,7 +19,7 @@ export const dynamic = "force-static";
 
 export const metadata: Metadata = {
     title: "Wix vs Custom Website in 2026: Which Ranks Better on Google?",
-    description: "Wix caps at 35 to 55 on mobile PageSpeed. Custom Next.js hits 95 to 100. Real 3-year cost, SEO ceiling, and when to stay or switch. Honest breakdown.",
+    description: "Wix caps at 35 to 55 on mobile PageSpeed. Custom Next.js hits 90+. Real 3-year cost, SEO ceiling, and when to stay or switch. Honest breakdown.",
     alternates: {
         canonical: "/blog/wix-vs-custom-website",
     },
@@ -58,7 +58,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wix-vs-custom-website#article",
             "headline": "Wix vs Custom Website in 2026: Which Ranks Better on Google?",
-            "description": "Wix scores 35 to 55 on mobile PageSpeed. Custom sites score 95 to 100. But Wix is free to start and easy to use. Here is the real cost, speed, and SEO comparison with honest advice on when to stay and when to switch.",
+            "description": "Wix scores 35 to 55 on mobile PageSpeed. Custom sites score 90+. But Wix is free to start and easy to use. Here is the real cost, speed, and SEO comparison with honest advice on when to stay and when to switch.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-13T00:00:00-05:00",
             "dateModified": "2026-05-06T00:00:00-05:00",
@@ -213,7 +213,7 @@ export default function WixVsCustomWebsitePage() {
                         <BlogAuthor
                             date="Apr 13, 2026"
                             readTime="12 min read"
-                            bio="Hassan is the founder of PandaCodeGen. Recent work: Obare Magazine rebuilt off Wix into Next.js and Sanity in 7 days. Every build scores 95 to 100 on Google PageSpeed. No templates. No page builders. No recurring platform fees."
+                            bio="Hassan is the founder of PandaCodeGen. Recent work: Obare Magazine rebuilt off Wix into Next.js and Sanity in 7 days. Every build scores 90+ on Google PageSpeed. No templates. No page builders. No recurring platform fees."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -229,11 +229,11 @@ export default function WixVsCustomWebsitePage() {
                             "Wix works for personal sites and small portfolios. The problems start when your business depends on Google rankings, booking systems, or e-commerce that actually converts.",
                             "Every third-party app you add from the Wix App Market injects JavaScript that slows your site. You cannot remove the platform JavaScript. The speed ceiling is 35 to 55 on mobile PageSpeed.",
                             "Wix has no content export feature. If you decide to leave, your pages, images, and blog posts must be manually extracted. Your design cannot be taken with you at all.",
-                            "A custom Next.js website scores 95 to 100 on PageSpeed, costs $0 to $20/month to host on Vercel, and you own every line of code. The upfront cost is higher, but the 3-year total cost is lower for any business spending $100+/month on Wix and apps."
+                            "A custom Next.js website scores 90+ on PageSpeed, costs $0 to $20/month to host on Vercel, and you own every line of code. The upfront cost is higher, but the 3-year total cost is lower for any business spending $100+/month on Wix and apps."
                         ]} />
                     </div>
 
-                    <p className="text-stone-700 leading-relaxed mb-6">A custom website ranks better than Wix on Google in 2026. Wix sites average 45 to 65 on Mobile PageSpeed and fail Core Web Vitals at a higher rate than custom sites. Google's ranking algorithm uses Core Web Vitals as a tiebreaker. Custom Next.js sites score 95 to 100 and consistently outrank Wix competitors in the same niche within 60 to 90 days of launch.</p>
+                    <p className="text-stone-700 leading-relaxed mb-6">A custom website ranks better than Wix on Google in 2026. Wix sites average 45 to 65 on Mobile PageSpeed and fail Core Web Vitals at a higher rate than custom sites. Google's ranking algorithm uses Core Web Vitals as a tiebreaker. Custom Next.js sites score 90+ and consistently outrank Wix competitors in the same niche within 60 to 90 days of launch.</p>
 
                     <div className="space-y-8">
 
@@ -399,7 +399,7 @@ export default function WixVsCustomWebsitePage() {
                         </BlogText>
 
                         <BlogText>
-                            A custom Next.js site ships 40 to 80KB of JavaScript per page. That is 80 to 90% less. The browser has less to download, less to parse, and less to execute. That is why custom sites score 95 to 100 on the same test where Wix scores 35 to 55.
+                            A custom Next.js site ships 40 to 80KB of JavaScript per page. That is 80 to 90% less. The browser has less to download, less to parse, and less to execute. That is why custom sites score 90+ on the same test where Wix scores 35 to 55.
                         </BlogText>
 
                         <BlogText>
@@ -448,7 +448,7 @@ export default function WixVsCustomWebsitePage() {
 
                         <div className="grid gap-4 my-8">
                             {[
-                                { icon: Zap, title: "95 to 100/100 PageSpeed on mobile", desc: "Pages pre-built at deploy time. No server rendering on each visit. No platform JavaScript. Your site loads in under 1 second on any device, anywhere in the world." },
+                                { icon: Zap, title: "90+ PageSpeed on mobile", desc: "Pages pre-built at deploy time. No server rendering on each visit. No platform JavaScript. Your site loads in under 1 second on any device, anywhere in the world." },
                                 { icon: DollarSign, title: "Hosting starts free on Vercel", desc: "Vercel's free tier handles most business sites. You only scale to $20/month when your business grows past free tier limits. Compare that to Wix's $17 to $49/month platform fee plus app costs." },
                                 { icon: Lock, title: "You own the code", desc: "The source code lives in your GitHub repository. Fire us and hire any developer in the world. Move to any hosting provider. No lock-in. No export limitations. The code is yours from day one." },
                                 { icon: CheckCircle2, title: "No app fees", desc: "Every feature Wix charges an app for (booking, forms, reviews, chat, SEO) gets built into the code once. No monthly subscriptions. No iframe overhead. No third-party JavaScript slowing your site." },
@@ -466,7 +466,7 @@ export default function WixVsCustomWebsitePage() {
                         </div>
 
                         <BlogText>
-                            For a real example of what this looks like in production, see MyCustomPatches, the WooCommerce e-commerce store we rebuilt for Matt Conner into a headless Next.js platform that now runs on roughly $25/month in total tooling costs, down from a four-figure monthly WordPress + plugin stack.
+                            For a real example of what this looks like in production, see MyCustomPatches, the WooCommerce e-commerce store we rebuilt for Matt Conner into a custom Next.js storefront. Hosting went from $150 a month to $0, PageSpeed from 45 to 90+, and page load from 3.2 seconds to 0.7.
                         </BlogText>
 
                         {/* === SECTION 7: When to STAY === */}
@@ -565,7 +565,7 @@ export default function WixVsCustomWebsitePage() {
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
                                         <td className="p-3 border border-stone-300 font-bold">PageSpeed Score</td>
                                         <td data-label="Wix (3 years)" className="p-3 border border-stone-300 font-bold text-red-600">35 to 55 (mobile)</td>
-                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-300 font-bold text-green-700">95 to 100 (mobile)</td>
+                                        <td data-label="Custom Next.js (3 years)" className="p-3 border border-stone-300 font-bold text-green-700">90+ (mobile)</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
                                         <td className="p-3 border border-stone-300 font-bold">Code Ownership</td>
@@ -594,7 +594,7 @@ export default function WixVsCustomWebsitePage() {
                         <BlogList items={[
                             "Week 1: Discovery call. We audit your Wix site, run PageSpeed, inventory every page and blog post, map all URLs for 301 redirects, and identify which features (booking, forms, e-commerce) need to be rebuilt.",
                             "Week 2 to 3: Build. We rebuild your site in Next.js with the same content, improved design, and all features built natively (no apps, no iframes, no third-party scripts). You review progress on a staging URL.",
-                            "Week 4: QA and launch. We test every page, verify all redirects, confirm PageSpeed scores are 95+, and execute a zero-downtime DNS cutover. Your old Wix site stays live until the new one is fully verified.",
+                            "Week 4: QA and launch. We test every page, verify all redirects, confirm PageSpeed scores are 90+, and execute a zero-downtime DNS cutover. Your old Wix site stays live until the new one is fully verified.",
                             "Day 1 to 30 post-launch: We monitor Google Search Console for any ranking fluctuations, fix any crawl issues, and confirm all rankings have held or improved. 30 days of post-launch support is included on every project."
                         ]} />
 

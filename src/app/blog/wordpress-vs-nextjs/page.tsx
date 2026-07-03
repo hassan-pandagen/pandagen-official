@@ -17,7 +17,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "WordPress vs Next.js in 2026: Which Is Faster and Cheaper?",
-    description: "WordPress vs Next.js 2026: speed, SEO, cost, security compared with real data. Next.js scores 95-100, WordPress 35-65. Full breakdown inside.",
+    description: "WordPress vs Next.js 2026: speed, SEO, cost, security compared with real data. Next.js scores 90+, WordPress 35-65. Full breakdown inside.",
     alternates: {
         canonical: '/blog/wordpress-vs-nextjs',
     },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
         title: "WordPress vs Next.js in 2026: Speed and Cost Comparison",
-        description: "WordPress vs Next.js 2026: speed, SEO, cost, security compared with real data. Next.js scores 95-100, WordPress 35-65. Full breakdown inside.",
+        description: "WordPress vs Next.js 2026: speed, SEO, cost, security compared with real data. Next.js scores 90+, WordPress 35-65. Full breakdown inside.",
         type: "article",
         publishedTime: "2026-03-11",
         authors: ["Hassan Jamal"],
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "WordPress vs Next.js in 2026: Speed and Cost Comparison",
-        description: "WordPress vs Next.js 2026: speed, SEO, cost, security compared with real data. Next.js scores 95-100, WordPress 35-65. Full breakdown inside.",
+        description: "WordPress vs Next.js 2026: speed, SEO, cost, security compared with real data. Next.js scores 90+, WordPress 35-65. Full breakdown inside.",
     },
 };
 
@@ -46,7 +46,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-vs-nextjs#article",
             "headline": "WordPress vs Next.js in 2026: Which Is Faster and Cheaper?",
-            "description": "WordPress vs Next.js 2026: speed, SEO, cost, security compared with real data. Next.js scores 95-100, WordPress 35-65. Full breakdown inside.",
+            "description": "WordPress vs Next.js 2026: speed, SEO, cost, security compared with real data. Next.js scores 90+, WordPress 35-65. Full breakdown inside.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-11T00:00:00-05:00",
             "dateModified": "2026-05-06T00:00:00-05:00",
@@ -189,7 +189,7 @@ export default function WordPressVsNextJSPage() {
 
                     {/* Executive Summary */}
                     <div className="bg-cognac/5 border-l-4 border-cognac p-5 mb-6 rounded-r-lg" data-speakable="true">
-                        <p className="text-sm text-charcoal leading-relaxed"><strong>Is Next.js better than WordPress in 2026?</strong> For business sites that depend on Google rankings or conversions, yes. Next.js sites score 95 to 100 on mobile PageSpeed. WordPress caps at 35 to 65. Next.js hosts for $0 to $20 per month on Vercel. WordPress costs $150 to $400 per month on Kinsta or WP Engine. For personal blogs or simple brochure sites with no traffic dependency, WordPress is still fine.</p>
+                        <p className="text-sm text-charcoal leading-relaxed"><strong>Is Next.js better than WordPress in 2026?</strong> For business sites that depend on Google rankings or conversions, yes. Next.js sites score 90+ on mobile PageSpeed. WordPress caps at 35 to 65. Next.js hosts for $0 to $20 per month on Vercel. WordPress costs $150 to $400 per month on Kinsta or WP Engine. For personal blogs or simple brochure sites with no traffic dependency, WordPress is still fine.</p>
                     </div>
 
                     <div data-speakable="true" className="bg-stone-50 border border-stone-200 rounded-xl p-6 mb-10">
@@ -199,7 +199,7 @@ export default function WordPressVsNextJSPage() {
                         </p>
                     </div>
 
-                    <p className="text-stone-700 leading-relaxed mb-6">Next.js is faster and cheaper than WordPress over 3 years. WordPress scores 35 to 65 on Mobile PageSpeed. Next.js scores 95 to 100. WordPress costs $400 to $800 per month in hosting, plugins, and maintenance. Next.js on Vercel costs $0 per month after a one-time build fee. For most business sites, switching saves $12,000 to $25,000 over 3 years.</p>
+                    <p className="text-stone-700 leading-relaxed mb-6">Next.js is faster and cheaper than WordPress over 3 years. WordPress scores 35 to 65 on Mobile PageSpeed. Next.js scores 90+. WordPress costs $400 to $800 per month in hosting, plugins, and maintenance. Next.js on Vercel costs $0 per month after a one-time build fee. For most business sites, switching saves $12,000 to $25,000 over 3 years.</p>
 
                     {/* Real Buyer Voices — verified Reddit threads */}
                     <div className="my-8 p-5 bg-stone-50 border border-stone-200 rounded-2xl">
@@ -294,7 +294,7 @@ export default function WordPressVsNextJSPage() {
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-stone-600">PageSpeed Mobile (avg)</td>
                                         <td data-label="WordPress (avg)" className="px-4 py-3 text-red-600 font-medium">38 to 65/100</td>
-                                        <td data-label="Next.js (PandaCodeGen)" className="px-4 py-3 text-green-700 font-medium">95 to 100/100</td>
+                                        <td data-label="Next.js (PandaCodeGen)" className="px-4 py-3 text-green-700 font-medium">90+/100</td>
                                     </tr>
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">PageSpeed ceiling (optimised)</td>
@@ -577,7 +577,7 @@ export default function WordPressVsNextJSPage() {
                             {[
                                 { step: "01", title: "Discovery & Audit", desc: "We crawl your existing site, map every URL, document your current rankings, Core Web Vitals scores, and all inbound links. This becomes the baseline we protect." },
                                 { step: "02", title: "Architecture & Design", desc: "We design your new site architecture in Next.js, plan the URL structure, and map any changed URLs to 301 redirects. Your content strategy and internal linking are preserved in full." },
-                                { step: "03", title: "Build & Optimise", desc: "We build your site in Next.js with all 8 performance optimisations built into the standard process. Every page targets 95 to 100/100 mobile PageSpeed before launch." },
+                                { step: "03", title: "Build & Optimise", desc: "We build your site in Next.js with all 8 performance optimisations built into the standard process. Every page targets 90+ mobile PageSpeed before launch." },
                                 { step: "04", title: "QA & Launch", desc: "We test every redirect, verify all metadata transferred correctly, confirm Core Web Vitals pass, and execute a zero-downtime launch. Your old site remains live until the new one is fully verified." },
                                 { step: "05", title: "Post-Launch SEO Monitoring", desc: "We submit your new sitemap to Google Search Console, monitor ranking changes for 30 days, and fix any crawl issues that emerge. Rankings typically recover within 30 to 60 days and then improve." },
                             ].map(({ step, title, desc }) => (

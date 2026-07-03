@@ -179,7 +179,7 @@ export default function CloudflareEmdashPage() {
                         <BlogAuthor
                             date="Apr 4, 2026"
                             readTime="10 min read"
-                            bio="Hassan builds custom-coded websites for businesses stuck on slow WordPress sites. Every site scores 95 to 100 on PageSpeed, loads in under 1 second, and costs $0 per month to host. No templates, no plugins, no bloat."
+                            bio="Hassan builds custom-coded websites for businesses stuck on slow WordPress sites. Every site scores 90+ on PageSpeed, loads in under 1 second, and costs $0 per month to host. No templates, no plugins, no bloat."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -490,7 +490,7 @@ export default function CloudflareEmdashPage() {
                             </Link>{" "}
                             takes 4 to 6 weeks from start to launch. We handle the entire process: design, build, content transfer, redirects, DNS, and post-launch monitoring. Your existing SEO equity is preserved with proper 301 redirects. And every site we deliver scores{" "}
                             <Link href="/services/custom-engineering?ref=blog/cloudflare-emdash-wordpress-replacement" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                95 to 100 on Google PageSpeed
+                                90+ on Google PageSpeed
                             </Link>, guaranteed.
                         </BlogText>
 
@@ -515,7 +515,7 @@ export default function CloudflareEmdashPage() {
                     <div className="bg-charcoal rounded-2xl p-8 mt-6 md:mt-10 mb-16 text-center">
                         <h3 className="text-2xl font-bold mb-4 text-white">Ready to Leave WordPress Behind?</h3>
                         <p className="text-stone-300 mb-6">
-                            You do not need to wait for Emdash to mature. Get a free speed audit. We will show you your current PageSpeed score, identify your plugin vulnerabilities, and map out the fastest path to a site that scores 95+ and loads in under 1 second.
+                            You do not need to wait for Emdash to mature. Get a free speed audit. We will show you your current PageSpeed score, identify your plugin vulnerabilities, and map out the fastest path to a site that scores 90+ and loads in under 1 second.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-white text-charcoal font-bold rounded-full hover:bg-stone-100 transition-all">
                             Schedule Free Audit <ArrowRight className="w-5 h-5" />

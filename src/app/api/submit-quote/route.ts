@@ -1,7 +1,13 @@
 import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Lazy-init: a module-level `new Resend(...)` throws during `next build`
+// page-data collection when RESEND_API_KEY is absent locally.
+let resendClient: Resend | null = null;
+function getResend(): Resend {
+  if (!resendClient) resendClient = new Resend(process.env.RESEND_API_KEY);
+  return resendClient;
+}
 
 // Escape HTML special characters to prevent injection in email templates
 function escHtml(str: string | null | undefined): string {
@@ -134,7 +140,7 @@ export async function POST(request: NextRequest) {
     const safeLanding = escHtml(landingPage);
 
     // Send email via Resend
-    const response = await resend.emails.send({
+    const response = await getResend().emails.send({
       from: process.env.RESEND_FROM_EMAIL || 'noreply@pandagen.com',
       to: 'info@pandacodegen.com',
       replyTo: email,

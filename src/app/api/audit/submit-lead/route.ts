@@ -2,7 +2,14 @@ import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import type { PageSpeedResult } from '@/lib/audit/pagespeed';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Lazy-init: creating the client at module level breaks `next build` when
+// RESEND_API_KEY is absent locally (build-time page-data collection evaluates
+// this module). Instantiate on first request instead.
+let resendClient: Resend | null = null;
+function getResend(): Resend {
+    if (!resendClient) resendClient = new Resend(process.env.RESEND_API_KEY);
+    return resendClient;
+}
 
 const fmt = (n: number) => n >= 1000 ? `${(n / 1000).toFixed(1)}s` : `${Math.round(n)}ms`;
 
@@ -184,7 +191,7 @@ export async function POST(request: NextRequest) {
     const issueCount = failCount + warnCount;
 
     // 1. Send confirmation email to the user (NOT the full report — Hassan sends that manually within 24h)
-    await resend.emails.send({
+    await getResend().emails.send({
       from: fromEmail,
       to: email,
       subject: `Your optimization report is being prepared. Expect it within 24 business hours.`,
@@ -194,7 +201,7 @@ export async function POST(request: NextRequest) {
     // 2. Send lead notification to business owner (full technical details + geo) — Hassan uses this to prepare the Gamma PDF + Loom
     // Goes to AUDIT_NOTIFY_EMAIL (a real inbox you read) if set, else the send-from address.
     const notifyEmail = process.env.AUDIT_NOTIFY_EMAIL || fromEmail;
-    await resend.emails.send({
+    await getResend().emails.send({
       from: fromEmail,
       to: notifyEmail,
       subject: `NEW AUDIT LEAD — prepare report within 24h: ${perfScore}/100 | ${auditData.platformDetected} | ${geo.country} | ${email}`,

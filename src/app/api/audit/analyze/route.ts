@@ -4,7 +4,13 @@ import { runPageSpeedAnalysis } from '@/lib/audit/pagespeed';
 import { runDeepChecks } from '@/lib/audit/deepChecks';
 import type { PageSpeedResult } from '@/lib/audit/pagespeed';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Lazy-init: a module-level `new Resend(...)` throws during `next build`
+// page-data collection when RESEND_API_KEY is absent locally.
+let resendClient: Resend | null = null;
+function getResend(): Resend {
+  if (!resendClient) resendClient = new Resend(process.env.RESEND_API_KEY);
+  return resendClient;
+}
 
 // In-memory dedup cache. Lives as long as the serverless function stays warm.
 // Good enough for early phase. Prevents accidental double-fires from refresh/retry.
@@ -132,7 +138,7 @@ export async function POST(request: NextRequest) {
       const notifyEmail = process.env.AUDIT_NOTIFY_EMAIL || fromEmail;
       if (fromEmail && notifyEmail && process.env.RESEND_API_KEY) {
         const subject = `[AUDIT USED] ${pageSpeedResult.performanceScore}/100 | ${pageSpeedResult.platformDetected} | ${geo.country} | ${normalizedUrl}`;
-        resend.emails
+        getResend().emails
           .send({
             from: fromEmail,
             to: notifyEmail,

@@ -11,7 +11,7 @@ interface ShopifyKillerProps {
 // Lower "badValue" = Shopify worse. Higher "goodValue" = Custom better.
 const comparisonMetrics = [
   { metric: "Load Speed",   shopifyLabel: "3-5s",       customLabel: "< 1s",         shopifyPct: 25, customPct: 98, shopifyIsBad: true,  icon: Gauge },
-  { metric: "Mobile Score", shopifyLabel: "30-50",      customLabel: "95+",          shopifyPct: 40, customPct: 95, shopifyIsBad: true,  icon: Smartphone },
+  { metric: "Mobile Score", shopifyLabel: "30-50",      customLabel: "90+",          shopifyPct: 40, customPct: 90, shopifyIsBad: true,  icon: Smartphone },
   { metric: "Monthly Fees", shopifyLabel: "$1,255/mo",  customLabel: "$22/mo",       shopifyPct: 100, customPct: 2,  shopifyIsBad: true,  icon: DollarSign },
   { metric: "Checkout",     shopifyLabel: "Generic",    customLabel: "Custom Logic", shopifyPct: 40, customPct: 100, shopifyIsBad: true,  icon: CreditCard },
   { metric: "Design",       shopifyLabel: "Template",   customLabel: "Fully Custom", shopifyPct: 35, customPct: 100, shopifyIsBad: true,  icon: ShoppingCart },

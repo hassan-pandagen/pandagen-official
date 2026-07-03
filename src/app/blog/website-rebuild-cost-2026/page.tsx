@@ -197,7 +197,7 @@ export default function WebsiteRebuildCost2026Page() {
                         <BlogAuthor
                             date="Apr 19, 2026 (updated May 5)"
                             readTime="16 min read"
-                            bio="Hassan runs PandaCodeGen, a custom web development studio that rebuilds slow or outdated sites on Next.js. Every rebuild is fixed-price, ships in 2 to 6 weeks, and guarantees 90+ on Google PageSpeed Mobile in writing, typically 95 to 100."
+                            bio="Hassan runs PandaCodeGen, a custom web development studio that rebuilds slow or outdated sites on Next.js. Every rebuild is fixed-price, ships in 2 to 6 weeks, and guarantees 90+ on Google PageSpeed Mobile in writing."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>

@@ -220,8 +220,8 @@ export default function SquarespaceToSlowPage() {
                                 "The cause is a mandatory JavaScript bundle that loads on every page regardless of content",
                                 "No Squarespace setting or third-party tool removes this bundle. The ceiling is 55 to 65 even fully optimized",
                                 "Poor Core Web Vitals directly cost rankings when competing sites perform better",
-                                "A custom Next.js build delivers 95 to 100 on mobile and LCP under 1.2 seconds",
-                                "Real result: we rebuilt an Austin photographer off Squarespace onto Next.js in 9 days. PageSpeed went 44 to 98, LCP 5.2s to 0.8s, and she climbed from position 11 to 3 on her primary keyword in 47 days",
+                                "A custom Next.js build delivers 90+ on mobile and LCP under 1.2 seconds",
+                                "Real result: we rebuilt an Austin photographer off Squarespace onto Next.js in 9 days. PageSpeed went from 44 into the 90s, LCP 5.2s to 0.8s, and she climbed from position 11 to 3 on her primary keyword in 47 days",
                             ].map((item) => (
                                 <li key={item} className="flex items-start gap-2 text-sm text-stone-700">
                                     <CheckCircle2 className="w-4 h-4 text-violet-500 mt-0.5 shrink-0" />
@@ -277,7 +277,7 @@ export default function SquarespaceToSlowPage() {
                                         ["Squarespace (optimized)", "50 to 65", "3 to 5 seconds", "Mild penalty"],
                                         ["Webflow", "55 to 75", "2 to 4 seconds", "Mild penalty"],
                                         ["WordPress + Elementor", "25 to 50", "5 to 10 seconds", "Heavy penalty"],
-                                        ["Custom Next.js", "95 to 100", "0.6 to 1.2 seconds", "Advantage"],
+                                        ["Custom Next.js", "90+", "0.6 to 1.2 seconds", "Advantage"],
                                     ].map(([platform, score, lcp, impact]) => (
                                         <tr key={platform} className="border border-stone-100 hover:bg-stone-50">
                                             <td className="p-3 text-stone-700 font-medium">{platform}</td>
@@ -361,7 +361,7 @@ export default function SquarespaceToSlowPage() {
                         </div>
 
                         <BlogText>
-                            For businesses in competitive local markets, this gap is material. A law firm, photographer, consultant, or local service business on Squarespace is competing against WordPress sites with optimized themes and Next.js sites with 95+ scores. Google uses the performance gap as a tiebreaker. On a page-2-to-page-1 keyword, that tiebreaker often determines whether you rank at position 8 or position 12.
+                            For businesses in competitive local markets, this gap is material. A law firm, photographer, consultant, or local service business on Squarespace is competing against WordPress sites with optimized themes and Next.js sites with 90+ scores. Google uses the performance gap as a tiebreaker. On a page-2-to-page-1 keyword, that tiebreaker often determines whether you rank at position 8 or position 12.
                         </BlogText>
 
                         <BlogHeader>Half Your Mobile Visitors Leave Before The Headline Loads</BlogHeader>
@@ -409,7 +409,7 @@ export default function SquarespaceToSlowPage() {
                             If your business depends on organic search traffic, the only fix that eliminates the Squarespace speed penalty is migrating to a platform that does not have the architectural constraint. Custom Next.js is the standard solution.
                         </BlogText>
                         <BlogText>
-                            Next.js pre-renders every page at build time. When a visitor loads your homepage, the server sends pre-built static HTML. There is no JavaScript bundle that needs to execute before content appears. No database query happens on the request. Images are automatically served in the optimal format and size for the visitor&apos;s device. The result is LCP under 1.2 seconds and mobile PageSpeed scores of 95 to 100.
+                            Next.js pre-renders every page at build time. When a visitor loads your homepage, the server sends pre-built static HTML. There is no JavaScript bundle that needs to execute before content appears. No database query happens on the request. Images are automatically served in the optimal format and size for the visitor&apos;s device. The result is LCP under 1.2 seconds and mobile PageSpeed scores of 90+.
                         </BlogText>
                         <BlogText>
                             The difference is not a 10-point improvement. It is moving from a range where Google applies a performance penalty to a range where Google gives you a performance advantage.
@@ -417,12 +417,12 @@ export default function SquarespaceToSlowPage() {
 
                         <div className="my-6 p-5 bg-cognac/5 border border-cognac/20 rounded-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">Real Receipt: Photography Portfolio</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">A photographer in Austin was booking $8,000/month from search on her Squarespace site. After a Webflow competitor launched nearby, she dropped from position 6 to 11 on her primary keyword in 90 days. We rebuilt her on Next.js in 9 days: PageSpeed 44 to 98, LCP 5.2s to 0.8s. She hit position 3 in 47 days. Bookings stabilized at $11,200 average by month four.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">A photographer in Austin was booking $8,000/month from search on her Squarespace site. After a Webflow competitor launched nearby, she dropped from position 6 to 11 on her primary keyword in 90 days. We rebuilt her on Next.js in 9 days: PageSpeed from 44 into the 90s, LCP 5.2s to 0.8s. She hit position 3 in 47 days. Bookings stabilized at $11,200 average by month four.</p>
                         </div>
 
                         <BlogText>
                             That pattern is typical. Sites that migrate from Squarespace to custom Next.js typically see{" "}
-                            <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">PageSpeed scores reach 97 to 100</Link> within the first week of launch.
+                            <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">PageSpeed scores reach 90+</Link> within the first week of launch.
                         </BlogText>
 
                         <h3 className="text-xl font-bold text-charcoal mt-2">Framer: A Middle Ground Worth Knowing About</h3>

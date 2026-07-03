@@ -131,7 +131,7 @@ const articleSchema = {
             "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "description": "PandaCodeGen builds custom Next.js websites for businesses migrating from Wix, WordPress, Webflow, Squarespace, and Shopify. All sites score 95 to 100 on Google PageSpeed or you do not pay.",
+            "description": "PandaCodeGen builds custom Next.js websites for businesses migrating from Wix, WordPress, Webflow, Squarespace, and Shopify. All sites score 90+ on Google PageSpeed or you do not pay.",
             "foundingDate": "2026",
             "areaServed": "Worldwide",
             "email": "info@pandacodegen.com",
@@ -208,7 +208,7 @@ export default function WixTooSlowPage() {
                         role="Lead Full-Stack Engineer"
                         date="April 6, 2026"
                         readTime="12 min read"
-                        bio="Hassan migrates businesses off Wix, WordPress, and Webflow onto custom Next.js sites that score 95 to 100 on Google PageSpeed. Recent rebuild: Obare Magazine off Wix onto Next.js and Sanity. Six years of WordPress experience before launching PandaCodeGen."
+                        bio="Hassan migrates businesses off Wix, WordPress, and Webflow onto custom Next.js sites that score 90+ on Google PageSpeed. Recent rebuild: Obare Magazine off Wix onto Next.js and Sanity. Six years of WordPress experience before launching PandaCodeGen."
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                     />
                     </div>
@@ -222,9 +222,9 @@ export default function WixTooSlowPage() {
                             <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-amber-400 mt-0.5 shrink-0" /><span>Wix average LCP: 6.8 seconds. Google requirement: under 2.5 seconds.</span></li>
                             <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-amber-400 mt-0.5 shrink-0" /><span>48% of Wix sites fail Core Web Vitals assessment entirely.</span></li>
                             <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-amber-400 mt-0.5 shrink-0" /><span>Wix loads 200 to 400KB of JavaScript before your content. You cannot remove it.</span></li>
-                            <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-amber-400 mt-0.5 shrink-0" /><span>Best-case Wix mobile score: 83/100. Custom Next.js baseline: 95 to 100.</span></li>
+                            <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-amber-400 mt-0.5 shrink-0" /><span>Best-case Wix mobile score: 83/100. Custom Next.js baseline: 90+.</span></li>
                             <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-amber-400 mt-0.5 shrink-0" /><span>Every 2-second mobile delay: 87% cart abandonment rate.</span></li>
-                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" /><span>Real result: we rebuilt Obare Magazine off Wix onto a Next.js frontend with Sanity in a 7-day turnaround. Mobile PageSpeed went from the 50s-60s to 95-100, LCP from over 4 seconds to under 1.</span></li>
+                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" /><span>Real result: we rebuilt Obare Magazine off Wix onto a Next.js frontend with Sanity in a 7-day turnaround. Mobile PageSpeed went from the 50s-60s into the 90s, LCP from over 4 seconds to under 1.</span></li>
                         </ul>
                     </div>
 
@@ -264,7 +264,7 @@ export default function WixTooSlowPage() {
                         The platform average for Wix sites on Google PageSpeed Insights (mobile) is 83 out of 100 in 2025, according to Wix's own published performance data. That 83 figure represents heavily optimized Wix sites. Most Wix websites, without significant optimization effort, score between 50 and 65 on mobile. Unoptimized sites with video backgrounds, multiple third-party app embeds, and large image galleries regularly score 40 to 50.
                     </BlogText>
                     <BlogText>
-                        For comparison: the gold standard for web performance is 90 and above. Custom Next.js sites built with static generation consistently score 95 to 100. Not because of clever tricks. Because the underlying architecture generates minimal JavaScript and serves pre-rendered HTML.
+                        For comparison: the gold standard for web performance is 90 and above. Custom Next.js sites built with static generation consistently score 90+. Not because of clever tricks. Because the underlying architecture generates minimal JavaScript and serves pre-rendered HTML.
                     </BlogText>
 
                     <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
@@ -281,7 +281,7 @@ export default function WixTooSlowPage() {
                             <tbody>
                                 <tr className="border-b border-[var(--border)] bg-emerald-500/5">
                                     <td className="py-3 px-4 font-medium text-emerald-600">Custom Next.js</td>
-                                    <td data-label="Google Score (Mobile)" className="py-3 px-4 text-[var(--muted)]">95 to 100</td>
+                                    <td data-label="Google Score (Mobile)" className="py-3 px-4 text-[var(--muted)]">90+</td>
                                     <td data-label="LCP Average" className="py-3 px-4 text-[var(--muted)]">0.6 to 1.1s</td>
                                     <td data-label="CWV Pass Rate" className="py-3 px-4 text-emerald-600">99%+</td>
                                 </tr>
@@ -480,9 +480,9 @@ export default function WixTooSlowPage() {
                     {/* Mid CTA */}
                     <div className="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-8 my-8 md:my-12 text-center">
                         <Zap className="w-8 h-8 text-amber-400 mx-auto mb-4" />
-                        <h2 className="text-2xl font-bold mb-3">Your Wix Site Can Score 95+ on Google (PageSpeed)</h2>
+                        <h2 className="text-2xl font-bold mb-3">Your Wix Site Can Score 90+ on Google (PageSpeed)</h2>
                         <p className="text-[var(--muted)] mb-6 max-w-lg mx-auto">
-                            We migrate Wix sites to custom Next.js. The result: 95 to 100 on Google&apos;s speed test (PageSpeed). Under 1-second load time. Vercel hosting that starts free and only scales to $20/month when your business grows. Starter engagements start at $1,500 (5 to 7 pages). Most 10 to 30 page migrations land in our $3,500 Growth tier. If the new site does not score 95 or higher, you do not pay the balance.
+                            We migrate Wix sites to custom Next.js. The result: 90+ on Google&apos;s speed test (PageSpeed). Under 1-second load time. Vercel hosting that starts free and only scales to $20/month when your business grows. Starter engagements start at $1,500 (5 to 7 pages). Most 10 to 30 page migrations land in our $3,500 Growth tier. If the new site does not score 90 or higher, you do not pay the balance.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-3 justify-center">
                             <QuoteModalButton cta="wix_mid_quote" className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-semibold px-6 py-3 rounded-xl transition-colors">
@@ -516,7 +516,7 @@ export default function WixTooSlowPage() {
                                 <tr className="border-b border-[var(--border)]">
                                     <td className="py-3 px-4 font-medium">Google Score (Mobile)</td>
                                     <td data-label="Wix (Before)" className="py-3 px-4 text-center text-red-600">54 to 67</td>
-                                    <td data-label="Next.js (After)" className="py-3 px-4 text-center text-emerald-600">95 to 100</td>
+                                    <td data-label="Next.js (After)" className="py-3 px-4 text-center text-emerald-600">90+</td>
                                     <td data-label="Change" className="py-3 px-4 text-center text-emerald-600">+40 pts avg</td>
                                 </tr>
                                 <tr className="border-b border-[var(--border)]">
@@ -619,7 +619,7 @@ export default function WixTooSlowPage() {
                         "301 redirects: Every URL on your Wix site gets a permanent redirect to its equivalent on the new site. This preserves your Google rankings, backlinks, and any existing SEO value you have built.",
                         "DNS cutover: We handle the domain transfer from pointing to Wix to pointing to the new Vercel deployment. Zero downtime. You stay on Wix until the new site is fully tested and ready.",
                         "Post-launch monitoring: We watch the new site for one week after launch. Any issues that come up get fixed immediately.",
-                        "Google score guarantee: If the new site does not score 95 or higher on Google PageSpeed Insights, you do not pay the balance. 30% upfront, the rest when you are satisfied with the results."
+                        "Google score guarantee: If the new site does not score 90 or higher on Google PageSpeed Insights, you do not pay the balance. 30% upfront, the rest when you are satisfied with the results."
                     ]} />
 
                     <BlogText>
@@ -638,10 +638,10 @@ export default function WixTooSlowPage() {
                         </h2>
                         <ol className="space-y-3 text-[var(--muted)] text-sm">
                             <li className="flex gap-3"><span className="text-amber-400 font-bold shrink-0">1.</span><span>Wix loads 200 to 400KB of mandatory platform JavaScript on every page. This code cannot be removed and is the primary cause of slow load times on Wix websites.</span></li>
-                            <li className="flex gap-3"><span className="text-amber-400 font-bold shrink-0">2.</span><span>48% of Wix sites fail Core Web Vitals. The best-case Google score (PageSpeed) on mobile with full optimization is around 83. Custom Next.js sites consistently reach 95 to 100.</span></li>
+                            <li className="flex gap-3"><span className="text-amber-400 font-bold shrink-0">2.</span><span>48% of Wix sites fail Core Web Vitals. The best-case Google score (PageSpeed) on mobile with full optimization is around 83. Custom Next.js sites consistently reach 90+.</span></li>
                             <li className="flex gap-3"><span className="text-amber-400 font-bold shrink-0">3.</span><span>Wix Studio is measurably slower than the standard editor. Blog pages regularly load in 15+ seconds on mobile. Lazy loading is broken in Studio as of early 2026.</span></li>
                             <li className="flex gap-3"><span className="text-amber-400 font-bold shrink-0">4.</span><span>A 2-second mobile delay causes 87% cart abandonment. If you are running an e-commerce store on Wix, this is directly reducing your revenue every day the site stays slow.</span></li>
-                            <li className="flex gap-3"><span className="text-amber-400 font-bold shrink-0">5.</span><span>Leaving Wix requires a complete rebuild because Wix does not export design or layout files. We do the full rebuild starting at $1,500 (Starter) with a 95+ Google score guarantee or you do not pay.</span></li>
+                            <li className="flex gap-3"><span className="text-amber-400 font-bold shrink-0">5.</span><span>Leaving Wix requires a complete rebuild because Wix does not export design or layout files. We do the full rebuild starting at $1,500 (Starter) with a 90+ Google score guarantee or you do not pay.</span></li>
                         </ol>
                     </div>
 
@@ -649,7 +649,7 @@ export default function WixTooSlowPage() {
                     <div className="bg-gradient-to-br from-amber-500/10 to-orange-500/10 border border-amber-500/30 rounded-2xl p-8 my-6 md:my-10 text-center">
                         <h2 className="text-2xl font-bold mb-3">Stop Optimizing. Start Migrating.</h2>
                         <p className="text-[var(--muted)] mb-6 max-w-xl mx-auto text-sm">
-                            You have hit the Wix ceiling. No more optimization is going to get you to 95. The only path to a fast Wix site is a site that is not on Wix. We migrate you starting at $1,500 (Starter), guarantee a 95+ Google score (PageSpeed), and host it on Vercel starting free (you only scale to $20/month when your business grows). Book a free 20-minute call to see exactly what the migration would involve for your site.
+                            You have hit the Wix ceiling. No more optimization is going to get you to 90. The only path to a fast Wix site is a site that is not on Wix. We migrate you starting at $1,500 (Starter), guarantee a 90+ Google score (PageSpeed), and host it on Vercel starting free (you only scale to $20/month when your business grows). Book a free 20-minute call to see exactly what the migration would involve for your site.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-3 justify-center">
                             <QuoteModalButton cta="wix_bottom_quote" className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-semibold px-6 py-3 rounded-xl transition-colors">

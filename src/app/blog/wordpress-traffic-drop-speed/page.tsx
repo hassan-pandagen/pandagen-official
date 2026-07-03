@@ -305,14 +305,14 @@ export default function WordPressTrafficDropPage() {
                             When we migrate clients from slow WordPress to fast Next.js sites, the traffic recovery follows a predictable pattern:
                         </BlogText>
                         <BlogList items={[
-                            "Week 1 to 2: Google crawls the new fast site, PageSpeed scores jump to 95 to 100",
+                            "Week 1 to 2: Google crawls the new fast site, PageSpeed scores jump to 90+",
                             "Week 3 to 4: Core Web Vitals switch from 'Poor' to 'Good' in Search Console",
                             "Month 1 to 2: Rankings for competitive keywords begin recovering",
                             "Month 2 to 3: Organic traffic returns to previous peak levels",
                             "Month 3+: Traffic exceeds previous peak by 15 to 25% as improved rankings compound"
                         ]} />
                         <BlogText>
-                            In practice: sites that move from PageSpeed scores in the 20s to 98+ (see <a href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">how we hit 100/100 PageSpeed</a>) typically see Core Web Vitals flip from Poor to Good within 30 days in Search Console, with ranking recovery following in weeks 6 to 12.
+                            In practice: sites that move from PageSpeed scores in the 20s to 90+ (see <a href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">how we hit 100/100 PageSpeed</a>) typically see Core Web Vitals flip from Poor to Good within 30 days in Search Console, with ranking recovery following in weeks 6 to 12.
                         </BlogText>
 
                         <BlogHeader>The Real Fix: Replace WordPress, Don&apos;t Patch It</BlogHeader>
@@ -330,7 +330,7 @@ export default function WordPressTrafficDropPage() {
                             "Vercel Edge Network: Your pages cached at 50+ edge locations globally"
                         ]} />
                         <BlogText>
-                            <BlogHighlight>Result: PageSpeed 95 to 100 on mobile. LCP under 1.2 seconds. Traffic grows, not shrinks.</BlogHighlight>
+                            <BlogHighlight>Result: PageSpeed 90+ on mobile. LCP under 1.2 seconds. Traffic grows, not shrinks.</BlogHighlight>
                         </BlogText>
 
                         <BlogHeader>What the Migration Timeline Looks Like</BlogHeader>

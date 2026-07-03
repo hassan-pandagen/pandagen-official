@@ -189,7 +189,7 @@ export default function GHLWebsiteSpeedPage() {
                         <BlogAuthor
                             date="Mar 22, 2026"
                             readTime="9 min read"
-                            bio="Hassan builds custom Next.js frontends for businesses that need GHL's CRM power without GHL's speed penalty. Sites score 95 to 100 on Google PageSpeed while staying connected to GoHighLevel for automation and lead management."
+                            bio="Hassan builds custom Next.js frontends for businesses that need GHL's CRM power without GHL's speed penalty. Sites score 90+ on Google PageSpeed while staying connected to GoHighLevel for automation and lead management."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -213,7 +213,7 @@ export default function GHLWebsiteSpeedPage() {
                             <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-cognac mt-0.5 shrink-0" /> Typical custom Next.js frontend scores 90 to 100 on Mobile PageSpeed. The gap between 35 and 95 affects ad costs, bounce rates, and conversion rates every month.</li>
                             <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> The fix: <Link href="/blog/gohighlevel-keep-crm-replace-website" className="text-cognac hover:underline">keeping the CRM and replacing the website</Link> gives you GHL&apos;s automation power with 90+ PageSpeed. You do not have to leave GoHighLevel.</li>
                             <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> PandaCodeGen guarantee: 90+ PageSpeed or full refund, with zero downtime for your existing GHL workflows.</li>
-                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> Real result: a chiropractor on a GHL site at 23 mobile PageSpeed was rebuilt to a Next.js front end scoring 98, every GHL automation kept intact. Six weeks later, inbound lead volume was up 41 percent and the GHL bill never changed.</li>
+                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> Real result: a chiropractor on a GHL site at 23 mobile PageSpeed was rebuilt to a Next.js front end scoring 90+, every GHL automation kept intact. Six weeks later, inbound lead volume was up 41 percent and the GHL bill never changed.</li>
                         </ul>
                     </div>
 
@@ -276,7 +276,7 @@ export default function GHLWebsiteSpeedPage() {
                         53% of visitors abandon a mobile page that takes longer than 3 seconds to load. If your GHL site is taking 4 to 6 seconds on mobile, more than half your visitors are gone before they read a single word.
                     </BlogText>
 
-                    <BlogHeader id="real-pagespeed-scores">GHL Scores 20 to 45. Custom Next.js Scores 95 to 100. The Table.</BlogHeader>
+                    <BlogHeader id="real-pagespeed-scores">GHL Scores 20 to 45. Custom Next.js Scores 90+. The Table.</BlogHeader>
                     <BlogText>
                         You can test any website for free at{" "}
                         <a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Google PageSpeed Insights</a>.
@@ -404,7 +404,7 @@ export default function GHLWebsiteSpeedPage() {
                     </ul>
 
                     <BlogText>
-                        If you spend $10,000 a month on Meta ads driving traffic to a GHL funnel that scores 35 on PageSpeed, you are paying a speed tax on every click. The same traffic to a 95+ PageSpeed landing page converts better and costs less per lead. For an agency using GHL for clients, funnels that could convert at 8% are converting at 4 to 5%. The platform is eating half your results before a single word of copy has a chance to work.
+                        If you spend $10,000 a month on Meta ads driving traffic to a GHL funnel that scores 35 on PageSpeed, you are paying a speed tax on every click. The same traffic to a 90+ PageSpeed landing page converts better and costs less per lead. For an agency using GHL for clients, funnels that could convert at 8% are converting at 4 to 5%. The platform is eating half your results before a single word of copy has a chance to work.
                     </BlogText>
 
                     <BlogHeader id="ghl-security">GHL Security: The Other Reason Agencies Are Migrating in 2026</BlogHeader>
@@ -492,11 +492,11 @@ export default function GHLWebsiteSpeedPage() {
                         What changes is your website. We build a custom Next.js site that handles everything the public sees: your homepage, service pages, landing pages, and blog. That site connects to your GoHighLevel account behind the scenes. Forms submit directly to your GHL pipeline. Every lead triggers your existing automations. Your team never touches a new dashboard.
                     </BlogText>
                     <BlogText>
-                        The result is a <Link href="/services/custom-engineering" className="text-cognac hover:underline">custom-coded Next.js site</Link> that scores 95 to 100 on Google PageSpeed while running every GHL workflow you already have. See how our <Link href="/services/gohighlevel?ref=blog/gohighlevel-website-speed" className="text-cognac hover:underline font-medium">GoHighLevel speed fix service</Link> works, or book a free call below and we will audit your current GHL setup and show you exactly what a custom frontend would deliver.
+                        The result is a <Link href="/services/custom-engineering" className="text-cognac hover:underline">custom-coded Next.js site</Link> that scores 90+ on Google PageSpeed while running every GHL workflow you already have. See how our <Link href="/services/gohighlevel?ref=blog/gohighlevel-website-speed" className="text-cognac hover:underline font-medium">GoHighLevel speed fix service</Link> works, or book a free call below and we will audit your current GHL setup and show you exactly what a custom frontend would deliver.
                     </BlogText>
                     <div className="my-6 p-5 bg-cognac/5 border border-cognac/20 rounded-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">Real Receipt: Local Service Business</p>
-                        <p className="text-sm text-stone-700 leading-relaxed">A chiropractor running a GHL site scored 23 on mobile PageSpeed. We rebuilt the front end in Next.js, kept every GHL automation intact, shipped at 98. Six weeks post-launch: inbound lead volume up 41 percent. Their GHL bill stayed the same. Their lead count did not.</p>
+                        <p className="text-sm text-stone-700 leading-relaxed">A chiropractor running a GHL site scored 23 on mobile PageSpeed. We rebuilt the front end in Next.js, kept every GHL automation intact, shipped at 90+. Six weeks post-launch: inbound lead volume up 41 percent. Their GHL bill stayed the same. Their lead count did not.</p>
                     </div>
                     <div className="my-8 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-orange-600 transition-all">
@@ -518,7 +518,7 @@ export default function GHLWebsiteSpeedPage() {
                         <BlogHighlight>Complete fix: <Link href="/blog/what-is-headless-commerce" className="text-cognac hover:underline">decouple the frontend</Link>.</BlogHighlight> Build a custom Next.js website that handles all public-facing pages: homepage, service pages, blog, landing pages. Connect it to GoHighLevel via webhook and API for lead capture, form submissions, and CRM data. GHL handles automation, pipeline management, appointment scheduling, and email sequences. The website handles performance and SEO.
                     </BlogText>
                     <BlogText>
-                        This architecture gives you 95 to 100 PageSpeed scores on the public-facing site while keeping every GHL workflow intact. Forms submit to GHL via API. Leads flow into the pipeline. Email sequences fire. Appointment booking works. Nothing changes in the backend. Everything changes in performance.
+                        This architecture gives you 90+ PageSpeed scores on the public-facing site while keeping every GHL workflow intact. Forms submit to GHL via API. Leads flow into the pipeline. Email sequences fire. Appointment booking works. Nothing changes in the backend. Everything changes in performance.
                     </BlogText>
 
                     <BlogHeader id="what-to-keep-in-ghl">What Should You Keep in GoHighLevel?</BlogHeader>
@@ -647,7 +647,7 @@ export default function GHLWebsiteSpeedPage() {
                     <div className="my-6 md:my-10 p-8 bg-charcoal text-white rounded-2xl text-center">
                         <TrendingDown className="w-8 h-8 text-cognac mx-auto mb-3" />
                         <p className="font-bold text-xl mb-2">Stop Letting GHL Kill Your Rankings</p>
-                        <p className="text-stone-300 mb-5 text-sm max-w-md mx-auto">We build a custom Next.js frontend that scores 95 to 100 on PageSpeed while keeping every GHL automation intact. Free discovery call to see exactly what is possible.</p>
+                        <p className="text-stone-300 mb-5 text-sm max-w-md mx-auto">We build a custom Next.js frontend that scores 90+ on PageSpeed while keeping every GHL automation intact. Free discovery call to see exactly what is possible.</p>
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-orange-600 transition-all">
                             Book Free Discovery Call <ArrowRight className="w-4 h-4" />
                         </CalModalButton>

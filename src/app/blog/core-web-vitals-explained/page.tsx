@@ -128,7 +128,7 @@ const articleSchema = {
             "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "description": "PandaCodeGen builds custom Next.js websites that score 95 to 100 on Google PageSpeed and pass all Core Web Vitals on every build.",
+            "description": "PandaCodeGen builds custom Next.js websites that score 90+ on Google PageSpeed and pass all Core Web Vitals on every build.",
             "foundingDate": "2026",
             "areaServed": "Worldwide",
             "email": "info@pandacodegen.com",
@@ -509,7 +509,7 @@ export default function CoreWebVitalsExplainedPage() {
                                     </tr>
                                     <tr className="hover:bg-stone-50">
                                         <td className="p-3 border border-stone-300 font-medium">Custom Next.js (what we build)</td>
-                                        <td data-label="Typical Mobile" className="p-3 border border-stone-300 text-green-700">95 to 100</td>
+                                        <td data-label="Typical Mobile" className="p-3 border border-stone-300 text-green-700">90+</td>
                                         <td data-label="Can You Pass CWV?" className="p-3 border border-stone-300 text-green-700 font-medium">Always</td>
                                     </tr>
                                 </tbody>
@@ -517,7 +517,7 @@ export default function CoreWebVitalsExplainedPage() {
                         </div>
 
                         <BlogText>
-                            See the pattern. <BlogHighlight>No platform-based site consistently passes Core Web Vitals.</BlogHighlight> The sites that do pass are almost always custom coded, using modern frameworks like Next.js that pre-build every page at deploy time and ship minimal JavaScript. That is why our clients score 95 to 100 every time, and why platform clients struggle to get above 60 no matter how much they optimize.
+                            See the pattern. <BlogHighlight>No platform-based site consistently passes Core Web Vitals.</BlogHighlight> The sites that do pass are almost always custom coded, using modern frameworks like Next.js that pre-build every page at deploy time and ship minimal JavaScript. That is why our clients score 90+ every time, and why platform clients struggle to get above 60 no matter how much they optimize.
                         </BlogText>
 
                         {/* SECTION 7: What Fixes Work */}
@@ -606,7 +606,7 @@ export default function CoreWebVitalsExplainedPage() {
                         ]} />
 
                         <BlogText>
-                            If you want to see what a 95+ score actually looks like in production, run <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.mycustompatches.net" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">PageSpeed Insights on mycustompatches.net</a>. That is one of our client sites. Feel the difference compared to your current platform.
+                            If you want to see what a 90+ score actually looks like in production, run <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.mycustompatches.net" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">PageSpeed Insights on mycustompatches.net</a>. That is one of our client sites. Feel the difference compared to your current platform.
                         </BlogText>
 
                         {/* SECTION 9: What to Do */}

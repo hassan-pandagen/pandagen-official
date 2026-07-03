@@ -117,7 +117,7 @@ const articleSchema = {
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://x.com/PandaCodeGen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158", "https://www.goodfirms.co/company/pandacodegen", "https://www.crunchbase.com/organization/pandacodegen", "https://www.designrush.com/agency/profile/pandacodegen", "https://www.sortlist.com/agency/pandacodegen", "https://www.f6s.com/pandacodegen", "https://www.sanity.io/exchange/community/pandacodegen", "https://www.behance.net/pandacodegen", "https://dev.to/pandacodegen", "https://www.reddit.com/user/PandaCodeGen/"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites for businesses migrating from Webflow, WordPress, Wix, Squarespace, and Shopify. All sites score 95 to 100 on Google PageSpeed or you do not pay.",
+            "description": "PandaCodeGen builds custom Next.js websites for businesses migrating from Webflow, WordPress, Wix, Squarespace, and Shopify. All sites score 90+ on Google PageSpeed or you do not pay.",
             "areaServed": "Worldwide",
             "foundingDate": "2026"
         },
@@ -166,7 +166,7 @@ export default function WebflowMigration50To100PagesPage() {
                         <BlogAuthor
                             date="Apr 20, 2026"
                             readTime="12 min read"
-                            bio="Hassan founded PandaCodeGen in Feb 2026 after six years inside WordPress. Recent rebuild: Obare Magazine off Wix into Next.js and Sanity, 7 days, 98 Mobile PageSpeed. Every build scores 95 to 100 on Google PageSpeed or you do not pay the balance."
+                            bio="Hassan founded PandaCodeGen in Feb 2026 after six years inside WordPress. Recent rebuild: Obare Magazine off Wix into Next.js and Sanity, 7 days, Mobile PageSpeed in the 90s. Every build scores 90+ on Google PageSpeed or you do not pay the balance."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -300,7 +300,7 @@ export default function WebflowMigration50To100PagesPage() {
                                     <tr className="bg-stone-50">
                                         <td data-label="Dimension" className="p-3 border border-stone-300 font-medium">Typical Lighthouse (mobile)</td>
                                         <td data-label="Webflow" className="p-3 border border-stone-300">60 to 75</td>
-                                        <td data-label="Next.js" className="p-3 border border-stone-300 font-bold text-cognac">90+ guaranteed in contract, typically 95 to 100 achieved</td>
+                                        <td data-label="Next.js" className="p-3 border border-stone-300 font-bold text-cognac">90+ guaranteed in contract</td>
                                     </tr>
                                     <tr>
                                         <td data-label="Dimension" className="p-3 border border-stone-300 font-medium">CMS item ceiling</td>
@@ -384,7 +384,7 @@ export default function WebflowMigration50To100PagesPage() {
                         <BlogList items={[
                             "Week 1: CMS data export, Screaming Frog URL crawl, architecture decisions, Sanity or Contentful schema design. You approve the content model before we write a component.",
                             "Week 2: Component build in Next.js App Router. CMS integration wired. All pages rendering with imported content by end of week. Staging URL shared.",
-                            "Week 3: 301 redirect map finalized from Google Search Console top-pages data. QA across devices. PageSpeed optimization until we hit 95+. Production deploy to Vercel, DNS cutover, sitemap submission to Google Search Console."
+                            "Week 3: 301 redirect map finalized from Google Search Console top-pages data. QA across devices. PageSpeed optimization until we hit 90+. Production deploy to Vercel, DNS cutover, sitemap submission to Google Search Console."
                         ]} />
 
                         <BlogHeader>The 301 Redirect Strategy for 50 to 100 Pages</BlogHeader>

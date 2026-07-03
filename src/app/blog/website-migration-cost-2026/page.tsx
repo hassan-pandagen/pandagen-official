@@ -188,7 +188,7 @@ export default function WebsiteMigrationCost2026Page() {
                         <BlogAuthor
                             date="Apr 29, 2026"
                             readTime="16 min read"
-                            bio="Hassan runs PandaCodeGen, a custom web development studio that migrates slow or expensive sites to Next.js. Every migration is fixed-price, ships in 1 to 4 weeks, and guarantees 90+ on Google PageSpeed Mobile in writing, typically 95 to 100."
+                            bio="Hassan runs PandaCodeGen, a custom web development studio that migrates slow or expensive sites to Next.js. Every migration is fixed-price, ships in 1 to 4 weeks, and guarantees 90+ on Google PageSpeed Mobile in writing."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -430,7 +430,7 @@ export default function WebsiteMigrationCost2026Page() {
                         <strong>Obare Magazine: $1,200, 7 days, 225,000 Instagram followers watching.</strong> Obare Magazine, a culture and design publication with 225,000 Instagram followers, was running on Wix Editor in 2025. Pages loaded at 3 to 5 seconds. The Wix Velo runtime injected over 600KB of JavaScript on every page. SEO scores capped at 35 to 50 on mobile PageSpeed.
                     </BlogText>
                     <BlogText>
-                        We migrated the entire publication from Wix to Next.js in 7 days. All articles moved into Sanity for ongoing editorial work. All URLs preserved with 301 redirect mapping. Page load dropped to under 0.8 seconds. PageSpeed jumped to 95+. Monthly Wix subscription: gone. Total monthly cost after migration: $0.
+                        We migrated the entire publication from Wix to Next.js in 7 days. All articles moved into Sanity for ongoing editorial work. All URLs preserved with 301 redirect mapping. Page load dropped to under 0.8 seconds. PageSpeed jumped to 90+. Monthly Wix subscription: gone. Total monthly cost after migration: $0.
                     </BlogText>
                     <BlogText>
                         Obare&apos;s audience watched the cutover happen on Instagram in real time. Rankings preserved. Zero downtime. The new site shipped at the original fixed quote with no scope creep.
@@ -496,7 +496,7 @@ export default function WebsiteMigrationCost2026Page() {
                         <strong>Why GoHighLevel migrations cost what they do.</strong> GoHighLevel migrations split into two paths. Path 1: keep GoHighLevel for CRM, automations, and pipelines (which it does well), and replace only the public-facing website with custom Next.js code. This is the $1,500 to $3,500 path, and is what most clients want. Path 2: replace GoHighLevel entirely with custom CRM, pipelines, and automations. This is the $5,000 Scale path, and we ship it for clients who want to escape the monthly fee structure.
                     </BlogText>
                     <BlogText>
-                        The website-only migration loads in under 1 second, scores 95+ on PageSpeed, integrates with the existing GoHighLevel sub-account through API calls, and preserves all lead capture and CRM data flow.
+                        The website-only migration loads in under 1 second, scores 90+ on PageSpeed, integrates with the existing GoHighLevel sub-account through API calls, and preserves all lead capture and CRM data flow.
                     </BlogText>
 
                     <BlogHeader id="roi-math">What does your slow platform actually cost you per month?</BlogHeader>

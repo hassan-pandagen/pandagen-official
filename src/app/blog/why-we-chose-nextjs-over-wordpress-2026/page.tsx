@@ -247,7 +247,7 @@ export default function WhyNextjsOverWordPressPage() {
                             </div>
                             {[
                                 { metric: "Average Load Time", wp: "3.8s", nxt: "0.9s" },
-                                { metric: "Mobile PageSpeed", wp: "35 to 65/100", nxt: "95 to 100/100" },
+                                { metric: "Mobile PageSpeed", wp: "35 to 65/100", nxt: "90+/100" },
                                 { metric: "Time to Interactive", wp: "5.2s", nxt: "1.1s" },
                                 { metric: "Monthly Hosting Cost", wp: "$150 to $400", nxt: "$0 to $20" },
                                 { metric: "Plugin Vulnerabilities", wp: "20 to 30+ surfaces", nxt: "Zero" },

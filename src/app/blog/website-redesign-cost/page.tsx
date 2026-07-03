@@ -408,7 +408,7 @@ export default function WebsiteRedesignCostPage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>Custom or headless ecommerce build ($15,000 to $50,000+):</strong> Custom Next.js storefront connected to Shopify Storefront API, Stripe + Sanity for fully custom builds, or WooCommerce headless setups. Eliminates app fees on the frontend and breaks past the platform PageSpeed ceiling. Result: 95 to 100 mobile PageSpeed and sub-1-second load times.
+                            <strong>Custom or headless ecommerce build ($15,000 to $50,000+):</strong> Custom Next.js storefront connected to Shopify Storefront API, Stripe + Sanity for fully custom builds, or WooCommerce headless setups. Eliminates app fees on the frontend and breaks past the platform PageSpeed ceiling. Result: 90+ mobile PageSpeed and sub-1-second load times.
                         </BlogText>
 
                         <BlogText>
@@ -552,7 +552,7 @@ export default function WebsiteRedesignCostPage() {
                                     <tr className="hover:bg-stone-50">
                                         <td className="p-3 border border-stone-300 font-medium">Performance ceiling</td>
                                         <td data-label="Template" className="p-3 border border-stone-300 text-red-600 font-medium">40 to 75 PageSpeed</td>
-                                        <td data-label="Custom Code" className="p-3 border border-stone-300 text-green-700 font-medium">95 to 100 PageSpeed</td>
+                                        <td data-label="Custom Code" className="p-3 border border-stone-300 text-green-700 font-medium">90+ PageSpeed</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
                                         <td className="p-3 border border-stone-300 font-medium">Flexibility</td>
@@ -574,7 +574,7 @@ export default function WebsiteRedesignCostPage() {
                         </div>
 
                         <BlogText>
-                            For a small business site, the math at the low end favors custom code by year 3. A $1,500 custom Next.js Starter site with $0 hosting beats a $40 a month Squarespace template by month 38 ($1,500 vs $1,520). The custom site also runs at 95+ PageSpeed vs Squarespace&apos;s 50 to 70 ceiling, which translates to better Google rankings, lower ad CPC, and higher conversion rates over the same 3 years.
+                            For a small business site, the math at the low end favors custom code by year 3. A $1,500 custom Next.js Starter site with $0 hosting beats a $40 a month Squarespace template by month 38 ($1,500 vs $1,520). The custom site also runs at 90+ PageSpeed vs Squarespace&apos;s 50 to 70 ceiling, which translates to better Google rankings, lower ad CPC, and higher conversion rates over the same 3 years.
                         </BlogText>
 
                         <BlogHeader>Hourly vs Fixed Price Website Redesign</BlogHeader>

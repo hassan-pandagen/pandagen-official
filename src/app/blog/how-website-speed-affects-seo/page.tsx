@@ -354,7 +354,7 @@ export default function WebsiteSpeedSEOPage() {
                             <Link href="/blog/shopify-dawn-theme-slow" className="text-stone-700 underline underline-offset-2 hover:text-black">why even Shopify's fastest theme still loads slowly</Link>.
                         </BlogHighlight>
                         <BlogText>
-                            The sites scoring 95 to 100/100 on mobile, the ones ranking above you on Google, are almost always built on modern frameworks: Next.js, Astro, or similar. These frameworks pre-render pages at build time, serve them from edge CDN nodes with no server computation, and ship zero unnecessary JavaScript to the browser. There's no ceiling to optimise around because the architecture itself is fast.
+                            The sites scoring 90+ on mobile, the ones ranking above you on Google, are almost always built on modern frameworks: Next.js, Astro, or similar. These frameworks pre-render pages at build time, serve them from edge CDN nodes with no server computation, and ship zero unnecessary JavaScript to the browser. There's no ceiling to optimise around because the architecture itself is fast.
                         </BlogText>
                     </section>
 
@@ -402,7 +402,7 @@ export default function WebsiteSpeedSEOPage() {
                                 <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-1">Step 5</p>
                                 <h3 className="text-lg font-bold mb-2">If You've Hit the Platform Ceiling, Migrate</h3>
                                 <BlogText>
-                                    If your mobile score is stuck below 70 after addressing the above, your platform is the bottleneck, not your settings. This is where businesses face a real financial decision: continue paying for ongoing optimisation that delivers diminishing returns and never escapes the ceiling, or make a one-time investment in a faster architecture that scores 95 to 100 natively. Our clients who migrate from WordPress to Next.js see rankings recover in 30 to 60 days and typically see 20 to 40% organic traffic increases within 90 days. See our <Link href="/blog/how-to-achieve-100-pagespeed" className="text-stone-700 underline underline-offset-2 hover:text-black">full guide to achieving 100/100 PageSpeed</Link>. The platform-level comparison is covered in our <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress vs Next.js breakdown</Link>.
+                                    If your mobile score is stuck below 70 after addressing the above, your platform is the bottleneck, not your settings. This is where businesses face a real financial decision: continue paying for ongoing optimisation that delivers diminishing returns and never escapes the ceiling, or make a one-time investment in a faster architecture that scores 90+ natively. Our clients who migrate from WordPress to Next.js see rankings recover in 30 to 60 days and typically see 20 to 40% organic traffic increases within 90 days. See our <Link href="/blog/how-to-achieve-100-pagespeed" className="text-stone-700 underline underline-offset-2 hover:text-black">full guide to achieving 100/100 PageSpeed</Link>. The platform-level comparison is covered in our <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress vs Next.js breakdown</Link>.
                                 </BlogText>
                             </div>
                         </div>

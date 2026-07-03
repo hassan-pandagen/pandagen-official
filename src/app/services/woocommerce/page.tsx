@@ -3,7 +3,7 @@ import PageContent from './PageContent';
 
 export const metadata: Metadata = {
   title: 'Is WooCommerce Slowing Your Store? We Fix It With Next.js',
-  description: 'WooCommerce stores score 30 to 55 on mobile PageSpeed. We fix the root cause with a headless Next.js frontend. Keep your product catalog, get 95+ PageSpeed and sub-1-second load times.',
+  description: 'WooCommerce stores score 30 to 55 on mobile PageSpeed. We fix the root cause with a headless Next.js frontend. Keep your product catalog, get 90+ PageSpeed and sub-1-second load times.',
   alternates: {
     canonical: '/services/woocommerce',
   },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Is WooCommerce Slowing Your Store? We Fix It With Next.js | PandaCodeGen',
-    description: 'WooCommerce stores score 30 to 55 on mobile PageSpeed. We fix it with a headless Next.js frontend. Keep your catalog, get 95+ PageSpeed.',
+    description: 'WooCommerce stores score 30 to 55 on mobile PageSpeed. We fix it with a headless Next.js frontend. Keep your catalog, get 90+ PageSpeed.',
     url: 'https://www.pandacodegen.com/services/woocommerce',
     siteName: 'PandaCodeGen',
     type: 'website',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Is WooCommerce Slowing Your Store? We Fix It With Next.js | PandaCodeGen',
-    description: 'WooCommerce scoring 30 to 55 on PageSpeed Mobile. We fix it with a headless Next.js frontend. 95+ PageSpeed, keep your product catalog.',
+    description: 'WooCommerce scoring 30 to 55 on PageSpeed Mobile. We fix it with a headless Next.js frontend. 90+ PageSpeed, keep your product catalog.',
   },
 };
 

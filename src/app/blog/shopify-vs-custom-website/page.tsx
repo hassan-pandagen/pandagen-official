@@ -173,7 +173,7 @@ export default function ShopifyVsCustomWebsitePage() {
                         <BlogAuthor
                             date="Mar 30, 2026"
                             readTime="11 min read"
-                            bio="Hassan rebuilt MyCustomPatches for Matt Conner from a slow WooCommerce store (42 PageSpeed) to a custom Next.js build scoring 97. He now builds custom Shopify replacements for DTC brands. Every build scores 95 to 100 on Google PageSpeed."
+                            bio="Hassan rebuilt MyCustomPatches for Matt Conner from a slow WooCommerce store (45 PageSpeed) to a custom Next.js build scoring 90+. He now builds custom Shopify replacements for DTC brands. Every build scores 90+ on Google PageSpeed."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -380,7 +380,7 @@ export default function ShopifyVsCustomWebsitePage() {
                                     <tr>
                                         <td className="border border-stone-300 px-4 py-3">Google PageSpeed Mobile</td>
                                         <td data-label="Shopify (3 Years)" className="border border-stone-300 px-4 py-3">25 to 50</td>
-                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-300 px-4 py-3">95 to 100</td>
+                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-300 px-4 py-3">90+</td>
                                     </tr>
                                     <tr className="bg-stone-100 font-bold">
                                         <td className="border border-stone-300 px-4 py-3">3-Year Total</td>
@@ -411,7 +411,7 @@ export default function ShopifyVsCustomWebsitePage() {
                         <BlogHeader>What a Custom E-Commerce Site Actually Gives You</BlogHeader>
 
                         <BlogText>
-                            <strong>Speed that converts.</strong> Custom Next.js stores load in under 1 second on mobile. Every page is pre-built at deploy time. No server-side rendering on each request. No Liquid template compilation. No app JavaScript bloat. The result is PageSpeed scores of 95 to 100 and conversion rates 2 to 3x higher than Shopify stores with the same products and traffic.
+                            <strong>Speed that converts.</strong> Custom Next.js stores load in under 1 second on mobile. Every page is pre-built at deploy time. No server-side rendering on each request. No Liquid template compilation. No app JavaScript bloat. The result is PageSpeed scores of 90+ and conversion rates 2 to 3x higher than Shopify stores with the same products and traffic.
                         </BlogText>
 
                         <BlogText>
@@ -446,7 +446,7 @@ export default function ShopifyVsCustomWebsitePage() {
                             "Your team keeps using the Shopify admin they already know",
                             "All product data, order history, and customer records stay in Shopify",
                             "The customer-facing store loads 3 to 4x faster",
-                            "PageSpeed scores jump from 30 to 50 range to 95 to 100",
+                            "PageSpeed scores jump from 30 to 50 range to 90+",
                             "You eliminate most app subscriptions because the custom frontend handles those features natively",
                             "No migration risk to product data or order history"
                         ]} />

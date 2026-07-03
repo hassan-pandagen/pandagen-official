@@ -117,7 +117,7 @@ export default function AboutPageClient() {
 
           <h1 className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-8 leading-tight">
             I rebuild slow platform sites. <br />
-            <span className="font-serif italic text-cognac">95+ PageSpeed. Always.</span>
+            <span className="font-serif italic text-cognac">90+ PageSpeed. Always.</span>
           </h1>
 
           <p className="text-xl text-stone-600 leading-relaxed mb-6">

@@ -74,7 +74,7 @@ export default function PageContent() {
           >
             Keep GHL. Upgrade your website. <br />
             <span className="font-serif italic text-cognac">
-              We took one chiropractor from PageSpeed 23 to 98. More leads.
+              We took one chiropractor from PageSpeed 23 to 90+. More leads.
             </span>
           </motion.h1>
 
@@ -85,12 +85,12 @@ export default function PageContent() {
             data-speakable="true"
             className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto"
           >
-            I&apos;m Hassan. I rebuilt a chiropractor&apos;s GHL frontend from 23 to 98 PageSpeed while every Workflow, Pipeline, and sub-account kept firing. Lead volume climbed in the weeks that followed. Book the call, share your GHL URL, I&apos;ll run your audit live.
+            I&apos;m Hassan. I rebuilt a chiropractor&apos;s GHL frontend from 23 to 90+ PageSpeed while every Workflow, Pipeline, and sub-account kept firing. Lead volume climbed in the weeks that followed. Book the call, share your GHL URL, I&apos;ll run your audit live.
           </motion.p>
 
           <div className="mb-8 inline-flex flex-wrap items-center gap-3 justify-center px-5 py-3 rounded-full bg-white border border-stone-200 text-sm">
             <span className="font-bold text-charcoal">Chiropractor client:</span>
-            <span className="text-stone-600">23 to 98 PageSpeed</span>
+            <span className="text-stone-600">23 to 90+ PageSpeed</span>
             <span className="text-stone-300">|</span>
             <span className="text-green-700 font-bold">More leads</span>
             <span className="text-stone-300">|</span>

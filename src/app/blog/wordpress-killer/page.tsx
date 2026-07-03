@@ -321,7 +321,7 @@ export default function WordPressKillerPage() {
                         </BlogText>
                         <BlogList items={[
                             "Load time: 0.8 to 1.2 seconds (vs 3.5 to 4.5 for WordPress)",
-                            "PageSpeed: 95 to 100/100 Mobile (vs 38 to 55 for WordPress)",
+                            "PageSpeed: 90+ Mobile (vs 38 to 55 for WordPress)",
                             "Hosting: $0 to $240/year on Vercel (vs $300 to $1,200 for WordPress)",
                             "Hacks: Zero plugin vulnerabilities (vs 98% of hacks through WordPress plugins)",
                             "Content editing: Cleaner CMS dashboard, simpler than WordPress admin"

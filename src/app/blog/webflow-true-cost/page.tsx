@@ -184,7 +184,7 @@ export default function WebflowTrueCostPage() {
                         <BlogAuthor
                             date="Mar 18, 2026"
                             readTime="10 min read"
-                            bio="Hassan has migrated dozens of businesses from website builders to custom code. He specializes in Next.js builds that score 95 to 100 on Google PageSpeed and rank on the first page."
+                            bio="Hassan has migrated dozens of businesses from website builders to custom code. He specializes in Next.js builds that score 90+ on Google PageSpeed and rank on the first page."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -249,7 +249,7 @@ export default function WebflowTrueCostPage() {
                         <div className="my-6 grid grid-cols-1 md:grid-cols-3 gap-3">
                             {[
                                 { who: "Service firm, 18 pages", before: "$147/mo, PageSpeed 58", after: "$0/mo, PageSpeed 98", delta: "+34% organic traffic at 6 months" },
-                                { who: "Obare Magazine (24 pages)", before: "$35,000 agency quote", after: "$1,200 fixed price", delta: "Shipped in 1 week, Wix to Next.js + Sanity, mobile PageSpeed to 98" },
+                                { who: "Obare Magazine (24 pages)", before: "$35,000 agency quote", after: "$1,200 fixed price", delta: "Shipped in 1 week, Wix to Next.js + Sanity, mobile PageSpeed into the 90s" },
                                 { who: "SaaS marketing site, 12 pages", before: "$89/mo, PageSpeed 64", after: "$0/mo, PageSpeed 100", delta: "Google ranking up 14 positions on primary keyword" },
                             ].map(r => (
                                 <div key={r.who} className="p-4 bg-stone-50 border border-stone-200 rounded-xl">
@@ -371,7 +371,7 @@ export default function WebflowTrueCostPage() {
                         ]} />
 
                         <BlogText>
-                            The result: <BlogHighlight>Webflow sites score 55 to 75 on Google PageSpeed Mobile. Custom-coded sites score 95 to 100.</BlogHighlight>
+                            The result: <BlogHighlight>Webflow sites score 55 to 75 on Google PageSpeed Mobile. Custom-coded sites score 90+.</BlogHighlight>
                         </BlogText>
 
                         <BlogText>
@@ -498,7 +498,7 @@ export default function WebflowTrueCostPage() {
 
                         <BlogList items={[
                             "Webflow: Scores 55 to 75/100 on Google's speed test. Google uses this score to decide where you rank. A score below 70 means you are losing customers to faster competitors every day.",
-                            "Custom code: Scores 95 to 100/100. You compete at the top of the results page, not the bottom."
+                            "Custom code: Scores 90+/100. You compete at the top of the results page, not the bottom."
                         ]} />
 
                         <BlogHeader>When Webflow Is Actually Fine (Read This Before You Migrate)</BlogHeader>
@@ -531,7 +531,7 @@ export default function WebflowTrueCostPage() {
 
                         <BlogList items={[
                             "Week 1: Full audit of your Webflow site. Map every page, URL, form, and integration.",
-                            "Week 2 to 4: Build your new Next.js site. Every page rebuilt with custom code, optimized for 95 to 100 PageSpeed.",
+                            "Week 2 to 4: Build your new Next.js site. Every page rebuilt with custom code, optimized for 90+ PageSpeed.",
                             "Week 5: Content migration. Export CMS content, transfer images, verify metadata.",
                             "Week 6: Launch. 301 redirects for every URL. Zero downtime. Submit new sitemap to Google."
                         ]} />
@@ -675,7 +675,7 @@ export default function WebflowTrueCostPage() {
                             <li><strong>Webflow's real cost is $1,500 to $5,000/year</strong>: The $29/month starting price does not include CMS plans, form limits, localization, or the third-party tools you need to run a real business site.</li>
                             <li><strong>Webflow has a hard PageSpeed ceiling of 55 to 75</strong>: The platform's CSS framework, JavaScript runtime, and lack of server-side rendering prevent it from reaching the 90+ zone Google rewards with higher rankings.</li>
                             <li><strong>You do not own your Webflow code</strong>: If you leave, you rebuild from scratch. Custom code is an asset you own forever.</li>
-                            <li><strong>Custom Next.js costs $12 to $252/year to host</strong>: With 95 to 100 PageSpeed scores, server-side rendering, and zero platform limits.</li>
+                            <li><strong>Custom Next.js costs $12 to $252/year to host</strong>: With 90+ PageSpeed scores, server-side rendering, and zero platform limits.</li>
                             <li><strong>Migration pays for itself in 6 to 12 months</strong>: Through lower hosting costs, better SEO rankings, and higher conversion rates from faster load times.</li>
                         </ol>
                     </section>

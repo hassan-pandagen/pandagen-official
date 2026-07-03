@@ -180,7 +180,7 @@ export default function WebflowVsCustomWebsitePage() {
                         <BlogAuthor
                             date="Mar 27, 2026"
                             readTime="11 min read"
-                            bio="Hassan is the founder of PandaCodeGen. Recent work: Obare Magazine rebuilt from Wix to Next.js and Sanity in 7 days. Every build scores 95 to 100 on Google PageSpeed and runs on Vercel starting free, scaling to $20/month only when the business grows."
+                            bio="Hassan is the founder of PandaCodeGen. Recent work: Obare Magazine rebuilt from Wix to Next.js and Sanity in 7 days. Every build scores 90+ on Google PageSpeed and runs on Vercel starting free, scaling to $20/month only when the business grows."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -194,14 +194,14 @@ export default function WebflowVsCustomWebsitePage() {
                         <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
                             "Webflow works well for brochure sites under 20 pages where SEO is not the primary growth channel. Beyond that, you hit platform limits.",
-                            "Webflow sites score 55 to 75 on Google PageSpeed Mobile. Custom Next.js sites score 95 to 100. That 20 to 40 point gap costs you rankings and customers.",
+                            "Webflow sites score 55 to 75 on Google PageSpeed Mobile. Custom Next.js sites score 90+. That gap costs you rankings and customers.",
                             "The real Webflow cost is $1,500 to $5,000/year once you add CMS hosting, forms, integrations, and third-party tools. Custom sites cost $12 to $252/year to host.",
                             "A custom website starts at $1,500+ Starter, $3,500+ Growth, or $5,000 to $10,000+ Scale, and typically pays for itself within 6 to 12 months through lower hosting and better organic traffic.",
                             "If your Webflow PageSpeed is below 70, your bill exceeds $100/month, or you need features Webflow cannot build, it is time to switch."
                         ]} />
                     </div>
 
-                    <p className="text-stone-700 leading-relaxed mb-6">A custom website is the better investment when Webflow costs over $150 per month and your site needs to rank on Google. Webflow locks you into monthly platform fees, CMS item limits, and bandwidth caps. A custom Next.js site costs $3,500 once, then $0 per month, scores 95 to 100 on PageSpeed, and you own the code outright.</p>
+                    <p className="text-stone-700 leading-relaxed mb-6">A custom website is the better investment when Webflow costs over $150 per month and your site needs to rank on Google. Webflow locks you into monthly platform fees, CMS item limits, and bandwidth caps. A custom Next.js site costs $3,500 once, then $0 per month, scores 90+ on PageSpeed, and you own the code outright.</p>
 
                     <div className="space-y-8">
                         <BlogText>
@@ -294,7 +294,7 @@ export default function WebflowVsCustomWebsitePage() {
                         </BlogText>
 
                         <BlogText>
-                            If you are writing similar content, targeting the same keywords, and have comparable backlink profiles, but a competitor with a custom-coded site keeps ranking above you, the difference is almost certainly Core Web Vitals. Google uses page speed as a tiebreaker. A custom site scoring 95 to 100 beats a Webflow site scoring 60 to 70 every time when other factors are equal.
+                            If you are writing similar content, targeting the same keywords, and have comparable backlink profiles, but a competitor with a custom-coded site keeps ranking above you, the difference is almost certainly Core Web Vitals. Google uses page speed as a tiebreaker. A custom site scoring 90+ beats a Webflow site scoring 60 to 70 every time when other factors are equal.
                         </BlogText>
 
                         <BlogText>
@@ -324,7 +324,7 @@ export default function WebflowVsCustomWebsitePage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>Speed that Google rewards.</strong> Custom Next.js sites score 95 to 100 on PageSpeed Mobile. Pages load in under 1 second. <a href="https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Deloitte research</a> shows every 0.1 second improvement in load time increases conversion rates by 8.4% for retail sites. The speed difference between Webflow and custom code is not marginal. It is the difference between page 2 and page 1 on Google.
+                            <strong>Speed that Google rewards.</strong> Custom Next.js sites score 90+ on PageSpeed Mobile. Pages load in under 1 second. <a href="https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Deloitte research</a> shows every 0.1 second improvement in load time increases conversion rates by 8.4% for retail sites. The speed difference between Webflow and custom code is not marginal. It is the difference between page 2 and page 1 on Google.
                         </BlogText>
 
                         <BlogText>
@@ -418,7 +418,7 @@ export default function WebflowVsCustomWebsitePage() {
                                     <tr className="bg-stone-50">
                                         <td className="border border-stone-300 px-4 py-3">Google PageSpeed Mobile</td>
                                         <td data-label="Webflow (3 Years)" className="border border-stone-300 px-4 py-3">55 to 75</td>
-                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-300 px-4 py-3">95 to 100</td>
+                                        <td data-label="Custom Next.js (3 Years)" className="border border-stone-300 px-4 py-3">90+</td>
                                     </tr>
                                     <tr>
                                         <td className="border border-stone-300 px-4 py-3">Lost organic revenue (20% traffic gap)</td>
@@ -476,7 +476,7 @@ export default function WebflowVsCustomWebsitePage() {
 
                         <BlogList items={[
                             "Week 1: Full audit. We map every page, URL, form, integration, and CMS item on your Webflow site.",
-                            "Week 2 to 4: Build. Every page is rebuilt in Next.js, optimized for 95 to 100 PageSpeed from day one.",
+                            "Week 2 to 4: Build. Every page is rebuilt in Next.js, optimized for 90+ PageSpeed from day one.",
                             "Week 5: Content migration. CMS content is exported, images are transferred, and all metadata is preserved.",
                             "Week 6: Launch. 301 redirects are set up for every URL. Zero downtime. New sitemap is submitted to Google."
                         ]} />
@@ -527,7 +527,7 @@ export default function WebflowVsCustomWebsitePage() {
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
                             <li><strong>Webflow works for simple sites</strong>: If you have under 20 pages, spend under $100/month, and do not depend on organic search, stay on Webflow.</li>
-                            <li><strong>Webflow has a hard PageSpeed ceiling of 55 to 75 on mobile</strong>: You cannot optimize past this from inside the platform. Custom sites score 95 to 100.</li>
+                            <li><strong>Webflow has a hard PageSpeed ceiling of 55 to 75 on mobile</strong>: You cannot optimize past this from inside the platform. Custom sites score 90+.</li>
                             <li><strong>The real Webflow cost is $1,500 to $5,000/year</strong>: Once you add CMS hosting, forms, localization, third-party integrations, and freelancer costs.</li>
                             <li><strong>Custom code costs more upfront but less over 3 years</strong>: A $10,000 custom build on Vercel (starts free, scales to $20/mo only when your business grows) is cheaper than 3 years of Webflow at $150/month ($5,400) plus $36,000 in lost organic revenue.</li>
                             <li><strong>Every month on a slow Webflow site is lost traffic that does not come back</strong>: Your competitors are capturing those customers right now. Migration takes 4 to 6 weeks. The rankings improve within 90 days.</li>
