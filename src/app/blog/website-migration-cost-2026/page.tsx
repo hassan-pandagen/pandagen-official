@@ -15,8 +15,8 @@ const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: { absolute: "How Much Does Website Migration Cost in 2026? $1,500 to $10,000 (7 Platforms)" },
-    description: "Real website migration receipts across 7 platforms in 2026: WordPress $1,500 to $10K, Webflow $1,500 to $25K, Wix $3,500, Squarespace $3,500, GHL $1,500 to $8K. Fixed price, 90+ PageSpeed guarantee.",
+    title: { absolute: "Website Migration Cost 2026: $1,500 to $10,000 (7 Platforms)" },
+    description: "Website migration costs $1,500 to $10,000 in 2026. Real receipts: WordPress to $10K, Webflow to $25K, Wix and Squarespace $3,500. Fixed price, 90+ PageSpeed.",
     alternates: {
         canonical: "/blog/website-migration-cost-2026",
     },

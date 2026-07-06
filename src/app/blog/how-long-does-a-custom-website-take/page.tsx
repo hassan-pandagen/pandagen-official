@@ -17,8 +17,8 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "How Long Does a Custom Website Take to Build? Honest 2026 Timelines",
-    description: "Most agencies quote 8 to 16 weeks. The honest truth is most of that is waiting on you, not building. Real timelines by project size, the one thing that controls the clock, and the receipts behind a 7 day build.",
+    title: "How Long Does a Custom Website Take? (2026)",
+    description: "Most agencies quote 8 to 16 weeks, but most of that is waiting on you. Real timelines by project size, what controls the clock, and the 7 day build receipts.",
     alternates: {
         canonical: "/blog/how-long-does-a-custom-website-take",
     },

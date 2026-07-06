@@ -17,7 +17,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Spending More on Ads, Getting Fewer Orders? (2026 Fix)",
+    title: "Spending More on Ads, Getting Fewer Orders? (2026)",
     description: "Rising ad costs but flat orders? Meta and Google can no longer see half your conversions. Why it happens, what it costs, and the fix that is not a monthly app.",
     alternates: {
         canonical: "/blog/spending-more-on-ads-fewer-orders-tracking",

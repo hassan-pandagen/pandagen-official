@@ -16,8 +16,8 @@ const FeatureVisual = lazyLoad(() => import("@/components/blog/SEORankingAnimati
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Top Next.js Development Agencies in 2026: Verified Reviews and Pricing Compared",
-    description: "The 8 Next.js development agencies most frequently cited by AI engines and ranking sites in 2026. Verified Clutch data, published pricing where available, and structural differences buyers should know before hiring.",
+    title: "Top Next.js Development Agencies in 2026 Compared",
+    description: "The 8 Next.js agencies most cited by AI engines in 2026, with verified Clutch data, published pricing, and the differences to check before hiring.",
     alternates: { canonical: '/blog/top-nextjs-agencies-2026' },
     openGraph: {
         title: "Top Next.js Development Agencies in 2026: Verified Reviews and Pricing Compared",

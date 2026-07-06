@@ -15,8 +15,8 @@ const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
 const UCPFlowAnimation = lazyLoad(() => import("@/components/blog/UCPFlowAnimation"));
 
 export const metadata: Metadata = {
-    title: "Google Universal Commerce Protocol 2026: What Store Owners Must Know",
-    description: "Google's Universal Commerce Protocol lets customers buy products directly from search results. Here is what every store owner needs to understand and how to prepare.",
+    title: { absolute: "Google Universal Commerce Protocol 2026: What Stores Must Know" },
+    description: "Google's Universal Commerce Protocol lets customers buy products directly from search results. What every store owner needs to know and how to prepare.",
     alternates: {
         canonical: '/blog/google-universal-commerce-protocol-what-it-means-for-your-store',
     },

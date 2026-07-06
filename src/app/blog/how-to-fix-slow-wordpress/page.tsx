@@ -17,7 +17,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: { absolute: "How to Fix a Slow WordPress Site 2026: 8 Methods Ranked" },
-    description: "WordPress loads in 4 seconds. Your competitor loads in 0.9 seconds. Here are 8 speed methods ranked by impact, plus the hard truth about WordPress's performance ceiling.",
+    description: "WordPress loads in 4 seconds. Your competitor loads in 0.9 seconds. 8 speed methods ranked by impact, plus the hard truth about WordPress's ceiling.",
     alternates: {
         canonical: '/blog/how-to-fix-slow-wordpress',
     },

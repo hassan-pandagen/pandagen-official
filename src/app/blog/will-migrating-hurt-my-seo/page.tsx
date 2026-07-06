@@ -17,8 +17,8 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Will Migrating My Website Hurt My SEO? The Honest Answer (2026)",
-    description: "Done wrong, a website migration can lose 50% of your traffic. Done right, you keep 95 to 100% of your rankings and end up faster. The exact difference, the honest recovery timeline, and the checklist that protects your rankings.",
+    title: "Will Migrating My Website Hurt My SEO? (2026)",
+    description: "Done wrong, a website migration can lose 50% of your traffic. Done right, you keep 95 to 100% of your rankings. The checklist that protects them.",
     alternates: {
         canonical: "/blog/will-migrating-hurt-my-seo",
     },

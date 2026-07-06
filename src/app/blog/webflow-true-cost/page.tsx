@@ -16,8 +16,8 @@ const FeatureVisual = lazyLoad(() => import("@/components/blog/CostStackAnimatio
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "How Much Does Webflow Really Cost in 2026? Hidden Fees Explained",
-    description: "Webflow's $29/month is the entry price. Real cost is $125 to $400/month with CMS tiers, form fees, localization, bandwidth overages. 14 outages in 90 days documented. Full breakdown.",
+    title: "How Much Does Webflow Really Cost in 2026?",
+    description: "Webflow's $29/month is just the entry price. Real cost runs $125 to $400/month with CMS tiers, form fees, localization, and overages. Full 2026 breakdown.",
     alternates: {
         canonical: '/blog/webflow-true-cost',
     },

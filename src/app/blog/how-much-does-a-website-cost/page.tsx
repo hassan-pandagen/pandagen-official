@@ -16,8 +16,8 @@ const FeatureVisual = lazyLoad(() => import("@/components/blog/CostStackAnimatio
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "How Much Does a Website Cost in 2026? Real Pricing by Build Type",
-    description: "A website costs $0 to $50,000+ in 2026. Real cost breakdown by build type, business size, and hidden fees that turn affordable platforms into expensive long-term commitments.",
+    title: "How Much Does a Website Cost in 2026? Real Pricing",
+    description: "A website costs $0 to $50,000+ in 2026. Real cost breakdown by build type, business size, and hidden fees that make cheap platforms expensive long term.",
     alternates: { canonical: "/blog/how-much-does-a-website-cost" },
     keywords: [
         "how much does a website cost",

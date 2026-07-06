@@ -17,8 +17,8 @@ const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Is Your Website Ready for AI Agents? Google Now Scores It (2026)",
-    description: "In May 2026 Google added an 'Agentic Browsing' score to PageSpeed Insights that checks if AI agents can browse and act on your site. Here is what it checks, why the WebMCP layer shows 'Not Applicable', and how our own site already passes 3 out of 3.",
+    title: "Agentic Browsing Score: Is Your Site Ready? (2026)",
+    description: "Google added an Agentic Browsing score to PageSpeed Insights in May 2026. What it checks, why WebMCP shows Not Applicable, and how our site passes 3 of 3.",
     alternates: { canonical: "/blog/agentic-browsing-pagespeed-score" },
     keywords: [
         "agentic browsing",

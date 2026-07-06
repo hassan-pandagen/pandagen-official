@@ -17,7 +17,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 const QuoteModalButton = lazyLoad(() => import("@/components/ui/QuoteModalButton"));
 
 export const metadata: Metadata = {
-    title: "Shopify Plus Still Slow in 2026? Why $2,300/Month Does Not Fix Speed",
+    title: "Shopify Plus Still Slow in 2026? Why $2,300 Fails",
     description: "You upgraded to Shopify Plus for speed. Still scoring 50 on mobile. Here is why $2,300/month never breaks the Liquid ceiling, and the headless fix that does.",
     alternates: { canonical: "/blog/shopify-plus-still-slow" },
     keywords: ["shopify plus slow", "shopify plus core web vitals", "shopify plus speed", "shopify plus performance", "shopify plus liquid template", "shopify plus headless"],

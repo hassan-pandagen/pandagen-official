@@ -17,8 +17,8 @@ const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "What You Get for a Custom Website Starting at $5,000 (2026)",
-    description: "Most agencies quote $15,000 to $30,000 for a custom website or hide the price. Here is the honest version: what a custom build includes starting at $5,000, why it is a scoped starting point not a flat fee, and the things we include that buyers do not know to ask for.",
+    title: "Custom Website at $5,000: What's Included (2026)",
+    description: "Most agencies quote $15,000 to $30,000 for a custom website. Here is what a $5,000 build includes, why it is a scoped starting point, and the extras we add.",
     alternates: { canonical: "/blog/custom-website-5000-whats-included" },
     keywords: [
         "custom website cost",

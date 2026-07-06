@@ -16,8 +16,8 @@ const FeatureVisual = lazyLoad(() => import("@/components/blog/SalesImpactAnimat
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "What Does a Website Developer Agency Actually Do in 2026?",
-    description: "A website developer agency builds, migrates, and maintains custom-coded sites. Services, pricing, 6 questions to ask before signing, and red flags that separate legitimate partners from padded quotes.",
+    title: "Website Developer Agency: What They Do in 2026",
+    description: "A website developer agency builds, migrates, and maintains custom-coded sites. Services, pricing, 6 questions to ask, and red flags in padded quotes.",
     alternates: { canonical: "/blog/website-developer-agency" },
     keywords: [
         "website developer agency",

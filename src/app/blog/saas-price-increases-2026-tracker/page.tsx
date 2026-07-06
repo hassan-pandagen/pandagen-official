@@ -16,8 +16,8 @@ const SalesImpactAnimation = lazyLoad(() => import("@/components/blog/SalesImpac
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: { absolute: "Every 2026 SaaS Price Increase (and How to Stop Yours) | PandaCodeGen" },
-    description: "9 documented software price increases in 2026 with dates and sources. Webflow restructured May 13, Microsoft 365 hikes July 1, Klaviyo's stealth billing change raised stores 30 to 150%. Plus exactly what to do about each.",
+    title: { absolute: "Every 2026 SaaS Price Increase (and How to Stop Yours)" },
+    description: "9 documented SaaS price increases in 2026 with dates and sources. Webflow, Microsoft 365, Klaviyo's stealth 30 to 150% billing change, and what to do next.",
     alternates: { canonical: "/blog/saas-price-increases-2026-tracker" },
     keywords: [
         "saas price increases 2026", "software price increase 2026", "microsoft 365 price increase 2026",

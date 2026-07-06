@@ -17,7 +17,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "Tested: Is Squarespace Bad for SEO in 2026?",
-    description: "We audited 40+ Squarespace sites. Squarespace is not bad for SEO in low-competition niches. In competitive markets it hits a ceiling no plugin can fix. Full test results, Core Web Vitals data, and when to migrate.",
+    description: "We audited 40+ Squarespace sites. Not bad for SEO in low-competition niches, but competitive markets hit a ceiling no plugin can fix. When to migrate.",
     alternates: { canonical: "/blog/is-squarespace-bad-for-seo" },
     keywords: [
         "is squarespace bad for seo",

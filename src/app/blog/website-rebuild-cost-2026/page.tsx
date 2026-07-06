@@ -19,7 +19,7 @@ export const dynamic = "force-static";
 
 export const metadata: Metadata = {
     title: { absolute: "Website Rebuild Cost in 2026: $2,000 to $250,000 (By Project)" },
-    description: "Website rebuild costs range from $2,000 freelance to $250,000 enterprise in 2026. Honest pricing by platform, what drives cost up, and how to spot a padded quote.",
+    description: "Website rebuild costs run $2,000 freelance to $250,000 enterprise in 2026. Honest pricing by platform, what drives cost up, and how to spot a padded quote.",
     alternates: {
         canonical: "/blog/website-rebuild-cost-2026",
     },

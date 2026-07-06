@@ -18,8 +18,8 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Should You Replace Your GoHighLevel Website But Keep the CRM? (2026)",
-    description: "Keep GoHighLevel for CRM, automations, calendars, and SaaS Mode. Replace only the slow public website with a Next.js frontend that talks to GHL via REST API v2 and webhooks. Full hybrid architecture and real PageSpeed numbers.",
+    title: "Keep GoHighLevel CRM, Replace the Website (2026)",
+    description: "Keep GoHighLevel for CRM, automations, and SaaS Mode. Replace only the slow public site with a Next.js frontend on GHL API v2. Full hybrid architecture.",
     alternates: {
         canonical: "/blog/gohighlevel-keep-crm-replace-website",
     },

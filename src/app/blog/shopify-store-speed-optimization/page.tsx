@@ -16,8 +16,8 @@ const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAni
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Shopify Store Speed Optimization: What Actually Works (2026)",
-    description: "Your Shopify store scores 35 on PageSpeed and speed apps are making it worse. This guide covers what actually moves the needle: 7 high-impact fixes, Core Web Vitals targets, the Liquid theme ceiling, and when headless is the only answer.",
+    title: "Shopify Store Speed Optimization (2026 Guide)",
+    description: "Speed apps are making your Shopify store slower. 7 high-impact fixes, Core Web Vitals targets, the Liquid theme ceiling, and when headless is the answer.",
     alternates: { canonical: "/blog/shopify-store-speed-optimization" },
     keywords: [
         "shopify store speed optimization",

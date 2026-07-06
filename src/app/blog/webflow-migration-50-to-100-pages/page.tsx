@@ -16,8 +16,8 @@ const FeatureVisual = lazyLoad(() => import("@/components/blog/PlatformCompariso
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "How Much Should You Budget for a 50 to 100 Page Webflow Migration? ($5K to $10K)",
-    description: "Enterprise agencies quote $15K to $25K for 50 to 100 page Webflow migrations. Same scope costs $5K to $10K at PandaCodeGen Scale tier. Real hour estimates per phase, what drives price up, and 3-week delivery.",
+    title: "50 to 100 Page Webflow Migration: $5K to $10K",
+    description: "Enterprise agencies quote $15K to $25K for 50 to 100 page Webflow migrations. Same scope is $5K to $10K at PandaCodeGen, delivered in 3 weeks.",
     alternates: { canonical: "/blog/webflow-migration-50-to-100-pages" },
     keywords: ["webflow migration cost 50-100 pages", "webflow migration cost 50 pages", "webflow migration 60 pages", "webflow migration 100 pages", "webflow agency pricing site migration", "webflow enterprise migration", "webflow to nextjs 50 pages"],
     openGraph: {

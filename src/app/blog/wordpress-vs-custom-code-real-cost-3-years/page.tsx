@@ -16,8 +16,8 @@ const SalesImpactAnimation = lazyLoad(() => import("@/components/blog/SalesImpac
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "WordPress vs Custom Code: Which Costs Less Over 3 Years? (2026)",
-    description: "WordPress costs $15,000+ over 3 years when you add hosting, plugins, maintenance, and lost revenue. A custom Next.js site costs $3,500 once, then $0/year. Full TCO breakdown.",
+    title: "WordPress vs Custom Code: 3-Year Cost (2026)",
+    description: "WordPress costs $15,000+ over 3 years with hosting, plugins, maintenance, and lost revenue. A custom Next.js site costs $3,500 once, then $0/year.",
     alternates: {
         canonical: '/blog/wordpress-vs-custom-code-real-cost-3-years',
     },

@@ -16,7 +16,7 @@ const SEORankingAnimation = lazyLoad(() => import("@/components/blog/SEORankingA
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Why Your Competitor Outranks You in 2026: Core Web Vitals and SERP Gaps",
+    title: "Why Your Competitor Outranks You in 2026: The Fix",
     description: "Your competitor gets 3x your traffic with a faster coded site. Google, ChatGPT, and Bing all prefer fast sites. Here is the exact reason and the fix.",
     alternates: {
         canonical: '/blog/why-competitor-outranks-you',

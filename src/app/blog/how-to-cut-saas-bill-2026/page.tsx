@@ -16,8 +16,8 @@ const SalesImpactAnimation = lazyLoad(() => import("@/components/blog/SalesImpac
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: { absolute: "How to Cut Your SaaS Bill 40 to 70% in 2026 (5-Step Audit) | PandaCodeGen" },
-    description: "23% of your software licenses have zero usage. Here is the exact 5-step audit to cut your SaaS bill 40 to 70% with no capability loss, the cheaper equivalents per category, and when a custom build beats paying forever.",
+    title: { absolute: "How to Cut Your SaaS Bill 40 to 70% in 2026 (5-Step Audit)" },
+    description: "23% of software licenses have zero usage. The exact 5-step audit to cut your SaaS bill 40 to 70%, cheaper equivalents per category, and when to build custom.",
     alternates: { canonical: "/blog/how-to-cut-saas-bill-2026" },
     keywords: [
         "how to cut saas bill", "reduce saas costs 2026", "saas audit", "cancel unused saas",

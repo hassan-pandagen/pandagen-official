@@ -16,7 +16,7 @@ const HeadlessAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnim
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "What Is Headless Commerce? (2026 Guide for Store Owners)",
+    title: "What Is Headless Commerce? 2026 Store Owner Guide",
     description: "Headless commerce separates storefront from backend for faster loads and better conversions. What it costs and who needs it.",
     alternates: {
         canonical: '/blog/what-is-headless-commerce',

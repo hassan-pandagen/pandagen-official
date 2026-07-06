@@ -17,7 +17,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Did Cloudflare Build a WordPress Replacement in 2026? What You Need to Know",
+    title: "Cloudflare Emdash: WordPress Replacement in 2026?",
     description: "Cloudflare launched Emdash, calling it WordPress's spiritual successor. 96% of WordPress security issues come from plugins. Here is what this means for you.",
     alternates: {
         canonical: '/blog/cloudflare-emdash-wordpress-replacement',

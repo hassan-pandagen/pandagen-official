@@ -16,8 +16,8 @@ const FeatureVisual = lazyLoad(() => import("@/components/blog/CostStackAnimatio
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: { absolute: "WooCommerce Migration Cost in 2026: $1,500 to $10K+ (Real Pricing)" },
-    description: "What it really costs to migrate off WooCommerce to custom Next.js. Fixed-price tiers from $1,500, what drives the number up, and the red flags in a $25K agency quote.",
+    title: { absolute: "WooCommerce Migration Cost 2026: $1,500 to $10K+ (Real Pricing)" },
+    description: "What it really costs to migrate off WooCommerce to custom Next.js. Fixed-price tiers from $1,500, what drives the number up, and red flags in a $25K quote.",
     alternates: {
         canonical: "/blog/woocommerce-migration-cost",
     },

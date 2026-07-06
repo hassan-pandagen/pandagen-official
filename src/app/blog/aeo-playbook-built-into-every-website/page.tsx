@@ -18,7 +18,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: { absolute: "AEO Playbook: Get Cited by ChatGPT, Claude & Perplexity in 30 Days" },
+    title: { absolute: "AEO Playbook: Cited by ChatGPT, Claude & Perplexity in 30 Days" },
     description: "The exact AEO playbook we bake into every new website build. Cited across ChatGPT, Claude, Perplexity, and Google AI Overview, with real GSC receipts.",
     alternates: {
         canonical: "/blog/aeo-playbook-built-into-every-website",

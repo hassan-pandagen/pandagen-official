@@ -17,8 +17,8 @@ const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Meta Conversions API Setup Cost: Why a Pixel Isn't Enough (2026)",
-    description: "Meta Conversions API setup costs $4,000 to $16,000 standalone, or arrives as monthly middleware. What it actually costs, what it delivered on our own store (~10% more leads reported, 9.0 EMQ), and how a custom server-side integration is built with no third party in your data.",
+    title: { absolute: "Meta Conversions API Setup Cost: Why a Pixel Isn't Enough" },
+    description: "Meta Conversions API setup costs $4,000 to $16,000. Our own store added about 10% more reported leads at 9.0 EMQ. What a custom server-side build costs.",
     alternates: { canonical: "/blog/meta-conversions-api-setup-cost" },
     keywords: [
         "meta conversions api setup",

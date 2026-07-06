@@ -16,7 +16,7 @@ const FeatureVisual = lazyLoad(() => import("@/components/blog/CostStackAnimatio
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Shopify vs Custom Website in 2026: When Should You Switch?",
+    title: "Shopify vs Custom Website 2026: When to Switch?",
     description: "Shopify works until app fees hit $1,000/month and your store loads in 4+ seconds. 5 signs you have outgrown Shopify and what to do next.",
     alternates: {
         canonical: '/blog/shopify-vs-custom-website',

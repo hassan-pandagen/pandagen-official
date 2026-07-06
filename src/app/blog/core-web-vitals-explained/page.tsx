@@ -18,7 +18,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "What Are Core Web Vitals in 2026 and Why Do They Affect Your Revenue?",
+    title: "Core Web Vitals in 2026: Why They Affect Revenue",
     description: "Your agency said your Core Web Vitals are failing and you have no idea what that means. Here is what the 3 metrics cost your business in lost sales.",
     alternates: {
         canonical: "/blog/core-web-vitals-explained",

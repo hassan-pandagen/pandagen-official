@@ -16,7 +16,7 @@ const SEORankingAnimation = lazyLoad(() => import("@/components/blog/SEORankingA
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Why Is My WordPress Traffic Dropping in 2026? Speed Tax Explained",
+    title: "WordPress Traffic Dropping in 2026? The Speed Tax",
     description: "WordPress sites with Mobile PageSpeed below 50 lose 20 to 30% of organic traffic to faster competitors. Here is exactly why and how to reverse it fast.",
     alternates: { canonical: "/blog/wordpress-traffic-drop-speed" },
     keywords: ["wordpress losing traffic", "wordpress traffic drop", "wordpress speed seo", "core web vitals wordpress", "wordpress traffic decrease", "wordpress google ranking drop"],

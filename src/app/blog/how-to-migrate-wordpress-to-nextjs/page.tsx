@@ -16,7 +16,7 @@ const FeatureVisual = lazyLoad(() => import("@/components/blog/PlatformCompariso
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "WordPress to Next.js Migration: Step-by-Step Without Losing SEO (2026)",
+    title: { absolute: "WordPress to Next.js Migration Without Losing SEO (2026)" },
     description: "Step-by-step WordPress to Next.js migration: content export, 301 redirects, SEO preservation, zero downtime launch. 6 migrations, zero ranking drops.",
     alternates: {
         canonical: '/blog/how-to-migrate-wordpress-to-nextjs',

@@ -16,8 +16,8 @@ const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAni
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Why Your GoHighLevel Site Is Slow and How to Fix It (2026)",
-    description: "GoHighLevel sites score 20 to 45 on Mobile PageSpeed because of runtime rendering, shared JS bundles, and no edge caching. Full root cause breakdown, 5 in-platform fixes, and when to migrate to a custom Next.js frontend.",
+    title: "GoHighLevel Site Slow? Why + How to Fix It (2026)",
+    description: "GoHighLevel sites score 20 to 45 on mobile PageSpeed. Why GHL is slow, 5 in-platform fixes, and when a custom Next.js frontend is the real fix.",
     alternates: {
         canonical: "/blog/gohighlevel-website-speed",
     },

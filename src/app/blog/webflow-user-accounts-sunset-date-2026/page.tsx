@@ -18,8 +18,8 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "What Happened to Webflow User Accounts? Migration Guide After Jan 29, 2026",
-    description: "Webflow killed User Accounts on January 29, 2026. Memberstack ($25/mo) and Outseta ($79/mo) are temporary fixes. Custom code is permanent. Real cost comparison and 7-day migration timeline.",
+    title: "Webflow User Accounts Sunset: What To Do (2026)",
+    description: "Webflow killed User Accounts on January 29, 2026. Memberstack ($25/mo) and Outseta ($79/mo) are stopgaps. Custom code is permanent. 7-day migration plan.",
     alternates: {
         canonical: "/blog/webflow-user-accounts-sunset-date-2026",
     },

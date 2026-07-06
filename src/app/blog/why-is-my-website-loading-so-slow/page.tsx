@@ -16,8 +16,8 @@ const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAni
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Why Is My Website Loading So Slow? 12 Causes and Fast Fixes",
-    description: "Your site is slow because images, scripts, hosting, or the platform itself is making visitors wait. 12 root causes, free diagnostic tools, step-by-step fixes, and when a rebuild beats optimization.",
+    title: "Why Is My Website Loading So Slow? 12 Fixes",
+    description: "Your site is slow because images, scripts, hosting, or the platform itself is making visitors wait. 12 root causes, free tools, and fixes that work.",
     alternates: { canonical: "/blog/why-is-my-website-loading-so-slow" },
     keywords: [
         "why is my website loading so slow",

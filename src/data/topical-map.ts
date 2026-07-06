@@ -365,7 +365,7 @@ export const clusters: Cluster[] = [
     label: 'Ad Tracking & Attribution',
     entityIds: ['custom-engineering'],
     relatedClusterIds: ['custom', 'ecommerce-strategy'],
-    postIds: ['meta-conversions-api-setup-cost', 'spending-more-on-ads-fewer-orders-tracking'],
+    postIds: ['meta-conversions-api-setup-cost', 'spending-more-on-ads-fewer-orders-tracking', 'fix-meta-ad-tracking-2026'],
   },
 ];
 

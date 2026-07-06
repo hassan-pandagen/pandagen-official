@@ -16,7 +16,7 @@ const FeatureVisual = lazyLoad(() => import("@/components/blog/PlatformCompariso
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "WordPress vs Next.js in 2026: Which Is Faster and Cheaper?",
+    title: "WordPress vs Next.js 2026: Faster and Cheaper?",
     description: "WordPress vs Next.js 2026: speed, SEO, cost, security compared with real data. Next.js scores 90+, WordPress 35-65. Full breakdown inside.",
     alternates: {
         canonical: '/blog/wordpress-vs-nextjs',

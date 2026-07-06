@@ -16,7 +16,7 @@ const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAni
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Are WordPress Plugins Slowing Down Your Site? 30+ Plugin Impact (2026)",
+    title: "Are WordPress Plugins Slowing Your Site? (2026)",
     description: "Most WordPress sites with 30+ plugins score 35/100 on mobile. How much revenue you lose per month and how to actually fix it.",
     alternates: { canonical: "/blog/wordpress-plugins-destroy-speed" },
     keywords: ["wordpress plugins slow", "wordpress plugin performance", "too many wordpress plugins", "wordpress plugins killing speed", "fix slow wordpress plugins", "wordpress speed optimization"],

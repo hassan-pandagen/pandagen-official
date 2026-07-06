@@ -16,8 +16,8 @@ const SalesImpactAnimation = lazyLoad(() => import("@/components/blog/SalesImpac
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "2026 Software Pricing Audit: Why Your Monthly Bill Keeps Climbing (and What to Cut)",
-    description: "Webflow restructured May 13. Microsoft 365 tier increases take effect July 1, 2026. Klaviyo's stealth billing change raised most stores 30 to 150%. Full 2026 pricing audit across 30 tools with primary sources.",
+    title: "2026 Software Pricing Audit: 30 Tools, What to Cut",
+    description: "Webflow restructured May 13. Microsoft 365 hikes hit July 1. Klaviyo's stealth change raised stores 30 to 150%. Full 2026 audit of 30 tools with sources.",
     alternates: {
         canonical: "/blog/saas-software-pricing-audit-2026",
     },

@@ -17,8 +17,8 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Do You Actually Own Your Website? The Truth About Code, Domain & Hosting (2026)",
-    description: "By default, copyright law says your developer owns the website you paid for, not you. Here are the four things you must control, the developer-hostage horror stories, and exactly how PandaCodeGen transfers full ownership in writing.",
+    title: { absolute: "Do You Own Your Website? Code, Domain & Hosting (2026)" },
+    description: "By default, copyright law says your developer owns the website you paid for. The four things you must control and how we transfer full ownership in writing.",
     alternates: {
         canonical: "/blog/do-you-own-your-website",
     },

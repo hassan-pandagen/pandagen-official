@@ -17,7 +17,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 const QuoteModalButton = lazyLoad(() => import("@/components/ui/QuoteModalButton"));
 
 export const metadata: Metadata = {
-    title: "Low Shopify Conversion Rate? How Site Speed Hurts Sales",
+    title: "Low Shopify Conversion Rate? Speed Hurts Sales",
     description: "Your Shopify conversion rate is stuck at 1.4% because your store loads in 4 seconds. Stores under 2 seconds convert at 3 to 5%. Here is the fix.",
     alternates: { canonical: "/blog/shopify-conversion-rate-speed-fix" },
     keywords: ["shopify conversion rate", "low shopify conversion rate", "shopify speed conversion", "improve shopify conversion rate", "shopify store slow", "shopify cro speed"],

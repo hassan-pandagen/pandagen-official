@@ -17,8 +17,8 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 const QuoteModalButton = lazyLoad(() => import("@/components/ui/QuoteModalButton"));
 
 export const metadata: Metadata = {
-    title: "Webflow Migration Cost 2026: Real Receipts From $1,500",
-    description: "Real Webflow migration receipts: $1,500 (5 pages), $3,500 (20 pages), $5K to $10K (50-100 pages). Enterprise agencies charge $15K to $25K for the same scope. Fixed pricing, 90+ PageSpeed guarantee.",
+    title: "Webflow Migration Cost 2026: Receipts From $1,500",
+    description: "Webflow migration receipts: $1,500 for 5 pages, $3,500 for 20, $5K-$10K for 50-100. Agencies quote $15K-$25K for the same scope. Fixed price, 90+ PageSpeed.",
     alternates: {
         canonical: '/blog/webflow-migration-cost',
     },

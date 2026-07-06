@@ -16,8 +16,8 @@ const FeatureVisual = lazyLoad(() => import("@/components/blog/SalesImpactAnimat
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Is Shopify Headless Worth It in 2026? Real Results From $1.2M Store",
-    description: "Shopify Liquid templates are render-blocking and cannot be fixed with apps. Headless Shopify on Next.js cuts load time from 4s to 0.8s. Real receipts, exact stack, fixed pricing.",
+    title: "Shopify Headless in 2026: $1.2M Store Results",
+    description: "Shopify Liquid templates are render-blocking. Headless on Next.js cut load time from 4s to 0.8s on a $1.2M store. Real receipts, exact stack, fixed pricing.",
     alternates: { canonical: "/blog/shopify-headless" },
     keywords: ["headless shopify", "shopify speed optimization", "shopify core web vitals", "shopify next.js", "shopify storefront api", "shopify liquid slow"],
     openGraph: {

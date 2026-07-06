@@ -15,7 +15,7 @@ const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
 const FeatureVisual = lazyLoad(() => import("@/components/blog/SalesImpactAnimation"));
 
 export const metadata: Metadata = {
-    title: "Can Your Agency Offer Custom Web Development Without Hiring Developers? (2026)",
+    title: { absolute: "Offer Custom Web Development Without Hiring Developers (2026)" },
     description: "Your client wants a custom site but you have no dev team. Here is how agency partners deliver premium custom builds under their own brand without writing code.",
     alternates: {
         canonical: '/blog/for-agencies-offer-custom-web-development',

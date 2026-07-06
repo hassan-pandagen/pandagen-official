@@ -16,8 +16,8 @@ const SecurityShieldAnimation = lazyLoad(() => import("@/components/blog/Securit
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "WordPress in April 2026: 3 Documented Events That Changed Migration Urgency",
-    description: "Three documented April 2026 events: Matt Mullenweg's internal memo admitting WordPress is failing, three plugin supply-chain attacks in one week (400K + 800K + 1 site), and the WooCommerce Core team lead's public admission of the platform's biggest problems. All primary sources.",
+    title: "WordPress in April 2026: 3 Documented Events",
+    description: "Three documented April 2026 events: Mullenweg's internal memo, three plugin supply-chain attacks in one week, and the WooCommerce team lead's admission.",
     alternates: {
         canonical: '/blog/wordpress-april-2026-evidence',
     },

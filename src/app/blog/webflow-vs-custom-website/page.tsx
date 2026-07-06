@@ -16,7 +16,7 @@ const FeatureVisual = lazyLoad(() => import("@/components/blog/PlatformCompariso
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Webflow vs Custom Website 2026: Which Is the Better Investment?",
+    title: "Webflow vs Custom Website 2026: Better Investment?",
     description: "Webflow works until your PageSpeed drops below 70, your bill hits $100+/month, or you need features it cannot build. Here are the 5 signs and what to do next.",
     alternates: {
         canonical: '/blog/webflow-vs-custom-website',

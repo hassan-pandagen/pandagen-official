@@ -18,8 +18,8 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: { absolute: "Best Website Builder for GoHighLevel Agencies in 2026 (Honest Comparison)" },
-    description: "GoHighLevel agencies have six real choices for client websites. Pricing pulled live from each platform, Webflow uptime data, and the honest verdict on custom code vs GHL Native vs Simvoly vs SiteSwan vs Duda vs Webflow.",
+    title: { absolute: "Best Website Builder for GoHighLevel Agencies in 2026" },
+    description: "GoHighLevel agencies have six real choices for client sites. Live pricing, Webflow uptime data, and an honest verdict on custom code vs GHL Native vs Duda.",
     alternates: {
         canonical: "/blog/best-website-builder-for-gohighlevel-agencies",
     },

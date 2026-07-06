@@ -34,6 +34,30 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "fix-meta-ad-tracking-2026",
+    cardStat: "9.0 EMQ",
+    cardStatLabel: "Lead match quality after wiring server-side CAPI on our own store",
+    title: "Facebook Ad Tracking Not Working? Diagnose and Fix It (2026)",
+    excerpt: "iOS opt-outs, ad blockers, Safari's 7-day cookie cap, and Shopify's checkout changes quietly eat your conversion signal, so Meta reports a worse ROAS than you actually got. How to diagnose broken tracking, and the server-side CAPI fix that lifted credited Lead conversions ~10% on our own store.",
+    category: "Guide",
+    readTime: "9 min",
+    date: "Jul 6",
+    author: "Hassan",
+    role: "Co-founder, Lead Engineer",
+    featured: false,
+    illustrationType: "conversion",
+    lastModified: "2026-07-06",
+    faqs: [
+      { question: "Why are my Facebook ads not tracking conversions or purchases?", answer: "Almost always because you're relying on the browser pixel, and a large share of your customers are now invisible to it: iOS ATT opt-outs, blocked third-party cookies, Safari's 7-day cookie cap, ad blockers, and on Shopify the loss of checkout.liquid tracking. The pixel still fires, so it looks installed, but it's missing real people. The fix is to also send conversions server-side through the Meta Conversions API with strong identifiers, deduplicated against the pixel." },
+      { question: "Why is my Meta pixel not firing?", answer: "First rule out the simple stuff with Meta's Pixel Helper: misplaced or duplicate base code, an invalid pixel ID, or the snippet in the footer instead of the head. Then check the modern causes: an ad blocker stopping the call, or a cookie-consent banner holding the pixel back until the visitor accepts. A reliable tell is the pixel firing in incognito but missing normal traffic. Server-side tracking keeps your data flowing when the browser pixel is suppressed." },
+      { question: "Why does Facebook report fewer sales than my Shopify admin?", answer: "Shopify records every order regardless of browser, but the pixel only catches the ones the browser lets through. Conversions on opted-out iOS devices, behind ad blockers, after Safari wiped the cookie, or missing fbp/fbc identifiers never reach Meta. The under-reporting is the gap between what the browser allowed and what actually sold. Server-side tracking closes most of it." },
+      { question: "Did iOS 14 / ATT actually break my tracking, and can I fix it?", answer: "Yes. iOS 14.5's App Tracking Transparency is one of the biggest causes of lost conversion visibility since 2021, because most users opt out. You can't undo Apple's prompt, but you can route around it: a server-to-server Conversions API call still delivers the event, because Apple can't block your server talking to Meta's server. That's the supported, durable fix." },
+      { question: "What is Event Match Quality and why is mine low?", answer: "EMQ is Meta's 0-to-10 score for how confidently it can match your events to real accounts. It's low when events arrive with thin data. You raise it by sending high-quality signals server-side: hashed email and phone, fbp, fbc, IP, and user agent, formatted to Meta's spec. Email plus fbc alone can lift a score from the low 3s into the 7s. On Panda Patches, a full identifier set pushed the Lead event to around 9.0." },
+      { question: "Do I still need to verify my domain and prioritize 8 conversion events?", answer: "No, that advice is outdated, and a lot of guides still repeat it. Meta removed the 8-event limit and manual event prioritization in June 2025, and the Aggregated Event Measurement tab is gone from Events Manager entirely. All eligible events now process automatically. Domain verification is still worth doing as account hygiene, but it no longer gates event configuration. What moves results in 2026 is signal quality: server-side events carrying strong identifiers." },
+      { question: "My clicks track fine but conversions don't match my campaigns. Why?", answer: "Check your UTMs. A common self-inflicted wound is adding the same UTM parameters to both the Destination Website URL and the URL Parameters fields in Ads Manager, which creates conflicting tags and scrambles attribution. Put dynamic tracking in the URL Parameters field only. If the UTMs are clean and conversions still don't line up, you're back to the visibility problem, and the fix is server-side tracking." },
+    ]
+  },
+  {
     id: "wix-migration-cost",
     cardStat: "No Export",
     cardStatLabel: "Wix has no site export, so a migration is really a rebuild",
@@ -1424,9 +1448,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "shopify-dawn-theme-slow",
-    cardStat: "55 to 95",
+    cardStat: "55 to 90+",
     cardStatLabel: "Dawn to custom PageSpeed",
-    title: "Shopify Dawn Theme Slow? How We Fixed It From 55 to 95 (2026)",
+    title: "Shopify Dawn Theme Slow? How We Fixed It From 55 to 90+ (2026)",
     excerpt: "Dawn is Shopify's fastest theme. so why is your store still loading in 3+ seconds? Here's what's actually killing your speed and why theme-level fixes won't save you.",
     category: "Shopify",
     readTime: "9 min",

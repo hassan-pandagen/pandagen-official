@@ -15,7 +15,7 @@ const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
 const SEORankingAnimation = lazyLoad(() => import("@/components/blog/SEORankingAnimation"));
 
 export const metadata: Metadata = {
-    title: "How Website Speed Affects SEO in 2026: Every 100ms Costs 1% in Revenue",
+    title: { absolute: "How Website Speed Affects SEO in 2026: Every 100ms Costs 1%" },
     description: "A site loading in 1 second converts 3x better than one at 5 seconds. Here is exactly how page speed affects your rankings and revenue.",
     alternates: {
         canonical: '/blog/how-website-speed-affects-seo',

@@ -16,7 +16,7 @@ const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAni
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "How to Hit a 90+ PageSpeed Score (Our Exact 8-Step Process)",
+    title: "How to Hit a 90+ PageSpeed Score (8-Step Process)",
     description: "Most sites score 35 to 55 on PageSpeed. We hit 90+ every build. The exact 8-step process, with real before/after data.",
     alternates: {
         canonical: '/blog/how-to-achieve-100-pagespeed',

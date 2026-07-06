@@ -16,8 +16,8 @@ const FeatureVisual = lazyLoad(() => import("@/components/blog/CostStackAnimatio
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Is Vercel Free? 2026 Pricing, Limits & the 100GB Bandwidth Cap",
-    description: "Yes, Vercel's free Hobby plan gives you 100GB bandwidth a month in 2026. Here's what's included, the new hard caps, when you hit $20/mo Pro, and how to stay near-free.",
+    title: "Is Vercel Free? 2026 Pricing & the 100GB Cap",
+    description: "Yes. Vercel's free Hobby plan includes 100GB bandwidth a month in 2026. What's included, the new hard caps, when you hit $20/mo Pro, how to stay near-free.",
     alternates: {
         canonical: '/blog/nextjs-hosting-zero-cost',
     },

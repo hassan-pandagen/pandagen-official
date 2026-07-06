@@ -18,7 +18,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Squarespace vs Custom Website in 2026: Which Is Better for SEO?",
+    title: { absolute: "Squarespace vs Custom Website in 2026: Which Is Better for SEO?" },
     description: "Squarespace caps at 30 to 55 on mobile PageSpeed. Custom Next.js hits 90+. Honest cost, speed, and SEO comparison for 2026.",
     alternates: {
         canonical: "/blog/squarespace-vs-custom-website",

@@ -16,8 +16,8 @@ const SecurityShieldAnimation = lazyLoad(() => import("@/components/blog/Securit
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Is WordPress Safe in 2026? AI Plugin Vulnerabilities Exposed 100K Sites",
-    description: "AI plugins are the newest WordPress vulnerability. 100K+ sites exposed through AI plugin flaws. Here is what business owners need to know and how to protect your site.",
+    title: "Is WordPress Safe in 2026? 100K Sites Exposed",
+    description: "AI plugins are the newest WordPress vulnerability. 100K+ sites exposed through AI plugin flaws. What business owners need to know to protect their sites.",
     alternates: {
         canonical: '/blog/wordpress-ai-security-risk-2026',
     },

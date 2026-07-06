@@ -17,7 +17,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 const QuoteModalButton = lazyLoad(() => import("@/components/ui/QuoteModalButton"));
 
 export const metadata: Metadata = {
-    title: "Slow Shopify Store? How Much Revenue You Are Losing in 2026 (With Math)",
+    title: "Slow Shopify Store? The $75K Revenue Leak (2026)",
     description: "A $500K/year Shopify store at 4s load time loses $75K to speed. Plug in your numbers and see what a 1-second store would earn.",
     alternates: {
         canonical: '/blog/shopify-slow-losing-sales',

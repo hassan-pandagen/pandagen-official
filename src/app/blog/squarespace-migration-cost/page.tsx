@@ -16,7 +16,7 @@ const FeatureVisual = lazyLoad(() => import("@/components/blog/CostStackAnimatio
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "How Much Does Squarespace Migration Cost in 2026? Full Breakdown",
+    title: "Squarespace Migration Cost 2026: Full Breakdown",
     description: "Squarespace costs $1,500 to $5,500 over 3 years with every fee counted. Real migration cost by site size plus the ROI payback math.",
     alternates: {
         canonical: "/blog/squarespace-migration-cost",

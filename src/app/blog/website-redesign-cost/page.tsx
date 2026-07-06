@@ -18,8 +18,8 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "How Much Does a Website Redesign Cost in 2026? ($3K to $50K Breakdown)",
-    description: "Honest pricing for refresh, redesign, and rebuild projects from $1,500 to $15,000+. Hidden costs agencies leave out and how to know which option you actually need.",
+    title: "Website Redesign Cost in 2026: $3K to $50K",
+    description: "Honest pricing for refresh, redesign, and rebuild projects from $1,500 to $15,000+. Hidden costs agencies leave out and how to know which option you need.",
     alternates: {
         canonical: '/blog/website-redesign-cost',
     },

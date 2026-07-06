@@ -19,7 +19,7 @@ const QuoteModalButton = lazyLoad(() => import("@/components/ui/QuoteModalButton
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "What Are the Best Pagepro Alternatives in 2026? (Next.js Agencies Compared)",
+    title: "Pagepro Alternatives 2026: Next.js Agencies",
     description: "Pagepro, Naturaily, and Blazity charge $25K+ minimums with no published pricing. Same Next.js quality at fixed prices with written PageSpeed guarantees.",
     alternates: {
         canonical: '/blog/pagepro-alternatives',

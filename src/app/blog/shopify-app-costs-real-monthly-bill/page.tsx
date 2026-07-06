@@ -17,7 +17,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 const QuoteModalButton = lazyLoad(() => import("@/components/ui/QuoteModalButton"));
 
 export const metadata: Metadata = {
-    title: "How Much Do Shopify Apps Cost in 2026? $300 to $800/mo (Real Store Data)",
+    title: "Shopify App Costs in 2026: $300 to $800/mo",
     description: "You cut 3 apps to save money. Black Friday hits and the bill is $1,000 again. Full app cost breakdown and how to actually stop paying.",
     alternates: {
         canonical: "/blog/shopify-app-costs-real-monthly-bill",

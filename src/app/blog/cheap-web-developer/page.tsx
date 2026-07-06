@@ -18,7 +18,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "How Do You Find a Cheap Web Developer Without Getting Burned? (2026)",
+    title: { absolute: "Cheap Web Developer: How to Hire Without Getting Burned (2026)" },
     description: "Where to find cheap web developers in 2026, what each price tier actually delivers, red flags that wreck projects, and how to hire without getting burned.",
     alternates: {
         canonical: '/blog/cheap-web-developer',

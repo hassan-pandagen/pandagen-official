@@ -16,7 +16,7 @@ const SEORankingAnimation = lazyLoad(() => import("@/components/blog/SEORankingA
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Does Elementor Kill SEO? We Audited 500 WordPress Sites",
+    title: "Does Elementor Kill SEO? We Audited 500 Sites",
     description: "Average Elementor site scores 38/100 on mobile. See the Core Web Vitals, DOM bloat, and ranking loss across 500 audited WordPress sites.",
     alternates: { canonical: "/blog/elementor-kills-seo" },
     keywords: ["elementor seo", "elementor slow", "elementor kills rankings", "page builder seo impact", "elementor pagespeed score", "wordpress page builder performance"],

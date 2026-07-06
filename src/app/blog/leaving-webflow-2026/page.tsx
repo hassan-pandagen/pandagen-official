@@ -18,8 +18,8 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Should You Leave Webflow in 2026? Real Migration Story After 14 Outages",
-    description: "Documented 14 Webflow outages between February and April 2026. Bandwidth bills hit $170 overnight. Memberships killed with 6 weeks notice. Full migration story, timeline, and results.",
+    title: "Leaving Webflow 2026: Why We Left After 14 Outages",
+    description: "14 documented Webflow outages Feb to April 2026. Bandwidth bills hit $170 overnight. Memberships killed with 6 weeks notice. The full migration story.",
     alternates: {
         canonical: "/blog/leaving-webflow-2026",
     },

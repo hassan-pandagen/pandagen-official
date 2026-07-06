@@ -17,7 +17,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Can You Replace Your GoHighLevel Website Without Losing the CRM? (2026)",
+    title: "GoHighLevel Migration: Keep the CRM (2026)",
     description: "GHL sites score 35 to 47 on mobile PageSpeed. Your ads cost more and your leads cost more. Here is how to fix it without losing your CRM.",
     alternates: {
         canonical: '/blog/gohighlevel-migration',

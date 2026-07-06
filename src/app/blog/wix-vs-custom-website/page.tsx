@@ -18,7 +18,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Wix vs Custom Website in 2026: Which Ranks Better on Google?",
+    title: "Wix vs Custom Website 2026: Which Ranks Better?",
     description: "Wix caps at 35 to 55 on mobile PageSpeed. Custom Next.js hits 90+. Real 3-year cost, SEO ceiling, and when to stay or switch. Honest breakdown.",
     alternates: {
         canonical: "/blog/wix-vs-custom-website",

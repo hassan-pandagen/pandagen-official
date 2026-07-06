@@ -16,8 +16,8 @@ const SalesImpactAnimation = lazyLoad(() => import("@/components/blog/SalesImpac
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: { absolute: "Build vs Buy Software in 2026: The $80K Question, Answered | PandaCodeGen" },
-    description: "35% of enterprises already replaced a SaaS tool with custom code. Here is the decision framework: when SaaS wins, when custom wins, and the exact monthly spend threshold where building beats buying.",
+    title: "Build vs Buy Software 2026: The $80K Question",
+    description: "35% of enterprises replaced a SaaS tool with custom code. When SaaS wins, when custom wins, and the monthly spend threshold where building beats buying.",
     alternates: { canonical: "/blog/build-vs-buy-software-2026-cost-comparison" },
     keywords: [
         "build vs buy software 2026", "custom software vs saas", "is it cheaper to build a custom crm",

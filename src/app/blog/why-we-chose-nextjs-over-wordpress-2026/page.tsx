@@ -16,7 +16,7 @@ const FeatureVisual = lazyLoad(() => import("@/components/blog/PlatformCompariso
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Why We Chose Next.js Over WordPress in 2026 (With Client Results)",
+    title: { absolute: "Why We Chose Next.js Over WordPress in 2026 (Client Results)" },
     description: "We built WordPress for years. Client data made it impossible to justify. The speed, cost, and SEO numbers that made us switch.",
     alternates: {
         canonical: '/blog/why-we-chose-nextjs-over-wordpress-2026',

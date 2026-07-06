@@ -17,7 +17,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "What Did Google's March 2026 Update Do to Rankings? Fast Sites Won",
+    title: "Google March 2026 Update: Fast Sites Won",
     description: "Google's March 2026 core update tightened speed requirements and dropped 47% of slow sites. Here's what changed and what your business should do now.",
     alternates: {
         canonical: '/blog/google-march-2026-update',

@@ -17,8 +17,8 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 const QuoteModalButton = lazyLoad(() => import("@/components/ui/QuoteModalButton"));
 
 export const metadata: Metadata = {
-    title: { absolute: "How Much Does WordPress to Next.js Migration Cost in 2026? ($1,500 to $25K)" },
-    description: "Real WordPress migration receipts: 5-page brochure $1,500, 20-page CMS $3,500, WooCommerce $5K to $10K. Pagepro charges $25K+ retainer minimums. PandaCodeGen ships fixed-price with 90+ PageSpeed guarantee.",
+    title: { absolute: "WordPress to Next.js Migration Cost in 2026: $1,500 to $25K" },
+    description: "WordPress migration receipts: $1,500 brochure, $3,500 CMS site, $5K-$10K WooCommerce. Pagepro wants $25K+ retainers. Fixed price, 90+ PageSpeed guarantee.",
     alternates: {
         canonical: "/blog/wordpress-migration-cost",
     },
