@@ -66,7 +66,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -184,7 +184,12 @@ export default function WebsiteCostPage() {
 
                             <div className="my-6 p-5 bg-cognac/5 border border-cognac/20 rounded-xl" data-speakable="true">
                                 <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">Real Receipt: MyCustomPatches</p>
-                                <p className="text-sm text-stone-700 leading-relaxed">Here is what the numbers look like in practice. We rebuilt MyCustomPatches (owner Matt Conner) from a slow WordPress and WooCommerce setup to a custom Next.js build. Mobile PageSpeed went from 45 to 100, load time from 3.2 seconds to 0.7, and monthly hosting dropped from $150 to $0 because the site no longer pays platform or plugin fees. The fixed build cost paid for itself in months on hosting savings alone, before counting the traffic the speed recovered. You can verify the live site at mycustompatches.net and the review on our Clutch and GoodFirms profiles.</p>
+                                <p className="text-sm text-stone-700 leading-relaxed">Here is what the numbers look like in practice. We rebuilt MyCustomPatches (owner Matt Conner) from a slow WordPress and WooCommerce setup to a custom Next.js build. Mobile PageSpeed went from 45 to 90+, load time from 3.2 seconds to 0.7, and monthly hosting dropped from $150 to $0 because the site no longer pays platform or plugin fees. The fixed build cost paid for itself in months on hosting savings alone, before counting the traffic the speed recovered. You can verify the live site at mycustompatches.net and the review on our Clutch and GoodFirms profiles.</p>
+                            </div>
+
+                            <div className="my-6 p-5 bg-cognac/5 border border-cognac/20 rounded-xl" data-speakable="true">
+                                <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">Real Receipt: Panda Patches</p>
+                                <p className="text-sm text-stone-700 leading-relaxed">Panda Patches is our own e-commerce brand (owned by Imran, our co-founder), so we can show the full cost math, not just the before/after speed numbers. Three years on WordPress and WooCommerce ran roughly $200 a month in hosting, plugins, and app fees, on top of a 64 mobile PageSpeed ceiling. The rebuild onto Next.js, Sanity, Supabase, and Square runs about $55 a month in total tooling, a Scale-tier build cost that paid for itself within months once the $200/month platform spend disappeared. Revenue grew from roughly $38K to $50K a month in the period after launch. <Link href="/work/panda-patches" className="text-cognac hover:underline">Full case study here.</Link></p>
                             </div>
 
                             <BlogText>
@@ -263,6 +268,9 @@ export default function WebsiteCostPage() {
                             </BlogText>
                             <BlogText>
                                 The performance difference is measurable: sub-1-second load times, <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">90+ PageSpeed scores</Link>, and infrastructure that scales without monthly platform fees. At PandaCodeGen, we build <Link href="/services/custom-engineering" className="text-cognac hover:underline">custom-coded sites starting at $1,500</Link> with fixed pricing, a 90+ PageSpeed guarantee, and full code ownership from day one.
+                            </BlogText>
+                            <BlogText>
+                                Our own tiers break down by scope, not by padding a quote to see what a client will pay. <strong>Starter ($1,500)</strong> covers a brochure site in the 5 to 15 page range, similar to the MyCustomPatches rebuild before its product catalog grew. <strong>Growth ($3,500)</strong> adds a CMS, blog infrastructure, and more custom components, the tier most service businesses migrating off WordPress land in. <strong>Scale ($5,000 to $10,000)</strong> covers e-commerce with a headless backend, which is where Panda Patches sits: Next.js plus Sanity, Supabase, and Square, running about $55 a month in combined tooling instead of a $200/month WordPress plugin stack. <strong>Scale+ ($10,000+)</strong> is for multi-integration builds, custom dashboards, or non-standard backend work that goes beyond a standard storefront.
                             </BlogText>
 
                             <BlogHeader>Average Website Cost by Business Size and Type</BlogHeader>
@@ -369,7 +377,7 @@ export default function WebsiteCostPage() {
 
                             <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Maintenance and Developer Retainers</h3>
                             <BlogText>
-                                Ongoing maintenance runs $30 to $1,000+ per month depending on platform and complexity. WordPress sites require regular updates, security patches, and backups. Custom-coded sites on modern stacks require far less maintenance because they have fewer dependencies and no plugin ecosystem to manage.
+                                Ongoing maintenance runs $30 to $1,000+ per month depending on platform and complexity. WordPress sites require regular updates, security patches, and backups, and the new wave of <Link href="/blog/wordpress-ai-security-risk-2026" className="text-cognac hover:underline">AI plugins has added a fresh security risk</Link> to that workload. Custom-coded sites on modern stacks require far less maintenance because they have fewer dependencies and no plugin ecosystem to manage.
                             </BlogText>
 
                             <BlogHeader>The True Cost of a Slow or Rented Website</BlogHeader>

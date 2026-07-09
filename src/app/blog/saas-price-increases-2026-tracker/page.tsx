@@ -16,8 +16,8 @@ const SalesImpactAnimation = lazyLoad(() => import("@/components/blog/SalesImpac
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: { absolute: "Every 2026 SaaS Price Increase (and How to Stop Yours)" },
-    description: "9 documented SaaS price increases in 2026 with dates and sources. Webflow, Microsoft 365, Klaviyo's stealth 30 to 150% billing change, and what to do next.",
+    title: { absolute: "9 SaaS Price Increases in 2026 So Far (Snapshot)" },
+    description: "9 documented SaaS price increases from the first five months of 2026, with dates and sources. Webflow, Microsoft 365, Klaviyo's stealth 30 to 150% billing change, and what to do next.",
     alternates: { canonical: "/blog/saas-price-increases-2026-tracker" },
     keywords: [
         "saas price increases 2026", "software price increase 2026", "microsoft 365 price increase 2026",
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
         "how to stop saas price increases", "stealth saas price increase"
     ],
     openGraph: {
-        title: "Every 2026 SaaS Price Increase (and How to Stop Yours)",
-        description: "9 documented software price increases in 2026 with dates and sources, plus exactly what to do about each one.",
+        title: "9 SaaS Price Increases in 2026 So Far (Snapshot, May 2026)",
+        description: "9 documented software price increases from the first five months of 2026 with dates and sources, plus exactly what to do about each one.",
         type: "article",
         publishedTime: "2026-05-31T00:00:00-05:00",
         modifiedTime: "2026-05-31T00:00:00-05:00",
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Every 2026 SaaS Price Increase (and How to Stop Yours)",
-        description: "9 documented software price increases in 2026 with dates and sources, plus what to do about each.",
+        title: "9 SaaS Price Increases in 2026 So Far (Snapshot, May 2026)",
+        description: "9 documented software price increases from the first five months of 2026 with dates and sources, plus what to do about each.",
     },
 };
 
@@ -48,7 +48,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/saas-price-increases-2026-tracker#article",
-            "headline": "Your SaaS Bill Went Up Again in 2026. Here Is Every Increase and How to Stop It.",
+            "headline": "9 SaaS Price Increases From the First Five Months of 2026 (Snapshot)",
             "description": "9 documented software price increases in 2026 with dates and sources, plus exactly what to do about each one.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-05-31T00:00:00-05:00",
@@ -57,7 +57,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -101,15 +101,15 @@ const articleSchema = {
             "itemListElement": [
                 { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
                 { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "2026 SaaS Price Increase Tracker", "item": "https://www.pandacodegen.com/blog/saas-price-increases-2026-tracker" }
+                { "@type": "ListItem", "position": 3, "name": "2026 SaaS Price Increase Snapshot", "item": "https://www.pandacodegen.com/blog/saas-price-increases-2026-tracker" }
             ]
         },
         {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/saas-price-increases-2026-tracker#webpage",
             "url": "https://www.pandacodegen.com/blog/saas-price-increases-2026-tracker",
-            "name": "Your SaaS Bill Went Up Again in 2026. Here Is Every Increase and How to Stop It.",
-            "description": "9 documented software price increases in 2026 with dates and sources.",
+            "name": "9 SaaS Price Increases From the First Five Months of 2026 (Snapshot)",
+            "description": "9 documented software price increases from the first five months of 2026 with dates and sources.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-05-31T00:00:00-05:00",
             "dateModified": "2026-05-31T00:00:00-05:00",
@@ -142,7 +142,7 @@ export default function SaasPriceIncreases2026TrackerPage() {
                     <Breadcrumb items={[
                         { label: "Home", href: "/" },
                         { label: "Blog", href: "/blog" },
-                        { label: "2026 SaaS Price Increase Tracker" }
+                        { label: "2026 SaaS Price Increase Snapshot" }
                     ]} />
                     <Link href="/blog" className="inline-flex items-center gap-2 text-stone-500 hover:text-charcoal text-sm mb-8 transition-colors">
                         <ArrowLeft className="w-4 h-4" /> Back to Blog
@@ -153,11 +153,11 @@ export default function SaasPriceIncreases2026TrackerPage() {
                             <DollarSign className="w-3 h-3" /> Pricing
                         </div>
                         <h1 className="text-4xl md:text-5xl font-bold text-charcoal leading-tight mb-4">
-                            Your SaaS Bill Went Up Again in 2026.{" "}
-                            <span className="font-serif italic text-cognac">Here Is Every Increase</span> and How to Stop It.
+                            9 SaaS Price Increases From the First Five Months of 2026.{" "}
+                            <span className="font-serif italic text-cognac">A Dated Snapshot</span> and How to Stop Yours.
                         </h1>
                         <p className="text-lg text-stone-600 leading-relaxed mb-6" data-speakable="true">
-                            Nine major software vendors changed pricing in the first five months of 2026. Some announced it. Most did not. Webflow quietly restructured every plan on May 13. Microsoft 365 raises tiers on July 1. Klaviyo changed how it counts who you pay for and most stores never noticed their bill climb 30 to 150%. Here is every documented 2026 increase with the date and the source, and exactly what to do about each one.
+                            Nine major software vendors changed pricing between January and May 2026. Some announced it. Most did not. Webflow quietly restructured every plan on May 13. Microsoft 365 raises tiers on July 1. Klaviyo changed how it counts who you pay for and most stores never noticed their bill climb 30 to 150%. This is a snapshot of every increase we had confirmed as of publication, with the date and the source for each, and exactly what to do about each one. It is not a live feed. Check the date below and treat vendor pricing pages as the source of truth for anything more recent.
                         </p>
                         <BlogAuthor
                             date="May 31, 2026"
@@ -190,7 +190,7 @@ export default function SaasPriceIncreases2026TrackerPage() {
                     </div>
 
                     <BlogText>
-                        I track software pricing because I migrate businesses off it. Over the last few months I have watched nine vendors raise prices, and in most cases the client did not find out until I pulled their statements line by line during a migration audit. This is the running list, with dates and sources, so you can check your own stack against it.
+                        I track software pricing because I migrate businesses off it. Over the first five months of 2026 I watched nine vendors raise prices, and in most cases the client did not find out until I pulled their statements line by line during a migration audit. This is that list as of publication, with dates and sources, so you can check your own stack against it.
                     </BlogText>
 
                     {/* Brand anchor — Version C, first-third zone */}

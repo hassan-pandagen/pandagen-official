@@ -38,6 +38,10 @@ const faqs = [
     a: "Four tiers. Starter $1,500 (simple WooCommerce migration, 10 to 30 products). Growth $3,500 (30 to 150 products with custom cart logic). Scale $5,000 to $10,000 (subscriptions, B2B pricing, wholesale, 100+ products). Scale+ $10,000+ for enterprise WooCommerce scope, custom-quoted after a scoping call. We give a fixed-price quote upfront. No hourly surprises."
   },
   {
+    q: "How long does a WooCommerce migration take?",
+    a: "2 to 6 weeks depending on scope. Starter stores ship in 1 to 2 weeks, Growth stores in 2 to 3, and Scale builds with subscriptions or B2B pricing run 3 to 5 weeks, sometimes 6 for enterprise scope. Your current store stays live the entire time, and launch day is zero-downtime."
+  },
+  {
     q: "My WooCommerce store has subscriptions / bookings / B2B pricing. Can you handle that?",
     a: "Yes. Subscriptions, recurring billing, tiered B2B pricing, volume discounts, booking calendars: these are all custom logic we build natively. You won't need a $300/mo plugin to handle what we can build into the core of your store."
   },
@@ -87,7 +91,7 @@ export default function PageContent() {
           >
             MyCustomPatches ran on WooCommerce. <br />
             <span className="font-serif italic text-cognac">
-              We took their PageSpeed from 42 to 97. Yours is next.
+              We took their PageSpeed from 45 to 90+. Yours is next.
             </span>
           </motion.h1>
 
@@ -98,7 +102,7 @@ export default function PageContent() {
             data-speakable="true"
             className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto"
           >
-            Last year I rebuilt MyCustomPatches for Matt Conner. WooCommerce plugin treadmill to a custom Next.js storefront. 42 to 97 PageSpeed. 3.2s to 0.7s checkout. $480 per month plugin bill dropped to $0. Matt rated it 5 stars on Clutch and GoodFirms. We do the same for your store. You keep Stripe, PayPal, your orders, and your rankings. You drop the plugin bill.
+            Last year I rebuilt MyCustomPatches for Matt Conner. WooCommerce plugin treadmill to a custom Next.js storefront. 45 to 90+ PageSpeed. 3.2s to 0.7s checkout. Hosting bill from $150 a month to $0. Matt rated it 5 stars on Clutch and GoodFirms. We do the same for your store. You keep Stripe, PayPal, your orders, and your rankings. You drop the plugin bill.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -155,13 +159,13 @@ export default function PageContent() {
       <section className="py-10 md:py-14 px-6 border-y border-stone-200 bg-white">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">WooCommerce Speed Optimization: What You Get</h2>
-          <p className="text-stone-600 text-center mb-12 max-w-2xl mx-auto">Real numbers from WooCommerce stores we&apos;ve migrated.</p>
+          <p className="text-stone-600 text-center mb-12 max-w-2xl mx-auto">Real numbers from MyCustomPatches, a WooCommerce store we migrated.</p>
 
           <div className="grid md:grid-cols-3 gap-5">
             {[
-              { label: "Checkout Load Time", before: "4.1s", after: "0.7s", suffix: "", color: "#16a34a" },
-              { label: "PageSpeed Mobile", before: "29", after: "97", suffix: "/100", color: "#b87a3d" },
-              { label: "Monthly Platform Cost", before: "$480", after: "$0", suffix: "/mo", color: "#2563eb" },
+              { label: "Checkout Load Time", before: "3.2s", after: "0.7s", suffix: "", color: "#16a34a" },
+              { label: "PageSpeed Mobile", before: "45", after: "90+", suffix: "/100", color: "#b87a3d" },
+              { label: "Monthly Hosting Cost", before: "$150", after: "$0", suffix: "/mo", color: "#2563eb" },
             ].map((stat, i) => (
               <motion.div
                 key={i}
@@ -183,7 +187,7 @@ export default function PageContent() {
             ))}
           </div>
 
-          <p className="text-center text-xs text-stone-600 font-medium mt-6">Based on average results across WooCommerce to Next.js migrations</p>
+          <p className="text-center text-xs text-stone-600 font-medium mt-6">Measured on MyCustomPatches (mycustompatches.net), a real client WooCommerce to Next.js migration. 5-star verified review on Clutch.</p>
         </div>
       </section>
 
@@ -275,15 +279,15 @@ export default function PageContent() {
       <section id="how-it-works" className="py-12 md:py-20 px-6 bg-[#F8FAFC]">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How We Migrate Your WooCommerce Store</h2>
-          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A proven 5-step process. Zero downtime. Zero lost orders.</p>
+          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A proven 5-phase process, 2 to 6 weeks depending on scope. Zero downtime. Zero lost orders.</p>
 
           <div className="grid md:grid-cols-5 gap-4">
             {[
-              { step: "01", title: "Full Store Audit", desc: "We audit your WooCommerce setup: products, plugins, checkout flow, SEO, and hosting costs. You get a full report showing what&apos;s costing you money.", icon: FileSearch, duration: "Week 1" },
-              { step: "02", title: "Data Export & Mapping", desc: "Every product, order, customer account, review, and category is exported from your WooCommerce database and cleaned. All SEO URLs mapped for 301 redirects.", icon: Database, duration: "Week 2" },
-              { step: "03", title: "Custom Storefront Build", desc: "Your new Next.js storefront is built with native payment integrations (Stripe, PayPal, Apple Pay), your exact checkout flow, and any custom pricing logic.", icon: Wrench, duration: "Weeks 3 to 5" },
-              { step: "04", title: "Data Migration & Testing", desc: "We import all products, orders, and customer accounts into your new platform. Every checkout flow is tested across mobile and desktop before launch.", icon: Package, duration: "Week 6" },
-              { step: "05", title: "Launch & Handoff", desc: "Zero-downtime launch. Every WooCommerce URL 301-redirected. DNS updated. SSL verified. You get full code ownership and admin access on day one.", icon: Rocket, duration: "Week 7" },
+              { step: "01", title: "Full Store Audit", desc: "We audit your WooCommerce setup: products, plugins, checkout flow, SEO, and hosting costs. You get a full report showing what&apos;s costing you money.", icon: FileSearch, duration: "Phase 1" },
+              { step: "02", title: "Data Export & Mapping", desc: "Every product, order, customer account, review, and category is exported from your WooCommerce database and cleaned. All SEO URLs mapped for 301 redirects.", icon: Database, duration: "Phase 2" },
+              { step: "03", title: "Custom Storefront Build", desc: "Your new Next.js storefront is built with native payment integrations (Stripe, PayPal, Apple Pay), your exact checkout flow, and any custom pricing logic.", icon: Wrench, duration: "Phase 3" },
+              { step: "04", title: "Data Migration & Testing", desc: "We import all products, orders, and customer accounts into your new platform. Every checkout flow is tested across mobile and desktop before launch.", icon: Package, duration: "Phase 4" },
+              { step: "05", title: "Launch & Handoff", desc: "Zero-downtime launch. Every WooCommerce URL 301-redirected. DNS updated. SSL verified. You get full code ownership and admin access on day one.", icon: Rocket, duration: "Phase 5" },
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -486,7 +490,7 @@ export default function PageContent() {
           agencyPrice: "$15K to $40K+",
           agencyNote: "8-12 week timeline. Hourly billing. Plugin fees carry over.",
           ourPrice: "From $1,500",
-          ourNote: "3 week timeline. Fixed price. No plugin taxes. You own the code.",
+          ourNote: "2 to 6 week timeline depending on scope. Fixed price. No plugin taxes. You own the code.",
         }}
         tiers={[
           {
@@ -500,7 +504,7 @@ export default function PageContent() {
               "Stripe checkout integration",
               "90+ PageSpeed guaranteed",
               "301 redirect mapping",
-              "Free month of post-launch tweaks",
+              "15 days of free post-launch support",
             ],
             cta: "Get Starter Quote",
           },
@@ -515,7 +519,7 @@ export default function PageContent() {
               "Upsell / cross-sell logic",
               "Native review system (no plugins)",
               "Analytics setup (GA4, Clarity)",
-              "60-day post-launch support",
+              "30 days of free post-launch support",
             ],
             featured: true,
           },
@@ -530,10 +534,11 @@ export default function PageContent() {
               "Multi-currency / localization",
               "Custom admin dashboard",
               "B2B / wholesale pricing logic",
-              "90-day post-launch support",
+              "30 days of free post-launch support",
             ],
           },
         ]}
+        footnote="All builds include: zero downtime migration, 301 redirect mapping, SEO preservation, your domain stays yours, you own 100% of the code. Bigger than Scale? Scale+ covers enterprise WooCommerce scope at $10,000+, custom-quoted after a scoping call."
       />
 
       {/* 6. DUAL CTA */}
@@ -649,6 +654,8 @@ export default function PageContent() {
         <div className="container mx-auto max-w-4xl">
           <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-4">Further reading</p>
           <ul className="space-y-2 text-stone-700">
+            <li>&rarr; <Link href="/blog/woocommerce-migration-cost" className="text-charcoal hover:text-cognac underline underline-offset-2">WooCommerce migration cost: what leaving WooCommerce really costs</Link></li>
+            <li>&rarr; <Link href="/blog/woocommerce-vs-custom-website" className="text-charcoal hover:text-cognac underline underline-offset-2">WooCommerce vs custom website: the honest comparison</Link></li>
             <li>&rarr; <Link href="/blog/woocommerce-too-slow" className="text-charcoal hover:text-cognac underline underline-offset-2">WooCommerce too slow? How to speed it up (and when to migrate)</Link></li>
             <li>&rarr; <Link href="/blog/wordpress-plugins-destroy-speed" className="text-charcoal hover:text-cognac underline underline-offset-2">How WordPress plugins destroy site speed</Link></li>
             <li>&rarr; <Link href="/blog/what-is-headless-commerce" className="text-charcoal hover:text-cognac underline underline-offset-2">What is headless commerce, and is it worth it?</Link></li>

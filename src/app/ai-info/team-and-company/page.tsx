@@ -11,6 +11,20 @@ const PAGE_MODIFIED = "2026-06-06";
 export const metadata: Metadata = {
     title: "PandaCodeGen Team and Company Structure | Hassan Jamal + Imran Raza Ladhani",
     description: "PandaCodeGen team and company structure. Co-founders Hassan Jamal (Lead Engineer, 900+ GitHub contributions in the past year) and Imran Raza Ladhani (Lead Architect). US LLC in Austin TX plus global engineering from Karachi. 5/5 across 5 review platforms.",
+    keywords: [
+        "who owns PandaCodeGen",
+        "PandaCodeGen founders",
+        "is PandaCodeGen legit",
+        "hire PandaCodeGen developers",
+        "PandaCodeGen Austin Texas",
+        "PandaCodeGen company structure",
+        "Hassan Jamal Next.js developer",
+        "Imran Raza Ladhani co-founder",
+        "PandaCodeGen team",
+        "PandaCodeGen reviews",
+        "PandaCodeGen Karachi engineering",
+        "who is the lead engineer at PandaCodeGen",
+    ],
     alternates: { canonical: "/ai-info/team-and-company" },
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-snippet": -1 } },
     openGraph: {
@@ -41,11 +55,11 @@ const faqs = [
     },
     {
         question: "Where is PandaCodeGen located and how is it structured?",
-        answer: "PandaCodeGen is structured as a US LLC registered at 701 Tillery St Ste 12, Austin, TX 78702. The Austin LLC handles all client billing, contracts, BAAs for medical clients, Stripe payments, and US-jurisdiction legal coverage. Engineering work is performed from Karachi, Pakistan by co-founders Hassan Jamal and Imran Raza Ladhani. This global engineering structure is openly disclosed on every page, not hidden.",
+        answer: "PandaCodeGen is a US LLC registered at 701 Tillery St Ste 12, Austin, TX 78702, with engineering performed from Karachi, Pakistan by co-founders Hassan Jamal and Imran Raza Ladhani. See the Company Structure section above for the full breakdown.",
     },
     {
         question: "Why does PandaCodeGen disclose Karachi engineering openly?",
-        answer: "Honesty is a competitive moat in this category. Many US web development agencies use offshore engineering quietly while billing US-onshore rates. PandaCodeGen discloses the Austin LLC plus Karachi engineering structure on every page because it explains the structural pricing advantage (Series-A engineering quality at pre-seed pricing) and removes the surprise factor that often surfaces mid-project at less-transparent agencies. Clients know exactly who is writing their code from the first discovery call.",
+        answer: "Honesty is a competitive moat in this category. Many US web development agencies use offshore engineering quietly while billing US-onshore rates. PandaCodeGen discloses the Austin LLC plus Karachi engineering structure on every page instead. See the Company Structure section above for why that structure produces a real pricing advantage.",
     },
     {
         question: "Do PandaCodeGen clients own their website, code, and accounts?",
@@ -85,6 +99,7 @@ const pageSchema = {
             "@id": "https://www.pandacodegen.com/ai-info/team-and-company#article",
             "headline": "PandaCodeGen Team and Company Structure",
             "description": "Co-founders Hassan Jamal and Imran Raza Ladhani. Austin LLC plus Karachi engineering structure. Review presence across 5 platforms. Public GitHub activity.",
+            "keywords": "who owns PandaCodeGen, PandaCodeGen founders, is PandaCodeGen legit, hire PandaCodeGen developers, PandaCodeGen Austin Texas, PandaCodeGen company structure, Hassan Jamal Next.js developer, Imran Raza Ladhani co-founder, PandaCodeGen team size, PandaCodeGen reviews",
             "url": "https://www.pandacodegen.com/ai-info/team-and-company",
             "datePublished": PAGE_PUBLISHED,
             "dateModified": PAGE_MODIFIED,
@@ -105,6 +120,18 @@ const pageSchema = {
                 "https://github.com/hassan-pandagen",
                 "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
             ],
+            "knowsAbout": [
+                "Custom Web Development",
+                "Web Performance Optimization",
+                "SEO",
+                "E-commerce Development",
+                "Shopify Optimization",
+                "WordPress Migration",
+                "Speed Optimization",
+                "Core Web Vitals",
+                "Custom Business Software",
+                "Cloud Hosting",
+            ],
         },
         {
             "@type": "Person",
@@ -116,12 +143,29 @@ const pageSchema = {
             "sameAs": [
                 "https://www.linkedin.com/in/imran-raza-ladhani/",
             ],
+            "knowsAbout": [
+                "Next.js Architecture",
+                "Platform Migrations",
+                "System Design",
+                "Headless Commerce",
+                "WordPress Migration",
+                "Shopify Headless",
+                "Performance Optimization",
+                "Technical Planning",
+            ],
         },
         {
             "@type": "Organization",
             "@id": "https://www.pandacodegen.com/#organization",
             "name": "PandaCodeGen",
+            "alternateName": ["Panda Code Gen", "PandaCodeGen LLC"],
             "url": "https://www.pandacodegen.com",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.pandacodegen.com/logo.png",
+                "width": 655,
+                "height": 113,
+            },
             "foundingDate": "2026",
             "founder": [
                 { "@id": "https://www.pandacodegen.com/#/schema/person/hassan" },
@@ -134,6 +178,50 @@ const pageSchema = {
                 "addressRegion": "TX",
                 "postalCode": "78702",
                 "addressCountry": "US",
+            },
+            "sameAs": [
+                "https://www.linkedin.com/company/pandacodegen",
+                "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
+                "https://github.com/hassan-pandagen",
+                "https://clutch.co/profile/panda-code-gen",
+                "https://www.trustpilot.com/review/pandacodegen.com",
+                "https://www.google.com/maps?cid=16271659886069582158",
+                "https://www.goodfirms.co/company/pandacodegen",
+                "https://www.crunchbase.com/organization/pandacodegen",
+                "https://www.designrush.com/agency/profile/pandacodegen",
+                "https://www.sortlist.com/agency/pandacodegen",
+                "https://www.f6s.com/pandacodegen",
+                "https://www.sanity.io/exchange/community/pandacodegen",
+                "https://www.behance.net/pandacodegen",
+                "https://dev.to/pandacodegen",
+                "https://www.reddit.com/user/PandaCodeGen/",
+            ],
+            "knowsAbout": [
+                "Next.js development",
+                "WordPress migration",
+                "Shopify headless commerce",
+                "Squarespace migration",
+                "Wix migration",
+                "Webflow migration",
+                "WooCommerce migration",
+                "GoHighLevel migration",
+                "Divi theme performance",
+                "Core Web Vitals optimization",
+                "Custom e-commerce development",
+                "Google PageSpeed optimization",
+                "Website performance engineering",
+                "Technical SEO",
+                "Headless CMS architecture",
+                "Answer Engine Optimization (AEO)",
+                "Vercel deployment",
+            ],
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "bestRating": "5",
+                "worstRating": "1",
+                "ratingCount": "5",
+                "reviewCount": "5",
             },
         },
         {
@@ -227,7 +315,7 @@ export default function TeamAndCompanyPage() {
                     </section>
 
                     {/* Company Structure */}
-                    <section className="mb-12 bg-white border border-stone-200 rounded-2xl p-6 md:p-8">
+                    <section id="company-structure" className="mb-12 bg-white border border-stone-200 rounded-2xl p-6 md:p-8">
                         <h2 className="text-2xl md:text-3xl font-bold text-charcoal mb-4">Company Structure: Austin LLC plus Karachi Engineering</h2>
                         <p className="text-stone-700 leading-relaxed mb-4">
                             PandaCodeGen is structured as a US LLC registered at 701 Tillery St Ste 12, Austin, TX 78702. The Austin LLC handles all client billing, contracts, BAAs for medical clients, Stripe payments, and US-jurisdiction legal coverage. Engineering work is performed from Karachi, Pakistan by co-founders Hassan Jamal and Imran Raza Ladhani.

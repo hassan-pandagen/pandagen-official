@@ -64,7 +64,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -238,6 +238,10 @@ export default function WebsiteDeveloperAgencyPage() {
                                 The price difference comes down to three factors: page count and template complexity, whether ecommerce or custom integrations are involved, and how much of the work is actually custom versus recycled from previous projects. See the full breakdown in our <Link href="/blog/how-much-does-a-website-cost" className="text-cognac hover:underline">website cost guide</Link> and <Link href="/pricing" className="text-cognac hover:underline">published fixed-price menu</Link>.
                             </BlogText>
 
+                            <BlogText>
+                                Two of our own builds show why the range is so wide. <Link href="/work/mycustompatches" className="text-cognac hover:underline">MyCustomPatches</Link> was a straightforward WordPress-to-Next.js migration, 8 product pages plus a blog, no custom backend, and it landed at the Starter/Growth end: about 22 days from kickoff to launch, moving from a 3.2-second load time and a ~45 PageSpeed score on $150/month hosting to a 0.7-second load time, 90+ PageSpeed, and $0/month hosting. <Link href="/work/panda-patches" className="text-cognac hover:underline">Panda Patches</Link>, by contrast, needed a real-time pricing engine covering 9 patch types, 3 backing options, and 8+ quantity tiers, an AI-generated mockup tool, Square checkout with Afterpay, and a connected staff CRM, which is Scale-tier scope. That build took about 8 weeks and runs on roughly $55/month in total tooling (Supabase, Vercel, and the AI image generator combined). The gap between a 22-day migration and an 8-week build is entirely about how much custom logic the client actually needs, not how much the agency can bill.
+                            </BlogText>
+
                             <BlogHeader>Platforms a Modern Web Development Agency Supports</BlogHeader>
 
                             <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">WordPress and WooCommerce</h3>
@@ -279,7 +283,7 @@ export default function WebsiteDeveloperAgencyPage() {
                                     { num: "1", title: "Discovery and Performance Audit", body: "The first step is understanding what you have and what is broken. This means running PageSpeed on your current site, auditing SEO gaps, reviewing security vulnerabilities, and documenting integrations that need to survive migration. The deliverable is a written audit with specific metrics: current PageSpeed score, load time, Core Web Vitals status, and a list of technical debt." },
                                     { num: "2", title: "Architecture and System Design", body: "Architecture is planning before code. This phase defines URL structure, database schema, CMS content models, third-party integrations, and hosting configuration. Agencies that skip architecture discover requirements mid-project. Planning upfront costs hours. Discovering gaps mid-build costs weeks." },
                                     { num: "3", title: "Build in Weekly Sprints", body: "Sprint-based delivery means you see working progress every week, not a big reveal after two months of silence. Each sprint ends with a demo of what shipped and a plan for the next week. If something is heading in the wrong direction, you catch it in week two instead of month three." },
-                                    { num: "4", title: "Zero-Downtime Launch and Handover", body: "Zero-downtime migration means your old site stays live until the new site is fully tested. The cutover happens at the DNS level, one configuration change points your domain to the new hosting. The handover includes full source code access, CMS training, SSL certificate setup, and 301 redirect implementation." }
+                                    { num: "4", title: "Zero-Downtime Launch and Handover", body: "Zero-downtime migration means your old site stays live until the new site is fully tested on a staging URL. On our MyCustomPatches migration, that meant exporting every indexed URL before touching anything, mapping each one to its new path, and running a full Google Search Console crawl validation before DNS cutover. The switch itself happened at the DNS level, one configuration change, with a pre-lowered TTL so propagation was near-instant and the visitor-facing gap was under 2 minutes. The handover includes full source code access, CMS training, SSL certificate setup, and 301 redirect implementation." }
                                 ].map((step) => (
                                     <div key={step.num} className="flex gap-4 p-4 bg-stone-50 rounded-xl border border-stone-200">
                                         <span className="flex-shrink-0 w-8 h-8 bg-cognac text-white font-bold rounded-full flex items-center justify-center text-sm">{step.num}</span>
@@ -366,7 +370,7 @@ export default function WebsiteDeveloperAgencyPage() {
                                     { q: "Do I Own the Source Code and IP on Day One?", good: "Yes, full GitHub access at launch.", bad: "We maintain the code for you on our servers." },
                                     { q: "What Are My Total Monthly Costs After Launch?", good: "Specific breakdown: $X hosting, $0 platform fees.", bad: "We can discuss that after the project." },
                                     { q: "Who Will Actually Write My Code?", good: "Named engineers with portfolio links.", bad: "Our development team handles that." },
-                                    { q: "How Do You Handle SEO and 301 Redirects During Migration?", good: "Full URL mapping and 301 implementation with GSC verification.", bad: "SEO is a separate service we can quote." },
+                                    { q: "How Do You Handle SEO and 301 Redirects During Migration?", good: "Every existing indexed URL gets exported and mapped to its new path before cutover, with a Search Console crawl validation run before DNS switches. That is the exact process we used to preserve rankings on the MyCustomPatches and Panda Patches migrations.", bad: "SEO is a separate service we can quote." },
                                     { q: "What Happens if You Miss the Performance Targets?", good: "Full or partial refund clause in the contract.", bad: "We do our best to hit targets." }
                                 ].map((item, i) => (
                                     <div key={i} className="p-4 bg-stone-50 rounded-xl border border-stone-200">

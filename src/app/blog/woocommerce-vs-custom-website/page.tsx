@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         description: "WooCommerce store loading in 4 seconds? Here is when a custom build beats WooCommerce on speed, cost and SEO, and when it does not.",
         type: "article",
         publishedTime: "2026-06-27",
-        modifiedTime: "2026-06-27",
+        modifiedTime: "2026-07-08",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/woocommerce-vs-custom-website",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -60,12 +60,12 @@ const articleSchema = {
             "description": "WooCommerce store loading in 4 seconds? Here is when a custom build beats WooCommerce on speed, cost and SEO, and when it does not.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-06-27T00:00:00-05:00",
-            "dateModified": "2026-06-27T00:00:00-05:00",
+            "dateModified": "2026-07-08T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -126,7 +126,7 @@ const articleSchema = {
             "description": "WooCommerce store loading in 4 seconds? Here is when a custom build beats WooCommerce on speed, cost and SEO, and when it does not.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-06-27T00:00:00-05:00",
-            "dateModified": "2026-06-27T00:00:00-05:00",
+            "dateModified": "2026-07-08T00:00:00-05:00",
             "inLanguage": "en-US"
         },
         {
@@ -136,7 +136,7 @@ const articleSchema = {
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "foundingDate": "2026",
-            "description": "PandaCodeGen builds custom Next.js websites that replace slow WordPress and WooCommerce stores. Sites load under 1 second, score 100/100 on Google PageSpeed, and cost $20/month to run.",
+            "description": "PandaCodeGen builds custom Next.js websites that replace slow WordPress and WooCommerce stores. Sites load under 1 second, score 90+ on Google PageSpeed, and cost $20/month to run.",
             "areaServed": "Worldwide",
             "sameAs": [
                 "https://www.linkedin.com/company/pandacodegen",
@@ -177,7 +177,7 @@ export default function WooCommerceVsCustomWebsitePage() {
                             (and When Not To)
                         </h1>
                         <p className="text-lg text-stone-500 leading-relaxed mb-6">
-                            A custom rebuild took MyCustomPatches from a 45 PageSpeed score to 90+ and from 3.2-second loads to 0.7. But a rebuild is not always the right move. Here is exactly when it is, and when it is not.
+                            Catalog size, plugin dependency, budget, and whether you have technical help on call decide this, not vibes. Here is the actual decision framework for when a custom rebuild beats WooCommerce, and the honest case for staying put.
                         </p>
                         <BlogAuthor
                             date="Jun 27, 2026"
@@ -200,7 +200,7 @@ export default function WooCommerceVsCustomWebsitePage() {
                         <ul className="space-y-2">
                             <li className="flex items-start gap-2 text-sm text-charcoal">
                                 <span className="text-cognac mt-0.5">•</span>
-                                We rebuilt MyCustomPatches off WooCommerce onto custom Next.js: PageSpeed went from 45 to 90+, load time from 3.2s to 0.7s, and hosting from $150/month to $0
+                                Four factors decide this: catalog size, how many plugins you depend on, your budget, and whether you have technical help on call
                             </li>
                             <li className="flex items-start gap-2 text-sm text-charcoal">
                                 <span className="text-cognac mt-0.5">•</span>
@@ -221,19 +221,56 @@ export default function WooCommerceVsCustomWebsitePage() {
                     <div className="space-y-8">
 
                         <BlogText>
-                            I rebuild WooCommerce stores onto Next.js for clients, and I run that same stack on a store we operate ourselves. So before I tell you anything, here are the receipts.
+                            This is a decision framework, not a pitch. I rebuild WooCommerce stores onto Next.js for clients, and I also run a store on that same stack myself, so I have seen both sides of the decision up close. That is useful context, but it is not the reason to switch. The reason is whether the criteria below actually match your store.
                         </BlogText>
 
                         <BlogText>
-                            Start with a client. We rebuilt <BlogHighlight>MyCustomPatches</BlogHighlight> (Matt Conner&apos;s store) off WordPress and WooCommerce onto a custom Next.js site in <BlogHighlight>22 days</BlogHighlight>. PageSpeed went from <BlogHighlight>45 to 90+</BlogHighlight>. Load time dropped from <BlogHighlight>3.2 seconds to 0.7</BlogHighlight>. Hosting went from <BlogHighlight>$150 a month to $0</BlogHighlight>. Matt was thrilled, especially with the speed.
+                            One data point worth naming up front, since it comes up constantly: we run <BlogHighlight>Panda Patches</BlogHighlight> (my co-founder Imran&apos;s store) on this same custom stack, and it has scaled from <BlogHighlight>$38,000 to about $50,000 a month</BlogHighlight> on roughly $55 a month in tooling, a Supabase backend, Vercel hosting, and the FAL AI patch generator. I mention it once, here, because it is the clearest illustration of the underlying mechanic this whole post is about: on a custom stack, the bill does not grow with your feature list the way a plugin stack does. Everything below is about figuring out whether that mechanic actually applies to your store, or whether WooCommerce is still the smarter call for where you are today.
                         </BlogText>
 
-                        <BlogText>
-                            That is the migration receipt: faster, cheaper, done in three weeks. What matters more shows up after launch, on a store we run ourselves. Panda Patches, <BlogHighlight>the store my co-founder Imran owns and I build</BlogHighlight> on the same stack, has scaled from <BlogHighlight>$38,000 to about $50,000 a month</BlogHighlight>. The tooling that runs it costs <BlogHighlight>about $55 a month</BlogHighlight>: roughly $25 for a Supabase backend, $20 for Vercel hosting, and $10 for the FAL Flux Schnell AI patch generator. Name one other store doing $50,000 a month on under $100 in tooling. I keep shipping to it, most recently an AI patch generator, a Square customer login, and an AI-info cluster. That is what custom buys you: revenue climbs, the tooling bill stays trivial, and you scale a store instead of babysitting a plugin stack. On WooCommerce, growth usually runs the other way, more plugins, more apps, a bigger bill every month.
-                        </BlogText>
+                        <BlogHeader>The decision framework: four questions before you touch anything</BlogHeader>
 
                         <BlogText>
-                            That is the upside when it works. But a rebuild is not always the right move, and I will tell you exactly when it is not. Let&apos;s go question by question.
+                            Skip the vibes-based version of this decision. Four factors do almost all the work in predicting whether a rebuild pays off: catalog size, how deep you are into the plugin ecosystem, your actual budget ceiling, and whether you have technical help on call. Score your store against each one honestly before reading another word of platform comparison.
+                        </BlogText>
+
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
+                        <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
+                            <table className="w-full border-collapse text-sm min-w-[560px] responsive-stack-table">
+                                <thead>
+                                    <tr className="bg-stone-100">
+                                        <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">Criteria</th>
+                                        <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">Stay on WooCommerce</th>
+                                        <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">Custom wins</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td className="border border-stone-300 px-4 py-3 text-charcoal font-medium">Catalog size</td>
+                                        <td data-label="Stay on WooCommerce" className="border border-stone-300 px-4 py-3 text-stone-700">Under ~50 SKUs, simple products, low SKU churn</td>
+                                        <td data-label="Custom wins" className="border border-stone-300 px-4 py-3 text-stone-700">Hundreds of SKUs, or a catalog that changes often enough that plugin-driven pages feel slow to manage</td>
+                                    </tr>
+                                    <tr className="bg-stone-50">
+                                        <td className="border border-stone-300 px-4 py-3 text-charcoal font-medium">Plugin dependency</td>
+                                        <td data-label="Stay on WooCommerce" className="border border-stone-300 px-4 py-3 text-stone-700">Under ~15 plugins, nothing mission-critical breaks on updates</td>
+                                        <td data-label="Custom wins" className="border border-stone-300 px-4 py-3 text-stone-700">25-40+ plugins, checkout has broken from an update before, renewal fees add up to real money</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="border border-stone-300 px-4 py-3 text-charcoal font-medium">Budget</td>
+                                        <td data-label="Stay on WooCommerce" className="border border-stone-300 px-4 py-3 text-stone-700">Pre-revenue or thin margins; every dollar needs to go to inventory or ads right now</td>
+                                        <td data-label="Custom wins" className="border border-stone-300 px-4 py-3 text-stone-700">You can cover $1,500-$10,000 upfront and the monthly savings on hosting/plugins pays it back within a year</td>
+                                    </tr>
+                                    <tr className="bg-stone-50">
+                                        <td className="border border-stone-300 px-4 py-3 text-charcoal font-medium">Technical team</td>
+                                        <td data-label="Stay on WooCommerce" className="border border-stone-300 px-4 py-3 text-stone-700">No developer on call; you rely on plugin support and community forums</td>
+                                        <td data-label="Custom wins" className="border border-stone-300 px-4 py-3 text-stone-700">You have an agency or freelancer relationship already, or the build comes with a CMS you can run without one</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <BlogText>
+                            If you land mostly in the left column, stop reading and go optimize what you have, the rest of this post still applies later, just not yet. If you land mostly in the right column, the question-by-question breakdown below will tell you exactly where the money and the risk are.
                         </BlogText>
 
                         <BlogHeader>Why is my WooCommerce store so slow, and will a custom site fix it?</BlogHeader>
@@ -255,7 +292,7 @@ export default function WooCommerceVsCustomWebsitePage() {
                         </BlogText>
 
                         <BlogText>
-                            A custom build wins in two cases: when you&apos;ve already optimized and you&apos;re still slow, or when the speed you&apos;d gain is worth real money. Speed is not a vanity score. On a storefront it is checkout friction, and friction is just orders you lose without ever watching them leave. That is what shifted for Matt. Same catalog, same traffic, but pages that now load in well under a second stopped giving shoppers a reason to bounce before anything appeared. When you are already doing real revenue, every second you cut off a page is money, not decoration. That is when a rebuild pays for itself.
+                            A custom build wins in two cases: when you&apos;ve already optimized and you&apos;re still slow, or when the speed you&apos;d gain is worth real money. Speed is not a vanity score. On a storefront it is checkout friction, and friction is just orders you lose without ever watching them leave. A page that loads in well under a second stops giving a mobile shopper a reason to bounce before anything even appears on screen. When you are already doing real revenue, every second you cut off a page is money, not decoration. That is when a rebuild pays for itself. For the full mechanical breakdown of why WooCommerce hits a wall here, our <Link href="/blog/woocommerce-too-slow" className="text-cognac underline underline-offset-2 hover:text-amber-700">deep dive on WooCommerce speed</Link> covers TTFB, cart fragments, and HPOS in detail.
                         </BlogText>
 
                         <BlogHeader>When should I move off WooCommerce instead of just optimizing it?</BlogHeader>
@@ -295,7 +332,7 @@ export default function WooCommerceVsCustomWebsitePage() {
                         </BlogText>
 
                         <BlogText>
-                            A custom Next.js site flips this. No plugin update roulette. MyCustomPatches went from $150/month in hosting to $0, and there is no plugin stack to license or patch. The full cost breakdown for a switch is in <Link href="/blog/woocommerce-migration-cost" className="text-cognac underline underline-offset-2 hover:text-amber-700">our WooCommerce migration cost breakdown</Link>.
+                            A custom Next.js site flips this. There is no plugin update roulette, because there is no plugin stack to license, patch, or watch break on the next core release. Hosting typically runs near $0 on a static/edge host for a small-to-mid catalog, since there is no PHP process to keep warm. The full cost breakdown for a switch is in <Link href="/blog/woocommerce-migration-cost" className="text-cognac underline underline-offset-2 hover:text-amber-700">our WooCommerce migration cost breakdown</Link>.
                         </BlogText>
 
                         <BlogHeader>Is WooCommerce good for SEO compared to a custom site?</BlogHeader>
@@ -305,7 +342,7 @@ export default function WooCommerceVsCustomWebsitePage() {
                         </BlogText>
 
                         <BlogText>
-                            WooCommerce SEO depends on stacking plugins (an SEO plugin, a caching plugin, an image optimizer, a schema plugin) and keeping them in sync. A custom build ships clean HTML, fast server-rendered pages, structured data, and passing Core Web Vitals as part of the architecture, not as add-ons. When MyCustomPatches cleared 90+ on PageSpeed, that wasn&apos;t a plugin, it was the build.
+                            WooCommerce SEO depends on stacking plugins (an SEO plugin, a caching plugin, an image optimizer, a schema plugin) and keeping them in sync, and each one is a separate point of failure if it falls out of date. A custom build ships clean HTML, fast server-rendered pages, structured data, and passing Core Web Vitals as part of the architecture itself, not as add-ons bolted on after the fact. A 90+ PageSpeed score on a custom build isn&apos;t the result of a plugin doing cleanup work, it is a direct consequence of how the pages are generated in the first place.
                         </BlogText>
 
                         <BlogText>
@@ -332,12 +369,12 @@ export default function WooCommerceVsCustomWebsitePage() {
                                     <tr>
                                         <td className="border border-stone-300 px-4 py-3 text-charcoal font-medium">Speed</td>
                                         <td data-label="WooCommerce" className="border border-stone-300 px-4 py-3 text-stone-700">2-4s typical; ~0.5s achievable with heavy optimization</td>
-                                        <td data-label="Custom Website (Next.js)" className="border border-stone-300 px-4 py-3 text-stone-700">Sub-second by default (0.7s on MyCustomPatches)</td>
+                                        <td data-label="Custom Website (Next.js)" className="border border-stone-300 px-4 py-3 text-stone-700">Sub-second by default; pages are pre-built, not assembled per request</td>
                                     </tr>
                                     <tr className="bg-stone-50">
                                         <td className="border border-stone-300 px-4 py-3 text-charcoal font-medium">Monthly cost</td>
                                         <td data-label="WooCommerce" className="border border-stone-300 px-4 py-3 text-stone-700">$200-$3,000 maintenance + plugin licenses + hosting</td>
-                                        <td data-label="Custom Website (Next.js)" className="border border-stone-300 px-4 py-3 text-stone-700">Near $0 hosting; no plugin licenses ($0/mo on MyCustomPatches)</td>
+                                        <td data-label="Custom Website (Next.js)" className="border border-stone-300 px-4 py-3 text-stone-700">Near $0 hosting; no plugin licenses to renew</td>
                                     </tr>
                                     <tr>
                                         <td className="border border-stone-300 px-4 py-3 text-charcoal font-medium">Ownership</td>
@@ -389,7 +426,7 @@ export default function WooCommerceVsCustomWebsitePage() {
                         </BlogText>
 
                         <BlogText>
-                            The return is usually fast. MyCustomPatches recovered the build cost inside a year, mostly from killed hosting fees and the conversion lift that came with the speed jump. It wasn&apos;t a huge build, and that is the point: a smaller budget doesn&apos;t mean smaller-quality work, it means the ROI lands faster.
+                            The return is usually fast on a Starter or Growth-tier build specifically because the math is simple: killed hosting fees plus plugin renewals you no longer pay, plus whatever conversion lift comes from the speed jump. On a smaller store those two line items alone can cover a $1,500-$3,500 build within a year. A smaller budget does not mean smaller-quality work, it means the payback period is shorter because there was less monthly overhead to begin with.
                         </BlogText>
 
                         {/* Mid CTA */}

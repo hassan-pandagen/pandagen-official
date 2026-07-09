@@ -53,7 +53,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -206,15 +206,15 @@ export default function AchievePageSpeedPage() {
                     {/* Content */}
                     <div className="space-y-8">
                         <BlogText>
-                            A client came to us with a PageSpeed Mobile score of 38/100. "We've tried everything," they said. "Image compression, caching plugins, CDN, better hosting. Nothing works."
+                            A client came to us with a PageSpeed Mobile score of 45/100. "We've tried everything," they said. "Image compression, caching plugins, CDN, better hosting. Nothing works."
                         </BlogText>
 
                         <BlogText>
-                            Six weeks later, their new site: <BlogHighlight>97 Mobile. 99 Desktop.</BlogHighlight> Solidly in Google&apos;s green zone.
+                            Six weeks later, their new site: <BlogHighlight>90+ Mobile.</BlogHighlight> Solidly in Google&apos;s green zone.
                         </BlogText>
 
                         <BlogText>
-                            Within 90 days, their Google rankings jumped 15-20 positions. Organic traffic tripled. Bounce rate dropped from 54% to 22%.
+                            Within 90 days, their Google rankings jumped 15-20 positions. Organic traffic tripled. Bounce rate dropped from 54% to 24%.
                         </BlogText>
 
                         <BlogText>
@@ -282,7 +282,7 @@ export default function AchievePageSpeedPage() {
                         </BlogText>
 
                         <BlogList items={[
-                            "Standard result: 90-99/100 Mobile score",
+                            "Standard result: 90+ Mobile score",
                             "Built-in: Image optimization, code splitting, static generation",
                             "Fast because: Modern architecture, minimal JavaScript, instant loading",
                             "Load time: 0.8-1.2 seconds (standard), 0.5-0.8 seconds (optimized)"
@@ -315,8 +315,8 @@ export default function AchievePageSpeedPage() {
                         </BlogText>
 
                         <BlogList items={[
-                            "Before: 42/100 Mobile, 3.8s load time, 54% bounce rate",
-                            "After: 97/100 Mobile, 0.9s load time, 24% bounce rate",
+                            "Before: 45/100 Mobile, 3.2s load time, 54% bounce rate",
+                            "After: 90+ Mobile, 0.7s load time, 24% bounce rate",
                             "Result: Measurable conversion lift and sub-one-second first paint on mobile"
                         ]} />
                         <BlogText>
@@ -324,27 +324,31 @@ export default function AchievePageSpeedPage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>SaaS Client (WordPress → Next.js):</strong>
+                            <strong>Panda Patches (WordPress + WooCommerce to Next.js, our own e-commerce brand):</strong>
                         </BlogText>
 
                         <BlogList items={[
-                            "Before: 38/100 Mobile, 4.2s load time, Page 2 Google rankings",
-                            "After: 98/100 Mobile, 1.1s load time, Page 1 Google rankings",
-                            "Result: 3× organic traffic within 90 days, 120% more signups"
+                            "Before: 64/100 Mobile, 5.8s LCP, running on a WordPress + WooCommerce stack for three years",
+                            "After: 90+ Mobile, 0.8s LCP, migrated to Next.js + Sanity + Supabase + Square",
+                            "Result: $200/month in plugin and hosting fees eliminated, revenue grew from roughly $38K to $50K/month in the months after launch"
                         ]} />
 
                         <BlogText>
-                            <strong>Service Business (WordPress to Next.js):</strong>
+                            We run Panda Patches ourselves, so this is not a client story we are relaying secondhand, it is our own production numbers. <Link href="/work/panda-patches" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Full case study here.</Link>
+                        </BlogText>
+
+                        <BlogText>
+                            For illustration, here is the kind of result pattern we typically see on service-business migrations (a composite based on typical before/after ranges across our WordPress-to-Next.js projects, not a single named client):
                         </BlogText>
 
                         <BlogList items={[
-                            "Before: 51/100 Mobile, 3.5s load time",
-                            "After: 99/100 Mobile, 0.8s load time",
-                            "Result: More than doubled qualified leads per month within 90 days"
+                            "Typical before: 45-55/100 Mobile, 3 to 4 second load time",
+                            "Typical after: 90+ Mobile, under 1 second load time",
+                            "Typical result: meaningfully more qualified leads per month within 90 days, though the exact lift depends on traffic volume and existing rankings"
                         ]} />
 
                         <BlogQuote>
-                            The pattern is consistent: Move from WordPress/Shopify to Next.js with these 8 optimizations → 90+ PageSpeed score → 2-4× more traffic within 90 days.
+                            The pattern is consistent: Move from WordPress/Shopify to Next.js with these 8 optimizations → 90+ PageSpeed score → measurably more organic traffic within 90 days.
                         </BlogQuote>
 
                         {/* Mid-Article CTA */}
@@ -587,7 +591,7 @@ export default function AchievePageSpeedPage() {
                             "Implement all 8 optimizations (built into our standard process)",
                             "Test on real devices to ensure a 90+ score",
                             "Launch with zero downtime, zero SEO loss",
-                            "Guarantee: 90+ PageSpeed score or we fix it for free"
+                            "Guarantee: 90+ PageSpeed score or a full refund"
                         ]} />
 
                         <BlogText>

@@ -52,7 +52,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -246,12 +246,12 @@ export default function ForAgenciesCustomDevPage() {
                             Speak to any agency owner who has tried outsourcing development and the same concern comes up:
                         </BlogText>
 
-                        <BlogQuote>
-                            &quot;I tried outsourcing development once. It was a disaster. The freelancer went quiet for three weeks, delivered something half-finished, and my client blamed me. I swore I&apos;d never do it again.&quot;
-                        </BlogQuote>
+                        <BlogText>
+                            It is a common complaint we hear from agency owners: they tried outsourcing development once, the freelancer went quiet for weeks, delivered something half-finished, and the client blamed the agency for it. Enough owners describe some version of that story that it is worth naming directly rather than pretending it does not happen.
+                        </BlogText>
 
                         <BlogText>
-                            That experience is real. And it comes from using the wrong kind of development partner: individual freelancers with no accountability, unclear scope, and vague timelines.
+                            That risk is real. And it comes from using the wrong kind of development partner: individual freelancers with no accountability, unclear scope, and vague timelines.
                         </BlogText>
 
                         <BlogText>
@@ -352,7 +352,7 @@ export default function ForAgenciesCustomDevPage() {
                             "Client is frustrated with slow WordPress site, high hosting costs, or constant security issues",
                             "They want the same site rebuilt properly. Fast, clean, owned",
                             "You position it as a &quot;performance rebuild&quot; or &quot;platform modernisation&quot;",
-                            "Typical project: $8,000 to $18,000. Your margin: $2,000 to $6,000"
+                            "Our fixed-tier cost to you lands in Growth ($3,500, 10 to 20 pages with CMS and blog migration) to Scale ($5,000 to $10,000, for larger sites or ones with custom integrations). Page count and integration complexity are what move a project between tiers, not time spent. At a standard 30 to 50% agency markup, that is roughly $4,500 to $15,000 quoted to your client, with $1,000 to $5,000 of that as your margin"
                         ]} />
 
                         <BlogText>
@@ -362,7 +362,7 @@ export default function ForAgenciesCustomDevPage() {
                         <BlogList items={[
                             "Client outgrew Shopify templates or WooCommerce and wants a bespoke storefront",
                             "Custom product configurators, pricing calculators, wholesale portals",
-                            "Typical project: $12,000 to $35,000. Your margin: $3,000 to $12,000"
+                            "This is Scale-tier work ($5,000 to $10,000+) because headless commerce means integrating a real backend (Shopify or WooCommerce as the order/inventory engine) behind a custom frontend, not just laying out pages. Custom configurators and wholesale logic push scope past a template rebuild. Marked up 30 to 50%, that is roughly $6,500 to $15,000+ to your client, with $1,500 to $5,000+ as your margin"
                         ]} />
 
                         <BlogText>
@@ -372,7 +372,7 @@ export default function ForAgenciesCustomDevPage() {
                         <BlogList items={[
                             "Client is a service business wanting a full CRM + funnel + booking system",
                             "You sell the strategy; we handle the technical build",
-                            "Typical project: $5,000 to $15,000. Your margin: $1,500 to $5,000"
+                            "This typically lands in Growth tier ($3,500) because it is scoped around a defined funnel and booking flow rather than open-ended pages. Marked up 30 to 50%, that is roughly $4,500 to $5,250 to your client, with $1,000 to $1,750 as your margin. Larger multi-funnel builds move into Scale pricing"
                         ]} />
 
                         <BlogText>
@@ -382,7 +382,7 @@ export default function ForAgenciesCustomDevPage() {
                         <BlogList items={[
                             "Client wants to replace Google Sheets / manual processes with a real dashboard",
                             "Order pipelines, attendance trackers, profit calculators, inventory systems",
-                            "Typical project: $15,000 to $40,000. Your margin: $4,000 to $15,000"
+                            "These are Scale+ engagements because the scope (data model design, multi-user auth, business logic specific to one client) cannot be fixed-tiered the way a marketing site can; we quote them after a scoping call, typically in the $10,000 to $40,000 range depending on the number of workflows and integrations. Marked up 30 to 50%, your margin usually runs $3,000 to $15,000+ per engagement"
                         ]} />
 
                         <BlogHeader>What Makes a Good White-Label Development Partner?</BlogHeader>
@@ -427,7 +427,7 @@ export default function ForAgenciesCustomDevPage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>One important note:</strong> Don&apos;t undersell. When you present a custom Next.js site, you&apos;re selling a premium product. <a href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">100/100 PageSpeed</a>, zero hosting costs, owned code. Position it accordingly. Clients who are serious about their website will pay for quality.
+                            <strong>One important note:</strong> Don&apos;t undersell. When you present a custom Next.js site, you&apos;re selling a premium product. <a href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">90+ PageSpeed</a>, zero hosting costs, owned code. Position it accordingly. Clients who are serious about their website will pay for quality.
                         </BlogText>
 
                         <BlogHeader>How Does This Affect Your Agency&apos;s Positioning?</BlogHeader>
@@ -460,7 +460,7 @@ export default function ForAgenciesCustomDevPage() {
 
                         <BlogList items={[
                             "Custom coded site, not a template, not a WordPress theme",
-                            "100/100 Google PageSpeed: the fastest possible loading experience",
+                            "90+ Google PageSpeed: the fastest possible loading experience",
                             "Vercel hosting that starts free and only scales to $20/month when the business grows",
                             "They own the code, portable to any developer, not locked into a platform",
                             "Simple content editor: they can edit text and images without developer help",

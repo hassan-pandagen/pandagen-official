@@ -70,7 +70,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -246,7 +246,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
                         Google and Meta both factor <Link href="/blog/how-website-speed-affects-seo" className="text-cognac hover:underline">landing page speed</Link> into Quality Score. A 1-second landing page costs less per click than a 5-second one, often by 20 to 40 percent. For a GHL agency client spending $5,000 per month on Meta or Google Ads, that gap is $1,000 to $2,000 a month in wasted budget.
                     </BlogText>
                     <BlogText>
-                        Target under 1-second First Contentful Paint and 90+ Google PageSpeed Mobile. Custom Next.js sites load in under 1 second and <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">score 90 to 100 on PageSpeed</Link>. Template-based builders typically ceiling at 40 to 80 because of theme bloat, runtime rendering, and shared JavaScript bundles.
+                        Target under 1-second First Contentful Paint and 90+ Google PageSpeed Mobile. Custom Next.js sites load in under 1 second and <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">score 90+ on PageSpeed</Link>. Template-based builders typically ceiling at 40 to 80 because of theme bloat, runtime rendering, and shared JavaScript bundles.
                     </BlogText>
 
                     <h3 id="native-ghl-api-integration" className="text-xl font-bold text-charcoal mt-6 mb-3">Native GHL API and Webhook Integration</h3>
@@ -512,7 +512,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
 
                     <h3 id="custom-pricing" className="text-xl font-bold text-charcoal mt-6 mb-3">Pricing and Full Code Ownership</h3>
                     <BlogText>
-                        <Link href="/pricing" className="text-cognac hover:underline">Fixed-scope custom builds</Link> start at $1,500 for simple sites and scale to $5,000+ for complex funnels with multiple integrations. PandaCodeGen ships custom GHL frontends at $1,500 (Starter, 5 to 7 page funnel) or $3,500 (Growth, 10 to 20 page marketing site with multiple funnels and booking integration). Every build includes a written 90+ PageSpeed guarantee, full source code ownership, zero monthly platform fees, and a 30-day free post-launch support window.
+                        <Link href="/pricing" className="text-cognac hover:underline">Fixed-scope custom builds</Link> start at $1,500 for simple sites and scale to $5,000+ for complex funnels with multiple integrations. PandaCodeGen ships custom GHL frontends at $1,500 (Starter, 5 to 7 page funnel) or $3,500 (Growth, 10 to 20 page marketing site with multiple funnels and booking integration). Every build includes a written 90+ PageSpeed guarantee, full source code ownership, zero monthly platform fees, and a free post-launch support window (15 days on Starter, 30 days on Growth and above).
                     </BlogText>
                     <BlogText>
                         After launch, hosting on Vercel runs $0 to $20 per month depending on traffic. There are no seat fees, no per-site fees, no CMS surcharges, and no platform upgrade pressure. You can take the code to any developer at any time. There is no lock-in because there is no platform to be locked into.
@@ -606,7 +606,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
                         </CalModalButton>
                         <div className="mt-4 p-4 bg-white/10 border border-white/20 rounded-xl">
                             <p className="text-sm font-bold text-white flex items-center justify-center gap-2"><Scale className="w-4 h-4" /> Three written guarantees</p>
-                            <p className="text-sm text-stone-300 mt-1">90+ PageSpeed Mobile or full refund. Free month of post-launch tweaks. Fixed price, no hourly billing ever.</p>
+                            <p className="text-sm text-stone-300 mt-1">90+ PageSpeed Mobile or full refund. Free post-launch tweaks (15 days on Starter, 1 month on Growth and above). Fixed price, no hourly billing ever.</p>
                         </div>
                     </div>
 

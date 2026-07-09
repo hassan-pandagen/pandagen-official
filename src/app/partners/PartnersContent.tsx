@@ -2,6 +2,7 @@
 
 import { motion } from "@/components/ui/motion";
 import { ArrowRight, ShieldCheck, Users, Code2, CheckCircle2, Lock, Zap, FileSearch, Wrench, Rocket, HelpCircle } from "lucide-react";
+import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import PricingTiers from "@/components/services/PricingTiers";
@@ -102,19 +103,21 @@ export default function PartnersContent() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-[2.5rem] md:text-[4.5rem] font-bold text-charcoal leading-[1.05] tracking-[-0.025em] mb-4"
+            className="text-[2.5rem] md:text-[4.5rem] font-bold text-charcoal leading-[1.05] tracking-[-0.025em] mb-8 md:mb-10"
           >
             You handle clients.
+            <span className="block font-serif italic text-cognac">We stay invisible.</span>
           </motion.h1>
 
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.15 }}
-            className="text-[2.5rem] md:text-[4.5rem] font-bold leading-[1.05] tracking-[-0.025em] mb-8 md:mb-10"
+            transition={{ delay: 0.18 }}
+            data-speakable="true"
+            className="text-base md:text-lg text-charcoal max-w-2xl mb-5 leading-[1.7] font-semibold"
           >
-            <span className="font-serif italic text-cognac">We stay invisible.</span>
-          </motion.h2>
+            PandaCodeGen builds white-label custom Next.js sites under agency brands, with mutual NDA and published 15/35/50 partner rates.
+          </motion.p>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -177,7 +180,10 @@ export default function PartnersContent() {
               </motion.div>
             ))}
           </div>
-          <p className="text-center text-xs text-stone-500 mt-4 italic">Numbers as of April 2026. Honest, not inflated.</p>
+          <p className="text-center text-xs text-stone-500 mt-4 italic">Numbers as of July 2026. Honest, not inflated.</p>
+          <p className="text-center text-sm text-stone-600 mt-3">
+            The proof is public: <Link href="/work" className="text-cognac font-bold hover:underline underline-offset-2">see the builds in our work portfolio</Link>.
+          </p>
         </div>
       </section>
 
@@ -187,7 +193,7 @@ export default function PartnersContent() {
           <div className="text-center mb-10 md:mb-14">
             <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-cognac mb-3">The White-Label Flow</p>
             <h2 className="text-3xl md:text-5xl font-bold text-charcoal mb-4 tracking-tight leading-tight">
-              Four steps. <span className="font-serif italic text-cognac">Zero surprises.</span>
+              White-label web development, four steps. <span className="font-serif italic text-cognac">Zero surprises.</span>
             </h2>
             <p className="text-stone-600 max-w-xl mx-auto">Your client never knows we exist. You keep the relationship, the brand, and the margin.</p>
           </div>
@@ -241,7 +247,7 @@ export default function PartnersContent() {
             includes: [
               "Send us a qualified lead via email",
               "We handle everything from there",
-              "15% commission on the final sale (paid on delivery)",
+              "15% commission on the final sale, paid net-14 after client payment",
               "Standard NDA protects your relationship",
               "No minimum leads required",
               "No contract, no quota",
@@ -280,7 +286,7 @@ export default function PartnersContent() {
             cta: "Start Joint Venture",
           },
         ]}
-        footnote="All partnerships include: mutual NDA, full source code handoff, 30-day post-launch support, and your agency brand on all deliverables. Commissions and margins paid net-14 on client payment."
+        footnote="All partnerships include: mutual NDA, full source code handoff, 15 to 30 days of post-launch support depending on the client's tier, and your agency brand on all deliverables. Commissions and margins paid net-14 after client payment."
       />
 
       {/* 5. FAQ */}
@@ -303,6 +309,7 @@ export default function PartnersContent() {
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  aria-expanded={openFaq === i}
                   className="w-full text-left p-5 rounded-xl bg-white border border-stone-200 hover:border-stone-300 transition-all"
                 >
                   <div className="flex items-center justify-between gap-4">
@@ -311,9 +318,7 @@ export default function PartnersContent() {
                       <span className="text-charcoal text-sm font-bold">+</span>
                     </div>
                   </div>
-                  {openFaq === i && (
-                    <p className="text-stone-600 text-sm leading-relaxed mt-4 border-t border-stone-200 pt-4">{faq.a}</p>
-                  )}
+                  <p className={`text-stone-600 text-sm leading-relaxed mt-4 border-t border-stone-200 pt-4 ${openFaq === i ? "block" : "hidden"}`}>{faq.a}</p>
                 </button>
               </motion.div>
             ))}

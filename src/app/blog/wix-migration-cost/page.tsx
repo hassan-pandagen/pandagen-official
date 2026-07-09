@@ -221,7 +221,7 @@ export default function WixMigrationCostPage() {
                         </BlogText>
 
                         <BlogText>
-                            A quick receipt before the pricing. We rebuilt <BlogHighlight>Obare Magazine</BlogHighlight>, a culture publication with 225,000 Instagram followers, off Wix into a custom Next.js and Sanity build, delivered in <BlogHighlight>7 days for $1,200</BlogHighlight>. And on WordPress, the same story: rebuilding MyCustomPatches (our client Matt Conner&apos;s WooCommerce store) took PageSpeed from <BlogHighlight>45 to 90+</BlogHighlight>, page load from 3.2 seconds to 0.7, and monthly hosting from $150 to $0. Different platforms, same pattern: a hand-built site is faster and cheaper to run than a builder.
+                            A quick receipt before the pricing. We rebuilt <BlogHighlight>Obare Magazine</BlogHighlight>, a culture publication with 225,000 Instagram followers, off Wix into a custom Next.js and Sanity build, delivered in <BlogHighlight>7 days for $1,350</BlogHighlight>. And on WordPress, the same story: rebuilding MyCustomPatches (our client Matt Conner&apos;s WooCommerce store) took PageSpeed from <BlogHighlight>45 to 90+</BlogHighlight>, page load from 3.2 seconds to 0.7, and monthly hosting from $150 to $0. Different platforms, same pattern: a hand-built site is faster and cheaper to run than a builder.
                         </BlogText>
 
                         <BlogHeader>How much does it cost to migrate off Wix?</BlogHeader>

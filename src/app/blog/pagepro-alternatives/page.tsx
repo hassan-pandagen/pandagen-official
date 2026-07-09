@@ -69,7 +69,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -202,7 +202,7 @@ export default function PageproAlternativesPage() {
                         <BlogList items={[
                             "Pagepro, Naturaily, and Blazity are strong Next.js agencies built for enterprise retainers, large platforms, and multi-developer teams. If that is your scope, they are solid choices.",
                             "For business websites, CRM builds, headless migrations, and custom storefronts under $25K, all three require minimums ($10K to $25K+), monthly retainer models, and no published pricing. That structure does not fit fixed-scope project work.",
-                            "PandaCodeGen specialises in exactly that scope: business websites, headless migrations, CRM and dashboard builds. Same Next.js stack. Fixed prices from $1,500. 90+ PageSpeed guaranteed or 100 percent refund. Free month of post-launch support.",
+                            "PandaCodeGen specialises in exactly that scope: business websites, headless migrations, CRM and dashboard builds. Same Next.js stack. Fixed prices from $1,500. 90+ PageSpeed guaranteed or 100 percent refund. Free post-launch support: 15 days on Starter, 1 month on Growth and above.",
                             "The honest split: enterprise platform retainer needing a long-term dev team: Pagepro or Blazity. Fixed-price business website, migration, or CRM build: PandaCodeGen."
                         ]} />
                     </div>
@@ -327,7 +327,7 @@ export default function PageproAlternativesPage() {
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">All three Polish agencies charge $50 to $99/hr with no published pricing and no contractual guarantees. PandaCodeGen uses the same Next.js + Sanity + Vercel stack at fixed prices from $1,500, with 90+ PageSpeed guaranteed or 100 percent refund, a free month of post-launch support, and a US LLC for contracts.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">All three Polish agencies charge $50 to $99/hr with no published pricing and no contractual guarantees. PandaCodeGen uses the same Next.js + Sanity + Vercel stack at fixed prices from $1,500, with 90+ PageSpeed guaranteed or 100 percent refund, free post-launch support (15 days on Starter, 1 month on Growth and above), and a US LLC for contracts.</p>
                         </div>
 
                         <p className="text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
@@ -352,7 +352,7 @@ export default function PageproAlternativesPage() {
                                         { label: "Published pricing", pagepro: "No", naturaily: "No", blazity: "No", pcg: "Yes — /pricing" },
                                         { label: "Fixed-price packages", pagepro: "No (retainer)", naturaily: "No", blazity: "No", pcg: "$1,500 / $3,500 / $5K+ / $10K+" },
                                         { label: "PageSpeed guarantee", pagepro: "No", naturaily: "No", blazity: "No", pcg: "90+ or full refund" },
-                                        { label: "Post-launch support", pagepro: "No", naturaily: "No", blazity: "No", pcg: "1 month free" },
+                                        { label: "Post-launch support", pagepro: "No", naturaily: "No", blazity: "No", pcg: "Free: 15 days (Starter) / 1 month (Growth+)" },
                                         { label: "Clutch rating", pagepro: "4.9/5 (32)", naturaily: "4.9/5 (36)", blazity: "5.0/5 (27)", pcg: "5 platforms verified" },
                                         { label: "Best for", pagepro: "Enterprise retainers", naturaily: "Design + dev + Shopify", blazity: "Enterprise CTOs", pcg: "Fixed-price projects" },
                                     ].map((row, i) => (
@@ -384,7 +384,7 @@ export default function PageproAlternativesPage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>Question 3: What happens after launch?</strong> At Pagepro, post-launch work is billed as part of the monthly retainer. At Naturaily and Blazity, post-launch support terms are not published. PandaCodeGen includes one full month of free post-launch support on every project. color changes, copy updates, bug fixes, and CMS training. at no extra charge, with scope boundaries defined in the SOW.
+                            <strong>Question 3: What happens after launch?</strong> At Pagepro, post-launch work is billed as part of the monthly retainer. At Naturaily and Blazity, post-launch support terms are not published. PandaCodeGen includes free post-launch support on every project. 15 days on Starter-tier projects, a full month on Growth and above. color changes, copy updates, bug fixes, and CMS training. at no extra charge, with scope boundaries defined in the SOW.
                         </BlogText>
 
                         <BlogQuote>
@@ -425,7 +425,7 @@ export default function PageproAlternativesPage() {
                             {[
                                 { icon: true, label: "Fixed published pricing", desc: "Starter $1,500, Growth $3,500, Scale $5,000 to $10,000. No discovery call required to see the numbers." },
                                 { icon: true, label: "90+ PageSpeed guarantee in writing", desc: "In the contract. If your site does not hit it on launch day, you get 100 percent refund. Verified before handover." },
-                                { icon: true, label: "Free month of post-launch support", desc: "Color changes, copy updates, bug fixes, CMS training. Scoped in your SOW. No hourly billing after launch." },
+                                { icon: true, label: "Free post-launch support", desc: "15 days on Starter, 1 month on Growth and above. Color changes, copy updates, bug fixes, CMS training. Scoped in your SOW. No hourly billing after launch." },
                                 { icon: true, label: "US LLC on the contract", desc: "MC Patches LLC d/b/a PandaCodeGen. Austin, Texas. Wyoming registered. US-jurisdiction contracts." },
                                 { icon: true, label: "Direct co-founder access", desc: "Hassan writes the code. Imran leads the architecture. No account managers, no junior handoffs, no subcontractors." },
                             ].map(({ label, desc }) => (
@@ -443,7 +443,7 @@ export default function PageproAlternativesPage() {
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">Two verifiable case studies: MyCustomPatches (WordPress to Next.js, PageSpeed 40 to 100, hosting $150/mo to $0/mo, 200+ pages, zero SEO drops) and Panda Patches (PageSpeed 64 to 99, LCP 5.8s to 0.8s, revenue scaled from $38K to about $50K/month on about $55/month tooling: Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). Both sites are live and testable in Lighthouse.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Two verifiable case studies: MyCustomPatches (WordPress to Next.js, PageSpeed 45 to 90+, hosting $150/mo to $0/mo, 200+ pages, zero SEO drops) and Panda Patches (PageSpeed 64 to 90+, LCP 5.8s to 0.8s, revenue scaled from $38K to about $50K/month on about $55/month tooling: Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). Both sites are live and testable in Lighthouse.</p>
                         </div>
 
                         <div className="grid md:grid-cols-2 gap-4 my-6">
@@ -452,7 +452,7 @@ export default function PageproAlternativesPage() {
                                 <div className="text-xs font-bold text-stone-400 uppercase tracking-wide mb-3">MyCustomPatches. WordPress Migration</div>
                                 <ul className="space-y-1 text-sm text-stone-300">
                                     <li>Load time: 3.2s to 0.7s</li>
-                                    <li>PageSpeed: ~40 to 100</li>
+                                    <li>PageSpeed: 45 to 90+</li>
                                     <li>Hosting: $150/mo to $0/mo</li>
                                     <li>Pages migrated: 200+</li>
                                     <li>SEO ranking drops: zero</li>
@@ -463,7 +463,7 @@ export default function PageproAlternativesPage() {
                                 <div className="text-3xl font-black text-cognac mb-1">$50K/mo</div>
                                 <div className="text-xs font-bold text-stone-400 uppercase tracking-wide mb-3">Panda Patches. Headless Stack <span className="normal-case text-stone-500">(up from $38K)</span></div>
                                 <ul className="space-y-1 text-sm text-stone-300">
-                                    <li>PageSpeed: 64 to 99</li>
+                                    <li>PageSpeed: 64 to 90+</li>
                                     <li>LCP: 5.8s to 0.8s</li>
                                     <li>Revenue: $50K/month (up from $38K)</li>
                                     <li>Tooling cost: $55/month (Supabase ~$25, Vercel ~$20, ~$10 FAL Flux Schnell AI patch generator)</li>
@@ -535,7 +535,7 @@ export default function PageproAlternativesPage() {
                         {/* Bottom CTA */}
                         <div className="my-6 md:my-10 p-8 bg-charcoal text-white rounded-2xl text-center">
                             <p className="text-xl font-bold mb-2">Same stack. Fixed price. Written guarantee.</p>
-                            <p className="text-stone-400 text-sm mb-6">Next.js + Sanity + Vercel. 90+ PageSpeed or 100 percent refund. Free month of post-launch support. Published pricing at $1,500 to $10,000. No retainer required.</p>
+                            <p className="text-stone-400 text-sm mb-6">Next.js + Sanity + Vercel. 90+ PageSpeed or 100 percent refund. Free post-launch support (15 days Starter, 1 month Growth+). Published pricing at $1,500 to $10,000. No retainer required.</p>
                             <div className="flex flex-col sm:flex-row gap-3 justify-center">
                                 <QuoteModalButton cta="pagepro_bottom_quote" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
                                     Get a Fixed-Price Quote <ArrowRight className="w-4 h-4" />

@@ -68,7 +68,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -443,6 +443,20 @@ export default function GHLKeepCRMReplaceWebsitePage() {
                         </table>
                     </div>
 
+                    <BlogHeader id="ad-quality-score">What a Slow GHL Landing Page Actually Costs in Google Ads</BlogHeader>
+                    <BlogText>
+                        The table above says "go hybrid" for anyone spending real money on Google Ads. Here is the math behind that line. Google Ads scores every landing page on a 1 to 10 Quality Score, and landing page experience is one of the three inputs. <BlogHighlight>GoHighLevel landing pages typically land a Quality Score of 2 to 4 out of 10</BlogHighlight> because the platform&apos;s 10 to 30 second first-page loads read as &quot;below average&quot; to Google.
+                    </BlogText>
+                    <BlogList items={[
+                        "A Quality Score of 3 means roughly 70% more cost per click than a page scoring 7.",
+                        "Lower Quality Score also drops your ad position, so fewer people ever see the ad in the first place.",
+                        "Every 1-second delay in load time cuts conversions by about 7%. A GHL page that takes 15 seconds to become interactive is losing close to half its potential conversions before it even finishes loading.",
+                        "A business spending $3,000 a month on Google Ads through a GHL landing page could get the same lead volume for roughly $1,800 a month on a fast landing page. That is about $14,400 a year staying in the ad budget instead of paying for the platform's load time."
+                    ]} />
+                    <BlogText>
+                        None of this touches the CRM side. It is purely the landing page tax GHL charges through Google&apos;s ad auction. Moving the public pages to the Next.js frontend described above raises Quality Score into the 7 to 10 range because the page loads in under a second instead of 10 to 30, which is the same fix as everywhere else in this hybrid stack: keep GHL for the backend, stop asking its website builder to render the page Google grades.
+                    </BlogText>
+
                     <BlogHeader id="white-label-ghl">GoHighLevel Agency White-Label Website Development: How to Offer It</BlogHeader>
 
                     <div className="my-4 p-4 bg-stone-50 border-l-4 border-amber-700 rounded-r-xl">
@@ -495,13 +509,13 @@ export default function GHLKeepCRMReplaceWebsitePage() {
                         GoHighLevel is the engine. It is excellent. Keep it. Use it for everything it does well: CRM, automation, calendars, SaaS Mode, white-label, sub-accounts, billing, reputation. Replace only the slow public website with a Next.js frontend that hits 90+ mobile PageSpeed (guaranteed in writing or 100 percent refund), shows up properly in ChatGPT and Perplexity searches, and sends every form submission and booking back into GHL through the same connections the platform already supports.
                     </BlogText>
                     <BlogText>
-                        For the technical breakdown of why GHL sites are slow at the rendering level, read <Link href="/blog/gohighlevel-website-speed" className="text-cognac hover:underline font-medium">why GoHighLevel sites score 20 to 45 on PageSpeed</Link>. For a more focused look at the ad ROI cost of slow GHL pages, read our <Link href="/blog/gohighlevel-migration" className="text-cognac hover:underline font-medium">GHL website migration guide</Link>. For Core Web Vitals fundamentals, see <Link href="/blog/core-web-vitals-explained" className="text-cognac hover:underline font-medium">Core Web Vitals explained for business owners</Link>.
+                        For the technical breakdown of why GHL sites are slow at the rendering level, read <Link href="/blog/gohighlevel-website-speed" className="text-cognac hover:underline font-medium">why GoHighLevel sites score 20 to 45 on PageSpeed</Link>. For Core Web Vitals fundamentals, see <Link href="/blog/core-web-vitals-explained" className="text-cognac hover:underline font-medium">Core Web Vitals explained for business owners</Link>.
                     </BlogText>
 
                     <div className="my-6 md:my-10 p-8 bg-charcoal text-white rounded-2xl text-center">
                         <Zap className="w-8 h-8 text-cognac mx-auto mb-3" />
                         <p className="font-bold text-xl mb-2">Keep the GHL CRM. Kill the Slow Website.</p>
-                        <p className="text-stone-300 mb-5 text-sm max-w-md mx-auto">Custom Next.js frontend wired to your existing GoHighLevel account. 90+ PageSpeed guaranteed in writing or 100 percent refund. Free month of post-launch tweaks. Same GHL bill, faster website, AI search visibility.</p>
+                        <p className="text-stone-300 mb-5 text-sm max-w-md mx-auto">Custom Next.js frontend wired to your existing GoHighLevel account. 90+ PageSpeed guaranteed in writing or 100 percent refund. Free post-launch tweaks (15 days Starter, 1 month Growth+). Same GHL bill, faster website, AI search visibility.</p>
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-orange-600 transition-all">
                             Book Free Hybrid Stack Call <ArrowRight className="w-4 h-4" />
                         </CalModalButton>

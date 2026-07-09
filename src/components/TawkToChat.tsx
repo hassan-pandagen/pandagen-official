@@ -101,7 +101,6 @@ const PROBLEM_AWARE_PATTERNS: Array<string | RegExp> = [
   '/blog/shopify-conversion-rate-speed-fix',
   '/blog/shopify-app-costs-real-monthly-bill',
   '/blog/gohighlevel-website-speed',
-  '/blog/gohighlevel-migration',
   '/blog/gohighlevel-keep-crm-replace-website',
   '/blog/why-competitor-outranks-you',
   '/blog/why-is-my-website-loading-so-slow',

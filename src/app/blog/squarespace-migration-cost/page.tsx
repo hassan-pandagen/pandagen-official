@@ -65,7 +65,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -220,7 +220,7 @@ export default function SquarespaceMinCostPage() {
                         </BlogText>
 
                         <BlogText>
-                            Her migration cost $5,500. She was back to even in 2.5 years on hosting savings alone, before accounting for the new bookings that came through improved Google rankings.
+                            For a portfolio at that size, a migration to the Growth tier runs $3,500. On hosting savings alone (roughly $62/month down to near $0), that is back to even in a little under 5 years. Add the bookings that typically come through improved Google rankings after a PageSpeed jump from 38 to 90+, and the realistic payback window shortens to 2 to 4 years, in line with the range in the takeaways above.
                         </BlogText>
 
                         <BlogText>
@@ -446,7 +446,7 @@ export default function SquarespaceMinCostPage() {
                             "Google Search Console setup and XML sitemap submission on launch day",
                             "Core Web Vitals verification: target 90+ on LCP, CLS, and INP before go-live",
                             "Zero-downtime DNS cutover so your site is never offline during the switch",
-                            "30-day post-launch monitoring with Search Console and PageSpeed tracking"
+                            "Post-launch monitoring with Search Console and PageSpeed tracking (15 days on Starter, 1 month on Growth and above)"
                         ]} />
 
                         <BlogText>
@@ -513,7 +513,7 @@ export default function SquarespaceMinCostPage() {
                         </BlogText>
 
                         <BlogText>
-                            But hosting savings are not the whole picture. The businesses that get the clearest return are the ones where organic traffic is a meaningful revenue driver. A site that moves from 30/100 to 97/100 on Google PageSpeed Mobile and adds 25 to 40% more organic visitors within 90 days can recover $7,000 in 12 to 24 months. We cover this in detail in our <Link href="/blog/how-website-speed-affects-seo" className="text-charcoal underline decoration-cognac/40 hover:decoration-cognac transition-colors">speed and SEO analysis</Link>.
+                            But hosting savings are not the whole picture. The businesses that get the clearest return are the ones where organic traffic is a meaningful revenue driver. A site that moves from 30/100 to 90+ on Google PageSpeed Mobile and adds 25 to 40% more organic visitors within 90 days can recover $7,000 in 12 to 24 months. We cover this in detail in our <Link href="/blog/how-website-speed-affects-seo" className="text-charcoal underline decoration-cognac/40 hover:decoration-cognac transition-colors">speed and SEO analysis</Link>.
                         </BlogText>
 
                         <BlogText>

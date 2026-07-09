@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
@@ -18,8 +18,8 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Website Redesign Cost in 2026: $3K to $50K",
-    description: "Honest pricing for refresh, redesign, and rebuild projects from $1,500 to $15,000+. Hidden costs agencies leave out and how to know which option you need.",
+    title: "Website Redesign Cost in 2026: $1.5K to $15K (No Platform Change)",
+    description: "A redesign is a new look on your existing platform, no migration required. Honest pricing from $1,500 to $15,000+, real redesign cost drivers, and how it differs from a rebuild.",
     alternates: {
         canonical: '/blog/website-redesign-cost',
     },
@@ -28,28 +28,30 @@ export const metadata: Metadata = {
         "website redesign pricing",
         "how much does a website redesign cost",
         "website redesign cost for small business",
-        "ecommerce website redesign cost",
-        "website refresh vs redesign vs rebuild",
+        "website redesign without changing platform",
+        "UX redesign cost",
+        "design system cost",
         "custom website redesign cost",
         "hidden costs of website redesign",
         "website redesign ROI",
         "agency vs freelancer website redesign",
-        "website refresh cost",
+        "staged website rollout",
         "fixed-price website redesign",
     ],
     openGraph: {
-        title: "How Much Does a Website Redesign Cost in 2026? ($3K to $50K Breakdown)",
-        description: "Honest pricing for refresh, redesign, and rebuild projects from $1,500 to $15,000+. Hidden costs agencies leave out and how to know which option you actually need.",
+        title: "Website Redesign Cost in 2026: $1,500 to $15,000 (Same Platform)",
+        description: "A redesign is a new look on your existing platform, no migration required. Honest pricing, real redesign cost drivers, and how it differs from a full rebuild.",
         type: "article",
         publishedTime: "2026-04-30T00:00:00-05:00",
+        modifiedTime: "2026-07-08T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/website-redesign-cost",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
     twitter: {
         card: "summary_large_image",
-        title: "How Much Does a Website Redesign Cost in 2026? ($3K to $50K Breakdown)",
-        description: "Honest pricing for refresh, redesign, and rebuild projects from $1,500 to $15,000+. Hidden costs agencies leave out and how to know which option you actually need.",
+        title: "Website Redesign Cost in 2026: $1,500 to $15,000 (Same Platform)",
+        description: "A redesign is a new look on your existing platform, no migration required. Honest pricing and real redesign cost drivers.",
     },
 };
 
@@ -59,16 +61,16 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/website-redesign-cost#article",
-            "headline": "How Much Does a Website Redesign Cost in 2026? ($3K to $50K Breakdown)",
-            "description": "Honest pricing for refresh, redesign, and rebuild projects from $1,500 to $15,000+. Hidden costs agencies leave out and how to know which option you actually need.",
+            "headline": "Website Redesign Cost in 2026: New Look, Same Platform ($1.5K to $15K)",
+            "description": "A redesign is a new visual design and UX on your existing platform and CMS, no migration required. Honest pricing from $1,500 to $15,000+, real cost drivers, and how it differs from a rebuild.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-30T00:00:00-05:00",
-            "dateModified": "2026-04-30T00:00:00-05:00",
+            "dateModified": "2026-07-08T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -82,14 +84,14 @@ const articleSchema = {
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/website-redesign-cost" },
             "articleSection": "Pricing",
-            "keywords": ["website redesign cost", "website redesign pricing", "website refresh vs redesign vs rebuild", "ecommerce redesign cost", "small business website redesign", "fixed-price website redesign"],
+            "keywords": ["website redesign cost", "website redesign pricing", "redesign without changing platform", "design system cost", "UX audit cost", "small business website redesign", "fixed-price website redesign"],
             "timeRequired": "PT14M",
             "wordCount": 3500,
             "about": [
                 { "@type": "Thing", "name": "Website Redesign Pricing" },
-                { "@type": "Thing", "name": "Website Refresh vs Rebuild" },
-                { "@type": "Thing", "name": "Hidden Web Development Costs" },
-                { "@type": "SoftwareApplication", "name": "Next.js", "applicationCategory": "DeveloperApplication", "operatingSystem": "Cross-platform", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } }
+                { "@type": "Thing", "name": "Design System Creation" },
+                { "@type": "Thing", "name": "UX Audit and Information Architecture" },
+                { "@type": "Thing", "name": "Hidden Web Development Costs" }
             ],
             "inLanguage": "en-US",
             "speakable": {
@@ -102,9 +104,8 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Portent: Site Speed and Conversion Research", "url": "https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" },
                 { "@type": "CreativeWork", "name": "Deloitte: Milliseconds Make Millions", "url": "https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" },
                 { "@type": "CreativeWork", "name": "Google Think: Mobile Page Speed Industry Benchmarks", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
-                { "@type": "CreativeWork", "name": "Vercel Pricing", "url": "https://vercel.com/pricing" },
-                { "@type": "CreativeWork", "name": "WordPress Plugin Directory", "url": "https://wordpress.org/plugins/" },
-                { "@type": "CreativeWork", "name": "Shopify Plus Pricing", "url": "https://www.shopify.com/plus" }
+                { "@type": "CreativeWork", "name": "Nielsen Norman Group: A/B Testing 101", "url": "https://www.nngroup.com/articles/ab-testing/" },
+                { "@type": "CreativeWork", "name": "Nielsen Norman Group: Redesign Risks", "url": "https://www.nngroup.com/articles/redesign-risks/" }
             ]
         },
         {
@@ -120,12 +121,12 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/website-redesign-cost#webpage",
             "url": "https://www.pandacodegen.com/blog/website-redesign-cost",
-            "name": "Website Redesign Cost in 2026",
-            "description": "Honest pricing for refresh, redesign, and rebuild projects from $1,500 to $15,000+. Hidden costs agencies leave out and how to know which option you actually need.",
+            "name": "Website Redesign Cost in 2026: New Look, Same Platform",
+            "description": "A redesign is a new visual design and UX on your existing platform and CMS, no migration required. Honest pricing from $1,500 to $15,000+, real cost drivers, and how it differs from a rebuild.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-04-30T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-07-08T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/website-redesign-cost#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -180,17 +181,17 @@ export default function WebsiteRedesignCostPage() {
                     <div className="mb-10">
                         <div className="inline-block px-3 py-1 text-xs font-medium bg-stone-100 text-stone-600 rounded-full mb-4">Pricing</div>
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                            <span className="font-serif italic text-cognac">Website Redesign Cost</span> in 2026
+                            <span className="font-serif italic text-cognac">Website Redesign Cost</span> in 2026: New Look, Same Platform
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            What you should actually pay for a refresh, redesign, or full rebuild. Real ranges from $1,500 to $15,000 plus, the hidden costs agencies leave out, and how to know which option your site actually needs.
+                            A redesign changes how your site looks and how visitors move through it, without touching what it runs on. Same CMS, same hosting, same platform, new design and UX on top. Real ranges from $1,500 to $15,000, the cost drivers agencies rarely itemize, and how to tell a redesign apart from a full platform rebuild before you get quoted for the wrong project.
                         </p>
 
                         <BlogAuthor
-                            date="Apr 30, 2026"
+                            date="Apr 30, 2026 (updated Jul 8)"
                             readTime="14 min read"
-                            bio="Hassan rebuilds slow WordPress, Shopify, Wix, and Webflow sites as custom Next.js builds at fixed prices. Every project ships with a 90+ PageSpeed guarantee or 100 percent refund, plus one full month of free post-launch support."
+                            bio="Hassan runs PandaCodeGen, a web design and development studio that redesigns sites in place and rebuilds them on new platforms. Every redesign ships with a disclosed PageSpeed ceiling in writing (90+ where the platform supports it), plus free post-launch support (15 days on Starter, a full month on Growth and above)."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -203,47 +204,19 @@ export default function WebsiteRedesignCostPage() {
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
                         <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
-                            "Refresh: $500 to $3,000. Updates visuals and content without changing the underlying code. Cheapest option, fastest turnaround.",
-                            "Redesign: $3,000 to $15,000. New visual design and UX, same backend. Right when the brand has evolved but the platform works.",
-                            "Rebuild: $1,500 to $30,000+. Replaces both frontend and backend with new architecture. Right when the platform itself is the problem.",
-                            "Hidden costs that quotes leave out: plugin fees ($50 to $500/mo), hosting upgrades, maintenance retainers, content cleanup, analytics setup. Compounds to $1,800+ per year.",
-                            "PandaCodeGen ships full custom Next.js rebuilds at $1,500 to $5,000 with 90+ PageSpeed guaranteed or 100 percent refund and a free month of support. No agency markup, no monthly fees, no vendor lock-in."
+                            "A redesign is visual and UX work on your current platform. No CMS change, no hosting change, no new framework. If someone is quoting you a Next.js migration or a new CMS as part of your \"redesign,\" that is a rebuild wearing a redesign price tag.",
+                            "Small business redesign (5 to 20 pages): $1,500 to $7,000. Mid-market redesign with a full design system and UX audit: $7,000 to $15,000. Enterprise scope with multi-stakeholder review: $15,000 to $50,000.",
+                            "The real cost drivers are a UX audit and information architecture pass, a design system built from scratch, content migration within the same platform, and whether you roll out in stages or relaunch all at once.",
+                            "Hidden costs that quotes leave out: extra design revision rounds, a design system that only covers half your page types, content cleanup that was assumed to be 'included,' and A/B testing the new design against the old one before full rollout.",
+                            "PandaCodeGen ships fixed-price redesigns from $1,500 with the PageSpeed ceiling disclosed in writing (90+ where the platform supports it), and free post-launch tweaks (15 days on Starter, 1 month on Growth and above). If your platform itself is the problem, see our rebuild and migration cost guides instead."
                         ]} />
                     </div>
 
-                    {/* Real Receipts */}
-                    <div className="mb-8 md:mb-12 p-6 md:p-8 bg-charcoal text-white rounded-2xl">
-                        <div className="flex items-center gap-3 mb-4">
-                            <div className="h-px w-8 bg-cognac" />
-                            <span className="text-cognac text-xs font-bold uppercase tracking-widest">Real Receipts</span>
-                        </div>
-                        <h2 className="text-2xl md:text-3xl font-bold mb-2">Three real redesign projects we shipped in 2026</h2>
-                        <p className="text-stone-400 text-sm mb-6">Real prices. Real PageSpeed scores. Verifiable live links.</p>
-
-                        <div className="grid md:grid-cols-3 gap-4">
-                            <div className="p-5 bg-white/5 border border-white/10 rounded-xl">
-                                <div className="text-3xl font-black text-cognac mb-1">$1,200</div>
-                                <div className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-3">Obare Magazine</div>
-                                <p className="text-sm text-stone-300 leading-relaxed">Wix to custom Next.js. 7 day rebuild. 98 Mobile PageSpeed. Culture publication with 225,000 Instagram followers.</p>
-                            </div>
-                            <div className="p-5 bg-white/5 border border-white/10 rounded-xl">
-                                <div className="text-3xl font-black text-cognac mb-1">100/100</div>
-                                <div className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-3">MyCustomPatches</div>
-                                <p className="text-sm text-stone-300 leading-relaxed">10 year WordPress site to Next.js. Load time 3.2s to 0.7s. Hosting $150/mo to $0/mo. 200+ pages, zero SEO drops. <Link href="/work/mycustompatches" className="text-cognac underline">Case study</Link>.</p>
-                            </div>
-                            <div className="p-5 bg-white/5 border border-white/10 rounded-xl">
-                                <div className="text-3xl font-black text-cognac mb-1">$50K/mo</div>
-                                <div className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-3">Panda Patches <span className="normal-case text-stone-500">(up from $38K)</span></div>
-                                <p className="text-sm text-stone-300 leading-relaxed">Headless Next.js + Sanity + Supabase + Square rebuild. PageSpeed 64 to 99. Revenue on about $55/mo tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). Zero ranking drops. <Link href="/work/panda-patches" className="text-cognac underline">Case study</Link>.</p>
-                            </div>
-                        </div>
-
-                        <p className="text-xs text-stone-400 mt-5 leading-relaxed">
-                            These are not screenshots. Every site is live, indexed, and verifiable. Open Lighthouse on any of them yourself. Most agencies will not show you their portfolio scores because they cannot.
-                        </p>
+                    <div className="my-6 p-5 bg-stone-50 border border-stone-200 rounded-xl">
+                        <p className="text-sm text-stone-700"><strong className="text-charcoal">Looking for platform migration or rebuild pricing instead?</strong> This post covers redesign only: new look, same platform. If your CMS, hosting, or framework also needs to change, see the <Link href="/blog/website-migration-cost-2026" className="text-cognac hover:underline font-medium">migration cost breakdown</Link> (moving what you have to new technology) or the <Link href="/blog/website-rebuild-cost-2026" className="text-cognac hover:underline font-medium">rebuild cost breakdown</Link> (new technology plus a reimagined site).</p>
                     </div>
 
-                    <p className="text-stone-700 leading-relaxed mb-6">A website redesign costs $3,000 to $50,000 in 2026 depending on scope. A 5 to 7 page refresh with updated design and no CMS runs $1,500 to $3,500. A full 10 to 20 page redesign with blog migration and new CMS runs $3,500 to $8,000. Agency-level redesigns with custom integrations run $15,000 to $50,000. Fixed-price agencies like PandaCodeGen publish exact pricing online before the call.</p>
+                    <p className="text-stone-700 leading-relaxed mb-6">A website redesign costs $1,500 to $15,000 in 2026 for most small and mid-market businesses, and up to $50,000 for enterprise scope with multiple stakeholders and complex approval chains. A 5 to 10 page redesign with a light design system runs $1,500 to $4,000. A full 10 to 25 page redesign with a proper UX audit, new design system, and staged rollout runs $4,000 to $15,000. None of these numbers include a platform change. If your quote includes migrating to a new CMS or framework, you are pricing a rebuild, not a redesign.</p>
 
                     <div className="space-y-8">
 
@@ -251,26 +224,26 @@ export default function WebsiteRedesignCostPage() {
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">A website redesign costs $500 to $30,000+ depending on whether you need a refresh, redesign, or full rebuild. Refresh: $500 to $3,000. Redesign with new design and UX: $3,000 to $15,000. Full rebuild on new architecture: $1,500 to $30,000+. Most quotes hide ongoing platform fees that compound to $1,800+ per year on top of the upfront price.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">A website redesign, same platform, costs $1,500 to $15,000 for most small and mid-market sites, and $15,000 to $50,000 for enterprise scope. The number moves on four things: how much UX and IA rework the audit turns up, how big a design system gets built, how much content needs cleanup during the in-place migration, and whether you roll out in stages or all at once.</p>
                         </div>
 
                         <BlogText>
-                            The agency pricing range for website redesigns runs from $500 to $80,000 with no clear logic for why. A 7-page site quoted at $32,000 by one agency lands at $1,500 with another. The difference is rarely quality. It is overhead, sales overhead, account managers, and margin layered on margin. For the full rebuild cost breakdown by scope and tier, see <Link href="/blog/website-rebuild-cost-2026" className="text-cognac hover:underline">how much a website rebuild costs in 2026</Link>.
+                            The agency pricing range for website redesigns runs from $500 to $80,000 with no clear logic for why. A 7-page site quoted at $32,000 by one agency lands at $1,500 with another, for the identical scope: same CMS, same hosting, new design and UX layered on top. The difference is rarely quality. It is overhead, sales overhead, account managers, and margin layered on margin.
                         </BlogText>
 
                         <BlogText>
-                            <BlogHighlight>Most quotes also leave out the recurring costs that double the real total.</BlogHighlight> A $5,000 redesign on WordPress with 20 plugins and managed hosting actually costs $7,000 in year one. A $1,500 custom Next.js rebuild with $0 monthly fees costs $1,500. Total cost of ownership is the number that matters, not the line on the proposal.
+                            <BlogHighlight>Watch for scope creep in the other direction too.</BlogHighlight> Some agencies quote a &ldquo;redesign&rdquo; that quietly includes a CMS migration, a hosting change, or a framework swap, because that lets them bill rebuild-level prices under a redesign label. If your proposal includes moving off your current CMS or hosting provider, you are being quoted a rebuild. Compare it against our <Link href="/blog/website-rebuild-cost-2026" className="text-cognac hover:underline">rebuild cost breakdown</Link> instead, where that combined scope is priced honestly.
                         </BlogText>
 
                         <BlogHeader>Why &quot;Cheap&quot; Should Mean Your Profit, Not Lower Quality</BlogHeader>
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">We aren&apos;t your typical web dev agency. Consider us your partners. Cheap should mean money that stays in your business, not corners cut on your build. PandaCodeGen offers fixed prices from $1,500, 90+ PageSpeed guaranteed or 100 percent refund, and a full month of free post-launch support. No freelancer or agency offers all three.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">We aren&apos;t your typical web dev agency. Consider us your partners. Cheap should mean money that stays in your business, not corners cut on your build. PandaCodeGen offers fixed prices from $1,500, a 90+ PageSpeed guarantee where the platform supports it, and free post-launch support (15 days on Starter, a full month on Growth and above). No freelancer or agency offers all three.</p>
                         </div>
 
                         <BlogText>
-                            Most agencies charge $15,000 to $50,000 for the same scope PandaCodeGen ships at $1,500 to $5,000. The difference is not quality. It is overhead, account managers, sales teams, junior subcontractors, office space, and margin layered on margin. <BlogHighlight>The agency markup is your profit, not theirs.</BlogHighlight> We are here to revolutionize what cheap means in this category.
+                            Most agencies charge $15,000 to $50,000 for redesign scope PandaCodeGen ships at $1,500 to $8,000. The difference is not quality. It is overhead, account managers, sales teams, junior subcontractors, office space, and margin layered on margin. <BlogHighlight>The agency markup is your profit, not theirs.</BlogHighlight> We are here to revolutionize what cheap means in this category.
                         </BlogText>
 
                         <BlogText>
@@ -278,20 +251,20 @@ export default function WebsiteRedesignCostPage() {
                         </BlogText>
 
                         <BlogList items={[
-                            "100% refund if your site does not score 90+ on Google PageSpeed. Verified before handover. The clause exists in writing but rarely triggers because we hit 90+ on every build.",
-                            "Free month of post-launch support and tweaks. Color changes, copy updates, bug fixes, and CMS training included. Tweak boundaries scoped per project in your SOW. No hourly billing.",
-                            "Fixed pricing with milestone payments. No hourly billing under any circumstances. Starter $1,500, Growth $3,500, Scale $5,000 to $10,000, Scale+ $10,000+."
+                            "90+ PageSpeed guarantee where the platform's architecture allows it, verified before handover. On platforms with a structural performance ceiling below 90 (some page-builder CMSes), we guarantee the best score the platform can support and disclose that ceiling upfront in writing.",
+                            "Free post-launch support and tweaks: 15 days on Starter, a full month on Growth and above. Color changes, copy updates, bug fixes, and CMS training included. Tweak boundaries scoped per project in your SOW. No hourly billing.",
+                            "Fixed pricing with milestone payments. No hourly billing under any circumstances. Redesign pricing runs $1,500 to $15,000 depending on page count, design system size, and rollout approach."
                         ]} />
 
                         <BlogText>
-                            Ask any agency or freelancer who has quoted you the same three questions. Will you refund 100 percent if the site does not hit 90 on Google PageSpeed? Will you guarantee that in writing in the contract? Will you give me a full month of free support and tweaks after launch with no hourly billing? Almost none will say yes to all three. That is the gap PandaCodeGen exists to close.
+                            Ask any agency or freelancer who has quoted you the same three questions. Will you disclose your platform's PageSpeed ceiling in writing before we sign? Will you give me free support and tweaks after launch with no hourly billing? Is the price fixed regardless of how many stakeholder review rounds it takes to reach sign-off? Almost none will say yes to all three. That is the gap PandaCodeGen exists to close.
                         </BlogText>
 
-                        <BlogHeader>Website Redesign Pricing by Project Tier</BlogHeader>
+                        <BlogHeader>What Actually Drives Redesign Cost: The Four Real Variables</BlogHeader>
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">Three project tiers exist with different scopes and prices. Refresh updates visuals and content for $500 to $3,000. Redesign creates new design and UX while keeping the backend for $3,000 to $15,000. Rebuild replaces frontend and backend for $1,500 to $30,000 plus. Match the tier to what your site actually needs, not what the agency wants to sell.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Four variables set redesign price, not page count alone: the depth of the UX audit and information architecture rework, how large a design system gets built, how much content needs cleanup during in-place migration, and whether the new design launches in stages or all at once. Page count matters, but a 10-page site with a full IA overhaul costs more than a 20-page site with a light visual refresh.</p>
                         </div>
 
                         <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
@@ -299,58 +272,62 @@ export default function WebsiteRedesignCostPage() {
                             <table className="w-full text-sm border-collapse min-w-[640px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Tier</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Typical Scope</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Price Range</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Best For</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Cost Driver</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Light Scope</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Full Scope</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Added Cost</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-300 font-medium">Refresh</td>
-                                        <td data-label="Typical Scope" className="p-3 border border-stone-300">New visuals, content updates, minor UX</td>
-                                        <td data-label="Price Range" className="p-3 border border-stone-300 font-bold text-cognac">$500 to $3,000</td>
-                                        <td data-label="Best For" className="p-3 border border-stone-300">Sound site, dated look</td>
+                                        <td className="p-3 border border-stone-300 font-medium">UX audit + IA</td>
+                                        <td data-label="Light Scope" className="p-3 border border-stone-300">Heuristic review, no user testing</td>
+                                        <td data-label="Full Scope" className="p-3 border border-stone-300">User testing, analytics review, full sitemap rework</td>
+                                        <td data-label="Added Cost" className="p-3 border border-stone-300 font-bold text-cognac">$500 to $4,000</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-300 font-medium">Redesign</td>
-                                        <td data-label="Typical Scope" className="p-3 border border-stone-300">New design, new UX, same backend</td>
-                                        <td data-label="Price Range" className="p-3 border border-stone-300 font-bold text-cognac">$3,000 to $15,000</td>
-                                        <td data-label="Best For" className="p-3 border border-stone-300">Brand evolution, conversion fix</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Design system</td>
+                                        <td data-label="Light Scope" className="p-3 border border-stone-300">Color, type, and button styles only</td>
+                                        <td data-label="Full Scope" className="p-3 border border-stone-300">Full component library with documented states</td>
+                                        <td data-label="Added Cost" className="p-3 border border-stone-300 font-bold text-cognac">$800 to $6,000</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-300 font-medium">Rebuild</td>
-                                        <td data-label="Typical Scope" className="p-3 border border-stone-300">New frontend, new backend, new architecture</td>
-                                        <td data-label="Price Range" className="p-3 border border-stone-300 font-bold text-cognac">$1,500 to $30,000+</td>
-                                        <td data-label="Best For" className="p-3 border border-stone-300">Slow, locked-in, or insecure platform</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Content migration (same platform)</td>
+                                        <td data-label="Light Scope" className="p-3 border border-stone-300">Copy-paste into new templates</td>
+                                        <td data-label="Full Scope" className="p-3 border border-stone-300">Content audit, rewrites, consolidation of thin pages</td>
+                                        <td data-label="Added Cost" className="p-3 border border-stone-300 font-bold text-cognac">$300 to $5,000</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-300 font-medium">Enterprise</td>
-                                        <td data-label="Typical Scope" className="p-3 border border-stone-300">Multi-region, complex integrations, custom features</td>
-                                        <td data-label="Price Range" className="p-3 border border-stone-300 font-bold text-cognac">$30,000 to $200,000+</td>
-                                        <td data-label="Best For" className="p-3 border border-stone-300">Large e-commerce, SaaS, multi-tenant</td>
+                                        <td className="p-3 border border-stone-300 font-medium">Rollout approach</td>
+                                        <td data-label="Light Scope" className="p-3 border border-stone-300">Full relaunch, single cutover date</td>
+                                        <td data-label="Full Scope" className="p-3 border border-stone-300">Staged rollout with A/B test against the old design</td>
+                                        <td data-label="Added Cost" className="p-3 border border-stone-300 font-bold text-cognac">$500 to $3,000</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
 
                         <BlogText>
-                            <strong>Refresh</strong> means updating visuals, content, and minor UX without changing the underlying platform or codebase. The cheapest option, fastest turnaround, but does not fix fundamental performance or architecture issues. If your WordPress site is slow because of plugins and themes, a refresh will not solve that.
+                            <strong>UX audit and information architecture.</strong> Before any new screen gets designed, someone needs to decide what is actually wrong with the current one: where users drop off, which pages nobody finds, and whether the navigation reflects how the business is organized today or how it was organized three years ago. A light audit is a structured heuristic review against usability principles from the <a href="https://www.nngroup.com/articles/redesign-risks/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Nielsen Norman Group</a>. A full audit adds analytics review (where people actually click and scroll) and, for higher-stakes redesigns, moderated user testing on the current site before touching the new design.
                         </BlogText>
 
                         <BlogText>
-                            <strong>Redesign</strong> means a new visual design and UX while keeping the same backend or CMS. Right when the brand has evolved significantly, UX is hurting conversions, but the technical foundation works. Preserves SEO equity and existing integrations while updating the frontend.
+                            <strong>Design system creation.</strong> A redesign that only restyles individual pages one at a time is slower and less consistent than one built from a small design system first: a type scale, a color palette with defined roles (primary, secondary, error, success), button and form states, and a spacing scale. Building the system costs more upfront than winging each page individually, but it is what makes the new design feel coherent across every page type and makes future page additions cheap.
                         </BlogText>
 
                         <BlogText>
-                            <strong>Rebuild</strong> means replacing both frontend and backend with new architecture. Necessary when the current platform is the problem (slow, insecure, locked-in). This is where custom code vs template decisions matter most. PandaCodeGen specializes in rebuilds because optimization on capped platforms eventually plateaus.
+                            <strong>Content migration within the same platform.</strong> This is different work than migrating content to a new CMS. The content stays in the same database or file structure; what changes is which template it renders in and, often, which page it lives on if pages get consolidated or split during the IA rework. Clean, well-organized existing content migrates fast. Content that has accumulated inconsistently for years needs an audit pass before it can go into new templates.
+                        </BlogText>
+
+                        <BlogText>
+                            <strong>Staged rollout vs full relaunch.</strong> A full relaunch replaces every page at once on a single cutover date. Cheaper to execute, higher risk if the new design underperforms the old one in ways nobody predicted. A staged rollout ships the new design to a subset of pages or a percentage of traffic first, which costs more in engineering time (you are running two designs in parallel temporarily) but lets you catch conversion problems before they hit 100 percent of visitors. See the A/B testing section below for how this plays out in practice.
                         </BlogText>
 
                         <BlogHeader>Small Business and Mid Market Website Redesign Pricing</BlogHeader>
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">Small business sites under 20 pages cost $1,500 to $7,000 for a full redesign or rebuild. Mid-market sites with 20 to 100 pages cost $7,000 to $25,000 depending on integrations and content volume. Page count is one factor. CMS complexity, custom integrations, and existing SEO equity to preserve drive the actual price.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Small business sites under 20 pages cost $1,500 to $7,000 for a same-platform redesign. Mid-market sites with 20 to 100 pages cost $7,000 to $15,000 depending on template count and stakeholder review. Page count is one factor. Number of distinct templates, UX audit depth, and content cleanup volume drive the actual price more than raw page count.</p>
                         </div>
 
                         <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
@@ -360,7 +337,7 @@ export default function WebsiteRedesignCostPage() {
                                     <tr className="bg-stone-100">
                                         <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Site Size</th>
                                         <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Pages</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Typical Features</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Typical Scope</th>
                                         <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Price Range</th>
                                         <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Timeline</th>
                                     </tr>
@@ -369,15 +346,15 @@ export default function WebsiteRedesignCostPage() {
                                     <tr className="hover:bg-stone-50">
                                         <td className="p-3 border border-stone-300 font-medium">Small business</td>
                                         <td data-label="Pages" className="p-3 border border-stone-300">5 to 20</td>
-                                        <td data-label="Typical Features" className="p-3 border border-stone-300">Contact form, blog, basic SEO</td>
+                                        <td data-label="Typical Scope" className="p-3 border border-stone-300">Light UX audit, right-sized design system, in-place content move</td>
                                         <td data-label="Price Range" className="p-3 border border-stone-300 font-bold text-cognac">$1,500 to $7,000</td>
                                         <td data-label="Timeline" className="p-3 border border-stone-300">2 to 4 weeks</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50">
                                         <td className="p-3 border border-stone-300 font-medium">Mid market</td>
                                         <td data-label="Pages" className="p-3 border border-stone-300">20 to 100</td>
-                                        <td data-label="Typical Features" className="p-3 border border-stone-300">CMS, integrations, multi-language</td>
-                                        <td data-label="Price Range" className="p-3 border border-stone-300 font-bold text-cognac">$7,000 to $25,000</td>
+                                        <td data-label="Typical Scope" className="p-3 border border-stone-300">Full UX audit, complete design system, multi-stakeholder review</td>
+                                        <td data-label="Price Range" className="p-3 border border-stone-300 font-bold text-cognac">$7,000 to $15,000</td>
                                         <td data-label="Timeline" className="p-3 border border-stone-300">4 to 8 weeks</td>
                                     </tr>
                                 </tbody>
@@ -385,196 +362,142 @@ export default function WebsiteRedesignCostPage() {
                         </div>
 
                         <BlogText>
-                            Small businesses often overpay for features they do not need. A 7-page service business site does not need a custom CMS, multi-language support, or e-commerce. The fixed-price floor for a clean, fast small business site in 2026 is $1,500 with PandaCodeGen Starter for qualifying small business sites.
+                            Small businesses often overpay for redesign work they do not need. A 7-page service business site rarely needs a full moderated-user-testing UX audit or a 40-component design system. A light IA review and a design system covering the 6 to 8 templates the site actually uses is enough, which is why the fixed-price floor for a clean small business redesign in 2026 is $1,500.
                         </BlogText>
 
                         <BlogText>
-                            Mid-market sites carry more complexity: legacy URLs to redirect, multiple stakeholder approvals, integrations with HubSpot or Salesforce, and substantial blog content to migrate. PandaCodeGen Growth ($3,500) covers most mid-market migrations from any platform. Scale ($5,000 to $10,000) covers complex e-commerce, headless commerce, or 30+ page builds with custom features.
+                            Mid-market sites carry more redesign complexity for reasons that have nothing to do with platform: more stakeholders need to sign off on the new design direction, more page templates exist (product pages, resource hubs, team pages, location pages), and more existing content needs an audit pass before it goes into the new design system. None of this requires touching the CMS or hosting. It requires more design and content-strategy hours.
                         </BlogText>
 
-                        <BlogHeader>Ecommerce Website Redesign Cost</BlogHeader>
+                        <BlogHeader>A/B Testing the New Design Before Full Rollout</BlogHeader>
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">Ecommerce redesigns cost $5,000 to $50,000 plus depending on architecture. Theme-based Shopify or WooCommerce redesigns run $5,000 to $15,000. Custom or headless ecommerce builds run $15,000 to $50,000+ but eliminate platform fees and unlock 90+ PageSpeed scores. PandaCodeGen ships headless Shopify storefronts at $5,000 to $10,000 in our Scale tier.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">A/B testing a redesign means running the new design against the old one on a split of live traffic before fully replacing it, measuring conversion rate, bounce rate, and time on page for each. It adds $500 to $3,000 and 2 to 6 weeks to a project timeline, but it catches a redesign that looks better and converts worse before that mistake reaches 100 percent of visitors.</p>
                         </div>
 
                         <BlogText>
-                            Ecommerce redesigns cost more than marketing sites because they touch product catalogs, checkout flows, payment integrations, and inventory systems. Each one is a place where small mistakes cost real revenue.
+                            The uncomfortable truth about redesigns: a genuine improvement in visual design does not guarantee a genuine improvement in conversion rate. <a href="https://www.nngroup.com/articles/ab-testing/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Nielsen Norman Group&apos;s research on A/B testing</a> documents redesigns that tested worse than the &ldquo;ugly&rdquo; version they replaced, usually because a new layout buried a call-to-action that used to be prominent, or a new navigation pattern that looked cleaner actually made key pages harder to find.
                         </BlogText>
 
                         <BlogText>
-                            <strong>Theme-based ecommerce redesign ($5,000 to $15,000):</strong> New theme on Shopify or WooCommerce, custom product page templates, conversion optimization on cart and checkout. Stays within the platform&apos;s structural performance ceiling (50 to 70 mobile PageSpeed for Shopify, 30 to 60 for WooCommerce).
+                            For a marketing site with meaningful traffic, running the new design on 10 to 50 percent of visitors for 2 to 4 weeks before a full relaunch is the safest way to catch that problem while it is still cheap to fix. For a low-traffic site where a statistically meaningful A/B test would take months, the safer substitute is a staged rollout by page (ship the new homepage first, watch it for two weeks, then proceed) rather than a true split test.
                         </BlogText>
 
                         <BlogText>
-                            <strong>Custom or headless ecommerce build ($15,000 to $50,000+):</strong> Custom Next.js storefront connected to Shopify Storefront API, Stripe + Sanity for fully custom builds, or WooCommerce headless setups. Eliminates app fees on the frontend and breaks past the platform PageSpeed ceiling. Result: 90+ mobile PageSpeed and sub-1-second load times.
+                            This is a redesign-specific cost precisely because it is a same-platform decision: you are running two visual designs against each other on the same backend, same content, same URLs. It is not something a migration or rebuild typically needs, because those projects usually have a hard cutover date tied to leaving the old platform behind.
                         </BlogText>
 
-                        <BlogText>
-                            <strong>Five factors that drive ecommerce redesign cost:</strong>
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Product count: 10 products is different work than 10,000. Bulk migration scripts handle the volume but data cleanup takes hours.",
-                            "Checkout customization: Native Shopify checkout is one cost. Custom checkout with B2B logic, multi-currency, or subscriptions is another.",
-                            "Subscription or membership features: Recurring billing, customer portals, and subscription management add $2,000 to $8,000.",
-                            "Multi-currency and international: Localization, tax calculation, and shipping zone logic add $1,500 to $5,000.",
-                            "Third-party app replacement: Each Shopify app replaced with custom code adds $500 to $3,000 upfront but eliminates monthly app fees forever."
-                        ]} />
-
-                        <BlogText>
-                            Panda Patches (which scaled from $38,000 to about $50,000 per month in revenue) runs on a custom Next.js + Sanity + Supabase + Square stack at about $55 a month total tooling cost (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). The full rebuild was Scale tier work. The math means the migration paid for itself in 3 months on app fee savings alone. <Link href="/services/woocommerce" className="text-cognac hover:underline">See our WooCommerce migration service</Link> for the full breakdown.
-                        </BlogText>
-
-                        <BlogHeader>Website Refresh vs Redesign vs Rebuild</BlogHeader>
+                        <BlogHeader>How Redesign, Rebuild, and Migration Actually Differ</BlogHeader>
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">Choose refresh when the site is fast, secure, and technically sound but looks dated. Choose redesign when the brand evolved but the platform works. Choose rebuild when the platform itself is slow, locked-in, or hitting structural limits. Most quotes oversell rebuilds because rebuilds bill more. The honest answer depends on what is actually broken, not what is most profitable to sell.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">A redesign changes how the site looks and how it is organized, keeping the same platform. A migration moves the same site, largely as-is, onto new technology. A rebuild changes the platform and reimagines the site at the same time. Choose based on what is actually broken: the look, the platform, or both.</p>
                         </div>
 
                         <BlogText>
-                            <strong>When a refresh is enough.</strong> Your site loads under 2 seconds, scores 75+ on PageSpeed, has no security issues, and you are not paying excessive monthly platform fees. The look is dated, the content is stale, but the foundation works. Refresh updates visuals and copy without touching the architecture. Cheapest option, fastest turnaround.
+                            <strong>Choose a redesign</strong> when your CMS, hosting, and technical foundation all work fine, but the visual design feels dated, the UX is hurting conversions, or the brand has evolved past what the site communicates. Nothing about the platform needs to change. This post covers that scope: $1,500 to $15,000 for most businesses.
                         </BlogText>
 
                         <BlogText>
-                            <strong>When a redesign makes sense.</strong> The brand has evolved significantly. UX is hurting conversions. Bounce rate is climbing. But the backend, CMS, and integrations all work fine technically. A redesign creates new design and UX while keeping the technical foundation. Preserves SEO equity and existing integrations.
+                            <strong>Choose a migration</strong> when the platform itself is the problem (slow, insecure, expensive, or locked-in) but the site&apos;s content, structure, and design intent are fine as they are. A migration preserves what exists and moves it to better technology. See the <Link href="/blog/website-migration-cost-2026" className="text-cognac hover:underline font-medium">migration cost breakdown</Link>: $1,500 to $10,000 across most platforms.
                         </BlogText>
 
                         <BlogText>
-                            <strong>When a full rebuild is the only option.</strong> Your site is slow (under 70 PageSpeed), built on a platform with recurring fees and plugin bloat, has security vulnerabilities, or has reached the ceiling of what the current platform can do. Rebuild is the right answer when the platform itself is the problem. Slow sites cost real revenue: a $40,000 a month e-commerce store loses approximately $2,800 a month for every 1 second of delay. A $3,500 rebuild pays back in 18 days at that opportunity cost.
+                            <strong>Choose a rebuild</strong> when the platform is the problem AND the business has outgrown the site&apos;s structure or positioning. A rebuild is a migration plus a redesign done at the same time: new technology, new information architecture, new design direction. See the <Link href="/blog/website-rebuild-cost-2026" className="text-cognac hover:underline font-medium">rebuild cost breakdown</Link>: $2,000 to $250,000 depending on scope.
                         </BlogText>
+                        <BlogQuote>
+                            If your platform works fine and only the look feels stale, paying for a rebuild wastes money on a platform migration you did not need. If your platform is genuinely the bottleneck, paying for a redesign wastes money on new paint over an engine that is still the problem. Match the project to what is actually broken.
+                        </BlogQuote>
 
-                        <BlogHeader>Hidden and Recurring Costs Most Redesign Quotes Leave Out</BlogHeader>
+                        <BlogHeader>Hidden Costs Most Redesign Quotes Leave Out</BlogHeader>
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">Five hidden costs most redesign quotes leave out: plugin and SaaS subscription fees ($600 to $6,000 per year), hosting and CDN upgrades ($240 to $2,400 per year), maintenance retainers and bug fixes ($1,200 to $6,000 per year), content cleanup and image optimization (often billed separately), and analytics, tracking, and CMS training ($500 to $3,000 one-time). The quoted price is rarely the full cost.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Five hidden costs most redesign quotes leave out: extra design revision rounds beyond the ones scoped upfront, a design system that only covers some page templates and needs extending later, content cleanup that turns out not to be included, stakeholder review cycles that were not budgeted for, and A/B testing or staged rollout if the quote assumed a single relaunch date. None of these involve the platform. All of them are redesign-specific.</p>
                         </div>
 
                         <BlogText>
-                            <strong>Plugin, app, and SaaS subscription fees.</strong> Forms, SEO tools, analytics, reviews, upsells, email capture, security scanning, caching, image optimization. Each one is $5 to $50 a month. A typical WordPress site stacks 10 to 20 of them. Total: $50 to $500 a month, $600 to $6,000 a year, every year. Ask the agency for a full list of paid tools the site will require post-launch before signing.
+                            <strong>Extra design revision rounds.</strong> Fixed-price redesigns typically include 2 to 3 structured rounds of feedback on the new direction. A round beyond that, especially one requested after the design was already approved, is scope creep that most studios bill separately at $300 to $1,500 depending on how much of the system it touches. Ask upfront how many rounds are included and what happens after that.
                         </BlogText>
 
                         <BlogText>
-                            <strong>Hosting, CDN, and bandwidth upgrades.</strong> Cheap shared hosting cannot handle traffic spikes. CDN and edge caching add cost. Some platforms charge based on bandwidth or visitors (Webflow auto-upgrades plans when you exceed bandwidth limits). Custom Next.js sites on Vercel start free and only scale to $20 a month when commercial usage justifies it.
+                            <strong>A design system that does not cover every page type.</strong> Some redesign quotes price the design system against the homepage and one or two interior pages, then discover mid-project that a pricing page, a team page, or a resource hub needs its own layout decisions that were never scoped. Ask for a list of every distinct page template the design system needs to cover before signing.
                         </BlogText>
 
                         <BlogText>
-                            <strong>Maintenance retainers and ongoing bug fixes.</strong> Many agencies require monthly retainers for updates, security patches, and bug fixes ($100 to $500 a month). Others bill hourly for everything post-launch. Ask what is included in the launch price and what costs extra. PandaCodeGen includes a full month of free support with all tweaks and bug fixes covered.
+                            <strong>Content cleanup that turns out not to be included.</strong> A quote that says &ldquo;content migration included&rdquo; usually means copying existing text into new templates, not rewriting inconsistent headlines, fixing broken internal links, or consolidating thin pages that should be merged. If your content has not been audited in a few years, budget separately for this or confirm explicitly that the quote covers it.
                         </BlogText>
 
                         <BlogText>
-                            <strong>Content cleanup, rewrites, and image optimization.</strong> Migrating messy content takes time. Image optimization, alt text, and content rewrites are often billed separately or assumed to be the client&apos;s responsibility. A site with 100 unoptimized images and inconsistent metadata can add 10 to 20 hours of work to any redesign.
+                            <strong>Stakeholder review cycles.</strong> Redesigns with more than one decision-maker take longer than solo-owner projects, and every review cycle with a new stakeholder who was not in the room for earlier approvals risks reopening decisions that were supposedly final. This does not show up as a separate line item on most quotes, but it is the single most common reason a scoped 4-week redesign timeline becomes 10 weeks.
                         </BlogText>
 
                         <BlogText>
-                            <strong>Analytics, tracking, and CMS training.</strong> Setting up GA4, conversion tracking, event monitoring, and Search Console verification is often extra ($500 to $1,500). Training a team to use the new CMS may be billed hourly. Get all of this in writing before signing.
+                            <strong>A/B testing or staged rollout, if you want it.</strong> Many redesign quotes assume a single full relaunch. If you want to test the new design against the old one on a slice of traffic first, that is additional engineering work to run both versions in parallel, not something most base quotes include by default.
                         </BlogText>
 
                         <BlogQuote>
-                            The agency that quoted you $5,000 may actually cost you $7,000 in year one. The fixed-price agency that quoted you $1,500 with $0 monthly fees is cheaper by month 4. Total cost of ownership is the only number that matters.
+                            The redesign quote that looked cheapest on paper is often the one that scoped the fewest revision rounds and the thinnest design system. Total project cost, not the headline number, is what matters.
                         </BlogQuote>
 
                         <BlogHeader>What Drives Website Redesign Cost Up or Down</BlogHeader>
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">Seven factors drive redesign cost: page count, design complexity and custom interactions, CMS choice and content migration, third-party integrations, performance and security requirements, team seniority and location, and timeline urgency. Page count is one factor. Custom integrations and performance targets often matter more.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Six factors drive redesign cost: page count and number of distinct templates, design complexity and custom interactions, depth of the UX audit and IA rework, content cleanup volume, number of stakeholders and review rounds, and timeline urgency. Page count is one factor. Template count and stakeholder count often matter more.</p>
                         </div>
 
                         <BlogText>
-                            <strong>Page count and site size.</strong> More pages mean more design, development, and migration work. Consolidating thin pages can reduce cost. A 50-page site with mostly templated blog posts is cheaper to migrate than a 50-page site with 50 unique custom layouts.
+                            <strong>Page count and template count.</strong> What matters more than raw page count is how many distinct page templates exist. A 50-page site where every page uses one of 4 templates is cheaper to redesign than a 20-page site where 15 pages have unique, one-off layouts. Consolidating one-off layouts into a shared template during the redesign reduces both cost and future maintenance.
                         </BlogText>
 
                         <BlogText>
-                            <strong>Design complexity and custom interactions.</strong> Template-based designs are cheaper. Custom animations, scroll-triggered effects, micro-interactions, and unique layouts increase cost by 20 to 50 percent. Page builders feel cheap upfront but cap performance.
+                            <strong>Design complexity and custom interactions.</strong> A clean, template-driven design system is cheaper to build and maintain. Custom animations, scroll-triggered effects, and bespoke micro-interactions on every page increase design and development cost by 20 to 50 percent and are usually worth reserving for a handful of high-traffic pages rather than the whole site.
                         </BlogText>
 
                         <BlogText>
-                            <strong>CMS choice and content migration.</strong> Migrating from WordPress to WordPress is simpler than migrating to a headless CMS. Some CMS platforms have licensing fees (Contentful $300+ per month for serious use). Sanity offers a more sustainable seat-based model. Custom Next.js with Sanity costs $0 to $99 a year for most clients vs $300 a month for Contentful.
+                            <strong>Depth of the UX audit and IA rework.</strong> A light heuristic review is far cheaper than a full audit with user testing and analytics review. The deeper audit costs more upfront but catches structural problems (bad navigation, buried calls-to-action, confusing page hierarchy) that a purely visual refresh would carry forward unchanged.
                         </BlogText>
 
                         <BlogText>
-                            <strong>Third-party integrations and apps.</strong> CRM, email, payment, booking, inventory, analytics integrations all add complexity. Native code integrations cost more upfront but eliminate recurring app fees. A typical WordPress site has 10+ integrations bolted on via plugins. A custom rebuild consolidates them into clean code.
+                            <strong>Content cleanup volume.</strong> Content that has been maintained consistently migrates into new templates quickly. Content that has accumulated inconsistently for years, with duplicate pages, outdated copy, and inconsistent formatting, needs an audit and cleanup pass that can add real hours regardless of how simple the new visual design is.
                         </BlogText>
 
                         <BlogText>
-                            <strong>Performance, security, and hosting architecture.</strong> A site loading under 1 second requires better architecture than a slow site. Static generation and edge rendering cost more upfront but eliminate ongoing performance work. Security compliance (SOC2, HIPAA) adds significant cost. PandaCodeGen builds HIPAA-compliant medical sites at Scale tier ($5,000 to $10,000) by treating compliance as architectural rather than bolt-on.
+                            <strong>Stakeholder count and review rounds.</strong> A solo business owner approving a design direction in one meeting is a fundamentally different project than a marketing team, a founder, and outside investors all needing sign-off. More stakeholders means more scheduled review rounds and a higher chance of late-stage direction changes, both of which add cost and time.
                         </BlogText>
 
                         <BlogText>
-                            <strong>Team seniority and location.</strong> US/UK senior developers cost $100 to $200 per hour. Offshore senior developers cost $25 to $75 per hour. Quality varies on both sides. PandaCodeGen runs a hybrid model: US LLC for billing and contracts, engineering performed from Karachi at globally competitive rates. The structure exists specifically to deliver senior-engineer quality without US agency overhead.
-                        </BlogText>
-
-                        <BlogText>
-                            <strong>Timeline and project urgency.</strong> Rush projects cost 30 to 50 percent more because they require parallel work streams and overtime. Standard timelines (3 to 5 weeks for a Growth migration) are cheaper. Be honest about your real deadline. Most clients who say "we need it in 2 weeks" actually have 6 weeks before it matters.
+                            <strong>Timeline and project urgency.</strong> Rush projects cost 30 to 50 percent more because they require parallel work streams and compressed review cycles. A standard small business redesign timeline is 2 to 5 weeks. Be honest about your real deadline. Most clients who say &ldquo;we need it in 2 weeks&rdquo; actually have 6 weeks before it matters.
                         </BlogText>
 
                         {/* Mid CTA */}
                         <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                             <p className="text-lg font-bold text-charcoal mb-2">Want a fixed-price quote that includes everything in writing?</p>
-                            <p className="text-stone-600 text-sm mb-6">Book a free 15-minute audit. We open Lighthouse on your live site, scope the work, and give you a fixed price that covers design, development, hosting setup, content migration, 90+ PageSpeed guarantee, and a free month of post-launch support. No surprise invoices, no hourly creep.</p>
+                            <p className="text-stone-600 text-sm mb-6">Book a free 15-minute audit. We review your live site, scope the UX audit and design system, and give you a fixed price that covers design, development, in-place content migration, and free post-launch support (15 days on Starter, 1 month on Growth and above). Same platform, same hosting. No surprise invoices, no hourly creep.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                 Get Your Fixed-Price Quote <ArrowRight className="w-4 h-4" />
                             </CalModalButton>
                         </div>
 
-                        <BlogHeader>Custom Code vs Template Website Redesign Pricing</BlogHeader>
+                        <BlogHeader>Design System From Scratch vs Reusing Theme Defaults</BlogHeader>
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">Templates cost $0 to $200 upfront with $15 to $50 a month in ongoing fees. Custom code costs $1,500 to $30,000 upfront with $0 to $20 a month in hosting. Templates are cheaper in year one. Custom code is cheaper by year 2 and substantially cheaper by year 3 because monthly fees compound while custom code has no recurring cost.</p>
-                        </div>
-
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
-                        <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
-                            <table className="w-full text-sm border-collapse min-w-[640px] responsive-stack-table">
-                                <thead>
-                                    <tr className="bg-stone-100">
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Factor</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Template</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Custom Code</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-300 font-medium">Upfront cost</td>
-                                        <td data-label="Template" className="p-3 border border-stone-300 text-green-700 font-medium">$0 to $200</td>
-                                        <td data-label="Custom Code" className="p-3 border border-stone-300 text-amber-700 font-medium">$1,500 to $30,000</td>
-                                    </tr>
-                                    <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-300 font-medium">Monthly cost</td>
-                                        <td data-label="Template" className="p-3 border border-stone-300 text-red-600 font-medium">$15 to $50</td>
-                                        <td data-label="Custom Code" className="p-3 border border-stone-300 text-green-700 font-medium">$0 to $20</td>
-                                    </tr>
-                                    <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-300 font-medium">Performance ceiling</td>
-                                        <td data-label="Template" className="p-3 border border-stone-300 text-red-600 font-medium">40 to 75 PageSpeed</td>
-                                        <td data-label="Custom Code" className="p-3 border border-stone-300 text-green-700 font-medium">90+ PageSpeed</td>
-                                    </tr>
-                                    <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-300 font-medium">Flexibility</td>
-                                        <td data-label="Template" className="p-3 border border-stone-300 text-red-600 font-medium">Limited to platform</td>
-                                        <td data-label="Custom Code" className="p-3 border border-stone-300 text-green-700 font-medium">Unlimited</td>
-                                    </tr>
-                                    <tr className="hover:bg-stone-50">
-                                        <td className="p-3 border border-stone-300 font-medium">Code ownership</td>
-                                        <td data-label="Template" className="p-3 border border-stone-300 text-red-600 font-medium">None (rented)</td>
-                                        <td data-label="Custom Code" className="p-3 border border-stone-300 text-green-700 font-medium">Full ownership</td>
-                                    </tr>
-                                    <tr className="hover:bg-stone-50 bg-stone-50/50">
-                                        <td className="p-3 border border-stone-300 font-medium">3-year total cost</td>
-                                        <td data-label="Template" className="p-3 border border-stone-300 text-amber-700 font-medium">$540 to $2,000</td>
-                                        <td data-label="Custom Code" className="p-3 border border-stone-300 text-green-700 font-medium">$1,500 to $30,720</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <p className="text-sm text-stone-700 leading-relaxed">Reusing your current theme or page-builder defaults with new colors and content costs $500 to $2,500 and takes 1 to 2 weeks, but the result still looks like a template. Building a real design system from scratch (custom type scale, component library, defined states) costs $2,000 to $10,000 more but produces a distinct look that scales cleanly as you add pages later.</p>
                         </div>
 
                         <BlogText>
-                            For a small business site, the math at the low end favors custom code by year 3. A $1,500 custom Next.js Starter site with $0 hosting beats a $40 a month Squarespace template by month 38 ($1,500 vs $1,520). The custom site also runs at 90+ PageSpeed vs Squarespace&apos;s 50 to 70 ceiling, which translates to better Google rankings, lower ad CPC, and higher conversion rates over the same 3 years.
+                            The cheapest possible &ldquo;redesign&rdquo; is swapping a theme, updating the color palette, and dropping in new photography, all within the existing page builder. It is fast and inexpensive, and it is also why so many small business sites in the same industry end up looking alike: they are built on the same handful of themes with different logos on top.
+                        </BlogText>
+
+                        <BlogText>
+                            A design system built specifically for the business, rather than adapted from a theme, costs more upfront because someone has to make deliberate decisions about type, color, spacing, and component states rather than accepting a template's defaults. The payoff shows up later: adding a new page type in month 8 means applying the existing system rather than making fresh design decisions and risking visual drift from the rest of the site.
+                        </BlogText>
+
+                        <BlogText>
+                            Neither approach requires changing your platform. Both are pure redesign work. The decision is about how distinct and how future-proof you need the new look to be, not about technology.
                         </BlogText>
 
                         <BlogHeader>Hourly vs Fixed Price Website Redesign</BlogHeader>
@@ -593,7 +516,7 @@ export default function WebsiteRedesignCostPage() {
                         </BlogText>
 
                         <BlogText>
-                            PandaCodeGen runs entirely fixed-price across all tiers. Starter $1,500, Growth $3,500, Scale $5,000 to $10,000, Scale+ $10,000+. No hourly tracking, no surprise invoices, no ongoing fees. The exception is post-launch retainers (optional, $500 a month) for clients who want continuous work after the included free month.
+                            PandaCodeGen runs entirely fixed-price on redesign work: $1,500 to $4,000 for small business scope, $4,000 to $8,000 for mid-market with a full design system and UX audit, $8,000 to $15,000 for larger sites with staged rollout. No hourly tracking, no surprise invoices. The exception is post-launch retainers (optional, $500 a month) for clients who want continuous design or content work after the included free support window (15 days on Starter, 1 month on Growth and above).
                         </BlogText>
 
                         <BlogHeader>Agency vs Freelancer vs In House Website Redesign Pricing</BlogHeader>
@@ -634,63 +557,59 @@ export default function WebsiteRedesignCostPage() {
                                         <td data-label="Best For" className="p-3 border border-stone-300">Continuous SaaS development</td>
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50 font-bold">
-                                        <td className="p-3 border border-stone-300 text-charcoal">Founder-built agency (PandaCodeGen)</td>
-                                        <td data-label="Typical Cost" className="p-3 border border-stone-300 text-green-700">$1,500 to $10K</td>
+                                        <td className="p-3 border border-stone-300 text-charcoal">Founder-built studio (PandaCodeGen)</td>
+                                        <td data-label="Typical Cost" className="p-3 border border-stone-300 text-green-700">$1,500 to $15K</td>
                                         <td data-label="Pros" className="p-3 border border-stone-300 text-green-700">Direct co-founder access, written guarantees</td>
-                                        <td data-label="Best For" className="p-3 border border-stone-300">Migrations, fixed-price builds, $50K+/mo businesses</td>
+                                        <td data-label="Best For" className="p-3 border border-stone-300">Fixed-price redesigns, small to mid-market sites</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
 
-                        <BlogHeader>The Cost of Not Redesigning a Slow Website</BlogHeader>
+                        <BlogHeader>The Cost of Not Redesigning a Dated, Underperforming Site</BlogHeader>
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">A slow website costs 20 to 30 percent of organic traffic, 7 to 20 percent per second of conversions, and 20 to 40 percent higher Google Ads CPC compared to fast competitors. For a $40,000 a month e-commerce site, every second of load time delay costs roughly $2,800 a month in lost revenue. A $3,500 redesign pays back in 18 days at that opportunity cost.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">A dated design with poor UX costs conversions and credibility even when the platform underneath is fast and secure. Confusing navigation, buried calls-to-action, and a visual style that reads as outdated all suppress conversion rate independently of load time. Note: if your site is also slow or insecure, that is a platform problem a redesign will not fix. See the migration or rebuild cost guides for that.</p>
                         </div>
 
                         <BlogText>
-                            The financial case for redesigning a slow site is not aesthetic. It is revenue.
+                            The financial case for redesigning a dated site is not purely aesthetic, but it is also not the same case as fixing a slow platform. A redesign&apos;s ROI comes from UX and positioning, not from Core Web Vitals.
                         </BlogText>
 
                         <BlogList items={[
-                            "Lost conversions: Google research shows mobile users abandon a page after 3 seconds. Each additional second cuts conversion rate by 7 to 20 percent depending on industry.",
-                            "Higher Google Ads CPC: Slow landing pages reduce Quality Score, raising cost per click by 20 to 40 percent compared to fast competitors targeting the same keywords.",
-                            "Lower SEO rankings: Sites scoring below 70 PageSpeed lose 20 to 30 percent of organic traffic. The March 2026 Google core update penalized 47 percent of sites failing Core Web Vitals.",
-                            "Damaged brand perception: 88 percent of users will not return to a site after a bad experience. Slow sites produce bad first impressions that close opportunities permanently.",
-                            "Security vulnerabilities: Outdated WordPress and plugin stacks are the most common attack vector for small business sites. The average breach costs $4,400 in remediation, lost revenue, and reputation damage."
+                            "Confusing navigation and buried calls-to-action: if visitors cannot find the page that answers their question or the button that lets them take action, conversion rate suffers regardless of how fast the page loaded to get there.",
+                            "Outdated visual style reads as outdated credibility: for service businesses and higher-consideration purchases, a site that looks like it has not been touched in 5+ years signals the business itself may be stagnant, independent of whether the underlying platform still works fine.",
+                            "Content and information architecture that no longer matches the business: a site built around an old product lineup, an old pricing model, or an old positioning statement actively misleads visitors about what the business does today.",
+                            "Mobile UX gaps that a template never solved: some redesigns exist specifically because the original design was never adapted properly for how most visitors actually browse on phones, even though the platform itself runs fine.",
+                            "Competitive visual gap: if your top 3 competitors have modernized their design and yours has not, visitors comparing options may read the dated design as a proxy for a dated business, even when that is not true."
                         ]} />
 
                         <BlogText>
-                            Frame the redesign as an investment with measurable ROI, not an expense. The break-even on a $3,500 Growth migration is typically 3 to 6 months for any site doing meaningful traffic. Year 2 onward is recovered profit.
+                            Frame the redesign as an investment in conversion rate and credibility, not in speed. If your site is also slow (PageSpeed under 70) or has security concerns from an outdated platform, that is a separate, platform-level problem, and pairing a redesign with a migration or rebuild is worth evaluating. But do not expect a same-platform redesign to fix load time on its own. It will not, because the platform is unchanged.
                         </BlogText>
 
                         <BlogHeader>How to Justify Website Redesign Cost to Stakeholders</BlogHeader>
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">Build the business case on five angles: revenue impact (slow site math), competitive benchmarking (your competitors&apos; PageSpeed scores), security risk (CVE counts on your current stack), brand perception (mobile users abandoning at 3 seconds), and measurable KPIs to track before and after. Avoid aesthetic arguments. Lead with numbers.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Build the business case on four angles: conversion impact from UX problems the audit uncovered, competitive benchmarking against how competitors present themselves visually, brand credibility risk from a dated look, and measurable KPIs to track before and after (conversion rate, bounce rate, time on key pages). Avoid conflating this with speed or security arguments, which belong to a platform decision, not a redesign one.</p>
                         </div>
 
                         <BlogText>
-                            <strong>Revenue impact.</strong> Calculate the dollar cost of your current site speed. Take monthly revenue, multiply by conversion rate, multiply by the percentage drop your slow load time is causing. A site doing $40,000 a month with a 4-second load time loses approximately $11,200 a year compared to a 1-second load time competitor. The redesign pays for itself in 4 months.
+                            <strong>Conversion impact from UX problems.</strong> Use the UX audit findings, not generic industry stats. If the audit found that 40 percent of mobile visitors never scroll past the hero section, or that the pricing page requires three clicks nobody attempts, those specific findings make a stronger case than a generic conversion-rate benchmark that may not apply to your traffic.
                         </BlogText>
 
                         <BlogText>
-                            <strong>Competitive benchmarking.</strong> Run your top 3 competitors through PageSpeed Insights. Screenshot the scores. Show the leadership team that competitors are scoring 90 plus while you are at 50. The competitive gap is a ranking factor, an ad efficiency factor, and a conversion factor simultaneously.
+                            <strong>Competitive benchmarking.</strong> Screenshot your top 3 competitors&apos; sites next to yours. Show the leadership team the visual and UX gap directly. This is a credibility and positioning argument, not a technical one, and it is usually the fastest way to get stakeholder buy-in on a redesign specifically (as opposed to a platform change).
                         </BlogText>
 
                         <BlogText>
-                            <strong>Security risk.</strong> Search your CMS and active plugins on the National Vulnerability Database. Show the count of unpatched CVEs. WordPress sites with 30+ plugins routinely have 5 to 15 known vulnerabilities at any given time. A breach costs more than a redesign.
+                            <strong>Brand credibility risk.</strong> A site that looks unchanged for 5+ years signals stagnation to visitors comparing options, independent of how well the backend runs. Show stakeholders side-by-side screenshots of the current design against modern competitor sites.
                         </BlogText>
 
                         <BlogText>
-                            <strong>Brand perception.</strong> Cite the 88 percent return rate stat. Show stakeholder screenshots of how the site looks on mobile vs competitors. The before/after on visual quality alone justifies the investment for most leadership teams.
-                        </BlogText>
-
-                        <BlogText>
-                            <strong>Measurable KPIs to track.</strong> Set specific targets before the redesign starts: PageSpeed score, conversion rate, bounce rate, organic traffic, average page load time, ad Quality Score. Measure 30 days before launch and 60 days after. Having data closes the loop and proves ROI for the next budget cycle.
+                            <strong>Measurable KPIs to track.</strong> Set specific targets before the redesign starts: conversion rate, bounce rate on key pages, average time on the pricing or contact page, and (if running an A/B test) the direct comparison between old and new design. Measure 30 days before launch and 60 days after. Having data closes the loop and proves ROI for the next budget cycle.
                         </BlogText>
 
                         <BlogHeader>How to Reduce Website Redesign Cost Without Sacrificing Quality</BlogHeader>
@@ -713,70 +632,57 @@ export default function WebsiteRedesignCostPage() {
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">Ten questions every redesign buyer should ask before signing: What is fixed-price vs hourly? Do I own the source code on launch day? What ongoing fees will I pay? What PageSpeed score do you guarantee in writing? What is included in post-launch support and for how long? What is the refund policy if the work is bad? Who exactly is doing the engineering? What happens to my SEO during migration? What is the milestone payment structure? What are the red flags in your contract?</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Ten questions every redesign buyer should ask before signing: What is fixed-price vs hourly? How many design revision rounds are included? Does this touch my CMS, hosting, or platform at all? Do I own the new design files and any custom components? What is included in post-launch support and for how long? What is the refund policy if the work is bad? Who exactly is doing the design and development? How will you preserve my existing URLs and SEO during the in-place content move? What is the milestone payment structure? Will you run a staged rollout or a single relaunch?</p>
                         </div>
 
                         <BlogList items={[
                             "Pricing model: Is this fixed price or hourly? If hourly, what is the not-to-exceed cap?",
-                            "Code ownership: Will I receive full source code on launch day? Will the GitHub repository transfer to my account?",
-                            "Ongoing fees: What will I pay monthly after launch for hosting, plugins, or platform fees?",
-                            "Performance guarantees: What PageSpeed score will you guarantee in writing? What happens if the site does not hit it?",
-                            "Refund policy: What is your refund policy if the work is below contract specifications?",
+                            "Revision rounds: How many structured rounds of design feedback are included? What happens after that?",
+                            "Platform scope: Does this touch my CMS, hosting, or framework at all? If yes, I am being quoted a rebuild, not a redesign, and should compare it against rebuild pricing.",
+                            "Deliverable ownership: Will I receive the design system files (Figma or equivalent) and any custom components on completion?",
                             "Post-launch support: What is included for how long after launch? What costs extra?",
-                            "Engineering team: Who exactly is writing the code? Is it the senior I am talking to or a junior subcontractor?",
-                            "SEO migration: How will you preserve Google rankings during migration? What is the 301 redirect process?",
-                            "Payment structure: What are the milestones for the deposit, mid-build, and final payment?",
-                            "Contract red flags: What clauses lock me in or limit my recourse if things go wrong?"
+                            "Refund policy: What is your refund policy if the work is below contract specifications?",
+                            "Design and content team: Who exactly is doing the UX audit, the design work, and the content migration? Is it the person I am talking to or a subcontractor?",
+                            "URL and SEO preservation: Since the platform is not changing, will URLs stay the same? If pages are being consolidated or renamed, how will redirects be handled?",
+                            "Payment structure: What are the milestones for the deposit, design approval, and final payment?",
+                            "Rollout approach: Is this a single full relaunch or a staged rollout? If staged, what does the interim period look like for visitors?"
                         ]} />
 
                         <BlogHeader>What You Should Actually Pay for a Website Redesign</BlogHeader>
 
                         <BlogText>
-                            For most small businesses in 2026, the right number is $1,500 to $5,000 for a full custom Next.js redesign with measurable performance guarantees, code ownership, and zero monthly fees. For mid-market sites with complex integrations, $5,000 to $10,000. For enterprise scope, custom-quoted in the $15,000 to $50,000 range with the same guarantee structure.
+                            For most small businesses in 2026, the right number is $1,500 to $4,000 for a redesign with a right-sized design system, a light UX audit, and in-place content migration on your existing platform. For mid-market sites with a full UX audit, user testing, and a complete design system across many templates, $4,000 to $8,000. For enterprise scope with multiple stakeholders, staged rollout, and A/B testing, $8,000 to $50,000.
                         </BlogText>
 
                         <BlogText>
-                            <BlogHighlight>The price tag on the proposal is not the real cost. Total cost of ownership is.</BlogHighlight> A $5,000 quote with $200 a month in plugin fees and $300 a month in hosting costs $11,000 in year one, $17,000 by year two, $23,000 by year three. A $1,500 fixed-price custom build with $0 to $20 a month in hosting costs $1,500 to $1,740 across all three years. The math says cheap upfront is rarely cheapest overall.
+                            <BlogHighlight>The price tag on the proposal is not the whole cost. Revision rounds, design system completeness, and rollout approach are.</BlogHighlight> A $3,000 quote that only includes 1 revision round and a design system covering 2 page templates will almost certainly cost more once change requests and missing templates surface mid-project. A $4,000 quote that explicitly scopes 3 rounds and every template the site needs is the better number even though it looks higher on paper.
                         </BlogText>
 
                         <BlogHeader>Get a Fixed-Price Website Redesign From PandaCodeGen</BlogHeader>
 
                         <BlogText>
-                            PandaCodeGen rebuilds slow WordPress, Shopify, Wix, Squarespace, Webflow, and GoHighLevel sites as custom Next.js builds at fixed prices. Every project ships with a 90+ PageSpeed guarantee or 100 percent refund. Full source code on launch day. Zero monthly platform fees. One full month of free post-launch support and tweaks scoped in your SOW.
+                            PandaCodeGen redesigns sites in place on whatever platform they currently run on, and separately rebuilds sites onto new platforms when that is genuinely what is needed. Every redesign ships at a fixed price with a defined design system, a scoped number of revision rounds, and a written PageSpeed disclosure (what your current platform can and cannot support). Full design files on completion. Free post-launch support and tweaks scoped in your SOW: 15 days on Starter, a full month on Growth and above.
                         </BlogText>
 
                         <BlogList items={[
-                            "Starter: $1,500 for 5 to 7 page custom Next.js business sites",
-                            "Growth: $3,500 for 10 to 20 pages with Sanity CMS and full migration",
-                            "Scale: $5,000 to $10,000 for headless e-commerce or 30+ page builds",
-                            "90+ PageSpeed Mobile guaranteed or 100 percent refund",
-                            "Full source code ownership on launch day",
-                            "Free month of post-launch support, tweaks, and CMS training",
-                            "Sub-1-second load times via Vercel edge deployment",
-                            "Timeline: 1 to 5 weeks depending on tier"
+                            "Small business redesign: $1,500 to $4,000 for 5 to 10 pages with a right-sized design system",
+                            "Mid-market redesign: $4,000 to $8,000 for a full UX audit, complete design system, and in-place content migration",
+                            "Larger scope redesign: $8,000 to $15,000 for staged rollout, A/B testing, and multi-stakeholder review",
+                            "PageSpeed disclosed in writing based on what your current platform supports",
+                            "Full design system files delivered on completion",
+                            "Free post-launch support, tweaks, and CMS training: 15 days on Starter, 1 month on Growth and above",
+                            "Same platform, same hosting, same URLs unless we agree otherwise",
+                            "Timeline: 2 to 6 weeks depending on scope"
                         ]} />
 
-                        <div className="grid md:grid-cols-2 gap-3 my-6">
-                            {[
-                                { label: "WordPress migration", href: "/services/wordpress-migration", desc: "Custom Next.js rebuild from $1,500. MyCustomPatches went from PageSpeed 40 to 100 in 6 weeks." },
-                                { label: "Webflow migration", href: "/services/webflow", desc: "Leave Webflow for $1,500 to $15,000. Eliminate $39 to $235 a month Webflow fees." },
-                                { label: "WooCommerce migration", href: "/services/woocommerce", desc: "Headless from $8,000. Zero lost orders, full product migration, 6 to 8 week timeline." },
-                                { label: "GoHighLevel migration", href: "/services/gohighlevel", desc: "Replace GHL website, keep CRM, $4,000 plus. Custom Next.js with GHL pipelines preserved." },
-                            ].map(({ label, href, desc }) => (
-                                <Link key={label} href={href} className="group flex items-start gap-3 p-4 bg-stone-50 border border-stone-200 rounded-xl hover:border-cognac transition-all">
-                                    <CheckCircle2 className="w-5 h-5 text-emerald-600 mt-0.5 shrink-0" />
-                                    <div>
-                                        <p className="font-bold text-charcoal text-sm mb-1 group-hover:text-cognac transition-colors">{label}</p>
-                                        <p className="text-sm text-stone-600 leading-relaxed">{desc}</p>
-                                    </div>
-                                </Link>
-                            ))}
+                        <div className="my-6 p-5 bg-stone-50 border border-stone-200 rounded-xl">
+                            <p className="text-sm text-stone-700"><strong className="text-charcoal">Need more than a redesign?</strong> If your platform itself is slow, insecure, or the real bottleneck, see the <Link href="/blog/website-migration-cost-2026" className="text-cognac hover:underline font-medium">migration cost breakdown</Link> for moving to new technology while preserving what exists, or the <Link href="/blog/website-rebuild-cost-2026" className="text-cognac hover:underline font-medium">rebuild cost breakdown</Link> for a new platform combined with a reimagined site.</p>
                         </div>
 
                         {/* Bottom CTA */}
                         <div className="my-6 md:my-10 p-8 bg-charcoal text-white rounded-2xl text-center">
                             <p className="text-xl font-bold mb-2">Stop comparing $5 Fiverr gigs to $50,000 agency quotes.</p>
-                            <p className="text-stone-400 text-sm mb-6">Get a fixed-price redesign quote with everything in writing: scope, timeline, PageSpeed guarantee, refund clause, and free month of post-launch support. No surprise invoices, no hourly creep, no agency markup.</p>
+                            <p className="text-stone-400 text-sm mb-6">Get a fixed-price redesign quote with everything in writing: scope, revision rounds, timeline, refund clause, and free post-launch support (15 days on Starter, 1 month on Growth and above). No surprise invoices, no hourly creep, no agency markup.</p>
                             <div className="flex flex-col sm:flex-row gap-3 justify-center">
                                 <CalModalButton className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
                                     Book Free Quote Call <ArrowRight className="w-4 h-4" />
@@ -797,7 +703,7 @@ export default function WebsiteRedesignCostPage() {
 
                     <section className="mb-10 mt-6 md:mt-10">
                         <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
-                        <p className="text-stone-700 leading-relaxed mb-3">For platform-specific cost breakdowns, see <Link href="/blog/website-migration-cost-2026" className="text-cognac hover:underline font-medium">Website Migration Cost 2026</Link>, <Link href="/blog/webflow-migration-cost" className="text-cognac hover:underline font-medium">Webflow Migration Cost</Link>, or <Link href="/blog/wordpress-migration-cost" className="text-cognac hover:underline font-medium">WordPress Migration Cost</Link>. For the cheap-tier perspective, see <Link href="/blog/cheap-web-developer" className="text-cognac hover:underline font-medium">Best Cheap Web Developers for Hire</Link>. For the speed angle that often drives the redesign decision, see <Link href="/blog/how-to-speed-up-your-website" className="text-cognac hover:underline font-medium">How to Speed Up Your Website</Link>.</p>
+                        <p className="text-stone-700 leading-relaxed mb-3">If your platform is the actual problem rather than the visual design, see <Link href="/blog/website-rebuild-cost-2026" className="text-cognac hover:underline font-medium">Website Rebuild Cost 2026</Link> (new platform plus a reimagined site) or <Link href="/blog/website-migration-cost-2026" className="text-cognac hover:underline font-medium">Website Migration Cost 2026</Link> (moving what you have to new technology, unchanged). For platform-specific migration numbers, see <Link href="/blog/webflow-migration-cost" className="text-cognac hover:underline font-medium">Webflow Migration Cost</Link> or <Link href="/blog/wordpress-migration-cost" className="text-cognac hover:underline font-medium">WordPress Migration Cost</Link>. For the cheap-tier perspective, see <Link href="/blog/cheap-web-developer" className="text-cognac hover:underline font-medium">Best Cheap Web Developers for Hire</Link>. If load time turns out to be your real issue, see <Link href="/blog/how-to-speed-up-your-website" className="text-cognac hover:underline font-medium">How to Speed Up Your Website</Link>, which is a platform question, not a redesign one.</p>
                         <p className="text-stone-700 leading-relaxed">For service pages by source platform, see <Link href="/services/wordpress-migration" className="text-cognac hover:underline font-medium">WordPress migration</Link>, <Link href="/services/webflow" className="text-cognac hover:underline font-medium">Webflow migration</Link>, <Link href="/services/woocommerce" className="text-cognac hover:underline font-medium">WooCommerce migration</Link>, <Link href="/services/gohighlevel" className="text-cognac hover:underline font-medium">GoHighLevel migration</Link>, <Link href="/services/wix" className="text-cognac hover:underline font-medium">Wix migration</Link>, <Link href="/services/squarespace" className="text-cognac hover:underline font-medium">Squarespace migration</Link>, <Link href="/services/ecommerce" className="text-cognac hover:underline font-medium">e-commerce solutions</Link>, or <Link href="/services/custom-engineering" className="text-cognac hover:underline font-medium">custom engineering</Link>.</p>
                     </section>
 

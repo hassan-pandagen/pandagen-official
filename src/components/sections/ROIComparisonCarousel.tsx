@@ -155,7 +155,7 @@ export default function ROIComparisonCarousel() {
         positive: true,
       },
       impact: {
-        stat: "99.99% Uptime",
+        stat: "Zero Exploits",
         description: "WordPress sites average 3-5 plugin conflicts/year causing downtime. Next.js on Vercel: zero vulnerability exploits",
       },
       source: "WP White Security Report 2026",

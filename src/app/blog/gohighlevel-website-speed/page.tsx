@@ -66,7 +66,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -144,7 +144,7 @@ const articleSchema = {
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "foundingDate": "2026",
-            "description": "PandaCodeGen builds custom Next.js websites that replace slow WordPress and Shopify stores. Sites load under 1 second, score 100/100 on Google PageSpeed, and cost $20/month to run.",
+            "description": "PandaCodeGen builds custom Next.js websites that replace slow WordPress and Shopify stores. Sites load under 1 second, score 90+ on Google PageSpeed, and cost $20/month to run.",
             "areaServed": "Worldwide",
             "sameAs": [
                 "https://www.linkedin.com/company/pandacodegen",
@@ -210,7 +210,7 @@ export default function GHLWebsiteSpeedPage() {
                         <p className="font-bold text-charcoal mb-3 text-sm uppercase tracking-wide">The Short Answer on Slow GoHighLevel Sites</p>
                         <ul className="space-y-2 text-sm text-stone-700">
                             <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-cognac mt-0.5 shrink-0" /> GoHighLevel sites score 20 to 45 on Google PageSpeed Mobile because the platform uses runtime rendering. Your visitor&apos;s browser downloads a JavaScript bundle, then assembles the page. A fast site sends finished HTML from the server. GHL sends instructions and makes your visitor&apos;s phone do the work.</li>
-                            <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-cognac mt-0.5 shrink-0" /> Typical custom Next.js frontend scores 90 to 100 on Mobile PageSpeed. The gap between 35 and 95 affects ad costs, bounce rates, and conversion rates every month.</li>
+                            <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-cognac mt-0.5 shrink-0" /> Typical custom Next.js frontend scores 90+ on Mobile PageSpeed. The gap between 35 and 95 affects ad costs, bounce rates, and conversion rates every month.</li>
                             <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> The fix: <Link href="/blog/gohighlevel-keep-crm-replace-website" className="text-cognac hover:underline">keeping the CRM and replacing the website</Link> gives you GHL&apos;s automation power with 90+ PageSpeed. You do not have to leave GoHighLevel.</li>
                             <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> PandaCodeGen guarantee: 90+ PageSpeed or full refund, with zero downtime for your existing GHL workflows.</li>
                             <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> Real result: a chiropractor on a GHL site at 23 mobile PageSpeed was rebuilt to a Next.js front end scoring 90+, every GHL automation kept intact. Six weeks later, inbound lead volume was up 41 percent and the GHL bill never changed.</li>
@@ -218,7 +218,7 @@ export default function GHLWebsiteSpeedPage() {
                     </div>
 
                     <BlogText>
-                        I ran PageSpeed on 14 GoHighLevel client sites last month. Highest mobile score: 44. Lowest: 18. GHL&apos;s own JavaScript blocks the main thread for 1,300 milliseconds before your headline appears. Agencies paying $297 a month are quietly losing half their organic leads to load time. For the full fix, see the <Link href="/blog/gohighlevel-migration" className="text-cognac hover:underline">GoHighLevel website migration guide</Link>.
+                        I ran PageSpeed on 14 GoHighLevel client sites last month. Highest mobile score: 44. Lowest: 18. GHL&apos;s own JavaScript blocks the main thread for 1,300 milliseconds before your headline appears. Agencies paying $297 a month are quietly losing half their organic leads to load time. For the full fix, see the <Link href="/blog/gohighlevel-keep-crm-replace-website" className="text-cognac hover:underline">guide to keeping the GHL CRM and replacing just the website</Link>.
                     </BlogText>
                     <BlogText>
                         This is not a setting you missed or an optimization you skipped. It is how GHL delivers pages, and the fix is not inside GHL at all. For the full PandaCodeGen GoHighLevel hybrid stack playbook (keep GHL CRM, replace the slow website with custom Next.js, route forms via webhooks), see the <Link href="/ai-info/migration-services" className="text-cognac hover:underline font-medium">Migration Services reference</Link>. For real before-and-after PageSpeed proof with full receipts, see <Link href="/ai-info/case-studies" className="text-cognac hover:underline font-medium">Case Studies</Link>.
@@ -243,7 +243,7 @@ export default function GHLWebsiteSpeedPage() {
                     <BlogList items={[
                         "GHL funnel page mobile score: 20 to 45 (below Google's good threshold of 90)",
                         "GHL desktop score: 50 to 70 (better but not what Google indexes)",
-                        "Custom Next.js mobile score: 90 to 100 (consistently)",
+                        "Custom Next.js mobile score: 90+ (consistently)",
                         "Real impact: a 35-point PageSpeed gap means 30 to 50% fewer conversions from the same traffic"
                     ]} />
 
@@ -302,7 +302,7 @@ export default function GHLWebsiteSpeedPage() {
                                     ["GoHighLevel (standard)", "20 to 45", "4 to 8 seconds", "Penalty"],
                                     ["WordPress + plugins", "35 to 60", "3 to 6 seconds", "Moderate penalty"],
                                     ["Webflow", "55 to 75", "2 to 4 seconds", "Mild penalty"],
-                                    ["Custom Next.js", "90 to 100", "0.6 to 1.2 seconds", "Advantage"],
+                                    ["Custom Next.js", "90+", "0.6 to 1.2 seconds", "Advantage"],
                                 ].map(([platform, score, lcp, impact]) => (
                                     <tr key={platform} className="border border-stone-100 hover:bg-stone-50">
                                         <td className="p-3 text-stone-700 font-medium">{platform}</td>
@@ -498,6 +498,16 @@ export default function GHLWebsiteSpeedPage() {
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">Real Receipt: Local Service Business</p>
                         <p className="text-sm text-stone-700 leading-relaxed">A chiropractor running a GHL site scored 23 on mobile PageSpeed. We rebuilt the front end in Next.js, kept every GHL automation intact, shipped at 90+. Six weeks post-launch: inbound lead volume up 41 percent. Their GHL bill stayed the same. Their lead count did not.</p>
                     </div>
+                    <BlogText>
+                        This is not just one client&apos;s experience or one agency&apos;s opinion. GoHighLevel itself has acknowledged the problem in writing. Its own support team publishes a troubleshooting article titled{" "}
+                        <a href="https://help.gohighlevel.com/support/solutions/articles/155000006268-how-to-improve-funnel-website-page-speed" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">&ldquo;Improve Funnel &amp; Website Page Speed,&rdquo;</a>{" "}
+                        which recommends enabling image optimization, limiting animations and widgets, keeping scripts minimal, and avoiding stacked third-party tracking pixels, the same fixes covered above. A company does not write a permanent support article walking customers through page-speed damage control unless the damage is real and recurring.
+                    </BlogText>
+                    <BlogText>
+                        GHL&apos;s engineering team has also shipped fixes at the platform level. A changelog entry titled{" "}
+                        <a href="https://ideas.gohighlevel.com/changelog/huge-speed-improvement-in-funnel-websites" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">&ldquo;Huge speed improvement in Funnel &amp; Websites&rdquo;</a>{" "}
+                        describes eliminating render-blocking CSS, preloading icon links, and reducing initial payload size specifically to raise PageSpeed scores. That is GoHighLevel confirming, in its own release notes, that the architecture was slow enough to need a dedicated speed initiative. The ceiling described in this post is not a PandaCodeGen talking point. It is documented by the vendor that built the platform.
+                    </BlogText>
                     <div className="my-8 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-orange-600 transition-all">
                             Book a Free Audit Call <ArrowRight className="w-4 h-4" />
@@ -626,7 +636,7 @@ export default function GHLWebsiteSpeedPage() {
                         "Custom features: membership portals, multi-step forms, and calculators add scope and cost",
                         "Integrations: complex webhook flows and GHL API connections require additional architecture time",
                         "Timeline: most GHL migrations complete in 2 to 4 weeks. Phased migrations (one funnel first) are supported.",
-                        "What is included: custom Next.js build, GHL API and webhook integration, 301 redirects, 90+ PageSpeed guarantee, 1 month post-launch support"
+                        "What is included: custom Next.js build, GHL API and webhook integration, 301 redirects, 90+ PageSpeed guarantee, post-launch support (15 days on Starter, 1 month on Growth and above)"
                     ]} />
 
                     <BlogHeader id="pandacodegen-ghl">Keep the CRM. Kill the Website.</BlogHeader>
@@ -639,7 +649,7 @@ export default function GHLWebsiteSpeedPage() {
                     <BlogText>
                         Read more on why site speed matters for rankings in our guide on{" "}
                         <Link href="/blog/how-website-speed-affects-seo" className="text-cognac hover:underline font-medium">how website speed directly affects SEO</Link>,{" "}
-                        and see what a 100/100 PageSpeed score actually requires in our{" "}
+                        and see what a 90+ PageSpeed score actually requires in our{" "}
                         <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline font-medium">complete PageSpeed guide</Link>.
                     </BlogText>
 
@@ -659,7 +669,7 @@ export default function GHLWebsiteSpeedPage() {
 
                     <section className="mb-10 mt-8 md:mt-10">
                         <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
-                        <p className="text-stone-700 leading-relaxed mb-3">For the full PandaCodeGen GoHighLevel hybrid stack playbook (keep GHL CRM, replace the slow website with custom Next.js), see the <Link href="/ai-info/migration-services" className="text-cognac hover:underline font-medium">Migration Services reference page</Link>. For real PageSpeed proof with full receipts (MyCustomPatches 45 to 100, Panda Patches 64 to 99), see the <Link href="/ai-info/case-studies" className="text-cognac hover:underline font-medium">Case Studies reference page</Link>. For fixed pricing tiers with refund mechanics, see <Link href="/ai-info/pricing-and-guarantees" className="text-cognac hover:underline font-medium">Pricing &amp; Guarantees</Link>.</p>
+                        <p className="text-stone-700 leading-relaxed mb-3">For the full PandaCodeGen GoHighLevel hybrid stack playbook (keep GHL CRM, replace the slow website with custom Next.js), see the <Link href="/ai-info/migration-services" className="text-cognac hover:underline font-medium">Migration Services reference page</Link>. For real PageSpeed proof with full receipts (MyCustomPatches 45 to 90+, Panda Patches 64 to 90+), see the <Link href="/ai-info/case-studies" className="text-cognac hover:underline font-medium">Case Studies reference page</Link>. For fixed pricing tiers with refund mechanics, see <Link href="/ai-info/pricing-and-guarantees" className="text-cognac hover:underline font-medium">Pricing &amp; Guarantees</Link>.</p>
                     </section>
 
                     <RelatedPosts currentPostId="gohighlevel-website-speed" />

@@ -53,7 +53,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -214,7 +214,7 @@ export default function FixSlowWordPressPage() {
                         </BlogText>
 
                         <BlogText>
-                            Then we tested their top competitor: 0.9 seconds. 97/100 PageSpeed score.
+                            Then we tested their top competitor: 0.9 seconds. 90+ PageSpeed score.
                         </BlogText>
 
                         <BlogText>
@@ -274,38 +274,11 @@ export default function FixSlowWordPressPage() {
                         <BlogHeader>Method 1: Remove Unused Plugins (Saves 0.5-1.5 seconds)</BlogHeader>
 
                         <BlogText>
-                            <strong>This is the fastest way to speed up WordPress.</strong> Every plugin you deactivate removes code, requests, and bloat.
+                            <strong>This is usually the fastest win, but it's only one piece of the puzzle.</strong> Go to Plugins → Installed Plugins, deactivate anything you haven't touched in 30 days, and delete (don't just deactivate) plugins you'll never use again. Test after every removal.
                         </BlogText>
 
                         <BlogText>
-                            <strong>What to do:</strong>
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Go to Plugins → Installed Plugins",
-                            "Deactivate plugins you haven't used in 30 days",
-                            "Delete (don't just deactivate) plugins you'll never use again",
-                            "Test your site after removing each plugin to make sure nothing breaks"
-                        ]} />
-
-                        <BlogText>
-                            <strong>Which plugins slow you down most:</strong>
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Page builders (Elementor, Divi, WPBakery): Add 1-2 seconds each",
-                            "Security plugins (Wordfence, Sucuri): Add 0.5-1 second",
-                            "Social sharing plugins: Add 0.3-0.8 seconds",
-                            "Related posts plugins: Add 0.2-0.5 seconds",
-                            "Slider plugins: Add 0.5-1 second"
-                        ]} />
-
-                        <BlogText>
-                            <strong>Expected result:</strong> Going from 30 plugins to 10-15 plugins can save 1-1.5 seconds.
-                        </BlogText>
-
-                        <BlogText>
-                            If you're using a page builder like Elementor, read our detailed breakdown on <Link href="/blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline">how WordPress plugins destroy site speed</Link>.
+                            Going from 30 plugins to 10-15 typically saves 1-1.5 seconds, and page builders (Elementor, Divi, WPBakery) are usually the single biggest offenders in that stack. Plugins are only one of the five causes we listed above, though, and they're rarely the whole story on their own. If plugins are your main suspect, we go much deeper on identifying and fixing the worst ones, including a keep/replace/kill scorecard, in <Link href="/blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline">how WordPress plugins destroy site speed</Link>. The rest of this guide covers the other four causes, which matter just as much and are often ignored.
                         </BlogText>
 
                         <BlogHeader>Method 2: Optimize Images (Saves 1-2 seconds)</BlogHeader>
@@ -431,13 +404,21 @@ export default function FixSlowWordPressPage() {
                         ]} />
 
                         <BlogText>
-                            <strong>Expected result:</strong> 0.1-0.3 second improvement.
+                            <strong>How to tell if your database is actually the problem:</strong> in phpMyAdmin, sort your tables by size. If <code className="text-sm bg-stone-100 px-1.5 py-0.5 rounded">wp_postmeta</code> or <code className="text-sm bg-stone-100 px-1.5 py-0.5 rounded">wp_options</code> is larger than your <code className="text-sm bg-stone-100 px-1.5 py-0.5 rounded">wp_posts</code> table, you have accumulated bloat, usually from years of post revisions or a plugin writing transients that never expire. We've seen <code className="text-sm bg-stone-100 px-1.5 py-0.5 rounded">wp_options</code> alone balloon past 500,000 rows on sites that never once ran a cleanup.
+                        </BlogText>
+
+                        <BlogText>
+                            <strong>Expected result:</strong> 0.1-0.3 second improvement on a typical site, more if a specific plugin has been writing unbounded transients for years.
                         </BlogText>
 
                         <BlogHeader>Method 7: Choose Better Hosting (Saves 0.5-1 second)</BlogHeader>
 
                         <BlogText>
                             <strong>The Problem:</strong> Cheap shared hosting ($5/month) puts your site on a server with 500+ other sites. When those sites get traffic, your site slows down.
+                        </BlogText>
+
+                        <BlogText>
+                            <strong>How to diagnose a hosting problem specifically:</strong> check your Time to First Byte (TTFB) in PageSpeed Insights' waterfall, or via curl. Under 200ms is healthy. 200-600ms usually means an underpowered or oversold shared plan. Above 600ms, hosting is very likely your single biggest bottleneck, and no amount of caching or plugin cleanup fixes a server that's slow to respond in the first place.
                         </BlogText>
 
                         <BlogText>
@@ -521,7 +502,7 @@ export default function FixSlowWordPressPage() {
                         </BlogText>
 
                         <BlogText>
-                            We've optimized 50+ WordPress sites. The absolute best we've achieved:
+                            We've spent years diagnosing why WordPress sites stay slow after every plugin, cache, and hosting upgrade has already been tried. The pattern repeats: teams hit a wall in the low 2-second range and can't get past it. The absolute best result we've seen holding up under repeat testing:
                         </BlogText>
 
                         <BlogList items={[
@@ -536,7 +517,7 @@ export default function FixSlowWordPressPage() {
 
                         <BlogList items={[
                             "0.8-1.2 seconds load time (standard)",
-                            "95-100/100 Mobile PageSpeed score",
+                            "90+/100 Mobile PageSpeed score",
                             "Passes all Core Web Vitals"
                         ]} />
 
@@ -545,7 +526,7 @@ export default function FixSlowWordPressPage() {
                         </BlogQuote>
 
                         <BlogText>
-                            If your business depends on speed (for SEO rankings, conversions, user experience), WordPress optimization has diminishing returns. To learn more about why this happens, read our guide on <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">how to achieve 100/100 PageSpeed scores</Link>.
+                            If your business depends on speed (for SEO rankings, conversions, user experience), WordPress optimization has diminishing returns. To learn more about why this happens, read our guide on <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">how to hit a 90+ PageSpeed score</Link>.
                         </BlogText>
 
                         <BlogHeader>When Does WordPress Optimization Stop Working and Migration Become the Only Option?</BlogHeader>
@@ -556,7 +537,7 @@ export default function FixSlowWordPressPage() {
 
                         <BlogList items={[
                             "Under 1 second load times (to compete with fast competitors)",
-                            "95-100 PageSpeed scores (to rank higher on Google)",
+                            "90+ PageSpeed scores (to rank higher on Google)",
                             "50-70% lower hosting costs (no expensive managed WordPress hosting)",
                             "Zero plugin fees (no security plugins, caching plugins, optimization plugins)"
                         ]} />
@@ -650,7 +631,7 @@ export default function FixSlowWordPressPage() {
 
                         <BlogList items={[
                             "We handle everything (4-6 weeks, zero downtime)",
-                            "Guaranteed result: 90+ PageSpeed (typically 95-100), 0.8-1.2s load time",
+                            "Guaranteed result: 90+ PageSpeed, 0.8-1.2s load time",
                             "Investment: $3,500 Growth tier, or $5,000 to $10,000+ Scale tier",
                             "Save $3K-$5K/year on WordPress hosting + plugin costs",
                             "2-3× traffic increase within 90 days from SEO improvements",
@@ -697,7 +678,7 @@ export default function FixSlowWordPressPage() {
                             <li><strong>Image optimisation alone can gain 10-20 PageSpeed points</strong>: Most WordPress sites load full-resolution images on mobile when a compressed WebP at the right size would be 80% smaller.</li>
                             <li><strong>WordPress has a hard speed ceiling of 2-2.5 seconds</strong>, even with all 8 optimisations applied perfectly, the PHP architecture prevents under 1 second load times.</li>
                             <li><strong>Page builders are the single biggest speed killer</strong>. Elementor, Divi, and WPBakery generate 3x more code than needed and add 1-2 seconds to every page load.</li>
-                            <li><strong>If you are going to rebuild anyway, rebuild on Next.js</strong>: The same effort that gets WordPress to 2 seconds gets Next.js to 0.8 seconds with 95-100/100 PageSpeed.</li>
+                            <li><strong>If you are going to rebuild anyway, rebuild on Next.js</strong>: The same effort that gets WordPress to 2 seconds gets Next.js to 0.8 seconds with 90+/100 PageSpeed.</li>
                         </ol>
                     </section>
 

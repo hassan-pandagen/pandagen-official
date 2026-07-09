@@ -17,7 +17,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 const QuoteModalButton = lazyLoad(() => import("@/components/ui/QuoteModalButton"));
 
 export const metadata: Metadata = {
-    title: "Shopify Dawn Theme Slow? Our Fix: 55 to 90+ (2026)",
+    title: "Shopify Dawn Theme Slow? The Real Fix to Hit 90+",
     description: "You optimize Dawn to 75. Add one app and it drops to 50. Why the loop never ends and the one approach that stays at 90+.",
     alternates: {
         canonical: "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     keywords: ["shopify dawn theme slow", "shopify dawn theme speed", "shopify 2.0 performance", "why is shopify slow", "shopify pagespeed score", "shopify speed optimization", "shopify dawn pagespeed"],
     robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
-        title: "Shopify Dawn Theme Slow? How We Fixed It From 55 to 95 (2026)",
+        title: "Shopify Dawn Theme Slow? The Real Fix to Hit 90+ (2026)",
         description: "You optimize Dawn to 75. Add one app and it drops to 50. Why the loop never ends and the one approach that stays at 90+.",
         type: "article",
         publishedTime: "2026-03-07",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Shopify Dawn Theme Slow? How We Fixed It From 55 to 95 (2026)",
+        title: "Shopify Dawn Theme Slow? The Real Fix to Hit 90+ (2026)",
         description: "You optimize Dawn to 75. Add one app and it drops to 50. Why the loop never ends and the one approach that stays at 90+.",
     },
 };
@@ -46,7 +46,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow#article",
-            "headline": "Shopify Dawn Theme Slow? How We Fixed It From 55 to 95 (2026)",
+            "headline": "Shopify Dawn Theme Slow? The Real Fix to Hit 90+ (2026)",
             "description": "You optimize Dawn to 75. Add one app and it drops to 50. Why the loop never ends and the one approach that stays at 90+.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-07T00:00:00-05:00",
@@ -55,7 +55,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -168,7 +168,7 @@ export default function ShopifyDawnThemeSlowPage() {
                     <div className="mb-10">
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
                             Shopify Dawn Theme Slow?{" "}
-                            <span className="font-serif italic text-cognac">How We Fixed It From 55 to 95.</span>
+                            <span className="font-serif italic text-cognac">The Real Fix to Hit 90+.</span>
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
@@ -207,11 +207,11 @@ export default function ShopifyDawnThemeSlowPage() {
                     <div className="space-y-8">
 
                         <BlogText>
-                            We took a Shopify Dawn store from 42 to 97 on mobile PageSpeed. Load time dropped from 3.8 seconds to 0.7 seconds via <Link href="/blog/shopify-headless" className="text-cognac hover:underline">headless Shopify on Next.js</Link>. The store is <a href="https://www.mycustompatches.net" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">mycustompatches.net</a>. You can click it right now and run PageSpeed yourself. Here is what actually moved the needle.
+                            Here is our receipt for what a custom storefront does: we took <a href="https://www.mycustompatches.net" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">mycustompatches.net</a> from 45 to 90+ on mobile PageSpeed, and load time from 3.2 seconds to 0.7. That store was on WordPress and WooCommerce, not Shopify, but it had the exact disease Dawn stores have: a theme plus apps stack the owner could not get past no matter what was optimized. For a Shopify store, the same escape is <Link href="/blog/shopify-headless" className="text-cognac hover:underline">headless Shopify on Next.js</Link>. You can click that store right now and run PageSpeed yourself.
                         </BlogText>
 
                         <BlogText>
-                            Because it was not the theme. They were already on Dawn, with compressed images, no bloated plugins, and a developer who had &ldquo;optimized&rdquo; everything. They were still at 42. Because the issue was not their setup. It was the platform itself.
+                            Because it is never really the theme. That store had compressed images, no bloated plugins, and a developer who had &ldquo;optimized&rdquo; everything. It was still stuck at 45. The issue was not the setup. It was the template-platform architecture, and Dawn stores hit the same wall.
                         </BlogText>
 
                         <BlogText>
@@ -221,7 +221,7 @@ export default function ShopifyDawnThemeSlowPage() {
                         <BlogHeader>Dawn Was Built to Fix Shopify&apos;s Speed Problem. It Didn&apos;t.</BlogHeader>
 
                         <BlogText>
-                            Dawn is Shopify&apos;s fastest default theme, released in 2021 to replace Debut. A clean Dawn install with no apps and optimized images scores <BlogHighlight>65 to 80/100 on mobile PageSpeed.</BlogHighlight> That is the ceiling, and most stores never get there because real stores have apps.
+                            Dawn shipped in 2021 as Shopify&apos;s free performance-focused theme, replacing Debut, and it was the default theme for new stores for several years. Shopify has since introduced Horizon as the new default for new stores, but Dawn remains free, actively supported, and still runs on a large share of existing stores, which is why its ceiling still matters. A clean Dawn install with no apps and optimized images scores <BlogHighlight>65 to 80/100 on mobile PageSpeed.</BlogHighlight> That is the ceiling, and most stores never get there because real stores have apps.
                         </BlogText>
 
                         <BlogHeader>The Four Things Actually Slowing Your Store (None Is the Theme)</BlogHeader>
@@ -453,7 +453,7 @@ export default function ShopifyDawnThemeSlowPage() {
                             And that is before accounting for the direct conversion impact. <a href="https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Google research</a> found that 53% of mobile shoppers abandon a store that takes more than 3 seconds to load. If your Dawn store loads in 3.5 seconds, you are losing more than half your mobile traffic before they see a single product. <a href="https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Portent research</a> found that a site loading in 1 second converts 3 times better than a site loading in 5 seconds. That gap is exactly the difference between Dawn and a custom headless build.
                         </BlogText>
 
-                        <BlogHeader>How We Got MyCustomPatches From 42 to 97</BlogHeader>
+                        <BlogHeader>How We Got MyCustomPatches From 45 to 90+</BlogHeader>
 
                         <BlogText>
                             The fix that actually gets you into the 90+ green zone is headless Shopify. Keeping your Shopify backend (products, orders, inventory, payments) and replacing the Shopify storefront with a custom Next.js frontend. Our <Link href="/services/ecommerce?ref=blog/shopify-dawn-theme-slow" className="text-cognac hover:underline font-medium">headless Shopify development service</Link> covers the full transition.
@@ -476,11 +476,11 @@ export default function ShopifyDawnThemeSlowPage() {
                         </BlogText>
 
                         <BlogText>
-                            We built exactly this for{" "}
+                            We ran this exact playbook on{" "}
                             <Link href="/work/mycustompatches" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 MyCustomPatches
                             </Link>
-                            . Their store went from 42/100 mobile to 97/100. Load time dropped from 3.8 seconds to 0.7 seconds. The site is live and verifiable at{" "}
+                            {" "}(their stack was WordPress and WooCommerce rather than Shopify, but the storefront rebuild is the same move). Their store went from 45 mobile to 90+. Load time dropped from 3.2 seconds to 0.7 seconds. The site is live and verifiable at{" "}
                             <a href="https://www.mycustompatches.net" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 mycustompatches.net
                             </a>.
@@ -515,7 +515,7 @@ export default function ShopifyDawnThemeSlowPage() {
                         ]} />
 
                         <BlogText>
-                            If you&apos;re in the middle. $10K to $20K/month with a PageSpeed score below 60: the calculation is close. Run the numbers: multiply your monthly revenue by 10% (a conservative conversion improvement estimate). If that number is bigger than the build cost divided by 12, it pays for itself in the first year.
+                            If you&apos;re in the middle. $10K to $20K/month with a PageSpeed score below 60: the calculation is close. Run the numbers: multiply your monthly revenue by 10% (a conservative conversion improvement estimate). If that number is bigger than the build cost divided by 12, it pays for itself in the first year. For the full three-year cost math between the two paths, see our <Link href="/blog/shopify-vs-custom-website" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Shopify vs custom website comparison</Link>.
                         </BlogText>
 
                         <BlogText>

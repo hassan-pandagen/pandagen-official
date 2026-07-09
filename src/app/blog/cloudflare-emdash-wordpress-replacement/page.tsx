@@ -54,7 +54,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -387,11 +387,11 @@ export default function CloudflareEmdashPage() {
                             <Link href="/blog/wordpress-vs-nextjs" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 WordPress site replaced with a modern framework
                             </Link>{" "}
-                            that scores 99 on PageSpeed, loads in under 1 second, and costs $0 per month to host.
+                            that scores 90+ on PageSpeed, loads in under 1 second, and costs $0 per month to host.
                         </BlogText>
 
                         <BlogList items={[
-                            "99 PageSpeed score from day one. Not 60 with optimization plugins.",
+                            "90+ PageSpeed score from day one. Not 60 with optimization plugins.",
                             "Under 1 second load time on mobile. Your visitors see your content instantly.",
                             "$0 per month hosting. No server costs, no managed hosting fees, no scaling charges.",
                             "You own every line of code. No lock-in to Cloudflare, WordPress, or anyone else.",
@@ -423,7 +423,7 @@ export default function CloudflareEmdashPage() {
                                     <tr className="border-b border-stone-300">
                                         <td className="py-3 pr-4 font-medium">Google PageSpeed (Mobile)</td>
                                         <td data-label="WordPress" className="py-3 px-4">38 to 58</td>
-                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">95 to 99</td>
+                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">90+</td>
                                     </tr>
                                     <tr className="border-b border-stone-300">
                                         <td className="py-3 pr-4 font-medium">Load Time (Mobile)</td>
@@ -507,7 +507,7 @@ export default function CloudflareEmdashPage() {
                             <li><strong>96% of WordPress security issues come from plugins</strong>: Every plugin you install is a potential vulnerability. Emdash sandboxes plugins, but custom-coded sites eliminate the plugin problem entirely.</li>
                             <li><strong>Emdash is not ready for businesses today</strong>: Zero plugin ecosystem, CLI-only setup, Cloudflare lock-in, no community, and beta status. Technically impressive, but not production-ready.</li>
                             <li><strong>WordPress market share is declining for the first time in 20 years</strong>: Down from 43.6% to 42.6%. Google&apos;s March 2026 update dropped 47% of slow sites. Only 44% of WordPress sites pass Core Web Vitals on mobile.</li>
-                            <li><strong>Custom Next.js sites are the proven alternative available today</strong>: 95 to 99 PageSpeed, under 1 second load time, $0 monthly hosting, zero plugins, 100% code ownership, and no vendor lock-in to any platform.</li>
+                            <li><strong>Custom Next.js sites are the proven alternative available today</strong>: 90+ PageSpeed, under 1 second load time, $0 monthly hosting, zero plugins, 100% code ownership, and no vendor lock-in to any platform.</li>
                         </ol>
                     </section>
 

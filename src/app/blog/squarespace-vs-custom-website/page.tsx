@@ -66,7 +66,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -583,7 +583,7 @@ export default function SquarespaceVsCustomWebsitePage() {
                             "Week 1: Discovery call. We audit your Squarespace site, run PageSpeed, inventory every page and portfolio item, map all URLs for 301 redirects, and identify scheduling, e-commerce, and form integrations that need rebuilding.",
                             "Week 2 to 3: Build. We rebuild your site in Next.js. Every portfolio image gets a custom pipeline (WebP/AVIF, responsive sizing, lazy loading). Booking, contact forms, and e-commerce are built natively. No third-party scripts. You review on a staging URL.",
                             "Week 4: QA and launch. We test every page, verify all redirects, confirm PageSpeed scores are 90+, and execute a zero-downtime DNS cutover. Your Squarespace site stays live until the new one is fully verified.",
-                            "Day 1 to 30 post-launch: We monitor Google Search Console for ranking changes, fix any crawl issues, and confirm all rankings have held or improved. 30 days of post-launch support included."
+                            "Post-launch: We monitor Google Search Console for ranking changes, fix any crawl issues, and confirm all rankings have held or improved. 15 days of post-launch support on Starter-tier projects, 1 month (30 days) on Growth and above."
                         ]} />
 
                         <BlogText>

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         description: "Yes, Vercel's free Hobby plan gives you 100GB bandwidth a month in 2026. Here's what's included, the new hard caps, when you hit $20/mo Pro, and how to stay near-free.",
         type: "article",
         publishedTime: "2026-03-13",
-        modifiedTime: "2026-06-29T00:00:00-05:00",
+        modifiedTime: "2026-07-08T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -49,7 +49,7 @@ const articleSchema = {
             "description": "Yes, Vercel's free Hobby plan gives you 100GB bandwidth a month in 2026. Here's what's included, the new hard caps, when you hit $20/mo Pro, and how to stay near-free.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-03-13T00:00:00-05:00",
-            "dateModified": "2026-06-29T00:00:00-05:00",
+            "dateModified": "2026-07-08T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -70,7 +70,7 @@ const articleSchema = {
             "articleSection": "Performance",
             "keywords": ["free nextjs hosting", "vercel free tier", "free website hosting", "nextjs hosting cost", "vercel vs wordpress hosting", "zero cost hosting"],
             "timeRequired": "PT10M",
-            "wordCount": 2412,
+            "wordCount": 2750,
             "about": [
                 {"@type": "Thing", "name": "Website Hosting Costs"},
                 {"@type": "Thing", "name": "Vercel Free Tier"},
@@ -84,6 +84,7 @@ const articleSchema = {
             },
             "citation": [
                 { "@type": "CreativeWork", "name": "Vercel Pricing", "url": "https://vercel.com/pricing" },
+                { "@type": "CreativeWork", "name": "Vercel Hobby Plan Docs", "url": "https://vercel.com/docs/plans/hobby" },
                 { "@type": "CreativeWork", "name": "Vercel Edge Network", "url": "https://vercel.com/docs/edge-network/overview" },
                 { "@type": "CreativeWork", "name": "Cloudflare CDN", "url": "https://www.cloudflare.com/cdn/" },
                 { "@type": "CreativeWork", "name": "Next.js Static Generation", "url": "https://nextjs.org/docs/app/building-your-application/rendering/server-components" },
@@ -112,7 +113,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-13T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-07-08T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -199,7 +200,7 @@ export default function NextjsHostingZeroCostPage() {
                         <BlogList items={[
                             "Most businesses pay $50 to $300/month for hosting that actually makes their site slower.",
                             "We deploy every client site on Vercel starting free. You only scale to $20/month when your business grows. Faster, more secure, zero maintenance.",
-                            "Our client MyCustomPatches went from $150/mo hosting to $0/mo with faster load times and 100/100 PageSpeed.",
+                            "Our client MyCustomPatches went from $150/mo hosting to $0/mo with faster load times and 90+ PageSpeed.",
                             "Here's exactly how it works and whether it works for your business."
                         ]} />
                     </div>
@@ -286,7 +287,7 @@ export default function NextjsHostingZeroCostPage() {
                         <BlogText>
                             This is the same technology behind some of the fastest websites on the internet. It&apos;s not a hack or a workaround. It&apos;s how modern websites are supposed to work. For a deeper look at why this architecture wins, read our{" "}
                             <Link href="/blog/how-to-achieve-100-pagespeed" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                guide to achieving 100/100 PageSpeed scores
+                                guide to hitting a 90+ PageSpeed score
                             </Link>. If you are still deciding between platforms, our <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress vs Next.js comparison</Link> covers every tradeoff in detail.
                         </BlogText>
 
@@ -320,7 +321,7 @@ export default function NextjsHostingZeroCostPage() {
                                     <tr className="bg-stone-50">
                                         <td className="p-4 border border-stone-300 font-medium">PageSpeed Score</td>
                                         <td data-label="WordPress Hosting" className="p-4 border border-stone-300 text-stone-600">35-75/100</td>
-                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-300 text-stone-600 font-bold">95-100/100</td>
+                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-300 text-stone-600 font-bold">90+/100</td>
                                     </tr>
                                     <tr>
                                         <td className="p-4 border border-stone-300 font-medium">Server Crashes</td>
@@ -358,27 +359,35 @@ export default function NextjsHostingZeroCostPage() {
                         <BlogHeader>The Vercel Free Tier: What You Actually Get</BlogHeader>
 
                         <BlogText>
-                            Vercel&apos;s free tier isn&apos;t a stripped-down demo. It&apos;s the same infrastructure that powers websites for Nike, Hulu, and The Washington Post. Here&apos;s what&apos;s included at $0/month:
+                            Vercel&apos;s free tier isn&apos;t a stripped-down demo. It&apos;s the same infrastructure that powers websites for Nike, Hulu, and The Washington Post. Here is the exact, current Hobby plan allowance, straight from Vercel&apos;s own documentation, not a rounded-off estimate:
                         </BlogText>
 
                         <BlogList items={[
-                            "100 GB bandwidth per month, enough for roughly 50,000 to 100,000 monthly visitors",
-                            "Automatic HTTPS/SSL with no extra cost and no configuration",
-                            "Global CDN with 80+ edge locations so your site loads fast everywhere",
-                            "Instant rollbacks. Made a mistake? Undo it in one click",
-                            "Preview deployments so you can see changes before they go live",
-                            "Zero maintenance. No updates, no security patches, no server management"
+                            "100 GB of bandwidth per month",
+                            "1,000,000 edge requests per month",
+                            "1,000,000 serverless function invocations per month",
+                            "4 CPU-hours of function compute per month",
+                            "100 build minutes per month",
+                            "Automatic HTTPS/SSL, a global CDN across 80+ edge locations, instant rollbacks, and preview deployments, all included at $0"
                         ]} />
 
                         <BlogText>
-                            Compare that to WordPress hosting where you&apos;re paying $30-$300/month and still need to worry about plugin updates, security vulnerabilities, server maintenance, and SSL certificates.
+                            One restriction most comparison articles skip: the Hobby plan is licensed for <strong>personal, non-commercial use only</strong> under Vercel&apos;s terms of service. A side project, portfolio, or client demo you are not yet billing for fits comfortably within that. A live business site generating revenue is technically a Pro-tier use case even if it never comes close to the traffic limits, which is why every PandaCodeGen client site is set up to move to a paid seat once it goes live for a real business.
                         </BlogText>
 
                         <BlogText>
-                            <strong>What happens when you outgrow the free tier?</strong> Vercel Pro costs $20/month. That&apos;s it. Even at the Pro level, you are paying <BlogHighlight>up to 93% less than high-end managed WordPress hosting.</BlogHighlight> For a full breakdown of long-term costs, see our{" "}
+                            <strong>What actually happens when you hit a cap.</strong> Hobby has no pay-as-you-go overage, unlike Pro. If a small business site blows through the 100 GB bandwidth allotment (say, a product page goes viral and pulls in far more traffic than the roughly 50,000-100,000 monthly visitors that 100 GB typically covers), Vercel does not quietly bill you for the extra data. The deployment is paused until your billing cycle resets, which runs on a roughly 30-day clock from when you first deployed. Same mechanic on the 1 million function invocations: a site with several API routes or form handlers that gets an unexpected traffic spike can burn through a million invocations faster than the bandwidth cap, and once it does, those functions stop responding until reset. There is no warning email with a credit card charge attached; there is just a hard stop. That is the tradeoff for free: predictable cost, unpredictable availability if you are near the ceiling.
+                        </BlogText>
+
+                        <BlogText>
+                            Compare that to WordPress hosting where you&apos;re paying $30-$300/month and still need to worry about plugin updates, security vulnerabilities, server maintenance, and SSL certificates, and a traffic spike is more likely to crash your server outright than pause gracefully.
+                        </BlogText>
+
+                        <BlogText>
+                            <strong>What happens when you outgrow the free tier?</strong> Vercel Pro costs $20/month. Pro trades the hard stop for metered overage instead, so a traffic spike costs you money rather than downtime. That is the entire tradeoff between the two tiers: Hobby is free but brittle at the edges, Pro is paid but does not fall over. Even at the Pro level, you are paying <BlogHighlight>up to 93% less than high-end managed WordPress hosting.</BlogHighlight> For a full breakdown of long-term costs, see our{" "}
                             <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 3-year cost comparison of WordPress vs custom code
-                            </Link>.
+                            </Link>. Full current limits are documented at <a href="https://vercel.com/docs/plans/hobby" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel&apos;s Hobby plan docs</a> and <a href="https://vercel.com/pricing" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel&apos;s pricing page</a>.
                         </BlogText>
 
                         <BlogHeader>2026 Vercel Hosting Updates (What Changed This Year)</BlogHeader>
@@ -389,7 +398,7 @@ export default function NextjsHostingZeroCostPage() {
 
                         <h3 id="hobby-hard-caps" className="text-xl md:text-2xl font-bold text-charcoal mt-10 mb-3 leading-tight">1. Hobby tier now has hard caps with no overage</h3>
                         <BlogText>
-                            The Hobby (free) tier now enforces strict monthly limits: 100 GB bandwidth, 100,000 function invocations, and 100 deployment builds. Unlike the old behavior of silent overage charges, exceeding any of these caps locks the feature for 30 days. The free tier is still genuinely free, but you cannot accidentally bleed into a bill. For a small business site doing under 50,000 monthly visitors, the caps are comfortable. For viral spikes or fast growth, plan to upgrade to Pro before you hit the wall. Source: <a href="https://vercel.com/pricing" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel official pricing</a>.
+                            The five hard limits covered above (bandwidth, edge requests, function invocations, compute hours, build minutes) all share one mechanic worth restating on its own: unlike a paid plan&apos;s pay-as-you-go overage, exceeding any Hobby cap pauses the affected feature until your next billing cycle resets, roughly 30 days later, with no option to pay your way past it mid-cycle. The free tier is still genuinely free, but you cannot accidentally bleed into a bill, and you cannot buy your way out of a cap either. For a small business site doing under 50,000 monthly visitors, the caps are comfortable. For viral spikes or fast growth, plan to upgrade to Pro before you hit the wall. Source: <a href="https://vercel.com/docs/plans/hobby" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel Hobby plan docs</a>.
                         </BlogText>
 
                         <h3 id="active-cpu-pricing" className="text-xl md:text-2xl font-bold text-charcoal mt-10 mb-3 leading-tight">2. Active CPU pricing is now the default Fluid Compute model</h3>
@@ -454,7 +463,7 @@ export default function NextjsHostingZeroCostPage() {
                         <BlogList items={[
                             "Hosting cost: $0/month ($0/year)",
                             "Load time: 0.7 seconds",
-                            "PageSpeed score: 100/100",
+                            "PageSpeed score: 90+",
                             "Zero downtime during Black Friday traffic"
                         ]} />
 
@@ -481,8 +490,9 @@ export default function NextjsHostingZeroCostPage() {
                         </BlogText>
 
                         <BlogList items={[
-                            "Sites needing server-side logic on every request. If your site needs to run custom code for every single visitor (rare for most businesses), you'll need serverless functions which have limits on the free tier.",
-                            "Sites with 100K+ monthly visitors. If you consistently exceed 100 GB bandwidth, you'll need Vercel Pro at $20/month. Still dramatically cheaper than alternatives.",
+                            "Sites running heavy server-side logic on every request. Contact forms, search, and light API routes stay well inside the 1 million function invocations and 4 CPU-hours Hobby includes each month, but a site calling external APIs on every page view or running compute-heavy logic per visitor can burn through the compute allotment before the bandwidth cap even becomes relevant.",
+                            "Sites with 100K+ monthly visitors. If you consistently exceed 100 GB bandwidth or 1 million edge requests, you'll need Vercel Pro at $20/month, which replaces the hard stop with metered overage instead. Still dramatically cheaper than alternatives.",
+                            "Any live commercial site, technically. Vercel's Hobby plan terms restrict free usage to personal, non-commercial projects. A business site generating revenue should be on Pro regardless of traffic volume, which is why every PandaCodeGen client site moves to a paid seat at launch.",
                             "Sites needing team collaboration. If multiple developers need to deploy changes, you'll need the Pro tier for team features.",
                             "WordPress sites without rebuilding. You can't simply move a WordPress site to Vercel. The site needs to be rebuilt with Next.js. That's an investment upfront that pays for itself within months."
                         ]} />

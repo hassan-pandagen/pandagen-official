@@ -16,13 +16,13 @@ const FeatureVisual = lazyLoad(() => import("@/components/blog/SalesImpactAnimat
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Shopify Headless in 2026: $1.2M Store Results",
-    description: "Shopify Liquid templates are render-blocking. Headless on Next.js cut load time from 4s to 0.8s on a $1.2M store. Real receipts, exact stack, fixed pricing.",
+    title: "Headless Shopify Architecture: Hydrogen vs Next.js in 2026",
+    description: "Liquid is render-blocking by design. Here's the real headless Shopify architecture decision: Hydrogen vs custom Next.js, what the Storefront API does and doesn't fix, and verified 2026 cost ranges.",
     alternates: { canonical: "/blog/shopify-headless" },
-    keywords: ["headless shopify", "shopify speed optimization", "shopify core web vitals", "shopify next.js", "shopify storefront api", "shopify liquid slow"],
+    keywords: ["headless shopify", "shopify hydrogen", "shopify next.js", "shopify storefront api", "shopify liquid slow", "hydrogen vs next.js"],
     openGraph: {
-        title: "Shopify Headless in 2026: Cut Load Time 80%, Boost Conversions",
-        description: "Shopify Liquid templates are render-blocking. The exact headless stack that cut load time from 4 seconds to 0.8 seconds.",
+        title: "Headless Shopify Architecture: Hydrogen vs Next.js in 2026",
+        description: "Liquid is render-blocking by design. The real architecture decision: Hydrogen vs custom Next.js, what the Storefront API fixes, and verified 2026 cost ranges.",
         type: "article",
         publishedTime: "2026-02-15T00:00:00-05:00",
         authors: ["Hassan Jamal"],
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Shopify Headless in 2026: Cut Load Time 80%, Boost Conversions",
-        description: "Shopify Liquid templates are render-blocking. The exact headless stack that cut load time from 4 seconds to 0.8 seconds.",
+        title: "Headless Shopify Architecture: Hydrogen vs Next.js in 2026",
+        description: "Liquid is render-blocking by design. The real architecture decision: Hydrogen vs custom Next.js, what the Storefront API fixes, and verified 2026 cost ranges.",
     },
 };
 
@@ -42,8 +42,8 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/shopify-headless#article",
-            "headline": "Is Shopify Headless Worth It in 2026? Real Results From $1.2M Store",
-            "description": "Shopify Liquid templates are render-blocking. The exact headless stack that cut load time from 4 seconds to 0.8 seconds.",
+            "headline": "Headless Shopify Architecture: Hydrogen vs Next.js in 2026",
+            "description": "Shopify Liquid templates are render-blocking by design. The real architecture decision between Shopify Hydrogen and custom Next.js, what the Storefront API does and doesn't fix, and verified 2026 cost ranges.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-15T00:00:00-05:00",
             "dateModified": "2026-05-31T00:00:00-05:00",
@@ -51,7 +51,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -94,15 +94,15 @@ const articleSchema = {
             "itemListElement": [
                 { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
                 { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "Shopify Headless: 4 Seconds to 0.8 Seconds", "item": "https://www.pandacodegen.com/blog/shopify-headless" }
+                { "@type": "ListItem", "position": 3, "name": "Headless Shopify Architecture: Hydrogen vs Next.js", "item": "https://www.pandacodegen.com/blog/shopify-headless" }
             ]
         },
         {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/shopify-headless#webpage",
             "url": "https://www.pandacodegen.com/blog/shopify-headless",
-            "name": "Your Shopify Store Loads in 4 Seconds. We Got It to 0.8. Here's Exactly How.",
-            "description": "Most Shopify stores fail Core Web Vitals because Liquid templates are render-blocking by design.",
+            "name": "Headless Shopify Architecture: Hydrogen vs Next.js in 2026",
+            "description": "Most Shopify stores fail Core Web Vitals because Liquid templates are render-blocking by design. Here is the real architecture decision between Hydrogen and custom Next.js.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-15T00:00:00-05:00",
@@ -148,7 +148,7 @@ export default function ShopifyHeadlessPage() {
                     <Breadcrumb items={[
                         { label: "Home", href: "/" },
                         { label: "Blog", href: "/blog" },
-                        { label: "Shopify Headless: 4 Seconds to 0.8 Seconds", href: "/blog/shopify-headless" }
+                        { label: "Headless Shopify Architecture: Hydrogen vs Next.js", href: "/blog/shopify-headless" }
                     ]} />
 
                     <Link href="/blog" className="inline-flex items-center gap-2 text-charcoal hover:text-stone-700 mb-8 transition-colors">
@@ -163,12 +163,12 @@ export default function ShopifyHeadlessPage() {
                             E-Commerce · Shopify Speed
                         </div>
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight text-charcoal">
-                            Your Shopify Store Loads in 4 Seconds.{" "}
-                            <span className="font-serif italic text-cognac">Headless Shopify Got It to 0.8.</span>{" "}
-                            Here&apos;s Exactly How.
+                            Headless Shopify Architecture:{" "}
+                            <span className="font-serif italic text-cognac">Hydrogen vs Next.js</span>{" "}
+                            in 2026.
                         </h1>
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            Liquid templates are render-blocking by design. Here&apos;s the exact headless stack that cut load time from 4s to 0.8s and boosted conversions by 55%.
+                            Liquid templates are server-rendered and render-blocking by design. Here&apos;s the real architecture decision: Shopify&apos;s own Hydrogen framework versus custom Next.js on the Storefront API, what each one actually fixes, and what it costs.
                         </p>
                         <BlogAuthor
                             date="Feb 15, 2026"
@@ -186,23 +186,20 @@ export default function ShopifyHeadlessPage() {
                         <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
                             "Shopify's Liquid templates are server-rendered and render-blocking: you cannot fix this with apps or theme edits alone.",
-                            "The only way to reach under 1 second load times on Shopify is a headless architecture with Next.js on the frontend.",
+                            "The two real headless paths are Shopify's own Hydrogen framework or a custom Next.js frontend on the Storefront API, and they carry different cost and lock-in tradeoffs.",
                             "Headless keeps your backend (orders, inventory, Shopify checkout) and replaces only the slow Liquid frontend.",
-                            "Stores migrated headless see 55% more conversions and 4 to 5× faster load times within 30 days of launch."
+                            "On our own headless rebuild (MyCustomPatches, off WooCommerce), mobile PageSpeed went from 45 to 90+ and load time fell from 3.2s to 0.7s."
                         ]} />
                     </div>
 
-                    <p className="text-stone-700 leading-relaxed mb-6">Shopify headless is worth it when your store does over $500K per year and loads slower than 3 seconds on mobile. You keep Shopify for orders, inventory, and checkout. You replace the Liquid frontend with Next.js. Load time drops from 4 seconds to under 1 second. Conversion rates typically double. PandaCodeGen Scale tier covers the full headless build at $5,000 to $10,000.</p>
+                    <p className="text-stone-700 leading-relaxed mb-6">Shopify headless is worth it when your store does over $500K per year and loads slower than 3 seconds on mobile. You keep Shopify for orders, inventory, and checkout. You replace the Liquid frontend with either Shopify&apos;s own Hydrogen framework or a custom Next.js build on the Storefront API. The architecture decision (not just "go headless") is what determines your total cost of ownership. PandaCodeGen Scale tier covers a custom Next.js headless build at $5,000 to $10,000.</p>
 
                     <div className="space-y-8">
                         <BlogText>
-                            We got a call from a Shopify merchant doing $1.2M/year. His store loaded in 4.1 seconds on mobile. His mobile conversion rate was 0.8%, less than half the industry average.
+                            Liquid is Shopify&apos;s templating language, and it renders every page server-side, on every request, before a single byte reaches the browser. That is not a bug you can optimize away with a faster theme or fewer apps. It is the architecture. Going headless means removing Liquid from the render path entirely, and then the real question starts: do you rebuild the frontend on Shopify&apos;s own Hydrogen framework, or on custom Next.js against the Storefront API? That decision, not the word "headless" itself, is what this guide is actually about.
                         </BlogText>
                         <BlogText>
-                            He&apos;d tried everything. New theme. Image compression. Removed apps. Paid $2,300/month for Shopify Plus. <BlogHighlight>Nothing got him below 3.2 seconds.</BlogHighlight>
-                        </BlogText>
-                        <BlogText>
-                            Six weeks later: 0.8 seconds. <a href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">97/100 Mobile PageSpeed</a>. Conversion rate up from 0.8% to 2.4%. Additional monthly revenue: $67,000.
+                            Our own reference point is <Link href="/work/mycustompatches" className="text-cognac hover:underline">MyCustomPatches</Link>, which we moved off a WordPress/WooCommerce theme-and-plugin stack onto a custom Next.js frontend. Mobile PageSpeed went from 45 to 90+ and load time fell from 3.2 seconds to 0.7. The platform was WooCommerce, not Shopify, but the architectural problem, and the fix, is identical: a server-rendered templating layer capped the score no matter how much the theme itself was optimized. Swap WooCommerce for Shopify Liquid and Storefront API for WooCommerce REST, and the same rebuild pattern applies.
                         </BlogText>
 
                         <BlogHeader>Why Is Your Shopify Store Slow No Matter What You Try?</BlogHeader>
@@ -240,18 +237,16 @@ export default function ShopifyHeadlessPage() {
 
                         <BlogHeader>What Results Do Headless Stores See?</BlogHeader>
                         <BlogText>
-                            The closest receipt we have: MyCustomPatches, a store we rebuilt for Matt Conner off WooCommerce. Mobile PageSpeed jumped from 42 to 97. First-paint times fell under one second. The same headless pattern applies to Shopify by swapping the backend from Woo to the Shopify Storefront API.
+                            The closest receipt we have: MyCustomPatches, a store we rebuilt for Matt Conner off WooCommerce. Mobile PageSpeed jumped from 45 to 90+. First-paint times fell under one second. The same headless pattern applies to Shopify by swapping the backend from Woo to the Shopify Storefront API.
                         </BlogText>
+                        <div className="my-6 p-5 bg-stone-50 border border-stone-200 rounded-2xl">
+                            <p className="text-xs font-bold uppercase tracking-widest text-stone-500 mb-2">Illustrative, Not a Real Store</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">
+                                We do not yet have a named, verifiable Shopify headless case study to publish alongside MyCustomPatches. Publicly documented Shopify Plus headless migrations (Allbirds, Gymshark, Victoria Beckham Beauty) report load-time drops in the same range we see on our own headless rebuilds, and the Deloitte finding that a 0.1-second improvement lifts conversions roughly 8% is a real, citable benchmark. Combining those two data points, a store moving from a 4-second Liquid storefront to a sub-1-second headless build would reasonably expect a meaningful, multi-point conversion rate improvement. That is a directional estimate built from public sources, not a client result, and we will not dress it up as one.
+                            </p>
+                        </div>
                         <BlogText>
-                            The following are modeled projections based on published Shopify Plus headless case studies (Allbirds, Gymshark, Victoria Beckham Beauty) and the Deloitte 8%-per-0.1s conversion lift benchmark. Use as directional ranges, not guarantees:
-                        </BlogText>
-                        <BlogList items={[
-                            "Fashion store profile (Shopify Plus): 4.1s to 0.8s, conversion rate 0.8% to 2.4%, modeled revenue lift +$60K to $80K/month at $5M run rate",
-                            "Electronics retailer profile: 3.8s to 0.9s, PageSpeed 41 to 96, modeled organic traffic +150 to 200% in 90 days",
-                            "Home goods brand profile: 4.4s to 0.7s, bounce rate 68% to 31%, revenue per visitor roughly 2.5 to 3x"
-                        ]} />
-                        <BlogText>
-                            The pattern is consistent: under 1 second load time translates to <Link href="/blog/shopify-conversion-rate-speed-fix" className="text-cognac hover:underline">2 to 3x more conversions</Link> from the same traffic. For the full revenue math see <Link href="/blog/shopify-slow-losing-sales" className="text-cognac hover:underline">how much slow Shopify costs per year</Link>. Still on Shopify Plus and wondering why speed didn&apos;t change? Read <Link href="/blog/shopify-plus-still-slow" className="text-cognac hover:underline">why Shopify Plus is still slow</Link>. Comparing platforms? See <Link href="/blog/shopify-vs-custom-website" className="text-cognac hover:underline">Shopify vs custom website</Link>.
+                            The pattern reported across those public case studies is consistent: cutting load time to under 1 second translates to <Link href="/blog/shopify-conversion-rate-speed-fix" className="text-cognac hover:underline">meaningfully more conversions</Link> from the same traffic, because fewer visitors abandon before the page finishes rendering. For the full revenue math see <Link href="/blog/shopify-slow-losing-sales" className="text-cognac hover:underline">how much slow Shopify costs per year</Link>. Still on Shopify Plus and wondering why speed didn&apos;t change? Read <Link href="/blog/shopify-plus-still-slow" className="text-cognac hover:underline">why Shopify Plus is still slow</Link>. Comparing platforms? See <Link href="/blog/shopify-vs-custom-website" className="text-cognac hover:underline">Shopify vs custom website</Link>.
                         </BlogText>
 
                         {/* Mid-Article CTA */}
@@ -278,7 +273,7 @@ export default function ShopifyHeadlessPage() {
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer: How to Make My Shopify Store Faster Without Apps</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">The fastest way to speed up Shopify without apps is to remove the apps, not add new ones. Most stores can drop 8 to 15 third-party apps by going headless: replace review apps with native Storefront API queries, replace email apps with Klaviyo direct integration, replace currency converters with build-time logic, replace upsell apps with custom Next.js components. Result: fewer apps loaded, no iframe overhead, mobile PageSpeed jumps from 40 to 60 range to 90 to 100.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">The fastest way to speed up Shopify without apps is to remove the apps, not add new ones. Most stores can drop 8 to 15 third-party apps by going headless: replace review apps with native Storefront API queries, replace email apps with Klaviyo direct integration, replace currency converters with build-time logic, replace upsell apps with custom Next.js components. Result: fewer apps loaded, no iframe overhead, mobile PageSpeed jumps from 40 to 60 range to 90+.</p>
                         </div>
 
                         <BlogText>
@@ -338,7 +333,7 @@ export default function ShopifyHeadlessPage() {
                             The performance improvement is immediate. The SEO and revenue compounding take 60 to 90 days to fully materialize:
                         </BlogText>
                         <BlogList items={[
-                            "Day 1 to 7: PageSpeed jumps to 90 to 97. Google Search Console shows Core Web Vitals switching from Poor to Good",
+                            "Day 1 to 7: PageSpeed jumps to 90+. Google Search Console shows Core Web Vitals switching from Poor to Good",
                             "Week 2 to 3: Bounce rate drops. Sessions that previously ended within 3 seconds now stay and browse. Mobile engagement metrics improve significantly",
                             "Month 1 to 2: Conversion rate improvement becomes measurable. Most stores see a 40 to 80% lift in mobile conversions within the first 30 days of full traffic on the new site",
                             "Month 2 to 3: Organic rankings begin recovering and improving. Pages that were stuck at position 8 to 12 start moving toward position 3 to 5 as Google registers the improved Core Web Vitals",
@@ -362,7 +357,7 @@ export default function ShopifyHeadlessPage() {
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
                             <li><strong>Shopify&apos;s Liquid templates are the bottleneck</strong>, no theme edit or app removal can break the 2.5-second floor because Liquid is server-rendered and render-blocking by design.</li>
-                            <li><strong>Headless Shopify cuts load time by 80%</strong>: Replacing the Liquid frontend with Next.js while keeping your Shopify backend delivers under 1 second load times and 55% more conversions.</li>
+                            <li><strong>The real decision is Hydrogen vs. custom Next.js</strong>, not "headless or not": Shopify's own Hydrogen framework offers free Oxygen hosting and deep API integration, while custom Next.js on the Storefront API trades that free hosting for full backend independence.</li>
                             <li><strong>Your Shopify checkout stays untouched</strong>: Headless replaces only the slow storefront; payments, fraud detection, and tax compliance remain on Shopify.</li>
                             <li><strong>ROI arrives in 3-6 months for stores doing $200K+/year</strong>: The conversion rate improvement from faster load times typically covers the entire headless build cost within the first few months.</li>
                         </ol>

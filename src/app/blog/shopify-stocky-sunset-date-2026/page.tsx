@@ -56,7 +56,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -457,11 +457,11 @@ export default function ShopifyStockySunset2026Page() {
                         <BlogHeader>The Pattern Here Is Bigger Than Stocky</BlogHeader>
 
                         <BlogText>
-                            Stocky is not the first feature Shopify has deprecated, and it will not be the last. Shopify Email had pricing changes that pushed merchants off it. Shopify Inbox has limited functionality. Shopify Hub is being reworked. The pattern across every platform-as-a-service company is the same. Webflow killed Logic in June 2025 and User Accounts in January 2026. WordPress periodically deprecates plugins that millions of sites depend on. Squarespace has reworked features in ways that broke existing customer workflows.
+                            Stocky is not the first feature Shopify has deprecated, and it will not be the last. Shopify Email had pricing changes that pushed merchants off it. Shopify Inbox has limited functionality. Shopify Hub is being reworked. The pattern across every platform-as-a-service company is the same. Webflow killed Logic in June 2025 and User Accounts in January 2026. WordPress periodically deprecates plugins that millions of sites depend on. Squarespace has reworked features in ways that broke existing customer workflows, and enough owners leave over it that we published a full <Link href="/blog/squarespace-migration-cost" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Squarespace migration cost breakdown</Link>.
                         </BlogText>
 
                         <BlogText>
-                            If your business depends on a tool inside someone else&apos;s ecosystem, the right question is not &quot;what should I switch to this time?&quot; The right question is &quot;do I want to keep doing this every two years?&quot; Every SaaS platform eventually prunes. Every SaaS platform eventually raises prices. Every SaaS platform eventually deprecates the feature you built around. The only permanent hedge is owning the code.
+                            If your business depends on a tool inside someone else&apos;s ecosystem, the right question is not &quot;what should I switch to this time?&quot; The right question is &quot;do I want to keep doing this every two years?&quot; Every SaaS platform eventually prunes. Every SaaS platform eventually raises prices. Every SaaS platform eventually deprecates the feature you built around. The only permanent hedge is owning the code. Our <Link href="/blog/shopify-vs-custom-website" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Shopify vs custom website comparison</Link> puts real numbers on that tradeoff.
                         </BlogText>
 
                         <BlogText>

@@ -16,13 +16,13 @@ const SEORankingAnimation = lazyLoad(() => import("@/components/blog/SEORankingA
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "WordPress Traffic Dropping in 2026? The Speed Tax",
-    description: "WordPress sites with Mobile PageSpeed below 50 lose 20 to 30% of organic traffic to faster competitors. Here is exactly why and how to reverse it fast.",
+    title: "WordPress Traffic Drop? How to Diagnose the Real Cause",
+    description: "Is your WordPress traffic drop caused by speed, an algorithm update, a technical SEO issue, or content decay? A 4-step Search Console diagnosis, plus the recovery timeline once speed is confirmed.",
     alternates: { canonical: "/blog/wordpress-traffic-drop-speed" },
-    keywords: ["wordpress losing traffic", "wordpress traffic drop", "wordpress speed seo", "core web vitals wordpress", "wordpress traffic decrease", "wordpress google ranking drop"],
+    keywords: ["wordpress losing traffic", "wordpress traffic drop", "why is my traffic dropping", "core web vitals wordpress", "wordpress traffic decrease", "wordpress google ranking drop", "diagnose traffic drop search console"],
     openGraph: {
-        title: "WordPress Traffic Dropping in 2026? The Speed Tax Killing Your Rankings",
-        description: "Slow WordPress sites with Mobile PageSpeed below 50 lose 20 to 30% of organic traffic to faster competitors. Here is why and how to reverse it.",
+        title: "WordPress Traffic Dropping? How to Diagnose the Real Cause",
+        description: "Speed, algorithm update, technical SEO, or content decay? A 4-step Search Console diagnosis for WordPress traffic drops, plus the recovery timeline once speed is confirmed.",
         type: "article",
         publishedTime: "2026-02-07",
         authors: ["Hassan Jamal"],
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "WordPress Traffic Dropping in 2026? The Speed Tax Killing Your Rankings",
-        description: "Slow WordPress sites with Mobile PageSpeed below 50 lose 20 to 30% of organic traffic to faster competitors. Here is why and how to reverse it.",
+        title: "WordPress Traffic Dropping? How to Diagnose the Real Cause",
+        description: "Speed, algorithm update, technical SEO, or content decay? A 4-step Search Console diagnosis for WordPress traffic drops, plus the recovery timeline once speed is confirmed.",
     },
 };
 
@@ -42,16 +42,16 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed#article",
-            "headline": "Why Is My WordPress Traffic Dropping in 2026? Speed Tax Explained",
-            "description": "Slow WordPress sites with Mobile PageSpeed below 50 lose 20 to 30% of organic traffic to faster competitors. Here is why and how to reverse it.",
+            "headline": "WordPress Traffic Drop: How to Diagnose the Real Cause (Speed, Algorithm, Technical, or Content)",
+            "description": "A 4-step Search Console diagnosis for whether a WordPress traffic drop is caused by speed, an algorithm update, a technical SEO issue, or content decay, plus the recovery timeline once speed is confirmed.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-07T00:00:00-05:00",
-            "dateModified": "2026-05-26T00:00:00-05:00",
+            "dateModified": "2026-07-08T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -65,13 +65,13 @@ const articleSchema = {
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed" },
             "articleSection": "Traffic Growth",
-            "keywords": ["wordpress losing traffic", "wordpress traffic drop", "wordpress speed seo", "core web vitals wordpress", "wordpress google ranking drop"],
+            "keywords": ["wordpress losing traffic", "wordpress traffic drop", "why is my traffic dropping", "core web vitals wordpress", "wordpress google ranking drop", "diagnose traffic drop search console"],
             "timeRequired": "PT10M",
-            "wordCount": 2347,
+            "wordCount": 2400,
             "about": [
                 { "@type": "Thing", "name": "WordPress Traffic Loss" },
+                { "@type": "Thing", "name": "Google Search Console Diagnosis" },
                 { "@type": "Thing", "name": "Google Core Web Vitals SEO" },
-                { "@type": "Thing", "name": "WordPress Speed" },
                 { "@type": "Thing", "name": "Website Traffic Optimization" }
             ],
             "inLanguage": "en-US",
@@ -82,7 +82,8 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Google Page Experience", "url": "https://developers.google.com/search/docs/appearance/page-experience" },
                 { "@type": "CreativeWork", "name": "web.dev Performance", "url": "https://web.dev/performance/" },
                 { "@type": "CreativeWork", "name": "PageSpeed Insights", "url": "https://pagespeed.web.dev/" },
-                { "@type": "CreativeWork", "name": "Think With Google. Speed Impact", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" }
+                { "@type": "CreativeWork", "name": "Think With Google. Speed Impact", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
+                { "@type": "CreativeWork", "name": "Google Search Status Dashboard", "url": "https://status.search.google.com/summary" }
             ]
         },
         {
@@ -98,12 +99,12 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed#webpage",
             "url": "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed",
-            "name": "WordPress Traffic Dropping? Speed Is Killing Your Rankings",
-            "description": "Slow WordPress sites with Mobile PageSpeed below 50 lose 20 to 30% of organic traffic to faster competitors. Here is why and how to reverse it.",
+            "name": "WordPress Traffic Drop: How to Diagnose the Real Cause",
+            "description": "A 4-step Search Console diagnosis for whether a WordPress traffic drop is caused by speed, an algorithm update, a technical SEO issue, or content decay, plus the recovery timeline once speed is confirmed.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-07T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-07-08T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -145,7 +146,7 @@ export default function WordPressTrafficDropPage() {
                     <Breadcrumb items={[
                         { label: "Home", href: "/" },
                         { label: "Blog", href: "/blog" },
-                        { label: "WordPress Traffic Drop", href: "/blog/wordpress-traffic-drop-speed" }
+                        { label: "Diagnose a WordPress Traffic Drop", href: "/blog/wordpress-traffic-drop-speed" }
                     ]} />
 
                     <Link href="/blog" className="inline-flex items-center gap-2 text-charcoal hover:text-stone-700 mb-8 transition-colors">
@@ -162,10 +163,10 @@ export default function WordPressTrafficDropPage() {
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight text-charcoal">
                             Why Is My WordPress Site{" "}
                             <span className="font-serif italic text-cognac">Losing Traffic?</span>{" "}
-                            The Speed Tax You&apos;re Paying
+                            How to Find the Real Cause
                         </h1>
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            If your WordPress traffic has been dropping, site speed might be the reason. Here&apos;s how to check and what you can do to turn it around.
+                            A traffic drop can come from site speed, an algorithm update, a technical SEO issue, or content decay. Here is how to tell which one is actually happening to you, using data already in Google Search Console.
                         </p>
                         <BlogAuthor
                             date="Feb 7, 2026"
@@ -182,14 +183,14 @@ export default function WordPressTrafficDropPage() {
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
                         <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
-                            "Google's Core Web Vitals update made site speed a direct ranking factor. Slow sites get demoted.",
-                            "WordPress sites averaging 4 to 6 seconds load time lose 20 to 30% of organic traffic to faster competitors.",
-                            "A Mobile PageSpeed score below 50 is a traffic emergency: your rankings are actively deteriorating.",
-                            "The fix isn't another plugin. It's replacing WordPress with a fast Next.js site that loads in under 1 second."
+                            "A WordPress traffic drop usually has one of four causes: an algorithm update, a technical SEO issue, content decay, or site speed. Diagnose before you fix.",
+                            "Check algorithm update dates and your indexed page count first. Both take minutes to rule in or out using Search Console.",
+                            "The Core Web Vitals report in Search Console shows whether URLs moved into 'Poor' around the same time traffic dropped, which is how you confirm speed as the cause rather than assume it.",
+                            "Once speed is confirmed, recovery typically plays out over 60 to 90 days as Core Web Vitals flip from Poor to Good and rankings follow."
                         ]} />
                     </div>
 
-                    <p className="text-stone-700 leading-relaxed mb-6">WordPress traffic drops in 2026 when Mobile PageSpeed falls below 50. Google's Core Web Vitals algorithm demotes slow sites by 5 to 10 positions compared to faster competitors. The fix is not another caching plugin. Sites that migrate from WordPress to Next.js recover organic traffic within 60 to 90 days as rankings climb back after Core Web Vitals flip from Poor to Good.</p>
+                    <p className="text-stone-700 leading-relaxed mb-6">A WordPress traffic drop is not automatically a speed problem. Before assuming that, check Google's confirmed algorithm update dates, your indexed page count in Search Console, and the Core Web Vitals trend for your URLs. If Core Web Vitals moved into "Poor" around the same time your traffic fell, speed is confirmed as a cause and sites typically recover organic traffic within 60 to 90 days of a real fix, as Core Web Vitals flip from Poor to Good and rankings follow. If none of that lines up, the cause is more likely an algorithm update, a technical issue, or content decay, and a speed fix alone will not bring traffic back.</p>
 
                     {/* About PandaCodeGen — brand anchor in first-third zone */}
                     <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
@@ -201,70 +202,54 @@ export default function WordPressTrafficDropPage() {
 
                     <div className="space-y-8">
                         <BlogText>
-                            You log into Google Search Console and the numbers are going in the wrong direction. Clicks down 18%. Impressions falling. Rankings that held for two years slowly sliding off page one. If speed is the cause, see <Link href="/blog/wordpress-migration-cost" className="text-cognac hover:underline">what a WordPress migration actually costs</Link>.
+                            You log into Google Search Console and the numbers are going in the wrong direction. Clicks down 18%. Impressions falling. Rankings that held for two years slowly sliding off page one. The natural next question is why, and it is tempting to jump straight to "my site is slow" or "Google hates me" without checking. Before you spend a dollar fixing anything, the job is to diagnose which of several possible causes is actually responsible, because the fix for a speed problem, an algorithm update, a technical SEO issue, and content decay are completely different.
                         </BlogText>
                         <BlogText>
-                            You haven&apos;t changed your content. You haven&apos;t done anything wrong. But <BlogHighlight>your WordPress site is paying a speed tax, and Google is collecting it every single day.</BlogHighlight>
+                            This post is a diagnostic guide: how to tell whether a traffic drop is actually caused by site speed, using the data already sitting in your Search Console account, before you assume it and before you pay anyone to fix it.
                         </BlogText>
 
-                        <BlogHeader>What Is Google&apos;s Speed Tax?</BlogHeader>
+                        <BlogHeader>The Four Most Common Causes of a WordPress Traffic Drop</BlogHeader>
                         <BlogText>
-                            In 2021, Google added Core Web Vitals to its ranking algorithm. This means site speed is now a direct ranking signal, not just a user experience metric. The three signals that matter:
+                            A ranking or traffic drop almost always traces back to one of four categories. Most site owners jump to blaming content quality or an algorithm update first, because those feel like external forces outside their control. Speed and technical SEO issues get checked last, if at all, because they require opening tools most people do not use daily. That order is backwards. Speed and technical issues are the fastest to rule in or out because the data is already sitting in Search Console and PageSpeed Insights.
                         </BlogText>
                         <BlogList items={[
-                            "LCP (Largest Contentful Paint): How fast the main content loads. Target: under 2.5 seconds.",
-                            "INP (Interaction to Next Paint): How fast the page responds to clicks. Replaced FID in March 2024. Target: 200ms or less.",
-                            "CLS (Cumulative Layout Shift): How much the page jumps around during load. Target: under 0.1."
+                            "Algorithm update: Google shipped a core update or spam update around the time your traffic dropped, and the drop affected many sites in your niche, not just yours.",
+                            "Technical SEO issue: pages got deindexed, a robots.txt or noindex tag changed, canonical tags point somewhere wrong, or a migration broke internal linking.",
+                            "Content decay: your content aged out relative to competitors who published fresher, more complete pages on the same queries, independent of any technical change.",
+                            "Seasonal or demand shift: search volume for your target queries genuinely dropped (a seasonal product, a declining industry term, a news-driven topic that cooled off).",
+                            "Site speed: Core Web Vitals crossed from 'Good' or 'Needs Improvement' into 'Poor' for a meaningful share of your URLs, and Google's ranking systems responded."
                         ]} />
                         <BlogText>
-                            The average WordPress site fails all three on mobile. And when you fail Core Web Vitals, Google quietly lowers your rankings, not with a penalty notice, just with slower organic decay.
+                            Google added Core Web Vitals to its ranking systems in 2021, which means LCP (how fast the main content loads), INP (how fast the page responds to interaction), and CLS (how much the layout shifts during load) are direct ranking inputs, not just user-experience metrics. That makes speed a real, legitimate cause of ranking loss. It does not mean it is automatically your cause. The rest of this section is how to tell the difference.
                         </BlogText>
 
-                        <BlogHeader>How Much Traffic Is a Slow WordPress Site Losing?</BlogHeader>
+                        <BlogHeader>Step 1: Rule Algorithm Updates In or Out</BlogHeader>
                         <BlogText>
-                            The numbers from Google&apos;s own research are stark:
+                            Check the date your traffic started dropping against Google's confirmed update rollout dates (Google publishes these on the Search Status Dashboard, and third-party trackers like Semrush Sensor and MozCast corroborate them with volatility spikes). If your drop lines up within a few days of a confirmed rollout, and you can find other site owners in your niche reporting the same thing in the same window, an algorithm update is the more likely cause, and a speed fix alone will not reverse it. If your drop happened on a date with no corresponding update and no niche-wide chatter, move to Step 2.
                         </BlogText>
-                        <BlogList items={[
-                            "53% of mobile visitors abandon pages that take longer than 3 seconds to load",
-                            "Sites with Mobile PageSpeed below 50 lose 20 to 30% of organic traffic compared to fast competitors",
-                            "A 1-second delay in page load time reduces conversions by 7%",
-                            "Pages with poor Core Web Vitals rank 5 to 10 positions lower than identical pages with good scores"
-                        ]} />
+
+                        <BlogHeader>Step 2: Check for Technical SEO Breakage</BlogHeader>
+                        <BlogText>
+                            In Search Console, open the Pages report under Indexing and check whether your indexed page count dropped at the same time as your traffic. A sudden drop in indexed pages points to a technical issue: an accidental noindex tag, a robots.txt block, a broken canonical, or a botched redirect from a recent site change. Cross-reference this against the exact date of any recent plugin update, theme change, or migration. Technical breakage tends to be sudden and page-specific, not the slow bleed that speed and content decay produce.
+                        </BlogText>
+
+                        <BlogHeader>Step 3: Check Core Web Vitals in Search Console</BlogHeader>
+                        <BlogText>
+                            If Steps 1 and 2 come back clean, open the Core Web Vitals report in Search Console (under Experience). This report groups your URLs into Good, Needs Improvement, and Poor, and critically, it shows you the trend over time. What you are looking for is a URL group that moved from Good or Needs Improvement into Poor in roughly the same window your traffic started falling. If a large batch of URLs crossed into Poor and your traffic drop tracks that timeline, speed is a legitimate suspect. If your Core Web Vitals have been Poor for a year and traffic only just started dropping, speed alone does not explain the timing, something else changed more recently.
+                        </BlogText>
+                        <BlogText>
+                            Confirm with a live test: run your homepage and your top 3 traffic-driving pages through <a href="https://pagespeed.web.dev" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">pagespeed.web.dev</a> on Mobile. A Mobile score in the 0-49 range alongside a Core Web Vitals trend that matches your traffic decline is a strong signal that speed is a real contributor. A score of 90+ across your key pages rules speed out almost entirely, and the cause is one of the other three categories.
+                        </BlogText>
+
+                        <BlogHeader>Step 4: Rule Out Content Decay and Seasonality</BlogHeader>
+                        <BlogText>
+                            If your indexing is stable and Core Web Vitals have not moved, pull up your top queries in Search Console's Performance report and compare average position over the last 12 months. A slow, steady position slide on the same queries, with no algorithm update and no technical or speed change, usually means competitors published newer or more complete content on those queries. Check Google Trends for your primary keyword to rule out a genuine seasonal or demand-driven decline before assuming it is a content problem you need to fix.
+                        </BlogText>
                         <BlogQuote>
-                            If your WordPress site loads in 5 seconds on mobile and your competitor&apos;s custom Next.js site loads in 0.9 seconds, Google will rank them above you. Regardless of how much better your content is. Speed is now a prerequisite for ranking, not a bonus.
+                            The order matters because it is ordered by how fast each cause is to verify. An algorithm-date lookup takes two minutes. A Core Web Vitals trend check takes five. Content and demand analysis takes longer and is more subjective. Check the fast, objective things first so you do not spend a month rewriting content when the real problem was a technical issue fixable in an afternoon.
                         </BlogQuote>
 
-                        <BlogHeader>Why WordPress Sites Are Structurally Slow</BlogHeader>
-                        <BlogText>
-                            WordPress wasn&apos;t built for modern performance standards. Every page load involves:
-                        </BlogText>
-                        <BlogList items={[
-                            "PHP server rendering: WordPress generates every page dynamically, adding 200 to 600ms before your browser gets anything",
-                            "Plugin bloat: Each active plugin adds HTTP requests, CSS, and JavaScript. 20 plugins often means 2MB+ of page weight",
-                            "Unoptimised images: WordPress stores originals and serves them without intelligent format conversion or lazy loading by default",
-                            "Theme overhead: Premium themes like Divi or Avada load 400 to 800KB of CSS/JS that's never used on most pages",
-                            "Database queries: Every page load runs dozens of MySQL queries, each adding milliseconds that compound on mobile networks"
-                        ]} />
-                        <BlogText>
-                            Caching plugins (WP Rocket, W3 Total Cache) help, but they&apos;re patches on an architectural problem. You can get a WordPress site from 6 seconds down to 2.5 seconds with aggressive optimisation. But you cannot get it under 1 second without replacing it.
-                        </BlogText>
-
-                        <BlogHeader>What WordPress Speed Plugins Actually Achieve (Real Benchmarks)</BlogHeader>
-                        <BlogText>
-                            Most WordPress site owners assume the right plugin will fix the speed problem. The actual ceiling each major caching plugin can reach is documented:
-                        </BlogText>
-                        <BlogList items={[
-                            "WP Rocket (premium, $59/year): Typically lifts a baseline 25-35 Mobile PageSpeed to 55-72. Effective for above-the-fold loading and lazy loading. Cannot break the 75 ceiling without paired CDN and image work.",
-                            "W3 Total Cache (free): Page caching and object caching can move a 22 Mobile PageSpeed score to 45-60. Requires technical configuration; misconfiguration often makes performance worse.",
-                            "LiteSpeed Cache (free, requires LiteSpeed hosting): Best free option, can reach 65-80 Mobile when paired with LiteSpeed servers. Switching hosts is required.",
-                            "WP Fastest Cache (free): Lifts 30 Mobile to 50-55. Lower ceiling than WP Rocket but free and easier to set up.",
-                            "Autoptimize + CDN combinations: Theoretical maximum of 75-82 Mobile on perfectly tuned sites with minimal plugins. Rarely achieved in production with the average 20-30 plugin stack."
-                        ]} />
-                        <BlogText>
-                            Across the audits we have run on WordPress sites in 2026, the practical ceiling with aggressive plugin optimisation is approximately <BlogHighlight>75 Mobile PageSpeed.</BlogHighlight> Google's Core Web Vitals threshold for "Good" performance starts at 90. That leaves a structural 15-point gap that no WordPress configuration closes. The plugin route is not a path to recovery for sites that need to compete in 2026 search results.
-                        </BlogText>
-
-                        <BlogHeader>The April 2026 Events That Made WordPress Migration Urgent</BlogHeader>
+                        <BlogHeader>The April 2026 Events That Made WordPress Speed and Security a Bigger Risk</BlogHeader>
                         <BlogText>
                             Three documented industry events in April 2026 changed the calculation on WordPress traffic loss. The speed problem is no longer just an SEO question. It is now a risk-management question.
                         </BlogText>
@@ -275,96 +260,48 @@ export default function WordPressTrafficDropPage() {
                             "Patchstack 2025 State of WordPress Security: 7,966 new WordPress vulnerabilities in 2024. 96% in plugins. 43% require zero authentication. 1,614 plugins removed from WordPress.org directory in 2024 for unpatched issues."
                         ]} />
                         <BlogText>
-                            For the full breakdown of these events with primary source citations, see <Link href="/blog/wordpress-april-2026-evidence" className="text-cognac hover:underline">the April 2026 evidence dump</Link>. The implication for traffic is direct: sites running a typical 20 to 30 plugin stack now carry both the speed penalty (lost rankings) and the supply-chain risk (one compromised plugin can take the site down or expose customer data). The compounding risk profile makes "keep WordPress and optimise" a weaker option in 2026 than it was in 2024.
+                            For the full breakdown of these events with primary source citations, see <Link href="/blog/wordpress-april-2026-evidence" className="text-cognac hover:underline">the April 2026 evidence dump</Link>. The implication for traffic is direct: sites running a typical 20 to 30 plugin stack now carry both the speed penalty (lost rankings) and the supply-chain risk (one compromised plugin can take the site down or expose customer data). The compounding risk profile makes "keep WordPress and optimise" a weaker option in 2026 than it was in 2024. And the fast-growing crop of AI plugins is widening that attack surface further, which we documented in the <Link href="/blog/wordpress-ai-security-risk-2026" className="text-cognac hover:underline">WordPress AI plugin security risk</Link>.
                         </BlogText>
 
                         {/* Mid-Article CTA */}
                         <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
-                            <p className="font-bold text-charcoal mb-2">Has your WordPress traffic been dropping?</p>
-                            <p className="text-stone-600 mb-4 text-sm">Drop your URL when you book. We test your Core Web Vitals live on the call, show you what Google is penalizing, and give you the fix with a fixed-price quote.</p>
+                            <p className="font-bold text-charcoal mb-2">Not sure if speed is really why your traffic dropped?</p>
+                            <p className="text-stone-600 mb-4 text-sm">Drop your URL and your Search Console access when you book. We run the same four-step diagnosis live on the call and tell you the actual cause before quoting any fix.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free Traffic Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
                         </div>
 
-                        <BlogHeader>How to Diagnose If Speed Is Your Traffic Problem</BlogHeader>
+                        <BlogHeader>Once Speed Is Confirmed as the Cause, What Is the Recovery Timeline?</BlogHeader>
                         <BlogText>
-                            Run this 5-minute diagnosis before assuming content is the issue:
+                            If Steps 1 through 4 point to speed, specifically a Core Web Vitals trend that moved into "Poor" around the same time your traffic dropped, the next question is how long recovery takes once the underlying speed problem is actually fixed. Whether that fix is aggressive WordPress optimisation or a full migration, the recovery pattern in Search Console follows a similar shape, just compressed or stretched depending on how much the fix actually moves your Core Web Vitals:
                         </BlogText>
                         <BlogList items={[
-                            "Go to pagespeed.web.dev. Test your homepage and your top-traffic page on Mobile",
-                            "If your Mobile score is 0 to 49 (red): speed is actively destroying your rankings. Urgent.",
-                            "If your Mobile score is 50 to 89 (orange): you're losing some rankings. Improvement will help.",
-                            "If your Mobile score is 90 to 100 (green): speed is not your traffic problem. Look at content gaps.",
-                            "Check Google Search Console → Core Web Vitals report for 'Poor' URL counts"
+                            "Week 1 to 2: Google recrawls the updated site and PageSpeed scores reflect the fix. This does not move rankings yet on its own.",
+                            "Week 3 to 4: The Core Web Vitals report in Search Console starts reclassifying URLs from 'Poor' to 'Needs Improvement' or 'Good' as enough field data accumulates from real visitors.",
+                            "Month 1 to 2: Rankings for the queries that were most affected by the speed-driven drop begin recovering, assuming the other three causes were genuinely ruled out.",
+                            "Month 2 to 3: Organic traffic typically returns to its pre-drop baseline if speed was the primary and only cause.",
+                            "Month 3+: If the fix also improved Core Web Vitals beyond where the site was before the drop, traffic can exceed the previous baseline as the improved experience compounds with existing rankings."
                         ]} />
                         <BlogText>
-                            For most WordPress sites we audit, the Mobile score is between 22 and 48. That&apos;s not an exaggeration. It&apos;s the baseline reality of a plugin-heavy WordPress site on shared hosting.
+                            The timeline stretches if any of the other three causes were also present and went unaddressed. A common misdiagnosis pattern: a site fixes its speed, PageSpeed jumps to 90+, and traffic still does not recover within 90 days. That is usually a sign that speed was a contributing factor but not the only one, and Steps 1, 2, and 4 above are worth revisiting rather than assuming the speed fix simply "hasn't kicked in yet."
+                        </BlogText>
+                        <BlogText>
+                            For the mechanics of actually fixing WordPress speed once it is confirmed as a cause, see <Link href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">how to fix a slow WordPress site</Link> for the full 8-method breakdown and honest ceiling, or <Link href="/blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline">how WordPress plugins destroy site speed</Link> if a bloated plugin stack is the likely driver. Both cover the plugin-level and architectural fixes in more depth than belongs in a diagnosis guide.
                         </BlogText>
 
-                        <BlogHeader>What Happens to Traffic After Fixing Speed?</BlogHeader>
+                        <BlogHeader>When Should You Act on a Confirmed Speed Problem?</BlogHeader>
                         <BlogText>
-                            When we migrate clients from slow WordPress to fast Next.js sites, the traffic recovery follows a predictable pattern:
-                        </BlogText>
-                        <BlogList items={[
-                            "Week 1 to 2: Google crawls the new fast site, PageSpeed scores jump to 90+",
-                            "Week 3 to 4: Core Web Vitals switch from 'Poor' to 'Good' in Search Console",
-                            "Month 1 to 2: Rankings for competitive keywords begin recovering",
-                            "Month 2 to 3: Organic traffic returns to previous peak levels",
-                            "Month 3+: Traffic exceeds previous peak by 15 to 25% as improved rankings compound"
-                        ]} />
-                        <BlogText>
-                            In practice: sites that move from PageSpeed scores in the 20s to 90+ (see <a href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">how we hit 100/100 PageSpeed</a>) typically see Core Web Vitals flip from Poor to Good within 30 days in Search Console, with ranking recovery following in weeks 6 to 12.
-                        </BlogText>
-
-                        <BlogHeader>The Real Fix: Replace WordPress, Don&apos;t Patch It</BlogHeader>
-                        <BlogText>
-                            If your Mobile PageSpeed is under 60, the honest answer is that <a href="/blog/wordpress-killer" className="text-cognac hover:underline">no amount of plugin configuration will recover your traffic</a>. The architectural ceiling of WordPress is around 2.5 seconds, and Google&apos;s preferred threshold is under 2 seconds.
+                            Once speed is confirmed rather than assumed, the case for acting quickly is stronger, because Google's ranking signals are cumulative. A site that has been in the "Poor" Core Web Vitals bucket for 12 months takes longer to recover than one that just crossed into it. If your Search Console trend shows the drop is recent and speed-correlated, the recovery timeline above is realistic. If the drop has been compounding for a year, expect the lower end of that timeline to stretch further, because Google has had more time to demote the affected URLs.
                         </BlogText>
                         <BlogText>
-                            <a href="/services/wordpress-migration?ref=blog/wordpress-traffic-drop-speed" className="text-cognac hover:underline">A custom Next.js site</a> built with performance as the foundation delivers:
-                        </BlogText>
-                        <BlogList items={[
-                            "Static generation: Pages pre-built at deploy time, served from CDN in milliseconds",
-                            "Zero plugin overhead: Only the code that's actually needed for each page",
-                            "Automatic image optimisation: WebP/AVIF conversion, lazy loading, responsive sizes built-in",
-                            "React Server Components: HTML rendered on the server, JavaScript only where interactions need it",
-                            "Vercel Edge Network: Your pages cached at 50+ edge locations globally"
-                        ]} />
-                        <BlogText>
-                            <BlogHighlight>Result: PageSpeed 90+ on mobile. LCP under 1.2 seconds. Traffic grows, not shrinks.</BlogHighlight>
-                        </BlogText>
-
-                        <BlogHeader>What the Migration Timeline Looks Like</BlogHeader>
-                        <BlogText>
-                            If you decide to fix the root cause, here is what a proper migration covers and how long each phase takes:
-                        </BlogText>
-                        <BlogList items={[
-                            "Week 1: Full site audit. Every page catalogued, redirect map built, keyword rankings recorded as a baseline.",
-                            "Weeks 2 to 4: Build phase. The new Next.js site is built to mirror your existing structure and content, with performance baked in from the start.",
-                            "Week 5: QA and testing. Mobile and desktop PageSpeed verified at 90+. All redirects tested. Zero broken links.",
-                            "Week 6: Launch with zero downtime. Old site stays live until the DNS cutover is confirmed. Google Search Console updated immediately.",
-                            "Day 30 to 60: Rankings begin recovering. Core Web Vitals switch from Poor to Good in Search Console. Organic traffic trends upward."
-                        ]} />
-                        <BlogText>
-                            The entire process is designed so your site is never down and no SEO equity is lost. The most common fear we hear is "I'll lose my rankings during the move." It does not happen when the migration is executed properly. All URL structure is preserved, all meta data is ported, and every old URL redirects to its new equivalent with a 301.
-                        </BlogText>
-                        <BlogText>
-                            For the full PandaCodeGen migration playbook covering all 8 platforms (WordPress, Webflow, Squarespace, Wix, Shopify, WooCommerce, Divi, GoHighLevel) with the 4-phase process, 301 redirect mapping methodology, and zero-downtime cutover protocol, see the <Link href="/ai-info/migration-services" className="text-cognac hover:underline">Migration Services reference page</Link>. For the verified before-and-after PageSpeed numbers from two completed migrations (MyCustomPatches: 45 to 100, Panda Patches: 64 to 99) including the full revenue and hosting cost data, see the <Link href="/ai-info/case-studies" className="text-cognac hover:underline">Case Studies reference page</Link>.
-                        </BlogText>
-
-                        <BlogHeader>When Should You Act?</BlogHeader>
-                        <BlogText>
-                            The longer a slow site stays live, the more ground it loses. Google's ranking signals are cumulative: a site that has been slow for 12 months takes longer to recover than one that just turned slow. If your traffic has been declining for more than 3 months and your Mobile PageSpeed is below 60, every additional month of delay makes the recovery harder and longer.
-                        </BlogText>
-                        <BlogText>
-                            The calculation is simple. If your site generates $10,000 per month in revenue and you are losing 25% of potential traffic to speed, that is $2,500 per month in missed revenue. A migration that takes 6 weeks and runs $3,500+ Growth or $5,000 to $10,000+ Scale pays for itself within the first quarter and then compounds every month after.
+                            The other reason to move on a confirmed diagnosis rather than sit on it: every month you wait is a month of lost traffic on top of the drop you have already taken, on top of a plugin ecosystem carrying the supply-chain risk profile described above. If a migration turns out to be the right fix rather than optimisation, see <Link href="/blog/wordpress-migration-cost" className="text-cognac hover:underline">what a WordPress migration actually costs</Link> for the fixed-price breakdown by site size.
                         </BlogText>
                     </div>
 
                     {/* Bottom CTA */}
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
-                        <h3 className="text-2xl font-bold mb-4">Stop Paying the WordPress Speed Tax</h3>
+                        <h3 className="text-2xl font-bold mb-4">Find Out What&apos;s Actually Causing Your Traffic Drop</h3>
                         <p className="text-stone-600 mb-6">
-                            Free audit. We&apos;ll analyse your PageSpeed scores, Core Web Vitals, and show you the exact traffic you&apos;ve lost to slow speed and how to get it back.
+                            Free audit. We&apos;ll run the algorithm, technical, Core Web Vitals, and content checks against your Search Console data and tell you the real cause before recommending any fix.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Book Free Traffic Audit <ArrowRight className="w-5 h-5" /></CalModalButton>
                     </div>
@@ -372,10 +309,11 @@ export default function WordPressTrafficDropPage() {
                     <section className="mb-10">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>Google&apos;s Core Web Vitals update made speed a direct ranking factor</strong>: Slow WordPress sites are being quietly demoted, losing 20-30% of organic traffic to faster competitors.</li>
-                            <li><strong>A Mobile PageSpeed score below 50 is a traffic emergency</strong>: Most WordPress sites we audit score between 22 and 48, meaning their rankings are actively deteriorating every day.</li>
-                            <li><strong>Plugins and themes create an architectural speed ceiling</strong>: Caching can get WordPress from 6 seconds down to 2.5, but you cannot reach under 1 second without replacing the platform entirely.</li>
-                            <li><strong>Traffic recovers within 60-90 days after migrating to Next.js</strong>: Clients typically return to their previous peak and then exceed it by 15-25% within three months of launching a fast site.</li>
+                            <li><strong>A traffic drop has four likely causes</strong>: an algorithm update, a technical SEO issue, content decay, or site speed. Diagnose which one it is before spending money on a fix.</li>
+                            <li><strong>Check the fast, objective signals first</strong>: algorithm update dates and your indexed page count in Search Console each take a couple of minutes to rule in or out.</li>
+                            <li><strong>Confirm speed with the Core Web Vitals trend, not a single PageSpeed score</strong>: what matters is whether URLs moved into &quot;Poor&quot; around the same time your traffic dropped.</li>
+                            <li><strong>Recovery typically plays out over 60-90 days once speed is confirmed and fixed</strong>: Core Web Vitals flip from Poor to Good first, then rankings and traffic follow.</li>
+                            <li><strong>If the timeline doesn&apos;t line up with a speed fix, revisit the other three causes</strong>: a common mistake is assuming a speed fix "hasn't kicked in yet" when a second cause was also present.</li>
                         </ol>
                     </section>
 
@@ -383,7 +321,7 @@ export default function WordPressTrafficDropPage() {
 
                     <section className="mb-4 mt-6">
                         <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
-                        <p className="text-stone-700 leading-relaxed">For the full architectural breakdown of why WordPress is slow, see <Link href="/blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline font-medium">how WordPress plugins destroy speed</Link>. For the 3-year cost comparison of staying on WordPress vs migrating, see <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className="text-cognac hover:underline font-medium">WordPress vs custom code real cost over 3 years</Link>.</p>
+                        <p className="text-stone-700 leading-relaxed">Once speed is confirmed as the cause, see <Link href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline font-medium">how to fix a slow WordPress site</Link> for the full 8-method breakdown, or if a bloated plugin stack looks like the driver, <Link href="/blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline font-medium">how WordPress plugins destroy speed</Link> for the keep/replace/kill scorecard. For the 3-year cost comparison of staying on WordPress vs migrating, see <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className="text-cognac hover:underline font-medium">WordPress vs custom code real cost over 3 years</Link>.</p>
                     </section>
 
                     <RelatedPosts currentPostId="wordpress-traffic-drop-speed" category="Traffic Growth" />

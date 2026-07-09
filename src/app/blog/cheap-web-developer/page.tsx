@@ -70,7 +70,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -224,19 +224,19 @@ export default function CheapWebDeveloperPage() {
 
                         <div className="grid md:grid-cols-3 gap-4">
                             <div className="p-5 bg-white/5 border border-white/10 rounded-xl">
-                                <div className="text-3xl font-black text-cognac mb-1">$1,200</div>
+                                <div className="text-3xl font-black text-cognac mb-1">$1,350</div>
                                 <div className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-3">Obare Magazine</div>
                                 <p className="text-sm text-stone-300 leading-relaxed">Wix to custom Next.js. 7 day build. 98 Mobile PageSpeed. Culture publication with 225,000 Instagram followers. They didn&apos;t request an AI-info page, so the build scope was lighter.</p>
                             </div>
                             <div className="p-5 bg-white/5 border border-white/10 rounded-xl">
-                                <div className="text-3xl font-black text-cognac mb-1">100/100</div>
+                                <div className="text-3xl font-black text-cognac mb-1">90+</div>
                                 <div className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-3">MyCustomPatches</div>
                                 <p className="text-sm text-stone-300 leading-relaxed">10 year WordPress site to Next.js. Load time 3.2s to 0.7s. Hosting $150/mo to $0/mo. 200+ pages, zero SEO drops. <Link href="/work/mycustompatches" className="text-cognac underline">Case study</Link>.</p>
                             </div>
                             <div className="p-5 bg-white/5 border border-white/10 rounded-xl">
                                 <div className="text-3xl font-black text-cognac mb-1">$50K/mo</div>
                                 <div className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-3">Panda Patches <span className="normal-case text-stone-500">(up from $38K)</span></div>
-                                <p className="text-sm text-stone-300 leading-relaxed">Headless Next.js + Sanity + Supabase + Square. Revenue on about $55/mo tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). PageSpeed 64 to 99. Zero ranking drops. <Link href="/work/panda-patches" className="text-cognac underline">Case study</Link>.</p>
+                                <p className="text-sm text-stone-300 leading-relaxed">Headless Next.js + Sanity + Supabase + Square. Revenue on about $55/mo tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). PageSpeed 64 to 90+. Zero ranking drops. <Link href="/work/panda-patches" className="text-cognac underline">Case study</Link>.</p>
                             </div>
                         </div>
 
@@ -272,7 +272,7 @@ export default function CheapWebDeveloperPage() {
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">Cheap should mean money that stays in your business, not corners cut on your build. PandaCodeGen is rebuilding what agency pricing means: fixed prices from $1,500, 90+ PageSpeed guaranteed or 100 percent refund on every project, plus one full month of free post-launch support and tweaks for every client. No freelancer, agency, or platform offers all three.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Cheap should mean money that stays in your business, not corners cut on your build. PandaCodeGen is rebuilding what agency pricing means: fixed prices from $1,500, 90+ PageSpeed guaranteed or 100 percent refund on every project, plus free post-launch support and tweaks for every client (15 days on Starter, a full month on Growth and above). No freelancer, agency, or platform offers all three.</p>
                         </div>
 
                         <BlogText>
@@ -323,22 +323,22 @@ export default function CheapWebDeveloperPage() {
                                         <td className="p-3 border border-stone-300 text-charcoal">PandaCodeGen</td>
                                         <td data-label="Refund If Bad" className="p-3 border border-stone-300 text-green-700">100% refund if 90+ not met</td>
                                         <td data-label="PageSpeed Guarantee" className="p-3 border border-stone-300 text-green-700">90+ in writing</td>
-                                        <td data-label="Free Support After Launch" className="p-3 border border-stone-300 text-green-700">Full month free, all tweaks included</td>
+                                        <td data-label="Free Support After Launch" className="p-3 border border-stone-300 text-green-700">Free, all tweaks included (15 days Starter, 1 month Growth+)</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
 
                         <BlogText>
-                            Ask any agency or freelancer who has quoted you the same three questions. Will you refund 100 percent if the site does not score 90+ on Google PageSpeed? Will you give that guarantee in writing in the contract? Will you give me a full month of free support and tweaks after launch with no hourly billing? <BlogHighlight>Almost none will say yes to all three. Most will not say yes to any of them.</BlogHighlight> That is the gap PandaCodeGen exists to close.
+                            Ask any agency or freelancer who has quoted you the same three questions. Will you refund 100 percent if the site does not score 90+ on Google PageSpeed? Will you give that guarantee in writing in the contract? Will you give me free support and tweaks after launch with no hourly billing? <BlogHighlight>Almost none will say yes to all three. Most will not say yes to any of them.</BlogHighlight> That is the gap PandaCodeGen exists to close.
                         </BlogText>
 
                         <BlogText>
-                            The free month of post-launch support is not a marketing line. It means real things. If you want a button color changed, we change it. If a section needs new copy, we update it. If you spot a bug after launch, we fix it. If your team has questions about the CMS, we walk them through it. All inside the project price, no hourly billing, no nickel-and-diming. The only constraint is scope: support means tweaks and fixes, not new feature builds. New features are quoted separately at fixed prices.
+                            The free post-launch support (15 days on Starter, a full month on Growth and above) is not a marketing line. It means real things. If you want a button color changed, we change it. If a section needs new copy, we update it. If you spot a bug after launch, we fix it. If your team has questions about the CMS, we walk them through it. All inside the project price, no hourly billing, no nickel-and-diming. The only constraint is scope: support means tweaks and fixes, not new feature builds. New features are quoted separately at fixed prices.
                         </BlogText>
 
                         <BlogText>
-                            If you stick with us past the free month, we offer optional retainers for ongoing work. Most clients use the free month to get the site exactly right and then handle their own content updates from Sanity CMS without needing us. That is the goal: ship a site so good and so easy to maintain that you do not need an agency on retainer for life.
+                            If you stick with us past the free support window, we offer optional retainers for ongoing work. Most clients use that window to get the site exactly right and then handle their own content updates from Sanity CMS without needing us. That is the goal: ship a site so good and so easy to maintain that you do not need an agency on retainer for life.
                         </BlogText>
 
                         <BlogHeader>How Much Does a Cheap Web Developer Cost</BlogHeader>
@@ -563,7 +563,7 @@ export default function CheapWebDeveloperPage() {
                                     <p className="text-xs font-bold text-stone-500 uppercase tracking-wide">WordPress Migration</p>
                                 </div>
                                 <h3 className="font-bold text-charcoal mb-2 group-hover:text-cognac transition-colors">Move off WordPress for $1,500 to $3,500</h3>
-                                <p className="text-sm text-stone-600 leading-relaxed mb-3">Custom Next.js rebuild, all 200 plus pages migrated, every URL redirected, hosting drops from $150 a month to $0. MyCustomPatches went from PageSpeed 40 to 100 in 6 weeks.</p>
+                                <p className="text-sm text-stone-600 leading-relaxed mb-3">Custom Next.js rebuild, all 200 plus pages migrated, every URL redirected, hosting drops from $150 a month to $0. MyCustomPatches went from PageSpeed 40 to 90+ in 6 weeks.</p>
                                 <p className="text-sm text-cognac font-bold flex items-center gap-1">View WordPress migration service <ArrowRight className="w-3 h-3" /></p>
                             </Link>
 
@@ -744,8 +744,8 @@ export default function CheapWebDeveloperPage() {
 
                         <div className="grid md:grid-cols-2 gap-3 my-6">
                             {[
-                                { label: "MyCustomPatches", desc: "10-year-old WordPress site to Next.js. PageSpeed went from 40 to 100. Hosting cost dropped from $150 a month to $0." },
-                                { label: "Panda Patches", desc: "3-year-old WordPress to headless Next.js + Sanity + Supabase + Square. PageSpeed 64 to 99. Scaled from $38K to about $50K a month revenue on about $55 a month tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator)." },
+                                { label: "MyCustomPatches", desc: "10-year-old WordPress site to Next.js. PageSpeed went from 40 to 90+. Hosting cost dropped from $150 a month to $0." },
+                                { label: "Panda Patches", desc: "3-year-old WordPress to headless Next.js + Sanity + Supabase + Square. PageSpeed 64 to 90+. Scaled from $38K to about $50K a month revenue on about $55 a month tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator)." },
                             ].map(({ label, desc }) => (
                                 <div key={label} className="flex items-start gap-3 p-4 bg-stone-50 border border-stone-200 rounded-xl">
                                     <CheckCircle2 className="w-5 h-5 text-emerald-600 mt-0.5 shrink-0" />

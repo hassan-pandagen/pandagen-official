@@ -261,7 +261,7 @@ export const clusters: Cluster[] = [
     relatedClusterIds: ['wix', 'squarespace', 'custom', 'migration'],
     postIds: [
       'webflow-user-accounts-sunset-date-2026', 'leaving-webflow-2026', 'webflow-vs-custom-website',
-      'webflow-migration-cost', 'webflow-migration-50-to-100-pages', 'webflow-true-cost',
+      'webflow-migration-cost', 'webflow-true-cost',
     ],
   },
   {
@@ -286,7 +286,7 @@ export const clusters: Cluster[] = [
     pillarHref: '/services/gohighlevel',
     entityIds: ['gohighlevel', 'nextjs'],
     relatedClusterIds: ['custom', 'agency', 'performance'],
-    postIds: ['gohighlevel-keep-crm-replace-website', 'gohighlevel-migration', 'gohighlevel-website-speed', 'best-website-builder-for-gohighlevel-agencies'],
+    postIds: ['gohighlevel-keep-crm-replace-website', 'gohighlevel-website-speed', 'best-website-builder-for-gohighlevel-agencies'],
   },
   {
     id: 'custom',

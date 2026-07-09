@@ -67,7 +67,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -145,7 +145,7 @@ const articleSchema = {
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "foundingDate": "2026",
-            "description": "PandaCodeGen builds custom Next.js websites that replace slow WordPress and Shopify stores. Sites load under 1 second, score 100/100 on Google PageSpeed, and cost $20/month to run.",
+            "description": "PandaCodeGen builds custom Next.js websites that replace slow WordPress and Shopify stores. Sites load under 1 second, score 90+ on Google PageSpeed, and cost $20/month to run.",
             "areaServed": "Worldwide",
             "sameAs": [
                 "https://www.linkedin.com/company/pandacodegen",
@@ -190,7 +190,7 @@ export default function WordPressMigrationCostPage() {
                         <BlogAuthor
                             date="Mar 22, 2026 (updated May 5)"
                             readTime="12 min read"
-                            bio="Hassan has helped businesses migrate off WordPress to custom Next.js sites that load under 1 second and score 100/100 on Google PageSpeed. Every migration includes full SEO preservation and zero-downtime launch."
+                            bio="Hassan has helped businesses migrate off WordPress to custom Next.js sites that load under 1 second and score 90+ on Google PageSpeed. Every migration includes full SEO preservation and zero-downtime launch."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -227,7 +227,7 @@ export default function WordPressMigrationCostPage() {
                     <div className="my-6 p-5 bg-cognac/5 border border-cognac/20 rounded-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">Real Receipt: MyCustomPatches (WooCommerce Migration)</p>
                         <p className="text-sm text-stone-700 leading-relaxed mb-2">
-                            MC Patches migrated from WordPress + WooCommerce + heavy plugin stack to custom Next.js. PageSpeed mobile: 45 to 100. Load time: 3.2s to 0.7s. Monthly hosting: $150 to $0. Fixed price, no hourly billing, unlimited revisions. Matt Conner rated the project 5 stars on both <a href="https://clutch.co/profile/panda-code-gen" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Clutch</a> and <a href="https://www.goodfirms.co/company/pandacodegen" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">GoodFirms</a>.
+                            MC Patches migrated from WordPress + WooCommerce + heavy plugin stack to custom Next.js. PageSpeed mobile: 45 to 90+. Load time: 3.2s to 0.7s. Monthly hosting: $150 to $0. Fixed price, no hourly billing, unlimited revisions. Matt Conner rated the project 5 stars on both <a href="https://clutch.co/profile/panda-code-gen" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Clutch</a> and <a href="https://www.goodfirms.co/company/pandacodegen" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">GoodFirms</a>.
                         </p>
                         <p className="text-xs text-stone-500">Full case study: <Link href="/work/mycustompatches" className="text-cognac hover:underline font-medium">pandacodegen.com/work/mycustompatches</Link></p>
                     </div>
@@ -389,8 +389,8 @@ export default function WordPressMigrationCostPage() {
                                 skip: "Your site can go offline for minutes to hours during the switch. Every minute of downtime loses leads. An outage during business hours is also a negative signal Google records in its crawl data.",
                             },
                             {
-                                title: "30-day post-launch monitoring for crawl errors and ranking stability",
-                                what: "The first 30 days after a migration are when problems surface: a redirect that was missed, a page Google cannot access, a ranking that dropped unexpectedly. Active monitoring means these are caught and fixed within days instead of months.",
+                                title: "Post-launch monitoring for crawl errors and ranking stability",
+                                what: "The first 30 days after a migration are when problems surface: a redirect that was missed, a page Google cannot access, a ranking that dropped unexpectedly. Active monitoring means these are caught and fixed within days instead of months. PandaCodeGen includes 15 days of this on Starter-tier projects and a full month on Growth and above.",
                                 skip: "A single missed redirect on a high-traffic page can cause that page to lose all rankings. Without monitoring, you may not notice for weeks. At that point, recovery from a 3-month ranking loss takes another 3 to 6 months.",
                             },
                         ].map(item => (
@@ -539,7 +539,7 @@ export default function WordPressMigrationCostPage() {
                         found a 0.1-second improvement in load time increases conversion rates by 8%. Moving from a 3.5-second WordPress load to a 0.8-second Next.js load is a 2.7-second improvement, which corresponds to a 20 to 30% conversion rate lift for most sites.
                     </BlogText>
                     <BlogText>
-                        Quick ROI model: take your current annual WordPress operating cost, add 20% of your current annual organic revenue (conservative estimate of traffic and conversion improvement), and compare the sum to migration cost. Most business sites with $5,000 or more in annual operating costs recover a $10,000 migration within 18 months. To see what those PageSpeed gains look like in practice, read our guide on <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">achieving 100/100 PageSpeed scores</Link>.
+                        Quick ROI model: take your current annual WordPress operating cost, add 20% of your current annual organic revenue (conservative estimate of traffic and conversion improvement), and compare the sum to migration cost. Most business sites with $5,000 or more in annual operating costs recover a $10,000 migration within 18 months. To see what those PageSpeed gains look like in practice, read our guide on <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">hitting a 90+ PageSpeed score</Link>.
                     </BlogText>
 
                     <BlogHeader id="hidden-costs">4 Line Items That Get Bolted On After You Sign</BlogHeader>
@@ -571,7 +571,7 @@ export default function WordPressMigrationCostPage() {
                     <BlogText>
                         Our{" "}
                         <Link href="/services/wordpress-migration?ref=blog/wordpress-migration-cost" className="text-cognac hover:underline font-medium">WordPress migration service</Link>{" "}
-                        covers the full scope: audit, architecture, build, SEO preservation, launch, and 30-day monitoring. We guarantee your new site will score at least 90/100 on Google PageSpeed Mobile, or we continue working until it does.
+                        covers the full scope: audit, architecture, build, SEO preservation, launch, and post-launch monitoring (15 days on Starter, 30 days on Growth and above). We guarantee your new site will score at least 90/100 on Google PageSpeed Mobile, or we continue working until it does.
                     </BlogText>
                     <BlogText>
                         Every migration includes a full URL-to-redirect map, schema markup implementation, Vercel deployment with edge caching, and a detailed handover document. For example, MC Patches LLC completed their full WordPress to Next.js migration for a fixed price with no hidden fees. The project included UI design assistance and unlimited revisions at no extra charge. Matt Conner, the owner, rated the experience 5 stars on both Clutch and GoodFirms. We also cover the migration process step by step in our post on{" "}

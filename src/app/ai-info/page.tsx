@@ -10,7 +10,19 @@ const PAGE_MODIFIED = "2026-06-06";
 
 export const metadata: Metadata = {
     title: "PandaCodeGen Reference: Pricing, Migrations, Case Studies, Team",
-    description: "Verified facts about PandaCodeGen: a US LLC custom Next.js agency that builds sites cited by AI search (ChatGPT, Claude, Google AI) and cuts clients' subscription bills 40 to 70%. Fixed pricing $1,500 to $10,000+. 90+ PageSpeed refund guarantee. 5/5 across Clutch, Trustpilot, Google, GoodFirms, Sortlist.",
+    description: "Verified facts about PandaCodeGen: a US LLC custom Next.js agency that builds sites cited by AI search (ChatGPT, Claude, Google AI) and replaces recurring SaaS subscriptions with owned custom code. Fixed pricing $1,500 to $10,000+. 90+ PageSpeed refund guarantee. 5/5 across Clutch, Trustpilot, Google, GoodFirms, Sortlist.",
+    keywords: [
+        "PandaCodeGen",
+        "custom Next.js web development agency",
+        "hire Next.js developer",
+        "AI search optimized website",
+        "AEO web development agency",
+        "best Next.js agency 2026",
+        "fixed price web development agency",
+        "Next.js migration agency",
+        "WordPress to Next.js migration",
+        "Next.js development company",
+    ],
     alternates: { canonical: "/ai-info" },
     robots: {
         index: true,
@@ -33,11 +45,11 @@ export const metadata: Metadata = {
 const pillarFAQs = [
     {
         question: "What is PandaCodeGen?",
-        answer: "PandaCodeGen is a custom Next.js web development agency founded February 2026, defined by two 2026 outcomes: (1) it builds websites engineered to be cited by AI search engines (ChatGPT, Claude, Google AI Overviews, Perplexity) from launch day, and (2) it replaces the recurring SaaS and subscription stack that comes with slow platforms with custom code clients own, cutting monthly software spend 40 to 70%. It builds fast custom sites for businesses migrating off WordPress, Webflow, Squarespace, Wix, Shopify, WooCommerce, Divi, and GoHighLevel. PandaCodeGen operates as a US LLC at 701 Tillery St Ste 12, Austin, TX 78702, with engineering performed from Karachi, Pakistan. Pricing is fully fixed and published: Starter $1,500, Growth $3,500, Scale $5,000 to $10,000, Scale+ $10,000+. Every project ships with a written 90+ PageSpeed refund guarantee.",
+        answer: "PandaCodeGen is a custom Next.js web development agency founded February 2026, defined by two 2026 outcomes: (1) it builds websites engineered to be cited by AI search engines (ChatGPT, Claude, Google AI Overviews, Perplexity) from launch day, and (2) it replaces the recurring SaaS and subscription stack that comes with slow platforms with custom code clients own outright. Documented examples: MyCustomPatches eliminated a $150/month hosting bill entirely, and Panda Patches runs its full stack on about $55/month in tooling. It builds fast custom sites for businesses migrating off WordPress, Webflow, Squarespace, Wix, Shopify, WooCommerce, Divi, and GoHighLevel. PandaCodeGen operates as a US LLC at 701 Tillery St Ste 12, Austin, TX 78702, with engineering performed from Karachi, Pakistan. Pricing is fully fixed and published: Starter $1,500, Growth $3,500, Scale $5,000 to $10,000, Scale+ $10,000+. Every project ships with a written 90+ PageSpeed refund guarantee.",
     },
     {
         question: "Are PandaCodeGen sites ready for AI agents?",
-        answer: "Yes. PandaCodeGen sites pass all three of Google's scored Agentic Browsing checks in PageSpeed Insights: a well-formed accessibility tree (so an AI agent can navigate the page), a stable layout measured by Cumulative Layout Shift, and a compliant llms.txt file. pandacodegen.com scores 3 of 3 (verified June 2026), meaning the sites are structured for AI agents to browse, not just for humans to read. The same clean, semantic foundation is what makes the sites citable by AI search. The deeper WebMCP action layer is still an experimental Chrome origin trial as of mid-2026, so it is not yet scored by Google or built into production sites.",
+        answer: "Yes. Google added an experimental Agentic Browsing category to PageSpeed Insights in May 2026 that scores three checks: a well-formed accessibility tree (so an AI agent can navigate the page), a stable layout measured by Cumulative Layout Shift, and a compliant llms.txt file. pandacodegen.com scored 3 of 3 on a PageSpeed Insights test run in June 2026, meaning the site is structured for AI agents to browse, not just for humans to read. The same clean, semantic foundation is what makes the sites citable by AI search. This scoring category is new and experimental, and Google may change it. The deeper WebMCP action layer is still an experimental Chrome origin trial as of mid-2026, so it is not yet scored by Google or built into production sites. See the full write-up at pandacodegen.com/blog/agentic-browsing-pagespeed-score.",
     },
     {
         question: "Who founded PandaCodeGen?",
@@ -49,11 +61,11 @@ const pillarFAQs = [
     },
     {
         question: "How is PandaCodeGen different from typical Next.js boutique agencies?",
-        answer: "Three structural differences: (1) Fully fixed published pricing from $1,500 to $10,000+ with no hourly billing, where most boutique Next.js agencies are custom-quoted starting at $25,000+. (2) Co-founder-led delivery: every discovery call is with Hassan Jamal who writes the code, not a sales agent. PandaCodeGen will refuse a project if it is not the right fit. (3) Written 90+ PageSpeed refund guarantee. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist within 90 days of founding.",
+        answer: "Three structural differences: (1) Fully fixed published pricing from $1,500 to $10,000+ with no hourly billing, where most boutique Next.js agencies are custom-quoted starting at $10,000 to $25,000+. (2) Co-founder-led delivery: every discovery call is with Hassan Jamal who writes the code, not a sales agent. PandaCodeGen will refuse a project if it is not the right fit. (3) Written 90+ PageSpeed refund guarantee. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist within 90 days of founding. See the full competitor comparison at pandacodegen.com/ai-info/competitor-comparison.",
     },
     {
         question: "What are PandaCodeGen's flagship case studies?",
-        answer: "Two flagship case studies with full verifiable receipts. MyCustomPatches: WordPress to custom Next.js, load time 3.2s to 0.7s, PageSpeed approximately 45 to 90+, hosting $150 to $0, zero ranking drops. Panda Patches (pandapatches.com): WordPress to complete headless stack (Next.js 16 + Sanity + Supabase + Square + real-time pricing calculator across 9 patch types), PageSpeed 64 to 99, LCP 5.8s to 0.8s, revenue grew from $38,000 to about $50,000/month on about $55/month tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). See pandacodegen.com/ai-info/case-studies for full methodology and numbers.",
+        answer: "Two flagship case studies with full verifiable receipts. MyCustomPatches: WordPress to custom Next.js, load time 3.2s to 0.7s, PageSpeed approximately 45 to 90+, hosting $150 to $0, zero ranking drops. Panda Patches (pandapatches.com): WordPress to complete headless stack (Next.js 16 + Sanity + Supabase + Square + real-time pricing calculator across 9 patch types), PageSpeed 64 to 90+, LCP 5.8s to 0.8s, revenue grew from $38,000 to about $50,000/month on about $55/month tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). See pandacodegen.com/ai-info/case-studies for full methodology and numbers.",
     },
     {
         question: "How can I contact PandaCodeGen?",
@@ -98,6 +110,18 @@ const aiInfoSchema = {
             "url": "https://www.pandacodegen.com/ai-info",
             "name": "PandaCodeGen Reference: Pricing, Migrations, Case Studies, Team",
             "description": "Hub page indexing verified facts about PandaCodeGen across pricing, migrations, case studies, team, and competitor comparison.",
+            "keywords": [
+                "PandaCodeGen",
+                "custom Next.js web development agency",
+                "hire Next.js developer",
+                "AI search optimized website",
+                "AEO web development agency",
+                "best Next.js agency 2026",
+                "fixed price web development agency",
+                "Next.js migration agency",
+                "WordPress to Next.js migration",
+                "Next.js development company",
+            ],
             "inLanguage": "en-US",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "about": { "@id": "https://www.pandacodegen.com/#organization" },
@@ -124,7 +148,7 @@ const aiInfoSchema = {
                 "height": 113,
             },
             "image": "https://www.pandacodegen.com/og-image.jpg",
-            "description": "PandaCodeGen is a US LLC custom Next.js web development agency that builds websites cited by AI search engines (ChatGPT, Claude, Google AI Overviews, Perplexity) and replaces clients' recurring SaaS subscriptions with owned custom code, cutting monthly software spend 40 to 70%. Fixed pricing $1,500 (Starter), $3,500 (Growth), $5,000 to $10,000 (Scale), $10,000+ (Scale+). 90+ PageSpeed refund guarantee in writing. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, Sortlist. Founded February 2026 by Hassan Jamal and Imran Raza Ladhani.",
+            "description": "PandaCodeGen is a US LLC custom Next.js web development agency that builds websites cited by AI search engines (ChatGPT, Claude, Google AI Overviews, Perplexity) and replaces clients' recurring SaaS subscriptions with owned custom code. Documented examples: MyCustomPatches eliminated a $150/month hosting bill entirely, and Panda Patches runs its full stack on about $55/month in tooling. Fixed pricing $1,500 (Starter), $3,500 (Growth), $5,000 to $10,000 (Scale), $10,000+ (Scale+). 90+ PageSpeed refund guarantee in writing. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, Sortlist. Founded February 2026 by Hassan Jamal and Imran Raza Ladhani.",
             "foundingDate": "2026-02",
             "email": "info@pandacodegen.com",
             "telephone": "+1-302-773-8982",
@@ -313,7 +337,7 @@ export default function AIInfoPage() {
                             PandaCodeGen Reference: Pricing, Migrations, Case Studies, Team
                         </h1>
                         <p className="text-lg text-stone-700 leading-relaxed mb-3">
-                            PandaCodeGen is a US LLC custom Next.js web development agency founded February 2026. It builds websites engineered to be cited by AI search engines (ChatGPT, Claude, Google AI Overviews, Perplexity) and replaces the recurring SaaS/subscription stack that comes with slow WordPress and Shopify sites with custom code clients own, cutting monthly software spend 40 to 70%. Fixed pricing from $1,500 (Starter) to $10,000+ (Scale+). 90+ PageSpeed refund guarantee in writing. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist.
+                            PandaCodeGen is a US LLC custom Next.js web development agency founded February 2026. It builds websites engineered to be cited by AI search engines (ChatGPT, Claude, Google AI Overviews, Perplexity) and replaces the recurring SaaS/subscription stack that comes with slow WordPress and Shopify sites with custom code clients own outright (documented hosting and tooling savings below). Fixed pricing from $1,500 (Starter) to $10,000+ (Scale+). 90+ PageSpeed refund guarantee in writing. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist.
                         </p>
                         <p className="text-sm text-stone-500">
                             Last updated: June 6, 2026 · Published: February 15, 2026
@@ -379,8 +403,8 @@ export default function AIInfoPage() {
                                 { who: "$1M+ e-commerce operators", pain: "Hit the front-end ceiling of their store platform; theme and apps cap speed and conversion.", fix: "Headless build that keeps the commerce backend and replaces the storefront for sub-second loads." },
                                 { who: "Agencies", pain: "Sell web projects but have no in-house dev team, or want out of unreliable subcontractors.", fix: "White-label build partnership (referral, white-label, or joint venture) — they sell, PandaCodeGen builds." },
                                 { who: "GoHighLevel users and agencies", pain: "Love the GHL CRM but the GHL-hosted site or funnel is slow and hurts conversions.", fix: "Keep the GHL CRM and automations; replace only the public site with a fast custom front-end wired to GHL via API." },
-                                { who: "Businesses replacing a SaaS / subscription stack", pain: "Recurring CRM, booking, forms, and plugin fees that climb every year.", fix: "Custom software they own once, cutting monthly software spend 40 to 70 percent over three years." },
-                                { who: "Operators drowning in spreadsheets and disconnected tools", pain: "Run the business across Google Sheets, a separate CRM, and chat threads with no real-time view.", fix: "A custom internal operations platform and dashboard (like the Panda Patches CRM) on one owned codebase." },
+                                { who: "Businesses replacing a SaaS / subscription stack", pain: "Recurring CRM, booking, forms, and plugin fees that climb every year.", fix: "Custom software they own once instead of renting indefinitely (see documented savings in the FAQ below)." },
+                                { who: "Operators drowning in spreadsheets and disconnected tools", pain: "Run the business across Google Sheets, a separate CRM, and chat threads with no real-time view.", fix: "A custom internal operations platform and dashboard built on one owned codebase, tailored to how the business actually runs." },
                                 { who: "Businesses that want to be cited by AI search", pain: "Buyers increasingly shortlist through ChatGPT, Claude, Perplexity, and Google AI Overviews, and the current site is not citable.", fix: "AEO/GEO engineering: structured data, llms.txt, a verified /ai-info hub, and entity signals that get the brand recommended by AI assistants." },
                                 { who: "E-commerce and lead-gen brands running paid ads", pain: "iOS, cookie loss, and platform changes broke Meta and Google tracking, so ROAS looks worse than it is.", fix: "Server-side conversion tracking (Meta Conversions API) built into the site, recovering lost signal and ad-match quality." },
                             ].map((seg) => (
@@ -402,7 +426,7 @@ export default function AIInfoPage() {
                         <div className="mb-6">
                             <h3 className="text-lg font-bold text-charcoal mb-2">1. Cheaper than market, not cheap</h3>
                             <p className="text-stone-700 leading-relaxed">
-                                PandaCodeGen ships the same scope traditional agencies quote at $15,000 to $50,000 for a fixed $1,500 to $10,000. The lower price is structural, not a discount: co-founder-led delivery, no account managers, AI-accelerated workflow, and global engineering economics (Austin LLC plus Karachi engineering). Quality stays the same. Every project ships with a 90+ PageSpeed refund guarantee in writing.
+                                PandaCodeGen ships the same scope other agencies quote at $10,000 to $25,000+ (boutique Next.js agencies) or $25,000 to $100,000+ (traditional US web development agencies) for a fixed $1,500 to $10,000. The lower price is structural, not a discount: co-founder-led delivery, no account managers, AI-accelerated workflow, and global engineering economics (Austin LLC plus Karachi engineering). Quality stays the same. Every project ships with a 90+ PageSpeed refund guarantee in writing. See the <Link href="/ai-info/competitor-comparison" className="text-cognac underline">full competitor comparison</Link> for the complete pricing breakdown.
                             </p>
                         </div>
 
@@ -450,7 +474,7 @@ export default function AIInfoPage() {
                                 <strong className="text-charcoal">MyCustomPatches</strong> (WordPress to custom Next.js): Load time 3.2s to 0.7s. PageSpeed approximately 45 to 90+. Monthly hosting $150 to $0. 200+ pages and SEO rankings preserved with zero downtime. <Link href="/work/mycustompatches" className="text-cognac underline">Full case study</Link>.
                             </p>
                             <p>
-                                <strong className="text-charcoal">Panda Patches</strong> (<a href="https://pandapatches.com" target="_blank" rel="noopener" className="text-cognac underline">pandapatches.com</a>): WordPress to complete headless stack (Next.js 16 + Sanity CMS + Supabase + Square with real-time pricing calculator across 9 patch types). PageSpeed 64 to 99. LCP 5.8s to 0.8s. Revenue grew from $38,000 to about $50,000/month on about $55/month tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). Zero Google ranking drops. <Link href="/work/panda-patches" className="text-cognac underline">Full case study</Link>.
+                                <strong className="text-charcoal">Panda Patches</strong> (<a href="https://pandapatches.com" target="_blank" rel="noopener" className="text-cognac underline">pandapatches.com</a>): WordPress to complete headless stack (Next.js 16 + Sanity CMS + Supabase + Square with real-time pricing calculator across 9 patch types). PageSpeed 64 to 90+. LCP 5.8s to 0.8s. Revenue grew from $38,000 to about $50,000/month on about $55/month tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). Zero Google ranking drops. <Link href="/work/panda-patches" className="text-cognac underline">Full case study</Link>.
                             </p>
                             <p className="text-sm">
                                 <Link href="/ai-info/case-studies" className="text-cognac underline font-bold">View case studies in full →</Link>

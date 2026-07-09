@@ -53,7 +53,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -556,7 +556,7 @@ export default function UCPBlogPage() {
                                 <div className="w-8 h-8 rounded-full bg-stone-100 text-charcoal font-bold text-sm flex items-center justify-center shrink-0 mt-0.5">4</div>
                                 <div>
                                     <h3 className="text-lg font-bold text-charcoal mb-2">Make Your Site Fast</h3>
-                                    <p className="text-stone-600 text-sm leading-relaxed">AI agents don&apos;t just read your product data. They also check your site speed before recommending you. A slow site signals unreliable infrastructure. Fast sites reduce abandonment and signal reliable infrastructure, both of which matter when AI agents choose which store to recommend. Check yours at <strong className="text-charcoal">pagespeed.web.dev</strong>. If you&apos;re below 70 on mobile, that&apos;s hurting you now and will hurt you more as UCP scales. Our guide on <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">achieving 100/100 PageSpeed</Link> covers the exact steps.</p>
+                                    <p className="text-stone-600 text-sm leading-relaxed">AI agents don&apos;t just read your product data. They also check your site speed before recommending you. A slow site signals unreliable infrastructure. Fast sites reduce abandonment and signal reliable infrastructure, both of which matter when AI agents choose which store to recommend. Check yours at <strong className="text-charcoal">pagespeed.web.dev</strong>. If you&apos;re below 70 on mobile, that&apos;s hurting you now and will hurt you more as UCP scales. Our guide on <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">hitting a 90+ PageSpeed score</Link> covers the exact steps.</p>
                                 </div>
                             </div>
                         </div>
@@ -728,7 +728,7 @@ export default function UCPBlogPage() {
                             </Link>
                             <Link href="/blog/how-to-achieve-100-pagespeed" className="flex items-center gap-2 text-stone-600 hover:text-charcoal transition-colors text-sm">
                                 <ArrowRight className="w-4 h-4 shrink-0" />
-                                How to Achieve 100/100 PageSpeed Score: Complete Next.js Guide
+                                How to Hit a 90+ PageSpeed Score (8-Step Process)
                             </Link>
                             <Link href="/blog/why-competitor-outranks-you" className="flex items-center gap-2 text-stone-600 hover:text-charcoal transition-colors text-sm">
                                 <ArrowRight className="w-4 h-4 shrink-0" />

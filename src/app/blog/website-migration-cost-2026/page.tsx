@@ -65,7 +65,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -280,7 +280,7 @@ export default function WebsiteMigrationCost2026Page() {
                                 <tr><td className="p-3 font-medium">WordPress</td><td data-label="Low" className="p-3">$1,500</td><td data-label="Median" className="p-3">$3,500</td><td data-label="High" className="p-3">$10,000+</td><td data-label="Real receipt" className="p-3 text-stone-600">Panda Patches and MyCustomPatches (in-house)</td></tr>
                                 <tr><td className="p-3 font-medium">WooCommerce</td><td data-label="Low" className="p-3">$3,500</td><td data-label="Median" className="p-3">$8,000</td><td data-label="High" className="p-3">$10,000+</td><td data-label="Real receipt" className="p-3 text-stone-600">Headless cart with Stripe + Sanity inventory</td></tr>
                                 <tr><td className="p-3 font-medium">Webflow</td><td data-label="Low" className="p-3">$1,500</td><td data-label="Median" className="p-3">$3,500</td><td data-label="High" className="p-3">$5,000-$10,000</td><td data-label="Real receipt" className="p-3 text-stone-600">Same scope enterprise agencies quote at $25,000+</td></tr>
-                                <tr><td className="p-3 font-medium">Wix</td><td data-label="Low" className="p-3">$1,500 (Starter)</td><td data-label="Median" className="p-3">$1,500</td><td data-label="High" className="p-3">$3,500</td><td data-label="Real receipt" className="p-3 text-stone-600">Obare Magazine: 7 days, 225K IG audience</td></tr>
+                                <tr><td className="p-3 font-medium">Wix</td><td data-label="Low" className="p-3">$1,500 (Starter)</td><td data-label="Median" className="p-3">$1,500</td><td data-label="High" className="p-3">$3,500</td><td data-label="Real receipt" className="p-3 text-stone-600">Obare Magazine: $1,350, 7 days, 225K IG audience</td></tr>
                                 <tr><td className="p-3 font-medium">Squarespace</td><td data-label="Low" className="p-3">$1,500</td><td data-label="Median" className="p-3">$3,500</td><td data-label="High" className="p-3">$5,000-$10,000</td><td data-label="Real receipt" className="p-3 text-stone-600">Squarespace 7.1 Fluid Engine to Tailwind grid</td></tr>
                                 <tr><td className="p-3 font-medium">Shopify (headless)</td><td data-label="Low" className="p-3">$5,000</td><td data-label="Median" className="p-3">$8,000</td><td data-label="High" className="p-3">$10,000+</td><td data-label="Real receipt" className="p-3 text-stone-600">Panda Patches: scaled from $38K to about $50K/mo on about $55/mo tooling</td></tr>
                                 <tr><td className="p-3 font-medium">GoHighLevel</td><td data-label="Low" className="p-3">$1,500</td><td data-label="Median" className="p-3">$3,500</td><td data-label="High" className="p-3">$5,000</td><td data-label="Real receipt" className="p-3 text-stone-600">Funnels rebuilt as static pages, traffic preserved</td></tr>
@@ -298,7 +298,7 @@ export default function WebsiteMigrationCost2026Page() {
                         "Every old URL mapped to a new URL with a 301 redirect, so Google rankings transfer",
                         "A content management system the owner can edit without a developer",
                         "90+ PageSpeed score guaranteed on launch, or full refund of the final payment",
-                        "One free month of post-launch support",
+                        "Free post-launch support: 15 days on Starter, one full month on Growth and above",
                         "Hosting starts at $0 per month. Vercel's free tier scales to roughly 100,000 visits per month before any cost"
                     ]} />
                     <BlogText>
@@ -349,7 +349,7 @@ export default function WebsiteMigrationCost2026Page() {
                         <strong>Custom integrations.</strong> Stripe checkout, Cal.com booking, Resend transactional email, Zoho Campaigns email marketing, custom dashboards, gated member areas. Each integration adds 4 to 12 hours of work. The Scale tier ($5,000 to $10,000) is where these get bundled in. The Starter ($1,500) tier ships with one default integration (Web3Forms or Cal.com).
                     </BlogText>
                     <BlogText>
-                        <strong>Post-launch support.</strong> Every migration comes with one free month of bug fixes and minor updates. After that, we offer a flat $300 a month growth retainer that covers ongoing development support, SEO maintenance (schema, sitemap, technical audits, ranking monitoring), and 4 fresh blog posts per month written and shipped to your CMS. Most clients on the retainer use it for the content engine, not the maintenance, because the Vercel + Sanity + Stripe stack we ship is roughly maintenance-free at the small-business scale.
+                        <strong>Post-launch support.</strong> Every migration comes with free post-launch support: 15 days of bug fixes and minor updates on the Starter tier, a full month on Growth and above. After that, we offer a flat $300 a month growth retainer that covers ongoing development support, SEO maintenance (schema, sitemap, technical audits, ranking monitoring), and 4 fresh blog posts per month written and shipped to your CMS. Most clients on the retainer use it for the content engine, not the maintenance, because the Vercel + Sanity + Stripe stack we ship is roughly maintenance-free at the small-business scale.
                     </BlogText>
                     <BlogText>That is the cost map. Now the platform-by-platform breakdown.</BlogText>
 
@@ -401,7 +401,7 @@ export default function WebsiteMigrationCost2026Page() {
 
                     <BlogHeader id="webflow-migration-cost">How much does a Webflow migration cost in 2026?</BlogHeader>
                     <BlogText>
-                        A{" "}<Link href="/blog/webflow-migration-cost" className="text-cognac hover:underline font-medium">Webflow to custom-coded migration</Link>{" "}on PandaCodeGen pricing: $1,500 (Starter), $3,500 (Growth), $5,000 to $10,000 (Scale, for enterprise CMS migration). Standard Webflow agency quotes for the same scope: $15,000 to $40,000. Enterprise Webflow agencies{" "}<Link href="/blog/webflow-migration-50-to-100-pages" className="text-cognac hover:underline font-medium">price 50 to 100 page migrations</Link>{" "}in this range across 2024 and 2025 buyer research.
+                        A{" "}<Link href="/blog/webflow-migration-cost" className="text-cognac hover:underline font-medium">Webflow to custom-coded migration</Link>{" "}on PandaCodeGen pricing: $1,500 (Starter), $3,500 (Growth), $5,000 to $10,000 (Scale, for enterprise CMS migration). Standard Webflow agency quotes for the same scope: $15,000 to $40,000. Enterprise Webflow agencies{" "}<Link href="/blog/webflow-migration-cost" className="text-cognac hover:underline font-medium">price 50 to 100 page migrations</Link>{" "}in this range across 2024 and 2025 buyer research.
                     </BlogText>
                     <BlogText>
                         <strong>What real Webflow users say (forum receipts).</strong> The Webflow Discourse forum thread &ldquo;Webflow Optimize and Analyze pricing is insane&rdquo; (2025) documents Webflow&apos;s enterprise sales team quoting $40,000 to $60,000 a month to lift the CMS item limit on enterprise accounts. That is per month. For a site that hits the 10,000-item CMS cap, the upgrade cost runs $480,000 to $720,000 a year before any agency fees, design work, or development.
@@ -427,7 +427,7 @@ export default function WebsiteMigrationCost2026Page() {
                         A Wix to custom-coded migration on PandaCodeGen pricing: $1,500 (Starter), $3,500 (Growth, for sites with Wix Stores or Bookings).
                     </BlogText>
                     <BlogText>
-                        <strong>Obare Magazine: $1,200, 7 days, 225,000 Instagram followers watching.</strong> Obare Magazine, a culture and design publication with 225,000 Instagram followers, was running on Wix Editor in 2025. Pages loaded at 3 to 5 seconds. The Wix Velo runtime injected over 600KB of JavaScript on every page. SEO scores capped at 35 to 50 on mobile PageSpeed.
+                        <strong>Obare Magazine: $1,350, 7 days, 225,000 Instagram followers watching.</strong> Obare Magazine, a culture and design publication with 225,000 Instagram followers, was running on Wix Editor in 2025. Pages loaded at 3 to 5 seconds. The Wix Velo runtime injected over 600KB of JavaScript on every page. SEO scores capped at 35 to 50 on mobile PageSpeed.
                     </BlogText>
                     <BlogText>
                         We migrated the entire publication from Wix to Next.js in 7 days. All articles moved into Sanity for ongoing editorial work. All URLs preserved with 301 redirect mapping. Page load dropped to under 0.8 seconds. PageSpeed jumped to 90+. Monthly Wix subscription: gone. Total monthly cost after migration: $0.

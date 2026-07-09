@@ -55,7 +55,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -244,7 +244,7 @@ export default function WebflowMigrationCostPage() {
                         <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
                             <p className="text-sm text-stone-700 leading-relaxed">
-                                Your Webflow plan and add-ons bill keeps climbing. Your revenue does not. PandaCodeGen migrates Webflow sites to custom Next.js + Sanity where you stop paying $39 to $235/month forever, designed to get cited by ChatGPT, Claude, and Google AI from launch day. Fixed pricing from $1,500 Starter to $10,000+ Scale+. 90+ PageSpeed in writing or full refund. Free 30-day post-launch tweak window on every build.
+                                Your Webflow plan and add-ons bill keeps climbing. Your revenue does not. PandaCodeGen migrates Webflow sites to custom Next.js + Sanity where you stop paying $39 to $235/month forever, designed to get cited by ChatGPT, Claude, and Google AI from launch day. Fixed pricing from $1,500 Starter to $10,000+ Scale+. 90+ PageSpeed in writing or full refund. Free post-launch tweak window on every build: 15 days on Starter, 1 month on Growth and above.
                             </p>
                         </div>
 
@@ -338,7 +338,7 @@ export default function WebflowMigrationCostPage() {
                         </div>
 
                         <BlogText>
-                            Large Webflow migrations in our Scale tier run <BlogHighlight>$5,000 to $10,000+</BlogHighlight> for 50 to 100 page sites. At this scale the migration is no longer just a rebuild: complex CMS modeling, third-party integrations, and 301 redirect strategy become the bulk of the engineering hours. We broke down the exact hour-per-phase estimates and compared our pricing against enterprise agencies in our <Link href="/blog/webflow-migration-50-to-100-pages" className="text-cognac hover:underline">50 to 100 page Webflow migration pricing breakdown</Link>. Enterprise scopes beyond 100 pages are custom-quoted in Scale+.
+                            Large Webflow migrations in our Scale tier run <BlogHighlight>$5,000 to $10,000+</BlogHighlight> for 50 to 100 page sites. At this scale the migration is no longer just a rebuild: complex CMS modeling, third-party integrations, and 301 redirect strategy become the bulk of the engineering hours. The full scope of what each tier includes, and how the handoff works end to end, is on our <Link href="/services/webflow" className="text-cognac hover:underline">Webflow migration service</Link> page. Enterprise scopes beyond 100 pages are custom-quoted in Scale+.
                         </BlogText>
 
                         <BlogText>
@@ -418,7 +418,7 @@ export default function WebflowMigrationCostPage() {
                                 { icon: CheckCircle2, label: "Google Search Console setup and sitemap submitted" },
                                 { icon: CheckCircle2, label: "Core Web Vitals verified at 90+ on all three" },
                                 { icon: CheckCircle2, label: "Zero-downtime DNS cutover process" },
-                                { icon: CheckCircle2, label: "30-day post-launch crawl error monitoring" },
+                                { icon: CheckCircle2, label: "Post-launch crawl error monitoring" },
                                 { icon: CheckCircle2, label: "Handover documentation for content updates" },
                             ].map(({ icon: Icon, label }) => (
                                 <div key={label} className="flex items-start gap-3 p-3 bg-stone-50 rounded-lg border border-stone-100">
@@ -670,7 +670,7 @@ export default function WebflowMigrationCostPage() {
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">Webflow had 14 incidents in 90 days (4 major, 10 minor) as tracked by IsDown third-party monitoring. A business doing $500K/year loses approximately $1,600 annually from Webflow's historical outage pattern. Custom Next.js on Vercel runs with 99.99% SLA uptime.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Webflow had 14 incidents in 90 days (4 major, 10 minor) as tracked by IsDown third-party monitoring. A business doing $500K/year loses approximately $1,600 annually from Webflow's historical outage pattern. Custom Next.js on Vercel runs on a global edge network with 300+ locations and none of Webflow's outage history.</p>
                         </div>
 
                         <BlogText>
@@ -682,7 +682,7 @@ export default function WebflowMigrationCostPage() {
                         </BlogText>
 
                         <BlogText>
-                            This matters for migration cost calculations. A business doing $500K/year in online revenue loses approximately $1,600 per year from Webflow&apos;s historical outage pattern (28 hours of degraded service across 14 incidents). Over 3 years, that is $4,800 in lost revenue that never shows up in any comparison table. A custom Next.js site on Vercel runs with 99.99% SLA uptime. That uptime difference alone can pay for a significant portion of your migration cost over 3 years.
+                            This matters for migration cost calculations. A business doing $500K/year in online revenue loses approximately $1,600 per year from Webflow&apos;s historical outage pattern (28 hours of degraded service across 14 incidents). Over 3 years, that is $4,800 in lost revenue that never shows up in any comparison table. A custom Next.js site on Vercel serves pre-built pages from a global edge network with 300+ locations, a track record Webflow&apos;s outage history cannot match. That reliability difference alone can pay for a significant portion of your migration cost over 3 years.
                         </BlogText>
 
                         <BlogHeader>When Does a Webflow Migration Pay for Itself?</BlogHeader>

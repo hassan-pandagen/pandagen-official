@@ -4,13 +4,13 @@ import { blogPosts } from "@/data/blog";
 
 export const metadata: Metadata = {
     title: "Web Development & Performance Blog",
-    description: "Guides on WordPress migration, Shopify speed, Next.js performance, and Core Web Vitals. Written by engineers who build 100/100 PageSpeed sites.",
+    description: "Guides on WordPress migration, Shopify speed, Next.js performance, and Core Web Vitals. Written by engineers who build 90+ PageSpeed sites.",
     alternates: {
         canonical: "/blog",
     },
     openGraph: {
         title: { absolute: "Web Development & Performance Blog | PandaCodeGen" },
-        description: "Guides on WordPress migration, Shopify speed, Next.js performance, and Core Web Vitals. Written by engineers who build 100/100 PageSpeed sites.",
+        description: "Guides on WordPress migration, Shopify speed, Next.js performance, and Core Web Vitals. Written by engineers who build 90+ PageSpeed sites.",
         url: "https://www.pandacodegen.com/blog",
         type: "website",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],

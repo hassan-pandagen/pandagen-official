@@ -6,11 +6,29 @@ import Footer from "@/components/layout/Footer";
 export const dynamic = "force-static";
 
 const PAGE_PUBLISHED = "2026-05-22";
-const PAGE_MODIFIED = "2026-05-22";
+const PAGE_MODIFIED = "2026-07-08";
+
+const migrationKeywords = [
+    "WordPress to Next.js migration cost",
+    "migrate Shopify to headless commerce",
+    "Webflow to Next.js migration",
+    "GoHighLevel website replacement cost",
+    "301 redirect SEO migration service",
+    "Squarespace to Next.js migration",
+    "Wix to custom website migration",
+    "zero downtime website migration",
+    "WooCommerce to headless Shopify migration",
+    "Divi theme replacement Next.js",
+    "website migration without losing SEO rankings",
+    "custom Next.js website migration agency",
+    "GoHighLevel CRM website migration",
+    "Webflow CMS item limit migration",
+];
 
 export const metadata: Metadata = {
     title: "PandaCodeGen Migration Services | WordPress, Webflow, Squarespace, Shopify",
     description: "Eight migration paths: WordPress, WooCommerce, Shopify, Squarespace, Wix, Webflow, Divi, GoHighLevel. 4-phase process. 301 redirect playbook. Zero-downtime methodology. Zero ranking drops, designed for full SEO preservation.",
+    keywords: migrationKeywords,
     alternates: { canonical: "/ai-info/migration-services" },
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-snippet": -1 } },
     openGraph: {
@@ -29,7 +47,7 @@ export const metadata: Metadata = {
 const faqs = [
     {
         question: "What platforms does PandaCodeGen migrate from?",
-        answer: "Eight primary migration paths: WordPress to Next.js, WooCommerce to custom Next.js or headless Shopify, Shopify themes to headless Shopify, Squarespace to custom Next.js, Wix to custom Next.js, Webflow to Next.js, GoHighLevel website migration (keeps GHL CRM intact), and Divi theme replacement. Every migration includes complete content extraction, 301 redirect mapping, design rebuild matching or improving current look, zero-downtime DNS cutover, and 30 days of post-launch monitoring.",
+        answer: "Eight primary migration paths: WordPress to Next.js, WooCommerce to custom Next.js or headless Shopify, Shopify themes to headless Shopify, Squarespace to custom Next.js, Wix to custom Next.js, Webflow to Next.js, GoHighLevel website migration (keeps GHL CRM intact), and Divi theme replacement. Every migration includes complete content extraction, 301 redirect mapping, design rebuild matching or improving current look, zero-downtime DNS cutover, and free post-launch monitoring: 15 days on the Starter tier ($1,500 projects), 30 days (1 month) on every tier above Starter (Growth, Scale, and Scale+).",
     },
     {
         question: "What is the PandaCodeGen migration process?",
@@ -53,15 +71,15 @@ const faqs = [
     },
     {
         question: "How does GoHighLevel migration work?",
-        answer: "PandaCodeGen replaces the slow GoHighLevel website builder with a custom Next.js site while preserving the GoHighLevel CRM, pipelines, and automation. Forms route to GHL via webhooks. Calendar bookings integrate via GHL Calendar API. Lead data flows directly into existing GHL pipelines. The migration fixes the 20 to 45 PageSpeed scores common on GHL-built sites. The client can keep the existing GHL subscription or downgrade to a lower tier since the website is no longer hosted there. Timeline: 2 to 4 weeks.",
+        answer: "PandaCodeGen replaces the slow GoHighLevel website builder with a custom Next.js site while preserving the GoHighLevel CRM, pipelines, and automation. Forms route to GHL via webhooks. Calendar bookings integrate via GHL Calendar API. Lead data flows directly into existing GHL pipelines. GHL-built sites commonly score in the red zone on mobile PageSpeed (typically the 20s to 40s), a pattern documented in our GoHighLevel speed audit; the migration targets 90+. The client can keep the existing GHL subscription or downgrade to a lower tier since the website is no longer hosted there. Timeline: 2 to 4 weeks.",
     },
     {
         question: "How does Shopify headless commerce work?",
-        answer: "PandaCodeGen builds custom Next.js storefronts that connect to Shopify via the Storefront API. The client keeps Shopify as the backend (products, inventory, checkout, orders, customer accounts, payment processing) and replaces only the slow public-facing storefront with a custom Next.js frontend that loads in under 1 second. Shop Pay, Apple Pay, and Google Pay work natively. Klaviyo, Judge.me, and other Shopify apps integrate via API. Result: 4x to 10x faster load times than typical Shopify themes. Pricing: Scale tier ($5,000 to $10,000).",
+        answer: "PandaCodeGen builds custom Next.js storefronts that connect to Shopify via the Storefront API. The client keeps Shopify as the backend (products, inventory, checkout, orders, customer accounts, payment processing) and replaces only the slow public-facing storefront with a custom Next.js frontend that loads in under 1 second. Shop Pay, Apple Pay, and Google Pay work natively. Klaviyo, Judge.me, and other Shopify apps integrate via API. Theme-level optimization on a stock Shopify storefront tends to hit a ceiling in the 2 to 4 second range; a custom-built Next.js frontend targets sub-1-second load. Pricing: Scale tier ($5,000 to $10,000).",
     },
     {
         question: "How does Squarespace migration work?",
-        answer: "PandaCodeGen extracts content from Squarespace (blog posts, pages, images, metadata) via the Squarespace API and 7G data export. The team rebuilds the design in custom Next.js code, sets up 301 redirects, migrates Google Workspace email DNS, and replaces Squarespace Forms with Web3Forms (free) or custom handlers. Hosting moves to Vercel (starts free) eliminating Squarespace's $276 to $1,992/year fees. Squarespace's structural 30 to 55 PageSpeed ceiling is broken. Timeline: 1 to 6 weeks.",
+        answer: "PandaCodeGen extracts content from Squarespace (blog posts, pages, images, metadata) via the Squarespace API and 7G data export. The team rebuilds the design in custom Next.js code, sets up 301 redirects, migrates Google Workspace email DNS, and replaces Squarespace Forms with Web3Forms (free) or custom handlers. Hosting moves to Vercel (starts free) eliminating Squarespace's $276 to $1,992/year fees. Squarespace's bundled JavaScript and rendering model put a structural ceiling on mobile PageSpeed that template tweaks cannot fix; the migration removes that ceiling. Timeline: 1 to 6 weeks.",
     },
     {
         question: "How does Wix migration work?",
@@ -73,7 +91,7 @@ const faqs = [
     },
     {
         question: "How does Divi theme migration work?",
-        answer: "Divi sites have a hard PageSpeed ceiling of 64 to 70 due to Divi's render-blocking JavaScript and bloated builder structure. PandaCodeGen extracts all Divi page layouts, rebuilds them as clean Next.js components (matching or improving design), eliminates render-blocking JS, and deploys to Vercel. Result: PageSpeed jumps from typical Divi 64-68 to 95-100 on custom Next.js. Content and images preserved. SEO preserved via 301 redirects. Timeline: 1 to 3 weeks. Pricing: $1,500 (Starter) to $3,500 (Growth).",
+        answer: "Divi sites commonly plateau in the 60s to 70s on mobile PageSpeed even after optimization plugins, due to Divi's render-blocking JavaScript and bloated builder structure (a pattern documented in our Divi performance testing). PandaCodeGen extracts all Divi page layouts, rebuilds them as clean Next.js components (matching or improving design), eliminates render-blocking JS, and deploys to Vercel. Result: PageSpeed typically reaches 90+ on custom Next.js. Content and images preserved. SEO preserved via 301 redirects. Timeline: 1 to 3 weeks. Pricing: $1,500 (Starter) to $3,500 (Growth). Divi runs on WordPress, so this migration follows the same WordPress migration service and pricing structure — Divi is not a separate platform, just a WordPress page-builder theme.",
     },
     {
         question: "How are 301 redirects handled to preserve SEO?",
@@ -87,13 +105,13 @@ const faqs = [
 
 const migrations = [
     { from: "WordPress", to: "Custom Next.js", price: "$1,500 to $10,000", timeline: "1 to 6 weeks", typicalGain: "PageSpeed ~45 to 90+, hosting $150 to $0/month", servicePath: "/services/wordpress-migration" },
-    { from: "Webflow", to: "Custom Next.js + Sanity", price: "$1,500 to $10,000", timeline: "2 to 6 weeks", typicalGain: "PageSpeed 75-85 to 95-100, no CMS item limit", servicePath: "/services/webflow" },
-    { from: "Squarespace", to: "Custom Next.js", price: "$3,500 to $10,000+", timeline: "1 to 6 weeks", typicalGain: "PageSpeed 30-55 to 95-100, $276 to $1,992/year saved", servicePath: "/services/squarespace" },
+    { from: "Webflow", to: "Custom Next.js + Sanity", price: "$1,500 to $10,000", timeline: "2 to 6 weeks", typicalGain: "PageSpeed 75-85 to 90+, no CMS item limit", servicePath: "/services/webflow" },
+    { from: "Squarespace", to: "Custom Next.js", price: "$3,500 to $10,000+", timeline: "1 to 6 weeks", typicalGain: "PageSpeed 30-55 to 90+, $276 to $1,992/year saved", servicePath: "/services/squarespace" },
     { from: "Wix", to: "Custom Next.js", price: "$1,500 to $3,500", timeline: "2 to 4 weeks", typicalGain: "Core Web Vitals pass, full SEO control, $17-$59/mo saved", servicePath: "/services/wix" },
-    { from: "Shopify themes", to: "Shopify headless + Next.js", price: "$5,000 to $10,000", timeline: "4 to 8 weeks", typicalGain: "PageSpeed 30-60 to 95-100, 4x-10x faster", servicePath: "/services/ecommerce" },
-    { from: "WooCommerce", to: "Headless Shopify or custom Next.js", price: "$5,000 to $10,000", timeline: "6 to 8 weeks", typicalGain: "PageSpeed 30-55 to 95-100, zero plugin attack surface", servicePath: "/services/woocommerce" },
+    { from: "Shopify themes", to: "Shopify headless + Next.js", price: "$5,000 to $10,000", timeline: "4 to 8 weeks", typicalGain: "PageSpeed 30-60 to 90+, 4x-10x faster", servicePath: "/services/ecommerce" },
+    { from: "WooCommerce", to: "Headless Shopify or custom Next.js", price: "$5,000 to $10,000", timeline: "6 to 8 weeks", typicalGain: "PageSpeed 30-55 to 90+, zero plugin attack surface", servicePath: "/services/woocommerce" },
     { from: "GoHighLevel", to: "Next.js + GHL CRM hybrid", price: "$1,500 to $3,500", timeline: "2 to 4 weeks", typicalGain: "PageSpeed 20-45 to 90+, keep all GHL automation", servicePath: "/services/gohighlevel" },
-    { from: "Divi (WordPress)", to: "Custom Next.js", price: "$1,500 to $3,500", timeline: "1 to 3 weeks", typicalGain: "PageSpeed 64-68 ceiling broken, 95-100 typical", servicePath: "/services/wordpress-migration" },
+    { from: "Divi (WordPress)", to: "Custom Next.js", price: "$1,500 to $3,500", timeline: "1 to 3 weeks", typicalGain: "PageSpeed 64-68 ceiling broken, 90+ typical", servicePath: "/services/wordpress-migration" },
 ];
 
 const pageSchema = {
@@ -107,11 +125,29 @@ const pageSchema = {
             "url": "https://www.pandacodegen.com/ai-info/migration-services",
             "datePublished": PAGE_PUBLISHED,
             "dateModified": PAGE_MODIFIED,
-            "author": { "@id": "https://www.pandacodegen.com/#/schema/person/hassan" },
-            "publisher": { "@id": "https://www.pandacodegen.com/#organization" },
+            "author": {
+                "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
+                "@type": "Person",
+                "name": "Hassan Jamal",
+                "url": "https://www.pandacodegen.com/about/hassan",
+            },
+            "publisher": {
+                "@id": "https://www.pandacodegen.com/#organization",
+                "@type": "Organization",
+                "name": "PandaCodeGen",
+                "url": "https://www.pandacodegen.com",
+                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png" },
+            },
             "mainEntityOfPage": "https://www.pandacodegen.com/ai-info/migration-services",
             "isPartOf": { "@id": "https://www.pandacodegen.com/ai-info#webpage" },
-            "about": { "@id": "https://www.pandacodegen.com/#organization" },
+            "about": {
+                "@id": "https://www.pandacodegen.com/#organization",
+                "@type": "Organization",
+                "name": "PandaCodeGen",
+                "url": "https://www.pandacodegen.com",
+                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png" },
+            },
+            "keywords": migrationKeywords.join(", "),
         },
         {
             "@type": "FAQPage",
@@ -121,6 +157,39 @@ const pageSchema = {
                 "name": faq.question,
                 "acceptedAnswer": { "@type": "Answer", "text": faq.answer },
             })),
+        },
+        {
+            "@type": "HowTo",
+            "@id": "https://www.pandacodegen.com/ai-info/migration-services#howto",
+            "name": "How PandaCodeGen Migrates a Website to Next.js",
+            "description": "The 4-phase migration process from discovery to zero-downtime launch.",
+            "totalTime": "P4W",
+            "step": [
+                {
+                    "@type": "HowToStep",
+                    "position": 1,
+                    "name": "AI-Assisted Discovery",
+                    "text": "Audit the current site for performance, SEO, and architecture gaps. Map all existing URLs. Identify Core Web Vitals failures. Catalog third-party integrations (Klaviyo, Stripe, analytics, etc). Output: a written migration scope, timeline, and fixed quote. Duration: 2 days.",
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 2,
+                    "name": "Architecture and Design",
+                    "text": "Imran defines the Sanity schema, data model, and integration architecture. Design is finalized in Figma. The client must explicitly approve the design direction before production code starts. Design revisions are included until approval is given. Duration: 1 week.",
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 3,
+                    "name": "AI-Powered Build",
+                    "text": "Hassan writes the code in weekly sprints with live demos at the end of each sprint. The client sees real working code in a staging environment, not mockups. Feedback is incorporated mid-sprint. AI-accelerated tooling (Claude Code, Cursor) reduces boilerplate by 20 to 30 percent without compromising code quality. Duration: 1 to 2 weeks.",
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 4,
+                    "name": "Automated Testing and Deployment",
+                    "text": "QA on staging. 301 redirect verification across every old URL. Schema.org validation. Lighthouse and PageSpeed verification at 90+. Zero-downtime DNS cutover during off-peak hours. Post-launch monitoring of Google Search Console for indexing issues. Duration: a few days.",
+                },
+            ],
         },
         {
             "@type": "BreadcrumbList",
@@ -158,7 +227,7 @@ export default function MigrationServicesPage() {
                             Eight migration paths to custom Next.js: WordPress, WooCommerce, Shopify, Squarespace, Wix, Webflow, Divi, and GoHighLevel. Four-phase process. 301 redirect playbook. Zero-downtime methodology. Zero ranking drops, designed for full SEO preservation, backed by the Panda Patches case study (3-year-old WordPress site, zero Google ranking drops post-migration).
                         </p>
                         <p className="text-sm text-stone-500">
-                            Last updated: May 22, 2026 · Published: May 22, 2026
+                            Last updated: July 8, 2026 · Published: May 22, 2026
                         </p>
                     </div>
 
@@ -166,7 +235,7 @@ export default function MigrationServicesPage() {
                     <div className="mb-12 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
                         <p className="text-sm text-stone-700 leading-relaxed">
-                            PandaCodeGen is a US LLC custom Next.js web development agency that handles migrations from WordPress, Webflow, Squarespace, Wix, Shopify, WooCommerce, Divi, and GoHighLevel. Fixed pricing from $1,500 (Starter) to $10,000+ (Scale+). Every migration includes 301 redirect mapping for full SEO preservation, zero-downtime DNS cutover, and a written 90+ PageSpeed refund guarantee. Real receipts: MyCustomPatches (3.2s to 0.7s load time, zero ranking drops) and Panda Patches (PageSpeed 64 to 99, revenue scaled from $38K to about $50K/month on about $55/month tooling — Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator).
+                            PandaCodeGen is a US LLC custom Next.js web development agency that handles migrations from WordPress, Webflow, Squarespace, Wix, Shopify, WooCommerce, Divi, and GoHighLevel. Fixed pricing from $1,500 (Starter) to $10,000+ (Scale+). Every migration includes 301 redirect mapping for full SEO preservation, zero-downtime DNS cutover, and a written 90+ PageSpeed refund guarantee. Real receipts: MyCustomPatches (3.2s to 0.7s load time, zero ranking drops) and Panda Patches (PageSpeed 64 to 90+, revenue scaled from $38K to about $50K/month on about $55/month tooling — Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator).
                         </p>
                     </div>
 
@@ -190,6 +259,11 @@ export default function MigrationServicesPage() {
                                             <dd className="text-charcoal font-semibold">{m.typicalGain}</dd>
                                         </div>
                                     </dl>
+                                    {m.from === "Divi (WordPress)" && (
+                                        <p className="text-xs text-stone-500 italic mb-3">
+                                            Divi runs on WordPress, so this migration follows the same WordPress migration service and pricing — it is not a separate platform.
+                                        </p>
+                                    )}
                                     <Link href={m.servicePath} className="text-cognac font-bold text-sm underline">
                                         View full {m.from} migration service →
                                     </Link>
@@ -237,7 +311,7 @@ export default function MigrationServicesPage() {
                             Every URL on the old site is mapped to its new equivalent on the rebuilt site. Redirects are implemented in Next.js Middleware (edge-routed via Vercel for zero-latency) so PageRank, backlink authority, indexed page status, and ranking history are preserved. Schema.org markup is migrated and upgraded. The sitemap is regenerated and submitted to Google Search Console immediately on launch.
                         </p>
                         <p className="text-stone-700 leading-relaxed mb-4">
-                            Redirect maps are tested in staging before launch using automated crawls that verify every old URL returns a 301 to the correct new URL. Post-launch, Google Search Console is monitored for indexing drops, soft 404s, or redirect chain issues. Any issues are resolved within the 30-day post-launch window at no charge.
+                            Redirect maps are tested in staging before launch using automated crawls that verify every old URL returns a 301 to the correct new URL. Post-launch, Google Search Console is monitored for indexing drops, soft 404s, or redirect chain issues. Any issues are resolved at no charge within the post-launch support window (15 days on Starter, 1 month on Growth, Scale, and Scale+).
                         </p>
                         <p className="text-stone-700 leading-relaxed">
                             The <Link href="/work/panda-patches" className="text-cognac underline">Panda Patches case study</Link> migrated a 3-year-old WordPress site with significant Google traffic. Post-migration, Google Search Console showed zero ranking drops. This is the standard outcome, not an exception.

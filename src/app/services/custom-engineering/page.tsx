@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import PageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'Need a Custom Next.js Web App Built From Scratch?',
+  title: 'Need a Custom Next.js App Built From Scratch?',
   description: 'We build custom Next.js web apps, SaaS platforms, and client portals from scratch. Fixed-price quotes, you own the code, built to scale from day one.',
   alternates: { canonical: '/services/custom-engineering' },
   keywords: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'custom portal development',
   ],
   openGraph: {
-    title: 'Need a Custom Next.js Web App Built From Scratch? | PandaCodeGen',
+    title: 'Need a Custom Next.js App Built From Scratch? | PandaCodeGen',
     description: 'Custom Next.js web apps, SaaS platforms, and client portals from scratch. Fixed-price quotes, you own the code, built to scale.',
     url: 'https://www.pandacodegen.com/services/custom-engineering',
     siteName: 'PandaCodeGen',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Need a Custom Next.js Web App Built From Scratch? | PandaCodeGen',
+    title: 'Need a Custom Next.js App Built From Scratch? | PandaCodeGen',
     description: 'Custom Next.js web apps, SaaS platforms, and client portals. Fixed-price quotes, you own the code, built to scale.',
   },
 };
@@ -44,7 +44,7 @@ export default function EngineeringPage() {
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
         "serviceType": ["SaaS Development", "Web Application Development", "Custom Dashboard", "AI Integration"],
-        "priceRange": "$3,000 - $60,000",
+        "priceRange": "$3,000 - $25,000+",
         "telephone": "+13027738982",
         "address": {
           "@type": "PostalAddress",

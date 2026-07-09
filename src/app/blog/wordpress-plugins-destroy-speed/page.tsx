@@ -4,7 +4,7 @@ import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
+import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor, StatCard, ComparisonGrid } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
@@ -52,7 +52,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -247,7 +247,7 @@ export default function WordPressPluginsSpeedPage() {
                             "If you do $200K/year with a 4-second load time: $30K to $60K in lost annual revenue"
                         ]} />
                         <BlogQuote>
-                            A client came to us with 34 active plugins and a 4.3-second load time. Conservative estimate of lost annual revenue: $89,000. The plugins they were paying for were costing them far more than their subscription fees.
+                            A typical audit pattern we see: 30+ active plugins, a 4+ second load time, and $500K+ in annual revenue. Run that profile through the formula above and the conservative loss estimate lands at $75K-$150K a year. The plugins on the invoice were costing far more than their subscription fees.
                         </BlogQuote>
 
                         <BlogHeader>How Do You Identify Which Plugins Are Causing the Most Damage?</BlogHeader>
@@ -261,11 +261,22 @@ export default function WordPressPluginsSpeedPage() {
                             "Step 4: Deactivate plugins one at a time and re-test speed after each removal",
                             "Step 5: Keep deactivated anything that doesn't cause a visible loss in functionality"
                         ]} />
+                        <BlogText>
+                            Once you have that data, sort every plugin into one of three buckets. This scorecard is what separates a real audit from guesswork:
+                        </BlogText>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-10">
+                            <StatCard stat="Keep" label="Under 50ms server time" context="Runs a single query or none. Removing it breaks a feature visitors use." />
+                            <StatCard stat="Replace" label="50-200ms server time" context="Doing a job a lighter plugin or 20 lines of theme code could do instead." />
+                            <StatCard stat="Kill" label="200ms+ or unused 30 days" context="Query Monitor shows heavy DB hits, or activity logs show nobody's touched it." />
+                        </div>
+                        <BlogText>
+                            Query Monitor's admin bar shows per-plugin query counts and time on every page load. Anything sitting in the "Kill" column on your homepage and checkout page simultaneously is your highest-priority removal, since that's where load compounds fastest per visitor.
+                        </BlogText>
 
                         {/* Mid-Article CTA */}
                         <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
-                            <p className="font-bold text-charcoal mb-2">How many plugins are killing your speed right now?</p>
-                            <p className="text-stone-600 mb-4 text-sm">Drop your URL when you book. We audit your plugin stack live on the call, show you your real speed ceiling, and quote the migration that permanently fixes it.</p>
+                            <p className="font-bold text-charcoal mb-2">Which of your plugins fall in the "kill" column?</p>
+                            <p className="text-stone-600 mb-4 text-sm">Drop your URL when you book. We run the keep/replace/kill scorecard on your live plugin stack, show you your real speed ceiling, and quote the migration that permanently fixes it.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free Speed Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
                         </div>
 
@@ -283,7 +294,37 @@ export default function WordPressPluginsSpeedPage() {
                             "Multiple SEO plugins running simultaneously: Pick one. Either Rank Math or Yoast, never both"
                         ]} />
                         <BlogText>
-                            For the Elementor and Divi deep dives, see <Link href="/blog/elementor-kills-seo" className="text-cognac hover:underline">Elementor kills SEO</Link> and <Link href="/blog/divi-theme-slow" className="text-cognac hover:underline">why Divi themes run slow</Link>.
+                            For the Elementor and Divi deep dives, see <Link href="/blog/elementor-kills-seo" className="text-cognac hover:underline">Elementor kills SEO</Link> and <Link href="/blog/divi-theme-slow" className="text-cognac hover:underline">why Divi themes run slow</Link>. And speed is not the only tax. The new wave of AI plugins stacks security exposure on top, which we broke down in the <Link href="/blog/wordpress-ai-security-risk-2026" className="text-cognac hover:underline">WordPress AI plugin security risk</Link>.
+                        </BlogText>
+
+                        <BlogHeader>How Do You Consolidate Plugins Instead of Just Deleting Them?</BlogHeader>
+                        <BlogText>
+                            Deleting a plugin outright only works if nothing on the site depends on it. Most of the time the better move is consolidation: replacing three or four single-purpose plugins doing overlapping jobs with one lighter tool, or with a small snippet of theme code that does the same job without the framework overhead.
+                        </BlogText>
+                        <ComparisonGrid
+                            left={{
+                                label: "Common Overlap Stack",
+                                items: [
+                                    "Yoast SEO + Rank Math (both active)",
+                                    "Contact Form 7 + WPForms + Gravity Forms",
+                                    "3 separate social share button plugins",
+                                    "A slider plugin used on one page",
+                                    "A full page builder for a static About page"
+                                ]
+                            }}
+                            right={{
+                                label: "Consolidated Result",
+                                items: [
+                                    "One SEO plugin, the other fully deleted",
+                                    "One form plugin for the entire site",
+                                    "Native share links coded once in the theme",
+                                    "A CSS-only carousel or static image grid",
+                                    "Gutenberg blocks, no builder framework loaded"
+                                ]
+                            }}
+                        />
+                        <BlogText>
+                            Each consolidation in that list removes an entire plugin's CSS, JS, and database footprint at once, not just the code for one feature. That is why consolidation audits usually recover more speed per hour of work than deleting rarely-used plugins one at a time.
                         </BlogText>
 
                         <BlogHeader>What Is the Maximum Speed You Can Reach by Fixing WordPress Plugins?</BlogHeader>
@@ -318,11 +359,11 @@ export default function WordPressPluginsSpeedPage() {
 
                     {/* Bottom CTA */}
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
-                        <h3 className="text-2xl font-bold mb-4">Find Out Which Plugins Are Costing You the Most</h3>
+                        <h3 className="text-2xl font-bold mb-4">Get Your Plugin Stack Scored: Keep, Replace, or Kill</h3>
                         <p className="text-stone-600 mb-6">
-                            Free WordPress speed audit: we identify your worst plugins, calculate revenue loss, and show your path to 90+ PageSpeed.
+                            Free plugin audit: we run the Query Monitor + GTmetrix scorecard on your live site, sort every plugin into keep/replace/kill, and show your path to 90+ PageSpeed.
                         </p>
-                        <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Book Free Speed Audit <ArrowRight className="w-5 h-5" /></CalModalButton>
+                        <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Book Free Plugin Audit <ArrowRight className="w-5 h-5" /></CalModalButton>
                     </div>
 
                     {/* Key Takeaways */}
@@ -332,6 +373,8 @@ export default function WordPressPluginsSpeedPage() {
                             <li><strong>Every plugin is a permanent tax on your speed</strong>: Each one adds 2-15 HTTP requests, database queries, and JavaScript that load on every single page whether needed or not.</li>
                             <li><strong>30+ plugins typically means a 35/100 PageSpeed score</strong>: That is Google's red zone, actively suppressing your organic rankings and handing traffic to faster competitors.</li>
                             <li><strong>Plugin bloat costs real revenue</strong>: A 4-second load time on a $500K/year business translates to $75K-$150K in lost annual revenue from abandoned visits and lower conversions.</li>
+                            <li><strong>Score every plugin as keep, replace, or kill using server time</strong>: Query Monitor's per-plugin query time turns plugin auditing from guesswork into a measurable process.</li>
+                            <li><strong>Consolidating overlapping plugins beats deleting one at a time</strong>: Merging 3-4 single-purpose plugins into one tool removes an entire framework's CSS and JS footprint at once.</li>
                             <li><strong>Removing half your plugins only gets you to 55-65/100</strong>: You can reduce the damage, but WordPress's hard ceiling of ~75/100 means you will never reach Google's green zone.</li>
                             <li><strong>Migration is the only path to 90+ PageSpeed</strong>: Once you have removed all non-essential plugins and still score below 70, the platform itself is the bottleneck, not your settings.</li>
                         </ol>

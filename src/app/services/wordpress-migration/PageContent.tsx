@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "@/components/ui/motion";
-import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Lock, Database, Server, FileSearch, Wrench, Rocket, HelpCircle, ShoppingBag, Layers, ArrowDown } from "lucide-react";
+import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Lock, Database, Server, FileSearch, Wrench, Rocket, HelpCircle } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -62,7 +62,7 @@ export default function PageContent() {
           >
             Your WordPress site is 3x slower than your competitor. <br />
             <span className="font-serif italic text-cognac">
-              We rebuild it on Next.js in 3 weeks.
+              We rebuild it on Next.js in 2 to 4 weeks.
             </span>
           </motion.h1>
 
@@ -77,7 +77,7 @@ export default function PageContent() {
 
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.15 }} className="flex flex-wrap justify-center gap-3 mb-6">
             <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-stone-200 shadow-xs text-sm">
-              <span className="text-cognac font-black">98/100</span>
+              <span className="text-cognac font-black">90+</span>
               <span className="text-stone-500">PageSpeed</span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-stone-200 shadow-xs text-sm">
@@ -149,9 +149,9 @@ export default function PageContent() {
 
           <div className="grid md:grid-cols-3 gap-5">
             {[
-              { label: "PageSpeed Mobile", before: "34", after: "98", suffix: "/100", color: "#b87a3d" },
-              { label: "Load Time", before: "4.2s", after: "0.8s", suffix: "", color: "#16a34a" },
-              { label: "Monthly Cost", before: "$350", after: "$0", suffix: "/mo", color: "#2563eb" },
+              { label: "PageSpeed Mobile", before: "45", after: "90+", suffix: "", color: "#b87a3d" },
+              { label: "Load Time", before: "3.2s", after: "0.7s", suffix: "", color: "#16a34a" },
+              { label: "Hosting Cost", before: "$150", after: "$0", suffix: "/mo", color: "#2563eb" },
             ].map((stat, i) => (
               <motion.div
                 key={i}
@@ -173,7 +173,7 @@ export default function PageContent() {
             ))}
           </div>
 
-          <p className="text-center text-xs text-stone-600 font-medium mt-6">Based on average results across WordPress to Next.js migrations</p>
+          <p className="text-center text-xs text-stone-600 font-medium mt-6">Real client result: MyCustomPatches (mycustompatches.net), migrated from WordPress to custom Next.js. 5-star reviews on Clutch and GoodFirms.</p>
         </div>
       </section>
 
@@ -225,8 +225,8 @@ export default function PageContent() {
               <p className="text-sm text-stone-400">No hourly billing. No surprise invoices. Published tiers.</p>
             </div>
             <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
-              <div className="text-2xl font-bold text-cognac mb-1">Free month</div>
-              <p className="text-sm text-stone-400">30 days of post-launch tweaks included on every build.</p>
+              <div className="text-2xl font-bold text-cognac mb-1">Free support</div>
+              <p className="text-sm text-stone-400">15 to 30 days of post-launch tweaks included, depending on tier.</p>
             </div>
           </div>
         </div>
@@ -236,14 +236,14 @@ export default function PageContent() {
       <section id="how-it-works" className="py-12 md:py-20 px-6 bg-[#F8FAFC]">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How Our WordPress to Next.js Migration Works</h2>
-          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A proven 4-step process. No surprises. No downtime.</p>
+          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A proven 4-phase process, 2 to 4 weeks for most sites. No surprises. No downtime.</p>
 
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { step: "01", title: "Full Site Audit", desc: "We analyze your WordPress site top to bottom: speed, security, plugins, SEO, and database health. You get a detailed report showing exactly what's costing you money.", icon: FileSearch, duration: "Week 1" },
-              { step: "02", title: "Data Export & Cleaning", desc: "We extract every page, post, image, and metadata from your WordPress database, then clean it. Plugin bloat removed. Broken links fixed. Images optimized.", icon: Database, duration: "Week 2" },
-              { step: "03", title: "Custom Website Build", desc: "Your new site is built in Next.js with SSR, automatic image optimization, and a content editor. Every page loads in under 1 second.", icon: Wrench, duration: "Weeks 3 to 5" },
-              { step: "04", title: "Migration & Launch", desc: "Every old URL maps to the new site with 301 redirects. Zero rankings lost. Zero downtime. We launch, monitor, and hand you the keys.", icon: Rocket, duration: "Week 6" },
+              { step: "01", title: "Full Site Audit", desc: "We analyze your WordPress site top to bottom: speed, security, plugins, SEO, and database health. You get a detailed report showing exactly what's costing you money.", icon: FileSearch, duration: "Phase 1" },
+              { step: "02", title: "Data Export & Cleaning", desc: "We extract every page, post, image, and metadata from your WordPress database, then clean it. Plugin bloat removed. Broken links fixed. Images optimized.", icon: Database, duration: "Phase 2" },
+              { step: "03", title: "Custom Website Build", desc: "Your new site is built in Next.js with SSR, automatic image optimization, and a content editor. Every page loads in under 1 second.", icon: Wrench, duration: "Phase 3" },
+              { step: "04", title: "Migration & Launch", desc: "Every old URL maps to the new site with 301 redirects. Zero rankings lost. Zero downtime. We launch, monitor, and hand you the keys.", icon: Rocket, duration: "Phase 4" },
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -456,7 +456,7 @@ export default function PageContent() {
                 <tr className="bg-cognac/5 border-t-2 border-cognac/20">
                   <td className="p-3 text-charcoal font-bold">Total annual plugin bill eliminated</td>
                   <td data-label="" className="p-3 text-stone-500 text-xs italic">replaced with native code you own</td>
-                  <td data-label="Total" className="p-3 text-right text-cognac font-black">$1,023 to $1,483/yr</td>
+                  <td data-label="Total" className="p-3 text-right text-cognac font-black">$1,023 to $1,484/yr</td>
                 </tr>
               </tbody>
             </table>
@@ -466,82 +466,6 @@ export default function PageContent() {
 
       {/* PARTNER PROMISE — locked brand voice, 3 guarantees */}
       <PartnerPromise />
-
-      {/* SIGNATURE BLOCK — Plugin Teardown Stack (unique to WordPress migration) */}
-      <section id="plugin-teardown-stack" className="py-12 md:py-20 px-6 bg-stone-50 border-y border-stone-200">
-        <div className="container mx-auto max-w-3xl">
-          <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-stone-200 text-xs font-bold uppercase tracking-widest text-cognac mb-4">
-              <Layers className="w-3.5 h-3.5" /> Plugin Teardown
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
-              The teetering stack of plugins <span className="font-serif italic text-cognac">we collapse into code.</span>
-            </h2>
-            <p data-speakable="true" className="text-stone-600 text-base leading-relaxed max-w-2xl mx-auto">
-              A typical WordPress site balances seven paid plugins on top of each other, each one its own renewal, update, and security risk. We tear the stack down layer by layer and rebuild every function natively in your Next.js codebase, eliminating roughly $1,222 in plugin licenses every single year.
-            </p>
-          </div>
-
-          {/* Teetering stack — each row offset and rotated, collapsing downward */}
-          <div className="space-y-2">
-            {[
-              { plugin: "Elementor Pro", role: "Page builder", cost: "$59/yr", replaced: "Custom React components", rot: "-1.4deg", off: "ml-6" },
-              { plugin: "WP Rocket", role: "Caching", cost: "$59/yr", replaced: "Static generation + Vercel Edge", rot: "1deg", off: "ml-2" },
-              { plugin: "Yoast SEO Premium", role: "SEO", cost: "$99/yr", replaced: "Next.js metadata API", rot: "-0.8deg", off: "ml-8" },
-              { plugin: "WPForms Pro", role: "Forms", cost: "$199/yr", replaced: "API routes + Resend", rot: "1.2deg", off: "ml-1" },
-              { plugin: "Wordfence Premium", role: "Security", cost: "$119/yr", replaced: "No database, no attack surface", rot: "-1.1deg", off: "ml-5" },
-              { plugin: "UpdraftPlus Premium", role: "Backups", cost: "$70/yr", replaced: "Git history + Vercel deploys", rot: "0.6deg", off: "ml-3" },
-              { plugin: "Slider Revolution", role: "Sliders & galleries", cost: "$249/yr", replaced: "Native image optimization", rot: "-0.6deg", off: "ml-7" },
-            ].map((row, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.06 }}
-                style={{ transform: `rotate(${row.rot})` }}
-                className={`${row.off} mr-1 flex items-center gap-3 md:gap-4 bg-white border border-stone-200 rounded-2xl px-4 py-3 shadow-xs hover:rotate-0 hover:shadow-md transition-all`}
-              >
-                <div className="w-9 h-9 shrink-0 rounded-xl bg-stone-50 border border-stone-100 flex items-center justify-center">
-                  <XCircle className="w-4.5 h-4.5 text-stone-400" />
-                </div>
-                <div className="min-w-0 flex-1">
-                  <div className="flex items-center gap-2 flex-wrap">
-                    <span className="font-bold text-charcoal text-sm line-through decoration-stone-300">{row.plugin}</span>
-                    <span className="text-[10px] uppercase tracking-wider text-stone-400 font-semibold">{row.role}</span>
-                  </div>
-                  <p className="text-xs text-stone-500 mt-0.5">Now built into the codebase: {row.replaced}</p>
-                </div>
-                <span className="shrink-0 text-sm font-black text-cognac">{row.cost}</span>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Collapse arrow */}
-          <div className="flex flex-col items-center py-4 text-stone-400">
-            <ArrowDown className="w-6 h-6 animate-bounce" />
-            <span className="text-[10px] uppercase tracking-widest font-bold mt-1">Collapses into</span>
-          </div>
-
-          {/* Final single card — the whole stack reduced to one codebase */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="rounded-3xl bg-charcoal text-white p-7 md:p-9 text-center shadow-md"
-          >
-            <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-cognac/20 text-cognac mb-4">
-              <Code2 className="w-6 h-6" />
-            </div>
-            <h3 className="text-2xl md:text-3xl font-bold mb-2">One Next.js codebase. <span className="font-serif italic text-cognac">Zero plugins.</span></h3>
-            <p className="text-stone-300 text-sm leading-relaxed max-w-xl mx-auto mb-5">
-              Seven licenses, seven update streams, and seven security holes become one repository you own outright. Nothing to renew, nothing to patch, nothing to break on launch day.
-            </p>
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-cognac/10 border border-cognac/30 text-cognac font-black text-base">
-              <DollarSign className="w-4 h-4" /> $1,222/yr in plugin fees eliminated
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
       {/* PRICING TIERS — foot-in-the-door with agency comparison */}
       <PricingTiers
@@ -565,7 +489,7 @@ export default function PageContent() {
               "Sanity CMS so your team can edit",
               "90+ PageSpeed guaranteed",
               "301 redirect mapping (no SEO loss)",
-              "Free month of post-launch tweaks",
+              "15 days of free post-launch support",
             ],
             cta: "Get Starter Quote",
           },
@@ -580,7 +504,7 @@ export default function PageContent() {
               "Forms with custom API routes",
               "Full SEO migration with schema",
               "Analytics setup (GA4, Clarity)",
-              "60-day post-launch support",
+              "30 days of free post-launch support",
             ],
             featured: true,
           },
@@ -595,11 +519,14 @@ export default function PageContent() {
               "Complex plugin replacements",
               "Custom admin dashboard",
               "Multi-author / multi-site support",
-              "90-day post-launch support",
+              "30 days of free post-launch support",
             ],
           },
         ]}
       />
+
+      {/* SCALE+ NOTE — larger scopes beyond the grid */}
+      <p className="text-center text-sm text-stone-500 px-6 pb-10 -mt-4">Larger scopes: <span className="font-semibold text-charcoal">Scale+ from $10,000</span>, custom quoted after a scoping call.</p>
 
       {/* 7. DUAL CTA */}
       <section className="py-10 md:py-14 px-6 border-y border-stone-200 bg-white">
@@ -749,7 +676,7 @@ export default function PageContent() {
               </Link>
               <div>
                 <Link href="/about/hassan" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Hassan Jamal</Link>
-                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. 40+ WordPress to Next.js migrations. Every site scores 90+ on Google PageSpeed. Specialises in zero-downtime launches and full SEO preservation.</p>
+                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. Dozens of WordPress rescues across our careers. Every site scores 90+ on Google PageSpeed. Specialises in zero-downtime launches and full SEO preservation.</p>
               </div>
             </div>
             <div className="flex items-start gap-4">

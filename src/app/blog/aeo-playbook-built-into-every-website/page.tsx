@@ -69,7 +69,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -633,7 +633,7 @@ export default function AEOPlaybookPage() {
                         </CalModalButton>
                         <div className="mt-4 p-4 bg-white/10 border border-white/20 rounded-xl">
                             <p className="text-sm font-bold text-white flex items-center justify-center gap-2"><Scale className="w-4 h-4" /> Three written guarantees</p>
-                            <p className="text-sm text-stone-300 mt-1">90+ PageSpeed Mobile or full refund. Free month of post-launch tweaks. Fixed price, no hourly billing ever.</p>
+                            <p className="text-sm text-stone-300 mt-1">90+ PageSpeed Mobile or full refund. Free post-launch tweaks (15 days Starter, 1 month Growth+). Fixed price, no hourly billing ever.</p>
                         </div>
                     </div>
 

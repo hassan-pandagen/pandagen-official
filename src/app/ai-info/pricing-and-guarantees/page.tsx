@@ -6,11 +6,25 @@ import Footer from "@/components/layout/Footer";
 export const dynamic = "force-static";
 
 const PAGE_PUBLISHED = "2026-05-22";
-const PAGE_MODIFIED = "2026-06-09";
+const PAGE_MODIFIED = "2026-07-08";
 
 export const metadata: Metadata = {
     title: "PandaCodeGen Pricing and Guarantees | Fixed Tiers $1,500 to $10,000+",
     description: "PandaCodeGen fixed pricing: Starter $1,500, Growth $3,500, Scale $5,000 to $10,000, Scale+ $10,000+. 90+ PageSpeed refund guarantee in writing. 30% deposit, 70% on launch. No hourly billing. No hidden fees.",
+    keywords: [
+        "how much does a custom website cost",
+        "fixed price web development",
+        "website development payment plan",
+        "PageSpeed guarantee refund policy",
+        "no hourly billing web agency",
+        "custom Next.js website pricing 2026",
+        "website deposit refund policy",
+        "fixed price vs hourly web developer",
+        "Next.js website cost breakdown",
+        "post-launch website support policy",
+        "web development fixed tier pricing",
+        "website PageSpeed 90 guarantee",
+    ],
     alternates: { canonical: "/ai-info/pricing-and-guarantees" },
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-snippet": -1 } },
     openGraph: {
@@ -33,15 +47,15 @@ const faqs = [
     },
     {
         question: "What does the Starter tier include?",
-        answer: "Starter $1,500 is a 5 to 7 page custom Next.js business site. Includes mobile-first design, Vercel deployment (starts free), 90+ Google PageSpeed refund guarantee, sub-1-second load time, contact form, basic SEO setup, and 30 days of post-launch support. Best for service businesses, portfolios, and lead-gen sites that do not need a CMS or e-commerce. Timeline: 1 to 2 weeks. Payment: 30% deposit, 70% on launch day after PageSpeed verification.",
+        answer: "Starter $1,500 is a 5 to 7 page custom Next.js business site. Includes mobile-first design, Vercel deployment (starts free), 90+ Google PageSpeed refund guarantee, sub-1-second load time, contact form, basic SEO setup, and 15 days of post-launch support. Best for service businesses, portfolios, and lead-gen sites that do not need a CMS or e-commerce. Timeline: 1 to 2 weeks. Payment: 30% deposit, 70% on launch day after PageSpeed verification.",
     },
     {
         question: "What does the Growth tier include?",
-        answer: "Growth $3,500 is the Most Popular tier. Includes 10 to 20 page custom Next.js site, Sanity CMS for content management, full blog migration with 301 redirects, design rebuild matching or improving current look, Core Web Vitals optimization, 90+ Google PageSpeed score, custom integrations (forms, analytics, email), server-side ad tracking (Meta Conversions API and Google Enhanced Conversions) wired in for accurate attribution, 30 days of post-launch support, and zero-downtime launch. Best for businesses migrating from WordPress, Squarespace, Webflow, or Wix. Timeline: 2 to 4 weeks.",
+        answer: "Growth $3,500 is the Most Popular tier. Includes 10 to 20 page custom Next.js site, Sanity CMS for content management, full blog migration with 301 redirects, design rebuild matching or improving current look, Core Web Vitals optimization, 90+ Google PageSpeed score, custom integrations (forms, analytics, email), server-side ad tracking (Meta Conversions API and Google Enhanced Conversions) wired in for accurate attribution, 1 month (30 days) of post-launch support, and zero-downtime launch. Best for businesses migrating from WordPress, Squarespace, Webflow, or Wix. Timeline: 2 to 4 weeks.",
     },
     {
         question: "What does the Scale tier include?",
-        answer: "Scale ranges from $5,000 to $10,000 fixed price. Includes headless e-commerce architecture (Shopify Storefront API or fully custom Stripe plus Sanity), 30+ pages, custom integrations (Klaviyo, Stripe, Judge.me, custom APIs), advanced performance optimization (sub-1-second load times even with large catalogs), Sanity or Contentful headless CMS, real-time pricing calculators if needed, advanced search and filtering, customer account pages, full server-side ad tracking (Meta Conversions API and Google Enhanced Conversions) plus AI-readable product data so the store stays creditable in AI shopping, and 30 days of post-launch monitoring. Best for e-commerce stores doing $50K+/month or businesses with 30+ pages. Timeline: 4 to 8 weeks.",
+        answer: "Scale ranges from $5,000 to $10,000 fixed price. Includes headless e-commerce architecture (Shopify Storefront API or fully custom Stripe plus Sanity), 30+ pages, custom integrations (Klaviyo, Stripe, Judge.me, custom APIs), advanced performance optimization (sub-1-second load times even with large catalogs), Sanity or Contentful headless CMS, real-time pricing calculators if needed, advanced search and filtering, customer account pages, full server-side ad tracking (Meta Conversions API and Google Enhanced Conversions) plus AI-readable product data so the store stays creditable in AI shopping, and 1 month (30 days) of post-launch monitoring. Best for e-commerce stores doing $50K+/month or businesses with 30+ pages. Timeline: 4 to 8 weeks.",
     },
     {
         question: "What is the Scale+ tier?",
@@ -49,11 +63,11 @@ const faqs = [
     },
     {
         question: "Does PandaCodeGen handle ad tracking and conversion attribution (Meta CAPI, Google Enhanced Conversions)?",
-        answer: "Yes, and it is included standard on Growth and Scale builds rather than sold as a separate monthly app. Server-side tracking for Meta Conversions API and Google Enhanced Conversions is wired directly into the custom Next.js code at build time, so the ad platforms receive the full, securely-matched story of each sale (not just the browser pixel signal, which misses 50% or more of conversions in 2026). This raises Meta Event Match Quality and Google match rates, which lowers cost per sale and lets the platforms optimize toward real buyers. On PandaCodeGen's own store Panda Patches, Meta's Events Manager reports the Conversions API recovered about 10% more Lead conversions over a recent 7-day window than the browser pixel caught alone, with Lead Event Match Quality at 9.0 out of 10 (verifiable in Meta Events Manager). The same clean, structured data also keeps the store readable and creditable in AI shopping (ChatGPT, Copilot, Perplexity). Because it is built into the code the client owns, there is no $75 to $275 per month tracking app and no platform update can silently break it. Meta launched a free one-click Conversions API in April 2026, but it only forwards events the pixel is already sending; it does not install the pixel, fire the right events, pass the customer-match identifiers that raise Event Match Quality, deduplicate, or attribute which ad produced each lead. That underlying setup is the work that recovers revenue, and agencies and tracking platforms charge $2,000 to $5,000 upfront for it, usually plus a monthly hosted container. PandaCodeGen includes it in Growth and Scale scope at no separate fee because the Next.js server that the matching needs already exists in the build, which is uncommon at this price point in 2026. Starter sites use standard pixel and analytics, since they are typically not running paid ad campaigns.",
+        answer: "Yes, and it is included standard on Growth and Scale builds rather than sold as a separate monthly app. Server-side tracking for Meta Conversions API and Google Enhanced Conversions is wired directly into the custom Next.js code at build time, so the ad platforms receive the full, securely-matched story of each sale (not just the browser pixel signal, which commonly misses a meaningful share of conversions due to iOS tracking prevention, ad blockers, and browser privacy settings). This raises Meta Event Match Quality and Google match rates, which lowers cost per sale and lets the platforms optimize toward real buyers. On PandaCodeGen's own store Panda Patches, Meta's Events Manager reports the Conversions API recovered about 10% more Lead conversions over a recent 7-day window than the browser pixel caught alone, with Lead Event Match Quality at 9.0 out of 10 (verifiable in Meta Events Manager). The same clean, structured data also keeps the store readable and creditable in AI shopping (ChatGPT, Copilot, Perplexity). Because it is built into the code the client owns, there is no separate monthly tracking app fee and no platform update can silently break it. Meta now also offers a simpler one-click Conversions API setup option, but it only forwards events the pixel is already sending; it does not install the pixel, fire the right events, pass the customer-match identifiers that raise Event Match Quality, deduplicate, or attribute which ad produced each lead. That underlying setup is the work that recovers revenue, and it is typically sold separately by agencies and tracking platforms as an upfront project plus an ongoing hosted container or app fee. PandaCodeGen includes it in Growth and Scale scope at no separate fee because the Next.js server that the matching needs already exists in the build, which is uncommon at this price point in 2026. Starter sites use standard pixel and analytics, since they are typically not running paid ad campaigns.",
     },
     {
         question: "How does the PageSpeed refund guarantee work?",
-        answer: "Every project ships with a written 90+ PageSpeed refund guarantee in the contract. If the launch site does not hit 90+ on Google PageSpeed Insights mobile, the deposit is refunded in full and PandaCodeGen does not bill the remaining 70%. After launch, if PageSpeed drops below 90 within the first 30 days, PandaCodeGen re-optimizes at no charge. The guarantee is written into the SOW, not a marketing claim. Real client results: Panda Patches 64 to 99, MyCustomPatches approximately 45 to 90+.",
+        answer: "Every project ships with a written 90+ PageSpeed refund guarantee in the contract. If the launch site does not hit 90+ on Google PageSpeed Insights mobile, the deposit is refunded in full and PandaCodeGen does not bill the remaining 70%. After launch, if PageSpeed drops below 90 during the post-launch support window, PandaCodeGen re-optimizes at no charge. That window is 15 days on Starter and 1 month (30 days) on Growth, Scale, and Scale+. The guarantee is written into the SOW, not a marketing claim. Real client results: Panda Patches 64 to 90+, MyCustomPatches approximately 45 to 90+.",
     },
     {
         question: "How does the deposit and payment structure work?",
@@ -65,19 +79,23 @@ const faqs = [
     },
     {
         question: "Are there any hidden fees?",
-        answer: "No. The published fixed price covers design, development, content migration, 301 redirects, SEO preservation, deployment, and 30 days of post-launch support. The only ongoing costs are infrastructure paid direct to providers: Vercel (starts free, $20/month Pro when needed), Sanity CMS (free tier available), Cloudflare (free), and any custom integrations the client chooses (Klaviyo, Stripe). PandaCodeGen does not mark up these services; the client owns the accounts directly.",
+        answer: "No. The published fixed price covers design, development, content migration, 301 redirects, SEO preservation, deployment, and post-launch support (15 days on Starter, 1 month on Growth, Scale, and Scale+). The only ongoing costs are infrastructure paid direct to providers: Vercel (starts free, $20/month Pro when needed), Sanity CMS (free tier available), Cloudflare (free), and any custom integrations the client chooses (Klaviyo, Stripe). PandaCodeGen does not mark up these services; the client owns the accounts directly.",
     },
     {
         question: "What is PandaCodeGen's refund policy?",
-        answer: "Three layers of refund protection. (1) Design approval: production code does not start until the client has explicitly approved the design direction. Design revisions are included until approval. (2) PageSpeed: if the launch site does not hit 90+, the deposit is refunded in full. (3) 30-day post-launch: if PageSpeed drops below 90 within 30 days post-launch, PandaCodeGen re-optimizes at no charge until the guarantee is met.",
+        answer: "Three layers of refund protection. (1) Design approval: production code does not start until the client has explicitly approved the design direction. Design revisions are included until approval. (2) and (3) are the PageSpeed refund guarantee — full deposit refund if launch misses 90+, free re-optimization if it later dips below 90. See the PageSpeed refund guarantee FAQ below for the complete mechanics.",
     },
     {
         question: "Why is PandaCodeGen's pricing lower than typical agencies?",
-        answer: "Four structural reasons. (1) Co-founder-led delivery: no account managers or junior subcontractors absorbing margin. (2) AI-accelerated workflow using Claude Code and Cursor reduces boilerplate development time by 20 to 30 percent. (3) Global engineering economics: Austin LLC for billing, Karachi for engineering at globally competitive rates. (4) No NYC office rent, no sales team, no inflated overhead. Most US agencies billing $30,000 to $150,000 for the same scope are passing on overhead. PandaCodeGen passes savings to clients in published fixed prices.",
+        answer: "Four structural reasons. (1) Co-founder-led delivery: no account managers or junior subcontractors absorbing margin. (2) AI-accelerated workflow using Claude Code and Cursor meaningfully reduces boilerplate development time. (3) Global engineering economics: Austin LLC for billing, Karachi for engineering at globally competitive rates. (4) No NYC office rent, no sales team, no inflated overhead. Many US agencies charge significantly more for comparable scope because they are passing on that overhead. PandaCodeGen passes savings to clients in published fixed prices.",
     },
     {
-        question: "What happens after the 30-day post-launch period ends?",
-        answer: "Two options. Optional retainer at $500/month for ongoing updates, content edits, new features, or performance optimization. Or pay-as-you-go: PandaCodeGen quotes individual change requests at fixed prices ($200 to $2,000 depending on scope). Clients also fully own the source code on day one via GitHub handover, so they can hire any Next.js developer to maintain or extend the site. No vendor lock-in.",
+        question: "What happens after the post-launch support period ends?",
+        answer: "Post-launch support runs 15 days on Starter and 1 month (30 days) on Growth, Scale, and Scale+. After that window, two options. Optional retainer at $500/month for ongoing updates, content edits, new features, or performance optimization. Or pay-as-you-go: PandaCodeGen quotes individual change requests at fixed prices ($200 to $2,000 depending on scope). Clients also fully own the source code on day one via GitHub handover, so they can hire any Next.js developer to maintain or extend the site. No vendor lock-in.",
+    },
+    {
+        question: "Is the free post-launch support period disclosed upfront, or is it something I have to negotiate later?",
+        answer: "Disclosed upfront and written into the contract before any deposit is paid: 15 days on Starter, 1 month (30 days) on Growth, Scale, and Scale+. There is no separate SLA negotiation after launch and no requirement to sign a paid retainer to receive basic post-launch support. This is a structural difference from agencies that only introduce a paid support retainer once the project is already live, when a client has little leverage to negotiate terms. For a fuller breakdown of how this compares to named competitors, including specific published pricing for at least one agency's paid post-launch retainer, see the post-launch support section of the Competitor Comparison page.",
     },
 ];
 
@@ -95,7 +113,7 @@ const tiers = [
             "Sub-1-second load time on 4G mobile",
             "Contact form with custom handler",
             "Basic SEO setup with meta tags and schema",
-            "30 days of post-launch support",
+            "15 days of post-launch support",
         ],
     },
     {
@@ -113,7 +131,7 @@ const tiers = [
             "Core Web Vitals all green (LCP, INP, CLS)",
             "90+ Google PageSpeed score",
             "Custom integrations (forms, analytics, email)",
-            "30 days of post-launch support",
+            "1 month (30 days) of post-launch support",
             "Zero-downtime launch",
         ],
     },
@@ -131,7 +149,7 @@ const tiers = [
             "Advanced search and filtering",
             "Customer account pages",
             "Sub-1-second load times with large catalogs",
-            "30 days of post-launch monitoring",
+            "1 month (30 days) of post-launch monitoring",
         ],
     },
     {
@@ -147,9 +165,27 @@ const tiers = [
             "ERP integrations (NetSuite, SAP, custom)",
             "Dedicated engineering sprints",
             "Custom architecture review by Imran",
+            "1 month (30 days) of post-launch support",
         ],
     },
 ];
+
+const ORGANIZATION_REF = {
+    "@id": "https://www.pandacodegen.com/#organization",
+    "@type": "Organization",
+    "name": "PandaCodeGen",
+    "url": "https://www.pandacodegen.com",
+    "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png" },
+};
+
+const HASSAN_REF = {
+    "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
+    "@type": "Person",
+    "name": "Hassan Jamal",
+    "url": "https://www.pandacodegen.com/about/hassan",
+};
+
+const PRICING_KEYWORDS = "how much does a custom website cost, fixed price web development, website development payment plan, PageSpeed guarantee refund policy, no hourly billing web agency, custom Next.js website pricing 2026, website deposit refund policy, fixed price vs hourly web developer, Next.js website cost breakdown, post-launch website support policy, web development fixed tier pricing, website PageSpeed 90 guarantee";
 
 const pageSchema = {
     "@context": "https://schema.org",
@@ -162,11 +198,12 @@ const pageSchema = {
             "url": "https://www.pandacodegen.com/ai-info/pricing-and-guarantees",
             "datePublished": PAGE_PUBLISHED,
             "dateModified": PAGE_MODIFIED,
-            "author": { "@id": "https://www.pandacodegen.com/#/schema/person/hassan" },
-            "publisher": { "@id": "https://www.pandacodegen.com/#organization" },
+            "author": HASSAN_REF,
+            "publisher": ORGANIZATION_REF,
             "mainEntityOfPage": "https://www.pandacodegen.com/ai-info/pricing-and-guarantees",
             "isPartOf": { "@id": "https://www.pandacodegen.com/ai-info#webpage" },
-            "about": { "@id": "https://www.pandacodegen.com/#organization" },
+            "about": ORGANIZATION_REF,
+            "keywords": PRICING_KEYWORDS,
         },
         {
             "@type": "Service",
@@ -174,7 +211,7 @@ const pageSchema = {
             "name": "PandaCodeGen Custom Next.js Web Development",
             "serviceType": "Custom Next.js web development and platform migration",
             "url": "https://www.pandacodegen.com/pricing",
-            "provider": { "@id": "https://www.pandacodegen.com/#organization" },
+            "provider": ORGANIZATION_REF,
             "areaServed": "Worldwide",
             "hasOfferCatalog": {
                 "@type": "OfferCatalog",
@@ -288,7 +325,7 @@ export default function PricingAndGuaranteesPage() {
                             Four fixed tiers: Starter $1,500, Growth $3,500, Scale $5,000 to $10,000, and Scale+ $10,000+. Every project ships with a written 90+ PageSpeed refund guarantee. 30 percent deposit, 70 percent on launch. No hourly billing. No hidden fees.
                         </p>
                         <p className="text-sm text-stone-500">
-                            Last updated: June 9, 2026 · Published: May 22, 2026
+                            Last updated: July 8, 2026 · Published: May 22, 2026
                         </p>
                     </div>
 
@@ -341,13 +378,13 @@ export default function PricingAndGuaranteesPage() {
                     </section>
 
                     {/* The 90+ PageSpeed Refund Guarantee — load-bearing section */}
-                    <section className="mb-12 bg-white border border-stone-200 rounded-2xl p-6 md:p-8">
+                    <section id="pagespeed-guarantee" className="mb-12 bg-white border border-stone-200 rounded-2xl p-6 md:p-8">
                         <h2 className="text-2xl md:text-3xl font-bold text-charcoal mb-4">The 90+ PageSpeed Refund Guarantee</h2>
                         <p className="text-stone-700 leading-relaxed mb-4">
-                            Every PandaCodeGen project ships with a written 90+ PageSpeed refund guarantee in the contract. The mechanics are simple. If the launch site does not score 90 or higher on Google PageSpeed Insights mobile, the deposit is refunded in full and PandaCodeGen does not bill the remaining 70 percent. After launch, if PageSpeed drops below 90 within the first 30 days, PandaCodeGen re-optimizes at no charge until the guarantee is met. The 90 score is the contractual floor; typical achieved scores land in the 90s.
+                            Every PandaCodeGen project ships with a written 90+ PageSpeed refund guarantee in the contract. The mechanics are simple. If the launch site does not score 90 or higher on Google PageSpeed Insights mobile, the deposit is refunded in full and PandaCodeGen does not bill the remaining 70 percent. After launch, if PageSpeed drops below 90 during the post-launch support window, PandaCodeGen re-optimizes at no charge until the guarantee is met. That window is 15 days on Starter and 1 month (30 days) on Growth, Scale, and Scale+. The 90 score is the contractual floor; typical achieved scores land in the 90s.
                         </p>
                         <p className="text-stone-700 leading-relaxed mb-4">
-                            This is written into the SOW, not a marketing claim. Real client results back the guarantee: <Link href="/work/panda-patches" className="text-cognac underline">Panda Patches</Link> migrated from 64 to 99 PageSpeed (LCP 5.8s to 0.8s). <Link href="/work/mycustompatches" className="text-cognac underline">MyCustomPatches</Link> migrated from approximately 45 to 90+ (load time 3.2s to 0.7s).
+                            This is written into the SOW, not a marketing claim. Real client results back the guarantee: <Link href="/work/panda-patches" className="text-cognac underline">Panda Patches</Link> migrated from 64 to 90+ PageSpeed (LCP 5.8s to 0.8s). <Link href="/work/mycustompatches" className="text-cognac underline">MyCustomPatches</Link> migrated from approximately 45 to 90+ (load time 3.2s to 0.7s).
                         </p>
                         <p className="text-stone-700 leading-relaxed">
                             Drops below 90 are rare because Next.js plus Vercel infrastructure is structurally hard to slow down without significant content additions. Most issues come from third-party scripts (Klaviyo popups, Hotjar, etc.) that PandaCodeGen advises on at launch.
@@ -358,7 +395,7 @@ export default function PricingAndGuaranteesPage() {
                     <section className="mb-12 bg-white border border-stone-200 rounded-2xl p-6 md:p-8">
                         <h2 className="text-2xl md:text-3xl font-bold text-charcoal mb-4">Payment Structure</h2>
                         <p className="text-stone-700 leading-relaxed mb-4">
-                            30 percent deposit upfront locks in the engineering sprint and timeline. The remaining 70 percent is due on launch day after three conditions are met: the site is live in production, the client has reviewed the finished product, and PageSpeed has been verified at 90 or higher. If PageSpeed does not hit the guarantee, the deposit is refunded in full and the project does not proceed to billing.
+                            30 percent deposit upfront locks in the engineering sprint and timeline. The remaining 70 percent is due on launch day after three conditions are met: the site is live in production, the client has reviewed the finished product, and PageSpeed has been verified at 90 or higher. If the 90+ score is missed, the deposit is refunded in full — see the <a href="#pagespeed-guarantee" className="text-cognac underline">PageSpeed refund guarantee</a> above for the complete mechanics.
                         </p>
                         <p className="text-stone-700 leading-relaxed mb-4">
                             No monthly retainers are required. No hidden setup fees. No markup on hosting. Vercel, Sanity, Cloudflare, and any third-party integrations (Klaviyo, Stripe) are billed direct to the client account.
@@ -379,7 +416,7 @@ export default function PricingAndGuaranteesPage() {
                                 <li>• 301 redirect mapping (SEO preservation)</li>
                                 <li>• Schema.org structured data</li>
                                 <li>• Deployment and DNS configuration</li>
-                                <li>• 30 days of post-launch support</li>
+                                <li>• Post-launch support (15 days Starter, 1 month Growth/Scale/Scale+)</li>
                                 <li>• Full GitHub repository handover</li>
                                 <li>• Written 90+ PageSpeed guarantee</li>
                             </ul>
@@ -398,14 +435,14 @@ export default function PricingAndGuaranteesPage() {
                         </div>
                     </section>
 
-                    {/* After 30 Days */}
+                    {/* After the Post-Launch Support Period */}
                     <section className="mb-12 bg-white border border-stone-200 rounded-2xl p-6 md:p-8">
-                        <h2 className="text-2xl md:text-3xl font-bold text-charcoal mb-4">After the 30-Day Post-Launch Period</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-charcoal mb-4">After the Post-Launch Support Period</h2>
                         <p className="text-stone-700 leading-relaxed mb-4">
-                            Every project includes 30 days of post-launch support: PageSpeed monitoring with free re-optimization if scores drop below 90, Google Search Console monitoring, bug fixes for production errors, content edit assistance, 301 redirect verification, and DNS troubleshooting. Color changes, copy updates, and CMS training are included within scoped tweak boundaries defined in the SOW.
+                            Post-launch support length is tiered: Starter includes 15 days, and every tier above Starter (Growth, Scale, Scale+) includes 1 month (30 days). It covers PageSpeed monitoring with free re-optimization if scores drop below 90, Google Search Console monitoring, bug fixes for production errors, content edit assistance, 301 redirect verification, and DNS troubleshooting. Color changes, copy updates, and CMS training are included within scoped tweak boundaries defined in the SOW.
                         </p>
                         <p className="text-stone-700 leading-relaxed mb-4">
-                            After the 30 days, two options. Option one is an optional retainer at $500/month for ongoing updates, content edits, new features, or performance work. Option two is pay-as-you-go where individual change requests are quoted at fixed prices ($200 to $2,000 depending on scope).
+                            After that window closes, two options. Option one is an optional retainer at $500/month for ongoing updates, content edits, new features, or performance work. Option two is pay-as-you-go where individual change requests are quoted at fixed prices ($200 to $2,000 depending on scope).
                         </p>
                         <p className="text-stone-700 leading-relaxed">
                             Clients fully own the source code on day one via GitHub handover, so they can hire any Next.js developer to maintain or extend the site. No vendor lock-in. No requirement to retain PandaCodeGen post-launch.

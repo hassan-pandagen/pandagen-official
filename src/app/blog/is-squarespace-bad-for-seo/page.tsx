@@ -67,7 +67,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -99,7 +99,9 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Squarespace SEO Help Center", "url": "https://support.squarespace.com/hc/en-us/articles/206744067-What-Squarespace-does-for-SEO" },
                 { "@type": "CreativeWork", "name": "Search Engine Journal: Core Web Vitals by CMS", "url": "https://www.searchenginejournal.com/core-web-vitals-wordpress-wix-squarespace-joomla-duda-drupal/517907/" },
                 { "@type": "CreativeWork", "name": "Squarespace Forum: Every Squarespace Site Seems Slow", "url": "https://forum.squarespace.com/topic/271059-the-elephant-in-the-room-every-squarespace-site-seems-to-be-slow-loading-andor-has-flickering/" },
-                { "@type": "CreativeWork", "name": "Squarespace Forum: Squarespace Is Killing My SEO", "url": "https://forum.squarespace.com/topic/233308-squarespace-is-killing-my-seo/" }
+                { "@type": "CreativeWork", "name": "Squarespace Forum: Squarespace Is Killing My SEO", "url": "https://forum.squarespace.com/topic/233308-squarespace-is-killing-my-seo/" },
+                { "@type": "CreativeWork", "name": "Think With Google: Mobile Page Speed Industry Benchmarks", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
+                { "@type": "CreativeWork", "name": "Portent: Site Speed and Conversion Rate Research", "url": "https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" }
             ]
         },
         {
@@ -306,11 +308,11 @@ export default function IsSquarespaceBadForSEOPage() {
                             </div>
 
                             <BlogText>
-                                Google has used Core Web Vitals as a ranking signal since the Page Experience update in 2021 and tightened the weighting through the March 2026 core update. For competitive keywords where the top 3 results all score above 90 on Mobile PageSpeed, a Squarespace site scoring 45 will rank 5 to 10 positions lower than identical content on a faster platform. We rebuilt a 38-page consulting firm from Squarespace to custom Next.js in March 2026. Average ranking position moved from 12.4 to 5.1 within 90 days. Same content, same backlinks. The platform change was the only variable.
+                                Google has used Core Web Vitals as a ranking signal since the Page Experience update in 2021 and tightened the weighting through the March 2026 core update. For competitive keywords where the top 3 results all score above 90 on Mobile PageSpeed, a Squarespace site scoring 45 will typically rank several positions lower than identical content on a faster platform, all else being equal. The size of the gap depends on how many other ranking factors (backlinks, content depth, domain authority) are also tied between competitors.
                             </BlogText>
 
                             <BlogText>
-                                <strong>What this costs in plain business terms:</strong> for every second of mobile load time above 2 seconds, mobile conversions drop by approximately 7 percent. A Squarespace site loading at 4 seconds is losing roughly 14 percent of mobile conversions compared to a competitor loading in under 1 second. For a service business spending $3,000 per month on Google Ads, that gap means roughly 14 percent fewer leads from the same ad budget every month.
+                                <strong>What this costs in plain business terms:</strong> Google&apos;s own research (via <a href="https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline">Think with Google&apos;s mobile page speed benchmarks</a>) and independent research from <a href="https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline">Portent</a> both link every additional second of load time to a meaningful drop in conversion rate, with Portent finding conversion rates fall in roughly the 4 to 7 percent range per extra second in the range most sites operate in. Applying that range to a Squarespace site loading at 4 seconds versus a competitor loading in under 1 second, the illustrative math works out to roughly 10 to 20 percent fewer conversions from the same visitor volume, and by extension, the same percentage fewer leads from a fixed Google Ads budget. Your actual number depends on your funnel, so treat this as a planning estimate, not a measured result.
                             </BlogText>
 
                             {/* ── H2: Platform Comparison ──────────────────────── */}
@@ -412,7 +414,7 @@ export default function IsSquarespaceBadForSEOPage() {
 
                             <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Slow Load Times Hurt Rankings and Ad Quality Scores</h3>
                             <BlogText>
-                                Google uses page speed as a ranking signal, and slow load times cost you in two ways simultaneously. First, rankings: slow pages rank lower for the same keywords than faster pages with equivalent content. Second, ad efficiency: if you run Google Ads, your Quality Score is partly determined by landing page experience, which includes page speed. A slow landing page means a lower Quality Score, which means you pay more per click for the same ad position. A business spending $5,000 per month on Google Ads with a Squarespace landing page scoring 45 on mobile may be paying 15 to 30 percent more per click than a competitor with a faster custom-coded landing page.
+                                Google uses page speed as a ranking signal, and slow load times cost you in two ways simultaneously. First, rankings: slow pages rank lower for the same keywords than faster pages with equivalent content. Second, ad efficiency: Google Ads documents landing page experience, which includes page speed, as one input into Quality Score, and a lower Quality Score directly increases what you pay per click for the same ad position. The exact percentage varies by account and industry, so if you run paid traffic to a slow Squarespace landing page, the way to see your real number is to compare your Quality Score diagnostics before and after a speed fix rather than relying on an industry-wide average.
                             </BlogText>
 
                             <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Generic Templates Create Duplicate User Experiences</h3>
@@ -498,7 +500,7 @@ export default function IsSquarespaceBadForSEOPage() {
 
                             <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Your Platform and Transaction Fees Are Climbing</h3>
                             <BlogText>
-                                Squarespace fees increase as your site grows. The Basic plan does not include a CMS or e-commerce. The CMS plan adds $10 to $25 per month. E-commerce adds $13 to $39 per month on top. Transaction fees on lower-tier plans add a percentage of every sale. Custom sites on Vercel can run for near-zero monthly fees: Vercel's Hobby tier handles most business sites at $0 per month. The migration pays for itself faster than you might expect through hosting savings alone, typically within 12 to 18 months for businesses currently paying $100+ per month on Squarespace plans.
+                                Squarespace fees increase as your site grows. The Basic plan does not include a CMS or e-commerce. The CMS plan adds $10 to $25 per month. E-commerce adds $13 to $39 per month on top. Transaction fees on lower-tier plans add a percentage of every sale. Custom sites on Vercel can run for near-zero monthly fees: Vercel's Hobby tier handles most business sites at $0 per month. The migration pays for itself faster than you might expect through hosting savings alone, typically within 12 to 18 months for businesses currently paying $100+ per month on Squarespace plans. For the full price ranges by site size, including redirects and content transfer, see our <Link href="/blog/squarespace-migration-cost" className="text-cognac hover:underline">Squarespace migration cost breakdown</Link>.
                             </BlogText>
 
                             {/* ── H2: CTA ──────────────────────────────────────── */}

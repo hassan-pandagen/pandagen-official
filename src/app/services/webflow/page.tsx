@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import PageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'Is Webflow Too Expensive? We Migrate to Custom Next.js',
-  description: 'Webflow charges $23 to $49 per month and still scores 55 to 75 on mobile PageSpeed. We migrate to custom Next.js. 90+ PageSpeed, no monthly fees, you own the code.',
+  title: 'Webflow Migration Service: Next.js From $1,500',
+  description: 'Webflow charges $23 to $49 a month and still scores 55 to 75 on mobile PageSpeed. We migrate to custom Next.js from $1,500. 90+ PageSpeed, code you own.',
   alternates: { canonical: '/services/webflow' },
   keywords: [
     'webflow migration service',
@@ -18,8 +18,8 @@ export const metadata: Metadata = {
     'webflow seo limitations',
   ],
   openGraph: {
-    title: 'Is Webflow Too Expensive? We Migrate to Custom Next.js | PandaCodeGen',
-    description: 'Webflow charges $23 to $49/month and still scores 55 to 75 on PageSpeed. We migrate to custom Next.js. 90+ PageSpeed, no monthly fees.',
+    title: 'Webflow Migration Service: Next.js From $1,500 | PandaCodeGen',
+    description: 'Webflow charges $23 to $49/month and still scores 55 to 75 on PageSpeed. We migrate to custom Next.js. 90+ PageSpeed, no platform fees.',
     url: 'https://www.pandacodegen.com/services/webflow',
     siteName: 'PandaCodeGen',
     type: 'website',
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Is Webflow Too Expensive? We Migrate to Custom Next.js | PandaCodeGen',
-    description: 'Webflow costs $23 to $49/month and still scores 55 to 75 on PageSpeed. We migrate to custom Next.js. 90+ PageSpeed, no monthly fees.',
+    title: 'Webflow Migration Service: Next.js From $1,500 | PandaCodeGen',
+    description: 'Webflow costs $23 to $49/month and still scores 55 to 75 on PageSpeed. We migrate to custom Next.js. 90+ PageSpeed, no platform fees.',
   },
 };
 
@@ -44,7 +44,7 @@ export default function WebflowServicePage() {
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
         "serviceType": ["Webflow Migration", "Webflow to Next.js", "Webflow Alternative", "Webflow to Custom Code"],
-        "priceRange": "$1,500 - $10,000",
+        "priceRange": "$1,500 - $10,000+",
         "telephone": "+13027738982",
         "address": {
           "@type": "PostalAddress",
@@ -54,7 +54,17 @@ export default function WebflowServicePage() {
           "addressRegion": "TX",
           "addressCountry": "US"
         },
-        "image": "https://www.pandacodegen.com/og-image.jpg"
+        "image": "https://www.pandacodegen.com/og-image.jpg",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Webflow Migration Tiers",
+          "itemListElement": [
+            { "@type": "Offer", "name": "Starter", "price": "1500", "priceCurrency": "USD", "description": "5 to 7 page Webflow site rebuilt in custom Next.js with Sanity CMS and 301 redirect mapping" },
+            { "@type": "Offer", "name": "Growth", "price": "3500", "priceCurrency": "USD", "description": "Business site with custom Webflow interactions recreated in code and full CMS collection migration" },
+            { "@type": "Offer", "name": "Scale", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "5000", "maxPrice": "10000", "priceCurrency": "USD" }, "description": "Complex builds, Webflow Ecommerce, localization, 30+ pages" },
+            { "@type": "Offer", "name": "Scale+", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "10000", "priceCurrency": "USD" }, "description": "Enterprise scope, custom-quoted after a scoping call" }
+          ]
+        }
       },
       {
         "@type": "WebPage",
@@ -88,24 +98,6 @@ export default function WebflowServicePage() {
         "areaServed": "Worldwide",
         "knowsAbout": ["Webflow CMS migration", "headless Sanity", "Vercel", "Core Web Vitals"],
         "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158"]
-      },
-      {
-        "@type": "Review",
-        "@id": "https://www.pandacodegen.com/services/webflow#review-clutch",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
-        "author": { "@type": "Person", "name": "Executive, MC Patches LLC" },
-        "reviewBody": "Panda Code Gen successfully delivered a speedy, bug free website. They did exactly what they said they would, delivering a blazing fast Next.js website with a 90+ PageSpeed score. The communication throughout was excellent.",
-        "datePublished": "2025-11-01",
-        "itemReviewed": { "@id": "https://www.pandacodegen.com/services/webflow#service" }
-      },
-      {
-        "@type": "Review",
-        "@id": "https://www.pandacodegen.com/services/webflow#review-trustpilot",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
-        "author": { "@type": "Person", "name": "Marshall James" },
-        "reviewBody": "I recently worked with PandaCodeGen on rebuilding my business website and I am beyond impressed. Hassan handled everything professionally, and the final product exceeded my expectations. The site loads incredibly fast and looks stunning.",
-        "datePublished": "2026-03-01",
-        "itemReviewed": { "@id": "https://www.pandacodegen.com/services/webflow#service" }
       },
       {
         "@type": "FAQPage",

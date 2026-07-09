@@ -54,7 +54,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -286,7 +286,7 @@ export default function WhyNextjsOverWordPressPage() {
                         </BlogText>
 
                         <BlogText>
-                            Vercel&apos;s free tier handles most business websites from day one. You only scale to Vercel Pro at $20/month when your business grows past free tier limits. Pages load from 300+ global edge locations. Zero server maintenance. Auto-scaling. 99.99% uptime.
+                            Vercel&apos;s free tier handles most business websites from day one. You only scale to Vercel Pro at $20/month when your business grows past free tier limits. Pages load from 300+ global edge locations. Zero server maintenance. Auto-scaling. No hosting company to babysit.
                         </BlogText>
 
                         <BlogText>
@@ -325,10 +325,10 @@ export default function WhyNextjsOverWordPressPage() {
                             Custom Next.js sites have <BlogHighlight>zero plugins</BlogHighlight>. We build every feature from scratch using stable npm packages. No attack surface. No plugin conflicts. No emergency patches.
                         </BlogText>
 
-                        <BlogHeader>Why We Guarantee 100/100 And WordPress Caps At 70</BlogHeader>
+                        <BlogHeader>Why We Guarantee 90+ And WordPress Caps At 70</BlogHeader>
 
                         <BlogText>
-                            We guarantee 90+ PageSpeed Mobile on every client site, and typically hit 95-100. Not because we&apos;re magicians. Because Next.js makes it structurally achievable. You can see exactly what goes into each build on our <Link href="/services/custom-engineering?ref=blog/why-we-chose-nextjs-over-wordpress-2026" className="text-charcoal font-bold underline hover:text-stone-600 transition-colors">custom engineering service page</Link>.
+                            We guarantee 90+ PageSpeed Mobile on every client site. Not because we&apos;re magicians. Because Next.js makes it structurally achievable. You can see exactly what goes into each build on our <Link href="/services/custom-engineering?ref=blog/why-we-chose-nextjs-over-wordpress-2026" className="text-charcoal font-bold underline hover:text-stone-600 transition-colors">custom engineering service page</Link>.
                         </BlogText>
 
                         <BlogText>
@@ -349,7 +349,7 @@ export default function WhyNextjsOverWordPressPage() {
                         </BlogText>
 
                         <BlogText>
-                            Our recent clients: MyCustomPatches. <a href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">100/100</a>. Our own agency site (this one). 100/100. Every project. Consistent.
+                            Our recent clients: MyCustomPatches. <a href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">90+</a>. Our own agency site (this one). 90+. Every project. Consistent.
                         </BlogText>
 
                         <BlogHeader>Your Team Will Stop Missing WordPress In Week Two</BlogHeader>
@@ -459,7 +459,7 @@ export default function WhyNextjsOverWordPressPage() {
                             "Map every changed URL to a 301 permanent redirect",
                             "Migrate all meta titles, descriptions, canonical tags, and schema markup",
                             "Run parallel: Keep WordPress live until new site passes all SEO checks",
-                            "Post-launch: 30-day monitoring of Google Search Console for crawl issues"
+                            "Post-launch: Google Search Console monitoring for crawl issues (15 days on Starter, 30 days on Growth and above)"
                         ]} />
 
                         <BlogText>
@@ -484,7 +484,7 @@ export default function WhyNextjsOverWordPressPage() {
                             "Weeks 2 to 4: Build the new Next.js site. Same content, same structure, zero WordPress",
                             "Week 5: Content migration, URL mapping, redirect configuration, PageSpeed testing",
                             "Week 6: Zero-downtime launch. DNS cutover while old WordPress site stays live in parallel",
-                            "30 days post-launch: Google Search Console monitoring, crawl error fixes, ranking tracking"
+                            "Post-launch: Google Search Console monitoring, crawl error fixes, ranking tracking (15 days on Starter, 1 month on Growth and above)"
                         ]} />
 
                         <BlogText>

@@ -32,12 +32,20 @@ const comparisonRows = [
         provider: "PandaCodeGen",
         refund: { label: "100% refund if 90+ not met", positive: true },
         guarantee: { label: "90+ in writing", positive: true },
-        support: { label: "Full month free, scoped tweaks", positive: true },
+        support: { label: "15 to 30 days free, scoped tweaks", positive: true },
         highlighted: true,
     },
 ];
 
-export default function PartnerPromise() {
+type PartnerPromiseProps = {
+    /**
+     * Hide the website-build tier pricing lines ($1,500 to $10,000).
+     * Used on pages with their own tier structure, like /services/custom-engineering.
+     */
+    hideTiers?: boolean;
+};
+
+export default function PartnerPromise({ hideTiers = false }: PartnerPromiseProps) {
     return (
         <section className="py-12 md:py-24 px-6">
             <div className="container mx-auto max-w-5xl">
@@ -55,7 +63,9 @@ export default function PartnerPromise() {
                         <span className="font-serif italic text-cognac">Consider us your partners.</span>
                     </h2>
                     <p className="text-lg text-stone-600 leading-relaxed max-w-3xl mx-auto">
-                        Cheaper than market, not cheap. Traditional agencies charge $15,000 to $50,000 for the same scope we ship at fixed prices from $1,500 to $10,000. The difference is structural: co-founder-led delivery, no account managers, no NYC office rent, AI-accelerated development, and global engineering economics. Quality stays the same. The savings flow to clients.
+                        {hideTiers
+                            ? "Cheaper than market, not cheap. Traditional dev shops charge several times what we quote for the same scope, and we ship at fixed prices agreed upfront. The difference is structural: co-founder-led delivery, no account managers, no NYC office rent, AI-accelerated development, and global engineering economics. Quality stays the same. The savings flow to clients."
+                            : "Cheaper than market, not cheap. Traditional agencies charge $15,000 to $50,000 for the same scope we ship at fixed prices from $1,500 to $10,000. The difference is structural: co-founder-led delivery, no account managers, no NYC office rent, AI-accelerated development, and global engineering economics. Quality stays the same. The savings flow to clients."}
                     </p>
                 </motion.div>
 
@@ -93,12 +103,16 @@ export default function PartnerPromise() {
                             desc: "Every site verified at 90+ PageSpeed before handover. If your build does not hit it, you get every dollar back. In writing in your contract.",
                         },
                         {
-                            title: "Free month of post-launch support",
-                            desc: "Color changes, copy updates, bug fixes, and CMS training included. Tweak boundaries scoped in your SOW. No hourly billing, no surprise invoices.",
+                            title: hideTiers ? "Free month of post-launch support" : "15 to 30 days of free post-launch support",
+                            desc: hideTiers
+                                ? "Color changes, copy updates, bug fixes, and CMS training included. Tweak boundaries scoped in your SOW. No hourly billing, no surprise invoices."
+                                : "15 days on Starter, 30 days on Growth and above. Color changes, copy updates, bug fixes, and CMS training included. Tweak boundaries scoped in your SOW. No hourly billing, no surprise invoices.",
                         },
                         {
                             title: "Fixed pricing, no scope creep",
-                            desc: "Starter $1,500, Growth $3,500, Scale $5,000 to $10,000, Scale+ $10,000+. Quoted upfront, paid in milestones, no hidden fees ever.",
+                            desc: hideTiers
+                                ? "Every project gets a fixed quote upfront, paid in milestones, no hidden fees ever. The number we agree on is the number you pay."
+                                : "Starter $1,500, Growth $3,500, Scale $5,000 to $10,000, Scale+ $10,000+. Quoted upfront, paid in milestones, no hidden fees ever.",
                         },
                     ].map((item, i) => (
                         <motion.div

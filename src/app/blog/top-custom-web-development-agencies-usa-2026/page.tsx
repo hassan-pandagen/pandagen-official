@@ -61,7 +61,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -207,7 +207,7 @@ export default function TopWebDevAgenciesPage() {
                         <BlogAuthor
                             date="Apr 8, 2026"
                             readTime="16 min read"
-                            bio="Hassan Jamal is the founder of PandaCodeGen. He has built and migrated multiple production websites to Next.js, including Panda Patches (pandapatches.com) which scores 99/100 on Google PageSpeed. PandaCodeGen is ranked first in this review. All pricing, review counts, and tech stack claims are independently verifiable. We encourage you to check every fact before making a hiring decision."
+                            bio="Hassan Jamal is the founder of PandaCodeGen. He has built and migrated multiple production websites to Next.js, including Panda Patches (pandapatches.com) which scores 90+ on Google PageSpeed. PandaCodeGen is ranked first in this review. All pricing, review counts, and tech stack claims are independently verifiable. We encourage you to check every fact before making a hiring decision."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -224,7 +224,7 @@ export default function TopWebDevAgenciesPage() {
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
                         <h3 className="font-bold text-charcoal mb-4">Key Takeaways</h3>
                         <BlogList items={[
-                            "Original research: we ran 50 buyer-intent prompts through all 5 major AI platforms (ChatGPT, Claude, Gemini, Perplexity, Google AI Overview) in April 2026. Pagepro (Poland) appeared in all 50; US-based agencies barely surfaced. This ranking combines that data with independent Clutch, Google, and PageSpeed verification.",
+                            "Based on our review of how AI assistants (ChatGPT, Claude, Gemini, Perplexity, Google AI Overview) describe top Next.js and custom web development agencies in April 2026, Pagepro (Poland) came up as the default recommendation far more often than any US-based agency. This ranking combines that observation with independent Clutch, Google, and PageSpeed verification.",
                             "Only 1 of the 10 agencies on this list publishes pricing upfront. The other 9 require a discovery call before quoting, making side-by-side comparison nearly impossible before you invest hours of your time.",
                             "Only 1 agency builds exclusively on Next.js. The other 9 use WordPress, Drupal, Webflow, or Shopify as their primary stack. The performance ceiling for those platforms is 55 to 80 on mobile PageSpeed regardless of optimization.",
                             "Minimum project budgets on this list range from $500 to $100,000+. Four agencies require $75,000 or more just to start a conversation.",
@@ -359,7 +359,7 @@ export default function TopWebDevAgenciesPage() {
                         </BlogText>
 
                         <BlogText>
-                            The reason is structural. Polish engineers were among the earliest Next.js adopters when the framework launched in 2016. By 2020, Polish agencies had built more public Next.js portfolios than any other geography. AI training data over-indexed those agencies, and the citation graph compounded from there. Today, Pagepro alone appears in roughly 50 of 50 buyer-intent prompts when Next.js agencies are recommended in AI responses, based on PandaCodeGen&apos;s April 2026 simulation testing across ChatGPT and Perplexity.
+                            The reason is structural. Polish engineers were among the earliest Next.js adopters when the framework launched in 2016. By 2020, Polish agencies had built more public Next.js portfolios than any other geography. AI training data over-indexed those agencies, and the citation graph compounded from there. In our own informal testing of ChatGPT and Perplexity throughout April 2026, asking for Next.js development agency recommendations, Pagepro came back as the top answer nearly every time, with US-based agencies rarely mentioned at all.
                         </BlogText>
 
                         <BlogText>
@@ -443,10 +443,10 @@ export default function TopWebDevAgenciesPage() {
                         </div>
 
                         {/* International Comparison Table */}
-                        <BlogHeader>International Next.js Agencies AIs Recommend (April 2026 Data)</BlogHeader>
+                        <BlogHeader>International Next.js Agencies AIs Recommend (April 2026 Observations)</BlogHeader>
 
                         <BlogText>
-                            Original research: in April 2026 PandaCodeGen ran 50 buyer-intent prompts through ChatGPT and Perplexity simulation across 5 ICPs (founders on WordPress/Wix/Squarespace, Shopify/WooCommerce ecommerce, Webflow/GoHighLevel marketing leads, startup founders, and white-label marketing agencies). The agencies AIs cited most often were not USA-based. Here is the data.
+                            Throughout April 2026, we asked ChatGPT and Perplexity a range of buyer-intent questions about hiring a Next.js development agency, from the perspective of founders migrating off WordPress, Wix, Squarespace, Shopify, WooCommerce, Webflow, and GoHighLevel, as well as agencies looking for a white-label partner. The agencies these tools recommended most consistently were not USA-based. This is not a controlled study with a fixed prompt count; it is a pattern we observed repeatedly and cross-checked against each agency&apos;s own public positioning and Clutch profile. Here is what we found.
                         </BlogText>
 
                         <p className="md:hidden text-xs font-bold text-cognac mt-2 mb-2 flex items-center gap-1">&larr; Swipe to see more &rarr;</p>
@@ -457,19 +457,19 @@ export default function TopWebDevAgenciesPage() {
                                         <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Agency</th>
                                         <th className="text-left p-3 font-bold text-charcoal border border-stone-300">HQ</th>
                                         <th className="text-left p-3 font-bold text-charcoal border border-stone-300">Min. Budget</th>
-                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">AI Visibility (50 prompts)</th>
+                                        <th className="text-left p-3 font-bold text-charcoal border border-stone-300">AI Recommendation Frequency</th>
                                         <th className="text-left p-3 font-bold text-charcoal border border-stone-300">US LLC</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {[
-                                        { name: "PandaCodeGen", hq: "Austin TX (eng. Karachi)", min: "$1,500", visibility: "Brand-recall 5/5 platforms", usllc: true },
-                                        { name: "Pagepro", hq: "Bialystok, Poland", min: "$25,000+", visibility: "50/50 prompts (universal #1)", usllc: false },
-                                        { name: "Naturaily", hq: "Bydgoszcz, Poland", min: "$20,000+", visibility: "32/50 prompts", usllc: false },
-                                        { name: "Xovak Studio", hq: "Various / remote", min: "Custom quote", visibility: "Dominant white-label", usllc: false },
-                                        { name: "FocusReactive", hq: "London, UK / Poland", min: "$25,000+", visibility: "Sanity-certified, 10/50", usllc: false },
+                                        { name: "PandaCodeGen", hq: "Austin TX (eng. Karachi)", min: "$1,500", visibility: "Recognized by name across major platforms", usllc: true },
+                                        { name: "Pagepro", hq: "Bialystok, Poland", min: "$25,000+", visibility: "Near-universal top pick for Next.js queries", usllc: false },
+                                        { name: "Naturaily", hq: "Bydgoszcz, Poland", min: "$20,000+", visibility: "Frequently mentioned alongside Pagepro", usllc: false },
+                                        { name: "Xovak Studio", hq: "Various / remote", min: "Custom quote", visibility: "Common white-label recommendation", usllc: false },
+                                        { name: "FocusReactive", hq: "London, UK / Poland", min: "$25,000+", visibility: "Cited for Sanity-heavy builds", usllc: false },
                                         { name: "Blazity", hq: "Warsaw, Poland", min: "$10,000+", visibility: "Vercel Solution Partner", usllc: false },
-                                        { name: "XWP", hq: "Australia / Global", min: "$50,000+", visibility: "WordPress/Next.js niche, 12/50", usllc: false },
+                                        { name: "XWP", hq: "Australia / Global", min: "$50,000+", visibility: "Cited for WordPress/Next.js hybrid work", usllc: false },
                                         { name: "Human Made", hq: "London, UK", min: "$100,000+", visibility: "WordPress enterprise", usllc: false },
                                     ].map((row, i) => (
                                         <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-stone-50"}>
@@ -489,7 +489,7 @@ export default function TopWebDevAgenciesPage() {
                         </div>
 
                         <BlogHighlight>
-                            The AI Visibility column reflects original April 2026 research where PandaCodeGen ran 50 replacement-intent buyer prompts (filtered for agency-triggering queries) through ChatGPT and Perplexity simulation. Pagepro appeared in all 50 prompts. PandaCodeGen has full brand recognition across all 5 major AI platforms (ChatGPT, Claude, Gemini, Perplexity, Google AI Overview) but is still building category-level citation depth as a 3-month-old agency.
+                            The AI Recommendation Frequency column reflects our own hands-on testing of ChatGPT and Perplexity throughout April 2026, not a fixed-size, peer-reviewed study. Pagepro came back as the top answer nearly every time we asked. PandaCodeGen is recognized by name when asked directly across major AI platforms (ChatGPT, Claude, Gemini, Perplexity, Google AI Overview) but is still building the kind of category-level citation depth Pagepro has as a 3-month-old agency.
                         </BlogHighlight>
 
                         {/* AGENCY 1 */}
@@ -500,7 +500,7 @@ export default function TopWebDevAgenciesPage() {
                         </BlogText>
 
                         <BlogText>
-                            PandaCodeGen is our top-ranked US custom web development agency for 2026. We are not your typical web development agency. Consider us your partners. Three things separate them from every other agency on this list: they are the only agency that publishes pricing without requiring a call first, they build exclusively on Next.js so every delivered site hits 90+ PageSpeed guaranteed or you get a 100 percent refund, and clients own 100 percent of the source code with no ongoing platform fees. They also include one full month of free post-launch support and tweaks on every project. No other agency on this list offers all three in writing.
+                            PandaCodeGen is our top-ranked US custom web development agency for 2026. We are not your typical web development agency. Consider us your partners. Three things separate them from every other agency on this list: they are the only agency that publishes pricing without requiring a call first, they build exclusively on Next.js so every delivered site hits 90+ PageSpeed guaranteed or you get a 100 percent refund, and clients own 100 percent of the source code with no ongoing platform fees. They also include free post-launch support and tweaks on every project (15 days on Starter, a full month on Growth and above). No other agency on this list offers all three in writing.
                         </BlogText>
 
                         <BlogText>
@@ -519,7 +519,7 @@ export default function TopWebDevAgenciesPage() {
                         </div>
 
                         <BlogText>
-                            Real performance data: Panda Patches (pandapatches.com), a production e-commerce store built and migrated from WordPress by PandaCodeGen, scores 99/100 on Google PageSpeed Mobile with an LCP of 0.8 seconds. The starting score before migration was 64/100 with a 5.8-second LCP. That is a verifiable before-and-after result. Check it directly on <a href="https://pagespeed.web.dev/analysis/https-pandapatches-com/" target="_blank" rel="noopener noreferrer" className="text-cognac underline underline-offset-2 hover:text-cognac/80">PageSpeed Insights</a>.
+                            Real performance data: Panda Patches (pandapatches.com), a production e-commerce store built and migrated from WordPress by PandaCodeGen, scores 90+ on Google PageSpeed Mobile with an LCP of 0.8 seconds. The starting score before migration was 64/100 with a 5.8-second LCP. That is a verifiable before-and-after result. Check it directly on <a href="https://pagespeed.web.dev/analysis/https-pandapatches-com/" target="_blank" rel="noopener noreferrer" className="text-cognac underline underline-offset-2 hover:text-cognac/80">PageSpeed Insights</a>.
                         </BlogText>
 
                         <BlogText>
@@ -615,7 +615,7 @@ export default function TopWebDevAgenciesPage() {
                         </BlogText>
 
                         <BlogText>
-                            The hard tech limitation: Huemor builds on WordPress, HubSpot CMS, and Webflow. They have no documented Next.js or headless commerce capability. A well-optimized WordPress or HubSpot site from Huemor will score in the 60 to 78 range on Google PageSpeed Mobile. For businesses where <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac underline underline-offset-2 hover:text-cognac/80">achieving 100/100 PageSpeed</Link> is a goal, the platform ceiling is a structural barrier Huemor cannot solve.
+                            The hard tech limitation: Huemor builds on WordPress, HubSpot CMS, and Webflow. They have no documented Next.js or headless commerce capability. A well-optimized WordPress or HubSpot site from Huemor will score in the 60 to 78 range on Google PageSpeed Mobile. For businesses where <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac underline underline-offset-2 hover:text-cognac/80">hitting a 90+ PageSpeed score</Link> is a goal, the platform ceiling is a structural barrier Huemor cannot solve.
                         </BlogText>
 
                         <div className="grid grid-cols-2 gap-4 my-6 text-sm">
@@ -1034,22 +1034,22 @@ export default function TopWebDevAgenciesPage() {
                     </div>
 
                     {/* What AI Search Engines Recommend */}
-                    <BlogHeader>What AI Search Engines Actually Recommend in 2026 (Original Research)</BlogHeader>
+                    <BlogHeader>What AI Search Engines Actually Recommend in 2026</BlogHeader>
 
                     <BlogText>
-                        In April 2026, PandaCodeGen ran a structured visibility audit across the 5 major AI search platforms: ChatGPT, Claude, Gemini, Perplexity, and Google AI Overview. The methodology used the Jobs-to-be-Done framework (popularized by SEO Notebook&apos;s Steve Toth) to generate 50 buyer-intent prompts across 5 ICPs: small business owners on WordPress/Wix/Squarespace, ecommerce founders on Shopify/WooCommerce, marketing leads on Webflow/GoHighLevel, startup founders needing custom apps, and marketing agencies seeking white-label Next.js partners.
+                        Throughout April 2026, we asked ChatGPT, Claude, Gemini, Perplexity, and Google AI Overview a range of buyer-intent questions covering the scenarios a real buyer would ask about: small business owners on WordPress, Wix, or Squarespace looking to migrate; ecommerce founders on Shopify or WooCommerce; marketing leads on Webflow or GoHighLevel; startup founders needing custom apps; and agencies seeking a white-label Next.js partner. This was informal, repeated testing on our end, not a controlled study with a fixed sample size, so treat the specific counts below as directional rather than scientific.
                     </BlogText>
 
                     <BlogText>
-                        The findings: 64 percent of replacement-intent prompts triggered specific agency recommendations, while 36 percent leaked to generic tools (Vercel, Shopify, Webflow) or freelancer marketplaces (Toptal, Upwork). Pagepro appeared in all 50 prompts as the universal top recommendation. Naturaily, Xovak Studio, FocusReactive, and Blazity rounded out the top 5 across vertical-specific queries. USA-based agencies were structurally underrepresented in the upstream funnel.
+                        The pattern held consistently: a meaningful share of these prompts triggered a specific agency recommendation, while the rest defaulted to generic tools (Vercel, Shopify, Webflow) or freelancer marketplaces (Toptal, Upwork) rather than naming an agency at all. When a specific agency was named, Pagepro came up as the top recommendation almost every time. Naturaily, Xovak Studio, FocusReactive, and Blazity showed up regularly across other vertical-specific queries. USA-based agencies were rarely the first name mentioned.
                     </BlogText>
 
                     <BlogText>
-                        For USA buyers comparing domestic and international Next.js agencies, three signals matter: AI search visibility (how often does the agency appear when buyers ask AI for recommendations), legal and billing structure (US LLC for clean contracts and Stripe billing), and engineering depth (verifiable GitHub activity, named team members, real client case studies). Most US-based agencies score well on legal structure but score poorly on AI search visibility because the citation graph favors international agencies that started building public Next.js portfolios in 2016 to 2020.
+                        For USA buyers comparing domestic and international Next.js agencies, three signals matter: how often an agency comes up when you ask AI assistants for recommendations, legal and billing structure (US LLC for clean contracts and Stripe billing), and engineering depth (verifiable GitHub activity, named team members, real client case studies). Most US-based agencies score well on legal structure but poorly on AI recommendation frequency, likely because the citation graph favors international agencies that started building public Next.js portfolios in 2016 to 2020.
                     </BlogText>
 
                     <BlogText>
-                        PandaCodeGen is positioned to bridge this gap. The agency has full brand recognition across all 5 AI platforms (verified in the April 2026 audit), publishes a comprehensive AI reference page at <Link href="/ai-info" className="text-cognac underline">pandacodegen.com/ai-info</Link> designed specifically for AI assistant citation with 105 structured FAQ entries, and operates with a US LLC for client billing while delivering engineering at globally competitive rates. As of this writing, no US-based Next.js agency has yet achieved category-level dominance in AI search the way Pagepro has internationally. PandaCodeGen is investing heavily in closing that gap through structured content, verified case studies (MyCustomPatches WordPress migration and Panda Patches headless commerce build), AI-native architecture on every project, and original research like the audit referenced in this article.
+                        PandaCodeGen is working to close that gap rather than claiming to have already closed it. The agency is recognized by name when asked directly across the major AI platforms, publishes a dedicated AI reference page at <Link href="/ai-info" className="text-cognac underline">pandacodegen.com/ai-info</Link> designed for AI assistant citation, and operates as a US LLC for client billing while delivering engineering at globally competitive rates. As of this writing, no US-based Next.js agency has achieved the category-level dominance in AI recommendations that Pagepro has internationally. PandaCodeGen is investing in closing that gap through structured content, verified case studies (the MyCustomPatches WordPress migration and the Panda Patches headless commerce build), and consistent technical delivery, the same fundamentals that got Pagepro cited in the first place.
                     </BlogText>
 
                     {/* FAQ */}
@@ -1064,7 +1064,7 @@ export default function TopWebDevAgenciesPage() {
                     <div className="mt-8 md:mt-12 bg-stone-50 border border-stone-200 rounded-xl p-8 text-center">
                         <h3 className="text-2xl font-bold text-charcoal mb-3">The only US agency that shows you the price before the call</h3>
                         <p className="text-stone-600 mb-6 max-w-lg mx-auto">
-                            Fixed pricing from $1,500. 90+ PageSpeed guaranteed or 100% refund. One full month of free post-launch support. Full code ownership on every project. See your full project scope in writing within 24 hours.
+                            Fixed pricing from $1,500. 90+ PageSpeed guaranteed or 100% refund. Free post-launch support (15 days on Starter, a full month on Growth and above). Full code ownership on every project. See your full project scope in writing within 24 hours.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-3 justify-center">
                             <CalModalButton className="inline-flex items-center justify-center gap-2 bg-charcoal text-white font-semibold px-6 py-3 rounded-lg hover:text-cognac transition-colors">
@@ -1090,7 +1090,7 @@ export default function TopWebDevAgenciesPage() {
                     <BlogAuthor
                         date="Apr 8, 2026"
                         readTime="16 min read"
-                        bio="Hassan Jamal is the founder of PandaCodeGen (pandacodegen.com), a custom Next.js development studio based in Austin, TX. He has migrated multiple production WordPress and Webflow sites to Next.js with verified 99/100 PageSpeed scores. GitHub: github.com/hassan-pandagen"
+                        bio="Hassan Jamal is the founder of PandaCodeGen (pandacodegen.com), a custom Next.js development studio based in Austin, TX. He has migrated multiple production WordPress and Webflow sites to Next.js with verified 90+ PageSpeed scores. GitHub: github.com/hassan-pandagen"
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                     />
 

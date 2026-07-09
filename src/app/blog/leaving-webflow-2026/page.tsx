@@ -19,7 +19,7 @@ export const dynamic = "force-static";
 
 export const metadata: Metadata = {
     title: "Leaving Webflow 2026: Why We Left After 14 Outages",
-    description: "14 documented Webflow outages Feb to April 2026. Bandwidth bills hit $170 overnight. Memberships killed with 6 weeks notice. The full migration story.",
+    description: "Multiple documented Webflow outages, including a widely reported 31-hour incident. Bandwidth bills hit $170 overnight. Memberships killed with 6 weeks notice. The full migration story.",
     alternates: {
         canonical: "/blog/leaving-webflow-2026",
     },
@@ -46,7 +46,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/leaving-webflow-2026#article",
-            "headline": "Should You Leave Webflow in 2026? Real Migration Story After 14 Outages",
+            "headline": "Should You Leave Webflow in 2026? Real Migration Story After Repeated Outages",
             "description": "Bandwidth cut 75%. Bills hit $170 overnight. Carts broke. Memberships killed. The real story of leaving Webflow and what comes next.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-04-06T00:00:00-05:00",
@@ -55,7 +55,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -208,7 +208,7 @@ export default function LeavingWebflow2026Page() {
                         </ul>
                     </div>
 
-                    <p className="text-stone-700 leading-relaxed mb-6">You should leave Webflow in 2026 if your site has experienced outages, your monthly Webflow bill exceeds $150, or your Google rankings are stuck. Webflow had 14 documented outages in 2025 to 2026. Migrating to a custom Next.js site gives you zero-downtime hosting on Vercel, $0 monthly fees, and full code ownership.</p>
+                    <p className="text-stone-700 leading-relaxed mb-6">You should leave Webflow in 2026 if your site has experienced outages, your monthly Webflow bill exceeds $150, or your Google rankings are stuck. Webflow has multiple documented outages on record in 2025 and 2026, including a widely reported 31-hour incident. Migrating to a custom Next.js site gives you zero-downtime hosting on Vercel, $0 monthly fees, and full code ownership.</p>
 
                     <div className="space-y-8">
 
@@ -339,23 +339,19 @@ export default function LeavingWebflow2026Page() {
                             The frustration is not just the cost. It is that the cost keeps changing. You budget for one number, you get charged another. You plan around a feature, Webflow kills it. You build a workflow, Webflow deprecates the tool. Every few months, something you relied on disappears or gets more expensive.
                         </BlogText>
 
-                        <BlogHeader>The 14 Outages Nobody Warned Us About</BlogHeader>
+                        <BlogHeader>The Outages Nobody Warned Us About</BlogHeader>
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">Webflow had 14 incidents in 90 days (4 major, 10 minor) per IsDown third-party monitoring. April 14-15, 2026 saw a 12-hour outage taking down every hosted Webflow site. July 2025 had a 31-hour outage. Custom Next.js on Vercel runs with a 99.99% SLA.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Webflow has multiple documented outages on record, including a widely reported 31-hour outage in July 2025, plus smaller incidents tracked on independent uptime monitors like IsDown and on Webflow&apos;s own status history. Custom Next.js on Vercel runs on a global edge network with 300+ locations and does not carry that incident history.</p>
                         </div>
 
                         <BlogText>
-                            The real breaking point was uptime. According to <a href="https://isdown.app/status/webflow" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">IsDown&apos;s third-party monitoring</a>, Webflow had <BlogHighlight>14 incidents in the last 90 days</BlogHighlight> (4 major outages, 10 minor). The median outage lasted 1 hour 59 minutes. March 2026 alone included a 5 hour 20 minute incident on March 2, a 3 hour 15 minute warning on March 16, and a 3 hour 30 minute warning on March 31.
+                            The real breaking point was uptime. Independent uptime monitoring for Webflow, alongside <a href="https://status.webflow.com/history" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Webflow&apos;s own status history</a>, shows a recurring pattern of incidents rather than an isolated bad week: some minor and resolved within hours, some larger and disruptive to live sites and dashboards. We are not going to pretend we have an exact, audited count of every incident in a given quarter, since third-party monitors and Webflow&apos;s own status page do not always agree on what counts as an incident. What we can say with confidence, because we lived it and because it is publicly documented, is the pattern below.
                         </BlogText>
 
                         <BlogText>
-                            Then April 14 to 15 happened. Every hosted Webflow site went dark for over 12 hours with 5xx errors, the Dashboard inaccessible, and the Forms API offline. <a href="https://status.webflow.com/history" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Webflow confirmed</a> the incident was caused by an upstream provider failure. Stores went down. Lead forms went down. Paid ads kept running and sent visitors to broken pages their owners could not fix.
-                        </BlogText>
-
-                        <BlogText>
-                            This was not even the worst one. In July 2025, Webflow had a <a href="https://medium.com/@slimx/web-flow-outage-for-over-31-hours-a-lesson-many-business-owners-learnt-the-hardway-476ae9168a9a" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">31-hour outage</a>. Entire work week lost for e-commerce stores. The <a href="https://news.ycombinator.com/item?id=44728554" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Hacker News thread</a> still reads like a eulogy for small businesses that trusted the platform. We read it during the 31-hour outage. We did not leave until we started losing money in smaller outages every few weeks.
+                            The clearest, most citable example is the outage in July 2025. Webflow had a <a href="https://medium.com/@slimx/web-flow-outage-for-over-31-hours-a-lesson-many-business-owners-learnt-the-hardway-476ae9168a9a" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">reported 31-hour outage</a>. Entire work week lost for e-commerce stores that depended on it. The <a href="https://news.ycombinator.com/item?id=44728554" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Hacker News thread</a> still reads like a eulogy for small businesses that trusted the platform. We read it while it was happening. We did not leave the day of that outage. We left after watching the pattern repeat in smaller incidents over the months that followed, and deciding we were not willing to keep betting client revenue on someone else&apos;s uptime.
                         </BlogText>
 
                         <BlogQuote>
@@ -425,7 +421,7 @@ export default function LeavingWebflow2026Page() {
                         </BlogQuote>
 
                         <BlogText>
-                            Then came the July 2025 outage. The platform went down for over 31 hours. Status updates were described by Hacker News commenters as "99% LLM slop." Businesses with live client sites had no recourse, no timeline, and no compensation. A second outage followed shortly after. The open letter from the Webflow community about platform instability was widely shared.
+                            Then came the July 2025 outage. The platform went down for over 31 hours. Status updates were described by Hacker News commenters as "99% LLM slop." Businesses with live client sites had no recourse, no timeline, and no compensation. Community discussion about platform instability on Webflow's own forums and on Hacker News was widely shared in the weeks that followed.
                         </BlogText>
 
                         <BlogText>
@@ -449,7 +445,7 @@ export default function LeavingWebflow2026Page() {
                         </div>
 
                         <BlogText>
-                            We ran this exact process on our Obare Magazine rebuild (Wix to Next.js and Sanity, 7 days). The playbook travels to Webflow cleanly. Here is what a real migration looks like from the inside, with no glossing over the hard parts. For the full scope breakdown and hour-per-phase estimates specifically for 50 to 100 page Webflow sites, see our <Link href="/blog/webflow-migration-50-to-100-pages" className="text-cognac hover:underline">Scale-tier pricing breakdown</Link>. The fixed-price scope and what every migration includes is on our <Link href="/services/webflow" className="text-cognac hover:underline">Webflow migration service page</Link>, with the full tier menu at <Link href="/pricing" className="text-cognac hover:underline">pricing</Link>.
+                            We ran this exact process on our Obare Magazine rebuild (Wix to Next.js and Sanity, 7 days). The playbook travels to Webflow cleanly. Here is what a real migration looks like from the inside, with no glossing over the hard parts. For the full scope breakdown and hour-per-phase estimates specifically for 50 to 100 page Webflow sites, see our <Link href="/blog/webflow-migration-cost" className="text-cognac hover:underline">Scale-tier pricing breakdown</Link>. The fixed-price scope and what every migration includes is on our <Link href="/services/webflow" className="text-cognac hover:underline">Webflow migration service page</Link>, with the full tier menu at <Link href="/pricing" className="text-cognac hover:underline">pricing</Link>.
                         </BlogText>
 
                         <BlogText>
@@ -476,7 +472,7 @@ export default function LeavingWebflow2026Page() {
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">Post-migration results from real client sites: PageSpeed 45-62 → 95-99, load time 3.2-4.5s → 0.6-0.8s, monthly hosting $150-$700 → $0, transaction fee 2% → 0%, CMS item limit removed, bandwidth limit removed, and Vercel 99.99% uptime replacing Webflow's outage history.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Post-migration results from real client sites: PageSpeed 45-62 → 90+, load time 3.2-4.5s → 0.6-0.8s, monthly hosting $150-$700 → $0, transaction fee 2% → 0%, CMS item limit removed, bandwidth limit removed, and Vercel's global edge network replacing Webflow's outage history.</p>
                         </div>
 
                         <BlogText>
@@ -497,7 +493,7 @@ export default function LeavingWebflow2026Page() {
                                     <tr className="border-b border-stone-300">
                                         <td className="py-3 pr-4 font-medium">Google PageSpeed (Mobile)</td>
                                         <td data-label="Webflow" className="py-3 px-4">45 to 62</td>
-                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">95 to 99</td>
+                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">90+</td>
                                     </tr>
                                     <tr className="border-b border-stone-300">
                                         <td className="py-3 pr-4 font-medium">Page Load Time (Mobile)</td>
@@ -532,7 +528,7 @@ export default function LeavingWebflow2026Page() {
                                     <tr>
                                         <td className="py-3 pr-4 font-medium">Downtime Risk</td>
                                         <td data-label="Webflow" className="py-3 px-4">31+ hour outages, no compensation</td>
-                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">Vercel 99.99% uptime SLA</td>
+                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">Vercel global edge network, 300+ locations</td>
                                     </tr>
                                 </tbody>
                             </table>

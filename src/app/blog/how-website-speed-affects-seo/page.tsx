@@ -52,7 +52,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -267,13 +267,13 @@ export default function WebsiteSpeedSEOPage() {
                             "A site loading in 1 second has a conversion rate 5x higher than one loading in 10 seconds."
                         ]} />
                         <BlogText>
-                            For a real number: if your store does $30,000 per month at a 3-second load time and you improve to 1 second, you could reasonably expect revenue in the $80,000 to $90,000 per month range from the same traffic. No new ads. No new content. The same visitors, converting at a higher rate because the page loads faster. The speed improvement also compounds over time. A faster site earns better Core Web Vitals scores, which drives higher rankings, which brings more organic traffic, which generates even more revenue on top.
+                            Here is what that looks like on a real, named site rather than a hypothetical. Panda Patches, our own e-commerce brand, ran on WordPress and WooCommerce for three years at 64 mobile PageSpeed and a 5.8-second LCP. We rebuilt it on Next.js, Sanity, Supabase, and Square. Mobile PageSpeed moved to 90+, LCP dropped to 0.8 seconds, and monthly revenue grew from roughly $38,000 to $50,000 in the months after launch, alongside $200 a month in eliminated plugin and hosting fees. That is not every visitor converting better in isolation; some of that growth includes rankings recovering and organic traffic increasing as Core Web Vitals improved. <Link href="/work/panda-patches" className="text-stone-700 underline underline-offset-2 hover:text-black">Full case study here.</Link>
                         </BlogText>
                         <BlogText>
                             <a href="https://www.deloitte.com/ie/en/services/consulting/research/milliseconds-make-millions.html" target="_blank" rel="noopener noreferrer" className="text-stone-700 underline underline-offset-2 hover:text-black">Deloitte's "Milliseconds Make Millions" study</a>, commissioned by Google and run across 37 brands in retail, travel, and luxury, found that a 0.1-second improvement in load time increased retail conversions by 8.4% and average order value by 9.2%. Not 1 second. Not 2 seconds. One tenth of a second produced a measurable revenue increase.
                         </BlogText>
                         <BlogHighlight>
-                            For a business generating $1 million per month through its website: each additional second of load time costs approximately $70,000 in lost monthly revenue.
+                            Illustrative math, not a measured result: apply Deloitte's 8.4%-per-0.1-second figure to a business doing $1 million per month through its website, and shaving a full second off load time (10 x 0.1s increments, assuming the effect holds linearly, which real-world results rarely do exactly) implies roughly $70,000 in monthly revenue at stake. Treat this as a back-of-envelope estimate to size the problem, not a guarantee.
                         </BlogHighlight>
                         <BlogText>
                             This is why speed isn't an "IT concern." It's a revenue line item.
@@ -402,7 +402,7 @@ export default function WebsiteSpeedSEOPage() {
                                 <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-1">Step 5</p>
                                 <h3 className="text-lg font-bold mb-2">If You've Hit the Platform Ceiling, Migrate</h3>
                                 <BlogText>
-                                    If your mobile score is stuck below 70 after addressing the above, your platform is the bottleneck, not your settings. This is where businesses face a real financial decision: continue paying for ongoing optimisation that delivers diminishing returns and never escapes the ceiling, or make a one-time investment in a faster architecture that scores 90+ natively. Our clients who migrate from WordPress to Next.js see rankings recover in 30 to 60 days and typically see 20 to 40% organic traffic increases within 90 days. See our <Link href="/blog/how-to-achieve-100-pagespeed" className="text-stone-700 underline underline-offset-2 hover:text-black">full guide to achieving 100/100 PageSpeed</Link>. The platform-level comparison is covered in our <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress vs Next.js breakdown</Link>.
+                                    If your mobile score is stuck below 70 after addressing the above, your platform is the bottleneck, not your settings. This is where businesses face a real financial decision: continue paying for ongoing optimisation that delivers diminishing returns and never escapes the ceiling, or make a one-time investment in a faster architecture that scores 90+ natively. Our clients who migrate from WordPress to Next.js see rankings recover in 30 to 60 days and typically see 20 to 40% organic traffic increases within 90 days. See our <Link href="/blog/how-to-achieve-100-pagespeed" className="text-stone-700 underline underline-offset-2 hover:text-black">full guide to hitting a 90+ PageSpeed score</Link>. The platform-level comparison is covered in our <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress vs Next.js breakdown</Link>.
                                 </BlogText>
                             </div>
                         </div>
@@ -481,7 +481,7 @@ export default function WebsiteSpeedSEOPage() {
                                 href="/blog/how-to-achieve-100-pagespeed"
                                 className="inline-flex items-center justify-center gap-2 border border-stone-300 text-stone-700 font-semibold px-6 py-3 rounded-lg hover:bg-stone-50 transition-colors"
                             >
-                                Read: How to Hit 100/100 PageSpeed
+                                Read: How to Hit a 90+ PageSpeed Score
                             </Link>
                         </div>
                     </div>

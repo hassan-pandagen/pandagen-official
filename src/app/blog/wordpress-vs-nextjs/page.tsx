@@ -54,7 +54,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -299,7 +299,7 @@ export default function WordPressVsNextJSPage() {
                                     <tr>
                                         <td className="px-4 py-3 text-stone-600">PageSpeed ceiling (optimised)</td>
                                         <td data-label="WordPress (avg)" className="px-4 py-3 text-orange-600 font-medium">65 to 75/100</td>
-                                        <td data-label="Next.js (PandaCodeGen)" className="px-4 py-3 text-green-700 font-medium">98 to 100/100</td>
+                                        <td data-label="Next.js (PandaCodeGen)" className="px-4 py-3 text-green-700 font-medium">90+/100</td>
                                     </tr>
                                     <tr className="bg-stone-50/50">
                                         <td className="px-4 py-3 text-stone-600">Core Web Vitals pass rate</td>
@@ -319,7 +319,7 @@ export default function WordPressVsNextJSPage() {
                             The ceiling matters more than the average. A WordPress site can be optimised with good hosting, aggressive caching, image compression, and a premium CDN. With all of that, you reach 65 to 75/100 mobile PageSpeed. Then you hit a wall. PHP rendering overhead, database query latency, and plugin script weight cannot be optimised away. They are architectural.
                         </BlogText>
                         <BlogQuote>
-                            Our client MyCustomPatches came to us with a WooCommerce store on WordPress scoring 45/100 on mobile, loading in 3.2 seconds. After migrating to a custom Next.js build: 97/100 mobile, 0.7 seconds, 45% increase in conversions. Not from new marketing. From speed alone.
+                            Our client MyCustomPatches came to us with a WooCommerce store on WordPress scoring 45/100 on mobile, loading in 3.2 seconds. After migrating to a custom Next.js build: 90+ mobile, 0.7 seconds, 45% increase in conversions. Not from new marketing. From speed alone.
                         </BlogQuote>
                         <BlogText>
                             According to{" "}
@@ -607,7 +607,11 @@ export default function WordPressVsNextJSPage() {
                             WordPress won the 2010s because it democratised website publishing. It gave everyone access to the web. That was genuinely important.
                         </BlogText>
                         <BlogText>
-                            Next.js is winning the 2020s because Google made speed a ranking factor, mobile became the primary device for browsing, and the revenue gap between fast and slow sites became impossible to ignore. The businesses taking market share from their competitors in 2026 are the ones that made the switch two or three years ago. They are now compounding the gains of being faster, more secure, and easier to find on Google.
+                            Next.js is winning the 2020s because Google made speed a ranking factor, mobile became the primary device for browsing, and the revenue gap between fast and slow sites became impossible to ignore. The businesses taking market share from their competitors in 2026 are the ones that made the switch two or three years ago. They are now compounding the gains of being faster, more secure, and easier to find on Google. We took our own advice as well: the site you are reading runs on Next.js, and we wrote up{" "}
+                            <Link href="/blog/why-we-chose-nextjs-over-wordpress-2026" className="text-stone-700 underline underline-offset-2 hover:text-black">
+                                why we chose Next.js over WordPress
+                            </Link>{" "}
+                            for it.
                         </BlogText>
                         <BlogHighlight>
                             If you are on WordPress and your site generates more than $10,000/month in revenue, a migration to Next.js is almost certainly one of the highest-ROI investments you can make this year. The combination of lower ongoing cost, higher search rankings, and better conversion rates creates a compounding advantage that widens every month you are on the faster platform.

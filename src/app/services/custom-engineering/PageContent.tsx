@@ -72,7 +72,7 @@ export default function PageContent() {
             className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.08] md:leading-tight break-words"
           >
             SaaS founders: stop waiting 6 months for a dev shop. <br />
-            <span className="font-serif italic text-cognac">We ship your custom app in 3 weeks.</span>
+            <span className="font-serif italic text-cognac">We ship your first working version in 4 to 6 weeks.</span>
           </motion.h1>
 
           <motion.p
@@ -216,10 +216,10 @@ export default function PageContent() {
           <div className="grid md:grid-cols-4 gap-6 relative">
             <div className="hidden md:block absolute top-8 left-0 w-full h-0.5 bg-slate-100 -z-10" />
             {[
-              { step: "01", title: "Discovery Sprint", duration: "Week 1", desc: "We map your requirements, user flows, and technical architecture. You get a detailed spec doc and timeline before a single line of code is written." },
-              { step: "02", title: "Prototype & Validate", duration: "Weeks 2-3", desc: "We build a working prototype with real functionality, not mockups. You test it, your users test it, we iterate until it's right." },
-              { step: "03", title: "Full Development", duration: "Weeks 4-8", desc: "Sprint-based build on Next.js App Router with React Server Components, Tailwind CSS, Turbopack, and Sanity or Supabase for content and data. Auth, Stripe payments, real-time features, Claude and OpenAI integration. Weekly demos. Never surprises." },
-              { step: "04", title: "Launch & Scale", duration: "Week 9+", desc: "We deploy to production, set up monitoring, and hand over the codebase. You own 100% of the code and IP. We stay on for support." },
+              { step: "01", title: "Discovery Sprint", duration: "Phase 1", desc: "We map your requirements, user flows, and technical architecture. You get a detailed spec doc and timeline before a single line of code is written." },
+              { step: "02", title: "Prototype & Validate", duration: "Phase 2", desc: "We build a working prototype with real functionality, not mockups. You test it, your users test it, we iterate until it's right." },
+              { step: "03", title: "Full Development", duration: "Phase 3", desc: "Sprint-based build on Next.js App Router with React Server Components, Tailwind CSS, Turbopack, and Sanity or Supabase for content and data. Auth, Stripe payments, real-time features, Claude and OpenAI integration. Weekly demos. Never surprises." },
+              { step: "04", title: "Launch & Scale", duration: "Phase 4", desc: "We deploy to production, set up monitoring, and hand over the codebase. You own 100% of the code and IP. We stay on for support." },
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -341,8 +341,8 @@ export default function PageContent() {
         </div>
       </section>
 
-      {/* PARTNER PROMISE — locked brand voice, 3 guarantees */}
-      <PartnerPromise />
+      {/* PARTNER PROMISE — locked brand voice, 3 guarantees. hideTiers: this page has its own $3K/$10K/$25K tiers */}
+      <PartnerPromise hideTiers />
 
       {/* SIGNATURE BLOCK — Build Blueprint Spec (unique to Custom Engineering) */}
       <section id="build-blueprint" className="py-12 md:py-20 px-6 bg-charcoal">
@@ -568,6 +568,19 @@ export default function PageContent() {
               Book Free Discovery Call
             </button>
           </div>
+        </div>
+      </section>
+
+      {/* Further Reading — blog cluster links (closes the pillar -> supporting-content loop) */}
+      <section className="py-10 px-6 bg-white border-t border-stone-200">
+        <div className="container mx-auto max-w-4xl">
+          <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-4">Further reading</p>
+          <ul className="space-y-2 text-stone-700">
+            <li>&rarr; <Link href="/blog/build-vs-buy-software-2026-cost-comparison" className="text-charcoal hover:text-cognac underline underline-offset-2">Build vs buy software in 2026: the real cost comparison</Link></li>
+            <li>&rarr; <Link href="/blog/how-long-does-a-custom-website-take" className="text-charcoal hover:text-cognac underline underline-offset-2">How long does a custom website take to build?</Link></li>
+            <li>&rarr; <Link href="/blog/custom-website-5000-whats-included" className="text-charcoal hover:text-cognac underline underline-offset-2">A $5,000 custom website: what&apos;s actually included</Link></li>
+            <li>&rarr; <Link href="/blog/do-you-own-your-website" className="text-charcoal hover:text-cognac underline underline-offset-2">Do you own your website? Code ownership explained</Link></li>
+          </ul>
         </div>
       </section>
 

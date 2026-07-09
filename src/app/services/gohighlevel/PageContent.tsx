@@ -17,12 +17,12 @@ import { Eye } from "lucide-react";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 
 const comparisonData = [
-  { feature: "Page Load Speed", ghl: "3.4-5.2 seconds (funnel pages)", custom: "Under 1 second", icon: Gauge },
+  { feature: "Page Load Speed", ghl: "3 to 5 seconds (funnel pages)", custom: "Under 1 second", icon: Gauge },
   { feature: "Code Ownership", ghl: "You own nothing (SaaS lock-in)", custom: "100% yours forever", icon: Lock },
-  { feature: "Google PageSpeed Score", ghl: "30-55 average (mobile)", custom: "90+ guaranteed", icon: TrendingUp },
+  { feature: "Google PageSpeed Score", ghl: "20 to 45 average (mobile)", custom: "90+ guaranteed", icon: TrendingUp },
   { feature: "Monthly Cost", ghl: "$97-497/mo subscription", custom: "$0 to start. Pay only when you scale massively", icon: DollarSign },
   { feature: "Design Freedom", ghl: "Template-based funnel builder", custom: "Unlimited, pixel-perfect designs", icon: Palette },
-  { feature: "SEO Capability", ghl: "Minimal, funnels don't rank", custom: "Full SEO that Google, ChatGPT and AI search love", icon: TrendingUp },
+  { feature: "SEO Capability", ghl: "Minimal, funnels rarely rank", custom: "Full SEO that Google, ChatGPT and AI search love", icon: TrendingUp },
 ];
 
 const faqs = [
@@ -119,17 +119,17 @@ export default function PageContent() {
         badge="What Your GHL Consultant Won't Tell You"
         headline="You're paying $297/mo for a"
         headlineAccent="slow site."
-        description="You're paying $297/mo because GHL's CRM and automations are genuinely useful. But the site it ships with scores 20 to 45 on mobile PageSpeed. You're paying $2,000/mo in Meta ads to send traffic to a page Google won't rank and users won't wait for. You're paying a designer to work around GHL's page builder limits."
+        description="You're paying $297/mo because GHL's CRM and automations are genuinely useful. But the site it ships with scores 20 to 45 on mobile PageSpeed. You're paying $2,000/mo in Meta ads to send traffic to a page Google rarely ranks and users won't wait for. You're paying a designer to work around GHL's page builder limits."
         descriptionSecondary="Nobody tells you this because GHL's Partner Program pays commissions on every account. Not GHL. Not the GHL consultants. Not the course sellers teaching you to stay inside it. We keep your CRM. We replace the frontend. No pitch. Just receipts."
         comparisonTitle="GHL Site vs Custom"
         themLabel="GHL Site"
         metrics={[
           { metric: "PageSpeed",     themLabel: "20-45",     usLabel: "90+",         themPct: 35, usPct: 98, icon: Gauge },
-          { metric: "Load Speed",    themLabel: "3-6s",      usLabel: "< 1s",        themPct: 30, usPct: 98, icon: Gauge },
+          { metric: "Load Speed",    themLabel: "3-5s",      usLabel: "< 1s",        themPct: 30, usPct: 98, icon: Gauge },
           { metric: "SEO Control",   themLabel: "Limited",   usLabel: "Full",        themPct: 30, usPct: 100, icon: FileSearch },
           { metric: "GHL CRM",       themLabel: "Stays",     usLabel: "Stays",       themPct: 100, usPct: 100, icon: Users },
           { metric: "Custom Design", themLabel: "Templates", usLabel: "Fully Custom",themPct: 35, usPct: 100, icon: Palette },
-          { metric: "AI Search",     themLabel: "Invisible", usLabel: "Optimized",   themPct: 15, usPct: 98, icon: Eye },
+          { metric: "AI Search",     themLabel: "Rarely cited", usLabel: "Optimized",   themPct: 15, usPct: 98, icon: Eye },
         ]}
         savingsLines={[
           { label: "GHL Agency plan (stays)",             amount: "(kept)" },
@@ -165,7 +165,7 @@ export default function PageContent() {
             <div className="p-6 rounded-2xl bg-red-50 border border-red-200">
               <h3 className="text-lg font-bold text-red-600 mb-4 flex items-center gap-2"><XCircle className="w-5 h-5" /> Where GHL Falls Short</h3>
               <ul className="space-y-3">
-                {["Funnel pages load in 3-5 seconds", "Templates look generic and cheap", "Zero organic SEO capability", "No custom design flexibility", "Mobile experience is poor"].map((item, i) => (
+                {["Funnel pages load in 3 to 5 seconds", "Templates look generic and cheap", "Systematically disadvantaged in search", "No custom design flexibility", "Mobile experience is poor"].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
                     <XCircle className="w-4 h-4 text-red-600 shrink-0" /> {item}
                   </li>
@@ -224,8 +224,8 @@ export default function PageContent() {
               <p className="text-sm text-stone-400">No hourly billing. No surprise invoices. Published tiers.</p>
             </div>
             <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
-              <div className="text-2xl font-bold text-cognac mb-1">Free month</div>
-              <p className="text-sm text-stone-400">30 days of post-launch tweaks included on every build.</p>
+              <div className="text-2xl font-bold text-cognac mb-1">Free support</div>
+              <p className="text-sm text-stone-400">15 to 30 days of post-launch tweaks included, depending on tier.</p>
             </div>
           </div>
         </div>
@@ -279,8 +279,8 @@ export default function PageContent() {
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { icon: TrendingUp, pain: "Slow Funnel Pages Are Burning Your Ad Budget", detail: "Google Ads Quality Score is tied directly to landing page speed. GHL pages load in 3-5 seconds. Slow pages mean lower scores and higher CPC. You're paying 30-50% more per lead than competitors with faster pages." },
-              { icon: XCircle, pain: "GHL Funnels Will Never Appear in Google Search", detail: "GHL funnel pages are JavaScript-rendered and effectively uncrawlable by Google. You'll never get organic traffic to a funnel URL. Every lead requires paid ad spend, forever, with no compounding returns." },
+              { icon: TrendingUp, pain: "Slow Funnel Pages Are Burning Your Ad Budget", detail: "Google Ads Quality Score is tied directly to landing page speed. GHL pages load in 3 to 5 seconds. Slow pages mean lower scores and higher CPC. You're paying 30-50% more per lead than competitors with faster pages." },
+              { icon: XCircle, pain: "GHL Funnels Rarely Appear in Google Search", detail: "GHL funnel pages are JavaScript-rendered and systematically disadvantaged in Google search. Organic traffic to a funnel URL is rare in practice, so nearly every lead keeps requiring paid ad spend, with little compounding return." },
               { icon: DollarSign, pain: "You're Paying CRM Prices for a Website Builder", detail: "GHL's $297-497/month is priced for agencies running full automation suites. Using it primarily for funnel pages and a website means you're dramatically overpaying for the web presence portion of that subscription." },
               { icon: Palette, pain: "Template Funnels Signal 'Small Operation' to Cold Traffic", detail: "Experienced buyers recognize GHL and ClickFunnels templates on sight. A template funnel signals 'this person just learned marketing.' A custom site signals 'established business.' First impressions decide if cold traffic converts." },
               { icon: Lock, pain: "One Platform Failure Takes Down Your Entire Business", detail: "GHL has had outages. When it goes down, your lead capture, booking system, and website all go down together. Your entire online presence runs on one company's uptime. Custom code plus GHL API splits that risk completely." },
@@ -365,7 +365,7 @@ export default function PageContent() {
             {[
               { icon: Gauge, title: "Instant Landing Pages", desc: "Your ad traffic lands on pages that load in under 1 second. Higher Quality Score = lower CPC = more leads for the same budget." },
               { icon: Users, title: "Seamless GHL API Integration", desc: "Forms, bookings, and lead capture flow directly into your GHL CRM. All your existing automations and pipelines keep working. Zero disruption." },
-              { icon: BarChart3, title: "Organic Traffic (Free Leads)", desc: "Custom sites rank on Google. For the first time, you'll get leads WITHOUT paying for ads. GHL funnels can't do this." },
+              { icon: BarChart3, title: "Organic Traffic (Free Leads)", desc: "Custom sites rank on Google. For the first time, you'll get leads WITHOUT paying for ads. GHL funnels rarely manage this." },
             ].map((item, i) => (
               <div key={i} className="p-6 rounded-2xl bg-stone-50 border border-stone-200 hover:border-cognac/30 transition-colors group">
                 <div className="w-12 h-12 rounded-xl bg-stone-50 flex items-center justify-center mb-4 group-hover:bg-stone-100 transition-colors">
@@ -443,7 +443,7 @@ export default function PageContent() {
               <p className="text-sm text-stone-400 mb-6">The slow GHL-hosted site, rebuilt and owned.</p>
               <div className="rounded-xl border border-red-500/20 bg-red-500/10 px-4 py-3 mb-3">
                 <div className="flex items-center gap-2 mb-1"><Gauge className="w-4 h-4 text-red-400 shrink-0" /><span className="text-xs font-bold text-red-400">Before — GHL funnel / site</span></div>
-                <p className="text-sm text-stone-300 leading-relaxed">3 to 5s loads, 20 to 45 PageSpeed, template look, no SEO, code you can never export.</p>
+                <p className="text-sm text-stone-300 leading-relaxed">3 to 5s loads, 20 to 45 PageSpeed, template look, weak SEO, code you can never export.</p>
               </div>
               <div className="flex items-center justify-center my-2"><ArrowRight className="w-5 h-5 text-cognac rotate-90" /></div>
               <div className="rounded-xl border border-cognac/30 bg-cognac/10 px-4 py-3">
@@ -454,7 +454,7 @@ export default function PageContent() {
           </div>
 
           <p className="text-center text-sm text-stone-400 mt-8 max-w-2xl mx-auto">
-            One bridge, two halves: the CRM keeps firing while every visitor lands on a site you actually own.
+            One bridge, two halves: the CRM keeps firing while every visitor lands on a site you actually own. For the full technical walkthrough, read our guide on <Link href="/blog/gohighlevel-keep-crm-replace-website" className="text-cognac hover:underline underline-offset-2">keeping your GHL CRM while replacing the website</Link>.
           </p>
         </div>
       </section>
@@ -481,7 +481,7 @@ export default function PageContent() {
               "Sanity CMS for content editing",
               "90+ PageSpeed guaranteed",
               "Your GHL automations stay intact",
-              "Free month of post-launch tweaks",
+              "15 days of free post-launch support",
             ],
             cta: "Get Starter Quote",
           },
@@ -496,7 +496,7 @@ export default function PageContent() {
               "Custom lead capture flows",
               "Full SEO with schema markup",
               "Analytics (GA4, Clarity, GHL tracking)",
-              "60-day post-launch support",
+              "30 days of free post-launch support",
             ],
             featured: true,
           },
@@ -511,12 +511,19 @@ export default function PageContent() {
               "Custom member portal with GHL auth",
               "Calendar integration (GHL or Cal.com)",
               "Multi-step funnel with GHL triggers",
-              "90-day post-launch support",
+              "30 days of free post-launch support",
             ],
           },
         ]}
         footnote="Every build keeps your GHL CRM, automations, and integrations fully intact. We replace only the slow frontend."
       />
+
+      {/* Agency cluster link — sits under the Scale (agency white-label) tier */}
+      <section className="px-6 pb-10 bg-paper">
+        <p className="text-center text-sm text-stone-500 max-w-2xl mx-auto">
+          Running a GHL agency? The Scale tier covers white-label builds for your client roster. Compare your options in our guide to the <Link href="/blog/best-website-builder-for-gohighlevel-agencies" className="text-cognac hover:underline underline-offset-2">best website builder for GoHighLevel agencies</Link>.
+        </p>
+      </section>
 
       {/* 7. TRIPLE CTA */}
       <section className="py-10 md:py-14 px-6">
@@ -586,6 +593,7 @@ export default function PageContent() {
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  aria-expanded={openFaq === i}
                   className="w-full text-left p-5 rounded-xl bg-stone-50 border border-stone-200 hover:border-stone-200 transition-all"
                 >
                   <div className="flex items-center justify-between gap-4">
@@ -594,9 +602,7 @@ export default function PageContent() {
                       <span className="text-charcoal text-sm font-bold">+</span>
                     </div>
                   </div>
-                  {openFaq === i && (
-                    <p className="text-stone-600 text-sm leading-relaxed mt-4 border-t border-stone-200 pt-4">{faq.a}</p>
-                  )}
+                  <p className={`text-stone-600 text-sm leading-relaxed mt-4 border-t border-stone-200 pt-4 ${openFaq === i ? 'block' : 'hidden'}`}>{faq.a}</p>
                 </button>
               </motion.div>
             ))}
@@ -634,7 +640,7 @@ export default function PageContent() {
           <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-4">Further reading</p>
           <ul className="space-y-2 text-stone-700">
             <li>&rarr; <Link href="/blog/gohighlevel-website-speed" className="text-charcoal hover:text-cognac underline underline-offset-2">Why GoHighLevel sites score 20 to 45 on PageSpeed (and the fix)</Link></li>
-            <li>&rarr; <Link href="/blog/gohighlevel-migration" className="text-charcoal hover:text-cognac underline underline-offset-2">GoHighLevel migration: how to keep the CRM and kill the website</Link></li>
+            <li>&rarr; <Link href="/blog/gohighlevel-keep-crm-replace-website" className="text-charcoal hover:text-cognac underline underline-offset-2">Keep the GoHighLevel CRM, replace just the slow website</Link></li>
             <li>&rarr; <Link href="/blog/core-web-vitals-explained" className="text-charcoal hover:text-cognac underline underline-offset-2">Core Web Vitals explained for business owners</Link></li>
           </ul>
         </div>
@@ -658,10 +664,10 @@ export default function PageContent() {
             </div>
             <div className="flex items-start gap-4">
               <Link href="/about/imran" className="shrink-0">
-                <Image src="/team/imran.png" alt="Imran" width={48} height={48} className="w-12 h-12 rounded-full border border-stone-200 object-cover" />
+                <Image src="/team/imran.png" alt="Imran Raza" width={48} height={48} className="w-12 h-12 rounded-full border border-stone-200 object-cover" />
               </Link>
               <div>
-                <Link href="/about/imran" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Imran</Link>
+                <Link href="/about/imran" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Imran Raza</Link>
                 <p className="text-xs text-stone-500 mt-0.5">Lead Solutions Architect. Maps your existing GHL pipelines, automations, and CRM workflows to ensure zero disruption during the frontend rebuild.</p>
               </div>
             </div>

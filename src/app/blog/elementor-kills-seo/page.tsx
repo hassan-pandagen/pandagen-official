@@ -16,13 +16,13 @@ const SEORankingAnimation = lazyLoad(() => import("@/components/blog/SEORankingA
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Does Elementor Kill SEO? We Audited 500 Sites",
-    description: "Average Elementor site scores 38/100 on mobile. See the Core Web Vitals, DOM bloat, and ranking loss across 500 audited WordPress sites.",
+    title: "Does Elementor Hurt SEO? The Real PageSpeed and DOM Data",
+    description: "An independent WP Rocket test scored an unoptimized Elementor page at 75/100 mobile with LCP in the red zone. Here's why production Elementor sites usually score worse, and what to do about it.",
     alternates: { canonical: "/blog/elementor-kills-seo" },
     keywords: ["elementor seo", "elementor slow", "elementor kills rankings", "page builder seo impact", "elementor pagespeed score", "wordpress page builder performance"],
     openGraph: {
-        title: "Does Elementor Kill SEO? We Audited 500 WordPress Sites",
-        description: "Average Elementor site scores 38/100 on mobile. See the Core Web Vitals, DOM bloat, and ranking loss across 500 audited WordPress sites.",
+        title: "Does Elementor Hurt SEO? The Real PageSpeed and DOM Data",
+        description: "An independent WP Rocket test scored an unoptimized Elementor page at 75/100 mobile with LCP in the red zone. Here's why production Elementor sites usually score worse, and what to do about it.",
         type: "article",
         publishedTime: "2025-12-28",
         authors: ["Hassan Jamal"],
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Does Elementor Kill SEO? We Audited 500 WordPress Sites",
-        description: "Average Elementor site scores 38/100 on mobile. See the Core Web Vitals, DOM bloat, and ranking loss across 500 audited WordPress sites.",
+        title: "Does Elementor Hurt SEO? The Real PageSpeed and DOM Data",
+        description: "An independent WP Rocket test scored an unoptimized Elementor page at 75/100 mobile with LCP in the red zone. Here's why production Elementor sites usually score worse, and what to do about it.",
     },
 };
 
@@ -42,16 +42,16 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/elementor-kills-seo#article",
-            "headline": "Does Elementor Kill SEO? We Audited 500 WordPress Sites",
-            "description": "Average Elementor site scores 38/100 on mobile. See the Core Web Vitals, DOM bloat, and ranking loss across 500 audited WordPress sites.",
+            "headline": "Does Elementor Hurt SEO? The Real PageSpeed and DOM Data",
+            "description": "An independent WP Rocket test scored an unoptimized Elementor page at 75/100 mobile with LCP in the red zone. Here's why production Elementor sites usually score worse, and what to do about it.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2025-12-28T00:00:00-05:00",
-            "dateModified": "2025-12-28T00:00:00-05:00",
+            "dateModified": "2026-07-08T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -98,12 +98,12 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/elementor-kills-seo#webpage",
             "url": "https://www.pandacodegen.com/blog/elementor-kills-seo",
-            "name": "Does Elementor Kill SEO? We Audited 500 WordPress Sites",
-            "description": "Average Elementor site scores 38/100 on mobile. See the Core Web Vitals, DOM bloat, and ranking loss across 500 audited WordPress sites.",
+            "name": "Does Elementor Hurt SEO? The Real PageSpeed and DOM Data",
+            "description": "An independent WP Rocket test scored an unoptimized Elementor page at 75/100 mobile with LCP in the red zone. Here's why production Elementor sites usually score worse, and what to do about it.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2025-12-28T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-07-08T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/elementor-kills-seo#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -160,12 +160,11 @@ export default function ElementorKillsSEOPage() {
                             Performance · SEO
                         </div>
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight text-charcoal">
-                            Elementor Kills Your SEO:{" "}
-                            <span className="font-serif italic text-cognac">We Audited 500 Sites</span>{" "}
-                            (Average Score: 38/100)
+                            Does Elementor Hurt SEO?{" "}
+                            <span className="font-serif italic text-cognac">The Real PageSpeed Data</span>
                         </h1>
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            We audited 500 Elementor sites to measure exactly how page builders affect Core Web Vitals and Google rankings. Here&apos;s what the data revealed and what alternatives are available.
+                            An independent 2026 test found an unoptimized Elementor page scoring 75/100 on mobile, with LCP deep in Google&apos;s red zone. Here&apos;s what that test actually measured, why real production Elementor sites tend to score worse than a lean demo page, and what your options are.
                         </p>
                         <BlogAuthor
                             date="Mar 10, 2026"
@@ -182,22 +181,22 @@ export default function ElementorKillsSEOPage() {
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
                         <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
-                            "Across 500 Elementor sites we audited, the average Mobile PageSpeed score is 38/100, deep in Google's red zone.",
-                            "Elementor adds 300 to 500KB of CSS/JS to every page and generates 3 to 5× more DOM nodes than clean code.",
-                            "The performance ceiling for Elementor is around 50 to 60/100 even with aggressive optimization: never enough.",
-                            "Business owners using Elementor are losing 20 to 30% of organic traffic to competitors on faster stacks."
+                            "An independent WP Rocket test measured an unoptimized Elementor demo page at 75/100 mobile PageSpeed, with LCP at 5.4 seconds (Google's red zone) before any optimization plugin was applied.",
+                            "That same page hit 99/100 after WP Rocket's own caching and optimization plugin was applied, showing the gap is largely closeable on a lean page, but that test used a single, lightly-built demo page, not a real production site.",
+                            "Elementor adds 300 to 500KB of CSS/JS to every page and generates more DOM nodes than clean code, and that bloat compounds as a real site adds more widgets, dynamic sections, and third-party addons.",
+                            "In practice, heavily built-out production Elementor sites (many widgets, dynamic content, plugins stacked on top) commonly score well below what a clean single-page test shows, because the architecture's overhead scales with how much you build."
                         ]} />
                     </div>
 
                     <div className="space-y-8">
                         <BlogText>
-                            We built a custom audit tool and ran it across 500 WordPress sites using Elementor. Every site was a real business: service companies, e-commerce stores, SaaS landing pages.
+                            In 2026, WP Rocket ran a controlled test comparing Divi and Elementor performance. On an unoptimized Elementor test page, the result was <BlogHighlight>75/100 mobile PageSpeed</BlogHighlight>, with Largest Contentful Paint at 5.4 seconds (Google&apos;s red zone), Cumulative Layout Shift at 0, a page size of 940KB, and 15 HTTP requests. After WP Rocket applied its own optimization plugin, the same page scored 99/100.
                         </BlogText>
                         <BlogText>
-                            The average Mobile PageSpeed score: <BlogHighlight>38/100.</BlogHighlight>
+                            That result matters, but read it carefully: it is one lightly-built demo page, not a fleet of real business sites. It shows Elementor can perform reasonably well unoptimized on a lean page, and very well once optimized. It does not tell you what happens once a real business piles on 40 widgets, dynamic post grids, a page builder add-on pack, a forms plugin, and a chat widget, which is what most production Elementor sites actually look like.
                         </BlogText>
                         <BlogText>
-                            That&apos;s not just slow. That&apos;s losing 20 to 30% of organic traffic every single month to faster competitors who will never give it back.
+                            That gap between a clean demo page and a real production site is the part worth understanding, because it&apos;s where most Elementor sites actually lose their PageSpeed score and, with it, organic traffic.
                         </BlogText>
 
                         <BlogHeader>Why Does Elementor Score So Badly on PageSpeed?</BlogHeader>
@@ -219,24 +218,29 @@ export default function ElementorKillsSEOPage() {
                             You can&apos;t optimize Elementor to perform like clean code. The bloat is the product. The same architectural bloat affects <Link href="/blog/divi-theme-slow" className="text-cognac hover:underline">Divi Builder sites</Link> and <Link href="/blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline">WordPress plugin stacks</Link>, but Elementor&apos;s DOM multiplication is uniquely severe.
                         </BlogQuote>
 
-                        <BlogHeader>What Were the Exact Results of Our Elementor Audit?</BlogHeader>
+                        <BlogHeader>What Does the Independent Elementor Performance Data Actually Show?</BlogHeader>
+                        <BlogText>
+                            Here is exactly what WP Rocket&apos;s 2026 test measured on the unoptimized Elementor page, before any caching or optimization plugin touched it:
+                        </BlogText>
                         <BlogList items={[
-                            "Average Mobile PageSpeed: 38/100",
-                            "Sites scoring below 50 (red zone): 71% of all sites audited",
-                            "Sites scoring above 70: only 4%, and those had disabled most Elementor features",
-                            "Average DOM element count: 3,200 (Google recommends under 1,500)",
-                            "Average page weight: 4.2MB (Google recommends under 1.6MB for mobile)",
-                            "Average LCP (Largest Contentful Paint): 5.8 seconds (Google threshold: under 2.5s)",
-                            "Average INP (Interaction to Next Paint): 420ms (Google threshold: under 200ms), largely caused by Elementor's global JavaScript event listeners",
-                            "Average CLS (Cumulative Layout Shift): 0.28 (Google threshold: under 0.1) from Elementor's lazy-loaded widgets shifting content after first paint"
+                            "Mobile PageSpeed score: 75/100",
+                            "LCP (Largest Contentful Paint): 5.4 seconds (Google threshold: under 2.5s, so this lands in the red zone despite the decent overall score)",
+                            "CLS (Cumulative Layout Shift): 0 (green, no layout shift penalty on this page)",
+                            "Page size: 940KB",
+                            "HTTP requests: 15",
+                            "Fully loaded time: 2.7 seconds",
+                            "After WP Rocket's own optimization plugin was applied: 99/100 mobile"
                         ]} />
                         <BlogText>
-                            7 out of 10 Elementor sites are actively being penalized by Google for Core Web Vitals failures. Their rankings are suppressed compared to what they&apos;d achieve on a faster platform.
+                            That is a real, citable result, and it is considerably better than the reputation Elementor has. But it is a single, lean test page built to compare two builders, not a real business site. Production Elementor sites diverge from that baseline for a specific, mechanical reason: every additional widget, dynamic section, and third-party add-on stacks more CSS, more JS, and more wrapper divs on top of the framework Elementor already loads on every page. A 15-request demo page and a 40-widget service-business homepage are not running the same architecture in practice, even though both are &quot;Elementor.&quot;
+                        </BlogText>
+                        <BlogText>
+                            That compounding is why LCP was already in the red zone (5.4s) even on WP Rocket&apos;s clean test page. Add Elementor Pro widgets, a page-builder add-on pack, forms, sliders, and dynamic content, all common on real client sites, and LCP and INP typically get worse before any optimization is applied, not better.
                         </BlogText>
 
-                        <BlogHeader>How Much Traffic Is a 38/100 PageSpeed Score Costing You?</BlogHeader>
+                        <BlogHeader>How Much Traffic Does a Slow Elementor Site Actually Cost You?</BlogHeader>
                         <BlogText>
-                            Google made Core Web Vitals a ranking factor in 2021. Here&apos;s the real-world traffic impact:
+                            Google made Core Web Vitals a ranking factor in 2021. Here&apos;s the real-world traffic impact of the red-zone LCP that shows up on unoptimized Elementor pages, and gets worse as a real site grows:
                         </BlogText>
                         <BlogList items={[
                             "You rank 20 to 30 positions lower than competitors with identical content but faster sites",
@@ -254,17 +258,17 @@ export default function ElementorKillsSEOPage() {
 
                         <BlogHeader>Can You Fix Elementor&apos;s Performance Problems?</BlogHeader>
                         <BlogText>
-                            You can reduce the damage, but you cannot solve it:
+                            You can meaningfully improve a lean Elementor page. WP Rocket&apos;s own test proved that: 75/100 unoptimized to 99/100 optimized on a single, lightly-built page. What optimization does not fix is a heavily built-out production site where the widget count, dynamic sections, and third-party add-ons keep growing:
                         </BlogText>
                         <BlogList items={[
-                            "Caching plugins (WP Rocket, W3 Total Cache): Marginally helpful, won't overcome architecture bloat",
+                            "Caching plugins (WP Rocket, W3 Total Cache): Genuinely effective, WP Rocket's test took a page from 75/100 to 99/100, but the gains shrink as more widgets and add-ons are stacked on",
                             "Image optimization: Helps with load speed but doesn't fix bloated page code or render-blocking files",
-                            "Disabling unused widgets: Reduces load slightly but Elementor still loads its core framework",
-                            "Best realistic outcome with Elementor + every optimization: 50 to 60/100 Mobile",
-                            "What you actually need for competitive rankings: 90+ Mobile"
+                            "Disabling unused widgets: Reduces load meaningfully but Elementor still loads its core framework on every page",
+                            "Realistic outcome on a lean, well-optimized Elementor page: 90s are achievable, as WP Rocket showed",
+                            "Realistic outcome on a heavily built-out production site (many widgets, dynamic content, add-ons): often well below that, even after the same optimization steps"
                         ]} />
                         <BlogText>
-                            <BlogHighlight>The performance ceiling is built into Elementor. You cannot optimize past it.</BlogHighlight>
+                            <BlogHighlight>Optimization works. What it can&apos;t do is stop the architecture from adding overhead every time you add another widget, section, or add-on.</BlogHighlight> The more a real site grows, the more that overhead compounds, which is the core reason production Elementor sites tend to underperform a clean test page.
                         </BlogText>
 
                         <BlogHeader>What Is the Best Alternative to Elementor for Business Sites?</BlogHeader>
@@ -273,12 +277,12 @@ export default function ElementorKillsSEOPage() {
                         </BlogText>
                         <BlogList items={[
                             "Next.js with Tailwind CSS: 90+ PageSpeed, zero builder bloat, full design control: the gold standard",
-                            "Webflow: Better than Elementor (60 to 75/100 typical), still JavaScript-heavy but manageable",
-                            "Clean WordPress theme (no builder): Can reach 70 to 80 without Elementor's overhead",
-                            "Elementor with all optimizations: Ceiling of 50 to 60/100, not competitive for modern SEO"
+                            "Webflow: Generally lighter than a heavily built-out Elementor site, still JavaScript-heavy but manageable",
+                            "Clean WordPress theme (no builder), like GeneratePress or Astra: Fewer wrapper divs and less injected CSS/JS than a drag-and-drop builder",
+                            "Elementor with every optimization applied: Can score well on a lean page, but every widget and add-on you add back chips away at that ceiling"
                         ]} />
                         <BlogText>
-                            Businesses we&apos;ve migrated off Elementor see <Link href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">rankings recover within 30 to 60 days</Link> and typically gain 2 to 3× organic traffic within 90 days of <Link href="/services/wordpress-migration" className="text-cognac hover:underline">launching on Next.js</Link>. The full platform comparison is covered in our <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress vs Next.js guide</Link>.
+                            Businesses we&apos;ve migrated off page-builder-based WordPress sites see <Link href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">rankings hold steady or improve within 30 to 60 days</Link> once they&apos;re on <Link href="/services/wordpress-migration" className="text-cognac hover:underline">a custom Next.js build</Link>, because a static, framework-free page has none of the widget and add-on overhead to compound. The full platform comparison is covered in our <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress vs Next.js guide</Link>.
                         </BlogText>
                         <BlogText>
                             For a full breakdown of what a migration off Elementor actually costs, see our <Link href="/blog/wordpress-migration-cost" className="text-cognac hover:underline">WordPress migration cost guide</Link>. If you&apos;re ready to leave WordPress entirely, our <Link href="/blog/wordpress-killer" className="text-cognac hover:underline">WordPress replacement breakdown</Link> covers the modern stack.
@@ -300,10 +304,10 @@ export default function ElementorKillsSEOPage() {
                     <section className="mb-10">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>Elementor&apos;s bloat is architectural, not fixable</strong>: The average Elementor site scores 38/100 on mobile because the drag-and-drop framework loads hundreds of kilobytes of unused code on every page.</li>
-                            <li><strong>71% of Elementor sites are in Google&apos;s red zone</strong>: Across the Elementor sites we audited, most fail Core Web Vitals, costing them 20 to 30% of organic traffic.</li>
-                            <li><strong>Optimization has a ceiling of 50 to 60/100</strong>: Caching plugins and image compression help, but you cannot optimize past Elementor&apos;s built-in DOM bloat and render-blocking CSS.</li>
-                            <li><strong>Migrating to Next.js recovers rankings in 30 to 60 days</strong>: Businesses that switch from Elementor to custom coded sites consistently score 90+ and gain 2 to 3x organic traffic within 90 days.</li>
+                            <li><strong>An independent 2026 test found Elementor&apos;s unoptimized score isn&apos;t as bad as its reputation, but LCP still landed in the red zone</strong>: WP Rocket measured an unoptimized Elementor page at 75/100 mobile PageSpeed, with LCP at 5.4 seconds, well past Google&apos;s 2.5-second threshold.</li>
+                            <li><strong>The bloat is architectural, and it compounds with real-world build-out</strong>: Elementor loads its full CSS/JS framework on every page regardless of what you use, and every widget, dynamic section, or third-party add-on you stack on top adds more DOM nodes and render-blocking code, which is why heavily-built production sites tend to score much worse than a lean demo page.</li>
+                            <li><strong>Optimization can close most of the gap, but not all of it</strong>: WP Rocket&apos;s own plugin took that same test page from 75/100 to 99/100. Caching and image optimization genuinely help, but on a heavily built-out production site they rarely erase Elementor&apos;s structural DOM and CSS overhead entirely.</li>
+                            <li><strong>Migrating to Next.js removes the ceiling entirely</strong>: Businesses that switch from Elementor to custom coded sites consistently score 90+ on PageSpeed with none of the widget-stacking tradeoffs that come with a page builder.</li>
                         </ol>
                     </section>
 

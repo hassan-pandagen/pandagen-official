@@ -54,7 +54,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -398,7 +398,7 @@ export default function MigrateWordPressToNextJSPage() {
                         <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-2">Done It 6+ Times</p>
                         <h3 className="text-2xl font-bold mb-3">Want Us to Handle the Migration?</h3>
                         <p className="text-stone-300 mb-6 leading-relaxed">
-                            We handle the entire process: audit, build, QA, redirect mapping, DNS cutover, and 30-day post-launch monitoring. Guaranteed 90+ PageSpeed score or we fix it for free.
+                            We handle the entire process: audit, build, QA, redirect mapping, DNS cutover, and post-launch monitoring (15 days on Starter, 1 month on Growth and above). Guaranteed 90+ PageSpeed score or we fix it for free.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 bg-white text-stone-900 font-semibold px-6 py-3 rounded-lg hover:bg-stone-100 transition-colors">
                                 Book Free Migration Assessment <ArrowRight className="w-4 h-4" />
@@ -464,7 +464,7 @@ export default function MigrateWordPressToNextJSPage() {
                         </div>
 
                         <BlogText>
-                            The decision comes down to your technical background and the revenue your site generates. If your site generates $20,000+/month and you're losing rankings to slow Core Web Vitals, a professional migration pays back within months. If you are a developer who wants to learn Next.js by doing a real project, DIY is a legitimate path. Just budget time for the learning curve. To see exactly what 90+ PageSpeed looks like in practice, read our post on <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">achieving 100/100 PageSpeed scores</Link>.
+                            The decision comes down to your technical background and the revenue your site generates. If your site generates $20,000+/month and you're losing rankings to slow Core Web Vitals, a professional migration pays back within months. If you are a developer who wants to learn Next.js by doing a real project, DIY is a legitimate path. Just budget time for the learning curve. To see exactly what 90+ PageSpeed looks like in practice, read our post on <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">hitting a 90+ PageSpeed score</Link>.
                         </BlogText>
                         <BlogText>
                             Either way, read our post on{" "}
@@ -475,7 +475,11 @@ export default function MigrateWordPressToNextJSPage() {
                             <Link href="/blog/how-to-fix-slow-wordpress" className="text-stone-700 underline underline-offset-2 hover:text-black">
                                 guide to fixing a slow WordPress site
                             </Link>{" "}
-                            if you want to understand exactly where the WordPress speed ceiling is before deciding whether a migration is necessary.
+                            if you want to understand exactly where the WordPress speed ceiling is before deciding whether a migration is necessary. This is also the exact move we made for our own site, and we documented{" "}
+                            <Link href="/blog/why-we-chose-nextjs-over-wordpress-2026" className="text-stone-700 underline underline-offset-2 hover:text-black">
+                                why we moved off WordPress ourselves
+                            </Link>{" "}
+                            with the before and after numbers.
                         </BlogText>
 
                         <div className="flex items-center gap-2 text-xs text-stone-400 mt-8"><RefreshCw className="w-3 h-3" />Published: Mar 11, 2026</div>

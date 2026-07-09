@@ -27,8 +27,8 @@ const ALL_CLIENTS: Record<string, CaseStudyClient> = {
     platform: "WordPress → Custom",
     pagespeed: 92,
     loadTime: "< 1s",
-    saved: "$595/mo",
-    note: "Migrated from WordPress + WooCommerce. Cut monthly tool bill from $650 to about $55 (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). 1 Million+ patches delivered.",
+    saved: "~$55/mo",
+    note: "Our own store (co-founder Imran Raza's brand): migrated from WordPress + WooCommerce. The entire plugin and hosting stack now runs on about $55/mo total tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). 1 Million+ patches delivered.",
   },
   myCustomPatches: {
     name: "MyCustomPatches",
@@ -61,7 +61,7 @@ const ALL_CLIENTS: Record<string, CaseStudyClient> = {
     pagespeed: 95,
     loadTime: "< 1s",
     saved: "225K IG",
-    note: "Editorial design magazine with 225K Instagram following. Migrated from Wix to custom Next.js for $1,350, in final review on staging.",
+    note: "Editorial design magazine with 225K Instagram following. Migrated from Wix to custom Next.js for $1,350. Build delivered in 7 days; launching on the client's domain.",
   },
 };
 

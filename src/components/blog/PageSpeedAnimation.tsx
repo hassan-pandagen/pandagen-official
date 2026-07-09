@@ -14,7 +14,7 @@ const DATA: Record<Phase, {
   measuring: { score: 47,  lcp: "4.2s",  cls: "0.25", fid: "180ms", lcpPass: false, clsPass: false, fidPass: false, status: "Auditing site: 3 Core Web Vitals failing" },
   optimizing:{ score: 72,  lcp: "2.4s",  cls: "0.10", fid: "48ms",  lcpPass: false, clsPass: false, fidPass: true,  status: "Removing render-blocking JS, lazy-loading images" },
   improved:  { score: 91,  lcp: "1.4s",  cls: "0.04", fid: "22ms",  lcpPass: false, clsPass: true,  fidPass: true,  status: "Switching to static Next.js, almost there" },
-  perfect:   { score: 100, lcp: "0.9s",  cls: "0.01", fid: "8ms",   lcpPass: true,  clsPass: true,  fidPass: true,  status: "100/100: All Core Web Vitals passing · Under 1s LCP" },
+  perfect:   { score: 90,  lcp: "0.9s",  cls: "0.01", fid: "8ms",   lcpPass: true,  clsPass: true,  fidPass: true,  status: "90+: All Core Web Vitals passing · Under 1s LCP" },
 };
 
 export default function PageSpeedAnimation() {
@@ -48,7 +48,7 @@ export default function PageSpeedAnimation() {
   ];
 
   return (
-    <div role="img" aria-label="Interactive animation showing website PageSpeed score improving from 47/100 to 100/100 through Next.js optimization" className="relative w-full aspect-[4/3] sm:aspect-2/1 bg-linear-to-br from-stone-50 to-white rounded-2xl border border-stone-200 overflow-hidden">
+    <div role="img" aria-label="Interactive animation showing website PageSpeed score improving from 47/100 to 90+ through Next.js optimization" className="relative w-full aspect-[4/3] sm:aspect-2/1 bg-linear-to-br from-stone-50 to-white rounded-2xl border border-stone-200 overflow-hidden">
       <style>{`
         @keyframes psRing { from { stroke-dashoffset: 239; } to { stroke-dashoffset: var(--ps-off); } }
         .ps-ring { animation: psRing 0.9s cubic-bezier(0.4,0,0.2,1) forwards; }
@@ -115,10 +115,10 @@ export default function PageSpeedAnimation() {
           <div className={`w-10 h-10 rounded-xl border-2 flex items-center justify-center transition-all duration-700 ${
             isGood ? "border-cognac bg-stone-50" : "border-stone-200 bg-stone-50"
           }`}>
-            <span className="text-lg">{d.score === 100 ? "✓" : "↑"}</span>
+            <span className="text-lg">{isGood ? "✓" : "↑"}</span>
           </div>
           <span className={`text-[8px] font-bold uppercase tracking-widest transition-colors duration-700 ${isGood ? "text-cognac" : "text-stone-300"}`}>
-            {d.score === 100 ? "Perfect" : isGood ? "Fast" : "Slow"}
+            {isGood ? "Fast" : "Slow"}
           </span>
         </div>
       </div>

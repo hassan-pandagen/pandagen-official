@@ -19,8 +19,8 @@ import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 const comparisonData = [
   { feature: "Page Load Speed", wix: "3.4-5.2 seconds", custom: "Under 1 second", icon: Gauge },
   { feature: "Code Ownership", wix: "You own nothing (hosted on Wix)", custom: "100% yours, deploy anywhere", icon: Lock },
-  { feature: "Google PageSpeed Score", wix: "30-55 average (mobile)", custom: "90-95/100 guaranteed", icon: TrendingUp },
-  { feature: "Monthly Cost", wix: "$17-159/mo subscription forever", custom: "$0 to start. Pay only when you scale massively", icon: DollarSign },
+  { feature: "Google PageSpeed Score", wix: "30-55 average (mobile)", custom: "90+ guaranteed", icon: TrendingUp },
+  { feature: "Monthly Cost", wix: "$17-159/mo subscription forever", custom: "Starts at $0, about $20/mo at scale", icon: DollarSign },
   { feature: "Customization", wix: "Limited to drag-and-drop editor", custom: "Unlimited, any design possible", icon: Palette },
   { feature: "SEO Control", wix: "Basic, can't edit meta robots or schema", custom: "Full control over everything Google, ChatGPT and AI search love", icon: TrendingUp },
 ];
@@ -116,7 +116,7 @@ export default function PageContent() {
         themLabel="Wix"
         metrics={[
           { metric: "Load Speed",    themLabel: "2-4s",       usLabel: "< 1s",       themPct: 40, usPct: 98, icon: Gauge },
-          { metric: "Monthly Cost",  themLabel: "$29-$159",   usLabel: "$22",        themPct: 80, usPct: 10, icon: DollarSign },
+          { metric: "Monthly Cost",  themLabel: "$29-$159",   usLabel: "~$20",       themPct: 80, usPct: 10, icon: DollarSign },
           { metric: "SEO Limits",    themLabel: "Hard",       usLabel: "None",       themPct: 75, usPct: 100, icon: FileSearch },
           { metric: "Export",        themLabel: "Impossible", usLabel: "Full rights",themPct: 15, usPct: 100, icon: Lock },
           { metric: "Design",        themLabel: "Template",   usLabel: "Fully Custom",themPct: 35, usPct: 100, icon: Palette },
@@ -137,8 +137,8 @@ export default function PageContent() {
       <CaseStudyGrid
         highlight="obare"
         label="Real Wix Migrations"
-        heading="Wix to custom, in progress"
-        subheading="Obare Magazine, a Wix site with 225K Instagram followers, rebuilt on custom Next.js for $1,350. Built and in final review on staging. Here is their build plus three others."
+        heading="Wix to custom, delivered"
+        subheading="Obare Magazine, a Wix site with 225K Instagram followers, rebuilt on custom Next.js for $1,350. Build delivered in 7 days; launching on the client's domain. Here is their build plus three others."
       />
 
       {/* 2b. SOCIAL PROOF — moved up for concentrated proof flow */}
@@ -351,7 +351,7 @@ export default function PageContent() {
             {[
               { icon: Gauge, title: "5x Faster Loading", desc: "Your Wix site loads in 3-5 seconds. A custom site loads in under 1 second. That\u2019s the difference between a bounce and a sale." },
               { icon: Lock, title: "You Own Everything", desc: "Cancel anytime and take your site with you. Your code. Your design. Your data. It\u2019s yours forever \u2014 no platform can take it away." },
-              { icon: DollarSign, title: "No More Subscriptions", desc: "Stop paying Wix $17-159/month forever. Host your custom site for $0 to start. You only pay when you scale massively." },
+              { icon: DollarSign, title: "No More Subscriptions", desc: "Stop paying Wix $17-159/month forever. Hosting starts at $0 and runs about $20/mo at scale." },
             ].map((item, i) => (
               <FadeIn
                 key={i}
@@ -461,7 +461,7 @@ export default function PageContent() {
               "Sanity CMS for content editing",
               "90+ PageSpeed guaranteed",
               "301 redirect mapping",
-              "Free month of post-launch tweaks",
+              "15 days of free post-launch support",
             ],
             cta: "Get Starter Quote",
           },
@@ -476,7 +476,7 @@ export default function PageContent() {
               "Forms with custom API routes",
               "Full SEO migration with schema",
               "Analytics setup (GA4, Clarity)",
-              "60-day post-launch support",
+              "30 days of free post-launch support",
             ],
             featured: true,
           },
@@ -491,7 +491,7 @@ export default function PageContent() {
               "Wix Bookings → custom booking system",
               "Multi-language / localization",
               "Custom admin dashboard",
-              "90-day post-launch support",
+              "30 days of free post-launch support",
             ],
           },
         ]}
@@ -526,7 +526,7 @@ export default function PageContent() {
               </div>
               <h3 className="text-lg font-bold text-cognac uppercase tracking-widest mb-2">Option B</h3>
               <h4 className="text-3xl font-bold text-slate-900 mb-4">Full Migration to Next.js</h4>
-              <p className="text-slate-600 mb-8">We rebuild your site from scratch. Perfect scores. Zero monthly fees. Full ownership. Built to last.</p>
+              <p className="text-slate-600 mb-8">We rebuild your site from scratch. 90+ scores, in writing. Zero monthly fees. Full ownership. Built to last.</p>
               <ul className="space-y-4 mb-10">
                 <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> Under a second load times (&lt;0.8s)</li>
                 <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> 100% SEO Preservation</li>

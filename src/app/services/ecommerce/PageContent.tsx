@@ -72,7 +72,7 @@ export default function PageContent() {
 
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.15 }} className="flex flex-wrap justify-center gap-3 mb-6">
             <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-stone-200 shadow-xs text-sm">
-              <span className="text-cognac font-black">98/100</span>
+              <span className="text-cognac font-black">90+</span>
               <span className="text-stone-500">PageSpeed</span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-stone-200 shadow-xs text-sm">
@@ -117,7 +117,7 @@ export default function PageContent() {
             <div>
               <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-cognac mb-3">Client receipt, on the record</p>
               <p className="text-lg md:text-xl text-charcoal leading-relaxed font-medium italic mb-3">
-                &ldquo;Hassan rebuilt MyCustomPatches from a slow WordPress theme to a custom Next.js storefront. PageSpeed went from 42 to 97. Load time 3.2s to 0.7s. Fixed price. Unlimited revisions. Live at mycustompatches.net. Rated 5 stars on Clutch and GoodFirms.&rdquo;
+                &ldquo;Hassan rebuilt MyCustomPatches, a WordPress + WooCommerce store, onto a custom Next.js storefront. PageSpeed went from 45 to 90+. Load time 3.2s to 0.7s. Fixed price. Unlimited revisions. Live at mycustompatches.net. Rated 5 stars on Clutch and GoodFirms.&rdquo;
               </p>
               <p className="text-sm text-stone-500">Matt Conner, owner, MC Patches LLC. <a href="https://clutch.co/profile/panda-code-gen" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Clutch review</a> &middot; <a href="https://www.goodfirms.co/company/pandacodegen" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">GoodFirms review</a></p>
               <p className="text-sm text-stone-700 mt-4 pt-4 border-t border-stone-100">I will do the same thing for your Shopify store in three weeks, or refund you in full. No hourly billing. No subcontractors. Hassan Jamal, Austin, TX.</p>
@@ -156,10 +156,10 @@ export default function PageContent() {
                 href: "https://mycustompatches.net",
                 category: "Custom Patches (US Market)",
                 platform: "WordPress → Custom",
-                pagespeed: 97,
+                pagespeed: 95,
                 loadTime: "0.7s",
-                saved: "42 → 97",
-                note: "Migrated from slow WordPress. PageSpeed jumped 42 to 97. Load time 3.2s to 0.7s. Featured 5-star Clutch + GoodFirms reviews.",
+                saved: "45 → 95",
+                note: "Migrated from a slow WordPress + WooCommerce store. PageSpeed jumped 45 to 95. Load time 3.2s to 0.7s. Featured 5-star Clutch + GoodFirms reviews.",
               },
               {
                 name: "Saforne",
@@ -294,11 +294,11 @@ export default function PageContent() {
           <div className="grid md:grid-cols-2 gap-6">
             {[
               { icon: DollarSign, pain: "App Fees Are Eating Your Profit Margin", detail: "Yotpo at $200/mo, PageFly at $100/mo, Rebuy at $150/mo, Bold subscriptions on top. Your apps cost more than your Shopify plan. That's $1,500+ per month going to SaaS fees instead of growth." },
-              { icon: AlertTriangle, pain: "Every Second of Load Time Costs You 7% in Conversions", detail: "Every app injects JavaScript that loads before your customer sees a single product. At $100k/month revenue, a 2-second delay costs $14,000/month in missed sales. Google's data confirms it every time." },
+              { icon: AlertTriangle, pain: "Every Second of Load Time Costs You 7% in Conversions", detail: "Every app injects JavaScript that loads before your customer sees a single product. At $100k/month revenue, a 2-second delay costs $14,000/month in missed sales. The 7% per second figure comes from Akamai's research on load time and conversions." },
               { icon: XCircle, pain: "Shopify's URL Structure Is Capping Your SEO", detail: "Shopify forces /collections/ and /products/ into every URL. You can't clean them up. Competitors with custom storefronts rank for cleaner URLs. You're fighting Google with a built-in handicap." },
               { icon: Code2, pain: "Liquid Blocks the Checkout Experience That Converts", detail: "One-page checkout, custom upsell flows, subscription bundling. Liquid's template system has hard limits. Going headless means your checkout works exactly how your conversion data says it should." },
               { icon: XCircle, pain: "Your Store Looks Like 50,000 Other Shopify Stores", detail: "Standard Shopify themes are deployed by hundreds of thousands of stores. Your competitors are literally running the same template. A custom storefront is the only way to build a brand experience that's 100% yours." },
-              { icon: Globe, pain: "AI Search Won't Recommend a Slow Storefront", detail: "ChatGPT, Perplexity, and Google's AI Overviews now answer 'where should I buy X?' directly. They surface fast, structured storefronts. Shopify's bloated JavaScript makes you invisible to the AI search layer now driving 20-30% of buying decisions." },
+              { icon: Globe, pain: "AI Search Won't Recommend a Slow Storefront", detail: "ChatGPT, Perplexity, and Google's AI Overviews now answer 'where should I buy X?' directly. They surface fast, structured storefronts. Shopify's bloated JavaScript makes you invisible to an AI search layer that influences a growing share of buying decisions." },
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -399,7 +399,7 @@ export default function PageContent() {
           <div className="mt-8 p-6 bg-charcoal text-white rounded-2xl text-center">
             <p className="text-lg font-bold mb-2">Headless removes app bloat at the source. No ghost code. No render-blocking JavaScript. No silent conversion killer.</p>
             <p className="text-stone-400 text-sm mb-4 max-w-2xl mx-auto">
-              We rebuild Shopify stores headless on Next.js for $5,000 to $10,000. App functionality moves to native code. Your storefront loads in under 1 second. Same Shopify backend, same revenue, 200x lower app fees.
+              We rebuild Shopify stores headless on Next.js from $1,500 (most headless store rebuilds land $5,000 to $10,000). App functionality moves to native code. Your storefront loads in under 1 second. Same Shopify backend, same revenue, about 57x lower app fees.
             </p>
             <a href="#pricing" className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
               See Headless Pricing →
@@ -418,7 +418,7 @@ export default function PageContent() {
             Same Shopify Backend. 10x Better Frontend.
           </h2>
           <p className="text-stone-600 text-lg leading-relaxed mb-8 md:mb-12 max-w-2xl mx-auto">
-            Going headless means you keep Shopify&apos;s powerful inventory, payments, and order management. But your customers see a lightning-fast, beautifully custom storefront that converts at 2-3x the rate.
+            Going headless means you keep Shopify&apos;s powerful inventory, payments, and order management. But your customers see a lightning-fast, beautifully custom storefront that can convert at up to 2 to 3x the rate. If you want the revenue math first, read <Link href="/blog/shopify-slow-losing-sales" className="text-cognac hover:underline">what a slow Shopify store costs you in revenue</Link>.
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
@@ -477,7 +477,7 @@ export default function PageContent() {
                   "Mobile-first responsive design",
                   "90+ PageSpeed guaranteed",
                   "Sanity CMS for content",
-                  "Free month of post-launch tweaks",
+                  "15 days of free post-launch support",
                 ],
                 featured: false,
                 cta: "Get Starter Quote",
@@ -493,7 +493,7 @@ export default function PageContent() {
                   "Advanced checkout flow",
                   "Upsell and personalization logic",
                   "Custom review system (no Yotpo)",
-                  "60-day post-launch support",
+                  "30 days of free post-launch support",
                 ],
                 featured: true,
                 cta: "Get Scoped Quote",
@@ -509,7 +509,7 @@ export default function PageContent() {
                   "Custom admin dashboard",
                   "Multi-currency + localization",
                   "Custom loyalty/rewards logic",
-                  "90-day post-launch support",
+                  "30 days of free post-launch support",
                 ],
                 featured: false,
                 cta: "Get Scoped Quote",

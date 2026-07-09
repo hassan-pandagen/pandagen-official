@@ -18,16 +18,16 @@ import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 
 const squarespaceComparison = [
   { metric: "Load Speed", bad: "3-5 seconds", good: "< 0.8s", icon: Zap },
-  { metric: "Monthly Cost", bad: "$33 - $65/mo", good: "$0", icon: Wallet },
+  { metric: "Monthly Cost", bad: "$23 to $65/mo", good: "$0", icon: Wallet },
   { metric: "Code Ownership", bad: "Rented", good: "100% Yours", icon: Lock },
-  { metric: "Google Score", bad: "Fail (30-50)", good: "98-100", icon: Search },
+  { metric: "Google Score", bad: "Fail (30-50)", good: "90+", icon: Search },
   { metric: "Design Freedom", bad: "Template Limit", good: "Pixel-Perfect", icon: Layout },
 ];
 
 const faqs = [
   {
     q: "Will my Squarespace site design transfer to custom code?",
-    a: "We don't copy-paste templates. We redesign your brand with custom code that's uniquely yours. We match your brand colors, fonts, and style \u2014 but make it faster, more professional, and fully customizable."
+    a: "We don't copy-paste templates. We redesign your brand with custom code that's uniquely yours. We match your brand colors, fonts, and style, but make it faster, more professional, and fully customizable."
   },
   {
     q: "Can I still use Squarespace for my online store?",
@@ -35,11 +35,11 @@ const faqs = [
   },
   {
     q: "How much does a Squarespace migration cost?",
-    a: "Four tiers. Starter $1,500 (5 to 7 pages, custom Next.js). Growth $3,500 (15 to 50 pages with forms and blog). Scale $5,000 to $10,000 (Squarespace Commerce, Scheduling, member areas, 30+ pages). Scale+ $10,000+ for enterprise scope, custom-quoted after a scoping call. Over 3 years, you also save $1,200 to $2,400 in Squarespace subscription fees alone."
+    a: "Four tiers. Starter $1,500 (5 to 7 pages, custom Next.js). Growth $3,500 (15 to 50 pages with forms and blog). Scale $5,000 to $10,000 (Squarespace Commerce, Scheduling, member areas, 30+ pages). Scale+ $10,000+ for enterprise scope, custom-quoted after a scoping call. You also stop paying Squarespace $23 to $65 a month forever."
   },
   {
     q: "What if I have a blog on Squarespace?",
-    a: "All blog posts migrate with their content, images, dates, and URLs. We set up a content editor so you can write and publish new posts the same way \u2014 but your blog loads 4-5x faster."
+    a: "All blog posts migrate with their content, images, dates, and URLs. We set up a content editor so you can write and publish new posts the same way, but your blog loads 4-5x faster."
   },
   {
     q: "Is the migration disruptive to my business?",
@@ -69,7 +69,7 @@ export default function SquarespacePageContent() {
           <h1 className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.08] md:leading-tight break-words animate-fade-in-up">
             Stuck at 30-55 PageSpeed on Squarespace? <br />
             <span className="font-serif italic text-cognac">
-              We rebuild you at 90+ in 3 weeks.
+              We rebuild you at 90+ in 2 to 3 weeks.
             </span>
           </h1>
 
@@ -191,7 +191,7 @@ export default function SquarespacePageContent() {
       <CaseStudyGrid
         highlight="saforne"
         label="Real Template-Platform Migrations"
-        heading="Squarespace to custom, done"
+        heading="Template platforms to custom, done"
         subheading="Four sites we built or migrated, including a recently launched build still in progress. Verifiable PageSpeed scores and honest before/after numbers."
       />
 
@@ -274,14 +274,14 @@ export default function SquarespacePageContent() {
       <section id="how-it-works" className="py-10 md:py-14 px-6">
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How We Migrate Your Squarespace Site</h2>
-          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A proven 4-step process. Your Squarespace site stays live the entire time.</p>
+          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A proven 4-phase process, 2 to 3 weeks typical. Your Squarespace site stays live the entire time.</p>
 
           <div className="space-y-8">
             {[
-              { step: "01", title: "Content Export", desc: "We extract every page, blog post, image, and gallery from Squarespace. Your content is cleaned and organized for the new platform.", icon: FileSearch, duration: "Week 1" },
-              { step: "02", title: "Custom Design", desc: "We recreate your brand with a custom design that\u2019s uniquely yours. No more sharing templates with millions of other sites.", icon: PenTool, duration: "Weeks 2-3" },
-              { step: "03", title: "Build & SEO Migration", desc: "Your site gets coded in Next.js with server-side rendering. We map all URLs, set up 301 redirects, and preserve your Google rankings.", icon: Wrench, duration: "Weeks 4-5" },
-              { step: "04", title: "Launch & Training", desc: "We launch your new site, set up a content editor for easy editing, and train your team. No coding required to update content.", icon: Rocket, duration: "Week 6" },
+              { step: "01", title: "Content Export", desc: "We extract every page, blog post, image, and gallery from Squarespace. Your content is cleaned and organized for the new platform.", icon: FileSearch, duration: "Phase 1" },
+              { step: "02", title: "Custom Design", desc: "We recreate your brand with a custom design that\u2019s uniquely yours. No more sharing templates with millions of other sites.", icon: PenTool, duration: "Phase 2" },
+              { step: "03", title: "Build & SEO Migration", desc: "Your site gets coded in Next.js with server-side rendering. We map all URLs, set up 301 redirects, and preserve your Google rankings.", icon: Wrench, duration: "Phase 3" },
+              { step: "04", title: "Launch & Training", desc: "We launch your new site, set up a content editor for easy editing, and train your team. No coding required to update content.", icon: Rocket, duration: "Phase 4" },
             ].map((item, i) => (
               <FadeIn
                 key={i}
@@ -526,7 +526,7 @@ export default function SquarespacePageContent() {
       <section className="py-8 md:py-12 px-6 bg-white border-t border-stone-200">
         <div className="container mx-auto max-w-3xl">
           <p className="text-sm text-stone-600 leading-relaxed">
-            We handle the full Squarespace 7.1 stack: Fluid Engine layouts rebuilt in Tailwind grid, Commerce plan products migrated with Stripe reconnected, Acuity and Squarespace Scheduling ported to a custom booking engine, Member Areas converted to gated Next.js routes, and the 600KB+ JavaScript bundle replaced with static HTML on every page. Total Blocking Time drops from 2+ seconds to under 200 milliseconds. INP (Interaction to Next Paint) stops failing. Your domain, DNS, and every blog post URL carry over with 301 redirects.
+            We handle the full Squarespace 7.1 stack: Fluid Engine layouts rebuilt in Tailwind grid, Commerce plan products migrated with Stripe reconnected, Acuity and Squarespace Scheduling ported to a custom booking engine, Member Areas converted to gated Next.js routes, and the 600KB+ JavaScript bundle replaced with static HTML on every page. Total Blocking Time drops from 2+ seconds to under 200 milliseconds. INP (Interaction to Next Paint) stops failing. Your domain, DNS, and every blog post URL carry over with 301 redirects. For exact price ranges by site size and what drives a quote up or down, read our <Link href="/blog/squarespace-migration-cost" className="text-cognac hover:underline font-medium">Squarespace migration cost breakdown</Link>.
           </p>
         </div>
       </section>
@@ -604,7 +604,7 @@ export default function SquarespacePageContent() {
           agencyPrice: "$10K to $30K+",
           agencyNote: "6-10 week timeline. Hourly billing. Squarespace subscription continues.",
           ourPrice: "From $1,500",
-          ourNote: "2-3 week timeline. Fixed price. No platform fees. You own the code.",
+          ourNote: "2 to 3 week typical timeline. Fixed price. No platform fees. You own the code.",
         }}
         tiers={[
           {
@@ -618,7 +618,7 @@ export default function SquarespacePageContent() {
               "Sanity CMS for content editing",
               "90+ PageSpeed guaranteed",
               "301 redirect mapping",
-              "Free month of post-launch tweaks",
+              "15 days of free post-launch support",
             ],
             cta: "Get Starter Quote",
           },
@@ -633,7 +633,7 @@ export default function SquarespacePageContent() {
               "Forms with custom API routes",
               "Full SEO migration with schema",
               "Analytics setup (GA4, Clarity)",
-              "60-day post-launch support",
+              "30 days of free post-launch support",
             ],
             featured: true,
           },
@@ -648,7 +648,7 @@ export default function SquarespacePageContent() {
               "Squarespace Scheduling → custom booking",
               "Member areas / gated content",
               "Custom admin dashboard",
-              "90-day post-launch support",
+              "30 days of free post-launch support",
             ],
           },
         ]}
@@ -668,7 +668,7 @@ export default function SquarespacePageContent() {
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center gap-2 text-slate-600 text-sm"><CheckCircle2 className="w-4 h-4 text-cognac shrink-0" /> Slight speed improvement</li>
                 <li className="flex items-center gap-2 text-slate-600 text-sm"><CheckCircle2 className="w-4 h-4 text-cognac shrink-0" /> Image compression</li>
-                <li className="flex items-center gap-2 text-slate-400 text-sm"><XCircle className="w-4 h-4 text-red-300 shrink-0" /> Still paying $33-65/mo forever</li>
+                <li className="flex items-center gap-2 text-slate-400 text-sm"><XCircle className="w-4 h-4 text-red-300 shrink-0" /> Still paying $23 to $65/mo forever</li>
                 <li className="flex items-center gap-2 text-slate-400 text-sm"><XCircle className="w-4 h-4 text-red-300 shrink-0" /> Still locked into templates</li>
               </ul>
               <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"optimize_existing_site",location:"service_page"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="w-full py-3 rounded-xl border border-slate-200 text-slate-600 font-bold hover:bg-slate-50 transition-colors">
@@ -683,7 +683,7 @@ export default function SquarespacePageContent() {
               </div>
               <h3 className="text-lg font-bold text-cognac uppercase tracking-widest mb-2">Option B</h3>
               <h4 className="text-3xl font-bold text-slate-900 mb-4">Full Migration to Next.js</h4>
-              <p className="text-slate-600 mb-8">We rebuild your site from scratch. Perfect scores. Zero monthly fees. Full ownership. Built to last.</p>
+              <p className="text-slate-600 mb-8">We rebuild your site from scratch. 90+ scores, in writing. Zero monthly fees. Full ownership. Built to last.</p>
               <ul className="space-y-4 mb-10">
                 <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> Under a second load times (&lt;0.8s)</li>
                 <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> 100% SEO Preservation</li>
@@ -762,6 +762,19 @@ export default function SquarespacePageContent() {
               </button>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Further Reading — blog cluster links (closes the pillar -> supporting-content loop) */}
+      <section className="py-10 px-6 bg-white border-t border-stone-200">
+        <div className="container mx-auto max-w-4xl">
+          <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-4">Further reading</p>
+          <ul className="space-y-2 text-stone-700">
+            <li>&rarr; <Link href="/blog/squarespace-migration-cost" className="text-charcoal hover:text-cognac underline underline-offset-2">Squarespace migration cost: what leaving Squarespace really costs</Link></li>
+            <li>&rarr; <Link href="/blog/squarespace-vs-custom-website" className="text-charcoal hover:text-cognac underline underline-offset-2">Squarespace vs custom website: the honest comparison</Link></li>
+            <li>&rarr; <Link href="/blog/is-squarespace-bad-for-seo" className="text-charcoal hover:text-cognac underline underline-offset-2">Is Squarespace bad for SEO? The technical limits explained</Link></li>
+            <li>&rarr; <Link href="/blog/squarespace-too-slow" className="text-charcoal hover:text-cognac underline underline-offset-2">Squarespace too slow? Why it happens and how to fix it</Link></li>
+          </ul>
         </div>
       </section>
 

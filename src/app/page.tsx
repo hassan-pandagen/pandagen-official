@@ -35,7 +35,7 @@ const homeFaqs = [
   },
   {
     q: "How much faster will my site be after migration from WordPress or Shopify?",
-    a: "Most WordPress and Shopify sites we migrate go from 4 to 8 second load times to under 1 second, an improvement of 80 to 95%. Our builds reliably score 90+ on Google PageSpeed (most land 95-100). Load times under 1 second directly improve your Google rankings, lower bounce rates, and increase conversion rates. Faster sites also cost less to host because they require fewer server resources.",
+    a: "Most WordPress and Shopify sites we migrate go from 4 to 8 second load times to under 1 second, an improvement of 80 to 95%. Our builds reliably score 90+ on Google PageSpeed. Load times under 1 second directly improve your Google rankings, lower bounce rates, and increase conversion rates. Faster sites also cost less to host because they require fewer server resources.",
   },
   {
     q: "Do you work with Shopify stores?",

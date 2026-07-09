@@ -145,7 +145,7 @@ export default function AboutPageClient() {
                <div className="text-sm text-stone-500 uppercase tracking-wider">Live Projects</div>
             </div>
             <div className="text-center p-6 bg-white border border-stone-300 rounded-2xl">
-               <div className="text-4xl font-bold text-charcoal mb-2">98/100</div>
+               <div className="text-4xl font-bold text-charcoal mb-2">90+</div>
                <div className="text-sm text-stone-500 uppercase tracking-wider">Avg Lighthouse Score</div>
             </div>
             <div className="text-center p-6 bg-white border border-stone-300 rounded-2xl">

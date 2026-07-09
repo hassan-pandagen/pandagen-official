@@ -51,7 +51,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -221,13 +221,13 @@ export default function WordPressKillerPage() {
 
                     <div className="space-y-8">
                         <BlogText>
-                            A business owner came to me after paying $620/month for WordPress. Hosting, plugins, security monitoring, developer retainer. He thought he was running an efficient setup.
+                            Here is a worked example, not a specific client, just the math applied to a common setup: hosting, plugins, security monitoring, and a developer retainer. Say those add up to $620/month. That is a realistic total for a mid-size WordPress business site once every line item is counted, not an outlier.
                         </BlogText>
                         <BlogText>
-                            We ran the numbers. Over three years, his WordPress site had cost him <BlogHighlight>$22,400 in direct costs</BlogHighlight>, and an estimated $85,000 in lost revenue from a PageSpeed score of 41/100.
+                            Run that $620/month over three years and you get <BlogHighlight>$22,320 in direct costs</BlogHighlight>. Add the revenue impact of a slow site (a PageSpeed score in the 40s is common for WordPress sites running that many plugins) using the 20 to 30% organic traffic loss figure cited later in this article, and the total cost climbs well past what the monthly bill alone suggests.
                         </BlogText>
                         <BlogText>
-                            He had no idea. Most business owners don&apos;t.
+                            Most business owners never run this math. They see the hosting invoice and stop there.
                         </BlogText>
 
                         <BlogHeader>What Does WordPress Actually Cost Per Year?</BlogHeader>

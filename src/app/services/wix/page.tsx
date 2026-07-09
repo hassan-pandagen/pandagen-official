@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import PageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'Is Wix Slowing Down Your Business? We Migrate to Next.js',
-  description: "Wix scores 30 to 60 on Google PageSpeed and blocks advanced SEO controls. We migrate to custom Next.js in 1 to 3 weeks. 90+ PageSpeed, no monthly fees, full SEO ownership.",
+  title: 'Wix Too Slow? We Migrate You to Next.js',
+  description: "Wix scores 30 to 60 on Google PageSpeed and blocks advanced SEO. We migrate you to custom Next.js in 1 to 3 weeks: 90+ PageSpeed, no monthly fees.",
   alternates: { canonical: '/services/wix' },
   keywords: [
     'wix migration service',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'wix seo limitations',
   ],
   openGraph: {
-    title: 'Is Wix Slowing Down Your Business? We Migrate to Next.js | PandaCodeGen',
+    title: 'Wix Too Slow? We Migrate You to Next.js | PandaCodeGen',
     description: "Wix scores 30 to 60 on PageSpeed and blocks advanced SEO. We migrate to custom Next.js in 1 to 3 weeks. 90+ PageSpeed, no monthly fees.",
     url: 'https://www.pandacodegen.com/services/wix',
     siteName: 'PandaCodeGen',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Is Wix Slowing Down Your Business? We Migrate to Next.js | PandaCodeGen',
+    title: 'Wix Too Slow? We Migrate You to Next.js | PandaCodeGen',
     description: "Wix scores 30 to 60 on PageSpeed and blocks SEO. We migrate to custom Next.js in 1 to 3 weeks. 90+ PageSpeed, no monthly fees.",
   },
 };
@@ -39,11 +39,11 @@ export default function WixServicePage() {
       {
         "@type": "ProfessionalService",
         "@id": "https://www.pandacodegen.com/services/wix#service",
-        "name": "Wix Website Development & Migration Services",
-        "description": "Professional Wix website development with migration path to custom coded Next.js for businesses that want to own their platform and rank higher.",
+        "name": "Wix to Next.js Migration Service",
+        "description": "Professional migration of Wix websites to custom coded Next.js. 90+ PageSpeed, full code ownership, zero monthly platform fees, and 301-mapped SEO preservation for businesses that want to own their platform and rank higher.",
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
-        "serviceType": ["Wix Development", "Wix Migration", "Wix to Next.js", "Wix Alternative"],
+        "serviceType": ["Website Migration Service", "Wix Migration", "Wix to Next.js", "Wix Alternative"],
         "priceRange": "$1,500 - $10,000",
         "image": "https://www.pandacodegen.com/og-image.jpg",
         "telephone": "+13027738982",
@@ -70,7 +70,7 @@ export default function WixServicePage() {
         "@type": "WebPage",
         "@id": "https://www.pandacodegen.com/services/wix#webpage",
         "url": "https://www.pandacodegen.com/services/wix",
-        "name": "Wix Development & Migration | PandaCodeGen",
+        "name": "Wix to Next.js Migration | PandaCodeGen",
         "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
         "about": { "@id": "https://www.pandacodegen.com/services/wix#service" },
         "inLanguage": "en-US",

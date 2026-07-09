@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import PageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'Is Your Shopify Store Too Slow? Headless Next.js Rebuild',
-  description: "Your Shopify store scores 40 to 60 on PageSpeed. We rebuild the frontend in Next.js, loading under 1 second. 90+ PageSpeed guaranteed, no app fees, you own the code.",
+  title: 'Shopify Speed Optimization: Headless Next.js',
+  description: "Shopify stores score 40 to 60 on PageSpeed. We rebuild the frontend headless in Next.js from $1,500. 90+ PageSpeed guaranteed, no app fees, you own the code.",
   alternates: { canonical: '/services/ecommerce' },
   keywords: [
     'shopify speed optimization service',
@@ -18,8 +18,8 @@ export const metadata: Metadata = {
     'shopify speed fix agency',
   ],
   openGraph: {
-    title: 'Is Your Shopify Store Too Slow? Headless Next.js Rebuild | PandaCodeGen',
-    description: "Your Shopify store scores 40 to 60 on PageSpeed. We rebuild the frontend in Next.js. 90+ PageSpeed guaranteed, no app fees, you own the code.",
+    title: 'Shopify Speed Optimization: Headless Next.js | PandaCodeGen',
+    description: "Shopify stores score 40 to 60 on PageSpeed. We rebuild the frontend headless in Next.js from $1,500. 90+ PageSpeed guaranteed, no app fees, you own the code.",
     url: 'https://www.pandacodegen.com/services/ecommerce',
     siteName: 'PandaCodeGen',
     type: 'website',
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Is Your Shopify Store Too Slow? Headless Next.js Rebuild | PandaCodeGen',
-    description: "Shopify scoring 40 to 60 on PageSpeed. We rebuild in Next.js. 90+ PageSpeed guaranteed, no app fees, you own the code.",
+    title: 'Shopify Speed Optimization: Headless Next.js | PandaCodeGen',
+    description: "Shopify scoring 40 to 60 on PageSpeed. We rebuild the frontend headless in Next.js. 90+ PageSpeed guaranteed, no app fees, you own the code.",
   },
 };
 
@@ -74,6 +74,8 @@ export default function EcommercePage() {
         "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
         "about": { "@id": "https://www.pandacodegen.com/services/ecommerce#service" },
         "inLanguage": "en-US",
+        "datePublished": "2026-01-27T00:00:00-05:00",
+        "dateModified": "2026-07-07T00:00:00-05:00",
         "speakable": {
           "@type": "SpeakableSpecification",
           "cssSelector": ["h1", "h2", "[data-speakable='true']"]
@@ -97,24 +99,6 @@ export default function EcommercePage() {
           { "@type": "Question", "name": "Will I lose sales during the migration?", "acceptedAnswer": { "@type": "Answer", "text": "No. Your existing Shopify store stays live throughout the entire build. We develop the new storefront in parallel. On launch day, we simply point your domain to the new site. Zero downtime, zero lost sales." } },
           { "@type": "Question", "name": "How much does a custom Shopify storefront cost?", "acceptedAnswer": { "@type": "Answer", "text": "Typical agencies charge $30,000 to $60,000 and take 8 to 12 weeks. We meet you halfway. Four tiers: Starter stores start at $1,500 (small catalogs, basic Shopify Storefront API). Growth builds start at $3,500 (30-100 products, custom features). Scale builds are $5,000 to $10,000 (subscriptions, custom logic, large catalogs). Scale+ is $10,000+ for enterprise headless commerce, custom-quoted after a scoping call. Most clients recover the investment within 4 to 6 months through eliminated app fees and conversion lift." } }
         ]
-      },
-      {
-        "@type": "Review",
-        "@id": "https://www.pandacodegen.com/services/ecommerce#review-1",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
-        "author": { "@type": "Person", "name": "Executive, MC Patches LLC" },
-        "reviewBody": "Panda Code Gen successfully delivered a speedy, bug free website using the latest coding language. The team was punctual, responsive, helpful, and communicative via email. They assisted with UI design and did not charge for revisions. Overall, their expertise and support were commendable.",
-        "datePublished": "2025-11-01",
-        "itemReviewed": { "@id": "https://www.pandacodegen.com/services/ecommerce#service" }
-      },
-      {
-        "@type": "Review",
-        "@id": "https://www.pandacodegen.com/services/ecommerce#review-2",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
-        "author": { "@type": "Person", "name": "Marshall James" },
-        "reviewBody": "I recently worked with PandaCodeGen and had a great experience. Hassan was super helpful and communicative throughout the process. Even though I am not tech-savvy, he broke things down in a way that made sense to me. The service was excellent overall.",
-        "datePublished": "2026-03-01",
-        "itemReviewed": { "@id": "https://www.pandacodegen.com/services/ecommerce#service" }
       }
     ]
   };

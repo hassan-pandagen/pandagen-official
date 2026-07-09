@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import PageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'Is Squarespace Hurting Your SEO? We Migrate to Next.js',
-  description: "Squarespace scores 30 to 55 on Google PageSpeed Mobile. No plugin fixes it. We migrate to custom Next.js, delivering 90+ PageSpeed, full SEO control, and no monthly fees.",
+  title: 'Squarespace Hurting SEO? We Migrate to Next.js',
+  description: "Squarespace scores 30 to 55 on mobile PageSpeed and no plugin fixes it. We migrate you to custom Next.js: 90+ PageSpeed, full SEO control, no monthly fees.",
   alternates: { canonical: '/services/squarespace' },
   keywords: [
     'squarespace migration service',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'squarespace to custom code',
   ],
   openGraph: {
-    title: 'Is Squarespace Hurting Your SEO? We Migrate to Next.js | PandaCodeGen',
+    title: 'Squarespace Hurting SEO? We Migrate to Next.js | PandaCodeGen',
     description: "Squarespace scores 30 to 55 on Google PageSpeed. No plugin fixes it. We migrate to custom Next.js. 90+ PageSpeed, full SEO control, no monthly fees.",
     url: 'https://www.pandacodegen.com/services/squarespace',
     siteName: 'PandaCodeGen',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Is Squarespace Hurting Your SEO? We Migrate to Next.js | PandaCodeGen',
+    title: 'Squarespace Hurting SEO? We Migrate to Next.js | PandaCodeGen',
     description: "Squarespace scores 30 to 55 on PageSpeed. No plugin fixes it. We migrate to custom Next.js. 90+ PageSpeed, no monthly fees.",
   },
 };
@@ -123,7 +123,7 @@ export default function SquarespaceServicePage() {
         "mainEntity": [
           { "@type": "Question", "name": "Will my Squarespace site design transfer to custom code?", "acceptedAnswer": { "@type": "Answer", "text": "We don't copy-paste templates. We redesign your brand with custom code that's uniquely yours. We match your brand colors, fonts, and style, but make it faster, more professional, and fully customizable." } },
           { "@type": "Question", "name": "Can I still use Squarespace for my online store?", "acceptedAnswer": { "@type": "Answer", "text": "We recommend migrating fully. But if you have a small store, we can integrate Shopify's Buy Button or Stripe checkout into your custom site so you keep selling without Squarespace's monthly fees." } },
-          { "@type": "Question", "name": "How much does a Squarespace migration cost?", "acceptedAnswer": { "@type": "Answer", "text": "Typical agencies charge $10,000 to $30,000 and take 6 to 10 weeks. We meet you halfway. Four tiers: Starter starts at $1,500 (5 to 7 pages, custom Next.js). Growth starts at $3,500 (15 to 50 pages with forms and blog). Scale is $5,000 to $10,000 (Squarespace Commerce, Scheduling, member areas, 30+ pages). Scale+ is $10,000+ for enterprise scope, custom-quoted after a scoping call. You also stop paying $23 to $65/month forever." } },
+          { "@type": "Question", "name": "How much does a Squarespace migration cost?", "acceptedAnswer": { "@type": "Answer", "text": "Four tiers. Starter $1,500 (5 to 7 pages, custom Next.js). Growth $3,500 (15 to 50 pages with forms and blog). Scale $5,000 to $10,000 (Squarespace Commerce, Scheduling, member areas, 30+ pages). Scale+ $10,000+ for enterprise scope, custom-quoted after a scoping call. You also stop paying Squarespace $23 to $65 a month forever." } },
           { "@type": "Question", "name": "What if I have a blog on Squarespace?", "acceptedAnswer": { "@type": "Answer", "text": "All blog posts migrate with their content, images, dates, and URLs. We set up a content editor so you can write and publish new posts the same way, but your blog loads 4-5x faster." } },
           { "@type": "Question", "name": "Is the migration disruptive to my business?", "acceptedAnswer": { "@type": "Answer", "text": "No. Your Squarespace site stays live during the entire build. We develop the new site in parallel. On launch day, we point your domain to the new site. Zero downtime." } }
         ]
@@ -134,7 +134,7 @@ export default function SquarespaceServicePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
-      <p className="sr-only" data-speakable="true">PandaCodeGen migrates Squarespace sites to custom Next.js in 1 to 3 weeks. Squarespace scores 30 to 55 on Google PageSpeed Mobile because its template architecture loads all CSS and JavaScript on every page. No plugin fixes this. After migration you get 90+ PageSpeed, full SEO control, zero monthly platform fees, and code you own outright.</p>
+      <p className="sr-only" data-speakable="true">PandaCodeGen migrates Squarespace sites to custom Next.js in 2 to 3 weeks. Squarespace scores 30 to 55 on Google PageSpeed Mobile because its template architecture loads all CSS and JavaScript on every page. No plugin fixes this. After migration you get 90+ PageSpeed, full SEO control, zero monthly platform fees, and code you own outright.</p>
       <PageContent />
     </>
   );

@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         description: "What it really costs to migrate off WooCommerce to custom Next.js. Fixed-price tiers from $1,500, what drives the number up, and the red flags in a $25K agency quote.",
         type: "article",
         publishedTime: "2026-06-30",
-        modifiedTime: "2026-06-30",
+        modifiedTime: "2026-07-08",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/woocommerce-migration-cost",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -60,7 +60,7 @@ const articleSchema = {
             "description": "What it really costs to migrate off WooCommerce to custom Next.js. Fixed-price tiers from $1,500, what drives the number up, and the red flags in a $25K agency quote.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-06-30T00:00:00-05:00",
-            "dateModified": "2026-06-30T00:00:00-05:00",
+            "dateModified": "2026-07-08T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -120,7 +120,7 @@ const articleSchema = {
             "description": "What it really costs to migrate off WooCommerce to custom Next.js. Fixed-price tiers from $1,500, what drives the number up, and the red flags in a $25K agency quote.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-06-30T00:00:00-05:00",
-            "dateModified": "2026-06-30T00:00:00-05:00",
+            "dateModified": "2026-07-08T00:00:00-05:00",
             "inLanguage": "en-US"
         },
         {
@@ -224,15 +224,76 @@ export default function WooCommerceMigrationCostPage() {
                         <BlogHeader>How much does it cost to migrate off WooCommerce?</BlogHeader>
 
                         <BlogText>
-                            Between $1,500 and $10,000+, and where you land depends almost entirely on product count, integrations, and whether you need a real checkout. Here is the receipt that started this for us.
+                            Between $1,500 and $10,000+, and where you land depends almost entirely on product count, integrations, and whether you need a real checkout. As a quick anchor: we rebuilt <BlogHighlight>MyCustomPatches</BlogHighlight> off WooCommerce for a storefront-only scope (no custom checkout, no headless commerce), and it landed well below the headless-store tier because the catalog and integration count were both small. That is the pattern this whole post is about, the price follows the mechanics of what has to move, not a flat rate per store.
                         </BlogText>
 
                         <BlogText>
-                            Matt Conner ran <BlogHighlight>MyCustomPatches</BlogHighlight> on WordPress and WooCommerce. The store worked, but it was slow: a PageSpeed score of 45 and a 3.2-second load. We rebuilt it on custom Next.js. PageSpeed went from <BlogHighlight>45 to 90+</BlogHighlight>, load dropped to <BlogHighlight>0.7 seconds</BlogHighlight>, and hosting went from <BlogHighlight>$150/month to $0/month</BlogHighlight>. That last line matters more than people expect, because it repeats every single month after the migration is done. And MyCustomPatches did not need a custom checkout or full headless commerce, just a clean, fast storefront rebuild, so it sat well below the headless-store tier.
+                            The rest of this section breaks down exactly which mechanics push a quote up or down, so you can predict your own number before anyone sends one.
+                        </BlogText>
+
+                        <BlogHeader>What actually drives the number: catalog size and complexity</BlogHeader>
+
+                        <BlogText>
+                            Product count is the first lever, but it is not linear. A 40-product store and a 400-product store are not 10x apart in cost, because most of the work is building the template and the migration pipeline once, then running it. What does scale directly with catalog size:
+                        </BlogText>
+
+                        <BlogList items={[
+                            "Variable products and variants. A simple product (name, price, one image) migrates in seconds per item. A variable product with 6 size/color combinations, each with its own SKU, stock count, and sometimes its own price, needs its variant matrix rebuilt, not just copied.",
+                            "Custom fields and product meta. Anything added via Advanced Custom Fields, a page builder's product add-ons, or a custom plugin (warranty length, care instructions, a compatibility chart) lives outside WooCommerce's standard schema. It has to be mapped field-by-field into the new data model, because there is no generic export for a field nobody but your dev ever configured.",
+                            "Category and attribute structure. If your catalog uses nested categories, cross-sell rules, or attribute-based filtering (shop by size, material, color), that logic has to be rebuilt in the new front end, not just the raw data moved.",
+                            "Product images and galleries at scale. Ten products with five images each is a non-issue. Two thousand products with inconsistent image sizing, missing alt text, and no naming convention is real QA time, because every image needs to render correctly on the new site.",
+                        ]} />
+
+                        <BlogText>
+                            This is why a 40-SKU store with simple products routinely fits the Starter or Growth tier, while a 500-SKU store with variants and custom fields pushes into Scale even if neither one needs a custom checkout.
+                        </BlogText>
+
+                        <BlogHeader>What&apos;s cheap to migrate vs. what&apos;s expensive</BlogHeader>
+
+                        <BlogText>
+                            Cheap: static content, simple products, and anything that maps one-to-one into the new system. Expensive: anything that depends on live third-party state or years of accumulated transaction history. Here is the actual split.
+                        </BlogText>
+
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
+                        <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
+                            <table className="w-full border-collapse text-sm min-w-[560px] responsive-stack-table">
+                                <thead>
+                                    <tr className="bg-stone-100">
+                                        <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">Cheap to migrate</th>
+                                        <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">Expensive to migrate</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td className="border border-stone-300 px-4 py-3 text-stone-700">Simple products (name, price, one image, one SKU)</td>
+                                        <td data-label="Expensive to migrate" className="border border-stone-300 px-4 py-3 text-stone-700">Variable products with multiple attributes and per-variant stock</td>
+                                    </tr>
+                                    <tr className="bg-stone-50">
+                                        <td className="border border-stone-300 px-4 py-3 text-stone-700">Static pages (About, contact, policies)</td>
+                                        <td data-label="Expensive to migrate" className="border border-stone-300 px-4 py-3 text-stone-700">Custom fields and product meta from page-builder plugins</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="border border-stone-300 px-4 py-3 text-stone-700">A single payment gateway (Stripe or PayPal only)</td>
+                                        <td data-label="Expensive to migrate" className="border border-stone-300 px-4 py-3 text-stone-700">Multiple gateways, saved cards, or a region-specific processor with its own API quirks</td>
+                                    </tr>
+                                    <tr className="bg-stone-50">
+                                        <td className="border border-stone-300 px-4 py-3 text-stone-700">A handful of blog posts or landing pages</td>
+                                        <td data-label="Expensive to migrate" className="border border-stone-300 px-4 py-3 text-stone-700">Years of order history with customer accounts, saved addresses, and reviews</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="border border-stone-300 px-4 py-3 text-stone-700">Flat-rate or free shipping</td>
+                                        <td data-label="Expensive to migrate" className="border border-stone-300 px-4 py-3 text-stone-700">Live carrier-calculated shipping (USPS/UPS/FedEx APIs) or zone-based tables</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <BlogText>
+                            Payment gateway reconfiguration deserves its own callout because it surprises people. Swapping Stripe or PayPal into a new checkout is usually a day of engineering: reconnect the API keys, remap webhooks, test refunds. But if you run WooCommerce Subscriptions, saved payment methods on file, or a gateway with a non-standard integration, that logic has to be rebuilt and tested against real transactions before launch, not just reconnected. That is what turns a quick gateway swap into several days of dedicated QA.
                         </BlogText>
 
                         <BlogText>
-                            Panda Patches, a store we build and run on the same stack, has scaled from <BlogHighlight>$38,000 to about $50,000 a month on about $55 a month in tooling</BlogHighlight> (a Supabase backend, Vercel, and the FAL AI patch generator). No plugin stack, no hosting tax, no &quot;performance add-on&quot; subscription. Name a WooCommerce store doing $50K/month on under $100 in tooling. That is the cost structure you are buying when you leave WooCommerce, and it is a big part of why the math works even when the upfront number is not tiny.
+                            Order-history preservation is the other cost driver people underestimate. Keeping product and content data is straightforward. Keeping five years of orders, customer accounts, and their relationships to each other (which customer bought which product how many times) means the migration has to preserve foreign-key relationships across multiple tables, not just export a spreadsheet. Most stores do not need full historical orders live on the new site; a common approach is migrating active customer accounts and recent order history in full, then archiving older records for reference rather than paying to rebuild them into the new system.
                         </BlogText>
 
                         <BlogText>
@@ -297,7 +358,7 @@ export default function WooCommerceMigrationCostPage() {
                         </BlogText>
 
                         <BlogText>
-                            Why speed is worth paying for: on a storefront, speed is not a vanity score, it is checkout friction. MyCustomPatches went from 3.2s to 0.7s on the same catalog and the same traffic, and a store that loads in well under a second stops giving shoppers a reason to bounce before the page paints. When you are already doing real revenue, the seconds you cut turn into orders you were quietly losing.
+                            Why speed is worth paying for: on a storefront, speed is not a vanity score, it is checkout friction. Every additional second before a product page becomes interactive is a point where a shopper on a mobile connection can bail before they ever see the &quot;Add to Cart&quot; button. That friction compounds at checkout, the one page in any store that cannot be cached and therefore feels every millisecond of server work. When you are already doing real revenue, the seconds a rebuild cuts turn into orders you were quietly losing, not a vanity metric on a report.
                         </BlogText>
 
                         <BlogHeader>Will I lose my SEO rankings when I migrate?</BlogHeader>

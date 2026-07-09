@@ -68,7 +68,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -262,7 +262,7 @@ export default function ShopifySpeedOptimizationPage() {
 
                             <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Heavy Themes and Unused Liquid Code</h3>
                             <BlogText>
-                                Liquid is Shopify&apos;s templating language. Premium themes often include features you never use, mega menus, product quick-views, animations, but the code still loads on every page. Older themes built before Online Store 2.0 lack modern performance optimizations entirely. The <Link href="/blog/shopify-dawn-theme-slow" className="text-cognac hover:underline">Dawn theme specifically scored 42 on mobile before optimization</Link>, we took it to 97.
+                                Liquid is Shopify&apos;s templating language. Premium themes often include features you never use, mega menus, product quick-views, animations, but the code still loads on every page. Older themes built before Online Store 2.0 lack modern performance optimizations entirely. Even <Link href="/blog/shopify-dawn-theme-slow" className="text-cognac hover:underline">Dawn, Shopify&apos;s fastest theme, tops out around 80</Link> once real apps are installed; the builds that hit 90+ go headless.
                             </BlogText>
 
                             <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Unoptimized Images and Video</h3>
@@ -496,7 +496,7 @@ export default function ShopifySpeedOptimizationPage() {
                             <div className="grid gap-3">
                                 {[
                                     { href: "/blog/shopify-headless", label: "Is Shopify Headless Worth It in 2026? Real Results From a $1.2M Store" },
-                                    { href: "/blog/shopify-dawn-theme-slow", label: "Shopify Dawn Theme Slow? How We Fixed It From 42 to 97" },
+                                    { href: "/blog/shopify-dawn-theme-slow", label: "Shopify Dawn Theme Slow? The Real Fix to Hit 90+" },
                                     { href: "/blog/shopify-slow-losing-sales", label: "Slow Shopify Store? How Much Revenue You Are Losing (With Math)" },
                                     { href: "/blog/shopify-app-costs-real-monthly-bill", label: "How Much Do Shopify Apps Cost in 2026? $300 to $800/mo (Real Data)" },
                                     { href: "/blog/shopify-plus-still-slow", label: "Why Is Shopify Plus Still Slow in 2026?" },

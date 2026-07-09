@@ -71,7 +71,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -209,7 +209,7 @@ export default function HowToSpeedUpYourWebsitePage() {
                             "Mobile users abandon a page after 3 seconds. Every additional second cuts conversions by 7 to 20 percent depending on the industry.",
                             "WordPress, Shopify, Wix, and Squarespace sites hit a structural speed ceiling around 50 to 75 PageSpeed on mobile. Optimization plateaus there.",
                             "12 tactics in this guide cover image compression, CDN, caching, render-blocking JavaScript, hosting, and the architecture choices that break the ceiling.",
-                            "If your site sits below 70 PageSpeed despite optimization, a rebuild on Next.js consistently delivers 90 to 100 with sub-1-second load times.",
+                            "If your site sits below 70 PageSpeed despite optimization, a rebuild on Next.js consistently delivers 90+ with sub-1-second load times.",
                             "PandaCodeGen rebuilds start at $1,500 with a 90+ PageSpeed score guaranteed or 100 percent refund. Timeline 3 to 5 weeks for most business sites."
                         ]} />
                     </div>
@@ -224,15 +224,15 @@ export default function HowToSpeedUpYourWebsitePage() {
                         </div>
 
                         <BlogText>
-                            A slow website is not just a technical problem. It is a revenue problem. <BlogHighlight>Google research shows that mobile users abandon a page that takes longer than 3 seconds to load.</BlogHighlight> Portent research found that the first 5 seconds of page load have the highest impact on conversion rates, with each additional second cutting conversions by an average of 4.42 percent.
+                            A slow website is not just a technical problem. It is a revenue problem. <BlogHighlight>Google research shows that mobile users abandon a page that takes longer than 3 seconds to load.</BlogHighlight> Portent&apos;s analysis of 27,000+ landing pages found conversion rate dropping from 3.05 percent at a 1-second load time down to roughly 1.12 percent at 3 seconds, with the sharpest drop-off happening in the first 5 seconds of load.
                         </BlogText>
 
                         <BlogText>
-                            Speed also drives ad efficiency. Google Ads uses Quality Score to set cost per click, and Quality Score is partly determined by landing page experience. A slow landing page raises your CPC by 20 to 40 percent compared to a fast competitor bidding on the same keyword. The slow site pays more for every click and converts a smaller share of that traffic.
+                            Speed also drives ad efficiency. Google Ads uses Quality Score to set cost per click, and Quality Score is partly determined by landing page experience. A slower landing page pushes your Quality Score down, which raises the CPC you pay for the same auction position. The slow site pays more for every click and converts a smaller share of that traffic.
                         </BlogText>
 
                         <BlogText>
-                            Organic traffic feels the same pressure. The March 2026 Google core update penalized 47 percent of sites that failed Core Web Vitals on mobile, and Search Console data shows sites scoring below 70 PageSpeed lose 20 to 30 percent of organic traffic compared to faster competitors targeting the same keywords. Speed is no longer a tiebreaker. It is one of the top ranking signals.
+                            Organic traffic feels the same pressure. Google made Core Web Vitals an official ranking signal in 2021, and on our own client work, sites migrated off a sub-70 PageSpeed platform onto Next.js have recovered rankings within 30 to 90 days without any new content or link building, purely from the speed gain. Speed is no longer a tiebreaker. It is one of the ranking signals Google measures directly from real user data.
                         </BlogText>
 
                         <BlogHeader>How Fast Your Website Should Load</BlogHeader>
@@ -351,7 +351,7 @@ export default function HowToSpeedUpYourWebsitePage() {
                         </div>
 
                         <BlogText>
-                            <strong>1. Optimize and compress images.</strong> Convert images to WebP or AVIF format. Use Squoosh, ShortPixel, or ImageOptim for compression at 80 to 85 percent quality (lossy compression at this level is visually identical to the original). Serve responsive image sizes with srcset so mobile devices do not download a 2000-pixel image to display on a 400-pixel screen. WebP delivers files 25 to 35 percent smaller than JPEG at equivalent quality. This is the highest-impact single change on most sites.
+                            <strong>1. Optimize and compress images.</strong> Convert images to WebP or AVIF format. Use Squoosh, ShortPixel, or ImageOptim for compression at 80 to 85 percent quality (lossy compression at this level is visually identical to the original). Serve responsive image sizes with srcset so mobile devices do not download a 2000-pixel image to display on a 400-pixel screen. WebP delivers files 25 to 35 percent smaller than JPEG at equivalent quality. This is the highest-impact single change on most sites. On the MyCustomPatches rebuild, converting uncompressed product photography to next/image-served WebP was the single biggest contributor to moving LCP from 3.2 seconds down toward the 0.7-second final result.
                         </BlogText>
 
                         <BlogText>
@@ -387,15 +387,15 @@ export default function HowToSpeedUpYourWebsitePage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>10. Move to static or edge rendering.</strong> Static Site Generation (SSG) and edge rendering pre-build pages and serve them instantly from a CDN. No server round-trip, no database query, no PHP execution. Next.js, Astro, and Hugo all support SSG. Vercel and Cloudflare Pages serve from the edge by default. This is the architectural change that breaks past the platform speed ceiling.
+                            <strong>10. Move to static or edge rendering.</strong> Static Site Generation (SSG) and edge rendering pre-build pages and serve them instantly from a CDN. No server round-trip, no database query, no PHP execution. Next.js, Astro, and Hugo all support SSG. Vercel and Cloudflare Pages serve from the edge by default. This is the architectural change that breaks past the platform speed ceiling. It is also the tactic that did the most work on the Panda Patches rebuild: moving off WordPress and WooCommerce server rendering onto static and edge-rendered Next.js pages took LCP from 5.8 seconds to 0.8 seconds.
                         </BlogText>
 
                         <BlogText>
-                            <strong>11. Upgrade to performance hosting.</strong> Move from shared hosting to managed WordPress (Kinsta, WP Engine), VPS (DigitalOcean, Hetzner), or edge platforms (Vercel, Netlify, Cloudflare Pages). Hosting determines the speed floor. Optimizations cannot overcome a slow server. Vercel starts free and only scales to $20 per month when commercial traffic justifies it.
+                            <strong>11. Upgrade to performance hosting.</strong> Move from shared hosting to managed WordPress (Kinsta, WP Engine), VPS (DigitalOcean, Hetzner), or edge platforms (Vercel, Netlify, Cloudflare Pages). Hosting determines the speed floor. Optimizations cannot overcome a slow server. On the Panda Patches migration, moving off paid WordPress hosting and plugin subscriptions onto Vercel eliminated roughly $200 a month in recurring fees outright.
                         </BlogText>
 
                         <BlogText>
-                            <strong>12. Audit and cut unused plugins.</strong> WordPress sites average 20 to 30 active plugins. Most can be replaced with native code or removed entirely. Each plugin adds database queries and potential conflicts. Remove plugins, do not just deactivate them. Deactivated plugins still sit in the database and can introduce security vulnerabilities.
+                            <strong>12. Audit and cut unused plugins.</strong> WordPress sites average 20 to 30 active plugins. Most can be replaced with native code or removed entirely. Each plugin adds database queries and potential conflicts. Remove plugins, do not just deactivate them. Deactivated plugins still sit in the database and can introduce security vulnerabilities. Be extra careful with the new AI plugins, which we flagged in our breakdown of the <Link href="/blog/wordpress-ai-security-risk-2026" className="text-cognac hover:underline">WordPress AI plugin security risk</Link>.
                         </BlogText>
 
                         {/* Mid CTA */}
@@ -434,7 +434,7 @@ export default function HowToSpeedUpYourWebsitePage() {
 
                         <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">Every major platform has a structural speed ceiling: WordPress and WooCommerce cap at 60 to 75 PageSpeed, Shopify at 50 to 70, Wix at 40 to 65, Squarespace at 50 to 70, and Webflow at 70 to 85. Optimization plateaus at the ceiling. Custom Next.js consistently scores 90 to 100.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Every major platform has a structural speed ceiling: WordPress and WooCommerce cap at 60 to 75 PageSpeed, Shopify at 50 to 70, Wix at 40 to 65, Squarespace at 50 to 70, and Webflow at 70 to 85. Optimization plateaus at the ceiling. Custom Next.js consistently scores 90+.</p>
                         </div>
 
                         <BlogText>
@@ -479,7 +479,7 @@ export default function HowToSpeedUpYourWebsitePage() {
                                     </tr>
                                     <tr className="hover:bg-stone-50 bg-stone-50/50 font-bold">
                                         <td className="p-3 border border-stone-300 text-charcoal">Custom Next.js</td>
-                                        <td data-label="Common Speed Ceiling" className="p-3 border border-stone-300 text-green-700">90 to 100</td>
+                                        <td data-label="Common Speed Ceiling" className="p-3 border border-stone-300 text-green-700">90+</td>
                                         <td data-label="Primary Bottleneck" className="p-3 border border-stone-300">None at architectural level</td>
                                     </tr>
                                 </tbody>
@@ -507,7 +507,7 @@ export default function HowToSpeedUpYourWebsitePage() {
                         </BlogText>
 
                         <BlogQuote>
-                            We have spent two weeks optimizing a Wix site to 65 PageSpeed and the same two weeks rebuilding a Wix site as Next.js to score 99. Same client effort. Permanent result vs temporary patch.
+                            We have spent two weeks optimizing a Wix site to 65 PageSpeed and the same two weeks rebuilding a Wix site as Next.js to score 90+. Same client effort. Permanent result vs temporary patch.
                         </BlogQuote>
 
                         <BlogHeader>When to Rebuild Your Website Instead of Optimizing</BlogHeader>
@@ -534,7 +534,7 @@ export default function HowToSpeedUpYourWebsitePage() {
                         ]} />
 
                         <BlogText>
-                            For a real example: Panda Patches ran on WordPress with WooCommerce for three years, optimized to 64 mobile PageSpeed. Two more weeks of optimization could have lifted that score to 70 at most. The rebuild to a Next.js + Sanity + Supabase + Stripe stack moved the site to 99 PageSpeed, dropped LCP from 5.8 seconds to 0.8 seconds, and eliminated $200 a month in plugin and hosting fees. The migration paid for itself in 3 months. <Link href="/work/panda-patches" className="text-cognac hover:underline">Full case study here.</Link>
+                            For a real example: Panda Patches ran on WordPress with WooCommerce for three years, optimized to 64 mobile PageSpeed. Two more weeks of optimization could have lifted that score to 70 at most. The rebuild to a Next.js + Sanity + Supabase + Square stack moved the site to 90+ PageSpeed, dropped LCP from 5.8 seconds to 0.8 seconds, and eliminated $200 a month in plugin and hosting fees. The migration paid for itself in 3 months. <Link href="/work/panda-patches" className="text-cognac hover:underline">Full case study here.</Link>
                         </BlogText>
 
                         <BlogText>
@@ -553,7 +553,7 @@ export default function HowToSpeedUpYourWebsitePage() {
                             "Fixed pricing: Starter $1,500, Growth $3,500, Scale $5,000 to $10,000",
                             "Zero monthly platform fees: you own the code and the hosting",
                             "Timeline: 1 to 2 weeks for Starter, 3 to 5 weeks for Growth, 4 to 6 weeks for Scale",
-                            "30 days post-launch monitoring and optimization included"
+                            "Post-launch monitoring and optimization included: 15 days on Starter, 1 month (30 days) on Growth and above"
                         ]} />
 
                         {/* Bottom CTA */}
@@ -580,7 +580,7 @@ export default function HowToSpeedUpYourWebsitePage() {
 
                     <section className="mb-10 mt-6 md:mt-10">
                         <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
-                        <p className="text-stone-700 leading-relaxed mb-3">For the exact 8-step process behind every PandaCodeGen build, read <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline font-medium">How to Achieve 100/100 PageSpeed Score</Link>. For the SEO impact specifically, see <Link href="/blog/how-website-speed-affects-seo" className="text-cognac hover:underline font-medium">How Website Speed Affects SEO</Link>. For platform-specific speed deep dives, see <Link href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline font-medium">how to fix slow WordPress</Link>, <Link href="/blog/shopify-dawn-theme-slow" className="text-cognac hover:underline font-medium">Shopify Dawn theme speed</Link>, or <Link href="/blog/divi-theme-slow" className="text-cognac hover:underline font-medium">Divi theme speed limits</Link>.</p>
+                        <p className="text-stone-700 leading-relaxed mb-3">For the exact 8-step process behind every PandaCodeGen build, read <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline font-medium">How to Hit a 90+ PageSpeed Score</Link>. For the SEO impact specifically, see <Link href="/blog/how-website-speed-affects-seo" className="text-cognac hover:underline font-medium">How Website Speed Affects SEO</Link>. For platform-specific speed deep dives, see <Link href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline font-medium">how to fix slow WordPress</Link>, <Link href="/blog/shopify-dawn-theme-slow" className="text-cognac hover:underline font-medium">Shopify Dawn theme speed</Link>, or <Link href="/blog/divi-theme-slow" className="text-cognac hover:underline font-medium">Divi theme speed limits</Link>.</p>
                         <p className="text-stone-700 leading-relaxed">Ready to rebuild instead of optimize? See <Link href="/services/wordpress-migration" className="text-cognac hover:underline font-medium">WordPress migration service</Link>, <Link href="/services/webflow" className="text-cognac hover:underline font-medium">Webflow migration service</Link>, <Link href="/services/woocommerce" className="text-cognac hover:underline font-medium">WooCommerce migration service</Link>, or <Link href="/services/gohighlevel" className="text-cognac hover:underline font-medium">GoHighLevel migration service</Link>.</p>
                     </section>
 

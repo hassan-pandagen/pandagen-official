@@ -3,7 +3,7 @@ import PartnersContent from './PartnersContent';
 
 export const metadata: Metadata = {
   title: 'White-Label Web Development for Agencies',
-  description: 'Three-tier agency partnership program. Referral Partner (15% commission), White-Label Partner (35% margin), or Joint Venture (50/50). Published rates. Mutual NDA. Your brand, our engineering.',
+  description: 'Three-tier agency partnership: Referral 15%, White-Label 35% margin, Joint Venture 50/50. Published rates, mutual NDA. Your brand, our engineering.',
   alternates: { canonical: '/partners' },
   keywords: [
     'white label web development agency',

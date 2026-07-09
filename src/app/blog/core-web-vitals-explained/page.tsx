@@ -66,7 +66,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -229,7 +229,7 @@ export default function CoreWebVitalsExplainedPage() {
                             "Only 47% of websites pass all three Core Web Vitals in 2026. The other 53% lose 8 to 35 percent of conversions, traffic, and revenue from this one problem.",
                             "Every 1-second delay in load time reduces conversions by 7%. For a $100K/month store, that is $7,000 per month in lost sales. $84,000 per year.",
                             "You can check your scores in 30 seconds at pagespeed.web.dev. Most business sites on Wix, Squarespace, WordPress, and Shopify fail because the platform itself adds JavaScript you cannot remove.",
-                            "Real result: our client MyCustomPatches moved from WordPress to a custom Next.js build and their PageSpeed went from 42 to 97, with bounce rate dropping 34 percent. Verify it live at mycustompatches.net."
+                            "Real result: our client MyCustomPatches moved from WordPress to a custom Next.js build and their PageSpeed went from 45 to 90+, with bounce rate dropping 34 percent. Verify it live at mycustompatches.net."
                         ]} />
                     </div>
 
@@ -601,7 +601,7 @@ export default function CoreWebVitalsExplainedPage() {
                         <BlogList items={[
                             "Vodafone improved LCP by 31 percent on their main landing page and saw 8 percent more sales, according to Google's official case study.",
                             "Cdiscount improved Core Web Vitals across product pages and saw a 5.2 percent revenue uplift directly attributed to speed.",
-                            "Our client MyCustomPatches migrated from WordPress to custom Next.js. Their PageSpeed score went from 42 to 97. Bounce rate dropped 34 percent. Conversions went up.",
+                            "Our client MyCustomPatches migrated from WordPress to custom Next.js. Their PageSpeed score went from 45 to 90+. Bounce rate dropped 34 percent. Conversions went up.",
                             "Google research shows bounce probability increases 32 percent when page load time goes from 1 to 3 seconds."
                         ]} />
 
@@ -668,7 +668,7 @@ export default function CoreWebVitalsExplainedPage() {
                         </BlogText>
 
                         <BlogText>
-                            The good news: you can check your scores yourself in 30 seconds. The bad news: if you are on a platform-based website builder, the fix is not a plugin. It is the platform itself. The sooner you accept that, the sooner you can stop paying for optimization work that has a structural ceiling, and start building a site that actually passes.
+                            The good news: you can check your scores yourself in 30 seconds. The bad news: if you are on a platform-based website builder, the fix is not a plugin. It is the platform itself. The sooner you accept that, the sooner you can stop paying for optimization work that has a structural ceiling, and start building a site that actually passes. And if you are on WordPress, trimming plugins buys you more than speed, because the newest <Link href="/blog/wordpress-ai-security-risk-2026" className="text-cognac hover:underline">AI plugins carry a real security risk</Link> on top of the performance cost.
                         </BlogText>
 
                     </div>

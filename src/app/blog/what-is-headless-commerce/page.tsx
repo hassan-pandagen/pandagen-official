@@ -53,7 +53,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -566,7 +566,7 @@ export default function WhatIsHeadlessCommercePage() {
                         <BlogText>
                             Every build follows the same performance playbook. If you want to understand the technical details, our guide on{" "}
                             <Link href="/blog/how-to-achieve-100-pagespeed" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                how we achieve 100/100 PageSpeed scores
+                                how we hit a 90+ PageSpeed score
                             </Link>{" "}
                             covers the exact 8 optimizations we apply to every project.
                         </BlogText>

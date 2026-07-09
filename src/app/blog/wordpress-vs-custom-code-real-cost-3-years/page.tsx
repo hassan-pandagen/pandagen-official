@@ -17,7 +17,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "WordPress vs Custom Code: 3-Year Cost (2026)",
-    description: "WordPress costs $15,000+ over 3 years with hosting, plugins, maintenance, and lost revenue. A custom Next.js site costs $3,500 once, then $0/year.",
+    description: "WordPress costs $15,000+ over 3 years with hosting, plugins, maintenance, and lost revenue. A custom Next.js site costs $10,000 once, then $0/year.",
     alternates: {
         canonical: '/blog/wordpress-vs-custom-code-real-cost-3-years',
     },
@@ -54,7 +54,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -225,7 +225,7 @@ export default function WordPressVsCustomCodeCostPage() {
                         </div>
                     </div>
 
-                    <p className="text-stone-700 leading-relaxed mb-6">Custom code costs less than WordPress over 3 years for most businesses. WordPress totals $12,000 to $18,000 over 3 years when you include hosting ($150 to $400/mo), plugins ($100 to $300/mo), developer time, and security costs. A custom Next.js site costs $3,500 once and $0 per year in platform fees. The break-even point is typically 14 to 18 months.</p>
+                    <p className="text-stone-700 leading-relaxed mb-6">Custom code costs less than WordPress over 3 years for most businesses. WordPress totals $12,000 to $18,000 over 3 years when you include hosting ($150 to $400/mo), plugins ($100 to $300/mo), developer time, and security costs. A custom Next.js site costs $10,000 once and $0 per year in platform fees. The break-even point is typically 14 to 18 months.</p>
 
                     <div className="space-y-8">
 
@@ -555,7 +555,7 @@ export default function WordPressVsCustomCodeCostPage() {
                         <BlogHeader>Real Client Example: MyCustomPatches. WordPress to Next.js</BlogHeader>
 
                         <BlogText>
-                            MyCustomPatches had a 10-year-old WordPress site. $150/month hosting (Kinsta). <a href="/blog/wordpress-killer" className="text-cognac hover:underline">30+ plugins</a>. 3.2 second load time. <a href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">40/100 PageSpeed on mobile</a>.
+                            MyCustomPatches had a 10-year-old WordPress site. $150/month hosting (Kinsta). <a href="/blog/wordpress-killer" className="text-cognac hover:underline">30+ plugins</a>. 3.2 second load time. <a href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">45/100 PageSpeed on mobile</a>.
                         </BlogText>
 
                         <BlogText>
@@ -579,14 +579,14 @@ export default function WordPressVsCustomCodeCostPage() {
                             "Plugins: $0 (zero plugins needed)",
                             "Maintenance: $0 (no plugin conflicts, no updates)",
                             "Load time: 3.2s → 0.7s",
-                            "PageSpeed: 40 → 100/100"
+                            "PageSpeed: 45 → 90+"
                         ]} />
 
                         <BlogText>
                             In Year 2 and Year 3, their website infrastructure costs nothing. Zero. The 3-year savings are real and compounding. See the full case study at{" "}
                             <Link href="/work/mycustompatches" className="text-charcoal font-bold underline hover:text-stone-600 transition-colors">
                                 /work/mycustompatches
-                            </Link>.
+                            </Link>. We ran the same math on our own site and made the identical call, which we explain in <Link href="/blog/why-we-chose-nextjs-over-wordpress-2026" className="text-cognac hover:underline">why we chose Next.js over WordPress</Link>.
                         </BlogText>
 
                         <BlogHeader>The Fair Case For WordPress (There Is One)</BlogHeader>

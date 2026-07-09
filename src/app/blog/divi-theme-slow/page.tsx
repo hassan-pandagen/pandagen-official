@@ -55,7 +55,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -224,6 +224,14 @@ export default function DiviThemeSlowPage() {
                             She was not doing anything wrong. She had spent real money on the right tools. The problem is that those tools were built to work around Divi. They cannot fix what Divi is doing at its foundation.
                         </BlogText>
 
+                        <BlogText>
+                            Her situation is not an isolated case. Independent 2026 lab testing by WP Rocket, comparing WordPress themes and page builders under controlled conditions, put a number on exactly what she ran into: Divi&apos;s page weight came in <BlogHighlight>6.9 times heavier than GeneratePress</BlogHighlight> for equivalent content, and its LCP measured <BlogHighlight>5.8 seconds, more than double Google&apos;s 2.5-second &ldquo;Good&rdquo; threshold</BlogHighlight>. That is a third party running the same test across multiple themes, not a single site&apos;s story. It is also why her $2,800 in fixes only moved the needle a few points: caching and CDNs cannot compensate for a theme that ships that much extra weight by default.
+                        </BlogText>
+
+                        <BlogText>
+                            Even Elegant Themes, the company that makes Divi, has effectively confirmed the problem. Divi 5, released February 26, 2026, cut the theme&apos;s JavaScript bundle from 276KB down to 45KB, a rebuild specifically aimed at the performance complaints that had been piling up. A vendor does not rebuild its own core architecture unless the old numbers were bad enough to threaten the product. The catch: Divi&apos;s ecosystem includes thousands of third-party add-on plugins that mostly have not been updated for Divi 5&apos;s new architecture yet, and Elegant Themes has advised site owners to hold off migrating production sites until that catches up. In practice, that means most real-world Divi sites today, including ones running the old architecture or an incompatible add-on, are still performing close to the numbers WP Rocket measured, not the clean-demo numbers Divi 5 is capable of.
+                        </BlogText>
+
                         <BlogHeader>The Business Cost of a Slow Website in 2026</BlogHeader>
 
                         <BlogText>
@@ -299,7 +307,7 @@ export default function DiviThemeSlowPage() {
                                     </tr>
                                     <tr>
                                         <td className="p-3 border border-stone-300 font-medium">Custom Next.js</td>
-                                        <td data-label="Mobile Score" className="p-3 border border-stone-300 text-green-600 font-medium">98/100</td>
+                                        <td data-label="Mobile Score" className="p-3 border border-stone-300 text-green-600 font-medium">90+</td>
                                         <td data-label="LCP" className="p-3 border border-stone-300">0.8s</td>
                                         <td data-label="CLS" className="p-3 border border-stone-300 text-green-600">0.000</td>
                                         <td data-label="Page Weight" className="p-3 border border-stone-300">18KB</td>
@@ -488,7 +496,7 @@ export default function DiviThemeSlowPage() {
                         ]} />
 
                         <BlogText>
-                            The migration preserves every URL with a 301 redirect, transfers all your content, and includes post-launch monitoring. Your domain authority, backlinks, and indexed pages carry over completely. Rankings do not drop with a properly executed migration. In most cases they improve within 60 to 90 days as Google re-crawls the faster pages and adjusts positions accordingly.
+                            The migration preserves every URL with a 301 redirect, transfers all your content, and includes post-launch monitoring (15 days on Starter-tier projects, 1 month on Growth and above). Your domain authority, backlinks, and indexed pages carry over completely. Rankings do not drop with a properly executed migration. In most cases they improve within 60 to 90 days as Google re-crawls the faster pages and adjusts positions accordingly.
                         </BlogText>
 
                     </div>

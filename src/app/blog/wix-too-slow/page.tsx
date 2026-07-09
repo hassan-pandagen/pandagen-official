@@ -69,7 +69,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -674,7 +674,7 @@ export default function WixTooSlowPage() {
                             <Link href="/blog/squarespace-too-slow" className="text-sm text-amber-400 hover:text-amber-300 underline underline-offset-4">Squarespace speed problems</Link>
                             <Link href="/blog/core-web-vitals-explained" className="text-sm text-amber-400 hover:text-amber-300 underline underline-offset-4">Core Web Vitals explained</Link>
                             <Link href="/blog/wordpress-vs-nextjs" className="text-sm text-amber-400 hover:text-amber-300 underline underline-offset-4">WordPress vs Next.js comparison</Link>
-                            <Link href="/blog/how-to-achieve-100-pagespeed" className="text-sm text-amber-400 hover:text-amber-300 underline underline-offset-4">How to achieve 100/100 PageSpeed</Link>
+                            <Link href="/blog/how-to-achieve-100-pagespeed" className="text-sm text-amber-400 hover:text-amber-300 underline underline-offset-4">How to hit a 90+ PageSpeed score</Link>
                             <Link href="/blog/why-competitor-outranks-you" className="text-sm text-amber-400 hover:text-amber-300 underline underline-offset-4">Why your competitor outranks you</Link>
                         </div>
                     </div>

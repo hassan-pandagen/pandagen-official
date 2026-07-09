@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import PageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'Is WooCommerce Slowing Your Store? We Fix It With Next.js',
-  description: 'WooCommerce stores score 30 to 55 on mobile PageSpeed. We fix the root cause with a headless Next.js frontend. Keep your product catalog, get 90+ PageSpeed and sub-1-second load times.',
+  title: 'WooCommerce Too Slow? We Fix It With Next.js',
+  description: 'WooCommerce stores score 30 to 55 on mobile PageSpeed. We fix the root cause with a headless Next.js frontend. Keep your catalog, get 90+ PageSpeed.',
   alternates: {
     canonical: '/services/woocommerce',
   },
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     'woocommerce checkout slow',
   ],
   openGraph: {
-    title: 'Is WooCommerce Slowing Your Store? We Fix It With Next.js | PandaCodeGen',
+    title: 'WooCommerce Too Slow? We Fix It With Next.js | PandaCodeGen',
     description: 'WooCommerce stores score 30 to 55 on mobile PageSpeed. We fix it with a headless Next.js frontend. Keep your catalog, get 90+ PageSpeed.',
     url: 'https://www.pandacodegen.com/services/woocommerce',
     siteName: 'PandaCodeGen',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Is WooCommerce Slowing Your Store? We Fix It With Next.js | PandaCodeGen',
+    title: 'WooCommerce Too Slow? We Fix It With Next.js | PandaCodeGen',
     description: 'WooCommerce scoring 30 to 55 on PageSpeed Mobile. We fix it with a headless Next.js frontend. 90+ PageSpeed, keep your product catalog.',
   },
 };
@@ -123,11 +123,16 @@ export default function WooCommerceServicePage() {
         "@type": "FAQPage",
         "@id": "https://www.pandacodegen.com/services/woocommerce#faq",
         "mainEntity": [
-          { "@type": "Question", "name": "Will I lose my WooCommerce orders and customer data during migration?", "acceptedAnswer": { "@type": "Answer", "text": "No. We export your full order history, customer records, and product catalog from WooCommerce before we touch anything. All data migrates to your new platform. Nothing is deleted until you confirm everything transferred correctly." } },
-          { "@type": "Question", "name": "How much does a WooCommerce to custom code migration cost?", "acceptedAnswer": { "@type": "Answer", "text": "Typical agencies charge $15,000 to $40,000 and take 8-12 weeks. We meet you halfway. Four tiers: Starter starts at $1,500 (small WooCommerce stores, 10 to 30 products). Growth starts at $3,500 (30-150 products with custom cart and reviews). Scale is $5,000 to $10,000 (subscriptions, B2B pricing, large catalogs, wholesale). Scale+ is $10,000+ for enterprise WooCommerce scope, custom-quoted after a scoping call. Most stores recover the investment within 4-6 months through eliminated plugin fees and faster checkout." } },
-          { "@type": "Question", "name": "Can I still use Stripe and PayPal after leaving WooCommerce?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We integrate Stripe and PayPal directly into your custom storefront using their official APIs. No payment gateway plugins needed. Your checkout is faster, more reliable, and you save the WooCommerce payment plugin fees." } },
-          { "@type": "Question", "name": "How long does a WooCommerce migration take?", "acceptedAnswer": { "@type": "Answer", "text": "Typically 6-8 weeks. Week 1-2: product export and new architecture. Weeks 3-5: build custom storefront with cart, checkout, and product pages. Week 6-7: data migration and testing. Week 8: zero-downtime launch." } },
-          { "@type": "Question", "name": "What happens to my WooCommerce SEO rankings after migration?", "acceptedAnswer": { "@type": "Answer", "text": "We map every product URL, category page, and blog post with 301 redirects so Google sees continuity. Combined with faster load times and improved Core Web Vitals, most clients see rankings improve within 30-60 days of launch." } }
+          { "@type": "Question", "name": "Will I lose my WooCommerce orders and customer data?", "acceptedAnswer": { "@type": "Answer", "text": "No. We export your entire WooCommerce database (products, orders, customer accounts, reviews, categories) and migrate it to your new platform. Zero data loss. We test imports in staging before anything touches your live store." } },
+          { "@type": "Question", "name": "Do I keep my Google rankings after migrating from WooCommerce?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every URL from your WooCommerce store is mapped with 301 redirects to the new site. Google treats it as the same page at a new address. Most clients see rankings recover within 2 to 4 weeks and improve within 60 days because the faster site gets rewarded." } },
+          { "@type": "Question", "name": "Can I still manage products and orders without being technical?", "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. We set up a clean admin dashboard where you can add products, update prices, manage inventory, and process orders. No code required. It's simpler than WooCommerce's admin because we only build what you actually need." } },
+          { "@type": "Question", "name": "What payment gateways do you support?", "acceptedAnswer": { "@type": "Answer", "text": "Stripe, PayPal, Apple Pay, Google Pay, Cash App Pay, Klarna, Afterpay, and any other gateway with an API. We integrate them natively. No paid plugin required. Your checkout is fully custom, so we can add any payment method you want." } },
+          { "@type": "Question", "name": "How much does a WooCommerce migration cost?", "acceptedAnswer": { "@type": "Answer", "text": "Four tiers. Starter $1,500 (simple WooCommerce migration, 10 to 30 products). Growth $3,500 (30 to 150 products with custom cart logic). Scale $5,000 to $10,000 (subscriptions, B2B pricing, wholesale, 100+ products). Scale+ $10,000+ for enterprise WooCommerce scope, custom-quoted after a scoping call. We give a fixed-price quote upfront. No hourly surprises." } },
+          { "@type": "Question", "name": "How long does a WooCommerce migration take?", "acceptedAnswer": { "@type": "Answer", "text": "2 to 6 weeks depending on scope. Starter stores ship in 1 to 2 weeks, Growth stores in 2 to 3, and Scale builds with subscriptions or B2B pricing run 3 to 5 weeks, sometimes 6 for enterprise scope. Your current store stays live the entire time, and launch day is zero-downtime." } },
+          { "@type": "Question", "name": "My WooCommerce store has subscriptions / bookings / B2B pricing. Can you handle that?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Subscriptions, recurring billing, tiered B2B pricing, volume discounts, booking calendars: these are all custom logic we build natively. You won't need a $300/mo plugin to handle what we can build into the core of your store." } },
+          { "@type": "Question", "name": "What about WooCommerce Subscriptions and my existing recurring billing?", "acceptedAnswer": { "@type": "Answer", "text": "We migrate every active subscription to Stripe Billing (native, no markup). Your subscribers keep their saved cards and billing date. Zero payment interruption, zero customer re-auth. Stripe handles the dunning, the webhooks, the failed-card retries. You stop paying $199/month for WooCommerce Subscriptions." } },
+          { "@type": "Question", "name": "Do I keep my Stripe account and saved customer cards?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We connect to your existing Stripe account using your live keys. All Customer IDs, saved payment methods, subscription IDs, and Stripe Customer Portal history carry over untouched. Your buyers never re-enter a card." } },
+          { "@type": "Question", "name": "How do you handle tax (Avalara, TaxJar, WooCommerce Tax)?", "acceptedAnswer": { "@type": "Answer", "text": "We integrate Stripe Tax or TaxJar directly at checkout. Live nexus calculation across all US states plus VAT for UK/EU. No more $99/month WooCommerce Tax plugin, no more Avalara reconciliation. Stripe Tax handles filings in 30+ jurisdictions." } }
         ]
       }
     ]
@@ -136,7 +141,7 @@ export default function WooCommerceServicePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
-      <p className="sr-only" data-speakable="true">PandaCodeGen fixes slow WooCommerce stores with a headless Next.js frontend. WooCommerce stores score 30 to 55 on mobile PageSpeed due to PHP server rendering and plugin bloat. We keep your WooCommerce product catalog and replace only the slow frontend. Checkout speed improves, cart abandonment drops, and mobile PageSpeed jumps to 95 or above.</p>
+      <p className="sr-only" data-speakable="true">PandaCodeGen fixes slow WooCommerce stores with a headless Next.js frontend. WooCommerce stores score 30 to 55 on mobile PageSpeed due to PHP server rendering and plugin bloat. We keep your WooCommerce product catalog and replace only the slow frontend. Checkout speed improves, cart abandonment drops, and mobile PageSpeed jumps to 90 or above.</p>
       <PageContent />
     </>
   );

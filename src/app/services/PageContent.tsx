@@ -9,6 +9,7 @@ import Footer from "@/components/layout/Footer";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 import MethodToCreativity from "@/components/MethodToCreativity";
 import UnfairAdvantage from "@/components/sections/UnfairAdvantage";
+import RelatedServicesGrid from "@/components/services/RelatedServicesGrid";
 
 export default function PageContent() {
   return (
@@ -120,11 +121,72 @@ export default function PageContent() {
 
       </div>
 
+      {/* PRICING SPINE — fixed tiers + written guarantee */}
+      <section className="py-12 md:py-16 px-6 bg-white border-y border-stone-200">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-8 md:mb-10">
+            <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-cognac mb-3">Fixed Pricing</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-3">
+              Four tiers. <span className="font-serif italic text-cognac">No hourly billing.</span>
+            </h2>
+            <p className="text-stone-600 max-w-2xl mx-auto">Every build ships at a fixed price with the same promise in writing: 90+ Google PageSpeed on launch day or a full refund.</p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            {[
+              { tier: "Starter", price: "$1,500", fit: "Simple sites, 5 to 15 pages" },
+              { tier: "Growth", price: "$3,500", fit: "Business sites, blogs, integrations" },
+              { tier: "Scale", price: "$5K to $10K", fit: "E-commerce and complex builds" },
+              { tier: "Scale+", price: "$10K+", fit: "Enterprise scope, custom quoted" },
+            ].map((t) => (
+              <div key={t.tier} className="p-5 rounded-2xl bg-stone-50 border border-stone-200 text-center hover:border-cognac/30 transition-colors">
+                <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-stone-500 mb-1">{t.tier}</p>
+                <p className="text-xl md:text-2xl font-black text-charcoal tracking-tight">{t.price}</p>
+                <p className="text-xs text-stone-500 mt-1 leading-relaxed">{t.fit}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="max-w-3xl mx-auto p-5 rounded-2xl bg-green-50 border border-green-200 flex items-start gap-3">
+            <Shield className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
+            <p className="text-sm text-stone-700 leading-relaxed">
+              <span className="font-bold text-charcoal">Fixed price. 90+ PageSpeed or full refund.</span> A 30% deposit starts the build, backed by a 30-day money-back guarantee: if your site does not hit 90+ on Google PageSpeed at launch, we refund 100% of your payment.{" "}
+              <Link href="/pricing" className="text-cognac font-semibold hover:underline">See full pricing →</Link>
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Our Process - How We Build */}
       <MethodToCreativity />
 
       {/* The Unfair Advantage - Speed, Security, Ownership */}
       <UnfairAdvantage />
+
+      {/* ALL SERVICE PILLARS — every platform we migrate */}
+      <RelatedServicesGrid />
+
+      {/* From the Blog - Internal Linking */}
+      <section className="py-10 md:py-16 px-6 bg-white">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-2xl font-bold text-charcoal text-center mb-3">From the Blog</h2>
+          <p className="text-stone-400 text-center mb-10 text-sm">Cost breakdowns and receipts behind our pricing.</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { href: "/blog/website-migration-cost-2026", title: "Website Migration Cost in 2026", desc: "What a platform migration really costs this year." },
+              { href: "/blog/how-much-does-a-website-cost", title: "How Much Does a Website Cost?", desc: "Real pricing across freelancers, agencies, and builders." },
+              { href: "/blog/wordpress-migration-cost", title: "WordPress Migration Cost", desc: "The full price breakdown, tier by tier." },
+              { href: "/blog/nextjs-hosting-zero-cost", title: "Next.js Hosting at $0", desc: "How custom sites drop hosting bills to zero." },
+            ].map((post) => (
+              <Link key={post.href} href={post.href} className="group flex flex-col gap-2 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
+                <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors leading-snug">{post.title}</h3>
+                <p className="text-stone-400 text-xs leading-relaxed flex-1">{post.desc}</p>
+                <span className="text-cognac text-xs font-semibold flex items-center gap-1 mt-1">Read more <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" /></span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </main>

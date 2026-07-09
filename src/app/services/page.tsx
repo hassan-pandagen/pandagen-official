@@ -31,7 +31,7 @@ export default function ServicesPage() {
         "url": "https://www.pandacodegen.com/services",
         "image": "https://www.pandacodegen.com/og-image.jpg",
         "telephone": "+1-302-773-8982",
-        "priceRange": "$1,500 - $60,000",
+        "priceRange": "$1,500 - $10,000+",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "701 Tillery St Ste 12",

@@ -46,6 +46,22 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
+      // Merged webflow-migration-50-to-100-pages into webflow-migration-cost (Jul 2026):
+      // Google was consolidating the two on its own (-98% impressions on the weaker page);
+      // the stronger page already carries the 50-100 content. 301 preserves link equity.
+      {
+        source: '/blog/webflow-migration-50-to-100-pages',
+        destination: '/blog/webflow-migration-cost',
+        permanent: true,
+      },
+      // Merged gohighlevel-migration into gohighlevel-keep-crm-replace-website (Jul 2026):
+      // near-duplicate content at nearly identical GSC position (8.76 vs 8.19) cannibalizing
+      // the same query intent; the keep-crm page is the stronger performer. 301 preserves link equity.
+      {
+        source: '/blog/gohighlevel-migration',
+        destination: '/blog/gohighlevel-keep-crm-replace-website',
+        permanent: true,
+      },
       {
         source: '/:path*',
         has: [{ type: 'header', key: 'x-forwarded-proto', value: 'http' }],

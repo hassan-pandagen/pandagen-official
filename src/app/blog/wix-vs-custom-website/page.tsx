@@ -66,7 +66,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -595,7 +595,7 @@ export default function WixVsCustomWebsitePage() {
                             "Week 1: Discovery call. We audit your Wix site, run PageSpeed, inventory every page and blog post, map all URLs for 301 redirects, and identify which features (booking, forms, e-commerce) need to be rebuilt.",
                             "Week 2 to 3: Build. We rebuild your site in Next.js with the same content, improved design, and all features built natively (no apps, no iframes, no third-party scripts). You review progress on a staging URL.",
                             "Week 4: QA and launch. We test every page, verify all redirects, confirm PageSpeed scores are 90+, and execute a zero-downtime DNS cutover. Your old Wix site stays live until the new one is fully verified.",
-                            "Day 1 to 30 post-launch: We monitor Google Search Console for any ranking fluctuations, fix any crawl issues, and confirm all rankings have held or improved. 30 days of post-launch support is included on every project."
+                            "Post-launch: We monitor Google Search Console for any ranking fluctuations, fix any crawl issues, and confirm all rankings have held or improved. 15 days of post-launch support on Starter-tier projects, 1 month (30 days) on Growth and above."
                         ]} />
 
                         <BlogText>

@@ -53,7 +53,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -196,10 +196,10 @@ export default function CompetitorRankingsPage() {
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
                         <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
-                            "Your competitor ranks 20-30 positions higher because their coded website loads in 1.2 seconds vs your 3.8-second WordPress/Shopify site",
+                            "A slow WordPress or Shopify site can rank meaningfully lower than a fast, custom-coded competitor on otherwise similar content, because Google has used Core Web Vitals as a ranking signal since 2021",
                             "Google, Bing, ChatGPT, and Perplexity all prioritize fast sites with clean code. Modern search engines reward speed.",
                             "Coded websites (Next.js) cost $0-$20/month to host. WordPress costs $100-$400/month. You're paying more for worse results.",
-                            "Over 12 months, coded websites save $1,200-$4,800 in hosting while getting 3× more organic traffic."
+                            "We rebuilt MyCustomPatches from WordPress (PageSpeed 45, $150/month hosting) to Next.js (PageSpeed 90+, $0/month hosting). That gap is the mechanism this article explains."
                         ]} />
                     </div>
 
@@ -225,63 +225,43 @@ export default function CompetitorRankingsPage() {
                             Your competitor has a coded website (Next.js, React, modern framework). You have WordPress or Shopify. And in 2026, that difference is costing you tens of thousands of dollars in lost traffic.
                         </BlogText>
 
-                        <BlogHeader>How Does Your WordPress Site Compare to a Coded Competitor Over 12 Months?</BlogHeader>
+                        <BlogHeader>A Real Example: What Changed When a Slow Site Went Custom</BlogHeader>
 
                         <BlogText>
-                            Let's compare what happens over 12 months. Same product, same keywords, same content, only the website technology is different.
+                            Instead of a hypothetical, here is what actually happened on one of our own rebuilds. <a href="https://www.mycustompatches.com" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline">MyCustomPatches</a>, a custom patches business run by Matt Conner, came to us on WordPress scoring 45 on Google PageSpeed Mobile and paying roughly $150/month for hosting. We rebuilt the site on Next.js. It now scores 90+ on PageSpeed and runs on $0/month hosting.
                         </BlogText>
 
                         <div className="my-8 md:my-12 border border-stone-200 rounded-2xl overflow-hidden shadow-2xl bg-white">
-                            {/* Header — desktop only. On mobile each row gets inline labels. */}
                             <div className="hidden md:grid md:grid-cols-3 bg-stone-50 p-5 border-b border-stone-200 font-bold text-charcoal text-sm md:text-base uppercase tracking-wider">
                                 <div>Metric</div>
-                                <div className="text-red-400">Your Site (WP)</div>
-                                <div className="text-charcoal">Competitor (Next.js)</div>
+                                <div className="text-red-400">Before (WordPress)</div>
+                                <div className="text-charcoal">After (Next.js)</div>
                             </div>
                             {[
-                                { metric: "Load Time", wp: "3.8 seconds", nextjs: "1.2 seconds" },
-                                { metric: "Google Mobile Score", wp: "38/100 (Red)", nextjs: "95/100 (Green)" },
-                                { metric: "Google Ranking", wp: "Page 2 (#14)", nextjs: "Page 1 (#3)" },
-                                { metric: "Monthly Traffic", wp: "2,500 visitors", nextjs: "8,200 visitors" },
-                                { metric: "Hosting Cost", wp: "$150/month (Kinsta)", nextjs: "$20/month (Vercel)" },
+                                { metric: "Google Mobile PageSpeed", wp: "45/100", nextjs: "90+/100" },
+                                { metric: "Hosting Cost", wp: "$150/month", nextjs: "$0/month" },
                             ].map((row, i) => (
                                 <div key={i} className="p-5 border-b border-stone-200 text-sm md:text-lg hover:bg-stone-50/50 transition-colors md:grid md:grid-cols-3">
                                     <div className="text-charcoal font-bold mb-3 md:mb-0 md:font-medium">{row.metric}</div>
                                     <div className="flex items-center justify-between gap-3 mb-2 md:mb-0 md:block">
-                                        <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-red-400">WP</span>
+                                        <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-red-400">Before</span>
                                         <span className="text-stone-400">{row.wp}</span>
                                     </div>
                                     <div className="flex items-center justify-between gap-3 md:block">
-                                        <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-charcoal">Next.js</span>
+                                        <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-charcoal">After</span>
                                         <span className="text-charcoal font-bold">{row.nextjs}</span>
                                     </div>
                                 </div>
                             ))}
-                            {/* Year 1 results footer */}
-                            <div className="p-5 bg-stone-50 text-charcoal font-bold border-t border-stone-200 text-sm md:text-base md:grid md:grid-cols-3">
-                                <div className="mb-3 md:mb-0">Year 1 Results</div>
-                                <div className="flex items-center justify-between gap-3 mb-2 md:mb-0 md:block">
-                                    <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-red-400">WP</span>
-                                    <span className="text-red-400">30K visits, -$1,800 hosting</span>
-                                </div>
-                                <div className="flex items-center justify-between gap-3 md:block">
-                                    <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-charcoal">Next.js</span>
-                                    <span className="text-charcoal">98K visits, -$240 hosting</span>
-                                </div>
-                            </div>
                         </div>
 
-                        <BlogList items={[
-                            "Your competitor gets 68,000 more visitors than you",
-                            "Your competitor saves $1,560 on hosting costs",
-                            "If your conversion rate is 2%, they get 1,360 more customers",
-                            "If your average sale is $100, they make $136,000 more revenue",
-                            "All because their website loads 2.6 seconds faster"
-                        ]} />
+                        <BlogText>
+                            That is the mechanism behind this whole article. A PageSpeed jump like that, combined with Google using Core Web Vitals as a ranking signal since the 2021 Page Experience update, is exactly the kind of gap that lets a technically faster competitor out-rank a slower one on otherwise similar content. If your competitor made a similar move and you have not, the ranking gap you are seeing is not a mystery. It is the same mechanism, running in their favor instead of yours.
+                        </BlogText>
 
-                        <BlogQuote>
-                            Your competitor is getting more traffic, more customers, and more revenue while paying less for hosting. And it's all because of the website technology.
-                        </BlogQuote>
+                        <BlogText>
+                            To see what the same math could look like for your own numbers, here is a worked illustration, not a claim about any specific business: if your competitor's faster site pulls in, say, 3x your organic visitors on shared keywords, and your conversion rate is 2%, that traffic gap alone is the difference between a trickle of leads and a real pipeline. Run your own visitor and conversion numbers through that formula to see what the gap is actually costing you, rather than relying on someone else's figures.
+                        </BlogText>
 
                         {/* Mid-Article CTA */}
                         <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
@@ -292,102 +272,24 @@ export default function CompetitorRankingsPage() {
                                 </CalModalButton>
                         </div>
 
-                        <BlogHeader>Why Does Google Rank Coded Websites Higher Than WordPress Sites?</BlogHeader>
+                        <BlogHeader>Why Coded Sites Outrank WordPress: The Technical Reason</BlogHeader>
 
                         <BlogText>
-                            Google's ranking algorithm is simple: <strong>Show users the best experience.</strong>
+                            Google's ranking algorithm is built to show users the best available experience for a query. Since the 2021 Page Experience update, that assessment includes Core Web Vitals alongside content relevance. When two pages have comparable content, backlinks, and domain authority, the faster, technically cleaner page has a real ranking advantage.
                         </BlogText>
 
                         <BlogText>
-                            "Best experience" used to mean "best content." Now it means "best content + fastest load time + cleanest code."
-                        </BlogText>
-
-                        <BlogText>
-                            In 2021, Google made <BlogHighlight>speed</BlogHighlight> a direct ranking factor. Fast sites moved up 20-30 positions. Slow sites dropped.
-                        </BlogText>
-
-                        <BlogText>
-                            Here's what happens when someone searches for your product:
+                            The gap traces back to how each platform is built. WordPress renders pages by loading a database query, a theme, and a stack of plugins, each one contributing its own scripts and stylesheets. A typical WordPress business site runs <Link href="/blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline">20 or more active plugins</Link>, and every plugin adds files the browser has to download before the page is usable. Page builders like Elementor and Divi add another layer of generated markup on top of that. A custom Next.js site skips all of it: no database call per request, no plugin stack, no page-builder output, just the exact HTML, CSS, and JavaScript the page needs and nothing else.
                         </BlogText>
 
                         <BlogList items={[
-                            "Google checks your site and your competitor's site",
-                            "Your WordPress site: Loads in 3.8 seconds (too slow)",
-                            "Competitor's coded site: Loads in 1.2 seconds (3× faster)",
-                            "Google's decision: \"Both have similar content, but this one loads 3× faster. Show it first.\"",
-                            "Your competitor gets the traffic. You get buried on page 2."
-                        ]} />
-
-                        <BlogQuote>
-                            Google's job is to send users to the best website. If two sites have identical content, Google picks the faster one. Every. Single. Time.
-                        </BlogQuote>
-
-                        <BlogHeader>What Is the Technical Reason Coded Websites Load 3× Faster Than WordPress?</BlogHeader>
-
-                        <BlogText>
-                            Let me explain why coded websites are faster, without using confusing tech jargon.
-                        </BlogText>
-
-                        <BlogText>
-                            <strong>WordPress/Shopify (The Old Way):</strong>
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Built on old technology (WordPress is 21 years old)",
-                            "Every page loads 30+ plugins, each adding extra files and slowing things down",
-                            "Page builders make it worse by adding unnecessary bloat",
-                            "Your site has to load hundreds of files before visitors see anything",
-                            "Result: Your site loads in 3-5 seconds. Google pushes you down in rankings."
+                            "WordPress: theme + 20-30 plugins + page builder output, most of it loading on every page whether that page uses the feature or not",
+                            "Next.js: pre-rendered pages with only the code that specific page actually needs",
+                            "Result: WordPress sites commonly land in the 38-55 mobile PageSpeed range; well-built Next.js sites commonly land at 90+"
                         ]} />
 
                         <BlogText>
-                            <strong>Coded Websites (The Modern Way):</strong>
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Built with modern technology, constantly updated",
-                            "Clean, lightweight code. Only loads what's needed.",
-                            "15× fewer files to load than WordPress",
-                            "Pages are ready instantly when visitors click",
-                            "Result: Your site loads in 0.8-1.5 seconds. Google ranks you higher."
-                        ]} />
-
-                        <BlogQuote>
-                            Think of WordPress like a car with 30 shopping bags in the trunk, a bike rack, roof cargo, and extra passengers. Next.js is the same car with just the driver and half a tank of gas. Both get you there. One is 3× faster.
-                        </BlogQuote>
-
-                        <BlogHeader>Why Can&apos;t WordPress Optimization Close the Speed Gap With Coded Sites?</BlogHeader>
-
-                        <BlogText>
-                            I know what you're thinking: "I'll just optimize my WordPress site. Install a caching plugin. Compress images. Remove some plugins."
-                        </BlogText>
-
-                        <BlogText>
-                            You can do all of that. And you'll improve your load time from 4.2 seconds to 3.3 seconds. Congratulations. <BlogHighlight>You're still losing.</BlogHighlight>
-                        </BlogText>
-
-                        <BlogText>
-                            Here's why optimization has a ceiling:
-                        </BlogText>
-
-                        <BlogList items={[
-                            "WordPress is built on 21-year-old technology",
-                            "You need plugins for basic features (contact forms, SEO, security)",
-                            "Page builders add bloated code even when \"optimized\"",
-                            "Themes load unnecessary files on every page",
-                            "Every plugin slows your site down, no matter how much you optimize"
-                        ]} />
-
-                        <BlogText>
-                            You can make WordPress faster. But you can't make it <strong>fast</strong>. There's a difference.
-                        </BlogText>
-
-                        <BlogText>
-                            The best-optimized WordPress site will load in 2.0-2.5 seconds. <a href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">A basic coded website loads in 0.8-1.2 seconds with zero optimization</a>.
-                        </BlogText>
-
-                        <BlogText>
-                            <BlogHighlight>You can't optimize old technology to beat new technology.</BlogHighlight> You're trying to make a 2006 Honda Civic faster than a 2024 Tesla. It's not going to happen.
+                            This is also why WordPress optimization has a ceiling. Caching plugins, image compression, and removing unused plugins genuinely help, and can move a badly-configured WordPress site from the 30s into the 50s or 60s. But you are still running a database-backed CMS with a plugin stack underneath. You cannot optimize your way out of the architecture. That ceiling is exactly what showed up on the MyCustomPatches rebuild above: it was not an unoptimized WordPress install, it was a normally-run one, and it still capped out at 45 until the platform itself changed. The plugins you are relying on for that ceiling are also your biggest attack surface, which the <a href="/blog/wordpress-ai-security-risk-2026" className="text-cognac hover:underline">WordPress AI plugin security risk</a> made obvious this year.
                         </BlogText>
 
                         <BlogHeader>What About Shopify?</BlogHeader>
@@ -411,7 +313,7 @@ export default function CompetitorRankingsPage() {
                         <BlogHeader>What Is the Real Annual Cost of Keeping a Slow WordPress or Shopify Site?</BlogHeader>
 
                         <BlogText>
-                            Let's do the math on what staying with WordPress or Shopify costs you over the next 12 months.
+                            Here is a worked example using round numbers, not a specific business, so you can see the formula and run your own figures in place of these.
                         </BlogText>
 
                         <BlogText>
@@ -553,11 +455,11 @@ export default function CompetitorRankingsPage() {
                     <section className="mb-10">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>A 2.6-second speed difference costs you 3x the traffic</strong>. Google ranks the faster site higher when content is similar, putting your competitor on page 1 and you on page 2.</li>
-                            <li><strong>WordPress optimization has a hard ceiling</strong>: The best-optimized WordPress site loads in 2.0-2.5 seconds, while a basic Next.js site loads in 0.8-1.2 seconds with zero optimization.</li>
-                            <li><strong>Coded websites cost less to run</strong>. Next.js hosting costs $0-$20/month on Vercel versus $100-$400/month for managed WordPress hosting, saving you $960-$4,560 per year.</li>
-                            <li><strong>Staying slow costs $225K+ per year in lost revenue</strong>: The combination of lower rankings, higher bounce rates, and fewer conversions compounds into six figures of missed opportunity annually.</li>
-                            <li><strong>Migration pays for itself in 2-6 months</strong>: The one-time cost of switching to a coded site is recovered through hosting savings and increased traffic within the first half-year.</li>
+                            <li><strong>Speed differences translate into ranking differences</strong>: Google has used Core Web Vitals as a ranking signal since 2021, so when two competing sites have similar content, the faster one has a real structural advantage.</li>
+                            <li><strong>WordPress optimization has a hard ceiling</strong>: Our MyCustomPatches rebuild was a normally-maintained WordPress site, not a neglected one, and it still capped out at 45/100 on Mobile PageSpeed until the platform itself changed to Next.js, which reached 90+.</li>
+                            <li><strong>Coded websites cost less to run</strong>. Next.js hosting costs $0-$20/month on Vercel versus $100-$400/month for managed WordPress hosting, saving you $960-$4,560 per year. MyCustomPatches went from $150/month to $0/month.</li>
+                            <li><strong>Lost traffic compounds into lost revenue</strong>: run your own visitor count, conversion rate, and average order value through the formula in this article to see what a ranking gap is actually costing you, rather than relying on a generic industry figure.</li>
+                            <li><strong>Migration pays for itself in months, not years</strong>: The one-time cost of switching to a coded site is typically recovered through hosting savings and traffic gains well within the first year.</li>
                         </ol>
                     </section>
 

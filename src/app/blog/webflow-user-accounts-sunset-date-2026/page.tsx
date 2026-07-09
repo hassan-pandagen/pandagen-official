@@ -56,7 +56,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -466,7 +466,7 @@ export default function WebflowUserAccountsSunset2026Page() {
                         </BlogQuote>
 
                         <BlogText>
-                            This is the same playbook we ran on our Obare Magazine rebuild (different platform, same urgency), and it is what the cluster of posts on <Link href="/blog/leaving-webflow-2026" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">leaving Webflow in 2026</Link> and our <Link href="/blog/webflow-migration-50-to-100-pages" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Scale-tier migration breakdown for 50 to 100 page sites</Link> build from. The process is not improvised. It is a repeatable sequence we tighten on every project.
+                            This is the same playbook we ran on our Obare Magazine rebuild (different platform, same urgency), and it is what the cluster of posts on <Link href="/blog/leaving-webflow-2026" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">leaving Webflow in 2026</Link> and our <Link href="/blog/webflow-migration-cost" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Scale-tier migration breakdown for 50 to 100 page sites</Link> build from. The process is not improvised. It is a repeatable sequence we tighten on every project.
                         </BlogText>
 
                         <BlogHeader>How Much It Costs to Rebuild the Right Way</BlogHeader>

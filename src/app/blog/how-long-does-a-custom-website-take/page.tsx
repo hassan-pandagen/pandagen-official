@@ -67,7 +67,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -284,11 +284,11 @@ export default function HowLongCustomWebsitePage() {
                         The clearest example is a medical practice we work with. The site genuinely takes time, and for good reasons. We cannot use any stock photos, because the work depends on the doctor's specific expertise and real results. The owner is busy, so each round of feedback takes about a day. The content is medically complex and has to be exactly right. That is a slow project, and it should be slow, because rushing it would be wrong.
                     </BlogText>
                     <BlogText>
-                        Now compare that to a build where the client handed us everything up front. That one shipped in 20 days, and it was a full e-commerce store. Same team, same standards. The only difference was content readiness. When you have your content and a clear direction, we go fast. When the content is still being created and decided, the calendar stretches, no matter who builds it.
+                        Now compare that to a build where the client handed us everything up front. That one was a full e-commerce store, our fastest large build to date, wrapped in a matter of weeks instead of months. Same team, same standards. The only difference was content readiness. When you have your content and a clear direction, we go fast. When the content is still being created and decided, the calendar stretches, no matter who builds it.
                     </BlogText>
 
                     <InsightBox variant="tip">
-                        Want the fastest possible timeline? Get your content and a clear direction ready before the build starts. That single thing is the difference between a 20-day e-commerce store and a project that stretches for months.
+                        Want the fastest possible timeline? Get your content and a clear direction ready before the build starts. That single thing is the difference between an e-commerce store shipped in weeks and a project that stretches for months.
                     </InsightBox>
 
                     <BlogQuote>
@@ -313,12 +313,12 @@ export default function HowLongCustomWebsitePage() {
                         Honest timelines mean nothing without proof. Here is what we have actually shipped.
                     </BlogText>
                     <BlogList items={[
-                        "PandaCodeLab, our own agency site: 7 days, designed from scratch on a surprise us brief.",
-                        "MyCustomPatches, a WordPress migration: 7 days, because the client had design and content ready.",
-                        "Panda Patches, a full e-commerce store: 20 days, our fastest large build, because all the content was provided up front.",
+                        "PandaCodeLab, our own agency site: designed and built from scratch on a surprise us brief, no content to wait on because we wrote it ourselves.",
+                        "Obare Magazine, a Wix migration for a culture publication with 225,000 Instagram followers: 7 days, a tight scope with content already in place.",
+                        "Panda Patches, a full e-commerce store: our fastest large build to date, because all the content was provided up front.",
                     ]} />
                     <BlogText>
-                        See the full breakdowns on our <Link href="/work" className="text-cognac hover:underline font-medium">work page</Link>. The pattern across all three is identical: when content and direction are ready, the build is fast.
+                        See the full breakdowns on our <Link href="/work" className="text-cognac hover:underline font-medium">work page</Link>. The pattern is identical across all three: when content and direction are ready, the build is fast.
                     </BlogText>
 
                     <BlogHeader id="how-we-stay-fast">How We Stay Faster Than a Typical Agency</BlogHeader>

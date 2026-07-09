@@ -2,6 +2,7 @@
 
 import { motion } from "@/components/ui/motion";
 import { Check, ShieldCheck, ArrowRight, X, Minus, Zap, Clock, DollarSign, RotateCcw } from "lucide-react";
+import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
@@ -11,7 +12,7 @@ const comparisonRows = [
   { label: "Load Time",     agency: "2.0s to 4.0s average",               pandagen: "Under 1s, guaranteed",          isPain: true  },
   { label: "Security",      agency: "Plugin vulnerabilities",             pandagen: "No plugins, no backdoors",      isPain: true  },
   { label: "Ownership",     agency: "Locked to theme / agency",           pandagen: "100% code ownership",           isPain: true  },
-  { label: "Monthly Cost",  agency: "Shopify Plus: $2,300+/mo + app fees", pandagen: "$0 to $50/mo at any scale",    isPain: true  },
+  { label: "Monthly Cost",  agency: "Shopify Plus: $2,300+/mo + app fees", pandagen: "Starts at $0, about $20/mo at scale (never more than ~$50)",    isPain: true  },
   { label: "Billing",       agency: "Hourly, unpredictable",              pandagen: "Fixed-price deposit",           isPain: true  },
 ];
 
@@ -25,7 +26,7 @@ const pricingSchema = {
       "name": "Pricing | PandaCodeGen Custom Web Development",
       "description": "Fixed-price custom Next.js builds. Starter $1,500. Growth $3,500. Scale $5,000 to $10,000. Scale+ custom quote for enterprise. No hourly billing. 30-day money-back guarantee.",
       "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
-      "about": { "@id": "https://www.pandacodegen.com/#organization" },
+      "about": { "@id": "https://www.pandacodegen.com/pricing#service" },
       "inLanguage": "en-US"
     },
     {
@@ -36,62 +37,77 @@ const pricingSchema = {
       ]
     },
     {
-      "@type": "Offer",
-      "@id": "https://www.pandacodegen.com/pricing#offer-starter",
-      "name": "Starter",
-      "description": "5 to 7 page custom Next.js business site. Under 1 second load time. 90+ Google PageSpeed guaranteed. Mobile-first build. Zero monthly fees.",
-      "price": "1500",
-      "priceCurrency": "USD",
-      "priceValidUntil": "2026-12-31",
-      "availability": "https://schema.org/InStock",
-      "url": "https://www.pandacodegen.com/pricing",
-      "seller": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization" }
-    },
-    {
-      "@type": "Offer",
-      "@id": "https://www.pandacodegen.com/pricing#offer-growth",
-      "name": "Growth",
-      "description": "10 to 20 page custom Next.js site with Sanity CMS, blog migration, 301 redirects, and 30 days of post-launch support. Most Popular tier.",
-      "price": "3500",
-      "priceCurrency": "USD",
-      "priceValidUntil": "2026-12-31",
-      "availability": "https://schema.org/InStock",
-      "url": "https://www.pandacodegen.com/pricing",
-      "seller": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization" }
-    },
-    {
-      "@type": "Offer",
-      "@id": "https://www.pandacodegen.com/pricing#offer-scale",
-      "name": "Scale",
-      "description": "Headless e-commerce (Shopify or WooCommerce), 30+ pages, custom integrations, advanced performance optimization. Full Next.js rebuild.",
-      "priceSpecification": {
-        "@type": "PriceSpecification",
-        "minPrice": "5000",
-        "maxPrice": "10000",
-        "priceCurrency": "USD"
-      },
-      "priceCurrency": "USD",
-      "priceValidUntil": "2026-12-31",
-      "availability": "https://schema.org/InStock",
-      "url": "https://www.pandacodegen.com/pricing",
-      "seller": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization" }
-    },
-    {
-      "@type": "Offer",
-      "@id": "https://www.pandacodegen.com/pricing#offer-scale-plus",
-      "name": "Scale+ Custom Engagement",
-      "description": "Enterprise scope. Multi-region e-commerce, custom SaaS platforms, complex integrations, dedicated engineering. Custom-quoted.",
-      "priceCurrency": "USD",
-      "priceValidUntil": "2026-12-31",
-      "availability": "https://schema.org/InStock",
-      "url": "https://www.pandacodegen.com/pricing",
-      "seller": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization" }
+      "@type": "Service",
+      "@id": "https://www.pandacodegen.com/pricing#service",
+      "name": "Fixed-Price Custom Web Development",
+      "description": "Fixed-price custom Next.js web development in four tiers: Starter $1,500, Growth $3,500, Scale $5,000 to $10,000, and Scale+ custom-quoted for enterprise scope. 90+ PageSpeed guarantee or full refund.",
+      "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
+      "areaServed": "Worldwide",
+      "serviceType": ["Custom Web Development", "Next.js Development", "Website Migration", "Headless E-Commerce Development"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Fixed-Price Web Development Tiers",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "@id": "https://www.pandacodegen.com/pricing#offer-starter",
+            "name": "Starter",
+            "description": "5 to 7 page custom Next.js business site. Under 1 second load time. 90+ Google PageSpeed guaranteed. Mobile-first build. Hosting starts at $0. Includes 15 days of post-launch support.",
+            "price": "1500",
+            "priceCurrency": "USD",
+            "priceValidUntil": "2026-12-31",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.pandacodegen.com/pricing",
+            "seller": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization" }
+          },
+          {
+            "@type": "Offer",
+            "@id": "https://www.pandacodegen.com/pricing#offer-growth",
+            "name": "Growth",
+            "description": "10 to 20 page custom Next.js site with Sanity CMS, blog migration, 301 redirects, and 30 days of post-launch support. Most Popular tier.",
+            "price": "3500",
+            "priceCurrency": "USD",
+            "priceValidUntil": "2026-12-31",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.pandacodegen.com/pricing",
+            "seller": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization" }
+          },
+          {
+            "@type": "Offer",
+            "@id": "https://www.pandacodegen.com/pricing#offer-scale",
+            "name": "Scale",
+            "description": "Headless e-commerce (Shopify or WooCommerce), 30+ pages, custom integrations, advanced performance optimization. Full Next.js rebuild. Includes 30 days of post-launch support.",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": "5000",
+              "maxPrice": "10000",
+              "priceCurrency": "USD"
+            },
+            "priceCurrency": "USD",
+            "priceValidUntil": "2026-12-31",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.pandacodegen.com/pricing",
+            "seller": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization" }
+          },
+          {
+            "@type": "Offer",
+            "@id": "https://www.pandacodegen.com/pricing#offer-scale-plus",
+            "name": "Scale+ Custom Engagement",
+            "description": "Enterprise scope. Multi-region e-commerce, custom SaaS platforms, complex integrations, dedicated engineering. Custom-quoted. Includes 30 days of post-launch support.",
+            "priceCurrency": "USD",
+            "priceValidUntil": "2026-12-31",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.pandacodegen.com/pricing",
+            "seller": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization" }
+          }
+        ]
+      }
     },
     {
       "@type": "FAQPage",
       "@id": "https://www.pandacodegen.com/pricing#faq",
       "mainEntity": [
-        { "@type": "Question", "name": "Which tier should I start with?", "acceptedAnswer": { "@type": "Answer", "text": "Most business rebuilds land in the Growth tier from $3,500: 10 to 20 pages, Sanity CMS, full blog migration with 301 redirects. Starter ($1,500+) is for simpler 5 to 7 page business sites. Scale ($5,000 to $10,000+) is for headless e-commerce, 30+ pages, and custom integrations. Bigger scope is handled in Scale+ with a custom quote after a scoping call." } },
+        { "@type": "Question", "name": "Which tier should I start with?", "acceptedAnswer": { "@type": "Answer", "text": "Most business rebuilds land in the Growth tier from $3,500: 10 to 20 pages, Sanity CMS, full blog migration with 301 redirects. Starter ($1,500+) is for simpler 5 to 7 page business sites. Scale ($5,000 to $10,000) is for headless e-commerce, 30+ pages, and custom integrations. Bigger scope is handled in Scale+ with a custom quote after a scoping call." } },
         { "@type": "Question", "name": "How does the deposit model work?", "acceptedAnswer": { "@type": "Answer", "text": "You pay 30% upfront to secure your engineering sprint and lock in your timeline. The remaining 70% is due on launch day, after you've seen the finished product and approved it." } },
         { "@type": "Question", "name": "Do you do retainers after launch?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Most clients keep us on for ongoing updates ($500/mo) or priority new feature development at discounted rates." } },
         { "@type": "Question", "name": "Why is your price higher than a freelancer?", "acceptedAnswer": { "@type": "Answer", "text": "Because we're not building templates. We're building assets. Clients typically see their investment pay for itself within 6 to 12 months through faster load times, higher conversion rates, and eliminated plugin fees." } },
@@ -131,6 +147,10 @@ export default function PricingPageClient() {
           >
             Most business rebuilds land in the <span className="font-bold text-charcoal">Growth tier from $3,500</span>. Stop paying for hours. Pay for outcomes. 30% deposit to start.
           </motion.p>
+
+          <p data-speakable="true" className="text-base font-semibold text-charcoal max-w-2xl mx-auto -mt-6 mb-12">
+            PandaCodeGen builds fixed-price custom Next.js websites from $1,500, with a 90+ PageSpeed guarantee or a full refund.
+          </p>
 
           {/* Work Teaser Strip */}
           <motion.div
@@ -210,7 +230,8 @@ export default function PricingPageClient() {
               <Feature text="90+ Google PageSpeed Mobile (guaranteed in writing. We fix it free if it scores lower)" />
               <Feature text="Under 1 Second Load Time (your site loads before slow sites render their hero image)" />
               <Feature text="Mobile-First Build (designed on mobile screen first, then scaled up, not the other way around)" />
-              <Feature text="Zero Monthly Fees (no Webflow subscription, no plugin bills, no hosting invoices. Ever)" />
+              <Feature text="Hosting Starts at $0 (no platform subscription, no plugin bills. Vercel starts free, about $20/mo as you scale)" />
+              <Feature text="15 Days of Free Post-Launch Support (bug fixes and refinements at no extra cost after handover)" />
             </ul>
 
             <button
@@ -256,7 +277,7 @@ export default function PricingPageClient() {
               <Feature dark text="Sanity CMS Integration (your team updates content without touching code)" />
               <Feature dark text="Full Blog Migration (every post moved, 301 redirects preserved, SEO rankings held)" />
               <Feature dark text="90+ PageSpeed Guaranteed (not an aspiration, a contract)" />
-              <Feature dark text="Zero Monthly Fees Forever (Vercel starts free, only $20/month when you grow)" />
+              <Feature dark text="No Platform Fees (Vercel hosting starts free, about $20/month when you grow)" />
               <Feature dark text="30 Days Post-Launch Support (bug fixes and refinements at no extra cost)" />
             </ul>
 
@@ -267,6 +288,10 @@ export default function PricingPageClient() {
             <p className="text-xs text-center text-stone-500 mt-4">
               Fully refundable within 30 days. No risk.
             </p>
+
+            <Link href="/services/wordpress-migration" className="block text-center text-xs text-stone-400 hover:text-cognac transition-colors mt-3 underline underline-offset-2">
+              Moving off WordPress? See the full migration scope
+            </Link>
           </motion.div>
 
           {/* CARD 3: Scale */}
@@ -285,7 +310,7 @@ export default function PricingPageClient() {
             <div className="mb-8 pb-8 border-b border-stone-100 min-h-[140px] flex flex-col justify-start">
               <div className="text-xs font-black text-cognac uppercase tracking-widest mb-2">Range</div>
               <div className="flex items-baseline gap-2 mb-3">
-                <span className="text-5xl font-black text-charcoal">$5k to $10k+</span>
+                <span className="text-5xl font-black text-charcoal">$5K to $10K</span>
                 <span className="text-lg font-bold text-stone-500">USD</span>
               </div>
               <div className="inline-block bg-stone-100 px-3 py-1 rounded-md border border-stone-200">
@@ -299,7 +324,7 @@ export default function PricingPageClient() {
               <Feature text="Custom Integrations (Klaviyo, HubSpot, Salesforce, Stripe subscriptions, or any API you need)" />
               <Feature text="Advanced Performance Optimization (edge caching, ISR, image pipeline tuned to your catalog size)" />
               <Feature text="Sanity CMS + Content Ops (content model designed for your editors, not generic templates)" />
-              <Feature text="60 Days Post-Launch Support (longer runway for catalog imports, data migrations, edge cases)" />
+              <Feature text="30 Days Post-Launch Support (bug fixes and refinements at no extra cost after handover)" />
             </ul>
 
             <button
@@ -310,6 +335,10 @@ export default function PricingPageClient() {
             >
               Book Scope Call
             </button>
+
+            <Link href="/services/ecommerce" className="block text-center text-xs text-stone-400 hover:text-cognac transition-colors mt-3 underline underline-offset-2">
+              See our headless e-commerce service
+            </Link>
           </motion.div>
 
         </div>
@@ -325,7 +354,7 @@ export default function PricingPageClient() {
             <div>
               <p className="text-xs font-bold uppercase tracking-widest text-charcoal mb-2">Scale+ Custom Engagement</p>
               <h3 className="text-lg md:text-xl font-bold text-charcoal mb-1">Bigger project? Let&apos;s scope it together.</h3>
-              <p className="text-sm text-stone-600">Enterprise scope, multi-region e-commerce, custom SaaS platforms, complex integrations. We cannot quote without understanding the work. Message us and we will scope it on a call.</p>
+              <p className="text-sm text-stone-600">Enterprise scope, multi-region e-commerce, custom SaaS platforms, complex integrations. We cannot quote without understanding the work. Message us and we will scope it on a call. Curious what this looks like in practice? See our <Link href="/services/custom-engineering" className="text-cognac underline underline-offset-2 hover:text-charcoal transition-colors">custom engineering service</Link>.</p>
             </div>
             <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"scope_it_with_us",location:"cta"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="shrink-0 px-5 py-2.5 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-cognac transition-all">
                 Scope It With Us
@@ -406,9 +435,9 @@ export default function PricingPageClient() {
           <div className="space-y-5">
             {[
               { num: "00", title: "You approve the design before we write a line of code", body: "We do not move into production until you have reviewed and signed off on the design direction. No surprise launches. No 'we built it, now you have to pay'. If the design direction isn't right, we iterate until it is. Production code only starts after your explicit approval." },
-              { num: "01", title: "You only pay a deposit to start", body: "We take a 30 to 50% deposit upfront to secure your engineering sprint and cover initial design and architecture work. That's all you owe until delivery." },
+              { num: "01", title: "You only pay a deposit to start", body: "We take a 30% deposit upfront to secure your engineering sprint and cover initial design and architecture work. That's all you owe until delivery." },
               { num: "02", title: "No final payment until you're satisfied", body: "The remaining balance is only due after we deliver the project and you're happy with it. We don't charge you the rest just because the calendar says so. We charge when the work is done right." },
-              { num: "03", title: "30-day money-back after delivery", body: "After we hand over the finished site, you have 30 days to put it through its paces. If the site is genuinely not performing as agreed (slow load times, broken features, anything we promised and didn't deliver), we refund your deposit. No awkward conversations. No dispute process. You clearly asked us for something and we didn't deliver it: you get your money back." },
+              { num: "03", title: "30-day money-back after delivery", body: "After we hand over the finished site, you have 30 days to put it through its paces. If the site is genuinely not performing as agreed (slow load times, broken features, anything we promised and didn't deliver), we refund every dollar you've paid. Not just the deposit, the full amount. No awkward conversations. No dispute process. You clearly asked us for something and we didn't deliver it: you get your money back." },
               { num: "04", title: "Escrow available on request", body: "If you prefer, we can run the project through a third-party escrow service (Escrow.com or similar). Funds are held by the escrow provider and released to us only when you approve the final delivery. Industry standard for larger projects." },
               { num: "05", title: "You keep everything, either way", body: "If we refund you, you keep all designs, wireframes, and any code written to that point. We don't ask for anything back. It's your IP from the moment it's created." },
             ].map((item, i) => (
@@ -523,6 +552,9 @@ export default function PricingPageClient() {
             </div>
             <div className="h-px w-8 bg-stone-300" />
           </div>
+          <Link href="/work" className="inline-block mt-6 text-sm font-bold text-cognac hover:underline underline-offset-2">
+            See this build and more in our work portfolio →
+          </Link>
         </motion.div>
       </section>
 
@@ -530,11 +562,11 @@ export default function PricingPageClient() {
       <section className="container mx-auto px-6 pb-16 md:pb-32 max-w-3xl">
         <h2 className="text-3xl font-bold text-charcoal text-center mb-8 md:mb-12">Common Questions</h2>
         <div className="space-y-6">
-          <FAQ q="Which tier should I start with?" a="Most business rebuilds land in the Growth tier from $3,500: 10 to 20 pages, Sanity CMS, full blog migration with 301 redirects. Starter ($1,500+) is for simpler 5 to 7 page business sites. Scale ($5,000 to $10,000+) is for headless e-commerce, 30+ pages, and custom integrations. Bigger scope is handled in Scale+ with a custom quote after a scoping call." />
+          <FAQ q="Which tier should I start with?" a="Most business rebuilds land in the Growth tier from $3,500: 10 to 20 pages, Sanity CMS, full blog migration with 301 redirects. Starter ($1,500+) is for simpler 5 to 7 page business sites. Scale ($5,000 to $10,000) is for headless e-commerce, 30+ pages, and custom integrations. Bigger scope is handled in Scale+ with a custom quote after a scoping call." />
           <FAQ q="How does the deposit model work?" a="You pay 30% upfront to secure your engineering sprint and lock in your timeline. The remaining 70% is due on launch day, after you've seen the finished product and approved it." />
           <FAQ q="What if my project is bigger than Scale?" a="Scale+ is for enterprise scope, multi-region e-commerce, custom SaaS platforms, and complex integrations. We cannot quote without understanding the work, so we scope it together on a call. Book a discovery call and tell us what you need." />
           <FAQ q="Do you do retainers after launch?" a="Yes. Most clients keep us on for ongoing updates ($500/mo) or priority new feature development at discounted rates." />
-          <FAQ q="Why not just hire a freelancer on Upwork or Fiverr?" a="A freelancer gives you a file. We give you a system. Our builds include architecture review, SEO preservation, performance guarantees, 30 days of post-launch support, and full IP handover to your accounts. Freelancers disappear after delivery. We don't, and we have the case studies to prove it." />
+          <FAQ q="Why not just hire a freelancer on Upwork or Fiverr?" a="A freelancer gives you a file. We give you a system. Our builds include architecture review, SEO preservation, performance guarantees, and full IP handover to your accounts, plus 15 to 30 days of free post-launch support depending on tier (15 days on Starter, 30 days on Growth and above). Freelancers disappear after delivery. We don't, and we have the case studies to prove it." />
           <FAQ q="Why is your price higher than a freelancer?" a="Because we're not building templates. We're building assets. Clients typically see their investment pay for itself within 6 to 12 months through faster load times, higher conversion rates, and eliminated plugin and hosting fees. MyCustomPatches went from $150/mo in hosting to $0 and from a 45 PageSpeed score to 90+. The build paid for itself in under a year." />
           <FAQ q="What's in the Discovery Call?" a="We audit your current site, understand your revenue goals, and map out the tech stack. Free, non-binding. Takes 30 minutes." />
           <FAQ q="What exactly does the 90+ PageSpeed guarantee mean?" a="It means your site will score 90+ on Google PageSpeed Insights at launch. If it doesn't, we keep working until it does at no extra cost. We have never failed to hit our 90+ guarantee on a completed project." />

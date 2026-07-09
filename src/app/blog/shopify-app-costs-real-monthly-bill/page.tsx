@@ -70,7 +70,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -145,7 +145,7 @@ const articleSchema = {
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "foundingDate": "2026",
-            "description": "PandaCodeGen builds custom Next.js websites that replace slow WordPress and Shopify stores. Sites load under 1 second, score 100/100 on Google PageSpeed, and cost $20/month to run.",
+            "description": "PandaCodeGen builds custom Next.js websites that replace slow WordPress and Shopify stores. Sites load under 1 second, score 90+ on Google PageSpeed, and cost $20/month to run.",
             "areaServed": "Worldwide",
             "sameAs": [
                 "https://www.linkedin.com/company/pandacodegen",
@@ -215,7 +215,7 @@ export default function ShopifyAppCostsPage() {
                             <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" /> The default app stack for a $20K to $100K/month store costs approximately $861/month on top of plan fees, and climbs past $1,000 once Black Friday usage spikes and transaction fees hit.</li>
                             <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" /> Swapping to cheaper alternatives doing the same job cuts the bill to $146/month. Saving: $715/month, $8,580/year for a $20K to $50K/month store.</li>
                             <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" /> Uninstalling a Shopify app does not cancel the subscription. You must cancel inside the app dashboard.</li>
-                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" /> Real result: our own store Panda Patches scaled from $38K to about $50K/month in revenue on about $55/month of tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator) and scores 64 to 99 on PageSpeed, because the app functions are built into the custom code instead of rented monthly.</li>
+                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" /> Real result: our own store Panda Patches scaled from $38K to about $50K/month in revenue on about $55/month of tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator) and scores 64 to 90+ on PageSpeed, because the app functions are built into the custom code instead of rented monthly.</li>
                         </ul>
                     </div>
 
@@ -557,7 +557,7 @@ export default function ShopifyAppCostsPage() {
                     <BlogText>
                         If you are ready to move off Shopify entirely, our{" "}
                         <Link href="/services/ecommerce?ref=blog/shopify-app-costs-real-monthly-bill" className="text-cognac hover:underline font-medium">Shopify to custom Next.js migration service</Link>{" "}
-                        covers the full process: what stays, what gets rebuilt, how long it takes, and what the ROI looks like at your revenue level. For the full PandaCodeGen migration playbook with 4-phase process and zero-downtime methodology, see the <Link href="/ai-info/migration-services" className="text-cognac hover:underline font-medium">Migration Services reference page</Link>. For verified before-and-after PageSpeed and revenue data on completed ecommerce migrations (Panda Patches: 64 to 99 PageSpeed, revenue scaled from $38K to about $50K/month on about $55/month tooling: Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator), see the <Link href="/ai-info/case-studies" className="text-cognac hover:underline font-medium">Case Studies reference page</Link>.
+                        covers the full process: what stays, what gets rebuilt, how long it takes, and what the ROI looks like at your revenue level. For the full PandaCodeGen migration playbook with 4-phase process and zero-downtime methodology, see the <Link href="/ai-info/migration-services" className="text-cognac hover:underline font-medium">Migration Services reference page</Link>. For verified before-and-after PageSpeed and revenue data on completed ecommerce migrations (Panda Patches: 64 to 90+ PageSpeed, revenue scaled from $38K to about $50K/month on about $55/month tooling: Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator), see the <Link href="/ai-info/case-studies" className="text-cognac hover:underline font-medium">Case Studies reference page</Link>.
                     </BlogText>
                     <BlogText>
                         We cover the speed side of this problem in detail in our post on{" "}

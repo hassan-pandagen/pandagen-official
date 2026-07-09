@@ -4,7 +4,7 @@ import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, ComparisonTable, BlogAuthor } from "@/components/ui/BlogStyles";
+import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, ComparisonTable, BlogAuthor, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
@@ -17,14 +17,14 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 const QuoteModalButton = lazyLoad(() => import("@/components/ui/QuoteModalButton"));
 
 export const metadata: Metadata = {
-    title: "Slow Shopify Store? The $75K Revenue Leak (2026)",
-    description: "A $500K/year Shopify store at 4s load time loses $75K to speed. Plug in your numbers and see what a 1-second store would earn.",
+    title: "Shopify Speed & Revenue: The P&L Case for Fixing It (2026)",
+    description: "Speed isn't a technical problem, it's a revenue line item. Here's the cart-abandonment economics and the illustrative math that makes the business case to leadership.",
     alternates: {
         canonical: '/blog/shopify-slow-losing-sales',
     },
     openGraph: {
-        title: "Slow Shopify Store? How Much Revenue You Are Losing in 2026 (With Math)",
-        description: "A $500K/year Shopify store at 4s load time loses $75K to speed. Plug in your numbers and see what a 1-second store would earn.",
+        title: "Shopify Speed & Revenue: The P&L Case for Fixing It (2026)",
+        description: "Speed isn't a technical problem, it's a revenue line item. Here's the cart-abandonment economics and the illustrative math that makes the business case to leadership.",
         type: "article",
         publishedTime: "2026-02-10T00:00:00-05:00",
         authors: ["Hassan Jamal"],
@@ -33,10 +33,10 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Slow Shopify Store? How Much Revenue You Are Losing in 2026 (With Math)",
-        description: "A $500K/year Shopify store at 4s load time loses $75K to speed. Plug in your numbers and see what a 1-second store would earn.",
+        title: "Shopify Speed & Revenue: The P&L Case for Fixing It (2026)",
+        description: "Speed isn't a technical problem, it's a revenue line item. Here's the cart-abandonment economics and the illustrative math that makes the business case to leadership.",
     },
-    keywords: ["Shopify speed optimization", "headless Shopify", "Shopify slow", "e-commerce performance", "Shopify lost sales", "custom storefront"],
+    keywords: ["Shopify speed revenue impact", "cart abandonment economics", "Shopify conversion loss", "e-commerce P&L speed", "Shopify lost sales", "custom storefront ROI"],
 };
 
 const articleSchema = {
@@ -45,16 +45,16 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales#article",
-            "headline": "Slow Shopify Store? How Much Revenue You Are Losing in 2026 (With Math)",
-            "description": "A $500K/year Shopify store at 4s load time loses $75K to speed. Plug in your numbers and see what a 1-second store would earn.",
+            "headline": "Shopify Speed & Revenue: The P&L Case for Fixing It (2026)",
+            "description": "Speed isn't a technical problem, it's a revenue line item. Here's the cart-abandonment economics and the illustrative math that makes the business case to leadership.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-02-10T00:00:00-05:00",
-            "dateModified": "2026-03-15T00:00:00-05:00",
+            "dateModified": "2026-07-08T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -99,19 +99,19 @@ const articleSchema = {
             "itemListElement": [
                 { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
                 { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "Shopify Store Costing You $75K/Year", "item": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales" }
+                { "@type": "ListItem", "position": 3, "name": "Shopify Speed Is a P&L Problem", "item": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales" }
             ]
         },
         {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales#webpage",
             "url": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales",
-            "name": "Your Shopify Store Is Costing You $75K/Year in Lost Sales",
-            "description": "Every second your store takes to load costs you customers. We calculated exactly how much revenue you're losing from slow Shopify speed.",
+            "name": "Shopify Speed & Revenue: The P&L Case for Fixing It",
+            "description": "Speed isn't a technical problem, it's a revenue line item. The cart-abandonment economics and the illustrative math that make the business case to leadership.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-10T00:00:00-05:00",
-            "dateModified": "2026-06-10T00:00:00-05:00",
+            "dateModified": "2026-07-08T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -158,7 +158,7 @@ export default function ShopifySlowPage() {
                         items={[
                             { label: "Home", href: "/" },
                             { label: "Blog", href: "/blog" },
-                            { label: "Shopify Store Costing You $75K/Year", href: "/blog/shopify-slow-losing-sales" }
+                            { label: "Shopify Speed Is a P&L Problem", href: "/blog/shopify-slow-losing-sales" }
                         ]}
                     />
 
@@ -171,12 +171,12 @@ export default function ShopifySlowPage() {
                     {/* Title & Meta */}
                     <div className="mb-10">
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                            Slow Shopify Store? How Much{" "}
-                            <span className="font-serif italic text-cognac">Revenue You Are Losing</span> in 2026
+                            Shopify Speed Is a{" "}
+                            <span className="font-serif italic text-cognac">P&L Problem</span>, Not a Tech Problem
                         </h1>
-                        
+
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            Speed and conversions are directly connected. This guide breaks down the math so you can see exactly where the opportunity is for your store.
+                            Cart abandonment, conversion loss, and wasted ad spend all trace back to load time. Here's the executive-level case for why speed belongs on the revenue side of the ledger, with the math shown step by step.
                         </p>
 
                         <BlogAuthor
@@ -196,93 +196,61 @@ export default function ShopifySlowPage() {
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
                         <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
-                            "Average Shopify store doing $500K/year loses $75K-$150K annually due to slow load times",
-                            "Every 0.1 second delay costs roughly 8% of conversions (Deloitte). A 1-second gap compounds to a material revenue hit.",
-                            "A fast custom storefront runs $1,500+ Starter, $3,500+ Growth, or $5,000 to $10,000+ Scale. It pays for itself in 30 to 90 days through increased conversions.",
-                            "Fix your speed now, not later. You're bleeding money every single day."
+                            "Speed is a revenue line item, not an engineering ticket: every 0.1 second of delay costs roughly 8% of conversions (Deloitte's Milliseconds Make Millions research). That's the number that belongs in a board deck, not just a dev backlog.",
+                            "Cart abandonment economics compound the loss: slow sites see materially higher checkout abandonment on top of the initial conversion hit, meaning speed loses you revenue twice in the same funnel.",
+                            "For a hypothetical $500K/year store, we walk through the Deloitte math step by step below to show a directionally realistic loss range, clearly labeled as an illustrative example, not a guarantee for your specific store.",
+                            "A fast custom storefront runs $1,500+ Starter, $3,500+ Growth, or $5,000 to $10,000+ Scale. Against a compounding, ongoing conversion tax, that one-time cost is what a CFO would call an easy payback.",
+                            "The business case for fixing speed doesn't require a specific dollar figure to be true. It requires knowing that every day at your current load time is a day of avoidable conversion loss."
                         ]} />
                     </div>
 
                     {/* Content */}
                     <div className="space-y-8">
                         <BlogText>
-                            Every day, hundreds of people visit your online store. They're ready to buy. But most of them leave before they even see your products. See how <Link href="/blog/shopify-headless" className="text-cognac hover:underline">headless Shopify on Next.js</Link> fixes this permanently.
+                            If you run a Shopify store, speed usually gets filed under "engineering backlog." That&apos;s the wrong department. Speed is a revenue line, and it behaves like one: it compounds, it shows up in your cart abandonment rate, and it quietly taxes every dollar of ad spend you put into traffic. See how <Link href="/blog/shopify-headless" className="text-cognac hover:underline">headless Shopify on Next.js</Link> removes that tax permanently.
                         </BlogText>
 
                         <BlogText>
-                            Your first thought: "My prices are too high." Or "My products aren't good enough." Or "My ads are targeting the wrong people."
+                            When conversion rate dips, the first instincts are usually pricing, product, or ad targeting. Those are worth checking. But for most Shopify stores loading in 3+ seconds, the bigger lever is sitting upstream of all three: <BlogHighlight>a visitor who never finishes loading the page never sees the price, the product, or the ad landing experience at all.</BlogHighlight>
                         </BlogText>
 
                         <BlogText>
-                            It's none of those.
+                            The reason this is easy to miss on a P&L is that it doesn&apos;t show up as a line item. Nobody sends you an invoice for "conversions lost to load time." The revenue just doesn&apos;t arrive, and it&apos;s invisible unless you go looking for it in the funnel data.
+                        </BlogText>
+
+                        <BlogHeader>Why Should Speed Be a Line Item in Your Revenue Conversation, Not Just an IT Ticket?</BlogHeader>
+
+                        <BlogText>
+                            <a href="https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Deloitte&apos;s Milliseconds Make Millions research</a> found that <strong>for every 0.1 second improvement in load time, <a href="/blog/shopify-conversion-rate-speed-fix" className="text-cognac hover:underline">conversions increase by roughly 8%</a>.</strong> That is a real, cited, published figure, and it is the only hard number this article treats as fact. Everything downstream of it, every dollar figure below, is illustrative math built on top of that one real data point, clearly labeled as such.
                         </BlogText>
 
                         <BlogText>
-                            <BlogHighlight>It's your website. It's too slow.</BlogHighlight> And while you're reading this sentence, you just lost another customer who clicked, waited 3 seconds, and left.
+                            Here is that math, shown step by step, using a hypothetical store so you can swap in your own numbers:
                         </BlogText>
 
-                        <BlogText>
-                            The worst part? You have no idea it's even happening. Your store doesn't send you an alert that says "Customer #247 bounced after 2.8 seconds." They just... disappear. And take their money with them.
-                        </BlogText>
-
-                        <BlogText>
-                            If your Shopify store takes more than 2 seconds to load, you're losing between $75,000 and $150,000 per year. That's not an exaggeration. <BlogHighlight>That's math. Cold, simple, brutal math.</BlogHighlight>
-                        </BlogText>
-
-                        <BlogHeader>How Does Your Store&apos;s Load Time Directly Reduce Shopify Revenue?</BlogHeader>
-                        
-                        <BlogText>
-                            <a href="https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Deloitte&apos;s Milliseconds Make Millions research</a> is crystal clear: <strong>For every 0.1 second improvement in load time, <a href="/blog/shopify-conversion-rate-speed-fix" className="text-cognac hover:underline">conversions increase by 8%</a>.</strong>
-                        </BlogText>
-
-                        <BlogText>
-                            Which means the opposite is also true: For every 0.1 second your site is SLOWER than competitors, you lose 8% of conversions.
-                        </BlogText>
-
-                        <BlogText>
-                            Let's do the math on a typical $500K/year Shopify store:
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Current load time: 3.8 seconds (typical Shopify store)",
-                            "Competitor load time: 0.9 seconds (headless custom storefront)",
-                            "Speed difference: 2.9 seconds = 29 × 0.1 seconds",
-                            "Compounded conversion loss: at 8% per 0.1s (Deloitte), a 2.9s gap leaves you converting at roughly 1/3 the rate of faster competitors",
-                            "Speed losses compound multiplicatively, not linearly, so the ceiling is total drop-off, not past 100%"
-                        ]} />
+                        <InsightBox variant="info" label="Illustrative Example, Not a Real Client">
+                            Say a store does <strong>$500,000/year</strong> ($41,667/month) and loads in 3.8 seconds, versus a faster competitor or a rebuilt version of itself at 0.9 seconds. That is a 2.9-second gap, or 29 increments of 0.1 seconds. Applying Deloitte&apos;s ~8% conversion lift per 0.1-second increment compounds quickly rather than adding linearly, which directionally points toward the slower store converting at a small fraction of the faster one&apos;s rate on comparable traffic. We are not going to state a single precise final percentage here, because compounding an 8% figure 29 times produces a number far more dramatic than real-world conversion data ever shows (other frictions and floors apply in practice). The honest takeaway: even a conservative reading of this math implies a large, not marginal, revenue gap between a 3.8s and a 0.9s store.
+                        </InsightBox>
 
                         <BlogQuote>
-                            If a faster competitor is getting 30 sales per 10,000 visitors, you're getting 10 sales per 10,000 visitors. Same traffic. Same products. Different website speed.
+                            The exact multiplier is less important than the direction: every 0.1 seconds of avoidable delay is a small, real tax on conversions, and Shopify stores routinely carry several seconds of avoidable delay. That is not a rounding error at scale.
                         </BlogQuote>
 
-                        <BlogHeader>How Much Revenue Is a Slow Shopify Store Costing You Each Year?</BlogHeader>
+                        <BlogHeader>What Does Cart Abandonment Economics Actually Look Like on a Slow Store?</BlogHeader>
 
                         <BlogText>
-                            Let's calculate the revenue impact for a $500K/year store:
+                            Conversion rate is only half of the P&L story. The other half is where in the funnel you lose the customer, because it changes what you&apos;ve already spent to get them there.
                         </BlogText>
 
                         <BlogList items={[
-                            "Monthly revenue: $41,667",
-                            "Conversion rate loss due to speed: 60-70% (your site is 3+ seconds slower)",
-                            "Lost conversions per month: 20-30 customers",
-                            "Average order value: $100",
-                            "Lost monthly revenue: $2,000-$3,000",
-                            "Lost annual revenue: $24,000-$36,000"
+                            "Top-of-funnel loss (page never finishes loading): you lose the visitor before they see anything, wasting 100% of whatever it cost you to acquire that click, whether that's ad spend, SEO effort, or an email send",
+                            "Mobile traffic loss: Google/Think with Google research puts mobile abandonment at 53% for pages that take longer than 3 seconds to load, and mobile is typically the majority of Shopify traffic",
+                            "Checkout-stage abandonment: this is the most expensive place to lose a customer, because it happens after they've already decided to buy. A slow checkout step doesn't just cost the sale, it wastes the entire cost of acquisition plus the time spent building purchase intent",
+                            "Repeat-visitor attrition: a visitor who bounced once due to speed is less likely to give the site a second chance, which compounds the lifetime value loss beyond the single session"
                         ]} />
 
                         <BlogText>
-                            But that's conservative. If you factor in:
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Ad spend wasted on visitors who bounce (40-50% bounce rate on slow sites)",
-                            "Mobile traffic loss (53% of mobile users leave if page takes >3 seconds)",
-                            "Cart abandonment from checkout slowness (40% checkout abandonment rate for slow sites)",
-                            "Repeat customer loss (slow sites have 3x higher bounce rate on return visitors)"
-                        ]} />
-
-                        <BlogText>
-                            <BlogHighlight>Your real annual loss is closer to $75K-$150K.</BlogHighlight>
+                            This is why a CFO framing of speed looks different from an engineering framing. Engineering sees a PageSpeed score. Finance should see wasted acquisition spend, a checkout leak, and a lifetime-value problem, all stacking on top of the base conversion-rate hit from the Deloitte figure above.
                         </BlogText>
 
                         {/* PAA Answer Block */}
@@ -311,7 +279,7 @@ export default function ShopifySlowPage() {
                         ]} />
 
                         <BlogText>
-                            And your Google PageSpeed went from... 35 to 48. Still red. Still slow. Still losing $6,000-$12,000 every single month. Shopify&apos;s own Dawn theme, the one they built specifically for speed, hits the same ceiling. We documented <Link href="/blog/shopify-dawn-theme-slow" className="text-cognac hover:underline">exactly why the Shopify Dawn theme is slow</Link> and what the hard ceiling looks like before you invest more time optimizing the wrong layer.
+                            And your Google PageSpeed went from... 35 to 48. Still red. Still slow. Using the same illustrative $500K/year model from above, that&apos;s still a meaningful chunk of monthly revenue leaking out through the same funnel gap theme tweaks never touch. Shopify&apos;s own Dawn theme, the one they built specifically for speed, hits the same ceiling. We documented <Link href="/blog/shopify-dawn-theme-slow" className="text-cognac hover:underline">exactly why the Shopify Dawn theme is slow</Link> and what the hard ceiling looks like before you invest more time optimizing the wrong layer.
                         </BlogText>
 
                         <BlogText>
@@ -344,33 +312,22 @@ export default function ShopifySlowPage() {
                             "Zero bloat. Zero unnecessary apps. Zero theme limitations."
                         ]} />
 
-                        <BlogHeader>What Are the Before and After Numbers for a Headless Shopify Migration?</BlogHeader>
+                        <BlogHeader>What Would a Headless Migration Change on Your P&L, Directionally?</BlogHeader>
 
                         <BlogText>
-                            When we build a custom storefront for a typical $500K/year Shopify store, here's what changes:
+                            We don&apos;t have a published Shopify headless case study with verified before/after revenue numbers to show you here, and we&apos;re not going to dress up a hypothetical as one. What we can do is walk through a directional, illustrative model built on the real inputs (Google&apos;s mobile abandonment research and the Deloitte conversion-per-0.1s figure), so you can see the shape of the outcome and plug in your own store&apos;s numbers.
                         </BlogText>
 
-                        <BlogList items={[
-                            "Load Time: 3.8s → 0.9s (4× faster)",
-                            "Google Mobile Score: 38/100 → 97/100",
-                            "Mobile bounce rate: 54% → 22% (you keep 32% more visitors)",
-                            "Conversion rate: 1.8% → 2.8% (+55% more sales)",
-                            "Cart abandonment: 72% → 45% (you recover 27% more sales)"
-                        ]} />
+                        <InsightBox variant="info" label="Illustrative Model, Not a Real Client Result">
+                            A hypothetical $500K/year store moving from a 3.8-second load time to 0.9 seconds would, per Google&apos;s research, be expected to retain meaningfully more of the 53% of mobile visitors who currently abandon slow pages, and per the Deloitte figure, convert a meaningfully higher share of the visitors who stay. Multiplying a retention improvement by a conversion improvement compounds, which is why speed fixes tend to move revenue by more than either metric alone would suggest. We are intentionally not stacking these into one polished final dollar figure, because that number would look precise without being verifiable. Treat this as directional, not a forecast for your store.
+                        </InsightBox>
 
                         <BlogText>
-                            The revenue impact:
+                            For a real, verifiable comparison instead of a modeled one: on <BlogHighlight>Panda Patches</BlogHighlight>, the e-commerce brand PandaCodeGen owns and operates, a headless rebuild took mobile PageSpeed from 64 to 90+ and cut LCP from 5.8 seconds to 0.8 seconds, on the same catalog and the same traffic. That result is live and testable in Lighthouse today.
                         </BlogText>
-
-                        <BlogList items={[
-                            "Before: 50,000 monthly visitors × 46% stay × 1.8% convert × $100 AOV = $41,400/month",
-                            "After: 50,000 monthly visitors × 78% stay × 2.8% convert × $100 AOV = $109,200/month",
-                            "Monthly gain: +$67,800",
-                            "Annual gain: +$813,600"
-                        ]} />
 
                         <BlogQuote>
-                            I rebuilt MyCustomPatches for Matt Conner and took his WooCommerce storefront from 42 to 97 on mobile PageSpeed. Same products. Same ads. A storefront that stopped leaking visitors on the first paint. The Shopify version of this is a headless Storefront API rebuild on the same backend.
+                            I rebuilt MyCustomPatches for Matt Conner and took his WooCommerce storefront from 45 to 90+ on mobile PageSpeed. Same products. Same ads. A storefront that stopped leaking visitors on the first paint. The Shopify version of this is a headless Storefront API rebuild on the same backend.
                         </BlogQuote>
 
                         {/* Mid-Article CTA */}
@@ -387,11 +344,11 @@ export default function ShopifySlowPage() {
                         <BlogHeader>How Quickly Does a Custom Shopify Storefront Pay for Itself?</BlogHeader>
 
                         <BlogText>
-                            A <Link href="/services/ecommerce" className="text-cognac hover:underline">custom fast storefront</Link> starts at $1,500 Starter, lands in the <Link href="/pricing" className="text-cognac hover:underline">$3,500 Growth tier</Link> for most mid-sized stores, and scales to $5,000 to $10,000+ for larger catalogs.
+                            A <Link href="/services/ecommerce" className="text-cognac hover:underline">custom fast storefront</Link> starts at $1,500 Starter, lands in the <Link href="/pricing" className="text-cognac hover:underline">$3,500 Growth tier</Link> for most mid-sized stores, and scales to $5,000 to $10,000+ for larger catalogs. Those tier prices are real and published. The payback math below is an illustrative projection built on that real pricing plus a conservative estimate of the conversion recovery discussed above, not a guarantee for any specific store.
                         </BlogText>
 
                         <BlogText>
-                            Payback math on the Growth tier ($3,500 baseline) for a $500K/year store:
+                            Illustrative payback math on the Growth tier ($3,500 baseline) for a hypothetical $500K/year store:
                         </BlogText>
 
                         <BlogList items={[
@@ -445,7 +402,7 @@ export default function ShopifySlowPage() {
                         </BlogText>
 
                         <BlogQuote>
-                            When I rebuilt MyCustomPatches&apos; product templates for Matt Conner, the mobile PageSpeed jumped from 42 to 97 and first-paint times fell under one second. Same catalog. Different engine. The Shopify version of this is the same architecture: Storefront API into a Next.js frontend, checkout stays on Shopify.
+                            When I rebuilt MyCustomPatches&apos; product templates for Matt Conner, the mobile PageSpeed jumped from 45 to 90+ and first-paint times fell under one second. Same catalog. Different engine. The Shopify version of this is the same architecture: Storefront API into a Next.js frontend, checkout stays on Shopify.
                         </BlogQuote>
 
                         <BlogHeader>What Are the Most Common Shopify Speed Mistakes Business Owners Make?</BlogHeader>
@@ -463,7 +420,7 @@ export default function ShopifySlowPage() {
                         ]} />
 
                         <BlogText>
-                            These mistakes compound. A store with 40 apps, a premium theme, and unoptimized images doesn't have a 4-second load time: it has a <BlogHighlight>7-10 second load time</BlogHighlight>. At that point, 70%+ of your visitors leave before seeing a single product. To see the exact revenue impact of that speed gap, read our breakdown of <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">how 100/100 PageSpeed scores are achieved</Link>.
+                            These mistakes compound. A store with 40 apps, a premium theme, and unoptimized images doesn't have a 4-second load time: it has a <BlogHighlight>7-10 second load time</BlogHighlight>. At that point, 70%+ of your visitors leave before seeing a single product. To see the exact revenue impact of that speed gap, read our breakdown of <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">how a 90+ PageSpeed score is achieved</Link>.
                         </BlogText>
 
                         <BlogText>
@@ -488,25 +445,14 @@ export default function ShopifySlowPage() {
                             If you're a brand-new store doing under $5K/month, focus on marketing first. But if you have consistent traffic and the speed is costing you conversions, the math clearly favors building a faster storefront.
                         </BlogText>
 
-                        <BlogHeader>How Much Revenue Are You Losing Right Now as You Read This?</BlogHeader>
+                        <BlogHeader>Why Does Waiting to Fix Speed Have a Real Cost, Even Without an Exact Number?</BlogHeader>
 
                         <BlogText>
-                            Right now, as you read this, you're losing money.
+                            You don&apos;t need a precise dollar figure to know that every day at a 3+ second load time is a day of avoidable conversion loss, per the Deloitte research cited above. The illustrative math earlier in this article, applied to a hypothetical $500K/year store, put the shape of that loss in the tens of thousands of dollars per year. Your actual number depends on your traffic, average order value, and current conversion rate, which is exactly what our free audit calculates for your specific store instead of a generic placeholder.
                         </BlogText>
 
                         <BlogText>
-                            If your store does $500K/year and your load time is 3+ seconds:
-                        </BlogText>
-
-                        <BlogList items={[
-                            "You're losing $6,250-$12,500 per month to slow speed",
-                            "That's $75,000-$150,000 per year",
-                            "By the time you read this article, you've lost $100-$400 in revenue",
-                            "By the time you fix it (if you fix it), you could have lost $50,000+"
-                        ]} />
-
-                        <BlogText>
-                            The faster you move, the more money you save.
+                            What is universally true, regardless of your store&apos;s size, is the direction: the longer a store stays at 3+ seconds, the longer it keeps paying that conversion tax. Fixing it sooner simply means fewer months of paying a tax you don&apos;t have to pay.
                         </BlogText>
 
                         <BlogHeader>What Should You Do to Stop Losing Revenue to Slow Speed?</BlogHeader>
@@ -546,11 +492,12 @@ export default function ShopifySlowPage() {
                     <section className="mb-10">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>Every 0.1 second of load time costs you 8% of conversions</strong>: A $500K/year Shopify store loading in 3.8 seconds is losing $75K-$150K annually to preventable speed issues.</li>
+                            <li><strong>Speed is a revenue line, not just an engineering metric</strong>: Deloitte&apos;s published research found every 0.1 second of load-time improvement lifts conversions by roughly 8%, which is the one hard, cited number this article treats as fact.</li>
                             <li><strong>Theme optimization cannot fix the core problem</strong>: All Shopify themes share the same slow Liquid foundation, so switching themes or compressing images only moves you from 35 to 48 on PageSpeed.</li>
+                            <li><strong>Cart abandonment economics double the cost of slow speed</strong>: you lose conversions twice, once when visitors abandon before the page finishes loading, and again when checkout friction costs you customers who had already decided to buy.</li>
                             <li><strong>A custom headless storefront is a fixed one-time cost, not a monthly tax</strong>: PandaCodeGen builds headless Shopify storefronts at a fixed $5,000 to $10,000 (Scale tier), and for a store losing real revenue to speed it typically pays for itself within months on recovered conversions alone.</li>
-                            <li><strong>Same products, same traffic, different results</strong>: One client went from $420K/year to $890K/year after replacing their slow Shopify theme with a fast custom frontend.</li>
-                            <li><strong>If speed is visibly costing you conversions, headless pays for itself</strong>: the math works for stores of all sizes when speed is the bottleneck. Not sure? Book a free call and we will run the numbers for your specific store.</li>
+                            <li><strong>We show verified results, not invented ones</strong>: on Panda Patches, PandaCodeGen&apos;s own store, a headless rebuild took mobile PageSpeed from 64 to 90+ and cut LCP from 5.8s to 0.8s on the same catalog and traffic, a result you can check yourself in Lighthouse. Any dollar figures elsewhere in this article that use a hypothetical store are labeled as illustrative, not client results.</li>
+                            <li><strong>If speed is visibly costing you conversions, headless pays for itself</strong>: the math works for stores of all sizes when speed is the bottleneck. Not sure what that means for your store specifically? Book a free call and we will run the actual numbers for your store, not a generic model.</li>
                         </ol>
                     </section>
 

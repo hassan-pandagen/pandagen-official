@@ -66,7 +66,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -437,7 +437,7 @@ export default function WhyWebsiteSlowPage() {
                                     { href: "/blog/core-web-vitals-explained", label: "What Are Core Web Vitals and Why Do They Affect Revenue?" },
                                     { href: "/blog/how-website-speed-affects-seo", label: "How Website Speed Affects SEO Rankings" },
                                     { href: "/blog/wordpress-plugins-destroy-speed", label: "Are WordPress Plugins Slowing Down Your Site?" },
-                                    { href: "/blog/how-to-achieve-100-pagespeed", label: "How to Hit 100/100 PageSpeed Score (Our Exact 8-Step Process)" },
+                                    { href: "/blog/how-to-achieve-100-pagespeed", label: "How to Hit a 90+ PageSpeed Score (Our Exact 8-Step Process)" },
                                     { href: "/blog/website-rebuild-cost-2026", label: "How Much Does a Website Rebuild Cost in 2026?" }
                                 ].map(link => (
                                     <Link key={link.href} href={link.href} className="flex items-center gap-2 text-sm text-cognac hover:underline">

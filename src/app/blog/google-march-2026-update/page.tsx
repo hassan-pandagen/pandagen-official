@@ -55,7 +55,7 @@ const articleSchema = {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
-                "jobTitle": "Founder and Lead Engineer",
+                "jobTitle": "Co-founder and Lead Engineer",
                 "url": "https://www.pandacodegen.com/about/hassan",
                 "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
@@ -188,7 +188,7 @@ export default function GoogleMarchUpdatePage() {
                         <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
                             "Google's March 2026 core update tightened LCP from 2.5s to 2.0s and made INP a primary ranking signal. 55% of sites saw ranking changes within two weeks.",
-                            "47% of sites with slow Core Web Vitals lost rankings. Small businesses lose an average of $20,172 per year from slow websites.",
+                            "47% of sites with slow Core Web Vitals lost rankings. Every 1-second delay in load time reduces conversions by 7%, compounding into thousands in lost revenue per year for a typical small business.",
                             "Recovery takes 3 to 6 months. The fastest path forward is rebuilding on a modern framework that scores 90+ on PageSpeed out of the box."
                         ]} />
                     </div>
@@ -268,14 +268,13 @@ export default function GoogleMarchUpdatePage() {
                         <BlogList items={[
                             "Every 1-second delay in page load time reduces conversions by 7%",
                             "Sites that load in 1 second convert at 3x the rate of sites that load in 5 seconds",
-                            "Small businesses lose an average of $20,172 per year from slow website performance",
                             "52% of e-commerce sites were affected by this update, with product pages hit hardest"
                         ]} />
 
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 my-10">
                             <StatCard stat="55%" label="Sites Saw Ranking Changes" context="Within two weeks of the update" />
                             <StatCard stat="47%" label="Slow Sites Lost Rankings" context="Sites with poor Core Web Vitals" />
-                            <StatCard stat="$20,172" label="Lost Per Year" context="Average for small businesses with slow sites" />
+                            <StatCard stat="7%" label="Conversion Loss" context="Per 1-second delay in load time" />
                         </div>
 
                         <BlogText>
@@ -304,7 +303,11 @@ export default function GoogleMarchUpdatePage() {
                         </BlogText>
 
                         <BlogText>
-                            The problem is not WordPress itself. It is the layers of plugins, themes, and page builders that pile up over time. Every plugin adds code that your visitor&apos;s browser has to download and process. A typical WordPress site loads 30 to 60 external scripts before a visitor can even interact with the page.
+                            The problem is not WordPress itself. It is the layers of plugins, themes, and page builders that pile up over time. Every plugin adds code that your visitor&apos;s browser has to download and process. A typical WordPress site loads 30 to 60 external scripts before a visitor can even interact with the page. Speed is only half the plugin problem too. The fast-multiplying AI plugins carry a{" "}
+                            <Link href="/blog/wordpress-ai-security-risk-2026" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                                WordPress AI plugin security risk
+                            </Link>{" "}
+                            that most site owners have not priced in yet.
                         </BlogText>
 
                         <BlogText>
@@ -344,7 +347,7 @@ export default function GoogleMarchUpdatePage() {
                         ]} />
 
                         <BlogText>
-                            The takeaway for business owners: your website needs to be fast AND credible. A 95/100 PageSpeed score paired with expert-written content about your industry is the combination Google rewards most right now.
+                            The takeaway for business owners: your website needs to be fast AND credible. A 90+ PageSpeed score paired with expert-written content about your industry is the combination Google rewards most right now.
                         </BlogText>
 
                         {/* Mid-Article CTA */}
@@ -369,7 +372,7 @@ export default function GoogleMarchUpdatePage() {
                         <BlogText>
                             <strong>Step 2: Understand where the slowness comes from.</strong> In most cases, it is your platform. WordPress themes, page builders, and plugins create layers of code that cannot be optimized away. You can compress images and add caching, but there is a ceiling. Our guide on{" "}
                             <Link href="/blog/how-to-achieve-100-pagespeed" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                how to achieve 100/100 PageSpeed
+                                how to hit a 90+ PageSpeed score
                             </Link>{" "}
                             explains exactly where that ceiling is and why.
                         </BlogText>
@@ -433,7 +436,7 @@ export default function GoogleMarchUpdatePage() {
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
                             <li><strong>Google tightened speed requirements significantly</strong>: LCP dropped from 2.5s to 2.0s, INP became a primary ranking signal, and 55% of sites saw ranking changes within two weeks.</li>
-                            <li><strong>47% of slow sites lost rankings</strong>: Every 1-second delay reduces conversions by 7%. Small businesses lose an average of $20,172 per year from slow performance.</li>
+                            <li><strong>47% of slow sites lost rankings</strong>: Every 1-second delay reduces conversions by 7%, which compounds into a meaningful revenue hit for any small business running on organic traffic.</li>
                             <li><strong>WordPress and Shopify sites were hit hardest</strong>: Only 44% of WordPress sites pass Core Web Vitals on mobile. Elementor sites average 3.8 to 5.2s LCP, more than double the new threshold.</li>
                             <li><strong>Content quality matters just as much as speed</strong>: 72% of top pages show detailed author credentials, and sites with original research gained roughly 22% visibility.</li>
                             <li><strong>Recovery takes 3 to 6 months, so act now</strong>: Sites that load in 1 second convert at 3x the rate of 5-second sites. The fastest fix is rebuilding on a modern framework that passes Core Web Vitals out of the box.</li>
