@@ -39,7 +39,7 @@ const ALL_CLIENTS: Record<string, CaseStudyClient> = {
     pagespeed: 95,
     loadTime: "< 1s",
     saved: "5-star Clutch",
-    note: "Featured client on Clutch. 5-star verified review. Custom Next.js + Sanity CMS build.",
+    note: "Featured client on Clutch. 5-star verified review. WordPress to custom Next.js migration.",
   },
   saforne: {
     name: "Saforne",

@@ -105,8 +105,8 @@ export default function PartnersContent() {
             transition={{ delay: 0.1 }}
             className="text-[2.5rem] md:text-[4.5rem] font-bold text-charcoal leading-[1.05] tracking-[-0.025em] mb-8 md:mb-10"
           >
-            You handle clients.
-            <span className="block font-serif italic text-cognac">We stay invisible.</span>
+            White label web development.
+            <span className="block font-serif italic text-cognac">You handle clients. We stay invisible.</span>
           </motion.h1>
 
           <motion.p

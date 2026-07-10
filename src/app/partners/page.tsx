@@ -3,12 +3,16 @@ import PartnersContent from './PartnersContent';
 
 export const metadata: Metadata = {
   title: 'White-Label Web Development for Agencies',
-  description: 'Three-tier agency partnership: Referral 15%, White-Label 35% margin, Joint Venture 50/50. Published rates, mutual NDA. Your brand, our engineering.',
+  description: 'White label web development for agencies: three-tier partnership — Referral 15%, White-Label 35% margin, Joint Venture 50/50. Published rates, mutual NDA.',
   alternates: { canonical: '/partners' },
   keywords: [
+    'white label web development',
     'white label web development agency',
     'agency partnership program',
     'white label nextjs development',
+    'white label next.js agency',
+    'white label developer for agencies',
+    'agency dev partner',
     'white label web design partner',
     'agency dev team outsourcing',
     'white label website builder agency',
@@ -19,7 +23,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'White-Label Web Development for Agencies | PandaCodeGen',
-    description: 'Three-tier agency partnership. 15% Referral / 35% White-Label margin / 50/50 Joint Venture. Published rates. Mutual NDA. Your brand, our engineering.',
+    description: 'White label web development for agencies. 15% Referral / 35% White-Label margin / 50/50 Joint Venture. Published rates. Mutual NDA. Your brand, our engineering.',
     url: 'https://www.pandacodegen.com/partners',
     siteName: 'PandaCodeGen',
     type: 'website',
@@ -28,7 +32,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'White-Label Web Development for Agencies | PandaCodeGen',
-    description: 'Three-tier agency partnership. Published commission rates. Mutual NDA. Your brand, our engineering.',
+    description: 'White label web development for agencies. Published commission rates. Mutual NDA. Your brand, our engineering.',
   },
 };
 
@@ -40,7 +44,7 @@ export default function PartnersPage() {
         "@type": "Service",
         "@id": "https://www.pandacodegen.com/partners#service",
         "name": "White-Label Web Development Partnership",
-        "description": "Three-tier agency partnership program: Referral Partner (15% commission), White-Label Partner (35% margin), and Joint Venture Partner (50/50 revenue split). Mutual NDA, full source code handoff, your brand on all deliverables.",
+        "description": "White label web development for agencies: a three-tier partnership program with Referral Partner (15% commission), White-Label Partner (35% margin), and Joint Venture Partner (50/50 revenue split). Mutual NDA, full source code handoff, your brand on all deliverables.",
         "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
         "areaServed": "Worldwide",
         "serviceType": ["White-Label Web Development", "Agency Partnership", "Custom Web Development", "Outsourced Development", "Referral Partner Program", "Joint Venture Partnership"],

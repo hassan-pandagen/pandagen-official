@@ -30,7 +30,11 @@ export const metadata: Metadata = {
         "meta conversions api server side tracking",
         "event match quality low fix",
         "fbp fbc tracking facebook",
-        "shopify checkout.liquid tracking broke"
+        "shopify checkout.liquid tracking broke",
+        "shopify conversion tracking fix",
+        "shopify server side tracking",
+        "fix shopify meta pixel ios",
+        "shopify sales not showing in meta ads manager"
     ],
     robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
@@ -38,7 +42,7 @@ export const metadata: Metadata = {
         description: "Pixel not firing, iOS killed your tracking, Meta under-reporting sales? Here is how to diagnose broken Facebook ad tracking and fix it with server-side CAPI.",
         type: "article",
         publishedTime: "2026-07-06",
-        modifiedTime: "2026-07-06",
+        modifiedTime: "2026-07-09",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/fix-meta-ad-tracking-2026",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -60,7 +64,7 @@ const articleSchema = {
             "description": "Pixel not firing, iOS killed your tracking, Meta under-reporting sales? How to diagnose broken Facebook ad tracking and fix it with server-side CAPI.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-07-06T00:00:00-05:00",
-            "dateModified": "2026-07-06T00:00:00-05:00",
+            "dateModified": "2026-07-09T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -79,15 +83,16 @@ const articleSchema = {
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/fix-meta-ad-tracking-2026" },
             "articleSection": "Ad Tracking",
-            "keywords": ["facebook ad tracking not working", "meta pixel not firing", "facebook conversions not tracking", "meta conversions api", "event match quality"],
-            "wordCount": 2100,
-            "timeRequired": "PT9M",
+            "keywords": ["facebook ad tracking not working", "meta pixel not firing", "facebook conversions not tracking", "meta conversions api", "event match quality", "shopify conversion tracking fix"],
+            "wordCount": 2800,
+            "timeRequired": "PT11M",
             "inLanguage": "en-US",
             "about": [
                 { "@type": "Thing", "name": "Meta Conversions API" },
                 { "@type": "Thing", "name": "Facebook Pixel" },
                 { "@type": "Thing", "name": "Server-Side Tracking" },
-                { "@type": "Thing", "name": "Event Match Quality" }
+                { "@type": "Thing", "name": "Event Match Quality" },
+                { "@type": "Thing", "name": "Shopify Conversions API" }
             ],
             "speakable": {
                 "@type": "SpeakableSpecification",
@@ -120,7 +125,7 @@ const articleSchema = {
             "description": "Pixel not firing, iOS killed your tracking, Meta under-reporting sales? How to diagnose broken Facebook ad tracking and fix it with server-side CAPI.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-07-06T00:00:00-05:00",
-            "dateModified": "2026-07-06T00:00:00-05:00",
+            "dateModified": "2026-07-09T00:00:00-05:00",
             "inLanguage": "en-US"
         },
         {
@@ -174,7 +179,7 @@ export default function FixMetaAdTrackingPage() {
                         </p>
                         <BlogAuthor
                             date="Jul 6, 2026"
-                            readTime="9 min read"
+                            readTime="11 min read"
                             bio="Hassan builds custom Next.js sites with server-side Meta CAPI tracking wired in. On Panda Patches, the store we build and run, that setup lifted credited Lead conversions ~10% and pushed Lead Event Match Quality to 9.0."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
@@ -368,6 +373,59 @@ export default function FixMetaAdTrackingPage() {
 
                         <BlogText>
                             PandaCodeGen builds server-side tracking directly into the site, so it&apos;s owned, with no monthly middleware tax. Server-side Meta CAPI is included in our Scale tier ($5K to $10K), and it can be added to an existing site too, it doesn&apos;t require a full rebuild. It&apos;s part of how we do <Link href="/services/ecommerce" className="text-cognac underline underline-offset-2 hover:text-amber-700">e-commerce development</Link> and <Link href="/services/custom-engineering" className="text-cognac underline underline-offset-2 hover:text-amber-700">custom engineering</Link>: the tracking is yours, wired in once, and it doesn&apos;t expire when an invoice does.
+                        </BlogText>
+
+                        <BlogHeader>Fixing Meta Ad Tracking If You&apos;re on Shopify</BlogHeader>
+
+                        <BlogText>
+                            Everything above describes wiring the Conversions API into a custom-built stack, the way we did it for Panda Patches, our own Next.js store. A lot of the store owners reading this run Shopify instead, and the fix path there is genuinely different. Shopify has shipped its own native Meta Conversions API support directly into the platform, so most Shopify merchants don&apos;t need to write server code, hash identifiers, or build a deduplication pipeline from scratch. You&apos;re turning on an integration Shopify and Meta already built and maintain, not building one.
+                        </BlogText>
+
+                        <InsightBox variant="tip" label="Quick Answer">
+                            On Shopify, look for server-side tracking inside Shopify&apos;s own Marketing settings and the official Meta (Facebook &amp; Instagram) sales channel, usually alongside Settings &gt; Customer events. The exact label shifts as Shopify updates its admin, so if what you see doesn&apos;t match, search &quot;Meta&quot; or &quot;Facebook&quot; from Shopify admin search and look for the conversions API or server-side tracking option attached to your ad connection.
+                        </InsightBox>
+
+                        <BlogText>
+                            Connect your Meta ad account and catalog through that channel, then check that the data-sharing setting is on the highest option available rather than the default. That one setting is usually the difference between Shopify sending Meta a thin, browser-only event and a full server-side event with order, email, and phone data attached.
+                        </BlogText>
+
+                        <BlogHeader>Why is Shopify&apos;s server-side tracking setup simpler than the custom Next.js path above?</BlogHeader>
+
+                        <BlogText>
+                            Because Shopify owns the checkout. On a custom stack, you build the server, capture the identifiers, hash them correctly, and deduplicate against the pixel yourself, which is the work described earlier in this post. On Shopify, the platform already sits between the buyer and the order data: it knows the email, phone, and order total the moment checkout completes, and its native integration passes that straight to Meta&apos;s Conversions API on your behalf.
+                        </BlogText>
+
+                        <BlogText>
+                            This is also why Shopify pushed merchants toward the native integration in the first place. When Shopify <BlogHighlight>removed checkout.liquid</BlogHighlight> and custom scripts on the Thank You and Order Status pages, it closed off the old workaround of pasting a custom pixel snippet onto the checkout page. The native, platform-level Conversions API connection is the supported replacement, not a workaround, and it keeps working through checkout changes that would otherwise break a custom script.
+                        </BlogText>
+
+                        <BlogHeader>Why aren&apos;t my Shopify sales showing up in Meta Ads Manager?</BlogHeader>
+
+                        <BlogText>
+                            Run the same check described earlier in this post: compare Meta&apos;s reported purchases to your actual Shopify order count for the same date range. If Meta is under-counting, the cause on Shopify is almost always one of two things.
+                        </BlogText>
+
+                        <BlogList items={[
+                            "The app is installed but server-side sharing isn't actually turned on. Plenty of stores connected the Facebook & Instagram channel years ago for the browser pixel and never revisited it once Shopify added the conversions API layer, so they're still effectively pixel-only.",
+                            "Event Match Quality is low. Open Events Manager and check the EMQ score on your Purchase event, same as described earlier in this post. A low score on Shopify usually means the channel isn't passing hashed email and phone with the order, not that the integration itself is broken.",
+                        ]} />
+
+                        <BlogText>
+                            Neither of those is a code problem. Both are a settings problem, which is the practical upside of being on Shopify: the fix is a checklist, not a build.
+                        </BlogText>
+
+                        <BlogHeader>How do I fix Shopify tracking after iOS privacy changes?</BlogHeader>
+
+                        <BlogText>
+                            The same way described throughout this post, just through Shopify&apos;s own toggle instead of custom code. iOS App Tracking Transparency restricts what the <em>browser</em> pixel can see once a customer opts out. It has no power over a server-to-server call, which is exactly what Shopify&apos;s native Conversions API integration sends. Turn it on, connect your ad account, and set data sharing to the highest level, and iOS opt-outs stop being a blind spot for that share of your traffic.
+                        </BlogText>
+
+                        <BlogText>
+                            The EMQ mechanics behind that fix are the same ones behind the Panda Patches numbers referenced earlier in this post. Panda Patches isn&apos;t a Shopify store, it runs on our own Next.js and Square stack, but it hits Meta&apos;s Conversions API and EMQ scoring the same way any CAPI integration does. Feeding Meta a full set of identifiers, email, phone, fbp, fbc, is what moved Lead EMQ to roughly 9.0 there. A Shopify store with the native integration fully connected and data sharing maxed out is feeding Meta that same kind of identifier set, so the EMQ lift follows the same logic, even though the plumbing underneath is Shopify&apos;s, not custom code.
+                        </BlogText>
+
+                        <BlogText>
+                            If your native integration is already connected, data sharing is already maxed out, and EMQ is still weak, or you&apos;re running a headless Shopify setup where checkout doesn&apos;t sit on Shopify&apos;s standard hosted flow, that&apos;s closer to the custom-stack problem described in the rest of this post. Book the free tracking audit below and we&apos;ll tell you which situation you&apos;re actually in.
                         </BlogText>
 
                     </div>

@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description: "The exact playbook we bake into every new website build. Cited across ChatGPT, Claude, Perplexity, and Google AI Overview. 10 tactics with real GSC receipts.",
         type: "article",
         publishedTime: "2026-05-18T00:00:00-05:00",
-        modifiedTime: "2026-06-06T00:00:00-05:00",
+        modifiedTime: "2026-07-09T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/aeo-playbook-built-into-every-website",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -64,7 +64,7 @@ const articleSchema = {
             "description": "The exact AEO playbook we bake into every new website build. Cited across ChatGPT, Claude, Perplexity, and Google AI Overview, with the 10 tactics and real GSC receipts.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-05-18T00:00:00-05:00",
-            "dateModified": "2026-05-18T00:00:00-05:00",
+            "dateModified": "2026-07-09T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -143,7 +143,7 @@ const articleSchema = {
             "description": "The exact playbook we bake into every new website build. Cited across ChatGPT, Claude, Perplexity, and Google AI Overview.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-05-18T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-07-09T00:00:00-05:00",
             "inLanguage": "en-US"
         },
         {
