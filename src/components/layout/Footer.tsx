@@ -57,7 +57,7 @@ export default function Footer({ onOpenQuote }: FooterProps) {
                 PandaCodeGen<span className="text-cognac">.</span>
               </Link>
               <p className="mt-6 text-stone-600 leading-relaxed max-w-sm">
-                We replace slow WordPress &amp; Shopify sites with custom built websites that load in under 1 second. No monthly fees. No vendor lock-in.
+                We replace slow WordPress &amp; Shopify sites with custom Next.js websites engineered to get cited by AI search and load in under 1 second. Code you own, a written 90+ PageSpeed guarantee, no monthly fees, no vendor lock-in.
               </p>
               <ul className="mt-6 space-y-2 text-sm text-stone-600">
                 <li>📍 701 Tillery St Ste 12, Austin, TX 78702</li>

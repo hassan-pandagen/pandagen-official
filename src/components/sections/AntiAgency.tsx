@@ -6,8 +6,8 @@ import { UserX, Code, LockOpen, ArrowRight } from "lucide-react";
 const pillars = [
   {
     icon: UserX,
-    title: "No Account Managers",
-    body: "You speak directly to the lead engineer building your product. Zero communication lag. Zero 'let me get back to you on that.' Direct access, always.",
+    title: "Founders, Not Account Managers",
+    body: "You work directly with the co-founder engineer building your site, one dedicated point of contact from discovery to launch. No account managers, no ticket queues, no freelancers who vanish mid-project.",
   },
   {
     icon: Code,

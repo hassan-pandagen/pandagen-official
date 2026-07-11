@@ -38,7 +38,7 @@ export default function Hero() {
             <span className="relative flex h-2 w-2">
               <span className="relative inline-flex rounded-full h-2 w-2 bg-cognac" />
             </span>
-            Built by Hassan Jamal &middot; Austin, TX &middot; Featured in Woman&apos;s World
+            Built by Hassan Jamal &middot; Featured in Woman&apos;s World
           </div>
 
           {/* Headline: LCP candidate, pure server HTML, inline fontFamily forces instant paint.
@@ -62,14 +62,14 @@ export default function Hero() {
             className="text-lg md:text-xl font-medium mb-4 max-w-xl leading-snug"
             style={{ color: "#44403c", fontFamily: "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" }}
           >
-            We build the sites{" "}
+            We build custom Next.js websites that{" "}
             <span style={{ color: "#1C1917", fontWeight: 700 }}>ChatGPT, Claude and Google AI recommend</span>, so when your buyers ask who to buy from, you&apos;re the answer, not your competitor.
           </p>
 
           {/* One proof line: reason to believe — cited (proof) + ownership + price, tight. */}
           <p className="text-sm font-semibold text-charcoal flex items-center gap-2 mb-6">
             <Sparkles className="w-4 h-4 text-cognac shrink-0" />
-            Already cited by ChatGPT, Claude and Perplexity. Custom code you own, from $1,500.
+            Already cited by ChatGPT, Claude and Perplexity. Custom code you own from $1,500, backed by a written 90+ PageSpeed guarantee.
           </p>
 
           {/* CTAs, animated client component */}
