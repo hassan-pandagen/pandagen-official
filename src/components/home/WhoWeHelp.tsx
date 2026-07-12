@@ -2,6 +2,7 @@ import { Gauge, ShoppingBag, Users, Zap, DollarSign, LayoutDashboard, Sparkles, 
 
 // Homepage ICP block — the 8 buyers PandaCodeGen serves, written in their OWN inner voice.
 // Voice-of-customer quotes so a visitor reads their own sentence and thinks "that's me".
+// Two-zone card: their pain (white) on top, our fix (tinted footer) below.
 const SEGMENTS = [
   {
     icon: Target,
@@ -20,7 +21,7 @@ const SEGMENTS = [
   },
   {
     icon: DollarSign,
-    quote: "Half my revenue vanishes into subscriptions I'm too scared to cancel.",
+    quote: "Half my revenue vanishes into subscriptions I'm scared to cancel.",
     answer: "You don't need most of them. We build custom software you own once and cut the bill 40 to 70%.",
   },
   {
@@ -61,23 +62,37 @@ export default function WhoWeHelp() {
           {SEGMENTS.map((s, i) => (
             <div
               key={i}
-              className="group relative overflow-hidden rounded-3xl bg-white ring-1 ring-stone-200/80 shadow-sm p-7 md:p-9 transition-all duration-300 hover:ring-cognac/40 hover:shadow-xl hover:-translate-y-0.5"
+              className="group relative flex flex-col overflow-hidden rounded-3xl bg-white ring-1 ring-stone-300 shadow-md transition-all duration-300 hover:ring-cognac/50 hover:shadow-xl hover:-translate-y-0.5"
             >
-              {/* Oversized decorative quote mark — editorial accent, not a feature icon */}
+              {/* Cognac spine — a crafted accent that lifts on hover */}
               <span
                 aria-hidden
-                className="pointer-events-none absolute -top-3 right-5 font-serif text-[6rem] leading-none text-cognac/10 select-none"
-              >
-                &rdquo;
-              </span>
+                className="absolute left-0 top-0 h-full w-1 bg-cognac/0 group-hover:bg-cognac/60 transition-colors duration-300"
+              />
 
-              <p className="relative z-10 font-serif italic text-xl md:text-2xl text-charcoal leading-snug mb-6">
-                &ldquo;{s.quote}&rdquo;
-              </p>
+              {/* Zone 1 — their pain, in their own voice */}
+              <div className="relative flex-1 p-7 md:p-9 pb-6">
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute -top-3 right-5 font-serif text-[6rem] leading-none text-cognac/10 select-none"
+                >
+                  &rdquo;
+                </span>
+                <p className="relative z-10 font-serif italic text-xl md:text-2xl text-charcoal leading-snug">
+                  &ldquo;{s.quote}&rdquo;
+                </p>
+              </div>
 
-              <div className="flex items-start gap-3 pt-5 border-t border-stone-100">
-                <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-cognac/10">
-                  <s.icon className="h-4 w-4 text-cognac" />
+              {/* Zone 2 — our fix, on a tinted footer band */}
+              <div className="flex items-start gap-3 px-7 md:px-9 py-5 bg-stone-100/70 border-t border-stone-200">
+                <span
+                  className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-white"
+                  style={{
+                    background: "linear-gradient(135deg, var(--color-cognac) 0%, #8a2f07 100%)",
+                    boxShadow: "inset 0 1px 0 rgba(255,255,255,0.18), 0 2px 6px rgba(184,65,12,0.25)",
+                  }}
+                >
+                  <s.icon className="h-[18px] w-[18px]" strokeWidth={2.2} />
                 </span>
                 <p className="text-sm md:text-[15px] text-stone-600 leading-relaxed">{s.answer}</p>
               </div>

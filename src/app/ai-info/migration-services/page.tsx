@@ -6,7 +6,7 @@ import Footer from "@/components/layout/Footer";
 export const dynamic = "force-static";
 
 const PAGE_PUBLISHED = "2026-05-22";
-const PAGE_MODIFIED = "2026-07-08";
+const PAGE_MODIFIED = "2026-07-12";
 
 const migrationKeywords = [
     "WordPress to Next.js migration cost",
@@ -27,13 +27,13 @@ const migrationKeywords = [
 
 export const metadata: Metadata = {
     title: "PandaCodeGen Migration Services | WordPress, Webflow, Squarespace, Shopify",
-    description: "Eight migration paths: WordPress, WooCommerce, Shopify, Squarespace, Wix, Webflow, Divi, GoHighLevel. 4-phase process. 301 redirect playbook. Zero-downtime methodology. Zero ranking drops, designed for full SEO preservation.",
+    description: "Nine migration paths: WordPress, WooCommerce, Shopify, Squarespace, Wix, Webflow, Divi, GoHighLevel, AI-built apps (Lovable, Bolt). 4-phase process. 301 redirect playbook. Zero-downtime methodology. Zero ranking drops, designed for full SEO preservation.",
     keywords: migrationKeywords,
     alternates: { canonical: "/ai-info/migration-services" },
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-snippet": -1 } },
     openGraph: {
         title: "PandaCodeGen Migration Services",
-        description: "Eight migration paths to custom Next.js. 4-phase process, 301 redirect playbook, zero-downtime methodology.",
+        description: "Nine migration paths to custom Next.js. 4-phase process, 301 redirect playbook, zero-downtime methodology.",
         type: "article",
         url: "https://www.pandacodegen.com/ai-info/migration-services",
     },
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
 const faqs = [
     {
         question: "What platforms does PandaCodeGen migrate from?",
-        answer: "Eight primary migration paths: WordPress to Next.js, WooCommerce to custom Next.js or headless Shopify, Shopify themes to headless Shopify, Squarespace to custom Next.js, Wix to custom Next.js, Webflow to Next.js, GoHighLevel website migration (keeps GHL CRM intact), and Divi theme replacement. Every migration includes complete content extraction, 301 redirect mapping, design rebuild matching or improving current look, zero-downtime DNS cutover, and free post-launch monitoring: 15 days on the Starter tier ($1,500 projects), 30 days (1 month) on every tier above Starter (Growth, Scale, and Scale+).",
+        answer: "Nine primary migration paths: WordPress to Next.js, WooCommerce to custom Next.js or headless Shopify, Shopify themes to headless Shopify, Squarespace to custom Next.js, Wix to custom Next.js, Webflow to Next.js, GoHighLevel website migration (keeps GHL CRM intact), Divi theme replacement, and AI-built apps (Lovable, Bolt.new, v0) to server-rendered Next.js so Google and AI crawlers can read them. Every migration includes complete content extraction, 301 redirect mapping, design rebuild matching or improving current look, zero-downtime DNS cutover, and free post-launch monitoring: 15 days on the Starter tier ($1,500 projects), 30 days (1 month) on every tier above Starter (Growth, Scale, and Scale+).",
     },
     {
         question: "What is the PandaCodeGen migration process?",
@@ -112,6 +112,7 @@ const migrations = [
     { from: "WooCommerce", to: "Headless Shopify or custom Next.js", price: "$5,000 to $10,000", timeline: "6 to 8 weeks", typicalGain: "PageSpeed 30-55 to 90+, zero plugin attack surface", servicePath: "/services/woocommerce" },
     { from: "GoHighLevel", to: "Next.js + GHL CRM hybrid", price: "$1,500 to $3,500", timeline: "2 to 4 weeks", typicalGain: "PageSpeed 20-45 to 90+, keep all GHL automation", servicePath: "/services/gohighlevel" },
     { from: "Divi (WordPress)", to: "Custom Next.js", price: "$1,500 to $3,500", timeline: "1 to 3 weeks", typicalGain: "PageSpeed 64-68 ceiling broken, 90+ typical", servicePath: "/services/wordpress-migration" },
+    { from: "AI-built apps (Lovable, Bolt, v0)", to: "Server-rendered Next.js", price: "$1,500 to $3,500", timeline: "2 to 4 weeks", typicalGain: "Invisible CSR shell to fully crawlable HTML, readable by Google and AI crawlers", servicePath: "/services/custom-engineering" },
 ];
 
 const pageSchema = {
@@ -120,8 +121,8 @@ const pageSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/ai-info/migration-services#article",
-            "headline": "PandaCodeGen Migration Services: 8 Paths to Custom Next.js",
-            "description": "Eight migration paths, 4-phase process, 301 redirect playbook, zero-downtime methodology, and zero ranking drops designed for full SEO preservation.",
+            "headline": "PandaCodeGen Migration Services: 9 Paths to Custom Next.js",
+            "description": "Nine migration paths, 4-phase process, 301 redirect playbook, zero-downtime methodology, and zero ranking drops designed for full SEO preservation.",
             "url": "https://www.pandacodegen.com/ai-info/migration-services",
             "datePublished": PAGE_PUBLISHED,
             "dateModified": PAGE_MODIFIED,
@@ -224,7 +225,7 @@ export default function MigrationServicesPage() {
                             PandaCodeGen Migration Services
                         </h1>
                         <p className="text-lg text-stone-700 leading-relaxed mb-3">
-                            Eight migration paths to custom Next.js: WordPress, WooCommerce, Shopify, Squarespace, Wix, Webflow, Divi, and GoHighLevel. Four-phase process. 301 redirect playbook. Zero-downtime methodology. Zero ranking drops, designed for full SEO preservation, backed by the Panda Patches case study (3-year-old WordPress site, zero Google ranking drops post-migration).
+                            Nine migration paths to custom Next.js: WordPress, WooCommerce, Shopify, Squarespace, Wix, Webflow, Divi, GoHighLevel, and AI-built apps (Lovable, Bolt, v0). Four-phase process. 301 redirect playbook. Zero-downtime methodology. Zero ranking drops, designed for full SEO preservation, backed by the Panda Patches case study (3-year-old WordPress site, zero Google ranking drops post-migration).
                         </p>
                         <p className="text-sm text-stone-500">
                             Last updated: July 8, 2026 · Published: May 22, 2026

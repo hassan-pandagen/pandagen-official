@@ -337,7 +337,7 @@ export const clusters: Cluster[] = [
     label: 'Migration (cross-platform)',
     entityIds: ['nextjs'],
     relatedClusterIds: ['wordpress', 'webflow', 'seo-aeo', 'pricing'],
-    postIds: ['will-migrating-hurt-my-seo', 'website-migration-cost-2026', 'woocommerce-migration-cost'],
+    postIds: ['will-migrating-hurt-my-seo', 'website-migration-cost-2026', 'woocommerce-migration-cost', 'lovable-site-not-showing-on-google'],
   },
   {
     id: 'seo-aeo',
@@ -348,6 +348,7 @@ export const clusters: Cluster[] = [
     postIds: [
       'agentic-browsing-pagespeed-score', 'aeo-playbook-built-into-every-website', 'google-march-2026-update',
       'why-competitor-outranks-you', 'will-migrating-hurt-my-seo', 'how-website-speed-affects-seo',
+      'lovable-site-not-showing-on-google',
     ],
   },
   {

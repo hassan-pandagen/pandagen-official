@@ -34,6 +34,30 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "lovable-site-not-showing-on-google",
+    cardStat: "747 KB",
+    cardStatLabel: "of raw HTML our homepage sends a crawler; a default AI-built site sends about 1 KB",
+    title: "Your Lovable Site Looks Great. Google Sees an Empty Page.",
+    excerpt: "Lovable, Bolt, and Replit build client-side rendered React apps, so crawlers get an empty shell: Google indexes you late or never, and ChatGPT can't cite you at all. The 60-second test to check your own site, and the Next.js migration that fixes it.",
+    category: "AEO",
+    readTime: "10 min",
+    date: "Jul 12",
+    author: "Hassan",
+    role: "Co-founder, Lead Engineer",
+    featured: false,
+    illustrationType: "ranking",
+    lastModified: "2026-07-12",
+    faqs: [
+      { question: "Why is my Lovable site not showing up on Google?", answer: "Lovable generates client-side rendered React apps, so your server sends crawlers a nearly empty HTML shell and JavaScript paints the content later. Google's first-wave crawl sees a blank page, and rendering in the second wave is slow and unreliable, so pages index late, partially, or not at all. The fix is server-side rendering, usually by migrating the app to Next.js." },
+      { question: "Do ChatGPT and Claude crawlers run JavaScript?", answer: "No. As of June 2026, GPTBot, ClaudeBot, PerplexityBot, and every other major AI crawler read raw HTML only. ChatGPT's crawler even downloads JavaScript files but never executes them. Only Google Gemini renders JavaScript, because it uses Googlebot's rendering infrastructure. If your content only exists after JavaScript runs, AI assistants cannot see or cite it." },
+      { question: "Can I fix Lovable SEO without leaving Lovable?", answer: "Partially. A prerendering service can serve static snapshots of your pages to known bots, which restores basic crawlability while you keep Lovable's editor. But human visitors still get the slower client-side experience, you maintain a bot-detection layer as new AI crawlers appear, and you add a subscription. It is a stopgap, not a fix; the durable solution is server-side rendering." },
+      { question: "How much does it cost to migrate a Lovable app to Next.js?", answer: "At PandaCodeGen, migrations start at $1,500 fixed. Because Lovable outputs React and Next.js is a React framework, your components and design port over rather than being rebuilt, which keeps the cost at the low end of our tiers. Every migration includes our written 90+ PageSpeed guarantee and full source-code ownership." },
+      { question: "Google shows my lovable.app URL instead of my custom domain. How do I fix it?", answer: "Lovable publishes to a yoursite.lovable.app subdomain before you connect a custom domain, and if both stay live, Google frequently keeps ranking the lovable.app version. Consolidate to one address: set the custom domain as canonical, redirect the lovable.app URL to it, then verify the custom domain in Google Search Console and request re-indexing of your main pages. Google needs one clear winner, not two copies." },
+      { question: "Is v0 better than Lovable for SEO?", answer: "For search visibility, yes. v0 outputs server-rendered Next.js with metadata and structured data by default, so crawlers receive real HTML. Lovable and Bolt default to client-side rendered React SPAs, which send crawlers an empty shell. If you have not picked a builder yet and organic traffic matters, v0's default architecture is the safer start." },
+      { question: "Will migrating my React site to Next.js hurt my existing rankings?", answer: "Usually there is little to hurt, because a client-side rendered site rarely has much indexed in the first place. A proper migration keeps your URLs (or 301-redirects changed ones), preserves titles and content, and typically improves rankings once crawlers can finally read full HTML." },
+    ]
+  },
+  {
     id: "fix-meta-ad-tracking-2026",
     cardStat: "9.0 EMQ",
     cardStatLabel: "Lead match quality after wiring server-side CAPI on our own store",
