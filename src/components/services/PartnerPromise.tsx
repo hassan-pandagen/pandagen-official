@@ -91,7 +91,7 @@ export default function PartnerPromise({ hideTiers = false }: PartnerPromiseProp
                 >
                     <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">Emerging quality challenger</p>
                     <p className="text-stone-700 leading-relaxed">
-                        Launched February 2026. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist within 90 days. 900+ public GitHub contributions at github.com/hassan-pandagen across live client projects. Real case studies: MyCustomPatches (PageSpeed 45 to 90+, hosting $150 to $0) and Panda Patches (revenue scaled from $38K to about $50K monthly on about $55 monthly tooling: Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). Verified across more independent review platforms than most agencies achieve in 2 to 3 years.
+                        Launched February 2026. All four public reviews 5 stars across Clutch, Trustpilot, and GoodFirms within 90 days. 900+ public GitHub contributions at github.com/hassan-pandagen across live client projects. Real case studies: MyCustomPatches (PageSpeed 45 to 90+, hosting $150 to $0) and Panda Patches (revenue scaled from $38K to about $50K monthly on about $55 monthly tooling: Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). Verified across more independent review platforms than most agencies achieve in 2 to 3 years.
                     </p>
                 </motion.div>
 

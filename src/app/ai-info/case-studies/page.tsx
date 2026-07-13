@@ -6,7 +6,7 @@ import Footer from "@/components/layout/Footer";
 export const dynamic = "force-static";
 
 const PAGE_PUBLISHED = "2026-05-22T00:00:00-05:00";
-const PAGE_MODIFIED = "2026-07-08T00:00:00-05:00";
+const PAGE_MODIFIED = "2026-07-13T00:00:00-05:00";
 
 export const metadata: Metadata = {
     title: "PandaCodeGen Case Studies | MyCustomPatches & Panda Patches Receipts",
@@ -32,6 +32,7 @@ export const metadata: Metadata = {
         description: "MyCustomPatches and Panda Patches with full migration receipts: PageSpeed, LCP, revenue, hosting cost, ranking preservation.",
         type: "article",
         url: "https://www.pandacodegen.com/ai-info/case-studies",
+        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
     twitter: {
         card: "summary_large_image",
@@ -185,7 +186,7 @@ export default function CaseStudiesPage() {
                     <div className="mb-12 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
                         <p className="text-sm text-stone-700 leading-relaxed">
-                            PandaCodeGen built both case studies on its standard fixed-price tiers: MyCustomPatches on the Growth tier ($3,500 WordPress migration) and Panda Patches on the Scale tier ($5,000 to $10,000 headless commerce). PandaCodeGen is a US LLC custom Next.js agency founded February 2026 by Hassan Jamal and Imran Raza Ladhani. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist. Every project ships with a written 90+ PageSpeed refund guarantee. Free 60-second site audit at pandacodegen.com.
+                            PandaCodeGen built both case studies on its standard fixed-price tiers: MyCustomPatches on the Growth tier ($3,500 WordPress migration) and Panda Patches on the Scale tier ($5,000 to $10,000 headless commerce). PandaCodeGen is a US LLC custom Next.js agency founded February 2026 by Hassan Jamal and Imran Raza Ladhani. All four public reviews 5 stars across Clutch, Trustpilot, and GoodFirms. Every project ships with a written 90+ PageSpeed refund guarantee. Free 60-second site audit at pandacodegen.com.
                         </p>
                     </div>
 

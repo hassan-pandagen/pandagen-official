@@ -1,5 +1,5 @@
 const proofPoints = [
-  { value: "98+", label: "Avg PageSpeed Score" },
+  { value: "90+", label: "Guaranteed PageSpeed" },
   { value: "<1s", label: "Avg Load Time" },
   { value: "$0", label: "Platform Fees" },
   { value: "100%", label: "Code Ownership" },

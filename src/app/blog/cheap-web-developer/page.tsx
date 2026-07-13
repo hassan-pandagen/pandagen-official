@@ -138,7 +138,7 @@ const articleSchema = {
             "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://x.com/PandaCodeGen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158", "https://www.goodfirms.co/company/pandacodegen", "https://www.crunchbase.com/organization/pandacodegen", "https://www.designrush.com/agency/profile/pandacodegen", "https://www.sortlist.com/agency/pandacodegen", "https://www.f6s.com/pandacodegen", "https://www.sanity.io/exchange/community/pandacodegen", "https://www.behance.net/pandacodegen", "https://dev.to/pandacodegen", "https://www.reddit.com/user/PandaCodeGen/"],
+            "sameAs": ["https://x.com/PandaCodeGen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.goodfirms.co/company/pandacodegen", "https://www.crunchbase.com/organization/pandacodegen", "https://www.designrush.com/agency/profile/pandacodegen", "https://www.sortlist.com/agency/pandacodegen", "https://www.f6s.com/pandacodegen", "https://www.sanity.io/exchange/community/pandacodegen", "https://www.behance.net/pandacodegen", "https://dev.to/pandacodegen", "https://www.reddit.com/user/PandaCodeGen/"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
             "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 90+ Google PageSpeed in writing or a full refund on every build.",
             "areaServed": "Worldwide",
@@ -496,7 +496,7 @@ export default function CheapWebDeveloperPage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>Reviews and verified track record.</strong> Read the negative reviews carefully. They show how a developer handles problems when things go wrong. Look for patterns: missed deadlines, poor communication, broken code shipped to production, refusal to fix bugs after launch. PandaCodeGen has verified reviews on five independent platforms (Trustpilot, Clutch, Google, GoodFirms, Sortlist) under named clients including Matt Conner and Marshall James.
+                            <strong>Reviews and verified track record.</strong> Read the negative reviews carefully. They show how a developer handles problems when things go wrong. Look for patterns: missed deadlines, poor communication, broken code shipped to production, refusal to fix bugs after launch. PandaCodeGen has verified reviews on three independent platforms (Trustpilot, Clutch, GoodFirms) under named clients including Matt Conner and Marshall James.
                         </BlogText>
 
                         <BlogText>
@@ -563,7 +563,7 @@ export default function CheapWebDeveloperPage() {
                                     <p className="text-xs font-bold text-stone-500 uppercase tracking-wide">WordPress Migration</p>
                                 </div>
                                 <h3 className="font-bold text-charcoal mb-2 group-hover:text-cognac transition-colors">Move off WordPress for $1,500 to $3,500</h3>
-                                <p className="text-sm text-stone-600 leading-relaxed mb-3">Custom Next.js rebuild, all 200 plus pages migrated, every URL redirected, hosting drops from $150 a month to $0. MyCustomPatches went from PageSpeed 40 to 90+ in 6 weeks.</p>
+                                <p className="text-sm text-stone-600 leading-relaxed mb-3">Custom Next.js rebuild, all 200 plus pages migrated, every URL redirected, hosting drops from $150 a month to $0. MyCustomPatches went from PageSpeed 45 to 90+ in 6 weeks.</p>
                                 <p className="text-sm text-cognac font-bold flex items-center gap-1">View WordPress migration service <ArrowRight className="w-3 h-3" /></p>
                             </Link>
 
@@ -744,7 +744,7 @@ export default function CheapWebDeveloperPage() {
 
                         <div className="grid md:grid-cols-2 gap-3 my-6">
                             {[
-                                { label: "MyCustomPatches", desc: "10-year-old WordPress site to Next.js. PageSpeed went from 40 to 90+. Hosting cost dropped from $150 a month to $0." },
+                                { label: "MyCustomPatches", desc: "10-year-old WordPress site to Next.js. PageSpeed went from 45 to 90+. Hosting cost dropped from $150 a month to $0." },
                                 { label: "Panda Patches", desc: "3-year-old WordPress to headless Next.js + Sanity + Supabase + Square. PageSpeed 64 to 90+. Scaled from $38K to about $50K a month revenue on about $55 a month tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator)." },
                             ].map(({ label, desc }) => (
                                 <div key={label} className="flex items-start gap-3 p-4 bg-stone-50 border border-stone-200 rounded-xl">

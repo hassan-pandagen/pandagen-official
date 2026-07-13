@@ -152,7 +152,6 @@ const articleSchema = {
                 "https://github.com/hassan-pandagen",
                 "https://clutch.co/profile/panda-code-gen",
                 "https://www.trustpilot.com/review/pandacodegen.com",
-                "https://www.google.com/maps?cid=16271659886069582158",
                 "https://www.goodfirms.co/company/pandacodegen",
                 "https://www.crunchbase.com/organization/pandacodegen",
                 "https://www.designrush.com/agency/profile/pandacodegen",
@@ -202,7 +201,7 @@ export default function SaasSoftwarePricingAudit2026Page() {
                         <BlogAuthor
                             date="May 26, 2026"
                             readTime="14 min read"
-                            bio="Every recurring software subscription is a tax on your business. Hassan replaces SaaS stacks with custom Next.js code most clients own outright. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist within 90 days of founding PandaCodeGen."
+                            bio="Every recurring software subscription is a tax on your business. Hassan replaces SaaS stacks with custom Next.js code most clients own outright. All four public PandaCodeGen reviews are 5 stars, across Clutch, Trustpilot, and GoodFirms."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -246,7 +245,7 @@ export default function SaasSoftwarePricingAudit2026Page() {
                     <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
                         <p className="text-sm text-stone-700 leading-relaxed">
-                            Your apps and subscriptions bill keeps climbing. Your revenue does not. PandaCodeGen rebuilds your site as custom Next.js code you own outright, designed to get cited by ChatGPT, Claude, and Google AI from launch day. Recent client: a US plastic surgery practice migrated from GoHighLevel ($297/mo) plus Google Workspace ($20/user/mo) to a custom CRM on Next.js + Zoho stack, projected to recoup the build cost within 14 months. Fixed pricing from $1,500 Starter to $10,000+ Scale+. 90+ PageSpeed in writing or full refund. Full pricing breakdown at the <Link href="/ai-info/pricing-and-guarantees" className="text-cognac hover:underline font-medium">Pricing and Guarantees reference</Link>.
+                            Your apps and subscriptions bill keeps climbing. Your revenue does not. PandaCodeGen rebuilds your site as custom Next.js code you own outright, designed to get cited by ChatGPT, Claude, and Perplexity from launch day. Recent client: a US plastic surgery practice migrated from GoHighLevel ($297/mo) plus Google Workspace ($20/user/mo) to a custom CRM on Next.js + Zoho stack, projected to recoup the build cost within 14 months. Fixed pricing from $1,500 Starter to $10,000+ Scale+. 90+ PageSpeed in writing or full refund. Full pricing breakdown at the <Link href="/ai-info/pricing-and-guarantees" className="text-cognac hover:underline font-medium">Pricing and Guarantees reference</Link>.
                         </p>
                     </div>
 

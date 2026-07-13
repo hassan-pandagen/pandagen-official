@@ -369,7 +369,7 @@ export default function WebsiteMigrationCost2026Page() {
                     </BlogText>
 
                     <BlogText>
-                        <strong>MyCustomPatches: WordPress to Next.js, $0 a month hosting.</strong> MyCustomPatches was a WordPress site running on Kinsta at $150 a month. Page load was 3+ seconds. PageSpeed score was around 40. The hosting bill was eating 20 percent of the small business&apos;s marketing budget.
+                        <strong>MyCustomPatches: WordPress to Next.js, $0 a month hosting.</strong> MyCustomPatches was a WordPress site running on Kinsta at $150 a month. Page load was 3+ seconds. PageSpeed score was around 45. The hosting bill was eating 20 percent of the small business&apos;s marketing budget.
                     </BlogText>
                     <BlogText>
                         We rebuilt the site from scratch in custom Next.js. All content migrated. Every URL preserved with a 301 redirect map. Google rankings held during cutover. Site now loads in under 0.7 seconds, scores 90+ on Google PageSpeed, and runs on Vercel&apos;s free tier at $0 a month.

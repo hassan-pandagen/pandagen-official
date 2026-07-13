@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: "Divi Theme Slow in 2026? Real Scores and the Fix",
     description: "1.58 million sites run Divi. 60% fail Core Web Vitals and cost owners $20,172/year in lost revenue. Real Divi PageSpeed scores and the only fix that works.",
     alternates: {
-        canonical: "https://www.pandacodegen.com/blog/divi-theme-slow",
+        canonical: "/blog/divi-theme-slow",
     },
     keywords: ["divi theme slow", "divi pagespeed score 2026", "divi performance", "why is divi slow", "divi core web vitals failing", "divi wordpress slow 2026", "divi speed fix"],
     openGraph: {

@@ -100,7 +100,7 @@ export default function GoHighLevelServicePage() {
         "foundingDate": "2026",
         "areaServed": "Worldwide",
         "knowsAbout": ["GoHighLevel API and webhooks", "Headless CRM", "Next.js", "Answer Engine Optimization (AEO)"],
-        "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158"]
+        "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"]
       },
       {
         "@type": "FAQPage",

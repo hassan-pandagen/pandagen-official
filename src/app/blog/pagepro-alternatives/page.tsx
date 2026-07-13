@@ -137,7 +137,7 @@ const articleSchema = {
             "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://x.com/PandaCodeGen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158", "https://www.goodfirms.co/company/pandacodegen", "https://www.crunchbase.com/organization/pandacodegen", "https://www.designrush.com/agency/profile/pandacodegen", "https://www.sortlist.com/agency/pandacodegen", "https://www.f6s.com/pandacodegen", "https://www.sanity.io/exchange/community/pandacodegen", "https://www.behance.net/pandacodegen", "https://dev.to/pandacodegen", "https://www.reddit.com/user/PandaCodeGen/"],
+            "sameAs": ["https://x.com/PandaCodeGen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.goodfirms.co/company/pandacodegen", "https://www.crunchbase.com/organization/pandacodegen", "https://www.designrush.com/agency/profile/pandacodegen", "https://www.sortlist.com/agency/pandacodegen", "https://www.f6s.com/pandacodegen", "https://www.sanity.io/exchange/community/pandacodegen", "https://www.behance.net/pandacodegen", "https://dev.to/pandacodegen", "https://www.reddit.com/user/PandaCodeGen/"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
             "description": "PandaCodeGen builds custom Next.js websites for businesses migrating off slow platforms. Fixed pricing from $1,500. 90+ PageSpeed guaranteed or 100 percent refund.",
             "areaServed": "Worldwide",
@@ -353,7 +353,7 @@ export default function PageproAlternativesPage() {
                                         { label: "Fixed-price packages", pagepro: "No (retainer)", naturaily: "No", blazity: "No", pcg: "$1,500 / $3,500 / $5K+ / $10K+" },
                                         { label: "PageSpeed guarantee", pagepro: "No", naturaily: "No", blazity: "No", pcg: "90+ or full refund" },
                                         { label: "Post-launch support", pagepro: "No", naturaily: "No", blazity: "No", pcg: "Free: 15 days (Starter) / 1 month (Growth+)" },
-                                        { label: "Clutch rating", pagepro: "4.9/5 (32)", naturaily: "4.9/5 (36)", blazity: "5.0/5 (27)", pcg: "5 platforms verified" },
+                                        { label: "Clutch rating", pagepro: "4.9/5 (32)", naturaily: "4.9/5 (36)", blazity: "5.0/5 (27)", pcg: "5.0 verified (Clutch)" },
                                         { label: "Best for", pagepro: "Enterprise retainers", naturaily: "Design + dev + Shopify", blazity: "Enterprise CTOs", pcg: "Fixed-price projects" },
                                     ].map((row, i) => (
                                         <tr key={i} className={i % 2 === 0 ? "hover:bg-stone-50" : "hover:bg-stone-50 bg-stone-50/50"}>

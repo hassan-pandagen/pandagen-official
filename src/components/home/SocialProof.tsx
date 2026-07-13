@@ -33,9 +33,9 @@ const reviews = [
     imgSrc: "/marshall-james.jpg",
   },
   {
-    platform: "Google",
-    platformColor: "#1a73e8",
-    starColor: "#f4b400",
+    platform: "Trustpilot",
+    platformColor: "#007a54",
+    starColor: "#00b67a",
     title: "They worked with me to make a website I could afford",
     name: "James Peace",
     initials: "JP",
@@ -45,9 +45,9 @@ const reviews = [
     imgSrc: "/james-peace.jpeg",
   },
   {
-    platform: "Google",
-    platformColor: "#1a73e8",
-    starColor: "#fbbc04",
+    platform: "Client review",
+    platformColor: "#1c1917",
+    starColor: "#f4b400",
     title: "PandaCodeGen really understood what I needed",
     name: "Richard Junior",
     initials: "RJ",
@@ -60,10 +60,8 @@ const reviews = [
 
 const platformBadges = [
   { name: "Clutch", rating: "5.0", count: "1", color: "#e8222f", url: "https://clutch.co/profile/panda-code-gen" },
-  { name: "Trustpilot", rating: "5.0", count: "2", color: "#00b67a", url: "https://www.trustpilot.com/review/pandacodegen.com" },
-  { name: "Google", rating: "5.0", count: "4", color: "#1a73e8", url: "https://www.google.com/maps?cid=16271659886069582158" },
+  { name: "Trustpilot", rating: "5★", count: "2", color: "#00b67a", url: "https://www.trustpilot.com/review/pandacodegen.com" },
   { name: "GoodFirms", rating: "5.0", count: "1", color: "#b8860b", url: "https://www.goodfirms.co/company/pandacodegen" },
-  { name: "Sortlist", rating: "5.0", count: "2", color: "#0f172a", url: "https://www.sortlist.com/agency/pandacodegen" },
 ];
 
 function Stars({ color, count = 5 }: { color: string; count?: number }) {
@@ -255,12 +253,12 @@ export default function SocialProof() {
             Review us on Trustpilot
           </a>
           <a
-            href="https://g.page/r/CU6JJpd0jNDhEBM/review"
+            href="https://clutch.co/profile/panda-code-gen"
             target="_blank"
             rel="noopener noreferrer"
             className="flex-1 inline-flex items-center justify-center gap-2 h-11 px-6 rounded-full border border-stone-200 bg-white text-xs font-bold text-stone-700 shadow-xs hover:bg-charcoal hover:text-white hover:border-charcoal transition-all"
           >
-            Review us on Google
+            Review us on Clutch
           </a>
         </div>
 

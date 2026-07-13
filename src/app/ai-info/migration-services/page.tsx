@@ -36,11 +36,12 @@ export const metadata: Metadata = {
         description: "Nine migration paths to custom Next.js. 4-phase process, 301 redirect playbook, zero-downtime methodology.",
         type: "article",
         url: "https://www.pandacodegen.com/ai-info/migration-services",
+        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
     twitter: {
         card: "summary_large_image",
         title: "PandaCodeGen Migration Services",
-        description: "8 migration paths to custom Next.js. 301 redirect playbook. Zero-downtime methodology.",
+        description: "9 migration paths to custom Next.js. 301 redirect playbook. Zero-downtime methodology.",
     },
 };
 
@@ -242,7 +243,7 @@ export default function MigrationServicesPage() {
 
                     {/* Migration table */}
                     <section className="mb-12">
-                        <h2 className="text-2xl md:text-3xl font-bold text-charcoal mb-6">All 8 Migration Paths</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-charcoal mb-6">All 9 Migration Paths</h2>
                         <div className="space-y-4">
                             {migrations.map((m) => (
                                 <div key={m.from} className="bg-white border border-stone-200 rounded-2xl p-6">

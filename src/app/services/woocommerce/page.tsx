@@ -99,7 +99,7 @@ export default function WooCommerceServicePage() {
         "foundingDate": "2026",
         "areaServed": "Worldwide",
         "knowsAbout": ["Headless commerce", "WooCommerce to Next.js migration", "Shopify Storefront API", "Stripe payments", "Square payments", "301 redirect SEO migration", "Core Web Vitals"],
-        "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158"]
+        "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"]
       },
       {
         "@type": "Review",

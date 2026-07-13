@@ -93,7 +93,6 @@ export default function Home() {
           "https://github.com/hassan-pandagen",
           "https://clutch.co/profile/panda-code-gen",
           "https://www.trustpilot.com/review/pandacodegen.com",
-          "https://www.google.com/maps?cid=16271659886069582158",
           "https://www.goodfirms.co/company/pandacodegen",
           "https://www.crunchbase.com/organization/pandacodegen",
           "https://www.designrush.com/agency/profile/pandacodegen",
@@ -138,14 +137,6 @@ export default function Home() {
           "Headless CMS architecture",
           "Vercel deployment"
         ],
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5.0",
-          "bestRating": "5",
-          "worstRating": "1",
-          "ratingCount": "5",
-          "reviewCount": "5"
-        },
       },
       {
         "@type": "WebSite",
@@ -275,22 +266,22 @@ export default function Home() {
         "@id": "https://www.pandacodegen.com/#review-james-peace",
         "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
         "author": { "@type": "Person", "name": "James Peace" },
-        "publisher": { "@type": "Organization", "name": "Google", "url": "https://www.google.com/maps" },
+        "publisher": { "@type": "Organization", "name": "Trustpilot", "url": "https://www.trustpilot.com" },
         "itemReviewed": { "@id": "https://www.pandacodegen.com/#organization" },
         "reviewBody": "I was not sure at first. Can a custom website really be built for $300 with no costs? PandaCodeGen. Hassan showed me it can be done. They gave me a quote at first. They worked with me to make a website I could afford. They made sure there are no costs or extra fees. PandaCodeGen and Hassan are good at what they do. They care about their customers.",
         "datePublished": "2026-03-18",
-        "url": "https://www.google.com/maps?cid=16271659886069582158"
+        "url": "https://www.trustpilot.com/review/pandacodegen.com"
       },
       {
         "@type": "Review",
         "@id": "https://www.pandacodegen.com/#review-richard-junior",
         "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
         "author": { "@type": "Person", "name": "Richard Junior" },
-        "publisher": { "@type": "Organization", "name": "Google", "url": "https://www.google.com/maps" },
+        "publisher": { "@type": "Organization", "name": "GoodFirms", "url": "https://www.goodfirms.co" },
         "itemReviewed": { "@id": "https://www.pandacodegen.com/#organization" },
         "reviewBody": "I was on the fence about leaving Squarespace, but PandaCodeGen really understood what I needed. I talked to a few other agencies and PandaCodeGen's proposal aligned best with my vision. They migrated my site in 10 days and did exactly what they said they'd do. Super happy with the result. Would definitely recommend them.",
         "datePublished": "2026-04-02",
-        "url": "https://www.google.com/maps?cid=16271659886069582158"
+        "url": "https://www.goodfirms.co/company/pandacodegen"
       },
       {
         "@type": "FAQPage",

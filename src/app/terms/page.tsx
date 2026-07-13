@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     url: "https://www.pandacodegen.com/terms",
     siteName: "PandaCodeGen",
     type: "website",
+    images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary",
@@ -170,7 +171,7 @@ export default function TermsPage() {
 
               <h3 className="text-lg font-semibold text-charcoal mb-3 mt-6">6.3 Maintenance and Support</h3>
               <p>
-                Post-delivery support (bug fixes, updates, maintenance) is available at our standard hourly rate ($100-200/hour depending on complexity) or via paid support packages. Warranty covers critical bugs for 30 days post-launch.
+                Post-delivery support (bug fixes, updates, maintenance) is available via fixed-price support packages or a fixed-scope quote for the work requested. We do not bill hourly. Warranty covers critical bugs for 30 days post-launch.
               </p>
             </FadeIn>
 

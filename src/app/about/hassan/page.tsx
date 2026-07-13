@@ -63,7 +63,6 @@ const personSchema = {
                 "https://github.com/hassan-pandagen",
                 "https://clutch.co/profile/panda-code-gen",
                 "https://www.crunchbase.com/person/hassan-jamal",
-                "https://www.google.com/maps?cid=16271659886069582158",
                 "https://www.reddit.com/user/PandaCodeGen/",
             ],
         },
@@ -208,7 +207,7 @@ export default function HassanAuthorPage() {
                         <h3 className="text-xl font-serif text-charcoal mb-6">Credentials &amp; Press</h3>
                         <div className="space-y-4 text-stone-600 text-sm leading-relaxed">
                             <p><strong>Quoted as an AI expert in <a href="https://www.womansworld.com/life/money/land-no-experience-remote-jobs-ai-training-that-pay" target="_blank" rel="noopener noreferrer" className="text-cognac underline decoration-cognac/40 hover:decoration-cognac transition-colors">Woman&apos;s World</a></strong> (1.6M readers), 2026.</p>
-                            <p><strong>Google Business Profile:</strong> 5-star rating with verified client reviews including MyCustomPatches (Matt Conner) and James Peace.</p>
+                            <p><strong>Client reviews:</strong> all 5-star, including a verified Clutch review from MyCustomPatches (Matt Conner) and Trustpilot reviews from James Peace and Marshall James.</p>
                             <p><strong>31 published articles</strong> on web performance, SEO, and e-commerce migration. Every article uses first-hand data from real client projects, not generic advice.</p>
                             <p><strong>Education:</strong> University of Karachi (Karachi University).</p>
                         </div>
@@ -216,7 +215,7 @@ export default function HassanAuthorPage() {
                             <a href="https://clutch.co/profile/panda-code-gen" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-stone-50 border border-stone-200 text-stone-600 text-xs font-bold rounded-full hover:border-cognac/40 transition-all">Clutch</a>
                             <a href="https://www.crunchbase.com/person/hassan-jamal" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-stone-50 border border-stone-200 text-stone-600 text-xs font-bold rounded-full hover:border-cognac/40 transition-all">Crunchbase</a>
                             <a href="https://www.goodfirms.co/company/pandacodegen" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-stone-50 border border-stone-200 text-stone-600 text-xs font-bold rounded-full hover:border-cognac/40 transition-all">GoodFirms</a>
-                            <a href="https://www.google.com/maps?cid=16271659886069582158" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-stone-50 border border-stone-200 text-stone-600 text-xs font-bold rounded-full hover:border-cognac/40 transition-all">Google Reviews</a>
+                            <a href="https://www.trustpilot.com/review/pandacodegen.com" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-stone-50 border border-stone-200 text-stone-600 text-xs font-bold rounded-full hover:border-cognac/40 transition-all">Trustpilot</a>
                         </div>
                     </section>
 

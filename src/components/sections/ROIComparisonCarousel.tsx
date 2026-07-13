@@ -66,8 +66,8 @@ export default function ROIComparisonCarousel() {
         negative: true,
       },
       nextjs: {
-        value: "100% Desktop, 86% Mobile",
-        label: "Perfect optimization out-of-the-box",
+        value: "90+ Mobile & Desktop",
+        label: "Passes Core Web Vitals, guaranteed in writing",
         positive: true,
       },
       impact: {

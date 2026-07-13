@@ -31,7 +31,7 @@ const faqData = [
   },
   {
     q: "How much does custom development cost?",
-    a: "Typical dev shops charge $50,000 to $200,000+ and take 3-6 months. We meet you halfway. Three tiers: Starter starts at $3,000 (small internal tool or marketing site with clear scope). Growth starts at $10,000 (SaaS MVP, client portal, or full dashboard with custom business logic). Scale starts at $25,000 (multi-tenant SaaS, complex integrations, enterprise features). Fixed-price quotes. No hourly billing surprises. You own 100% of the code and IP from Day 1.",
+    a: "Typical dev shops charge $50,000 to $200,000+ and take 3-6 months. We meet you halfway. Three tiers: Tool starts at $3,000 (small internal tool or marketing site with clear scope). Platform starts at $10,000 (SaaS MVP, client portal, or full dashboard with custom business logic). Enterprise starts at $25,000 (multi-tenant SaaS, complex integrations, enterprise features). Fixed-price quotes. No hourly billing. You own 100% of the code and IP from Day 1.",
   },
   {
     q: "Can I add AI features to my app?",
@@ -412,7 +412,7 @@ export default function PageContent() {
         }}
         tiers={[
           {
-            tier: "Starter",
+            tier: "Tool",
             price: "Starting from $3,000",
             timeline: "1 to 2 weeks",
             fit: "Marketing site, internal tool, or small portal. Clear scope.",
@@ -427,7 +427,7 @@ export default function PageContent() {
             cta: "Scope My Project",
           },
           {
-            tier: "Growth",
+            tier: "Platform",
             price: "Starting from $10,000",
             timeline: "3 to 5 weeks",
             fit: "SaaS MVP, client portal, or full dashboard. Custom business logic.",
@@ -437,12 +437,12 @@ export default function PageContent() {
               "Admin dashboard with analytics",
               "Custom business workflow logic",
               "API integrations (up to 3)",
-              "60-day post-launch support",
+              "30-day post-launch support",
             ],
             featured: true,
           },
           {
-            tier: "Scale",
+            tier: "Enterprise",
             price: "Starting from $25,000",
             timeline: "6-12 weeks",
             fit: "Multi-tenant SaaS, complex integrations, enterprise features.",
@@ -452,7 +452,7 @@ export default function PageContent() {
               "Scales to 10,000+ users",
               "Complex API integrations",
               "Security audit + penetration testing",
-              "90-day post-launch support",
+              "30-day post-launch support",
             ],
           },
         ]}

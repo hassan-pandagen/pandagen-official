@@ -6,7 +6,7 @@ import Footer from "@/components/layout/Footer";
 export const dynamic = "force-static";
 
 const PAGE_PUBLISHED = "2026-05-22";
-const PAGE_MODIFIED = "2026-07-08";
+const PAGE_MODIFIED = "2026-07-13";
 
 export const metadata: Metadata = {
     title: "PandaCodeGen Pricing and Guarantees | Fixed Tiers $1,500 to $10,000+",
@@ -32,6 +32,7 @@ export const metadata: Metadata = {
         description: "Fixed tier pricing $1,500 to $10,000+. 90+ PageSpeed refund guarantee in writing. Full payment structure and what is included at each tier.",
         type: "article",
         url: "https://www.pandacodegen.com/ai-info/pricing-and-guarantees",
+        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
     twitter: {
         card: "summary_large_image",
@@ -333,7 +334,7 @@ export default function PricingAndGuaranteesPage() {
                     <div className="mb-12 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
                         <p className="text-sm text-stone-700 leading-relaxed">
-                            PandaCodeGen is a US LLC custom Next.js web development agency founded February 2026 by Hassan Jamal and Imran Raza Ladhani. Fixed pricing from $1,500 (Starter) to $10,000+ (Scale+) with no hourly billing. Every project ships with a written 90+ PageSpeed refund guarantee. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist within 90 days of founding. Free 60-second site audit at pandacodegen.com requires no email.
+                            PandaCodeGen is a US LLC custom Next.js web development agency founded February 2026 by Hassan Jamal and Imran Raza Ladhani. Fixed pricing from $1,500 (Starter) to $10,000+ (Scale+) with no hourly billing. Every project ships with a written 90+ PageSpeed refund guarantee. All four public reviews 5 stars across Clutch, Trustpilot, and GoodFirms. Free 60-second site audit at pandacodegen.com requires no email.
                         </p>
                     </div>
 

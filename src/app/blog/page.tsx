@@ -3,7 +3,7 @@ import BlogPageClient from "./BlogPageClient";
 import { blogPosts } from "@/data/blog";
 
 export const metadata: Metadata = {
-    title: "Web Development & Performance Blog",
+    title: { absolute: "Web Development & Performance Blog | PandaCodeGen" },
     description: "Guides on WordPress migration, Shopify speed, Next.js performance, and Core Web Vitals. Written by engineers who build 90+ PageSpeed sites.",
     alternates: {
         canonical: "/blog",

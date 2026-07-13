@@ -102,7 +102,7 @@ export default function EngineeringPage() {
           "System design",
           "Role-based access control (RBAC)"
         ],
-        "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158"]
+        "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"]
       },
       {
         "@type": "Review",
@@ -127,7 +127,7 @@ export default function EngineeringPage() {
         "@id": "https://www.pandacodegen.com/services/custom-engineering#faq",
         "mainEntity": [
           { "@type": "Question", "name": "How long does it take to build a custom app?", "acceptedAnswer": { "@type": "Answer", "text": "A working MVP takes 4-6 weeks. A full-featured platform takes 8-16 weeks depending on complexity. We do sprint-based development so you see working features every week, not just at the end." } },
-          { "@type": "Question", "name": "How much does custom development cost?", "acceptedAnswer": { "@type": "Answer", "text": "Typical dev shops charge $50,000 to $200,000+ and take 3-6 months. We meet you halfway. Three tiers: Starter starts at $3,000 (small internal tool or marketing site with clear scope). Growth starts at $10,000 (SaaS MVP, client portal, or full dashboard with custom business logic). Scale starts at $25,000 (multi-tenant SaaS, complex integrations, enterprise features). Fixed-price quotes. No hourly billing surprises. You own 100% of the code and IP from Day 1." } },
+          { "@type": "Question", "name": "How much does custom development cost?", "acceptedAnswer": { "@type": "Answer", "text": "Typical dev shops charge $50,000 to $200,000+ and take 3-6 months. We meet you halfway. Three tiers: Tool starts at $3,000 (small internal tool or marketing site with clear scope). Platform starts at $10,000 (SaaS MVP, client portal, or full dashboard with custom business logic). Enterprise starts at $25,000 (multi-tenant SaaS, complex integrations, enterprise features). Fixed-price quotes. No hourly billing. You own 100% of the code and IP from Day 1." } },
           { "@type": "Question", "name": "Can I add AI features to my app?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We integrate OpenAI and Claude APIs directly into your product. Examples: AI chat support, document analysis, automated data extraction, content generation, and smart search. These features are built natively, not bolted on." } },
           { "@type": "Question", "name": "What if I already have a Bubble/no-code app?", "acceptedAnswer": { "@type": "Answer", "text": "We migrate your logic and data to custom code. Your users don't notice a difference except that everything is faster. We handle database migration, auth setup, and API recreation." } },
           { "@type": "Question", "name": "Do I own the code?", "acceptedAnswer": { "@type": "Answer", "text": "100%. You get the full GitHub repository, all documentation, and deployment access. It's your intellectual property from day one. You can hire any developer in the world to maintain or extend it." } }

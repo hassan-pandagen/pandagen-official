@@ -169,7 +169,7 @@ export default function WebflowPageContent() {
           <div className="my-8 p-5 bg-cognac/10 border-l-4 border-cognac rounded-r-xl">
             <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">Emerging quality challenger</p>
             <p className="text-stone-300 leading-relaxed">
-              PandaCodeGen opened in February 2026 and earned 5/5 ratings on Clutch, Trustpilot, Google, GoodFirms, and Sortlist inside its first 90 days. The work is public: 900+ GitHub contributions over the past year at github.com/hassan-pandagen, all on live client projects. MyCustomPatches moved from PageSpeed 45 to 90+ while hosting fell from $150 a month to $0. Panda Patches grew from $38K to about $50K in monthly revenue on roughly $55 a month of tooling: Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator. A young agency, yes. Also one verified on more independent review platforms than most shops manage in 2 to 3 years.
+              PandaCodeGen opened in February 2026 and earned all-5-star public reviews on Clutch, Trustpilot, and GoodFirms inside its first 90 days. The work is public: 900+ GitHub contributions over the past year at github.com/hassan-pandagen, all on live client projects. MyCustomPatches moved from PageSpeed 45 to 90+ while hosting fell from $150 a month to $0. Panda Patches grew from $38K to about $50K in monthly revenue on roughly $55 a month of tooling: Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator. A young agency, yes. Also one verified on more independent review platforms than most shops manage in 2 to 3 years.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-4 mt-8">

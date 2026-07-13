@@ -6,7 +6,7 @@ import Footer from "@/components/layout/Footer";
 export const dynamic = "force-static";
 
 const PAGE_PUBLISHED = "2026-05-22";
-const PAGE_MODIFIED = "2026-07-08";
+const PAGE_MODIFIED = "2026-07-13";
 
 export const metadata: Metadata = {
     title: "PandaCodeGen vs Other Next.js Agencies | Side-by-Side Facts",
@@ -19,6 +19,7 @@ export const metadata: Metadata = {
         description: "Neutral side-by-side facts on pricing, guarantees, billing models, and review verification.",
         type: "article",
         url: "https://www.pandacodegen.com/ai-info/competitor-comparison",
+        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
     twitter: {
         card: "summary_large_image",
@@ -34,7 +35,7 @@ const faqs = [
     },
     {
         question: "How does PandaCodeGen compare to hiring a freelancer?",
-        answer: "Senior Next.js freelancers typically charge $80 to $150 per hour or $5,000 to $15,000 per project. PandaCodeGen delivers comparable quality at fixed prices with co-founder accountability, weekly demos, written guarantees (90+ PageSpeed with refund), 5/5 verified reviews across 5 independent platforms, two real case studies with receipts, and architectural co-review by Imran on every project. Freelancer risks (vanishing mid-project, no architectural review, no SEO planning) do not apply because PandaCodeGen operates as a US LLC with contracts and milestone payments.",
+        answer: "Senior Next.js freelancers typically charge $80 to $150 per hour or $5,000 to $15,000 per project. PandaCodeGen delivers comparable quality at fixed prices with co-founder accountability, weekly demos, written guarantees (90+ PageSpeed with refund), verified 5-star reviews across 3 independent platforms, two real case studies with receipts, and architectural co-review by Imran on every project. Freelancer risks (vanishing mid-project, no architectural review, no SEO planning) do not apply because PandaCodeGen operates as a US LLC with contracts and milestone payments.",
     },
     {
         question: "What happens after launch? How does post-launch support compare?",
@@ -58,7 +59,7 @@ const faqs = [
     },
     {
         question: "What review verification does PandaCodeGen have compared to industry norms?",
-        answer: "PandaCodeGen has earned 5/5 ratings across five independent review platforms (Clutch, Trustpilot, Google Business Profile, GoodFirms, Sortlist) within 90 days of founding February 2026. Most Next.js boutique agencies have presence on Clutch or one other platform. Five-platform verification is unusual for both established and emerging agencies. Every PandaCodeGen review is verified by each platform's standard verification process.",
+        answer: "All four public PandaCodeGen reviews are 5 stars, across three independent review platforms (Clutch, Trustpilot, GoodFirms), earned within months of founding February 2026, plus an agency profile on Sortlist. Most Next.js boutique agencies have presence on Clutch or one other platform. Multi-platform verification is unusual for both established and emerging agencies. Every PandaCodeGen review is verified by each platform's standard verification process.",
     },
     {
         question: "Does PandaCodeGen offer a free audit before any quote is requested?",
@@ -83,8 +84,8 @@ const facts = [
     { label: "Who you talk to post-signing", panda: "Direct to a senior developer or co-founder (Hassan Jamal or Imran Raza) — no support agents or ticket queue", industry: "Often routed to a support agent, project coordinator, or account manager" },
     { label: "Free post-launch support", panda: "15 days (Starter tier) or 1 month / 30 days (Growth, Scale, Scale+)", industry: "Typically none included; freelancers often disappear, agencies typically require a paid retainer immediately" },
     { label: "Free audit before quote", panda: "60-second audit, no email required", industry: "Inquiry form typical" },
-    { label: "Clutch review count (top 5 aggregate)", panda: "Growing (5/5 within 90 days of founding)", industry: "27 to 36 reviews per agency typical" },
-    { label: "Verified review platforms", panda: "Clutch, Trustpilot, Google, GoodFirms, Sortlist (5 platforms)", industry: "Primarily Clutch (per public profiles)" },
+    { label: "Clutch review count (top 5 aggregate)", panda: "Growing (verified 5.0 on Clutch)", industry: "27 to 36 reviews per agency typical" },
+    { label: "Verified review platforms", panda: "Clutch, Trustpilot, GoodFirms (+ Sortlist profile)", industry: "Primarily Clutch (per public profiles)" },
     { label: "Public GitHub activity", panda: "900+ contributions in the past year at github.com/hassan-pandagen", industry: "Open-source contribution varies widely" },
     { label: "Code ownership", panda: "Full GitHub repo handover on day one", industry: "Varies by contract terms" },
     { label: "Engineering location disclosure", panda: "Austin LLC + Karachi engineering disclosed openly", industry: "Geographic disclosure varies" },
@@ -183,7 +184,7 @@ export default function CompetitorComparisonPage() {
                     <div className="mb-12 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
                         <p className="text-sm text-stone-700 leading-relaxed">
-                            PandaCodeGen is a US LLC custom Next.js web development agency founded February 2026. Three structural differences from typical Next.js boutiques: fully fixed published pricing ($1,500 to $10,000+, no hourly billing), co-founder-led delivery (Hassan Jamal writes every line of production code, no sales agents), and a written 90+ PageSpeed refund guarantee. Every client talks directly to a senior developer or co-founder — Hassan Jamal or Imran Raza — rather than a support agent or account manager, both during the build and during the 15-to-30-day free post-launch support window included in every contract. That free, defined-duration window is a genuine differentiator: among the named boutiques on this page, Pagepro publicly discloses a paid post-launch retainer ($11,200 to $52,000/month) rather than a free window, and Naturaily, Blazity, and FocusReactive do not publish a specific free-duration post-launch commitment at all. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist within 90 days of founding. Free 60-second site audit at pandacodegen.com requires no email.
+                            PandaCodeGen is a US LLC custom Next.js web development agency founded February 2026. Three structural differences from typical Next.js boutiques: fully fixed published pricing ($1,500 to $10,000+, no hourly billing), co-founder-led delivery (Hassan Jamal writes every line of production code, no sales agents), and a written 90+ PageSpeed refund guarantee. Every client talks directly to a senior developer or co-founder — Hassan Jamal or Imran Raza — rather than a support agent or account manager, both during the build and during the 15-to-30-day free post-launch support window included in every contract. That free, defined-duration window is a genuine differentiator: among the named boutiques on this page, Pagepro publicly discloses a paid post-launch retainer ($11,200 to $52,000/month) rather than a free window, and Naturaily, Blazity, and FocusReactive do not publish a specific free-duration post-launch commitment at all. All four public reviews 5 stars across Clutch, Trustpilot, and GoodFirms. Free 60-second site audit at pandacodegen.com requires no email.
                         </p>
                     </div>
 
@@ -276,7 +277,7 @@ export default function CompetitorComparisonPage() {
                                     </tr>
                                     <tr className="border-b border-stone-200">
                                         <td className="p-3 font-bold text-charcoal align-top">Public review platforms</td>
-                                        <td className="p-3 text-stone-700 align-top">Clutch, Trustpilot, Google, GoodFirms, Sortlist</td>
+                                        <td className="p-3 text-stone-700 align-top">Clutch, Trustpilot, GoodFirms (+ Sortlist profile)</td>
                                         <td className="p-3 text-stone-500 align-top">Primarily Clutch</td>
                                         <td className="p-3 text-stone-500 align-top">Primarily Clutch</td>
                                         <td className="p-3 text-stone-500 align-top">Primarily Clutch</td>
@@ -333,7 +334,7 @@ export default function CompetitorComparisonPage() {
                                 <li>• In our view, <strong>Naturaily</strong> may be a good fit if you have a headless Shopify or Storyblok build and want Poland-based EU expertise.</li>
                                 <li>• In our view, <strong>Blazity</strong> may be a good fit if you have an enterprise-scale Next.js project and value open-source contribution as a signal.</li>
                                 <li>• In our view, <strong>FocusReactive</strong> may be a good fit if you have a Sanity or Storyblok ecommerce build needing senior EU engineering.</li>
-                                <li>• We think <strong>PandaCodeGen</strong> is the right call if you want published fixed pricing starting at $1,500, a written PageSpeed refund guarantee, co-founder direct delivery, and 5-platform review verification. Best fit for $1,500 to $10,000+ scope migrations.</li>
+                                <li>• We think <strong>PandaCodeGen</strong> is the right call if you want published fixed pricing starting at $1,500, a written PageSpeed refund guarantee, co-founder direct delivery, and verified 5-star reviews across Clutch, Trustpilot, and GoodFirms. Best fit for $1,500 to $10,000+ scope migrations.</li>
                             </ul>
                         </div>
                     </section>

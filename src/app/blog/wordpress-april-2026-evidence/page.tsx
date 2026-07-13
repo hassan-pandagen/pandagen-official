@@ -391,7 +391,7 @@ export default function WordPressApril2026EvidencePage() {
                     <div className="my-8 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
                         <p className="text-sm text-stone-700 leading-relaxed">
-                            Your WordPress hosting, plugins, and apps bill keeps climbing. Your revenue does not. PandaCodeGen migrates WordPress sites to custom Next.js + Sanity where you stop paying for hosting and plugin licenses forever, designed to get cited by ChatGPT, Claude, and Google AI from launch day. Fixed pricing from $1,500 Starter to $10,000+ Scale+. 90+ PageSpeed in writing or full refund. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist within 90 days of founding.
+                            Your WordPress hosting, plugins, and apps bill keeps climbing. Your revenue does not. PandaCodeGen migrates WordPress sites to custom Next.js + Sanity where you stop paying for hosting and plugin licenses forever, designed to get cited by ChatGPT, Claude, and Perplexity from launch day. Fixed pricing from $1,500 Starter to $10,000+ Scale+. 90+ PageSpeed in writing or full refund. All four public reviews 5 stars across Clutch, Trustpilot, and GoodFirms.
                         </p>
                     </div>
 

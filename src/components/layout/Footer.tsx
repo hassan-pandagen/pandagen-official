@@ -76,7 +76,7 @@ export default function Footer({ onOpenQuote }: FooterProps) {
               <SocialPill href="https://www.instagram.com/pandacodegen/" icon={Instagram} label="Instagram" />
               <SocialPill href="https://www.reddit.com/user/PandaCodeGen/" label="Reddit" isReddit ariaLabel="PandaCodeGen on Reddit" />
               <SocialPill href="mailto:info@pandacodegen.com" icon={Mail} label="Email" />
-              <SocialPill href="https://g.page/r/CU6JJpd0jNDhEBM/review" label="Google Review" isGoogle />
+              <SocialPill href="https://www.trustpilot.com/review/pandacodegen.com" label="Leave a Review" />
             </div>
           </div>
 
@@ -155,7 +155,7 @@ export default function Footer({ onOpenQuote }: FooterProps) {
               <FeaturedLink
                 href="/ai-info/migration-services"
                 title="Migration Services"
-                desc="8 platforms. 4-phase process. 301 redirects."
+                desc="9 platforms. 4-phase process. 301 redirects."
               />
               <FeaturedLink
                 href="/ai-info/case-studies"

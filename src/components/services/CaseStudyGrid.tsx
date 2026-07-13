@@ -54,8 +54,8 @@ const ALL_CLIENTS: Record<string, CaseStudyClient> = {
   },
   obare: {
     name: "Obare Magazine",
-    url: "obare-magazine.vercel.app",
-    href: "https://obare-magazine.vercel.app",
+    url: "obare.vercel.app",
+    href: "https://obare.vercel.app",
     category: "Editorial Magazine",
     platform: "Wix → Custom",
     pagespeed: 95,

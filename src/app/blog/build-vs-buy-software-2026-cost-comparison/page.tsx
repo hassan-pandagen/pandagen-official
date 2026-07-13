@@ -196,7 +196,7 @@ export default function BuildVsBuySoftware2026Page() {
                     <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
                         <p className="text-sm text-stone-700 leading-relaxed">
-                            Your apps and subscriptions bill keeps climbing. Your revenue does not. PandaCodeGen builds the &ldquo;build&rdquo; side of this decision: custom Next.js software you own outright, designed to get cited by ChatGPT, Claude, and Google AI from launch day. Fixed pricing from $1,500 Starter to $10,000+ Scale+. 90+ PageSpeed in writing or full refund. See the full cost picture in our <Link href="/blog/saas-software-pricing-audit-2026" className="text-cognac hover:underline font-medium">2026 software pricing audit</Link>.
+                            Your apps and subscriptions bill keeps climbing. Your revenue does not. PandaCodeGen builds the &ldquo;build&rdquo; side of this decision: custom Next.js software you own outright, designed to get cited by ChatGPT, Claude, and Perplexity from launch day. Fixed pricing from $1,500 Starter to $10,000+ Scale+. 90+ PageSpeed in writing or full refund. See the full cost picture in our <Link href="/blog/saas-software-pricing-audit-2026" className="text-cognac hover:underline font-medium">2026 software pricing audit</Link>.
                         </p>
                     </div>
 

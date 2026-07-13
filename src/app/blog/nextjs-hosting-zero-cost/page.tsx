@@ -124,7 +124,7 @@ const articleSchema = {
             "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://x.com/PandaCodeGen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.google.com/maps?cid=16271659886069582158", "https://www.goodfirms.co/company/pandacodegen", "https://www.crunchbase.com/organization/pandacodegen", "https://www.designrush.com/agency/profile/pandacodegen", "https://www.sortlist.com/agency/pandacodegen", "https://www.f6s.com/pandacodegen", "https://www.sanity.io/exchange/community/pandacodegen", "https://www.behance.net/pandacodegen", "https://dev.to/pandacodegen", "https://www.reddit.com/user/PandaCodeGen/"],
+            "sameAs": ["https://x.com/PandaCodeGen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.goodfirms.co/company/pandacodegen", "https://www.crunchbase.com/organization/pandacodegen", "https://www.designrush.com/agency/profile/pandacodegen", "https://www.sortlist.com/agency/pandacodegen", "https://www.f6s.com/pandacodegen", "https://www.sanity.io/exchange/community/pandacodegen", "https://www.behance.net/pandacodegen", "https://dev.to/pandacodegen", "https://www.reddit.com/user/PandaCodeGen/"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
             "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 90+ Google PageSpeed in writing or a full refund on every build.",
             "areaServed": "Worldwide",
@@ -211,7 +211,7 @@ export default function NextjsHostingZeroCostPage() {
                     <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
                         <p className="text-sm text-stone-700 leading-relaxed">
-                            Your hosting and platform bill keeps climbing. Your revenue does not. PandaCodeGen rebuilds your site as custom Next.js code you own outright, designed to get cited by ChatGPT, Claude, and Google AI from launch day. Every client site deploys on Vercel starting free on the Hobby tier, scaling to Pro at $20/month only when the business actually grows past the free limits. Clients pay Vercel directly, no markup. Fixed pricing from $1,500 Starter to $10,000+ Scale+. 90+ PageSpeed in writing or full refund. Full pricing breakdown at the <Link href="/ai-info/pricing-and-guarantees" className="text-cognac hover:underline font-medium">Pricing and Guarantees reference</Link>.
+                            Your hosting and platform bill keeps climbing. Your revenue does not. PandaCodeGen rebuilds your site as custom Next.js code you own outright, designed to get cited by ChatGPT, Claude, and Perplexity from launch day. Every client site deploys on Vercel starting free on the Hobby tier, scaling to Pro at $20/month only when the business actually grows past the free limits. Clients pay Vercel directly, no markup. Fixed pricing from $1,500 Starter to $10,000+ Scale+. 90+ PageSpeed in writing or full refund. Full pricing breakdown at the <Link href="/ai-info/pricing-and-guarantees" className="text-cognac hover:underline font-medium">Pricing and Guarantees reference</Link>.
                         </p>
                     </div>
 
@@ -251,7 +251,7 @@ export default function NextjsHostingZeroCostPage() {
                             <Link href="/work/mycustompatches" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 MyCustomPatches
                             </Link>{" "}
-                            was paying $150/month for managed hosting. Their site still loaded in 3.2 seconds. Their PageSpeed score was around 40/100. They were paying premium prices for mediocre performance.
+                            was paying $150/month for managed hosting. Their site still loaded in 3.2 seconds. Their PageSpeed score was around 45/100. They were paying premium prices for mediocre performance.
                         </BlogText>
 
                         <BlogQuote>
@@ -452,7 +452,7 @@ export default function NextjsHostingZeroCostPage() {
                         <BlogList items={[
                             "Hosting cost: $150/month ($1,800/year)",
                             "Load time: 3.2 seconds",
-                            "PageSpeed score: ~40/100",
+                            "PageSpeed score: ~45/100",
                             "Server crashes during holiday sales"
                         ]} />
 
@@ -536,7 +536,7 @@ export default function NextjsHostingZeroCostPage() {
 
                     <blockquote className="border-l-4 border-cognac/30 pl-6 my-8 py-2">
                         <p className="text-stone-600 italic text-lg leading-relaxed">&quot;They worked with me to make a website that I could afford. They made sure there are no costs or extra fees.&quot;</p>
-                        <cite className="text-sm text-stone-500 not-italic block mt-2">James Peace, via Google Business review</cite>
+                        <cite className="text-sm text-stone-500 not-italic block mt-2">James Peace, via Trustpilot review</cite>
                     </blockquote>
 
                     {/* FAQ Section */}

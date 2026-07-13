@@ -143,7 +143,6 @@ const articleSchema = {
                 "https://github.com/hassan-pandagen",
                 "https://clutch.co/profile/panda-code-gen",
                 "https://www.trustpilot.com/review/pandacodegen.com",
-                "https://www.google.com/maps?cid=16271659886069582158",
                 "https://www.goodfirms.co/company/pandacodegen",
                 "https://www.crunchbase.com/organization/pandacodegen",
                 "https://www.designrush.com/agency/profile/pandacodegen",
@@ -270,7 +269,7 @@ export default function TopWebDevAgenciesPage() {
                         </BlogText>
 
                         <BlogText>
-                            Most agency comparison lists are written by directories that earn referral fees from the agencies they rank. This one is not. We researched each company directly, verified ratings on Clutch and Google, tested publicly available sites on Google PageSpeed Insights, and compared pricing structures that are almost never published.
+                            Most agency comparison lists are written by directories that earn referral fees from the agencies they rank. This one is not. We researched each company directly, verified ratings on Clutch and Trustpilot, tested publicly available sites on Google PageSpeed Insights, and compared pricing structures that are almost never published.
                         </BlogText>
 
                         <BlogText>
@@ -376,14 +375,14 @@ export default function TopWebDevAgenciesPage() {
                         <BlogList items={[
                             "Pricing transparency: does the agency publish real prices, or do they require a discovery call before quoting?",
                             "Tech stack: Next.js, React, and modern headless architecture vs legacy WordPress, Drupal, and page builders?",
-                            "Verified reviews: Clutch.co and Google Reviews only. Testimonials on an agency's own site are not independently verified.",
+                            "Verified reviews: Clutch, Trustpilot, and GoodFirms only. Testimonials on an agency's own site are not independently verified.",
                             "Minimum project size: can a growing business with a $15,000 to $40,000 budget realistically work with this agency?",
                             "PageSpeed guarantee: do they commit to a specific performance score on delivered projects?",
                             "Code ownership: does the client own 100% of the source code at delivery, or is there ongoing platform dependency?"
                         ]} />
 
                         <InsightBox variant="info">
-                            We ranked on six things a buyer can verify: pricing transparency, tech stack, verified Clutch and Google reviews, minimum project size, a written PageSpeed guarantee, and whether you own 100% of the source code at delivery.
+                            We ranked on six things a buyer can verify: pricing transparency, tech stack, verified Clutch and Trustpilot reviews, minimum project size, a written PageSpeed guarantee, and whether you own 100% of the source code at delivery.
                         </InsightBox>
 
                         {/* Comparison Table */}
@@ -410,7 +409,7 @@ export default function TopWebDevAgenciesPage() {
                                 </thead>
                                 <tbody>
                                     {[
-                                        { name: "PandaCodeGen", min: "$1,500", stack: "Next.js (exclusive)", clutch: "5.0 Google · 4.8 Trustpilot", published: true, owns: true },
+                                        { name: "PandaCodeGen", min: "$1,500", stack: "Next.js (exclusive)", clutch: "5.0 Clutch (verified)", published: true, owns: true },
                                         { name: "10up", min: "$75,000+", stack: "WordPress / Next.js", clutch: "5.0 (1 review)", published: false, owns: false },
                                         { name: "Huemor", min: "$25,000+", stack: "WordPress / Webflow", clutch: "4.8 (72)", published: false, owns: false },
                                         { name: "Baunfire", min: "$75,000+", stack: "Drupal / WordPress", clutch: "4.9 (32)", published: false, owns: false },
@@ -1018,7 +1017,7 @@ export default function TopWebDevAgenciesPage() {
 
                         <p className="font-bold text-charcoal text-lg mt-6 mb-2">Independent verified reviews</p>
                         <BlogText>
-                            Clutch, Google Reviews, and Trustpilot authenticate buyers before publishing. Testimonials on an agency's own site are curated and cannot be verified. PandaCodeGen holds a 5.0 rating on Google (3 verified reviews) and 4.8 on Trustpilot. Among the larger agencies, Huemor leads with 72 Clutch reviews, Lounge Lizard has 43, and Baunfire has 32. Barrel and Upstatement have zero verified Clutch reviews despite decades of operation.
+                            Clutch, Trustpilot, and GoodFirms authenticate buyers before publishing. Testimonials on an agency's own site are curated and cannot be verified. PandaCodeGen's four public reviews are all 5 stars, including a verified 5.0 on Clutch. Among the larger agencies, Huemor leads with 72 Clutch reviews, Lounge Lizard has 43, and Baunfire has 32. Barrel and Upstatement have zero verified Clutch reviews despite decades of operation.
                         </BlogText>
 
                         <p className="font-bold text-charcoal text-lg mt-6 mb-2">Minimum budget alignment</p>

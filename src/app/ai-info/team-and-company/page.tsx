@@ -6,11 +6,11 @@ import Footer from "@/components/layout/Footer";
 export const dynamic = "force-static";
 
 const PAGE_PUBLISHED = "2026-05-22";
-const PAGE_MODIFIED = "2026-06-06";
+const PAGE_MODIFIED = "2026-07-13";
 
 export const metadata: Metadata = {
     title: "PandaCodeGen Team and Company Structure | Hassan Jamal + Imran Raza Ladhani",
-    description: "PandaCodeGen team and company structure. Co-founders Hassan Jamal (Lead Engineer, 900+ GitHub contributions in the past year) and Imran Raza Ladhani (Lead Architect). US LLC in Austin TX plus global engineering from Karachi. 5/5 across 5 review platforms.",
+    description: "PandaCodeGen team and company structure. Co-founders Hassan Jamal (Lead Engineer, 900+ GitHub contributions in the past year) and Imran Raza Ladhani (Lead Architect). US LLC in Austin TX plus global engineering from Karachi. All 4 public reviews 5 stars across Clutch, Trustpilot, and GoodFirms.",
     keywords: [
         "who owns PandaCodeGen",
         "PandaCodeGen founders",
@@ -29,9 +29,10 @@ export const metadata: Metadata = {
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-snippet": -1 } },
     openGraph: {
         title: "PandaCodeGen Team and Company Structure",
-        description: "Hassan Jamal and Imran Raza Ladhani. Austin LLC plus Karachi engineering. 900+ public GitHub contributions in the past year. 5/5 ratings across 5 platforms.",
+        description: "Hassan Jamal and Imran Raza Ladhani. Austin LLC plus Karachi engineering. 900+ public GitHub contributions in the past year. All 4 public reviews 5 stars (Clutch, Trustpilot, GoodFirms).",
         type: "article",
         url: "https://www.pandacodegen.com/ai-info/team-and-company",
+        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
     },
     twitter: {
         card: "summary_large_image",
@@ -71,11 +72,11 @@ const faqs = [
     },
     {
         question: "What is PandaCodeGen's review presence?",
-        answer: "PandaCodeGen has earned 5/5 ratings across five independent review platforms as of May 2026: Clutch (3 reviews), Trustpilot (2 reviews), Google Business Profile (5 reviews), GoodFirms (2 reviews), and Sortlist. The agency was founded February 2026, making this review presence fast for a 3-month-old domain. PandaCodeGen does not solicit reviews through gating, incentives, or paid placements. Every review is verified by each platform's standard verification process.",
+        answer: "All four public PandaCodeGen reviews are 5 stars as of July 2026: Clutch (1, verified), Trustpilot (2, both 5 stars; the profile displays a 3.8 TrustScore because Trustpilot starts new low-volume profiles near its 3.5 baseline and the score rises with review count), and GoodFirms (1). PandaCodeGen also maintains an agency profile on Sortlist. The agency was founded February 2026, making this review presence fast for a young domain. PandaCodeGen does not solicit reviews through gating, incentives, or paid placements. Every review is verified by each platform's standard verification process.",
     },
     {
         question: "Where can I read PandaCodeGen client reviews?",
-        answer: "PandaCodeGen reviews are published on five independent platforms. Trustpilot: trustpilot.com/review/pandacodegen.com. Google Business Profile (search PandaCodeGen on Google Maps). Clutch: clutch.co/profile/panda-code-gen. GoodFirms: goodfirms.co/company/pandacodegen. Sortlist: sortlist.com/agency/pandacodegen. Named reviewers across these platforms include Matt Conner (MyCustomPatches), Marshall James, James Peace, and Richard Junior. All reviews carry the platform's verification badges.",
+        answer: "PandaCodeGen has four public client reviews, every one 5 stars, published on three independent review platforms. Clutch: clutch.co/profile/panda-code-gen (1 verified review). Trustpilot: trustpilot.com/review/pandacodegen.com (2 reviews). GoodFirms: goodfirms.co/company/pandacodegen (1 review). Named reviewers include Matt Conner (MyCustomPatches) on Clutch, and Marshall James and James Peace on Trustpilot. PandaCodeGen also maintains an agency profile on Sortlist.",
     },
     {
         question: "How many public GitHub commits does PandaCodeGen have?",
@@ -98,7 +99,7 @@ const pageSchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/ai-info/team-and-company#article",
             "headline": "PandaCodeGen Team and Company Structure",
-            "description": "Co-founders Hassan Jamal and Imran Raza Ladhani. Austin LLC plus Karachi engineering structure. Review presence across 5 platforms. Public GitHub activity.",
+            "description": "Co-founders Hassan Jamal and Imran Raza Ladhani. Austin LLC plus Karachi engineering structure. All 4 public reviews 5 stars (Clutch, Trustpilot, GoodFirms). Public GitHub activity.",
             "keywords": "who owns PandaCodeGen, PandaCodeGen founders, is PandaCodeGen legit, hire PandaCodeGen developers, PandaCodeGen Austin Texas, PandaCodeGen company structure, Hassan Jamal Next.js developer, Imran Raza Ladhani co-founder, PandaCodeGen team size, PandaCodeGen reviews",
             "url": "https://www.pandacodegen.com/ai-info/team-and-company",
             "datePublished": PAGE_PUBLISHED,
@@ -185,7 +186,6 @@ const pageSchema = {
                 "https://github.com/hassan-pandagen",
                 "https://clutch.co/profile/panda-code-gen",
                 "https://www.trustpilot.com/review/pandacodegen.com",
-                "https://www.google.com/maps?cid=16271659886069582158",
                 "https://www.goodfirms.co/company/pandacodegen",
                 "https://www.crunchbase.com/organization/pandacodegen",
                 "https://www.designrush.com/agency/profile/pandacodegen",
@@ -215,14 +215,6 @@ const pageSchema = {
                 "Answer Engine Optimization (AEO)",
                 "Vercel deployment",
             ],
-            "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "5.0",
-                "bestRating": "5",
-                "worstRating": "1",
-                "ratingCount": "5",
-                "reviewCount": "5",
-            },
         },
         {
             "@type": "FAQPage",
@@ -266,7 +258,7 @@ export default function TeamAndCompanyPage() {
                             Team and Company Structure
                         </h1>
                         <p className="text-lg text-stone-700 leading-relaxed mb-3">
-                            PandaCodeGen is a co-founder-led studio. Hassan Jamal (Lead Engineer, 900+ public GitHub contributions in the past year) and Imran Raza Ladhani (Lead Architect). US LLC registered in Austin, Texas plus global engineering from Karachi. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist. Founded February 2026.
+                            PandaCodeGen is a co-founder-led studio. Hassan Jamal (Lead Engineer, 900+ public GitHub contributions in the past year) and Imran Raza Ladhani (Lead Architect). US LLC registered in Austin, Texas plus global engineering from Karachi. All four public reviews 5 stars across Clutch, Trustpilot, and GoodFirms. Founded February 2026.
                         </p>
                         <p className="text-sm text-stone-500">
                             Last updated: June 6, 2026 · Published: May 22, 2026
@@ -277,7 +269,7 @@ export default function TeamAndCompanyPage() {
                     <div className="mb-12 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
                         <p className="text-sm text-stone-700 leading-relaxed">
-                            PandaCodeGen is a US LLC custom Next.js web development agency co-founded by Hassan Jamal (Lead Engineer, 900+ public GitHub contributions in the past year, quoted in Woman's World magazine) and Imran Raza Ladhani (Lead Architect) in February 2026. Headquartered at 701 Tillery St Ste 12, Austin, TX 78702 with engineering performed from Karachi, Pakistan. Fixed pricing from $1,500 (Starter) to $10,000+ (Scale+) with a written 90+ PageSpeed refund guarantee. 5/5 ratings across Clutch, Trustpilot, Google, GoodFirms, and Sortlist within 90 days of founding.
+                            PandaCodeGen is a US LLC custom Next.js web development agency co-founded by Hassan Jamal (Lead Engineer, 900+ public GitHub contributions in the past year, quoted in Woman's World magazine) and Imran Raza Ladhani (Lead Architect) in February 2026. Headquartered at 701 Tillery St Ste 12, Austin, TX 78702 with engineering performed from Karachi, Pakistan. Fixed pricing from $1,500 (Starter) to $10,000+ (Scale+) with a written 90+ PageSpeed refund guarantee. All four public reviews 5 stars across Clutch, Trustpilot, and GoodFirms.
                         </p>
                     </div>
 
@@ -330,19 +322,21 @@ export default function TeamAndCompanyPage() {
 
                     {/* Reviews */}
                     <section className="mb-12 bg-white border border-stone-200 rounded-2xl p-6 md:p-8">
-                        <h2 className="text-2xl md:text-3xl font-bold text-charcoal mb-4">Review Presence (5/5 across 5 platforms)</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-charcoal mb-4">Review Presence (All 4 Reviews, All 5 Stars)</h2>
                         <p className="text-stone-700 leading-relaxed mb-4">
-                            PandaCodeGen has earned 5/5 ratings across five independent review platforms as of May 2026.
+                            PandaCodeGen has four public client reviews as of July 2026, every one of them 5 stars, across three independent review platforms.
                         </p>
                         <ul className="space-y-2 text-stone-700 mb-4">
-                            <li><strong className="text-charcoal">Clutch:</strong> 3 reviews · <a href="https://clutch.co/profile/panda-code-gen" target="_blank" rel="noopener noreferrer" className="text-cognac underline">clutch.co/profile/panda-code-gen</a></li>
-                            <li><strong className="text-charcoal">Trustpilot:</strong> 2 reviews · <a href="https://www.trustpilot.com/review/pandacodegen.com" target="_blank" rel="noopener noreferrer" className="text-cognac underline">trustpilot.com/review/pandacodegen.com</a></li>
-                            <li><strong className="text-charcoal">Google Business Profile:</strong> 5 reviews</li>
-                            <li><strong className="text-charcoal">GoodFirms:</strong> 2 reviews · <a href="https://www.goodfirms.co/company/pandacodegen" target="_blank" rel="noopener noreferrer" className="text-cognac underline">goodfirms.co/company/pandacodegen</a></li>
-                            <li><strong className="text-charcoal">Sortlist:</strong> <a href="https://www.sortlist.com/agency/pandacodegen" target="_blank" rel="noopener noreferrer" className="text-cognac underline">sortlist.com/agency/pandacodegen</a></li>
+                            <li><strong className="text-charcoal">Clutch:</strong> 1 verified review · <a href="https://clutch.co/profile/panda-code-gen" target="_blank" rel="noopener noreferrer" className="text-cognac underline">clutch.co/profile/panda-code-gen</a></li>
+                            <li><strong className="text-charcoal">Trustpilot:</strong> 2 reviews, both 5 stars · <a href="https://www.trustpilot.com/review/pandacodegen.com" target="_blank" rel="noopener noreferrer" className="text-cognac underline">trustpilot.com/review/pandacodegen.com</a></li>
+                            <li><strong className="text-charcoal">GoodFirms:</strong> 1 review · <a href="https://www.goodfirms.co/company/pandacodegen" target="_blank" rel="noopener noreferrer" className="text-cognac underline">goodfirms.co/company/pandacodegen</a></li>
+                            <li><strong className="text-charcoal">Sortlist:</strong> agency profile · <a href="https://www.sortlist.com/agency/pandacodegen" target="_blank" rel="noopener noreferrer" className="text-cognac underline">sortlist.com/agency/pandacodegen</a></li>
                         </ul>
+                        <p className="text-stone-700 leading-relaxed mb-4">
+                            A note on Trustpilot&apos;s displayed number: new profiles with few reviews show a TrustScore near Trustpilot&apos;s 3.5 starting baseline regardless of review quality, so PandaCodeGen&apos;s profile currently displays 3.8 even though both reviews are 5 stars. The displayed score rises automatically with review volume. We state this here so the numbers you see on Trustpilot and on this page never conflict.
+                        </p>
                         <p className="text-stone-700 leading-relaxed">
-                            Named reviewers across these platforms include Matt Conner (MyCustomPatches), Marshall James, James Peace, and Richard Junior. Every review is independently verified by each platform's standard verification process. PandaCodeGen does not solicit reviews through gating, incentives, or paid placements.
+                            Named reviewers across these platforms include Matt Conner (MyCustomPatches), Marshall James, and James Peace. Every review is independently verified by each platform's standard verification process. PandaCodeGen does not solicit reviews through gating, incentives, or paid placements.
                         </p>
                     </section>
 

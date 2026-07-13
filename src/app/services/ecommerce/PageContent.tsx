@@ -147,8 +147,8 @@ export default function PageContent() {
                 platform: "WordPress → Custom",
                 pagespeed: 92,
                 loadTime: "< 1s",
-                saved: "$595/mo",
-                note: "Owned by co-founder Imran Raza, built and operated by PandaCodeGen. Migrated from WordPress + WooCommerce to a custom Next.js storefront with Square payments. Cut monthly tool bill from $650 to about $55 (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). 1 Million+ patches delivered.",
+                saved: "$145+/mo",
+                note: "Owned by co-founder Imran Raza, built and operated by PandaCodeGen. Migrated from WordPress + WooCommerce to a custom Next.js storefront with Square payments. Cut monthly tool bill from $200+ to about $55 (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). 1 Million+ patches delivered.",
               },
               {
                 name: "MyCustomPatches",
@@ -158,8 +158,8 @@ export default function PageContent() {
                 platform: "WordPress → Custom",
                 pagespeed: 95,
                 loadTime: "0.7s",
-                saved: "45 → 95",
-                note: "Migrated from a slow WordPress + WooCommerce store. PageSpeed jumped 45 to 95. Load time 3.2s to 0.7s. Featured 5-star Clutch + GoodFirms reviews.",
+                saved: "45 → 90+",
+                note: "Migrated from a slow WordPress + WooCommerce store. PageSpeed jumped 45 to 90+. Load time 3.2s to 0.7s. Featured 5-star Clutch + GoodFirms reviews.",
               },
               {
                 name: "Saforne",
@@ -174,8 +174,8 @@ export default function PageContent() {
               },
               {
                 name: "Obare Magazine",
-                url: "obare-magazine.vercel.app",
-                href: "https://obare-magazine.vercel.app",
+                url: "obare.vercel.app",
+                href: "https://obare.vercel.app",
                 category: "Editorial Magazine",
                 platform: "Wix → Custom",
                 pagespeed: 95,

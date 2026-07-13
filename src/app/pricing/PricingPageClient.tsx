@@ -362,26 +362,6 @@ export default function PricingPageClient() {
           </div>
         </motion.div>
 
-        {/* Hourly / Retainer Option */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-12 max-w-3xl mx-auto"
-        >
-          <div className="bg-white border border-stone-300 rounded-3xl p-8 shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <div>
-              <p className="text-xs font-black text-cognac uppercase tracking-widest mb-2">Prefer Hourly?</p>
-              <h3 className="text-xl font-bold text-charcoal mb-1">Hourly &amp; Retainer Engagements</h3>
-              <p className="text-stone-500 text-sm max-w-md">
-                Some clients prefer hourly for audits, code reviews, bug fixes, or ongoing feature work after launch. We accommodate that too. Rate starts at $50 to $99/hr depending on scope. Retainers from $500/mo for priority access.
-              </p>
-            </div>
-            <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"discuss_your_needs",location:"cta"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="shrink-0 px-6 py-3 border border-stone-300 text-charcoal font-bold rounded-xl hover:border-cognac hover:text-cognac transition-colors text-sm whitespace-nowrap">
-                Discuss Your Needs
-            </button>
-          </div>
-        </motion.div>
       </section>
 
       {/* 3. DEPOSIT MODEL EXPLAINER */}

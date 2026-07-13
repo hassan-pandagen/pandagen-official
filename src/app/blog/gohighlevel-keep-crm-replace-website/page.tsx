@@ -234,7 +234,7 @@ export default function GHLKeepCRMReplaceWebsitePage() {
                     <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
                         <p className="text-sm text-stone-700 leading-relaxed">
-                            Your GoHighLevel plan and add-ons bill keeps climbing. Your revenue does not. PandaCodeGen rebuilds GHL websites as custom Next.js while keeping your GHL CRM, funnels, automations, and calendars intact, designed to get cited by ChatGPT, Claude, and Google AI from launch day. Fixed pricing from $1,500 Starter to $10,000+ Scale+. 90+ PageSpeed in writing or full refund.
+                            Your GoHighLevel plan and add-ons bill keeps climbing. Your revenue does not. PandaCodeGen rebuilds GHL websites as custom Next.js while keeping your GHL CRM, funnels, automations, and calendars intact, designed to get cited by ChatGPT, Claude, and Perplexity from launch day. Fixed pricing from $1,500 Starter to $10,000+ Scale+. 90+ PageSpeed in writing or full refund.
                         </p>
                     </div>
 

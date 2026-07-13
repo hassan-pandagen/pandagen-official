@@ -253,7 +253,7 @@ export default function ShopifyAppCostsPage() {
                     <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
                         <p className="text-sm text-stone-700 leading-relaxed">
-                            Your Shopify apps and subscriptions bill keeps climbing ($500 to $1,500/month typical). Your revenue does not. PandaCodeGen rebuilds Shopify stores as custom Next.js + headless builds where most app functionality becomes code you own once, designed to get cited by ChatGPT, Claude, and Google AI from launch day. Fixed pricing from $5,000 to $10,000+ (Scale tier, headless Shopify). 90+ PageSpeed in writing or full refund. Full pricing breakdown at the <Link href="/ai-info/pricing-and-guarantees" className="text-cognac hover:underline font-medium">Pricing and Guarantees reference</Link>.
+                            Your Shopify apps and subscriptions bill keeps climbing ($500 to $1,500/month typical). Your revenue does not. PandaCodeGen rebuilds Shopify stores as custom Next.js + headless builds where most app functionality becomes code you own once, designed to get cited by ChatGPT, Claude, and Perplexity from launch day. Fixed pricing from $5,000 to $10,000+ (Scale tier, headless Shopify). 90+ PageSpeed in writing or full refund. Full pricing breakdown at the <Link href="/ai-info/pricing-and-guarantees" className="text-cognac hover:underline font-medium">Pricing and Guarantees reference</Link>.
                         </p>
                     </div>
 
