@@ -4,6 +4,7 @@ import { CheckCircle2, BarChart3, Lock, Users, Clock, Shield, Database, Zap, Ale
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import { FAQAccordion } from "@/components/ui/FAQAccordion";
 
 export const metadata: Metadata = {
     title: { absolute: "Enterprise Operations Platform Case Study, Custom Business Dashboard | PandaCodeGen" },
@@ -22,6 +23,29 @@ export const metadata: Metadata = {
     },
     alternates: { canonical: "/work/enterprise-ops" },
 };
+
+const pageFaqs: { question: string; answer: string }[] = [
+    {
+        question: "What is a custom business operations platform?",
+        answer: "A custom business operations platform is a single web application that replaces multiple disconnected SaaS tools, like CRMs, spreadsheets, attendance trackers, and reporting tools. This is PandaCodeGen's own custom ops platform for the Panda Patches business: we replaced multiple separate tools with one Supabase-backed platform featuring real-time order tracking, 8+ financial reporting modules, RBAC, payments via Square and Stripe, server-side Meta CAPI ad tracking, employee attendance, and automated profit calculations.",
+    },
+    {
+        question: "How much does it cost to replace Google Sheets with a custom business dashboard?",
+        answer: "A custom business dashboard replacing spreadsheets, a CRM, and manual reporting typically starts at $10,000 to $25,000 depending on the number of roles, data tables, and automation requirements. This platform replaced tools costing $80/month plus 20+ hours of manual work per month.",
+    },
+    {
+        question: "What is role-based access control (RBAC) and why does a small business need it?",
+        answer: "RBAC means each user only sees the data their role requires. In this platform: ADMIN sees full financials and all agents; SALES sees their own pipeline only; PRODUCTION sees pending orders with no financial data. We enforce this at two layers, application logic AND Supabase Row-Level Security policies at the database level, so even direct API access is blocked.",
+    },
+    {
+        question: "How long did it take to build the Enterprise Operations platform?",
+        answer: "The full platform, a Supabase schema with Row-Level Security, a 13-status order pipeline, 8+ reporting modules, RBAC with RLS policies, payments via Square and Stripe, attendance with PKT timezone, automated profit calculations, and 20 Supabase Edge Functions, was built in 10 weeks. It received a 9.0/10 rating from independent senior developer review: 9.4/10 code quality, 9.3/10 architecture, 9.0/10 UX.",
+    },
+    {
+        question: "Can a custom dashboard work offline?",
+        answer: "Yes. We implemented a Service Worker that caches the critical UI and data. Team members in Pakistan with intermittent internet connectivity can still access order data and make updates, which sync automatically when the connection is restored.",
+    },
+];
 
 const caseStudySchema = {
     "@context": "https://schema.org",
@@ -128,33 +152,11 @@ const caseStudySchema = {
         {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/work/enterprise-ops#faq",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "What is a custom business operations platform?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "A custom business operations platform is a single web application that replaces multiple disconnected SaaS tools, like CRMs, spreadsheets, attendance trackers, and reporting tools. This is PandaCodeGen's own custom ops platform for the Panda Patches business: we replaced multiple separate tools with one Supabase-backed platform featuring real-time order tracking, 8+ financial reporting modules, RBAC, payments via Square and Stripe, server-side Meta CAPI ad tracking, employee attendance, and automated profit calculations." }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How much does it cost to replace Google Sheets with a custom business dashboard?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "A custom business dashboard replacing spreadsheets, a CRM, and manual reporting typically starts at $10,000 to $25,000 depending on the number of roles, data tables, and automation requirements. This platform replaced tools costing $80/month plus 20+ hours of manual work per month." }
-                },
-                {
-                    "@type": "Question",
-                    "name": "What is role-based access control (RBAC) and why does a small business need it?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "RBAC means each user only sees the data their role requires. In this platform: ADMIN sees full financials and all agents; SALES sees their own pipeline only; PRODUCTION sees pending orders with no financial data. We enforce this at two layers, application logic AND Supabase Row-Level Security policies at the database level, so even direct API access is blocked." }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How long did it take to build the Enterprise Operations platform?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "The full platform, a Supabase schema with Row-Level Security, a 13-status order pipeline, 8+ reporting modules, RBAC with RLS policies, payments via Square and Stripe, attendance with PKT timezone, automated profit calculations, and 20 Supabase Edge Functions, was built in 10 weeks. It received a 9.0/10 rating from independent senior developer review: 9.4/10 code quality, 9.3/10 architecture, 9.0/10 UX." }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Can a custom dashboard work offline?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Yes. We implemented a Service Worker that caches the critical UI and data. Team members in Pakistan with intermittent internet connectivity can still access order data and make updates, which sync automatically when the connection is restored." }
-                }
-            ]
+            "mainEntity": pageFaqs.map((f) => ({
+                "@type": "Question",
+                "name": f.question,
+                "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+            }))
         }
     ]
 };
@@ -732,6 +734,8 @@ export default function EnterpriseOpsCaseStudy() {
                             ))}
                         </div>
                     </section>
+
+                    <FAQAccordion faqs={pageFaqs} />
 
                 </div>
             </div>

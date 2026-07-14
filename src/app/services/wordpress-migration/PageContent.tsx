@@ -111,6 +111,15 @@ export default function PageContent() {
         </div>
       </section>
 
+      {/* Answer-first summary, extractable passage in the citation zone */}
+      <section className="px-6 pb-6 md:pb-8 bg-paper">
+        <div className="container mx-auto max-w-3xl">
+          <p data-speakable="true" className="text-base md:text-lg text-stone-600 leading-relaxed text-center">
+            <strong className="text-charcoal">PandaCodeGen migrates WordPress sites to custom Next.js code the client owns outright.</strong> Migrations are fixed-price from $1,500 (Starter) to $10,000+, take 1 to 3 weeks with zero downtime, and include a full 301-redirect map that preserves SEO rankings. Every migration ships with a written 90+ Google PageSpeed guarantee or a full refund and removes recurring plugin and managed-hosting fees, one client dropped from $150/month to $0.
+          </p>
+        </div>
+      </section>
+
       {/* 2. PLATFORM KILLER CHART — modernized WordPress comparison */}
       <div className="-mt-4">
         <PlatformKillerChart

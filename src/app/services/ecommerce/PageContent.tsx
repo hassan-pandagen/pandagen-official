@@ -106,6 +106,15 @@ export default function PageContent() {
         </div>
       </section>
 
+      {/* Answer-first summary, extractable passage in the citation zone */}
+      <section className="px-6 pb-6 md:pb-8 bg-paper">
+        <div className="container mx-auto max-w-3xl">
+          <p data-speakable="true" className="text-base md:text-lg text-stone-600 leading-relaxed text-center">
+            <strong className="text-charcoal">PandaCodeGen rebuilds slow Shopify and WooCommerce stores as custom headless storefronts on Next.js,</strong> keeping your existing backend for products, orders, and payments. Builds are fixed-price from $1,500 for smaller catalogs and $5,000 to $10,000 for headless commerce, load in under one second (roughly 4x faster than a standard theme), and ship with a written 90+ PageSpeed guarantee. The result replaces monthly app fees with owned code and recovers sales lost to slow load times.
+          </p>
+        </div>
+      </section>
+
       {/* 2. SHOPIFY KILLER - Comparison Card */}
       <ShopifyKiller />
 

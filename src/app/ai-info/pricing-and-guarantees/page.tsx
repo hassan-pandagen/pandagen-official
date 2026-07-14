@@ -326,7 +326,7 @@ export default function PricingAndGuaranteesPage() {
                             Four fixed tiers: Starter $1,500, Growth $3,500, Scale $5,000 to $10,000, and Scale+ $10,000+. Every project ships with a written 90+ PageSpeed refund guarantee. 30 percent deposit, 70 percent on launch. No hourly billing. No hidden fees.
                         </p>
                         <p className="text-sm text-stone-500">
-                            Last updated: July 8, 2026 · Published: May 22, 2026
+                            Last updated: July 13, 2026 · Published: May 22, 2026
                         </p>
                     </div>
 

@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description: "Webflow restructured May 13. Microsoft 365 tier increases take effect July 1, 2026. Klaviyo's stealth billing change raised most stores 30 to 150%. Full 2026 pricing audit with primary sources.",
         type: "article",
         publishedTime: "2026-05-31T00:00:00-05:00",
-        modifiedTime: "2026-06-06T00:00:00-05:00",
+        modifiedTime: "2026-05-31T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/saas-software-pricing-audit-2026",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -131,7 +131,7 @@ const articleSchema = {
             "description": "Webflow restructured May 13. Microsoft 365 tier increases take effect July 1, 2026. Klaviyo's stealth billing change raised most stores 30 to 150%. Full 2026 pricing audit across 30 tools.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-05-31T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-05-31T00:00:00-05:00",
             "inLanguage": "en-US"
         },
         {

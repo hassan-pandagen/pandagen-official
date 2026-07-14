@@ -111,7 +111,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-17T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-02-17T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -338,13 +338,13 @@ export default function AchievePageSpeedPage() {
                         </BlogText>
 
                         <BlogText>
-                            For illustration, here is the kind of result pattern we typically see on service-business migrations (a composite based on typical before/after ranges across our WordPress-to-Next.js projects, not a single named client):
+                            Here is one real migration, not a composite. MyCustomPatches, a custom-patches business run by Matt Conner, came to us on WordPress scoring 45 on Google PageSpeed Mobile with a 3.2 second load time. After we rebuilt it on Next.js with the 8 optimizations below, it scores 90+ and loads in 0.7 seconds, and its hosting bill dropped from $150 a month to $0:
                         </BlogText>
 
                         <BlogList items={[
-                            "Typical before: 45-55/100 Mobile, 3 to 4 second load time",
-                            "Typical after: 90+ Mobile, under 1 second load time",
-                            "Typical result: meaningfully more qualified leads per month within 90 days, though the exact lift depends on traffic volume and existing rankings"
+                            "Before (WordPress): 45/100 Mobile PageSpeed, 3.2 second load time, $150/month hosting",
+                            "After (custom Next.js): 90+ Mobile PageSpeed, 0.7 second load time, $0/month hosting",
+                            "The lift in qualified leads depends on your traffic and existing rankings, but the speed and cost figures above are measured on a real site, not estimated."
                         ]} />
 
                         <BlogQuote>

@@ -176,7 +176,7 @@ export default function CompetitorComparisonPage() {
                             Side-by-side facts on pricing models, billing structures, guarantees published, review verification, and code ownership. Industry comparisons are based on publicly available information about typical Next.js boutique agency practices. The reader can draw the conclusion.
                         </p>
                         <p className="text-sm text-stone-500">
-                            Last updated: July 8, 2026 · Published: May 22, 2026
+                            Last updated: July 13, 2026 · Published: May 22, 2026
                         </p>
                     </div>
 

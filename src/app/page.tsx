@@ -317,6 +317,15 @@ export default function Home() {
       {/* Hero */}
       <Hero />
 
+      {/* Answer-first summary, extractable passage placed in the citation zone (first 30% of page) */}
+      <section className="px-6 pt-2 pb-6 md:pb-8 bg-paper">
+        <div className="container mx-auto max-w-3xl">
+          <p data-speakable="true" className="text-base md:text-lg text-stone-600 leading-relaxed text-center">
+            <strong className="text-charcoal">PandaCodeGen is a custom Next.js web development agency</strong> that rebuilds slow WordPress, Shopify, Webflow, Wix, and Squarespace sites into fast custom code the client owns outright. Every build ships with a written 90+ Google PageSpeed guarantee or a full refund, fixed pricing from $1,500, and no monthly platform fees. Sites load in under one second and are engineered to be cited by AI search engines like ChatGPT, Claude, and Perplexity.
+          </p>
+        </div>
+      </section>
+
       {/* Trust Stats Strip, 90+ PageSpeed, <1s load, $0 fees, 100% ownership */}
       <TrustLogoBar />
 

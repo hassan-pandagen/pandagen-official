@@ -4,6 +4,7 @@ import { CheckCircle2, Zap, Shield, Smartphone, Code2, BarChart3, Layers, Eye } 
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import { FAQAccordion } from "@/components/ui/FAQAccordion";
 
 export const metadata: Metadata = {
     title: { absolute: "Panda CodeLab, Custom Agency Website, Spline 3D + Framer Motion + WCAG 2.1 AA | PandaCodeGen" },
@@ -22,6 +23,29 @@ export const metadata: Metadata = {
     },
     alternates: { canonical: "/work/panda-codelab" },
 };
+
+const pageFaqs: { question: string; answer: string }[] = [
+    {
+        question: "Why build an agency website in Next.js 16 instead of a website builder?",
+        answer: "We couldn't sell custom-code performance to clients while running our own site on Webflow or WordPress. Next.js 16 gave us App Router, React 19, server components, and full control over every render. The result: sub-700ms load times, 90+ PageSpeed, and zero platform fees. It's our live proof of concept.",
+    },
+    {
+        question: "Do Framer Motion animations hurt performance?",
+        answer: "Not when implemented correctly. We use hardware-accelerated CSS properties only (transform, opacity), never layout-triggering properties. Spring physics are calculated in the browser compositor thread. We also detect prefers-reduced-motion and disable all animations for users who request it. The animated site scores the same as a static site on Lighthouse.",
+    },
+    {
+        question: "What is WCAG 2.1 AA compliance and why does it matter for a business website?",
+        answer: "WCAG 2.1 Level AA is the international accessibility standard that covers keyboard navigation, screen reader compatibility, focus indicators, color contrast ratios, and motion preferences. In the US, ADA compliance lawsuits against websites are increasing. Every interactive element on this site has focus rings, ARIA labels, and keyboard navigation. Accessibility is also a direct ranking signal in Google's Page Experience algorithm.",
+    },
+    {
+        question: "How does the Spline 3D integration affect page load time?",
+        answer: "The 3D scene is lazy-loaded, it only initializes after the critical above-the-fold content has rendered. We use Next.js dynamic imports with a lightweight placeholder, so the initial page load is unaffected. The 3D scene loads progressively in the background while the user reads the page.",
+    },
+    {
+        question: "Can you build a site like this for my agency or business?",
+        answer: "Yes. We build premium agency and business websites on this exact stack: Next.js 14+, TypeScript, Tailwind CSS, Framer Motion, and Lenis smooth scroll. Pricing starts from $5,900 for a full custom coded agency site. Timeline is typically 4-6 weeks. Every site includes schema markup, Core Web Vitals optimization, and WCAG 2.1 AA compliance.",
+    },
+];
 
 const caseStudySchema = {
     "@context": "https://schema.org",
@@ -127,33 +151,11 @@ const caseStudySchema = {
         {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/work/panda-codelab#faq",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "Why build an agency website in Next.js 16 instead of a website builder?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "We couldn't sell custom-code performance to clients while running our own site on Webflow or WordPress. Next.js 16 gave us App Router, React 19, server components, and full control over every render. The result: sub-700ms load times, 90+ PageSpeed, and zero platform fees. It's our live proof of concept." }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Do Framer Motion animations hurt performance?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Not when implemented correctly. We use hardware-accelerated CSS properties only (transform, opacity), never layout-triggering properties. Spring physics are calculated in the browser compositor thread. We also detect prefers-reduced-motion and disable all animations for users who request it. The animated site scores the same as a static site on Lighthouse." }
-                },
-                {
-                    "@type": "Question",
-                    "name": "What is WCAG 2.1 AA compliance and why does it matter for a business website?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "WCAG 2.1 Level AA is the international accessibility standard that covers keyboard navigation, screen reader compatibility, focus indicators, color contrast ratios, and motion preferences. In the US, ADA compliance lawsuits against websites are increasing. Every interactive element on this site has focus rings, ARIA labels, and keyboard navigation. Accessibility is also a direct ranking signal in Google's Page Experience algorithm." }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How does the Spline 3D integration affect page load time?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "The 3D scene is lazy-loaded, it only initializes after the critical above-the-fold content has rendered. We use Next.js dynamic imports with a lightweight placeholder, so the initial page load is unaffected. The 3D scene loads progressively in the background while the user reads the page." }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Can you build a site like this for my agency or business?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Yes. We build premium agency and business websites on this exact stack: Next.js 14+, TypeScript, Tailwind CSS, Framer Motion, and Lenis smooth scroll. Pricing starts from $5,900 for a full custom coded agency site. Timeline is typically 4-6 weeks. Every site includes schema markup, Core Web Vitals optimization, and WCAG 2.1 AA compliance." }
-                }
-            ]
+            "mainEntity": pageFaqs.map((f) => ({
+                "@type": "Question",
+                "name": f.question,
+                "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+            }))
         }
     ]
 };
@@ -515,6 +517,8 @@ export default function PandaCodelabCaseStudy() {
                             ))}
                         </div>
                     </section>
+
+                    <FAQAccordion faqs={pageFaqs} />
 
                 </div>
             </div>

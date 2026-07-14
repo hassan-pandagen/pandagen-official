@@ -29,7 +29,7 @@ export const metadata: Metadata = {
         description: "Shopify is sunsetting Stocky on August 31, 2026. Stores lose purchase orders, supplier data, and landed costs. Here is the permanent fix.",
         type: "article",
         publishedTime: "2026-04-25",
-        modifiedTime: "2026-06-06T00:00:00-05:00",
+        modifiedTime: "2026-04-25T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/shopify-stocky-sunset-date-2026",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -115,7 +115,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-04-25T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-04-25T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/shopify-stocky-sunset-date-2026#breadcrumb" },
             "inLanguage": "en-US"
         },

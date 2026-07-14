@@ -4,6 +4,7 @@ import { CheckCircle2, Zap, DollarSign, Server, ShoppingBag, BarChart3, Lock, Us
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import { FAQAccordion } from "@/components/ui/FAQAccordion";
 
 export const metadata: Metadata = {
     title: "Panda Patches: WordPress to Next.js Migration, Zero SEO Drops",
@@ -22,6 +23,33 @@ export const metadata: Metadata = {
     },
     alternates: { canonical: "/work/panda-patches" },
 };
+
+const pageFaqs: { question: string; answer: string }[] = [
+    {
+        question: "Did the Panda Patches WordPress migration preserve Google search rankings?",
+        answer: "Yes. We migrated the 3-year-old WordPress site to Next.js with 100 percent of Google rankings preserved and zero drops in Google Search Console. We exported every indexed URL before migration, built 301 redirects for each one in Next.js middleware, preserved existing meta titles and descriptions, upgraded schema markup without changing entity signals, and submitted a fresh sitemap to Google the day of launch. Rankings held position for 30 days post-launch and improved after 60 days because the new site loads in under 1 second, which Google rewards under its 2026 Core Web Vitals algorithm.",
+    },
+    {
+        question: "Can you replace Shopify with a custom coded e-commerce store?",
+        answer: "Yes. We replaced WordPress + WooCommerce entirely for Panda Patches with a custom Next.js storefront. The store has scaled from $38K to about $50K/month with zero platform fees, compared to Shopify's $79 to $299/month plus transaction fees. You own 100% of the code.",
+    },
+    {
+        question: "How does a real-time pricing calculator work without API calls?",
+        answer: "We built the pricing engine in TypeScript and run all calculations client-side. The full pricing matrix, 9 patch types, custom dimensions, 8+ quantity tiers, 3 backing options, 2 border types, is pre-compiled into a JavaScript function. Every price update takes under 5ms with zero server round-trips.",
+    },
+    {
+        question: "How much does it cost to build a custom e-commerce platform like this?",
+        answer: "A custom e-commerce platform with a real-time pricing engine, CMS, Square checkout (card, Apple Pay, Google Pay, Cash App Pay, and Afterpay BNPL), an AI mockup generator, a customer portal, and a full server-side conversion-tracking stack starts at $15,000 to $30,000 depending on complexity. Panda Patches runs on about $55/month in total tooling costs after launch (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator).",
+    },
+    {
+        question: "What tools did the custom platform replace?",
+        answer: "One platform replaced: WordPress + WooCommerce ($80/mo), a separate CRM ($50/mo), Google Sheets for order tracking, a manual attendance tracker ($30/mo), and WhatsApp for team communication. Total savings: $200+/month plus 10+ hours per week of manual work.",
+    },
+    {
+        question: "How long did it take to build the Panda Patches platform?",
+        answer: "The storefront, custom real-time pricing, Sanity CMS, AI patch generator, Square checkout with BNPL, customer portal, and the server-side conversion-tracking stack, was built and launched within 8 weeks. The connected staff CRM that runs order operations is a separate application sharing the same Supabase backend. The Lighthouse score is 90+ across all Core Web Vitals.",
+    },
+];
 
 const caseStudySchema = {
     "@context": "https://schema.org",
@@ -167,38 +195,11 @@ const caseStudySchema = {
         {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/work/panda-patches#faq",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "Did the Panda Patches WordPress migration preserve Google search rankings?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Yes. We migrated the 3-year-old WordPress site to Next.js with 100 percent of Google rankings preserved and zero drops in Google Search Console. We exported every indexed URL before migration, built 301 redirects for each one in Next.js middleware, preserved existing meta titles and descriptions, upgraded schema markup without changing entity signals, and submitted a fresh sitemap to Google the day of launch. Rankings held position for 30 days post-launch and improved after 60 days because the new site loads in under 1 second, which Google rewards under its 2026 Core Web Vitals algorithm." }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Can you replace Shopify with a custom coded e-commerce store?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Yes. We replaced WordPress + WooCommerce entirely for Panda Patches with a custom Next.js storefront. The store has scaled from $38K to about $50K/month with zero platform fees, compared to Shopify's $79 to $299/month plus transaction fees. You own 100% of the code." }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How does a real-time pricing calculator work without API calls?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "We built the pricing engine in TypeScript and run all calculations client-side. The full pricing matrix, 9 patch types, custom dimensions, 8+ quantity tiers, 3 backing options, 2 border types, is pre-compiled into a JavaScript function. Every price update takes under 5ms with zero server round-trips." }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How much does it cost to build a custom e-commerce platform like this?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "A custom e-commerce platform with a real-time pricing engine, CMS, Square checkout (card, Apple Pay, Google Pay, Cash App Pay, and Afterpay BNPL), an AI mockup generator, a customer portal, and a full server-side conversion-tracking stack starts at $15,000 to $30,000 depending on complexity. Panda Patches runs on about $55/month in total tooling costs after launch (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator)." }
-                },
-                {
-                    "@type": "Question",
-                    "name": "What tools did the custom platform replace?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "One platform replaced: WordPress + WooCommerce ($80/mo), a separate CRM ($50/mo), Google Sheets for order tracking, a manual attendance tracker ($30/mo), and WhatsApp for team communication. Total savings: $200+/month plus 10+ hours per week of manual work." }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How long did it take to build the Panda Patches platform?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "The storefront, custom real-time pricing, Sanity CMS, AI patch generator, Square checkout with BNPL, customer portal, and the server-side conversion-tracking stack, was built and launched within 8 weeks. The connected staff CRM that runs order operations is a separate application sharing the same Supabase backend. The Lighthouse score is 90+ across all Core Web Vitals." }
-                }
-            ]
+            "mainEntity": pageFaqs.map((f) => ({
+                "@type": "Question",
+                "name": f.question,
+                "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+            }))
         }
     ]
 };
@@ -705,6 +706,8 @@ export default function PandaPatchesCaseStudy() {
                             </Link>
                         </div>
                     </section>
+
+                    <FAQAccordion faqs={pageFaqs} />
 
                 </div>
             </div>

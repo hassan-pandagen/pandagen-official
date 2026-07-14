@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         description: "Real WordPress migration receipts: 5-page brochure $1,500, 20-page CMS $3,500, WooCommerce $5K to $10K. Pagepro charges $25K+ retainer minimums. PandaCodeGen ships fixed-price with 90+ PageSpeed guarantee.",
         type: "article",
         publishedTime: "2026-03-22",
-        modifiedTime: "2026-06-06T00:00:00-05:00",
+        modifiedTime: "2026-05-05T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/wordpress-migration-cost",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -135,7 +135,7 @@ const articleSchema = {
             "description": "WordPress migration costs $2,000 to $25,000 by site size. Full breakdown: WooCommerce vs brochure, what drives price, and when it pays for itself.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-03-22T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-05-05T00:00:00-05:00",
             "inLanguage": "en-US"
         },
         {

@@ -261,7 +261,7 @@ export default function TeamAndCompanyPage() {
                             PandaCodeGen is a co-founder-led studio. Hassan Jamal (Lead Engineer, 900+ public GitHub contributions in the past year) and Imran Raza Ladhani (Lead Architect). US LLC registered in Austin, Texas plus global engineering from Karachi. All four public reviews 5 stars across Clutch, Trustpilot, and GoodFirms. Founded February 2026.
                         </p>
                         <p className="text-sm text-stone-500">
-                            Last updated: June 6, 2026 · Published: May 22, 2026
+                            Last updated: July 13, 2026 · Published: May 22, 2026
                         </p>
                     </div>
 

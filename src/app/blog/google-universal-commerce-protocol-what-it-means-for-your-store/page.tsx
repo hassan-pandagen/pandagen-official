@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         description: "Google's Universal Commerce Protocol lets customers buy products directly from search results. Here is what every store owner needs to understand and how to prepare.",
         type: "article",
         publishedTime: "2026-02-21",
-        modifiedTime: "2026-06-06T00:00:00-05:00",
+        modifiedTime: "2026-05-26T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/google-universal-commerce-protocol-what-it-means-for-your-store",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -118,7 +118,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-02-21T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-05-26T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/google-universal-commerce-protocol-what-it-means-for-your-store#breadcrumb" },
             "inLanguage": "en-US"
         },

@@ -231,6 +231,31 @@ export default function PlatformKillerChart({
           </div>
         </motion.div>
       </div>
+
+      {/* Extractable comparison table, semantic HTML for AI citation + accessibility (mirrors the chart) */}
+      <div className="max-w-3xl mx-auto mt-8 px-6">
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <caption className="sr-only">{comparisonTitle} comparison</caption>
+            <thead>
+              <tr className="bg-stone-100">
+                <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">Metric</th>
+                <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">{themLabel}</th>
+                <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">Custom Next.js</th>
+              </tr>
+            </thead>
+            <tbody>
+              {metrics.map((row) => (
+                <tr key={row.metric} className="odd:bg-white even:bg-stone-50">
+                  <td className="border border-stone-300 px-4 py-3 font-medium text-charcoal">{row.metric}</td>
+                  <td className="border border-stone-300 px-4 py-3 text-stone-600">{row.themLabel}</td>
+                  <td className="border border-stone-300 px-4 py-3 text-stone-700">{row.usLabel}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </section>
   );
 }

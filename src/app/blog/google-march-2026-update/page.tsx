@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         description: "Google's March 2026 core update tightened speed requirements and dropped 47% of slow sites. Here's what changed and what your business should do now.",
         type: "article",
         publishedTime: "2026-04-01T00:00:00-05:00",
-        modifiedTime: "2026-06-06T00:00:00-05:00",
+        modifiedTime: "2026-04-01T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/google-march-2026-update",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -109,7 +109,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-04-01T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-04-01T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/google-march-2026-update#breadcrumb" },
             "inLanguage": "en-US"
         },

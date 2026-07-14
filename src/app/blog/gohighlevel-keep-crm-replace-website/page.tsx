@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description: "Keep GoHighLevel for CRM, automations, calendars, and SaaS Mode. Replace only the slow public website with a Next.js frontend that talks to GHL via REST API v2 and webhooks.",
         type: "article",
         publishedTime: "2026-05-04",
-        modifiedTime: "2026-06-06T00:00:00-05:00",
+        modifiedTime: "2026-05-04T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/gohighlevel-keep-crm-replace-website",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -135,7 +135,7 @@ const articleSchema = {
             "description": "Hybrid stack architecture for GoHighLevel: Next.js frontend, GHL backend. Real PageSpeed numbers, code paths, webhook events, and pitfalls.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-05-04T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-05-04T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/gohighlevel-keep-crm-replace-website#breadcrumb" },
             "inLanguage": "en-US"
         },

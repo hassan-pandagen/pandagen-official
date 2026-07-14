@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         description: "Real Webflow migration receipts: $1,500 (5 pages), $3,500 (20 pages), $5K to $10K (50-100 pages). Enterprise agencies charge $15K to $25K for the same scope. Fixed pricing, 90+ PageSpeed guarantee.",
         type: "article",
         publishedTime: "2026-03-25",
-        modifiedTime: "2026-06-06T00:00:00-05:00",
+        modifiedTime: "2026-04-15T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/webflow-migration-cost",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -113,7 +113,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-03-25T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-04-15T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/webflow-migration-cost#breadcrumb" },
             "inLanguage": "en-US"
         },

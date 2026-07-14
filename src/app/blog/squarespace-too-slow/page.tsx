@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description: "Squarespace PageSpeed stuck at 30-55 on mobile? The cause is a JavaScript bundle you cannot remove. Full diagnosis and the only fix that works.",
         type: "article",
         publishedTime: "2026-03-27T00:00:00-05:00",
-        modifiedTime: "2026-06-06T00:00:00-05:00",
+        modifiedTime: "2026-03-27T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/squarespace-too-slow",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -142,7 +142,7 @@ const schemaData = {
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/squarespace-too-slow#breadcrumb" },
             "inLanguage": "en-US",
             "datePublished": "2026-03-27T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00"
+            "dateModified": "2026-03-27T00:00:00-05:00"
         },
         {
             "@type": "Organization",

@@ -178,7 +178,7 @@ export default function CaseStudiesPage() {
                             Two flagship client migrations with full verifiable receipts. MyCustomPatches: PageSpeed approximately 45 to 90+, load time 3.2s to 0.7s, monthly hosting $150 to $0, zero ranking drops. Panda Patches: PageSpeed 64 to 90+, LCP 5.8s to 0.8s, revenue scaled from $38,000 to about $50,000/month on about $55/month tooling total, zero ranking drops.
                         </p>
                         <p className="text-sm text-stone-500">
-                            Last updated: July 8, 2026 · Published: May 22, 2026
+                            Last updated: July 13, 2026 · Published: May 22, 2026
                         </p>
                     </div>
 

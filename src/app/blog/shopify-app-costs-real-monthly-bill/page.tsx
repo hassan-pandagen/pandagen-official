@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         description: "You cut 3 apps to save money. Black Friday hits and the bill is $1,000 again. Full app cost breakdown and how to actually stop paying.",
         type: "article",
         publishedTime: "2026-03-19T00:00:00-05:00",
-        modifiedTime: "2026-06-06T00:00:00-05:00",
+        modifiedTime: "2026-05-26T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/shopify-app-costs-real-monthly-bill",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -135,7 +135,7 @@ const articleSchema = {
             "description": "The full Shopify app cost breakdown. Default stack costs $1,000/month. Optimized stack costs $136/month. Here is every swap, named and priced.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-03-19T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-05-26T00:00:00-05:00",
             "inLanguage": "en-US"
         },
         {

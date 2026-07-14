@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         description: "Squarespace costs $1,500 to $5,500 over 3 years. Here is the real migration cost by site size and exactly when it pays for itself.",
         type: "article",
         publishedTime: "2026-05-08T00:00:00-05:00",
-        modifiedTime: "2026-06-06T00:00:00-05:00",
+        modifiedTime: "2026-05-08T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/squarespace-migration-cost",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -121,7 +121,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-05-08T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-05-08T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/squarespace-migration-cost#breadcrumb" },
             "inLanguage": "en-US"
         },

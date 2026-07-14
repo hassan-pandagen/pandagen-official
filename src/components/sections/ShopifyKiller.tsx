@@ -251,6 +251,31 @@ export default function ShopifyKiller({ onOpenQuote }: ShopifyKillerProps) {
           </div>
         </motion.div>
 
+        {/* Extractable comparison table, semantic HTML for AI citation + accessibility (mirrors the chart above) */}
+        <div className="max-w-4xl mx-auto mt-10 px-4">
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <caption className="sr-only">Standard Shopify theme versus custom Next.js storefront comparison</caption>
+              <thead>
+                <tr className="bg-stone-100">
+                  <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">Metric</th>
+                  <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">Standard Shopify theme</th>
+                  <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">Custom Next.js storefront</th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparisonMetrics.map((row) => (
+                  <tr key={row.metric} className="odd:bg-white even:bg-stone-50">
+                    <td className="border border-stone-300 px-4 py-3 font-medium text-charcoal">{row.metric}</td>
+                    <td className="border border-stone-300 px-4 py-3 text-stone-600">{row.shopifyLabel}</td>
+                    <td className="border border-stone-300 px-4 py-3 text-stone-700">{row.customLabel}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
       </div>
     </section>
   );

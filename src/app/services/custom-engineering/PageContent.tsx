@@ -101,6 +101,15 @@ export default function PageContent() {
         </div>
       </section>
 
+      {/* Answer-first summary, extractable passage in the citation zone */}
+      <section className="px-6 pb-6 md:pb-8 bg-paper">
+        <div className="container mx-auto max-w-3xl">
+          <p data-speakable="true" className="text-base md:text-lg text-stone-600 leading-relaxed text-center">
+            <strong className="text-charcoal">PandaCodeGen builds custom software, SaaS platforms, dashboards, and internal tools</strong> on Next.js, TypeScript, and Supabase, with the client owning 100% of the code and IP from day one. Projects are fixed-price from $3,000 (Tool) to $25,000+ (Enterprise), take 1 to 12 weeks depending on scope, and replace $50,000 to $200,000 agency quotes and recurring SaaS subscriptions with owned code. No hourly billing.
+          </p>
+        </div>
+      </section>
+
       {/* 2. WHAT WE BUILD */}
       <section id="what-we-build" className="py-10 md:py-14 px-6 border-y border-stone-200 bg-[#F8FAFC]">
         <div className="container mx-auto max-w-5xl">

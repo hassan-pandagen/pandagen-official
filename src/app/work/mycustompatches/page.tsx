@@ -4,6 +4,7 @@ import { CheckCircle2, Zap, BarChart3, Globe, ShoppingBag, Code2, Clock, Trendin
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import { FAQAccordion } from "@/components/ui/FAQAccordion";
 
 export const metadata: Metadata = {
     title: { absolute: "MyCustomPatches Case Study, WordPress Migration, 90+ PageSpeed | PandaCodeGen" },
@@ -22,6 +23,29 @@ export const metadata: Metadata = {
     },
     alternates: { canonical: "/work/mycustompatches" },
 };
+
+const pageFaqs: { question: string; answer: string }[] = [
+    {
+        question: "How did you migrate 200+ WordPress pages without losing SEO rankings?",
+        answer: "We mapped every existing WordPress URL to its identical path in the new Next.js build. Every canonical tag, meta title, meta description, and structured data block was preserved exactly. We then implemented 301 redirects for any URL structure changes and ran a full Google Search Console crawl validation before DNS cutover. Rankings were stable within 2 weeks post-launch.",
+    },
+    {
+        question: "How did load time drop from 3.2s to 0.7s?",
+        answer: "Three main factors: First, eliminating WordPress plugin overhead (removed ~45 active plugins). Second, switching to Next.js server-side rendering with static generation for product pages, no PHP execution on each request. Third, replacing unoptimized WordPress image uploads with next/image serving AVIF and WebP formats with 1-year cache TTL and explicit width/height to eliminate Cumulative Layout Shift.",
+    },
+    {
+        question: "How did hosting costs drop from $150/mo to $0?",
+        answer: "The original site ran on managed WordPress hosting ($150/mo) plus paid plugins, premium theme fees, and security scanning. The new Next.js site deploys on Vercel's free tier with Cloudflare CDN. Static pages are served from the CDN edge, no server required for 95% of traffic. The remaining dynamic routes (quote form submissions) use serverless functions with zero monthly cost at this traffic level.",
+    },
+    {
+        question: "Was there any downtime during the migration?",
+        answer: "Zero. We ran the new Next.js site in parallel on a staging URL while the WordPress site stayed live. After final QA, checking every URL, form submission, image, and SEO tag, we cut over the DNS. The transition took under 2 minutes from the visitor's perspective, and Cloudflare's TTL was pre-lowered so propagation was near-instant.",
+    },
+    {
+        question: "What happens to the quote forms and file uploads after migration?",
+        answer: "All quote forms were rebuilt with React Hook Form and Zod validation, integrated with Web3Forms for email delivery (no backend required). Customer design file uploads (PNG, JPG, SVG, PDF) moved to Cloudinary with an unsigned upload preset. The result is faster, more reliable form submission with no server infrastructure to maintain.",
+    },
+];
 
 const caseStudySchema = {
     "@context": "https://schema.org",
@@ -117,33 +141,11 @@ const caseStudySchema = {
         {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/work/mycustompatches#faq",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "How did you migrate 200+ WordPress pages without losing SEO rankings?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "We mapped every existing WordPress URL to its identical path in the new Next.js build. Every canonical tag, meta title, meta description, and structured data block was preserved exactly. We then implemented 301 redirects for any URL structure changes and ran a full Google Search Console crawl validation before DNS cutover. Rankings were stable within 2 weeks post-launch." }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How did load time drop from 3.2s to 0.7s?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Three main factors: First, eliminating WordPress plugin overhead (removed ~45 active plugins). Second, switching to Next.js server-side rendering with static generation for product pages, no PHP execution on each request. Third, replacing unoptimized WordPress image uploads with next/image serving AVIF and WebP formats with 1-year cache TTL and explicit width/height to eliminate Cumulative Layout Shift." }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How did hosting costs drop from $150/mo to $0?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "The original site ran on managed WordPress hosting ($150/mo) plus paid plugins, premium theme fees, and security scanning. The new Next.js site deploys on Vercel's free tier with Cloudflare CDN. Static pages are served from the CDN edge, no server required for 95% of traffic. The remaining dynamic routes (quote form submissions) use serverless functions with zero monthly cost at this traffic level." }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Was there any downtime during the migration?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Zero. We ran the new Next.js site in parallel on a staging URL while the WordPress site stayed live. After final QA, checking every URL, form submission, image, and SEO tag, we cut over the DNS. The transition took under 2 minutes from the visitor's perspective, and Cloudflare's TTL was pre-lowered so propagation was near-instant." }
-                },
-                {
-                    "@type": "Question",
-                    "name": "What happens to the quote forms and file uploads after migration?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "All quote forms were rebuilt with React Hook Form and Zod validation, integrated with Web3Forms for email delivery (no backend required). Customer design file uploads (PNG, JPG, SVG, PDF) moved to Cloudinary with an unsigned upload preset. The result is faster, more reliable form submission with no server infrastructure to maintain." }
-                }
-            ]
+            "mainEntity": pageFaqs.map((f) => ({
+                "@type": "Question",
+                "name": f.question,
+                "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+            }))
         }
     ]
 };
@@ -576,6 +578,8 @@ export default function MyCustomPatchesCaseStudy() {
                             </Link>
                         </div>
                     </section>
+
+                    <FAQAccordion faqs={pageFaqs} />
 
                 </div>
             </div>

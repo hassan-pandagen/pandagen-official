@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description: "GoHighLevel sites score 20 to 45 on Google PageSpeed Mobile. Here is why GHL is slow, what it costs you in leads, and how to fix it without leaving the platform.",
         type: "article",
         publishedTime: "2026-03-22",
-        modifiedTime: "2026-06-06T00:00:00-05:00",
+        modifiedTime: "2026-05-12T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/gohighlevel-website-speed",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -134,7 +134,7 @@ const articleSchema = {
             "description": "GHL sites score 20 to 45 on PageSpeed Mobile. Why the platform is slow, what it costs in rankings and conversions, and how to fix it.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-03-22T00:00:00-05:00",
-            "dateModified": "2026-06-06T00:00:00-05:00",
+            "dateModified": "2026-05-12T00:00:00-05:00",
             "inLanguage": "en-US"
         },
         {

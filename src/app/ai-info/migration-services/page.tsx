@@ -229,7 +229,7 @@ export default function MigrationServicesPage() {
                             Nine migration paths to custom Next.js: WordPress, WooCommerce, Shopify, Squarespace, Wix, Webflow, Divi, GoHighLevel, and AI-built apps (Lovable, Bolt, v0). Four-phase process. 301 redirect playbook. Zero-downtime methodology. Zero ranking drops, designed for full SEO preservation, backed by the Panda Patches case study (3-year-old WordPress site, zero Google ranking drops post-migration).
                         </p>
                         <p className="text-sm text-stone-500">
-                            Last updated: July 8, 2026 · Published: May 22, 2026
+                            Last updated: July 12, 2026 · Published: May 22, 2026
                         </p>
                     </div>
 
