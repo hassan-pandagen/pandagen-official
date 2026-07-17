@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         description: "Squarespace costs $1,500 to $5,500 over 3 years. Here is the real migration cost by site size and exactly when it pays for itself.",
         type: "article",
         publishedTime: "2026-05-08T00:00:00-05:00",
-        modifiedTime: "2026-05-08T00:00:00-05:00",
+        modifiedTime: "2026-07-17T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/squarespace-migration-cost",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -60,7 +60,7 @@ const articleSchema = {
             "description": "Squarespace costs $1,500 to $5,500 over 3 years with every fee counted. Real migration cost by site size plus the ROI payback math.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
             "datePublished": "2026-05-08T00:00:00-05:00",
-            "dateModified": "2026-05-08T00:00:00-05:00",
+            "dateModified": "2026-07-17T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -121,7 +121,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
             "datePublished": "2026-05-08T00:00:00-05:00",
-            "dateModified": "2026-05-08T00:00:00-05:00",
+            "dateModified": "2026-07-17T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/squarespace-migration-cost#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -293,6 +293,29 @@ export default function SquarespaceMinCostPage() {
                         <BlogText>
                             None of this is hidden. It is just spread across multiple pricing pages that most people never add up before signing up.
                         </BlogText>
+
+                        <BlogHeader id="squarespace-price-increase">What to Do When Squarespace Raises Your Renewal Price</BlogHeader>
+
+                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl" data-speakable="true">
+                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">You have three real options when a Squarespace renewal lands higher than you expected: downgrade a tier and give up features, pay the increase and move on, or move to a site with no recurring platform fee at all. Only the third one ends the problem. The first two reset the price to a number that can rise again at the next renewal.</p>
+                        </div>
+
+                        <BlogText>
+                            This is the single most common reason people give us for leaving Squarespace, and it is almost never about one dollar figure. It is the feeling of opening a renewal email, seeing a number you did not choose, and realising you will be having this exact conversation again in a year.
+                        </BlogText>
+
+                        <BlogText>
+                            Here is the mechanism worth understanding, because it explains why this keeps happening. Over the past year Squarespace has been moving everyone onto a new four-tier structure, Basic, Core, Plus, and Advanced, that replaced the older Personal, Business, and Commerce plans. If your renewal suddenly looks different, a legacy plan being retired into one of the new tiers is the most common reason. Those four plans currently run $16, $23, $39, and $99 a month billed annually. Choose to pay month to month rather than commit to a full year and every one of those jumps 40 to 56 percent, landing between $25 and $139 a month. The plan you are on is not a fixed cost. It is a subscription tier, and a subscription tier is the lever a platform pulls when it needs to grow revenue. Your website is what sits on the other end of that lever.
+                        </BlogText>
+
+                        <BlogText>
+                            A custom site changes what you are paying for in the first place. Instead of renting a tier that can be repriced or restructured, you pay once to build the site, then host it on infrastructure you control, which for most small-business traffic runs $0 to $20 a month on Vercel. There is no plan to be moved between, no feature locked behind the next tier up, and no renewal email quietly setting your budget. The recurring fee you are reacting to does not get smaller. It stops existing. That is the real difference between switching plans and switching off the meter.
+                        </BlogText>
+
+                        <BlogHighlight>
+                            A price increase is a good prompt to run the numbers. It is not, on its own, a reason to migrate. If you have a three-page site that never leans on Google traffic, absorbing $23 a month is genuinely cheaper than a $1,500 rebuild, and you should stay. Run the three-year math above first. The businesses that clearly come out ahead by moving are the ones already paying $100 or more a month across plan and add-ons, or the ones where organic search actually drives revenue and Squarespace&apos;s mobile PageSpeed ceiling is costing them rankings.
+                        </BlogHighlight>
 
                         <BlogHeader>The Cost Nobody Counts: What a Slow Website Costs in Revenue</BlogHeader>
 
