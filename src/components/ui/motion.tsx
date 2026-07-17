@@ -9,8 +9,8 @@
 // keep importing from framer-motion directly:
 //   - src/components/audit/AuditWidget.tsx
 //   - src/components/audit/AuditEmailGate.tsx
+//   - src/components/audit/AuditLoadingState.tsx
 //   - src/components/ui/QuoteModal.tsx
-//   - src/components/sections/ROIComparisonCarousel.tsx
 import {
   forwardRef,
   useEffect,

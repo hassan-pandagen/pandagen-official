@@ -443,7 +443,7 @@ export default function FixMetaAdTrackingPage() {
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
 
-                    <RelatedPosts currentPostId="fix-meta-ad-tracking-2026" category="Guide" />
+                    <RelatedPosts currentPostId="fix-meta-ad-tracking-2026" />
 
                 </div>
             </section>

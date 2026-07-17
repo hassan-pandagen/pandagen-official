@@ -66,7 +66,7 @@ const articleSchema = {
                 "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/why-competitor-outranks-you" },
-            "articleSection": "Traffic Growth",
+            "articleSection": "SEO",
             "keywords": ["Google rankings", "competitor analysis", "website speed SEO", "WordPress vs Next.js", "AI search optimization", "coded website benefits"],
             "timeRequired": "PT11M",
             "wordCount": 2200,
@@ -478,7 +478,7 @@ export default function CompetitorRankingsPage() {
                     </div>
 
                     {/* Related Posts */}
-                    <RelatedPosts currentPostId="why-competitor-outranks-you" category="Traffic Growth" />
+                    <RelatedPosts currentPostId="why-competitor-outranks-you" />
 
                 </article>
             </main>

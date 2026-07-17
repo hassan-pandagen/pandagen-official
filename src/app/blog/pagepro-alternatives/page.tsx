@@ -82,7 +82,7 @@ const articleSchema = {
                 "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/pagepro-alternatives" },
-            "articleSection": "Comparison",
+            "articleSection": "Agency",
             "keywords": ["pagepro alternatives", "naturaily alternatives", "blazity alternatives", "next.js agency comparison", "affordable next.js development"],
             "timeRequired": "PT11M",
             "wordCount": 2800,
@@ -562,7 +562,7 @@ export default function PageproAlternativesPage() {
                     </section>
 
                     <div className="mt-4 pt-4 border-t border-stone-100">
-                        <RelatedPosts currentPostId="pagepro-alternatives" category="Comparison" />
+                        <RelatedPosts currentPostId="pagepro-alternatives" />
                     </div>
 
                 </article>

@@ -554,7 +554,7 @@ export default function WebflowUserAccountsSunset2026Page() {
                         <p className="text-stone-700 leading-relaxed">For the full context on why businesses are leaving Webflow in 2026, read <Link href="/blog/leaving-webflow-2026" className="text-cognac hover:underline font-medium">the 31-hour outage and hidden fees story</Link>. For decision-making on whether to leave Webflow at all, see <Link href="/blog/webflow-vs-custom-website" className="text-cognac hover:underline font-medium">Webflow vs custom website 2026</Link>. For full pricing by page count, see our <Link href="/blog/webflow-migration-cost" className="text-cognac hover:underline font-medium">Webflow migration cost breakdown</Link>.</p>
                     </section>
 
-                    <RelatedPosts currentPostId="webflow-user-accounts-sunset-date-2026" category="Webflow" />
+                    <RelatedPosts currentPostId="webflow-user-accounts-sunset-date-2026" />
 
                 </article>
             </main>

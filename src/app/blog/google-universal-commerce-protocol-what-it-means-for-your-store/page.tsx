@@ -780,7 +780,7 @@ export default function UCPBlogPage() {
                 )}
 
                 {/* Related Posts */}
-                <RelatedPosts currentPostId="google-universal-commerce-protocol-what-it-means-for-your-store" category="E-Commerce" />
+                <RelatedPosts currentPostId="google-universal-commerce-protocol-what-it-means-for-your-store" />
 
             </main>
             <Footer />

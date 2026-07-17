@@ -616,7 +616,7 @@ export default function LeavingWebflow2026Page() {
                         <p className="text-stone-700 leading-relaxed">For every hidden Webflow fee and the PageSpeed ceiling, read <Link href="/blog/webflow-true-cost" className="text-cognac hover:underline font-medium">the full Webflow pricing breakdown for 2026</Link>. For pricing across any platform, see the <Link href="/blog/website-rebuild-cost-2026" className="text-cognac hover:underline font-medium">2026 website rebuild cost guide</Link>.</p>
                     </section>
 
-                    <RelatedPosts currentPostId="leaving-webflow-2026" category="Webflow" />
+                    <RelatedPosts currentPostId="leaving-webflow-2026" />
 
                 </article>
             </main>

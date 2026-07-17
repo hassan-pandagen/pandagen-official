@@ -74,7 +74,7 @@ const articleSchema = {
                 "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/top-custom-web-development-agencies-usa-2026" },
-            "articleSection": "Web Development",
+            "articleSection": "Agency",
             "keywords": ["custom web development agency usa", "best web development company 2026", "wordpress migration agency", "nextjs agency usa", "web development agency comparison", "web agency hidden costs", "how to hire web developer usa"],
             "timeRequired": "PT16M",
             "wordCount": 4200,
@@ -1083,7 +1083,6 @@ export default function TopWebDevAgenciesPage() {
 
                     <RelatedPosts
                         currentPostId="top-custom-web-development-agencies-usa-2026"
-                        category="Web Development"
                     />
 
                     <BlogAuthor

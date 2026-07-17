@@ -369,7 +369,7 @@ export default function WillMigratingHurtSeoPage() {
                 </article>
             </section>
 
-            <RelatedPosts currentPostId="will-migrating-hurt-my-seo" category="Guide" />
+            <RelatedPosts currentPostId="will-migrating-hurt-my-seo" />
             <Footer />
         </main>
     );

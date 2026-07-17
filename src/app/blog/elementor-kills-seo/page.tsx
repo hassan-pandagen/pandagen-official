@@ -24,7 +24,7 @@ export const metadata: Metadata = {
         title: "Does Elementor Hurt SEO? The Real PageSpeed and DOM Data",
         description: "An independent WP Rocket test scored an unoptimized Elementor page at 75/100 mobile with LCP in the red zone. Here's why production Elementor sites usually score worse, and what to do about it.",
         type: "article",
-        publishedTime: "2025-12-28",
+        publishedTime: "2026-03-10",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/elementor-kills-seo",
         images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
@@ -45,7 +45,7 @@ const articleSchema = {
             "headline": "Does Elementor Hurt SEO? The Real PageSpeed and DOM Data",
             "description": "An independent WP Rocket test scored an unoptimized Elementor page at 75/100 mobile with LCP in the red zone. Here's why production Elementor sites usually score worse, and what to do about it.",
             "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2025-12-28T00:00:00-05:00",
+            "datePublished": "2026-03-10T00:00:00-05:00",
             "dateModified": "2026-07-08T00:00:00-05:00",
             "author": {
                 "@type": "Person",
@@ -102,7 +102,7 @@ const articleSchema = {
             "description": "An independent WP Rocket test scored an unoptimized Elementor page at 75/100 mobile with LCP in the red zone. Here's why production Elementor sites usually score worse, and what to do about it.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
-            "datePublished": "2025-12-28T00:00:00-05:00",
+            "datePublished": "2026-03-10T00:00:00-05:00",
             "dateModified": "2026-07-08T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/elementor-kills-seo#breadcrumb" },
             "inLanguage": "en-US"
@@ -312,7 +312,7 @@ export default function ElementorKillsSEOPage() {
                     </section>
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
-                    <RelatedPosts currentPostId="elementor-kills-seo" category="Performance" />
+                    <RelatedPosts currentPostId="elementor-kills-seo" />
 
                 </article>
             </main>

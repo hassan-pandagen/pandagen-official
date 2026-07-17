@@ -528,7 +528,7 @@ export default function ForAgenciesCustomDevPage() {
                     </div>
 
                     {/* Related Posts */}
-                    <RelatedPosts currentPostId="for-agencies-offer-custom-web-development" category="Agency" />
+                    <RelatedPosts currentPostId="for-agencies-offer-custom-web-development" />
 
                 </article>
             </main>

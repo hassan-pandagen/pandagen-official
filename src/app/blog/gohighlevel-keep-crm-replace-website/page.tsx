@@ -82,7 +82,7 @@ const articleSchema = {
                 "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/gohighlevel-keep-crm-replace-website" },
-            "articleSection": "Architecture",
+            "articleSection": "GoHighLevel",
             "keywords": ["gohighlevel hybrid stack", "next.js gohighlevel integration", "gohighlevel api v2", "gohighlevel headless", "replace ghl website builder", "decouple gohighlevel website"],
             "wordCount": 2500,
             "timeRequired": "PT11M",
@@ -525,7 +525,7 @@ export default function GHLKeepCRMReplaceWebsitePage() {
                     <BlogHeader id="faq">Frequently Asked Questions</BlogHeader>
                     <FAQAccordion faqs={ghlHybridFAQs} />
 
-                    <RelatedPosts currentPostId="gohighlevel-keep-crm-replace-website" category="Architecture" />
+                    <RelatedPosts currentPostId="gohighlevel-keep-crm-replace-website" />
 
                 </article>
             </section>

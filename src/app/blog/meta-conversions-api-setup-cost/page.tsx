@@ -78,7 +78,7 @@ const articleSchema = {
                 "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/meta-conversions-api-setup-cost" },
-            "articleSection": "Marketing",
+            "articleSection": "Ad Tracking",
             "keywords": ["meta conversions api setup", "facebook conversions api cost", "server side tracking", "event match quality", "capi custom setup"],
             "wordCount": 2600,
             "timeRequired": "PT12M",

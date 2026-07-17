@@ -67,7 +67,7 @@ const articleSchema = {
                 "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/wordpress-april-2026-evidence" },
-            "articleSection": "Evidence",
+            "articleSection": "WordPress",
             "keywords": ["WordPress April 2026", "Matt Mullenweg memo", "WordPress plugin supply chain attack", "Essential Plugin backdoor", "Smart Slider 3 Pro hijack", "WooCommerce 30 plugins", "Patchstack 2025 WordPress vulnerabilities"],
             "timeRequired": "PT11M",
             "wordCount": 2827,
@@ -435,7 +435,7 @@ export default function WordPressApril2026EvidencePage() {
 
                     {/* Related Posts */}
                     <div className="mt-12">
-                        <RelatedPosts currentPostId="wordpress-april-2026-evidence" category="Evidence" />
+                        <RelatedPosts currentPostId="wordpress-april-2026-evidence" />
                     </div>
                 </article>
             </main>

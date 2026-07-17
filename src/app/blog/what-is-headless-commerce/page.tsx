@@ -711,7 +711,7 @@ export default function WhatIsHeadlessCommercePage() {
                     {headlessFAQs.length > 0 && <FAQAccordion faqs={headlessFAQs} />}
 
                     {/* Related Posts */}
-                    <RelatedPosts currentPostId="what-is-headless-commerce" category="E-Commerce" />
+                    <RelatedPosts currentPostId="what-is-headless-commerce" />
 
                 </article>
             </main>

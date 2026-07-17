@@ -64,7 +64,7 @@ const articleSchema = {
                 "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed" },
-            "articleSection": "Traffic Growth",
+            "articleSection": "WordPress",
             "keywords": ["wordpress losing traffic", "wordpress traffic drop", "why is my traffic dropping", "core web vitals wordpress", "wordpress google ranking drop", "diagnose traffic drop search console"],
             "timeRequired": "PT10M",
             "wordCount": 2400,
@@ -324,7 +324,7 @@ export default function WordPressTrafficDropPage() {
                         <p className="text-stone-700 leading-relaxed">Once speed is confirmed as the cause, see <Link href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline font-medium">how to fix a slow WordPress site</Link> for the full 8-method breakdown, or if a bloated plugin stack looks like the driver, <Link href="/blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline font-medium">how WordPress plugins destroy speed</Link> for the keep/replace/kill scorecard. For the 3-year cost comparison of staying on WordPress vs migrating, see <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className="text-cognac hover:underline font-medium">WordPress vs custom code real cost over 3 years</Link>.</p>
                     </section>
 
-                    <RelatedPosts currentPostId="wordpress-traffic-drop-speed" category="Traffic Growth" />
+                    <RelatedPosts currentPostId="wordpress-traffic-drop-speed" />
 
                 </article>
             </main>

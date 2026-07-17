@@ -67,7 +67,7 @@ const articleSchema = {
                 "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/why-we-chose-nextjs-over-wordpress-2026" },
-            "articleSection": "Comparison",
+            "articleSection": "WordPress",
             "keywords": ["nextjs vs wordpress 2026", "why nextjs over wordpress", "wordpress alternative nextjs", "switch from wordpress to nextjs", "nextjs benefits over wordpress"],
             "timeRequired": "PT11M",
             "wordCount": 2500,
@@ -527,7 +527,7 @@ export default function WhyNextjsOverWordPressPage() {
                     </div>
 
                     {/* Related Posts */}
-                    <RelatedPosts currentPostId="why-we-chose-nextjs-over-wordpress-2026" category="Comparison" />
+                    <RelatedPosts currentPostId="why-we-chose-nextjs-over-wordpress-2026" />
 
                 </article>
             </main>

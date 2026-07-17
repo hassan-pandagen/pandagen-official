@@ -79,7 +79,7 @@ const articleSchema = {
                 "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/gohighlevel-website-speed" },
-            "articleSection": "Performance",
+            "articleSection": "GoHighLevel",
             "keywords": ["gohighlevel website speed", "ghl slow website", "gohighlevel pagespeed", "ghl seo problems", "gohighlevel performance", "fix ghl speed"],
             "wordCount": 4500,
             "timeRequired": "PT18M",

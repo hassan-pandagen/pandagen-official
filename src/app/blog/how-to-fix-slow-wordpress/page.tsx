@@ -691,7 +691,7 @@ export default function FixSlowWordPressPage() {
                     </section>
 
                     {/* Related Posts */}
-                    <RelatedPosts currentPostId="how-to-fix-slow-wordpress" category="Performance" />
+                    <RelatedPosts currentPostId="how-to-fix-slow-wordpress" />
 
                 </article>
             </main>

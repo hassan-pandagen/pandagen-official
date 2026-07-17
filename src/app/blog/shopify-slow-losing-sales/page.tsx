@@ -522,7 +522,7 @@ export default function ShopifySlowPage() {
                     </div>
 
                     {/* Related Posts */}
-                    <RelatedPosts currentPostId="shopify-slow-losing-sales" category="E-Commerce" />
+                    <RelatedPosts currentPostId="shopify-slow-losing-sales" />
 
                 </article>
             </main>

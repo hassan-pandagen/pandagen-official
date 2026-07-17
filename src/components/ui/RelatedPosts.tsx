@@ -5,9 +5,6 @@ import { getRelatedPostIds } from "@/data/topical-map";
 
 interface RelatedPostsProps {
   currentPostId: string;
-  /** @deprecated Kept for backwards-compat with existing callers. Ranking now
-   * derives from the topical map (shared-cluster proximity), not flat category. */
-  category?: string;
   maxPosts?: number;
 }
 

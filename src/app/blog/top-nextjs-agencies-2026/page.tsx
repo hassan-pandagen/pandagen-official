@@ -426,7 +426,7 @@ export default function TopNextjsAgencies2026Page() {
 
                     {/* Related Posts */}
                     <div className="mt-12">
-                        <RelatedPosts currentPostId="top-nextjs-agencies-2026" category="Agency" />
+                        <RelatedPosts currentPostId="top-nextjs-agencies-2026" />
                     </div>
                 </article>
             </main>

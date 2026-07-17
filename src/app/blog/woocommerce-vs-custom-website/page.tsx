@@ -500,7 +500,7 @@ export default function WooCommerceVsCustomWebsitePage() {
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
 
-                    <RelatedPosts currentPostId="woocommerce-vs-custom-website" category="WooCommerce" />
+                    <RelatedPosts currentPostId="woocommerce-vs-custom-website" />
 
                 </div>
             </section>

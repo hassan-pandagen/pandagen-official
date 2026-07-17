@@ -77,7 +77,7 @@ const articleSchema = {
                 "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/custom-website-5000-whats-included" },
-            "articleSection": "Pricing",
+            "articleSection": "Guide",
             "keywords": ["custom website cost", "what does a custom website include", "custom website price 2026", "next.js website cost"],
             "wordCount": 2400,
             "timeRequired": "PT11M",

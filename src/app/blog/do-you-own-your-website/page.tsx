@@ -380,7 +380,7 @@ export default function DoYouOwnYourWebsitePage() {
                 </article>
             </section>
 
-            <RelatedPosts currentPostId="do-you-own-your-website" category="Guide" />
+            <RelatedPosts currentPostId="do-you-own-your-website" />
             <Footer />
         </main>
     );

@@ -67,7 +67,7 @@ const articleSchema = {
                 "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/webflow-true-cost" },
-            "articleSection": "Comparison",
+            "articleSection": "Webflow",
             "keywords": ["Webflow cost", "Webflow hidden fees", "Webflow CMS item limit", "Webflow bandwidth overage", "Webflow pricing", "Webflow apps and integrations cost", "Webflow Workspace seats"],
             "timeRequired": "PT10M",
             "wordCount": 2600,
@@ -468,7 +468,7 @@ export default function WebflowTrueCostPage() {
                     </section>
 
                     {/* Related Posts */}
-                    <RelatedPosts currentPostId="webflow-true-cost" category="Comparison" />
+                    <RelatedPosts currentPostId="webflow-true-cost" />
 
                 </article>
             </main>

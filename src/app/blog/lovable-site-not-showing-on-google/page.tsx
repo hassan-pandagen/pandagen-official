@@ -500,7 +500,7 @@ export default function LovableSiteNotShowingPage() {
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
 
-                    <RelatedPosts currentPostId="lovable-site-not-showing-on-google" category="AEO" />
+                    <RelatedPosts currentPostId="lovable-site-not-showing-on-google" />
 
                 </div>
             </section>

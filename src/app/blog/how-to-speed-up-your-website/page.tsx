@@ -585,7 +585,7 @@ export default function HowToSpeedUpYourWebsitePage() {
                     </section>
 
                     <div className="mt-6 md:mt-10 md:mt-16 pt-8 border-t border-stone-100">
-                        <RelatedPosts currentPostId="how-to-speed-up-your-website" category="Performance" />
+                        <RelatedPosts currentPostId="how-to-speed-up-your-website" />
                     </div>
 
                 </article>

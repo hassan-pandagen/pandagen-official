@@ -720,7 +720,7 @@ export default function AchievePageSpeedPage() {
                     {pagespeedFAQs.length > 0 && <FAQAccordion faqs={pagespeedFAQs} />}
 
                     {/* Related Posts */}
-                    <RelatedPosts currentPostId="how-to-achieve-100-pagespeed" category="Performance" />
+                    <RelatedPosts currentPostId="how-to-achieve-100-pagespeed" />
 
                 </article>
             </main>

@@ -453,7 +453,7 @@ export default function WebflowVsCustomWebsitePage() {
                     </section>
 
                     {/* Related Posts */}
-                    <RelatedPosts currentPostId="webflow-vs-custom-website" category="Webflow" />
+                    <RelatedPosts currentPostId="webflow-vs-custom-website" />
 
                 </article>
             </main>

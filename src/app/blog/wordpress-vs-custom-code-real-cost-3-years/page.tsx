@@ -67,7 +67,7 @@ const articleSchema = {
                 "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/wordpress-vs-custom-code-real-cost-3-years" },
-            "articleSection": "Cost Analysis",
+            "articleSection": "Pricing",
             "keywords": ["wordpress vs custom code cost", "wordpress real cost", "custom website vs wordpress", "wordpress hidden costs", "website total cost of ownership"],
             "timeRequired": "PT12M",
             "wordCount": 2800,
@@ -670,7 +670,7 @@ export default function WordPressVsCustomCodeCostPage() {
                     </div>
 
                     {/* Related Posts */}
-                    <RelatedPosts currentPostId="wordpress-vs-custom-code-real-cost-3-years" category="Cost Analysis" />
+                    <RelatedPosts currentPostId="wordpress-vs-custom-code-real-cost-3-years" />
 
                 </article>
             </main>

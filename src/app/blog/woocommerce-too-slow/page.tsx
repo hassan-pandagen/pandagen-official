@@ -739,7 +739,7 @@ export default function WooCommerceTooSlowPage() {
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
 
-                    <RelatedPosts currentPostId="woocommerce-too-slow" category="WooCommerce" />
+                    <RelatedPosts currentPostId="woocommerce-too-slow" />
 
                 </div>
             </section>

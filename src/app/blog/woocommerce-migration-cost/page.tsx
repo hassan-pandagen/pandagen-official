@@ -483,7 +483,7 @@ export default function WooCommerceMigrationCostPage() {
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
 
-                    <RelatedPosts currentPostId="woocommerce-migration-cost" category="WooCommerce" />
+                    <RelatedPosts currentPostId="woocommerce-migration-cost" />
 
                 </div>
             </section>

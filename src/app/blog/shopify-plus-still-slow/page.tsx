@@ -65,7 +65,7 @@ const articleSchema = {
                 "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/shopify-plus-still-slow" },
-            "articleSection": "E-Commerce",
+            "articleSection": "Shopify",
             "keywords": ["shopify plus slow", "shopify plus speed", "shopify plus core web vitals", "shopify plus headless", "shopify liquid template performance"],
             "timeRequired": "PT10M",
             "wordCount": 2600,
@@ -333,7 +333,7 @@ export default function ShopifyPlusStillSlowPage() {
                     </section>
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
-                    <RelatedPosts currentPostId="shopify-plus-still-slow" category="E-Commerce" />
+                    <RelatedPosts currentPostId="shopify-plus-still-slow" />
 
                 </article>
             </main>

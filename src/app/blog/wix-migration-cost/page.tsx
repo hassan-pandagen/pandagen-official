@@ -416,7 +416,7 @@ export default function WixMigrationCostPage() {
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
 
-                    <RelatedPosts currentPostId="wix-migration-cost" category="Wix" />
+                    <RelatedPosts currentPostId="wix-migration-cost" />
 
                 </div>
             </section>

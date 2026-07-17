@@ -529,7 +529,6 @@ export default function MigrateWordPressToNextJSPage() {
                     {/* Related Posts */}
                     <RelatedPosts
                         currentPostId="how-to-migrate-wordpress-to-nextjs"
-                        category="WordPress"
                     />
 
                 </article>

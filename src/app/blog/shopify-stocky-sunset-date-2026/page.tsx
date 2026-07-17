@@ -509,7 +509,7 @@ export default function ShopifyStockySunset2026Page() {
                         <p className="text-stone-700 leading-relaxed">For the same playbook applied to a different platform deprecation, read <Link href="/blog/webflow-user-accounts-sunset-date-2026" className="text-cognac hover:underline font-medium">the Webflow User Accounts sunset breakdown</Link>. For the architecture story behind moving Shopify storefronts to custom code, see <Link href="/blog/shopify-headless" className="text-cognac hover:underline font-medium">how we cut Shopify load time from 4s to 0.8s with headless</Link>. For the cost math behind cutting your Shopify app stack, see <Link href="/blog/shopify-app-costs-real-monthly-bill" className="text-cognac hover:underline font-medium">your real monthly Shopify app bill</Link>.</p>
                     </section>
 
-                    <RelatedPosts currentPostId="shopify-stocky-sunset-date-2026" category="Shopify" />
+                    <RelatedPosts currentPostId="shopify-stocky-sunset-date-2026" />
 
                 </article>
             </main>

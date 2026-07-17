@@ -786,7 +786,7 @@ export default function CheapWebDeveloperPage() {
                     </section>
 
                     <div className="mt-6 md:mt-10 md:mt-16 pt-8 border-t border-stone-100">
-                        <RelatedPosts currentPostId="cheap-web-developer" category="Pricing" />
+                        <RelatedPosts currentPostId="cheap-web-developer" />
                     </div>
 
                 </article>

@@ -65,7 +65,7 @@ const articleSchema = {
                 "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/shopify-conversion-rate-speed-fix" },
-            "articleSection": "Conversion",
+            "articleSection": "Shopify",
             "keywords": ["shopify conversion rate", "low shopify conversion rate", "shopify speed conversion", "improve shopify conversion rate", "shopify cro speed"],
             "timeRequired": "PT15M",
             "wordCount": 2800,
@@ -473,7 +473,7 @@ export default function ShopifyConversionRateSpeedFixPage() {
                         <p className="text-stone-700 leading-relaxed">For the complete speed playbook (the 2026 average Shopify store scores just 30 on mobile), see our <Link href="/blog/shopify-store-speed-optimization" className="text-cognac hover:underline font-medium">Shopify speed optimization guide</Link>. For the full revenue loss calculation from slow Shopify, see <Link href="/blog/shopify-slow-losing-sales" className="text-cognac hover:underline font-medium">how slow Shopify costs stores $75K per year</Link>. For why Dawn theme specifically hits performance ceilings, see <Link href="/blog/shopify-dawn-theme-slow" className="text-cognac hover:underline font-medium">why the Shopify Dawn theme is slow</Link>.</p>
                     </section>
 
-                    <RelatedPosts currentPostId="shopify-conversion-rate-speed-fix" category="Conversion" />
+                    <RelatedPosts currentPostId="shopify-conversion-rate-speed-fix" />
 
                 </article>
             </main>

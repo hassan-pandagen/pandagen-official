@@ -67,7 +67,7 @@ const articleSchema = {
                 "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/wordpress-ai-security-risk-2026" },
-            "articleSection": "Security",
+            "articleSection": "WordPress",
             "keywords": ["WordPress AI security risk", "is WordPress AI safe", "WordPress 6.9 security vulnerabilities", "WordPress AI plugin vulnerabilities", "AI Engine plugin security flaw", "WordPress site security 2026", "WordPress AI threats", "protect WordPress from AI attacks", "WordPress security for business owners", "WordPress AI endpoint security", "WordPress plugin security risks", "should I use WordPress for business"],
             "timeRequired": "PT10M",
             "wordCount": 2850,
@@ -606,7 +606,7 @@ export default function WordPressAISecurityPage() {
                 )}
 
                 {/* Related Posts */}
-                <RelatedPosts currentPostId="wordpress-ai-security-risk-2026" category="Security" />
+                <RelatedPosts currentPostId="wordpress-ai-security-risk-2026" />
 
             </main>
             <Footer />

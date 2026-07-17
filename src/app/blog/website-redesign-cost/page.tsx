@@ -708,7 +708,7 @@ export default function WebsiteRedesignCostPage() {
                     </section>
 
                     <div className="mt-6 md:mt-10 md:mt-16 pt-8 border-t border-stone-100">
-                        <RelatedPosts currentPostId="website-redesign-cost" category="Pricing" />
+                        <RelatedPosts currentPostId="website-redesign-cost" />
                     </div>
 
                 </article>

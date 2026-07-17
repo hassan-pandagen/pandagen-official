@@ -81,7 +81,7 @@ const articleSchema = {
                 "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/spending-more-on-ads-fewer-orders-tracking" },
-            "articleSection": "Guide",
+            "articleSection": "Ad Tracking",
             "keywords": ["meta event match quality", "meta capi", "google enhanced conversions", "server side tracking", "ecommerce attribution 2026", "ai shopping agent attribution"],
             "wordCount": 2600,
             "timeRequired": "PT10M",
@@ -461,7 +461,7 @@ export default function SpendingMoreOnAdsFewerOrdersPage() {
                 </article>
             </section>
 
-            <RelatedPosts currentPostId="spending-more-on-ads-fewer-orders-tracking" category="Guide" />
+            <RelatedPosts currentPostId="spending-more-on-ads-fewer-orders-tracking" />
             <Footer />
         </main>
     );

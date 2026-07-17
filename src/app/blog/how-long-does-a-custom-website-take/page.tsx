@@ -369,7 +369,7 @@ export default function HowLongCustomWebsitePage() {
                 </article>
             </section>
 
-            <RelatedPosts currentPostId="how-long-does-a-custom-website-take" category="Guide" />
+            <RelatedPosts currentPostId="how-long-does-a-custom-website-take" />
             <Footer />
         </main>
     );

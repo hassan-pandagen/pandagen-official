@@ -79,7 +79,7 @@ const articleSchema = {
                 "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/wix-vs-custom-website" },
-            "articleSection": "Comparison",
+            "articleSection": "Wix",
             "wordCount": 2400,
             "timeRequired": "PT12M",
             "inLanguage": "en-US",

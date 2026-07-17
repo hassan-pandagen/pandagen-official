@@ -386,7 +386,7 @@ export default function WordPressPluginsSpeedPage() {
                     </section>
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
-                    <RelatedPosts currentPostId="wordpress-plugins-destroy-speed" category="Performance" />
+                    <RelatedPosts currentPostId="wordpress-plugins-destroy-speed" />
 
                 </article>
             </main>

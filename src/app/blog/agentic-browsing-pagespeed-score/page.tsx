@@ -78,7 +78,7 @@ const articleSchema = {
                 "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/agentic-browsing-pagespeed-score" },
-            "articleSection": "AI Search",
+            "articleSection": "AEO",
             "keywords": ["agentic browsing", "webmcp", "agent ready website", "llms.txt", "agentic commerce readiness"],
             "wordCount": 1500,
             "timeRequired": "PT9M",

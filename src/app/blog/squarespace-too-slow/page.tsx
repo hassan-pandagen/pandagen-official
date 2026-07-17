@@ -498,7 +498,7 @@ export default function SquarespaceToSlowPage() {
 
                     <FAQAccordion faqs={squarespaceSlowFAQs} />
 
-                    <RelatedPosts currentPostId="squarespace-too-slow" category="Squarespace" />
+                    <RelatedPosts currentPostId="squarespace-too-slow" />
 
                 </div>
             </main>

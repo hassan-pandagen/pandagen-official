@@ -79,7 +79,7 @@ const articleSchema = {
                 "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/squarespace-vs-custom-website" },
-            "articleSection": "Comparison",
+            "articleSection": "Squarespace",
             "wordCount": 3200,
             "timeRequired": "PT12M",
             "inLanguage": "en-US",

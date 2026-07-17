@@ -789,7 +789,7 @@ export default function WebflowMigrationCostPage() {
                     </section>
 
                     <div className="mt-6 md:mt-10 md:mt-16 pt-8 border-t border-stone-100">
-                        <RelatedPosts currentPostId="webflow-migration-cost" category="Webflow" />
+                        <RelatedPosts currentPostId="webflow-migration-cost" />
                     </div>
 
                 </article>

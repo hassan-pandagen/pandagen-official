@@ -1,26 +1,9 @@
 "use client";
 
 import { motion } from "@/components/ui/motion";
-import { ArrowRight, Zap, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { trackGAEvent } from "@/components/GoogleAnalytics";
-
-export function HeroStatusPill() {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-stone-200 text-xs font-bold uppercase tracking-widest text-stone-500 mb-8 shadow-xs"
-    >
-      <span className="relative flex h-2 w-2">
-        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cognac opacity-75" />
-        <span className="relative inline-flex rounded-full h-2 w-2 bg-cognac" />
-      </span>
-      Accepting Q2 Clients
-    </motion.div>
-  );
-}
-
 
 export function HeroCTAs() {
   return (
@@ -53,33 +36,5 @@ export function HeroCTAs() {
         </Link>
       </motion.div>
     </>
-  );
-}
-
-export function HeroTrustSignals() {
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.55 }}
-      className="flex flex-wrap items-center gap-x-8 gap-y-3 mt-10 text-sm text-stone-500 font-medium"
-    >
-      <div className="flex items-center gap-2">
-        <Zap className="w-4 h-4 text-cognac shrink-0" />
-        <span>&lt;1s Load Time</span>
-      </div>
-      <div className="flex items-center gap-2">
-        <ShieldCheck className="w-4 h-4 text-charcoal shrink-0" />
-        <span>Bank Grade Security</span>
-      </div>
-      <div className="flex items-center gap-2">
-        <CheckCircle2 className="w-4 h-4 text-charcoal shrink-0" />
-        <span>Fixed Pricing</span>
-      </div>
-      <div className="flex items-center gap-2">
-        <CheckCircle2 className="w-4 h-4 text-charcoal shrink-0" />
-        <span>Zero Maintenance</span>
-      </div>
-    </motion.div>
   );
 }

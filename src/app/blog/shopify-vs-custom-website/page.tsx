@@ -530,7 +530,7 @@ export default function ShopifyVsCustomWebsitePage() {
                     {shopifyVsCustomFAQs.length > 0 && <FAQAccordion faqs={shopifyVsCustomFAQs} />}
 
                     {/* Related Posts */}
-                    <RelatedPosts currentPostId="shopify-vs-custom-website" category="Shopify" />
+                    <RelatedPosts currentPostId="shopify-vs-custom-website" />
 
                 </article>
             </main>

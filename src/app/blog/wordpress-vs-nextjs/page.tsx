@@ -67,7 +67,7 @@ const articleSchema = {
                 "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/wordpress-vs-nextjs" },
-            "articleSection": "Comparison",
+            "articleSection": "WordPress",
             "keywords": ["WordPress vs Next.js", "WordPress alternative", "migrate WordPress to Next.js", "Next.js SEO", "WordPress performance", "custom website development"],
             "timeRequired": "PT11M",
             "wordCount": 3100,
@@ -675,7 +675,6 @@ export default function WordPressVsNextJSPage() {
                     {/* Related Posts */}
                     <RelatedPosts
                         currentPostId="wordpress-vs-nextjs"
-                        category="Comparison"
                     />
 
                 </article>

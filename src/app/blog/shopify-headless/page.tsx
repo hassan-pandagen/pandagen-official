@@ -64,7 +64,7 @@ const articleSchema = {
                 "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/shopify-headless" },
-            "articleSection": "E-Commerce",
+            "articleSection": "Shopify",
             "keywords": ["headless shopify", "shopify speed", "shopify next.js", "shopify storefront api", "core web vitals ecommerce"],
             "timeRequired": "PT14M",
             "wordCount": 3450,
@@ -370,7 +370,7 @@ export default function ShopifyHeadlessPage() {
                         <p className="text-stone-700 leading-relaxed">Before going headless, check why <Link href="/blog/shopify-dawn-theme-slow" className="text-cognac hover:underline font-medium">Dawn theme still caps at 75 PageSpeed</Link>. Running WooCommerce instead? Same architectural ceiling applies. Read <Link href="/blog/woocommerce-too-slow" className="text-cognac hover:underline font-medium">why WooCommerce is too slow and how to fix it</Link>. And see what it means that with <Link href="/blog/google-universal-commerce-protocol-what-it-means-for-your-store" className="text-cognac hover:underline font-medium">Google UCP, customers can now buy without visiting your store</Link>.</p>
                     </section>
 
-                    <RelatedPosts currentPostId="shopify-headless" category="E-Commerce" />
+                    <RelatedPosts currentPostId="shopify-headless" />
 
                 </article>
             </main>

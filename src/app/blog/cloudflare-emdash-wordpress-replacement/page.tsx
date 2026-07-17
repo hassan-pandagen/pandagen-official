@@ -526,7 +526,7 @@ export default function CloudflareEmdashPage() {
                     {emdashFAQs.length > 0 && <FAQAccordion faqs={emdashFAQs} />}
 
                     {/* Related Posts */}
-                    <RelatedPosts currentPostId="cloudflare-emdash-wordpress-replacement" category="WordPress" />
+                    <RelatedPosts currentPostId="cloudflare-emdash-wordpress-replacement" />
 
                 </article>
             </main>

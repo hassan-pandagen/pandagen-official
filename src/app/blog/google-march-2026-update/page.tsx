@@ -447,7 +447,7 @@ export default function GoogleMarchUpdatePage() {
                     {marchUpdateFAQs.length > 0 && <FAQAccordion faqs={marchUpdateFAQs} />}
 
                     {/* Related Posts */}
-                    <RelatedPosts currentPostId="google-march-2026-update" category="SEO" />
+                    <RelatedPosts currentPostId="google-march-2026-update" />
 
                 </article>
             </main>

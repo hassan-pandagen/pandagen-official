@@ -543,7 +543,7 @@ export default function NextjsHostingZeroCostPage() {
                     {hostingFAQs.length > 0 && <FAQAccordion faqs={hostingFAQs} />}
 
                     {/* Related Posts */}
-                    <RelatedPosts currentPostId="nextjs-hosting-zero-cost" category="Performance" />
+                    <RelatedPosts currentPostId="nextjs-hosting-zero-cost" />
 
                 </article>
             </main>

@@ -82,7 +82,7 @@ const articleSchema = {
                 "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/wix-too-slow" },
-            "articleSection": "Performance",
+            "articleSection": "Wix",
             "wordCount": 3000,
             "timeRequired": "PT12M",
             "inLanguage": "en-US",
@@ -684,7 +684,7 @@ export default function WixTooSlowPage() {
 
                     <FAQAccordion faqs={postFAQs} />
 
-                    <RelatedPosts currentPostId="wix-too-slow" category="Wix" />
+                    <RelatedPosts currentPostId="wix-too-slow" />
 
                     <BlogAuthor
                         name="Hassan Jamal"
