@@ -320,6 +320,7 @@ export const clusters: Cluster[] = [
     postIds: [
       'why-is-my-website-loading-so-slow', 'how-to-speed-up-your-website', 'how-to-achieve-100-pagespeed',
       'nextjs-hosting-zero-cost', 'core-web-vitals-explained', 'how-website-speed-affects-seo',
+      'aeo-web-performance-glossary',
     ],
   },
   {
@@ -348,7 +349,7 @@ export const clusters: Cluster[] = [
     postIds: [
       'agentic-browsing-pagespeed-score', 'aeo-playbook-built-into-every-website', 'google-march-2026-update',
       'why-competitor-outranks-you', 'will-migrating-hurt-my-seo', 'how-website-speed-affects-seo',
-      'lovable-site-not-showing-on-google',
+      'lovable-site-not-showing-on-google', 'aeo-web-performance-glossary',
     ],
   },
   {
