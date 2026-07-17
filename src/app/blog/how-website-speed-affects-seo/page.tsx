@@ -86,7 +86,8 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Portent. Site Speed is Impacting Your Conversion Rate", "url": "https://portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" },
                 { "@type": "CreativeWork", "name": "Akamai. Online Retail Performance Report", "url": "https://www.prnewswire.com/news-releases/akamai-online-retail-performance-report-milliseconds-are-critical-300441498.html" },
                 { "@type": "CreativeWork", "name": "RUMvision. Core Web Vitals SEO Impact Study", "url": "https://www.rumvision.com/blog/impact-core-web-vitals-seo/" },
-                { "@type": "CreativeWork", "name": "Google Web Dev. Web Vitals", "url": "https://web.dev/vitals/" }
+                { "@type": "CreativeWork", "name": "Google Web Dev. Web Vitals", "url": "https://web.dev/vitals/" },
+                { "@type": "CreativeWork", "name": "Google Web Dev. How Swappie Increased Mobile Revenue by 42% by Focusing on Core Web Vitals", "url": "https://web.dev/case-studies/swappie" }
             ]
         },
         {
@@ -437,7 +438,8 @@ export default function WebsiteSpeedSEOPage() {
                             "Month 3 to 6: The compounding effect starts. Better rankings bring more traffic, which brings more engagement signals, which brings even better rankings."
                         ]} />
                         <BlogText>
-                            Real-world example: Swappie, a refurbished phone retailer, improved their Core Web Vitals and cut load time by 23%. The result was a 42% increase in mobile revenue. Not from new content or additional ad spend. Purely from fixing the speed metrics Google was already tracking.
+                            Real-world example: Swappie, a refurbished phone retailer, improved their Core Web Vitals and cut average page load time by 23%. The result was a 42% increase in mobile revenue, and their relative mobile conversion rate climbed from 24% to 34% over three months, per{" "}
+                            <a href="https://web.dev/case-studies/swappie" target="_blank" rel="noopener noreferrer" className="text-stone-700 underline underline-offset-2 hover:text-black">Google&apos;s own case study on the work</a>. Not from new content or additional ad spend. Purely from fixing the speed metrics Google was already tracking.
                         </BlogText>
                         <BlogText>
                             The businesses that treat speed as a permanent priority and not a one-time project are the ones that compound these gains. Fast sites attract more links, earn higher engagement, and get more frequent crawling, which creates a widening gap between them and slower competitors over time.
@@ -512,7 +514,6 @@ export default function WebsiteSpeedSEOPage() {
                     {/* Related Posts */}
                     <RelatedPosts
                         currentPostId="how-website-speed-affects-seo"
-                        category="SEO"
                     />
 
                 </article>
